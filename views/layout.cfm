@@ -82,6 +82,13 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js"></script>
     <script src="/assets/script.js"></script>
-    <a href="https://github.com/foundeo/cfdocs" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="//s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+    <cfif IsDefined("data") AND IsStruct(data) AND StructKeyExists(data, "type") AND StructKeyExists(data, "name")>
+    	<cfoutput>
+    	<a href="https://github.com/foundeo/cfdocs/tree/master/data/en/#LCase(data.name)#.json" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="//s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+    	</cfoutput>
+    <cfelse>
+    	<a href="https://github.com/foundeo/cfdocs" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="//s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+    </cfif> 
+    
   </body>
 </html>
