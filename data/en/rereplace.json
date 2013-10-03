@@ -1,0 +1,24 @@
+{
+	"name":"rereplace",
+	"type":"function",
+	"syntax":"rereplace(String, reg_expression, substring [, scope])",
+	"returns":"String",
+	"related":[],
+	"description":" Uses a regular expression (RE) to search a string for a string\n pattern and replace it with another. The search is\n case-sensitive.",
+	"params": [ 
+		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]},
+		{"name":"reg_expression","description":"Regular expression to replace.","required":true,"default":"","type":"Regex","values":[]},
+		{"name":"substring","description":"A string or a variable that contains one. Replaces\n reg_expression","required":true,"default":"","type":"String","values":[]},
+		{"name":"scope","description":"* one: Replace the first occurrence of the regular\n expression. Default.\n * all: Replace all occurrences of the regular expression.","required":false,"default":"","type":"String","values":["one","all"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/rereplace"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/rereplace"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/rereplace"}
+	},
+	"links": [
+		
+	]
+	
+}

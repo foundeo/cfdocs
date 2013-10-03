@@ -1,0 +1,23 @@
+{
+	"name":"cflogin",
+	"type":"tag",
+	"syntax":"<cflogin>",
+	"returns":"",
+	"related":[],
+	"description":" A container for user login and authentication code. CFML\n runs the code in this tag if a user is not already logged in.\n You put code in the tag that authenticates the user and\n identifies the user with a set of roles. Used with cfloginuser\n tag.",
+	"params": [ 
+		{"name":"idletimeout","description":"Time interval with no keyboard activity after which\n CFML logs the user off. Seconds.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"applicationtoken","description":"Unique application identifier. Limits the login validity to\n one application, as specified by the cfapplication tag.","required":false,"default":"","type":"String","values":[]},
+		{"name":"cookiedomain","description":"Domain of the cookie that is used to mark a user as logged\n in. Use this attribute to enable a user login cookie to\n work with multiple clustered servers in the same domain.","required":false,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cflogin"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflogin"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflogin"}
+	},
+	"links": [
+		
+	]
+	
+}

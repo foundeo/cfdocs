@@ -1,0 +1,19 @@
+{
+	"name":"getUserRoles",
+	"type":"function",
+	"syntax":"getUserRoles()",
+	"returns":"List",
+	"related":[],
+	"description":" Retrieves the list of roles for the current user.",
+	"params": [ 
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/getuserroles"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getuserroles"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getuserroles"}
+	},
+	"links": [
+		
+	]
+	
+}

@@ -1,0 +1,38 @@
+{
+	"name":"cfcalendar",
+	"type":"tag",
+	"syntax":"<cfcalendar name=\"\">",
+	"returns":"",
+	"related":[],
+	"description":" Puts an interactive Macromedia Flash format calendar in an HTML\n or Flash form. Not supported in XML format forms. The calendar\n lets a user select a date for submission as a form variable.",
+	"params": [ 
+		{"name":"name","description":"The name of the calendar.","required":true,"default":"","type":"String","values":[]},
+		{"name":"height","description":"The vertical dimension of the calendar specified in pixels.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"width","description":"The horizontal dimension of the calendar specified in pixels.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"selecteddate","description":"The date that is initially selected. It is highlighted in a\n color determined by the form skin. Must be in mm\/dd\/yyyy\n or dd\/mm\/yyyy format, depending on the current locale.\n (Use the setlocale tag to set the locale, if necessary.)","required":false,"default":"","type":"String","values":[]},
+		{"name":"startrange","description":"The start of a range of dates that are disabled. Users\n cannot select dates from this date through the date\n specified by the endRange attribute.","required":false,"default":"","type":"String","values":[]},
+		{"name":"endrange","description":"The end of a range of dates that are disabled. Users\n cannot select dates from the date specified by the\n startRange attribute through this date.","required":false,"default":"","type":"String","values":[]},
+		{"name":"disabled","description":"Disables all user input, making the control read only.\n To disable input, specify disabled without an attribute\n or disabled=\"true\". To enable input, omit the attribute\n or specify disabled=\"false\".\n Default is: false","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"mask","description":"A pattern that specifies the format of the submitted date.\n Mask characters are:\n - D = day, can use 0-2 mask characters\n - M = month, can use 0-4 mask characters\n - Y = year, can use 0, 2, or 4 characters\n - E = day in week, can use 0-4 characters\n - Any other character = put the character in the specified location\n Default is: MM\/DD\/YYYY","required":false,"default":"MM\/DD\/YYYY","type":"String","values":["MM\/DD\/YYYY","DD\/MM\/YYYY","MM\/YYYY","MM\/YY","YYYY-MM-DD","EEE DD. MMM YYYY"]},
+		{"name":"firstdayofweek","description":"Integer in the range 0-6 specifying the first day of the\n week in the calendar, 0 indicates Sunday, 6 indicates Saturday.\n Default is: 0","required":false,"default":0,"type":"Numeric","values":[0,1,2,3,4,5,6]},
+		{"name":"daynames","description":"A comma-delimited list that sets the names of the\n weekdays displayed in the calendar. Sunday is the\n first day and the rest of the weekday names follow in\n the normal order.\n Default is: S,M,T,W,Th,F,S","required":false,"default":"S,M,T,W,Th,F,S","type":"String","values":["S,M,T,W,Th,F,S","Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","Sun,Mon,Tue,Wed,Thu,Fri,Sat"]},
+		{"name":"monthnames","description":"A comma-delimited list of the month names that are\n displayed at the top of the calendar.","required":false,"default":"January,February,March,April,May,June,July,August,September,October,November,December","type":"String","values":["January,February,March,April,May,June,July,August,September,October,November,December","Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"]},
+		{"name":"enabled","description":"Flash only: Specifying whether the control is enabled. A\n disabled control appears in light gray. This is the inverse\n of the disabled attribute.","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"visible","description":"Flash only: Specifying whether to show the control. Space\n that would be occupied by an invisible control is blank.","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"tooltip","description":"Flash only: Text to display when the mouse pointer hovers\n over the control.","required":false,"default":"","type":"String","values":[]},
+		{"name":"style","description":"Flash only: Actionscript style or styles to apply to the calendar.\n Default is: haloGreen","required":false,"default":"","type":"String","values":["haloBlue","haloGreen","haloOrange","haloSilver"]},
+		{"name":"onchange","description":"Flash only: ActionScript that runs when the user selects a\n date.","required":false,"default":"","type":"String","values":[]},
+		{"name":"onblur","description":"Flash only: ActionScript that runs when the user selects a\n date.","required":false,"default":"","type":"String","values":[]},
+		{"name":"onfocus","description":"Flash only: ActionScript that runs when the user selects a\n date.","required":false,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfcalendar"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfcalendar"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcalendar"}
+	},
+	"links": [
+		
+	]
+	
+}

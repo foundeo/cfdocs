@@ -1,0 +1,19 @@
+{
+	"name":"createUUID",
+	"type":"function",
+	"syntax":"createUUID()",
+	"returns":"UUID",
+	"related":[],
+	"description":" Creates a Universally Unique Identifier (UUID). A UUID is a\n 35-character string representation of a unique 128-bit integer\n xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxxxxxx : x is a hexadecimal digit",
+	"params": [ 
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/createuuid"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createuuid"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createuuid"}
+	},
+	"links": [
+		
+	]
+	
+}

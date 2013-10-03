@@ -1,0 +1,21 @@
+{
+	"name":"int",
+	"type":"function",
+	"syntax":"int(number)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Calculates the closest integer that is smaller than number.",
+	"params": [ 
+		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/int"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/int"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/int"}
+	},
+	"links": [
+		
+	]
+	
+}

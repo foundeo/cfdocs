@@ -1,0 +1,22 @@
+{
+	"name":"objectEquals",
+	"type":"function",
+	"syntax":"objectEquals(Param1, Param2)",
+	"returns":"boolean",
+	"related":[],
+	"description":" No Help Available",
+	"params": [ 
+		{"name":"Param1","description":"No Help Available","required":true,"default":"","type":"","values":[]},
+		{"name":"Param2","description":"No Help Available","required":true,"default":"","type":"","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/objectequals"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/objectequals"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/objectequals"}
+	},
+	"links": [
+		
+	]
+	
+}

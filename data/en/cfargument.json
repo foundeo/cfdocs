@@ -1,0 +1,26 @@
+{
+	"name":"cfargument",
+	"type":"tag",
+	"syntax":"<cfargument name=\"\">",
+	"returns":"",
+	"related":[],
+	"description":" Creates a parameter definition within a component definition.\n Defines a function argument. Used within a cffunction tag.",
+	"params": [ 
+		{"name":"name","description":"An argument name.","required":true,"default":"","type":"Stirng","values":[]},
+		{"name":"type","description":"a type name; data type of the argument.","required":false,"default":"","type":"String","values":["any","array","binary","boolean","date","guid","numeric","query","string","struct","uuid","xml","variablename","(component name)"]},
+		{"name":"required","description":"Whether the parameter is required to execute the component\n method.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"default","description":"If no argument is passed, specifies a default argument\n value.","required":false,"default":"","type":"String","values":[]},
+		{"name":"displayname","description":"Meaningful only for CFC method parameters. A value to be\n displayed when using introspection to show information\n about the CFC.","required":false,"default":"","type":"String","values":[]},
+		{"name":"hint","description":"Meaningful only for CFC method parameters. Text to be\n displayed when using introspection to show information\n about the CFC. The hint attribute value follows the\n displayname attribute value in the parameter description\n line. This attribute can be useful for describing the\n purpose of the parameter","required":false,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfargument"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfargument"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfargument"}
+	},
+	"links": [
+		
+	]
+	
+}

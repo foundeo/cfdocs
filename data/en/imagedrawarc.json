@@ -1,0 +1,28 @@
+{
+	"name":"imageDrawArc",
+	"type":"function",
+	"syntax":"imageDrawArc(name, x, y, width, height, startAngle, archAngle [, filled])",
+	"returns":"void",
+	"related":[],
+	"description":" Draws a circular or elliptical arc.",
+	"params": [ 
+		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"x","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"y","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"width","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"height","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"startAngle","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"archAngle","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"filled","description":"No Help Available","required":false,"default":"","type":"Boolean","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/imagedrawarc"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagedrawarc"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagedrawarc"}
+	},
+	"links": [
+		
+	]
+	
+}

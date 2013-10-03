@@ -1,0 +1,21 @@
+{
+	"name":"cacheGet",
+	"type":"function",
+	"syntax":"cacheGet(id)",
+	"returns":"",
+	"related":[],
+	"description":" Gets an object that is stored in the cache.",
+	"params": [ 
+		{"name":"id","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cacheget"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cacheget"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cacheget"}
+	},
+	"links": [
+		
+	]
+	
+}

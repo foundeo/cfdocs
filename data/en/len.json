@@ -1,0 +1,21 @@
+{
+	"name":"len",
+	"type":"function",
+	"syntax":"len(Object)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Determines the length of a string or binary object",
+	"params": [ 
+		{"name":"Object","description":"","required":true,"default":"","type":"Object","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/len"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/len"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/len"}
+	},
+	"links": [
+		
+	]
+	
+}

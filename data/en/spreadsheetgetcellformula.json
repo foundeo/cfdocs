@@ -1,0 +1,23 @@
+{
+	"name":"spreadsheetGetCellFormula",
+	"type":"function",
+	"syntax":"spreadsheetGetCellFormula(spreadsheetObj, row, column)",
+	"returns":"String",
+	"related":[],
+	"description":" Gets the formula for a for an Excel spreadsheet object cell, or all formulas for the object.",
+	"params": [ 
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
+		{"name":"row","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"column","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetgetcellformula"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetgetcellformula"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetgetcellformula"}
+	},
+	"links": [
+		
+	]
+	
+}

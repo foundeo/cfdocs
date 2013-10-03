@@ -1,0 +1,23 @@
+{
+	"name":"cfsetting",
+	"type":"tag",
+	"syntax":"<cfsetting>",
+	"returns":"",
+	"related":[],
+	"description":" Controls aspects of page processing, such as the output of\n HTML code in pages.",
+	"params": [ 
+		{"name":"enablecfoutputonly","description":"Yes: blocks output of HTML that is outside cfoutput tags\n No: displays HTML that is outside cfoutput tags.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"showdebugoutput","description":"Yes: If debugging is enabled in the Administrator, displays\n debugging information\n No: suppresses debugging information that would otherwise\n display at end of generated page.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"requesttimeout","description":"Integer; number of seconds. Time limit, after which\n CFML processes the page as an unresponsive thread.\n Overrides the timeout set in the CFML Administrator.","required":false,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfsetting"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfsetting"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfsetting"}
+	},
+	"links": [
+		
+	]
+	
+}

@@ -1,0 +1,24 @@
+{
+	"name":"imagePaste",
+	"type":"function",
+	"syntax":"imagePaste(image1, image2, x, y)",
+	"returns":"void",
+	"related":[],
+	"description":" Takes two images and an (x,y) coordinate and draws the second image over the first image with the upper-left corner at coordinate (x,y).",
+	"params": [ 
+		{"name":"image1","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"image2","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"x","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"y","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/imagepaste"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagepaste"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagepaste"}
+	},
+	"links": [
+		
+	]
+	
+}

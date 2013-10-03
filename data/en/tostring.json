@@ -1,0 +1,22 @@
+{
+	"name":"toString",
+	"type":"function",
+	"syntax":"toString(any_value [, encoding])",
+	"returns":"String",
+	"related":[],
+	"description":" Converts a value to a string.",
+	"params": [ 
+		{"name":"any_value","description":"Value to convert to a string","required":true,"default":"","type":"Object","values":[]},
+		{"name":"encoding","description":"The character encoding (character set) of the string.","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/tostring"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/tostring"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/tostring"}
+	},
+	"links": [
+		
+	]
+	
+}

@@ -1,0 +1,22 @@
+{
+	"name":"valueList",
+	"type":"function",
+	"syntax":"valueList(column [, delimiter])",
+	"returns":"String",
+	"related":[],
+	"description":" Inserts a delimiter between each value in an executed query.\n CFML does not evaluate the arguments.\n A delimited list of the values of each record returned from an\n executed query",
+	"params": [ 
+		{"name":"column","description":"Name of an executed query and column. Separate query name\n and column name with a period.","required":true,"default":"","type":"QueryColumn","values":[]},
+		{"name":"delimiter","description":"A delimiter character to separate column data items.\n Default: comma (,).","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/valuelist"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/valuelist"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/valuelist"}
+	},
+	"links": [
+		
+	]
+	
+}

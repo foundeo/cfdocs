@@ -1,0 +1,22 @@
+{
+	"name":"bitShln",
+	"type":"function",
+	"syntax":"bitShln(number, count)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Performs a bitwise shift-left, no-rotation operation.",
+	"params": [ 
+		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"count","description":"","required":true,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/bitshln"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/bitshln"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/bitshln"}
+	},
+	"links": [
+		
+	]
+	
+}

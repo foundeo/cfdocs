@@ -1,0 +1,19 @@
+{
+	"name":"cfset",
+	"type":"tag",
+	"syntax":"<cfset>",
+	"returns":"",
+	"related":[],
+	"description":" Sets a value in CFML. Used to create a variable, if it\n does not exist, and assign it a value. Also used to call\n functions.",
+	"params": [ 
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfset"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfset"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfset"}
+	},
+	"links": [
+		
+	]
+	
+}

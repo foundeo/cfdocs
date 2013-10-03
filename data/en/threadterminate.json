@@ -1,0 +1,21 @@
+{
+	"name":"threadTerminate",
+	"type":"function",
+	"syntax":"threadTerminate(threadname)",
+	"returns":"void",
+	"related":[],
+	"description":" Terminates the thread specified by the threadName parameter.",
+	"params": [ 
+		{"name":"threadname","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/threadterminate"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/threadterminate"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/threadterminate"}
+	},
+	"links": [
+		
+	]
+	
+}

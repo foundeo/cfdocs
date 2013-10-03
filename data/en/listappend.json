@@ -1,0 +1,23 @@
+{
+	"name":"listAppend",
+	"type":"function",
+	"syntax":"listAppend(list, value [, delimiters])",
+	"returns":"String",
+	"related":[],
+	"description":" Concatenates a list or element to a list.",
+	"params": [ 
+		{"name":"list","description":"","required":true,"default":"","type":"String","values":[]},
+		{"name":"value","description":"An element or a list of elements.","required":true,"default":"","type":"String","values":[]},
+		{"name":"delimiters","description":"","required":false,"default":",","type":"String","values":[",","|","_",";",":"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/listappend"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listappend"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listappend"}
+	},
+	"links": [
+		
+	]
+	
+}

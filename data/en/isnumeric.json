@@ -1,0 +1,21 @@
+{
+	"name":"isNumeric",
+	"type":"function",
+	"syntax":"isNumeric(String)",
+	"returns":"boolean",
+	"related":[],
+	"description":" Determines whether a string can be converted to a numeric value.\n Supports numbers in U.S. number format. For other number support\n use LSIsNumeric.",
+	"params": [ 
+		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/isnumeric"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isnumeric"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isnumeric"}
+	},
+	"links": [
+		
+	]
+	
+}

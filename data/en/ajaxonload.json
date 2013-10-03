@@ -1,0 +1,21 @@
+{
+	"name":"ajaxOnLoad",
+	"type":"function",
+	"syntax":"ajaxOnLoad(functionname)",
+	"returns":"void",
+	"related":[],
+	"description":" Causes the specified JavaScript function to run when the page loads.",
+	"params": [ 
+		{"name":"functionname","description":"The name of the function to run when the page loads.","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/ajaxonload"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ajaxonload"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ajaxonload"}
+	},
+	"links": [
+		
+	]
+	
+}

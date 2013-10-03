@@ -1,0 +1,21 @@
+{
+	"name":"xmlNew",
+	"type":"function",
+	"syntax":"xmlNew([casesensitive])",
+	"returns":"Object",
+	"related":[],
+	"description":" Creates an XML document object.",
+	"params": [ 
+		{"name":"casesensitive","description":"Maintains the case of document elements and attributes.\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/xmlnew"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/xmlnew"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/xmlnew"}
+	},
+	"links": [
+		
+	]
+	
+}

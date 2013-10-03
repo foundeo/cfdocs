@@ -1,0 +1,32 @@
+{
+	"name":"dateDiff",
+	"type":"function",
+	"syntax":"dateDiff(datepart, date1, date2)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Determines the integer number of units by which date1 is less\n than date2.\n [datepart - quicky]\n yyyy: Year; q: Quarter; m: Month; y: Day of year; d: Day\n w: Weekday; ww: Week; h: Hour; n: Minute; s: Second;\n l: Millisecond",
+	"params": [ 
+		{"name":"datepart","description":"","required":true,"default":"","type":"String","values":["yyyy","q","m","y","d","w","ww","h","n","s","l"]},
+		{"name":"date1","description":"","required":true,"default":"","type":"DateTime","values":["now()"]},
+		{"name":"date2","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/datediff"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/datediff"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/datediff"}
+	},
+	"links": [
+		
+	],
+	"examples": [
+		{
+			"title": "DateDiff Example",
+			"description": "Find the difference between two dates.",
+			"code": "DateDiff(\"d\", \"2013-01-15\", \"2013-01-25\")",
+			"result": "10"
+		}
+	]		
+	
+	
+}

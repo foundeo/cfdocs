@@ -1,0 +1,21 @@
+{
+	"name":"sqr",
+	"type":"function",
+	"syntax":"sqr(number)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Calculates the square root of a number.",
+	"params": [ 
+		{"name":"number","description":"A positive integer or a variable that contains one.\n Number whose square root to get.","required":true,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/sqr"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/sqr"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/sqr"}
+	},
+	"links": [
+		
+	]
+	
+}

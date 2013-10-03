@@ -1,0 +1,42 @@
+{
+	"name":"cffileupload",
+	"type":"tag",
+	"syntax":"<cffileupload url=\"\">",
+	"returns":"",
+	"related":[],
+	"description":" Ajax File upload",
+	"params": [ 
+		{"name":"url","description":"The URL to the server where the files are uploaded.","required":true,"default":"","type":"String","values":[]},
+		{"name":"width","description":"Width of the file upload control, in pixels.","required":false,"default":"","type":"String","values":[]},
+		{"name":"title","description":"Title for the upload dialog.","required":false,"default":"","type":"String","values":[]},
+		{"name":"extensionfilter","description":"Use this attribute to specify the type of file that you will allow to be uploaded. \nFor example, to let only image files to be uploaded, you can specify file extensions like .jpg, .jpeg, or .png","required":false,"default":"","type":"String","values":[]},
+		{"name":"uploadbuttonlabel","description":"Label of the Upload button.","required":false,"default":"","type":"String","values":[]},
+		{"name":"progressbar","description":"Whether to display Progress Bar or not. Default true","required":false,"default":"","type":"Boolean","values":[true,false]},
+		{"name":"height","description":"Height of the file upload control, in pixels.","required":false,"default":"","type":"String","values":[]},
+		{"name":"maxUploadSize","description":"The maximum file size, in mega bytes, allowed for the upload. Default 10MB.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"maxFileSelect","description":"The maximum number of files allowed for the upload.","required":false,"default":"","type":"String","values":[]},
+		{"name":"style","description":"A CSS style specification that defines layout styles","required":false,"default":"","type":"String","values":[]},
+		{"name":"bgcolor","description":"The background color for the file upload control. A hexadecimal value without ‚Äú#‚Äù prefixed.","required":false,"default":"","type":"String","values":[]},
+		{"name":"addButtonLabel","description":"Label of the Add button","required":false,"default":"","type":"String","values":[]},
+		{"name":"name","description":"Name of the file upload component.","required":false,"default":"","type":"String","values":[]},
+		{"name":"oncomplete","description":"The JavaScript function to run after the file upload completes","required":false,"default":"","type":"String","values":[]},
+		{"name":"onerror","description":"The JavaScript function to run on an error condition. The error can be a network error or server-side error","required":false,"default":"","type":"String","values":[]},
+		{"name":"clearButtonLabel","description":"Label of the Clear button","required":false,"default":"","type":"String","values":[]},
+		{"name":"deleteButtonLabel","description":"Label of the Delete button","required":false,"default":"","type":"String","values":[]},
+		{"name":"align","description":"Specifies the default alignment","required":false,"default":"","type":"String","values":["left","right","center","justify"]},
+		{"name":"wmode","description":"Specifies the absolute positioning and layering capabilities in your browser:","required":false,"default":"","type":"String","values":["opaque","transparent","window"]},
+		{"name":"stopOnError","description":"Specifies whether or not to ignore the exceptions for this operation. When the value is\ntrue, it stops uploading, displays an appropriate error","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"hideUploadButton","description":"A Boolean value that specifies if the Upload button should appear in the media player","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"onUploadComplete","description":"The JavaScript function to run after the all uploads have completed","required":false,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cffileupload"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cffileupload"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cffileupload"}
+	},
+	"links": [
+		
+	]
+	
+}

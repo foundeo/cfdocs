@@ -1,0 +1,21 @@
+{
+	"name":"quarter",
+	"type":"function",
+	"syntax":"quarter(date)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Calculates the quarter of the year in which a date falls.",
+	"params": [ 
+		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/quarter"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/quarter"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/quarter"}
+	},
+	"links": [
+		
+	]
+	
+}

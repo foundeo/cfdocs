@@ -1,0 +1,21 @@
+{
+	"name":"cfflush",
+	"type":"tag",
+	"syntax":"<cfflush>",
+	"returns":"",
+	"related":[],
+	"description":" Flushes currently available data to the client.",
+	"params": [ 
+		{"name":"interval","description":"Flushes output each time this number of bytes becomes\n available. HTML headers, and data that is already\n available when the tag is executed, are omitted from the\n count.","required":false,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfflush"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfflush"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfflush"}
+	},
+	"links": [
+		
+	]
+	
+}

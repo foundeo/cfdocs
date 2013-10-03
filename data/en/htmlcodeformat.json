@@ -1,0 +1,22 @@
+{
+	"name":"htmlCodeFormat",
+	"type":"function",
+	"syntax":"htmlCodeFormat(String [, version])",
+	"returns":"String",
+	"related":[],
+	"description":" Replaces special characters in a string with their HTML-escaped\n equivalents and inserts <pre> and </pre> tags at the beginning\n and end of the string.\n [version]\n HTML version to use. currently ignored.\n -1: The latest implementation of HTML\n 2.0: HTML 2.0 (Default)\n 3.2: HTML 3.2",
+	"params": [ 
+		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
+		{"name":"version","description":"","required":false,"default":"","type":"Numeric","values":[-1,2.0,3.2]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/htmlcodeformat"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/htmlcodeformat"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/htmlcodeformat"}
+	},
+	"links": [
+		
+	]
+	
+}

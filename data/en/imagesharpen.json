@@ -1,0 +1,22 @@
+{
+	"name":"imageSharpen",
+	"type":"function",
+	"syntax":"imageSharpen(name [, gain])",
+	"returns":"void",
+	"related":[],
+	"description":" Sharpens a ColdFusion image by using the unsharp mask filter.",
+	"params": [ 
+		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"gain","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/imagesharpen"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagesharpen"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagesharpen"}
+	},
+	"links": [
+		
+	]
+	
+}

@@ -1,0 +1,23 @@
+{
+	"name":"xmlElemNew",
+	"type":"function",
+	"syntax":"xmlElemNew(xmlobj [, namespace], childname)",
+	"returns":"Object",
+	"related":[],
+	"description":" Creates an XML document object element",
+	"params": [ 
+		{"name":"xmlobj","description":"The name of an XML object. An XML document or an element.","required":true,"default":"","type":"Object","values":[]},
+		{"name":"namespace","description":"URI of the namespace to which this element belongs.","required":false,"default":"","type":"String","values":[]},
+		{"name":"childname","description":"The name of the element to create. This element becomes a\n child element of xmlObj in the tree.","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/xmlelemnew"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/xmlelemnew"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/xmlelemnew"}
+	},
+	"links": [
+		
+	]
+	
+}

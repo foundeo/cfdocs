@@ -1,0 +1,49 @@
+{
+	"name":"cfmap",
+	"type":"tag",
+	"syntax":"<cfmap>",
+	"returns":"",
+	"related":[],
+	"description":" Embeds a Google map within a ColdFusion web page",
+	"params": [ 
+		{"name":"width","description":"Map width, in pixels.","required":false,"default":"","type":"String","values":[]},
+		{"name":"centerlongitude","description":"The longitude value for the location, in degrees","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"centeraddress","description":"The address of the location, which is set as the center of the map.","required":false,"default":"","type":"String","values":[]},
+		{"name":"continuouszoom","description":"Whether to provide zoom control that enables smooth zooming for the map","required":false,"default":"","type":"Boolean","values":[true,false]},
+		{"name":"type","description":"Type of the Google map","required":false,"default":"","type":"String","values":["map","satellite","hybrid","earth","terrain"]},
+		{"name":"title","description":"Title of the panel","required":false,"default":"","type":"String","values":[]},
+		{"name":"zoomcontrol","description":"Whether to enable zoom control","required":false,"default":"","type":"String","values":["none","small","large","small3D","large3D"]},
+		{"name":"tip","description":"A short description of the center location that appears as a tool tip.","required":false,"default":"","type":"String","values":[true,false]},
+		{"name":"overview","description":"Whether to add an Overview panel to the map","required":false,"default":"","type":"Boolean","values":[true,false]},
+		{"name":"hideborder","description":"Whether to hide border for surrounding panel","required":false,"default":"","type":"Boolean","values":[true,false]},
+		{"name":"doubleclickzoom","description":"Whether to enable double-click zoom","required":false,"default":"","type":"Boolean","values":[true,false]},
+		{"name":"key","description":"The API key of the map.","required":false,"default":"","type":"String","values":[]},
+		{"name":"collapsible","description":"Whether to provide a collapsible property for the surrounding panel","required":false,"default":"","type":"Boolean","values":[true,false]},
+		{"name":"zoomlevel","description":"Specifies the starting zoom value","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"height","description":"Height of the map, in pixels","required":false,"default":"","type":"String","values":[]},
+		{"name":"centerlatitude","description":"The latitude value for the location, in degrees.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"onload","description":"Custom JavaScript function that runs after the map loads..","required":false,"default":"","type":"String","values":[]},
+		{"name":"typecontrol","description":"What type of typecontrol to provide. Basic inclueds \"map, satellite, hybrid\" and Advanced includes \"map, satellite, hybrid, earth, terrain\"","required":false,"default":"","type":"String","values":["none","basic","advanced"]},
+		{"name":"displayscale","description":"Whether to enable scale control","required":false,"default":"","type":"Boolean","values":[true,false]},
+		{"name":"name","description":"Name of the map.","required":false,"default":"","type":"String","values":[]},
+		{"name":"scrollwheelzoom","description":"Whether to enable mouse wheel zooming control","required":false,"default":true,"type":"Boolean","values":[true,false]},
+		{"name":"markerBind","description":"Uses a bind expression to fetch markup to be displayed in the infowindow opened when the marker is clicked. This is mutually exclusive with the markerwindowtext attribute. This is inherited by all cfmapitem tags","required":false,"default":"","type":"String","values":[]},
+		{"name":"showMarkerWindow","description":"When true, the marker infowindow is shown. By default, this is false. This is inherited by all cfmapitem tags.","required":false,"default":true,"type":"Boolean","values":[true,false]},
+		{"name":"markerWindowContent","description":"Static inner html markup to be displayed in the infowindow opened when the marker is clicked. This is mutually exclusive with the markerbind attribute","required":false,"default":"","type":"String","values":[]},
+		{"name":"markerIcon","description":"Location of the icon to use for the marker.","required":false,"default":"","type":"String","values":[]},
+		{"name":"markerColor","description":"marker color in hexadecimal value.","required":false,"default":"","type":"String","values":[]},
+		{"name":"onError","description":"The JavaScript function to run when there is a Google map API error.\nThe JavaScript function is passed with two parameters, Google map status code and error message.","required":false,"default":"","type":"String","values":[]},
+		{"name":"showCenterMarker","description":"Whether to display the marker icon that identifies the map center","required":false,"default":true,"type":"Boolean","values":[true,false]},
+		{"name":"showScale","description":"Whether to show scale control","required":false,"default":true,"type":"Boolean","values":[true,false]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfmap"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmap"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmap"}
+	},
+	"links": [
+		
+	]
+	
+}

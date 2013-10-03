@@ -1,0 +1,21 @@
+{
+	"name":"asc",
+	"type":"function",
+	"syntax":"asc(String)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Determines the value of a character.",
+	"params": [ 
+		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/asc"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/asc"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/asc"}
+	},
+	"links": [
+		
+	]
+	
+}

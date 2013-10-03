@@ -1,0 +1,40 @@
+{
+	"name":"cfreport",
+	"type":"tag",
+	"syntax":"<cfreport>",
+	"returns":"",
+	"related":[],
+	"description":" Used to do either of the following:\n - Execute a report definition created with the ColdFusion\n Report Builder, displaying it in PDF, FlashPaper, or Excel\n format. You can optionally save this report to a file.\n - Run a predefined Crystal Reports report. Applies only to\n Windows systems. Uses the CFCRYSTAL.exe file to generate\n reports. Sets parameters in the Crystal Reports engine\n according to its attribute values.",
+	"params": [ 
+		{"name":"template","description":"Specifies the path to the report definition file,\n relative to the web root.","required":false,"default":"","type":"String","values":[]},
+		{"name":"format","description":"Specifies the output format.","required":false,"default":"","type":"String","values":["PDF","FlashPaper","Excel","RTF","HTML","XML"]},
+		{"name":"name","description":"The name of the ColdFusion variable that will hold\n the report output. You cannot specify both name and\n filename.","required":false,"default":"","type":"String","values":[]},
+		{"name":"filename","description":"The filename to contain the report. You cannot\n specify both name and filename.","required":false,"default":"","type":"String","values":[]},
+		{"name":"query","description":"The name of the query that contains input data for\n the report. If you omit this parameter, the report\n definition obtains data from the internal SQL or from\n cfreportparam items.","required":false,"default":"","type":"String","values":[]},
+		{"name":"overwrite","description":"Specifies whether to overwrite files that have the\n same name as that specified in the filename attribute.\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"encryption","description":"Specifies whether the output is encrypted. PDF format only.\n Default: none","required":false,"default":"none","type":"String","values":["128-bit","40-bit","none"]},
+		{"name":"ownerpassword","description":"Specifies an owner password. PDF format only.","required":false,"default":"","type":"String","values":[]},
+		{"name":"userpassword","description":"Specifies a user password. PDF format only.","required":false,"default":"","type":"String","values":[]},
+		{"name":"permissions","description":"Specifies one or more permissions. PDF format only.\n Separate multiple permissions with a comma.","required":false,"default":"","type":"String","values":["AllowPrinting,AllowCopy,AllowScreenReaders","AllowPrinting","AllowModifyContents","AllowCopy","AllowModifyAnnotations","AllowFillIn","AllowScreenReaders","AllowAssembly","AllowDegradedPrinting","AllowPrinting,AllowModifyContents,AllowCopy,AllowModifyAnnotations,AllowFillIn,AllowScreenReaders,AllowAssembly,AllowDegradedPrinting"]},
+		{"name":"datasource","description":"Name of registered or native data source.","required":false,"default":"","type":"String","values":[]},
+		{"name":"type","description":"* standard (not valid for Crystal Reports 8.0)\n * netscape\n * microsoft","required":false,"default":"standard","type":"String","values":["standard","netscape","microsoft"]},
+		{"name":"timeout","description":"Maximum time, in seconds, in which a connection must be\n made to a Crystal Report.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"report","description":"Report path. Store Crystal Reports files in the same\n directories as CFML page files.","required":false,"default":"","type":"String","values":[]},
+		{"name":"orderby","description":"Orders results according to your specifications.","required":false,"default":"","type":"String","values":[]},
+		{"name":"username","description":"Username required for entry into database from which report\n is created. Overrides default settings for data source in\n CFML Administrator.","required":false,"default":"","type":"String","values":[]},
+		{"name":"password","description":"Password that corresponds to username required for database\n access. Overrides default settings for data source in\n CFML Administrator.","required":false,"default":"","type":"String","values":[]},
+		{"name":"formula","description":"One or more named formulas. Terminate each formula with a\n semicolon. Use the format:\n\n formula = \"formulaname1='formula1';formulaname2='formula2';\"\n\n If you use a semicolon in a formula, you must escape it by\n typing it twice (;;). For example:\n\n formula = \"Name1 = 'Val_1a;;Val_1b';Name2 = 'Val2';\"","required":false,"default":"","type":"String","values":[]},
+		{"name":"resourceTimespan","description":"Life span of the resource directory. Used only with format=HTML","required":false,"default":"","type":"Variablename","values":[]},
+		{"name":"style","description":"Style in CSS format that overrides a style defined in the Report Builder report at run time.","required":false,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfreport"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfreport"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfreport"}
+	},
+	"links": [
+		
+	]
+	
+}

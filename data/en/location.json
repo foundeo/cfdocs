@@ -1,0 +1,23 @@
+{
+	"name":"location",
+	"type":"function",
+	"syntax":"location(url [, addtoken] [, statuscode])",
+	"returns":"void",
+	"related":[],
+	"description":" Stops execution of the current page and opens a CFML page or HTML file.",
+	"params": [ 
+		{"name":"url","description":"URL of HTML file or CFML page to open.","required":true,"default":"","type":"String","values":[]},
+		{"name":"addtoken","description":"clientManagement must be enabled (see cfapplication).","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"statuscode","description":"The HTTP status code","required":false,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/location"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/location"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/location"}
+	},
+	"links": [
+		
+	]
+	
+}

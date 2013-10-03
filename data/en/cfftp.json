@@ -1,0 +1,49 @@
+{
+	"name":"cfftp",
+	"type":"tag",
+	"syntax":"<cfftp action=\"open\">",
+	"returns":"",
+	"related":[],
+	"description":" Lets users implement File Transfer Protocol (FTP) operations.",
+	"params": [ 
+		{"name":"action","description":"FTP operation to perform.\n open: create an FTP connection\n close: terminate an FTP connection","required":true,"default":"","type":"String","values":["open","close","changedir","createdir","listdir","removedir","getfile","putfile","rename","remove","getcurrentdir","getcurrenturl","existsdir","existsfile","exists","quote","site","allo","acct"]},
+		{"name":"username","description":"Overrides username specified in ODBC setup.","required":false,"default":"","type":"String","values":[]},
+		{"name":"password","description":"Overrides password specified in ODBC setup.","required":false,"default":"","type":"String","values":[]},
+		{"name":"server","description":"FTP server to which to connect; for example,\n ftp.myserver.com","required":false,"default":"","type":"String","values":[]},
+		{"name":"timeout","description":"Value in seconds for the timeout of all operations,\n including individual data request operations.","required":false,"default":30,"type":"Numeric","values":[]},
+		{"name":"port","description":"Remote port to which to connect","required":false,"default":21,"type":"Numeric","values":[]},
+		{"name":"connection","description":"Name of the FTP connection. If you specify the username,\n password, and server attributes, and if no connection\n exists for them, CFML creates one. Calls to cfftp\n with the same connection name reuse the connection.","required":false,"default":"","type":"variableName","values":[]},
+		{"name":"proxyserver","description":"The proxy server required to access the URL.","required":false,"default":"","type":"String","values":[]},
+		{"name":"retrycount","description":"Number of retries until failure is reported.","required":false,"default":1,"type":"Numeric","values":[]},
+		{"name":"stoponerror","description":"Yes: halts processing, displays an appropriate error.\n No: populates the error variables","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"passive","description":"Yes: enable passive mode","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"transfermode","description":"ASCII FTP transfer mode\n Binary FTP transfer mode\n Auto FTP transfer mode","required":false,"default":"auto","type":"String","values":["auto","ascii","binary"]},
+		{"name":"failifexists","description":"Yes: if a local file with same name exists, getFile fails","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"directory","description":"Directory on which to perform an operation","required":false,"default":"","type":"String","values":[]},
+		{"name":"localfile","description":"Name of the file on the local file system","required":false,"default":"","type":"String","values":[]},
+		{"name":"remotefile","description":"Name of the file on the FTP server file system.","required":false,"default":"","type":"String","values":[]},
+		{"name":"item","description":"Object of these actions: file or directory.","required":false,"default":"","type":"String","values":[]},
+		{"name":"existing","description":"Current name of the file or directory on the remote server.","required":false,"default":"","type":"String","values":[]},
+		{"name":"new","description":"New name of file or directory on the remote server","required":false,"default":"","type":"String","values":[]},
+		{"name":"name","description":"Query name of directory listing.","required":false,"default":"","type":"String","values":[]},
+		{"name":"result","description":"Specifies a name for the structure in which cfftp\n stores the returnValue variable. If set, this value\n replaces cfftp as the prefix to use when accessing\n returnVariable.","required":false,"default":"","type":"String","values":[]},
+		{"name":"attributes","description":"Attributes of the current element: normal or Directory.","required":false,"default":"","type":"String","values":[]},
+		{"name":"passphrase","description":"Used when key is specified. Because private keys are stored in an encrypted form on the client host, the user must supply a passphrase to enable generating the signature.","required":false,"default":"","type":"String","values":[]},
+		{"name":"buffersize","description":"Buffer size in bytes.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"secure","description":"* yes: enables secure FTP\n * no","required":false,"default":false,"type":"String","values":[true,false]},
+		{"name":"asciiextensionlist","description":"Delimited list of file extensions that force ASCII\n transfer mode, if transferMode = \"auto\".","required":false,"default":"","type":"String","values":[]},
+		{"name":"key","description":"Public-key-based authentication. Refers to the absolute path to the private key of the user. \nPossession of a private key provides authentication by sending a signature created with a private key. \nThe server must ensure that the key is a valid authentication for the user and that the signature is valid. \nBoth must be valid to accept the authentication.","required":false,"default":"","type":"String","values":[]},
+		{"name":"actionparam","description":"Used only when action is quote, site, or acct. Specifies the command when action is quote or site; specifies account information when action is acct.","required":false,"default":"","type":"String","values":[]},
+		{"name":"fingerprint","description":"Fingerprint of the host key in the form ssh-dss.ssh-rsa, which is a 16-byte unique identifier for the server attribute that you specify.","required":false,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfftp"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfftp"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfftp"}
+	},
+	"links": [
+		
+	]
+	
+}

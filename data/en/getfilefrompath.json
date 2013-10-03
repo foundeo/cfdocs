@@ -1,0 +1,21 @@
+{
+	"name":"getFileFromPath",
+	"type":"function",
+	"syntax":"getFileFromPath(path)",
+	"returns":"String",
+	"related":[],
+	"description":" Extracts a filename from an absolute path.",
+	"params": [ 
+		{"name":"path","description":"","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/getfilefrompath"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getfilefrompath"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getfilefrompath"}
+	},
+	"links": [
+		
+	]
+	
+}

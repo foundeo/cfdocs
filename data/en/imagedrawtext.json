@@ -1,0 +1,25 @@
+{
+	"name":"imageDrawText",
+	"type":"function",
+	"syntax":"imageDrawText(name, str, x, y, attributecollection)",
+	"returns":"void",
+	"related":[],
+	"description":" Draws a text string on a ColdFusion image with the baseline of the first character positioned at (x,y) in the image.",
+	"params": [ 
+		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"str","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"x","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"y","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"attributecollection","description":"No Help Available","required":true,"default":"","type":"Struct","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/imagedrawtext"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagedrawtext"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagedrawtext"}
+	},
+	"links": [
+		
+	]
+	
+}

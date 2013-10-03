@@ -1,0 +1,23 @@
+{
+	"name":"structFindValue",
+	"type":"function",
+	"syntax":"structFindValue(top, value [, scope])",
+	"returns":"Array",
+	"related":[],
+	"description":" Searches recursively through a substructure of nested arrays,\n structures, and other elements for structures with values that\n match the search key in the value parameter.",
+	"params": [ 
+		{"name":"top","description":"CFML object (a structure or an array) from which to\n start search. This attribute requires an object, not a\n name of an object.","required":true,"default":"","type":"Object","values":[]},
+		{"name":"value","description":"String or a variable that contains one for which to search.\n The type must be a simple object. Arrays and structures\n are not supported.","required":true,"default":"","type":"String","values":[]},
+		{"name":"scope","description":"one: function returns one matching key (default)\n all: function returns all matching keys","required":false,"default":"","type":"String","values":["one","all"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/structfindvalue"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structfindvalue"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structfindvalue"}
+	},
+	"links": [
+		
+	]
+	
+}

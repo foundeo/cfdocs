@@ -1,0 +1,25 @@
+{
+	"name":"imageScaleTofit",
+	"type":"function",
+	"syntax":"imageScaleTofit(name, fitWidth, fitHeight [, interpolation] [, blurFactor])",
+	"returns":"void",
+	"related":[],
+	"description":" Creates a resized image with the aspect ratio maintained.",
+	"params": [ 
+		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"fitWidth","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"fitHeight","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"interpolation","description":"No Help Available","required":false,"default":"","type":"String","values":[]},
+		{"name":"blurFactor","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/imagescaletofit"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagescaletofit"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagescaletofit"}
+	},
+	"links": [
+		
+	]
+	
+}

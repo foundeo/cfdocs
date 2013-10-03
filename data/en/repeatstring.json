@@ -1,0 +1,22 @@
+{
+	"name":"repeatString",
+	"type":"function",
+	"syntax":"repeatString(String, count)",
+	"returns":"String",
+	"related":[],
+	"description":" Creates a string that contains a specified number of\n repetitions of the specified string.",
+	"params": [ 
+		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
+		{"name":"count","description":"","required":true,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/repeatstring"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/repeatstring"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/repeatstring"}
+	},
+	"links": [
+		
+	]
+	
+}

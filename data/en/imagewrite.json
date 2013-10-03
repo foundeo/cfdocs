@@ -1,0 +1,24 @@
+{
+	"name":"imageWrite",
+	"type":"function",
+	"syntax":"imageWrite(name [, destination] [, quality] [, overwrite])",
+	"returns":"void",
+	"related":[],
+	"description":" Writes a ColdFusion image to the specified filename or destination.",
+	"params": [ 
+		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"destination","description":"No Help Available","required":false,"default":"","type":"String","values":[]},
+		{"name":"quality","description":"No Help Available","required":false,"default":"","type":"String","values":[]},
+		{"name":"overwrite","description":"No Help Available","required":false,"default":true,"type":"boolean","values":[false,true]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/imagewrite"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagewrite"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagewrite"}
+	},
+	"links": [
+		
+	]
+	
+}

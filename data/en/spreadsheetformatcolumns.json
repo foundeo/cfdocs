@@ -1,0 +1,23 @@
+{
+	"name":"spreadsheetFormatColumns",
+	"type":"function",
+	"syntax":"spreadsheetFormatColumns(spreadsheetObj, format, columns)",
+	"returns":"void",
+	"related":[],
+	"description":" Formats the contents of a multipe columns of an Excel spreadsheet object.",
+	"params": [ 
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
+		{"name":"format","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"columns","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetformatcolumns"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetformatcolumns"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetformatcolumns"}
+	},
+	"links": [
+		
+	]
+	
+}

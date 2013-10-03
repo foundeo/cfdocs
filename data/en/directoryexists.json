@@ -1,0 +1,21 @@
+{
+	"name":"directoryExists",
+	"type":"function",
+	"syntax":"directoryExists(absolute_path)",
+	"returns":"boolean",
+	"related":[],
+	"description":" Determines whether a directory exists.",
+	"params": [ 
+		{"name":"absolute_path","description":"","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/directoryexists"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/directoryexists"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/directoryexists"}
+	},
+	"links": [
+		
+	]
+	
+}

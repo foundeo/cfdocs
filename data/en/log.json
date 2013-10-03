@@ -1,0 +1,21 @@
+{
+	"name":"log",
+	"type":"function",
+	"syntax":"log(number)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Calculates the natural logarithm of a number. Natural\n logarithms are based on the constant e (2.71828182845904).",
+	"params": [ 
+		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/log"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/log"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/log"}
+	},
+	"links": [
+		
+	]
+	
+}

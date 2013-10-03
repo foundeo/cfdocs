@@ -1,0 +1,21 @@
+{
+	"name":"isXMLNode",
+	"type":"function",
+	"syntax":"isXMLNode(value)",
+	"returns":"boolean",
+	"related":[],
+	"description":" Determines whether the function parameter is\n an XML document object node.",
+	"params": [ 
+		{"name":"value","description":"Name of an XML document object node.","required":true,"default":"","type":"Object","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/isxmlnode"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isxmlnode"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isxmlnode"}
+	},
+	"links": [
+		
+	]
+	
+}

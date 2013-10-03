@@ -1,0 +1,21 @@
+{
+	"name":"fileDelete",
+	"type":"function",
+	"syntax":"fileDelete(file)",
+	"returns":"void",
+	"related":[],
+	"description":" No Help Available",
+	"params": [ 
+		{"name":"file","description":"No Help Available","required":true,"default":"","type":"","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/filedelete"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filedelete"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filedelete"}
+	},
+	"links": [
+		
+	]
+	
+}

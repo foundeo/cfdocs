@@ -1,0 +1,23 @@
+{
+	"name":"createTime",
+	"type":"function",
+	"syntax":"createTime(hour, minute, second)",
+	"returns":"DateTime",
+	"related":[],
+	"description":" Creates a time variable.",
+	"params": [ 
+		{"name":"hour","description":"","required":true,"default":"","type":"Numeric","values":["hour(now())"]},
+		{"name":"minute","description":"","required":true,"default":"","type":"Numeric","values":["minute(now())"]},
+		{"name":"second","description":"","required":true,"default":"","type":"Numeric","values":["second(now())"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/createtime"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createtime"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createtime"}
+	},
+	"links": [
+		
+	]
+	
+}

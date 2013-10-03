@@ -1,0 +1,24 @@
+{
+	"name":"bitMaskSet",
+	"type":"function",
+	"syntax":"bitMaskSet(number, mask, start, length)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Performs a bitwise mask set operation.",
+	"params": [ 
+		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"mask","description":"","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"start","description":"","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"length","description":"","required":true,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/bitmaskset"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/bitmaskset"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/bitmaskset"}
+	},
+	"links": [
+		
+	]
+	
+}

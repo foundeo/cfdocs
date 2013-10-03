@@ -1,0 +1,23 @@
+{
+	"name":"cfinvokeargument",
+	"type":"tag",
+	"syntax":"<cfinvokeargument name=\"\" value=\"\">",
+	"returns":"",
+	"related":[],
+	"description":" Passes the name and value of a parameter to a component method\n or a web service. This tag is used within the cfinvoke tag.",
+	"params": [ 
+		{"name":"name","description":"Argument name","required":true,"default":"","type":"String","values":[]},
+		{"name":"value","description":"Argument value","required":true,"default":"","type":"String","values":[]},
+		{"name":"omit","description":"Enables you to omit a parameter when invoking a web service.\n It is an error to specify omit=\"true\" if the cfinvoke\n webservice attribute is not specified.\n - true: omit this parameter when invoking a web service.\n - false: do not omit this parameter when invoking a web service.","required":false,"default":false,"type":"boolean","values":[true,false]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfinvokeargument"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfinvokeargument"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfinvokeargument"}
+	},
+	"links": [
+		
+	]
+	
+}

@@ -1,0 +1,19 @@
+{
+	"name":"applicationStop",
+	"type":"function",
+	"syntax":"applicationStop()",
+	"returns":"void",
+	"related":[],
+	"description":" stops current application",
+	"params": [ 
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/applicationstop"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/applicationstop"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/applicationstop"}
+	},
+	"links": [
+		
+	]
+	
+}

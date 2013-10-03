@@ -1,0 +1,25 @@
+{
+	"name":"isValid",
+	"type":"function",
+	"syntax":"isValid(type, value, min, max, pattern)",
+	"returns":"boolean",
+	"related":[],
+	"description":" Tests whether a value meets a validation or data type rule.",
+	"params": [ 
+		{"name":"type","description":"The valid format for the data.","required":true,"default":"","type":"String","values":["Any","Array","Binary","boolean","creditcard","date","time","email","eurodate","float","Numeric","guid","integer","Query","range","Regex","regular_expression","ssn","social_security_number","String","Struct","telephone","URL","UUID","usdate","variablename","xml","zipcode"]},
+		{"name":"value","description":"The value to test.","required":true,"default":"","type":"Object","values":[]},
+		{"name":"min","description":"The minimum valid value; used only for range validation.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"max","description":"The maximum valid value; used only for range validation.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"pattern","description":"A regular expression that the parameter must match;\n used only for regex or regular_expression validation.","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/isvalid"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isvalid"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isvalid"}
+	},
+	"links": [
+		
+	]
+	
+}

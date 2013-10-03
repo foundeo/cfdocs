@@ -1,0 +1,28 @@
+{
+	"name":"cftable",
+	"type":"tag",
+	"syntax":"<cftable query=\"\">",
+	"returns":"",
+	"related":[],
+	"description":" Builds a table in a CFML page. This tag renders data as\n preformatted text, or, with the HTMLTable attribute, in an\n HTML table. If you do not want to write HTML table tag code, or\n if your data can be presented as preformatted text, use this\n tag.\n\n Preformatted text (defined in HTML with the <pre> and </pre>\n tags) displays text in a fixed-width font. It displays white\n space and line breaks exactly as they are written within the\n pre tags. For more information, see an HTML reference guide.\n\n To define table column and row characteristics, use the cfcol\n tag within this tag.",
+	"params": [ 
+		{"name":"query","description":"Name of cfquery from which to draw data.","required":true,"default":"","type":"query","values":[]},
+		{"name":"maxrows","description":"Maximum number of rows to display in the table.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"colSpacing","description":"Number of spaces between columns","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"headerLines","description":"Number of lines to use for table header (the default leaves\n one line between header and first row of table).","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"htmltable","description":"Renders data in an HTML 3.0 table.\n\n If you use this attribute (regardless of its value),\n CFML renders data in an HTML table.","required":false,"default":"","type":"Any","values":[]},
+		{"name":"border","description":"Displays border around table.\n\n If you use this attribute (regardless of its value),\n CFML displays a border around the table.\n\n Use this only if you use the HTMLTable attribute.","required":false,"default":"","type":"Any","values":[]},
+		{"name":"colheaders","description":"Displays column heads. If you use this attribute, you must\n also use the cfcol tag header attribute to define them.\n\n If you use this attribute (regardless of its value),\n CFML displays column heads.","required":false,"default":"","type":"Any","values":[]},
+		{"name":"startrow","description":"The query result row to put in the first table row.","required":false,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cftable"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cftable"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cftable"}
+	},
+	"links": [
+		
+	]
+	
+}

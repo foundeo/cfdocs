@@ -1,0 +1,19 @@
+{
+	"name":"cfsilent",
+	"type":"tag",
+	"syntax":"<cfsilent>",
+	"returns":"",
+	"related":[],
+	"description":" Suppresses output produced by CFML within a tag\'s scope.",
+	"params": [ 
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfsilent"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfsilent"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfsilent"}
+	},
+	"links": [
+		
+	]
+	
+}

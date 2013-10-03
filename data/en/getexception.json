@@ -1,0 +1,21 @@
+{
+	"name":"getException",
+	"type":"function",
+	"syntax":"getException(javaobject)",
+	"returns":"Object",
+	"related":[],
+	"description":" Used with the cftry and cfcatch tags. Retrieves a Java\n exception object from a Java object.",
+	"params": [ 
+		{"name":"javaobject","description":"","required":true,"default":"","type":"Object","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/getexception"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getexception"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getexception"}
+	},
+	"links": [
+		
+	]
+	
+}

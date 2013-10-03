@@ -1,0 +1,21 @@
+{
+	"name":"lTrim",
+	"type":"function",
+	"syntax":"lTrim(String)",
+	"returns":"String",
+	"related":[],
+	"description":" Removes leading spaces from a string.",
+	"params": [ 
+		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/ltrim"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ltrim"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ltrim"}
+	},
+	"links": [
+		
+	]
+	
+}

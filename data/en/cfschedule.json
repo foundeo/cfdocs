@@ -1,0 +1,41 @@
+{
+	"name":"cfschedule",
+	"type":"tag",
+	"syntax":"<cfschedule action=\"delete\" task=\"\">",
+	"returns":"",
+	"related":[],
+	"description":" Provides a programmatic interface to the CFML scheduling\n engine. Can run a CFML page at scheduled intervals, with the\n option to write the page output to a static HTML page. This\n feature enables you to schedule pages that publish data, such\n as reports, without waiting while a database transaction is\n performed to populate the page.",
+	"params": [ 
+		{"name":"action","description":"delete: deletes the specified task\n update: updates an existing task or creates a new task,\n if one with the name specified by the task attribute\n does not exist\n run: executes the specified task","required":true,"default":"","type":"String","values":["delete","update","run","pause","resume"]},
+		{"name":"task","description":"Name of the task.","required":true,"default":"","type":"String","values":[]},
+		{"name":"operation","description":"Operation that the scheduler performs. Must be HTTPRequest.","required":false,"default":"","type":"String","values":[]},
+		{"name":"file","description":"Name of the file in which to store the published output of\n the scheuled task","required":false,"default":"","type":"String","values":[]},
+		{"name":"path","description":"Path to the directory in which to put the published file.","required":false,"default":"","type":"String","values":[]},
+		{"name":"startdate","description":"Date on which to first run the scheuled task.","required":false,"default":"","type":"String","values":[]},
+		{"name":"starttime","description":"Time at which to run the scheduled of task starts.","required":false,"default":"","type":"String","values":[]},
+		{"name":"URL","description":"URL of the page to execute.","required":false,"default":"","type":"URL","values":[]},
+		{"name":"port","description":"Port to use on the server that is specified by the url\n parameter. If resolveURL = \"yes\", retrieved document URLs\n that specify a port number are automatically resolved, to\n preserve links in the retrieved document. A port value in\n the url attribute overrides this value.","required":false,"default":80,"type":"Numeric","values":[]},
+		{"name":"publish","description":"Yes: save the result to a file\n No: does not","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"endDate","description":"Date when scheduled task ends.","required":false,"default":"","type":"String","values":[]},
+		{"name":"endTime","description":"Time when scheduled task ends (seconds).","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"interval","description":"Interval at which task is scheduled.\n * number of seconds (minimum is 60)\n * once\n * daily\n * weekly\n * monthly","required":false,"default":"","type":"String","values":["once","daily","weekly","monthly"]},
+		{"name":"requesttimeout","description":"Can be used to extend the default timeout period.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"username","description":"Username, if URL is protected.","required":false,"default":"","type":"String","values":[]},
+		{"name":"password","description":"Password, if URL is protected.","required":false,"default":"","type":"String","values":[]},
+		{"name":"proxyserver","description":"Host name or IP address of a proxy server.","required":false,"default":"","type":"String","values":[]},
+		{"name":"proxyport","description":"Port number to use on the proxy server.","required":false,"default":80,"type":"Numeric","values":[]},
+		{"name":"proxyuser","description":"User name to provide to the proxy server.","required":false,"default":"","type":"String","values":[]},
+		{"name":"proxypassword","description":"Password to provide to the proxy server.","required":false,"default":"","type":"String","values":[]},
+		{"name":"resolveurl","description":"Yes: resolve links in the output page to absolute\n references\n No: does not","required":false,"default":false,"type":"boolean","values":[true,false]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfschedule"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfschedule"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfschedule"}
+	},
+	"links": [
+		
+	]
+	
+}

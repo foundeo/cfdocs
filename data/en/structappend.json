@@ -1,0 +1,23 @@
+{
+	"name":"structAppend",
+	"type":"function",
+	"syntax":"structAppend(struct1, struct2 [, overwriteFlag])",
+	"returns":"boolean",
+	"related":[],
+	"description":" Appends one structure to another.\n CFML MX: Changed behavior: this function can be used on\n XML objects.",
+	"params": [ 
+		{"name":"struct1","description":"Structure to append.","required":true,"default":"","type":"Struct","values":[]},
+		{"name":"struct2","description":"Structure that contains the data to append to struct1","required":true,"default":"","type":"Struct","values":[]},
+		{"name":"overwriteFlag","description":"Yes: values in struct2 overwrite corresponding values in\n struct1. Default.","required":false,"default":true,"type":"boolean","values":[true,false]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/structappend"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structappend"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structappend"}
+	},
+	"links": [
+		
+	]
+	
+}

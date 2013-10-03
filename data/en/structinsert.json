@@ -1,0 +1,24 @@
+{
+	"name":"structInsert",
+	"type":"function",
+	"syntax":"structInsert(structure, key, value [, allowoverwrite])",
+	"returns":"boolean",
+	"related":[],
+	"description":" Inserts a key-value pair into a structure.",
+	"params": [ 
+		{"name":"structure","description":"Structure to contain the new key-value pair.","required":true,"default":"","type":"Struct","values":[]},
+		{"name":"key","description":"Key that contains the inserted value.","required":true,"default":"","type":"String","values":[]},
+		{"name":"value","description":"Value to add.","required":true,"default":"","type":"Object","values":[]},
+		{"name":"allowoverwrite","description":"Whether to allow overwriting a key. Default: False.","required":false,"default":false,"type":"boolean","values":[true,false]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/structinsert"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structinsert"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structinsert"}
+	},
+	"links": [
+		
+	]
+	
+}

@@ -1,0 +1,22 @@
+{
+	"name":"binaryEncode",
+	"type":"function",
+	"syntax":"binaryEncode(binarydata, encoding)",
+	"returns":"String",
+	"related":[],
+	"description":" Converts binary data to a string.",
+	"params": [ 
+		{"name":"binarydata","description":"A string containing encoded binary data.","required":true,"default":"","type":"Binary","values":[]},
+		{"name":"encoding","description":"A string specifying the encoding method to use to represent\n the data; one of the following:\n - hex: use characters 0-9 and A-F represent the hexadecimal value\n of each byte; for example, 3A.\n - UU: use the UNIX UUencode algorithm to convert the data.\n - base64: use the Base64 algorithm to convert the data.","required":true,"default":"","type":"String","values":["hex","uu","base64"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/binaryencode"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/binaryencode"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/binaryencode"}
+	},
+	"links": [
+		
+	]
+	
+}

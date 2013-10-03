@@ -1,0 +1,25 @@
+{
+	"name":"imageWriteBase64",
+	"type":"function",
+	"syntax":"imageWriteBase64(name, destination, format [, inHTMLFormat] [, overwrite])",
+	"returns":"void",
+	"related":[],
+	"description":" Writes Base64 images to the specified filename and destination.",
+	"params": [ 
+		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"destination","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"format","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"inHTMLFormat","description":"No Help Available","required":false,"default":false,"type":"boolean","values":[false,true]},
+		{"name":"overwrite","description":"No Help Available","required":false,"default":true,"type":"boolean","values":[false,true]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/imagewritebase64"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagewritebase64"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagewritebase64"}
+	},
+	"links": [
+		
+	]
+	
+}

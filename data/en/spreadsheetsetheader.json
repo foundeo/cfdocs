@@ -1,0 +1,24 @@
+{
+	"name":"spreadsheetSetHeader",
+	"type":"function",
+	"syntax":"spreadsheetSetHeader(spreadsheetObj, leftHeader, centerHeader, rightHeader)",
+	"returns":"void",
+	"related":[],
+	"description":" Adds a header to the specified worksheet.",
+	"params": [ 
+		{"name":"spreadsheetObj","description":"The Excel spreadsheet object to which to add the header.","required":true,"default":"","type":"Variablename","values":[]},
+		{"name":"leftHeader","description":"Adds the header in the left side of the worksheet.","required":true,"default":"","type":"String","values":[]},
+		{"name":"centerHeader","description":"Adds the header in the center of the worksheet.","required":true,"default":"","type":"String","values":[]},
+		{"name":"rightHeader","description":"Adds the header in the right side of the worksheet.","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetsetheader"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetsetheader"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetsetheader"}
+	},
+	"links": [
+		
+	]
+	
+}

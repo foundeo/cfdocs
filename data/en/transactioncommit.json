@@ -1,0 +1,19 @@
+{
+	"name":"transactionCommit",
+	"type":"function",
+	"syntax":"transactionCommit()",
+	"returns":"void",
+	"related":[],
+	"description":" No Help Available",
+	"params": [ 
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/transactioncommit"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/transactioncommit"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/transactioncommit"}
+	},
+	"links": [
+		
+	]
+	
+}

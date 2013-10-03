@@ -1,0 +1,19 @@
+{
+	"name":"getTemplatePath",
+	"type":"function",
+	"syntax":"getTemplatePath()",
+	"returns":"String",
+	"related":[],
+	"description":" This function is deprecated.\n \n Use the GetBaseTemplatePath function instead.",
+	"params": [ 
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/gettemplatepath"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/gettemplatepath"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/gettemplatepath"}
+	},
+	"links": [
+		
+	]
+	
+}

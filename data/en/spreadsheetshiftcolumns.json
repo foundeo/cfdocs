@@ -1,0 +1,24 @@
+{
+	"name":"spreadsheetShiftColumns",
+	"type":"function",
+	"syntax":"spreadsheetShiftColumns(spreadsheetObj, start [, end] [, start])",
+	"returns":"void",
+	"related":[],
+	"description":" shifts one or more columns in Excel spreadsheet object left or right.",
+	"params": [ 
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
+		{"name":"start","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"end","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"start","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetshiftcolumns"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetshiftcolumns"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetshiftcolumns"}
+	},
+	"links": [
+		
+	]
+	
+}

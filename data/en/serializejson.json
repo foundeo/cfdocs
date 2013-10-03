@@ -1,0 +1,22 @@
+{
+	"name":"serializeJSON",
+	"type":"function",
+	"syntax":"serializeJSON(var [, serializeQueryByColumns])",
+	"returns":"String",
+	"related":[],
+	"description":" Converts ColdFusion data into a JSON (JavaScript Object Notation) representation of the data.",
+	"params": [ 
+		{"name":"var","description":"A ColdFusion data value or variable that represents one.","required":true,"default":"","type":"Variablename","values":[]},
+		{"name":"serializeQueryByColumns","description":"A Boolean value that specifies how to serialize ColdFusion queries.","required":false,"default":"","type":"boolean","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/serializejson"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/serializejson"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/serializejson"}
+	},
+	"links": [
+		
+	]
+	
+}

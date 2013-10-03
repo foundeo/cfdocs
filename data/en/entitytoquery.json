@@ -1,0 +1,22 @@
+{
+	"name":"entityToQuery",
+	"type":"function",
+	"syntax":"entityToQuery(orm_object [, entity_name])",
+	"returns":"query",
+	"related":[],
+	"description":" Converts the input entity object or the input array of entity objects to a query object.\nEntitytoQuery (orm_object, [entity_name]) \nEntitytoQuery (orm_object_array, [entity_name])",
+	"params": [ 
+		{"name":"orm_object","description":"Entity object that needs to be converted to a query object.","required":true,"default":"","type":"Variablename","values":[]},
+		{"name":"entity_name","description":"Name of the entity. Use this optional parameter to return the query of the given entity in the case of inheritance mapping.","required":false,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/entitytoquery"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entitytoquery"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/entitytoquery"}
+	},
+	"links": [
+		
+	]
+	
+}

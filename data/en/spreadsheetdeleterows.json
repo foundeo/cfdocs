@@ -1,0 +1,22 @@
+{
+	"name":"spreadsheetDeleteRows",
+	"type":"function",
+	"syntax":"spreadsheetDeleteRows(spreadsheetObj, range)",
+	"returns":"void",
+	"related":[],
+	"description":" Deletes all data from multiple rows of an Excel spreadsheet object. It does not delete the row.",
+	"params": [ 
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
+		{"name":"range","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetdeleterows"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetdeleterows"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetdeleterows"}
+	},
+	"links": [
+		
+	]
+	
+}

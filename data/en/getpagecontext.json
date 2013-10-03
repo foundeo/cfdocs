@@ -1,0 +1,19 @@
+{
+	"name":"getPageContext",
+	"type":"function",
+	"syntax":"getPageContext()",
+	"returns":"Object",
+	"related":[],
+	"description":" Gets the current CFML MX PageContext object that\n provides access to page attributes and configuration, request\n and response objects.",
+	"params": [ 
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/getpagecontext"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getpagecontext"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getpagecontext"}
+	},
+	"links": [
+		
+	]
+	
+}

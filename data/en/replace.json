@@ -1,0 +1,24 @@
+{
+	"name":"replace",
+	"type":"function",
+	"syntax":"replace(String, substring1, substring2 [, scope])",
+	"returns":"String",
+	"related":[],
+	"description":" Replaces occurrences of substring1 in a string with substring2,\n in a specified scope. The search is case-sensitive.",
+	"params": [ 
+		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
+		{"name":"substring1","description":"","required":true,"default":"","type":"String","values":[]},
+		{"name":"substring2","description":"","required":true,"default":"","type":"String","values":[]},
+		{"name":"scope","description":"* one: replace the first occurrence (default)\n * all: replace all occurrences","required":false,"default":"","type":"String","values":["one","all"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/replace"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/replace"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/replace"}
+	},
+	"links": [
+		
+	]
+	
+}

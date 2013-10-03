@@ -1,0 +1,21 @@
+{
+	"name":"objectload",
+	"type":"function",
+	"syntax":"objectload(binaryObject)",
+	"returns":"",
+	"related":[],
+	"description":" Load object from binary obj",
+	"params": [ 
+		{"name":"binaryObject","description":"No Help Available","required":true,"default":"","type":"","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/objectload"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/objectload"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/objectload"}
+	},
+	"links": [
+		
+	]
+	
+}

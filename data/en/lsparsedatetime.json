@@ -1,0 +1,21 @@
+{
+	"name":"lsParseDateTime",
+	"type":"function",
+	"syntax":"lsParseDateTime(dt_string)",
+	"returns":"DateTime",
+	"related":[],
+	"description":" Converts a string that is a valid date/time representation in\n the current locale into a date/time object.",
+	"params": [ 
+		{"name":"dt_string","description":"","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/lsparsedatetime"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsparsedatetime"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsparsedatetime"}
+	},
+	"links": [
+		
+	]
+	
+}

@@ -1,0 +1,19 @@
+{
+	"name":"isUserLoggedIn",
+	"type":"function",
+	"syntax":"isUserLoggedIn()",
+	"returns":"boolean",
+	"related":[],
+	"description":" Determines whether a user is logged in.",
+	"params": [ 
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/isuserloggedin"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isuserloggedin"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isuserloggedin"}
+	},
+	"links": [
+		
+	]
+	
+}

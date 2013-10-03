@@ -1,0 +1,26 @@
+{
+	"name":"spreadSheetAddSplitPane",
+	"type":"function",
+	"syntax":"spreadSheetAddSplitPane(spreadsheetObj, x, y, splitColumn, splitRow [, position])",
+	"returns":"void",
+	"related":[],
+	"description":" Adds split pane to spreadsheet.",
+	"params": [ 
+		{"name":"spreadsheetObj","description":"Spreadsheet variable","required":true,"default":"","type":"Variablename","values":[]},
+		{"name":"x","description":"X position for split","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"y","description":"Y position for split","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"splitColumn","description":"Split Column","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"splitRow","description":"Split Row","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"position","description":"Specify which pane has the focus","required":false,"default":"","type":"String","values":["LOWER_LEFT","LOWER_RIGHT","UPPER_LEFT","UPPER_RIGHT"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetaddsplitpane"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetaddsplitpane"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetaddsplitpane"}
+	},
+	"links": [
+		
+	]
+	
+}

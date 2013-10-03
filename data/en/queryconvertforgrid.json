@@ -1,0 +1,23 @@
+{
+	"name":"queryConvertForGrid",
+	"type":"function",
+	"syntax":"queryConvertForGrid(query, page, pageSize)",
+	"returns":"Struct",
+	"related":[],
+	"description":" Converts query data to a structure that contains a paged subset of the query.",
+	"params": [ 
+		{"name":"query","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"page","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"pageSize","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/queryconvertforgrid"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/queryconvertforgrid"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/queryconvertforgrid"}
+	},
+	"links": [
+		
+	]
+	
+}

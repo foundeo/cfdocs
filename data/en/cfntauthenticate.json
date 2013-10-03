@@ -1,0 +1,26 @@
+{
+	"name":"cfntauthenticate",
+	"type":"tag",
+	"syntax":"<cfntauthenticate username=\"\" password=\"\" domain=\"\">",
+	"returns":"",
+	"related":[],
+	"description":" Authenticates a user name and password against the\n NT domain on which ColdFusion server is running,\n and optionally retrieves the user\'s groups.",
+	"params": [ 
+		{"name":"username","description":"User's login name.","required":true,"default":"","type":"String","values":[]},
+		{"name":"password","description":"User's login name.","required":true,"default":"","type":"String","values":[]},
+		{"name":"domain","description":"Domain against which to authenticate the user. The\n ColdFusion J2EE server must be running on this domain.","required":true,"default":"","type":"String","values":[]},
+		{"name":"result","description":"Name of the variable in which to return the results.\n Default: cfntauthenticate","required":false,"default":"cfntauthenticate","type":"variableName","values":[]},
+		{"name":"listgroups","description":"Boolean value specifying whether to Include a\n comma-delimited list of the user's groups in the\n result structure.\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"throwonerror","description":"Boolean value specifying whether to throw an\n exception if the validation fails. If this attribute is true,\n ColdFusion throws an error if the user name or password is\n invalid; the application must handle such errors in a\n try\/catch block or ColdFusion error handler page.\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfntauthenticate"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfntauthenticate"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfntauthenticate"}
+	},
+	"links": [
+		
+	]
+	
+}

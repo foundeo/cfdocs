@@ -1,0 +1,19 @@
+{
+	"name":"cffinally",
+	"type":"tag",
+	"syntax":"<cffinally>",
+	"returns":"",
+	"related":[],
+	"description":" Used inside a cftry tag. Code in the cffinally block is processed after the main cftry code and, if an exception\noccurs, the cfcatch code. The cffinally block code always executes, whether or not there is an exception.",
+	"params": [ 
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cffinally"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cffinally"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cffinally"}
+	},
+	"links": [
+		
+	]
+	
+}

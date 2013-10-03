@@ -1,0 +1,22 @@
+{
+	"name":"arrayDelete",
+	"type":"function",
+	"syntax":"arrayDelete(array, object)",
+	"returns":"boolean",
+	"related":[],
+	"description":" Deletes specified object from given array",
+	"params": [ 
+		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
+		{"name":"object","description":"","required":true,"default":"","type":"Any","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/arraydelete"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arraydelete"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraydelete"}
+	},
+	"links": [
+		
+	]
+	
+}

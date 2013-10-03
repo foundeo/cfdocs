@@ -1,0 +1,21 @@
+{
+	"name":"cos",
+	"type":"function",
+	"syntax":"cos(number)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Calculates the cosine of an angle that is entered\n in radians.\n A number; the cosine of the angle.",
+	"params": [ 
+		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cos"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cos"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cos"}
+	},
+	"links": [
+		
+	]
+	
+}

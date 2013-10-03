@@ -1,0 +1,48 @@
+{
+	"name":"cfgridcolumn",
+	"type":"tag",
+	"syntax":"<cfgridcolumn name=\"\">",
+	"returns":"",
+	"related":[],
+	"description":" Used with the cfgrid tag in a cfform. Use this tag to specify\n column data in a cfgrid control. The font and alignment\n attributes used in cfgridcolumn override global font or\n alignment settings defined in cfgrid.",
+	"params": [ 
+		{"name":"name","description":"Name of grid column element. If grid uses a query, column\n name must specify name of a query column.","required":true,"default":"","type":"String","values":[]},
+		{"name":"header","description":"Column header text. Used only if cfgrid colHeaders = \"Yes\".","required":false,"default":"","type":"String","values":[]},
+		{"name":"width","description":"Column width, in pixels.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"font","description":"Font of data in column.","required":false,"default":"arial","type":"String","values":["arial","times","courier","arialunicodeMS"]},
+		{"name":"fontsize","description":"Size of text in column.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"italic","description":"Yes: displays grid control text in italics","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"bold","description":"Yes: displays grid control text in bold","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"bgcolor","description":"Background color of control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.","required":false,"default":"","type":"String","values":["black","red","blue","magenta","cyan","orange","darkgray","pink","white","lightgray","yellow"]},
+		{"name":"textcolor","description":"Text color for control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.","required":false,"default":"","type":"String","values":["black","red","blue","magenta","cyan","orange","darkgray","pink","white","lightgray","yellow"]},
+		{"name":"href","description":"URL o r query column name that contains a URL to hyperlink\n each grid column with.","required":false,"default":"","type":"String","values":[]},
+		{"name":"hrefkey","description":"The query column to use for the value appended to the href\n URL of each column, instead of the column's value.","required":false,"default":"","type":"String","values":[]},
+		{"name":"target","description":"Frame in which to open link specified in href.","required":false,"default":"","type":"String","values":[]},
+		{"name":"select","description":"Yes: user can select the column in grid control.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"display","description":"No: hides column","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"type","description":"image: grid displays image that corresponds to value in\n column (a built-in CFML image name, or an image in\n cfide\\classes directory or subdirectory referenced with\n relative URL). If image is larger than column cell, it is\n clipped to fit. Built-in image names","required":false,"default":"","type":"String","values":["string_noCase","Boolean","numeric","date","combobox","image"]},
+		{"name":"headerfont","description":"Font of data in column.","required":false,"default":"","type":"String","values":[]},
+		{"name":"headerfontsize","description":"Size of text in column.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"headeritalic","description":"Yes: displays grid control text in italics","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"headerbold","description":"Yes: displays grid control text in bold","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"headertextcolor","description":"Text color for control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.","required":false,"default":"","type":"String","values":["black","red","blue","magenta","cyan","orange","darkgray","pink","white","lightgray","yellow"]},
+		{"name":"dataalign","description":"Column data alignment","required":false,"default":"","type":"String","values":["left","right","center"]},
+		{"name":"headeralign","description":"Column header text alignment","required":false,"default":"","type":"String","values":["left","right","center"]},
+		{"name":"numberformat","description":"Format for displaying numeric data in grid. See\n numberFormat mask characters.","required":false,"default":"","type":"String","values":[]},
+		{"name":"values","description":"Formats cells in column as drop-down list boxes; specify\n items in drop-down list. Example:\n values = \"arthur, scott, charles, 1-20, mabel\"","required":false,"default":"","type":"String","values":[]},
+		{"name":"valuesdisplay","description":"Maps elements in values attribute to string to display in\n drop-down list. Delimited strings and\/or numeric range(s).","required":false,"default":"","type":"String","values":[]},
+		{"name":"valuesdelimiter","description":"Maps elements in values attribute to string to display in\n drop-down list. Delimited strings and\/or numeric range(s).","required":false,"default":"","type":"String","values":[",",";","|",":"]},
+		{"name":"mask","description":"A mask pattern that controls the character pattern\n that the form displays or allows users to input and\n sends to ColdFusion.\n For currency type data, use currency symbol.\n For text or numeric type data use:\n - A = [A-Za-z]\n - X = [A-Za-z0-9]\n - 9 = [0-9]\n - ? = Any character\n - all other = the literal character\n For date type data use datetime masks.","required":false,"default":"","type":"String","values":[]},
+		{"name":"headerIcon","description":"Header Icon for grid column","required":false,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfgridcolumn"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfgridcolumn"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfgridcolumn"}
+	},
+	"links": [
+		
+	]
+	
+}

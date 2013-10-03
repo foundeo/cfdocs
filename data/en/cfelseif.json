@@ -1,0 +1,19 @@
+{
+	"name":"cfelseif",
+	"type":"tag",
+	"syntax":"<cfelseif>",
+	"returns":"",
+	"related":[],
+	"description":" Used as a control block in a cfif tag block to handle any case\n not identified by the cfif tag or a cfelseif tag.",
+	"params": [ 
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfelseif"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfelseif"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfelseif"}
+	},
+	"links": [
+		
+	]
+	
+}

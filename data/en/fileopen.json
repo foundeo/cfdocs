@@ -1,0 +1,23 @@
+{
+	"name":"fileOpen",
+	"type":"function",
+	"syntax":"fileOpen(Param1, Param2, Param3)",
+	"returns":"",
+	"related":[],
+	"description":" No Help Available",
+	"params": [ 
+		{"name":"Param1","description":"No Help Available","required":true,"default":"","type":"","values":[]},
+		{"name":"Param2","description":"No Help Available","required":true,"default":"","type":"","values":[]},
+		{"name":"Param3","description":"No Help Available","required":true,"default":"","type":"","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/fileopen"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/fileopen"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/fileopen"}
+	},
+	"links": [
+		
+	]
+	
+}

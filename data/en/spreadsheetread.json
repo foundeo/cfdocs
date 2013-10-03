@@ -1,0 +1,22 @@
+{
+	"name":"spreadsheetRead",
+	"type":"function",
+	"syntax":"spreadsheetRead(fileName, spreadsheetObj)",
+	"returns":"void",
+	"related":[],
+	"description":" Create a new spreadsheet variable from specified file",
+	"params": [ 
+		{"name":"fileName","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"spreadsheetObj","description":"Spreadsheet name or number","required":true,"default":"","type":"Variablename","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetread"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetread"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetread"}
+	},
+	"links": [
+		
+	]
+	
+}

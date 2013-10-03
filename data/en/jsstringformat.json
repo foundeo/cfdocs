@@ -1,0 +1,21 @@
+{
+	"name":"jsStringFormat",
+	"type":"function",
+	"syntax":"jsStringFormat(String)",
+	"returns":"String",
+	"related":[],
+	"description":" Escapes special JavaScript characters, such as single quotation\n mark, double quotation mark, and newline",
+	"params": [ 
+		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/jsstringformat"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/jsstringformat"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/jsstringformat"}
+	},
+	"links": [
+		
+	]
+	
+}

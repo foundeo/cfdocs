@@ -1,0 +1,22 @@
+{
+	"name":"spreadsheetSetActiveSheetNumber",
+	"type":"function",
+	"syntax":"spreadsheetSetActiveSheetNumber(spreadsheetObj [, number])",
+	"returns":"void",
+	"related":[],
+	"description":" Sets number of active sheet in given spreadsheet",
+	"params": [ 
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
+		{"name":"number","description":"No Help Available","required":false,"default":"","type":"Number","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetsetactivesheetnumber"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetsetactivesheetnumber"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetsetactivesheetnumber"}
+	},
+	"links": [
+		
+	]
+	
+}

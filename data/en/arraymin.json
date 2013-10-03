@@ -1,0 +1,21 @@
+{
+	"name":"arrayMin",
+	"type":"function",
+	"syntax":"arrayMin(array)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Returns the smallest numeric value in an array. If the array\n parameter value is an empty array, returns zero.\n All elements must contain values that can be automatically\n converted to numeric values.",
+	"params": [ 
+		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/arraymin"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arraymin"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraymin"}
+	},
+	"links": [
+		
+	]
+	
+}

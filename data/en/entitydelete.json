@@ -1,0 +1,21 @@
+{
+	"name":"entityDelete",
+	"type":"function",
+	"syntax":"entityDelete(entity)",
+	"returns":"void",
+	"related":[],
+	"description":" Deletes the record from the database for the specified entity.\nEntityDelete(entity)",
+	"params": [ 
+		{"name":"entity","description":"Name of the entity being deleted.","required":true,"default":"","type":"Variablename","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/entitydelete"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entitydelete"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/entitydelete"}
+	},
+	"links": [
+		
+	]
+	
+}

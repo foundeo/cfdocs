@@ -1,0 +1,22 @@
+{
+	"name":"binaryDecode",
+	"type":"function",
+	"syntax":"binaryDecode(String, binaryencoding)",
+	"returns":"Binary",
+	"related":[],
+	"description":" Converts a string to a binary object. Used to convert\n binary data that has been encoded into string format\n back into binary data.",
+	"params": [ 
+		{"name":"String","description":"A string containing encoded binary data.","required":true,"default":"","type":"String","values":[]},
+		{"name":"binaryencoding","description":"A string specifying the algorithm used to encode the original\n binary data into a string; must be one of the following:\n - hex: characters 0-9 and A-F represent the hexadecimal value\n of each byte; for example, 3A.\n - UU: data is encoded using the UNIX UUencode algorithm.\n - base64: data is encoded using the Base64 algorithm.","required":true,"default":"","type":"String","values":["hex","uu","base64"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/binarydecode"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/binarydecode"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/binarydecode"}
+	},
+	"links": [
+		
+	]
+	
+}

@@ -1,0 +1,21 @@
+{
+	"name":"arrayAvg",
+	"type":"function",
+	"syntax":"arrayAvg(array)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Calculates the average of the values in an array.\n All elements in the array must contain values that can be\n automatically converted to numeric.",
+	"params": [ 
+		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/arrayavg"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arrayavg"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayavg"}
+	},
+	"links": [
+		
+	]
+	
+}

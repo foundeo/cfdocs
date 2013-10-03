@@ -1,0 +1,21 @@
+{
+	"name":"day",
+	"type":"function",
+	"syntax":"day(date)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Determines the day of the month, in a date.\n The ordinal for the day of the month, ranging from 1 to 31.",
+	"params": [ 
+		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/day"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/day"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/day"}
+	},
+	"links": [
+		
+	]
+	
+}

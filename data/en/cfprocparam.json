@@ -1,0 +1,27 @@
+{
+	"name":"cfprocparam",
+	"type":"tag",
+	"syntax":"<cfprocparam cfsqltype=\"CF_SQL_BIGINT\">",
+	"returns":"",
+	"related":[],
+	"description":" Defines stored procedure parameters. This tag is nested within\n a cfstoredproc tag.",
+	"params": [ 
+		{"name":"type","description":"in: The parameter is used to send data to the database\n system only. Passes the parameter by value.\n out: The parameter is used to receive data from the\n database system only. Passes the parameter as a bound\n variable.\n inout: The parameter is used to send and receive data.\n Passes the parameter as a bound variable.","required":false,"default":"in","type":"String","values":["in","out","inout"]},
+		{"name":"variable","description":"CFML variable name; references the value that the\n output parameter has after the stored procedure is called.","required":false,"default":"","type":"String","values":[]},
+		{"name":"value","description":"Value that CFML passes to the stored procedure.","required":false,"default":"","type":"String","values":[]},
+		{"name":"cfsqltype","description":"SQL type to which the parameter (any type) is bound.\n CFML supports the following values, where the last\n element of the name corresponds to the SQL data type.\n Different database systems might support different subsets\n of this list. See your DBMS documentation for information\n on supported parameter types.","required":true,"default":"","type":"String","values":["CF_SQL_BIGINT","CF_SQL_BIT","CF_SQL_CHAR","CF_SQL_BLOB","CF_SQL_CLOB","CF_SQL_DATE","CF_SQL_DECIMAL","CF_SQL_DOUBLE","CF_SQL_FLOAT","CF_SQL_IDSTAMP","CF_SQL_INTEGER","CF_SQL_LONGVARCHAR","CF_SQL_MONEY","CF_SQL_MONEY4","CF_SQL_NUMERIC","CF_SQL_REAL","CF_SQL_REFCURSOR","CF_SQL_SMALLINT","CF_SQL_TIME","CF_SQL_TIMESTAMP","CF_SQL_TINYINT","CF_SQL_VARCHAR"]},
+		{"name":"maxlength","description":"Maximum length of a string or character IN or INOUT value\n attribute. A maxLength of 0 allows any length. The\n maxLength attribute is not required when specifying\n type=out.","required":false,"default":0,"type":"Numeric","values":[]},
+		{"name":"scale","description":"Number of decimal places in numeric parameter. A scale of 0\n allows any number of decimal places.","required":false,"default":0,"type":"Numeric","values":[]},
+		{"name":"null","description":"Whether the parameter is passed in as a null value. Not\n used with OUT type parameters.","required":false,"default":false,"type":"boolean","values":[true,false]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfprocparam"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfprocparam"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfprocparam"}
+	},
+	"links": [
+		
+	]
+	
+}

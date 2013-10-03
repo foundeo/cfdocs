@@ -1,0 +1,31 @@
+{
+	"name":"cffunction",
+	"type":"tag",
+	"syntax":"<cffunction name=\"\">",
+	"returns":"",
+	"related":[],
+	"description":" Defines a function that you can call in CFML. Required to\n defined CFML component methods.",
+	"params": [ 
+		{"name":"name","description":"A string; a component method that is used within the\n cfcomponent tag.","required":true,"default":"","type":"String","values":[]},
+		{"name":"returntype","description":"String; a type name; data type of the function return value\n Required for a web service; Optional, otherwise.","required":false,"default":"Any","type":"String","values":["Any","Array","Binary","boolean","date","guid","Numeric","Query","String","Struct","UUID","variablename","void","xml","(component name)"]},
+		{"name":"roles","description":"A comma-delimited list of CFML security roles that\n can invoke the method. Only users who are logged in with\n the specified roles can execute the function. If this\n attribute is omitted, all users can invoke the method","required":false,"default":"","type":"String","values":[]},
+		{"name":"access","description":"The client security context from which the method can be\n invoked:\n\n private: available only to the component that declares the\n method and any components that extend the component in\n which it is defined\n package: available only to the component that declares the\n method, components that extend the component, or any\n other components in the package\n public: available to a locally executing page or component\n method\n remote: available to a locally or remotely executing page\n or component method, or a remote client through a URL,\n Flash, or a web service. To publish the function as a\n web service, this option is required.","required":false,"default":"public","type":"String","values":["private","package","public","remote"]},
+		{"name":"output","description":"Specifies under which conditions the function can generate\n HTML output.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"displayname","description":"Meaningful only for CFC method parameters. A value to be\n displayed in parentheses following the function name when\n using introspection to show information about the CFC","required":false,"default":"","type":"String","values":[]},
+		{"name":"hint","description":"Meaningful only for CFC method parameters. Text to be\n displayed when using introspection to show information\n about the CFC. The hint attribute value follows the syntax\n line in the function description","required":false,"default":"","type":"String","values":[]},
+		{"name":"description","description":"Supplies a short text description of the function.","required":false,"default":"","type":"String","values":[]},
+		{"name":"returnformat","description":"The format in which to return values to a remote caller.","required":false,"default":"","type":"String","values":["JSON","plain","WDDX"]},
+		{"name":"securejson","description":"A Boolean value that specifies whether to add a security prefix in front of any value that the function returns in JSON-format in response to a remote call.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"verifyclient","description":"A Boolean value that specifies whether to require remote function calls to include an encrypted security token. For use with ColdFusion AJAX applications only.","required":false,"default":"","type":"boolean","values":[true,false]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cffunction"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cffunction"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cffunction"}
+	},
+	"links": [
+		
+	]
+	
+}

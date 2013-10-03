@@ -1,0 +1,21 @@
+{
+	"name":"isNumericDate",
+	"type":"function",
+	"syntax":"isNumericDate(number)",
+	"returns":"boolean",
+	"related":[],
+	"description":" Evaluates whether a real number is a valid representation of a\n date (date/time object).",
+	"params": [ 
+		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/isnumericdate"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isnumericdate"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isnumericdate"}
+	},
+	"links": [
+		
+	]
+	
+}

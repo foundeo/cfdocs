@@ -1,0 +1,22 @@
+{
+	"name":"imageBlur",
+	"type":"function",
+	"syntax":"imageBlur(name [, blurradius])",
+	"returns":"void",
+	"related":[],
+	"description":" Smooths (blurs) the ColdFusion image.",
+	"params": [ 
+		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"blurradius","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/imageblur"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imageblur"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imageblur"}
+	},
+	"links": [
+		
+	]
+	
+}

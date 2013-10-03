@@ -1,0 +1,21 @@
+{
+	"name":"structCount",
+	"type":"function",
+	"syntax":"structCount(structure)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Counts the keys in a structure.",
+	"params": [ 
+		{"name":"structure","description":"Structure to access","required":true,"default":"","type":"Struct","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/structcount"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structcount"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structcount"}
+	},
+	"links": [
+		
+	]
+	
+}

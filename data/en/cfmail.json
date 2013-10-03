@@ -1,0 +1,53 @@
+{
+	"name":"cfmail",
+	"type":"tag",
+	"syntax":"<cfmail to=\"\" from=\"\" subject=\"\">",
+	"returns":"",
+	"related":["cfmailpart","cfmailparam"],
+	"description":" Sends an e-mail message that optionally contains query output,\n using an SMTP server.",
+	"params": [ 
+		{"name":"to","description":"Message recipient e-mail addresses.","required":true,"default":"","type":"String","values":[]},
+		{"name":"from","description":"E-mail message sender:","required":true,"default":"","type":"String","values":[]},
+		{"name":"cc","description":"Address(es) to which to copy the message","required":false,"default":"","type":"String","values":[]},
+		{"name":"bcc","description":"Address(es) to which to copy the message, without listing\n them in the message header.","required":false,"default":"","type":"String","values":[]},
+		{"name":"subject","description":"Message subject. Can be dynamically generated.","required":true,"default":"","type":"String","values":[]},
+		{"name":"replyto","description":"Address(es) to which the recipient is directed to send\n replies.","required":false,"default":"","type":"String","values":[]},
+		{"name":"failto","description":"Address to which mailing systems should send delivery\n failure notifications. Sets the mail envelope reverse-path\n value.","required":false,"default":"","type":"String","values":[]},
+		{"name":"username","description":"A user name to send to SMTP servers that require\n authentication. Requires a password attribute","required":false,"default":"","type":"String","values":[]},
+		{"name":"password","description":"A password to send to SMTP servers that require\n authentication. Requires a username attribute.","required":false,"default":"","type":"String","values":[]},
+		{"name":"wraptext","description":"Specifies the maximum line length, in characters of the\n mail text. If a line has more than the specified number of\n characters, replaces the last white space character, such\n as a tab or space, preceding the specified position with\n a line break. If there are no white space characters,\n inserts a line break at the specified position. A common\n value for this attribute is 72.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"charset","description":"The character encoding in which the part text is encoded.\n\n For more information on character encodings, see:\n www.w3.org\/International\/O-charset.html.","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]},
+		{"name":"type","description":"The MIME media type of the part. Can be a can be valid MIME\n media type","required":false,"default":"text\/plain","type":"String","values":["plain","html","text","text\/html","text\/plain"]},
+		{"name":"mimeattach","description":"Path of file to attach to message. Attached file is\n MIME-encoded. CFML attempts to determine the MIME\n type of the file; use the cfmailparam tag to send an\n attachement and specify the MIME type.","required":false,"default":"","type":"String","values":[]},
+		{"name":"query","description":"Name of cfquery from which to draw data for message(s).\n Use this attribute to send more than one message, or to\n send query results within a message.","required":false,"default":"","type":"query","values":[]},
+		{"name":"group","description":"Query column to use when you group sets of records to send\n as a message. For example, to send a set of billing\n statements to a customer, group on \"Customer_ID.\"\n Case-sensitive. Eliminates adjacent duplicates when data is\n sorted by the specified field.","required":false,"default":"","type":"String","values":[]},
+		{"name":"groupcasesensitive","description":"Whether to consider case when using the group attribute. To\n group on case-sensitive records, set this attribute to Yes.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"startrow","description":"Row in a query to start from.","required":false,"default":1,"type":"Numeric","values":[]},
+		{"name":"maxrows","description":"Maximum number of messages to send when looping over a\n query.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"server","description":"SMTP server address, or (Enterprise edition only) a\n comma-delimited list of server addresses, to use for\n sending messages. At least one server must be specified\n here or in the CFML MX Administrator. A value here\n overrides the Administrator. A value that includes a port\n specification overrides the port attribute. See the Usage\n section for details.","required":false,"default":"","type":"String","values":[]},
+		{"name":"port","description":"TCP\/IP port on which SMTP server listens for requests\n (normally 25). A value here overrides the Administrator.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"mailerid","description":"Mailer ID to be passed in X-Mailer SMTP header, which\n identifies the mailer application.","required":false,"default":"","type":"String","values":[]},
+		{"name":"timeout","description":"Number of seconds to wait before timing out connection to\n SMTP server. A value here overrides the Administrator.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"spoolenable","description":"Specifies whether to spool mail or always send it\n Immediately. Overrides the CFML MX Administrator\n Spool mail messages to disk for delivery setting.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"debug","description":"* Yes: sends debugging output to standard output. By\n default, if the console window is unavailable, ColdFusion\n sends output to cf_root\\runtime\\logs\\coldfusion-out.log on\n server configurations. On J2EE configurations, with JRun,\n the default location is jrun_home\/logs\/servername-out.log.\n * No: does not generate debugging output.","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"priority","description":"The message priority level. Can be one of the following values:\n * An integer in the range 1-5; 1 represents the highest priority.\n * One of the following string values, which correspond to the numeric values: highest or urgent, high, normal, low, and lowest or non-urgent.","required":false,"default":"normal","type":"String","values":["highest","urgent","normal","low","lowest"]},
+		{"name":"usessl","description":"Whether to use Secure Sockets Layer.","required":false,"default":"","type":"Boolean","values":[true,false]},
+		{"name":"usetls","description":"Whether to use Transport Level Security.","required":false,"default":"","type":"Boolean","values":[true,false]},
+		{"name":"remove","description":"Tells ColdFusion to remove any attachments after successful mail delivery.","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"keystore","description":"Keystore containing the private key and certificate. The supported type is JKS (java key store) and pkcs12","required":false,"default":"","type":"String","values":[]},
+		{"name":"keypassword","description":"Password with which the private key is stored. If it is not specified, keystorepassword will be used as keypassword as well.","required":false,"default":"","type":"String","values":[]},
+		{"name":"sign","description":"Mail will be signed when set to true","required":false,"default":"","type":"Boolean","values":[]},
+		{"name":"keyalias","description":"Alias of the key with which the certificate and private key is stored in keystore. If it is not specified then the first entry in the keystore will be picked up.","required":false,"default":"","type":"String","values":[]},
+		{"name":"keystorepassword","description":"Password of the keystore","required":false,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfmail"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmail"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmail"}
+	},
+	"links": [
+		
+	]
+	
+}

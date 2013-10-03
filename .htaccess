@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^tag-summary$ http://cfdocs.org/tags [R=301,L]
+#rewrite uppercase to lowercase
+RewriteRule ^([^./]*[A-Z][^./]+)$ /ucase.cfm?uri=$1 [L]
+#send to doc page
+RewriteRule ^([^./]+)$ /doc.cfm?name=$1 [L]
+ErrorDocument 404 /404.cfm

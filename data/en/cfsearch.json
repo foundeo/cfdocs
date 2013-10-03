@@ -1,0 +1,36 @@
+{
+	"name":"cfsearch",
+	"type":"tag",
+	"syntax":"<cfsearch name=\"\" collection=\"\">",
+	"returns":"",
+	"related":[],
+	"description":" Searches Verity collections using CFML or K2Server,\n whichever search engine a collection is registered by.\n (CFML can also search collections that have not been\n registered, with the cfcollection tag.)\n\n A collection must be created and indexed before this tag can\n return search results.",
+	"params": [ 
+		{"name":"name","description":"Name of the search query.","required":true,"default":"","type":"String","values":[]},
+		{"name":"collection","description":"One or more collection names. You can specify more\n than one collection unless you are performing a\n category search (that is, specifying category or\n categoryTree).\n\n One or more collection names. You can specify more\n than one collection unless you are performing a\n category search (that is, specifying category or\n categoryTree).","required":true,"default":"","type":"String","values":[]},
+		{"name":"category","description":"A list of categories, separated by commas, to which\n the search is limited. If specified, and the collection\n does not have categories enabled, ColdFusion\n\n throws an exception.","required":false,"default":"","type":"String","values":[]},
+		{"name":"categorytree","description":"The location in a hierarchical category tree at which\n to start the search. ColdFusion searches at and\n below this level. If specified, and the collection does\n not have categories enabled, ColdFusion throws an\n exception. Can be used in addition to category\n attribute.","required":false,"default":"","type":"String","values":[]},
+		{"name":"status","description":"Specifies the name of the structure variable into\n which ColdFusion places search information, including\n alternative criteria suggestions (spelling corrections).","required":false,"default":"","type":"String","values":[]},
+		{"name":"type","description":"Used to specify the parser that Verity\/SOLR uses to process\n the criteria.","required":false,"default":"simple","type":"String","values":["simple","explicit","internet","internet_basic","natural","standard","dismax"]},
+		{"name":"criteria","description":"Search criteria. Follows the syntax rules of the type\n attribute. If you pass a mixed-case entry in this attribute,\n the search is case-sensitive. If you pass all uppercase or\n all lowercase, the search is case-insensitive. Follow\n Verity syntax and delimiter character rules; see Using\n Verity Search Expressions in Developing CFML MX\n Applications.","required":false,"default":"","type":"String","values":[]},
+		{"name":"maxrows","description":"Maximum number of rows to return in query results.\n Default: all","required":false,"default":"all","type":"Numeric","values":[]},
+		{"name":"startrow","description":"First row number to get.\n Default: 1","required":false,"default":1,"type":"Numeric","values":[]},
+		{"name":"suggestions","description":"Specifies whether Verity\/SOLR returns spelling suggestions\n for possibly misspelled words.","required":false,"default":"never","type":"String","values":["always","never",5,10]},
+		{"name":"contextPassages","description":"The number of passages\/sentences Verity returns in\n the context summary (that is, the context column of\n the results).\n Default: 3","required":false,"default":3,"type":"Numeric","values":[]},
+		{"name":"contextBytes","description":"The maximum number of bytes Verity returns in the\n context summary.\n Default: 300","required":false,"default":300,"type":"Numeric","values":[]},
+		{"name":"contextHighlightBegin","description":"The HTML to prepend to search terms in the context\n summary. Use this attribute in conjunction with\n contextHighlightEnd to highlight search terms in the\n context summary.\n Default: <b>","required":false,"default":"<b>","type":"String","values":["<b>","<strong>","<span class=\"highlight\">"]},
+		{"name":"contextHighlightEnd","description":"The HTML to prepend to search terms in the context\n summary. Use this attribute in conjunction with\n contextHighlightEnd to highlight search terms in the\n context summary.\n Default: <\/b>","required":false,"default":"<\/b>","type":"String","values":["<\/b>","<\/strong>","<\/span>"]},
+		{"name":"previousCriteria","description":"The name of a result set from an existing set of search\n results. Verity searches the result set for criteria\n without regard to the previous search score or rank.\n Use this attribute to implement searching within result\n sets.","required":false,"default":"","type":"String","values":[]},
+		{"name":"language","description":"Deprecated. This attribute is now ignored and the language of the collection is used to perform the search.","required":false,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfsearch"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfsearch"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfsearch"}
+	},
+	"links": [
+		
+	]
+	
+}

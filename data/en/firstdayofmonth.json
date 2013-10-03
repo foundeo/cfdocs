@@ -1,0 +1,21 @@
+{
+	"name":"firstDayOfMonth",
+	"type":"function",
+	"syntax":"firstDayOfMonth(date)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" Determines the ordinal (day number, in the year) of the first\n day of the month in which a given date falls.",
+	"params": [ 
+		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/firstdayofmonth"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/firstdayofmonth"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/firstdayofmonth"}
+	},
+	"links": [
+		
+	]
+	
+}

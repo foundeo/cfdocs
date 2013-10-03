@@ -1,0 +1,22 @@
+{
+	"name":"entitySave",
+	"type":"function",
+	"syntax":"entitySave(entity [, forceInsert])",
+	"returns":"void",
+	"related":[],
+	"description":" Saves or updates data of the entity and all related entities to the database.\nEntitySave(entity, [forceinsert])",
+	"params": [ 
+		{"name":"entity","description":"Name of the entity that must be saved in the database.","required":true,"default":"","type":"Variablename","values":[]},
+		{"name":"forceInsert","description":"If true, then ColdFusion always tries to insert the entity as a new record.","required":false,"default":"","type":"Boolean","values":[true,false]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/entitysave"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entitysave"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/entitysave"}
+	},
+	"links": [
+		
+	]
+	
+}

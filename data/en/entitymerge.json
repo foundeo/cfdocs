@@ -1,0 +1,21 @@
+{
+	"name":"entityMerge",
+	"type":"function",
+	"syntax":"entityMerge(entity)",
+	"returns":"Object",
+	"related":[],
+	"description":" Attaches given enity to current ORM session",
+	"params": [ 
+		{"name":"entity","description":"The entity that must be attached to the ORM session.","required":true,"default":"","type":"Variablename","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/entitymerge"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entitymerge"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/entitymerge"}
+	},
+	"links": [
+		
+	]
+	
+}

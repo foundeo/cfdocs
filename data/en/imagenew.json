@@ -1,0 +1,25 @@
+{
+	"name":"imageNew",
+	"type":"function",
+	"syntax":"imageNew([source] [, width] [, height] [, imagetype] [, canvascolor])",
+	"returns":"Image",
+	"related":[],
+	"description":" Creates a ColdFusion image.",
+	"params": [ 
+		{"name":"source","description":"No Help Available","required":false,"default":"","type":"String","values":[]},
+		{"name":"width","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"height","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"imagetype","description":"No Help Available","required":false,"default":"","type":"String","values":[]},
+		{"name":"canvascolor","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/imagenew"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagenew"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagenew"}
+	},
+	"links": [
+		
+	]
+	
+}

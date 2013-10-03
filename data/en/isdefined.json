@@ -1,0 +1,21 @@
+{
+	"name":"isDefined",
+	"type":"function",
+	"syntax":"isDefined(variable_name)",
+	"returns":"boolean",
+	"related":[],
+	"description":" Evaluates a string value to determine whether the variable\n named in it exists.",
+	"params": [ 
+		{"name":"variable_name","description":"","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/isdefined"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isdefined"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isdefined"}
+	},
+	"links": [
+		
+	]
+	
+}

@@ -1,0 +1,21 @@
+{
+	"name":"lsParseCurrency",
+	"type":"function",
+	"syntax":"lsParseCurrency(String)",
+	"returns":"String",
+	"related":[],
+	"description":" Converts a locale-specific currency string into a formatted\n number. Attempts conversion by comparing the string with each\n the three supported currency formats (none, local,\n international) and using the first that matches.",
+	"params": [ 
+		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/lsparsecurrency"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsparsecurrency"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsparsecurrency"}
+	},
+	"links": [
+		
+	]
+	
+}

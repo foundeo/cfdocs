@@ -1,0 +1,22 @@
+{
+	"name":"arrayFind",
+	"type":"function",
+	"syntax":"arrayFind(array, object)",
+	"returns":"Numeric",
+	"related":[],
+	"description":" These functions searches the array for the specified object.",
+	"params": [ 
+		{"name":"array","description":"No Help Available","required":true,"default":"","type":"Array","values":[]},
+		{"name":"object","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/arrayfind"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arrayfind"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayfind"}
+	},
+	"links": [
+		
+	]
+	
+}

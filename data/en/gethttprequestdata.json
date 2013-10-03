@@ -1,0 +1,19 @@
+{
+	"name":"getHTTPRequestData",
+	"type":"function",
+	"syntax":"getHTTPRequestData()",
+	"returns":"Struct",
+	"related":[],
+	"description":" Makes HTTP request headers and body available to CFML pages.\n Useful for capturing SOAP request data, which can be delivered\n in an HTTP header.",
+	"params": [ 
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/gethttprequestdata"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/gethttprequestdata"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/gethttprequestdata"}
+	},
+	"links": [
+		
+	]
+	
+}

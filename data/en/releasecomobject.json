@@ -1,0 +1,21 @@
+{
+	"name":"releaseCOMObject",
+	"type":"function",
+	"syntax":"releaseCOMObject(objectName)",
+	"returns":"void",
+	"related":[],
+	"description":" Releases a COM Object and frees up resources that it used.",
+	"params": [ 
+		{"name":"objectName","description":"","required":true,"default":"","type":"Object","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/releasecomobject"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/releasecomobject"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/releasecomobject"}
+	},
+	"links": [
+		
+	]
+	
+}

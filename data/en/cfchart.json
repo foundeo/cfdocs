@@ -1,0 +1,56 @@
+{
+	"name":"cfchart",
+	"type":"tag",
+	"syntax":"<cfchart>",
+	"returns":"",
+	"related":[],
+	"description":" Generates and displays a chart.",
+	"params": [ 
+		{"name":"format","description":"File format in which to save graph.","required":false,"default":false,"type":"String","values":["flash","jpg","png"]},
+		{"name":"chartheight","description":"Chart height; integer number of pixels","required":false,"default":240,"type":"Numeric","values":[]},
+		{"name":"chartwidth","description":"Chart width; integer number of pixels","required":false,"default":320,"type":"Numeric","values":[]},
+		{"name":"scalefrom","description":"Y-axis minimum value; integer","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"scaleto","description":"Y-axis max value; integer","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"showxgridlines","description":"yes: display X-axis gridlines","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"showygridlines","description":"yes: display Y-axis gridlines","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"gridlines","description":"Number of grid lines to display on value axis, including\n axis; positive integer.","required":false,"default":10,"type":"Numeric","values":[]},
+		{"name":"seriesplacement","description":"Applies to charts that have more than one data series.\n Relative positions of series.","required":false,"default":"default","type":"String","values":["default","cluster","stacked","percent"]},
+		{"name":"foregroundcolor","description":"color for control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.","required":false,"default":"black","type":"String","values":["black","red","blue","magenta","cyan","orange","darkgray","pink","white","lightgray","yellow"]},
+		{"name":"backgroundcolor","description":"Color of the area between the data background and the chart\n border, around labels and around the legend. Hexadecimal\n value or supported named color. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.","required":false,"default":"","type":"String","values":["black","red","blue","magenta","cyan","orange","darkgray","pink","white","lightgray","yellow"]},
+		{"name":"showborder","description":"Whether to display a border around the chart","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"databackgroundcolor","description":"color for control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.","required":false,"default":"white","type":"String","values":["black","red","blue","magenta","cyan","orange","darkgray","pink","white","lightgray","yellow"]},
+		{"name":"font","description":"Font of data in column.","required":false,"default":"arial","type":"String","values":["arial","times","courier","arialunicodeMS"]},
+		{"name":"fontsize","description":"Size of text in column.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"fontitalic","description":"Yes: displays grid control text in italics","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"fontbold","description":"Yes: displays grid control text in bold","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"labelformat","description":"Format for Y-axis labels.","required":false,"default":"number","type":"String","values":["number","currency","percent","date"]},
+		{"name":"xaxistitle","description":"text; X-axis title","required":false,"default":"","type":"String","values":[]},
+		{"name":"yaxistitle","description":"text; X-axis title","required":false,"default":"","type":"String","values":[]},
+		{"name":"xaxistype","description":"* category The axis indicates the data category. Data is\n sorted according to the sortXAxis attribute.\n * scale The axis is numeric. All cfchartdata item attribute\n values must numeric. The X axis is automatically sorted\n numerically.","required":false,"default":"category","type":"String","values":["category","scale"]},
+		{"name":"yaxistype","description":"Currently has no effect, as Y axis is always used for data\n values. Valid values are category and scale","required":false,"default":"category","type":"String","values":["category","scale"]},
+		{"name":"sortxaxis","description":"Display column labels in alphabetic order along X-axis.\n Ignored if the xAxisType attribute is scale.","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"show3d","description":"Display chart with three-dimensional appearance.","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"xoffset","description":"Applies if show3D=\"yes\". Number of units by which to\n display the chart as angled, horizontally","required":false,"default":0.1,"type":"Numeric","values":[]},
+		{"name":"yoffset","description":"Applies if show3D=\"yes\". Number of units by which to\n display the chart as angled, horizontally.","required":false,"default":0.1,"type":"Numeric","values":[]},
+		{"name":"showlegend","description":"yes: if chart contains more than one data series, display\n legend","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"tipstyle","description":"Determines the action that opens a popup window to display\n information about the current chart element.\n * mouseDown: display if the user positions the cursor at the element\n and clicks the mouse. Applies only to Flash format graph files.\n * mouseOver: displays if the user positions the cursor at the element\n * none: suppresses display","required":false,"default":"mouseOver","type":"String","values":["mouseDown","mouseOver","none"]},
+		{"name":"tipbgcolor","description":"color for control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.","required":false,"default":"white","type":"String","values":["black","red","blue","magenta","cyan","orange","darkgray","pink","white","lightgray","yellow"]},
+		{"name":"showmarkers","description":"Applies to chartseries type attribute values line, curve\n and scatter.\n yes: display markers at data points","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"markersize","description":"Size of data point marker. in pixels. Integer.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"pieslicestyle","description":"Applies to chartseries type attribute value pie.","required":false,"default":"sliced","type":"String","values":["solid","sliced"]},
+		{"name":"URL","description":"URL to open if the user clicks item in a data series; the\n onClick destination page.\n\n You can specify variables within the URL string;\n ColdFusion passes current values of the variables.\n * $VALUE$: the value of the selected row. If none, the value is an empty string.\n * $ITEMLABEL$: the label of the selected item. If none, the value is an empty string.\n * $SERIESLABEL$: the label of the selected series. If none, the value is an empty string.","required":false,"default":"","type":"URL","values":["$VALUE$","$ITEMLABEL$","$SERIESLABEL$"]},
+		{"name":"name","description":"Page variable name. String. Generates the the graph as\n binary data and assigns it to the specified variable.\n Suppresses chart display. You can use the name value in\n the cffile tag to write the chart to a file.","required":false,"default":"","type":"String","values":[]},
+		{"name":"style","description":"XML file or string to use to specify the style of the chart.","required":false,"default":"","type":"String","values":["beige","blue","default","red","silver","yellow"]},
+		{"name":"title","description":"Title of the chart.","required":false,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfchart"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfchart"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfchart"}
+	},
+	"links": [
+		
+	]
+	
+}
