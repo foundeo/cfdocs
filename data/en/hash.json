@@ -1,18 +1,19 @@
 {
 	"name":"hash",
 	"type":"function",
-	"syntax":"hash(String [, algorithm] [, encoding])",
+	"syntax":"hash(String [, algorithm] [, encoding] [, iterations])",
 	"returns":"String",
 	"related":[],
-	"description":" Converts a variable-length string to a 32-byte, hexadecimal\n string, using the MD5 algorithm. (It is not possible to convert\n the hash result back to the source string.)\n 32-byte, hexadecimal string",
+	"description":"Converts a string into a fixed length hexadecimal string.",
 	"params": [ 
 		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"algorithm","description":"","required":false,"default":"CFMX_COMPAT","type":"String","values":["CFMX_COMPAT","MD5","SHA","SHA-256","SHA-384","SHA-512"]},
-		{"name":"encoding","description":"A string specifying the encoding to use when converting\n the string to byte data used by the hash algorithm.\n Must be a character encoding name recognized by the\n Java runtime.","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
+		{"name":"algorithm","description":"A supported algorithm such as MD5,SHA,SHA-256,SHA-384, or SHA-512. Of those listed SHA-512 is the strongest and generates a 128 character hex result. CF7+", "required":false,"default":"MD5","type":"String","values":["CFMX_COMPAT","MD5","SHA","SHA-256","SHA-384","SHA-512"]},
+		{"name":"encoding","description":"A string specifying the encoding to use when converting\n the string to byte data used by the hash algorithm.\n Must be a character encoding name recognized by the\n Java runtime. CF7+","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]},
+		{"name":"iterations", "description":"Iterates the number of times the hash is computed to create a more computationally intensive hash. CF10+", "default":"1", "required":false, "type":"numeric", "values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/hash"},
+		"coldfusion": {"minimum_version":"", "notes":"CF7 added additional algorithm support, CF10 added the iterations option.", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/hash"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/hash"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/hash"}
 	},

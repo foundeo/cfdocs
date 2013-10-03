@@ -17,6 +17,6 @@
        </div>
         <div class="col-lg-4">
           <h2><span class="glyphicon glyphicon-thumbs-up"></span> &nbsp; Handy</h2>
-          <p>Easy urls like: <a href="/datediff">cfdocs.org/datediff</a> just hit <code>/tag-name</code> or <code>/function-name</code>.</p>
+          <p>Easy urls like: <a href="/hash">cfdocs.org/hash</a> just hit <code>/tag-name</code> or <code>/function-name</code>.</p>
         </div>
       </div>
