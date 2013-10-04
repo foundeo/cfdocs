@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <cfif NOT FindNoCase("cfdocs.org", cgi.server_name)><meta name="ROBOTS" content="NOINDEX, NOFOLLOW"></cfif>
     <cfparam name="request.title" default="">
-    <title><cfoutput>#ReReplace(request.title, "[^a-zA-Z0-9._-]", "", "ALL")# CFML Documentation</cfoutput></title>
+    <title><cfoutput>#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation</cfoutput></title>
     <link href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/style.css" rel="stylesheet">
     <!--[if lt IE 9]>
