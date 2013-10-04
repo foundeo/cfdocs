@@ -2,6 +2,8 @@ RewriteEngine On
 RewriteBase /
 
 RewriteRule ^tag-summary$ http://cfdocs.org/tags [R=301,L]
+RewriteRule ^t$ http://cfdocs.org/tags [R=301,L]
+RewriteRule ^f$ http://cfdocs.org/functions [R=301,L]
 #rewrite uppercase to lowercase
 RewriteRule ^([^./]*[A-Z][^./]+)$ /ucase.cfm?uri=$1 [L]
 #send to doc page
