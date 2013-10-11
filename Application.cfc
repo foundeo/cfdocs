@@ -38,7 +38,7 @@
 			</cfif>
 		</cfloop>
 		<cfloop array="#application.index.functions#" index="i">
-			<cfif i IS NOT arguments.exclude>
+			<cfif i IS NOT arguments.exclude AND NOT ListFindNoCase("insert,include", i)>
 				<cfset arguments.content = ReReplaceNoCase(arguments.content, "[ ](#i#)([ .!,])", " <a href=""#linkTo(i)#"">\1</a>\2", "all")>
 			</cfif>
 		</cfloop>
