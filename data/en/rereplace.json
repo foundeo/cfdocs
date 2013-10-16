@@ -1,15 +1,15 @@
 {
-	"name":"rereplace",
+	"name":"ReReplace",
 	"type":"function",
-	"syntax":"rereplace(String, reg_expression, substring [, scope])",
-	"returns":"String",
-	"related":[],
-	"description":" Uses a regular expression (RE) to search a string for a string\n pattern and replace it with another. The search is\n case-sensitive.",
+	"syntax":"ReReplace(string, regex, substring [, scope])",
+	"returns":"string",
+	"related":["rereplacenocase","refind","refindnocase","replace","rematch","rematchnocase"],
+	"description":" Uses a regular expression (regex) to search a string for a string\n pattern and replace it with another. The search is\n case-sensitive.",
 	"params": [ 
-		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]},
-		{"name":"reg_expression","description":"Regular expression to replace.","required":true,"default":"","type":"Regex","values":[]},
-		{"name":"substring","description":"A string or a variable that contains one. Replaces\n reg_expression","required":true,"default":"","type":"String","values":[]},
-		{"name":"scope","description":"* one: Replace the first occurrence of the regular\n expression. Default.\n * all: Replace all occurrences of the regular expression.","required":false,"default":"","type":"String","values":["one","all"]}
+		{"name":"string","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]},
+		{"name":"regex","description":"Regular expression to replace.","required":true,"default":"","type":"Regex","values":[]},
+		{"name":"substring","description":"A string or a variable that contains one. Replaces substring with the regex match","required":true,"default":"","type":"String","values":[]},
+		{"name":"scope","description":"* one: Replace the first occurrence of the regular\n expression. Default.\n * all: Replace all occurrences of the regular expression.","required":false,"default":"one","type":"String","values":["one","all"]}
 
 	],
 	"engines": {
@@ -18,7 +18,30 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/rereplace"}
 	},
 	"links": [
-		
-	]
+		{
+			"title":"Regular Expressions in ColdFusion Howto",
+			"description":"Learn about regex in CFML, written by Pete Freitag",
+			"url":"http:\/\/www.petefreitag.com\/item\/517.cfm"
+		},
+		{
+			"title": "Regular Expression Cheat Sheet",
+			"description": "Lists the special characters and their meanings",
+			"url": "http:\/\/www.petefreitag.com\/cheatsheets\/regex\/"
+		}
+	],
+	"examples": [
+		{
+			"title": "Strip Characters Using ReReplace",
+			"description": "This example strips out all characters except a-z and 0-9.",
+			"code": "ReReplace(\"test 123!\", \"[^a-z0-9]\", \"\", \"ALL\")",
+			"result": "test123"
+		},
+		{
+			"title": "Extract Characters Using Back Reference",
+			"description": "Uses a back reference: \\1 to extract the pattern contained within the parenthesis.",
+			"code": "ReReplace(\"123abc456\", \"[0-9]+([a-z]+)[0-9]+\", \"\\1\")",
+			"result": "abc"
+		}
+	]		
 	
 }

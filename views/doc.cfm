@@ -74,16 +74,17 @@
 		</table>
 	</cfif>
 	<cfif StructKeyExists(data, "links") AND ArrayLen(data.links)>
-		<h2>More About <strong>#data.name#</strong></h2>
+		<h2>#data.name# Links</h2>
 		<ul>
 			<cfloop array="#data.links#" index="link">
-				<a href="#link.url#">#link.title#</a><cfif StructKeyExists(link, "description") AND Len(link.description)> - #autoLink(XmlFormat(link.description))#</cfif>
+				<li><a href="#link.url#">#link.title#</a><cfif StructKeyExists(link, "description") AND Len(link.description)> - #autoLink(XmlFormat(link.description))#</cfif></li>
 			</cfloop>
 		</ul>
 	</cfif>
 	<cfif StructKeyExists(data, "examples") AND IsArray(data.examples) AND ArrayLen(data.examples)>
-		<br /><br />
+		<h2>#data.name# Examples</h2>
 		<cfloop array="#data.examples#" index="ex">
+			<br />
 			<h4>#XmlFormat(ex.title)#</h4>
 			<p>#autoLink(ex.description)#</p>
 			<pre>#HTMLEditFormat(ex.code)#</pre>
