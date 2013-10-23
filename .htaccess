@@ -12,6 +12,7 @@ RewriteRule ^([^./]+)$ /doc.cfm?name=$1 [L]
 ErrorDocument 404 /404.cfm
 
 #block access to some urls
-RedirectMatch 403 (?i).git
+RedirectMatch 403 (?i)\.git
 RedirectMatch 403 (?i)views/
 RedirectMatch 403 (?i)CFIDE/
+
