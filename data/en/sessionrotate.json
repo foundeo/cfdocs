@@ -1,0 +1,20 @@
+{
+	"name":"SessionRotate",
+	"type":"function",
+	"syntax":"SessionRotate()",
+	"returns":"void",
+	"related":["sessioninvalidate"],
+	"description":"Creates a new session (using new session ids) and copies session scope into this new session, then invalidates the old session. Used after a valid login to prevent session fixation.",
+	"params": [ 
+		
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/sessioninrotate"},
+		"railo": {"minimum_version":"4", "notes":"", "docs":"http://railodocs.org/index.cfm/function/sessioninrotate"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/sessioninrotate"}
+	},
+	"links": [
+		
+	]
+	
+}
