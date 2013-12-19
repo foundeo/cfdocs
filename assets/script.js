@@ -12,6 +12,7 @@ $(document).ready(function() {
   	document.location = '/' + $('#lookup-box').val().toLowerCase();
   	return false;
   });
+  $('#lookup-box').focus();
 });
 //google analytics
 var _gaq = _gaq || [];
