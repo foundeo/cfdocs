@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" Replaces occurrences of substring1 in a string with substring2,\n in a specified scope. The search is case-sensitive.",
 	"params": [ 
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"substring1","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"substring2","description":"","required":true,"default":"","type":"String","values":[]},
+		{"name":"String","description":"String to search","required":true,"default":"","type":"String","values":[]},
+		{"name":"substring1","description":"Substring to find within string","required":true,"default":"","type":"String","values":[]},
+		{"name":"substring2","description":"Substring to replace substring1 with","required":true,"default":"","type":"String","values":[]},
 		{"name":"scope","description":"* one: replace the first occurrence (default)\n * all: replace all occurrences","required":false,"default":"","type":"String","values":["one","all"]}
 
 	],
