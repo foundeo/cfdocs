@@ -9,7 +9,7 @@
 		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"substring1","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"substring2","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"scope","description":"* one: replace the first occurrence (default)\n * all: replace all occurrences","required":false,"default":"","type":"String","values":["one","all"]}
+		{"name":"scope","description":"* one: replace the first occurrence\n * all: replace all occurrences","required":false,"default":"one","type":"String","values":["one","all"]}
 
 	],
 	"engines": {
