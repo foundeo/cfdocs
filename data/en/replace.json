@@ -4,12 +4,12 @@
 	"syntax":"replace(String, substring1, substring2 [, scope])",
 	"returns":"String",
 	"related":[],
-	"description":" Replaces occurrences of substring1 in a string with substring2,\n in a specified scope. The search is case-sensitive.",
+	"description":"Replaces occurrences of substring1 in a string with substring2,\n in a specified scope. The search is case-sensitive. Function returns original string with replacements made.",
 	"params": [ 
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"substring1","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"substring2","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"scope","description":"* one: replace the first occurrence (default)\n * all: replace all occurrences","required":false,"default":"","type":"String","values":["one","all"]}
+		{"name":"String","description":"String to search","required":true,"default":"","type":"String","values":[]},
+                {"name":"substring1","description":"Substring to find within string","required":true,"default":"","type":"String","values":[]},
+                {"name":"substring2","description":"Substring to replace substring1 with","required":true,"default":"","type":"String","values":[]},
+		{"name":"scope","description":"* one: replace the first occurrence\n * all: replace all occurrences","required":false,"default":"one","type":"String","values":["one","all"]}
 
 	],
 	"engines": {
