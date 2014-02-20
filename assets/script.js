@@ -8,12 +8,15 @@ $(document).ready(function() {
   		}
   });
   $('.tt-hint').addClass('form-control');
-  $('#search').submit(function() {
-  	document.location = '/' + $('#lookup-box').val().toLowerCase();
-  	return false;
-  });
+  $('#search').submit(submitSearch);
+  $('#lookup-box').on('typeahead:selected', submitSearch);
   $('#lookup-box').focus();
 });
+//search submit
+function submitSearch() {
+  document.location = '/' + $('#lookup-box').val().toLowerCase();
+  return false;
+}
 //google analytics
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-82573-18']);
