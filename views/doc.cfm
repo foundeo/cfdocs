@@ -67,12 +67,42 @@
 						<td class="p-name">#p.name#</td>
 						<td><cfif IsBoolean(p.required)>#YesNoFormat(p.required)#<cfelse>#p.required#</cfif></td>
 						<td>#XmlFormat(p.default)#</td>
-						<td class="p-description">#autoLink(p.description)#</td>
+						<td class="p-description">
+							#autoLink(p.description)#
+							<cfif StructKeyExists(p, "values") AND IsArray(p.values) AND ArrayLen(p.values)>
+								<p>Example Values:</p>
+								<ul>
+									<cfloop array="#p.values#" index="i">
+										<li>#XmlFormat(i)#</li>
+									</cfloop>
+								</ul>
+							</cfif>
+						</td>
 					</tr>
 				</cfloop>
 			</tbody>
 		</table>
 	</cfif>
+	<cfif StructKeyExists(data, "engines")>
+		<cfset compatibilityData = "">
+		<cfloop index="i" list="#StructKeyList(data.engines)#">
+			<cfif (StructKeyExists(data.engines[i], "minimum_version") AND Len(data.engines[i].minimum_version)) OR (StructKeyExists(data.engines[i], "notes") AND Len(data.engines[i].notes))>
+				<cfsavecontent variable="compatibilityData">
+					#compatibilityData#
+					<div class="row">
+						<div class="col-xs-1"><strong><cfif i IS "coldfusion">ColdFusion<cfelseif i IS "railo">Railo<cfelseif i IS "openbd">OpenBD</cfif></strong></div> 
+						<div class="col-xs-2"><cfif Len(data.engines[i].minimum_version)><span class="label label-warning">Version #XmlFormat(data.engines[i].minimum_version)#+</span></cfif></div>
+						<div class="col-xs-9">#XmlFormat(data.engines[i].notes)#</div>
+					</div>
+				</cfsavecontent>
+			</cfif>
+		</cfloop>
+		<cfif Len(compatibilityData)>
+			<h2>Compatibility</h2>
+			#compatibilityData#
+		</cfif>
+	</cfif>
+
 	<cfif StructKeyExists(data, "links") AND ArrayLen(data.links)>
 		<h2>#data.name# Links</h2>
 		<ul>
