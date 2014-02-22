@@ -407,7 +407,7 @@ $btn = $('##btnaddExamples,##btnaddLinks,##btnaddParams').on('click',function(e)
     $section = '##'+$this.attr('data-tbody'),
     $template = $($section+'Template'),
     $tbody = $($section+'Tbody');
-    console.log($tbody);
+   // console.log($tbody);
     $tbody.append($template.html());
 
 
