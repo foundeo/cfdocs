@@ -14,7 +14,7 @@ variables.json = {
 
     "name":form.name,
     "type":form.type,
-    "syntax":htmleditformat(form.syntax),
+    "syntax":form.syntax,
     "returns":form.returns,
     "description":form.description,
     "related":listtoarray(form['related'],' ')
