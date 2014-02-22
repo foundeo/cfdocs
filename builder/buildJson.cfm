@@ -32,7 +32,7 @@ if(isarray(form['param-name'])){
    loop collection="#form['param-name']#" index="variables.i" item="variables.item"{
 
 
-    variables.thisparamvalues = listtoarray(form['param-values'][variables.i],chr(10));
+    variables.thisparamvalues = listtoarray(form['param-values'][variables.i],' ');
     variables.thisparam = {
 
         "name":variables.item,
