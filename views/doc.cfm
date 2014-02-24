@@ -19,12 +19,12 @@
 	  
 	  <cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "coldfusion") AND StructKeyExists(data.engines.coldfusion, "docs") AND Len(data.engines.coldfusion.docs)>
 	  		<li class="pull-right">		  			
-	  			<a href="#data.engines.coldfusion.docs#" title="Official Adobe ColdFusion Docs" class="label label-info">CF</a>
+	  			<a href="#data.engines.coldfusion.docs#" title="Official Adobe ColdFusion Docs" class="label label-info">CF<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)>#XmlFormat(data.engines.coldfusion.minimum_version)#+</cfif></a>
 	  		</li>
 	  </cfif>
 	  <cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "railo") AND StructKeyExists(data.engines.railo, "docs") AND Len(data.engines.railo.docs)>
 	  		<li class="pull-right">		  			
-	  			<a href="#data.engines.railo.docs#" title="Official Railo Docs" class="label label-danger">R</a>
+	  			<a href="#data.engines.railo.docs#" title="Official Railo Docs" class="label label-danger">R<cfif StructKeyExists(data.engines.railo, "minimum_version") AND Len(data.engines.railo.minimum_version)>#XmlFormat(data.engines.railo.minimum_version)#+</cfif></a>
 	  		</li>
 	  </cfif>
 	  <cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "openbd") AND StructKeyExists(data.engines.openbd, "docs") AND Len(data.engines.openbd.docs)>
@@ -86,7 +86,7 @@
 	<cfif StructKeyExists(data, "engines")>
 		<cfset compatibilityData = "">
 		<cfloop index="i" list="#StructKeyList(data.engines)#">
-			<cfif (StructKeyExists(data.engines[i], "minimum_version") AND Len(data.engines[i].minimum_version)) OR (StructKeyExists(data.engines[i], "notes") AND Len(data.engines[i].notes))>
+			<cfif StructKeyExists(data.engines[i], "notes") AND Len(data.engines[i].notes)>
 				<cfsavecontent variable="compatibilityData">
 					#compatibilityData#
 					<div class="row">
