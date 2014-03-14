@@ -3,7 +3,7 @@
 CFDocs is a community maintained CFML reference tool available at [cfdocs.org](http://cfdocs.org). It features:
 * Hosting on Amazon CloudFront CDN for fast responses around the globe. Sponsored by [Foundeo Inc.](http://foundeo.com).
 * Easy to use urls like: [cfdocs.org/hash](http:cfdocs.org/hash) just hit /tag-name or /function-name.
-* Publicly maintained on GitHub [GitHub](http://github.com/foundeo/cfdocs)
+* Publicly maintained on [GitHub](http://github.com/foundeo/cfdocs)
 
 ## How reference data is structured
 
@@ -31,6 +31,7 @@ If you want to work on a tag or function,
 ### Not sure what you can contribute? 
 
 We need help expanding existing tag and function documentation. Look through the reference pages till you find one needing more definitions or examples.
+
 You can also help add the new Adobe Coldfusion tags from the Splendor release. See the list of new tags / functions here: https://wikidocs.adobe.com/wiki/display/coldfusionen/CFML+Reference+-+New+in+Splendor
 
 
