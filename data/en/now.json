@@ -3,17 +3,21 @@
 	"type":"function",
 	"syntax":"now()",
 	"returns":"DateTime",
-	"related":[],
-	"description":" Gets the current date and time of the computer running the\n CFML server.",
-	"params": [ 
+	"related":["DateAdd","DateConvert","DatePart","Month","Day","Year"],
+	"description":" Gets the current date and time of the computer running\n the CFML server.",
+	"params": [
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/now"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/now"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/now"}
 	},
+	"examples":[
+		{"title":"Using Now() in Script", "description":"Let's display the current server datetime using script.", "code":"WriteOutput( 'The current date and time is: ' & Now() );", "result":"The current date and time is: {ts '2014-03-19 15:27:42'}"},
+		{"title":"Using Now() in Tagged CFML", "description":"Let's display the current server datetime using tagged CFML.", "code":"<p>The current date and time is: <cfoutput>#Now()#</cfoutput></p>", "result":"The current date and time is: {ts '2014-03-19 15:27:42'}"}
+	],
 	"links": [
-		
+
 	]
-	
+
 }
