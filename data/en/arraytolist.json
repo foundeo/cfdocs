@@ -5,7 +5,7 @@
 	"returns":"String",
 	"related":[],
 	"description":" Converts a one-dimensional array to a list.",
-	"params": [ 
+	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
 		{"name":"delimiter","description":"","required":false,"default":",","type":"String","values":[",","|","_",";",":"]}
 
@@ -16,7 +16,17 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraytolist"}
 	},
 	"links": [
-		
-	]
-	
+
+	],
+	"example": {
+		"defaultEngine": "acf",
+		"code": "<cfscript>
+	originalArray = ['1','2','3'];
+	writeDump( var=originalArray, label='Array' );
+
+	convertedToList = arrayToList( originalArray );
+	writeDump( var=convertedToList, label='List' );
+</cfscript>"
+	}
+
 }

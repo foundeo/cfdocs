@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="trycf">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,8 @@
     <title><cfoutput>#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation</cfoutput></title>
     <link href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/style.css" rel="stylesheet">
+    <link href="/assets/vendor/plugins/split-pane/split-pane.css" rel="stylesheet">
+    <link href="/assets/code-editor.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -37,7 +39,7 @@
                 		<cfloop list="#StructKeyList(application.categories)#" index="cat">
 						<cfif cat contains "-tags">
 							<li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li>
-						</cfif>		
+						</cfif>
 					</cfloop>
               </ul>
             </li>
@@ -49,7 +51,7 @@
                 		<cfloop list="#StructKeyList(application.categories)#" index="cat">
 						<cfif cat contains "-functions">
 							<li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li>
-						</cfif>		
+						</cfif>
 					</cfloop>
               </ul>
             </li>
@@ -65,7 +67,7 @@
       </div>
     </div>
 
-    
+
     <cfoutput>#request.content#</cfoutput>
 
       <hr>
@@ -77,18 +79,33 @@
       </footer>
     </div> <!-- /container -->
 
-
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js"></script>
     <script src="/assets/script.js"></script>
+
+    <!--- TryCF Editor Scripts --->
+    <!--- Ace Editor --->
+    <script src="//rawgithub.com/ajaxorg/ace-builds/master/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <!--- load ace language tools & utility --->
+    <script src="//rawgithub.com/ajaxorg/ace-builds/master/src-min/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//rawgithub.com/ajaxorg/ace-builds/master/src-min/snippets/coldfusion.js"></script>
+    <script src="/assets/vendor/plugins/split-pane/split-pane.js"></script>
+    <!--- Angular JS --->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <!--- Directives --->
+    <script src="/assets/code-editor.js"></script>
+    <script src="/assets/trycf.js"></script>
+    <!--- // TryCF Editor Scripts --->
+
+
     <cfif IsDefined("data") AND IsStruct(data) AND StructKeyExists(data, "type") AND StructKeyExists(data, "name")>
     	<cfoutput>
     	<a href="https://github.com/foundeo/cfdocs/tree/master/data/en/#LCase(data.name)#.json" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="//s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
     	</cfoutput>
     <cfelse>
     	<a href="https://github.com/foundeo/cfdocs" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="//s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
-    </cfif> 
-    
+    </cfif>
+
   </body>
 </html>

@@ -16,26 +16,26 @@
 	  <cfset cat = findCategory(url.name)>
 	  <cfif Len(cat)><li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li></cfif>
 	  <li class="active">#data.name#</li>
-	  
+
 	  <cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "coldfusion") AND StructKeyExists(data.engines.coldfusion, "docs") AND Len(data.engines.coldfusion.docs)>
-	  		<li class="pull-right">		  			
+	  		<li class="pull-right">
 	  			<a href="#data.engines.coldfusion.docs#" title="Official Adobe ColdFusion Docs" class="label label-info">CF<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)>#XmlFormat(data.engines.coldfusion.minimum_version)#+</cfif></a>
 	  		</li>
 	  </cfif>
 	  <cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "railo") AND StructKeyExists(data.engines.railo, "docs") AND Len(data.engines.railo.docs)>
-	  		<li class="pull-right">		  			
+	  		<li class="pull-right">
 	  			<a href="#data.engines.railo.docs#" title="Official Railo Docs" class="label label-danger">R<cfif StructKeyExists(data.engines.railo, "minimum_version") AND Len(data.engines.railo.minimum_version)>#XmlFormat(data.engines.railo.minimum_version)#+</cfif></a>
 	  		</li>
 	  </cfif>
 	  <cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "openbd") AND StructKeyExists(data.engines.openbd, "docs") AND Len(data.engines.openbd.docs)>
-	  		<li class="pull-right">		  			
+	  		<li class="pull-right">
 	  			<a href="#data.engines.openbd.docs#" title="Official OpenBD Docs" class="label label-default">BD</a>
 	  		</li>
 	  </cfif>
 	</ol>
 	</cfif>
 <div class="container">
-	
+
 	<cfif StructKeyExists(data, "related") AND ArrayLen(data.related)>
 		<cfif data.type IS "listing">
 			<cfloop array="#data.related#" index="r">
@@ -90,7 +90,7 @@
 				<cfsavecontent variable="compatibilityData">
 					#compatibilityData#
 					<div class="row">
-						<div class="col-xs-1"><strong><cfif i IS "coldfusion">ColdFusion<cfelseif i IS "railo">Railo<cfelseif i IS "openbd">OpenBD</cfif></strong></div> 
+						<div class="col-xs-1"><strong><cfif i IS "coldfusion">ColdFusion<cfelseif i IS "railo">Railo<cfelseif i IS "openbd">OpenBD</cfif></strong></div>
 						<div class="col-xs-2"><cfif Len(data.engines[i].minimum_version)><span class="label label-warning">Version #XmlFormat(data.engines[i].minimum_version)#+</span></cfif></div>
 						<div class="col-xs-9">#XmlFormat(data.engines[i].notes)#</div>
 					</div>
@@ -101,6 +101,18 @@
 			<h2>Compatibility</h2>
 			#compatibilityData#
 		</cfif>
+	</cfif>
+
+	<cfif StructKeyExists(data, "example")>
+		<div code-editor
+			title="Example:"
+		    id="code-#hash( createUUID() )#"
+		    mode="coldfusion"
+		    width="100%"
+		    height="350px"
+		    engine="#isDefined('data.example.defaultEngine') ? data.example.defaultEngine : 'acf'#"
+		    show-results="true" code="#htmlEditFormat( data.example.code )#"></div>
+		<br/>
 	</cfif>
 
 	<cfif StructKeyExists(data, "links") AND ArrayLen(data.links)>
