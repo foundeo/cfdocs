@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether an array element is defined.",
 	"params": [ 
-		{"name":"array","description":"The array object","required.":true,"default":"","type":"String","values":[]},
+		{"name":"array","description":"The array object","required":true,"default":"","type":"String","values":[]},
 		{"name":"elementIndex","description":"The key value/index to check.","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
