@@ -16,7 +16,7 @@
 		{"name":"output","description":"Where to send the results of cfdump.","required":false,"default":"browser","type":"String","values":["browser","console","filename"]},
 		{"name":"show","description":"show column or keys.","required":false,"default":"","type":"String","values":[]},
 		{"name":"showUDfs","description":"show UDFs in cfdump output.","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"top","description":"The number of rows to display.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"top","description":"The number of rows to display. For a structure, this is the number of nested levels to display (useful for large stuctures).","required":false,"default":"","type":"Numeric","values":[]},
 		{"name":"abort","description":"stops further processing of page","required":false,"default":false,"type":"boolean","values":[true,false]}
 
 	],
@@ -27,6 +27,9 @@
 	},
 	"links": [
 		
+	],
+	"examples":[
+		{"result":"","title":"Short version","description":"Instead of using a boolean for the abort-Attribute to abort after a dump, it works like that:","code":"<cfdump var=\"#CGI#\" abort>\r\n"}
 	]
 	
 }
