@@ -4,7 +4,7 @@
 	"syntax":"arrayFindNoCase(array, object)",
 	"returns":"Numeric",
 	"related":[],
-	"description":" These functions performs a case-insensitive search in the array for the specified object.",
+	"description":" These functions performs a case-insensitive search in the array for the specified object. Returns the array index of the first match; 0 if not found.",
 	"params": [ 
 		{"name":"array","description":"No Help Available","required":true,"default":"","type":"Array","values":[]},
 		{"name":"object","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]}
