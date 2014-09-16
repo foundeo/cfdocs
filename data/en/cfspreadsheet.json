@@ -18,6 +18,7 @@
 		{"name":"query","description":" * read action: The query in which to store the converted spreadsheet file. You must specify format, name\n, or query.\n * write and update actions: A query variable containing the data to write. You must specify name or query.","required":false,"default":"","type":"String","values":[]},
 		{"name":"sheet","description":"Number of the sheet.","required":false,"default":"","type":"Numeric","values":[]},
 		{"name":"headerrow","description":"Row number that contains column names.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"excludeHeaderRow","description":"If set to true, excludes the headerRow from being included in the query results of a spreadsheet read..","required":false,"default":"false","type":"Boolean","values":[true,false]},
 		{"name":"name","description":"read action: The variable in which to store the spreadsheet file data. You must specify name or query.if format='csv' then name will contain csv variable.\nif format='html' then name will contain html content.\nwrite and update actions: A variable containing CSV-format data or an ColdFusion spreadsheet object containing the data to write. You must specify name or query.","required":false,"default":"","type":"String","values":[]},
 		{"name":"format","description":"Format of the data represented by the name variable.","required":false,"default":"","type":"String","values":["html","csv"]}
 
