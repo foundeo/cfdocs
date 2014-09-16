@@ -1,23 +1,74 @@
 {
-	"name":"findOnEOF",
-	"type":"function",
-	"syntax":"findOnEOF(set, String [, start])",
-	"returns":"Numeric",
-	"related":[],
-	"description":" Finds the first occurrence of any one of a set of characters\n in a string, from a specified start position. The search is\n case-sensitive.",
-	"params": [ 
-		{"name":"set","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"start","description":"","required":false,"default":1,"type":"Numeric","values":[1]}
-
+	"name": "findOneOf",
+	"type": "function",
+	"syntax": "findOneOf(set, string [, start])",
+	"returns": "Numeric",
+	"related": [],
+	"description": " Finds the first occurrence of any one of a set of characters in a string,\n from a specified start position. The search is case-sensitive.\n\n Returns the position of the first member of set found in string; or 0, if no member of set is found in string.",
+	"params": [
+		{
+			"name": "set",
+			"description": "String which contains one or more characters to search for. ",
+			"required": true,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "string",
+			"description": "String in which to search. ",
+			"required": true,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "start",
+			"description": "Start position of search. Can be 1 through the length of the string to search.\n Choosing a start index greater than the length of the string to search will return a 0.",
+			"required": false,
+			"default": 1,
+			"type": "Numeric",
+			"values": [
+				"1 through string length."
+			]
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/findoneof"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/findoneof"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/findoneof"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://learn.adobe.com/wiki/display/coldfusionen/findoneof"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/findoneof"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/findoneof"
+		}
 	},
-	"links": [
-		
-	]
-	
+	"examples": [
+		{
+			"result": "7",
+			"title": "Find first instance starting from beginning of string.",
+			"description": "We're not passing a start index in this example.",
+			"code": "string_to_search = 'The rain in Spain falls mainly in the plains.';\nWriteOutput( findOneOf('in', string_to_search) );"
+		},
+		{
+			"result": "16",
+			"title": "Find first instance starting from the twelfth character.",
+			"description": "Let's pass in a starting index of 12. The search will start at the twelfth character, just before the word 'Spain'.",
+			"code": "string_to_search = 'The rain in Spain falls mainly in the plains.';\nWriteOutput( findOneOf('in', string_to_search, 12) );"
+		},
+		{
+			"result": "3",
+			"title": "Example showing this function will search all characters from the 'set' argument in the 'string' argument.",
+			"description": "This function is case-sensitive so 't' does NOT match the first 'T'. It's the same for 'H' NOT matching the first 'h'. But 'e' matches the 'e' at the third position.\nSince this is the first match, this is the index that is returned.",
+			"code": "string_to_search = 'The rain in Spain falls mainly in the plains.';\nWriteOutput( findOneOf('tHe', string_to_search, 1) );"
+		}
+	],
+	"links": []
 }
