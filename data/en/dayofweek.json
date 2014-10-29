@@ -4,7 +4,7 @@
 	"syntax":"dayOfWeek(date)",
 	"returns":"Numeric",
 	"related":[],
-	"description":" Determines the day of the week, in a date.",
+	"description":" Determines the day of the week, in a date. Returns the ordinal for the day of the week, as an integer in the range 1 (Sunday) to 7 (Saturday).",
 	"params": [ 
 		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
 
