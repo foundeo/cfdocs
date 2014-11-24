@@ -1,14 +1,14 @@
 {
 	"name":"structAppend",
 	"type":"function",
-	"syntax":"structAppend(struct1, struct2 [, overwriteFlag])",
+	"syntax":"structAppend(destStruct, sourceStruct [, overwriteFlag])",
 	"returns":"boolean",
 	"related":[],
 	"description":" Appends one structure to another.\n CFML MX: Changed behavior: this function can be used on\n XML objects.",
 	"params": [ 
-		{"name":"struct1","description":"Structure to append.","required":true,"default":"","type":"Struct","values":[]},
-		{"name":"struct2","description":"Structure that contains the data to append to struct1","required":true,"default":"","type":"Struct","values":[]},
-		{"name":"overwriteFlag","description":"Yes: values in struct2 overwrite corresponding values in\n struct1. Default.","required":false,"default":true,"type":"boolean","values":[true,false]}
+		{"name":"destStruct","description":"Structure to append.","required":true,"default":"","type":"Struct","values":[]},
+		{"name":"sourceStruct","description":"Structure that contains the data to append to destStruct","required":true,"default":"","type":"Struct","values":[]},
+		{"name":"overwriteFlag","description":"Yes: values in sourceStruct overwrite corresponding values in\n destStruct. Default.","required":false,"default":true,"type":"boolean","values":[true,false]}
 
 	],
 	"engines": {
