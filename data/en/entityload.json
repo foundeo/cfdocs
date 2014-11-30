@@ -4,7 +4,7 @@
 	"syntax":"entityload(entityName, filtercriteria [, unique] [, sortorder] [, options])",
 	"returns":"",
 	"related":[],
-	"description":" Loads and returns an array of entities of the specified entityname.\nEntityLoad (entityname, filtercriteria [,unique] \nEntityLoad(entityname, filtercriteria, sortorder [, options])",
+	"description":" Loads and returns an array of entities of the specified entityname.\n\nEntityLoad (entityname, filtercriteria [,unique])\nEntityLoad(entityname, filtercriteria, sortorder [, options])",
 	"params": [ 
 		{"name":"entityName","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
 		{"name":"filtercriteria","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
