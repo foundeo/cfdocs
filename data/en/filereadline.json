@@ -1,12 +1,12 @@
 {
 	"name":"fileReadLine",
 	"type":"function",
-	"syntax":"fileReadLine(Param1)",
+	"syntax":"fileReadLine(fileObj)",
 	"returns":"String",
-	"related":[],
-	"description":" No Help Available",
+	"related":["fileOpen","fileClose","fileIsEOF","fileRead","fileWrite"],
+	"description":"Returns the next line from the file",
 	"params": [ 
-		{"name":"Param1","description":"No Help Available","required":true,"default":"","type":"","values":[]}
+		{"name":"fileObj","description":"file object previously opened with fileOpen()","required":true,"default":"","type":"","values":[]}
 
 	],
 	"engines": {
