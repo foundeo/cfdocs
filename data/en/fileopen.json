@@ -3,13 +3,12 @@
 	"type":"function",
 	"syntax":"fileOpen(Param1, Param2, Param3)",
 	"returns":"",
-	"related":[],
-	"description":" No Help Available",
+	"related":["FileClose", "FileCopy", "FileReadBinary", "FileRead", "FileReadLine", "FileWrite"],
+	"description":"Opens a file",
 	"params": [ 
-		{"name":"Param1","description":"No Help Available","required":true,"default":"","type":"","values":[]},
-		{"name":"Param2","description":"No Help Available","required":true,"default":"","type":"","values":[]},
-		{"name":"Param3","description":"No Help Available","required":true,"default":"","type":"","values":[]}
-
+		{"name":"filePath","description":"An absolute path of an on-disk or in-memory file on the server","required":true,"default":"","type":"","values":[]},
+		{"name":"mode","description":"<ul><li>read</li><li>readBinary</li><li>write</li><li>append</li></ul>","required":false,"default":"read","type":"","values":[]},
+		{"name":"charset","description":"<ul><li>utf-8</li><li>iso-8859-1</li><li>windows-1252</li><li>us-ascii</li><li>shift_jis</li><li>iso-2022-jp</li><li>euc-jp</li><li>euc-kr</li><li>big5</li><li>euc-cn</li><li>utf-16</li></ul>","required":false,"default":"Character encoding identified by the file's byte order mark, if any; otherwise, JVM default file character set.","type":"","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/fileopen"},
