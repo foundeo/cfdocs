@@ -1,5 +1,5 @@
 /*
-	Copyright (c) 2013, Abram Aams
+	Copyright (c) 2013, Abram Adams
 
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
@@ -50,9 +50,11 @@ angular.module('code.editor', [])
 	'	</div>'+
 	'	</div>'+
 	'	<div class="editor-toolbar">'+
-	'	    <button class="submit-code btn {{runBtnClass || \'btn-primary\'}} pull-left">Run Code <i class="icon-play icon-white glyphicon glyphicon-play"></i></button>'+
-	'	    <button class="toggle-fullscreen btn {{fullscreenbtnclass}} pull-right" ng-click="toggleFullscreen()"> <i class="icon-resize-full glyphicon glyphicon-resize-full"></i></button>'+
-	'	    <button ng-hide="showOptions == false || showOptions == 0" class="editor-options btn btn-default {{optionsbtnclass}} pull-right"> <i class="icon-gear glyphicon glyphicon-cog"></i></button>'+
+	'	    <button class="submit-code btn {{runBtnClass || \'btn-primary\'}} pull-left">Run Code <i class="icon-play icon-white"></i></button>'+
+	'		<span class="code-editor-help text-muted" style="font-size:small;">&nbsp;Ctl+Enter to Run, Ctl+S to save Gist</span>'+
+	'		<span class="code-editor-message"></span>'+
+	'	    <button class="toggle-fullscreen btn {{fullscreenbtnclass}} pull-right" ng-click="toggleFullscreen()"> <i class="icon-resize-full"></i></button>'+
+	'	    <button ng-show="showOptions" class="editor-options btn btn-default {{optionsbtnclass}} pull-right"> <i class="icon-gear"></i></button>'+
 	'		<div class="modal fade" style="display:none;" tabindex="-1" role="dialog">'+
 	'		  <div class="modal-dialog">'+
 	'		    <div class="modal-content">'+
@@ -103,8 +105,9 @@ angular.module('code.editor', [])
 	'				<label class="control-label">Change CFML Engine</label>'+
 	'		        <div>'+
 	'		         <select id="engine" class="form-control">'+
+	'		             <option value="lucee">Lucee 4.5</option>'+
+	'		             <option value="railo">Railo 4.2</option>'+
 	'		             <option value="acf">Adobe ColdFusion 10</option>'+
-	'		             <option value="railo">Railo 4</option>'+
 	'		         </select>'+
 	'		        </div>'+
 	'		      </div>'+
@@ -133,7 +136,7 @@ angular.module('code.editor', [])
 			fullscreen: '@fullscreen',
 			runBtnClass: '@runbtnclass',
 			fullscreenBtnClass: '@fullscreenbtnclass',
-			shoOptions: '@showOptions',
+			showOptions: '@showOptions',
 			showError: '@showError',
 			asserts: '@asserts',
 			code: '@code',
@@ -173,6 +176,7 @@ angular.module('code.editor', [])
 					resultsAnnotations = element.find('.results-annotations'),
 					splitPane = element.find('.split-pane'),
 					submitCode = element.find('.submit-code'),
+					message = element.find('.code-editor-message'),
 					toggleFullscreenBtn = element.find('.toggle-fullscreen');
 
 				// Initialize editor and set various default options
@@ -180,37 +184,17 @@ angular.module('code.editor', [])
 					session = aceEditor.getSession(),
 					mode = attrs.mode || "coldfusion",
 					theme = attrs.theme || "monokai",
-					showError = typeof attrs.showerror !== 'undefined' ? attrs.showerror === "true" : true,
+					showError = typeof attrs.showerror !== 'undefined' ? attrs.showerror === "true" || attrs.showerror === "1" : true,
 					asserts = attrs.asserts || "",
-					showOptions = typeof attrs.showOptions !== 'undefined' ? attrs.showOptions === "true" : true,
-					showResults = typeof attrs.showResults !== 'undefined' ? attrs.showResults === "true" : true,
-                    engine = attrs.engine || "acf",
+					showOptions = typeof attrs.showOptions !== 'undefined' ? attrs.showOptions === "true" || attrs.showOptions === "1" : true,
+					showResults = typeof attrs.showResults !== 'undefined' ? attrs.showResults === "true" || attrs.showResults === "1" : true,
+                    engine = attrs.engine || "lucee",
                     urlPool = {
-                    	"railo" : [ 'http://railo-us1.sbx.cloudbees.net/getremote.cfm',
-                    				'http://railo-us2.sbx.cloudbees.net/getremote.cfm',
-                    				'http://railo-eu1.sbx.eu.cloudbees.net/getremote.cfm',
-                    				'http://railo-eu2.sbx.eu.cloudbees.net/getremote.cfm',
-                    				'http://railo-us1.cfxchange.cloudbees.net/getremote.cfm',
-                    				'http://railo-us2.cfxchange.cloudbees.net/getremote.cfm',
-                    				'http://railo-eu1.cfxchange.eu.cloudbees.net/getremote.cfm',
-                    				'http://railo-eu2.cfxchange.eu.cloudbees.net/getremote.cfm',
-                    				'http://railo-us1.sbx2.cloudbees.net/getremote.cfm',
-                    				'http://railo-us2.sbx2.cloudbees.net/getremote.cfm',
-                    				'http://railo-eu1.sbx2.eu.cloudbees.net/getremote.cfm',
-                    				'http://railo-eu2.sbx2.eu.cloudbees.net/getremote.cfm'
-                    			  ],
-                    	"acf" 	: [ 'http://sbx.trycf.cloudbees.net/getremote.cfm',
-                    				'http://sbx2.trycf.cloudbees.net/getremote.cfm',
-                    				'http://sbx3.trycf.cloudbees.net/getremote.cfm',
-                    				'http://acf-sbx2.trycf.cloudbees.net/getremote.cfm',
-                    				'http://acf-sbx3.trycf.cloudbees.net/getremote.cfm',
-                    				'http://acf-sbx-eu1.trycf.eu.cloudbees.net/getremote.cfm',
-                    				'http://acf-sbx-eu2.trycf.eu.cloudbees.net/getremote.cfm',
-                    				'http://acf-sbx-eu3.trycf.eu.cloudbees.net/getremote.cfm',
-                    				'http://acf-sbx-eu4.trycf.eu.cloudbees.net/getremote.cfm',
-                    				'http://acf-sbx-eu5.trycf.eu.cloudbees.net/getremote.cfm'
-                    			  ]
+                    	"railo" : [ 'http://sbx-railo.aws.af.cm/getremote.cfm' ],
+        			    "lucee" : [ 'http://sbx-lucee.aws.af.cm/getremote.cfm' ],
+                    	"acf" 	: [ 'http://acf-sbx.jelastic.servint.net/getremote.cfm' ]
                     },
+
                     url = attrs.url || urlPool[engine][Math.floor(Math.random()*urlPool[engine].length)];
 
 				theme = theme.toLowerCase();
@@ -238,6 +222,26 @@ angular.module('code.editor', [])
 				   	});
 
 			    });
+
+			    // Custom ACE editor key bindings
+				// Run
+				aceEditor.commands.addCommand({
+				    name: "Run",
+				    bindKey: {win: "Ctrl-Enter", mac: "Command-Enter"},
+				    exec: function(editor) {
+				    	if( submitCode )
+				    	submitCode.trigger('click');
+				    }
+				});
+				// Save Gist
+				aceEditor.commands.addCommand({
+				    name: "Save",
+				    bindKey: {win: "Ctrl-s", mac: "Command-s"},
+				    exec: function(editor) {
+				    	saveGist();
+				    }
+				});
+
 
 			    /* Enable Auto-complete */
 				var langTools = ace.require("ace/ext/language_tools");
@@ -275,17 +279,25 @@ angular.module('code.editor', [])
 				editorWrapper.css('height',attrs.height);
 				editorWrapper.css('width',attrs.width);
 
+				scope.$watch('showOptions', function(){
+					if( showOptions == 1 || showOptions == true ){
+						element.find('.editor-options').show();
+					}else{
+						element.find('.editor-options').hide();
+					}
+				});
 				// Hide results pane if specified
 				scope.$watch('showResults', function(){
-
 					if( showResults == 1 || showResults == true ){
 						element.find('#right-component').show();
 						element.find('.split-pane-divider').show();
+						element.find('.code-editor-help').show();
 					}else{
 						element.find('.submit-code').hide();
 						element.find('#right-component').hide();
 						element.find('.split-pane-divider').hide();
 						element.find('#left-component').css('width','100%');
+						element.find('.code-editor-help').hide();
 					}
 					aceEditor.resize(true);
 				});
@@ -347,6 +359,30 @@ angular.module('code.editor', [])
 					url = urlPool[engine][Math.floor(Math.random()*urlPool[engine].length)];
 				});
 
+				function saveGist(){
+					var data = {
+				        "description": "TryCF Gist",
+				        "public": true,
+				        "files": {
+				          "trycf-gist.cfm": {
+				              "content": aceEditor.getValue()
+				          }
+				        }
+				      };
+				      $.ajax({
+				        url: 'https://api.github.com/gists',
+				        type: 'POST',
+				        dataType: 'json',
+				        data: JSON.stringify(data)
+				      })
+				      .success( function( response ) {
+				        message.html('<span class="alert alert-success" style="padding: 5px;margin: 0 0 0 3px;display: inline-block;"><i class="icon-check icon-white"></i> Saved Gist: <a href="http://trycf.com/gist/'+ response.id +'/'+engine+'">'+response.id+'</a></span>');
+				      })
+				      .error( function(e) {
+				        console.warn("gist save error", e);
+				        message.html('<span class="alert alert-danger" style="padding: 5px;margin: 0 0 0 3px;display: inline-block;"><i class="icon-warning-sign icon-white"></i> Couldn''t save Gist: '+e.detail+'</span>');
+				      });
+				}
 				// This fires when the results pane is updated with the response
 				// back from the server.
 				function frameOnLoad(e){
@@ -355,130 +391,138 @@ angular.module('code.editor', [])
 
 					resultsFrame.off('load');
 
-					$.ajax({
+					var xhr = $.ajax({
 						type : "GET",
 						url  : url + "?callback=?",
 						data : {'key':attrs.id+uid},
-						dataType :"jsonp",
-						success : function(data){
-							if( data.error !== undefined || ( asserts && asserts.length < 0 ) || data.hasfailedtest !== undefined  ){
-							  try{
+						timeout: 5000,
+						dataType :"jsonp"})
+							.always( renderResults )
+							.fail( function ( httpReq, status, exception ){
 
-								var html = '',
-									htmlFull = '';
-
-								if( typeof data !== 'object' ) {
-									data = $.parseJSON( data );
-								}
-
-								if( data.line && data.line == 0 ){
-									// forced error due to blacklist
-									if( data.state == "blacklist" ){
-										html = '<div class="alert alert-warning">'+
-												data.html +
-												'</div>';
-									// runtime error occured when running user's code
-									}else{
-									  	html = '<div class="alert alert-danger"><strong><i class="icon-bug"></i> Error:</strong><br/>'+
-												data.error +
-												'</div>';
-									}
-								}else{
-
-									html = '<div class="alert alert-danger"><strong><i class="icon-bug"></i> Error:</strong><br/>'+
-											data.error + ' on line ' + data.line +
-										   '</div>';
-
-									// This creates a marker in the gutter of the editor to indicate where the error is.
-									session.setAnnotations([{
-										row: data.line-1,
-										column: data.column,
-										text: data.error || data.message,
-										type: "error" // also warning and information
-									}]);
-
-									aceEditor.gotoLine(data.line);
-									// use the angular timeout method to delay the call to
-									// make the popover, this makes sure the editor has identified
-									// and selected the line marked as an error.
-									$timeout(function(){
-										makePopover(editor);
-									}, 100);
-								}
-
-								htmlFull = html;
-
-								if (data.pattern && data.pattern != ''){
-									htmlFull += '<div class="alert alert-info"><strong><i class="icon-code"></i> Expected Pattern:</strong><br><pre><code>'+ decodeURIComponent(data.pattern) + '</code></pre>';
-								}
-								if(data.documentation && data.documentation != ''){
-									htmlFull += '<strong><i class="icon-book"></i> Documentation:</strong><pre>' + decodeURIComponent(data.documentation) + '</pre></div>';
-								}
-
-								resultsAnnotations.html(html);
-								resultsDiv.html(htmlFull).show();
-								resultsFrame.hide();
-							  } catch( e ) {
-								resultsDiv.hide();
-								resultsFrame.show();
-							  }
-
-							}else{
-
-								if( asserts.length  == 0 || !data.hasfailedtest ){
-									resultsDiv.hide();
-									resultsFrame.show();
-
-								}else{
-
-									if( typeof data !== 'object' ) {
-										data = $.parseJSON( data );
-									}
-									var html = data.html || '';
-
-
-									/* Did we get test results, and were there any fails? */
-									if( data.tests && data.tests.length > 0 ){
-										var testFailed = 0;
-										var resultList = $('<ul class="list-group"></ul>');
-										var results = {};
-										var filter = [];
-										for( var test in data.tests ){
-											results = data.tests[test].results;
-											if( results.status === "fail"){
-												testFailed++;
-												if( filter.indexOf( results.message )  == -1 ){
-													resultList.append('<li class="list-group-item '+ (results.status === "fail" ? 'alert-danger' : 'alert-success') +'">'+ results.message +'</li>');
-												}
-												filter.push(results.message);
-											}
-										}
-										if( testFailed > 0){
-											resultList.prepend('<li class="list-group-item alert-danger"><i class="icon-bug"></i> Hmm... Something\'s not quite right...</li>');
-											resultsDiv.html(resultList.html()).show();
-											resultsFrame.hide();
-											return;
-										}
-									}
-									if( data.status === "success" ){
-										resultsDiv.hide();
-										resultsFrame.show();
-									}else{
-										resultsDiv.html(html).show();
-										resultsFrame.hide();
-									}
-								}
+							if( status == "timeout"){
+								// timeout indicates the jsonp request failed with a 500 series server error.
+								// jQuery doesn't handle those errors on a jsonp call.
+								renderResults( {"pattern":"","state":"execution","message":"There was an error parsing your code.  This usually indicates a missing ; or another compile time syntax error.  Check your syntax and try again.","html":"There was an error parsing your code.","documentation":"","error":"There was an error parsing your code.  This usually indicates a missing ; or another compile time syntax error.  Check your syntax and try again.","line":0,"column":0} );
+								return;
 							}
-						},
-						error : function(httpReq,status,exception){
-							//console.log(status+" "+exception);
 							//var html = '<div class="alert alert-info"><strong><i class="icon-warning-sign"></i> Oh snap</strong><br><p>'+ exception + '</p>';
 							var html = '<div class="alert alert-info"><strong><i class="icon-time"></i> Oh snap</strong><br><p>Looks like someone is hogging all the resources.  Click run again and we\'ll try another server.</p>';
 							url = urlPool[engine][Math.floor(Math.random()*urlPool[engine].length)];
 							resultsFrame.hide();
 							resultsDiv.html(html).show();
-						}
 					});
+
+					function renderResults(data){
+						if( data.error !== undefined || ( asserts && asserts.length < 0 && data.hasfailedtest !== "false" ) ){
+						  try{
+
+							var html = '',
+								htmlFull = '';
+
+							if( typeof data !== 'object' ) {
+								data = $.parseJSON( data );
+							}
+
+							if( data.line !== undefined && data.line == 0 ){
+								// forced error due to blacklist
+								if( data.state == "blacklist" ){
+									html = '<div class="alert alert-warning">'+
+											data.html +
+											'</div>';
+								// runtime error occured when running user's code
+								}else{
+								  	html = '<div class="alert alert-danger"><strong><i class="icon-bug"></i> Error:</strong><br/>'+
+											data.error +
+											'</div>';
+								}
+							}else{
+
+								html = '<div class="alert alert-danger"><strong><i class="icon-bug"></i> Error:</strong><br/>'+
+										data.error + ' on line ' + data.line +
+									   '</div>';
+
+								// This creates a marker in the gutter of the editor to indicate where the error is.
+								session.setAnnotations([{
+									row: data.line-1,
+									column: data.column,
+									text: data.error || data.message,
+									type: "error" // also warning and information
+								}]);
+
+								aceEditor.gotoLine(data.line);
+								// use the angular timeout method to delay the call to
+								// make the popover, this makes sure the editor has identified
+								// and selected the line marked as an error.
+								$timeout(function(){
+									makePopover(editor);
+								}, 100);
+							}
+
+							htmlFull = html;
+
+							if (data.pattern && data.pattern != ''){
+								htmlFull += '<div class="alert alert-info"><strong><i class="icon-code"></i> Expected Pattern:</strong><br><pre><code>'+ decodeURIComponent(data.pattern) + '</code></pre>';
+							}
+							if(data.documentation && data.documentation != ''){
+								htmlFull += '<strong><i class="icon-book"></i> Documentation:</strong><pre>' + decodeURIComponent(data.documentation) + '</pre></div>';
+							}
+
+							resultsAnnotations.html(html);
+							resultsDiv.html(htmlFull).show();
+							resultsFrame.hide();
+						  } catch( e ) {
+							resultsDiv.hide();
+							resultsFrame.show();
+						  }
+
+						}else{
+
+							if( asserts.length  == 0 || !data.hasfailedtest ){
+								resultsDiv.hide();
+								resultsFrame.show();
+
+							}else{
+
+								if( typeof data !== 'object' ) {
+									data = $.parseJSON( data );
+								}
+								var html = data.html || '';
+
+
+								/* Did we get test results, and were there any fails? */
+								if( data.tests && data.tests.length > 0 ){
+									var testFailed = 0;
+									var resultList = $('<ul class="list-group"></ul>');
+									var results = {};
+									var filter = [];
+									for( var test in data.tests ){
+										results = data.tests[test].results;
+										if( results.status === "fail"){
+											testFailed++;
+											if( filter.indexOf( results.message )  == -1 ){
+												resultList.append('<li class="list-group-item '+ (results.status === "fail" ? 'alert-danger' : 'alert-success') +'">'+ results.message +'</li>');
+											}
+											filter.push(results.message);
+										}
+									}
+									if( testFailed > 0){
+										resultList.prepend('<li class="list-group-item alert-danger"><i class="icon-bug"></i> Hmm... Something\'s not quite right...</li>');
+										resultsDiv.html(resultList.html()).show();
+										resultsFrame.hide();
+										return;
+									}
+								}
+								if( data.status === "success" ){
+									resultsDiv.hide();
+									resultsFrame.show();
+								}else{
+									resultsDiv.html(html).show();
+									resultsFrame.hide();
+								}
+							}
+						}
+					}
 
 					return;
 
