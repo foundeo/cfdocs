@@ -53,8 +53,8 @@ angular.module('code.editor', [])
 	'	    <button class="submit-code btn {{runBtnClass || \'btn-primary\'}} pull-left">Run Code <i class="icon-play icon-white"></i></button>'+
 	'		<span class="code-editor-help text-muted" style="font-size:small;">&nbsp;Ctl+Enter to Run, Ctl+S to save Gist</span>'+
 	'		<span class="code-editor-message"></span>'+
-	'	    <button class="toggle-fullscreen btn {{fullscreenbtnclass}} pull-right" ng-click="toggleFullscreen()"> <i class="icon-resize-full"></i></button>'+
-	'	    <button ng-show="showOptions" class="editor-options btn btn-default {{optionsbtnclass}} pull-right"> <i class="icon-gear"></i></button>'+
+	'		<button class="toggle-fullscreen btn {{fullscreenbtnclass}} pull-right" ng-click="toggleFullscreen()"> <i class="icon-resize-full glyphicon glyphicon-resize-full"></i></button>'+
+	'	    <button ng-hide="showOptions == false || showOptions == 0" class="editor-options btn btn-default {{optionsbtnclass}} pull-right"> <i class="icon-gear glyphicon glyphicon-cog"></i></button>'+
 	'		<div class="modal fade" style="display:none;" tabindex="-1" role="dialog">'+
 	'		  <div class="modal-dialog">'+
 	'		    <div class="modal-content">'+
@@ -380,7 +380,7 @@ angular.module('code.editor', [])
 				      })
 				      .error( function(e) {
 				        console.warn("gist save error", e);
-				        message.html('<span class="alert alert-danger" style="padding: 5px;margin: 0 0 0 3px;display: inline-block;"><i class="icon-warning-sign icon-white"></i> Couldn''t save Gist: '+e.detail+'</span>');
+				        message.html('<span class="alert alert-danger" style="padding: 5px;margin: 0 0 0 3px;display: inline-block;"><i class="icon-warning-sign icon-white"></i> Couldn\'t save Gist: '+e.detail+'</span>');
 				      });
 				}
 				// This fires when the results pane is updated with the response

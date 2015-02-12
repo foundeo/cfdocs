@@ -86,10 +86,10 @@
 
     <!--- TryCF Editor Scripts --->
     <!--- Ace Editor --->
-    <script src="/assets/vendor/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/assets/vendor/ace/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
     <!--- load ace language tools & utility --->
-    <script src="/assets/vendor/ace/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/assets/vendor/ace/snippets/coldfusion.js"></script>
+    <script src="/assets/vendor/ace/src-min/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/assets/vendor/ace/src-min/snippets/coldfusion.js"></script>
     <script src="/assets/vendor/plugins/split-pane/split-pane.js"></script>
     <!--- Angular JS --->
     <script src="/assets/vendor/angular/angular.min.js"></script>
