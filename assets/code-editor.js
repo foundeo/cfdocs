@@ -56,6 +56,7 @@ angular.module('code.editor', [])
 	'		<button class="toggle-fullscreen btn {{fullscreenbtnclass}} pull-right" ng-click="toggleFullscreen()"> <i class="icon-resize-full glyphicon glyphicon-resize-full"></i></button>'+
 	'	    <button ng-hide="showOptions == false || showOptions == 0" class="editor-options btn btn-default {{optionsbtnclass}} pull-right"> <i class="icon-gear glyphicon glyphicon-cog"></i></button>'+
 	'		<span class="alert alert-info pull-right" style="padding: 5px;margin: 5px 3px 0px 3px;display: inline-block;">Current Engine: <span class="display-engine"></span></span>'+
+	'		<div class="text-muted">&nbsp;Powered by <a href="http://trycf.com">TryCF.com</a></div>'+
 	'		<div class="modal fade" style="display:none;" tabindex="-1" role="dialog">'+
 	'		  <div class="modal-dialog">'+
 	'		    <div class="modal-content">'+
