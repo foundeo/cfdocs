@@ -55,6 +55,7 @@ angular.module('code.editor', [])
 	'		<span class="code-editor-message"></span>'+
 	'		<button class="toggle-fullscreen btn {{fullscreenbtnclass}} pull-right" ng-click="toggleFullscreen()"> <i class="icon-resize-full glyphicon glyphicon-resize-full"></i></button>'+
 	'	    <button ng-hide="showOptions == false || showOptions == 0" class="editor-options btn btn-default {{optionsbtnclass}} pull-right"> <i class="icon-gear glyphicon glyphicon-cog"></i></button>'+
+	'		<span class="alert alert-info pull-right" style="padding: 5px;margin: 5px 3px 0px 3px;display: inline-block;">Current Engine: <span class="display-engine"></span></span>'+
 	'		<div class="modal fade" style="display:none;" tabindex="-1" role="dialog">'+
 	'		  <div class="modal-dialog">'+
 	'		    <div class="modal-content">'+
@@ -162,7 +163,8 @@ angular.module('code.editor', [])
 				scope.code = attrs.code;
 				scope.asserts = attrs.asserts;
 				scope.fullscreen = attrs.fullscreen;
-
+				scope.engines = {'acf':'Adobe ColdFusion 10', 'railo':'Railo 4.2', 'lucee':'Lucee 4.5'};
+				scope.engine = attrs.engine || 'lucee';
 
 				// Setup dom pointers.
 				var editor = element.find('.code-editor'),
@@ -177,6 +179,7 @@ angular.module('code.editor', [])
 					splitPane = element.find('.split-pane'),
 					submitCode = element.find('.submit-code'),
 					message = element.find('.code-editor-message'),
+					displayEngineSpan = element.find('.display-engine'),
 					toggleFullscreenBtn = element.find('.toggle-fullscreen');
 
 				// Initialize editor and set various default options
@@ -188,15 +191,14 @@ angular.module('code.editor', [])
 					asserts = attrs.asserts || "",
 					showOptions = typeof attrs.showOptions !== 'undefined' ? attrs.showOptions === "true" || attrs.showOptions === "1" : true,
 					showResults = typeof attrs.showResults !== 'undefined' ? attrs.showResults === "true" || attrs.showResults === "1" : true,
-                    engine = attrs.engine || "lucee",
                     urlPool = {
                     	"railo" : [ 'http://sbx-railo.aws.af.cm/getremote.cfm' ],
         			    "lucee" : [ 'http://sbx-lucee.aws.af.cm/getremote.cfm' ],
                     	"acf" 	: [ 'http://acf-sbx.jelastic.servint.net/getremote.cfm' ]
                     },
 
-                    url = attrs.url || urlPool[engine][Math.floor(Math.random()*urlPool[engine].length)];
-
+                    url = attrs.url || urlPool[scope.engine][Math.floor(Math.random()*urlPool[scope.engine].length)];
+                displayEngine();
 				theme = theme.toLowerCase();
 				element.find('#theme').val(theme);
 				aceEditor.setTheme("ace/theme/" + theme);
@@ -246,7 +248,7 @@ angular.module('code.editor', [])
 			    /* Enable Auto-complete */
 				var langTools = ace.require("ace/ext/language_tools");
 
-				element.find('#engine').val(engine);
+				element.find('#engine').val(scope.engine);
 
 
 				scope.$watch('code', function(){
@@ -355,10 +357,14 @@ angular.module('code.editor', [])
 				});
 
 				element.find('#engine').on('change',function(e){
-					engine = $(this).val();
-					url = urlPool[engine][Math.floor(Math.random()*urlPool[engine].length)];
+					scope.engine = $(this).val();
+					displayEngine();
+					url = urlPool[scope.engine][Math.floor(Math.random()*urlPool[scope.engine].length)];
 				});
 
+				function displayEngine(){
+					displayEngineSpan.html( scope.engines[scope.engine] );
+				}
 				function saveGist(){
 					var data = {
 				        "description": "TryCF Gist",
@@ -376,11 +382,11 @@ angular.module('code.editor', [])
 				        data: JSON.stringify(data)
 				      })
 				      .success( function( response ) {
-				        message.html('<span class="alert alert-success" style="padding: 5px;margin: 0 0 0 3px;display: inline-block;"><i class="icon-check icon-white"></i> Saved Gist: <a href="http://trycf.com/gist/'+ response.id +'/'+engine+'">'+response.id+'</a></span>');
+				        message.html('<span class="alert alert-success" style="padding: 5px;margin: 5px 0 0 3px;display: inline-block;"><i class="icon-check icon-white"></i> Saved Gist: <a href="http://trycf.com/gist/'+ response.id +'/'+scope.engine+'">'+response.id+'</a></span>');
 				      })
 				      .error( function(e) {
 				        console.warn("gist save error", e);
-				        message.html('<span class="alert alert-danger" style="padding: 5px;margin: 0 0 0 3px;display: inline-block;"><i class="icon-warning-sign icon-white"></i> Couldn\'t save Gist: '+e.detail+'</span>');
+				        message.html('<span class="alert alert-danger" style="padding: 5px;margin: 5px 0 0 3px;display: inline-block;"><i class="icon-warning-sign icon-white"></i> Couldn\'t save Gist: '+e.detail+'</span>');
 				      });
 				}
 				// This fires when the results pane is updated with the response
@@ -408,7 +414,7 @@ angular.module('code.editor', [])
 							}
 							//var html = '<div class="alert alert-info"><strong><i class="icon-warning-sign"></i> Oh snap</strong><br><p>'+ exception + '</p>';
 							var html = '<div class="alert alert-info"><strong><i class="icon-time"></i> Oh snap</strong><br><p>Looks like someone is hogging all the resources.  Click run again and we\'ll try another server.</p>';
-							url = urlPool[engine][Math.floor(Math.random()*urlPool[engine].length)];
+							url = urlPool[scope.engine][Math.floor(Math.random()*urlPool[scope.engine].length)];
 							resultsFrame.hide();
 							resultsDiv.html(html).show();
 					});
