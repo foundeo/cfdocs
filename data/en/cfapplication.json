@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Defines the scope of a CFML application; enables and\n disables storage of Client variables; specifies the Client\n variable storage mechanism; enables Session variables; and\n sets Application variable timeouts.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"Name of application. Up to 64 characters","required":false,"default":"","type":"String","values":[]},
 		{"name":"loginstorage","description":"cookie: store login information in the Cookie scope.\n session: store login information in the Session scope.","required":false,"default":"cookie","type":"String","values":["cookie","session"]},
 		{"name":"clientmanagement","description":"enables client variables","required":false,"default":false,"type":"boolean","values":[true,false]},
@@ -18,7 +18,7 @@
 		{"name":"scriptprotect","description":"Specifies whether to protect variables from cross-site scripting attacks.\n - none: do not protect variables\n - all: protect Form, URL, CGI, and Cookie variables\n - comma-delimited list of ColdFusion scopes: protect variables in the specified scopes","required":false,"default":"","type":"String","values":["none","all","form","url","cookie","cgi","form,url","form,url,cookie","form,url,cookie,cgi"]},
 		{"name":"securejsonprefix","description":"The security prefix to put in front of the value that a ColdFusion function returns in JSON-format \n\t\t\t\tin response to a remote call if the secureJSON setting is true.","required":false,"default":"","type":"String","values":[true,false]},
 		{"name":"securejson","description":"A Boolean value that specifies whether to add a security prefix in front of any value that a ColdFusion function returns in JSON-format\n\t\t\t\t in response to a remote call.","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"serverSideFormValidation","description":"Enable\/Disable ColdFusion‚Äôs server side validation on CFFORM.","required":false,"default":"","type":"Boolean","values":[true,false]}
+		{"name":"serverSideFormValidation","description":"Enable\/Disable ColdFusion‚ server side validation on CFFORM.","required":false,"default":"","type":"Boolean","values":[true,false]}
 
 	],
 	"engines": {
@@ -27,7 +27,7 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfapplication"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }
