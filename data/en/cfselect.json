@@ -5,11 +5,11 @@
 	"returns":"",
 	"related":[],
 	"description":" Constructs a drop-down list box form control. Used within a\n cfform tag.\n\n You can populate the list from a query, or by using the HTML\n option tag.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"Name of the select form element","required":true,"default":"","type":"String","values":[]},
 		{"name":"id","description":"ID for form input element.","required":false,"default":"","type":"String","values":[]},
 		{"name":"bind","description":"A bind expression that dynamically sets an attribute \n of the control.","required":false,"default":"","type":"String","values":[]},
-		{"name":"bindAttribute","description":"Specifies the HTML tag attribute whose value is set \n by the bind attribute. You can only specify attributes \n in the browser‚Äôs HTML DOM tree, not ColdFusion- \n specific attributes. \n Ignored if there is no bind attribute.","required":false,"default":"","type":"String","values":[]},
+		{"name":"bindAttribute","description":"Specifies the HTML tag attribute whose value is set \n by the bind attribute. You can only specify attributes \n in the browser‚ HTML DOM tree, not ColdFusion- \n specific attributes. \n Ignored if there is no bind attribute.","required":false,"default":"","type":"String","values":[]},
 		{"name":"bindOnLoad","description":"A Boolean value that specifies whether to execute \n the bind attribute expression when first loading the \n form. Ignored if there is no bind attribute.","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"editable","description":"Boolean value specifying whether you can edit the \n contents of the control.","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"label","description":"Label to put next to the control on a Flash or XML-format form.","required":false,"default":"","type":"String","values":[]},
@@ -47,7 +47,7 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfselect"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

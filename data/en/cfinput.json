@@ -5,12 +5,12 @@
 	"returns":"",
 	"related":[],
 	"description":" Used within the cfform tag, to place radio buttons, check boxes,\n or text boxes on a form. Provides input validation for the\n specified control type.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"Name for form input element.","required":true,"default":"","type":"String","values":[]},
 		{"name":"autosuggest","description":"Specifies entry completion suggestions to \n display as the user types into a text input. The \n user can select a suggestion to complete the text \n entry. \n The valid value can be either of the following: \n ‚Ä¢ A string consisting of the suggestion values \n separated by the delimiter specified by the \n delimiter attribute. \n ‚Ä¢ A bind expression that gets the suggestion \n values based on the current input text. \n Valid only for cfinput type=\"text\".","required":false,"default":"","type":"String","values":[]},
 		{"name":"autoSuggestBindDelay","description":"The minimum time between autosuggest bind \n expression invocations, in seconds. Use this \n attribute to limit the number of requests that are \n sent to the server when a user types. \n Valid only for cfinput type=\"text\"","required":false,"default":"","type":"Numeric","values":[]},
 		{"name":"autoSuggestMinLength","description":"The minimum number of characters required in \n the text box before invoking a bind expression to \n return items for suggestion. \n Valid only for cfinput type=\"text\".","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"bindAttribute","description":"Specifies the HTML tag attribute whose value is \n set by the bind attribute. You can only specify \n attributes in the browser‚Äôs HTML DOM tree, not \n ColdFusion-specific attributes. \n Ignored if there is no bind attribute. \n Valid only for cfinput type=\"text\".","required":false,"default":"","type":"String","values":[]},
+		{"name":"bindAttribute","description":"Specifies the HTML tag attribute whose value is \n set by the bind attribute. You can only specify \n attributes in the browser‚ HTML DOM tree, not \n ColdFusion-specific attributes. \n Ignored if there is no bind attribute. \n Valid only for cfinput type=\"text\".","required":false,"default":"","type":"String","values":[]},
 		{"name":"bindonload","description":"A Boolean value that specifies whether to \n execute the bind attribute expression when first \n loading the form. \n Ignored if there is no bind attribute. \n Valid only for cfinput type=\"text\".","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"id","description":"ID for form input element.","required":false,"default":"","type":"String","values":[]},
 		{"name":"type","description":"The input control type to create:\n - button: push button.\n - checkbox: check box.\n - file: file selector; not supported in Flash.\n - hidden: invisible control.\n - image: clickable button with an image.\n - password: password entry control; hides input values.\n - radio: radio button.\n - reset: form reset button.\n - submit: form submission button.\n - text: text entry box.\n - datefield: Flash only; date entry field with an\n expanding calendar for selecting dates.","required":false,"default":"text","type":"String","values":["button","checkbox","file","hidden","image","password","radio","reset","submit","text","datefield","autosuggest"]},
@@ -63,7 +63,7 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfinput"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }
