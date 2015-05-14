@@ -5,7 +5,7 @@
 	"returns":"void",
 	"related":[],
 	"description":" Adds freeze pane to spreadsheet",
-	"params": [ 
+	"params": [
 		{"name":"spreadsheetObj","description":"Spreadsheet variable","required":true,"default":"","type":"Variablename","values":[]},
 		{"name":"column","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"row","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
@@ -14,12 +14,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetaddfreezepane"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/spreadsheetaddfreezepane"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetaddfreezepane"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetaddfreezepane"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

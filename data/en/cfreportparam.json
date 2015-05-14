@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Passes input parameters to a ColdFusion Report Builder\n report definition. Allowed inside cfreport tag bodies only.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"Variable name for data that is passed. The ColdFusion\n Report Builder report definition must include an input\n parameter that matches this name.","required":false,"default":"","type":"String","values":[]},
 		{"name":"value","description":"Value of the data that is sent.","required":false,"default":"","type":"String","values":[]},
 		{"name":"chart","description":"Name of the chart contained in a report or subreport. The value of this attribute must match Name property of a chart defined in the Report Builder report.","required":false,"default":"","type":"String","values":[]},
@@ -16,12 +16,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfreportparam"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfreportparam"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfreportparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfreportparam"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

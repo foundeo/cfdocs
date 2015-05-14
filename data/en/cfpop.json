@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Retrieves or deletes e-mail messages from a POP mail server.",
-	"params": [ 
+	"params": [
 		{"name":"server","description":"POP server identifier:\n A host name; for example, \"biff.upperlip.com\"\n An IP address; for example, \"192.1.2.225\"","required":true,"default":"","type":"String","values":[]},
 		{"name":"port","description":"POP port","required":false,"default":"","type":"Numeric","values":[]},
 		{"name":"username","description":"Overrides username.","required":false,"default":"","type":"String","values":[]},
@@ -22,12 +22,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfpop"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfpop"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfpop"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfpop"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

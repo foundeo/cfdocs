@@ -5,17 +5,17 @@
 	"returns":"Numeric",
 	"related":[],
 	"description":" Returns size of given directory",
-	"params": [ 
+	"params": [
 		{"name":"path","description":"","required":true,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/directorysize"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/directorysize"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/directorysize"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/directorysize"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

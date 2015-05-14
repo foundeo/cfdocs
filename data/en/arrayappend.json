@@ -5,19 +5,19 @@
 	"returns":"boolean",
 	"related":[],
 	"description":"Appends an array element to an array.",
-	"params": [ 
+	"params": [
 		{"name":"array","description":"The array to which the element should be appended.","required":true,"default":"","type":"Array","values":[]},
 		{"name":"value","description":"The element to append. Can be any type.","required":true,"default":"","type":"Any","values":[]},
 		{"name":"merge","description":"When true appends array elements individually to the specified array. When false (default), the new array is appended as a single element.","required":false,"default":false,"type":"Boolean","values":[true,false]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/arrayappend"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/arrayappend"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arrayappend"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayappend"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

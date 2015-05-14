@@ -5,15 +5,15 @@
 	"returns":"Object",
 	"related":[],
 	"description":" Returns an XML object that contains the entire SOAP\n request. Usually called from within a web service CFC.",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/getsoaprequest"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/getsoaprequest"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getsoaprequest"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getsoaprequest"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

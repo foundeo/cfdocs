@@ -5,19 +5,19 @@
 	"returns":"Numeric",
 	"related":[],
 	"description":" Counts instances of a specified value in a list. The search is\n case-sensitive.",
-	"params": [ 
+	"params": [
 		{"name":"list","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"value","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"delimiters","description":"","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/listvaluecount"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/listvaluecount"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listvaluecount"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listvaluecount"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

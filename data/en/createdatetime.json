@@ -5,7 +5,7 @@
 	"returns":"DateTime",
 	"related":[],
 	"description":" Creates a date-time object.",
-	"params": [ 
+	"params": [
 		{"name":"year","description":"","required":true,"default":"","type":"Numeric","values":["year(now())"]},
 		{"name":"month","description":"","required":true,"default":"","type":"Numeric","values":["month(now())"]},
 		{"name":"day","description":"","required":true,"default":"","type":"Numeric","values":["day(now())"]},
@@ -15,12 +15,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/createdatetime"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/createdatetime"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createdatetime"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createdatetime"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

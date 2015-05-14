@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Allowed inside cfhttp tag bodies only. Required for cfhttp POST\n operations. Optional for all others. Specifies parameters to\n build an HTTP request.",
-	"params": [ 
+	"params": [
 		{"name":"type","description":"Information type\n * Header: The parameter specifies an HTTP header.\n (ColdFusion does not URL encode the header)\n * Body: Specifies the body of the HTTP request.\n (ColdFusion does not URL encode the body contents)\n * XML: Identifies the request as having a content-type of\n text\/xml. Specifies that the value attribute contains\n the body of the HTTP request. Used to send XML to the\n destination URL. CFML does not URL encode the XML\n data.\n * CGI: Specifies an HTTP header. CFML URL encodes\n the header by default.\n * File: Tells CFML to send the contents of the\n specified file. CFML does not URL encode the\n file contents\n * URL: Specifies a URL query string name-value pair to\n append to the cfhttp url attribute. CFML URL\n encodes the query string.\n * FormField: Specifies a form field to send. CFML\n URL encodes the Form field by default.\n * Cookie: Specifies a cookie to send as an HTTP header.\n CFML URL encodes the cookie.","required":true,"default":"","type":"String","values":["header","body","xml","cgi","file","url","formfield","cookie"]},
 		{"name":"name","description":"Variable name for data that is passed. Ignored for Body\n and XML types. For File type, specifies the filename to\n send in the request.","required":false,"default":"","type":"String","values":[]},
 		{"name":"value","description":"Value of the data that is sent. Ignored for File type. The\n value must contain string data or data that CFML can\n convert to a string for all type attributes except Body.\n Body types can have string or binary values.","required":false,"default":"","type":"String","values":[]},
@@ -15,12 +15,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfhttpparam"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfhttpparam"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfhttpparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfhttpparam"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

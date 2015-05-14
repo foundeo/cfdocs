@@ -5,18 +5,18 @@
 	"returns":"String",
 	"related":[],
 	"description":" Calculates the Base64 representation of a string or binary\n object. The Base64 format uses printable characters, allowing\n binary data to be sent in forms and e-mail, and stored in a\n database or file.",
-	"params": [ 
+	"params": [
 		{"name":"string_or_object","description":"A string, the name of a string, or a binary object.","required":true,"default":"","type":"Object","values":[]},
 		{"name":"encoding","description":"For a string, defines how characters are represented in a\n byte array.","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/tobase64"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/tobase64"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/tobase64"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/tobase64"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

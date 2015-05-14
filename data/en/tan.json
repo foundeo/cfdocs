@@ -5,17 +5,17 @@
 	"returns":"Numeric",
 	"related":[],
 	"description":" Calculates the tangent of an angle that is entered in radians.",
-	"params": [ 
+	"params": [
 		{"name":"number","description":"Angle, in radians, for which to calculate the tangent","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/tan"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/tan"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/tan"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/tan"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

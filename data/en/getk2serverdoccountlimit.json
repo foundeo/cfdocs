@@ -5,15 +5,15 @@
 	"returns":"Numeric",
 	"related":[],
 	"description":" This function is deprecated.\n \n Gets the maximum number of documents that the CFML\n registered K2 Server is permitted to return from a search.\n This function is used primarily by the CFML Verity and\n K2Server Administrator pages. This function uses Verity\n K2Server Release K2.2.0.",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/getk2serverdoccountlimit"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/getk2serverdoccountlimit"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getk2serverdoccountlimit"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getk2serverdoccountlimit"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,17 +5,17 @@
 	"returns":"Numeric",
 	"related":[],
 	"description":" Determines the sign of a number.",
-	"params": [ 
+	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/sgn"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/sgn"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/sgn"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/sgn"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

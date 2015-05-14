@@ -5,15 +5,15 @@
 	"returns":"Object",
 	"related":[],
 	"description":" Returns ORM session factory instance",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/ormgetsessionfactory"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/ormgetsessionfactory"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ormgetsessionfactory"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ormgetsessionfactory"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

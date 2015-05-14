@@ -5,15 +5,15 @@
 	"returns":"boolean",
 	"related":[],
 	"description":" Determines whether debugging output is enabled.",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/isdebugmode"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/isdebugmode"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isdebugmode"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isdebugmode"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,18 +5,18 @@
 	"returns":"String",
 	"related":[],
 	"description":" Extracts keys from a CFML structure.",
-	"params": [ 
+	"params": [
 		{"name":"structure","description":"Structure from which to extract a list of keys","required":true,"default":"","type":"Struct","values":[]},
 		{"name":"delimiter","description":"Character that separates keys in list. Default: comma.","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/structkeylist"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/structkeylist"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structkeylist"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structkeylist"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

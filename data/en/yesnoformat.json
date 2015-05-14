@@ -5,17 +5,17 @@
 	"returns":"String",
 	"related":[],
 	"description":" Yes, for a non-zero value; No, otherwise.",
-	"params": [ 
+	"params": [
 		{"name":"value","description":"A number or Boolean value","required":true,"default":"","type":"boolean","values":[true,false]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/yesnoformat"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/yesnoformat"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/yesnoformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/yesnoformat"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,17 +5,17 @@
 	"returns":"ODBCTime",
 	"related":[],
 	"description":" Creates an ODBC time object.",
-	"params": [ 
+	"params": [
 		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/createodbctime"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/createodbctime"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createodbctime"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createodbctime"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

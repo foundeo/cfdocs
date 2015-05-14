@@ -5,17 +5,17 @@
 	"returns":"Numeric",
 	"related":[],
 	"description":" Converts a real number to an integer.",
-	"params": [ 
+	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/fix"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/fix"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/fix"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/fix"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

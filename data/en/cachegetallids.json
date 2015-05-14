@@ -5,15 +5,15 @@
 	"returns":"",
 	"related":[],
 	"description":" Gets the IDs of all objects stored in the cache.",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cachegetallids"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cachegetallids"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cachegetallids"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cachegetallids"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

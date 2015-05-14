@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Builds a table in a CFML page. This tag renders data as\n preformatted text, or, with the HTMLTable attribute, in an\n HTML table. If you do not want to write HTML table tag code, or\n if your data can be presented as preformatted text, use this\n tag.\n\n Preformatted text (defined in HTML with the <pre> and </pre>\n tags) displays text in a fixed-width font. It displays white\n space and line breaks exactly as they are written within the\n pre tags. For more information, see an HTML reference guide.\n\n To define table column and row characteristics, use the cfcol\n tag within this tag.",
-	"params": [ 
+	"params": [
 		{"name":"query","description":"Name of cfquery from which to draw data.","required":true,"default":"","type":"query","values":[]},
 		{"name":"maxrows","description":"Maximum number of rows to display in the table.","required":false,"default":"","type":"Numeric","values":[]},
 		{"name":"colSpacing","description":"Number of spaces between columns","required":false,"default":"","type":"Numeric","values":[]},
@@ -17,12 +17,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cftable"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cftable"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cftable"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cftable"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

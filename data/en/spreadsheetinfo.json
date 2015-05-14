@@ -5,17 +5,17 @@
 	"returns":"Struct",
 	"related":[],
 	"description":" Returns spreadsheet property",
-	"params": [ 
+	"params": [
 		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetinfo"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/spreadsheetinfo"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetinfo"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetinfo"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

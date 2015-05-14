@@ -5,17 +5,17 @@
 	"returns":"Numeric",
 	"related":[],
 	"description":" Determines the number of elements in an array.\n CFML MX: this function can be used on child XML objects.",
-	"params": [ 
+	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/arraylen"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/arraylen"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arraylen"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraylen"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

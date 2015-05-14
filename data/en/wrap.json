@@ -5,19 +5,19 @@
 	"returns":"String",
 	"related":[],
 	"description":" Wraps text so that each line has a specified maximum number\n of characters.",
-	"params": [ 
+	"params": [
 		{"name":"String","description":"String or variable that contains one. The text to wrap.","required":true,"default":"","type":"String","values":[]},
 		{"name":"limit","description":"Positive integer maximum number of characters to allow on\n a line.","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"strip","description":"whether to remove all existing newline and carriage return\n characters in the input string with spaces before wrapping\n the text. Default: False.","required":false,"default":false,"type":"boolean","values":[true,false]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/wrap"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/wrap"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/wrap"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/wrap"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

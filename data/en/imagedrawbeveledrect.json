@@ -5,7 +5,7 @@
 	"returns":"void",
 	"related":[],
 	"description":" Draws a rectangle with beveled edges.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
 		{"name":"x","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"y","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
@@ -16,12 +16,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/imagedrawbeveledrect"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/imagedrawbeveledrect"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagedrawbeveledrect"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagedrawbeveledrect"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

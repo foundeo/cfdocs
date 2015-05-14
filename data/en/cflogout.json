@@ -5,15 +5,15 @@
 	"returns":"",
 	"related":[],
 	"description":" Logs the current user out. Removes knowledge of the user ID,\n password, and roles from the server. If you do not use this\n tag, the user is automatically logged out when the session\n ends.",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cflogout"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cflogout"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflogout"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflogout"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

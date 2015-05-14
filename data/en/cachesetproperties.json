@@ -5,17 +5,17 @@
 	"returns":"void",
 	"related":[],
 	"description":" No Help Available",
-	"params": [ 
+	"params": [
 		{"name":"Param1","description":"No Help Available","required":true,"default":"","type":"","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cachesetproperties"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cachesetproperties"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cachesetproperties"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cachesetproperties"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

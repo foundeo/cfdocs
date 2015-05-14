@@ -5,15 +5,15 @@
 	"returns":"",
 	"related":[],
 	"description":" Rethrows the currently active exception. Preserves the\n exception\'s cfcatch.type and cfcatch.tagContext variable\n values.",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfrethrow"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfrethrow"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfrethrow"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfrethrow"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

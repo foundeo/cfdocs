@@ -5,19 +5,19 @@
 	"returns":"Array",
 	"related":[],
 	"description":" Searches recursively through a substructure of nested arrays,\n structures, and other elements, for structures whose values\n match the search key in the value parameter.",
-	"params": [ 
+	"params": [
 		{"name":"top","description":"CFML object (structure or array) from which to start\n search. This attribute requires an object, not a name of\n an object.","required":true,"default":"","type":"Object","values":[]},
 		{"name":"value","description":"String or a variable that contains one for which to search.","required":true,"default":"","type":"String","values":[]},
 		{"name":"scope","description":"* one: returns one matching key. Default.\n * all: returns all matching keys","required":true,"default":"","type":"String","values":["one","all"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/structfindkey"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/structfindkey"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structfindkey"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structfindkey"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

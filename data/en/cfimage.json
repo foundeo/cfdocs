@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Creates a ColdFusion image that can be manipulated by using Image functions.\n You can use the cfimage tag to perform common image manipulation operations as a shortcut to Image functions.\n You can use the cfimage tag independently or in conjunction with Image functions.",
-	"params": [ 
+	"params": [
 		{"name":"action","description":"The action to take. Must be one of the following:\n border\n captcha\n convert\n info\n read\n resize\n rotate\n write\n writeToBrowser\n You do not need to specify the default action, read, explicitly. (optional, default=read)","required":false,"default":"","type":"String","values":["border","captcha","convert","info","read","resize","rotate","write","writeToBrowser"]},
 		{"name":"angle","description":"Angle in degrees to rotate the image.\n You must specify an integer for the value. (required)","required":false,"default":"","type":"Numeric","values":[]},
 		{"name":"color","description":"(border) Border color.\n Hexadecimal value or supported named color.\n For a hexadecimal value, use the form \"##xxxxxx\" or \"xxxxxx\". (required)","required":false,"default":"","type":"String","values":[]},
@@ -27,12 +27,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfimage"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfimage"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfimage"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfimage"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

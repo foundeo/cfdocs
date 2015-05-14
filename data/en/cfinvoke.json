@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Does either of the following:\n\n * Invokes a component method from within a CFML page or\n component.\n * Invokes a web service.\n Different attribute combonations make some attributes required\n at sometimes and not at others.",
-	"params": [ 
+	"params": [
 		{"name":"component","description":"String or component object; a reference to a component, or\n component to instantiate.","required":false,"default":"","type":"String","values":[]},
 		{"name":"method","description":"Name of a method. For a web service, the name of an\n operation.","required":true,"default":"","type":"String","values":[]},
 		{"name":"returnvariable","description":"Name of a variable for the invocation result.","required":false,"default":"","type":"variableName","values":[]},
@@ -24,12 +24,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfinvoke"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfinvoke"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfinvoke"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfinvoke"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

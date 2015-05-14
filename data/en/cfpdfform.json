@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Manipulates existing Adobe Acrobat forms and Adobe LiveCycle forms.\n The following list describes some of the tasks you can perform with the cfpdfform tag:\n Embed an interactive Acrobat form or LiveCycle form within a PDF document.\n You use the cfpdfform tag to embed the PDF form within a cfdocument tag.\n Render an existing Acrobat form or LiveCycle form. This includes prefilling\n fields from a database or an XML data file and processing form data submitted\n via HTTP post or PDF format.\n Extract or prefill values in stored PDF forms and save the output to a file\n or use it to update a data source.",
-	"params": [ 
+	"params": [
 		{"name":"action","description":"The action to perform on the source:\n populate\n read (required)","required":true,"default":"","type":"String","values":["populate","read"]},
 		{"name":"datafile","description":"(populate read) Pathname for the XML data file.\n if action=\"populate\", the data from this file\n populates the fields of the PDF form.\n if action=\"read\", ColdFusion writes the data\n to this file.\n You can specify a pathname relative to the context\n root or a relative pathname.\n You must specify either the datafile attribute\n or the result attribute for the read action;\n you can specify both. (optional)","required":false,"default":"","type":"String","values":[]},
 		{"name":"destination","description":"(populate) Pathname for the output file.\n You can specify an absolute pathname or\n a pathname relative to the context root.\n The file extension must be PDF or XDP.\n The file extension determines the format\n of the file. (The XDP format applies only\n to LiveCycle forms.)\n If you do not specify the destination,\n ColdFusion displays the form in the browser.\n Do not specify the destination when you\n embed a form in a PDF document. (optional)","required":false,"default":"","type":"String","values":[]},
@@ -20,12 +20,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfpdfform"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfpdfform"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfpdfform"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfpdfform"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

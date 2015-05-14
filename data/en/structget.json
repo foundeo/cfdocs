@@ -5,17 +5,17 @@
 	"returns":"Struct",
 	"related":[],
 	"description":" Gets a structure(s) from a specified path.",
-	"params": [ 
+	"params": [
 		{"name":"pathdesired","description":"Pathname of variable that contains structure or array from\n which CFML retrieves structure","required":true,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/structget"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/structget"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structget"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structget"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

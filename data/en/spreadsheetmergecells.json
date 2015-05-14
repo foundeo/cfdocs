@@ -5,7 +5,7 @@
 	"returns":"void",
 	"related":[],
 	"description":" Merges a rectangular block of two or more Excel spreadsheet object cells.",
-	"params": [ 
+	"params": [
 		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
 		{"name":"startrow","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"endrow","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
@@ -14,12 +14,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetmergecells"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/spreadsheetmergecells"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetmergecells"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetmergecells"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

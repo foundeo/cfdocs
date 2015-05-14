@@ -5,18 +5,18 @@
 	"returns":"Numeric",
 	"related":[],
 	"description":" Adds a specified number of empty rows to a query.",
-	"params": [ 
+	"params": [
 		{"name":"query","description":"","required":true,"default":"","type":"Query","values":[]},
 		{"name":"number/row(s)","description":"As of CF10 you can pass a Structure whose keys map to the query column names to insert a row of data; or an Array of those Structures to insert multiple rows at once.","required":false,"default":"","type":"Numeric / Array / Struct","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/queryaddrow"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/queryaddrow"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/queryaddrow"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/queryaddrow"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

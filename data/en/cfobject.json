@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Creates a CFML object, of a specified type.\n\n The tag syntax depends on the object type. Some types use the\n type attribute; others do not.",
-	"params": [ 
+	"params": [
 		{"name":"type","description":"The object type. You can omit this attribute or specify component. ColdFusion automatically sets the type to component.","required":false,"default":"","type":"String","values":["com","component","corba","java","dotnet","webservice"]},
 		{"name":"action","description":"* create: instantiates a COM object (typically, a DLL) before invoking methods or properties.\n * connect: ionnects to a COM object (typically, an EXE) running on server.","required":false,"default":"","type":"String","values":["create","connect"]},
 		{"name":"class","description":"Component ProgID for the object to invoke. When using Java stubs to connect to the COM object, the class must be the ProgID of the COM object.","required":false,"default":"","type":"String","values":[]},
@@ -31,12 +31,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfobject"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfobject"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfobject"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfobject"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Creates a region of its container (such as the browser \n window or a cflayoutarea tag) with a specific layout \n behavior: a bordered area, a horizontal or vertically \n arranged box, or a tabbed navigator.",
-	"params": [ 
+	"params": [
 		{"name":"type","description":"The type of layout.","required":true,"default":"border","type":"String","values":["accordion","border","hbox","tab","vbox"]},
 		{"name":"align","description":"Specifies the default alignment of the content of \n child layout areas. Each cflayoutarea tag can specify \n an alignment attribute to override this value.","required":false,"default":"center","type":"String","values":["center","justify","left","right"]},
 		{"name":"name","description":"The name of the layout region. Must be unique \n on a page.","required":false,"default":"","type":"String","values":[]},
@@ -23,12 +23,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cflayout"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cflayout"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflayout"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflayout"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

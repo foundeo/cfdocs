@@ -5,17 +5,17 @@
 	"returns":"boolean",
 	"related":[],
 	"description":" Determines whether a variable is a structure.\n True, if variable is a CFML structure or is a Java object\n that implements the java.lang.Map interface. Returns False if the\n object in variable is a user-defined function (UDF).",
-	"params": [ 
+	"params": [
 		{"name":"variable","description":"","required":true,"default":"","type":"Object","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/isstruct"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/isstruct"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isstruct"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isstruct"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

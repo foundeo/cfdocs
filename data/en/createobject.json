@@ -5,7 +5,7 @@
 	"returns":"Object",
 	"related":[],
 	"description":" The CreateObject function takes different arguments depending on the value of the first argument:\n\n CreateObject(\'com\', class, context, serverName)\n CreateObject(\'component\', component-name)\n CreateObject(\'corba\', context, class, locale)\n CreateObject(\'java\', class)\n CreateObject(\'webservice\', urltowsdl, [, portname])",
-	"params": [ 
+	"params": [
 		{"name":"type","description":"","required":true,"default":"","type":"String","values":["component","corba","com","java","webservice"]},
 		{"name":"context","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"class","description":"","required":true,"default":"","type":"String","values":[]},
@@ -17,12 +17,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/createobject"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/createobject"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createobject"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createobject"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

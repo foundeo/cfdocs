@@ -5,17 +5,17 @@
 	"returns":"String",
 	"related":[],
 	"description":" Gets the current time, in the Universal Time code (UTC).",
-	"params": [ 
+	"params": [
 		{"name":"DateTime","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/gethttptimestring"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/gethttptimestring"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/gethttptimestring"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/gethttptimestring"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

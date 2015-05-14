@@ -5,7 +5,7 @@
 	"returns":"String",
 	"related":[],
 	"description":" Decrypts a string that is encrypted with the Encrypt function.",
-	"params": [ 
+	"params": [
 		{"name":"encrypted_string","description":"String to decrypt.","required":true,"default":"","type":"String","values":[]},
 		{"name":"key","description":"Key or seed used to encrypt the string.\n * For the CFMX_COMPAT algorithm, any combination of any\n number of characters; used as a seed used to generate\n a 32-bit encryption key.\n * For all other algorithms, a key in the format used by the\n algorithm. For these algorithms, use the GenerateSecretKey\n function to generate the key.","required":true,"default":"","type":"String","values":[]},
 		{"name":"algorithm","description":"The algorithm to use to decrypt the string. Must be the same\n as the algorithm used to encrypt the string.\n * CFMX_COMPAT: the algorithm used in ColdFusion MX and prior\n releases. This algorithm is the least secure option (default).\n * AES: the Advanced Encryption Standard specified by the\n National Institute of Standards and Technology (NIST) FIPS-197.\n * BLOWFISH: the Blowfish algorithm defined by Bruce Schneier.\n * DES: the Data Encryption Standard algorithm defined by NIST FIPS-46-3.\n * DESEDE: the \"Triple DES\" algorithm defined by NIST FIPS-46-3.","required":false,"default":"CFMX_COMPAT","type":"String","values":["CFMX_COMPAT","AES","BLOWFISH","DES","DESEDE"]},
@@ -15,12 +15,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/decrypt"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/decrypt"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/decrypt"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/decrypt"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

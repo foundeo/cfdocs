@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Serializes and deserializes CFML data structures to the\n XML-based WDDX format. The WDDX is an XML vocabulary for\n describing complex data structures in a standard, generic way.\n Implementing it lets you use the HTTP protocol to such\n information among application server platforms, application\n servers, and browsers.\n\n This tag generates JavaScript statements to instantiate\n JavaScript objects equivalent to the contents of a WDDX packet\n or CFML data structure. Interoperates with Unicode.",
-	"params": [ 
+	"params": [
 		{"name":"action","description":"cfml2wddx: serialize CFML to WDDX\n wddx2cfml: deserialize WDDX to CFML\n cfml2js: serialize CFML to JavaScript\n wddx2js: deserialize WDDX to JavaScript","required":true,"default":"","type":"String","values":["cfml2wddx","wddx2cfml","cfml2js","wddx2js"]},
 		{"name":"input","description":"A value to process","required":true,"default":"","type":"String","values":[]},
 		{"name":"output","description":"Name of variable for output. If action = \"WDDX2JS\" or\n \"CFML2JS\", and this attribute is omitted, result is output\n in HTML stream.","required":false,"default":"","type":"variableName","values":[]},
@@ -15,12 +15,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfwddx"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfwddx"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfwddx"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfwddx"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Authenticates a user name and password against the\n NT domain on which ColdFusion server is running,\n and optionally retrieves the user\'s groups.",
-	"params": [ 
+	"params": [
 		{"name":"username","description":"User's login name.","required":true,"default":"","type":"String","values":[]},
 		{"name":"password","description":"User's login name.","required":true,"default":"","type":"String","values":[]},
 		{"name":"domain","description":"Domain against which to authenticate the user. The\n ColdFusion J2EE server must be running on this domain.","required":true,"default":"","type":"String","values":[]},
@@ -15,12 +15,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfntauthenticate"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfntauthenticate"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfntauthenticate"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfntauthenticate"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,7 +5,7 @@
 	"returns":"Object",
 	"related":[],
 	"description":" Uses a regular expression (RE) to search a string for a pattern,\n starting from a specified position. The search is\n case-insensitive.",
-	"params": [ 
+	"params": [
 		{"name":"reg_expression","description":"","required":true,"default":"","type":"Regex","values":[]},
 		{"name":"String","description":"A string or a variable that contains one. String in which\n to search.","required":true,"default":1,"type":"String","values":[1]},
 		{"name":"start","description":"","required":false,"default":"","type":"Numeric","values":[]},
@@ -13,12 +13,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/refindnocase"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/refindnocase"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/refindnocase"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/refindnocase"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

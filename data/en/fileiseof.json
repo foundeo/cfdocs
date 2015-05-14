@@ -5,17 +5,17 @@
 	"returns":"boolean",
 	"related":[],
 	"description":" Determines whether ColdFusion has reached the end of the file while reading it.",
-	"params": [ 
+	"params": [
 		{"name":"fileObject","description":"The file object.","required":true,"default":"","type":"Object","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/fileiseof"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/fileiseof"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/fileiseof"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/fileiseof"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

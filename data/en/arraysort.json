@@ -5,19 +5,19 @@
 	"returns":"boolean",
 	"related":[],
 	"description":" Sorts array elements numerically or alphanumerically.",
-	"params": [ 
+	"params": [
 		{"name":"array","description":"Name of an array","required":true,"default":"","type":"Array","values":[]},
 		{"name":"sort_type","description":"numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n (also known as case sensitive). All letters of one case\n precede the first letter of the other case:\n - aabzABZ, if sort_order = \"asc\" (ascending sort)\n - ZBAzbaa, if sort_order = \"desc\" (descending sort)\n\n textnocase: sorts text alphabetically, without regard to\n case (also known as case-insensitive). A letter in varying\n cases precedes the next letter:\n - aAaBbBzzZ, in an ascending sort; preserves original\n intra-letter order\n - ZzzBbBaAa, in a descending sort; reverses original\n intra-letter order","required":true,"default":"","type":"String","values":["numeric","text","textnocase"]},
 		{"name":"sort_order","description":"asc: ascending sort order. Default.\n - aabzABZ or aAaBbBzzZ, depending on value of sort_type,\n for letters\n - from smaller to larger, for numbers\n\n desc: descending sort order.\n - ZBAzbaa or ZzzBbBaAa, depending on value of sort_type,\n for letters\n - from larger to smaller, for numbers","required":false,"default":"asc","type":"String","values":["asc","desc"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/arraysort"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/arraysort"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arraysort"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraysort"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

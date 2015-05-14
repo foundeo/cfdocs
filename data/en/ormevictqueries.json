@@ -5,17 +5,17 @@
 	"returns":"",
 	"related":[],
 	"description":" This will remove all the queries from the named query cache. \nIf name is not specified, all quiries from default cache will be removed.\normEvictQueries([cacheName])",
-	"params": [ 
+	"params": [
 		{"name":"cacheName","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/ormevictqueries"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/ormevictqueries"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ormevictqueries"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ormevictqueries"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

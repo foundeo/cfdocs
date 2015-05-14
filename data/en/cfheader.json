@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Generates custom HTTP response headers to return to the client.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"Header name\n Required if statusCode not specified","required":false,"default":"","type":"String","values":[]},
 		{"name":"value","description":"HTTP header value","required":false,"default":"","type":"String","values":[]},
 		{"name":"charset","description":"The character encoding in which to encode the header value.\n\n For more information on character encodings, see:\n www.w3.org\/International\/O-charset.html.","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]},
@@ -14,12 +14,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfheader"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfheader"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfheader"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfheader"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

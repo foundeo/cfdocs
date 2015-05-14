@@ -5,18 +5,18 @@
 	"returns":"void",
 	"related":[],
 	"description":" Sets the drawing stroke for points and lines in subsequent ColdFusion images.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
 		{"name":"attributecollection","description":"No Help Available","required":false,"default":"","type":"Struct","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/imagesetdrawingstroke"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/imagesetdrawingstroke"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagesetdrawingstroke"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagesetdrawingstroke"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

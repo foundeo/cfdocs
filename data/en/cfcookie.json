@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Defines web browser cookie variables, including expiration and\n security options.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"Name of cookie variable. CFML converts cookie names\n to all-uppercase. Cookie names set using this tag can\n include any printable ASCII characters except commas,\n semicolons or white space characters.","required":true,"default":"","type":"String","values":[]},
 		{"name":"value","description":"Value to assign to cookie variable. Must be a string or\n variable that can be stored as a string.","required":false,"default":"","type":"String","values":[]},
 		{"name":"expires","description":"Expiration of cookie variable.\n\n * The default: the cookie expires when the user closes the\n browser, that is, the cookie is \"session only\".\n * A date or date\/time object (for example, 10\/09\/97)\n * A number of days (for example, 10, or 100)\n * now: deletes cookie from client cookie.txt file\n (but does not delete the corresponding variable the\n Cookie scope of the active page).\n * never: The cookie expires in 30 years from the time it\n was created (effectively never in web years).","required":false,"default":"","type":"Object","values":[]},
@@ -16,12 +16,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfcookie"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfcookie"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfcookie"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcookie"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

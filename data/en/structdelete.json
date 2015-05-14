@@ -5,19 +5,19 @@
 	"returns":"boolean",
 	"related":[],
 	"description":" Removes an element from a structure.",
-	"params": [ 
+	"params": [
 		{"name":"structure","description":"Structure or a variable that contains one. Contains element\n to remove","required":true,"default":"","type":"String","values":[]},
 		{"name":"key","description":"Element to remove","required":true,"default":"","type":"String","values":[]},
 		{"name":"indicatenotexisting","description":"","required":false,"default":false,"type":"boolean","values":[true,false]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/structdelete"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/structdelete"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structdelete"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structdelete"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,17 +5,17 @@
 	"returns":"boolean",
 	"related":[],
 	"description":" Determines whether a value is a PDF object.",
-	"params": [ 
+	"params": [
 		{"name":"value","description":"A value, typically the PDF object stored as a variable name.","required":true,"default":"","type":"Variablename","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/ispdfobject"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/ispdfobject"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ispdfobject"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ispdfobject"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }
