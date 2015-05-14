@@ -5,7 +5,7 @@
 	"returns":"boolean",
 	"related":[],
 	"description":" Adds a SOAP header to a web service request before making the request.",
-	"params": [ 
+	"params": [
 		{"name":"webservice","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
 		{"name":"namespace","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
 		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
@@ -14,12 +14,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/addsoaprequestheader"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/addsoaprequestheader"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/addsoaprequestheader"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/addsoaprequestheader"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

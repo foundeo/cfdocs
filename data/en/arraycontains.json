@@ -5,18 +5,18 @@
 	"returns":"boolean",
 	"related":["arrayContainsNoCase"],
 	"description":"Used to determine if an object is in the given array, case insensitive. Adobe CF and OpenBD return boolean. Railo returns the numeric index if the object is found, 0 if not.",
-	"params": [ 
+	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
 		{"name":"object","description":"","required":true,"default":"","type":"Any","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/arraycontains"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/arraycontains"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arraycontains"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraycontains"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

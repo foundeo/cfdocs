@@ -5,17 +5,17 @@
 	"returns":"boolean",
 	"related":[],
 	"description":" Determines whether an authenticated user belongs to any role in a list of roles.",
-	"params": [ 
+	"params": [
 		{"name":"roleList","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/isuserinanyrole"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/isuserinanyrole"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isuserinanyrole"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isuserinanyrole"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,17 +5,17 @@
 	"returns":"Binary",
 	"related":[],
 	"description":" Calculates the binary representation of Base64-encoded data.",
-	"params": [ 
+	"params": [
 		{"name":"base64_or_object","description":"A string or a variable that contains one:\n * In Base64 format to convert to binary\n * In binary format to test whether it is valid","required":true,"default":"","type":"Object","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/tobinary"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/tobinary"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/tobinary"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/tobinary"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

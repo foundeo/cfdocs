@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Builds a form with CFML custom control tags; these provide\n more functionality than standard HTML form input elements.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"In HTML format, if you omit this attribute and specify\n an id attribute, ColdFusion does not include a name\n attribute in the HTML sent to the browser; this\n behavior lets you use the cfform tag to create\n XHTML-compliant forms. If you omit the name\n attribute and the id attribute, ColdFusion generates\n a name of the form CFForm_n where n is a number\n that assigned serially to the forms on a page.","required":false,"default":"","type":"String","values":[]},
 		{"name":"action","description":"Name of CFML page to execute when the form is\n submitted for processing.","required":false,"default":"","type":"String","values":[]},
 		{"name":"method","description":"The method the browser uses to send the form data\n to the server:\n - post: Send the data using the HTTP post method,\n This method sends the data in a separate message\n to the server.\n - get: Send the data using the HTTP get method,\n which puts the form field contents in the URL\n query string.","required":false,"default":"post","type":"String","values":["post","get"]},
@@ -33,12 +33,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfform"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfform"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfform"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfform"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

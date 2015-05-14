@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Creates a pod, an area of the browser window or layout \n area with an optional title bar and body that contains \n display elements.",
-	"params": [ 
+	"params": [
 		{"name":"bodyStyle","description":"A CSS style specification for the pod body. As a \n general rule, use this attribute to set color and \n font styles. Using this attribute to set the height \n and width, for example, can result in distorted output.","required":false,"default":"","type":"String","values":[]},
 		{"name":"headerStyle","description":"A CSS style specification for the pod header. As a \n general rule, use this attribute to set color and font \n styles. Using this attribute to set the height and width, \n for example, can result in distorted output.","required":false,"default":"","type":"String","values":[]},
 		{"name":"height","description":"Height if the control, including the title bar and borders, \n in pixels. Default is 100.","required":false,"default":"","type":"Numeric","values":[]},
@@ -18,12 +18,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfpod"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfpod"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfpod"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfpod"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

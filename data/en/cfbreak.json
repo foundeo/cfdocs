@@ -5,15 +5,15 @@
 	"returns":"",
 	"related":[],
 	"description":" Used within a cfloop tag. Breaks out of a loop.",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfbreak"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfbreak"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfbreak"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfbreak"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

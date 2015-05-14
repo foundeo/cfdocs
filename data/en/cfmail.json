@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":["cfmailpart","cfmailparam"],
 	"description":" Sends an e-mail message that optionally contains query output,\n using an SMTP server.",
-	"params": [ 
+	"params": [
 		{"name":"to","description":"Message recipient e-mail addresses.","required":true,"default":"","type":"String","values":[]},
 		{"name":"from","description":"E-mail message sender:","required":true,"default":"","type":"String","values":[]},
 		{"name":"cc","description":"Address(es) to which to copy the message","required":false,"default":"","type":"String","values":[]},
@@ -42,12 +42,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfmail"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfmail"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmail"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmail"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

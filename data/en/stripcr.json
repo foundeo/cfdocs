@@ -5,17 +5,17 @@
 	"returns":"String",
 	"related":[],
 	"description":" Deletes return characters from a string.",
-	"params": [ 
+	"params": [
 		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/stripcr"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/stripcr"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/stripcr"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/stripcr"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

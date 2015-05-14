@@ -5,17 +5,17 @@
 	"returns":"",
 	"related":[],
 	"description":" Flushes the query cache.",
-	"params": [ 
+	"params": [
 		{"name":"action","description":"clear: Clears queries from the cache in the Application\n scope","required":true,"default":"clear","type":"String","values":["clear"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfobjectcache"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfobjectcache"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfobjectcache"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfobjectcache"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

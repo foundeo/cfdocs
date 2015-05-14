@@ -5,17 +5,17 @@
 	"returns":"void",
 	"related":[],
 	"description":" Reads spreadsheet file into a binary object",
-	"params": [ 
+	"params": [
 		{"name":"spreadsheetObj","description":"Spreadsheet file","required":true,"default":"","type":"Variablename","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetreadbinary"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/spreadsheetreadbinary"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetreadbinary"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetreadbinary"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

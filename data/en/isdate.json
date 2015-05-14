@@ -5,17 +5,17 @@
 	"returns":"boolean",
 	"related":[],
 	"description":" Determines whether a string or Java object can be converted\n to a date/time value.",
-	"params": [ 
+	"params": [
 		{"name":"Object","description":"","required":true,"default":"","type":"Object","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/isdate"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/isdate"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isdate"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isdate"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

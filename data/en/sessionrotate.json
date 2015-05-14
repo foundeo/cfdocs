@@ -5,11 +5,11 @@
 	"returns":"void",
 	"related":["sessioninvalidate"],
 	"description":"Creates a new session (using new session ids) and copies session scope into this new session, then invalidates the old session. Used after a valid login to prevent session fixation.",
-	"params": [ 
-		
+	"params": [
+
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"10", "notes":"Does not rotate jsessionid when JEE sessions are enabled, only works with ColdFusion sessions (CFID,CFTOKEN).", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/sessionrotate"},
+		"coldfusion": {"minimum_version":"10", "notes":"Does not rotate jsessionid when JEE sessions are enabled, only works with ColdFusion sessions (CFID,CFTOKEN).", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/sessionrotate"},
 		"railo": {"minimum_version":"4", "notes":"", "docs":"http://railodocs.org/index.cfm/function/sessionrotate"}
 	},
 	"links": [
@@ -19,5 +19,5 @@
 			"url":"http:\/\/www.petefreitag.com\/item\/829.cfm"
 		}
 	]
-	
+
 }

@@ -5,17 +5,17 @@
 	"returns":"String",
 	"related":[],
 	"description":" Determines whether an authenticated user belongs to the\n specified Role.",
-	"params": [ 
+	"params": [
 		{"name":"role_name","description":"","required":true,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/isuserinrole"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/isuserinrole"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isuserinrole"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isuserinrole"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

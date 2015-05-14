@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Describes a presenter in a slide presentation. A slide presentation can have multiple presenters.\n The presenters must be referenced from the slides defined by the cfpresentationslide tag.",
-	"params": [ 
+	"params": [
 		{"name":"biography","description":"Specifies the biography of the presenter. (required)","required":false,"default":"","type":"String","values":[]},
 		{"name":"email","description":"The name to use for the JavaScript proxy class. (optional)","required":false,"default":"","type":"String","values":[]},
 		{"name":"image","description":"Specifies the path for the presenter's image in JPEG format.\n The JPG file must be relative to theCFM page. (optional)","required":false,"default":"","type":"String","values":[]},
@@ -15,12 +15,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfpresenter"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfpresenter"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfpresenter"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfpresenter"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

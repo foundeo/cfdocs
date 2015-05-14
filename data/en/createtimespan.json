@@ -5,7 +5,7 @@
 	"returns":"DateTime",
 	"related":[],
 	"description":" Creates a date/time object that defines a time period. You\n can add or subtract it from other date/time objects and use\n it with the cachedWithin attribute of cfquery.",
-	"params": [ 
+	"params": [
 		{"name":"days","description":"","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"hours","description":"","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"minutes","description":"","required":true,"default":"","type":"Numeric","values":[]},
@@ -13,12 +13,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/createtimespan"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/createtimespan"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createtimespan"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createtimespan"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

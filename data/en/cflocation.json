@@ -5,19 +5,19 @@
 	"returns":"",
 	"related":[],
 	"description":" Stops execution of the current page and redirects to the specified URI.",
-	"params": [ 
+	"params": [
 		{"name":"url","description":"URI or URL to redirect to.","required":true,"default":"","type":"String","values":[]},
 		{"name":"addtoken","description":"Appends the CFID, CFTOKEN, JSESSIONID and possibly other session/client identifiers to the URL. Security best practices recommend setting this to false.","required":false,"default":"true","type":"boolean","values":[true,false]},
 		{"name":"statuscode","description":"The 30X HTTP status code. CF8+","required":false,"default":"302","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cflocation"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cflocation"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflocation"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflocation"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

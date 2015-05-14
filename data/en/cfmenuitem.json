@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Defines an entry in a menu, including an item that is the head of a submenu.",
-	"params": [ 
+	"params": [
 		{"name":"display","description":"The text to show as the menu item label.","required":false,"default":"","type":"String","values":[]},
 		{"name":"childstyle","description":"A CSS style specification that applies to all child \n menu items, including the children of submenus.","required":false,"default":"","type":"String","values":[]},
 		{"name":"divider","description":"This attribute specifies that the item is a divider. If \n you specify this attribute, you cannot specify any \n other attributes.","required":false,"default":"","type":"String","values":[true,false]},
@@ -18,12 +18,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfmenuitem"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfmenuitem"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmenuitem"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmenuitem"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,18 +5,18 @@
 	"returns":"void",
 	"related":[],
 	"description":" Removes an object from the cache .",
-	"params": [ 
+	"params": [
 		{"name":"ids","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
 		{"name":"throwOnError","description":"No Help Available","required":false,"default":"","type":"Boolean","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cacheremove"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cacheremove"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cacheremove"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cacheremove"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

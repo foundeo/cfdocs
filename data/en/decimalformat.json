@@ -5,17 +5,17 @@
 	"returns":"String",
 	"related":[],
 	"description":" Converts a number to a decimal-formatted string.",
-	"params": [ 
+	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/decimalformat"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/decimalformat"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/decimalformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/decimalformat"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

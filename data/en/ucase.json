@@ -5,17 +5,17 @@
 	"returns":"String",
 	"related":[],
 	"description":" Converts the alphabetic characters in a string to uppercase.",
-	"params": [ 
+	"params": [
 		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/ucase"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/ucase"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ucase"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ucase"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

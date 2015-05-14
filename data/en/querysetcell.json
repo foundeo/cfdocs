@@ -5,7 +5,7 @@
 	"returns":"boolean",
 	"related":[],
 	"description":" Sets a cell to a value. If no row number is specified,\n the cell on the last row is set.",
-	"params": [ 
+	"params": [
 		{"name":"query","description":"","required":true,"default":"","type":"Query","values":[]},
 		{"name":"column","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"value","description":"","required":true,"default":"","type":"Object","values":[]},
@@ -13,12 +13,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/querysetcell"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/querysetcell"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/querysetcell"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/querysetcell"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,7 +5,7 @@
 	"returns":"string",
 	"related":["rereplacenocase","refind","refindnocase","replace","rematch","rematchnocase"],
 	"description":" Uses a regular expression (regex) to search a string for a string\n pattern and replace it with another. The search is\n case-sensitive.",
-	"params": [ 
+	"params": [
 		{"name":"string","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]},
 		{"name":"regex","description":"Regular expression to replace.","required":true,"default":"","type":"Regex","values":[]},
 		{"name":"substring","description":"A string or a variable that contains one. Replaces substring with the regex match","required":true,"default":"","type":"String","values":[]},
@@ -13,7 +13,7 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/rereplace"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/rereplace"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/rereplace"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/rereplace"}
 	},
@@ -42,6 +42,6 @@
 			"code": "ReReplace(\"123abc456\", \"[0-9]+([a-z]+)[0-9]+\", \"\\1\")",
 			"result": "abc"
 		}
-	]		
-	
+	]
+
 }

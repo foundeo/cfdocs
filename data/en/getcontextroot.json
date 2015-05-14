@@ -5,15 +5,15 @@
 	"returns":"String",
 	"related":[],
 	"description":" Returns path to the J2EE server context root for the current request.",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/getcontextroot"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/getcontextroot"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getcontextroot"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getcontextroot"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

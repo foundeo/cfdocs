@@ -5,17 +5,17 @@
 	"returns":"Object",
 	"related":[],
 	"description":" Gets metadata (the methods, properties, and parameters of a\n component) associated with an object that is deployed on the\n CFML server.",
-	"params": [ 
+	"params": [
 		{"name":"Object","description":"","required":true,"default":"","type":"Object","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/getmetadata"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/getmetadata"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getmetadata"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getmetadata"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

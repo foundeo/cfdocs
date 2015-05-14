@@ -5,18 +5,18 @@
 	"returns":"Binary",
 	"related":[],
 	"description":" Uses the specified encoding to convert binary data to a string.",
-	"params": [ 
+	"params": [
 		{"name":"binaryobject","description":"A variable containing binary data to decode into text.","required":true,"default":"","type":"Binary","values":[]},
 		{"name":"encoding","description":"The character encoding that was used to encode the string into binary format.","required":true,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/charsetencode"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/charsetencode"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/charsetencode"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/charsetencode"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

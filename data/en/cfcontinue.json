@@ -5,15 +5,15 @@
 	"returns":"",
 	"related":[],
 	"description":" Used within a cfloop tag. Returns processing to the top of a loop.",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfcontinue"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfcontinue"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfcontinue"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcontinue"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

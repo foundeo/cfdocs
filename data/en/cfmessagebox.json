@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Creates MessageBox",
-	"params": [ 
+	"params": [
 		{"name":"labelcancel","description":"The text to put on the cancel button of a prompt message box.","required":false,"default":"","type":"String","values":[]},
 		{"name":"callbackHandler","description":"callback function which will be called when any ok|no|cancel button is clicked","required":false,"default":"","type":"String","values":[]},
 		{"name":"labelok","description":"The text to put on a alert button and prompt messge box OK button.","required":false,"default":"","type":"String","values":[]},
@@ -26,12 +26,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfmessagebox"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfmessagebox"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmessagebox"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmessagebox"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

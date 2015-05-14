@@ -5,15 +5,15 @@
 	"returns":"void",
 	"related":[],
 	"description":" Returns ORM session factory instance",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/ormreload"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/ormreload"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ormreload"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ormreload"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

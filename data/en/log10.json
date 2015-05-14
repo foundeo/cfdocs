@@ -5,17 +5,17 @@
 	"returns":"Numeric",
 	"related":[],
 	"description":" Calculates the logarithm of number, to base 10.",
-	"params": [ 
+	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/log10"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/log10"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/log10"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/log10"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

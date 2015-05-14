@@ -5,19 +5,19 @@
 	"returns":"void",
 	"related":[],
 	"description":" Sets the width of a column in a worksheet.",
-	"params": [ 
+	"params": [
 		{"name":"spreadsheetObj","description":"The Excel spreadsheet object to which to set the column width.","required":true,"default":"","type":"Variablename","values":[]},
 		{"name":"columnNumber","description":"Specifies the column to set the width.","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"width","description":"Specifies the width in points.","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetsetcolumnwidth"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/spreadsheetsetcolumnwidth"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetsetcolumnwidth"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetsetcolumnwidth"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

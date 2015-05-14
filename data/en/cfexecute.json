@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Executes a CFML developer-specified process on a server\n computer.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"Absolute path of the application to execute.\n\n On Windows, you must specify an extension; for example,\n C:\\myapp.exe.","required":true,"default":"","type":"String","values":[]},
 		{"name":"arguments","description":"Command-line variables passed to application. If specified\n as string, it is processed as follows:\n * Windows: passed to process control subsystem for parsing.\n * UNIX: tokenized into an array of arguments. The default\n token separator is a space; you can delimit arguments\n that have embedded spaces with double quotation marks.\n If passed as array, it is processed as follows:\n * Windows: elements are concatenated into a string of\n tokens, separated by spaces. Passed to process control\n subsystem for parsing.\n * UNIX: elements are copied into an array of exec()\n arguments","required":false,"default":"","type":"Object","values":[]},
 		{"name":"outputfile","description":"File to which to direct program output. If no outputfile or\n variable attribute is specified, output is displayed on\n the page from which it was called.\n\n If not an absolute path (starting a with a drive letter and\n a colon, or a forward or backward slash), it is relative\n to the CFML temporary directory, which is returned\n by the GetTempDirectory function.","required":false,"default":"","type":"String","values":[]},
@@ -16,12 +16,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfexecute"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfexecute"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfexecute"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfexecute"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

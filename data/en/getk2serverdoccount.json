@@ -5,15 +5,15 @@
 	"returns":"Numeric",
 	"related":[],
 	"description":" This function is deprecated.\n \n Determines the number of documents that can be searched by the\n CFML registered K2 Server. This function is used\n primarily by the CFML Verity and K2Server Administrator\n pages, and requires significant processing time. Avoid using\n it in production applications. This function uses Verity\n K2Server Release K2.2.0.",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/getk2serverdoccount"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/getk2serverdoccount"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getk2serverdoccount"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getk2serverdoccount"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

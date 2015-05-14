@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Inserts records in data sources from data in a CFML form\n or form Scope.",
-	"params": [ 
+	"params": [
 		{"name":"datasource","description":"Data source; contains table.","required":true,"default":"","type":"String","values":[]},
 		{"name":"tablename","description":"Table in which to insert form fields.\n\n ORACLE drivers: must be uppercase.\n Sybase driver: case-sensitive. Must be the same case used\n when table was created","required":true,"default":"","type":"String","values":[]},
 		{"name":"tableowner","description":"For data sources that support table ownership (such as SQL\n Server, Oracle, and Sybase SQL Anywhere), use this field to\n specify the owner of the table.","required":false,"default":"","type":"String","values":[]},
@@ -21,12 +21,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfinsert"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfinsert"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfinsert"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfinsert"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,18 +5,18 @@
 	"returns":"Numeric",
 	"related":[],
 	"description":" Determines the greater of two numbers.",
-	"params": [ 
+	"params": [
 		{"name":"number1","description":"","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"number2","description":"","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/max"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/max"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/max"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/max"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

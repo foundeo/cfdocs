@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Creates PDF or FlashPaper output from a text block containing CFML and HTML.",
-	"params": [ 
+	"params": [
 		{"name":"format","description":"Specifies the report format.","required":true,"default":"","type":"String","values":["PDF","FlashPaper"]},
 		{"name":"filename","description":"Specifies the fully qualified path name of a file to\n contain the PDF or FlashPaper output. If you omit the\n filename attribute, ColdFusion MX streams output to\n the browser.","required":false,"default":"","type":"String","values":[]},
 		{"name":"localurl","description":"Specifies whether to retrieve image files directly \n from the local drive:\n * yes: ColdFusion retrieves image files directly from \n the local drive rather than by using HTTP, HTTPS, or proxy.\n * no: ColdFusion uses HTTP, HTTPS, or proxy to retrieve \n image files even if the files are stored locally.","required":false,"default":false,"type":"boolean","values":[true,false]},
@@ -49,12 +49,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfdocument"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfdocument"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdocument"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdocument"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

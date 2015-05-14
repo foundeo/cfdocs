@@ -5,7 +5,7 @@
 	"returns":"void",
 	"related":[],
 	"description":" Crops a ColdFusion image to a specified rectangular area.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
 		{"name":"x","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"y","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
@@ -14,12 +14,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/imagecrop"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/imagecrop"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagecrop"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagecrop"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

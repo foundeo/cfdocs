@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Manages Excel spreadsheet files:",
-	"params": [ 
+	"params": [
 		{"name":"password","description":"Set a password for modifying the sheet.","required":false,"default":"","type":"String","values":[]},
 		{"name":"sheetname","description":"Name of the sheet.","required":false,"default":"","type":"String","values":[]},
 		{"name":"action","description":"One of the following:\n * read - Reads the contents of an XLS format file.\n * update - Adds a new sheet to an existing XLS file. You cannot use the uppdate\n\t\taction to change an existing sheet in a file. For more information, see Usage.\n * write - Writes a new XLS format file or overwrites an existing file.","required":false,"default":"","type":"String","values":["write","update","read"]},
@@ -24,12 +24,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfspreadsheet"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfspreadsheet"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfspreadsheet"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfspreadsheet"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":["cfquery"],
 	"description":" Verifies the data type of a query parameter and, for DBMSs that\n support bind variables, enables CFML to use bind variables\n in the SQL statement. Bind variable usage enhances performance\n when executing a cfquery statement multiple times.\n\n This tag is nested within a cfquery tag, embedded in a query SQL\n statement. If you specify optional parameters, this tag performs\n data validation.",
-	"params": [ 
+	"params": [
 		{"name":"value","description":"Value that CFML passes to the right of the comparison\n operator in a where clause.\n\n If CFSQLType is a date or time option, ensure that the date\n value uses your DBMS-specific date format. Use the\n CreateODBCDateTime or DateFormat and TimeFormat functions\n to format the date value.","required":false,"default":"","type":"String","values":[]},
 		{"name":"cfsqltype","description":"SQL type that parameter (any type) is bound to.","required":false,"default":"","type":"String","values":["cf_sql_bigint","cf_sql_bit","cf_sql_char","cf_sql_blob","cf_sql_clob","cf_sql_date","cf_sql_decimal","cf_sql_double","cf_sql_float","cf_sql_idstamp","cf_sql_integer","cf_sql_longvarchar","cf_sql_money","cf_sql_money4","cf_sql_numeric","cf_sql_real","cf_sql_refcursor","cf_sql_smallint","cf_sql_time","cf_sql_timestamp","cf_sql_tinyint","cf_sql_varchar"]},
 		{"name":"maxlength","description":"Maximum length of parameter.","required":false,"default":"","type":"Numeric","values":[]},
@@ -16,12 +16,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfqueryparam"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfqueryparam"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfqueryparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfqueryparam"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

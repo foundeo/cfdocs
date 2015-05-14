@@ -5,15 +5,15 @@
 	"returns":"void",
 	"related":[],
 	"description":" Verifies whether request is from valid client or not",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/verifyclient"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/verifyclient"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/verifyclient"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/verifyclient"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

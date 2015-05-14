@@ -5,17 +5,17 @@
 	"returns":"String",
 	"related":[],
 	"description":" Sets the country/language locale for CFML processing\n and the page returned to the client. The locale value\n determines the default format of date, time, number, and\n currency values, according to language and regional\n conventions.",
-	"params": [ 
+	"params": [
 		{"name":"new_locale","description":"The name of a locale; for example, \"English (US)\"","required":true,"default":"","type":"String","values":["Chinese (China)","Chinese (Hong Kong)","Chinese (Taiwan)","Dutch (Belgian)","Dutch (Standard)","English (Australian)","English (Canadian)","English (New Zealand)","English (US)","English (UK)","French (Belgian)","French (Canadian)","French (Standard)","French (Swiss)","German (Austrian)","German (Standard)","German (Swiss)","Italian (Standard)","Italian (Swiss)","Japanese","Korean","Norwegian (Bokmal)","Norwegian (Nynorsk)","Portuguese (Brazilian)","Portuguese (Standard)","Spanish (Modern)","Spanish (Standard)","Swedish"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/setlocale"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/setlocale"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/setlocale"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/setlocale"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Used to do either of the following:\n - Execute a report definition created with the ColdFusion\n Report Builder, displaying it in PDF, FlashPaper, or Excel\n format. You can optionally save this report to a file.\n - Run a predefined Crystal Reports report. Applies only to\n Windows systems. Uses the CFCRYSTAL.exe file to generate\n reports. Sets parameters in the Crystal Reports engine\n according to its attribute values.",
-	"params": [ 
+	"params": [
 		{"name":"template","description":"Specifies the path to the report definition file,\n relative to the web root.","required":false,"default":"","type":"String","values":[]},
 		{"name":"format","description":"Specifies the output format.","required":false,"default":"","type":"String","values":["PDF","FlashPaper","Excel","RTF","HTML","XML"]},
 		{"name":"name","description":"The name of the ColdFusion variable that will hold\n the report output. You cannot specify both name and\n filename.","required":false,"default":"","type":"String","values":[]},
@@ -29,12 +29,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfreport"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfreport"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfreport"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfreport"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

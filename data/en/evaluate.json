@@ -5,19 +5,19 @@
 	"returns":"Object",
 	"related":[],
 	"description":" Evaluates one or more string expressions, dynamically, from\n left to right. (The results of an evaluation on the left can\n have meaning in an expression to the right.) Returns the\n result of evaluating the rightmost expression.",
-	"params": [ 
+	"params": [
 		{"name":"expression1","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"expression2","description":"","required":false,"default":"","type":"String","values":[]},
 		{"name":"expressionN","description":"","required":false,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/evaluate"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/evaluate"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/evaluate"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/evaluate"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

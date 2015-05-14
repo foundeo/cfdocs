@@ -5,18 +5,18 @@
 	"returns":"String",
 	"related":[],
 	"description":" Formats a number in a locale-specific format.\n [mask - quicky]\n _,9 Digit placeholder; . decimal point; 0 Pads with zeros;\n ( ) less than zero, puts parentheses around the mask\n + plus sign before positive number minus before negative\n - a space before positive minus sign before negative\n , Separates every third decimal place with a comma.\n L,C Left-justifies or center-justifies number\n $ dollar sign before formatted number.\n ^ Separates left and right formatting.",
-	"params": [ 
+	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"mask","description":"","required":false,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/lsnumberformat"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/lsnumberformat"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsnumberformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsnumberformat"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

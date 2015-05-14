@@ -5,18 +5,18 @@
 	"returns":"void",
 	"related":[],
 	"description":" Sets active sheet in given spreadsheet",
-	"params": [ 
+	"params": [
 		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
 		{"name":"name","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetsetactivesheet"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/spreadsheetsetactivesheet"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetsetactivesheet"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetsetactivesheet"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

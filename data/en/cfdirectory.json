@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Manages interactions with directories.\n Different combos cause different attributes to be\n required.",
-	"params": [ 
+	"params": [
 		{"name":"action","description":"Action to perform","required":false,"default":"list","type":"String","values":["list","create","delete","rename"]},
 		{"name":"directory","description":"Absolute pathname of directory against which to perform\n action.","required":true,"default":"","type":"String","values":[]},
 		{"name":"name","description":"Name for output record set.","required":false,"default":"","type":"String","values":[]},
@@ -19,12 +19,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfdirectory"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfdirectory"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdirectory"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdirectory"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

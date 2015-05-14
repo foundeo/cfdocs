@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Manipulates existing PDF documents. The following list describes some of the\n tasks you can perform with the cfpdf tag:\n Merge several PDF documents into one PDF document.\n Extract pages from multiple PDF documents and generate a new PDF document.\n Linearize multipage PDF documents for faster display.\n Encrypt or decrypt PDF files for security.",
-	"params": [ 
+	"params": [
 		{"name":"action","description":"The action to take. Must be one of the following:\n addwatermark\n deletepages\n getinfo\n merge\n protect\n read\n removewatermark\n setinfo\n write\n (required)","required":false,"default":"","type":"String","values":["addwatermark","deletepages","getinfo","merge","protect","processddx","read","removewatermark","setinfo","thumbnail","write","extracttext","extractimage","addheader","addfooter","removeheaderfooter","optimize","transform"]},
 		{"name":"ascending","description":"Order in which the PDF files are sorted:\n yes: files are sorted in ascending order\n no: files are sorted in descending order (optional, default=no)","required":false,"default":"","type":"Boolean","values":[true,false]},
 		{"name":"copyfrom","description":"The filename of the PDF document from which to copy the watermark (optional)","required":false,"default":"","type":"String","values":[]},
@@ -76,12 +76,12 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfpdf"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfpdf"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfpdf"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfpdf"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }
