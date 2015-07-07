@@ -2,6 +2,7 @@
 	"name":"cfcase",
 	"type":"tag",
 	"syntax":"<cfcase value=\"\">",
+	"script":"case \"apple\":",
 	"returns":"",
 	"related":[],
 	"description":" Used only inside the cfswitch tag body. Contains code to\n execute when the expression specified in the cfswitch tag has\n one or more specific values.",

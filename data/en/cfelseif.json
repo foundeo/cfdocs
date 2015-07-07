@@ -2,8 +2,9 @@
 	"name":"cfelseif",
 	"type":"tag",
 	"syntax":"<cfelseif>",
+	"script":"else if (expression) { }",
 	"returns":"",
-	"related":[],
+	"related":["cfif","cfelse"],
 	"description":" Used as a control block in a cfif tag block to handle any case\n not identified by the cfif tag or a cfelseif tag.",
 	"params": [
 	],
