@@ -2,7 +2,7 @@
 	"name":"cflock",
 	"type":"tag",
 	"syntax":"<cflock name=\"lockName\" timeout=\"3\">",
-	"script":"lock name=\"lockName\" timeout=\"3\" { }"
+	"script":"lock name=\"lockName\" timeout=\"3\" { }",
 	"returns":"",
 	"related":[],
 	"description":" Ensures the integrity of shared data. Instantiates the\n following kinds of locks:\n\n * Exclusive allows single-thread access to the CFML constructs\n * Read-only allows multiple requests to access CFML constructs",
