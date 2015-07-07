@@ -15,6 +15,7 @@
                 <!--- add cfscript syntax --->
                 <cfset data.script = ReReplace(data.syntax, "[<\r\n]", "", "ALL")>
                 <cfset data.script = ReplaceNoCase(data.script, data.name, data.name & "(")>
+                <cfset data.script = Replace(data.script, "( ", "(")>
                 <!--- replace double quote followed by a space with a ,[space] --->
                 <cfset data.script = ReReplace(data.script, """ ", """, ", "ALL")>
                 <cfset data.script = ReReplace(data.script, ",? ?>", ");")>
