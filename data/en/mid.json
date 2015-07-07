@@ -18,6 +18,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Extract month from date",
+			"description": "Grabs the month out of a raw date yyyymmdd value.",
+			"code": "Mid(\"20001122\", \"5\", \"2\")",
+			"result": "11"
+		}
 	]
 
 }
