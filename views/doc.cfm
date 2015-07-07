@@ -11,7 +11,7 @@
             <cfelseif ListFindNoCase("cfabort,cfbreak,cfcontinue,cfreturn,cfexit", data.name)>
                 <cfset data.scriptTitle = "Script Syntax">
                 <cfset data.script = ReplaceNoCase(data.name, "cf", "") & ";">
-            <cfelseif NOT ListFindNoCase("cfif,cfset,cfelse,cfelseif,cfloop,cfinclude,cfparam,cfswitch,cfcase,cftry,cfthrow,cfrethrow,cfcatch,cffinally,cfmodule,cfcomponent,cfinterface,cfproperty,cffunction,cfimport,cftransaction,cftrace,cflock,cfthread,cfsavecontent,cflocation", data.name)>
+            <cfelseif NOT ListFindNoCase("cfif,cfset,cfelse,cfelseif,cfloop,cfinclude,cfparam,cfswitch,cfcase,cftry,cfthrow,cfrethrow,cfcatch,cffinally,cfmodule,cfcomponent,cfinterface,cfproperty,cffunction,cfimport,cftransaction,cftrace,cflock,cfthread,cfsavecontent,cflocation,cfargument", data.name)>
                 <!--- add cfscript syntax --->
                 <cfset data.script = ReReplace(data.syntax, "[<\r\n]", "", "ALL")>
                 <cfset data.script = ReplaceNoCase(data.script, data.name, data.name & "(")>
