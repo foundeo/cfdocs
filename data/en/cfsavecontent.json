@@ -21,12 +21,12 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfscript>\r\nsavecontent variable=\"myContent\" {\r\n writeOutput(\"Somecontent.\");\r\n}\r\n</cfscript>",
+			"code": "\r\nsavecontent variable=\"myContent\" {\r\n writeOutput(\"Somecontent.\");\r\n}\r\n",
 			"result": ""
 		},
 	        {
 	            "title": "Tag Syntax",
-	            "description": "Show the Tag syntax of CFSavecontent.",
+	            "description": "",
 	            "code": "<cfsavecontent variable=\"myContent\">\r\n<cfoutput>Some content.</cfoutput>\r\n</cfsavecontent>",
 	            "result": ""
 	        }
