@@ -2,7 +2,7 @@
 	"name":"cfinclude",
 	"type":"tag",
 	"syntax":"<cfinclude template=\"\" runOnce=\"true|false\">",
-	"script":"include \"template.cfm\";",
+	"script":"include \"template.cfm\" runOnce=true;",
 	"returns":"",
 	"related":[],
 	"description":" Embeds references to CFML pages in CFML. You can embed\n cfinclude tags recursively. For another way to encapsulate\n CFML, see cfmodule. (A CFML page was formerly sometimes\n called a CFML template or a template.)",
