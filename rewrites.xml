@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlrewrite>
+    <rule>
+        <from>^([^./]+)$</from>
+        <to type="redirect">/doc.cfm?name=$1</to>
+    </rule>
+    <rule>
+        <from>^/tag-summary$</from>
+        <to type="redirect">/doc.cfm?name=tags</to>
+    </rule>
+    <rule>
+        <from>^/t$</from>
+        <to type="redirect">/doc.cfm?name=tags</to>
+    </rule>
+    <rule>
+        <from>^/f$</from>
+        <to type="redirect">/doc.cfm?name=functions</to>
+    </rule>
+</urlrewrite>
