@@ -15,7 +15,7 @@ This makes the documentation super easy to edit and allows developers to run a l
 
 The cfdocs.org site can run locally pretty easily, it doesn't need anything except CF or Lucee to run (no database or anything), it utilizes a .htaccess file for url rewriting, but you could still test things by hitting /doc.cfm?name=getsafehtml if you just want to drop it in a directory somewhere.
 
-*Running locally with commandbox EASY!*
+## Running locally with CommandBox (EASIEST WAY)!
 
 1. Go download (CommandBox)[https://www.ortussolutions.com/products/commandbox] if you have not already.
 2. Download this repository and extract it to a folder, or clone it from this repository. If you are going to be making changes to the docs I would suggest you fork it, see Adam Tuttle's guide: (GitHub tip for your first pull request)[http://fusiongrokker.com/post/github-tip-for-your-first-pull-request]
