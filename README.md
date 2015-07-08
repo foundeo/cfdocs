@@ -18,8 +18,8 @@ The cfdocs.org site can run locally pretty easily, it doesn't need anything exce
 ### Running locally with CommandBox (EASIEST WAY)!
 
 1. Go download [CommandBox](https://www.ortussolutions.com/products/commandbox) if you have not already.
-2. Download this repository and extract it to a folder, or clone it from this repository. If you are going to be making changes to the docs I would suggest you fork it, see Adam Tuttle's guide: (GitHub tip for your first pull request)[http://fusiongrokker.com/post/github-tip-for-your-first-pull-request]
-3. Run `box recipe server-star.boxr` from Command Prompt or Terminal
+2. Download this repository and extract it to a folder, or clone it from this repository. If you are going to be making changes to the docs I would suggest you fork it, see Adam Tuttle's guide: [GitHub tip for your first pull request](http://fusiongrokker.com/post/github-tip-for-your-first-pull-request)
+3. Run `box recipe server-star.boxr` from Command Prompt or Terminal in the root directory.
 
 CommandBox will start an embedded CFML server on port 8411, and you can browse to (http://localhost:8411/) to view the docs.
 
@@ -39,3 +39,84 @@ If you want to work on a tag or function,
 ### Not sure what you can contribute?
 
 We need help expanding existing tag and function documentation. Look through the reference pages till you find one needing more definitions or examples.
+
+### JSON File Documentation
+
+    {
+    	"name":"NameOfTagOrFunction",
+    	"type":"function|tag",
+    	"syntax":"Tag(arg)|<cftag attr=1>",
+        "script":"cftag(attr=1);",
+    	"returns":"void",
+    	"related":["tag","function"],
+    	"description":"A short description that describes what the tag or function does.",
+    	"params": [
+            {"name":"funcArgNameOrTagAttributeName","description":"What it does","required":true,"default":"false","type":"boolean","values":["true","false"]}
+    	],
+    	"engines": {
+    		"coldfusion": {"minimum_version":"10", "notes":"CF Specific Info Here", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/function"},
+    		"railo": {"minimum_version":"4.1", "notes":"Railo Specific Here", "docs":"http://railodocs.org/index.cfm/function/sessionrotate"},
+            "lucee": {"minimum_version":"4.5", "notes":"Lucee Specific Info Here", "docs":"http://docs.lucee.org/reference/functions/name.html"}
+    	},
+    	"links": [
+    		{
+    			"title":"Title of a blog entry that has good info about this.",
+    			"description":"Description of the link",
+    			"url":"http:\/\/www.example.com\/a\/b.cfm"
+    		}
+    	],
+        "examples": [
+            {
+    			"title": "Name of the code example",
+    			"description": "Description of the code example",
+    			"code": "<cf_examplecodehere>",
+    			"result": "The expected output of the code example"
+            }
+        ]
+
+    }
+
+
+##### name
+
+The name of the tag or function, use lowercase.
+
+##### type
+
+Either `function` or `tag` or `listing` a *listing* is how categories are made, they simply contain a `name`, `description`, and a list of `related`
+
+##### syntax
+
+The basic syntax of the tag or function
+
+##### script
+
+For tags, shows how the tag would be invoked from cfscript.
+
+##### returns
+
+The returntype of a function.
+
+##### related
+
+An array of tag or function names that are related to this item.
+
+##### description
+
+A short description of the item.
+
+##### params
+
+Array of structures containing information about the attributes of a tag, or arguments of a function.
+
+##### engines
+
+CFML engine implementation specific info goes here, for example if it was added in CF10 and Railo 4.1 you can add that in `minimum_version` if something was changed in CF11, you can add notes about what changed. The `docs` key should point to a url for vendor documentation.
+
+##### links
+
+Use this to link to blog entries or other useful related content.
+
+##### examples
+
+Show example code. It is very helpful to readers to use the `result` to show the expected result of the code sample when applicable.
