@@ -31,11 +31,16 @@ If you are interested in helping you can just copy a tag or function and write u
 
 CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. attribute names / function arguments and one two sentence descriptions.
 
-If you want to work on a tag or function,
+#### The easy way to edit the docs
+
+1. Find a
+
+#### The better way to edit the docs
 
 1. fork the project to your GitHub account,
-2. then please [create an issue here](https://github.com/foundeo/cfdocs/issues/), eg "Missing Docs for CF11 getSafeHTML() Function",
-3. and specify that you will be working on it, (please check the list of issues before posting to avoid duplicates)
+2. clone it locally
+3. make your changes
+4. test it locally using commandbox (see above)
 4. once you are done you can send a pull request, and I'll merge it into the main repository.
 
 ### Not sure what you can contribute?
