@@ -33,7 +33,9 @@ CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. att
 
 #### The easy way to edit the docs
 
-1. Find a
+1. Browse the [data/en/](https://github.com/foundeo/cfdocs/tree/master/data/en) folder on github and find the tag or function you want to edit.
+2. Click the edit button (pencil)
+3. Commit / Send a pull request.
 
 #### The better way to edit the docs
 
