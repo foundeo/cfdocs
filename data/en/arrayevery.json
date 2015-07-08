@@ -12,6 +12,7 @@
 		{"name":"maxThreads","description":"Railo only option, the number of threads to use when parallel = true","required":false,"default":"20","type":"Boolean","values":[]}
 	],
 	"engines": {
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayEvery.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://www.railodocs.org/index.cfm/function/arrayevery/"}
 	},
 	"links": [

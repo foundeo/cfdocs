@@ -44,9 +44,9 @@
 	  			<a href="#data.engines.coldfusion.docs#" title="Official Adobe ColdFusion Docs" class="label label-info">CF<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)>#XmlFormat(data.engines.coldfusion.minimum_version)#+</cfif></a>
 	  		</li>
 	  </cfif>
-	  <cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "railo") AND StructKeyExists(data.engines.railo, "docs") AND Len(data.engines.railo.docs)>
+	  <cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "lucee") AND StructKeyExists(data.engines.lucee, "docs") AND Len(data.engines.lucee.docs)>
 	  		<li class="pull-right">
-	  			<a href="#data.engines.railo.docs#" title="Official Railo Docs" class="label label-danger">R<cfif StructKeyExists(data.engines.railo, "minimum_version") AND Len(data.engines.railo.minimum_version)>#XmlFormat(data.engines.railo.minimum_version)#+</cfif></a>
+	  			<a href="#data.engines.lucee.docs#" title="Official Lucee Docs" class="label label-danger">L<cfif StructKeyExists(data.engines.lucee, "minimum_version") AND Len(data.engines.railo.minimum_version)>#XmlFormat(data.engines.lucee.minimum_version)#+</cfif></a>
 	  		</li>
 	  </cfif>
 	  <cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "openbd") AND StructKeyExists(data.engines.openbd, "docs") AND Len(data.engines.openbd.docs)>
