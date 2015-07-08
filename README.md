@@ -21,7 +21,7 @@ The cfdocs.org site can run locally pretty easily, it doesn't need anything exce
 2. Download this repository and extract it to a folder, or clone it from this repository. If you are going to be making changes to the docs I would suggest you fork it, see Adam Tuttle's guide: [GitHub tip for your first pull request](http://fusiongrokker.com/post/github-tip-for-your-first-pull-request)
 3. Run `box recipe server-star.boxr` from Command Prompt or Terminal in the root directory.
 
-CommandBox will start an embedded CFML server on port 8411, and you can browse to (http://localhost:8411/) to view the docs.
+CommandBox will start an embedded CFML server on port 8411, and you can browse to [http://localhost:8411/](http://localhost:8411/) to view the docs.
 
 Note: To restart the server, don't use `server restart`, instead use `server stop` and then `recipe server-start.boxr` due to a [bug](https://ortussolutions.atlassian.net/browse/COMMANDBOX-245) in CommandBox the rewrite rules will not be added when the server restarts.
 
