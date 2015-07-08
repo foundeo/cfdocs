@@ -16,6 +16,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "<cfscript>\r\nsavecontent variable=\"myContent\" {\r\n writeOutput(\"Somecontent.\");\r\n}\r\n</cfscript>",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "Show the Tag syntax of CFSavecontent.",
+	            "code": "<cfsavecontent variable=\"myContent\">\r\n<cfoutput>Some content.</cfoutput>\r\n</cfsavecontent>",
+	            "result": ""
+	        }
 	]
 
 }
