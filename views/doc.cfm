@@ -114,7 +114,7 @@
 					<div class="row">
 						<div class="col-xs-1"><strong><cfif i IS "coldfusion">ColdFusion<cfelseif i IS "railo">Railo<cfelseif i IS "openbd">OpenBD</cfif></strong></div>
 						<div class="col-xs-2"><cfif Len(data.engines[i].minimum_version)><span class="label label-warning">Version #XmlFormat(data.engines[i].minimum_version)#+</span></cfif></div>
-						<div class="col-xs-9">#XmlFormat(data.engines[i].notes)#</div>
+						<div class="col-xs-9">#autoLink(XmlFormat(data.engines[i].notes))#</div>
 					</div>
 				</cfsavecontent>
 			</cfif>
