@@ -23,6 +23,8 @@ The cfdocs.org site can run locally pretty easily, it doesn't need anything exce
 
 CommandBox will start an embedded CFML server on port 8411, and you can browse to (http://localhost:8411/) to view the docs.
 
+Note: To restart the server, don't use `server restart`, instead use `server stop` and then `recipe server-start.boxr` due to a [bug](https://ortussolutions.atlassian.net/browse/COMMANDBOX-245) in CommandBox the rewrite rules will not be added when the server restarts.
+
 ## How to contribute
 
 If you are interested in helping you can just copy a tag or function and write up some documentation. The documentation doesn't need to be super wordy and should not be a copy of Adobe's documentation word for word.
