@@ -10,12 +10,12 @@
 		<cfif StructKeyExists(data, "type")>
 			<cfif data.type IS "tag" OR data.type IS "function">
 
-			    <cfif Find("""railo"":", json) AND NOT Find("""lucee"":", json)>
-                    <cfsavecontent variable="lucee"><cfoutput>"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/#data.type#s/#ReReplace(data.name, "^cf", "")#.html"},#Chr(10)##Chr(9)##Chr(9)#"railo":</cfoutput></cfsavecontent>
-                    <cfset json = Replace(json, """railo"":" , lucee)>
+			    <cfif Find("""lucee"":", json) AND REFind("[A-Z]", data.name)>
+					<cfset docUrl = "http://docs.lucee.org/reference/#data.type#s/" & ReReplace(data.name, "^cf", "") & ".html">
+                    <cfset json = Replace(json, docUrl , LCase(docUrl))>
                     <cfset fileWrite(filePath, json, "utf-8")>
                     <cfoutput>#filePath#<br></cfoutput>
-
+					
                 </cfif>
 
 			</cfif>
