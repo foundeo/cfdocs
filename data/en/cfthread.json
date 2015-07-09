@@ -2,6 +2,7 @@
 	"name":"cfthread",
 	"type":"tag",
 	"syntax":"<cfthread>",
+	"script": "thread action=\"\" name=\"\";",
 	"returns":"",
 	"related":[],
 	"description":" The cfthread tag enables multithreaded programming in ColdFusion.\n Threads are independent streams of execution, and multiple threads\n on a page can execute simultaneously and asynchronously, letting you\n perform asynchronous processing in CFML. CFML code within the cfthread\n tag body executes on a separate thread while the page request thread\n continues processing without waiting for the cfthread body to finish.\n You use this tag to run or end a thread, temporarily stop thread execution,\n or join together multiple threads.",
@@ -21,6 +22,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "\r\nthread action=\"run\" name=\"myThread\" { \r\n // do single thread stuff \r\n} \r\n thread action=\"join\" name=\"myThread,myOtherThread\";\r\n",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfthread action=\"run\" name=\"myThread\"> \r\n <!--- Do single thread stuff ---> \r\n </cfthread> \r\n <cfthread action=\"join\" name=\"myThread,myOtherThread\" />",
+	            "result": ""
+	        }
 	]
 
 }
