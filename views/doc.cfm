@@ -59,7 +59,7 @@
 <div class="container">
 
 	<cfif StructKeyExists(data, "related") AND ArrayLen(data.related)>
-		<cfif data.type IS "listing">
+		<cfif data.type IS "listing" OR data.type IS "404">
 			<cfloop array="#data.related#" index="r">
 				<h2 class="listing col-sm-3"><a href="#linkTo(r)#" class="related listing label label-default">#r#</a></h2>
 			</cfloop>
