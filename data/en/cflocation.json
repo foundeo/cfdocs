@@ -2,6 +2,7 @@
 	"name":"cflocation",
 	"type":"tag",
 	"syntax":"<cflocation url=\"page.cfm\" addtoken=\"false\">",
+	"script":"location(\"mypage.cfm\", \"false\", \"301\");",
 	"returns":"",
 	"related":[],
 	"description":" Stops execution of the current page and redirects to the specified URI.",
@@ -19,6 +20,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "\r\nlocation(\"mypage.cfm\", \"false\", \"301\");",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cflocation url=\"mypage.cfm\" addToken=\"false\" statusCode=\"301\">",
+	            "result": ""
+	        }
 	]
 
 }
