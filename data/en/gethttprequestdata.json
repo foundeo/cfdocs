@@ -3,8 +3,8 @@
 	"type":"function",
 	"syntax":"getHTTPRequestData()",
 	"returns":"Struct",
-	"related":[],
-	"description":" Makes HTTP request headers and body available to CFML pages.\n Useful for capturing SOAP request data, which can be delivered\n in an HTTP header.",
+	"related":["getpagecontext"],
+	"description":"Returns HTTP request headers and request body. The resulting structure contains the following keys:\n\t content (the request body),\n\t headers (a structure of request headers),\n\t method (same as cgi.request_method),\n\t protocol (same as cgi.server_protocol).",
 	"params": [
 	],
 	"engines": {
@@ -14,7 +14,11 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/gethttprequestdata"}
 	},
 	"links": [
-
+		{
+			"title":"GetHttpRequestData() May Break Your Request But GetHttpRequestData(False) May Not",
+			"description": "Undocumented boolean argument omits the content from being returned if you only need the headers.",
+			"url":"http://www.bennadel.com/blog/2824-gethttprequestdata-may-break-your-request-in-coldfusion-but-gethttprequestdata-false-may-not.htm"
+		}
 	]
 
 }

@@ -2,9 +2,9 @@
 	"name":"getPageContext",
 	"type":"function",
 	"syntax":"getPageContext()",
-	"returns":"Object",
-	"related":[],
-	"description":" Gets the current CFML MX PageContext object that\n provides access to page attributes and configuration, request\n and response objects.",
+	"returns":"javax.servlet.jsp.PageContext",
+	"related":["gethttprequestdata"],
+	"description":" Gets the current java PageContext object that provides access to page attributes and configuration, request and response objects.",
 	"params": [
 	],
 	"engines": {
@@ -14,7 +14,11 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getpagecontext"}
 	},
 	"links": [
-
+		{
+			"title": "javax.servlet.jsp.PageContext",
+			"description": "Documentation for the Java PageContext object of which an instance of is returned by this function.",
+			"url":"http://docs.oracle.com/javaee/7/api/javax/servlet/jsp/PageContext.html"
+		}
 	]
 
 }
