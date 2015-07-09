@@ -19,6 +19,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "\r\ninclude \"mypage.cfm\";",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfinclude template=\"mypage.cfm\">",
+	            "result": ""
+	        }
 	]
 
 }
