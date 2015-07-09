@@ -69,3 +69,25 @@ h2 .item-name { font-weight:bold; }
 .breadcrumb li.pull-right:before { content: " ";}
 footer { text-align: center; margin-top: 10px; font-size:smaller; }
 .navbar-brand { font-weight:bold; }
+
+.label-acf {
+    background-color: #069;
+}
+.label-acf:hover,
+.label-acf:focus {
+    background-color: #246;
+}
+.label-lucee {
+    background-color: #449caf;
+}
+.label-lucee:hover,
+.label-lucee:focus {
+    background-color: #01798a;
+}
+.label-openbd {
+    background-color: #2fa5d7;
+}
+.label-openbd:hover,
+.label-openbd:focus {
+    background-color: #1b6c8f;
+}
