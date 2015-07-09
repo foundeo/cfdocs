@@ -1,7 +1,7 @@
 {
 	"name":"ormExecuteQuery",
 	"type":"function",
-	"syntax":"ormExecuteQuery(hql [, unique] [, queryoptions])",
+	"syntax":"ORMExecuteQuery(hql, params [,unique]);\nORMExecuteQuery(hql, [,unique] [, queryoptions]);\nORMExecuteQuery(hql, params [,unique] [,queryOptions])",
 	"returns":"",
 	"related":[],
 	"description":" Runs the HQL on the default data source specified for the application.",
