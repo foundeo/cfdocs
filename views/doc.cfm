@@ -55,7 +55,7 @@
 	  		</li>
 	  </cfif>
 	</ol>
-	</cfif>
+</cfif>
 <div class="container">
 
 	<cfif StructKeyExists(data, "related") AND ArrayLen(data.related)>
