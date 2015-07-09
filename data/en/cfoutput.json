@@ -2,6 +2,7 @@
 	"name":"cfoutput",
 	"type":"tag",
 	"syntax":"<cfoutput>",
+	"script":"writeOutput ()",
 	"returns":"",
 	"related":[],
 	"description":" Displays output that can contain the results of processing\n CFML variables and functions. Can loop over the results\n of a database query.",
@@ -21,6 +22,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Example",
+			"description": "",
+			"code": "\r\n writeOutput(\"Some text and a #variable#\");\r\n or \r\n writeOutput(\"Some text and a \" & variable);",
+			"result": ""
+		},
+		{
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfoutput>Some text and a #variable#</cfoutput>",
+	            "result": ""
+	        }
 	]
 
 }
