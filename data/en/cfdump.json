@@ -2,6 +2,7 @@
 	"name":"cfdump",
 	"type":"tag",
 	"syntax":"<cfdump var=\"\">",
+	"script": "writeDump(var = cgi, label = \"CGI Scope\");",
 	"returns":"",
 	"related":[],
 	"description":" Outputs the elements, variables and values of most kinds of\n CFML objects. Useful for debugging. You can display the\n contents of simple and complex variables, objects, components,\n user-defined functions, and other elements.",
@@ -30,7 +31,15 @@
 
 	],
 	"examples":[
-		{"result":"","title":"Short version","description":"Instead of using a boolean for the abort-Attribute to abort after a dump, it works like that:","code":"<cfdump var=\"#CGI#\" abort>\r\n"}
+		{"result":"","title":"Short version - Tag","description":"Instead of using a boolean for the abort-Attribute to abort after a dump, it works like that:","code":"<cfdump var=\"#CGI#\" abort>\r\n"},
+		
+		{
+		"result":"",
+		"title":"Script",
+		"description":"",
+		"code":"writeDump(var = cgi, label = \"CGI Scope\");\r\n"
+			
+		}
 	]
 
 }
