@@ -22,6 +22,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "\r\nlock timeout=\"60\" scope=\"session\" type=\"exclusive\" { \r\n session.myVar = \"Hello\"; \r\n }\r\n",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cflock timeout=\"60\" scope=\"session\" type=\"exclusive\"> \r\n <cfset session.myVar = \"Hello\"> \r\n </cflock>",
+	            "result": ""
+	        }
 	]
 
 }
