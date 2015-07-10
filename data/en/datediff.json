@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"dateDiff(datepart, date1, date2)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["dateadd","dateformat"],
 	"description":"Determines the integer number of units by which date1 is less than date2.",
 	"params": [
 		{"name":"datepart","description":"yyyy: Year\n q: Quarter\n m: Month\n y: Day of year\n d: Day\n w: Weekday\n ww: Week\n h: Hour\n n: Minute\n s: Second\n l: Millisecond","required":true,"default":"","type":"String","values":["yyyy","q","m","y","d","w","ww","h","n","s","l"]},
@@ -26,6 +26,11 @@
 			"description": "Find the difference between two dates.",
 			"code": "DateDiff(\"d\", \"2013-01-15\", \"2013-01-25\")",
 			"result": "10"
+		},
+		{
+			"title": "How old are they?",
+			"description": "Calculates a persons age based on a variable birthDate which contains a date. Uses the now function to get current date.",
+			"code": "DateDiff(\"yyyy\", birthDate, now())"
 		}
 	]
 
