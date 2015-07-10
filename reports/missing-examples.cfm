@@ -26,6 +26,6 @@
 </cfloop>
 <cfset total = ArrayLen(application.index.tags) + ArrayLen(application.index.functions)>
 <cfset percentExamples = NumberFormat ( (hasExample/total) * 100 , "_.__")>
-<cfset data.description = "Out of #total# tags and functions, #hasExample# have examples, #percentExamples#%. Here are some good ones to start with.">
+<cfset data.description = "Out of #total# tags and functions, #hasExample# have examples, #percentExamples#%. Here are #ArrayLen(data.related)# good ones to start with.">
 <cfset url.name = "todo">
 <cfinclude template="../views/doc.cfm">

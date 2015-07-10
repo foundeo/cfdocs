@@ -3,11 +3,11 @@
 	"type":"function",
 	"syntax":"fileRead(filepath [, charset])",
 	"returns":"String",
-	"related":[],
+	"related":["filewrite","filereadline"],
 	"description":" Reads an on-disk or in-memory text file or a file object created with the FileOpen function.",
 	"params": [
-		{"name":"filepath","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"charset","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
+		{"name":"filepath","description":"An absolute file path, or file object.","required":true,"default":"","type":"String","values":[]},
+		{"name":"charset","description":"Character encoding used to read the file","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1", "windows-1252", "us-ascii"]}
 
 	],
 	"engines": {
@@ -18,6 +18,13 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Read a file into a variable",
+			"description": "Uses expandPath to grab a file in current directory.",
+			"code": "fileContent = fileRead(ExpandPath(\"./file.txt\"), \"utf-8\")"
+		}
 	]
 
 }
