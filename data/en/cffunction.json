@@ -2,6 +2,7 @@
 	"name":"cffunction",
 	"type":"tag",
 	"syntax":"<cffunction name=\"\">",
+	"script": "public boolean function myFunction(required any myArgument) { }",
 	"returns":"",
 	"related":[],
 	"description":" Defines a function that you can call in CFML. Required to\n defined CFML component methods.",
@@ -27,6 +28,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "public boolean function myFunction(required any myArgument) { \r\n  // Some function bits \r\n return true; \r\n }",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cffunction access=\"public\" returntype=\"boolean\" name=\"myFunction\"> \r\n <cfargument required=\"true\" type=\"any\" name=\"myArgument\"> \r\n <!--- Some function bits ---> \r\n <cfreturn true> \r\n </cffunction>",
+	            "result": ""
+	        }
 	]
 
 }
