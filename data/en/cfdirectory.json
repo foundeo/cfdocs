@@ -1,11 +1,11 @@
 {
 	"name":"cfdirectory",
 	"type":"tag",
-	"syntax":"<cfdirectory directory=\"\">",
-	"script": "directoryList(\" \", false, \" \");",
+	"syntax":"<cfdirectory directory=\".\" action=\"list|create|delete|rename\">",
+	"script": "directoryList(\".\", false, \" \");",
 	"returns":"",
-	"related":[],
-	"description":" Manages interactions with directories.\n Different combos cause different attributes to be\n required.",
+	"related":["directorylist","directorycreate","directoryread","directorydelete","directoryexists"],
+	"description":"Allows you to list, create, delete or rename a directory in the server file system.",
 	"params": [
 		{"name":"action","description":"Action to perform","required":false,"default":"list","type":"String","values":["list","create","delete","rename"]},
 		{"name":"directory","description":"Absolute pathname of directory against which to perform\n action.","required":true,"default":"","type":"String","values":[]},
@@ -30,50 +30,50 @@
 	],
 	"examples": [
 	        {
-	            "title": "Script Syntax",
-	            "description": "Directory List",
+	            "title": "List Files in Directory (Script Syntax)",
+	            "description": "Returns a query",
 	            "code": "myList = directoryList(expandPath(\"./\"), false, \"query\");",
 	            "result": ""
 	        },
 	        {
-	            "title": "Script Syntax",
-	            "description": "Directory Create",
+	            "title": "Create a Directory (Script Syntax)",
+	            "description": "",
 	            "code": "directoryCreate(expandPath(\"./new_directory\"));",
 	            "result": ""
 	        },
 	        {
-	            "title": "Script Syntax",
+	            "title": "Delete a Directory (Script Syntax)",
 	            "description": "Directory Delete",
 	            "code": "directoryDelete(expandPath(\"./my_directory\"));",
 	            "result": ""
 	        },
 	        {
-	            "title": "Script Syntax",
-	            "description": "Directory Rename",
+	            "title": "Rename a Directory (Script Syntax)",
+	            "description": "",
 	            "code": "directoryRename(expandPath(\"./my_directory\"), expandPath(\"./new_driectory\"));",
 	            "result": ""
 	        },
 	        {
-			"title": "Tag Syntax",
+			"title": "List File in Directory (Tag Syntax)",
 			"description": "Directory List",
 			"code": "<cfdirectory action=\"list\" directory=\"#expandPath(\"./\")#\" recurse=\"false\" name=\"myList\">",
 			"result": ""
 		},
 		{
-			"title": "Tag Syntax",
-			"description": "Directory Create",
+			"title": "Create a Directory (Tag Syntax)",
+			"description": "",
 			"code": "<cfdirectory action=\"create\" directory=\"#expandPath(\"./new_directory\")#\">",
 			"result": ""
 		},
 		{
-			"title": "Tag Syntax",
-			"description": "Directory Delete",
+			"title": "Delete a Directory (Tag Syntax)",
+			"description": "",
 			"code": "<cfdirectory action=\"delete\" directory=\"#expandPath(\"./my_directory\")#\">",
 			"result": ""
 		},
 		{
-			"title": "Tag Syntax",
-			"description": "Directory Rename",
+			"title": "Rename a Directory (Tag Syntax)",
+			"description": "",
 			"code": "<cfdirectory action=\"rename\" directory=\"#expandPath(\"./my_directory\")#\" newdirectory=\"#expandPath(\"./new_directory\")#\">",
 			"result": ""
 		}
