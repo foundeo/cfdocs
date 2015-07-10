@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cfmail to=\"\" from=\"\" subject=\"\">",
 	"returns":"",
-	"related":["cfmailpart","cfmailparam"],
+	"related":["cfmailpart","cfmailparam","savecontent"],
 	"description":" Sends an e-mail message that optionally contains query output,\n using an SMTP server.",
 	"params": [
 		{"name":"to","description":"Message recipient e-mail addresses.","required":true,"default":"","type":"String","values":[]},
@@ -49,6 +49,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "Its a good idea to build your message in a savecontent block",
+			"code": "savecontent variable=\"mailBody\" { \r\n writeOutput(\"Your Email Message!!\"); \r\n }; \r\n // Create and populate the mail object \r\n mailService = new mail( \r\n to = \"your@email.com\", \r\n from = \"another@email.com\", \r\n subject = \"CFMail Example\", \r\n body = mailBody \r\n ); \r\n // Send \r\n mailService.send();",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfmail to=\"your@email.com\" from=\"another@email.com\" subject=\"CFMail Example\"> \r\n  Your Email Message!! \r\n </cfmail>",
+	            "result": ""
+	        }
 	]
 
 }
