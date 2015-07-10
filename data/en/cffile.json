@@ -32,6 +32,129 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "File Write",
+			"code": "fileWrite(expandPath(\"./myFile.txt\"), \"Here's some content for my file.\");",
+			"result": ""
+		},
+		{
+			"title": "Script Syntax",
+			"description": "File Append - There is no fileAppend() so we access the file and use fileWriteLine()",
+			"code": "fmyFile = fileOpen(expandPath(\"./myFile.txt\"), \"write\"); \r\n fileWriteLine(myFile, \"Here's some new content.\"); \r\n fileClose(myFile);",
+			"result": ""
+		},
+		{
+			"title": "Script Syntax",
+			"description": "File Read",
+			"code": "myFile = fileRead(expandPath(\"./myFile.txt\"));",
+			"result": ""
+		},
+		{
+			"title": "Script Syntax",
+			"description": "File Read Binary",
+			"code": "myImageBinary = fileReadBinary(expandPath(\"./myImage.jpg\"));",
+			"result": ""
+		},
+		{
+			"title": "Script Syntax",
+			"description": "File Rename - Since there is no fileRename(), fileMove() works just as well",
+			"code": "fileMove(expandPath(\"./myFile.txt\"), expandPath(\"./myNewFileName.txt\"));",
+			"result": ""
+		},
+		{
+			"title": "Script Syntax",
+			"description": "File Copy",
+			"code": "fileCopy(expandPath(\"./myFile.txt\"), expandPath(\"./some/other/path\"));",
+			"result": ""
+		},
+		{
+			"title": "Script Syntax",
+			"description": "File Move",
+			"code": "fileMove(expandPath(\"./myFile.txt\"), expandPath(\"./some/other/path\"));",
+			"result": ""
+		},
+		{
+			"title": "Script Syntax",
+			"description": "File Delete",
+			"code": "fileDelete(expandPath(\"./myFile.txt\"));",
+			"result": ""
+		},
+		{
+			"title": "Script Syntax",
+			"description": "File Upload",
+			"code": "fileUpload(expandPath(\"./destination\"), form.myFile, \" \", \"makeunique\");",
+			"result": ""
+		},
+		{
+			"title": "Script Syntax",
+			"description": "File Upload All",
+			"code": "fileUploadAll(expandPath(\"./destination\"), \" \", \"makeunique\");",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "File Write",
+	            "code": "<cffile action=\"write\" file=\"#expandPath(\"./myFile.txt\")#\" output=\"Here's some content for my file.\">",
+	            "result": ""
+	        },
+	        {
+	            "title": "Tag Syntax",
+	            "description": "File Append",
+	            "code": "<cffile action=\"append\" file=\"#expandPath(\"./myFile.txt\")#\" attributes=\"normal\" output=\"Here's some new content.\">",
+	            "result": ""
+	        },
+	        {
+	            "title": "Tag Syntax",
+	            "description": "File Read",
+	            "code": "<cffile action=\"read\" file=\"#expandPath(\"./myFile.txt\")#\" variable=\"myFile\">",
+	            "result": ""
+	        },
+	        {
+	            "title": "Tag Syntax",
+	            "description": "File Read Binary",
+	            "code": "<cffile action=\"readBinary\" file=\"#expandPath(\"./myImage.jpg\")#\" variable=\"myImageBinary\">",
+	            "result": ""
+	        },
+	        {
+	            "title": "Tag Syntax",
+	            "description": "File Rename",
+	            "code": "<cffile action=\"rename\" source=\"#expandPath(\"./myFile.txt\")#\" destination=\"#expandPath(\"./myNewFileName.txt\")#\" attributes=\"normal\">",
+	            "result": ""
+	        },
+	        {
+	            "title": "Tag Syntax",
+	            "description": "File Copy",
+	            "code": "<cffile action=\"copy\" source=\"#expandPath(\"./myFile.txt\")#\" destination=\"#expandPath(\"./some/other/path\")#\">",
+	            "result": ""
+	        },
+	        {
+	            "title": "Tag Syntax",
+	            "description": "File Move",
+	            "code": "<cffile action=\"move\" source=\"#expandPath(\"./myFile.txt\")#\" destination=\"#expandPath(\"./some/other/path\")#\">",
+	            "result": ""
+	        },
+	        {
+	            "title": "Tag Syntax",
+	            "description": "File Delete",
+	            "code": "<cffile action=\"delete\" file=\"#expandPath(\"./myFile.txt\")#\">",
+	            "result": ""
+	        },
+	        {
+	            "title": "Tag Syntax",
+	            "description": "File Upload",
+	            "code": "<cffile action=\"upload\" destination=\"#expandPath(\"./destination)#\" filefield=\"form.myFile\" nameconflict=\"makeunique\">",
+	            "result": ""
+	        }
+	        ,
+	        {
+	            "title": "Tag Syntax",
+	            "description": "File Upload All",
+	            "code": "<cffile action=\"uploadall\" destination=\"#expandPath(\"./destination\")#\" nameconflict=\"makeunique\">",
+	            "result": ""
+	        }
 	]
 
 }
