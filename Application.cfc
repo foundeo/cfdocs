@@ -2,7 +2,7 @@
 	<cfset this.name="cfdocs">
 	<cfset this.sessionManagement=false>
 	<cfset this.clientManagement=false>
-	
+
 	<cffunction name="onRequest">
 		<cfargument name="targetPage" type="string">
 		<cfset var content = "">
@@ -32,6 +32,9 @@
 		<cfargument name="content">
 		<cfargument name="exclude" default="#url.name#">
 		<cfset var i = "">
+		<cfif ReFindNoCase("https?://", arguments.content)>
+			<cfset arguments.content = ReReplaceNoCase(arguments.content, "(https?://[a-zA-Z0-9._/=&%?-]+)", "<a href=""\1"">\1</a>", "ALL")>
+		</cfif>
 		<cfloop array="#application.index.tags#" index="i">
 			<cfif i IS NOT arguments.exclude>
 				<cfset arguments.content = ReReplaceNoCase(arguments.content, "[ ](#i#)([ .!,])", " <a href=""#linkTo(i)#"">\1</a>\2", "all")>
@@ -42,6 +45,7 @@
 				<cfset arguments.content = ReReplaceNoCase(arguments.content, "[ ](#i#)([ .!,])", " <a href=""#linkTo(i)#"">\1</a>\2", "all")>
 			</cfif>
 		</cfloop>
+
 		<cfset arguments.content = Replace(arguments.content, "#Chr(10)#", "<br />", "ALL")>
 		<cfreturn arguments.content>
 	</cffunction>
@@ -56,5 +60,5 @@
 		</cfloop>
 		<cfreturn "">
 	</cffunction>
-	
+
 </cfcomponent>
