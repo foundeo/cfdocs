@@ -62,7 +62,7 @@ We need help expanding existing tag and function documentation. Look through the
     	"returns":"void",
     	"related":["tag","function"],
     	"description":"A short description that describes what the tag or function does.",
-        "discouraged":"Only add this key if this tag/function is discouraged by the community."
+        "discouraged":"Only add this key if this tag/function is discouraged by the community.",
     	"params": [
             {"name":"funcArgNameOrTagAttributeName","description":"What it does","required":true,"default":"false","type":"boolean","values":["true","false"]}
     	],
