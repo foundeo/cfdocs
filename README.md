@@ -62,6 +62,7 @@ We need help expanding existing tag and function documentation. Look through the
     	"returns":"void",
     	"related":["tag","function"],
     	"description":"A short description that describes what the tag or function does.",
+        "discouraged":"Only add this key if this tag/function is discouraged by the community."
     	"params": [
             {"name":"funcArgNameOrTagAttributeName","description":"What it does","required":true,"default":"false","type":"boolean","values":["true","false"]}
     	],
@@ -116,6 +117,10 @@ An array of tag or function names that are related to this item.
 ##### description
 
 A short description of the item.
+
+##### discouraged
+
+If this key exists and has content a warning is displayed stating that the tag or function is discouraged by the CFML community.
 
 ##### params
 
