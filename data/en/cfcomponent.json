@@ -2,6 +2,7 @@
 	"name":"cfcomponent",
 	"type":"tag",
 	"syntax":"<cfcomponent>",
+	"script": "component displayname=\"myComponent\" output=\"false\" {  }",
 	"returns":"",
 	"related":[],
 	"description":" Creates and defines a component object; encloses functionality\n that you build in CFML and enclose within cffunction tags.\n This tag contains one or more cffunction tags that define\n methods. Code within the body of this tag, other than\n cffunction tags, is executed when the component is\n instantiated.",
@@ -52,6 +53,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "component displayname=\"myComponent\" output=\"false\" { \r\n // functions and other values here \r\n }",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfcomponent displayname=\"myComponent\" output=\"false\"> \r\n <!--- functions and other values here ---> \r\n </cfcomponent>",
+	            "result": ""
+	        }
 	]
 
 }
