@@ -28,6 +28,11 @@
             </cfif>
         </cfif>
 	</cfif>
+    <cfif StructKeyExists(data, "discouraged") AND Len(data.discouraged)>
+        <div class="alert alert-danger">
+            <h4><span class="glyphicon glyphicon-warning-sign"></span> Discouraged: #autoLink(htmlEditFormat(data.discouraged))#</h4>
+        </div>
+    </cfif>
   </div>
 </div>
 <cfif data.type IS NOT "404" AND data.type IS NOT "index">
