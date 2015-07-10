@@ -2,6 +2,7 @@
 	"name":"cfdirectory",
 	"type":"tag",
 	"syntax":"<cfdirectory directory=\"\">",
+	"script": "directoryList(\" \", false, \" \");",
 	"returns":"",
 	"related":[],
 	"description":" Manages interactions with directories.\n Different combos cause different attributes to be\n required.",
@@ -26,6 +27,56 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+	        {
+	            "title": "Script Syntax",
+	            "description": "Directory List",
+	            "code": "myList = directoryList(expandPath(\"./\"), false, \"query\");",
+	            "result": ""
+	        },
+	        {
+	            "title": "Script Syntax",
+	            "description": "Directory Create",
+	            "code": "directoryCreate(expandPath(\"./new_directory\"));",
+	            "result": ""
+	        },
+	        {
+	            "title": "Script Syntax",
+	            "description": "Directory Delete",
+	            "code": "directoryDelete(expandPath(\"./my_directory\"));",
+	            "result": ""
+	        },
+	        {
+	            "title": "Script Syntax",
+	            "description": "Directory Rename",
+	            "code": "directoryRename(expandPath(\"./my_directory\"), expandPath(\"./new_driectory\"));",
+	            "result": ""
+	        },
+	        {
+			"title": "Tag Syntax",
+			"description": "Directory List",
+			"code": "<cfdirectory action=\"list\" directory=\"#expandPath(\"./\")#\" recurse=\"false\" name=\"myList\">",
+			"result": ""
+		},
+		{
+			"title": "Tag Syntax",
+			"description": "Directory Create",
+			"code": "<cfdirectory action=\"create\" directory=\"#expandPath(\"./new_directory\")#\">",
+			"result": ""
+		},
+		{
+			"title": "Tag Syntax",
+			"description": "Directory Delete",
+			"code": "<cfdirectory action=\"delete\" directory=\"#expandPath(\"./my_directory\")#\">",
+			"result": ""
+		},
+		{
+			"title": "Tag Syntax",
+			"description": "Directory Rename",
+			"code": "<cfdirectory action=\"rename\" directory=\"#expandPath(\"./my_directory\")#\" newdirectory=\"#expandPath(\"./new_directory\")#\">",
+			"result": ""
+		}
 	]
 
 }
