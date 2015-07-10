@@ -47,7 +47,10 @@ CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. att
 
 ### Not sure what you can contribute?
 
-We need help expanding existing tag and function documentation. Look through the reference pages till you find one needing more definitions or examples.
+We need help expanding existing tag and function documentation. Look through the reference pages till you find one needing more definitions or examples. Also see:
+
+* [List of Tags and Functions that do not have examples](http://cfdocs.org/report/missing-examples.cfm)
+* [Missing Functions](http://cfdocs.org/report/todo.cfm)
 
 ### JSON File Documentation
 
