@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cfhttp url=\"\">",
 	"returns":"",
-	"related":[],
+	"related":["cfhttppram", "cfdump", "writedump"],
 	"description":" Generates an HTTP request and handles the response from the\n server.",
 	"params": [
 		{"name":"url","description":"Address of the resource on the server which will handle\n the request. The URL must include the hostname or IP\n address.\n\n If you do not specify the transaction protocol (http:\/\/ or\n https:\/\/), CFML defaults to http.\n\n If you specify a port number in this attribute, it\n overrides any port attribute value.\n\n The cfhttppparam tag URL attribute appends query string\n attribute-value pairs to the URL.","required":true,"default":"","type":"URL","values":[]},
@@ -44,6 +44,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "httpService = new http(method = \"GET\", charset = \"utf-8\", url = \"https://www.google.com/\"); \r\n httpService.addParam(name = \"q\", type = \"formfield\", value = \"cfml\"); \r\n result = httpService.send().getPrefix(); \r\n writeDump(result);",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfhttp result=\"result\" method=\"GET\" charset=\"utf-8\" url=\"https://www.google.com/\"> \r\n <cfhttpparam name=\"q\" type=\"formfield\" value=\"cfml\"> \r\n </cfhttp> \r\n <cfdump var=\"#result#\">",
+	            "result": ""
+	        }
 	]
 
 }
