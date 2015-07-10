@@ -2,8 +2,9 @@
 	"name":"cftransaction",
 	"type":"tag",
 	"syntax":"<cftransaction>",
+	"script": "transaction { }",
 	"returns":"",
-	"related":[],
+	"related":["cftry", "cfcatch"],
 	"description":" Instructs the database management system to treat multiple\n database operations as a single transaction. Provides database\n commit and rollback processing.",
 	"params": [
 		{"name":"action","description":"<ul>\n <li>begin: the start of the block of code to execute<\/li>\n <li>commit: commits a pending transaction<\/li>\n <li>rollback: rolls back a pending transaction<\/li>\n <\/ul>","required":false,"default":"begin","type":"String","values":["begin","commit","rollback","setsavepoint"]},
@@ -20,6 +21,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "\r\ntransaction { \r\n try { \r\n // code to run \r\n transaction action=\"commit\"; \r\n } \r\n catch(any e) { \r\n  transaction action=\"rollback\"; \r\n  } \r\n }",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cftransaction> \r\n <cftry> \r\n <!--- code to run ---> \r\n   <cftransaction action=\"commit\" /> \r\n <cfcatch type=\"any\"> \r\n <cftransaction action=\"rollback\" /> \r\n </cfcatch> \r\n </cftry> \r\n </cftransaction>",
+	            "result": ""
+	        }
 	]
 
 }
