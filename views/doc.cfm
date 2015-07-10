@@ -46,7 +46,7 @@
 	  </cfif>
 	  <cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "lucee") AND StructKeyExists(data.engines.lucee, "docs") AND Len(data.engines.lucee.docs)>
 	  		<li class="pull-right">
-	  			<a href="#data.engines.lucee.docs#" title="Official Lucee Docs" class="label label-lucee">L<cfif StructKeyExists(data.engines.lucee, "minimum_version") AND Len(data.engines.railo.minimum_version)>#XmlFormat(data.engines.lucee.minimum_version)#+</cfif></a>
+	  			<a href="#data.engines.lucee.docs#" title="Official Lucee Docs" class="label label-lucee">Lucee<cfif StructKeyExists(data.engines.lucee, "minimum_version") AND Len(data.engines.lucee.minimum_version)>#XmlFormat(data.engines.lucee.minimum_version)#+</cfif></a>
 	  		</li>
 	  </cfif>
 	  <cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "openbd") AND StructKeyExists(data.engines.openbd, "docs") AND Len(data.engines.openbd.docs)>
