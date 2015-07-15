@@ -21,6 +21,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "This need verified",
+			"code": "savecontent variable="saved" { \r\n writeOutput("stuff to save"); \r\n}",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfcontent type="application/vnd.ms-excel" file="c:\temp\acmesales03.xls"> ",
+	            "result": ""
+	        }
 	]
 
 }
