@@ -2,6 +2,7 @@
 	"name":"cfbreak",
 	"type":"tag",
 	"syntax":"<cfbreak>",
+	"script":"break;",
 	"returns":"",
 	"related":["cfloop"],
 	"description":" Used within a cfloop tag. Breaks out of a loop.",
