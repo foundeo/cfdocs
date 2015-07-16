@@ -34,7 +34,7 @@
 	        {
 	            "title": "Tag Syntax",
 	            "description": "For Tag syntax the argument is its own tag",
-	            "code": "<cffunction access="public" returntype="boolean" name="myFunction"> \r\n <cfargument required="true" type="any" name="myArgument"> \r\n <!--- Some function bits ---> \r\n <cfreturn true> \r\n </cffunction>",
+	            "code": "<cffunction access=\"public\" returntype=\"boolean\" name=\"myFunction\"> \r\n <cfargument required=\"true\" type=\"any\" name=\"myArgument\"> \r\n <!--- Some function bits ---> \r\n <cfreturn true> \r\n </cffunction>",
 	            "result": ""
 	        }
 	]
