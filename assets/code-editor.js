@@ -19,15 +19,15 @@ angular.module('code.editor', [])
 .directive('codeEditor',function($timeout){
 	var uid = +new Date().getTime() +'-'+guid();
 	var editorTemplate =
-	'<input type="hidden" name="{{fieldname}}" id="{{fieldname}}" value="{{code}}"/>'+
 	'<div id="{{id}}-editor" class="editor-wrapper"><h2 ng-hide="!title">{{title}}</h2>'+
+	'<input type="hidden" name="{{fieldname}}" id="{{fieldname}}" value="{{code}}"/>'+
 	'<div class="editor-container"><div>'+
 	'	<div class="split-pane-frame">'+
 	'		<div class="split-pane vertical-percent">'+
 	'		    <div class="split-pane-component" id="left-component">'+
 	'		        <div class="decoration">'+
 	'					<form id="form-{{id}}" target="results-{{id}}" method="post" enctype="multipart/form-data" class="code-form">'+
-	'						<input type="hidden" name="setupcode" id="setupcode" value="{{setupcode}}"/>'+
+	'						<input type="hidden" name="setupcode" id="setupcode" value="{{setupCode}}"/>'+
 	'						<input type="hidden" name="code" id="code" value="{{code}}"/>'+
 	'						<input type="hidden" name="postcode" id="postcode" value="{{postcode}}"/>'+
 	'						<input type="hidden" name="key" id="key" value="{{id}}'+ uid +'"/>'+
@@ -51,12 +51,11 @@ angular.module('code.editor', [])
 	'	</div>'+
 	'	<div class="editor-toolbar">'+
 	'	    <button class="submit-code btn {{runBtnClass || \'btn-primary\'}} pull-left">Run Code <i class="icon-play icon-white"></i></button>'+
-	'		<span class="code-editor-help text-muted" style="font-size:small;">&nbsp;Ctl+Enter to Run, Ctl+S to save Gist</span>'+
+	'		<span class="code-editor-help text-muted" style="font-size:small;">&nbsp;Ctl+Enter to Run, Ctl+S to save Gist.</span>'+
 	'		<span class="code-editor-message"></span>'+
-	'		<button class="toggle-fullscreen btn {{fullscreenbtnclass}} pull-right" ng-click="toggleFullscreen()"> <i class="icon-resize-full glyphicon glyphicon-resize-full"></i></button>'+
-	'	    <button ng-hide="showOptions == false || showOptions == 0" class="editor-options btn btn-default {{optionsbtnclass}} pull-right"> <i class="icon-gear glyphicon glyphicon-cog"></i></button>'+
-	'		<span ng-hide="showResults == false || showResults == 0" class="alert alert-info pull-right" style="padding: 5px;margin: 5px 3px 0px 3px;display: inline-block;">Current Engine: <span class="display-engine"></span></span>'+
-	'		<div class="text-muted">&nbsp;Powered by <a href="http://trycf.com">TryCF.com</a></div>'+
+	'	    <button class="toggle-fullscreen btn {{fullscreenbtnclass}} pull-right" ng-click="toggleFullscreen()"> <i class="icon-resize-full"></i></button>'+
+	'	    <button class="editor-options btn btn-default {{optionsbtnclass}} pull-right"> <i class="icon-gear"></i></button>'+
+	'		<span ng-hide="showResults == false || showResults == 0" class="alert alert-info pull-right" style="padding: 5px;margin: 0px 3px 0px 3px;display: inline-block;">Current Engine: <span class="display-engine"></span></span>'+
 	'		<div class="modal fade" style="display:none;" tabindex="-1" role="dialog">'+
 	'		  <div class="modal-dialog">'+
 	'		    <div class="modal-content">'+
@@ -107,8 +106,10 @@ angular.module('code.editor', [])
 	'				<label class="control-label">Change CFML Engine</label>'+
 	'		        <div>'+
 	'		         <select id="engine" class="form-control">'+
+	'		             <option value="lucee5">Lucee 5.0.0.49 (beta)</option>'+
 	'		             <option value="lucee">Lucee 4.5</option>'+
 	'		             <option value="railo">Railo 4.2</option>'+
+	'				     <option value="acf11">Adobe ColdFusion 11</option>'+
 	'		             <option value="acf">Adobe ColdFusion 10</option>'+
 	'		         </select>'+
 	'		        </div>'+
@@ -142,34 +143,43 @@ angular.module('code.editor', [])
 			showError: '@showError',
 			asserts: '@asserts',
 			code: '@code',
-			setupcode: '@setupCode',
+			codeGist: '@codeGist',
+			setupCode: '@setupCode',
+			setupCodeGist: '@setupCodeGist',
 			postcode: '@postcode',
-			showResults: '@showResults'
+			showResults: '@showResults',
+			basepath: '@basepath'
 		},
-		//template: editorTemplate,
-		compile: function( tElement, tAttrs, transclude ){
+		template: editorTemplate,
+		// compile: function( tElement, tAttrs, transclude ){
 
-			// We're working in the compile phase so we can manually transclude the content
-			// into the template before the template is rendered.  Otherwise the content would
-			// have to be sent in as an attribute.
-			var elementText  = tElement.text();
-			tAttrs.code = elementText || tAttrs.code;
+		// 	// We're working in the compile phase so we can manually transclude the content
+		// 	// into the template before the template is rendered.  Otherwise the content would
+		// 	// have to be sent in as an attribute.
+		// 	var elementText  = tElement.text();
+		// 	tAttrs.code = elementText || tAttrs.code;
 
-			// Inject the rendered template html into the template element (tElement)
-			tElement.html(editorTemplate);
+		// 	// Inject the rendered template html into the template element (tElement)
+		// 	tElement.html(editorTemplate);
 
-			// The return of a compile function is a link function (containing the compiled "scope") which Angular will fire
-			// LINK:
-			return function( scope, element, attrs ){
+		// 	// The return of a compile function is a link function (containing the compiled "scope") which Angular will fire
+		// 	// LINK:
+		// 	return function( scope, element, attrs ){
+		link: function( scope, element, attrs ){
 				scope.code = attrs.code;
+				scope.codeGist = attrs.codeGist;
+				scope.setupCode = attrs.setupCode;
+				scope.setupCodeGist = attrs.setupCodeGist;
 				scope.asserts = attrs.asserts;
 				scope.fullscreen = attrs.fullscreen;
-				scope.engines = {'acf':'Adobe ColdFusion 10', 'railo':'Railo 4.2', 'lucee':'Lucee 4.5'};
+				scope.engines = {'acf11':'Adobe ColdFusion 11', 'acf':'Adobe ColdFusion 10', 'railo':'Railo 4.2', 'lucee':'Lucee 4.5', 'lucee5':'Lucee 5', 'lucee5.0.0.45':'Lucee 5.0.0.45'};
 				scope.engine = attrs.engine || 'lucee';
+				scope.basepath = attrs.basepath || '/gist/';
 
 				// Setup dom pointers.
 				var editor = element.find('.code-editor'),
 					codeForm = element.find('.code-form'),
+					setupCode = element.find('#setupcode'),
 					results = element.find('.results'),
 					resultsDiv = element.find('.results-div'),
 					resultsWrapper = element.find('.results-wrapper'),
@@ -181,7 +191,8 @@ angular.module('code.editor', [])
 					submitCode = element.find('.submit-code'),
 					message = element.find('.code-editor-message'),
 					displayEngineSpan = element.find('.display-engine'),
-					toggleFullscreenBtn = element.find('.toggle-fullscreen');
+					toggleFullscreenBtn = element.find('.toggle-fullscreen'),
+					basepath = scope.basepath;
 
 				// Initialize editor and set various default options
 				var aceEditor = window.ace.edit(editor[0]),
@@ -193,13 +204,18 @@ angular.module('code.editor', [])
 					showOptions = typeof attrs.showOptions !== 'undefined' ? attrs.showOptions === "true" || attrs.showOptions === "1" : true,
 					showResults = typeof attrs.showResults !== 'undefined' ? attrs.showResults === "true" || attrs.showResults === "1" : true,
                     urlPool = {
-                    	"railo" : [ 'http://sbx-railo.aws.af.cm/getremote.cfm' ],
-        			    "lucee" : [ 'http://sbx-lucee.aws.af.cm/getremote.cfm' ],
-                    	"acf" 	: [ 'http://acf-sbx.jelastic.servint.net/getremote.cfm' ]
+                    	"railo" : [ "http://sbx-railo.aws.af.cm/getremote.cfm" ],
+        			    // "lucee" : [ "http://sbx-lucee.aws.af.cm/getremote.cfm" ],
+        			    "lucee" : [ "http://lucee4-sbx.trycf.com/lucee4/getremote.cfm" ],
+        			    // "lucee5.0.0.45" : [ "http://lucee5-0-0-45-sbx.trycf.com/lucee5.0.0.45/getremote.cfm" ],
+        			    "lucee5" : [ "http://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
+        			    "lucee5.0.0.45" : [ "http://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
+                    	"acf" 	: [ "http://acf10-sbx.trycf.com/cfusion/getremote.cfm" ],
+						"acf11" : [ "http://acf11-sbx.trycf.com/cfusion/getremote.cfm" ]
                     },
-
                     url = attrs.url || urlPool[scope.engine][Math.floor(Math.random()*urlPool[scope.engine].length)];
-                displayEngine();
+
+				displayEngine();
 				theme = theme.toLowerCase();
 				element.find('#theme').val(theme);
 				aceEditor.setTheme("ace/theme/" + theme);
@@ -255,6 +271,27 @@ angular.module('code.editor', [])
 				scope.$watch('code', function(){
 					session.setValue(scope.code);
 				});
+				// Load Gist if id was supplied
+				if( scope.codeGist && scope.codeGist.length > 0){
+					loadGist( scope.codeGist ).then( function(data){
+						var codeGist = "";
+						for( var file in data.files ){
+							codeGist+=data.files[file].content;
+						}
+						scope.code = codeGist;
+						session.setValue(scope.code);
+					} );
+				}
+				if( scope.setupCodeGist && scope.setupCodeGist.length > 0 ){
+					loadGist( scope.setupCodeGist ).then( function(data){
+						var setupCodeGist = "";
+						for( var file in data.files ){
+							setupCodeGist+=data.files[file].content;
+						}
+						setupCode.val(setupCodeGist);
+					} );
+				}
+
 				// Set the editor's initial value
 				session.setValue(scope.code);
 				aceEditor.on('change',function(e){
@@ -264,11 +301,10 @@ angular.module('code.editor', [])
 
 					scope.code = session.getValue();
 					$('#code',codeForm).val(scope.code);
+
 					$('#'+attrs.fieldname).val(scope.code);
 
-
 				});
-
 
 				// Enable split pane
 				splitPane.splitPane();
@@ -326,7 +362,6 @@ angular.module('code.editor', [])
 					codeForm.attr( 'action', url );
 					codeForm.attr( 'target', resultsFrame.attr('name') );
 
-
 					var editorVal = aceEditor.getValue();
 					session.clearAnnotations();
 					$('#code',codeForm).val(editorVal);
@@ -367,6 +402,10 @@ angular.module('code.editor', [])
 					displayEngineSpan.html( scope.engines[scope.engine] );
 				}
 				function saveGist(){
+					// if( scope.codeGist !== '' ){
+					// 	forkGist( scope.codeGist );
+					// 	return;
+					// }
 					var data = {
 				        "description": "TryCF Gist",
 				        "public": true,
@@ -383,11 +422,46 @@ angular.module('code.editor', [])
 				        data: JSON.stringify(data)
 				      })
 				      .success( function( response ) {
-				        message.html('<span class="alert alert-success" style="padding: 5px;margin: 5px 0 0 3px;display: inline-block;"><i class="icon-check icon-white"></i> Saved Gist: <a href="http://trycf.com/gist/'+ response.id +'/'+scope.engine+'">'+response.id+'</a></span>');
+				      	var gistId = response.id;
+				      	var url = basepath + gistId +'/'+scope.engine;
+				      	if( scope.setupCodeGist !== undefined && scope.setupCodeGist.length > 0 ){
+				      		url+= '?setupCodeGistId='+ scope.setupCodeGist;
+				      	}
+				      	if( scope.theme.length > 0 ){
+							url+= (url.indexOf('?') > 0 ? '&' : '?') + 'theme='+ scope.theme;
+				      	}
+				        message.html('<span class="alert alert-success" style="padding: 5px;margin: 5px 0 0 3px;display: inline-block;"><i class="icon-check icon-white"></i> Saved Gist: <a href="http://trycf.com'+ url + '">'+response.id+'</a></span>');
 				      })
 				      .error( function(e) {
 				        console.warn("gist save error", e);
 				        message.html('<span class="alert alert-danger" style="padding: 5px;margin: 5px 0 0 3px;display: inline-block;"><i class="icon-warning-sign icon-white"></i> Couldn\'t save Gist: '+e.detail+'</span>');
+				      });
+				}
+				// requires oauth to post on user's behalf
+				// function forkGist( gistId ){
+				//       $.ajax({
+				//         url: 'https://api.github.com/gists/'+gistId+'/forks',
+				//         type: 'POST'
+				//       })
+				//       .success( function( response ) {
+				//         message.html('<span class="alert alert-inverted" style="padding: 5px;margin: 5px 0 0 3px;display: inline-block;"><i class="icon-check icon-white"></i> Forked Gist: <a href="http://trycf.com/gist/'+ response.id +'/'+scope.engine+'">'+response.id+'</a></span>');
+				//       })
+				//       .error( function(e) {
+				//         console.warn("gist save error", e);
+				//         message.html('<span class="alert alert-danger" style="padding: 5px;margin: 5px 0 0 3px;display: inline-block;"><i class="icon-warning-sign icon-white"></i> Couldn\'t save Gist: '+e.detail+'</span>');
+				//       });
+				// }
+				function loadGist( gistId ){
+					return $.ajax({
+				        url: 'https://api.github.com/gists/'+gistId,
+				        type: 'GET',
+				        dataType: 'json'
+				      })
+				      .success( function( response ) {
+				        return response.files.content;
+				      })
+				      .error( function(e) {
+				        console.warn("gist save error", e);
 				      });
 				}
 				// This fires when the results pane is updated with the response
@@ -588,7 +662,7 @@ angular.module('code.editor', [])
 					});
 				}
 			}
-		}
+		// }
 	}
 });
 
