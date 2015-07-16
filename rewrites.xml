@@ -2,7 +2,7 @@
 <urlrewrite>
     <rule>
         <from>^/try/([^./]+)/([0-9]+)/?$</from>
-        <to>/trycf.cfm?name=$1&index=$2</to>
+        <to>/trycf.cfm?name=$1&amp;index=$2</to>
     </rule>
     <rule>
         <from>^/([^./]+)$</from>
