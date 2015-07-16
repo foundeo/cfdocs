@@ -42,8 +42,9 @@
     </cfoutput>
 </cfif>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
+<cfoutput>
 <!--- TryCF Editor Scripts --->
 <!--- Ace Editor --->
 <script src="#request.assetBaseURL#vendor/ace/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
@@ -57,5 +58,6 @@
 <script src="#request.assetBaseURL#code-editor.js"></script>
 <script src="#request.assetBaseURL#trycf.js"></script>
 <!--- // TryCF Editor Scripts --->
+</cfoutput>
 </body>
 </html>
