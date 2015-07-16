@@ -18,6 +18,12 @@
 		</cfif>
 		<cfset request.content = "">
 		<!--- cache for one day --->
+		<cfset request.assetBaseURL = "/assets/">
+		<cfif FindNoCase("cfdocs.org", cgi.server_name)>
+			<!--- for production only --->
+			<cfset local.assetInfo = directoryList(ExpandPath("./assets/"), false, "query")>
+			<cfset request.assetBaseURL = "/assets/" & Hash(ValueList(local.assetInfo.dateLastModified))>
+		</cfif>
 		<cfheader name="Cache-Control" value="max-age=86400">
 		<cfsavecontent variable="request.content"><cfinclude template="#arguments.targetPage#"></cfsavecontent>
 		<cfcontent reset="true" type="text/html"><cfinclude template="views/layout.cfm">
