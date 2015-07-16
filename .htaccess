@@ -11,6 +11,10 @@ RewriteRule ^assets/[A-Za-z0-9-]+/(.+)$ /assets/$1 [L]
 RewriteRule ^([^./]*[A-Z][^./]+)$ /ucase.cfm?uri=$1 [L]
 #send to doc page
 RewriteRule ^([^./]+)$ /doc.cfm?name=$1 [L]
+#trycf rules
+RewriteRule ^try/([^./]+)/([0-9]+)/? /trycf.cfm?name=$1&index=$2 [L]
+RewriteRule ^try/([^./]+)/? /trycf.cfm?name=$1
+
 ErrorDocument 404 /404.cfm
 
 #block access to some urls
