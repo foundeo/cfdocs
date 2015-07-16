@@ -21,7 +21,7 @@
     <p>Sorry no dice</p>
 <cfelse>
     <cfset example = data.examples[Int(url.index)]>
-    <cfif NOT Find("<", example.code)>
+    <cfif NOT Find("<cf", example.code)>
         <cfif NOT Find (";", example.code)>
             <cfset example.code = "<cfoutput>" & Chr(10) & "##" & example.code & "##" & Chr(10) & "</cfoutput>">
         <cfelse>
