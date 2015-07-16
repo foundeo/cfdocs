@@ -2,8 +2,9 @@
 	"name":"cfbreak",
 	"type":"tag",
 	"syntax":"<cfbreak>",
+	"script":"break;",
 	"returns":"",
-	"related":[],
+	"related":["cfloop"],
 	"description":" Used within a cfloop tag. Breaks out of a loop.",
 	"params": [
 	],
@@ -15,6 +16,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "for (i=1; i <= 10; i++){ \r\n writeOutput(\"#i#<br>\"); \r\n if (i >= 5){ \r\n break; \r\n } \r\n }",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfloop index=\"i\" from=\"1\" to=\"10\"> \r\n <cfoutput>#i#</cfoutput><br> \r\n <cfif i Ge 5> \r\n <cfbreak> \r\n </cfif> \r\n </cfloop>",
+	            "result": ""
+	        }
 	]
 
 }
