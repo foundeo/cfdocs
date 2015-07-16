@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<cfif StructKeyExists(request, "skiplayout") AND request.skiplayout><cfoutput>#request.content#</cfoutput><cfelse><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -6,7 +6,7 @@
     <cfif NOT FindNoCase("cfdocs.org", cgi.server_name)><meta name="ROBOTS" content="NOINDEX, NOFOLLOW"></cfif>
     <cfparam name="request.title" default="">
     <title><cfoutput>#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation</cfoutput></title>
-    <link href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/style.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
@@ -37,7 +37,7 @@
                 		<cfloop list="#StructKeyList(application.categories)#" index="cat">
 						<cfif cat contains "-tags">
 							<li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li>
-						</cfif>		
+						</cfif>
 					</cfloop>
               </ul>
             </li>
@@ -49,7 +49,7 @@
                 		<cfloop list="#StructKeyList(application.categories)#" index="cat">
 						<cfif cat contains "-functions">
 							<li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li>
-						</cfif>		
+						</cfif>
 					</cfloop>
               </ul>
             </li>
@@ -65,7 +65,7 @@
       </div>
     </div>
 
-    
+
     <cfoutput>#request.content#</cfoutput>
 
       <hr>
@@ -78,8 +78,8 @@
     </div> <!-- /container -->
 
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js"></script>
     <script src="/assets/script.js"></script>
     <cfif IsDefined("data") AND IsStruct(data) AND StructKeyExists(data, "type") AND StructKeyExists(data, "name")>
@@ -88,7 +88,8 @@
     	</cfoutput>
     <cfelse>
     	<a href="https://github.com/foundeo/cfdocs" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="//s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
-    </cfif> 
-    
+    </cfif>
+
   </body>
 </html>
+</cfif>
