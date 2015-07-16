@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlrewrite>
     <rule>
+        <from>^/try/([^./]+)/([0-9]+)/?$</from>
+        <to>/trycf.cfm?name=$1&index=$2</to>
+    </rule>
+    <rule>
         <from>^/([^./]+)$</from>
         <to>/doc.cfm?name=$1</to>
     </rule>
@@ -16,8 +20,5 @@
         <from>^/f$</from>
         <to type="redirect">/functions</to>
     </rule>
-    <rule>
-        <from>^/try/([^./]+)/([0-9]+)/?$</from>
-        <to>/trycf.cfm?name=$1&index=$2</to>
-    </rule>
+
 </urlrewrite>
