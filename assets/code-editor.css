@@ -182,3 +182,7 @@ h2.error{font-size:1em;margin-top:2em;text-align:center;color:#c5bcb4;line-heigh
 .modal-solution {
 	width: 750px;
 }
+span.code-editor-message > span > a {
+	color:#fff;
+	font-weight: bold;
+}
