@@ -140,15 +140,37 @@
 	</cfif>
 	<cfif StructKeyExists(data, "examples") AND IsArray(data.examples) AND ArrayLen(data.examples)>
 		<h2>#data.name# Examples</h2>
+        <cfset example_index = 0>
 		<cfloop array="#data.examples#" index="ex">
+            <cfset example_index = example_index + 1>
 			<br />
-			<h4>#XmlFormat(ex.title)#</h4>
+			<h4>
+                #XmlFormat(ex.title)#
+                <div class="pull-right">
+                    <button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"> Run Code</button>
+                </div>
+            </h4>
 			<p>#autoLink(ex.description)#</p>
 			<pre>#HTMLEditFormat(ex.code)#</pre>
 			<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
 				<p><strong>Expected Result: </strong> #XmlFormat(ex.result)#</p>
 			</cfif>
 		</cfloop>
+        <div class="modal fade example-modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">#XmlFormat(data.name)# Example</h4>
+                </div>
+                <div class="modal-body" id="example-modal-content">
+
+                </div>
+                
+            </div>
+          </div>
+        </div>
+
 	</cfif>
 </div>
 </cfoutput>

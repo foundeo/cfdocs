@@ -60,7 +60,7 @@ h2 .item-name { font-weight:bold; }
 .twitter-typeahead .tt-hint {
     display: block;
     height: 43px;
-    padding: 8px 12px;
+    padding: 8px 25px;
     font-size: 14px;
     line-height: 1.428571429;
     border: 1px solid transparent;
@@ -91,3 +91,5 @@ footer { text-align: center; margin-top: 10px; font-size:smaller; }
 .label-openbd:focus {
     background-color: #1b6c8f;
 }
+
+iframe { border:0px;}
