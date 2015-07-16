@@ -6,7 +6,7 @@ RewriteRule ^t$ http://cfdocs.org/tags [R=301,L]
 RewriteRule ^f$ http://cfdocs.org/functions [R=301,L]
 RewriteRule ^cfeclipse / [R=301,L]
 #asset versioning
-RewriteRule ^assets/[A-Za-z0-9-]+/([a-zA-Z0-9/._-]+)$ /assets/$1 [L]
+RewriteRule ^assets/v-[A-Za-z0-9-]+/([a-zA-Z0-9/._-]+)$ /assets/$1 [L]
 #rewrite uppercase to lowercase
 RewriteRule ^([^./]*[A-Z][^./]+)$ /ucase.cfm?uri=$1 [L]
 #send to doc page
