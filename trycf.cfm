@@ -14,7 +14,7 @@
 <html lang="en" ng-app="trycf">
 <head>
     <cfoutput>
-        <link href="#request.assetBaseURL#vendor/plugins/split-pane/split-pane.css" rel="stylesheet">
+        <link href="/assets/vendor/plugins/split-pane/split-pane.css" rel="stylesheet">
         <link href="#request.assetBaseURL#code-editor.css" rel="stylesheet">
     </cfoutput>
 </head>
@@ -47,13 +47,13 @@
 <cfoutput>
 <!--- TryCF Editor Scripts --->
 <!--- Ace Editor --->
-<script src="#request.assetBaseURL#vendor/ace/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/vendor/ace/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
 <!--- load ace language tools & utility --->
-<script src="#request.assetBaseURL#vendor/ace/src-min/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
-<script src="#request.assetBaseURL#vendor/ace/src-min/snippets/coldfusion.js"></script>
-<script src="#request.assetBaseURL#vendor/plugins/split-pane/split-pane.js"></script>
+<script src="/assets/vendor/ace/src-min/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/vendor/ace/src-min/snippets/coldfusion.js"></script>
+<script src="/assets/vendor/plugins/split-pane/split-pane.js"></script>
 <!--- Angular JS --->
-<script src="#request.assetBaseURL#vendor/angular/angular.min.js"></script>
+<script src="/assets/vendor/angular/angular.min.js"></script>
 <!--- Directives --->
 <script src="#request.assetBaseURL#code-editor.js"></script>
 <script src="#request.assetBaseURL#trycf.js"></script>
