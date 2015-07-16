@@ -147,10 +147,10 @@
 			<h4>
                 #XmlFormat(ex.title)#
                 <div class="pull-right">
-                    <button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"> Run Code</button>
+                    <button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
                 </div>
             </h4>
-			<p>#autoLink(ex.description)#</p>
+			<p class="clearfix">#autoLink(ex.description)#</p>
 			<pre>#HTMLEditFormat(ex.code)#</pre>
 			<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
 				<p><strong>Expected Result: </strong> #XmlFormat(ex.result)#</p>
@@ -166,7 +166,7 @@
                 <div class="modal-body" id="example-modal-content">
 
                 </div>
-                
+
             </div>
           </div>
         </div>

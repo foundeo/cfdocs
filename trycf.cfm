@@ -24,6 +24,8 @@
     <cfif NOT Find("<", example.code)>
         <cfif NOT Find (";", example.code)>
             <cfset example.code = "<cfoutput>" & Chr(10) & "##" & example.code & "##" & Chr(10) & "</cfoutput>">
+        <cfelse>
+            <cfset example.code = "<cfscript>" & Chr(10) & example.code & Chr(10) & "</cfscript>">
         </cfif>
     </cfif>
     <cfoutput>
