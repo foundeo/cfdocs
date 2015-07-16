@@ -1,5 +1,5 @@
 /*
-	Copyright (c) 2013, Abram Adams
+	Copyright (c) 2015, Abram Adams
 
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
@@ -345,7 +345,7 @@ angular.module('code.editor', [])
 				aceEditor.resize(true);
 
 				editor.show();
-
+				scope.toggleFullscreen = toggleFullscreen;
 				// Force fullscreen if fullscreen attribute was passed in and true.
 				if( attrs.fullscreen !== undefined && attrs.fullscreen ==	 "true"){
 					toggleFullscreen();
@@ -427,10 +427,10 @@ angular.module('code.editor', [])
 				      	if( scope.setupCodeGist !== undefined && scope.setupCodeGist.length > 0 ){
 				      		url+= '?setupCodeGistId='+ scope.setupCodeGist;
 				      	}
-				      	if( scope.theme.length > 0 ){
+				      	if( scope.theme !== undefined && scope.theme.length > 0 ){
 							url+= (url.indexOf('?') > 0 ? '&' : '?') + 'theme='+ scope.theme;
 				      	}
-				        message.html('<span class="alert alert-success" style="padding: 5px;margin: 5px 0 0 3px;display: inline-block;"><i class="icon-check icon-white"></i> Saved Gist: <a href="http://trycf.com'+ url + '">'+response.id+'</a></span>');
+				        message.html('<span class="alert alert-success" style="padding: 5px;margin: 5px 0 0 3px;display: inline-block;"><i class="icon-check icon-white"></i> Saved Gist: <a href="http://trycf.com'+ url + '" target="_blank">'+response.id+'</a></span>');
 				      })
 				      .error( function(e) {
 				        console.warn("gist save error", e);
@@ -610,22 +610,22 @@ angular.module('code.editor', [])
 				}
 
 				/* UTILITY FUNCTIONS */
-				scope.toggleFullscreen = function(){
+				function toggleFullscreen(){
 
 					element.find( '.editor-container' ).toggleClass( 'fullscreen' );
 					element.find( '.toggle-fullscreen i' ).toggleClass( 'icon-resize-full' ).toggleClass( 'icon-resize-small' );
 
 					if( element.find( '.editor-container' ).hasClass( 'fullscreen' ) ){
-						$( document ).on( 'keyup', scope.handleEscape );
+						$( document ).on( 'keyup', handleEscape );
 					}else{
-						$( document ).off( 'keyup', scope.handleEscape );
+						$( document ).off( 'keyup', handleEscape );
 					}
 					aceEditor.resize(true);
 				}
-				scope.handleEscape = function( e ){
+				function handleEscape( e ){
 					// register listener to restore editor size when escape is pressed
 					if ( e.keyCode == 27 ) { // esc
-						scope.toggleFullscreen();
+						toggleFullscreen();
 					}
 				}
 

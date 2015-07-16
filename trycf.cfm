@@ -14,8 +14,10 @@
 <html lang="en" ng-app="trycf">
 <head>
     <cfoutput>
+        <link href="//netdna.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css" rel="stylesheet">
         <link href="#request.assetBaseURL#vendor/plugins/split-pane/split-pane.css" rel="stylesheet">
         <link href="#request.assetBaseURL#code-editor.css" rel="stylesheet">
+        <link href="#request.assetBaseURL#vendor/font-awesome/font-awesome.css" rel="stylesheet">
     </cfoutput>
 </head>
 <body>
@@ -37,13 +39,14 @@
     		    mode="coldfusion"
     		    width="100%"
     		    height="350px"
+                fullscreen="true"
     		    engine="#encodeForHTMLAttribute(url.engine)#"
     		    show-results="true" code="#htmlEditFormat( example.code )#"></div>
     </cfoutput>
 </cfif>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <cfoutput>
 <!--- TryCF Editor Scripts --->
 <!--- Ace Editor --->
