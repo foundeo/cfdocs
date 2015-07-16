@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"reFind(reg_expression, String [, start] [, returnsubexpressions])",
 	"returns":"Object",
-	"related":[],
+	"related":["find","refindnocase","findnocase","rereplace"],
 	"description":" ",
 	"params": [
 		{"name":"reg_expression","description":"","required":true,"default":"","type":"Regex","values":[]},
@@ -19,6 +19,25 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/refind"}
 	},
 	"links": [
+		{
+			"title":"Regular Expressions in ColdFusion Howto",
+			"description":"Learn about regex in CFML, written by Pete Freitag",
+			"url":"http:\/\/www.petefreitag.com\/item\/517.cfm"
+		},
+		{
+			"title": "Regular Expression Cheat Sheet",
+			"description": "Lists the special characters and their meanings",
+			"url": "http:\/\/www.petefreitag.com\/cheatsheets\/regex\/"
+		}
+	],
+	"examples": [
+
+		{
+			"title": "Find an integer in a string",
+			"description": "This example uses REFind to locate an integer in a string, and returns the position of the integer in the string.",
+			"code": "ReFind(\"[0-9]+\", \"test 123!\")",
+			"result": "6"
+		}
 
 	]
 
