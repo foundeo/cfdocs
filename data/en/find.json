@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" Finds the first occurrence of a substring in a string, from a\n specified start position. The search is case-sensitive.",
 	"params": [
-		{"name":"substring","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"start","description":"","required":false,"default":1,"type":"Numeric","values":[1]}
+		{"name":"substring","description":"The string you are looking for.","required":true,"default":"","type":"String","values":[]},
+		{"name":"String","description":"The string to search in.","required":true,"default":"","type":"String","values":[]},
+		{"name":"start","description":"The position to start searching in the string (starts at 1)","required":false,"default":1,"type":"Numeric","values":[1]}
 
 	],
 	"engines": {
@@ -19,6 +19,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Find apple in the string",
+			"description":"Returns the index of apple in the string.",
+			"code":"Find(\"apple\", \"An apple a day keeps the doctor away.\")",
+			"result": "4"
+		}
 	]
 
 }
