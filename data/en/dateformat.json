@@ -3,8 +3,8 @@
 	"type":"function",
 	"syntax":"dateFormat(date [, mask])",
 	"returns":"String",
-	"related":[],
-	"description":" Formats a date value using U.S. date formats. For\n international date support, use LSDateFormat.\n [mask - quicky]\n d,dd,ddd,dddd: Day of month / week\n m,mm,mmm,mmmm: Month; y,yy,yyyy: Year; gg: Period/era string\n short / medium / long / full",
+	"related":["timeFormat","dateTimeFormat"],
+	"description":"Formats a date value using U.S. date formats. When formatting both date and time, use DateTimeFormat. For international date support, use LSDateFormat.\n [mask - quicky]\n d,dd,ddd,dddd: Day of month / week\n m,mm,mmm,mmmm: Month\n y,yy,yyyy: Year\n gg: Period/era string\n short / medium / long / full",
 	"params": [
 		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]},
 		{"name":"mask","description":"","required":false,"default":"","type":"String","values":["short","medium","long","full"]}
@@ -18,7 +18,7 @@
 	},
 	"links": [
 		{
-			"title":"DateForamt Cheatsheet",
+			"title":"DateFormat Cheatsheet",
 			"description":"Shows masks and what they output.",
 			"url":"http://www.petefreitag.com/cheatsheets/coldfusion/dateformat/"
 		}
