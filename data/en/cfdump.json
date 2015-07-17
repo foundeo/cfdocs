@@ -31,15 +31,24 @@
 
 	],
 	"examples":[
-		{"result":"","title":"Short version - Tag","description":"Instead of using a boolean for the abort-Attribute to abort after a dump, it works like that:","code":"<cfdump var=\"#CGI#\" abort>\r\n"},
-		
 		{
-		"result":"",
-		"title":"Script",
-		"description":"",
-		"code":"writeDump(var = cgi, label = \"CGI Scope\");\r\n"
-			
-		}
+			"result":"",
+			"title":"Dump Server Scope (Tag Based)",
+			"description":"Outputs a listing of all the variables in the server scope.",
+			"code":"<cfdump var=\"#server#\" label=\"Server Scope\">"
+		},
+		{
+			"result":"",
+			"title":"Dump Server Scope (Script Based)",
+			"description":"Outputs a listing of all the variables in the server scope.",
+			"code":"writeDump(var = server, label = \"Server Scope\");"
+		},
+		{
+			"result":"",
+			"title":"Dump Then Abort",
+			"description":"Instead of using a boolean for the abort-Attribute to abort after a dump, it works like that:",
+			"code":"<cfdump var=\"#server#\" abort>"
+		},
 	]
 
 }

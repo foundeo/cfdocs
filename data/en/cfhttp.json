@@ -47,7 +47,13 @@
 	],
 	"examples": [
 		{
-			"title": "Script Syntax",
+			"title":"Script Syntax (CF11+)",
+			"description":"",
+			"code":"cfhttp(method=\"GET\", charset=\"utf-8\", url=\"https://www.google.com/\", result=\"result\") {\r\n    cfhttpparam(name=\"q\", type=\"formfield\", value=\"cfml\");\r\n}\r\nwriteDump(result);",
+			"result":""
+		},
+		{
+			"title": "Alternate Script Syntax (CF9+)",
 			"description": "",
 			"code": "httpService = new http(method = \"GET\", charset = \"utf-8\", url = \"https://www.google.com/\"); \r\n httpService.addParam(name = \"q\", type = \"formfield\", value = \"cfml\"); \r\n result = httpService.send().getPrefix(); \r\n writeDump(result);",
 			"result": ""
