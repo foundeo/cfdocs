@@ -1,12 +1,12 @@
 {
 	"name":"onApplicationStart",
 	"type":"function",
-	"syntax":"onApplicationStart() { return true; }",
+	"syntax":"function onApplicationStart() { return true; }",
 	"returns":"boolean",
 	"related":["application-cfc", "onapplicationend"],
 	"description":"Defined in Application.cfc, invoked once when the application is initialized.",
 	"params": [
-		
+
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/onRequestStart"}

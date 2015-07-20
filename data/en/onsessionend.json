@@ -1,7 +1,7 @@
 {
 	"name":"onSessionEnd",
 	"type":"function",
-	"syntax":"onSessionEnd(sessionScope, applicationScope) {}",
+	"syntax":"function onSessionEnd(sessionScope, applicationScope) {}",
 	"returns":"void",
 	"related":["application-cfc","sessionrotate","sessioninvalidate","onsessionstart"],
 	"description":"Defined in Application.cfc, invoked when a session expires or times out.",

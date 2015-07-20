@@ -1,7 +1,7 @@
 {
 	"name":"onSessionStart",
 	"type":"function",
-	"syntax":"onSessionStart() {}",
+	"syntax":"function onSessionStart() {}",
 	"returns":"void",
 	"related":["application-cfc","sessionrotate","sessioninvalidate"],
 	"description":"Defined in Application.cfc, invoked upon initialization of a session.",

@@ -1,7 +1,7 @@
 {
 	"name":"onApplicationEnd",
 	"type":"function",
-	"syntax":"onApplicationEnd(applicationScope) { }",
+	"syntax":"function onApplicationEnd(applicationScope) { }",
 	"returns":"boolean",
 	"related":["application-cfc", "onapplicationstart"],
 	"description":"Defined in Application.cfc, invoked when the application times out or when the server is shutting down.",

@@ -1,7 +1,7 @@
 {
 	"name":"onError",
 	"type":"function",
-	"syntax":"onError(exception, eventName) {}",
+	"syntax":"function onError(exception, eventName) {}",
 	"returns":"void",
 	"related":["application-cfc"],
 	"description":"Defined in Application.cfc, invoked when an exception occurrs that was not caught by a cftry or cfcatch statement.",
@@ -10,7 +10,7 @@
         {"name":"eventName","description":"The name of the application event at which the exception occurred. If no onRequest method is defined then an empty string may be passed.","required":true,"default":"","type":"String","values":["onApplicationStart","onApplicationEnd","onRequest","onRequestStart","onSessionStart","onSessionEnd","[empty string]"]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/onerror"}
+		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/onerror"}
 	},
 	"links": [
 

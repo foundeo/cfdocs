@@ -41,6 +41,9 @@
 		<cfif ReFindNoCase("https?://", arguments.content)>
 			<cfset arguments.content = ReReplaceNoCase(arguments.content, "(https?://[a-zA-Z0-9._/=&%?-]+)", "<a href=""\1"">\1</a>", "ALL")>
 		</cfif>
+		<cfif ReFindNoCase("\bApplication\.cfc\b", arguments.content)>
+			<cfset arguments.content = ReReplaceNoCase(arguments.content, "\bApplication\.cfc\b", "<a href=""#linkTo('application-cfc')#"">Application.cfc</a>", "ALL")>
+		</cfif>
 		<cfloop array="#application.index.tags#" index="i">
 			<cfif i IS NOT arguments.exclude>
 				<cfset arguments.content = ReReplaceNoCase(arguments.content, "[ ](#i#)([ .!,])", " <a href=""#linkTo(i)#"">\1</a>\2", "all")>
