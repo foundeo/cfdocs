@@ -84,10 +84,10 @@
     <cfoutput><script src="#request.assetBaseURL#script.js"></script></cfoutput>
     <cfif IsDefined("data") AND IsStruct(data) AND StructKeyExists(data, "type") AND StructKeyExists(data, "name")>
     	<cfoutput>
-    	<a href="https://github.com/foundeo/cfdocs/tree/master/data/en/#LCase(data.name)#.json" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="//s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+    	<a href="https://github.com/foundeo/cfdocs/tree/master/data/en/#LCase(data.name)#.json" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-white@2x.png" alt="Fork me on GitHub"></a>
     	</cfoutput>
     <cfelse>
-    	<a href="https://github.com/foundeo/cfdocs" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="//s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+    	<a href="https://github.com/foundeo/cfdocs" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-white@2x.png" alt="Fork me on GitHub"></a>
     </cfif>
 
   </body>
