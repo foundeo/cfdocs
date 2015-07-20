@@ -51,7 +51,10 @@
 				<cfset arguments.content = ReReplaceNoCase(arguments.content, "[ ](#i#)([ .!,])", " <a href=""#linkTo(i)#"">\1</a>\2", "all")>
 			</cfif>
 		</cfloop>
-
+		<!--- add CFx+ badge --->
+		<cfif REFind("CF[0-9]+\+", arguments.content)>
+			<cfset arguments.content = ReReplace(arguments.content, "(CF[0-9]+\+)", "<span class=""label label-acf"">\1</span>")>
+		</cfif>
 		<cfset arguments.content = Replace(arguments.content, "#Chr(10)#", "<br />", "ALL")>
 		<cfreturn arguments.content>
 	</cffunction>
