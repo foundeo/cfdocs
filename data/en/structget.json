@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Gets a structure(s) from a specified path.",
 	"params": [
-		{"name":"pathdesired","description":"Pathname of variable that contains structure or array from\n which CFML retrieves structure","required":true,"default":"","type":"String","values":[]}
+		{"name":"pathdesired","description":"Pathname of variable that contains structure or array from which CFML retrieves the value. If there is no structure or array present in the path, this function creates structures or arrays to make it a valid variable path.","required":true,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Get a value in a structure using structGet",
+			"description":"",
+			"code":"x = { y={ z=8 } };\nwriteDump( structGet(\"x.y.z\") );",
+			"result":"8"
+		},
+		{
+			"title":"Accidentially Modifying a Structure",
+			"description":"The structGet function will create structures to complete the path.",
+			"code":"x = { y={ z=8 } };\nwriteDump( structGet(\"x.a.b\") );\nwriteDump(x);",
+			"result":""
+		}
 	]
 
 }
