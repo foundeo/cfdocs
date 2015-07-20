@@ -20,8 +20,10 @@
 		{"name":"debug","description":"Yes: If debugging is enabled, but the Administrator\n Database Activity option is not enabled, displays SQL\n submitted to datasource and number of records returned\n by query.\n No: If the Administrator Database Activity option is\n enabled, suppresses display.","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"result","description":"CF8+ Specifies a name for the structure in which cfquery returns\n the result variables.\n * SQL: The SQL statement that was executed. (string)\n * Cached: If the query was cached. (boolean)\n * SqlParameters: An ordered Array of cfqueryparam values. (array)\n * RecordCount: Total number of records in the query. (numeric)\n * ColumnList: Column list, comma seperated. (numeric)\n * ExecutionTime: Execution time for the SQL request. (numeric)","required":false,"default":"","type":"String","values":[]},
 		{"name":"ormoptions","description":"CF9+ A structure of ORM Options when used for HQL queries (9.0.1+). ","required":false,"default":"","type":"Struct","values":[]},
+		{"name":"cacheID","description":"CF10+ A value to serve as cache identifier when cachedWithin or cachedAfter are specified.","required":false,"default":"","type":"String","values":[]},
+		{"name":"cacheRegion","description":"CF10+ The name of the region  cachedWithin or cachedAfter are specified.","required":false,"default":"","type":"String","values":[]},
 		{"name":"clientInfo","description":"CF10+ A structure containing properties to be set on the database connection.","required":false,"default":"","type":"Struct","values":[]},
-		{"name":"fetchClientInfo","description":"CF10+ When true returns a struct with the clientInfo argument value passed by the last query","required":false,"default":"false","type":"Boolean","values":[]},
+		{"name":"fetchClientInfo","description":"CF10+ When true returns a struct with the clientInfo argument value passed by the last query","required":false,"default":"false","type":"Boolean","values":[]}
 
 	],
 	"engines": {

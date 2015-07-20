@@ -139,7 +139,7 @@
 		</ul>
 	</cfif>
 	<cfif StructKeyExists(data, "examples") AND IsArray(data.examples) AND ArrayLen(data.examples)>
-		<h2>#data.name# Examples</h2>
+		<h2 id="examples">#data.name# Examples</h2>
         <cfset example_index = 0>
 		<cfloop array="#data.examples#" index="ex">
             <cfset example_index = example_index + 1>
