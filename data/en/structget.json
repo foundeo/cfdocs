@@ -22,13 +22,13 @@
 		{
 			"title":"Get a value in a structure using structGet",
 			"description":"",
-			"code":"x = { y={ z=8 } };\nwriteDump( structGet(\"x.y.z\") );",
+			"code":"x = { y = { z=8 } };\nwriteDump( structGet(\"x.y.z\") );",
 			"result":"8"
 		},
 		{
 			"title":"Accidentially Modifying a Structure",
-			"description":"The structGet function will create structures to complete the path.",
-			"code":"x = { y={ z=8 } };\nwriteDump( structGet(\"x.a.b\") );\nwriteDump(x);",
+			"description":"The structGet function will modify the varaible x by adding a new structure x.a and also adds a key x.a.b to satisfy the path.",
+			"code":"x = { y = { z=8 } };\nwriteDump( structGet(\"x.a.b\") );\nwriteDump(x);",
 			"result":""
 		}
 	]
