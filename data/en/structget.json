@@ -36,7 +36,7 @@
 			"description":"The value of x.y.z[2] will be set to an empty struct.",
 			"code":"x = { y = { z=[1,2,3] } };\nwriteDump( structGet(\"x.y.z[2]\") );\nwriteDump(x);",
 			"result":""
-		},
+		}
 	]
 
 }
