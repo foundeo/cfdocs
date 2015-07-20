@@ -6,7 +6,7 @@ h2 .item-name { font-weight:bold; }
 .p-name { font-weight:bold; font-size:larger;}
 .listing { display:inline; margin: 8px; line-height:60px;}
 #syntax { font-weight:bold; }
-#forkme { position: absolute; top: 0; right: 0; border: 0; z-index: 9999;}
+#forkme { position: absolute; top: 0; right: 0; border: 0; z-index: 9999; width:149px; height:149px;}
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
   margin-bottom: 0;

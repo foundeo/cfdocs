@@ -52,6 +52,9 @@
 <cfset fileWrite(dataDir & "/all.json", prettyJSON(serializeJSON(aData), "utf-8"))>
 <p>Wrote all.json</p>
 
+<cfset applicationStop()>
+<p>Stopped application so it can reinit</p>
+
 <cffunction name="prettyJSON" returntype="string" output="false">
 	<cfargument name="json" type="string">
 	<cfset arguments.json = replace(arguments.json, "],", "],#chr(10)##chr(9)#", "all")>

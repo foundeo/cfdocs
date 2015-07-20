@@ -70,4 +70,24 @@
 		<cfreturn "">
 	</cffunction>
 
+	<cffunction name="onError">
+		<cfargument name="exception">
+		<cfargument name="eventName">
+		<<cfsavecontent variable = "request.content">
+			<div class="container">
+				<h1>Oops <small>Something went wrong</small></h1>
+				<cfif cgi.server_port IS "8411" OR cgi.remote_addr IS "127.0.0.1">
+					<div class="alert alert-danger">
+						<cfoutput>#encodeForHTML(arguments.exception.message)#</cfoutput>
+					</div>
+					<cfdump var="#arguments#">
+				<cfelse>
+					<cflog file="cfdocs-errors" type="error" text="#arguments.exception.message# -- #arguments.exception.detail#">
+				</cfif>
+			</div>
+		</cfsavecontent>
+
+		<cfcontent reset="true" type="text/html"><cfheader statuscode="500" statustext="Server Error"><cfinclude template="views/layout.cfm">
+	</cffunction>
+
 </cfcomponent>

@@ -1,0 +1,19 @@
+{
+	"name":"onSessionEnd",
+	"type":"function",
+	"syntax":"onSessionEnd(sessionScope, applicationScope) {}",
+	"returns":"void",
+	"related":["application-cfc","sessionrotate","sessioninvalidate","onsessionstart"],
+	"description":"Defined in Application.cfc, invoked when a session expires or times out.",
+	"params": [
+        {"name":"sessionScope","description":"The session scope of the session that is ending.","required":true,"default":"","type":"Struct","values":[]},
+        {"name":"applicationScope","description":"The application scope of the session that is ending.","required":true,"default":"","type":"Struct","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/onerror"}
+	},
+	"links": [
+
+	]
+
+}
