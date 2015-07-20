@@ -1,21 +1,24 @@
 {
-	"name":"QueryExecute",
-	"syntax":"QueryExecute(sql [, params, options])",
+	"name":"queryExecute",
+	"syntax":"queryExecute(sql [, params, options])",
 	"description":"Executes a SQL query, returns the result.",
-	"engines":{"coldfusion":{"minimum_version":"11","docs":"https:\/\/wikidocs.adobe.com\/wiki\/display\/coldfusionen\/QueryExecute","notes":""}},
+	"engines":{
+		"coldfusion":{"minimum_version":"11","docs":"https:\/\/wikidocs.adobe.com\/wiki\/display\/coldfusionen\/QueryExecute","notes":""},
+		"lucee":{"minimum_version":"4.5", "docs":"http://docs.lucee.org/reference/functions/queryexecute.html","notes":""}
+		},
 	"links":[],
 	"params":[
 		{"values":[],"default":"","description":"SQL string to execute.","name":"sql","type":"String","required":"1"},
 		{"values":["cfsqltype","list"],"default":"","description":"Array or Struct of parameter values. When passing an array use ? as place holders. When passing a struct use :keyName where keyName is the name of the key in the structure corresponding to the parameter. The struct or array can be a struct with keys such as the following.","name":"queryParams","type":"Any","required":"0"},
-		{"values":["datasource","cachename"],"default":"","description":"Struct containing query options, see list of option names below.","name":"queryOptions","type":"Struct","required":"0"}
+		{"values":["datasource","cachename","dbtype"],"default":"","description":"Struct containing query options, all cfquery tag attributes are supported except the name attribute.","name":"queryOptions","type":"Struct","required":"0"}
 	],
 	"returns":"Query",
 	"examples":[
-		{"title":"Simple Example", "description":"SQL Only Example. Assums that a default datasource has been specified (by setting the variable this.datasource in Application.cfc)", "code":"qryResult = QueryExecute(\"SELECT * FROM Employees\");", "result":""},
-		{"title":"Passing Query Parameters using Struct", "description":"Use :structKeyName in your sql then pass a struct with corresponding key names.", "code":"qryResult = QueryExecute(\"SELECT * FROM Employees WHERE empid = :empid AND country = :country\", {country=\"USA\", empid=1});", "result":""},
-		{"title":"Passing Query Parameters using Array", "description":"When passing with an array use the ? as a placeholder in your sql", "code":"qryResult = QueryExecute(\"SELECT * FROM Employees WHERE empid = ? AND country = ?\", [1,\"USA\"]);", "result":""},
-		{"title":"Passing Query Parameters using Struct of Structs", "description":"If you need to pass the cfsqltype or other cfqueryparam attributes you can pass a struct for each param.", "code":"qryResult = QueryExecute(\"SELECT * FROM Employees WHERE empid = :empid AND country = :country\", {country={value=\"USA\", cfsqltype=\"cf_sql_varchar\"}, empid={value=1, cfsqltype=\"cf_sql_integer\"}});", "result":""},
-		{"title":"Specifying the Datasource", "description":"If you have not defined the datasource using this.datasource in Application.cfc or want to explicitly specify the datasource use the third argument.", "code":"qryResult = QueryExecute(\"SELECT * FROM Employees\", {}, {datasource=\"myDataSourceName\"});", "result":""}
+		{"title":"Simple Example", "description":"SQL Only Example. Assums that a default datasource has been specified (by setting the variable this.datasource in Application.cfc)", "code":"qryResult = queryExecute(\"SELECT * FROM Employees\");", "result":""},
+		{"title":"Passing Query Parameters using Struct", "description":"Use :structKeyName in your sql then pass a struct with corresponding key names.", "code":"qryResult = queryExecute(\"SELECT * FROM Employees WHERE empid = :empid AND country = :country\", {country=\"USA\", empid=1});", "result":""},
+		{"title":"Passing Query Parameters using Array", "description":"When passing with an array use the ? as a placeholder in your sql", "code":"qryResult = queryExecute(\"SELECT * FROM Employees WHERE empid = ? AND country = ?\", [1,\"USA\"]);", "result":""},
+		{"title":"Passing Query Parameters using Struct of Structs", "description":"If you need to pass the cfsqltype or other cfqueryparam attributes you can pass a struct for each param.", "code":"qryResult = queryExecute(\"SELECT * FROM Employees WHERE empid = :empid AND country = :country\", {country={value=\"USA\", cfsqltype=\"cf_sql_varchar\"}, empid={value=1, cfsqltype=\"cf_sql_integer\"}});", "result":""},
+		{"title":"Specifying the Datasource", "description":"If you have not defined the datasource using this.datasource in Application.cfc or want to explicitly specify the datasource use the third argument.", "code":"qryResult = queryExecute(\"SELECT * FROM Employees\", {}, {datasource=\"myDataSourceName\"});", "result":""}
 	]
 	,"type":"function",
 	"related":["cfquery","cfqueryparam"]
