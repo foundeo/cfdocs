@@ -30,7 +30,13 @@
 			"description":"The structGet function will modify the varaible x by adding a new structure x.a and also adds a key x.a.b to satisfy the path.",
 			"code":"x = { y = { z=8 } };\nwriteDump( structGet(\"x.a.b\") );\nwriteDump(x);",
 			"result":""
-		}	
+		},
+		{
+			"title":"Accidentially Overwriting a variable using structGet",
+			"description":"The value of x.y.z[2] will be set to an empty struct.",
+			"code":"x = { y = { z=[1,2,3] } };\nwriteDump( structGet(\"x.y.z[2]\") );\nwriteDump(x);",
+			"result":""
+		},
 	]
 
 }
