@@ -41,7 +41,10 @@
         {"name":"this.strictNumberValidation","description":"CF11+ Makes isValid, cfargument, cfparam, and cfform more strict with reguard to how the treat integer or numeric validation when the string contains a currency.","required":false,"default":"true","type":"boolean","values":[]},
         {"name":"this.inMemoryFileSystem.enabled","description":"CF11+ Enables or disables in memory file system.","required":false,"default":"","type":"boolean","values":[]},
         {"name":"this.inMemoryFileSystem.size","description":"CF11+ Memory limit in MB for the in memory file system.","required":false,"default":"","type":"numeric","values":[]},
-        {"name":"this.datasources","description":"CF11+ Create multiple an application specific datasources. This value is a structure whos keys are the name of the datasource to be created, and the values are another structure with keys such as: database, driver, host, username, password, url","required":false,"default":"","type":"struct","values":[]}
+        {"name":"this.datasources","description":"CF11+ Create multiple an application specific datasources. This value is a structure whos keys are the name of the datasource to be created, and the values are another structure with keys such as: database, driver, host, username, password, url","required":false,"default":"","type":"struct","values":[]},
+        {"name":"this.serialization.preserveCaseForStructKey","description":"CF11+ Preserves the case of your variable names when generating json using the serializeJSON function.","required":false,"default":"true","type":"boolean","values":[]}
+        {"name":"this.customSerializer","description":"CF11+ The name of a CFC pointing to a custom serializer. See https://wikidocs.adobe.com/wiki/display/coldfusionen/RESTful+Web+Services+in+ColdFusion#RESTfulWebServicesinColdFusion-Supportforpluggableserializeranddeserializer","required":false,"default":"","type":"numeric","values":[]},
+
 
 	],
 	"engines": {

@@ -1,23 +1,37 @@
 {
 	"name":"serializeJSON",
 	"type":"function",
-	"syntax":"serializeJSON(var [, serializeQueryByColumns])",
+	"syntax":"serializeJSON(var [, serializeQueryByColumns, useCustomSerializer])",
 	"returns":"String",
 	"related":[],
 	"description":" Converts ColdFusion data into a JSON (JavaScript Object Notation) representation of the data.",
 	"params": [
 		{"name":"var","description":"A ColdFusion data value or variable that represents one.","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"serializeQueryByColumns","description":"A Boolean value that specifies how to serialize ColdFusion queries.","required":false,"default":"","type":"boolean","values":[]}
-
+		{"name":"serializeQueryByColumns","description":"A Boolean value that specifies how to serialize ColdFusion queries.","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"useCustomSerializer","description":"CF11+ Use custom serializer if defined. See: https://wikidocs.adobe.com/wiki/display/coldfusionen/RESTful+Web+Services+in+ColdFusion#RESTfulWebServicesinColdFusion-Supportforpluggableserializeranddeserializer","required":true,"default":"true","type":"boolean","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/serializejson"},
+		"coldfusion": {"minimum_version":"8", "notes":"CF11+ Added Application.cfc setting this.serialization.preserveCaseForStructKey which defaults to true, also added useCustomSerializer argument.", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/serializejson"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/serializejson.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/serializejson"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/serializejson"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Serialize a Struct",
+			"description":"Serialize a CF Struct into a JSON representation",
+			"code":"person = {name=\"Pete Freitag\", company=\"Foundeo\"};\nwriteOutput( serializeJSON(person) );",
+			"result": "{\"COMPANY\":\"Foundeo\",\"NAME\":\"Pete Freitag\"}"
+		},
+		{
+			"title":"Lower Case Keys",
+			"description":"Same as above but they variable names are case sensitive by quoting them.",
+			"code":"person = {\"name\"=\"Pete Freitag\", \"company\"=\"Foundeo\"};\nwriteOutput( serializeJSON(person) );",
+			"result": "{\"company\":\"Foundeo\",\"name\":\"Pete Freitag\"}"
+		},
 	]
 
 }

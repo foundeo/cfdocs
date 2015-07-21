@@ -39,7 +39,7 @@
 		<cfargument name="exclude" default="#url.name#">
 		<cfset var i = "">
 		<cfif ReFindNoCase("https?://", arguments.content)>
-			<cfset arguments.content = ReReplaceNoCase(arguments.content, "(https?://[a-zA-Z0-9._/=&%?-]+)", "<a href=""\1"">\1</a>", "ALL")>
+			<cfset arguments.content = ReReplaceNoCase(arguments.content, "(https?://[a-zA-Z0-9._/=&%?##+-]+)", "<a href=""\1"">\1</a>", "ALL")>
 		</cfif>
 		<cfif ReFindNoCase("\bApplication\.cfc\b", arguments.content)>
 			<cfset arguments.content = ReReplaceNoCase(arguments.content, "\bApplication\.cfc\b", "<a href=""#linkTo('application-cfc')#"">Application.cfc</a>", "ALL")>
