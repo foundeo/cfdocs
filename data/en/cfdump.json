@@ -48,7 +48,7 @@
 			"title":"Dump Then Abort",
 			"description":"Instead of using a boolean for the abort-Attribute to abort after a dump, it works like that:",
 			"code":"<cfdump var=\"#server#\" abort>"
-		},
+		}
 	]
 
 }

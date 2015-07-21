@@ -36,7 +36,7 @@
 			"description": "Assums url.idList is a comma seperated list of integers, eg: 1,2,3",
 			"code": "<cfquery name=\"news\">\n    SELECT id,title,story\n    FROM news\n    WHERE id IN (<cfqueryparam value=\"#url.idList#\" cfsqltype=\"cf_sql_integer\" list=\"true\">)\n</cfquery>",
 			"result": ""
-		},
+		}
 	]
 
 }
