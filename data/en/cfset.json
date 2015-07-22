@@ -15,6 +15,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "x = y = 1; \r\n z = [ \r\n !x, \r\n x == 1 && y == 2, \r\n x == 1 || y == 2 \r\n ]; \r\n writeDump(z);",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfset x = y = 1> \r\n <cfset z = [ \r\n NOT x, \r\n x EQ 1 AND y EQ 2, \r\n x EQ 1 OR y EQ 2 \r\n ]> \r\n <cfdump var="#z#">",
+	            "result": ""
+	        }
 	]
 
 }
