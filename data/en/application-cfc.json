@@ -55,7 +55,7 @@
         {"name":"this.localeMode","description":"Lucee4+ Defines how the local scope of a function is invoked when a variable with no scope definition is used. When classic the local scope is only invoked when the key already exists in it, with modern the local scope is always assumed on unscoped variables.","required":false,"default":"classic","type":"string","values":["classic", "modern"]},
         {"name":"this.scopeCascading","description":"Lucee4+ Depending on this setting Lucee scans certain scopes to find a variable when the variable is called without a scope (For Example: #myVar# instead of #variables.myVar#). When strict, only scans the variables scope, small only scans variables, url, and form scopes. When standard (the ColdFusion standard way) scans all scopes: variables,cgi,url,form,cookie","required":false,"default":"standard","type":"string","values":["standard","strict","small"]},
         {"name":"this.typeChecking","description":"Lucee4+ If set to false Lucee ignores type defintions with function arguments and return values","required":false,"default":"","type":"boolean","values":[]},
-        {"name":"this.compression","description":"Lucee4+ Enables Gzip compression on the HTTP response when true","required":false,"default":"false","type":"boolean","values":[]},
+        {"name":"this.compression","description":"Lucee4+ Enables Gzip compression on the HTTP response when true","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://wikidocs.adobe.com/wiki/display/coldfusionen/Application.CFC+Reference"},
