@@ -15,6 +15,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "<cfscript> \r\n x = y = 1; \r\n writeDump(x); \r\n </cfscript>",
+			"result": ""
+		},
+
 	]
 
 }
