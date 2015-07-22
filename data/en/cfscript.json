@@ -20,10 +20,9 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n x = y = 1; \r\n writeDump(x); \r\n </cfscript>",
+			"code": "<cfscript>\r\nx = y = 1;\r\nwriteDump(x);\r\n</cfscript>",
 			"result": ""
-		},
-
+		}
 	]
 
 }
