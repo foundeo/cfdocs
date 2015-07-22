@@ -25,7 +25,10 @@
         {"name":"this.serverSideFormValidation","description":"CF9+ Enable\/Disable ColdFusion‚ server side validation on CFFORM.","required":false,"default":"","type":"Boolean","values":[true,false]},
         {"name":"this.googleMapKey","description":"CF9+ the google maps api when cfmap is used.","required":false,"default":"","type":"String","values":[]},
         {"name":"this.datasource","description":"CF9+ Defines the default datasource for the application. As of CF9.0.1+ it can also accept a struct with keys: name, username, password.","required":false,"default":"","type":"String","values":[]},
-        {"name":"this.s3","description":"CF9+ A struct with keys accessKeyId, awsSecretKey and defaultLocation.","required":false,"default":"","type":"String","values":[]},
+        {"name":"this.s3","description":"CF9+ A struct with keys accessKeyId, awsSecretKey and defaultLocation.","required":false,"default":"","type":"Struct","values":[]},
+        {"name":"this.ormEnabled","description":"CF9+ Set to true if you want to use ORM.","required":false,"default":"false","type":"boolean","values":[]},
+        {"name":"this.ormSettings","description":"CF9+ A struct with various Hibernate / ORM configuration options. For details see: https://wikidocs.adobe.com/wiki/display/coldfusionen/ORM+settings","required":false,"default":"","type":"Struct","values":[]},
+
 
         {"name":"this.sessioncookie.httpOnly","description":"CF10+ Specifies if the session cookies (CFID/CFTOKEN) should have the HTTPOnly cookie flag set. This prevents the cookie value from being read from JavaScript.","required":false,"default":"true","type":"boolean","values":[]},
         {"name":"this.sessioncookie.secure","description":"CF10+ Specifies if the session cookies (CFID/CFTOKEN) should have the secure cookie flag set. When true the cookies are only sent over a secure transport (eg HTTPS).","required":false,"default":"false","type":"boolean","values":[]},
