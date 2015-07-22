@@ -4,11 +4,11 @@
 	"syntax":"<cfcase value=\"\">",
 	"script":"case \"apple\":",
 	"returns":"",
-	"related":[],
-	"description":" Used only inside the cfswitch tag body. Contains code to\n execute when the expression specified in the cfswitch tag has\n one or more specific values.",
+	"related":["cfswitch","cfdefaultcase"],
+	"description":"Used only inside the cfswitch tag body. Contains code to execute when the expression specified in the cfswitch tag has one or more specific values.",
 	"params": [
-		{"name":"value","description":"The value or values that the expression attribute of the\n cfswitch tag must match. To specify multiple matching\n values, separate the values with the delimiter character.\n The value or values must be simple constants or constant\n expressions, not variables.","required":true,"default":"","type":"String","values":[]},
-		{"name":"delimiters","description":"Specifies the delimiter character or characters that\n separate multiple values to match. If you specify multiple\n delimiter characters, you can use any of them to separate\n the values to be matched.","required":false,"default":",","type":"String","values":[",",";","|",":"]}
+		{"name":"value","description":"The value or values that the expression attribute of the cfswitch tag must match. To specify multiple matching values, separate the values with the delimiter character.\n The value or values must be simple constants or constant\n expressions, not variables.","required":true,"default":"","type":"String","values":[]},
+		{"name":"delimiters","description":"Specifies the delimiter character or characters that separate multiple values to match. If you specify multiple\n delimiter characters, you can use any of them to separate\n the values to be matched.","required":false,"default":",","type":"String","values":[",",";","|",":"]}
 
 	],
 	"engines": {
@@ -24,15 +24,15 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "fruit = ""; \r\n switch(fruit) { \r\n case "Apple": \r\n writeOutput("I like apples!"); \r\n break; \r\n case "Orange": \r\n writeOutput("I like oranges!"); \r\n break; \r\n case "Kiwi": \r\n writeOutput("I like kiwi!"); \r\n break; \r\n default: \r\n writeOutput("Fruit, what fruit?"); \r\n break; \r\n }",
-			"result": ""
+			"code": "fruit = \"\";\r\nswitch(fruit) {\r\n    case \"Apple\":\r\n        writeOutput(\"I like apples!\");\r\n        break; \r\n    case \"Orange\":\r\n        writeOutput(\"I like oranges!\");\r\n        break; \r\n    case \"Kiwi\":\r\n        writeOutput(\"I like kiwi!\"); \r\n        break; \r\n    default: \r\n        writeOutput(\"Fruit, what fruit?\"); \r\n        break; \r\n }",
+			"result": "Fruit, what fruit?"
 		},
-	        {
-	            "title": "Tag Syntax",
-	            "description": "",
-	            "code": "<cfset fruit = ""> \r\n <cfswitch expression="#fruit#"> \r\n <cfcase value="Apple"> \r\n <cfoutput>I like apples!</cfoutput> \r\n </cfcase> \r\n <cfcase value="Orange"> \r\n <cfoutput>I like oranges!</cfoutput> \r\n </cfcase> \r\n <cfcase value="Kiwi"> \r\n <cfoutput>I like kiwi!</cfoutput> \r\n </cfcase> \r\n <cfdefaultcase> \r\n <cfoutput>Fruit, what fruit?</cfoutput> \r\n </cfdefaultcase> \r\n </cfswitch>",
-	            "result": ""
-	        }
+        {
+            "title": "Tag Syntax",
+            "description": "",
+            "code": "<cfset fruit = \"\"> \r\n<cfswitch expression=\"#fruit#\"> \r\n    <cfcase value=\"Apple\">I like apples!</cfcase>\r\n    <cfcase value=\"Orange\">I like oranges!</cfcase> \r\n    <cfcase value=\"Kiwi\">I like kiwi!</cfcase>\r\n    <cfdefaultcase>Fruit, what fruit?</cfdefaultcase> \r\n</cfswitch>",
+            "result": "Fruit, what fruit?"
+        }
 	]
 
 }
