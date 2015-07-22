@@ -17,6 +17,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "fruit = ""; \r\n switch(fruit) { \r\n case "Apple": \r\n writeOutput("I like apples!"); \r\n break; \r\n case "Orange": \r\n writeOutput("I like oranges!"); \r\n break; \r\n case "Kiwi": \r\n writeOutput("I like kiwi!"); \r\n break; \r\n default: \r\n writeOutput("Fruit, what fruit?"); \r\n break; \r\n }",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfset fruit = ""> \r\n <cfswitch expression="#fruit#"> \r\n <cfcase value="Apple"> \r\n <cfoutput>I like apples!</cfoutput> \r\n </cfcase> \r\n <cfcase value="Orange"> \r\n <cfoutput>I like oranges!</cfoutput> \r\n </cfcase> \r\n <cfcase value="Kiwi"> \r\n <cfoutput>I like kiwi!</cfoutput> \r\n </cfcase> \r\n <cfdefaultcase> \r\n <cfoutput>Fruit, what fruit?</cfoutput> \r\n </cfdefaultcase> \r\n </cfswitch>",
+	            "result": ""
+	        }
 	]
 
 }
