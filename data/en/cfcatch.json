@@ -18,6 +18,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "A simple try/catch script based example",
+			"description":"Create a divide by zero error and then catch it.",
+			"code":"try {\n    x = 5/0;\n}\ncatch (any e) {\n    writeOutput(\"Error: \" & e.message);\n}",
+			"result":"Error: Division by zero."
+		}
 	]
 
 }
