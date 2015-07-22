@@ -91,7 +91,7 @@
 			<tbody>
 				<cfloop array="#data.params#" index="p">
 					<tr>
-						<td class="p-name">#p.name#</td>
+						<td class="p-name" id="p-#XmlFormat(p.name)#">#XmlFormat(p.name)#</td>
 						<td><cfif IsBoolean(p.required)>#YesNoFormat(p.required)#<cfelse>#p.required#</cfif></td>
 						<td>#XmlFormat(p.default)#</td>
 						<td class="p-description">
