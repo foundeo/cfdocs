@@ -20,6 +20,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "getVal = ReFindNoCase(\"E\", \"test 123!\"); \r\n writeDump(getVal);",
+			"result": "Expected Result is 2"
+		}
 	]
 
 }
