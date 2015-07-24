@@ -20,6 +20,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "getVal = replaceNoCase(\"ColdFUsion\", \"u\", \"a\"); \r\n writeDump(getVal);",
+			"result": "Expected Result: ColdFasion"
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "getVal = replaceNoCase(\"ColdFusiOn\", \"O\", \"a\", \"ALL\"); \r\n writeDump(getVal);",
+	            "result": "Expected Result: CaldFusian"
+	        }
 	]
 
 }
