@@ -20,6 +20,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Strip Characters Using ReReplace",
+			"description": "This example strips out all characters except a-z and 0-9.",
+			"code": "ReReplaceNoCase(\"test 123!\", \"[^a-z0-9]\", \"\", \"ALL\")",
+			"result": "test123"
+		},
+		{
+			"title": "Extract Characters Using Back Reference",
+			"description": "Uses a back reference: \\1 to extract the pattern contained within the parenthesis.",
+			"code": "ReReplaceNoCase(\"123abc456\", \"[0-9]+([a-z]+)[0-9]+\", \"\\1\")",
+			"result": "abc"
+		}
 	]
 
 }
