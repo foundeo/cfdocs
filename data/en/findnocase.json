@@ -19,6 +19,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "strVar = \"cfdocs.org\"; \r\n getVal = findNoCase(\"s\", strVar, 0); \r\n writeDump(getVal);",
+			"result": "Result should be 6"
+		}
 	]
 
 }
