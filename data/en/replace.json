@@ -20,6 +20,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "getVal = replace(\"ColdFUsion\", \"U\", \"u\"); \r\n writeDump(getVal);",
+			"result": "Expected Result: ColdFusion"
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "getVal1 = replace(\"COldFusiOn\", \"O\", \"o\", \"ONE\"); \r\n writeDump(getVal1);",
+	            "result": "Expected Result: ColdFusiOn"
+	        }
 	]
 
 }
