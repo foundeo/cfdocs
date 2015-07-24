@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "getVal = monthAsString(11); \r\n writeDump(getVal);",
+			"result": "result is: November"
+		}
 	]
 
 }
