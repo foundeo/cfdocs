@@ -19,6 +19,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Basic Example",
+			"description":"Find item in a list and return the index.",
+			"code":"listFindNoCase(\"apple,orange,banana\", \"orange\")",
+			"result":"2"
+		},
+		{
+			"title":"Different Delimiters",
+			"description":"Find item in a pipe delimited list and return the index.",
+			"code":"listFindNoCase(\"apple|orange|banana\", \"orange\", \"|\")",
+			"result":"2"
+		}
 	]
 
 }
