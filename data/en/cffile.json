@@ -5,7 +5,7 @@
 	"script":"fileRead(path);",
 	"returns":"",
 	"related":["fileread","filewrite","fileopen","filereadline"],
-	"description":" Manages interactions with server files.\n Different combonations cause different attributes to be\n required.",
+	"description":" Manages interactions with server files.\n Different combinations cause different attributes to be\n required.",
 	"params": [
 		{"name":"action","description":"Type of file manipulation that the tag performs.","required":true,"default":"","type":"String","values":["append","copy","delete","move","read","readbinary","rename","upload","uploadall","write"]},
 		{"name":"file","description":"Pathname of the file.","required":false,"default":"","type":"String","values":[]},
