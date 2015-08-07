@@ -56,11 +56,11 @@
 		</cfloop>
 		<!--- add CFx+ badge --->
 		<cfif REFind("CF[0-9.]+\+", arguments.content)>
-			<cfset arguments.content = ReReplace(arguments.content, "CF([0-9.]+\+)", "<span class=""label label-acf"" title=""Requires ColdFusion \1"">CF \1</span>")>
+			<cfset arguments.content = ReReplace(arguments.content, "CF([0-9.]+\+)", "<span class=""label label-acf"" title=""Requires ColdFusion \1"">CF \1</span>", "ALL")>
 		</cfif>
 		<!--- add Luceex+ badge --->
 		<cfif REFind("Lucee[0-9.]+\+", arguments.content)>
-			<cfset arguments.content = ReReplace(arguments.content, "Lucee([0-9.]+\+)", "<span class=""label label-lucee"" title=""Requires Lucee \1"">Lucee \1</span>")>
+			<cfset arguments.content = ReReplace(arguments.content, "Lucee([0-9.]+\+)", "<span class=""label label-lucee"" title=""Requires Lucee \1"">Lucee \1</span>", "ALL")>
 		</cfif>
 		<cfset arguments.content = Replace(arguments.content, "#Chr(10)#", "<br />", "ALL")>
 		<cfreturn arguments.content>
