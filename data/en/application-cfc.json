@@ -21,6 +21,7 @@
 		{"name":"this.secureJSON","description":"CF8+ A Boolean value that specifies whether to add a security prefix in front of any value that a ColdFusion function returns in JSON-format\n\t\t\t\t in response to a remote call.","required":false,"default":"","type":"Boolean","values":[true,false]},
         {"name":"this.customTagPaths","description":"CF8+ A file path to a directory containing custom tags.","required":false,"default":"","type":"String","values":[]},
         {"name":"this.mappings","description":"CF8+ A structure of application mappings where they key is the mapping and the value is the directory path.","required":false,"default":"","type":"Struct","values":[]},
+		{"name":"this.welcomeFileList","description":"CF8+ A comma seperated list of file names that will skip onMissingTemplate invocation - typically only necessary if you are using a builtin web server like Tomcat or JRun.","required":false,"default":"","type":"String","values":[]},
 
         {"name":"this.serverSideFormValidation","description":"CF9+ Enable\/Disable ColdFusion‚ server side validation on CFFORM.","required":false,"default":"","type":"Boolean","values":[true,false]},
         {"name":"this.googleMapKey","description":"CF9+ the google maps api when cfmap is used.","required":false,"default":"","type":"String","values":[]},
@@ -28,7 +29,10 @@
         {"name":"this.s3","description":"CF9+ A struct with keys accessKeyId, awsSecretKey and defaultLocation.","required":false,"default":"","type":"Struct","values":[]},
         {"name":"this.ormEnabled","description":"CF9+ Set to true if you want to use ORM.","required":false,"default":"false","type":"boolean","values":[]},
         {"name":"this.ormSettings","description":"CF9+ A struct with various Hibernate / ORM configuration options. For details see: https://wikidocs.adobe.com/wiki/display/coldfusionen/ORM+settings","required":false,"default":"","type":"Struct","values":[]},
-
+		{"name":"this.smtpServerSettings","description":"CF9+ A struct with possible keys: server, username and password.","required":false,"default":"","type":"Struct","values":[]},
+		{"name":"this.timeout","description":"CF9+ The default request timeout in seconds for requests within the application. Can be overridden by the cfsetting tag.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"this.debuggingIPAddresses","description":"CF9+ A list of IP addresses which show debugging output when debugging is enabled in the Administrator.","required":false,"default":"","type":"String","values":[]},
+		{"name":"this.enableRobustException","description":"CF9+ Overrides the value of the ColdFusion Administrator checkbox \"Enable Robust Exception Information\" for the application.","required":false,"default":"","type":"boolean","values":[]},
 
         {"name":"this.sessioncookie.httpOnly","description":"CF10+ Specifies if the session cookies (CFID/CFTOKEN) should have the HTTPOnly cookie flag set. This prevents the cookie value from being read from JavaScript.","required":false,"default":"true","type":"boolean","values":[]},
         {"name":"this.sessioncookie.secure","description":"CF10+ Specifies if the session cookies (CFID/CFTOKEN) should have the secure cookie flag set. When true the cookies are only sent over a secure transport (eg HTTPS).","required":false,"default":"false","type":"boolean","values":[]},
