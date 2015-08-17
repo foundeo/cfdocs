@@ -4,7 +4,7 @@
 	"syntax":"imageXORDrawingMode(name, c1)",
 	"returns":"void",
 	"related":[],
-	"description":" Sets the paint mode of the image to alternate between the image\'s current color and the new specified color.",
+	"description":" Sets the paint mode of the image to alternate between the image's current color and the new specified color.",
 	"params": [
 		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
 		{"name":"c1","description":"No Help Available","required":true,"default":"","type":"String","values":[]}

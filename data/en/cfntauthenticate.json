@@ -4,7 +4,7 @@
 	"syntax":"<cfntauthenticate username=\"\" password=\"\" domain=\"\">",
 	"returns":"",
 	"related":[],
-	"description":" Authenticates a user name and password against the\n NT domain on which ColdFusion server is running,\n and optionally retrieves the user\'s groups.",
+	"description":" Authenticates a user name and password against the\n NT domain on which ColdFusion server is running,\n and optionally retrieves the user's groups.",
 	"params": [
 		{"name":"username","description":"User's login name.","required":true,"default":"","type":"String","values":[]},
 		{"name":"password","description":"User's login name.","required":true,"default":"","type":"String","values":[]},

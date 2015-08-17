@@ -4,7 +4,7 @@
 	"syntax":"arrayDeleteAt(array, position)",
 	"returns":"boolean",
 	"related":[],
-	"description":" Deletes an element from an array and resizes the array\n so that the deleted element doesn\'t leave a gap.",
+	"description":" Deletes an element from an array and resizes the array\n so that the deleted element doesn't leave a gap.",
 	"params": [
 		{"name":"array","description":"The array that the element will be deleted from.","required":true,"default":"","type":"Array","values":[]},
 		{"name":"position","description":"The numeric position of the element. Remember that\n ColdFusion arrays start at 1 not 0.","required":true,"default":"","type":"Numeric","values":[]}
