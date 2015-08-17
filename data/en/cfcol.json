@@ -5,6 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Defines table column header, width, alignment, and text. Used\n within a cftable tag.",
+	"discouraged":"The use of tags that generate client side UI code is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cftable/index.html",
 	"params": [
 		{"name":"header","description":"Column header text. To use this attribute, you must also\n use the cftable colHeaders attribute.","required":true,"default":"","type":"String","values":[]},
 		{"name":"width","description":"Column width. If the length of data displayed exceeds this\n value, data is truncated to fit. To avoid this, use an\n HTML table tag.","required":false,"default":20,"type":"Numeric","values":[]},
@@ -19,7 +20,11 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcol"}
 	},
 	"links": [
-
+		{
+			"title":"ColdFusion UI The Right Way: CFTable",
+			"description":"Shows how to implement it using HTML",
+			"url":"http://static.raymondcamden.com/cfuitherightway/cftable/index.html"
+		}
 	]
 
 }
