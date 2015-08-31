@@ -1,14 +1,14 @@
 {
 	"name":"structDelete",
 	"type":"function",
-	"syntax":"structDelete(structure, key [, indicatenotexisting])",
+	"syntax":"structDelete(structure, key [, indicateNotExisting])",
 	"returns":"boolean",
-	"related":[],
-	"description":" Removes an element from a structure.",
+	"related":["structclear"],
+	"description":"Removes an element from a structure.",
 	"params": [
 		{"name":"structure","description":"Structure or a variable that contains one. Contains element\n to remove","required":true,"default":"","type":"String","values":[]},
 		{"name":"key","description":"Element to remove","required":true,"default":"","type":"String","values":[]},
-		{"name":"indicatenotexisting","description":"","required":false,"default":false,"type":"boolean","values":[true,false]}
+		{"name":"indicateNotExisting","description":"When true this function will return true only if they key that will be deleted existed. When false (default) this function will return true if the key is successfully removed.","required":false,"default":false,"type":"boolean","values":[true,false]}
 
 	],
 	"engines": {
@@ -19,6 +19,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Remove a key from a struct",
+			"description": "Creates a struct then removes a key",
+			"code": "someStruct = {a=1,b=2};\nstructDelete(someStruct, \"a\");\nwriteDump(someStruct);",
+			"result": ""
+		}
 	]
 
 }
