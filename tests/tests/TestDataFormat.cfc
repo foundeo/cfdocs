@@ -6,7 +6,6 @@ component extends="testbox.system.BaseSpec" {
 
 
 		describe("JSON Format Tests", function() {
-			debug(arguments,"inside describe args");
 			it("should be valid isJSON==true", function() {
 				for (filePath in files) {
 					var json = fileRead(filePath);
@@ -18,7 +17,7 @@ component extends="testbox.system.BaseSpec" {
 					
 					
 				}
-				debug(arguments,"inside it args");
+				
 			});
 
 			it("should have key: name, type", function() {
