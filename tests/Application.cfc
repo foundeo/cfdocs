@@ -5,7 +5,7 @@ component {
 	this.mappings[ "/tests"   ] = ExpandPath( "./tests" );
 
 	public void function onRequest( required string requestedTemplate ) {
-		include template=arguments.requestedTemplate;
+		include arguments.requestedTemplate;
 	}
-	
+
 }
