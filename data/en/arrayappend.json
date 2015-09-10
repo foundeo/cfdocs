@@ -19,6 +19,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Append a value to an array",
+			"description": "Uses the arrayAppend function to append a value to the end of the array",
+			"code": "someArray = [1,2,3];\narrayAppend(someArray, 4);\nwriteOutput(serializeJSON(someArray));",
+			"result": "[1,2,3,4]"
+		},
+		{
+			"title": "Append a value to an array using the Array member function",
+			"description": "CF11+ Invoking the append function on an array is the same as running arrayAppend.",
+			"code": "someArray = [1,2,3];\nsomeArray.append(4);\nwriteOutput(serializeJSON(someArray));",
+			"result": "[1,2,3,4]"
+		}
 	]
 
 }
