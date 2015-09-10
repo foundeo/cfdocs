@@ -2,19 +2,14 @@ component extends="testbox.system.BaseSpec" {
 	function run(testResults, testBox) {
 		dataDir = ExpandPath("../data/en");
 		files = directoryList(dataDir, false, "array");
-		filesWithErrors = [];
-
-
+		
 		describe("JSON Format Tests", function() {
 			it("should be valid isJSON==true", function() {
 				for (filePath in files) {
 					var json = fileRead(filePath);
 					var isItJson = isJSON(json);
-					if (!isItJSON) {
-						filesWithErrors.append(getFileFromPath(filePath));	
-					}
-					expect(isItJSON).toBeTrue();
-					
+					var fileName = getFileFromPath(filePath);
+					expect(isItJSON).toBeTrue("#fileName# was NOT valid JSON");
 					
 				}
 				
@@ -27,28 +22,18 @@ component extends="testbox.system.BaseSpec" {
 					var fileName = getFileFromPath(filePath);
 					if (isItJSON && fileName != "index.json") {
 						json = deserializeJSON(json);
-						if (!json.keyExists("name") || !json.keyExists("type")) {
-							filesWithErrors.append(fileName);
-							debug(json, "Missing key name or type in #fileName#");	
-						}
-						expect(json).toHaveKey("name");
-						expect(json).toHaveKey("type");
+						expect(json).toHaveKey("name", "#fileName# did not have key: name");
+						expect(json).toHaveKey("type", "#fileName# did not have key: name");
 					}
 					
 				}
-				debug(arguments,"inside it args");
 			});
 
 				
 
 		});
 
-		describe("There should be no errors", function(){
-			it("filesWithErrors should be empty", function() {
-				expect(filesWithErrors).toBe([]);
-			});	
-		});
-
+		
 
 	}
 }
