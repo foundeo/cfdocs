@@ -1,9 +1,12 @@
-# CFDocs
+# CFDocs 
 
 CFDocs is a community maintained CFML reference tool available at [cfdocs.org](http://cfdocs.org). It features:
 * Hosting on Amazon CloudFront CDN for fast responses around the globe. Sponsored by [Foundeo Inc.](http://foundeo.com).
 * Easy to use urls like: [cfdocs.org/hash](http:cfdocs.org/hash) just hit /tag-name or /function-name.
 * Publicly maintained on [GitHub](http://github.com/foundeo/cfdocs)
+
+[![Build Status](https://travis-ci.org/foundeo/cfdocs.svg?branch=master)](https://travis-ci.org/foundeo/cfdocs)
+
 
 ## How reference data is structured
 
