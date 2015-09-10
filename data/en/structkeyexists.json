@@ -4,7 +4,7 @@
 	"syntax":"structKeyExists(structure, key)",
 	"returns":"boolean",
 	"related":[],
-	"description":" Determines whether a specific key is present in a structure.",
+	"description":"Determines whether a specific key is present in a structure.",
 	"params": [
 		{"name":"structure","description":"Name of structure to test","required":true,"default":"","type":"Struct","values":[]},
 		{"name":"key","description":"Key to test","required":true,"default":"","type":"String","values":[]}
@@ -18,6 +18,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Check if server struct has OS key",
+			"description": "",
+			"code": "structKeyExists(server, \"os\")",
+			"result": "YES"
+		},
+		{
+			"title": "Check if server struct has OS key using member function",
+			"description": "CF11+ calling the keyExists member function on a struct.",
+			"code": "server.keyExists(\"os\")",
+			"result": "YES"
+		}
 	]
 
 }
