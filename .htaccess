@@ -21,3 +21,4 @@ ErrorDocument 404 /404.cfm
 RedirectMatch 403 (?i)\.git
 RedirectMatch 403 (?i)views/
 RedirectMatch 403 (?i)CFIDE/
+RedirectMatch 403 (?i)tests/
