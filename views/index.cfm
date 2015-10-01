@@ -23,52 +23,62 @@
    
   </div>
 
-  <cfhttp url="https://api.github.com/repos/foundeo/cfdocs/stats/contributors" method="GET" charset="utf-8" result="statResult"></cfhttp>
+  <br><hr><br>
+
+  <cfhttp url="https://api.github.com/repos/foundeo/cfdocs/stats/contributors" method="GET" charset="utf-8" result="statResult" throwonerror="false"></cfhttp>
       <cfif statResult.statusCode contains "200" AND IsJSON(statResult.fileContent)>
         <cfset stats = DeserializeJSON(statResult.fileContent)>
-        <h2><cfoutput>#ArrayLen(stats)#</cfoutput> Contributors - Leader Board</h2>
-        
-        
-        <p class="text-center">
+        <h2 class="text-center"><cfoutput>#ArrayLen(stats)#</cfoutput> Awesome Contributors <br><small>The Leader Board</small></h2>
             <!--- seams to be in reverse order --->
+            <cfset i = 0>
             <cfloop from="#ArrayLen(stats)#" to="1" index="s" step="-1">
-              <cfset stat = stats[s]>
+              
+              <cfsilent>
+                <cfset stat = stats[s]>
+                <cfset i = i+1>
+                <cfset a = 0>
+                <cfset d = 0>
+                <cfset c = 0>
+                <cfset lastMod = 0>
+                <cfloop array="#stat.weeks#" index="w">
+                  <cfset a = a+w.a>
+                  <cfset d = d+w.d>
+                  <cfset c = c+w.c>
+                  <cfif w.a GT 0 OR w.d GT 0 OR w.c GT 0 AND w.w GT lastMod>
+                    <cfset lastMod = w.w>
+                  </cfif>
+                </cfloop>
+              </cfsilent>
               <cfoutput>
+              <div class="contributor">
                 <div class="row">
-                  <div class="col-sm-1 col-xs-3">
-                    <a href="#encodeForHTMLAttribute(stat.author.html_url)#" rel="nofollow"><img src="#encodeForHTMLAttribute(stat.author.avatar_url)#" class="img-circle" height="60" width="60" /></a> 
+                  <div class="col-sm-4 text-center">
+                    <a href="#encodeForHTMLAttribute(stat.author.html_url)#" rel="nofollow"><img src="#encodeForHTMLAttribute(stat.author.avatar_url)#" class="img-rounded" height="75" width="75" /></a> 
+                    <br>
+                    <div class="text-muted"><strong>#encodeForHTML(stat.author.login)#</strong></div>
                   </div>
-                  <div class="col-sm-2 col-xs-9">
+                  <div class="col-sm-4">
                     
                     <span class="label label-primary">#Val(stat.total)# Contribution<cfif Val(stat.total) NEQ 1>s</cfif></span><br>
-                    <cfsilent>
-                    <cfset a = 0>
-                    <cfset d = 0>
-                    <cfset c = 0>
-                    <cfset lastMod = 0>
-                    <cfloop array="#stat.weeks#" index="w">
-                      <cfset a = a+w.a>
-                      <cfset d = d+w.d>
-                      <cfset c = c+w.c>
-                      <cfif w.a GT 0 OR w.d GT 0 OR w.c GT 0 AND w.w GT lastMod>
-                        <cfset lastMod = w.w>
-                      </cfif>
-                    </cfloop>
-                    </cfsilent>
+                    
                     <span class="label label-info">#Val(a+d+c)# Line<cfif Val(a+d+c) NEQ 1>s</cfif> Altered</span>
-                  </div>
-                  <div class="col-sm-6 col-xs-12">
                     <cfset weeksAgo = DateDiff("w", DateAdd("s", lastMod, "1970-01-01 00:00:00"), now())>
-                    <em><strong>#encodeForHTML(stat.author.login)#</strong> last contribution <cfif weeksAgo EQ 0>this week!<cfelse>#weeksAgo# week<cfif weeksAgo NEQ 1>s</cfif> ago</cfif></em>
+                    <span class="label label-success"><cfif weeksAgo EQ 0>Contributed this week!<cfelse>#weeksAgo# week<cfif weeksAgo NEQ 1>s</cfif> ago</cfif></span>
                   </div>
                   
                 </div>
+              </div>
               </cfoutput>
-            </cfloop>  
-        </p>
+            </cfloop> 
         
+      <cfelse>
+        <!--- error connecting to github so tell CDN to only cache for 30 seconds --->
+        <cfset request.cacheControlMaxAge = 30> 
       </cfif>
   
+    <style>
+        .contributor { width: 320px; display:inline-block; background-color: #f1f1f1; border-radius: 7px; margin: 5px 20px; padding:15px 10px; }
+    </style>
 
   
 </div>

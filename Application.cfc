@@ -24,8 +24,10 @@
 			<cfset local.assetInfo = directoryList(ExpandPath("./assets/"), false, "query")>
 			<cfset request.assetBaseURL = "/assets/v-" & LCase(Hash(ValueList(local.assetInfo.dateLastModified))) & "/">
 		</cfif>
-		<cfheader name="Cache-Control" value="max-age=86400">
+		
 		<cfsavecontent variable="request.content"><cfinclude template="#arguments.targetPage#"></cfsavecontent>
+		<cfparam name="request.cacheControlMaxAge" default="86400" type="integer">
+		<cfheader name="Cache-Control" value="max-age=#Int(request.cacheControlMaxAge)#">
 		<cfcontent reset="true" type="text/html"><cfinclude template="views/layout.cfm">
 	</cffunction>
 
