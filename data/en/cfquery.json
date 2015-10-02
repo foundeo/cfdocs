@@ -61,9 +61,7 @@
 		{
 			"title": "Script Syntax using new Query()",
 			"description": "This syntax was implemented by script-based components in CF 9 & 10. It is superceeded by queryExecute() in CF11.",
-			"code": "queryObj = new Query(\r\n name=\"qryDemo\",\r\n datasource=\"mydatasourcename\",\r\n sql = \"SELECT col1, col2\r\n FROM myTable\r\n WHERE id=:id\"\r\n); \r\nqueryObj.addParam(name=\"id\",value=arguments.id, cfsqltype=\"cf_sql_integer\");\r\nresultset=queryObj.execute().getResult();
-
-			",
+			"code": "queryObj = new Query(\r\n name=\"qryDemo\",\r\n datasource=\"mydatasourcename\",\r\n sql = \"SELECT col1, col2\r\n FROM myTable\r\n WHERE id=:id\"\r\n); \r\nqueryObj.addParam(name=\"id\",value=arguments.id, cfsqltype=\"cf_sql_integer\");\r\nresultset=queryObj.execute().getResult();",
 			"result": ""
 		}
 
