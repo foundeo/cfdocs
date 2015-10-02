@@ -29,7 +29,7 @@
 		{
 			"title": "Simple EncodeForHTMLAttribute Example",
 			"description": "Shows how and where encodeForHTMLAttribute would be used.",
-			"code": "<div title=\"#encodeForHTMLAttribute(\"<test>\")#\">",
+			"code": "<cfoutput><div title=\"#encodeForHTMLAttribute(\"<test>\")#\"></cfoutput>",
 			"result": "<div title=\"&lt;test&gt;\">"
 		}
 	]
