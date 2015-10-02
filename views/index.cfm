@@ -61,7 +61,7 @@
                     
                     <span class="label label-primary">#Val(stat.total)# Contribution<cfif Val(stat.total) NEQ 1>s</cfif></span><br>
                     
-                    <span class="label label-info">#Val(a+d+c)# Line<cfif Val(a+d+c) NEQ 1>s</cfif> Altered</span>
+                    <span class="label label-info">#Val(a+d)# Line<cfif Val(a+d) NEQ 1>s</cfif> Altered</span>
                     <cfset weeksAgo = DateDiff("w", DateAdd("s", lastMod, "1970-01-01 00:00:00"), now())>
                     <span class="label label-success"><cfif weeksAgo EQ 0>Contributed this week!<cfelse>#weeksAgo# week<cfif weeksAgo NEQ 1>s</cfif> ago</cfif></span>
                   </div>
