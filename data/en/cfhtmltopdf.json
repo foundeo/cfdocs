@@ -1,7 +1,7 @@
 {
 	"syntax":"<cfhtmltopdf>html</cfhtmltopdf>",
 	"description":"Creates PDFs from HTML using a WebKit based rendering engine.",
-	"engines":{"coldfusion":{"minimum_version":"11","docs":"https:\/\/wikidocs.adobe.com\/wiki\/display\/coldfusionen\/cfhtmltopdf","notes":"The rendering engine only runs on Windows. You can still run this tag on a Linux or Mac, but it must connect to a remote rendering engine running on Windows. Rendering engines are configured in the ColdFusion adminstrator."}},
+	"engines":{"coldfusion":{"minimum_version":"11","docs":"https:\/\/wikidocs.adobe.com\/wiki\/display\/coldfusionen\/cfhtmltopdf","notes":"The rendering engine only runs on Windows. You can still run this tag on a Linux or Mac, but it must connect to a remote rendering engine running on Windows. Rendering engines are configured in the ColdFusion adminstrator. Adobe guide: https:\/\/helpx.adobe.com\/coldfusion\/pdf-generation-in-coldfusion.html"}},
 	"name":"cfhtmltopdf",
 	"links":[],
 	"params":[
