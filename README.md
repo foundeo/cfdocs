@@ -52,8 +52,8 @@ CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. att
 
 We need help expanding existing tag and function documentation. Look through the reference pages till you find one needing more definitions or examples. Also see:
 
-* [List of Tags and Functions that do not have examples](http://cfdocs.org/report/missing-examples.cfm)
-* [Missing Functions](http://cfdocs.org/report/todo.cfm)
+* [List of Tags and Functions that do not have examples](http://cfdocs.org/reports/missing-examples.cfm)
+* [Missing Functions](http://cfdocs.org/reports/todo.cfm)
 
 ### JSON File Documentation
 
