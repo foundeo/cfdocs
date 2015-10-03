@@ -82,7 +82,7 @@
 	<cffunction name="onError">
 		<cfargument name="exception">
 		<cfargument name="eventName">
-		<<cfsavecontent variable = "request.content">
+		<cfsavecontent variable = "request.content">
 			<div class="container">
 				<h1>Oops <small>Something went wrong</small></h1>
 				<cfif cgi.server_port IS "8411" OR cgi.remote_addr IS "127.0.0.1">
