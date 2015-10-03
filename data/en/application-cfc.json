@@ -86,7 +86,12 @@
             "description":"This example uses getCurrentTemplatePath and getDirectoryFromPath to dynamically get the directory that the current Application.cfc resieds in and then defines some mappings relative to that. You want to avoid using expandPath in Application.cfc because the path will be relative to the current template path not the Application.cfc path.",
             "code": "component {\n    this.name = \"AppName\";\n    this.appBasePath = getDirectoryFromPath(getCurrentTemplatePath());\n    this.mappings[\"/components\"] = this.appBasePath & \"components\";\n    this.mappings[\"/frameworks\"] = this.appBasePath & \"frameworks\";\n\n}",
             "result":""
+        },
+        {
+            "title":"Relative mappings - Advanced Example",
+            "description":"This example shows how to map to directories that are a level up from the Application.cfc (web root) as well as how to handle an application that will need to be deployed on multiple operating systems (Mac, Unix, Windows) due to differing developer environments. It uses Find to determine if we need to use forward or back slashes in our paths and ListDeleteAt to drop the current directory from the path. We can then build the path for our mappings and custom tags using this information.",
+            "code": "component {\n    this.name = \"AppName\";\n    this.currentPath = getDirectoryFromPath( getCurrentTemplatePath() );\n    this.delim = find('/', this.currentPath) ? \"/\" : \"\\\";\n    this.basePath = listDeleteAt(this.currentPath, listLen(this.currentPath, this.delim), this.delim);\n    this.mappings[\"/components\"] = this.basePath & this.delim & \"components\";\n    this.mappings[\"/frameworks\"] = this.basePath & this.delim & \"frameworks\";\n    this.customtagpaths = this.basePath & this.delim & \"customtags\";\n\n}",
+            "result":""
         }
     ]
-
 }
