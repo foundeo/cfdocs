@@ -1,8 +1,7 @@
 {
 	"name":"cfcookie",
 	"type":"tag",
-	"syntax":"<cfcookie name=\"\">",
-	"returns":"",
+	"syntax":"<cfcookie name = \"cookie name\" domain = \".domain\" expires = \"period\" httponly = \"yes|no\" path = \"URL\" secure = \"yes|no\" value = \"text\" encodevalue = \"yes|no\" preserveCase = \"yes|no\">", "returns":"",
 	"related":[],
 	"description":" Defines web browser cookie variables, including expiration and\n security options.",
 	"params": [
@@ -23,6 +22,27 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+            "title": "Script Syntax",
+            "description": "",
+            "code": "cfcookie(name=\"TimeVisited\" value=Now(), domain=\".local.com\", path=\"/coldfusion\" expires=30, httponly=\"yes\" )\r\n"
+        },
+        {
+            "title": "Tag Syntax",
+            "description": "",
+            "code": "<cfcookie name=\"TimeVisited\" value=Now(), domain=\".local.com\", path=\"/coldfusion\" expires=30, httponly=\"yes\" />\r\n"
+        },
+        {
+			"title": "Using Cookie Scope",
+			"description": "",
+			"code": "cookie.TimeVisited = { value=\"#Now()#\", domain=\".local.com\", path=\"/coldfusion\", expires=30, httponly=\"yes\" }; \r\n "
+		},
+		{ 
+			"title": "Using CFHeader",
+			"description": "",
+			"code": "<cfheader name=\"Set-Cookie\" value=\"TimeVisited=#Now()#; path=/coldfusion; domain=.local.com; expires=30; HttpOnly;\"/>\r\n"
+		}
 	]
-
 }
