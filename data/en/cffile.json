@@ -85,7 +85,7 @@
 		{
 			"title": "Script Syntax",
 			"description": "File Upload",
-			"code": "fileUpload(expandPath(\"./destination\"), "form.myFile", \" \", \"makeunique\");",
+			"code": "fileUpload(expandPath(\"./destination\"), \"form.myFile\", \" \", \"makeunique\");",
 			"result": ""
 		},
 		{
