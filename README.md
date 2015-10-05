@@ -17,16 +17,17 @@ The cfdocs.org site can run locally pretty easily, I run it on a dedicated virtu
 
 ## How to contribute
 
-If you are interested in helping you can just copy a tag or function and write up some documentation. The documentation doesn't need to be super wordy and should not be a copy of Adobe's documentation word for word.
+If you are interested in helping you can just pick a tag or function and write up some documentation. The documentation doesn't need to be super wordy and should not be a copy of Adobe's documentation word for word.
 
 CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. attribute names / function arguments and one two sentence descriptions.
 
 If you want to work on a tag or function, 
 
-1. fork the project to your GitHub account,
-2. then please (create an issue here)[https://github.com/foundeo/cfdocs/issues/], eg "Missing Docs for CF11 getSafeHTML() Function",
-3. and specify that you will be working on it, (please check the list of issues before posting to avoid duplicates) 
-4. once you are done you can send a pull request, and I'll merge it into the main repository.
+1. fork the project to your GitHub account (this happens for you if you click 'fork' on an existing page, then the 'edit' icon in the editor's tool bar).
+2. once you are done you can send a pull request, and I'll merge it into the main repository.
+
+### Code examples
+Code examples have to be valid json. So you can to do `\n` for newline, and double quotes must be `\"`
 
 ### Not sure what you can contribute? 
 
