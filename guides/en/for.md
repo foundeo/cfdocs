@@ -8,7 +8,7 @@ The following for loop has been supported since the initial version of cfscript.
 
 	array = [3,2,1];
 
-	for (i=1; i LTE ArrayLen(array);i=i+1) {
+	for (i=1; i <= ArrayLen(array);i=i+1) {
 		WriteOutput(array[i]);
 	}
 
