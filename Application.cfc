@@ -2,6 +2,8 @@
 	<cfset this.name="cfdocs">
 	<cfset this.sessionManagement=false>
 	<cfset this.clientManagement=false>
+	<cfset this.javaSettings.loadPaths = [getDirectoryFromPath(getCurrentTemplatePath()) & "lib/"]>
+	<cfset this.javaSettings.reloadOnChange=true>
 
 	<cffunction name="onRequest">
 		<cfargument name="targetPage" type="string">
@@ -15,6 +17,7 @@
 				<cfset application.categories[local.cat].name = local.catData.name>
 				<cfset application.categories[local.cat].items = local.catData.related>
 			</cfloop>
+			<cfset application.txtmark = createObject("java", "com.github.rjeschke.txtmark.Processor")>
 		</cfif>
 		<cfset request.content = "">
 		<!--- cache for one day --->
