@@ -1,0 +1,43 @@
+{
+	"name":"arraySlice",
+	"type":"function",
+	"syntax":"arraySlice(array, offset, length)",
+	"returns":"array",
+	"related":["ArrayFind","ArrayFindNoCase","ArrayMap","ArrayReduce","ArrayResize","ArraySort","ArraySwap","ArrayToList"],
+	"description":"Returns a new array, from the start position up to the count of elements.",
+	"params": [
+		{"name":"array","description":"Name of the array that you want to slice","required":true,"default":"","type":"Array","values":[]},
+		{"name":"offset","description":"Specifies the position from which to slice the array. Negative value indicates that the array is sliced, with sequence starting from array's end.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"length","description":"Maximum elements to slice","required":false,"default":"Length of Array","type":"Numeric","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayslice.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayslice.html"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayslice"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Simple ArraySlice Example",
+			"description":"",
+			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = arraySlice(array, 2, 3);\nwritedump(newArray)",
+			"result":"[2,3,4]"
+		},
+		{
+			"title":"ArraySlice with no length specified",
+			"description":"",
+			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = arraySlice(array, 4);\nwritedump(newArray)",
+			"result":"[4,5,6,7,8]"
+		},
+		{
+			"title":"ArraySlice using a negative offset",
+			"description":"",
+			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = arraySlice(array, -5, 3);\nwritedump(newArray)",
+			"result":"[4,5,6]"
+		}
+	]
+
+}
