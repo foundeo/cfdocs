@@ -70,7 +70,7 @@
               </div>
               </cfoutput>
             </cfloop> 
-        
+        <div id="test-tool"><small>Contributions not showing up? Test them with this tool. <a href="http://contribution-checker.herokuapp.com/">http://contribution-checker.herokuapp.com</a>.<small></div>
       <cfelse>
         <!--- error connecting to github so tell CDN to only cache for 30 seconds --->
         <cfset request.cacheControlMaxAge = 30> 
@@ -78,6 +78,7 @@
   
     <style>
         .contributor { width: 320px; display:inline-block; background-color: #f1f1f1; border-radius: 7px; margin: 5px 20px; padding:15px 10px; }
+        #test-tool { text-align: center;}
     </style>
 
   
