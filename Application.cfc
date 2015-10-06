@@ -93,8 +93,10 @@
 						<cfoutput>#encodeForHTML(arguments.exception.message)#</cfoutput>
 					</div>
 					<cfdump var="#arguments#">
+				<cfelseif structKeyExists(arguments.exception, "rootCause")>
+					<cflog file="cfdocs-errors" type="error" text="Root Cause: #arguments.exception.rootCause.message# -- #arguments.exception.rootCause.detail# -- #cgi.script_name#">
 				<cfelse>
-					<cflog file="cfdocs-errors" type="error" text="#arguments.exception.message# -- #arguments.exception.detail#">
+					<cflog file="cfdocs-errors" type="error" text="#arguments.exception.message# -- #arguments.exception.detail# #cgi.script_name#">
 				</cfif>
 			</div>
 		</cfsavecontent>
