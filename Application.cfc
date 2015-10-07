@@ -2,6 +2,8 @@
 	<cfset this.name="cfdocs">
 	<cfset this.sessionManagement=false>
 	<cfset this.clientManagement=false>
+	<cfset this.javaSettings.loadPaths = [getDirectoryFromPath(getCurrentTemplatePath()) & "lib/"]>
+	<cfset this.javaSettings.reloadOnChange=true>
 
 	<cffunction name="onRequest">
 		<cfargument name="targetPage" type="string">
@@ -15,6 +17,7 @@
 				<cfset application.categories[local.cat].name = local.catData.name>
 				<cfset application.categories[local.cat].items = local.catData.related>
 			</cfloop>
+			<cfset application.txtmark = createObject("java", "com.github.rjeschke.txtmark.Processor")>
 		</cfif>
 		<cfset request.content = "">
 		<!--- cache for one day --->
@@ -90,8 +93,10 @@
 						<cfoutput>#encodeForHTML(arguments.exception.message)#</cfoutput>
 					</div>
 					<cfdump var="#arguments#">
+				<cfelseif structKeyExists(arguments.exception, "rootCause")>
+					<cflog file="cfdocs-errors" type="error" text="Root Cause: #arguments.exception.rootCause.message# -- #arguments.exception.rootCause.detail# -- #cgi.script_name#">
 				<cfelse>
-					<cflog file="cfdocs-errors" type="error" text="#arguments.exception.message# -- #arguments.exception.detail#">
+					<cflog file="cfdocs-errors" type="error" text="#arguments.exception.message# -- #arguments.exception.detail# #cgi.script_name#">
 				</cfif>
 			</div>
 		</cfsavecontent>

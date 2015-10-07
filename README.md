@@ -139,4 +139,4 @@ Use this to link to blog entries or other useful related content.
 
 ##### examples
 
-Show example code. It is very helpful to readers to use the `result` to show the expected result of the code sample when applicable.
+Show example code. It is very helpful to readers to use the `result` to show the expected result of the code sample when applicable. This has to be JSON, so  you can to do `\n` for newline, double quotes must be escaped `\"`.

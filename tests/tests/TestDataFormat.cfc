@@ -68,6 +68,13 @@ component extends="testbox.system.BaseSpec" {
 				}
 			});	
 
+			it("should have lower case file names", function() {
+				for (filePath in files) {
+					var fileName = getFileFromPath(filePath);
+					expect(fileName).toBeWithCase(lCase(fileName), "#fileName# was not all lower case");
+				}
+			});
+
 		});
 
 		
