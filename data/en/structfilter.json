@@ -2,6 +2,7 @@
 	"name":"structFilter",
 	"type":"function",
 	"syntax":"structFilter(struct,function(key, value){return true|false;});",
+	"member":"someStruct.Filter(function(key, value){return true|false;});",
 	"returns":"struct",
 	"related":["structEach","structMap","structReduce"],
 	"description":"Used to filter the key-value pairs in a structure.",
@@ -22,6 +23,12 @@
 			"title": "Example using a simple numeric comparison",
 			"description": "Take a struct of items with their rating and use structFilter to return ones of a rating 3 and higher.",
 			"code": "fruitRatings = {apple=4,banana=1,orange=5,mango=2,kiwi=3};\n\nfavoriteFruits = structFilter(fruitRatings, function(key, value){\n     return value >= 3;\n});\nwritedump(favoriteFruits);",
+			"result": "{apple=4,orange=5,kiwi=3}"
+		},
+		{
+			"title": "Example using a member function",
+			"description": "This is the same example, but using a member function on the struct instead of a standalone function.",
+			"code": "fruitRatings = {apple=4,banana=1,orange=5,mango=2,kiwi=3};\n\nfavoriteFruits = fruitRatings.Filter(function(key, value){\n     return value >= 3;\n});\nwritedump(favoriteFruits);",
 			"result": "{apple=4,orange=5,kiwi=3}"
 		}
 	]

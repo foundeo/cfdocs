@@ -26,6 +26,13 @@
                     <small><span class="glyphicon glyphicon-flash" title="#HTMLEditFormat(data.scriptTitle)#"></span></small> &nbsp;<code>#HTMLEditFormat(data.script)#</code>
                 </p>
             </cfif>
+        <cfelseif data.type is "function">
+        	 <cfif StructKeyExists(data, "member")>
+        	 	<h4><em>Member Function Syntax</em></h4>
+                <p id="member-syntax">
+                    <code>#HTMLEditFormat(data.member)#</code>
+                </p>
+            </cfif>
         </cfif>
 	</cfif>
     <cfif StructKeyExists(data, "discouraged") AND Len(data.discouraged)>
