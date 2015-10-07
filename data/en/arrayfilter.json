@@ -2,7 +2,7 @@
 	"name":"arrayFilter",
 	"type":"function",
 	"syntax":"arrayFilter(array array, function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
-	"member":"someArray.Filter(function(item, [index, [array]]), [boolean parallel], [number maxThreads]);",
+	"member":"someArray.filter(function(item, [index, [array]]), [boolean parallel], [number maxThreads]);",
 	"returns":"array",
 	"related":["arrayEach", "arrayReduce"],
 	"description":"Used to filter an array to items for which the closure function returns true.",
@@ -31,7 +31,7 @@
 		{
 			"title": "Example using a member function",
 			"description": "This is the same example as above, but using a member function on the array instead of a standalone function.",
-			"code": "fruitArray = [{fruit='apple', rating=4}, {fruit='banana', rating=1}, {fruit='orange', rating=5}, {fruit='mango', rating=2}, {fruit='kiwi', rating=3}];\n\nfavoriteFruits = fruitArray.Filter(function(item){\n     return item.rating >= 3;\n});\nwritedump(favoriteFruits);",
+			"code": "fruitArray = [{fruit='apple', rating=4}, {fruit='banana', rating=1}, {fruit='orange', rating=5}, {fruit='mango', rating=2}, {fruit='kiwi', rating=3}];\n\nfavoriteFruits = fruitArray.filter(function(item){\n     return item.rating >= 3;\n});\nwritedump(favoriteFruits);",
 			"result": "Array with the structs for apple, orange and kiwi."
 		}
 	]

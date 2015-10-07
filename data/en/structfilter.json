@@ -2,7 +2,7 @@
 	"name":"structFilter",
 	"type":"function",
 	"syntax":"structFilter(struct,function(key, value, [struct]){return true|false;});",
-	"member":"someStruct.Filter(function(key, value, [struct]){return true|false;});",
+	"member":"someStruct.filter(function(key, value, [struct]){return true|false;});",
 	"returns":"struct",
 	"related":["structEach","structMap","structReduce"],
 	"description":"Used to filter the key-value pairs in a structure.",
@@ -28,7 +28,7 @@
 		{
 			"title": "Example using a member function",
 			"description": "This is the same example, but using a member function on the struct instead of a standalone function.",
-			"code": "fruitRatings = {apple=4,banana=1,orange=5,mango=2,kiwi=3};\n\nfavoriteFruits = fruitRatings.Filter(function(key, value){\n     return value >= 3;\n});\nwritedump(favoriteFruits);",
+			"code": "fruitRatings = {apple=4,banana=1,orange=5,mango=2,kiwi=3};\n\nfavoriteFruits = fruitRatings.filter(function(key, value){\n     return value >= 3;\n});\nwritedump(favoriteFruits);",
 			"result": "{apple=4,orange=5,kiwi=3}"
 		}
 	]
