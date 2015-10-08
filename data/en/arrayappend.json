@@ -2,6 +2,7 @@
 	"name":"arrayAppend",
 	"type":"function",
 	"syntax":"arrayAppend(array, value [, merge])",
+	"member":"someArray.append( value [, merge])",
 	"returns":"boolean",
 	"related":["arrayprepend"],
 	"description":"Appends an element to the end of an array.",
@@ -14,7 +15,6 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayappend.html"},
 		"lucee": {"minimum_version":"", "notes":"When called as a member function array.append() returns the array instead of boolean.", "docs":"http://docs.lucee.org/reference/functions/arrayappend.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arrayappend"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayappend"}
 	},
 	"links": [

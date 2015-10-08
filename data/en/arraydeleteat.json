@@ -2,6 +2,7 @@
 	"name":"arrayDeleteAt",
 	"type":"function",
 	"syntax":"arrayDeleteAt(array, position)",
+	"member":"someArray.deleteAt(position)",
 	"returns":"boolean",
 	"related":[],
 	"description":" Deletes an element from an array and resizes the array\n so that the deleted element doesn't leave a gap.",
@@ -13,7 +14,6 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraydeleteat.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arraydeleteat.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arraydeleteat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraydeleteat"}
 	},
 	"links": [
