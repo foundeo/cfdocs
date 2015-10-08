@@ -2,8 +2,9 @@
 	"name":"arrayFindNoCase",
 	"type":"function",
 	"syntax":"arrayFindNoCase(array, object)",
+	"member":"someArray.findNoCase(object)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
 	"description":" These functions performs a case-insensitive search in the array for the specified object. Returns the array index of the first match; 0 if not found.",
 	"params": [
 		{"name":"array","description":"The array to search","required":true,"default":"","type":"Array","values":[]},

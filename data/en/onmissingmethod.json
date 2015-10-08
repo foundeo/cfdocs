@@ -10,7 +10,7 @@
         {"name":"missingMethodArguments","description":"The arguments that were passed on the function call to the missing method.","required":true,"default":"","type":"Struct","values":[]}
  	],
  	"engines": {
- 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://wikidocs.adobe.com/wiki/display/coldfusionen/CFC+Implicit+notation"}
+ 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcomponent.html"}
  	},
  	"links": [
 

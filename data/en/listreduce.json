@@ -1,1 +1,18 @@
-{"syntax":" ListReduce(list, function(result, item [,index, list]) [,initialValue, delimiter, includeEmptyFields])","description":"Iterates over each item of the list and calls the closure to work on the item. This function will reduce the list to a single value and will return the value.","engines":{"coldfusion":{"minimum_version":"11","docs":"https:\/\/wikidocs.adobe.com\/wiki\/display\/coldfusionen\/ListReduce","notes":""}},"name":"ListReduce","links":[],"params":[{"values":[],"default":"","description":"Input list","name":"list","type":"String","required":"1"},{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: value\r\nindex : current index for the iteration\r\nlist : reference of the original list","name":"function","type":"Any","required":"1"},{"values":[],"default":"","description":"Initial value which will be used for the reduce operation. The type is any.","name":"intialValue","type":"Any","required":"0"},{"values":[],"default":"comma","description":"The list delimiter.","name":"delimiter","type":"String","required":"0"},{"values":[],"default":"false","description":"Include empty values.","name":"includeEmptyFields","type":"Boolean","required":"0"}],"returns":"Any","examples":[],"type":"function","related":["ArrayMap","ArrayReduce"]}
+{"syntax":" ListReduce(list, function(result, item [,index, list]) [,initialValue, delimiter, includeEmptyFields])",
+"description":"Iterates over each item of the list and calls the closure to work on the item. This function will reduce the list to a single value and will return the value.",
+"engines":{
+		"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listreduce.html","notes":""}
+	},
+	"name":"ListReduce",
+	"links":[],
+	"params":[
+		{"values":[],"default":"","description":"Input list","name":"list","type":"String","required":"1"},
+		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: value\r\nindex : current index for the iteration\r\nlist : reference of the original list","name":"function","type":"Any","required":"1"},
+		{"values":[],"default":"","description":"Initial value which will be used for the reduce operation. The type is any.","name":"intialValue","type":"Any","required":"0"},
+		{"values":[],"default":"comma","description":"The list delimiter.","name":"delimiter","type":"String","required":"0"},{"values":[],"default":"false","description":"Include empty values.","name":"includeEmptyFields","type":"Boolean","required":"0"}
+	],
+	"returns":"Any",
+	"examples":[],
+	"type":"function",
+	"related":["ArrayMap","ArrayReduce"]
+}

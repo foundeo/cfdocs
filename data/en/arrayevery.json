@@ -2,6 +2,7 @@
 	"name":"arrayEvery",
 	"type":"function",
 	"syntax":"arrayEvery(array array, function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
+	"member":"someArray.every(function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
 	"returns":"boolean",
 	"related":["arraySome"],
 	"description":"returns true if every closure returns true, otherwise false",
