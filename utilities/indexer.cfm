@@ -8,7 +8,7 @@
 	<cftry>
 		<cfset data = deserializeJSON(json)>
 		<cfset nameKey = getFileFromPath(filePath)>
-		<cfset nameKey = Replace(nameKey, ".json", "")>
+		<cfset nameKey = LCase(Replace(nameKey, ".json", ""))>
 		<cfif StructKeyExists(data, "type")>
 			<cfif data.type IS "tag">
 				<cfset arrayAppend(tags, nameKey)>
