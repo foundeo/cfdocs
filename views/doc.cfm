@@ -145,7 +145,7 @@
 	</cfif>
 
 	<cfif StructKeyExists(data, "links") AND ArrayLen(data.links)>
-		<h2>#data.name# Links</h2>
+		<h2>Links <small>more information about #data.name#</small></h2>
 		<ul>
 			<cfloop array="#data.links#" index="link">
 				<li><a href="#link.url#">#link.title#</a><cfif StructKeyExists(link, "description") AND Len(link.description)> - #autoLink(XmlFormat(link.description))#</cfif></li>
@@ -153,7 +153,7 @@
 		</ul>
 	</cfif>
 	<cfif StructKeyExists(data, "examples") AND IsArray(data.examples) AND ArrayLen(data.examples)>
-		<h2 id="examples">Examples <small>using the #data.name# <cfif data.type IS "tag">tag<cfelse>function</cfif></small></h2>
+		<h2 id="examples">Examples <small>sample code <cfif data.type IS "function">invoking<cfelse>using</cfif> the #data.name# <cfif data.type IS "tag">tag<cfelse>function</cfif></small></h2>
         <cfset example_index = 0>
 		<cfloop array="#data.examples#" index="ex">
             <cfset example_index = example_index + 1>

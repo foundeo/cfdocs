@@ -32,6 +32,9 @@
 </cfif>
 <cfif isStruct(data)>
 	<cfset request.title = data.name>
+	<cfif structKeyExists(data, "examples") AND arrayLen(data.examples) GT 0>
+		<cfset request.title = request.title & " Code Examples and">
+	</cfif>
 	<cfinclude template="views/doc.cfm">
 <cfelse>
 	<cfinclude template="views/markdown.cfm">
