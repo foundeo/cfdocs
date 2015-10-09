@@ -8,7 +8,7 @@
 	"params": [
 		{"name":"var","description":"A ColdFusion data value or variable that represents one.","required":true,"default":"","type":"Variablename","values":[]},
 		{"name":"serializeQueryByColumns","description":"A Boolean value that specifies how to serialize ColdFusion queries.","required":false,"default":"","type":"boolean","values":[]},
-		{"name":"useCustomSerializer","description":"CF11+ Use custom serializer if defined. See: https://wikidocs.adobe.com/wiki/display/coldfusionen/RESTful+Web+Services+in+ColdFusion#RESTfulWebServicesinColdFusion-Supportforpluggableserializeranddeserializer","required":true,"default":"true","type":"boolean","values":[]}
+		{"name":"useCustomSerializer","description":"CF11+ Use custom serializer if defined. See: https://helpx.adobe.com/coldfusion/developing-applications/changes-in-coldfusion/restful-web-services-in-coldfusion.html","required":true,"default":"true","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"CF11+ Added Application.cfc setting this.serialization.preserveCaseForStructKey which defaults to true, also added useCustomSerializer argument.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/serializejson.html"},

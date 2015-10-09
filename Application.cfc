@@ -8,6 +8,7 @@
 	<cffunction name="onRequest">
 		<cfargument name="targetPage" type="string">
 		<cfset var content = "">
+		<cfset var showError = "">
 		<cfif NOT StructKeyExists(application, "index") OR StructKeyExists(url, "reinit")>
 			<cfset application.index = DeserializeJSON( FileRead(ExpandPath("./data/en/index.json")))>
 			<cfset application.categories = {}>
@@ -17,7 +18,20 @@
 				<cfset application.categories[local.cat].name = local.catData.name>
 				<cfset application.categories[local.cat].items = local.catData.related>
 			</cfloop>
-			<cfset application.txtmark = createObject("java", "com.github.rjeschke.txtmark.Processor")>
+			<cfset application.guides = {}>
+				<cfloop array="#application.index.guides#" index="local.guide">
+					<cfset local.fileObj = fileOpen(ExpandPath("./guides/en/#local.guide#.md"),"read")>
+					<cfset local.title = fileReadLine(local.fileObj)>
+					<cfset local.title = Replace(local.title, "## ", "")>
+					<cfset fileClose(local.fileObj)>
+					<cfset application.guides[local.guide] = local.title>
+			</cfloop>
+			<cftry>
+				<cfset application.txtmark = createObject("java", "com.github.rjeschke.txtmark.Processor")>
+				<cfcatch type="any">
+					<cfset showError = "<script>alert('txtMark library required to view Guide pages, please install the jar file in the lib directory.');</script>">
+				</cfcatch>
+			</cftry>			
 		</cfif>
 		<cfset request.content = "">
 		<!--- cache for one day --->
@@ -31,6 +45,7 @@
 		<cfsavecontent variable="request.content"><cfinclude template="#arguments.targetPage#"></cfsavecontent>
 		<cfparam name="request.cacheControlMaxAge" default="86400" type="integer">
 		<cfheader name="Cache-Control" value="max-age=#Int(request.cacheControlMaxAge)#">
+		<cfif len(showError)><cfoutput>#showError#</cfoutput><cfflush></cfif>
 		<cfcontent reset="true" type="text/html"><cfinclude template="views/layout.cfm">
 	</cffunction>
 

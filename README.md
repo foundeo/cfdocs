@@ -61,6 +61,7 @@ We need help expanding existing tag and function documentation. Look through the
     	"name":"NameOfTagOrFunction",
     	"type":"function|tag",
     	"syntax":"Tag(arg)|<cftag attr=1>",
+        "member":"item.memberFunction([args])",
         "script":"cftag(attr=1);",
     	"returns":"void",
     	"related":["tag","function"],
@@ -108,6 +109,10 @@ The basic syntax of the tag or function
 ##### script
 
 For tags, shows how the tag would be invoked from cfscript.
+
+##### member
+
+For functions, shows the available member function syntax.
 
 ##### returns
 

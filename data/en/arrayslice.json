@@ -2,6 +2,7 @@
 	"name":"arraySlice",
 	"type":"function",
 	"syntax":"arraySlice(array, offset, length)",
+	"member":"someArray.slice(offset, length)",
 	"returns":"array",
 	"related":["ArrayFind","ArrayFindNoCase","ArrayMap","ArrayReduce","ArrayResize","ArraySort","ArraySwap","ArrayToList"],
 	"description":"Returns a new array, from the start position up to the count of elements.",

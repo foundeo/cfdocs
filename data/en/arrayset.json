@@ -2,6 +2,7 @@
 	"name":"arraySet",
 	"type":"function",
 	"syntax":"arraySet(array, start_pos, end_pos, value)",
+	"member":"someArray.set(start_pos, end_pos, value)",
 	"returns":"boolean",
 	"related":[],
 	"description":" In a one-dimensional array, sets the elements in a specified\n index range to a value. Useful for initializing an array after\n a call to ArrayNew.",
@@ -15,7 +16,6 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayset.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayset.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arrayset"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayset"}
 	},
 	"links": [

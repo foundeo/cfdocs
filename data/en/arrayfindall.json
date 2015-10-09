@@ -2,8 +2,9 @@
 	"name":"arrayFindAll",
 	"type":"function",
 	"syntax":"arrayFindAll(array, object or closure)",
+	"member":"someArray.findAll(object or closure)",
 	"returns":"array",
-	"related":["arrayFind"],
+	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
 	"description":"Searches an array for all positions of a specified object. The function searches for simple objects such as strings and numbers or for complex objects such as structures. When the second parameter is a simple object, string searches are case-sensitive",
 	"params": [
 		{"name":"array","description":"The source array to search through","required":true,"default":"","type":"Array","values":[]},

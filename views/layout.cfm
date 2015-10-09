@@ -16,6 +16,8 @@
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
+  <cfset listCategories = listSort(StructKeyList(application.categories),"text")>
+  <cfset listGuides = listSort(StructKeyList(application.guides),"text")>
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -33,7 +35,7 @@
           <ul class="dropdown-menu">
             <li><a href="#linkTo('tags')#">All Tags</a></li>
             <li class="divider"></li>
-            <cfloop list="#StructKeyList(application.categories)#" index="cat">
+            <cfloop list="#listCategories#" index="cat">
               <cfif cat contains "-tags">
                 <li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li>
               </cfif>
@@ -45,7 +47,7 @@
           <ul class="dropdown-menu">
             <li><a href="#linkTo('functions')#">All Functions</a></li>
             <li class="divider"></li>
-            <cfloop list="#StructKeyList(application.categories)#" index="cat">
+            <cfloop list="#listCategories#" index="cat">
               <cfif cat contains "-functions">
                 <li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li>
               </cfif>
@@ -56,6 +58,9 @@
             <a href="##" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a>
             <ul class="dropdown-menu">
             <li><a href="#linkTo("application-cfc")#">Application.cfc</a></li>
+            <cfloop list="#listGuides#" index="guide">
+                <li><a href="#linkTo(guide)#">#application.guides[guide]#</a></li>
+            </cfloop>
             </ul>
         </li>
         </cfoutput>
@@ -69,7 +74,6 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
-
 
     <cfoutput>#request.content#</cfoutput>
 

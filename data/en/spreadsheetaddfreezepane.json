@@ -1,7 +1,7 @@
 {
-	"name":"spreadSheetAddFreezePane",
+	"name":"spreadsheetAddFreezePane",
 	"type":"function",
-	"syntax":"spreadSheetAddFreezePane(spreadsheetObj, column, row [, endColumn] [, endRow])",
+	"syntax":"spreadsheetAddFreezePane(spreadsheetObj, column, row [, endColumn] [, endRow])",
 	"returns":"void",
 	"related":[],
 	"description":" Adds freeze pane to spreadsheet",

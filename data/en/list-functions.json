@@ -1,6 +1,6 @@
 {
 	"name":"List Functions",
 	"type":"listing",
-	"related":["arraytolist","listappend","listchangedelims","listcontains","listcontainsnocase","listdeleteat","listfind","listfindnocase","listfirst","listgetat","listinsertat","listlast","listlen","listprepend","listqualify","listrest","listsetat","listsort","listtoarray","listvaluecount","listvaluecountnocase","replacelist","valuelist"],
+	"related":["arrayToList","listAppend","listChangeDelims","listContains","listContainsNoCase","listDeleteAt","listFind","listFindNoCase","listFirst","listGetAt","listInsertAt","listLast","listLen","listPrepend","listQualify","listRest","listSetAt","listSort","listToArray","listValueCount","listValueCountNoCase","replaceList","structKeyList","valueList"],
 	"description":"CFML Functions to manipulate lists (delimited strings)"
 }
