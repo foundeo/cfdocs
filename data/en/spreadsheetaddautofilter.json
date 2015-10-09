@@ -1,9 +1,9 @@
-{"syntax":"SpreadSheetAddAutofilter(SpreadsheetObj, autofilter)",
+{"syntax":"spreadsheetAddAutofilter(SpreadsheetObj, autofilter)",
 "description":"A function to add auto filters to the spreadsheet.",
 "engines":{
 	"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetaddautofilter.html","notes":""}
 },
-"name":"SpreadSheetAddAutofilter",
+"name":"spreadsheetAddAutofilter",
 "links":[],
 "params":[
 	{"values":[],"default":"","description":"Excel spreadsheet object","name":"spreadsheetObj","type":"Any","required":"1"},
@@ -12,5 +12,5 @@
 "returns":"void",
 "examples":[],
 "type":"function",
-"related":["SpreadsheetRead","SpreadsheetNew"]
+"related":["spreadsheetRead","spreadsheetNew"]
 }
