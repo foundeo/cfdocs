@@ -1,6 +1,8 @@
 <cfset dataDir = ExpandPath("../data/en")>
+<cfset guideDir = ExpandPath("../guides/en")>
 <cfset tags = []>
 <cfset functions = []>
+<cfset guides = []>
 <cfset all = []>
 <cfset categories = []>
 <cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
@@ -26,11 +28,25 @@
 		</cfcatch>
 	</cftry>
 </cfloop>
+<cfloop array="#directoryList(guideDir, false, "array")#" index="filePath">
+	<cfset nameKey = getFileFromPath(filePath)>
+	<cfif listGetAt(nameKey,2,".") IS "md">
+		<cftry>
+			<cfset nameKey = LCase(Replace(nameKey, ".md", ""))>
+			<cfset arrayAppend(guides, nameKey)>
+		<cfcatch>
+			<cfoutput><h2>Error Parsing File: #filePath#</h2></cfoutput>
+			<cfdump var="#cfcatch#">
+		</cfcatch>
+		</cftry>
+	</cfif>	
+</cfloop>
 <cfset arraySort(tags, "text")>
 <cfset arraySort(functions, "text")>
+<cfset arraySort(guides, "text")>
 <cfset arraySort(categories, "text")>
 <cfset arraySort(all, "text")>
-<cfset index = {"tags"=tags, "functions"=functions,"categories"=categories}>
+<cfset index = {"tags"=tags, "functions"=functions,"categories"=categories, "guides"=guides}>
 <cfset fileWrite(dataDir & "/index.json", prettyJSON(serializeJSON(index)), "utf-8")>
 <p>Wrote index.json</p>
 
@@ -47,10 +63,16 @@
 <p>Wrote functions.json</p>
 
 <cfset aJSON = fileRead(dataDir & "/all.json", "utf-8")>
-<cfset aData = deserializeJSON(fJSON)>
+<cfset aData = deserializeJSON(aJSON)>
 <cfset aData.related = functions>
 <cfset fileWrite(dataDir & "/all.json", prettyJSON(serializeJSON(aData), "utf-8"))>
 <p>Wrote all.json</p>
+
+<cfset gJSON = fileRead(dataDir & "/guides.json", "utf-8")>
+<cfset gData = deserializeJSON(gJSON)>
+<cfset gData.related = guides>
+<cfset fileWrite(dataDir & "/guides.json", prettyJSON(serializeJSON(gData), "utf-8"))>
+<p>Wrote guides.json</p>
 
 <cfset applicationStop()>
 <p>Stopped application so it can reinit</p>
