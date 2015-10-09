@@ -94,11 +94,11 @@
 		<cfargument name="name"  default="#url.name#">
 		<cfset var cat = "">
 		<cfloop list="#StructKeyList(application.categories)#" index="cat">
-			<cfif ArrayContains(application.categories[cat].items, arguments.name)>
+			<cfif cat IS NOT "all" AND arrayFindNoCase(application.categories[cat].items, arguments.name)>
 				<cfreturn cat>
 			</cfif>
 		</cfloop>
-		<cfreturn "">
+		<cfreturn "all">
 	</cffunction>
 
 	<cffunction name="onError">
