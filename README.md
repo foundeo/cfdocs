@@ -16,7 +16,7 @@ This makes the documentation super easy to edit and allows developers to run a l
 
 ## Running CFDocs locally for dev or pleasure
 
-The cfdocs.org site can run locally pretty easily, it doesn't need anything except CF or Lucee to run (no database or anything), it utilizes a .htaccess file for url rewriting, but you could still test things by hitting /doc.cfm?name=getsafehtml if you just want to drop it in a directory somewhere.
+The cfdocs.org site can run locally pretty easily, it doesn't need anything except CF 10+ or Lucee to run (no database or anything), it utilizes a .htaccess file for url rewriting, but you could still test things by hitting /doc.cfm?name=getsafehtml if you just want to drop it in a directory somewhere.
 
 ### Running locally with CommandBox (EASIEST WAY)!
 
