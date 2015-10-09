@@ -1,6 +1,6 @@
 {
 	"name":"String Functions",
 	"type":"listing",
-	"related":["dayOfWeekAsString","find","findNoCase","findOneOf","getProfileString","jsStringFormat","listFind","listFindNoCase","monthAsString","reFind","reFindNoCase","repeatString","replace","replaceList","replaceNoCase","reReplace","reReplaceNoCase","setProfileString","toString"],
+	"related":["asc","binaryDecode","binaryEncode","chr","cJustify","compare","compareNoCase","dayOfWeekAsString","decrypt","encrypt","find","findNoCase","findOneOf","formatBaseN","hash","htmlCodeFormat","htmlEditFormat","insert","javaCast","jsStringFormat","lCase","left","len","lJustify","listFind","listFindNoCase","listValueCount","listValueCountNoCase","lTrim","mid","monthAsString","paragraphFormat","reFind","reFindNoCase","reMatch","reMatchNoCase","removeChars","repeatString","replace","replaceList","replaceNoCase","reReplace","reReplaceNoCase","reverse","right","rJustify","rTrim","spanExcluding","spanIncluding","stripCR","toBase64","toBinary","toString","trim","uCase","URLDecode","URLEncodedFormat","val","wrap","xmlFormat"],
 	"description":"A list of CFML Functions for working with Strings."
 }

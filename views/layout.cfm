@@ -16,6 +16,7 @@
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
+  <cfset listCategories = listSort(StructKeyList(application.categories),"text")>
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -33,7 +34,7 @@
           <ul class="dropdown-menu">
             <li><a href="#linkTo('tags')#">All Tags</a></li>
             <li class="divider"></li>
-            <cfloop list="#StructKeyList(application.categories)#" index="cat">
+            <cfloop list="#listCategories#" index="cat">
               <cfif cat contains "-tags">
                 <li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li>
               </cfif>
@@ -45,7 +46,7 @@
           <ul class="dropdown-menu">
             <li><a href="#linkTo('functions')#">All Functions</a></li>
             <li class="divider"></li>
-            <cfloop list="#StructKeyList(application.categories)#" index="cat">
+            <cfloop list="#listCategories#" index="cat">
               <cfif cat contains "-functions">
                 <li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li>
               </cfif>
@@ -69,7 +70,6 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
-
 
     <cfoutput>#request.content#</cfoutput>
 
