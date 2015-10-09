@@ -1,7 +1,7 @@
 {
-	"name":"lsIsNumeric",
+	"name":"IsNumeric",
 	"type":"function",
-	"syntax":"lsIsNumeric(String)",
+	"syntax":"IsNumeric(String)",
 	"returns":"boolean",
 	"related":[],
 	"description":" Determines whether a string is a valid representation of a\n number in the current locale.",
