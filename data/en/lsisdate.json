@@ -1,7 +1,7 @@
 {
-	"name":"lsIsDate",
+	"name":"IsDate",
 	"type":"function",
-	"syntax":"lsIsDate(String)",
+	"syntax":"lsDate(String)",
 	"returns":"boolean",
 	"related":[],
 	"description":" Determines whether a string is a valid representation of a\n date/time value in the current locale.",
