@@ -19,17 +19,21 @@
 				<cfset application.categories[local.cat].items = local.catData.related>
 			</cfloop>
 			<cfset application.guides = {}>
-				<cfloop array="#application.index.guides#" index="local.guide">
-					<cfset local.fileObj = fileOpen(ExpandPath("./guides/en/#local.guide#.md"),"read")>
-					<cfset local.title = fileReadLine(local.fileObj)>
+			<cfloop array="#application.index.guides#" index="local.guide">
+				<cfset local.fileObj = fileOpen(ExpandPath("./guides/en/#local.guide#.md"),"read")>
+				<cfset local.title = fileReadLine(local.fileObj)>
+				<cfset fileClose(local.fileObj)>
+				<cfif Left(local.title, 1) IS "##"> 
 					<cfset local.title = Replace(local.title, "## ", "")>
-					<cfset fileClose(local.fileObj)>
-					<cfset application.guides[local.guide] = local.title>
+				<cfelse>
+					<cfset local.title = local.guide>
+				</cfif>
+				<cfset application.guides[local.guide] = local.title>
 			</cfloop>
 			<cftry>
 				<cfset application.txtmark = createObject("java", "com.github.rjeschke.txtmark.Processor")>
 				<cfcatch type="any">
-					<cfset showError = "<script>alert('txtMark library required to view Guide pages, please install the jar file in the lib directory.');</script>">
+					<cfthrow message="Error loading txtmark - you might need to restart CF: #cfcatch.message#" detail="#cfcatch.detail#">
 				</cfcatch>
 			</cftry>			
 		</cfif>
@@ -51,7 +55,7 @@
 
 	<cffunction name="linkTo" output="false">
 		<cfargument name="name">
-		<cfreturn "/" & URLEncodedFormat(arguments.name)>
+		<cfreturn "/" & URLEncodedFormat(LCase(arguments.name))>
 	</cffunction>
 
 	<cffunction name="autoLink" output="false">
@@ -90,11 +94,11 @@
 		<cfargument name="name"  default="#url.name#">
 		<cfset var cat = "">
 		<cfloop list="#StructKeyList(application.categories)#" index="cat">
-			<cfif ArrayContains(application.categories[cat].items, arguments.name)>
+			<cfif cat IS NOT "all" AND arrayFindNoCase(application.categories[cat].items, arguments.name)>
 				<cfreturn cat>
 			</cfif>
 		</cfloop>
-		<cfreturn "">
+		<cfreturn "all">
 	</cffunction>
 
 	<cffunction name="onError">
