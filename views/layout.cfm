@@ -87,18 +87,21 @@
     </div> <!-- /container -->
 
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	 <script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js"></script>
     <cfoutput><script src="#request.assetBaseURL#script.js"></script></cfoutput>
-    <cfif IsDefined("data") AND IsStruct(data) AND StructKeyExists(data, "type") AND StructKeyExists(data, "name")>
-    	<cfoutput>
-    	<a href="https://github.com/foundeo/cfdocs/tree/master/data/en/#LCase(data.name)#.json" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-white@2x.png" alt="Fork me on GitHub"></a>
-    	</cfoutput>
+    <cfif structKeyExists(url,"name") AND FileExists(ExpandPath("./guides/en/#url.name#.md"))>
+        <cfset gitFilePath = "/tree/master/guides/en/#LCase(url.name)#.md">
+    <cfelseif structKeyExists(url,"name") AND FileExists(ExpandPath("./data/en/#url.name#.json"))>
+        <cfset gitFilePath = "/tree/master/data/en/#LCase(url.name)#.json">
     <cfelse>
-    	<a href="https://github.com/foundeo/cfdocs" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-white@2x.png" alt="Fork me on GitHub"></a>
+        <cfset gitFilePath = "">
     </cfif>
-
+    <cfoutput>
+    	<a href="https://github.com/foundeo/cfdocs#gitFilePath#" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-white@2x.png" alt="Fork me on GitHub"></a>
+    </cfoutput>
+<cfabort>
   </body>
 </html>
 </cfif>
