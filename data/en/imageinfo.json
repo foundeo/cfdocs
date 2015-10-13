@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Get Image Info",
+			"description":"Uses the imageRead function to read an image from a url.",
+			"code":"<cfset img = imageRead(\"http://lorempixel.com/10/20/\")>\n<cfset imgInfo = imageInfo(img)>\n<cfoutput>Image is #imgInfo.height#px high and #imgInfo.width#px wide.</cfoutput>",
+			"result":"Image is 20px high and 10px wide."
+		}
 	]
 
 }
