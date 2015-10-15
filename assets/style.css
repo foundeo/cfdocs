@@ -2,7 +2,10 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
-h2 .item-name { font-weight:bold; }
+h1,h4 { font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
+
+
+h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
 .p-name { font-weight:bold; font-size:larger;}
 .listing { display:inline; margin: 8px; line-height:60px;}
 #syntax { font-weight:bold; }
