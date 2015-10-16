@@ -1,11 +1,11 @@
 {
     "name":"listRemoveDuplicates",
-    "type":"tag",
+    "type":"function",
     "syntax":"listRemoveDuplicates(list[, delimiter] [, ignoreCase])",
-    "returns":"list",
+    "returns":"string",
     "description":"Removes duplicate values (if they exist) in a list.",
     "params": [
-        {"name":"list","description":"Required. List of objects.","required":true,"type":"string"},
+        {"name":"list","description":"Required. List of objects.","required":true,"type":"string", "default":""},
         {"name":"delimiter","description":"Optional. Character(s) that separate list elements. The default value is comma.","required":false,"default":",","type":"string"},
         {"name":"ignoreCase","description":"Optional. If true, ignores the case of strings in the list. By default the value is set to false.","required":false,"default":false,"type":"boolean"}
     ],
@@ -18,22 +18,13 @@
         {
             "title": "Basic usage (case sensitive)",
             "description": "Basic usage. Optional arguments left as defaults.",
-            "code": "<cfscript>
-myList = "one,two,three,four,five,one,five,three" 
-newList = listremoveduplicates(myList); 
-//default delimeter is "," 
-//newList contains "one,two,three,four,five" 
-</cfscript>",
+            "code": "listRemoveDuplicates(\"one,two,three,four,five,one,five,three\")",
             "result": "one,two,three,four,five"
         },
         {
             "title": "Optional arguments usage (ignore case = true)",
             "description": "Optional arguments being set. Ignore case set to true",
-            "code": "<cfscript> 
-myList = "one,two,three,four,five,ONE,TWO,THREE" 
-newList = listremoveduplicates(myList, ",", true); 
-//newList contains "one,two,three,four,five" 
-</cfscript>",
+            "code": "listRemoveDuplicates(\"one,two,three,four,five,ONE,TWO,THREE\", \",\", true)",
             "result": "one,two,three,four,five"
         }
     ]
