@@ -6,6 +6,7 @@
 	<cftry>
 		<!--- convert md to HTML --->
 		<cfset data = application.txtmark.process(createObject("java", "java.io.File").init(ExpandPath("./guides/en/#url.name#.md")), "utf-8")>
+		<cfset request.gitFilePath = "/tree/master/guides/en/" & url.name & ".json">
 		<cfcatch>
 			<cfset data = "Error processing markdown: #encodeForHTML(cfcatch.message)# #encodeForHTML(cfcatch.detail)#">
 			<cfset data &= "Make sure you have installed the textMark jar file in the lib directory used to process the markup files.">
@@ -14,6 +15,7 @@
 	</cftry>
 <cfelseif FileExists(ExpandPath("./data/en/#url.name#.json"))>
 	<cfset data = DeserializeJSON( FileRead(ExpandPath("./data/en/#url.name#.json")))>
+	<cfset request.gitFilePath = "/tree/master/data/en/" & url.name & ".json">
 <cfelse>
 	<cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9._-]", "", "ALL")>
 	<cfset possible = []>

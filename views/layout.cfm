@@ -91,15 +91,9 @@
 	 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	 <script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js"></script>
     <cfoutput><script src="#request.assetBaseURL#script.js"></script></cfoutput>
-    <cfif structKeyExists(url,"name") AND FileExists(ExpandPath("./guides/en/#url.name#.md"))>
-        <cfset gitFilePath = "/tree/master/guides/en/#LCase(url.name)#.md">
-    <cfelseif structKeyExists(url,"name") AND FileExists(ExpandPath("./data/en/#url.name#.json"))>
-        <cfset gitFilePath = "/tree/master/data/en/#LCase(url.name)#.json">
-    <cfelse>
-        <cfset gitFilePath = "">
-    </cfif>
+    <cfparam name="request.gitFilePath" default="/">
     <cfoutput>
-    	<a href="https://github.com/foundeo/cfdocs#gitFilePath#" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-white@2x.png" alt="Fork me on GitHub"></a>
+    	<a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-white@2x.png" alt="Fork me on GitHub"></a>
     </cfoutput>
 <cfabort>
   </body>
