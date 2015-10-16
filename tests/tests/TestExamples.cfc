@@ -22,6 +22,14 @@ component extends="testbox.system.BaseSpec" {
 											actualResult = "EXCEPTION: #ex.message#";
 										}
 										
+										//workaround bug: listRemoveDuplicates adds trailing comma in lucee
+										//https://luceeserver.atlassian.net/browse/LDEV-387
+										if (json.name == "listRemoveDuplicates" && server.keyExists("lucee")) {
+											if (right(actualResult, 1) == ",") {
+												e.result = e.result & ",";
+											}
+										}
+
 										expect(actualResult).toBe(e.result, "#fileName# example result is:#e.result# but evaluated to:#actualResult#");
 									}
 								}
