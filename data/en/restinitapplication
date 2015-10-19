@@ -8,7 +8,7 @@
 	"params": [
 		  {"name":"dirPath","description":"The path to a folder of CFCs to scan. Should be a full file system path","required":true,"default":"","type":"String","values":[]},
 		  {"name":"serviceMapping","description":"The root of the exposed API, minus the server-wide prefix. E.g. to expose at '/rest/api/' you should set this to 'api'.","required":true,"default":"","type":"String","values":[]},
-		  {"name":"default","description":"If the mapping is a default mapping set this to true (Lucee only)","required":false,"default":"","type":"String","values":[]}
+		  {"name":"default","description":"If the mapping is a default mapping set this to true (Lucee only)","required":false,"default":"","type":"String","values":[]},
 		  {"name":"password","description":"The password for the web admin (Lucee only)","required":true,"default":"","type":"String","values":[]}
 		],
 	"engines": {
@@ -20,7 +20,7 @@
 		{
 			"title":"Recreate the CFCs available at /rest/api (Lucee)",
 			"description":"",
-			"code":"restInitApplication( dirPath=expandPath('./cfcs/api/'),serviceMapping="api",password='password' )"
+			"code":"restInitApplication( dirPath=expandPath('./cfcs/api/'),serviceMapping='api',password='password' )"
 		}
 	]
 }
