@@ -30,12 +30,7 @@
 				</cfif>
 				<cfset application.guides[local.guide] = local.title>
 			</cfloop>
-			<cftry>
-				<cfset application.txtmark = createObject("java", "com.github.rjeschke.txtmark.Processor")>
-				<cfcatch type="any">
-					<cfthrow message="Error loading txtmark - you might need to restart CF: #cfcatch.message#" detail="#cfcatch.detail#">
-				</cfcatch>
-			</cftry>			
+			
 		</cfif>
 		<cfset request.content = "">
 		<!--- cache for one day --->

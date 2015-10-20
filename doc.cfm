@@ -5,7 +5,8 @@
 <cfelseif FileExists(ExpandPath("./guides/en/#url.name#.md"))>
 	<cftry>
 		<!--- convert md to HTML --->
-		<cfset data = application.txtmark.process(createObject("java", "java.io.File").init(ExpandPath("./guides/en/#url.name#.md")), "utf-8")>
+		<cfset txtmark = createObject("java", "com.github.rjeschke.txtmark.Processor")>
+		<cfset data = txtmark.process(createObject("java", "java.io.File").init(ExpandPath("./guides/en/#url.name#.md")), "utf-8")>
 		<cfset request.gitFilePath = "/tree/master/guides/en/" & url.name & ".json">
 		<cfcatch>
 			<cfset data = "Error processing markdown: #encodeForHTML(cfcatch.message)# #encodeForHTML(cfcatch.detail)#">

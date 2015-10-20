@@ -3,7 +3,7 @@ body {
   padding-bottom: 20px;
 }
 h1,h4 { font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
-
+h2 { border-bottom:1px solid #f1f1f1; padding-bottom: 12px; }
 
 h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
 .p-name { font-weight:bold; font-size:larger;}
