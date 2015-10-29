@@ -9,8 +9,8 @@
 	"links":[],
 	"params":[
 		{"values":[],"default":"","description":"SQL string to execute.","name":"sql","type":"String","required":"1"},
-		{"values":["cfsqltype","list"],"default":"","description":"Array or Struct of parameter values. When passing an array use ? as place holders. When passing a struct use :keyName where keyName is the name of the key in the structure corresponding to the parameter. The struct or array can be a struct with keys such as the following.","name":"queryParams","type":"Any","required":"0"},
-		{"values":["datasource","cachename","dbtype"],"default":"","description":"Struct containing query options, all cfquery tag attributes are supported except the name attribute.","name":"queryOptions","type":"Struct","required":"0"}
+		{"values":["cfsqltype","list"],"default":"","description":"Array or Struct of parameter values. When passing an array use ? as place holders. When passing a struct use :keyName where keyName is the name of the key in the structure corresponding to the parameter. The struct or array can be a struct with keys such as the following.","name":"params","type":"Any","required":"0"},
+		{"values":["datasource","cachename","dbtype"],"default":"","description":"Struct containing query options, all cfquery tag attributes are supported except the name attribute.","name":"options","type":"Struct","required":"0"}
 	],
 	"returns":"Query",
 	"examples":[
