@@ -18,6 +18,25 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+				"title":"Simple listRest Example",
+				"description":"A very basic listRest example",
+				"code" : "listRest(\"one,two,three,four\");",
+				"result":"two,three,four"
+		},
+		{
+				"title":"Combining listRest to Shorten the List",
+				"description":"Nesting listRest shortens the list by one each time with the first element removed.",
+				"code" : "listRest(listRest(\"one,two,three,four\"));",
+				"result":"three,four"
+		},
+		{
+				"title":"Traversing a List with listRest and listFirst",
+				"description":"Nesting list functions lets you move through the list in pieces.",
+				"code" : "listFirst(listRest(listRest(\"one,two,three,four\")));",
+				"result":"three"
+		}
 	]
-
 }

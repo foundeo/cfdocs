@@ -18,6 +18,19 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+				"title":"Simple listFirst Example",
+				"description":"A very basic listFirst example",
+				"code" : "listFirst(\"one,two,three,four\");",
+				"result":"one"
+		},
+		{
+				"title":"Traversing a List with listFirst and listRest",
+				"description":"Nesting list functions lets you move through the list in pieces.",
+				"code" : "listFirst(listRest(listRest(\"one,two,three,four\")));",
+				"result":"three"
+		}
 	]
-
 }
