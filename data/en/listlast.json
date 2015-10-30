@@ -18,6 +18,13 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+				"title":"Simple listLast Example",
+				"description":"A very basic listLast example",
+				"code" : "listLast(\"one,two,three,four\");",
+				"result":"four"
+		}
 	]
-
 }
