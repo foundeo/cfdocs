@@ -4,7 +4,7 @@
 	"syntax":"getDirectoryFromPath(path)",
 	"returns":"String",
 	"related":[],
-	"description":" Extracts a directory from an absolute path.\n Returns the absolute path, without the filename.",
+	"description":"Extracts a directory from an absolute path. Returns the absolute path with a trailing slash and omits the filename.",
 	"params": [
 		{"name":"path","description":"","required":true,"default":"","type":"String","values":[]}
 
