@@ -24,7 +24,7 @@
 		{
 			"title":"Append options to config struct",
 			"description":"",
-			"code":"config = {a:0,b:0};\noptions={b:1,c:1};\nstructAppend(config,options, true);\nwriteOutput( serializeJSON( config ) );",
+			"code":"config = {a:0, b:0};\noptions= {b:1, c:1};\nstructAppend(config, options, true);\nwriteOutput( serializeJSON( config ) );",
 			"result":"{\"A\":0,\"B\":1,\"C\":1}"
 		}
 	]
