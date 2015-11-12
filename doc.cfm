@@ -7,7 +7,7 @@
 		<!--- convert md to HTML --->
 		<cfset txtmark = createObject("java", "com.github.rjeschke.txtmark.Processor")>
 		<cfset data = txtmark.process(createObject("java", "java.io.File").init(ExpandPath("./guides/en/#url.name#.md")), "utf-8")>
-		<cfset request.gitFilePath = "/tree/master/guides/en/" & url.name & ".json">
+		<cfset request.gitFilePath = "/tree/master/guides/en/" & url.name & ".md">
 		<cfcatch>
 			<cfset data = "Error processing markdown: #encodeForHTML(cfcatch.message)# #encodeForHTML(cfcatch.detail)#">
 			<cfset data &= "Make sure you have installed the textMark jar file in the lib directory used to process the markup files.">
