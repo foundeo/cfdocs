@@ -1,0 +1,15 @@
+language: java
+sudo: false
+jdk:
+- oraclejdk8
+before_install:
+- mkdir /tmp/bin
+- export PATH=$PATH:/tmp/bin
+install:
+- curl --location 'https://www.ortussolutions.com/parent/download/commandbox/type/bin' -o /tmp/box.zip
+- unzip /tmp/box.zip -d /tmp/bin
+- /tmp/bin/box install
+before_script:
+- chmod +x test.sh
+script:
+- "./test.sh"

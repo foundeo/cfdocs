@@ -1,7 +1,7 @@
 {
-	"name":"rereplaceNoCase",
+	"name":"reReplaceNoCase",
 	"type":"function",
-	"syntax":"rereplaceNoCase(String, reg_expression, substring [, scope])",
+	"syntax":"reReplaceNoCase(String, reg_expression, substring [, scope])",
 	"returns":"String",
 	"related":[],
 	"description":" Uses a regular expression to search a string for a string\n pattern and replace it with another. The search is\n case-insensitive.",
@@ -13,12 +13,26 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/rereplacenocase"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/rereplacenocase"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/rereplacenocase.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/rereplacenocase.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/rereplacenocase"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Strip Characters Using ReReplace",
+			"description": "This example strips out all characters except a-z and 0-9.",
+			"code": "reReplaceNoCase(\"test 123!\", \"[^a-z0-9]\", \"\", \"ALL\")",
+			"result": "test123"
+		},
+		{
+			"title": "Extract Characters Using Back Reference",
+			"description": "Uses a back reference: \\1 to extract the pattern contained within the parenthesis.",
+			"code": "reReplaceNoCase(\"123abc456\", \"[0-9]+([a-z]+)[0-9]+\", \"\\1\")",
+			"result": "abc"
+		}
 	]
 
 }

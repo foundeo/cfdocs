@@ -4,7 +4,8 @@
 	"syntax":"<cfpod>",
 	"returns":"",
 	"related":[],
-	"description":" Creates a pod, an area of the browser window or layout \n area with an optional title bar and body that contains \n display elements.",
+	"description":"Creates a pod, an area of the browser window or layout \n area with an optional title bar and body that contains \n display elements.",
+	"discouraged":"The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html",
 	"params": [
 		{"name":"bodyStyle","description":"A CSS style specification for the pod body. As a \n general rule, use this attribute to set color and \n font styles. Using this attribute to set the height \n and width, for example, can result in distorted output.","required":false,"default":"","type":"String","values":[]},
 		{"name":"headerStyle","description":"A CSS style specification for the pod header. As a \n general rule, use this attribute to set color and font \n styles. Using this attribute to set the height and width, \n for example, can result in distorted output.","required":false,"default":"","type":"String","values":[]},
@@ -18,12 +19,17 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfpod"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpod.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/pod.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfpod"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfpod"}
 	},
 	"links": [
-
+		{
+			"title": "ColdFusion UI - The Right Way: CFPod",
+			"description": "Shows how to use CSS instead of cfpod.",
+			"url": "http://static.raymondcamden.com/cfuitherightway/cfpod/index.html"
+		}
 	]
 
 }

@@ -9,7 +9,8 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/sessioninvalidate"},
+		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/sessioninvalidate.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/sessioninvalidate.html"},
 		"railo": {"minimum_version":"4", "notes":"", "docs":"http://railodocs.org/index.cfm/function/sessioninvalidate"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/sessioninvalidate"}
 	},

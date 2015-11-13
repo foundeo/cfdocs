@@ -1,1 +1,17 @@
-{"syntax":"SpreadSheetAddPagebreaks(SpreadsheetObj, rowbreaks, colbreaks)","description":"A function to add page breaks for rows and columns to a Spreadsheet Object.","engines":{"coldfusion":{"minimum_version":"11","docs":"https:\/\/wikidocs.adobe.com\/wiki\/display\/coldfusionen\/SpreadSheetAddPagebreaks","notes":""}},"name":"SpreadSheetAddPagebreaks","links":[],"params":[{"values":[],"default":"","description":"Excel spreadsheet object to apply page break to.","name":"SpreadsheetObj","type":"Any","required":"1"},{"values":[],"default":"","description":"Comma-delimited row numbers where the page breaks will be applied.","name":"rowbreaks","type":"String","required":"1"},{"values":[],"default":"","description":"Comma-delimited column numbers where the page breaks will be applied.","name":"colbreaks","type":"String","required":"1"}],"returns":"void","examples":[],"type":"function","related":["SpreadsheetNew","SpreadsheetRead"]}
+{"syntax":"SpreadSheetAddPagebreaks(SpreadsheetObj, rowbreaks, colbreaks)",
+"description":"A function to add page breaks for rows and columns to a Spreadsheet Object.",
+"engines":{
+	"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetaddpagebreaks.html","notes":""}
+},
+"name":"SpreadSheetAddPagebreaks",
+"links":[],
+"params":[
+	{"values":[],"default":"","description":"Excel spreadsheet object to apply page break to.","name":"SpreadsheetObj","type":"Any","required":"1"},
+	{"values":[],"default":"","description":"Comma-delimited row numbers where the page breaks will be applied.","name":"rowbreaks","type":"String","required":"1"},
+	{"values":[],"default":"","description":"Comma-delimited column numbers where the page breaks will be applied.","name":"colbreaks","type":"String","required":"1"}
+],
+"returns":"void",
+"examples":[],
+"type":"function",
+"related":["SpreadsheetNew","SpreadsheetRead"]
+}

@@ -1,0 +1,37 @@
+{
+	"name":"encodeForHTML",
+	"type":"function",
+	"syntax":"encodeForHTML(inputString [, canonicalize])",
+	"returns":"String",
+	"related":["htmleditformat", "encodeforhtmlattribute"],
+	"description":"Encodes the inputString for safe output in the body of a HTML tag. The encoding in meant to mitigate Cross Site Scripting (XSS) attacks. This function can provide more protection from XSS than the HTMLEditFormat or XMLFormat functions do.",
+	"params": [
+		{"name":"inputString","description":"A string to encode","required":true,"default":"","type":"String","values":[]},
+		{"name":"canonicalize","description":"When true runs the canonicalize function against the input before encoding. This argument is not supported on Lucee.","required":false,"default":"","type":"Boolean","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/encodeforhtml.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/encodeforhtml.html"}
+	},
+	"links": [
+        {
+            "title":"How to call encodeFor functions in CF8 and CF9",
+            "description":"Fully patched CF8 and CF9 servers include the OWASP ESAPI encoder jar.",
+            "url":"https://www.petefreitag.com/item/788.cfm"
+        },
+        {
+            "title":"OWASP Cross Site Scripting Guide",
+            "description":"Learn more about XSS",
+            "url":"https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)"
+        }
+	],
+	"examples": [
+		{
+			"title": "Simple EncodeForHTML Example",
+			"description": "Pass in a tag and HTML encode the result.",
+			"code": "encodeForHTML(\"<test>\")",
+			"result": "&lt;test&gt;"
+		}
+	]
+
+}

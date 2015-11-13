@@ -12,8 +12,8 @@
 		{"name":"nameConflict","description":"Action to take if file has the same name of a file in the directory.","required":false,"default":"","type":"String","values":["Error","Skip","Overwrite","MakeUnique"]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"9.0.1", "notes":"", "docs":"https://wikidocs.adobe.com/wiki/display/coldfusionen/FileUpload"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/fileupload/"},
+		"coldfusion": {"minimum_version":"9.0.1", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileupload.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/fileupload.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/fileUpload"}
 	},
 	"links": [

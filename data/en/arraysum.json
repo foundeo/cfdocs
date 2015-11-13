@@ -2,6 +2,7 @@
 	"name":"arraySum",
 	"type":"function",
 	"syntax":"arraySum(array)",
+	"member":"someArray.sum()",
 	"returns":"Numeric",
 	"related":[],
 	"description":" The sum of values in an array. If the array parameter value is\n an empty array, returns zero.",
@@ -10,8 +11,8 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/arraysum"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arraysum"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraysum.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arraysum.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraysum"}
 	},
 	"links": [

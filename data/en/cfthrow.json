@@ -2,6 +2,7 @@
 	"name":"cfthrow",
 	"type":"tag",
 	"syntax":"<cfthrow>",
+	"script":"throw(message=\"\");",
 	"returns":"",
 	"related":[],
 	"description":" Throws a developer-specified exception, which can be caught\n with a cfcatch tag that has any of the following type attribute\n options:\n type = \"custom_type\"\n type = \"Application\"\n type = \"Any\"",
@@ -15,12 +16,21 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfthrow"},
+		"coldfusion": {"minimum_version":"", "notes":"CF9+ throw added to cfscript.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cfthrow.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/throw.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfthrow"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfthrow"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Script Example: Try, Throw, Catch, Finally!",
+			"description":"Throw and Finally requires CF9+ in cfscript",
+			"code":"try {\n    throw(message=\"Oops\", detail=\"xyz\"); //CF9+\n} catch (any e) {\n    writeOutput(\"Error: \" & e.message);\n} finally { //CF9+\n    writeOutput(\"I run even if no error\");\n}",
+			"result":"Error: OopsI run even if no error"
+		}
 	]
 
 }

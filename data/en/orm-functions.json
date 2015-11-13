@@ -1,6 +1,6 @@
 {
 	"name":"ORM Functions",
 	"type":"listing",
-	"related":["decimalformat","dollarformat","entitydelete","entityload","entityload","entityloadbyexample","entityloadbypk","entitymerge","entitynew","entityreload","entitysave","entitytoquery","formatbasen","getreadableimageformats","getwriteableimageformats","htmlcodeformat","htmleditformat","jsstringformat","lscurrencyformat","lseurocurrencyformat","lsnumberformat","numberformat","ormclearsession","ormclosesession","ormevictcollection","ormevictentity","ormevictqueries","ormexecutequery","ormflush","ormgetsession","ormgetsessionfactory","ormreload","paragraphformat","urlencodedformat","urlsessionformat","xmlformat","xmltransform","yesnoformat"],
-	"description":"A listing of CFML ORM Functions."
+	"related":["entityDelete","entityLoad","entityLoadByExample","entityLoadByPK","entityMerge","entityNew","entityReload","entitySave","entityToQuery","ormClearSession","ormCloseSession","ormEvictCollection","ormEvictEntity","ormEvictQueries","ormExecuteQuery","ormFlush","ormGetSession","ormGetSessionFactory","ormReload"],
+	"description":"A listing of CFML ORM / Hibernate Functions."
 }

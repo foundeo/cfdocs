@@ -2,14 +2,16 @@
 	"name":"arrayContainsNoCase",
 	"type":"function",
 	"syntax":"arrayContainsNoCase(array, object)",
+	"member":"someArray.containsNoCase(object)",
 	"returns":"numeric",
-	"related":["arrayContains"],
+	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
 	"description":"Used to determine if an object is in the given array, case insensitive.  Railo returns the numeric index if the object is found, 0 if not.  OpenBD returns a boolean.  Adobe CF does not implement this function.",
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
 		{"name":"object","description":"","required":true,"default":"","type":"Any","values":[]}
 	],
 	"engines": {
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arraycontainsnocase.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://www.railodocs.org/index.cfm/function/arraycontainsnocase"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraycontainsnocase"}
 	},

@@ -1,13 +1,14 @@
 {
 	"name":"cfquery",
 	"type":"tag",
-	"syntax":"<cfquery>",
+	"syntax":"<cfquery>SQL</cfquery>",
+	"script":"queryExecute(sql, params, options);",
 	"returns":"",
-	"related":["cfqueryparam"],
+	"related":["cfqueryparam", "queryExecute"],
 	"description":" Passes queries or SQL statements to a data source.\n It is recommended that you use the cfqueryparam tag within\n every cfquery tag, to help secure your databases from\n unauthorized users",
 	"params": [
 		{"name":"name","description":"Name of query. Used in page to reference query record set.\n Must begin with a letter. Can include letters, numbers,\n and underscores.","required":false,"default":"","type":"String","values":[]},
-		{"name":"datasource","description":"Name of data source from which query gets data.","required":false,"default":"","type":"String","values":[]},
+		{"name":"datasource","description":"Name of data source from which query gets data. As of CF9+ you can specify a default datasource in Application.cfc using the variable this.datasource","required":false,"default":"","type":"String","values":[]},
 		{"name":"dbtype","description":"query. Use this value to specify the results of a query as\n input.","required":false,"default":"","type":"String","values":[]},
 		{"name":"username","description":"Overrides username in data source setup.","required":false,"default":"","type":"String","values":[]},
 		{"name":"password","description":"Overrides password in data source setup.","required":false,"default":"","type":"String","values":[]},
@@ -17,16 +18,26 @@
 		{"name":"cachedafter","description":"Date value (for example, April 16, 1999, 4-16-99). If date\n of original query is after this date, CFML uses\n cached query data. To use cached data, current query must\n use same SQL statement, data source, query name, user name,\n password.\n\n A date\/time object is in the range 100 AD-9999 AD.\n\n When specifying a date value as a string, you must enclose\n it in quotation marks.","required":false,"default":"","type":"DateTime","values":[]},
 		{"name":"cachedwithin","description":"Timespan, using the CreateTimeSpan function. If original\n query date falls within the time span, cached query data is\n used. CreateTimeSpan defines a period from the present,\n back. Takes effect only if query caching is enabled in the\n Administrator.\n\n To use cached data, the current query must use the same SQL\n statement, data source, query name, user name, and password.","required":false,"default":"","type":"Timespan","values":[]},
 		{"name":"debug","description":"Yes: If debugging is enabled, but the Administrator\n Database Activity option is not enabled, displays SQL\n submitted to datasource and number of records returned\n by query.\n No: If the Administrator Database Activity option is\n enabled, suppresses display.","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"result","description":"Specifies a name for the structure in which cfquery returns\n the result variables.\n * SQL: The SQL statement that was executed. (string)\n * Cached: If the query was cached. (boolean)\n * SqlParameters: An ordered Array of cfqueryparam values. (array)\n * RecordCount: Total number of records in the query. (numeric)\n * ColumnList: Column list, comma seperated. (numeric)\n * ExecutionTime: Execution time for the SQL request. (numeric)","required":false,"default":"","type":"String","values":[]}
+		{"name":"result","description":"CF8+ Specifies a name for the structure in which cfquery returns\n the result variables.\n * SQL: The SQL statement that was executed. (string)\n * Cached: If the query was cached. (boolean)\n * SqlParameters: An ordered Array of cfqueryparam values. (array)\n * RecordCount: Total number of records in the query. (numeric)\n * ColumnList: Column list, comma seperated. (numeric)\n * ExecutionTime: Execution time for the SQL request. (numeric)\n * GENERATEDKEY: CF9+ If the query was an INSERT with an identity or autoincrement value the value of that ID is placed in this variable.","required":false,"default":"","type":"String","values":[]},
+		{"name":"ormoptions","description":"CF9+ A structure of ORM Options when used for HQL queries (9.0.1+). ","required":false,"default":"","type":"Struct","values":[]},
+		{"name":"cacheID","description":"CF10+ A value to serve as cache identifier when cachedWithin or cachedAfter are specified.","required":false,"default":"","type":"String","values":[]},
+		{"name":"cacheRegion","description":"CF10+ The name of the region  cachedWithin or cachedAfter are specified.","required":false,"default":"","type":"String","values":[]},
+		{"name":"clientInfo","description":"CF10+ A structure containing properties to be set on the database connection.","required":false,"default":"","type":"Struct","values":[]},
+		{"name":"fetchClientInfo","description":"CF10+ When true returns a struct with the clientInfo argument value passed by the last query","required":false,"default":"false","type":"Boolean","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfquery"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfquery.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/query.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfquery"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfquery"}
 	},
 	"links": [
-
+		{
+			"title":"Adobe Query of Queries User Guide",
+			"url":"https://helpx.adobe.com/coldfusion/developing-applications/accessing-and-using-data/using-query-of-queries/query-of-queries-user-guide.html",
+			"description":"From the Adobe documentation, useful to see what SQL statements are supported."
+		}
 	],
 	"examples": [
 		{
@@ -34,7 +45,27 @@
 			"description": "Shows how to use a cfqueryparam tag within cfquery.",
 			"code": "<cfquery name=\"news\">\n    SELECT id,title,story\n    FROM news\n    WHERE id = <cfqueryparam value=\"#url.id#\" cfsqltype=\"cf_sql_integer\">\n</cfquery>",
 			"result": ""
+		},
+		{
+			"title": "Script Syntax using QueryExecute",
+			"description": "Also see the Tags Implemented as Components section for another method of using <cfquery> in script.",
+			"code": "myQuery = queryExecute(\r\n \"SELECT myCol1, myCol2 FROM myTable \r\n  WHERE myCol1=? \r\n  ORDER BY myCol1 ASC \", \r\n  {myid: 5}, \r\n  {datasource = \"myDSN\"} \r\n );",
+			"result": ""
+		},
+		{
+			"title":"Simple Query of Query Example",
+			"description":"A dummy query is first created from scratch using queryNew, then sorted. A query of query is performed by specifying dbtype=\"query\" and then using a query object variable name as in the FROM statement.",
+			"code":"<!--- create a dummy query using queryNew --->\n<cfset news = queryNew(\"id,title\", \"integer,varchar\")>\n<cfset queryAddRow(news)>\n<cfset querySetCell(news, \"id\", \"1\")>\n<cfset querySetCell(news, \"title\", \"Dewey defeats Truman\")>\n<cfset queryAddRow(news)>\n<cfset querySetCell(news, \"id\", \"2\")>\n<cfset querySetCell(news, \"title\", \"Men walk on Moon\")>\n<cfset writeDump(news)>\n\n<!--- run QofQ (query of query) --->\n<cfquery name=\"sortedNews\" dbtype=\"query\">\n    SELECT id, title FROM news\n    ORDER BY title DESC\n</cfquery>\n<cfset writeDump(sortedNews)>",
+			"result":""
+		},
+		{
+			"title": "Script Syntax using new Query()",
+			"description": "This syntax was implemented by script-based components in CF 9 & 10. It is superceeded by queryExecute() in CF11.",
+			"code": "queryObj = new Query(\r\n name=\"qryDemo\",\r\n datasource=\"mydatasourcename\",\r\n sql = \"SELECT col1, col2\r\n FROM myTable\r\n WHERE id=:id\"\r\n); \r\nqueryObj.addParam(name=\"id\",value=arguments.id, cfsqltype=\"cf_sql_integer\");\r\nresultset=queryObj.execute().getResult();",
+			"result": ""
 		}
+
+
 	]
 
 

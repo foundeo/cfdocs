@@ -1,1 +1,25 @@
-{"syntax":"isSafeHTML(inputString [, PolicyFile, throwOnError])","description":"Checks string against antisamy policy file.","engines":{"coldfusion":{"minimum_version":"11","docs":"https:\/\/wikidocs.adobe.com\/wiki\/display\/coldfusionen\/isSafeHTML","notes":""}},"name":"isSafeHTML","links":[{"title":"AntiSamy OWASP","description":"","url":"https:\/\/www.owasp.org\/index.php\/Category:OWASP_AntiSamy_Project"}],"params":[{"values":[],"default":"","description":"String to be validated","name":"inputString","type":"String","required":"1"},{"values":[],"default":"","description":"File path for custom antisamy policy file. Can be defined in the application scope or if not defined will use Coldfusion server default","name":"PolicyFile","type":"String","required":"0"},{"values":[],"default":"","description":"If true will throw error else empty string will be returned","name":"throwOnError","type":"Boolean","required":"0"}],"returns":"Boolean","examples":[{"result":"","title":"Basic Usage","description":"","code":"<cfscript>\r\nisSafe = isSafeHTML(html);\r\n<\/cfscript>"}],"type":"function","related":["getSafeHTML"]}
+{
+    "name":"isSafeHTML",
+    "syntax":"isSafeHTML(inputString [, PolicyFile, throwOnError])",
+    "returns":"Boolean",
+    "type":"function",
+    "related":["getSafeHTML"],
+    "description":"Checks a HTML string against antisamy policy file to determine if it may be vulnerable to XSS / Cross Site Scripting.",
+    "engines":{
+        "coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/issafehtml.html","notes":""}
+    },
+
+    "links":[
+        {"title":"AntiSamy OWASP","description":"","url":"https:\/\/www.owasp.org\/index.php\/Category:OWASP_AntiSamy_Project"}
+    ],
+    "params":[
+        {"values":[],"default":"","description":"String to be validated","name":"inputString","type":"String","required":"1"},
+        {"values":[],"default":"","description":"File path for custom antisamy policy file. Can be defined in the application scope or if not defined will use Coldfusion server default","name":"PolicyFile","type":"String","required":"0"},
+        {"values":[],"default":"","description":"If true will throw error else empty string will be returned","name":"throwOnError","type":"Boolean","required":"0"}
+    ],
+    "examples":[
+        {"result":"no","title":"Unsafe HTML Example","description":"Example with HTML that causes isSafeHTML to return false.","code":"<cfsavecontent variable=\"html\">\r\n    <div onmouseover=alert(1)>\r\n</cfsavecontent>\r\n<cfoutput>#isSafeHTML(html)#</cfoutput>"},
+        {"result":"yes","title":"Safe HTML Example","description":"Example with HTML that is safe on the default policy.","code":"<cfsavecontent variable=\"html\">\r\n    <a href=\"https://foundeo.com/\" title=\"ColdFusion Consulting &amp; Security\">Foundeo Inc.</a>\r\n</cfsavecontent>\r\n<cfoutput>#isSafeHTML(html)#</cfoutput>"}
+    ]
+
+}

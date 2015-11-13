@@ -1,7 +1,8 @@
 {
-	"name":"arraylen",
+	"name":"arrayLen",
 	"type":"function",
-	"syntax":"arraylen(array)",
+	"syntax":"arrayLen(array)",
+	"member":"someArray.len()",
 	"returns":"Numeric",
 	"related":[],
 	"description":" Determines the number of elements in an array.\n CFML MX: this function can be used on child XML objects.",
@@ -10,8 +11,8 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/arraylen"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arraylen"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraylen.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arraylen.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraylen"}
 	},
 	"links": [

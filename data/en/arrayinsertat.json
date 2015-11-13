@@ -2,8 +2,9 @@
 	"name":"arrayInsertAt",
 	"type":"function",
 	"syntax":"arrayInsertAt(array, position, value)",
+	"member":"someArray.insertAt(position, value)",
 	"returns":"boolean",
-	"related":[],
+	"related":["arrayappend","arrayprepend","arraydelete","arraydeleteat","arrayset"],
 	"description":" Inserts a value at the specified position in the array. If\n the element is inserted before the end of the array, ColdFusion\n shifts the positions of all elements with a higher index to make room.",
 	"params": [
 		{"name":"array","description":"The array which will have the new element inserted.","required":true,"default":"","type":"Array","values":[]},
@@ -12,8 +13,8 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/arrayinsertat"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arrayinsertat"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayinsertat.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayinsertat.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayinsertat"}
 	},
 	"links": [

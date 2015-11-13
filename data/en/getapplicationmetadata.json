@@ -1,0 +1,19 @@
+{
+	"name":"getApplicationMetadata",
+	"type":"function",
+	"syntax":"getApplicationMetadata()",
+	"returns":"Struct",
+	"related":["getApplicationSettings"],
+	"description":"Returns the application settings that you have specified in the application, either in the Application.cfc or Application.cfm. Contains application settings such as name, sessionManagement, or invokeImplicitAccessor.",
+	"params": [
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getapplicationmetadata.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/getapplicationmetadata.html"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/GetApplicationMetaData"}
+	},
+	"links": [
+
+	]
+
+}

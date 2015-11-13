@@ -1,0 +1,18 @@
+{
+	"name":"onRequestStart",
+	"type":"function",
+	"syntax":"function onRequestStart(string targetPage) { return true; }",
+	"returns":"boolean",
+	"related":["application-cfc", "onrequest"],
+	"description":"Defined in Application.cfc, invoked when the request starts before onRequest.",
+	"params": [
+		{"name":"targetPage","description":"Requested template path relative to the webroot","required":true,"default":"","type":"String","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/onRequestStart"}
+	},
+	"links": [
+
+	]
+
+}

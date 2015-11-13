@@ -2,6 +2,7 @@
 	"name":"arrayEvery",
 	"type":"function",
 	"syntax":"arrayEvery(array array, function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
+	"member":"someArray.every(function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
 	"returns":"boolean",
 	"related":["arraySome"],
 	"description":"returns true if every closure returns true, otherwise false",
@@ -12,6 +13,7 @@
 		{"name":"maxThreads","description":"Railo only option, the number of threads to use when parallel = true","required":false,"default":"20","type":"Boolean","values":[]}
 	],
 	"engines": {
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayevery.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://www.railodocs.org/index.cfm/function/arrayevery/"}
 	},
 	"links": [

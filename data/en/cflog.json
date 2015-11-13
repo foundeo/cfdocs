@@ -14,7 +14,8 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cflog"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cflog.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/log.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflog"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflog"}
 	},
@@ -22,7 +23,13 @@
 
 	],
 	"examples":[
-		{"result":"","title":"Log to a file you specify","description":"CFLog will create a file or append to a file named myAppLog.log in the servers logs directory.","code":"<cflog file=\"myAppLog\" text=\"Whatever you want to log.\" type=\"information\" >"}
+		{"result":"","title":"Log to a file you specify","description":"CFLog will create a file or append to a file named myAppLog.log in the servers logs directory.","code":"<cflog file=\"myAppLog\" text=\"Whatever you want to log.\" type=\"information\" >"},
+		
+		{"result":"",
+		"title":"Script Syntax",
+		"description":"",
+		"code":"writeLog(text = \"Logging some info.\", type = \"information\", application = \"no\", file = \"myLogFile\");"
+		}
 	]
 
 }

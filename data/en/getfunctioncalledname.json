@@ -1,0 +1,30 @@
+{
+	"name":"getFunctionCalledName",
+	"type":"function",
+	"syntax":"getFunctionCalledName()",
+	"returns":"String",
+	"related":[],
+	"description":" Returns the name of the variable used to call a defined function. This function can be used to return data from CFCs by simulating getters and setters.",
+	"params": [],
+	"engines": {
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getfunctioncalledname.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/getfunctioncalledname.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "getFunctionCalledName Basic Example",
+			"description": "Show results of calling a function directly versus by reference",
+			"code": "void function actualFunctionName(){\n    writeOutput(\"actualFunctionName() was called as: #getFunctionCalledName()#<br>\");\n}\nwriteOutput(\"<hr><h4>Calling actualFunctionName()</h4>\");\nactualFunctionName();\nwriteOutput(\"<hr><h4>Calling actualFunctionName() via reference</h4>\");\nreferenceToFunction = actualFunctionName;\nreferenceToFunction();",
+			"result": ""
+		},
+		{
+			"title": "Getters and Setters Example",
+			"description": "Example of using getFunctionCalledName to create dynamic getters and setters",
+			"code": "//callednamedemo.cfc\ncomponent\n{\n    variables.x1 = 1;\n    variables.y1 = 2;\n\n    function init() {\n        return this;\n    }\n\n    function get() {\n        var name = getFunctionCalledName();\n        return variables[mid(name,4,len(name)-3)];\n    }\n\n    function set(value) {\n        var name = getFunctionCalledName();\n        variables[mid(name,4,len(name)-3)] = value;\n    }\n\n    this.getX1 = get;\n    this.getY1 = get;\n    this.setX1 = set;\n    this.setY1 = set;\n}\n\n<!--- calledname.cfm --->\n\n<cfscript>\nfunction test() {\n    return getFunctionCalledName();\n}\n\nwriteOutput(test() & \"<br>\"); // test \na = test;\n\nwriteOutput(variables.a() & \"<br>\"); // a \no = new callednamedemo();\n\n// shows *real* methods get(), SetX1() and getY1(), etc. \nwriteDump(o);\no.setX1(10);\no.setY1(20);\n\nwriteOutput(o.getX1() & \"<br>\"); // 10\nwriteOutput(o.getY1() & \"<br>\") ; // 20\n</cfscript>",
+			"result": ""
+		}
+	]
+}

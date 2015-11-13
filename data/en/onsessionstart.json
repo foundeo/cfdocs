@@ -1,0 +1,17 @@
+{
+	"name":"onSessionStart",
+	"type":"function",
+	"syntax":"function onSessionStart() {}",
+	"returns":"void",
+	"related":["application-cfc","sessionrotate","sessioninvalidate"],
+	"description":"Defined in Application.cfc, invoked upon initialization of a session.",
+	"params": [
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/onerror"}
+	},
+	"links": [
+
+	]
+
+}

@@ -1,0 +1,21 @@
+{
+	"name":"fileAppend",
+	"type":"function",
+	"syntax":"fileAppend(file, data [, charset])",
+	"returns":"void",
+	"related":["filewrite"],
+	"description":"Appends the data contents to the file.",
+	"params": [
+		{"name":"filePath","description":"File path","required":true,"default":"","type":"String","values":[]},
+		{"name":"data","description":"Data to append to the file","required":true,"default":"","type":"String","values":[]},
+		{"name":"charset","description":"The character encoding in which the file contents is encoded.","required":false,"default":"","type":"String","values":[]}
+
+	],
+	"engines": {
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/fileappend.html"}
+	},
+	"links": [
+
+	]
+
+}

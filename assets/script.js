@@ -11,6 +11,14 @@ $(document).ready(function() {
   $('#search').submit(submitSearch);
   $('#lookup-box').on('typeahead:selected', submitSearch);
   $('#lookup-box').focus();
+
+  $('.example-btn').click(function() {
+      var name = $(this).attr('data-name');
+      var index = $(this).attr('data-index');
+      $('#example-modal-content').html('<iframe width="100%" height="450" border="0" src="/try/' + name + '/' + index + '">');
+      $('.example-modal').modal();
+  });
+
 });
 //search submit
 function submitSearch() {

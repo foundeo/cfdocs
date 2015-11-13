@@ -2,8 +2,9 @@
 	"name":"cfinterface",
 	"type":"tag",
 	"syntax":"<cfinterface>",
+	"script": "interface displayname=\"My Interface\" { \r\n numeric function myFunction(required string myArgument); \r\n }",
 	"returns":"",
-	"related":[],
+	"related":["cffunction","cfargument"],
 	"description":" Defines an interface that consists of a set of signatures for functions.\n The interface does not include the full function definitions;\n instead, you implement the functions in a CFC.\n The interfaces that you define by using this tag can make up\n the structure of a reusable application framework.",
 	"params": [
 		{"name":"displayName","description":"A value to be displayed when using introspection to\n show a descriptive name for the interface. (optional)","required":false,"default":"","type":"String","values":[]},
@@ -12,12 +13,27 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfinterface"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfinterface.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/interface.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfinterface"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfinterface"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "interface displayname=\"My Interface\" { \r\n numeric function myFunction(required string myArgument); \r\n }",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfinterface displayname=\"My Interface\"> \r\n <cfunction name=\"myFunction\" returntype=\"numeric\"> \r\n <cfargument required=\"true\" type=\"string\" name=\"myArgument\"> \r\n </cffunction> \r\n </cfinterface>",
+	            "result": ""
+	        }
 	]
 
 }
