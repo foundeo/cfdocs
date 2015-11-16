@@ -8,8 +8,8 @@ The following for loop has been supported since the initial version of cfscript.
 
 	array = [3,2,1];
 
-	for (i=1; i <= ArrayLen(array);i=i+1) {
-		WriteOutput(array[i]);
+	for (i=1; i <= arrayLen(array);i=i+1) {
+		writeOutput(array[i]);
 	}
 
 The above would output `321`
@@ -18,7 +18,7 @@ The above would output `321`
 
 	struct = {a=1,b=2};
 	for (key in struct) {
-		WriteOutput(key);
+		writeOutput(key);
 	}
 	
 The above outputs `AB`
@@ -27,7 +27,15 @@ The above outputs `AB`
 
 	cars = ["Ford","Dodge"];
 	for (car in cars) {
-		WriteOutput(car);
+		writeOutput(car);
 	}
 	
-The above example would output `FordDodge`
+The above example would output `FordDodge` 
+
+For in support for native java arrays was added in CF10+
+
+### For In Loop (over a query) CF10+
+
+	for (row in query) {
+		writeOutput(row.currentrow);
+	}

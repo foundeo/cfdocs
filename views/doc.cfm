@@ -1,7 +1,7 @@
 <cfoutput>
 <div class="jumbotron">
   <div class="container">
-    <h1>#data.name#</h1>
+    <h1 id="docname">#data.name#</h1>
     <p>#autoLink(data.description)#</p>
 	<cfif StructKeyExists(data, "syntax") AND Len(data.syntax)>
 		<p id="syntax"><cfif data.type IS "tag"><small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;</cfif><code>#Replace(HTMLEditFormat(data.syntax), Chr(10), "<br>", "ALL")#<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)> <em>&##8594; returns #XmlFormat(data.returns)#</em></cfif></code></p>
