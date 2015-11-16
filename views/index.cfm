@@ -24,8 +24,8 @@
   </div>
 
   <br><hr><br>
-
-  <cfhttp url="https://api.github.com/repos/foundeo/cfdocs/stats/contributors" method="GET" charset="utf-8" result="statResult" throwonerror="false"></cfhttp>
+  <cftry>
+    <cfhttp url="https://api.github.com/repos/foundeo/cfdocs/stats/contributors" method="GET" charset="utf-8" result="statResult" throwonerror="false"></cfhttp>
       <cfif statResult.statusCode contains "200" AND IsJSON(statResult.fileContent)>
         <cfset stats = DeserializeJSON(statResult.fileContent)>
         <h2 class="text-center"><cfoutput>#ArrayLen(stats)#</cfoutput> Awesome Contributors <br><small>The Leader Board</small></h2>
@@ -35,6 +35,10 @@
               
               <cfsilent>
                 <cfset stat = stats[s]>
+                <cfif !structKeyExists(stat, "author") OR isNull(stat.author) OR !isStruct(stat.author) OR !structKeyExists(stat.author, "html_url")>
+                  <!--- for some cases possibly a bug on github side the author key is null or empty --->
+                  <cfcontinue>
+                </cfif>
                 <cfset i = i+1>
                 <cfset a = 0>
                 <cfset d = 0>
@@ -80,6 +84,10 @@
         .contributor { width: 320px; display:inline-block; background-color: #f1f1f1; border-radius: 7px; margin: 5px 20px; padding:15px 10px; }
         #test-tool { text-align: center;}
     </style>
-
+    <cfcatch>
+      <small>Some sort of error occurred constructing the leaderboard, please check back later.</small>
+      <cfset request.cacheControlMaxAge = 30> 
+    </cfcatch>
+  </cftry>
   
 </div>
