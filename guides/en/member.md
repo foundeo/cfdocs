@@ -1,7 +1,7 @@
 # ColdFusion Member Functions
 
-Member Functions are operators and functions that are declared as a member of a class.
-These are more in line with true object oriented style of coding.
+CF11+ Member Functions allow variables of certain CFML data types to be treated as objects with functions. Invoking a member function on the object (the variable) allows you to skip passing the variable into the function because it already has a reference to the value.
+The use of member functions often lead to more concise and readable code.
 
 For instance, consider the following headless function:
 
@@ -9,13 +9,13 @@ For instance, consider the following headless function:
     ArrayAppend (empArr, emp)
 
 
-It can now be written as:
+Using a member function it can be written as:
 
 
     empArr.append(emp)
 
 
-where `arrayObj` is a reference to the CFArray class.
+Where `empArr` is a reference to an instance of a CFArray class (possibly a variable created with arrayNew). 
 
 The following example depicts the new usage of member functions:
 
@@ -294,7 +294,7 @@ The following _Query_ member functions are supported:
 * QueryConvertForGrid:	someVar.convertForGrid()
 * QuerySetCell:	someVar.setCell()
 * QueryAddRow:	someVar.addRow()
-*               someVar.getResult()
+* someVar.getResult()
     
 Member Functions can also be chained, for example:
 
