@@ -8,14 +8,15 @@ Application framework tags, Other tags
 Syntax
     <cfscript> 
         cfscript code here 
-        </cfscript>
+    </cfscript>
+
 See also
 cfinvoke, cfmessagebox, CreateObject; Extending ColdFusion Pages with CFML Scripting in the Developing ColdFusion Applications
 
 History
-_ColdFusion 11: Enhanced support like usage of custom tags._
+CF11+: Enhanced support like usage of custom tags.
 
-_ColdFusion MX:_
+CF6+
 
 Changed how to invoke component methods: this tag can now invoke component methods, using the CreateObject function
 Changed use of reserved words: you cannot use ColdFusion reserved words within this tag
