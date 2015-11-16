@@ -1,4 +1,3 @@
-[$PROFILE$]: extended
 # Operators in CFML
 
 This is an incomplete / work in progress guide to operators in CFML.
