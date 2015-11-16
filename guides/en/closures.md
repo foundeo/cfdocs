@@ -1,4 +1,4 @@
-##ColdFusion Closures
+# ColdFusion Closures
 
 A closure is an inner function. The inner function can access the variables in the outer function. You can access the inner function by accessing the outer function. See the example below.
 

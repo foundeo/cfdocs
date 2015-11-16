@@ -1,4 +1,4 @@
-##ColdFusion Member Functions
+# ColdFusion Member Functions
 
 Member Functions are operators and functions that are declared as a member of a class.
 These are more in line with true object oriented style of coding.

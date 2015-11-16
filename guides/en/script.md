@@ -1,4 +1,4 @@
-##CFScript syntax
+# CFScript syntax
 Description
 Encloses a code block that contains cfscript statements.
 
@@ -222,9 +222,9 @@ _If/elseif/else example:_
 _Query Loop_
     q = queryNew("id,data", "integer,varchar", [  [11, "aa"], [22, "bb"], [33, "cc"]  ] );
     for (row in q){
-      writeOutput("#q.currentRow#:#row.id#:#row.data#;"); 
-      //result:   1:11:aa;2:22:bb;3:33:cc;
-      }
+        writeOutput("#q.currentRow#:#row.id#:#row.data#;"); 
+        //result:   1:11:aa;2:22:bb;3:33:cc;
+    }
 OR
     cfloop(query=q, group="fk"){
         writeOutput("<strong>#fk#</strong>");

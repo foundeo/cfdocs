@@ -1,6 +1,6 @@
-##Elvis Operator
+# Elvis Operator
 
-The Elvis Operator added in ColdFusion 11
+CF11+ The Elvis Operator added in ColdFusion 11
 
 It works like a Ternary Operator; it's a decision making operator that requires three operands: condition, true statement, and false statement that are combined using a question mark (?) and a colon (:):
 
