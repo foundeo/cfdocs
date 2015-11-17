@@ -338,6 +338,6 @@ result: `GOD YZAL EHT REVO SPMUJ XOF NWORB KCIUQ EHT`
 
 # Important Note on a potential Member Function Gotcha
 
-Some member functions might fall into underlying Java methods if the strict ColdFusion syntax is not followed.
+Some member functions [might fall into underlying Java methods][note] if the strict ColdFusion syntax is not followed.
 
-https://bugbase.adobe.com/index.cfm?event=bug&id=3753710
+[note]: https://bugbase.adobe.com/index.cfm?event=bug&id=3753710
