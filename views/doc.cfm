@@ -160,9 +160,11 @@
 			<br />
 			<h4>
                 #XmlFormat(ex.title)#
-                <div class="pull-right">
-                    <button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
-                </div>
+                <cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
+	                <div class="pull-right">
+	                    <button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
+	                </div>
+	            </cfif>
             </h4>
 			<p class="clearfix">#autoLink(ex.description)#</p>
 			<pre>#HTMLEditFormat(ex.code)#</pre>
