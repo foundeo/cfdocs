@@ -3,8 +3,8 @@
 	"type":"tag",
 	"syntax":"<cfdocument format=\"PDF\">",
 	"returns":"",
-	"related":[],
-	"description":" Creates PDF or FlashPaper output from a text block containing CFML and HTML.",
+	"related":["cfhtmltopdf","cfdocumentitem","cfdocumentsection"],
+	"description":"Creates PDF or FlashPaper output from a text block containing CFML and HTML.",
 	"params": [
 		{"name":"format","description":"Specifies the report format.","required":true,"default":"","type":"String","values":["PDF","FlashPaper"]},
 		{"name":"filename","description":"Specifies the fully qualified path name of a file to\n contain the PDF or FlashPaper output. If you omit the\n filename attribute, ColdFusion MX streams output to\n the browser.","required":false,"default":"","type":"String","values":[]},
@@ -49,13 +49,20 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfdocument.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/document.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdocument"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdocument"}
+		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfdocument.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/tags/document.html"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Dynamic PDF Served to Browser",
+			"description":"PDF is sent back to the browser instead of saving to a file. The cfheader tag is used to suggest a file name to the browser. The cfcontent tag is used to set the Content-Type response header (that could also be done using cfheader) which tells the browser that it is a PDF file.",
+			"code":"<cfcontent type=\"application/pdf\">\n<cfheader name=\"Content-Disposition\" value=\"attachment;filename=example.pdf\">\n<cfdocument format=\"pdf\">\n    <h1>Hello ColdFusion</h1>\n    <p>This is <strong>PDF</strong> example document.</p>\n    <p>Genereated at: <cfoutput>#TimeFormat(Now())# on #DateFormat(Now())#</cfoutput></p>\n</cfdocument>",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }
