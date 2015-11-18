@@ -10,7 +10,11 @@
 	{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nkey: key for the current iteration\r\nvalue: the value for the current iteration\r\nstruct: a reference of the original struct","name":"function","type":"Any","required":"1"}
 ],
 "returns":"Struct",
-"examples":[],
+"examples":[{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "original = {\"one\"={1=\"tahi\"},\"two\"={2=\"rua\"},\"three\"={3=\"toru\"},\"four\"={4=\"wha\"}}; \r\n fixed = structMap(original, function(k,v) \r\n { \r\n return v[v.keyList().first()]; \r\n }); \r\n writeDump([ original, fixed]); \r\n"
+		}],
 "type":"function",
 "related":["StructReduce"]
 }

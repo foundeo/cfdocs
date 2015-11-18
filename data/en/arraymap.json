@@ -16,6 +16,13 @@
 		{"values":[],"default":"","description":"The input array","name":"array","type":"Array","required":"1"},
 		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: item in the array\r\nindex: index of the array\r\narray: a reference of the original arrray","name":"function","type":"Any","required":"1"}
 	],
-	"examples":[]
+	"examples":[
+        {
+			"title": "Script Syntax",
+			"description": "",
+			"code": "complexData = [ {a: 4}, {a: 18}, {a: 51} ]; \r\n newArray = arrayMap( complexData, function(item) \r\n { \r\n return item.a; \r\n }, 0 ); \r\n ",
+			"result": "Answer: [4, 18, 51]"
+		}
+    ]
 	
 }
