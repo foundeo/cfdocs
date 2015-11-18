@@ -1,72 +1,69 @@
 # ColdFusion Closures
 
-A closure is an inner function. The inner function can access the variables in the outer function. You can access the inner function by accessing the outer function. See the example below.
+CF10+ A closure is an inner function. The inner function can access the variables in the outer function. You can access the inner function by accessing the outer function. See the example below.
 
     <cfscript> 
-    function helloTranslator(String helloWord) 
-    { 
-        return function(String name) 
-        { 
-        return "#helloWord#, #name#"; 
-        }; 
-    } 
-    helloInHindi=helloTranslator("Namaste"); 
-    helloInFrench=helloTranslator("Bonjour"); 
-    writeoutput(helloInHindi("Anna")); 
+        function helloTranslator(String helloWord) { 
+            return function(String name) { 
+                return "#helloWord#, #name#"; 
+            }; 
+        } 
 
-    //closure is formed. 
-    //Prints Namaste, Anna. 
-    writeoutput("<br>"); 
-    writeoutput(helloInFrench("John")); 
-    //Prints Bonjour, John. 
+        helloInHindi=helloTranslator("Namaste"); 
+        helloInFrench=helloTranslator("Bonjour"); 
+        writeOutput(helloInHindi("Anna")); 
+
+        //closure is formed. 
+        //Prints Namaste, Anna. 
+        writeOutput("<br>"); 
+        writeOutput(helloInFrench("John")); 
+        //Prints Bonjour, John. 
     </cfscript>
 
-In the above example, the outer function returns a closure. 
-Using the helloHindi variable, the outer function is accessed. It sets the helloWord argument. 
-Using this function pointer, the closure is called. 
-For example, helloInHindi("Anna"). Observe that even after the execution of outer function, the closure can access the variable sets by the outer function.
+In the above example, the outer function returns a closure. Using the helloHindi variable, the outer function is accessed. It sets the helloWord argument. 
+
+Using this function pointer, the closure is called. For example, helloInHindi("Anna"). Observe that even after the execution of outer function, the closure can access the variable sets by the outer function.
+
 In this case, using closure, two new functions are created. One adds Namaste to the name. And the second one adds Bonjour to the name. 
 helloInHindi and helloInFrench are closures. They have the same function body; however, store different environments.
+
 The inner function is available for execution after the outer function is returned. A closure is formed when the inner function is available for execution. 
 
-As seen in the example, even after the outer function is returned, the inner function can access the variables in the outer function. 
-Closure retains the reference to the environment at the time it is created. For example, the value of a local variable in the outer function. It makes closure an easy to use and handy feature.
+As seen in the example, even after the outer function is returned, the inner function can access the variables in the outer function. Closure retains the reference to the environment at the time it is created. For example, the value of a local variable in the outer function. It makes closure an easy to use and handy feature.
+
 To see more details on closure, see http://jibbering.com/faq/notes/closures.
 
-<strong>Closure in ColdFusion</strong>
+### Closure in ColdFusion
+
 A closure can be of the following categories:
 
 * Defined inline without giving a name. They can be used in the following ways:
-    * They can be assigned to a variable, array item, struct, and variable scope. It can be returned directly from a function. 
+* They can be assigned to a variable, array item, struct, and variable scope. It can be returned directly from a function. 
 
-Example
+#### ColdFusion Example
 
     <cfscript> 
-    function operation(string operator) 
-    { 
-    return function(numeric x, numeric y) 
-    { 
-        if(operator eq "add") 
-        { 
-            return x + y; 
+        function operation(string operator) { 
+            return function(numeric x, numeric y) { 
+                if(operator eq "add") { 
+                    return x + y; 
+                } 
+                else if(operator eq "subtract") { 
+                    return x - y; 
+                } 
+            }; 
         } 
-        else if(operator eq "subtract") 
-        { 
-    return x - y; 
-    } 
-    }; 
-    } 
-    myval_addition=operation("add"); 
-    myval_substraction=operation("subtract"); 
-    writeoutput(myval_addition(10,20)); 
-    writeoutput("<br>"); 
-    writeoutput(myval_substraction(10,20)); 
+
+        myval_addition=operation("add"); 
+        myval_substraction=operation("subtract"); 
+        writeOutput(myval_addition(10,20)); 
+        writeOutput("<br>"); 
+        writeOutput(myval_substraction(10,20)); 
     </cfscript>
 
 In the above example, the outer function sets the operator. myval_addition and myval_substraction are two closures. They process the data based on the condition sets by the outer function.
 
-* Defined inline as a function and tag argument.
-Example
+#### Defined inline as a function and tag argument
 
     <cfscript> 
     function operation(numeric x, numeric y, function logic) 
@@ -88,50 +85,42 @@ Example
 
 In the above example, the function operation has an argument logic, which is a closure. While calling operation, an inline closure is passed as an argument. This anonymous closure contains the logic to process the numbers - addition or subtraction. In this case, the logic is dynamic and passed as a closure to the function.
 
-A Closure can be assigned to a variable
-* You can assign a closure to a variable.
-Example
+
+#### You can assign a closure to a variable.
 
     var c2 = function () {..}
 
 Note: When assigning Closures to a variable, only script style of syntax is supported.
 
 A closure can be used as a return type
-* You can use a closure as a return type.
 
 Note: As a best practice, if the return type is a closure, provide the Function keyword with initial capitalization.
 
 Example
 
-    Function function exampleClosure(arg1) 
-    { 
-    function exampleReturned(innerArg) 
-    { 
-    return innerArg + arg1; 
-    } 
-    /* return a reference to the inner function defined.  */ 
-    return exampleReturned; 
+    Function function exampleClosure(arg1) { 
+        function exampleReturned(innerArg) { 
+            return innerArg + arg1; 
+        } 
+        /* return a reference to the inner function defined.  */ 
+        return exampleReturned; 
     }
 
-Calling closure with key-value pair
-* You can call a closure by passing a key-value pair as you do for a function call.
-Example
+#### Calling closure with key-value pair
+
 
     var c2 = function(arg1, arg1) {..} 
     c2(arg1=1, arg2=3);
 
-Closure can be assigned to a variable outside function
-* You can assign a closure to a variable outside the function.
-Example
+#### Closure can be assigned to a variable outside function
 
-    hello = function (arg1) 
-    { 
-    writeoutput("Hello " & arg1); 
+    hello = function (arg1) { 
+        writeoutput("Hello " & arg1); 
     }; 
     hello("Mark");
 
-* Calling closure with argument collection
-Example
+#### Calling closure with argument collection
+
 
     var c2 = function(arg1, arg1) {..} 
     argsColl = structNew(); 
@@ -139,11 +128,13 @@ Example
     argsColl.arg2= 3; 
     c2(argumentCollection = argsColl);
 
-<strong>Closures and functions</strong>
-A closure retains a copy of variables visible at the time of its creation. The global variables (like ColdFusion specific scopes) and the local variables (including declaring or outer function's local and arguments scope) are retained at the time of a closure creation. Functions are static.
-The following table details the scope of closure based on the way they are defined:
+### Closures and functions
 
-<strong>Scenario where closure is defined</strong>
+A closure retains a copy of variables visible at the time of its creation. The global variables (like ColdFusion specific scopes) and the local variables (including declaring or outer function's local and arguments scope) are retained at the time of a closure creation. Functions are static.
+
+The following details the scope of closure based on the way they are defined:
+
+#### Scenario where closure is defined
 
 
 _In a CFC function_
@@ -167,46 +158,11 @@ Scope Chain:
 * ColdFusion built-in scope
 Note: A closure cannot call any user-defined function, because the function's context is not retained, though the closure's context is retained. It gives erroneous results. For example, when a closure is cached, it can be properly called for later use, while a function cannot.
 
-Closure functions
-The following are the closure functions:
+### The isClosure Function
 
-isClosure
-Description
-Determines whether a name represents a closure.
+CF10+ added the `isClosure` function which returns true if a variable is a closure, false otherwise.
 
-Returns
-True, if name can be called as a closure; False, otherwise.
-
-Category
-Decision functions
-
-Syntax
-    isClosure(closureName__)
-
-
-History
-ColdFusion 10: Added this function.
-
-closureName
-
-Name of a closure. Must not be in quotation marks.Results in an error if not a defined variable or function name.
-
-Usage
-Use this function to determine whether the name represents a closure.
-
-Example
-    <cfscript> 
-    isClosure(closureName) 
-    { 
-    // do something 
-    } 
-    else 
-    { 
-    // do something 
-    } 
-    </cfscript>
-
-Modifications to the function isCustomFunction
+#### Modifications to the function isCustomFunction
 Though closure is a function object, it is not considered as a custom function.
 The function now returns:
 
@@ -215,11 +171,10 @@ False: If name can be called as a closure.
 Usage scenarios
 The following scenario explains how you can effectively use ColdFusion closures.
 
-<strong>Example - filtering of arrays using closures</strong>
+## Example - filtering of arrays using closures
 The following example filters employees based on location, age, and designation. A single function is used for filtering. The filtering logic is provided to the function as closures. That's filtering logic changes dynamically.
 
-Example
-Create the employee.cfcfile that defines the variables.
+Create the `employee.cfc` file that defines the variables.
 
     /** 
     * @name employee 
@@ -229,46 +184,43 @@ Create the employee.cfcfile that defines the variables.
     */ 
     component 
     { 
-    property string Name; 
-    property numeric Age; 
-    property string designation; 
-    property string location; 
-    property string status; 
+        property string Name; 
+        property numeric Age; 
+        property string designation; 
+        property string location; 
+        property string status; 
     }
 
 Create the employee array. This CFC also contains the filterArray() }}function. A closure, {{filter, is an argument of the function. While accessing this function, the filtering logic is passed as a closure.
 
-<!---filter.cfc---> 
-    <cfcomponent> 
-    <cfscript> 
-    //Filter the array based on the logic provided by the closure. 
-    function filterArray(Array a, function filter) 
-    { 
-    resultarray = arraynew(1); 
-    for(i=1;i<=ArrayLen(a);i++) 
-    { 
-        if(filter(a[i])) 
-            ArrayAppend(resultarray,a[i]); 
+    <!---filter.cfc---> 
+    component {
+        //Filter the array based on the logic provided by the closure. 
+        function filterArray(Array a, function filter) { 
+            resultarray = arraynew(1); 
+            for(i=1;i<=ArrayLen(a);i++) { 
+                if(filter(a[i])) 
+                    ArrayAppend(resultarray,a[i]); 
+            } 
+            return resultarray; 
         } 
-    return resultarray; 
-    } 
-    function getEmployee() 
-    { 
-    //Create the employee array. 
-    empArray = Arraynew(1); 
-    ArrayAppend(empArray,new employee(Name="Ryan", Age=24, designation="Manager", location="US")); 
-    ArrayAppend(empArray,new employee(Name="Ben", Age=34, designation="Sr Manager", location="US")); 
-    ArrayAppend(empArray,new employee(Name="Den", Age=24, designation="Software Engineer", location="US")); 
-    ArrayAppend(empArray,new employee(Name="Ran", Age=28, designation="Manager", location="IND")); 
-    ArrayAppend(empArray,new employee(Name="Ramesh", Age=31, designation="Software Engineer", location="IND")); 
-    return empArray; 
-    } 
-    </cfscript> 
-    </cfcomponent>
+
+        function getEmployee() { 
+            //Create the employee array. 
+            empArray = Arraynew(1); 
+            ArrayAppend(empArray,new employee(Name="Ryan", Age=24, designation="Manager", location="US")); 
+            ArrayAppend(empArray,new employee(Name="Ben", Age=34, designation="Sr Manager", location="US")); 
+            ArrayAppend(empArray,new employee(Name="Den", Age=24, designation="Software Engineer", location="US")); 
+            ArrayAppend(empArray,new employee(Name="Ran", Age=28, designation="Manager", location="IND")); 
+            ArrayAppend(empArray,new employee(Name="Ramesh", Age=31, designation="Software Engineer", location="IND")); 
+            return empArray; 
+        } 
+    }
+    
 
 Create the CFM page that accesses the {{filterArray()}}function with a closure which provides the filtering logic. The {{filterArray()}}function is used to filter the employee data in three ways: location, age, and designation. Each time the function is accessed, the filtering logic is changed in the closure.
 
-<!---arrayFilter.cfm---> 
+    <!---arrayFilter.cfm---> 
     <cfset filteredArray = arraynew(1)> 
     <cfset componentArray = [3,6,8,2,4,7,9]> 
     <cfscript> 
@@ -302,7 +254,8 @@ Create the CFM page that accesses the {{filterArray()}}function with a closure w
     writedump(filteredArray); 
     </cfscript>
 
-<strong>Other Closure Examples:</strong>
+### Other Closure Examples:
+
 Javascript example:
     Function outerFunction() {
 	   var a = 3;
@@ -321,23 +274,24 @@ We have an outer function with a nested function which accepts a parameter b
 (3)That is why the result Is 5!
 http://taha-sh.com/blog/understanding-closures-in-javascript
 
-<strong>ColdFusion built in Functions that use Closures:</strong>
-_CF10 Closure Functions:_
-  * [ArrayEach] (#cfdocs.org/arrayEach)
-  * [StructEach] (#cfdocs.org/StructEach)
-  * [ArrayFilter] (#cfdocs.org/ArrayFilter)
-  * [StructFilter] (#cfdocs.org/StructFilter)
-  * [ListFilter] (#cfdocs.org/ListFilter)
-  * [ArrayFindAt ] (#cfdocs.org/ArrayFindAt)
-  * [ArrayFindAllNoCase] (#cfdocs.org/ArrayFindAllNoCase)
+## ColdFusion built in Functions that use Closures:
+
+### CF10 Closure Functions
+* [ArrayEach](/arrayeach)
+* [StructEach](/structeach)
+* [ArrayFilter](/arrayfilter)
+* [StructFilter](/structfilter)
+* [ListFilter](/ListFilter)
+* [ArrayFindAt ](/ArrayFindAt)
+* [ArrayFindAllNoCase](/ArrayFindAllNoCase)
   
 
-_CF11 Closure Functions: _
-  * [isClosure] (#cfdocs.org/isClosure)
-  * [ArrayReduce] (#cfdocs.org/ArrayReduce)
-  * [StructReduce] (#cfdocs.org/StructReduce)
-  * [ListReduce] (#cfdocs.org/ListReduce)
-  * [ArrayMap] (#cfdocs.org/ArrayMap)
-  * [StructMap] (#cfdocs.org/StructMap)
-  * [ListMap] (#cfdocs.org/ListMap)
+### CF11 Closure Functions
+* [isClosure](/isClosure)
+* [ArrayReduce](/ArrayReduce)
+* [StructReduce](/StructReduce)
+* [ListReduce](/ListReduce)
+* [ArrayMap](/ArrayMap)
+* [StructMap](/StructMap)
+* [ListMap](/ListMap)
 
