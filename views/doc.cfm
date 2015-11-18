@@ -100,7 +100,7 @@
 					<tr>
 						<td class="p-name" id="p-#XmlFormat(p.name)#">#XmlFormat(p.name)#</td>
 						<td><cfif IsBoolean(p.required)>#YesNoFormat(p.required)#<cfelse>#p.required#</cfif></td>
-						<td>#XmlFormat(p.default)#</td>
+						<td><cfif structKeyExists(p, "default")>#XmlFormat(p.default)#<cfelse>&nbsp;</cfif></td>
 						<td class="p-description">
 							#autoLink(p.description)#
 							<cfif StructKeyExists(p, "values") AND IsArray(p.values) AND ArrayLen(p.values)>
