@@ -20,6 +20,14 @@
 	},
 	"links": [
 		
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "letters = [\"a\",\"b\",\"c\",\"d\"]; \r\n arrayEach(letters, function() \r\n {\r\n                 writeDump(arguments);\r\n  });\r\n",
+			"result": "Struct 1 a \r\n struct 1 b \r\n struct 1 c \r\n struct 1 d"
+		}
 	]
 	
 }

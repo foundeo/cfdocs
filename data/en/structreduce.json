@@ -11,7 +11,11 @@
 	{"values":[],"default":"","description":"Initial value which will be used for the reduce operation. The type is any.","name":"initialVal","type":"Any","required":"0"}
 ],
 "returns":"Any",
-"examples":[],
+"examples":[{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "rainbow = { \"Red\"=\"Whero\",  \"Orange\"=\"Karaka\", \"Yellow\"=\"Kowhai\",  \"Green\"=\"Kakariki\" }; \r\n  ui = structReduce(  rainbow, function(previousValue, key, value) \r\n   { \r\n return previousValue & \"<dt>#key#</dt><dd>#value#</dd>\"; \r\n  }, \r\n \"<dl>\" \r\n ) & \"</dl>\"; \r\n writeOutput(dl); \r\n"
+		}],
 "type":"function",
 "related":["StructMap"]
 }

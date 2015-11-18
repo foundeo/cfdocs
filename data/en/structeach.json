@@ -23,6 +23,13 @@
 			"code": "someStruct = {a=1,b=2,c=3};\n\narrayEach(someStruct,function(obj) {\n     writeoutput('Key ' & key & ' is ' & value & '; ');\n});",
 			"result": "Key a is 1; Key b is 2; Key c is 3; "
 		}
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "favs = {color: 'blue', food: 'pizza', sport: 'basketball'}; \r\n // named function \r\n // notice that the function takes two arguments, the key and value pair of the current iteration of the structure's key-value pairs \r\n function getFavorites(key, value) { \r\n writeoutput('My favorite ' & key & ' is ' & value); \r\n } \r\n // run structeach() with a named function \r\n structeach(favs,getFavorites); \r\n // run structeach() with an inline function \r\n structeach(favs, function(key,value) { \r\n writeoutput('My favorite ' & key & ' is ' & value); \r\n }); \r\n"
+		}
 	]
 
 }

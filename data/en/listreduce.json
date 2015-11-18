@@ -12,7 +12,11 @@
 		{"values":[],"default":"comma","description":"The list delimiter.","name":"delimiter","type":"String","required":"0"},{"values":[],"default":"false","description":"Include empty values.","name":"includeEmptyFields","type":"Boolean","required":"0"}
 	],
 	"returns":"Any",
-	"examples":[],
+	"examples":[{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "numbers = \"1,2,3,4,5,6,7,8,9,10\"; \r\n sum = listReduce(numbers, function(previousValue, value) \r\n { \r\n return previousValue + value; \r\n },  0); \r\n writeOutput(\"The sum of the digits #numbers# is #sum#<br>\"); \r\n"
+		}],
 	"type":"function",
 	"related":["ArrayMap","ArrayReduce"]
 }
