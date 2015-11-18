@@ -25,55 +25,32 @@
         {
             "title": "Enforce multiple and mixed encoding detection",
             "description": "(Adode CF11+ example with `throwOnError` parameter set to true) Enforce multiple and mixed encoding detection. Mixed encoding is detected as the data is encoded using URL and HTML entity encoding. Multiple Encoding is also detected.",
-            "code": "<cftry>
-<cfoutput>#canonicalize(\"%26lt; %26lt; %2526lt%253B %2526lt%253B %2526lt%253B\",true,true, true)#</cfoutput><br/>
-<cfcatch type=\"any\" >
-<!--- throws Error when throwOnError set to true (CF11+) when mixed or mutiple encoding is detected. --->
-<cfdump var=\"#cfcatch#\" >
-</cfcatch>
-</cftry>",
+            "code": "<cftry>\n\t<cfoutput>#canonicalize(\"%26lt; %26lt; %2526lt%253B %2526lt%253B %2526lt%253B\",true,true, true)#</cfoutput><br/>\n\t<cfcatch type=\"any\" >\n\t\t<!--- throws Error when throwOnError set to true (CF11+) when mixed or mutiple encoding is detected. --->\n\t\t<cfdump var=\"#cfcatch#\" >\n\t</cfcatch>\n</cftry>",
             "result": "Error Message: Input validation failure. The log message will contain more detailed information on the error."
         },
         {
             "title": "Enforce multiple and mixed encoding detection",
             "description": "(Adode CF11+ example with `throwOnError` parameter set to false) Enforce multiple and mixed encoding detection. Mixed encoding is detected as the data is encoded using URL and HTML entity encoding. Multiple Encoding is also detected.",
-            "code": "<!--- an Empty string will be returned if the throwOnError is set to false and multiple or mixed encoding is found --->
-<cfoutput>#canonicalize(\"%26lt; %26lt; %2526lt%253B %2526lt%253B %2526lt%253B\",true,true, false)#</cfoutput>",
+            "code": "<!--- an Empty string will be returned if the throwOnError is set to false and multiple or mixed encoding is found --->\n<cfoutput>#canonicalize(\"%26lt; %26lt; %2526lt%253B %2526lt%253B %2526lt%253B\",true,true, false)#</cfoutput>",
             "result": "[Empty string]"
         },
         {
             "title": "Enforce mixed but not multiple encoding detection returns an Empty String",
             "description": "Enforce mixed but not multiple encoding detection returns an Empty String.",
-            "code": "<cfoutput>#canonicalize(\"%25 %2526 %26##X3c;script&##x3e; &##37;3Cscript%25252525253e\",false,true)#</cfoutput>
-<!--- The following example is purely to show the error when using `throwOnError` parameter set to true (Adobe CF11+) --->
-<cftry>
-<cfoutput>#canonicalize(\"%25 %2526 %26##X3c;script&##x3e; &##37;3Cscript%25252525253e\",false,true, true)#</cfoutput><br/>
-<cfcatch type=\"any\" >
-<!--- throws Error when throwOnError set to true. --->
-<cfdump var=\"#cfcatch#\" >
-</cfcatch>
-</cftry>",
+            "code": "<cfoutput>#canonicalize(\"%25 %2526 %26##X3c;script&##x3e; &##37;3Cscript%25252525253e\",false,true)#</cfoutput>\n<!--- The following example is purely to show the error when using `throwOnError` parameter set to true (Adobe CF11+) --->\n<cftry>\n\t<cfoutput>#canonicalize(\"%25 %2526 %26##X3c;script&##x3e; &##37;3Cscript%25252525253e\",false,true, true)#</cfoutput><br/>\n\t<cfcatch type=\"any\" >\n\t\t<!--- throws Error when throwOnError set to true. --->\n\t\t<cfdump var=\"#cfcatch#\" >\n\t</cfcatch>\n</cftry>",
             "result": "[Empty string]"
         },
         {
             "title": "Mixed and multiple encoding detected",
             "description": "Mixed encoding is detected as the data is encoded using URL and HTML entity encoding. Multiple Encoding is also detected.",
-            "code": "<!--- Decodes the string using both percent and HTML Entity encodings as the flags were set to false --->
-<cfoutput>#canonicalize(\"%26lt; %26lt; %2526lt%253B %2526lt%253B %2526lt%253B\",false,false)#</cfoutput><br/>
-<cfoutput>#canonicalize(\"&##X25;3c\",false,false)#</cfoutput><br/>
-<cfoutput>#canonicalize(\"&##x25;3c\",false,false)#</cfoutput>",
-            "result": "< < < < <
-<
-<"
+            "code": "<!--- Decodes the string using both percent and HTML Entity encodings as the flags were set to false --->\n<cfoutput>#canonicalize(\"%26lt; %26lt; %2526lt%253B %2526lt%253B %2526lt%253B\",false,false)#</cfoutput><br/>\n<cfoutput>#canonicalize(\"&##X25;3c\",false,false)#</cfoutput><br/>\n<cfoutput>#canonicalize(\"&##x25;3c\",false,false)#</cfoutput>",
+            "result": "< < < < <\n<\n<"
         },
         {
             "title": "Simple Javascript decoding",
             "description": "http://www.planetpdf.com/codecuts/pdfs/tutorial/jsspec.pdf see section 2.7.5 for JS Encoding",
-            "code": "<cfoutput>#canonicalize(\"\\\\U003C\",false,false)#</cfoutput><br/>
-<cfoutput>#canonicalize(\"\\\\X3C\",false,false)#</cfoutput>",
-            "result": "<
-<"
+            "code": "<cfoutput>#canonicalize(\"\\\\U003C\",false,false)#</cfoutput><br/>\n<cfoutput>#canonicalize(\"\\\\X3C\",false,false)#</cfoutput>",
+            "result": "<\n<"
         }
-    ]
-    
+    ]   
 }
