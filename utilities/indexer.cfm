@@ -30,7 +30,7 @@
 </cfloop>
 <cfloop array="#directoryList(guideDir, false, "array")#" index="filePath">
 	<cfset nameKey = getFileFromPath(filePath)>
-	<cfif listGetAt(nameKey,2,".") IS "md">
+	<cfif listLast(nameKey,".") IS "md">
 		<cftry>
 			<cfset nameKey = LCase(Replace(nameKey, ".md", ""))>
 			<cfset arrayAppend(guides, nameKey)>
