@@ -1,14 +1,15 @@
 {
 	"name":"listPrepend",
 	"type":"function",
-	"syntax":"listPrepend(list, value [, delimiters])",
+	"syntax":"listPrepend(someList, value [, delimiters])",
+    "member":"someList.listPrepend( value [, delimeters])",
 	"returns":"String",
 	"related":[],
 	"description":" Inserts an element at the beginning of a list.",
 	"params": [
-		{"name":"list","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"value","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
+		{"name":"list","description":"A string list.","required":true,"default":"","type":"String","values":[]},
+		{"name":"value","description":"An element or list of elements.","required":true,"default":"","type":"String","values":[]},
+		{"name":"delimiters","description":"Characters that separate list elements.","required":false,"default":",","type":"String","values":[",","|",";","-","chr(9)","chr(10)","chr(13)"]}
 
 	],
 	"engines": {
@@ -19,6 +20,20 @@
 	},
 	"links": [
 
-	]
+	],
+    "examples": [
+        {
+            "title": "Prepend to a List using a dash delimeter",
+            "description": "",
+            "code": "someList = \"1-2-3-4\";\nsomeList = ListPrepend(someList,\"0\",\"-\");\nWriteOutput(someList);",
+            "result": "\"0-1-2-3-4\""
+        },
+        {
+            "title": "Prepend to a List using the List member function",
+            "description": "CF11+ Lucee4.5+",
+            "code": "seinfeldList = \"Close Talker,Soup Nazi\";\nseinfeldList = seinfeldList.listPrepend(\"Puffy Shirt\");\nWriteOutput(seinfeldList);",
+            "result": "\"Puffy Shirt,Close Talker,Soup Nazi\""
+        }
+    ]
 
 }
