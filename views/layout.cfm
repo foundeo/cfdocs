@@ -52,6 +52,8 @@
                 <li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li>
               </cfif>
             </cfloop>
+            <li class="divider"></li>
+            <li><a href="/reports/todo.cfm">Todo</a></li>
           </ul>
         </li>
         <li class="dropdown">

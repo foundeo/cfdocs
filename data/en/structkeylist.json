@@ -2,6 +2,7 @@
 	"name":"structKeyList",
 	"type":"function",
 	"syntax":"structKeyList(structure [, delimiter])",
+    "member":"someStruct.keyList([delimiter])",
 	"returns":"String",
 	"related":[],
 	"description":" Extracts keys from a CFML structure.",
@@ -18,6 +19,20 @@
 	},
 	"links": [
 
-	]
+	],
+    "examples": [
+        {
+            "title": "Using Custom Delimiter",
+            "description": "Retrieve a pipe seperated list of keys",
+            "code": "statusCodes = {\n    OK = 200,\n    CREATED = 201,\n    NOT_MODIFIED = 304,\n    BAD_REQUEST = 400,\n    NOT_FOUND = 404\n};\n\nwriteDump(StructKeyList(statusCodes, \" | \"));",
+            "result": "\"OK | CREATED | NOT_MODIFIED | BAD_REQUEST | NOT_FOUND\""
+        },
+        {
+            "title": "Using Member Function",
+            "description": "CF11+ Lucee4.5+ Retrieve a comma seperated list of keys using the member function",
+            "code": "statusCodes = {\n    OK = 200,\n    CREATED = 201,\n    NOT_MODIFIED = 304,\n    BAD_REQUEST = 400,\n    NOT_FOUND = 404\n};\n\nwriteDump(statusCodes.keyList());",
+            "result": "\"OK,CREATED,NOT_MODIFIED,BAD_REQUEST,NOT_FOUND\""
+        }
+    ]
 
 }

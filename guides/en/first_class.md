@@ -1,4 +1,5 @@
-###Built in ColdFusion Functions as First Class Citizens
+# Built in ColdFusion Functions as First Class Citizens
+
 The ColdFusion built-in functions will be treated as ‘first-class’ functions so that any built-in function can be passed as an argument.
 
 For instance, this is valid:

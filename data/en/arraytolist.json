@@ -18,6 +18,20 @@
 	},
 	"links": [
 
-	]
+	],
+    "examples": [
+        {
+            "title": "Retrieve an array as a list",
+            "description": "Uses the arrayToList function with a pipe dilimeter to retrieve an array as a list",
+            "code": "someArray = [1,2,3,4];\nsomeList = ArrayToList(someArray,\"|\");\nWriteOutput(someList);",
+            "result": "\"1|2|3|4\""
+        },
+        {
+            "title": "Retrieve an array as a list using the Array member function",
+            "description": "CF11+ Lucee4.5+ Uses the Array member function to retrieve an array as a list",
+            "code": "seinfeldArray = [\"Jerry\",\"Elaine\",\"Kramer\",\"George\"];\nseinfeldList = seinfeldArray.toList();\nWriteOutput(seinfeldList);",
+            "result": "\"Jerry,Elaine,Kramer,George\""
+        }
+    ]
 
 }

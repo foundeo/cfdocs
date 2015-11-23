@@ -1,7 +1,7 @@
 <cfoutput>
 <div class="jumbotron">
   <div class="container">
-    <h1>#data.name#</h1>
+    <h1 id="docname">#data.name#</h1>
     <p>#autoLink(data.description)#</p>
 	<cfif StructKeyExists(data, "syntax") AND Len(data.syntax)>
 		<p id="syntax"><cfif data.type IS "tag"><small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;</cfif><code>#Replace(HTMLEditFormat(data.syntax), Chr(10), "<br>", "ALL")#<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)> <em>&##8594; returns #XmlFormat(data.returns)#</em></cfif></code></p>
@@ -100,7 +100,7 @@
 					<tr>
 						<td class="p-name" id="p-#XmlFormat(p.name)#">#XmlFormat(p.name)#</td>
 						<td><cfif IsBoolean(p.required)>#YesNoFormat(p.required)#<cfelse>#p.required#</cfif></td>
-						<td>#XmlFormat(p.default)#</td>
+						<td><cfif structKeyExists(p, "default")>#XmlFormat(p.default)#<cfelse>&nbsp;</cfif></td>
 						<td class="p-description">
 							#autoLink(p.description)#
 							<cfif StructKeyExists(p, "values") AND IsArray(p.values) AND ArrayLen(p.values)>
@@ -160,9 +160,11 @@
 			<br />
 			<h4>
                 #XmlFormat(ex.title)#
-                <div class="pull-right">
-                    <button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
-                </div>
+                <cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
+	                <div class="pull-right">
+	                    <button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
+	                </div>
+	            </cfif>
             </h4>
 			<p class="clearfix">#autoLink(ex.description)#</p>
 			<pre>#HTMLEditFormat(ex.code)#</pre>
