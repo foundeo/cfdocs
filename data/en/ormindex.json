@@ -1,0 +1,28 @@
+{
+	"name":"ormIndex",
+	"type":"function",
+	"syntax":"ormIndex(); ORMIndex('entity_name'); ORMIndex('entity_list'); ORMIndex('entityObject');",
+	"returns":"void",
+	"related":[],
+	"description":" Performs offline indexing - using this function without specifying parameters, all perseistent entities of a given application are indexed.",
+	"params": [
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormindex.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/ormindex.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ormindex"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ormindex"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "EmpOBJs = EntitlLoad('employee', {lastname='Bond'}); \r\n for(EmpObj in EmpObjs) \r\n { \r\n ormIndex(empObj); ]r]n } \r\n",
+			"result": ""
+		}
+	]
+
+}
