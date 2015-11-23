@@ -7,9 +7,9 @@
 	"related":[],
 	"description":" Swaps array values of an array at specified positions. This\n function is more efficient than multiple cfset tags",
 	"params": [
-		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
-		{"name":"position1","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"position2","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"array","description":"The array in which postions will be swapped","required":true,"default":"","type":"Array","values":[]},
+		{"name":"position1","description":"Positon of 1st element to swap.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"position2","description":"Postion of 2nd element to swap.","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
@@ -19,6 +19,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Swap the position of two values in an array",
+			"description": "",
+			"code": "superiorArray = ['Spider-Man','Green Goblin','Doctor Octopus','Venom'];\narraySwap(superiorArray,1,3);\nwriteDump(superiorArray);",
+			"result":"['Doctor Octopus', 'Green Goblin', 'Spider-Man', 'Venom']"
+		},
+		{
+			"title": "Swap the position of two values in an array using the member function",
+			"description": "CF11+ Lucee4.5+",
+			"code": "superiorArray = ['Spider-Man','Green Goblin','Doctor Octopus','Venom'];\nsuperiorArray.swap(1,3);\nwriteDump(superiorArray);",
+			"result":"['Doctor Octopus', 'Green Goblin', 'Spider-Man', 'Venom']"	
+		},
 	]
 
 }
