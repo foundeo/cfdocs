@@ -1,0 +1,29 @@
+{
+	"name":"csrfVerifyToken",
+	"type":"function",
+	"syntax":"csrfVerifyToken(token [, key])",
+	"returns":"boolean",
+	"related":["csrfgeneratetoken"],
+	"description":"Validates the given token against the same stored in the session for a specific key.",
+	"params": [
+		{"name":"token","description":"Token that to be validated against the token stored in the session.","required":true,"default":"","type":"String","values":[]},
+		{"name":"key","description":"The key against which the token be searched.","required":false,"default":"","type":"String","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CSRFVerifyToken.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/csrfverifytoken.html"}
+	},
+	"links": [
+
+	],
+    "examples": [
+        {
+            "title": "Verify a token against the default key",
+            "description": "",
+            "code": "if (csrfVerifyToken(form.token) {\n    writeOutput(\"Token validated!\");\n}\nelse {\n    writeOutput(\"Token not validated\");\n})",
+            "result": "",
+            "runnable": false
+        }
+    ]
+
+}
