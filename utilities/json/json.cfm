@@ -21,8 +21,10 @@
 }
 </cfsavecontent>
 </cfoutput>
+<cfelse>
+	Sorry invalid action.<cfabort>
 </cfif>
-<cfcontent type="application/json" reset="true">while(true);//do not copy this line
-
-
-<cfoutput>#json#</cfoutput>
+<cfif cgi.request_method IS NOT "POST">
+	<cfheader statuscode="405" statustext="Method Not Allowed">Sorry This URI Requires POST.<cfabort>
+</cfif>
+<cfcontent type="application/json" reset="true"><cfoutput>#json#</cfoutput>
