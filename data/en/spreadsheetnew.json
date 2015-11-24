@@ -21,10 +21,18 @@
 	],
 	"examples": [
 		{
-			"title":"Creates a simple spreadsheet",
-			"description":"xlsx format",
-			"code":"xlsxSheet = spreadSheetNew(\"xlsx sheet\",true);\r\nspreadSheetAddRow(xlsxSheet,\"Nation,Capital\");\r\nspreadSheetAddRow(xlsxSheet,\"Canada,Ottawa\");\r\nspreadSheetAddRow(xlsxSheet,\"United Kingdom,London\");\r\nspreadSheetAddRow(xlsxSheet,\"United States of America,Washington, D.C.\");\r\nwriteDump(xlsxSheet);",
-			"result":""
+			"title":"Create xlsx sheet",
+			"description":"xlsx files with and with out sheet name",
+			"code":"xlsxSheet1 = spreadSheetNew(\"xlsx sheet\",true);\r\nxlsxSheet2 = spreadSheetNew(true);\r\nwriteDump(xlsxSheet1);\r\nwriteDump(xlsxSheet2);",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Create xls sheet",
+			"description":"xls files with and with out sheet name",
+			"code":"xlsSheet1 = spreadSheetNew(\"xls sheet\");\r\nxlsSheet2 = spreadSheetNew();\r\nwriteDump(xlsSheet1);\r\nwriteDump(xlsSheet2);",
+			"result":"",
+			"runnable":true
 		}
 	]
 
