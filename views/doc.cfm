@@ -104,12 +104,14 @@
 						<td class="p-description">
 							#autoLink(p.description)#
 							<cfif StructKeyExists(p, "values") AND IsArray(p.values) AND ArrayLen(p.values)>
-								<p>Example Values:</p>
-								<ul>
-									<cfloop array="#p.values#" index="i">
-										<li>#XmlFormat(i)#</li>
-									</cfloop>
-								</ul>
+								<cfif uCase(arrayToList(p.values)) IS NOT "YES,NO">
+									<p>Example Values:</p>
+									<ul>
+										<cfloop array="#p.values#" index="i">
+											<li>#XmlFormat(i)#</li>
+										</cfloop>
+									</ul>
+								</cfif>
 							</cfif>
 						</td>
 					</tr>

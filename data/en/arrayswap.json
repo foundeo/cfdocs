@@ -29,10 +29,10 @@
 		},
 		{
 			"title": "Swap the position of two values in an array using the member function",
-			"description": "CF11+ Lucee4.5+",
+			"description": "CF11+ or Lucee4.5+",
 			"code": "superiorArray = ['Spider-Man','Green Goblin','Doctor Octopus','Venom'];\nsuperiorArray.swap(1,3);\nwriteDump(superiorArray);",
 			"result":"['Doctor Octopus', 'Green Goblin', 'Spider-Man', 'Venom']"	
-		},
+		}
 	]
 
 }

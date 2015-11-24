@@ -1,0 +1,35 @@
+{
+	"name":"GetFreeSpace",
+	"type":"function",
+	"syntax":"getFreeSpace(path);",
+	"returns":"Returns the free space in bytes.",
+	"related":[],
+	"description":" Gets information about free hard disk space or free in-memory VFS space.",
+	"params": [
+		{"name":"path","description":"The Path to the Hard Disk Drive or to the in-memory file system - ram.","required":true,"default":"","type":"","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/GetFreeSpace.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/GetFreeSpace.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/GetFreeSpace"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/GetFreeSpace"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "In the following example, in-memory file system memory for the application is set to 20 MB in ColdFusion Administrator. The function returns 20, which means the total space considered is 20 MB. This is because the value specified in the ColdFusion Administrator (Memory Limit per Application for In-Memory Virtual File System) is lesser than the value specified in the Application.cfc (20 MB).Application.cfc",
+			"code": "<cfcomponent> \r\n <cfset this.name = 'vfs_total_space'> \r\n <cfset this.inmemoryfilesystem.size = 30> \r\n </cfcomponent> \r\n",
+			"result": ""
+		},
+        {
+			"title": "Tag Syntax",
+			"description": "space.cfm",
+			"code": "<cfset freeRAMSpace = getFreeSpace('ram:')>\r\n <cfset freeDiskSpace = getFreeSpace('c:')> \r\n Free Application RAM Memory = #DecimalFormat(freeRAMSpace / (1024 * 1024))# MB \r\n <br>Free Hard Disk Space = #DecimalFormat(freeDiskSpace / (1024 * 1024 * 1024))# GB  \r\n",
+			"result": ""
+		}
+	]
+
+}

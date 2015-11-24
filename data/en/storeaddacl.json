@@ -1,0 +1,30 @@
+{
+	"name":"StoreAddACL",
+	"type":"function",
+	"syntax":"StoreAddACL(url, ACLObject);",
+	"returns":"",
+	"related":[],
+	"description":" Adds ACL to existing ACL for object or bucket.",
+	"params": [
+		{"name":"url","description":"Amazon S3 URLs (content or object).","required":true,"default":"","type":"","values":[]},
+        {"name":"ACLObject","description":"An array of struct where each struct represents a permission or grant as discussed in ACLObject.","required":true,"default":"","type":"","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/StoreAddACL.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/StoreAddACL.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/StoreAddACL"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/StoreAddACL"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "Use this function to add permissions to the existing ones.",
+			"code": "<cftry> \r\n <cfset dir = 's3://bucket_name/'> \r\n \r\n     <cfset perm = structnew()> \r\n     <cfset perm.group = 'authenticated'> \r\n     <cfset perm.permission = 'READ'> \r\n     <cfset perm1 = structnew()> \r\n     <cfset perm1.email = 'email_ID'> \r\n     <cfset perm1.permission = 'READ_ACP'> \r\n     <cfset myarrray = [perm,perm1]> \r\n     <cfif NOT DirectoryExists(dir)> \r\n         <cfset directoryCreate(dir)> \r\n     </cfif> \r\n     <cfset fileWrite('#dir#/Sample.txt','This is to test StoreAddACL')> \r\n     <cfset StoreAddACL('#dir#','#myarrray#')> \r\n     <cfset test = StoreGetACL(dirkey)> \r\n         <cfdump var='#test#'> \r\n     <cfcatch> \r\n         <cfdump var='#cfcatch#'> \r\n     </cfcatch> \r\n </cftry> \r\n",
+			"result": ""
+		}
+	]
+
+}

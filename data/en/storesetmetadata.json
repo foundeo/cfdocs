@@ -1,0 +1,30 @@
+{
+	"name":"StoreSetMetadata",
+	"type":"function",
+	"syntax":"StoreSetMetadata(url,Struct);",
+	"returns":"",
+	"related":[],
+	"description":" Sets the metadata on bucket or object.",
+	"params": [
+		{"name":"url","description":"Amazon S3 URLs (bucket or object).","required":true,"default":"","type":"","values":[]},
+        {"name":"region","description":"Represents the metadata. See Standard keys for a list of standard keys in metadata.You can also have custom metadata apart from the standard ones.","required":true,"default":"","type":"","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/StoreSetMetadata.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/StoreSetMetadata.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/StoreSetMetadata"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/StoreSetMetadata"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfscript>  \r\n       mydate = #Now()#; \r\n       hello = structNew(); \r\n       hello.color = 'grey'; \r\n /cfscript>  \r\n <cfset dir = 's3://mycfbucket'> \r\n       <cffile action='write' file='#dir#/hello5.txt' output='Sample s3 text'> \r\n       <cfset StoreSetMetadata('#dir#/hello5.txt','#hello#')> \r\n       <cfset test = StoreGetMetadata('#dir#/hello5.txt')> \r\n <cfdump var='#test#'> \r\n",
+			"result": ""
+		}
+	]
+
+}
