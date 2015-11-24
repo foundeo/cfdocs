@@ -1,0 +1,31 @@
+{
+	"name":"CacheRegionNew",
+	"type":"function",
+	"syntax":"cacheRegionNew(region,[properties],[throwOnError]__);",
+	"returns":"An error if throwOnError parameter is set to true, provided cache region already exists.",
+	"related":[],
+	"description":" Creates a new custom cache region (if no cache region exists).",
+	"params": [
+		{"name":"region","description":"Name of the new cache region to be created.","required":true,"default":"","type":"","values":[]},
+        {"name":"properties","description":"Struct that contains the cache region properties.","required":false,"default":"","type":"","values":[]},
+        {"name":"throwOnError","description":"A Boolean value specifying if to throw an exception if the cache region name you specify already exists. The default value is true.","required":false,"default":"","type":"","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheRegionNew.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/CacheRegionNew.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/CacheRegionNew"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/CacheRegionNew"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "Defining properties for the struct ",
+			"code": "<cfset defaultCacheProps = StructNew()> \r\n <cfset defaultCacheProps.CLEARONFLUSH = 'true'> \r\n <cfset defaultCacheProps.DISKEXPIRYTHREADINTERVALSECONDS = '3600'> \r\n <cfset defaultCacheProps.DISKPERSISTENT = 'false'> \r\n <cfset defaultCacheProps.DISKSPOOLBUFFERSIZEMB = '30'> \r\n <cfset defaultCacheProps.ETERNAL = 'false'> \r\n <cfset defaultCacheProps.MAXELEMENTSINMEMORY = '5'> \r\n <cfset defaultCacheProps.MAXELEMENTSONDISK = '10'> \r\n <cfset defaultCacheProps.MEMORYEVICTIONPOLICY = 'LRU'> \r\n <cfset defaultCacheProps.OBJECTTYPE = 'OBJECT'> \r\n <cfset defaultCacheProps.OVERFLOWTODISK = 'true'> \r\n <cfset defaultCacheProps.TIMETOLIVESECONDS = '5'> \r\n <cfset defaultCacheProps.TIMETOIDLESECONDS = '30'> \r\n <cfset cacheRegionNew('testregion',#defaultCacheProps#,false)> \r\n <!--- Defining a struct object ---> \r\n <cfset obj1 = structNew()> \r\n <cfset obj1.name = 'xyz'> \r\n <cfset timeToLive = CreateTimeSpan(0,0,5,0)> \r\n <cfset timeToIdle = CreateTimeSpan(0,0,10,0)> \r\n <!--- Putting Cache in the USD specific cache ---> \r\n <cfoutput>Starting to write to cache.</cfoutput> \r\n <cfset cachePut('obj1',obj1,timetoLive,timeToIdle,'testregion')> \r\n <cfoutput>Trying to fetch cached item...</cfoutput> \r\n <cfset obj = cacheGet('obj1','testregion')> \r\n <br/> \r\n <cfoutput>Done!!<br></cfoutput> \r\n <cfoutput>#obj.name#</cfoutput> \r\n",
+			"result": ""
+		}
+	]
+
+}
