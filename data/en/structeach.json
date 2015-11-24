@@ -38,7 +38,7 @@
         {
             "title": "Accessing a reference to the looping struct in the callback",
             "description": "Lucee4.5+",
-            "code": "statusCodes = {\n    OK = 200,\n    CREATED = 201,\n    NOT_MODIFIED = 304,\n    BAD_REQUEST = 400,\n    NOT_FOUND = 404\n};\n\nstatusCodes.each(function(key, value, struct) {\n    writeDump(struct);\n});",
+            "code": "statusCodes = {\n    OK = 200,\n    CREATED = 201,\n    NOT_MODIFIED = 304,\n    BAD_REQUEST = 400,\n    NOT_FOUND = 404\n};\n\nstatusCodes.each(function(key, value, struct) {\n    writeDump(struct);\n});"
         }
 	]
 
