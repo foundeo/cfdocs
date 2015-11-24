@@ -2,10 +2,11 @@
 	"name":"cftransaction",
 	"type":"tag",
 	"syntax":"<cftransaction>",
+	"script": "transaction { }",
 	"returns":"",
-	"related":[],
+	"related":["cftry", "cfcatch"],
 	"description":" Instructs the database management system to treat multiple\n database operations as a single transaction. Provides database\n commit and rollback processing.",
-	"params": [ 
+	"params": [
 		{"name":"action","description":"<ul>\n <li>begin: the start of the block of code to execute<\/li>\n <li>commit: commits a pending transaction<\/li>\n <li>rollback: rolls back a pending transaction<\/li>\n <\/ul>","required":false,"default":"begin","type":"String","values":["begin","commit","rollback","setsavepoint"]},
 		{"name":"isolation","description":"ODBC lock type.","required":false,"default":"","type":"String","values":["read_uncommitted","read_committed","repeatable_read","serializable"]},
 		{"name":"savepoint","description":"The name of the savepoint in the transaction.","required":false,"default":"","type":"String","values":[]},
@@ -13,12 +14,27 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cftransaction"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cftransaction.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/transaction.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cftransaction"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cftransaction"}
 	},
 	"links": [
-		
+
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "\r\ntransaction { \r\n try { \r\n // code to run \r\n transaction action=\"commit\"; \r\n } \r\n catch(any e) { \r\n  transaction action=\"rollback\"; \r\n  } \r\n }",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cftransaction> \r\n <cftry> \r\n <!--- code to run ---> \r\n   <cftransaction action=\"commit\" /> \r\n <cfcatch type=\"any\"> \r\n <cftransaction action=\"rollback\" /> \r\n </cfcatch> \r\n </cftry> \r\n </cftransaction>",
+	            "result": ""
+	        }
 	]
-	
+
 }

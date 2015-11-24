@@ -5,18 +5,19 @@
 	"returns":"void",
 	"related":[],
 	"description":" Shifts the file pointer to the given position. The file must be opened with seekable option",
-	"params": [ 
+	"params": [
 		{"name":"file","description":"No Help Available","required":true,"default":"","type":"variablename","values":[]},
 		{"name":"position","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/fileseek"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileseek.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/fileseek.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/fileseek"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/fileseek"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Populates a Verity search engine collection with an index of\n documents on a file system or of CFML query result sets.\n\n A collection must exist before it can be populated.",
-	"params": [ 
+	"params": [
 		{"name":"collection","description":"Name of a collection that is registered by CFML; for\n example, \"personnel\"\n Name and absolute path of a collection that is not\n registered by CFML; for example:\n \"e:\\collections\\personnel\"","required":true,"default":"","type":"String","values":[]},
 		{"name":"action","description":"- update: updates a collection and adds key to the index.\n - delete: removes collection documents as specified by\n the key attribute.\n - purge: deletes all of the documents in a collection.\n Causes the collection to be taken offline, preventing\n searches.\n - refresh: deletes all of the documents in a collection,\n and then performs an update.","required":false,"default":"","type":"String","values":["update","delete","purge","refresh"]},
 		{"name":"type","description":"file: using the key attribute value of the query result as\n input, applies action value to filenames or filepaths.\n path: using the key attribute value of the query result as\n input, applies action to filenames or filepaths that\n pass the extensions filter\n custom: If action = \"update\" or \"delete\": applies action to\n custom entities in query results.","required":false,"default":"","type":"String","values":["file","path","custom"]},
@@ -28,12 +28,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfindex"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfindex.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/index.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfindex"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfindex"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,16 +5,20 @@
 	"returns":"void",
 	"related":["sessioninvalidate"],
 	"description":"Creates a new session (using new session ids) and copies session scope into this new session, then invalidates the old session. Used after a valid login to prevent session fixation.",
-	"params": [ 
-		
+	"params": [
+
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/sessioninrotate"},
-		"railo": {"minimum_version":"4", "notes":"", "docs":"http://railodocs.org/index.cfm/function/sessioninrotate"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/sessioninrotate"}
+		"coldfusion": {"minimum_version":"10", "notes":"Does not rotate jsessionid when JEE sessions are enabled, only works with ColdFusion sessions (CFID,CFTOKEN).", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/sessionrotate.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/sessionrotate.html"},
+		"railo": {"minimum_version":"4", "notes":"", "docs":"http://railodocs.org/index.cfm/function/sessionrotate"}
 	},
 	"links": [
-		
+		{
+			"title":"SessionRotate for JEE Sessions",
+			"description":"A UDF for rotating JEE sessions.",
+			"url":"http:\/\/www.petefreitag.com\/item\/829.cfm"
+		}
 	]
-	
+
 }

@@ -5,17 +5,18 @@
 	"returns":"String",
 	"related":[],
 	"description":" Creates an absolute, platform-appropriate path that is\n equivalent to the value of relative_path, appended to the base\n path. This function (despite its name) can accept an absolute\n or relative path in the relative_path attribute",
-	"params": [ 
+	"params": [
 		{"name":"relative_path","description":"","required":true,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/expandpath"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/expandpath.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/expandpath.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/expandpath"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/expandpath"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

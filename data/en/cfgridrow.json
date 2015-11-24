@@ -5,18 +5,19 @@
 	"returns":"",
 	"related":[],
 	"description":" Lets you define a cfgrid that does not use a query as source\n for row data. If a query attribute is specified in cfgrid, the\n cfgridrow tags are ignored.",
-	"params": [ 
+	"params": [
 		{"name":"data","description":"Delimited list of column values. If a value contains a\n comma, it must be escaped with another comma","required":true,"default":"","type":"String","values":[]},
 		{"name":"delimiter","description":"Delimiter to be used for data","required":false,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfgridrow"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfgridrow.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/gridrow.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfgridrow"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfgridrow"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

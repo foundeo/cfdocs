@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Creates a container control for multiple form controls.\n Used in the cfform tag body of Macromedia Flash and XML\n forms. Ignored in HTML forms.",
-	"params": [ 
+	"params": [
 		{"name":"type","description":"For XML forms can be any XForms group type defined in the XSLT.\n For Flash see the value options and docs for more information.","required":true,"default":"","type":"String","values":["horizontal","vertical","fieldset","repeater","horizontal","vertical","hbox","vbox","hdividedbox","vdividedbox","panel","tile","accordion","tabnavigator","page"]},
 		{"name":"query","description":"The query to use with the repeater. Flash creates an\n instance of each of the cfformgroup tag's child tags for\n each row in the query. You can use the bind attribute in\n the child tags to use data from the query row for the\n instance.","required":false,"default":"","type":"query","values":[]},
 		{"name":"startrow","description":"Used only for the repeater type; ignored otherwise.\n Specifies the row number of the first row of the query to\n use in the Flash form repeater. This attribute is zerobased:\n the first row is row 0, not row 1 (as in most ColdFusion tags).\n Default: 0","required":false,"default":0,"type":"Numeric","values":[]},
@@ -23,12 +23,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfformgroup"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-f/cfformgroup.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/formgroup.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfformgroup"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfformgroup"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

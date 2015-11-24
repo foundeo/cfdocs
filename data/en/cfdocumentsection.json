@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Divides a PDF or FlashPaper document into sections.\n By using this tag in conjunction with a cfdocumentitem\n tag, each section can have unique headers, footers,\n and page numbers.",
-	"params": [ 
+	"params": [
 		{"name":"margintop","description":"Specifies the top margin in inches (default) or\n centimeters. To specify the top margin in centimeters,\n include the unit=\"cm\" attribute in the parent cfdocument\n tag.","required":false,"default":"","type":"Numeric","values":[]},
 		{"name":"marginbottom","description":"Specifies the bottom margin in inches (default) or\n centimeters. To specify the bottom margin in\n centimeters, include the unit=\"cm\" attribute in the\n parent cfdocument tag.","required":false,"default":"","type":"Numeric","values":[]},
 		{"name":"marginleft","description":"Specifies the left margin in inches (default) or\n centimeters. To specify the left margin in centimeters,\n include the unit=\"cm\" attribute in the parent cfdocument\n tag.","required":false,"default":"","type":"Numeric","values":[]},
@@ -20,12 +20,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfdocumentsection"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfdocumentsection.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/documentsection.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdocumentsection"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdocumentsection"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

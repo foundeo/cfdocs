@@ -2,10 +2,11 @@
 	"name":"cfargument",
 	"type":"tag",
 	"syntax":"<cfargument name=\"\">",
+	"script": "myFunction(required any myArgument){}",
 	"returns":"",
-	"related":[],
+	"related":["cffunction"],
 	"description":" Creates a parameter definition within a component definition.\n Defines a function argument. Used within a cffunction tag.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"An argument name.","required":true,"default":"","type":"Stirng","values":[]},
 		{"name":"type","description":"a type name; data type of the argument.","required":false,"default":"","type":"String","values":["any","array","binary","boolean","date","guid","numeric","query","string","struct","uuid","xml","variablename","(component name)"]},
 		{"name":"required","description":"Whether the parameter is required to execute the component\n method.","required":false,"default":"","type":"boolean","values":[true,false]},
@@ -15,12 +16,27 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfargument"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-a-b/cfargument.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/argument.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfargument"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfargument"}
 	},
 	"links": [
-		
+
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "For Script syntax the argument is inside the ()",
+			"code": "public boolean function myFunction(required any myArgument) {\r\n // Some function bits \r\n return true; \r\n }",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "For Tag syntax the argument is its own tag",
+	            "code": "<cffunction access=\"public\" returntype=\"boolean\" name=\"myFunction\"> \r\n <cfargument required=\"true\" type=\"any\" name=\"myArgument\"> \r\n <!--- Some function bits ---> \r\n <cfreturn true> \r\n </cffunction>",
+	            "result": ""
+	        }
 	]
-	
+
 }

@@ -3,21 +3,22 @@
 	"type":"function",
 	"syntax":"dateDiff(datepart, date1, date2)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["dateadd","dateformat"],
 	"description":"Determines the integer number of units by which date1 is less than date2.",
-	"params": [ 
+	"params": [
 		{"name":"datepart","description":"yyyy: Year\n q: Quarter\n m: Month\n y: Day of year\n d: Day\n w: Weekday\n ww: Week\n h: Hour\n n: Minute\n s: Second\n l: Millisecond","required":true,"default":"","type":"String","values":["yyyy","q","m","y","d","w","ww","h","n","s","l"]},
 		{"name":"date1","description":"","required":true,"default":"","type":"DateTime","values":["now()"]},
 		{"name":"date2","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/datediff"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateDiff.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/datediff.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/datediff"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/datediff"}
 	},
 	"links": [
-		
+
 	],
 	"examples": [
 		{
@@ -25,8 +26,13 @@
 			"description": "Find the difference between two dates.",
 			"code": "DateDiff(\"d\", \"2013-01-15\", \"2013-01-25\")",
 			"result": "10"
+		},
+		{
+			"title": "How old are they?",
+			"description": "Calculates a persons age based on a variable birthDate which contains a date. Uses the now function to get current date.",
+			"code": "DateDiff(\"yyyy\", birthDate, now())"
 		}
-	]		
-	
-	
+	]
+
+
 }

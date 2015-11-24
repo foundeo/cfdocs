@@ -1,25 +1,40 @@
 {
-	"name":"entityload",
+	"name":"EntityLoad",
 	"type":"function",
-	"syntax":"entityload(entityName, filtercriteria [, unique] [, sortorder] [, options])",
-	"returns":"",
-	"related":[],
-	"description":" Loads and returns an array of entities of the specified entityname.\nEntityLoad (entityname, filtercriteria [,unique] \nEntityLoad(entityname, filtercriteria, sortorder [, options])",
-	"params": [ 
-		{"name":"entityName","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"filtercriteria","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"unique","description":"No Help Available","required":false,"default":"","type":"String","values":[]},
-		{"name":"sortorder","description":"No Help Available","required":false,"default":"","type":"String","values":[]},
-		{"name":"options","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
+	"syntax":"EntityLoad(entityName [, filterCriteria] [, unique])\n EntityLoad(entityName [, filterCriteria] [, sortOrder] [, options])",
+	"returns":"array|object",
+	"related":["entitynew","entityget", "entityloadbypk","entityloadbyexample", "entityreload", "ormexecutequery"],
+	"description":"Loads and returns an array of entities of the specified entityname or an entity if unique=true or if a primary key id is passed in to filterCriteria.",
+	"params": [
+		{"name":"entityName","description":"Name of CFC / Entity","required":true,"default":"","type":"String","values":[]},
+		{"name":"filterCriteria","description":"A struct of key value pairs, or a primary key value","required":false,"default":"","type":"Any","values":[]},
+		{"name":"unique","description":"When true a single entity is returned, otherwise an array","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"sortOrder","description":"Column name and direction list, eg: LastName ASC, FirstName ASC","required":false,"default":"","type":"String","values":[]},
+		{"name":"options","description":"A struct with possible keys: ignorecase, sortorder, offset, maxresults, cacheable, cachename, timeout","required":false,"default":"","type":"Struct","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/entityload"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entityload.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/entityload.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entityload"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/entityload"}
 	},
 	"links": [
-		
+
+	],
+	"examples": [
+		{
+			"title": "Load by PK",
+			"description": "Loads an entity by primary key value",
+			"code": "EntityLoad(\"Employee\", url.employee_id)",
+			"result": "An Employee CFC Instance"
+		},
+		{
+			"title": "Get multiple entities",
+			"description": "Returns an array of Employee instances with last name Smith",
+			"code": "EntityLoad(\"Employee\", {LastName=\"Smith\"})",
+			"result": "array"
+		}
 	]
-	
+
 }

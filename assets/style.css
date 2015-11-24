@@ -2,11 +2,14 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
-h2 .item-name { font-weight:bold; }
+#docname,h4 { font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
+h2 { border-bottom:1px solid #f1f1f1; padding-bottom: 12px; }
+
+h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
 .p-name { font-weight:bold; font-size:larger;}
 .listing { display:inline; margin: 8px; line-height:60px;}
 #syntax { font-weight:bold; }
-#forkme { position: absolute; top: 0; right: 0; border: 0; z-index: 9999;}
+#forkme { position: absolute; top: 0; right: 0; border: 0; z-index: 9999; width:149px; height:149px;}
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
   margin-bottom: 0;
@@ -60,7 +63,7 @@ h2 .item-name { font-weight:bold; }
 .twitter-typeahead .tt-hint {
     display: block;
     height: 43px;
-    padding: 8px 12px;
+    padding: 8px 25px;
     font-size: 14px;
     line-height: 1.428571429;
     border: 1px solid transparent;
@@ -69,3 +72,27 @@ h2 .item-name { font-weight:bold; }
 .breadcrumb li.pull-right:before { content: " ";}
 footer { text-align: center; margin-top: 10px; font-size:smaller; }
 .navbar-brand { font-weight:bold; }
+
+.label-acf {
+    background-color: #069;
+}
+.label-acf:hover,
+.label-acf:focus {
+    background-color: #246;
+}
+.label-lucee {
+    background-color: #449caf;
+}
+.label-lucee:hover,
+.label-lucee:focus {
+    background-color: #01798a;
+}
+.label-openbd {
+    background-color: #2fa5d7;
+}
+.label-openbd:hover,
+.label-openbd:focus {
+    background-color: #1b6c8f;
+}
+
+iframe { border:0px;}

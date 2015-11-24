@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Inserts a tree control in a form. Validates user selections.\n Used within a cftree tag block. You can use a CFML query\n to supply data to the tree.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"Name for tree control.","required":true,"default":"","type":"String","values":[]},
 		{"name":"format","description":"- applet: displays the tree using a Java applet in the\n browser,\n - flash: displays the tree using a Flash control\n - object: returns the tree as a ColdFusion structure with the\n name specified by the name attribute, For details of the\n structure contents, see \"object format\", below.\n - xml: Generates an XMLrepresentation of the tree.\n In XML format forms, includes the generated XML in the\n form. and puts the XML in a string variable with the name\n specified by the name attribute.\n Default: applet","required":false,"default":"applet","type":"String","values":["applet","flash","html","object","xml"]},
 		{"name":"required","description":"- true: user must select an item in tree control\n - false: they do not\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]},
@@ -41,12 +41,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cftree"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cftree.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/tree.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cftree"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cftree"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

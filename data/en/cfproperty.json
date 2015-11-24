@@ -5,11 +5,11 @@
 	"returns":"",
 	"related":[],
 	"description":" Defines properties of a CFML component (CFC). Used to\n create complex data types for web services. The attributes of\n this tag are exposed as component metadata and are subject to\n inheritance rules.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"Specifies the name of the property.","required":true,"default":"","type":"String","values":[]},
 		{"name":"type","description":"Specifies the ColdFusion data type for the property.","required":false,"default":"","type":"String","values":["any","array","binary","boolean","date","guid","numeric","query","string","struct","uuid","variablename"]},
 		{"name":"required","description":"Whether the parameter is required","required":false,"default":"","type":"boolean","values":[true,false]},
-		{"name":"default","description":"This sets the default value on the property when the object is created.","required":false,"default":"","type":"String","values":[]},
+		{"name":"default","description":"This sets the default value on the property when the object is created. For ORM Entities, this only works for static values. Variable values like the current timestamp can be set by a function \"preInsert\" in the component.","required":false,"default":"","type":"String","values":[]},
 		{"name":"displayname","description":"A value to be displayed when using introspection to show\n information about the CFC. The value appears in parentheses\n following the property name.","required":false,"default":"","type":"String","values":[]},
 		{"name":"hint","description":"Text to be displayed when using introspection to show\n information about the CFC. This attribute can be useful\n for describing the purpose of the parameter.","required":false,"default":"","type":"String","values":[]},
 		{"name":"fieldtype","description":"This attribute is used to specify the type of the property. Use this attribute to specify the following:\n* Primary key: Specify fieldtype = \"id\" to map a property to the primary key in the table. \n* Column: Specify the fieldtype = \"column\" to map a property to a column in the table.\n* Relationship: Specify the fieldtype = \"relationship_type\". The relationship_type can be one-to-one, one-to-many, many-to-one, or many-to-many.\n* Version: Specify the fieldtype=\"version‚Äù to indicate that the column contains versioned data.\n* Timestamp: Specify the fieldtype=\"timestamp\" to indicate the column contains data with timestamp.\n* Collection: Specify the fieldtype=\"collection\" to define the collection mapping.","required":false,"default":"","type":"String","values":["id","column","one-to-one","one-to-many","many-to-many","many-to-one","collection","timestamp","version"]},
@@ -68,12 +68,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfproperty"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfproperty.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/property.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfproperty"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfproperty"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

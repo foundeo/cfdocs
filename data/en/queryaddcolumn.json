@@ -5,20 +5,21 @@
 	"returns":"Numeric",
 	"related":[],
 	"description":" Adds a column to a query and populates its rows with the\n contents of a one-dimensional array. Pads query columns,\n if necessary, to ensure that all columns have the same number\n of rows.",
-	"params": [ 
+	"params": [
 		{"name":"query","description":"","required":true,"default":"","type":"Query","values":[]},
 		{"name":"column_name","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"datatype","description":"Column data type.","required":false,"default":"","type":"String","values":["Integer","BigInt","Double","Decimal","VarChar","Binary","Bit","Time","Data"]},
+		{"name":"datatype","description":"Column data type.","required":false,"default":"","type":"String","values":["Integer","Bigint","Double","Decimal","Varchar","Binary","Bit","Time","Data"]},
 		{"name":"array_name","description":"","required":true,"default":"","type":"Array","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/queryaddcolumn"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryaddcolumn.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/queryaddcolumn.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/queryaddcolumn"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/queryaddcolumn"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

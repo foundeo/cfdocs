@@ -3,19 +3,20 @@
 	"type":"function",
 	"syntax":"isNull(object)",
 	"returns":"boolean",
-	"related":[],
-	"description":" Determines whether given object is null or not",
-	"params": [ 
+	"related":["javacast"],
+	"description":"Returns true if the specified object is null.",
+	"params": [
 		{"name":"object","description":"","required":true,"default":"","type":"variablename","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/isnull"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isnull"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isnull.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/isnull.html"},
+		"railo": {"minimum_version":"3", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isnull"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isnull"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Reads, writes, and deletes keys and values in the system registry.\n Provides persistent storage of client variables.\n This tag is deprecated for the UNIX platform.\n Note: For this tag to execute, it must be enabled in the ColdFusion MX\n Administrator.",
-	"params": [ 
+	"params": [
 		{"name":"action","description":"Action to perform","required":true,"default":"","type":"String","values":["getAll","get","set","delete"]},
 		{"name":"branch","description":"Name of a registry branch.","required":false,"default":"","type":"String","values":[]},
 		{"name":"entry","description":"Registry value to access.\n Note: For key deletion this attribute is required.","required":false,"default":"","type":"String","values":[]},
@@ -22,12 +22,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfregistry"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfregistry.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/registry.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfregistry"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfregistry"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,18 +5,19 @@
 	"returns":"String",
 	"related":[],
 	"description":" Decodes a URL-encoded string.",
-	"params": [ 
+	"params": [
 		{"name":"urlencodedstring","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"charset","description":"The character encoding in which the string is encoded.","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/urldecode"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/urldecode.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/urldecode.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/urldecode"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/urldecode"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

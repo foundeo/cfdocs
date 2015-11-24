@@ -5,19 +5,20 @@
 	"returns":"void",
 	"related":[],
 	"description":" Formats the contents of a multipe rows of an Excel spreadsheet object.",
-	"params": [ 
+	"params": [
 		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
 		{"name":"format","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
 		{"name":"row","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetformatrows"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetformatrows.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/spreadsheetformatrows.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetformatrows"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetformatrows"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

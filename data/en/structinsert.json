@@ -5,7 +5,7 @@
 	"returns":"boolean",
 	"related":[],
 	"description":" Inserts a key-value pair into a structure.",
-	"params": [ 
+	"params": [
 		{"name":"structure","description":"Structure to contain the new key-value pair.","required":true,"default":"","type":"Struct","values":[]},
 		{"name":"key","description":"Key that contains the inserted value.","required":true,"default":"","type":"String","values":[]},
 		{"name":"value","description":"Value to add.","required":true,"default":"","type":"Object","values":[]},
@@ -13,12 +13,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/structinsert"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structinsert.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/structinsert.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structinsert"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structinsert"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,7 +5,7 @@
 	"returns":"String",
 	"related":[],
 	"description":" Encrypts binary data using a specific algorithm and encoding method.",
-	"params": [ 
+	"params": [
 		{"name":"bytes","description":"Bindary data to encrypt.","required":true,"default":"","type":"String","values":[]},
 		{"name":"key","description":"Key or seed used to encrypt the string.\n * For the CFMX_COMPAT algorithm, any combination of any\n number of characters; used as a seed used to generate\n a 32-bit encryption key.\n * For all other algorithms, a key in the format used by the\n algorithm. For these algorithms, use the GenerateSecretKey\n function to generate the key.","required":true,"default":"","type":"String","values":[]},
 		{"name":"algorithm","description":"The algorithm to use to encrypt the string. \n * CFMX_COMPAT: the algorithm used in ColdFusion MX and prior\n releases. This algorithm is the least secure option (default).\n * AES: the Advanced Encryption Standard specified by the\n National Institute of Standards and Technology (NIST) FIPS-197.\n * BLOWFISH: the Blowfish algorithm defined by Bruce Schneier.\n * DES: the Data Encryption Standard algorithm defined by NIST FIPS-46-3.\n * DESEDE: the \"Triple DES\" algorithm defined by NIST FIPS-46-3.","required":false,"default":"CFMX_COMPAT","type":"String","values":["CFMX_COMPAT","AES","BLOWFISH","DES","DESEDE"]},
@@ -14,12 +14,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/encryptbinary"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/encryptbinary.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/encryptbinary.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/encryptbinary"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/encryptbinary"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

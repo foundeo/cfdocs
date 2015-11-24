@@ -1,0 +1,45 @@
+{
+	"name":"structEach",
+	"type":"function",
+	"syntax":"structEach(struct,function(key, value [, struct]) {})",
+    "member":"someStruct.each(function(key, value [, struct]) {})",
+	"related":[],
+	"description":"Used to loop over elements in a structure by accessing key-value pairs.",
+	"params": [
+		{"name":"structure","description":"Structure or a variable that contains one.","required":true,"default":"","type":"String","values":[]},
+		{"name":"callback","description":"Closure or function reference that will be called for each iteration. The arguments passed to the callback are:\n\n<strong>key:</strong> Name of the key in the struct\n<strong>value:</strong> Value of the key in the struct\n<strong>struct:</strong> Lucee4.5+ A reference to the original struct","required":true,"default":"","type":"UDF","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structeach.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/structeach.html"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structeach"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "structEach() with an inline function (closure)",
+			"description": "Use a function to write out the keys in a structure to the screen",
+			"code": "someStruct = {a=1,b=2,c=3};\n\narrayEach(someStruct,function(obj) {\n     writeoutput('Key ' & key & ' is ' & value & '; ');\n});",
+			"result": "Key a is 1; Key b is 2; Key c is 3; "
+		},
+		{
+			"title": "Using a function reference",
+			"description": "",
+			"code": "favs = {color: 'blue', food: 'pizza', sport: 'basketball'}; \r\n // named function \r\n // notice that the function takes two arguments, the key and value pair of the current iteration of the structure's key-value pairs \r\n function getFavorites(key, value) { \r\n writeoutput('My favorite ' & key & ' is ' & value); \r\n } \r\n // run structeach() with a named function \r\n structeach(favs,getFavorites); \r\n // run structeach() with an inline function \r\n structeach(favs, function(key,value) { \r\n writeoutput('My favorite ' & key & ' is ' & value); \r\n }); \r\n"
+		},
+        {
+            "title": "Using the member function",
+            "description": "CF11+ Lucee4.5+",
+            "code": "statusCodes = {\n    OK = 200,\n    CREATED = 201,\n    NOT_MODIFIED = 304,\n    BAD_REQUEST = 400,\n    NOT_FOUND = 404\n};\n\nstatusCodes.each(function(key, value) {\n    writeOutput(\"#key# => #value#<br />\");\n});",
+            "result": "NOT_FOUND => 404\nBAD_REQUEST => 400\nCREATED => 201\nOK => 200\nNOT_MODIFIED => 304"
+        },
+        {
+            "title": "Accessing a reference to the looping struct in the callback",
+            "description": "Lucee4.5+",
+            "code": "statusCodes = {\n    OK = 200,\n    CREATED = 201,\n    NOT_MODIFIED = 304,\n    BAD_REQUEST = 400,\n    NOT_FOUND = 404\n};\n\nstatusCodes.each(function(key, value, struct) {\n    writeDump(struct);\n});",
+        }
+	]
+
+}

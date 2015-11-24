@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Generates and displays a chart.",
-	"params": [ 
+	"params": [
 		{"name":"format","description":"File format in which to save graph.","required":false,"default":false,"type":"String","values":["flash","jpg","png"]},
 		{"name":"chartheight","description":"Chart height; integer number of pixels","required":false,"default":240,"type":"Numeric","values":[]},
 		{"name":"chartwidth","description":"Chart width; integer number of pixels","required":false,"default":320,"type":"Numeric","values":[]},
@@ -45,12 +45,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfchart"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfchart.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/chart.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfchart"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfchart"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

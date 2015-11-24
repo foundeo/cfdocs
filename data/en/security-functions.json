@@ -1,0 +1,6 @@
+{
+	"name":"Security Functions",
+	"type":"listing",
+	"related":["binaryDecode","binaryEncode", "decrypt","decryptBinary","encodeForHTML","encodeForHTMLAttribute","encrypt","encryptBinary","getAuthUser","generateSecretKey","getTempDirectory","getTempFile","getUserRoles","hash","hmac","isUserInAnyRole","isUserInRole","isUserLoggedIn","verifyClient","generatePBKDFKey"], 
+	"description":"A listing of CFML Security Functions."
+}

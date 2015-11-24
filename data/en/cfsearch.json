@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Searches Verity collections using CFML or K2Server,\n whichever search engine a collection is registered by.\n (CFML can also search collections that have not been\n registered, with the cfcollection tag.)\n\n A collection must be created and indexed before this tag can\n return search results.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"Name of the search query.","required":true,"default":"","type":"String","values":[]},
 		{"name":"collection","description":"One or more collection names. You can specify more\n than one collection unless you are performing a\n category search (that is, specifying category or\n categoryTree).\n\n One or more collection names. You can specify more\n than one collection unless you are performing a\n category search (that is, specifying category or\n categoryTree).","required":true,"default":"","type":"String","values":[]},
 		{"name":"category","description":"A list of categories, separated by commas, to which\n the search is limited. If specified, and the collection\n does not have categories enabled, ColdFusion\n\n throws an exception.","required":false,"default":"","type":"String","values":[]},
@@ -25,12 +25,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfsearch"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfsearch.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/search.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfsearch"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfsearch"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

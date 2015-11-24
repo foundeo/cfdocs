@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Creates, deletes, modifies, and gets Microsoft Exchange contact records, and gets contact record attachments.",
-	"params": [ 
+	"params": [
 		{"name":"action","description":"The action to take. Must be one of the following: create, delete, get, getAttachments, modify (required)","required":true,"default":"","type":"String","values":["create","delete","deleteAttachments","get","getAttachments","modify"]},
 		{"name":"attachmentPath","description":"The absolute file path of the directory in which to put the attachments.\n If the directory does not exist, ColdFusion creates it.\n If you omit this attribute, ColdFusion does not save any attachments. (optional)","required":false,"default":"","type":"String","values":[]},
 		{"name":"connection","description":"The name of the connection to the Exchange server, as specified in the cfexchangeconnection tag.\n If you omit this attribute, you must create a temporary connection by specifying\n cfexchangeconnection tag connection attributes in the cfexchangecontact tag. (optional)","required":false,"default":"","type":"variablename","values":[]},
@@ -17,12 +17,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfexchangecontact"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexchangecontact.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/exchangecontact.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfexchangecontact"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfexchangecontact"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

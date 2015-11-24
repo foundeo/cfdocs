@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Defines the look and feel of a dynamic slide presentation.\n Use the cfpresentation tag as the parent tag for one or more cfpresentationslide tags,\n where you define the content for the presentation.",
-	"params": [ 
+	"params": [
 		{"name":"backgroundColor","description":"Specifies the background color of the presentation.\n The value is hexadecimal: use the form \"##xxxxxx\" or \"##xxxxxxxx\",\n where x = 0-9 or A-F; use two number signs or none. (optional, default=0x727971)","required":false,"default":"","type":"String","values":[]},
 		{"name":"control","description":"Specifies the presentation control:\n normal\n brief (optional, default=normal)","required":false,"default":"","type":"String","values":["normal","brief"]},
 		{"name":"controlLocation","description":"Specifies the location of the presentation control:\n right\n left (optional, default= right)","required":false,"default":"","type":"String","values":["right","left"]},
@@ -35,12 +35,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfpresentation"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpresentation.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/presentation.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfpresentation"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfpresentation"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -2,21 +2,37 @@
 	"name":"cfcase",
 	"type":"tag",
 	"syntax":"<cfcase value=\"\">",
+	"script":"case \"apple\":",
 	"returns":"",
-	"related":[],
-	"description":" Used only inside the cfswitch tag body. Contains code to\n execute when the expression specified in the cfswitch tag has\n one or more specific values.",
-	"params": [ 
-		{"name":"value","description":"The value or values that the expression attribute of the\n cfswitch tag must match. To specify multiple matching\n values, separate the values with the delimiter character.\n The value or values must be simple constants or constant\n expressions, not variables.","required":true,"default":"","type":"String","values":[]},
-		{"name":"delimiters","description":"Specifies the delimiter character or characters that\n separate multiple values to match. If you specify multiple\n delimiter characters, you can use any of them to separate\n the values to be matched.","required":false,"default":",","type":"String","values":[",",";","|",":"]}
+	"related":["cfswitch","cfdefaultcase"],
+	"description":"Used only inside the cfswitch tag body. Contains code to execute when the expression specified in the cfswitch tag has one or more specific values.  Note the difference in the tag and script syntax when providing multiple values for a case.",
+	"params": [
+		{"name":"value","description":"The value or values that the expression attribute of the cfswitch tag must match. To specify multiple matching values, for tag syntax, separate the values with the delimiter character; for script syntax list each on the same line. The value or values must be simple constants or constant expressions, not variables.","required":true,"default":"","type":"String","values":[]},
+		{"name":"delimiters","description":"Specifies the delimiter character or characters that separate multiple values to match. If you specify multiple delimiter characters, you can use any of them to separate the values to be matched. Used only for tag syntax.","required":false,"default":",","type":"String","values":[",",";","|",":"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfcase"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcase.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/case.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfcase"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcase"}
 	},
 	"links": [
-		
+
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "fruit = \"\";\r\nswitch(fruit) {\r\n    case \"Apple\":\r\n        writeOutput(\"I like apples!\");\r\n        break; \r\n    case \"Orange\": case \"Citrus\":\r\n        writeOutput(\"I like oranges!\");\r\n        break; \r\n    case \"Kiwi\":\r\n        writeOutput(\"I like kiwi!\"); \r\n        break; \r\n    default: \r\n        writeOutput(\"Fruit, what fruit?\"); \r\n        break; \r\n }",
+			"result": "Fruit, what fruit?"
+		},
+        {
+            "title": "Tag Syntax",
+            "description": "",
+            "code": "<cfset fruit = \"Orange\"> \r\n<cfswitch expression=\"#fruit#\"> \r\n    <cfcase value=\"Apple\">I like apples!</cfcase>\r\n    <cfcase value=\"Orange;Citrus\" delimiters=\";\">I like oranges!</cfcase> \r\n    <cfcase value=\"Kiwi\">I like kiwi!</cfcase>\r\n    <cfdefaultcase>Fruit, what fruit?</cfdefaultcase> \r\n</cfswitch>",
+            "result": "I like oranges!"
+        }
 	]
-	
+
 }

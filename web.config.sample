@@ -1,0 +1,28 @@
+<!----
+    This sample IIS config file provides a simple approximation of the official .htaccess included in this project.
+    If you're running CFDocs on a windows dev server, add the <rewrite> rule below to your web.config.
+    Also, to get the search typeahead working your server must return /en/data/index.json with MIME application/json
+    to do so, include the <mimeMap> below in your web.config file as well.
+
+    Tested with IIS 7.5
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <rewrite>
+            <rules>
+                <rule name="Rewrite /t to /tags" stopProcessing="true">
+                    <match url="^t/*$" />
+                    <action type="Rewrite" url="/tags" />
+                </rule>
+                <rule name="Rewrite Tag Function to Doc" stopProcessing="true">
+                    <match url="^([^./]+)$" />
+                    <action type="Rewrite" url="/doc.cfm?name={R:1}" />
+                </rule>
+            </rules>
+        </rewrite>
+        <staticContent>
+            <mimeMap fileExtension=".json" mimeType="application/json" />
+        </staticContent>
+    </system.webServer>
+</configuration>

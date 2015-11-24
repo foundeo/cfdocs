@@ -1,0 +1,29 @@
+{
+	"name":"cacheRemoveAll",
+	"type":"function",
+	"syntax":"cacheRemoveAll(region__);",
+	"returns":"",
+	"related":[],
+	"description":" Removes all stored objects in a cache region. If no cache region is specified, objects in the default region are removed.",
+	"params": [
+		{"name":"region","description":"Indicates the cache region from which to remove the stored objects. If no value is specified, default cache region is considered by default.","required":false,"default":"","type":"","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/cacheRemoveAll.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/cacheRemoveAll.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cacheRemoveAll"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cacheRemoveAll"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "the in-memory file system memory set in cfadmin and should return that.",
+			"code": "<!--- clear all object caches ---> \r\n <cfif ArrayLen(cacheGetAllIds()) gt 0> <cfset cacheRemove(ArrayToList(cacheGetAllIds()))> \r\n </cfif> \r\n <!--- create few caches ---> \r\n <cfloop from='1' to='10' index='i'> \r\n <cfset id = 'cache_#i#'> \r\n <cfset timeToLive = CreateTimeSpan(0,0,30,0)> <cfset timeToIdle = CreateTimeSpan(0,0,30,0)> \r\n <cfset cachePut(id,createQryObj(i),timeToLive,timeToIdle)> \r\n </cfloop> \r\n <cfoutput>Before cacheRemove() :: Number of objects in the cache: #ArrayLen(cacheGetAllIds())#<br></cfoutput> \r\n <!--- clear all objects from the cache ---> \r\n <cfset cacheRemoveAll()> \r\n <cfoutput>After cacheRemove() :: Number of objects in the cache: #ArrayLen(cacheGetAllIds())#<br><br></cfoutput> \r\n",
+			"result": ""
+		}
+	]
+
+}

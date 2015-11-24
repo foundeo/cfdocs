@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Defines stored procedure parameters. This tag is nested within\n a cfstoredproc tag.",
-	"params": [ 
+	"params": [
 		{"name":"type","description":"in: The parameter is used to send data to the database\n system only. Passes the parameter by value.\n out: The parameter is used to receive data from the\n database system only. Passes the parameter as a bound\n variable.\n inout: The parameter is used to send and receive data.\n Passes the parameter as a bound variable.","required":false,"default":"in","type":"String","values":["in","out","inout"]},
 		{"name":"variable","description":"CFML variable name; references the value that the\n output parameter has after the stored procedure is called.","required":false,"default":"","type":"String","values":[]},
 		{"name":"value","description":"Value that CFML passes to the stored procedure.","required":false,"default":"","type":"String","values":[]},
@@ -16,12 +16,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfprocparam"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfprocparam.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/procparam.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfprocparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfprocparam"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

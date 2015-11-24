@@ -5,8 +5,8 @@
 	"returns":"",
 	"related":[],
 	"description":" Queries an IMAP server to retrieve and manage mails within multiple folders.",
-	"params": [ 
-		{"name":"password","description":"Specifies the password for assessing the users‚Äô e-mail account.","required":false,"default":"","type":"String","values":[]},
+	"params": [
+		{"name":"password","description":"Specifies the password for assessing the users e-mail account.","required":false,"default":"","type":"String","values":[]},
 		{"name":"secure","description":"Specifies whether the IMAP server uses a Secure Sockets Layer.","required":false,"default":"","type":"Boolean","values":[true,false]},
 		{"name":"action","description":"* GetHeaderOnly - Returns the message header information for all retrieved mail.\n* GetAll - Returns mail. The information includes the message header information, message text, and any attachments. Set the AttachmentPath attribute to retrieve attachments.\n* Delete - Deletes messages from a folder.\n* Open - Initiates an open session or connection with the IMAP server.\n* Close - Terminates the open session or connection with the IMAP server.\n* MarkRead - Marks all messages read from a folder.\n* DeleteFolder - Deletes the identified folder.\n* CreateFolder - Creates a folder in Inbox.\n* RenameFolder - Renames an existing user-defined folder.\n* ListAllFolders - Displays a list of all existing folders in the mailbox or under the folder name defined by the Folder attribute.\n* MoveMail - Moves mail from one folder to another","required":false,"default":"getheaderonly","type":"String","values":["createfolder","open","close","getall","markread","listallfolders","getheaderonly","deletefolder","delete","renamefolder","movemail"]},
 		{"name":"timeout","description":"Specifies the number of seconds to wait before timing out connection to IMAP server. An error message is displayed when timeout occurs.","required":false,"default":"","type":"Numeric","values":[]},
@@ -28,12 +28,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfimap"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfimap.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/imap.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfimap"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfimap"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

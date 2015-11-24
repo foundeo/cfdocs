@@ -1,19 +1,35 @@
 {
 	"name":"cfset",
 	"type":"tag",
-	"syntax":"<cfset>",
+	"syntax":"<cfset x = 1>",
+	"script":"x = 1;",
 	"returns":"",
 	"related":[],
 	"description":" Sets a value in CFML. Used to create a variable, if it\n does not exist, and assign it a value. Also used to call\n functions.",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfset"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfset.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/set.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfset"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfset"}
 	},
 	"links": [
-		
+
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "x = y = 1; \r\nz = [ \r\n    !x, \r\n    x == 1 && y == 2, \r\n    x == 1 || y == 2 \r\n]; \r\nwriteDump(z);",
+			"result": ""
+		},
+        {
+            "title": "Tag Syntax",
+            "description": "",
+            "code": "<cfset x = y = 1> \r\n<cfset z = [ \r\n    NOT x, \r\n    x EQ 1 AND y EQ 2, \r\n    x EQ 1 OR y EQ 2 \r\n]> \r\n<cfdump var=\"#z#\">",
+            "result": ""
+        }
 	]
-	
+
 }

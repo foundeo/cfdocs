@@ -5,19 +5,20 @@
 	"returns":"",
 	"related":[],
 	"description":" Provides additional information for the cfpdf tag.\n The cfpdfparam tag applies only to the merge action of the cfpdf tag.\n The cfpdfparam tag is always a child tag of the cfpdf tag.",
-	"params": [ 
+	"params": [
 		{"name":"password","description":"Specify the user or owner password, if the source PDF file is passwordprotected. (optional)","required":false,"default":"","type":"String","values":[]},
 		{"name":"source","description":"Specify the source PDF file to merge. (optional)","required":true,"default":"","type":"String","values":[]},
 		{"name":"pages","description":"Page or pages of the PDF source file to merge. You can specify a range of pages, for example, \"1-5 \", or a comma-separated list of pages, for example, \"1-5,9-10,18\".","required":false,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfpdfparam"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpdfparam.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/pdfparam.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfpdfparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfpdfparam"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

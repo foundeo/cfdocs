@@ -1,0 +1,35 @@
+{
+    "name":"CFDocs",
+    "version":"1.0.0",
+    "author":"Pete Freitag / Foundeo Inc.",
+    "slug":"cfdocs-site",
+    "shortDescription":"The cfdocs.org site",
+    "private":false,
+    "engines":[
+        {
+            "type":"lucee",
+            "version":">=4.5.x"
+        },
+        {
+            "type":"railo",
+            "version":">=4.1.x"
+        },
+        {
+            "type":"adobe",
+            "version":">=10.0.0"
+        }
+    ],
+    "defaultEngine":"",
+    "defaultPort":8411,
+    "devDependencies":{
+        "testbox":"2.0.0"
+    },
+    "installPaths":{
+        "testbox":"tests/testbox"
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ]
+}

@@ -2,18 +2,34 @@
 	"name":"cfelse",
 	"type":"tag",
 	"syntax":"<cfelse>",
+	"script":"else { }",
 	"returns":"",
-	"related":[],
+	"related":["cfif","cfelseif"],
 	"description":" Used as the last control block in a cfif tag block to handle\n any case not identified by the cfif tag or a cfelseif tag.",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfelse"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfelse.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/else.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfelse"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfelse"}
 	},
 	"links": [
-		
+
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "count = 10; \r\n if (count > 20) { \r\n writeOutput(count); \r\n } else if (count == 8) { \r\n writeOutput(count); \r\n } else { \r\n writeOutput(count); \r\n }",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfset count = 10> \r\n <cfif count GT 20> \r\n <cfoutput>#count#</cfoutput> \r\n <cfelseif count EQ 8> \r\n <cfoutput>#count#</cfoutput> \r\n <cfelse> \r\n <cfoutput>#count#</cfoutput> \r\n </cfif>",
+	            "result": ""
+	        }
 	]
-	
+
 }

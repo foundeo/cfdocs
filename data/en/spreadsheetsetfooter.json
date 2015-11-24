@@ -5,7 +5,7 @@
 	"returns":"void",
 	"related":[],
 	"description":" Adds a footer to the specified worksheet.",
-	"params": [ 
+	"params": [
 		{"name":"spreadsheetObj","description":"The Excel spreadsheet object to which to add the footer.","required":true,"default":"","type":"Variablename","values":[]},
 		{"name":"leftFooter","description":"Adds the footer in the left side of the worksheet.","required":true,"default":"","type":"String","values":[]},
 		{"name":"centerFooter","description":"Adds the footer in the center of the worksheet.","required":true,"default":"","type":"String","values":[]},
@@ -13,12 +13,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetsetfooter"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetsetfooter.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/spreadsheetsetfooter.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetsetfooter"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetsetfooter"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

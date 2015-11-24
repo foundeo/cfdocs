@@ -2,10 +2,11 @@
 	"name":"cfoutput",
 	"type":"tag",
 	"syntax":"<cfoutput>",
+	"script":"writeOutput ()",
 	"returns":"",
 	"related":[],
 	"description":" Displays output that can contain the results of processing\n CFML variables and functions. Can loop over the results\n of a database query.",
-	"params": [ 
+	"params": [
 		{"name":"query","description":"Name of cfquery from which to draw data for output section.","required":false,"default":"","type":"query","values":[]},
 		{"name":"group","description":"Query column to use to group sets of records. Eliminates\n adjacent duplicate rows when data is sorted. Use if you\n retrieved a record set ordered on one or more a query\n columns. For example, if a record set is ordered on\n \"Customer_ID\" in the cfquery tag, you can group the output\n on \"Customer_ID.\"","required":false,"default":"","type":"String","values":[]},
 		{"name":"groupcasesensitive","description":"Whether to consider the case in grouping rows.","required":false,"default":"","type":"boolean","values":[true,false]},
@@ -14,12 +15,27 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfoutput"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfoutput.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/output.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfoutput"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfoutput"}
 	},
 	"links": [
-		
+
+	],
+	"examples": [
+		{
+			"title": "Script Example",
+			"description": "",
+			"code": "\r\n writeOutput(\"Some text and a #variable#\");\r\n or \r\n writeOutput(\"Some text and a \" & variable);",
+			"result": ""
+		},
+		{
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfoutput>Some text and a #variable#</cfoutput>",
+	            "result": ""
+	        }
 	]
-	
+
 }

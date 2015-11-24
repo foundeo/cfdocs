@@ -1,22 +1,38 @@
 {
 	"name":"arrayAppend",
 	"type":"function",
-	"syntax":"arrayAppend(array, value)",
+	"syntax":"arrayAppend(array, value [, merge])",
+	"member":"someArray.append( value [, merge])",
 	"returns":"boolean",
-	"related":[],
-	"description":" Appends an array element to an array.",
-	"params": [ 
+	"related":["arrayprepend"],
+	"description":"Appends an element to the end of an array.",
+	"params": [
 		{"name":"array","description":"The array to which the element should be appended.","required":true,"default":"","type":"Array","values":[]},
-		{"name":"value","description":"The element to append. Can be any type.","required":true,"default":"","type":"Any","values":[]}
+		{"name":"value","description":"The element to append. Can be any type.","required":true,"default":"","type":"Any","values":[]},
+		{"name":"merge","description":"When true appends array elements individually to the specified array. When false (default), the new array is appended as a single element.","required":false,"default":false,"type":"Boolean","values":[true,false]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/arrayappend"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arrayappend"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayappend.html"},
+		"lucee": {"minimum_version":"", "notes":"When called as a member function array.append() returns the array instead of boolean.", "docs":"http://docs.lucee.org/reference/functions/arrayappend.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayappend"}
 	},
 	"links": [
-		
+
+	],
+	"examples": [
+		{
+			"title": "Append a value to an array",
+			"description": "Uses the arrayAppend function to append a value to the end of the array",
+			"code": "someArray = [1,2,3];\narrayAppend(someArray, 4);\nwriteOutput(serializeJSON(someArray));",
+			"result": "[1,2,3,4]"
+		},
+		{
+			"title": "Append a value to an array using the Array member function",
+			"description": "CF11+ Lucee4.5+ Invoking the append function on an array is the same as running arrayAppend.",
+			"code": "someArray = [1,2,3];\nsomeArray.append(4);\nwriteOutput(serializeJSON(someArray));",
+			"result": "[1,2,3,4]"
+		}
 	]
-	
+
 }

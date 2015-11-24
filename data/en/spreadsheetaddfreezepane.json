@@ -1,11 +1,11 @@
 {
-	"name":"spreadSheetAddFreezePane",
+	"name":"spreadsheetAddFreezePane",
 	"type":"function",
-	"syntax":"spreadSheetAddFreezePane(spreadsheetObj, column, row [, endColumn] [, endRow])",
+	"syntax":"spreadsheetAddFreezePane(spreadsheetObj, column, row [, endColumn] [, endRow])",
 	"returns":"void",
 	"related":[],
 	"description":" Adds freeze pane to spreadsheet",
-	"params": [ 
+	"params": [
 		{"name":"spreadsheetObj","description":"Spreadsheet variable","required":true,"default":"","type":"Variablename","values":[]},
 		{"name":"column","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"row","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
@@ -14,12 +14,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetaddfreezepane"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetaddfreezepane.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/spreadsheetaddfreezepane.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetaddfreezepane"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetaddfreezepane"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Defines a region within a cflayout tag body, such as an \n individual tab of a tabbed layout. This tag is not used in \n Flash forms.",
-	"params": [ 
+	"params": [
 		{"name":"position","description":"The position...(docs don't explain this one).","required":false,"default":"top","type":"String","values":["bottom","center","left","right","top"]},
 		{"name":"align","description":"Specifies how to align child controls within the \n layout area.","required":false,"default":"center","type":"String","values":["center","justify","left","right"]},
 		{"name":"closable","description":"A Boolean value specifying whether the area can close. \n Specifying this attribute adds an x icon on the tab or \n title bar that a user can click to close the area. \n You cannot use this attribute for border layout areas \n with a position attribute value of center.","required":false,"default":false,"type":"Boolean","values":[true,false]},
@@ -30,12 +30,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cflayoutarea"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cflayoutarea.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/layoutarea.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflayoutarea"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflayoutarea"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

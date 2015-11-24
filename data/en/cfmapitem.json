@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" This tag creates markers on the map.",
-	"params": [ 
+	"params": [
 		{"name":"longitude","description":"The longitude value for the marker, in degrees.","required":false,"default":"","type":"String","values":[]},
 		{"name":"address","description":"The address of the location to set the map marker.","required":false,"default":"","type":"String","values":[]},
 		{"name":"tip","description":"A short description of the marker location that appears as a tool tip.","required":false,"default":"","type":"String","values":[]},
@@ -18,12 +18,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfmapitem"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmapitem.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/mapitem.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmapitem"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmapitem"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

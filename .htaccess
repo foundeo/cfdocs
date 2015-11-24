@@ -5,14 +5,20 @@ RewriteRule ^tag-summary$ http://cfdocs.org/tags [R=301,L]
 RewriteRule ^t$ http://cfdocs.org/tags [R=301,L]
 RewriteRule ^f$ http://cfdocs.org/functions [R=301,L]
 RewriteRule ^cfeclipse / [R=301,L]
+#asset versioning
+RewriteRule ^assets/v-[A-Za-z0-9-]+/([a-zA-Z0-9/._-]+)$ /assets/$1 [L]
 #rewrite uppercase to lowercase
 RewriteRule ^([^./]*[A-Z][^./]+)$ /ucase.cfm?uri=$1 [L]
 #send to doc page
 RewriteRule ^([^./]+)$ /doc.cfm?name=$1 [L]
+#trycf rules
+RewriteRule ^try/([^./]+)/([0-9]+)/? /trycf.cfm?name=$1&index=$2 [L]
+RewriteRule ^try/([^./]+)/? /trycf.cfm?name=$1
+
 ErrorDocument 404 /404.cfm
 
 #block access to some urls
 RedirectMatch 403 (?i)\.git
 RedirectMatch 403 (?i)views/
 RedirectMatch 403 (?i)CFIDE/
-
+RedirectMatch 403 (?i)tests/

@@ -1,14 +1,28 @@
 {
-	"syntax":"ArrayReduce(array, function(result, item, [,index, array])[, initialValue])",
+	"name":"arrayReduce",
+	"type":"function",
+	"syntax":"arrayReduce(array, function(result, item [,index, array])[, initialValue])",
+	"member":"someArray.reduce(function(result, item [,index, array])[, initialValue])",
+	"returns":"Any",
+	"related": ["ArrayMap"],
 	"description":"Iterates over every entry of the array and calls the closure to work on the elements of the array. This function will reduce the array to a single value and will return the value.",
-	"engines":{"coldfusion":{"minimum_version":"11","docs":"https:\/\/wikidocs.adobe.com\/wiki\/display\/coldfusionen\/ArrayReduce","notes":""}},
-	"name":"ArrayReduce",
+	"engines":{
+			"coldfusion":{"minimum_version":"11","notes":"","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayreduce.html"},
+			"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayreduce.html"},
+			"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraymax"}
+		},
 	"links":[],
 	"params":[
 		{"values":[],"default":"","description":"the input array","name":"array","type":"Array","required":"1"},
 		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nresult: result of the reduce operation after the previous iteration\r\nitem: item in the array\r\nindex : current index for the iteration\r\narray : reference of the original array","name":"function","type":"Any","required":"1"},
 		{"values":[],"default":"","description":"Initial value which will be used for the reduce operation. The type is any.","name":"initialValue","type":"Any","required":"0"}
 	],
-	"returns":"Any",
-	"examples":[],
-	"type":"function","related":["ArrayMap"]}
+	"examples":[
+        {
+			"title": "Script Syntax",
+			"description": "",
+			"code": "complexData = [ {a: 4}, {a: 18}, {a: 51} ]; \r\n sum = arrayReduce( complexData, function(prev, element) \r\n { \r\n return prev + element.a; \r\n }, 0 ); \r\n ",
+			"result": "Answer: [73]"
+		}
+    ]
+}

@@ -2,10 +2,11 @@
 	"name":"cfthread",
 	"type":"tag",
 	"syntax":"<cfthread>",
+	"script": "thread action=\"\" name=\"\";",
 	"returns":"",
 	"related":[],
 	"description":" The cfthread tag enables multithreaded programming in ColdFusion.\n Threads are independent streams of execution, and multiple threads\n on a page can execute simultaneously and asynchronously, letting you\n perform asynchronous processing in CFML. CFML code within the cfthread\n tag body executes on a separate thread while the page request thread\n continues processing without waiting for the cfthread body to finish.\n You use this tag to run or end a thread, temporarily stop thread execution,\n or join together multiple threads.",
-	"params": [ 
+	"params": [
 		{"name":"action","description":"The action to take, one of the following values:\n join Makes the current thread wait until the thread or threads\n specified in the name attribute complete processing, or until the\n period specified in the timeout attribute passes, before continuing\n processing. If you dont specify a timeout and thread you are joining\n to doesnt finish, the current thread also cannot finish processing.\n run Creates a thread and starts it processing.\n sleep Suspends the current threads processing for the time specified\n by the duration attribute. This action is useful if one thread must wait\n for another thread to do processing without joining the threads.\n terminate Stops processing of the thread specified in the name attribute.\n If you terminate a thread, the thread scope includes an ERROR metadata\n structure with information about the termination. (optional, default=run)","required":false,"default":"","type":"String","values":["join","run","sleep","terminate"]},
 		{"name":"duration","description":"(sleep) The number of milliseconds for which to suspend thread processing. (required)","required":false,"default":"","type":"String","values":[]},
 		{"name":"name","description":"The name of the thread to which the action applies:\n terminate The name of the thread to stop.\n join The name of the thread or threads to join to the current thread.\n To specify multiple threads, use a comma-delimited list.\n run The name to use to identify the thread being created. (required)","required":false,"default":"","type":"String","values":[]},
@@ -14,12 +15,27 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfthread"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cfthread.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/thread.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfthread"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfthread"}
 	},
 	"links": [
-		
+
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "CF9+",
+			"code": "thread action=\"run\" name=\"myThread\" {\r\n // do single thread stuff \r\n} \r\nthread action=\"join\" name=\"myThread,myOtherThread\";",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfthread action=\"run\" name=\"myThread\">\r\n <!--- Do single thread stuff ---> \r\n </cfthread> \r\n <cfthread action=\"join\" name=\"myThread,myOtherThread\" />",
+	            "result": ""
+	        }
 	]
-	
+
 }

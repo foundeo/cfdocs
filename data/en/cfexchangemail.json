@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Gets mail messages and attachments, deletes messages, and sets properties for messages on a Microsoft Exchange server.\n The cfexchangemail tag performs mail actions on an Exchange server that you cannot do using the cfmail tag.",
-	"params": [ 
+	"params": [
 		{"name":"action","description":"The name to use for the JavaScript proxy class. (required)","required":false,"default":"","type":"String","values":["get","getAttachments","getMeetingInfo","delete","deleteAttachments","move","set"]},
 		{"name":"attachmentPath","description":"The file path of the directory in which to put the attachments.\n If the directory does not exist, ColdFusion creates it.\n If you omit this attribute, ColdFusion does not save any attachments.\n If you specify a relative path, the path root is the ColdFusion temporary directory, which is returned by the GetTempDirectory function. (optional)","required":false,"default":"","type":"String","values":[]},
 		{"name":"connection","description":"The name of the connection to the Exchange server, as specified in the cfexchangeconnection tag.\n If you omit this attribute, and you specify cfexchangeconnection tag attributes in this tag, Coldfusion creates a temporary connection. (optional)","required":false,"default":"","type":"variablename","values":[]},
@@ -20,12 +20,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfexchangemail"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexchangemail.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/exchangemail.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfexchangemail"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfexchangemail"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

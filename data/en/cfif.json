@@ -2,18 +2,34 @@
 	"name":"cfif",
 	"type":"tag",
 	"syntax":"<cfif>",
+	"script":"if (expression) { }",
 	"returns":"",
-	"related":[],
+	"related":["cfelse","cfelseif"],
 	"description":" Creates simple and compound conditional statements in CFML.\n Tests an expression, variable, function return value, or\n string. Used, optionally, with the cfelse and cfelseif tags.",
-	"params": [ 
+	"params": [
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfif"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfif.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/if.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfif"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfif"}
 	},
 	"links": [
-		
+
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "count = 10; \r\n if (count > 20) { \r\n writeOutput(count); \r\n } else if (count == 8) { \r\n writeOutput(count); \r\n } else { \r\n writeOutput(count); \r\n }",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cfset count = 10> \r\n <cfif count GT 20> \r\n <cfoutput>#count#</cfoutput> \r\n <cfelseif count EQ 8> \r\n <cfoutput>#count#</cfoutput> \r\n <cfelse> \r\n <cfoutput>#count#</cfoutput> \r\n </cfif>",
+	            "result": ""
+	        }
 	]
-	
+
 }

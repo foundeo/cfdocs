@@ -5,7 +5,7 @@
 	"returns":"Array",
 	"related":[],
 	"description":" Gets the comment for an Excel spreadsheet object cell as a structure with formatting information, or all comments for the object.",
-	"params": [ 
+	"params": [
 		{"name":"author","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
 		{"name":"column","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]},
 		{"name":"comment","description":"No Help Available","required":false,"default":"","type":"String","values":[]},
@@ -13,12 +13,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/spreadsheetgetcellcomment"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetgetcellcomment.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/spreadsheetgetcellcomment.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetgetcellcomment"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetgetcellcomment"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

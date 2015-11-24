@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Puts a slider control, for selecting a numeric value from a\n range, in a ColdFusion form. The slider moves over the slider\n groove. As the user moves the slider, the current value\n displays. Used within a cfform tag.\n Not supported with Flash forms.",
-	"params": [ 
+	"params": [
 		{"name":"name","description":"Name for cfslider control.","required":true,"default":"","type":"String","values":[]},
 		{"name":"label","description":"Label to display with control.\n For example, \"Volume\" This displays: \"Volume %value%\"\n To reference the value, use \"%value%\". If %% is omitted,\n slider value displays directly after label.","required":false,"default":"","type":"String","values":[]},
 		{"name":"range","description":"Numeric slider range values.\n Separate values with a comma.","required":false,"default":"0,100","type":"String","values":[]},
@@ -39,12 +39,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfslider"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfslider.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/slider.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfslider"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfslider"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

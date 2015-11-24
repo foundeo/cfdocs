@@ -1,11 +1,12 @@
 {
 	"name":"cflock",
 	"type":"tag",
-	"syntax":"<cflock timeout=\"\">",
+	"syntax":"<cflock name=\"lockName\" timeout=\"3\">",
+	"script":"lock name=\"lockName\" timeout=\"3\" { }",
 	"returns":"",
 	"related":[],
 	"description":" Ensures the integrity of shared data. Instantiates the\n following kinds of locks:\n\n * Exclusive allows single-thread access to the CFML constructs\n * Read-only allows multiple requests to access CFML constructs",
-	"params": [ 
+	"params": [
 		{"name":"timeout","description":"Maximum length of time, in seconds, to wait to obtain a\n lock. If lock is obtained, tag execution continues.\n Otherwise, behavior depends on throwOnTimeout attribute\n value.","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"scope","description":"Lock scope. Mutually exclusive with the name attribute.\n Lock name. Only one request in the specified scope can\n execute the code within this tag (or within any other\n cflock tag with the same lock scope scope) at a time.","required":false,"default":"","type":"String","values":["Application","request","Server","Session"]},
 		{"name":"name","description":"Lock name. Mutually exclusive with the scope attribute.\n Only one request can execute the code within a cflock tag\n with a given name at a time. Cannot be an empty string.","required":false,"default":"","type":"String","values":[]},
@@ -14,12 +15,27 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cflock"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cflock.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/lock.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflock"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflock"}
 	},
 	"links": [
-		
+
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "\r\nlock timeout=\"60\" scope=\"session\" type=\"exclusive\" { \r\n session.myVar = \"Hello\"; \r\n }\r\n",
+			"result": ""
+		},
+	        {
+	            "title": "Tag Syntax",
+	            "description": "",
+	            "code": "<cflock timeout=\"60\" scope=\"session\" type=\"exclusive\"> \r\n <cfset session.myVar = \"Hello\"> \r\n </cflock>",
+	            "result": ""
+	        }
 	]
-	
+
 }

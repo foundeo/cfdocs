@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Creates a pop-up window in the browser. Does not create a \n separate browser pop-up instance.",
-	"params": [ 
+	"params": [
 		{"name":"bodyStyle","description":"A CSS style specification for the window body. As a \n general rule, use this attribute to set color and \n font styles. Using this attribute to set the height \n and width, for example, can result in distorted output.","required":false,"default":"","type":"String","values":[]},
 		{"name":"center","description":"A Boolean value specifying whether to center\n the window over the browser window.\n ‚Ä¢ If true, ColdFusion ignores the x and y\n attribute values.\n ‚Ä¢ If false, and you do not specify x and y\n attributes, ColdFusion centers the window.","required":false,"default":false,"type":"Boolean","values":[true,false]},
 		{"name":"closable","description":"A Boolean value specifying whether the user can \n close the window. If true, the window has an X \n close icon.","required":false,"default":true,"type":"Boolean","values":[true,false]},
@@ -29,12 +29,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfwindow"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfwindow.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/window.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfwindow"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfwindow"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }

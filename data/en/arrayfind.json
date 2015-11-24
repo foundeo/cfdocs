@@ -2,21 +2,43 @@
 	"name":"arrayFind",
 	"type":"function",
 	"syntax":"arrayFind(array, object)",
+	"member":"someArray.find(object)",
 	"returns":"Numeric",
-	"related":[],
-	"description":" These functions searches the array for the specified object.",
-	"params": [ 
-		{"name":"array","description":"No Help Available","required":true,"default":"","type":"Array","values":[]},
-		{"name":"object","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]}
+	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
+	"description":" These functions searches the array for the specified object. Returns the index in the array of the first match, or 0 if there is no match.",
+	"params": [
+		{"name":"array","description":"The array you are searching.","required":true,"default":"","type":"Array","values":[]},
+		{"name":"object","description":"The value you are looking for in the array","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/arrayfind"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayfind.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayfind.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arrayfind"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayfind"}
 	},
 	"links": [
-		
+
+	],
+	"examples": [
+		{
+			"title":"Find an \"apple\" in an array of Fruit",
+			"description":"Returns the index of the element \"apple\" in the array",
+			"code":"arrayFind([\"orange\",\"pineapple\",\"apple\"], \"apple\")",
+			"result":"3"
+		},
+		{
+			"title":"Member Functions: Find an \"apple\" in an array of Fruit",
+			"description":"Calls the find member function of the array object. Requires CF11+ or Lucee4.5+",
+			"code":"fruit = [\"orange\",\"pineapple\",\"apple\"];\nwriteOutput( fruit.find(\"apple\") );",
+			"result":"3"
+		},
+		{
+			"title":"ArrayFind is Case Sensitive",
+			"description":"Case sensitive so \"Apple\" is not in the array, returns 0. Use arrayFindNoCase for case insensitive matching.",
+			"code":"arrayFind([\"orange\",\"pineapple\",\"apple\"], \"Apple\")",
+			"result":"0"
+		}
 	]
-	
+
 }

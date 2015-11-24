@@ -5,7 +5,7 @@
 	"returns":"",
 	"related":[],
 	"description":" Inserts a horizontal line, a vertical line, a spacer,\n or text in a Flash form. Used in the cfform or cfformgroup\n tag body for Flash and XML forms. Ignored in HTML forms.",
-	"params": [ 
+	"params": [
 		{"name":"type","description":"Form item type. See docs for more details.","required":true,"default":"","type":"String","values":["html","text","script","spacer","hrule","vrule"]},
 		{"name":"style","description":"Flash: Must be a style specification in CSS format.\n Ignored if the type attribute is html or text.\n XML: ColdFusion passes the style attribute to the XML.\n ColdFusion skins include the style attribute to the\n generated HTML.","required":false,"default":"","type":"String","values":[]},
 		{"name":"width","description":"Width of the item, in pixels. If you omit this attribute, Flash\n automatically sizes the width. In ColdFusion XSL skins,\n use the style attribute, instead.","required":false,"default":"","type":"Numeric","values":[]},
@@ -17,12 +17,13 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://learn.adobe.com/wiki/display/coldfusionen/cfformitem"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-f/cfformitem.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/formitem.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfformitem"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfformitem"}
 	},
 	"links": [
-		
+
 	]
-	
+
 }
