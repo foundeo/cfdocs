@@ -21,7 +21,7 @@
                 </rule>
                 <rule name="trycf rules" stopProcessing="true">
                     <match url="^try/([^./]+)/([0-9]+)/?" />
-					<action type="Rewrite" url="/trycf.cfm?name={R:1}&amp;index={R:2}" />
+                    <action type="Rewrite" url="/trycf.cfm?name={R:1}&amp;index={R:2}" />
                 </rule>
             </rules>
         </rewrite>
