@@ -18,6 +18,36 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Using left() on a string",
+			"description": "In this example we'll use left() to return part of a string.",
+			"code": "writeOutput( left( 'The quick brown fox jumped over the lazy dog', 19 ) );",
+			"result": "The quick brown fox",
+			"runnable":true
+		},
+		{
+			"title": "Using left() in a function",
+			"description": "In this example we'll use left() in a function to help us to capitalize the first letter in a string.",
+			"code": "public string function capitalize( required string text ) {\r\n\treturn uCase( left( arguments.text, 1 ) ) & right( arguments.text, len( arguments.text ) - 1 );\r\n}",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title": "Using left() to test values",
+			"description": "In this example we'll use left() to test the first five characters of a request context variable.",
+			"code": "if( listFindNoCase( 'super,great,coder,rulez', left( rc.answer, 5 ) ) ) {\r\n\twriteOutput( 'You are an awesome developer!' );\r\n}",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title": "Using left() as a member function",
+			"description": "In this example we'll use left() as a member function inside a function to help us to capitalize the first letter in a string.",
+			"code": "public string function capitalize( required string text ) {\r\n\treturn arguments.text.ucase().left( 1 ) & arguments.text.right( arguments.text.len() - 1 );\r\n}",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }
