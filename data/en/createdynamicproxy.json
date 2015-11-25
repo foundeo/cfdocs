@@ -1,0 +1,30 @@
+{
+	"name":"CreateDynamicProxy",
+	"type":"function",
+	"syntax":"createDynamicProxy(\"fullyQualifiedNameOfCFC\", [\"interfaceName\"]);",
+	"returns":"Meta data structure related to the current session",
+	"related":[],
+	"description":"  creates a dynamic proxy of the ColdFusion component that is passed to a Java library. Dynamic proxy lets you pass ColdFusion components to Java objects. Java objects can work with the ColdFusion components seamlessly as if they are native Java objects. ",
+	"params": [
+		{"name":"fullyQualifiedNameOfCFC","description":"Fully qualified name of the ColdFusion component or a CFC instance.","required":true,"default":"","type":"","values":[]},
+        {"name":"interfaceName","description":"An array of Java interfaces for which you want to create the dynamic proxy.","required":false,"default":"","type":"","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/CreateDynamicProxy.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/CreateDynamicProxy.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/CreateDynamicProxy"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/CreateDynamicProxy"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset instance=new cfc.helloWorld()> \r\n <cfset dynInstnace = createDynamicProxy(instance, [\"MyInterface\"])> \r\n <cfset x = createObject(\"java\",\"InvokeHelloProxy\").init(dynInstnace)> \r\n <cfset y = x.invokeHello()> \r\n <cfoutput>#y#</cfoutput> \r\n",
+			"result": ""
+		}
+	]
+
+}
