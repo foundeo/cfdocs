@@ -8,7 +8,8 @@
 	"description":" Deletes specified object from given array",
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
-		{"name":"object","description":"","required":true,"default":"","type":"Any","values":[]}
+		{"name":"object","description":"","required":true,"default":"","type":"Any","values":[]},
+		{"name":"scope","description":"Lucee4.5+ remove one (default) or all occurances of the object","required":false,"default":'one',"type":"String","values":['one','all']}
 
 	],
 	"engines": {
@@ -18,6 +19,28 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Delete a value from an array",
+			"description": "Uses the arrayAppend function to append a value to the end of the array",
+			"code":"arr = ['apple', 'orange', 'pear', 'apple'];\r\narrayDelete(arr, 'apple');\r\n\r\nwriteDump(arr);",
+			"result":"['orange','pear','apple']",
+			"runnable":true
+		},
+		{
+			"title": "Delete a value from an array using the Array member function",
+			"description": "CF11+ Lucee4.5+ Invoking the delete function on an array is the same as running arrayDelete.",
+			"code":"arr = ['apple', 'orange', 'pear', 'apple'];\r\narr.delete('apple');\r\n\r\nwriteDump(arr);",
+			"result":"['orange','pear','apple']",
+			"runnable":true
+		},
+		{
+			"title":"Use of scope parameter",
+			"description":"Lucee4.5+ Use scope to remove one or all occurances of the object",
+			"code":"arr = ['apple', 'orange', 'pear', 'apple'];\r\narr.delete('apple', 'all');\r\n\r\nwriteDump(arr);",
+			"result":"['orange','pear']",
+			"runnable":true
+		}
 	]
-
 }
