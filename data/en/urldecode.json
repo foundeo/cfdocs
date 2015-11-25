@@ -4,7 +4,7 @@
 	"syntax":"urlDecode(urlencodedstring [, charset])",
 	"returns":"String",
 	"related":[],
-	"description":" Decodes a URL-encoded string.",
+	"description":"Decodes a URL-encoded string.",
 	"params": [
 		{"name":"urlencodedstring","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"charset","description":"The character encoding in which the string is encoded.","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
@@ -21,6 +21,13 @@
 	],
 	"examples": [
 		{
+			"title":"Simple urlDecode() example",
+			"description":"Shows how it takes an input of: %21 and returns: !",
+			"code":"urlDecode( \"%21\")",
+			"result":"!",
+			"runnable":true
+		},
+		{
 			"title":"Basic urlDecode() usage",
 			"description":"In this example we demonstrate taking a URL encoded message passed on the request context and displaying it decoded.",
 			"code":"if( len( rc.msg ) ) {\r\n\twriteOutput( encodeForHTML( urlDecode( rc.msg ) ) );\r\n}",
@@ -31,7 +38,7 @@
 			"title":"urlDecode() in obfuscation",
 			"description":"In this example we demonstrate url encoding a password before it is encrypted, and then decoding it after it is decrypted.",
 			"code":"pwd = urlEncodedFormat( 'myPassword' );\r\npwd = encrypt( pwd, '7Z8of/gKWpqsx/v6O5yHRKanrXsp93B4xIHV97zf88Q=', 'BLOWFISH/CBC/PKCS5Padding', 'HEX' );\r\nwriteOutput( pwd & ' : ' );\r\ndecpwd = decrypt( pwd, '7Z8of/gKWpqsx/v6O5yHRKanrXsp93B4xIHV97zf88Q=', 'BLOWFISH/CBC/PKCS5Padding', 'HEX' );\r\ndecpwd = urlDecode( decpwd );\r\nwriteOutput( decpwd );",
-			"result":"<some encrypted value> : myPassword",
+			"result":"DE99D03FEA780BBEBA3846C0BC68D95A3D744F70AAA82DDF : myPassword",
 			"runnable":true
 		},
 		{
@@ -40,7 +47,7 @@
 			"code":"if( len( rc.msg ) ) {\r\n\twriteOutput( encodeForHTML( rc.msg.urlDecode() ) );\r\n}",
 			"result":"",
 			"runnable":false
-		},
+		}
 	]
 
 }
