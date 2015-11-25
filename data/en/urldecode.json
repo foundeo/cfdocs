@@ -18,6 +18,29 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Basic urlDecode() usage",
+			"description":"In this example we demonstrate taking a URL encoded message passed on the request context and displaying it decoded.",
+			"code":"if( len( rc.msg ) ) {\r\n\twriteOutput( encodeForHTML( urlDecode( rc.msg ) ) );\r\n}",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"urlDecode() in obfuscation",
+			"description":"In this example we demonstrate url encoding a password before it is encrypted, and then decoding it after it is decrypted.",
+			"code":"pwd = urlEncodedFormat( 'myPassword' );\r\npwd = encrypt( pwd, '7Z8of/gKWpqsx/v6O5yHRKanrXsp93B4xIHV97zf88Q=', 'BLOWFISH/CBC/PKCS5Padding', 'HEX' );\r\nwriteOutput( pwd & ' : ' );\r\ndecpwd = decrypt( pwd, '7Z8of/gKWpqsx/v6O5yHRKanrXsp93B4xIHV97zf88Q=', 'BLOWFISH/CBC/PKCS5Padding', 'HEX' );\r\ndecpwd = urlDecode( decpwd );\r\nwriteOutput( decpwd );",
+			"result":"<some encrypted value> : myPassword",
+			"runnable":true
+		},
+		{
+			"title":"urlDecode() usage as a member function",
+			"description":"In this example we demonstrate taking a URL encoded message passed on the request context and displaying it decoded using the urlDecode() member function.",
+			"code":"if( len( rc.msg ) ) {\r\n\twriteOutput( encodeForHTML( rc.msg.urlDecode() ) );\r\n}",
+			"result":"",
+			"runnable":false
+		},
 	]
 
 }
