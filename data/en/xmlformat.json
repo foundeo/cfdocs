@@ -30,8 +30,8 @@
 		{
 			"title":"Advanced xmlFormat() usage",
 			"description":"In this example we demonstrate parsing the cfdocs.org index page into xmlFormat() to make it safe for XML storage.",
-			"code":"httpService = new http();\r\nhttpService.setMethod( 'get' );\r\nhttpService.setCharset( 'utf-8' );\r\nhttpService.setUrl( 'http://cfdocs.org/' );\r\n\r\nwriteOutput( xmlFormat( httpService.send().getPrefix().fileContent )  );",
-			"result":"",
+			"code":"httpService = new http();\r\nhttpService.setMethod( 'get' );\r\nhttpService.setCharset( 'utf-8' );\r\nhttpService.setUrl( 'http://cfdocs.org/' );\r\n\r\nxmlDoc = '<node>' & xmlFormat( httpService.send().getPrefix().fileContent ) & '</node>';\r\n\r\nwriteOutput( xmlDoc );\r\n// NOTE: View results frame source in TryCF to see actual encoding",
+			"result":"<node> [parsed HTML document] </node>",
 			"runnable":true
 		}
 	]
