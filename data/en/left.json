@@ -44,7 +44,7 @@
 		{
 			"title": "Using left() as a member function",
 			"description": "In this example we'll use left() as a member function inside a function to help us to capitalize the first letter in a string.",
-			"code": "public string function capitalize( required string text ) {\r\n\treturn arguments.text.ucase().left( 1 ) & arguments.text.right( arguments.text.len() - 1 );\r\n}",
+			"code": "public string function capitalize( required string text ) {\r\n\treturn arguments.text.left( 1 ).ucase() & arguments.text.right( arguments.text.len() - 1 );\r\n}",
 			"result": "",
 			"runnable":false
 		}
