@@ -10,7 +10,7 @@ component extends="testbox.system.BaseSpec" {
 					var isItJson = isJSON(json);
 					var fileName = getFileFromPath(filePath);
 					if (isItJson && find("""code""",json) && !listFind("queryexecute.json,entityload.json", fileName)) {
-						json = deserializeJSON(json)
+						json = deserializeJSON(json);
 						if (json.keyExists("examples") && isArray(json.examples) && arrayLen(json.examples)) {
 							for (var e in json.examples) {
 								if (e.keyExists("code") && e.keyExists("result") && Len(e.result)) {

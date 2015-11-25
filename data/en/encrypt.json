@@ -33,6 +33,13 @@
 			"description":"The key must be generated using the GenerateSecretKey(\"AES\") function.",
 			"code":"Encrypt(\"top secret\", \"WTq8zYcZfaWVvMncigHqwQ==\", \"AES\", \"Base64\")",
 			"result":"keciULin7bxOWvN/BOarWw=="
+		},
+		{
+			"title":"Encrypt using Cipher Block Chaining (CBC) mode",
+			"description":"By default encrypt() uses the Electronic Code Book (ECB) mode for encryption.\r\n For increased security you should specify the mode and padding to use. In this example we will use CBC mode and PKCS5Padding.",
+			"code":"msg = 'data to encrypt';\r\nkey = generateSecretKey('AES');\r\nencMsg = encrypt( msg, key, 'AES/CBC/PKCS5Padding', 'HEX');\r\nwriteOutput( encMsg );",
+			"result":"",
+			"runnable":true
 		}
 	]
 
