@@ -9,7 +9,7 @@
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
 		{"name":"object","description":"","required":true,"default":"","type":"Any","values":[]},
-		{"name":"scope","description":"Lucee4.5+ remove one (default) or all occurances of the object","required":false,"default":'one',"type":"String","values":['one','all']}
+		{"name":"scope","description":"Lucee4.5+ remove one (default) or all occurances of the object","required":false,"default":"one","type":"String","values":["one","all"]}
 
 	],
 	"engines": {
