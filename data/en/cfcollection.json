@@ -23,6 +23,22 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Example of using the cfcollection function to create a collection",
+			"description":"In this example we demonstrate using the cfcollection function to build a function which first checks if a collection already exists (and has records), and if not, creates the collection.",
+			"code":"public boolean function createCollection( required string collectionName ) {\r\n\t// var scope a variable to check if the collection already exists\r\n\tvar collectionExists = '';\r\n\r\n\t// use cfcollection to get a list of documents from the passed in collection\r\n\tcfcollection( action = 'list', collection = arguments.collectionName, name = 'collectionExists' );\r\n\r\n\t// see if the collection has any records\r\n\tif( !collectionExists.recordCount ) {\r\n\t\t// it does not, but wrap create in a try in case it exists but is merely empty\r\n\t\ttry {\r\n\t\t\t// use cfcollection to create a new collection\r\n\t\t\tcfcollection( action = 'create', collection = arguments.collectionName );\r\n\t\t// catch if this collection already exists\r\n\t\t} catch (any e) {\r\n\t\t\t// it does, return false\r\n\t\t\treturn false;\r\n\t\t}\r\n\t// otherwise\r\n\t} else {\r\n\t\t// collection already has records (and thus exists), return false\r\n\t\treturn false;\r\n\t}\r\n\r\n\t// the collection was successfully created, return true\r\n\treturn true;\r\n}",
+			"result":"True, if the collection was created; False, if the collection already exists",
+			"runnable":false
+		},
+		{
+			"title":"Example of using the <cfcollection> tag to create a collection",
+			"description":"In this example we demonstrate using the &lt;cfcollection&gt; tag to build a function which first checks if a collection already exists (and has records), and if not, creates the collection.",
+			"code":"<cffunction access=\"public\" returntype=\"boolean\" name=\"createCollection\">\r\n\t<cfargument name=\"collectionName\" type=\"string\" required=\"true\" />\r\n\r\n\t<!--- var scope a variable to check if the collection already exists --->\r\n\t<cfset var collectionExists = \"\"; />\r\n\r\n\t<!--- use cfcollection to get a list of documents from the passed in collection --->\r\n\t<cfcollection action=\"list\" collection = \"#arguments.collectionName#\" name=\"collectionExists\" />\r\n\r\n\t<!--- see if the collection has any records --->\r\n\t<cfif NOT collectionExists.recordCount>\r\n\t\t<!--- it doesn't, but wrap create in a try in case it exists but is merely empty --->\r\n\t\t<cftry>\r\n\t\t\t<!--- use cfcollection to create a new collection --->\r\n\t\t\t<cfcollection action=\"create\" collection = \"#arguments.collectionName#\" />\r\n\t\t<!--- catch if this collection already exists --->\r\n\t\t<cfcatch type=\"any\">\r\n\t\t\t<!--- it does, return false --->\r\n\t\t\t<cfreturn false />\r\n\t\t</cfcatch>\r\n\t\t</cftry>\r\n\t<!--- otherwise --->\r\n\t<cfelse>\r\n\t\t<!--- collection already has records (and thus exists), return false --->\r\n\t\t<cfreturn false />\r\n\t</cfif>\r\n\r\n\t<!--- the collection was successfully created, return true --->\r\n\t<cfreturn true />\r\n</cffunction>",
+			"result":"True, if the collection was created; False, if the collection already exists",
+			"runnable":false
+		}
 	]
 
 }
