@@ -1,0 +1,28 @@
+{
+	"name":"EncodeForLDAP",
+	"type":"function",
+	"syntax":"EncodeForLDAP(string);",
+	"returns":"String",
+	"related":[],
+	"description":" Encodes the given string for safe output in LDAP queries. this function is deprecated, use function ESAPIEncode('ldap',...) instead.",
+	"params": [
+		{"name":"string","description":"String to encode.","required":true,"default":"","type":"","values":[]}
+	],
+	"engines": {
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/EncodeForLDAP.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/EncodeForLDAP"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/EncodeForLDAP"}
+	},
+	"links": [
+
+	],
+	"examples": [
+        {
+			"title": "Script Syntax",
+			"description": "",
+			"code": "<cfscript> \r\n enc=EncodeForLDAP('<script>'); \r\n writedump(enc); \r\n </cfscript> \r\n",
+			"result": ""
+		}
+	]
+
+}

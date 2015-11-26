@@ -1,0 +1,29 @@
+{
+	"name":"ORMCloseAllSessions",
+	"type":"function",
+	"syntax":"ormcloseallsessions();",
+	"returns":"",
+	"related":[],
+	"description":" Closes all Hibernate sessions in the request.",
+	"params": [
+		{"name":"region","description":"Name of the cache region.","required":true,"default":"","type":"","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ORMCloseAllSessions.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/ORMCloseAllSessions.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ORMCloseAllSessions"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ORMCloseAllSessions"}
+	},
+	"links": [
+
+	],
+	"examples": [
+        {
+			"title": "Tag Syntax",
+			"description": "Example 2",
+			"code": "ormcloseallsessions() \r\n",
+			"result": ""
+		}
+	]
+
+}
