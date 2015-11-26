@@ -18,6 +18,22 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Basic xmlFormat() usage",
+			"description":"In this example we demonstrate passing the invalid characters < and & into the xmlFormat() function to make them XML safe.",
+			"code":"writeOutput( xmlFormat( '<node>Good &amp; Juicy</node>') );",
+			"result":"&lt;node&gt;Good &amp;amp; Juicy&lt;/node&gt;",
+			"runnable":true
+		},		
+		{
+			"title":"Advanced xmlFormat() usage",
+			"description":"In this example we demonstrate parsing the cfdocs.org index page into xmlFormat() to make it safe for XML storage.",
+			"code":"httpService = new http();\r\nhttpService.setMethod( 'get' );\r\nhttpService.setCharset( 'utf-8' );\r\nhttpService.setUrl( 'http://cfdocs.org/' );\r\n\r\nxmlDoc = '<node>' & xmlFormat( httpService.send().getPrefix().fileContent ) & '</node>';\r\n\r\nwriteOutput( xmlDoc );\r\n// NOTE: View results frame source in TryCF to see actual encoding",
+			"result":"<node> [parsed HTML document] </node>",
+			"runnable":true
+		}
 	]
 
 }
