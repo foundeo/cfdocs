@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Performs a bitwise logical OR operation.",
 	"params": [
-		{"name":"number1","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"number2","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number1","description":"Integer","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"number2","description":"Integer","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
@@ -18,6 +18,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Calculate bitwise logical OR",
+			"description":"Uses the bitOr function to perform the logical OR operation on each pair of the corresponding bits",
+			"code":"bitOr(5,3)",
+			"result":7,
+			"runnable":true
+		}
 	]
-
 }

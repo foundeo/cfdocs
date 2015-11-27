@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" Performs a bitwise mask clear operation.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"start","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"length","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"Integer","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"start","description":"Start bit for the mask (Integer in the range 0-31, inclusive)","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"length","description":"Length of bits in the mask (Integer in the range 0-31, inclusive)","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
@@ -19,6 +19,29 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Bitwise Mask Clear",
+			"description":"Uses the bitMaskClear function to clear (setting to 0) each of the corresponding bits",
+			"code":"bitMaskClear(3, 0, 1)",
+			"result":2,
+			"runnable":true
+		},
+		{
+			"title":"Using non zero start parameter",
+			"description":"",
+			"code":"bitMaskClear(3, 1, 1)",
+			"result":1,
+			"runnable":true
+		},
+		{
+			"title":"Using non zero mask start and length parameters",
+			"description":"",
+			"code":"bitMaskClear(10, 1, 2)",
+			"result":8,
+			"runnable":true
+		}
 	]
 
 }
