@@ -4,11 +4,11 @@
 	"syntax":"bitMaskRead(number, start, length)",
 	"returns":"Numeric",
 	"related":[],
-	"description":" Performs a bitwise mask read operation.\n Returns an integer, created from length bits of number,\n beginning at start.",
+	"description":" Performs a bitwise mask read operation.\n Returns an integer representation of the corresponding bits specified in the mask.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"start","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"length","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"Integer","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"start","description":"Start bit for the read mask (Integer in the range 0-31, inclusive)","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"length","description":"Length of bits in the read mask (Integer in the range 0-31, inclusive)","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
@@ -19,6 +19,29 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Bitwise Mask Read",
+			"description":"Uses the bitMaskRead function to read each of the corresponding bits specified in the mask",
+			"code":"bitMaskRead(3, 0, 1)",
+			"result":1,
+			"runnable":true
+		},
+		{
+			"title":"Using non zero start parameter",
+			"description":"Bit shift the mask 2 places",
+			"code":"bitMaskRead(10, 2, 1)",
+			"result":0,
+			"runnable":true
+		},
+		{
+			"title":"Using non zero read mask start and length parameters",
+			"description":"",
+			"code":"bitMaskRead(10, 1, 3)",
+			"result":5,
+			"runnable":true
+		}
 	]
 
 }
