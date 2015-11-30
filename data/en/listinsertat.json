@@ -20,6 +20,22 @@
 	},
 	"links": [
 
-	]
+	],
+	"examples": [
+        {
+            "title": "Simple Example",
+            "description": "Inserts 'foo' into the list at position 2",
+            "code": "listInsertAt(\"bar,lorem,ipsum\", 2, \"foo\")",
+            "result": "bar,foo,lorem,ipsum",
+            "runnable":true
+        },
+        {
+            "title": "Example with Custom Delimiter",
+            "description": "Inserts 'foo' into the list with a custom delimiter",
+            "code": "listInsertAt(\"bar|lorem,ipsum|me|something\", 2, \"foo\", \"|\")",
+            "result": "bar|foo|lorem,ipsum|me|something",
+            "runnable":true
+        }
+    ]
 
 }
