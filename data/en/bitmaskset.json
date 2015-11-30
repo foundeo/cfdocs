@@ -6,10 +6,10 @@
 	"related":[],
 	"description":" Performs a bitwise mask set operation.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"mask","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"start","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"length","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"Integer","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"mask","description":"Integer mask","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"start","description":"Start bit for the set mask (Integer in the range 0-31, inclusive)","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"length","description":"Length of bits in the set mask (Integer in the range 0-31, inclusive)","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
@@ -20,6 +20,29 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Bitwise Mask Set",
+			"description":"Performs masking operation on each of the corresponding bits",
+			"code":"bitMaskSet(6, 1, 0, 1)",
+			"result":7,
+			"runnable":true
+		},
+		{
+			"title":"Using non zero start parameter",
+			"description":"Bit shift the mask 2 places",
+			"code":"bitMaskSet(10, 1, 2, 1)",
+			"result":14,
+			"runnable":true
+		},
+		{
+			"title":"Using non zero mask start and length parameters",
+			"description":"",
+			"code":"bitMaskSet(10, 2, 1, 2)",
+			"result":12,
+			"runnable":true
+		}
 	]
 
 }

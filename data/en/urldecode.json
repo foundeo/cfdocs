@@ -33,12 +33,12 @@
 			"code":"if( len( rc.msg ) ) {\r\n\twriteOutput( encodeForHTML( urlDecode( rc.msg ) ) );\r\n}",
 			"result":"",
 			"runnable":false
-		},
+		},		
 		{
 			"title":"urlDecode() in obfuscation",
 			"description":"In this example we demonstrate url encoding a password before it is encrypted, and then decoding it after it is decrypted.",
-			"code":"pwd = urlEncodedFormat( 'myPassword' );\r\npwd = encrypt( pwd, '7Z8of/gKWpqsx/v6O5yHRKanrXsp93B4xIHV97zf88Q=', 'BLOWFISH/CBC/PKCS5Padding', 'HEX' );\r\nwriteOutput( pwd & ' : ' );\r\ndecpwd = decrypt( pwd, '7Z8of/gKWpqsx/v6O5yHRKanrXsp93B4xIHV97zf88Q=', 'BLOWFISH/CBC/PKCS5Padding', 'HEX' );\r\ndecpwd = urlDecode( decpwd );\r\nwriteOutput( decpwd );",
-			"result":"DE99D03FEA780BBEBA3846C0BC68D95A3D744F70AAA82DDF : myPassword",
+			"code":"pwd = urlEncodedFormat( '$18$f^$XlTe41' );\r\nwriteOutput( pwd & ' : ' );\r\npwd = encrypt( pwd, '7Z8of/gKWpqsx/v6O5yHRKanrXsp93B4xIHV97zf88Q=', 'BLOWFISH/CBC/PKCS5Padding', 'HEX' );\r\nwriteOutput( pwd & ' : ' );\r\ndecpwd = decrypt( pwd, '7Z8of/gKWpqsx/v6O5yHRKanrXsp93B4xIHV97zf88Q=', 'BLOWFISH/CBC/PKCS5Padding', 'HEX' );\r\nwriteOutput( decpwd & ' : ' );\r\ndecpwd = urlDecode( decpwd );\r\nwriteOutput( decpwd );",
+			"result":"%2418%24f%5E%24XlTe41 : <some encrypted value> : %2418%24f%5E%24XlTe41 : $18$f^$XlTe41",
 			"runnable":true
 		},
 		{

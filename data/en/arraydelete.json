@@ -23,7 +23,7 @@
 	"examples": [
 		{
 			"title": "Delete a value from an array",
-			"description": "Uses the arrayAppend function to append a value to the end of the array",
+			"description": "Uses the arrayDelete function to delete an object in an array",
 			"code":"arr = ['apple', 'orange', 'pear', 'apple'];\r\narrayDelete(arr, 'apple');\r\n\r\nwriteDump(arr);",
 			"result":"['orange','pear','apple']",
 			"runnable":true

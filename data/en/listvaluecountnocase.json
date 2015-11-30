@@ -19,6 +19,22 @@
 	},
 	"links": [
 
-	]
+	],
+	"examples": [
+        {
+            "title": "Simple Example",
+            "description": "Counts instances of 'foo' in the list, ignoring case",
+            "code": "listValueCountNoCase(\"foo,bar,lorem,Foo,ipsum\", \"foo\")",
+            "result": 2,
+            "runnable":true
+        },
+        {
+            "title": "Example with Custom Delimiter",
+            "description": "Counts instances of 'foo' in the list with a custom delimiter, ignoring case",
+            "code": "listValueCountNoCase(\"bar|Foo|lorem,ipsum|me|foo,something|foo|FOO\", \"foo\", \"|\")",
+            "result": 3,
+            "runnable":true
+        }
+    ]
 
 }
