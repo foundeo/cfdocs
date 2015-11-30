@@ -1,3 +1,4 @@
+<cfset request.cacheControlMaxAge = 60 * 20><!--- cache for 20 min ---> 
 <cfset data = {related=[], name="Missing Examples", type="listing", description=""}>
 
 
