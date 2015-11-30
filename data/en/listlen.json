@@ -18,6 +18,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+				"title":"Simple listLen Example",
+				"description":"Get the number of elements in this list",
+				"code" : "listLen(\"foo,bar,bar2,foo2\")",
+				"result":"4"
+		},
+			{
+				"title":"listLen Example with Delimiter",
+				"description":"Get the number of elements in this list using a custom delimiter",
+				"code" : "listLen(\"foo,bar|bar2|foo2\", \"|\")",
+				"result":"3"
+		}
 	]
 
 }

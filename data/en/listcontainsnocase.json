@@ -19,6 +19,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+		"title":"Simple Example",
+		"description":"Return the first instance position of 'foo', irrespective of case",
+		"code":"listContainsNoCase(\"sheep,goat,Foo,bar,foo\", \"foo\")",
+		"result":3,
+		"runnable":true
+		}
 	]
 
 }
