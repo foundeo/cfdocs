@@ -19,6 +19,22 @@
 	},
 	"links": [
 
-	]
+	],
+	"examples": [
+        {
+            "title": "Simple Example",
+            "description": "Returns the 2nd element in the list",
+            "code": "listGetAt(\"foo,bar,lorem,ipsum\", 2)",
+            "result": "bar",
+            "runnable":true
+        },
+        {
+            "title": "Example with Delimiter",
+            "description": "Returns the 3rd element in the list using a custom delimiter",
+            "code": "listGetAt(\"foo,bar|lorem,ipsum|me|something\", 3, \"|\")",
+            "result": "me",
+            "runnable":true
+        }
+    ]
 
 }
