@@ -21,6 +21,15 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "This example shows how to draw a zigzag line.",
+			"code": "<!--- Use the ImageNew function to create a 250x250-pixel image. ---> \r\n <cfset myImage=ImageNew(\"\",250,250)> \r\n <!--- Set the drawing color to cyan. --->  \r\n <cfset ImageSetDrawingColor(myImage,\"cyan\")> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset ImageSetAntialiasing(myImage,\"on\")> \r\n <!--- Create arrays for the x and y coordinates. ---> \r\n <cfset x = ArrayNew(1)> \r\n <cfset y = ArrayNew(1)> \r\n <!--- Set the values for the x and y coordinates for three connected line segments: the first segment begins at (100,50) and ends at (50,100). The second segment begins at (50, 100) and ends at (200,100). The third segment begins at (200,100) and ends at (100,200). ---> \r\n     <cfset x[1] = \"100\"> \r\n     <cfset x[2] = \"50\"> \r\n     <cfset x[3] = \"200\"> \r\n     <cfset x[4] = \"100\"> \r\n     <cfset y[1] = \"50\"> \r\n     <cfset y[2] = \"100\"> \r\n     <cfset y[3] = \"100\"> \r\n     <cfset y[4] = \"200\"> \r\n <!--- Draw the lines on the image. ---> \r\n <cfset ImageDrawLines(myImage,x,y)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=#myImage# action=\"writeToBrowser\"> ",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

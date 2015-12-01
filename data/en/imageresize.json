@@ -21,6 +21,15 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "This example shows how to resize an image to 50% of original size and resize it proportionately to the new width. Notice that the height is blank. ",
+			"code": "<cfset myImage=ImageNew(\"http://www.google.com/images/logo_sm.gif\")> \r\n <cfset ImageResize(myImage,\"50%\",\"\",\"blackman\",2)> \r\n <!--- Save the modified image to a file called \"test_myImage.jpeg\" and display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"write\" destination=\"test_myImage.jpeg\" overwrite=\"yes\"> \r\n <!--- Display the source image and the thumbnail image. ---> \r\n <img src=\"http://www.google.com/images/logo_sm.gif\"/> \r\n <img src=\"test_myImage.jpeg\"/> ",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

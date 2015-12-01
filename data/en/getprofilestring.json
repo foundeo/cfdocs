@@ -19,6 +19,15 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset IniPath = \"c:\\myboot.ini\"> \r\n <cfset Section = \"boot loader\"> \r\n <cfset timeout = GetProfileString(IniPath, Section, \"timeout\")>    ",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

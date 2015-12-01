@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "This example shows how to turn off antialiasing for a ColdFusion image.",
+			"code": "<<!--- Create a ColdFusion image from an existing JPEG file. ---> \r\n <cfset myImage=ImageNew(\"../cfdocs/images/artgallery/elecia02.jpg\")> \r\n <!--- Turn off antialiasing.---> \r\n <cfset ImageSetAntialiasing(myImage,\"off\")> \r\n <!--- Display the modified image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

@@ -20,6 +20,15 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "This example shows how to create an image with three shapes drawn on the same axis. ",
+			"code": "<!--- Use ImageNew to create a 300x300-pixel image. ---> \r\n <cfset myImage=ImageNew(\"\",300,300)> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset ImageSetAntialiasing(myImage,\"on\")> \r\n <!--- Set the drawing axis to 30 degrees and the point of rotation at (10,10). ---> \r\n <cfset ImageRotateDrawingAxis(myImage,30,10,10)> \r\n <!--- Set the drawing color to blue. ---> \r\n <cfset ImageSetDrawingColor(myImage,\"blue\")> \r\n <!--- Draw three shapes with the same color and drawing axis. ---> \r\n <cfset ImageDrawRect(myImage,150,10,10,150,\"yes\")> \r\n <cfset ImageDrawOval(myImage,200,40,45,65,\"yes\")> \r\n <cfset ImageDrawRect(myImage,275,10,10,150,\"yes\")> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

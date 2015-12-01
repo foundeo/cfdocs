@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "This example shows how to set the background color, and then draw a rectangle on an image filled with that color. ",
+			"code": "<!--- Create a ColdFusion image from an existing JPEG file. ---> \r\n <cfimage name=\"myImage\" source=\"../cfdocs/images/artgallery/maxwell01.jpg\"> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset ImageSetAntialiasing(myImage)> \r\n <!--- Set the background color to magenta. ---> \r\n <cfset ImageSetBackgroundColor(myImage,\"magenta\")> \r\n <!--- Clear the rectangle specified on myImage with the background color specified for the image. ---> \r\n <cfset ImageClearRect(myImage,36,45,100,100)> \r\n <!--- Display the modified image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

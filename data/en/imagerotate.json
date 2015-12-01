@@ -21,6 +21,15 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "This example shows how to rotate an image by 10 degrees. ",
+			"code": "<!--- Create a ColdFusion image from an existing JPEG file. ---> \r\n <cfset myImage=ImageNew(\"../cfdocs/images/artgallery/jeff05.jpg\")> \r\n <cfset ImageSetAntialiasing(myImage,\"on\")> \r\n <!--- Rotate the image by 10 degrees. ---> \r\n <cfset ImageRotate(myImage,10)> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

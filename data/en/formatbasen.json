@@ -18,6 +18,14 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "<cfoutput> \r\n <br>FormatBaseN(10,2): #FormatBaseN(10,2)# \r\n <br>FormatBaseN(1024,16): #FormatBaseN(1024,16)# \r\n <br>FormatBaseN(125,10): #FormatBaseN(125,10)#  \r\n <br>FormatBaseN(10.75,2): #FormatBaseN(10.75,2)# \r\n </cfoutput>   ",
+			"result": ""
+		}
 	]
 
 }

@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "<cfscript> \r\n FileMove(#sourcefile#, #destinationfile#); \r\n </cfscript>   ",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

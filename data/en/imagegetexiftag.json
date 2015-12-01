@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": " This example shows how to retrieve one element from the EXIF information associated with an image. ",
+			"code": "<!--- Create a ColdFusion image from an existing JPEG file. ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/paul05.jpg\" name=\"myImage\"> \r\n <!--- Retrieve the name of the software application used to create the original image. ---> \r\n <cfset data = ImageGetEXIFTag(myImage,\"software\")> \r\n <!--- Display the name of the software. ---> \r\n <cfdump var=\"#data#\"> ",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

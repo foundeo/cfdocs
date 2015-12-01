@@ -19,6 +19,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset yourDate = CreateDate(\"2015\", \"12\", \"09\")> \r\n <cfdump var=\"#yourDate#\" />      ",
+			"result": ""
+		}
 	]
 
 }
