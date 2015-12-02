@@ -1,11 +1,34 @@
 $(document).ready(function() {
+
+ var tags_fns = new Bloodhound({
+    datumTokenizer: function(d) {
+      var test = Bloodhound.tokenizers.whitespace(d);
+          $.each(test,function(k,v){
+              var i = 0;
+              while( (i+1) < v.length ){
+                  test.push(v.substr(i,v.length));
+                  i++;
+              }
+          })
+          return test;
+    },
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    prefetch: {
+          url:'data/en/index.json',
+          ttl: 86400000*7,
+          cache: false,
+          transform: function(d){return d.tags.concat(d.functions, d.categories);}
+        }
+  });
   $('#lookup-box').typeahead({
+      hint: true,
+      highlight: true,
+      minLength: 1
+  },
+  {
   		name: 'tags-fns',
-  		prefetch: {
-  			url:'data/en/index.json',
-  			ttl: 86400000*7,
-  			filter: function(d){return d.tags.concat(d.functions, d.categories);}
-  		}
+  		source: tags_fns,
+      limit: 10
   });
   $('.tt-hint').addClass('form-control');
   $('#search').submit(submitSearch);
