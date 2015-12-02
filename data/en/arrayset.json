@@ -20,6 +20,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset MyNewArray = ArrayNew(1)> \r\n <!--- ArrayToList does not function properly if the Array has not been initialized with ArraySet. ---> \r\n <cfset temp = ArraySet(MyNewArray, 1,6, \"Initial Value\")> \r\n  <cfdump var=\"#myNewArray#\" />   ",
+			"result": ""
+		}
 	]
 
 }

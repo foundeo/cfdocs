@@ -19,6 +19,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset comparison = DateCompare('11/30/2015', '12/02/2015', 'yyyy')> \r\n <cfdump var=\"#comparison#\">  ",
+			"result": ""
+		}
 	]
 
 }

@@ -19,6 +19,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<!--- Evaluate the expression ---> \r\n <cfset first = \"ColdFusion\"> \r\n <cfset second = \"ColdFusion\"> \r\n <cfset op = \"eq\"> \r\n <cfoutput>#evaluate(\"first #op# second\")#</cfoutput> ",
+			"result": "YES"
+		}
 	]
 
 }

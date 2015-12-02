@@ -18,6 +18,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset jstring = Cjustify(\"ColdFusion\", 35)> \r\n <cfdump var=\"#jstring#\" />   ",
+			"result": ""
+		}
 	]
 
 }

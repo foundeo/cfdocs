@@ -21,6 +21,22 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "Use the ImageNew function to create a 200x200-pixel image in ARGB format. ",
+			"code": "<cfset myImage = ImageNew(\"\",200,200,\"argb\")> \r\n <cfimage action=\"writeTobrowser\" source=\"#myImage#\">",
+			"result": "",
+			"runnable":false
+		},
+        {
+			"title": "Tag Syntax",
+			"description": "This example shows how to create a ColdFusion image from a URL. ",
+			"code": "<cfset myImage = ImageNew(\"http://www.google.com/images/logo_sm.gif\")> \r\n <cfset ImageWrite(myImage,\"google_via_imagenew.png\")> \r\n <img src=\"google_via_imagenew.png\">",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

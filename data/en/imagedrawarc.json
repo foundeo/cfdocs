@@ -24,6 +24,15 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "This example shows how to use the ImageNew function to create a blank ColdFusion image that is 250 pixels wide and 180 pixels high. ",
+			"code": "<cfset myImage=ImageNew(\"\",250,320)> \r\n <!--- Set the drawing color for the arc to orange. --->  \r\n <cfset ImageSetDrawingColor(myImage,\"orange\")> \r\n <!--- Turn on antialiasing to improve image quality. --->  \r\n <cfset ImageSetAntialiasing(myImage,\"on\")> \r\n <!--- Draw an enclosed orange arc starting at the coordinate (5,5). --->  \r\n <cfset ImageDrawArc(myImage,5,5,200,300,100,100,\"yes\")> \r\n <!--- Display the image in a browser. --->  \r\n <cfimage action=\"writeToBrowser\" source=\"#myImage#\">  ",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

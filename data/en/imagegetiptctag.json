@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "This example shows how to retrieve the caption for a JPEG file.  ",
+			"code": "<!--- Create a ColdFusion image from a JPEG file. ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/paul05.jpg\" name=\"myImage\" action=\"read\"> \r\n <!--- Retrieve the camera make used to take the original picture. ---> \r\n <cfset cameraMake=ImageGetIPTCTag(myImage,\"make\")> \r\n <cfdump var=\"#cameraMake#\"> ",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

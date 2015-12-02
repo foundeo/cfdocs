@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset delDirectory = \"someDirPath\" /> \r\n <cfset recurse = true /> \r\n <cfset DirectoryDelete(delDirectory,recurse)>   ",
+			"result": "",
+            "runnable":false
+		}
 	]
 
 }
