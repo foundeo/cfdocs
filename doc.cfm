@@ -16,7 +16,7 @@
 	</cftry>
 <cfelseif FileExists(ExpandPath("./data/en/#url.name#.json"))>
 	<cfset data = DeserializeJSON( FileRead(ExpandPath("./data/en/#url.name#.json")))>
-	<cfset request.gitFilePath = "/tree/master/data/en/" & url.name & ".json">
+	<cfset request.gitFilePath = "/edit/master/data/en/" & url.name & ".json">
 <cfelse>
 	<cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9._-]", "", "ALL")>
 	<cfset possible = []>

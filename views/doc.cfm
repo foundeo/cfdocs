@@ -51,6 +51,7 @@
 	  <cfif Len(cat)><li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li></cfif>
 	  <li class="active">#data.name#</li>
 
+
 	  <cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "coldfusion") AND StructKeyExists(data.engines.coldfusion, "docs") AND Len(data.engines.coldfusion.docs)>
 	  		<li class="pull-right">
 	  			<a href="#data.engines.coldfusion.docs#" title="Official Adobe ColdFusion Docs" class="label label-acf">CF<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)>#XmlFormat(data.engines.coldfusion.minimum_version)#+</cfif></a>
@@ -66,6 +67,12 @@
 	  			<a href="#data.engines.openbd.docs#" title="Official OpenBD Docs" class="label label-openbd">BD</a>
 	  		</li>
 	  </cfif>
+	  <li class="pull-right">
+	  		<a href="https://github.com/foundeo/cfdocs/issues/new" rel="nofollow" class="label label-warning" title="Report an Issue">Issue</a>
+	  </li>
+	  <li class="pull-right">
+	  		<a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="label label-danger">Edit</a>
+	  </li>
 	</ol>
 </cfif>
 <div class="container">
