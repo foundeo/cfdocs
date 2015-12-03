@@ -23,10 +23,16 @@
 	],
 	"examples": [
 		{
-			"title": "Script Syntax",
+			"title": "Simple Example",
 			"description": "",
-			"code": "letters = [\"a\",\"b\",\"c\",\"d\"]; \r\n arrayEach(letters, function() \r\n {\r\n                 writeDump(arguments);\r\n  });\r\n",
-			"result": "Struct 1 a \r\n struct 1 b \r\n struct 1 c \r\n struct 1 d"
+			"code": "letters = [\"a\",\"b\",\"c\",\"d\"]; \r\narrayEach(letters, function(element,index) \r\n {\r\n    writeOutput(\"#index#:#element#;\");\r\n});",
+			"result": "1:a;2:b;3:c;4:d;"
+		},
+		{
+			"title": "Member Function Example",
+			"description": "Array Loop -- array.Each()",
+			"code": "a = [\"a\",\"b\",\"c\"];\r\na.each(function(element,index,array){\r\n    writeOutput(\"#index#:#element#;\"); \r\n});",
+			"result": "1:a;2:b;3:c;"
 		}
 	]
 	
