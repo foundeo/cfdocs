@@ -2,36 +2,44 @@
 	"name":"imageDrawArc",
 	"type":"function",
 	"syntax":"imageDrawArc(name, x, y, width, height, startAngle, archAngle [, filled])",
+	"member":"someImage.drawArc(x, y, width, height, startAngle, archAngle [, filled])",
 	"returns":"void",
 	"related":[],
 	"description":" Draws a circular or elliptical arc.",
 	"params": [
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"x","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"y","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"width","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"height","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"startAngle","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"archAngle","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"filled","description":"No Help Available","required":false,"default":"","type":"Boolean","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
+		{"name":"x","description":"The x coordinate of the upper-left corner of the arc.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"y","description":"The y coordinate of the upper-left corner of the arc.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"width","description":"The width of the arc.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"height","description":"The height of the arc.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"startAngle","description":"The beginning angle in degrees.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"archAngle","description":"The angular extent of the arc, relative to the start angle.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"filled","description":"Specify whether the arc is filled","required":false,"default":"false","type":"Boolean","values":["true","false"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagedrawarc.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagedrawarc.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagedrawarc.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagedrawarc.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagedrawarc"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagedrawarc"}
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to use the ImageNew function to create a blank ColdFusion image that is 250 pixels wide and 180 pixels high. ",
 			"code": "<cfset myImage=ImageNew(\"\",250,320)> \r\n <!--- Set the drawing color for the arc to orange. --->  \r\n <cfset ImageSetDrawingColor(myImage,\"orange\")> \r\n <!--- Turn on antialiasing to improve image quality. --->  \r\n <cfset ImageSetAntialiasing(myImage,\"on\")> \r\n <!--- Draw an enclosed orange arc starting at the coordinate (5,5). --->  \r\n <cfset ImageDrawArc(myImage,5,5,200,300,100,100,\"yes\")> \r\n <!--- Display the image in a browser. --->  \r\n <cfimage action=\"writeToBrowser\" source=\"#myImage#\">  ",
 			"result": "",
-			"runnable":false
+			"runnable": false
+		},
+		{
+			"title":"Using drawArc member function",
+			"description":"CF11+ Lucee4.5+ Draw a circle in the center of the image and fill with color",
+			"code":"imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\nimgObj.setDrawingColor(\"005100\");\r\nimgObj.drawArc(50,50,50,50,90,360,\"yes\");\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result":"",
+			"runnable":true
 		}
 	]
 

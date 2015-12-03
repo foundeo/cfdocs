@@ -2,22 +2,23 @@
 	"name":"imageDrawBeveledRect",
 	"type":"function",
 	"syntax":"imageDrawBeveledRect(name, x, y, width, height, raised [, filled])",
+	"member":"someImage.drawBeveledRect(x, y, width, height, raised [, filled])",
 	"returns":"void",
 	"related":[],
 	"description":" Draws a rectangle with beveled edges.",
 	"params": [
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"x","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"y","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"width","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"height","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"raised","description":"No Help Available","required":true,"default":"","type":"Boolean","values":[]},
-		{"name":"filled","description":"No Help Available","required":false,"default":"","type":"Boolean","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
+		{"name":"x","description":"The x coordinate of the rectangle.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"y","description":"The y coordinate of the rectangle.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"width","description":"The width of the rectangle.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"height","description":"The height of the rectangle.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"raised","description":"Specify whether the rectangle appears raised above the surface or sunk into the surface","required":true,"default":"false","type":"Boolean","values":[]},
+		{"name":"filled","description":"Specify whether the rectangle is filled.","required":false,"default":"false","type":"Boolean","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagedrawbeveledrect.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagedrawbeveledrect.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagedrawbeveledrect.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagedrawbeveledrect.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagedrawbeveledrect"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagedrawbeveledrect"}
 	},
@@ -30,7 +31,14 @@
 			"description": "This example shows how to create a bevel-edged rectangle.",
 			"code": "<!--- Use the ImageNew function to create a 200x200-pixel image. ---> \r\n <cfset myImage=ImageNew(\"\",200,200)> \r\n <!--- Turn on antialiasing to improve image quality. --->  \r\n <cfset ImageSetAntialiasing(myImage,\"on\")> \r\n <!--- Set the drawing color for the image to light gray. ---> \r\n <cfset ImageSetDrawingColor(myImage,\"lightgray\")> \r\n <!--- Draw a 3D gray, filled, raised rectangle. --->  \r\n <cfset ImageDrawBeveledRect(myImage,50,50,100,75,\"yes\",\"yes\")> \r\n <!--- Display the image in a browser. --->  \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\">  ",
 			"result": "",
-			"runnable":false
+			"runnable": false
+		},
+		{
+			"title":"Using drawBeveledRect member function",
+			"description":"CF11+ Lucee4.5+ Create a new image and place a raised beveled rectange at its center",
+			"code":"imgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.drawBeveledRect(50,50,50,50,\"yes\",\"yes\");\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result":"",
+			"runnable":true
 		}
 	]
 
