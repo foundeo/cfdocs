@@ -69,7 +69,7 @@
 	  </cfif>
 	  <li role="separator" class="pull-right divider"></li>
 	  <li class="pull-right">
-	  		<a href="https://github.com/foundeo/cfdocs/issues/new" rel="nofollow" class="label label-warning" title="Report an Issue">Issue</a>
+	  		<a href="https://github.com/foundeo/cfdocs/issues/new?title=#encodeForURL(data.name)#" rel="nofollow" class="label label-warning" title="Report an Issue">Issue</a>
 	  </li>
       <cfif StructKeyExists(request,"gitFilePath") AND Len(request.gitFilePath)>
           <li class="pull-right">
