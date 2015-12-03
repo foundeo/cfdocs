@@ -67,6 +67,7 @@
 	  			<a href="#data.engines.openbd.docs#" title="Official OpenBD Docs" class="label label-openbd">BD</a>
 	  		</li>
 	  </cfif>
+	  <li role="separator" class="pull-right divider"></li>
 	  <li class="pull-right">
 	  		<a href="https://github.com/foundeo/cfdocs/issues/new" rel="nofollow" class="label label-warning" title="Report an Issue">Issue</a>
 	  </li>

@@ -63,6 +63,7 @@ h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier Ne
     color:#fff;
 }
 .breadcrumb li.pull-right:before { content: " ";}
+.breadcrumb li.divider:before { content: "|"; padding-right:0px; padding-left:8px; }
 footer { text-align: center; margin-top: 10px; font-size:smaller; }
 .navbar-brand { font-weight:bold; }
 
