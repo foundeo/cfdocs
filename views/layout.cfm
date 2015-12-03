@@ -63,6 +63,7 @@
             <cfloop list="#listGuides#" index="guide">
                 <li><a href="#linkTo(guide)#">#application.guides[guide]#</a></li>
             </cfloop>
+                <li><a href="/reports/missing-examples.cfm">Missing Examples</a></li>
             </ul>
         </li>
         </cfoutput>

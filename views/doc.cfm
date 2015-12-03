@@ -70,9 +70,11 @@
 	  <li class="pull-right">
 	  		<a href="https://github.com/foundeo/cfdocs/issues/new" rel="nofollow" class="label label-warning" title="Report an Issue">Issue</a>
 	  </li>
-	  <li class="pull-right">
-	  		<a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="label label-danger">Edit</a>
-	  </li>
+      <cfif StructKeyExists(request,"gitFilePath") AND Len(request.gitFilePath)>
+          <li class="pull-right">
+                <a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="label label-danger">Edit</a>
+          </li>
+      </cfif>
 	</ol>
 </cfif>
 <div class="container">
