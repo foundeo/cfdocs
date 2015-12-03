@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cfinvokeargument name=\"\" value=\"\">",
 	"returns":"",
-	"related":[],
+	"related":["cfinvoke"],
 	"description":"Passes the name and value of an argument to a component method or a web service method. This tag is used inside of the cfinvoke tag.",
 	"params": [
 		{"name":"name","description":"The argument name","required":true,"default":"","type":"String","values":[]},
@@ -21,7 +21,7 @@
 	],
 	"examples": [
 		{
-			"title":"Invoke a SOAP webservice using cfinvoke",
+			"title":"Invoke a SOAP webservice and passing arguments using cfinvokeargument",
 			"description":"Calls a remote web service to perform an addition, uses cfinvokeargument to pass the arguments to the method.",
 			"code":"<cfinvoke webservice=\"http://soaptest.parasoft.com/calculator.wsdl\" method=\"add\" returnvariable=\"answer\">\r\n    <cfinvokeargument name=\"x\" value=\"2\">\r\n    <cfinvokeargument name=\"y\" value=\"3\">\r\n</cfinvoke>\r\n<cfoutput>#answer#</cfoutput>",
 			"result":"5.0",
