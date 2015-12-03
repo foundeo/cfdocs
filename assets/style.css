@@ -89,4 +89,8 @@ footer { text-align: center; margin-top: 10px; font-size:smaller; }
     background-color: #1b6c8f;
 }
 
+.alert-warning a {
+  color: #fff;
+}
+
 iframe { border:0px;}
