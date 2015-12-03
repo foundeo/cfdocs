@@ -67,7 +67,9 @@
 	  			<a href="#data.engines.openbd.docs#" title="Official OpenBD Docs" class="label label-openbd">BD</a>
 	  		</li>
 	  </cfif>
-	  <li role="separator" class="pull-right divider"></li>
+	  <cfif structKeyExists(data, "engines") AND NOT structIsEmpty(data.engines)>
+			<li role="separator" class="pull-right divider"></li>
+	  </cfif>
 	  <li class="pull-right">
 	  		<a href="https://github.com/foundeo/cfdocs/issues/new?title=#encodeForURL(data.name)#" rel="nofollow" class="label label-warning" title="Report an Issue">Issue</a>
 	  </li>
