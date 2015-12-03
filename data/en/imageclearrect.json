@@ -2,20 +2,21 @@
 	"name":"imageClearRect",
 	"type":"function",
 	"syntax":"imageClearRect(name, x, y, width, height)",
+	"member":"someImage.clearRect(x, y, width, height)",
 	"returns":"void",
 	"related":[],
 	"description":" Clears the specified rectangle by filling it with the background color of the current drawing surface.",
 	"params": [
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"x","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"y","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"width","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"height","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"name","description":"The image on which this operation is performed","required":true,"default":"","type":"String","values":[]},
+		{"name":"x","description":"The X coordinate of the rectangle to clear.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"y","description":"The Y coordinate of the rectangle to clear.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"width","description":"The width of the rectangle to clear.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"height","description":"The height of the rectangle to clear.","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imageclearrect.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imageclearrect.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imageclearrect.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imageclearrect.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imageclearrect"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imageclearrect"}
 	},
@@ -29,6 +30,13 @@
 			"code": "<!--- Create a ColdFusion image from an existing JPEG file. ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/jeff05.jpg\" name=\"myImage\"> \r\n <!--- Set the background color to green. ---> \r\n <cfset ImageSetBackgroundColor(myImage,\"green\")> \r\n <!--- Draw four rectangles in the background color. ---> \r\n <cfset ImageClearRect(myImage,10,25,50,50)> \r\n <cfset ImageClearRect(myImage,100,25,50,50)> \r\n <cfset ImageClearRect(myImage,10,100,50,50)> \r\n <cfset ImageClearRect(myImage,100,100,50,50)> \r\n <!--- Save the modified ColdFusion image to a file. ---> \r\n <cfimage source=\"#myImage#\" action=\"write\" destination=\"test_myImage.jpeg\" overwrite=\"yes\"> \r\n <!--- Display the source image and the new image. ---> \r\n <img src=\"../cfdocs/images/artgallery/jeff05.jpg\"/> \r\n <img src=\"test_myImage.jpeg\"/> ",
 			"result": "",
 			"runnable":false
+		},
+		{
+			"title":"Using clearRect member function",
+			"description":"CF11+ Lucee4.5+ Clears the specified rectangle  (50x50) from the center of the image (x=50, y-50)",
+			"code":"imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\nimgObj.clearRect(50,50,50,50);\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result":"",
+			"runnable":true
 		}
 	]
 
