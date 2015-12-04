@@ -2,7 +2,7 @@
 	"name":"imageOverlay",
 	"type":"function",
 	"syntax":"imageOverlay(source1, source2 [, rule, alpha])",
-	"member":"someImage.overlay(source1, source2 [, rule, alpha])",
+	"member":"someImage.overlay(source2 [, rule, alpha])",
 	"returns":"void",
 	"related":[],
 	"description":" Reads two source ColdFusion images and overlays the second source image on the first source image.",

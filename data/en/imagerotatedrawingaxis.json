@@ -2,19 +2,20 @@
 	"name":"imageRotateDrawingAxis",
 	"type":"function",
 	"syntax":"imageRotateDrawingAxis(name, angle [, x] [, y])",
+	"member":"someImage.rotateDrawingAxis(angle [, x] [, y])",
 	"returns":"void",
 	"related":[],
 	"description":" Rotates all subsequent drawing on a ColdFusion image at a specified point by a specified angle.",
 	"params": [
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"angle","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"x","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"y","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]}
+		{"name":"name","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
+		{"name":"angle","description":"The rotation angle in degrees.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"x","description":"The x coordinate for the point of rotation.","required":false,"default":"0","type":"Numeric","values":[]},
+		{"name":"y","description":"The y coordinate for the point of rotation.","required":false,"default":"0","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagerotatedrawingaxis.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagerotatedrawingaxis.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagerotatedrawingaxis.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagerotatedrawingaxis.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagerotatedrawingaxis"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagerotatedrawingaxis"}
 	},
@@ -28,6 +29,13 @@
 			"code": "<!--- Use ImageNew to create a 300x300-pixel image. ---> \r\n <cfset myImage=ImageNew(\"\",300,300)> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset ImageSetAntialiasing(myImage,\"on\")> \r\n <!--- Set the drawing axis to 30 degrees and the point of rotation at (10,10). ---> \r\n <cfset ImageRotateDrawingAxis(myImage,30,10,10)> \r\n <!--- Set the drawing color to blue. ---> \r\n <cfset ImageSetDrawingColor(myImage,\"blue\")> \r\n <!--- Draw three shapes with the same color and drawing axis. ---> \r\n <cfset ImageDrawRect(myImage,150,10,10,150,\"yes\")> \r\n <cfset ImageDrawOval(myImage,200,40,45,65,\"yes\")> \r\n <cfset ImageDrawRect(myImage,275,10,10,150,\"yes\")> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
 			"result": "",
 			"runnable":false
+		},
+		{
+			"title":"Using rotateDrawingAxis member function",
+			"description":"CF11+ Create a new image, rotate the drawing axis by 45° about the center (71,71) and draw a 'W'",
+			"code":"imgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.rotateDrawingAxis(45,71,71);\r\nimgObj.drawLines([0,38,76,114,152],[0,152,0,152,0],\"no\",\"no\");\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result":"",
+			"runnable":true
 		}
 	]
 
