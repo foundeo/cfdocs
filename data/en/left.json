@@ -43,7 +43,7 @@
 		},
 		{
 			"title": "Using left() as a member function",
-			"description": "In this example we'll use left() as a member function inside a function to help us to capitalize the first letter in a string. NOTE: Member functions require CF11+ or Lucee 4.5+",
+			"description": "CF11+ Lucee4.5+ In this example we'll use left() as a member function inside a function to help us to capitalize the first letter in a string.",
 			"code": "public string function capitalize( required string text ) {\r\n\treturn arguments.text.left( 1 ).ucase() & arguments.text.right( arguments.text.len() - 1 );\r\n}",
 			"result": "",
 			"runnable":false
