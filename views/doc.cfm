@@ -160,6 +160,7 @@
 		<cfloop array="#data.examples#" index="ex">
             <cfset example_index = example_index + 1>
             <cfset parsedCode = ReReplaceNoCase( HTMLEditFormat(ex.code), '\b#data.name#\b\(', '<em><strong class="syntax-highlight">#data.name#</strong></em>(', 'all' )>
+            <cfset parsedCode = ReReplaceNoCase( HTMLEditFormat(ex.code), '&lt;\b#data.name#\b', '<<em><strong class="syntax-highlight">#data.name#</strong></em>', 'all' )>
             <cfif StructKeyExists(data, "script")>
             	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, '(' ), '<em><strong class="syntax-highlight">#ListFirst( data.script, '(' )#</strong></em>', 'all' )>
             </cfif>
