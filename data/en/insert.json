@@ -3,12 +3,12 @@
 	"type":"function",
 	"syntax":"insert(substring, String, position)",
 	"returns":"String",
-	"related":[],
+	"related":["RemoveChars", "Len"],
 	"description":" Inserts a substring in a string after a specified character\n position. If position = 0, prefixes the substring to the\n string.",
 	"params": [
-		{"name":"substring","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"position","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"substring","description":"A string to insert","required":true,"default":"","type":"String","values":[]},
+		{"name":"String","description":"A string, which to insert substring","required":true,"default":"","type":"String","values":[]},
+		{"name":"position","description":"Substring add after this postion value in given string","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
@@ -19,6 +19,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Simple insert function example",
+			"description": "To add substring on prefix of the given string",
+			"code": "someString = ' chrome browser';\nresult = insert('Google', someString, 0);\nwriteOutput(result);",
+			"result": "Google chrome browser"
+		},
+		{
+			"title": "Simple insert function example with position",
+			"description": "To add substring on suffix of the given string",
+			"code": "someString = 'New private mozilla fire';\nlength = len(someString);\nwriteOutput(insert('fox', someString, length));",
+			"result": "New private mozilla firefox"
+		}
 	]
 
 }
