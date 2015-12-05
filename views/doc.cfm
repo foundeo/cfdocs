@@ -163,6 +163,7 @@
             <cfset parsedCode = ReReplaceNoCase( HTMLEditFormat(ex.code), '&lt;\b#data.name#\b', '<<em><strong class="syntax-highlight">#data.name#</strong></em>', 'all' )>
             <cfif StructKeyExists(data, "script")>
             	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, '(' ), '<em><strong class="syntax-highlight">#ListFirst( data.script, '(' )#</strong></em>', 'all' )>
+            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, ' ' ), '<em><strong class="syntax-highlight">#ListFirst( data.script, ' ' )#</strong></em>', 'all' )>
             </cfif>
             <cfif StructKeyExists(data, "member")>
 	            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( ListLast( data.member, '.' ), '(' ), '<em><strong class="syntax-highlight">#listFirst( ListLast( data.member, '.' ), '(' )#</strong></em>', 'all' )>
