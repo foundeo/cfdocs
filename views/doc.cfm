@@ -164,7 +164,7 @@
             	<cfoutput>#ReFindNoCase( '\b#data.name#\b\(', HTMLEditFormat(ex.code) )#</cfoutput>
             </cfif>
             <cfset parsedCode = ReReplaceNoCase( HTMLEditFormat(ex.code), '&lt;\b#data.name#\b', '&lt;<em><strong class="syntax-highlight">#data.name#</strong></em>', 'all' )>
-            <cfset parsedCode = ReReplaceNoCase( HTMLEditFormat(ex.code), '\b#data.name#\b\(', '<em><strong class="syntax-highlight">#data.name#</strong></em>(', 'all' )>
+            <cfset parsedCode = ReReplaceNoCase( parsedCode, '\b#data.name#\b\(', '<em><strong class="syntax-highlight">#data.name#</strong></em>(', 'all' )>
             <cfif StructKeyExists(data, "script")>
             	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, '(' ), '<em><strong class="syntax-highlight">#ListFirst( data.script, '(' )#</strong></em>', 'all' )>
             	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, ' ' ), '<em><strong class="syntax-highlight">#ListFirst( data.script, ' ' )#</strong></em>', 'all' )>
