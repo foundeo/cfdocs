@@ -175,14 +175,14 @@
             	<cfoutput>#data.name#</cfoutput>
             	<cfoutput>#ReFindNoCase( '\b#data.name#\b\(', HTMLEditFormat(ex.code) )#</cfoutput>
             </cfif>
-            <cfset parsedCode = ReReplaceNoCase( HTMLEditFormat(ex.code), '&lt;\b#data.name#\b', '&lt;<em><strong class="syntax-highlight">#data.name#</strong></em>', 'all' )>
-            <cfset parsedCode = ReReplaceNoCase( parsedCode, '\b#data.name#\b\(', '<em><strong class="syntax-highlight">#data.name#</strong></em>(', 'all' )>
+            <cfset parsedCode = ReReplaceNoCase( HTMLEditFormat(ex.code), '&lt;\b#data.name#\b', '&lt;<span class="syntax-highlight">#data.name#</span>', 'all' )>
+            <cfset parsedCode = ReReplaceNoCase( parsedCode, '\b#data.name#\b\(', '<span class="syntax-highlight">#data.name#</span>(', 'all' )>
             <cfif StructKeyExists(data, "script")>
-            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, '(' ), '<em><strong class="syntax-highlight">#ListFirst( data.script, '(' )#</strong></em>', 'all' )>
-            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, ' ' ), '<em><strong class="syntax-highlight">#ListFirst( data.script, ' ' )#</strong></em>', 'all' )>
+            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, '(' ), '<span class="syntax-highlight">#ListFirst( data.script, '(' )#</span>', 'all' )>
+            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, ' ' ), '<span class="syntax-highlight">#ListFirst( data.script, ' ' )#</span>', 'all' )>
             </cfif>
             <cfif StructKeyExists(data, "member")>
-	            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( ListLast( data.member, '.' ), '(' ), '<em><strong class="syntax-highlight">#listFirst( ListLast( data.member, '.' ), '(' )#</strong></em>', 'all' )>
+	            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( ListLast( data.member, '.' ), '(' ), '<span class="syntax-highlight">#listFirst( ListLast( data.member, '.' ), '(' )#</span>', 'all' )>
             </cfif>
 			<br />
 			<h4>
