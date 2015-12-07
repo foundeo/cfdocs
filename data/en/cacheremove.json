@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<!--- clear all object caches ---> \r\n <cfif ArrayLen(cacheGetAllIds()) gt 0> \r\n <cfset cacheRemove(ArrayToList(cacheGetAllIds()))> \r\n </cfif>   ",
+			"result": "",
+            "runnable":false
+		}
 	]
 
 }

@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Performs a bitwise logical NOT operation.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"Integer","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Calculate bitwise logical NOT",
+			"description":"Uses the bitNot function to perform the logical NOT operation of a signed 32-bit integer (two's complement)",
+			"code":"bitNot(0)",
+			"result":-1,
+			"runnable":true
+		}
 	]
 
 }

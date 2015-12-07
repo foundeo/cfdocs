@@ -18,6 +18,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset MyArray = ArrayNew(1)> \r\n <!--- Resize that array to the number of records in the query. ---> \r\n <cfset temp = ArrayResize(MyArray, 8)> \r\n  <cfdump var=\"#MyArray#\" />  ",
+			"result": ""
+		}
 	]
 
 }

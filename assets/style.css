@@ -15,7 +15,7 @@ h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier Ne
   margin-bottom: 0;
 }
 
-.tt-dropdown-menu {
+.tt-menu {
   min-width: 160px;
   margin-top: 2px;
   padding: 5px 0;
@@ -40,8 +40,9 @@ h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier Ne
   padding: 3px 20px;
 }
 
-.tt-suggestion.tt-is-under-cursor {
+.tt-suggestion:hover {
   color: #fff;
+  cursor: pointer;
   background-color: #0081c2;
   background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
@@ -50,14 +51,6 @@ h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier Ne
   background-image: linear-gradient(to bottom, #0088cc, #0077b3);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0)
-}
-
-.tt-suggestion.tt-is-under-cursor a {
-  color: #fff;
-}
-
-.tt-suggestion p {
-  margin: 0;
 }
 
 .twitter-typeahead .tt-hint {
@@ -70,6 +63,7 @@ h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier Ne
     color:#fff;
 }
 .breadcrumb li.pull-right:before { content: " ";}
+.breadcrumb li.divider:before { content: "|"; padding-right:0px; padding-left:8px; }
 footer { text-align: center; margin-top: 10px; font-size:smaller; }
 .navbar-brand { font-weight:bold; }
 
@@ -97,6 +91,10 @@ footer { text-align: center; margin-top: 10px; font-size:smaller; }
 .syntax-highlight {
   color: #c7254e;
   background-color: #ffffe0;
+}
+
+.alert-warning a {
+  color: #fff;
 }
 
 iframe { border:0px;}

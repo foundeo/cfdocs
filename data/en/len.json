@@ -3,10 +3,10 @@
 	"type":"function",
 	"syntax":"len(Object)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["Left","Right","Mid"],
 	"description":" Determines the length of a string or binary object",
 	"params": [
-		{"name":"Object","description":"","required":true,"default":"","type":"Object","values":[]}
+		{"name":"Object","description":"A string or variable name","required":true,"default":"","type":"Object","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Simple example for Len function",
+			"description": "To get the total length of the string or binary object",
+			"code": "someString = 'ColdFusion';\nwriteOutput(len(someString));",
+			"result": "10"
+		},
+		{
+			"title": "Simple example for Len function as member function",
+			"description": "For CF11+ Lucee4.5+",
+			"code": "colorArray = ['Green','red','blue'];\nwriteOutput(colorArray.len());",
+			"result": "3"
+		}
 	]
 
 }

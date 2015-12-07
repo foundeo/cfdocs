@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset renameDirectory = \"someDirPath\" /> \r\n <cfset rename = \"newName\" /> \r\n <cfset DirectoryRename(renameDirectory,newName)>  ",
+			"result": "",
+            "runnable":false
+		}
 	]
 
 }

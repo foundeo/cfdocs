@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "This example shows the use of GetBaseTagData function. Typically used in custom tags.",
+			"code": "<cfif trim(inCustomTag) neq \"\"> \r\n <cfoutput> \r\n Running in the context of a custom tag named #inCustomTag#.<p> \r\n </cfoutput> \r\n <!--- Get the tag instance data ---> \r\n <cfset tagData = GetBaseTagData(inCustomTag)> \r\n <!--- Find the tag's execution mode Located inside the  ---> \r\n <cfif tagData.thisTag.executionMode neq ’inactive’> \r\n template \r\n <cfelse> \r\n BODY \r\n </cfif>   ",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

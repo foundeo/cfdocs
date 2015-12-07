@@ -19,6 +19,22 @@
 	},
 	"links": [
 
-	]
+	],
+	"examples": [
+        {
+            "title": "Simple Example",
+            "description": "Changes the delimiters in the list",
+            "code": "listChangeDelims(\"foo,bar,lorem,ipsum\", \"|\")",
+            "result": "foo|bar|lorem|ipsum",
+            "runnable":true
+        },
+        {
+            "title": "Example with Custom Delimiter",
+            "description": "Changes the delimiters in the list using a custom delimiter",
+            "code": "listChangeDelims(\"foo,bar|lorem,ipsum|me|something\", \"~\", \"|\")",
+            "result": "foo,bar~lorem,ipsum~me~something",
+            "runnable":true
+        }
+    ]
 
 }

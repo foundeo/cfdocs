@@ -22,23 +22,36 @@
 	],
 	"examples": [
 		{
-			"title": "Tag Syntax",
+			"title": "List Loop using listEach",
+			"description": "Using a semicolon delimiter.",
+			"code": "list = \"a;b;c\";\nlistEach(list, function(element,index,list) {\n    writeOutput(\"#index#:#element#;\");\n}, \";\");",
+			"result": "1:a;2:b;3:c;"
+		},
+		{
+			"title": "Member Function Example",
+			"description": "List Loop list.Each()",
+			"code": "list = \"a;b;c\";\r\nlist.each(function(element,index,list) { \r\n    writeOutput(\"#index#:#element#;\");\r\n}, \";\");",
+			"result": "1:a;2:b;3:c;"
+		},
+		{
+			"title": "Example using a Closure",
 			"description": "Example 1",
-			"code": "<cfscript> \r\n empArray = [\"john\", \"pete\", \"bob\"]; \r\n listS = \"'john', 'pete', 'bob'\"; \r\n ArrayEach(empArray, xclosure); \r\n ListEach(listS, xclosure); \r\n function xclosure(empname, index) \r\n {  \r\n writeOutput(empName & \" at index: \" & index); \r\n } \r\n </cfscript> \r\n",
-			"result": ""
+			"code": "<cfscript> \r\n empArray = [\"john\", \"pete\", \"bob\"]; \r\n listS = \"'john', 'pete', 'bob'\"; \r\n ArrayEach(empArray, xclosure); \r\n ListEach(listS, xclosure); \r\n function xclosure(empname, index) {  \r\n    writeOutput(empName & \" at index: \" & index); \r\n } \r\n</cfscript> \r\n",
+			"result": "john at index: 1pete at index: 2bob at index: 3'john' at index: 1 'pete' at index: 2 'bob' at index: 3"
 		},
         {
-			"title": "Tag Syntax",
+			"title": "Example using a Closure Alternate",
 			"description": "Also, the original array can also be passed to the closure function. So the following code is also valid:",
 			"code": "... \r\n function xclosure(empname, index, empArray) \r\n { \r\n } \r\n ... \r\n } \r\n </cfscript> \r\n",
-			"result": ""
+			"result": "",
+			"runnable":false
 		}
         ,
         {
-			"title": "Tag Syntax",
+			"title": "Another Closure Example",
 			"description": "Example 2",
-			"code": "<cfscript> \r\n cityList = \"Pittsburgh, Raleigh, Miami, Las Vegas\"; \r\n function printCity(String city) \r\n { \r\n writeOutput(\"Current city: \" & city); \r\n } \r\n ListEach(cityList ,printCity); \r\n </cfscript> \r\n",
-			"result": ""
+			"code": "<cfscript> \r\n cityList = \"Pittsburgh, Raleigh, Miami, Las Vegas\"; \r\n function printCity(String city) { \r\n    writeOutput(\"Current city: \" & city); \r\n } \r\n ListEach(cityList ,printCity); \r\n</cfscript> \r\n",
+			"result": "Current city: PittsburghCurrent city: RaleighCurrent city: MiamiCurrent city: Las Vegas"
 		}
 	]
 

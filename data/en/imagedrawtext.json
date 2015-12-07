@@ -2,25 +2,42 @@
 	"name":"imageDrawText",
 	"type":"function",
 	"syntax":"imageDrawText(name, str, x, y, attributecollection)",
+	"member":"someImage.drawText(str, x, y, attributecollection)",
 	"returns":"void",
 	"related":[],
 	"description":" Draws a text string on a ColdFusion image with the baseline of the first character positioned at (x,y) in the image.",
 	"params": [
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"str","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"x","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"y","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"attributecollection","description":"No Help Available","required":true,"default":"","type":"Struct","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
+		{"name":"str","description":"The text to draw.","required":true,"default":"","type":"String","values":[]},
+		{"name":"x","description":"The x coordinate for the start point of the string.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"y","description":"The y coordinate for the start point of the string.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"attributecollection","description":"A structure used to specify the text characteristics. the following keys are supported: \r\nfont: The name of the font used to draw the text string. If you do not specify the font attribute, the text is drawn in the default system font. \r\nsize: The font size for the text string. The default value is 10 points. \r\nstyle: The style to apply to the font ( bold,italic,boldItalic,plain (default) ). \r\nstrikethrough: a boolean that specify whether strikethrough is applied to the text image, default is false. \r\nunderline: a boolean that specify whether underline is applied to the text image, default is false.","required":false,"default":"","type":"Struct","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagedrawtext.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagedrawtext.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagedrawtext.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagedrawtext.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagedrawtext"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagedrawtext"}
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "This example shows how to create a text string image. ",
+			"code": "<!--- Use the ImageNew function to create a 200x100-pixel image. ---> \r\n <cfset myImage=ImageNew(\"\",200,100)> \r\n <!--- Set the drawing color to green. ---> \r\n <cfset ImageSetDrawingColor(myImage,\"green\")> \r\n <!--- Specify the text string and the start point for the text. ---> \r\n <cfset ImageDrawText(myImage,\"It's not easy being green.\",10,50)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"result": "",
+			"runnable": false
+		},
+		{
+			"title":"Using drawText member function",
+			"description":"CF11+ Lucee4.5+ Create an new image. With the new image write \"CFDocs\" with the text characteristics specified ",
+			"code":"TextCharacteristics = { size=\"20\", style=\"bold\", strikethrough=\"false\", underline=\"false\"};\r\nimgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.drawText(\"CFDocs\",20,50,TextCharacteristics);\r\ncfimage (action=\"writeToBrowser\", source=imgObj);",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

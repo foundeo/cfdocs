@@ -21,6 +21,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset listDirectory = \"someDirPath\" /> \r\n <cfset recurse = true /> \r\n <cfset listInfo = \"name\" /> \r\n <cfset filter = \"someFilter\" /> \r\n <cfset res= DirectoryList(listDirectory,recurse,listInfo,filter)>    ",
+			"result": "",
+            "runnable":false
+		}
 	]
 
 }

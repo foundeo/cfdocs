@@ -17,5 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfscript> \r\n writeOutput(ArrayContainsNoCase([\"STRING\",\"STRING\"], \"string\")); \r\n </cfscript> ",
+			"result": "",
+            "runnable":false
+		}
 	]
 }

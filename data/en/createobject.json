@@ -24,6 +24,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "CreateObject Component",
+			"code": "<cfscript> \r\n tellTimeCFC=CreateObject(\"component\",\"appResources.components.tellTime\"); \r\n tellTimeCFC.getLocalTime();\r\n </cfscript>       ",
+			"result": ""
+		},
+        {
+			"title": "Script Syntax",
+			"description": "CreateObject WebService",
+			"code": "<cfscript> \r\n ws = CreateObject(\"webservice\", \"http://www.xmethods.net/sd/2001/TemperatureService.wsdl\"); \r\n xlatstring = ws.getTemp(zipcode = \"55987\"); \r\n writeoutput(\"The temperature at 55987 is \" & xlatstring); \r\n </cfscript>      ",
+			"result": ""
+		}
 	]
 
 }

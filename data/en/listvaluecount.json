@@ -19,6 +19,22 @@
 	},
 	"links": [
 
-	]
+	],
+	"examples": [
+        {
+            "title": "Simple Example",
+            "description": "Counts instances of 'foo' in the list",
+            "code": "listValueCount(\"foo,bar,lorem,foo,ipsum\", \"foo\")",
+            "result": 2,
+            "runnable":true
+        },
+        {
+            "title": "Example with Custom Delimiter",
+            "description": "Counts instances of 'foo' in the list with a custom delimiter",
+            "code": "listValueCount(\"bar|foo|lorem,ipsum|me|foo,something|foo|FOO\", \"foo\", \"|\")",
+            "result": 2,
+            "runnable":true
+        }
+    ]
 
 }
