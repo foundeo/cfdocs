@@ -171,6 +171,19 @@
         <cfset example_index = 0>
 		<cfloop array="#data.examples#" index="ex">
             <cfset example_index = example_index + 1>
+            <cfif findNoCase( 'monthAsString', data.name )>
+            	<cfoutput>#data.name#</cfoutput>
+            	<cfoutput>#ReFindNoCase( '\b#data.name#\b\(', HTMLEditFormat(ex.code) )#</cfoutput>
+            </cfif>
+            <cfset parsedCode = ReReplaceNoCase( HTMLEditFormat(ex.code), '&lt;\b#data.name#\b', '&lt;<em><strong class="syntax-highlight">#data.name#</strong></em>', 'all' )>
+            <cfset parsedCode = ReReplaceNoCase( parsedCode, '\b#data.name#\b\(', '<em><strong class="syntax-highlight">#data.name#</strong></em>(', 'all' )>
+            <cfif StructKeyExists(data, "script")>
+            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, '(' ), '<em><strong class="syntax-highlight">#ListFirst( data.script, '(' )#</strong></em>', 'all' )>
+            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, ' ' ), '<em><strong class="syntax-highlight">#ListFirst( data.script, ' ' )#</strong></em>', 'all' )>
+            </cfif>
+            <cfif StructKeyExists(data, "member")>
+	            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( ListLast( data.member, '.' ), '(' ), '<em><strong class="syntax-highlight">#listFirst( ListLast( data.member, '.' ), '(' )#</strong></em>', 'all' )>
+            </cfif>
 			<br />
 			<h4>
                 #XmlFormat(ex.title)#
@@ -181,7 +194,7 @@
 	            </cfif>
             </h4>
 			<p class="clearfix">#autoLink(ex.description)#</p>
-			<pre>#HTMLEditFormat(ex.code)#</pre>
+			<pre><code>#parsedCode#</code></pre>
 			<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
 				<p><strong>Expected Result: </strong> #XmlFormat(ex.result)#</p>
 			</cfif>

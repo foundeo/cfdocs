@@ -88,6 +88,10 @@ footer { text-align: center; margin-top: 10px; font-size:smaller; }
 .label-openbd:focus {
     background-color: #1b6c8f;
 }
+.syntax-highlight {
+  color: #c7254e;
+  background-color: #ffffe0;
+}
 
 .alert-warning a {
   color: #fff;
