@@ -14,6 +14,8 @@ This is an incomplete / work in progress guide to operators in CFML.
 		return "mooo!";
 	}
 
+The `EQ` `IS` and `==` operators are case insensitive, so `"PETE" IS "pete"` evaluates `true`
+
 ### Inequality
 
 `NEQ` _Script_ ✓ _Tags_ ✓
