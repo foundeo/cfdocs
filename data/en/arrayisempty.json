@@ -4,10 +4,10 @@
 	"syntax":"arrayIsEmpty(array)",
 	"member":"someArray.isEmpty()",
 	"returns":"boolean",
-	"related":[],
+	"related":["ArrayIsDefined"],
 	"description":" Determines whether an array is empty. Equivalent to arrayLen().\n Calling this function on an array with 10 undefined elements\n will return false.\n CFML MX: this function can be used on XML objects.",
 	"params": [
-		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]}
+		{"name":"array","description":"An array name or variable name","required":true,"default":"","type":"Array","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,32 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Simple example for arrayIsEmpty function",
+			"description": "To check an array is empty or not",
+			"code": "someArray = [1,2,3,4,5];\nwriteOutput(arrayIsEmpty(someArray));",
+			"result": "No"
+		},
+		{
+			"title": "Simple example for arrayIsEmpty function",
+			"description": "Lucee4.5+ To check an array is empty or not",
+			"code": "someArray = [1,2,3,4,5];\nwriteOutput(arrayIsEmpty(someArray));",
+			"result": "false"
+		},
+		{
+			"title": "Simple example with member function",
+			"description": "CF11+ Uses the member function is the same as running arrayIsEmpty.",
+			"code": "numberArray = arrayNew(1);\nwriteOutput(numberArray.isEmpty());",
+			"result": "Yes"
+		},
+		{
+			"title": "Simple example with member function",
+			"description": "Lucee4.5+ Uses the member function is the same as running arrayIsEmpty.",
+			"code": "numberArray = arrayNew(1);\nwriteOutput(numberArray.isEmpty());",
+			"result": "true"
+		}
 	]
 
 }

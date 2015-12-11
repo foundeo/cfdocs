@@ -4,10 +4,10 @@
 	"syntax":"arrayClear(array)",
 	"member":"someArray.clear()",
 	"returns":"boolean",
-	"related":[],
+	"related":["ArrayDelete","ArrayDeleteAt"],
 	"description":" Removes all elements from an array.",
 	"params": [
-		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]}
+		{"name":"array","description":"An array name or variable name","required":true,"default":"","type":"Array","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,26 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Clear the value of an array",
+			"description": "Uses the arrayClear function to clear the value of an array",
+			"code": "someArray = [\"Red\", \"White\", \"Green\", \"Blue\", \"Pink\"];\nwriteOutput(arrayClear(someArray));",
+			"result": "Yes"
+		},
+		{
+			"title": "Clear the value of an array",
+			"description": "Lucee4.5+ To clear the value of an array",
+			"code": "someArray = [\"Red\", \"White\", \"Green\", \"Blue\", \"Pink\"];\nwriteOutput(arrayClear(someArray));",
+			"result": "true"
+		},
+		{
+			"title": "Clear value of an array using member function",
+			"description": "CF11+ Uses the member function is the same as running arrayClear.",
+			"code": "numberArray = [1,2,3];\nwriteOutput(numberArray.Clear());",
+			"result": "Yes"
+		}
 	]
 
 }
