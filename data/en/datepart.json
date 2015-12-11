@@ -18,6 +18,14 @@
 	},
 	"links": [
 
+	],
+"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<!--- This example shows information available from DatePart ---> \r\n <cfset todayDate = Now()> \r\n <h3>DatePart Example</h3> \r\n <p>Today's date is <cfoutput>#todayDate#</cfoutput>. \r\n <p>Using datepart, we extract an integer representing the dateparts from that value <cfoutput> \r\n <ul> \r\n <li>year: #DatePart(\"yyyy\", todayDate)#</li> \r\n <li>quarter: #DatePart(\"q\", todayDate)#</li> \r\n <li>month: #DatePart(\"m\", todayDate)#</li> \r\n <li>day of year: #DatePart(\"y\", todayDate)#</li> \r\n <li>day: #DatePart(\"d\", todayDate)#</li> \r\n <li>weekday: #DatePart(\"w\", todayDate)#</li> \r\n <li>week: #DatePart(\"ww\", todayDate)#</li> \r\n <li>hour: #DatePart(\"h\", todayDate)#</li> \r\n <li>minute: #DatePart(\"n\", todayDate)#</li> \r\n <li>second: #DatePart(\"s\", todayDate)#</li> \r\n </ul> \r\n </cfoutput>   ",
+			"result": ""
+		}
 	]
 
 }

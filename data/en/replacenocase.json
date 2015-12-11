@@ -31,7 +31,7 @@
 	        {
 	            "title": "Tag Syntax",
 	            "description": "",
-	            "code": "getVal = replaceNoCase(\"ColdFusiOn\", \"O\", \"a\", \"ALL\"); \r\n writeDump(getVal);",
+	            "code": "<cfset getVal = replaceNoCase(\"ColdFusiOn\", \"O\", \"a\", \"ALL\")> \r\n <cfdump var=\"#getVal#\">",
 	            "result": "Expected Result: CaldFusian"
 	        }
 	]

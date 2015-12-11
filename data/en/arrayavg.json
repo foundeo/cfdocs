@@ -4,10 +4,10 @@
 	"syntax":"arrayAvg(array)",
 	"member":"someArray.avg()",
 	"returns":"Numeric",
-	"related":[],
+	"related":["Arraylen"],
 	"description":" Calculates the average of the values in an array.\n All elements in the array must contain values that can be\n automatically converted to numeric.",
 	"params": [
-		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]}
+		{"name":"array","description":"An array which to determine average","required":true,"default":"","type":"Array","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Average value of an array",
+			"description": "Uses the arrayAvg function to get average value of an array",
+			"code": "numberArray = [1,2,3];\nwriteOutput(arrayAvg(numberArray));",
+			"result": "2"
+		},
+		{
+			"title": "Average value of an array using the Array member function",
+			"description": "CF11+ Lucee4.5+ Uses the avg member function is the same as running arrayAvg.",
+			"code": "numberArray = [1,2,3];\nwriteOutput(numberArray.avg());",
+			"result": "2"
+		}
 	]
 
 }

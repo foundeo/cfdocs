@@ -19,6 +19,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset yourTime = CreateTime(\"5\", \"24\", \"56\")>  \r\n <cfdump var=\"#yourTime#\" />   ",
+			"result": ""
+		}
 	]
 
 }

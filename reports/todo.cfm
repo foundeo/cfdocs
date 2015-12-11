@@ -14,4 +14,5 @@
 	<cfset data.description = "We have docs for #arrayLen(application.index.functions)# functions (#listLen(funcList)# in CF11), but we still need to add documentation for the following #arrayLen(data.related)# functions (#percentLeft#%).">
 </cfif>
 <cfset url.name = "todo">
+<cfset request.gitFilePath = "/edit/master/reports/" & url.name & ".cfm">
 <cfinclude template="../views/doc.cfm">

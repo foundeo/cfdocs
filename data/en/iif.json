@@ -19,6 +19,22 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "#IIF( \r\n RandRange( 0, 1 ), \r\n  \"arrValuesA[ RandRange( 1, 2 ) ]\", \r\n \"arrValuesB[ RandRange( 1, 2 ) ]\" \r\n )#   ",
+			"result": "",
+			"runnable":false
+		},
+        {
+			"title": "Script Syntax",
+			"description": "",
+			"code": "<cfoutput> \r\n #IIf(IsDefined(\"Form.Deliver\"), Evaluate(DE(\"Form.Deliver\")), DE(\"no\"))# \r\n </cfoutput>    ",
+			"result": "",
+			"runnable":true
+		}
 	]
 
 }

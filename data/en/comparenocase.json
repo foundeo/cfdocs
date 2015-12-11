@@ -18,6 +18,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset comparison = CompareNoCase('ColdFusion', 'coldfusion')> \r\n <cfdump var=\"#comparison#\" />    ",
+			"result": "0"
+		}
 	]
 
 }

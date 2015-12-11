@@ -20,6 +20,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<h3>AddSOAPRequestHeader Example</h3> \r\n <cfscript> \r\n     // Create the web service object. \r\n     ws = CreateObject(\"webservice\", \"http://localhost/soapheaders/headerservice.cfc?WSDL\"); \r\n     // Set the username header as a string. \r\n addSOAPRequestHeader(ws, \"http://mynamespace/\", \"username\", \"tom\", false); \r\n // Invoke the web service operation. \r\n     ret = ws.echo_me(\"argument\"); \r\n     // Get the first header as an object (string) and as XML. \r\n     header = getSOAPResponseHeader(ws, \"http://www.tomj.org/myns\", \"returnheader\"); \r\n     XMLheader = getSOAPResponseHeader(ws, \"http://www.tomj.org/myns\", \"returnheader\", true); \r\n </cfscript> ",
+			"result": "",
+            "runnable":false
+		}
 	]
 
 }

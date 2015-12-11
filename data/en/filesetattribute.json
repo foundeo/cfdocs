@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "<cfscript> \r\n FileSetAttribute(\"c:\temp\test1.txt\", \"readOnly\"); \r\n </cfscript>  ",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

@@ -2,22 +2,40 @@
 	"name":"imageSetDrawingStroke",
 	"type":"function",
 	"syntax":"imageSetDrawingStroke(name [, attributecollection])",
+	"member":"someImage.setDrawingStroke(attributecollection)",
 	"returns":"void",
 	"related":[],
 	"description":" Sets the drawing stroke for points and lines in subsequent ColdFusion images.",
 	"params": [
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"attributecollection","description":"No Help Available","required":false,"default":"","type":"Struct","values":[]}
+		{"name":"name","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
+		{"name":"attributecollection","description":"The structure used to specify the line attributes\r\n\r\nwidth: Pen width, which is measured perpendicularly to the pen trajectory.\r\n\r\nendcaps: Decoration applied to the ends of unclosed subpaths and dash segments. Subpaths that start and end on the same point are considered unclosed if they do not have a close segment: (butt,round,square)\r\n\r\nlineJoins: Type of line joins: (bevel,miter,join)\r\n\r\nmiterLimit: The limit to trim a line join that has a mitered join decoration. (Use only when lineJoins = 'miter'.) A line join is trimmed when the ratio of miter length to stroke width is greater than the miterLimit value. The miter length is the diagonal length of the miter, which is the distance between the inside corner and the outside corner of the intersection. The smaller the angle formed by two line segments, the longer the miter length and the sharper the angle of intersection. The default value is 10.0, which trims all angles less than 11 degrees. Trimming miters converts the decoration of the line join to bevel.\r\n\r\ndashArray: An array of numbers that indicates the dash pattern. For example. if dashArray is (8,4), the dash pattern is 8 pixels solid, 4 pixels blank, 8 pixels solid, 4 pixels blank, and so on.\r\n\r\ndash_phases: An offset into the dash pattern. For example, a dash_phase of 2, and a dashArray of (8,4) produces the dash pattern of 6 pixels solid, 4 pixels blank, 8 pixels solid, 4 pixels blank, and so on.","required":false,"default":"","type":"Struct","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagesetdrawingstroke.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagesetdrawingstroke.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagesetdrawingstroke.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagesetdrawingstroke.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagesetdrawingstroke"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagesetdrawingstroke"}
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "This example shows how to create an attribute collection for the ImageSetDrawingStroke function and draws a line with those attributes. ",
+			"code": "<!--- Use the ImageNew function to create a ColdFusion image. ---> \r\n <cfset myImage=ImageNew(\"\",200,200)> \r\n <!--- Create an attribute collection to pass to the ImageSetDrawingStroke function. Create a stroke that is 10-pixels wide, has round endcaps, and has a dash pattern of (8,4). ---> \r\n <cfset attr = StructNew()> \r\n <cfset attr.width = 2> \r\n <cfset attr.endcaps = \"round\"> \r\n <cfset dashPattern = ArrayNew(1)> \r\n <cfset dashPattern[1] = 8> \r\n <cfset dashPattern[2] = 4> \r\n <cfset attr.dashArray = dashPattern> \r\n <!--- Apply the attribute collection to the ImageSetDrawingStroke function for the image. ---> \r\n <cfset ImageSetDrawingStroke(myImage,attr)> \r\n <!--- Draw a line on the ColdFusion image with the drawing stroke attributes. ---> \r\n <cfset ImageDrawLine(myImage,20,20,40,150)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title":"Using setDrawingStroke member function",
+			"description":"CF11+ Lucee4.5+ Create an new image. With the new image draw a 'W' with a dashed line stroke ",
+			"code":"lineAttributes = { width=\"2\", endcaps=\"round\", dashArray=[8,4]};\r\nimgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.setDrawingStroke(lineAttributes);\r\nimgObj.drawLines([0,38,76,114,152],[0,152,0,152,0],\"no\",\"no\");\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }
+

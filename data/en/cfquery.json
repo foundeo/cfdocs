@@ -49,7 +49,7 @@
 		{
 			"title": "Script Syntax using QueryExecute",
 			"description": "Also see the Tags Implemented as Components section for another method of using <cfquery> in script.",
-			"code": "myQuery = queryExecute(\r\n \"SELECT myCol1, myCol2 FROM myTable \r\n  WHERE myCol1=? \r\n  ORDER BY myCol1 ASC \", \r\n  {myid: 5}, \r\n  {datasource = \"myDSN\"} \r\n );",
+			"code": "myQuery = queryExecute(\r\n \"SELECT myCol1, myCol2 FROM myTable \r\n  WHERE myCol1 = :myid \r\n  ORDER BY myCol1 ASC \", \r\n  {myid: 5}, \r\n  {datasource = \"myDSN\"} \r\n );",
 			"result": ""
 		},
 		{

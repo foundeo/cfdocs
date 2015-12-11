@@ -2,21 +2,31 @@
 	"name":"imageGrayScale",
 	"type":"function",
 	"syntax":"imageGrayScale(name)",
+	"member":"someImage.grayScale()",
 	"returns":"void",
 	"related":[],
 	"description":" Converts a ColdFusion image to grayscale.",
 	"params": [
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagegrayscale.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagegrayscale.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagegrayscale.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagegrayscale.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagegrayscale"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagegrayscale"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Using grayScale member function",
+			"description":"CF11+ Lucee4.5+ Convert image to grayScale",
+			"code":"imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\nimgObj.grayScale();\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }
