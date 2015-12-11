@@ -2,24 +2,38 @@
 	"name":"imageTranslate",
 	"type":"function",
 	"syntax":"imageTranslate(name, xTrans, yTrans [, interpolation])",
+	"member":"someImage.translate(xTrans, yTrans [, interpolation])",
 	"returns":"void",
 	"related":[],
 	"description":" Copies an image to a new location on the plane.",
 	"params": [
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"xTrans","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"yTrans","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"interpolation","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
+		{"name":"xTrans","description":"Displacement in the x direction.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"yTrans","description":"Displacement in the y direction.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"interpolation","description":"Type of interpolation","required":false,"default":"nearest","type":"String","values":["nearest : Applies the nearest neighbor method of interpolation. Image quality is lower than the other interpolation methods, but processing is fastest.","bilinear: Applies the bilinear method of interpolation. The quality of the image is less pixelated than the default, but processing is slower.","bicubic: Applies the bicubic method of interpolation. Generally, the quality of image is highest with this method and processing is slowest."]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagetranslate.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagetranslate.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagetranslate.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagetranslate.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagetranslate"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagetranslate"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Using translate member function",
+			"description":"CF11+ copy the original image to a new location on the plane",
+			"code":"imgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.translate(35,35);\r\nimgObj.drawRect(40,50,70,50,\"yes\");\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }
+
+
+
+
