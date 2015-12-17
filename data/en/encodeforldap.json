@@ -1,7 +1,7 @@
 {
-	"name":"EncodeForLDAP",
+	"name":"encodeForLDAP",
 	"type":"function",
-	"syntax":"EncodeForLDAP(string);",
+	"syntax":"encodeForLDAP(string);",
 	"returns":"String",
 	"related":[],
 	"description":"Encodes the given string for safe output in LDAP queries.",
