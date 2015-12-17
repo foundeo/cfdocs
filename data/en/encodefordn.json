@@ -9,7 +9,7 @@
 		{"name":"string","description":"string to encode.","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"11", "notes":"Works on CF11+ but not documented.", "docs":""},
+		"coldfusion": {"minimum_version":"11", "notes":"Works on CF11+ but not documented.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-by-category/display-and-formatting-functions.html"},
 		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/encodefordn.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/EncodeForDN"}
 	},
