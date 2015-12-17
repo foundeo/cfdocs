@@ -40,7 +40,7 @@ h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier Ne
   padding: 3px 20px;
 }
 
-.tt-suggestion:hover {
+.tt-suggestion:hover, .tt-cursor {
   color: #fff;
   cursor: pointer;
   background-color: #0081c2;
