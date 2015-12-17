@@ -2,25 +2,35 @@
 	"name":"imageWriteBase64",
 	"type":"function",
 	"syntax":"imageWriteBase64(name, destination, format [, inHTMLFormat] [, overwrite])",
+	"member":"someImage.writeBase64(destination, format [, inHTMLFormat] [, overwrite])",
 	"returns":"void",
 	"related":[],
 	"description":" Writes Base64 images to the specified filename and destination.",
 	"params": [
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"destination","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"format","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"inHTMLFormat","description":"No Help Available","required":false,"default":false,"type":"boolean","values":[false,true]},
-		{"name":"overwrite","description":"No Help Available","required":false,"default":true,"type":"boolean","values":[false,true]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
+		{"name":"destination","description":"The path for the destination file.","required":true,"default":"","type":"String","values":[]},
+		{"name":"format","description":"the image format","required":true,"default":"","type":"String","values":[]},
+		{"name":"inHTMLFormat","description":"Specify whether Base64 output includes the headers used by the Base64 images in the HTML 'img' tag ('data:image/{format};base64,...')","required":false,"default":false,"type":"boolean","values":[false,true]},
+		{"name":"overwrite","description":"If set to true, overwrites the destination file.","required":false,"default":true,"type":"boolean","values":[false,true]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagewritebase64.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagewritebase64.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagewritebase64.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagewritebase64.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagewritebase64"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagewritebase64"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Using translateDrawingAxis member function",
+			"description":"CF11+ Write a base64 representation of an image",
+			"code":"imgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.writeBase64('base64.txt','jpg');",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

@@ -51,6 +51,7 @@
 	  <cfif Len(cat)><li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li></cfif>
 	  <li class="active">#data.name#</li>
 
+
 	  <cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "coldfusion") AND StructKeyExists(data.engines.coldfusion, "docs") AND Len(data.engines.coldfusion.docs)>
 	  		<li class="pull-right">
 	  			<a href="#data.engines.coldfusion.docs#" title="Official Adobe ColdFusion Docs" class="label label-acf">CF<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)>#XmlFormat(data.engines.coldfusion.minimum_version)#+</cfif></a>
@@ -66,6 +67,17 @@
 	  			<a href="#data.engines.openbd.docs#" title="Official OpenBD Docs" class="label label-openbd">BD</a>
 	  		</li>
 	  </cfif>
+	  <cfif structKeyExists(data, "engines") AND NOT structIsEmpty(data.engines)>
+			<li role="separator" class="pull-right divider"></li>
+	  </cfif>
+	  <li class="pull-right">
+	  		<a href="https://github.com/foundeo/cfdocs/issues/new?title=#encodeForURL(data.name)#" rel="nofollow" class="label label-warning" title="Report an Issue">Issue</a>
+	  </li>
+      <cfif StructKeyExists(request,"gitFilePath") AND Len(request.gitFilePath)>
+          <li class="pull-right">
+                <a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="label label-danger">Edit</a>
+          </li>
+      </cfif>
 	</ol>
 </cfif>
 <div class="container">
@@ -159,6 +171,19 @@
         <cfset example_index = 0>
 		<cfloop array="#data.examples#" index="ex">
             <cfset example_index = example_index + 1>
+            <cfif findNoCase( 'monthAsString', data.name )>
+            	<cfoutput>#data.name#</cfoutput>
+            	<cfoutput>#ReFindNoCase( '\b#data.name#\b\(', HTMLEditFormat(ex.code) )#</cfoutput>
+            </cfif>
+            <cfset parsedCode = ReReplaceNoCase( HTMLEditFormat(ex.code), '&lt;\b#data.name#\b', '&lt;<span class="syntax-highlight">#data.name#</span>', 'all' )>
+            <cfset parsedCode = ReReplaceNoCase( parsedCode, '\b#data.name#\b\(', '<span class="syntax-highlight">#data.name#</span>(', 'all' )>
+            <cfif StructKeyExists(data, "script")>
+            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, '(' ), '<span class="syntax-highlight">#ListFirst( data.script, '(' )#</span>', 'all' )>
+            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, ' ' ), '<span class="syntax-highlight">#ListFirst( data.script, ' ' )#</span>', 'all' )>
+            </cfif>
+            <cfif StructKeyExists(data, "member")>
+	            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( ListLast( data.member, '.' ), '(' ), '<span class="syntax-highlight">#listFirst( ListLast( data.member, '.' ), '(' )#</span>', 'all' )>
+            </cfif>
 			<br />
 			<h4>
                 #XmlFormat(ex.title)#
@@ -169,7 +194,7 @@
 	            </cfif>
             </h4>
 			<p class="clearfix">#autoLink(ex.description)#</p>
-			<pre>#HTMLEditFormat(ex.code)#</pre>
+			<pre><code>#parsedCode#</code></pre>
 			<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
 				<p><strong>Expected Result: </strong> #XmlFormat(ex.result)#</p>
 			</cfif>

@@ -1,18 +1,21 @@
 {
 	"name":"imageOverlay",
 	"type":"function",
-	"syntax":"imageOverlay(source1, source2)",
+	"syntax":"imageOverlay(source1, source2 [, rule, alpha])",
+	"member":"someImage.overlay(source2 [, rule, alpha])",
 	"returns":"void",
 	"related":[],
 	"description":" Reads two source ColdFusion images and overlays the second source image on the first source image.",
 	"params": [
-		{"name":"source1","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"source2","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"source1","description":"The image that is the bottom layer in the image.","required":true,"default":"","type":"String","values":[]},
+		{"name":"source2","description":"The image that is the top layer (overlaid on the source1 image) in the image.","required":true,"default":"","type":"String","values":[]},
+		{"name":"rule","description":"CF10+ Compositing Rule","required":false,"default":"","type":"String","values":["SRC","DST_IN","DST_OUT","DST_OVER","SRC_IN","SRC_OVER","SRC_OUT"]},
+		{"name":"alpha","description":"CF10+ The percentage value of transparency","required":false,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imageoverlay.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imageoverlay.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imageoverlay.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imageoverlay.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imageoverlay"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imageoverlay"}
 	},
@@ -23,9 +26,16 @@
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to overlay a smaller image on a larger image. ",
-			"code": "<!--- Create a ColdFusion image from an existing JPEG file and enlarge it by 150%. This image is displayed in the background. ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/maxwell01.jpg\" name=\"myImage\" action=\"resize\" width=\"150%\" height=\"150%\"> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset ImageSetAntialiasing(myImage,\"on\")> \r\n <!--- Create a ColdFusion image from an existing JPEG file. This image is overlaid on the background image. ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/viata05.jpg\" name=\"topImage\"> \r\n <!--- Overlay the top image on the background image. ---> \r\n <cfset ImageOverlay(myImage,topImage)> \r\n <!--- Display the combined image in a browser. ---> \rn <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"code": "<!--- Create a ColdFusion image from an existing JPEG file and enlarge it by 150%. This image is displayed in the background. --->\r\n<cfimage source=\"../cfdocs/images/artgallery/maxwell01.jpg\" name=\"myImage\" action=\"resize\" width=\"150%\" height=\"150%\">\r\n <!--- Turn on antialiasing to improve image quality. --->\r\n<cfset ImageSetAntialiasing(myImage,\"on\")>\r\n<!--- Create a ColdFusion image from an existing JPEG file. This image is overlaid on the background image. --->\r\n<cfimage source=\"../cfdocs/images/artgallery/viata05.jpg\" name=\"topImage\">\r\n<!--- Overlay the top image on the background image. --->\r\n<cfset ImageOverlay(myImage,topImage)>\r\n<!--- Display the combined image in a browser. --->\r\n<cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
 			"result": "",
 			"runnable":false
+		},
+		{
+			"title":"Using overlay member function",
+			"description":"CF11+ Lucee4.5+ Overlay one image on the other",
+			"code":"imgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\ntopImg = imageNew(\"\",50,50,\"rgb\",\"ffffff\");\r\nimgObj.overlay(topImg);\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result":"",
+			"runnable":true
 		}
 	]
 
