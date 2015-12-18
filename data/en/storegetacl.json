@@ -1,7 +1,7 @@
 {
-	"name":"StoreGetACL",
+	"name":"storeGetACL",
 	"type":"function",
-	"syntax":"StoreGetACL(url, ACLObject);",
+	"syntax":"storeGetACL(url, ACLObject);",
 	"returns":"Returns an ACLObject",
 	"related":[],
 	"description":" Gets the ACL object or bucket.",
@@ -22,7 +22,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset dir = 's3://bucket_Name'> \r\n     <cfif NOT DirectoryExists(dir)> \r\n          <cfset directoryCreate(dir)> \r\n </cfif> \r\n     <cfset test = StoreGetACL('#dir#')> \r\n     <cfdump var='#test#'>  \r\n",
+			"code": "<cfset dir = 's3://bucket_Name'> \r\n     <cfif NOT directoryExists(dir)> \r\n          <cfset directoryCreate(dir)> \r\n </cfif> \r\n     <cfset test = storeGetACL('#dir#')> \r\n     <cfdump var='#test#'>  \r\n",
 			"result": ""
 		}
 	]

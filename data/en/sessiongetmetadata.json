@@ -1,7 +1,7 @@
 {
-	"name":"SessionGetMetadata",
+	"name":"sessionGetMetadata",
 	"type":"function",
-	"syntax":"sessionGetMetaData();",
+	"syntax":"sessionGetMetadata();",
 	"returns":"Meta data structure related to the current session",
 	"related":[],
 	"description":" Returns meta data related to the current session.",
@@ -21,7 +21,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset metaData = sessionGetMetaData() > \r\n",
+			"code": "<cfset metaData = sessionGetMetadata() > \r\n",
 			"result": ""
 		}
 	]

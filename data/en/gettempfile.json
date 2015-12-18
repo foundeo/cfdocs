@@ -18,12 +18,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfoutput>#GetTempFile(GetTempDirectory(),\"testFile\")#</cfoutput></p>    ",
+			"code": "<cfoutput>#getTempFile(getTempDirectory(),\"testFile\")#</cfoutput></p>    ",
 			"result": "",
 			"runnable":true
 		}

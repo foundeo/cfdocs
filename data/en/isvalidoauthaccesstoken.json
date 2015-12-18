@@ -1,7 +1,7 @@
 {
-	"name":"IsValidOauthAccesstoken",
+	"name":"isValidOauthAccesstoken",
 	"type":"function",
-	"syntax":"IsValidOauthAccesstoken(token,type);",
+	"syntax":"isValidOauthAccesstoken(token,type);",
 	"returns":"Boolean",
 	"related":[],
 	"description":" Checks if the OAUTH access token is still valid.",
@@ -22,7 +22,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "IsValidOauthAccesstoken(\"any_token_value\",\"facebook\") \r\n",
+			"code": "isValidOauthAccesstoken(\"any_token_value\",\"facebook\") \r\n",
 			"result": ""
 		}
 	]

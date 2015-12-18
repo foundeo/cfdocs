@@ -1,7 +1,7 @@
 {
-	"name":"StoreAddACL",
+	"name":"storeAddACL",
 	"type":"function",
-	"syntax":"StoreAddACL(url, ACLObject);",
+	"syntax":"storeAddACL(url, ACLObject);",
 	"returns":"",
 	"related":[],
 	"description":" Adds ACL to existing ACL for object or bucket.",
@@ -22,7 +22,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "Use this function to add permissions to the existing ones.",
-			"code": "<cftry> \r\n <cfset dir = 's3://bucket_name/'> \r\n \r\n     <cfset perm = structnew()> \r\n     <cfset perm.group = 'authenticated'> \r\n     <cfset perm.permission = 'READ'> \r\n     <cfset perm1 = structnew()> \r\n     <cfset perm1.email = 'email_ID'> \r\n     <cfset perm1.permission = 'READ_ACP'> \r\n     <cfset myarrray = [perm,perm1]> \r\n     <cfif NOT DirectoryExists(dir)> \r\n         <cfset directoryCreate(dir)> \r\n     </cfif> \r\n     <cfset fileWrite('#dir#/Sample.txt','This is to test StoreAddACL')> \r\n     <cfset StoreAddACL('#dir#','#myarrray#')> \r\n     <cfset test = StoreGetACL(dirkey)> \r\n         <cfdump var='#test#'> \r\n     <cfcatch> \r\n         <cfdump var='#cfcatch#'> \r\n     </cfcatch> \r\n </cftry> \r\n",
+			"code": "<cftry> \r\n <cfset dir = 's3://bucket_name/'> \r\n \r\n     <cfset perm = structnew()> \r\n     <cfset perm.group = 'authenticated'> \r\n     <cfset perm.permission = 'READ'> \r\n     <cfset perm1 = structnew()> \r\n     <cfset perm1.email = 'email_ID'> \r\n     <cfset perm1.permission = 'READ_ACP'> \r\n     <cfset myarrray = [perm,perm1]> \r\n     <cfif NOT directoryExists(dir)> \r\n         <cfset directoryCreate(dir)> \r\n     </cfif> \r\n     <cfset fileWrite('#dir#/Sample.txt','This is to test storeAddACL')> \r\n     <cfset storeAddACL('#dir#','#myarrray#')> \r\n     <cfset test = storeGetACL(dirkey)> \r\n         <cfdump var='#test#'> \r\n     <cfcatch> \r\n         <cfdump var='#cfcatch#'> \r\n     </cfcatch> \r\n </cftry> \r\n",
 			"result": ""
 		}
 	]

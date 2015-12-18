@@ -19,12 +19,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n FileWrite(\"mail_list\", \"#companymail#\"); \r\n mlist = FileRead(\"mail_list\"); \r\n </cfscript>  ",
+			"code": "<cfscript> \r\n fileWrite(\"mail_list\", \"#companymail#\"); \r\n mlist = fileRead(\"mail_list\"); \r\n </cfscript>  ",
 			"result": "",
 			"runnable":false
 		}

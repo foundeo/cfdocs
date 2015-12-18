@@ -22,7 +22,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n writeOutput(ArrayContainsNoCase([\"STRING\",\"STRING\"], \"string\")); \r\n </cfscript> ",
+			"code": "<cfscript> \r\n writeOutput(arrayContainsNoCase([\"STRING\",\"STRING\"], \"string\")); \r\n </cfscript> ",
 			"result": "",
             "runnable":false
 		}

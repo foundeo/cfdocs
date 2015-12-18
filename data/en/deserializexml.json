@@ -1,5 +1,5 @@
 {
-	"name":"DeserializeXML",
+	"name":"deserializeXML",
 	"type":"function",
 	"syntax":"deserializeXML( String strToDeserialize, boolean useCustomSerializer );",
 	"returns":"Object",
@@ -22,7 +22,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset value = deserializeXML(ToString(xmlDoc.root.XMLChildren[i].XMLChildren[1]), true)> \r\n",
+			"code": "<cfset value = deserializeXML(toString(xmlDoc.root.XMLChildren[i].XMLChildren[1]), true)> \r\n",
 			"result": ""
 		}
 	]

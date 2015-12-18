@@ -1,7 +1,7 @@
 {
-	"name":"ListEach",
+	"name":"listEach",
 	"type":"function",
-	"syntax":"ListEach(String str, UDFMethod function [, String delim, boolean includeEmptyFields]);",
+	"syntax":"listEach(String str, UDFMethod function [, String delim, boolean includeEmptyFields]);",
 	"returns":"",
 	"related":[],
 	"description":" Iterates over every element of a List object and can call a UDF function, passed as the second argument.",
@@ -36,7 +36,7 @@
 		{
 			"title": "Example using a Closure",
 			"description": "Example 1",
-			"code": "<cfscript> \r\n empArray = [\"john\", \"pete\", \"bob\"]; \r\n listS = \"'john', 'pete', 'bob'\"; \r\n ArrayEach(empArray, xclosure); \r\n ListEach(listS, xclosure); \r\n function xclosure(empname, index) {  \r\n    writeOutput(empName & \" at index: \" & index); \r\n } \r\n</cfscript> \r\n",
+			"code": "<cfscript> \r\n empArray = [\"john\", \"pete\", \"bob\"]; \r\n listS = \"'john', 'pete', 'bob'\"; \r\n arrayEach(empArray, xclosure); \r\n listEach(listS, xclosure); \r\n function xclosure(empname, index) {  \r\n    writeOutput(empName & \" at index: \" & index); \r\n } \r\n</cfscript> \r\n",
 			"result": "john at index: 1pete at index: 2bob at index: 3'john' at index: 1 'pete' at index: 2 'bob' at index: 3"
 		},
         {
@@ -50,7 +50,7 @@
         {
 			"title": "Another Closure Example",
 			"description": "Example 2",
-			"code": "<cfscript> \r\n cityList = \"Pittsburgh, Raleigh, Miami, Las Vegas\"; \r\n function printCity(String city) { \r\n    writeOutput(\"Current city: \" & city); \r\n } \r\n ListEach(cityList ,printCity); \r\n</cfscript> \r\n",
+			"code": "<cfscript> \r\n cityList = \"Pittsburgh, Raleigh, Miami, Las Vegas\"; \r\n function printCity(String city) { \r\n    writeOutput(\"Current city: \" & city); \r\n } \r\n listEach(cityList ,printCity); \r\n</cfscript> \r\n",
 			"result": "Current city: PittsburghCurrent city: RaleighCurrent city: MiamiCurrent city: Las Vegas"
 		}
 	]

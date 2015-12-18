@@ -1,5 +1,5 @@
 {
-	"name":"CreateDynamicProxy",
+	"name":"createDynamicProxy",
 	"type":"function",
 	"syntax":"createDynamicProxy(\"fullyQualifiedNameOfCFC\", [\"interfaceName\"]);",
 	"returns":"Meta data structure related to the current session",

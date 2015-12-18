@@ -26,19 +26,19 @@
         {
             "title": "Simple example for listQualify function with delimiter",
             "description": "To insert a string or character before and after the list elements.",
-            "code": "list = \"coldfusion:railo:144:lucee:46\";\nWriteOutput(listQualify(list, \"|\", \":\"));",
+            "code": "list = \"coldfusion:railo:144:lucee:46\";\nwriteOutput(listQualify(list, \"|\", \":\"));",
             "result": "|coldfusion|:|railo|:|144|:|lucee|:|46|"
         },
         {
             "title": "Example for listQualify function with elements",
             "description": "To insert a string or character before and after the alphabet list elements only.",
-            "code": "list = \"coldfusion:railo:144:lucee:46\";\nWriteOutput(listQualify(list, \"|\", \":\",\"CHAR\"));",
+            "code": "list = \"coldfusion:railo:144:lucee:46\";\nwriteOutput(listQualify(list, \"|\", \":\",\"CHAR\"));",
             "result": "|coldfusion|:|railo|:144:|lucee|:46"
         },
         {
             "title": "Example for listQualify function with includeEmptyFields",
             "description": "If includeEmptyFields is true, empty value add in list elements.",
-            "code": "list = \"coldfusion:railo:144::lucee::46\";\nWriteOutput(listQualify(list, \"|\", \":\",\"CHAR\",true));",
+            "code": "list = \"coldfusion:railo:144::lucee::46\";\nwriteOutput(listQualify(list, \"|\", \":\",\"CHAR\",true));",
             "result": "|coldfusion|:|railo|:144:||:|lucee|:||:46"
         }
     ]

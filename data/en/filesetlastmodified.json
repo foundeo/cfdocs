@@ -18,12 +18,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n FileSetLastModified(\"c:\temp\test1.txt\", \"#Now()#\"); \r\n    WriteOutput(#GetFileInfo(\"c:\temp\test1.txt\").lastmodified#); \r\n </cfscript>  ",
+			"code": "<cfscript> \r\n fileSetLastModified(\"c:\temp\test1.txt\", \"#now()#\"); \r\n    writeOutput(#getFileInfo(\"c:\temp\test1.txt\").lastmodified#); \r\n </cfscript>  ",
 			"result": "",
 			"runnable":false
 		}

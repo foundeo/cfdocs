@@ -20,12 +20,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",
 			"description": " This example shows how to draw a large square in the middle of an image. ",
-			"code": "<!--- Use the ImageNew function to create a 200x200-pixel image. ---> \r\n <cfset myImage=ImageNew(\"\",200,200)> \r\n <!---Set the drawing color to orange. ---> \r\n <cfset ImageSetDrawingColor(myImage,\"orange\")> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset ImageSetAntialiasing(myImage,\"on\")> \r\n <!--- Set the drawing area to 10 pixels. ---> \r\n <cfset attr = StructNew()>  \r\n <cfset attr.width = 10> \r\n <cfset ImageSetDrawingStroke(myImage,attr)> \r\n <!--- Draw the point at (100,100). ---> \r\n <cfset ImageDrawPoint(myImage,100,100)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"code": "<!--- Use the imageNew function to create a 200x200-pixel image. ---> \r\n <cfset myImage=imageNew(\"\",200,200)> \r\n <!---Set the drawing color to orange. ---> \r\n <cfset imageSetDrawingColor(myImage,\"orange\")> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset imageSetAntialiasing(myImage,\"on\")> \r\n <!--- Set the drawing area to 10 pixels. ---> \r\n <cfset attr = structNew()>  \r\n <cfset attr.width = 10> \r\n <cfset imageSetDrawingStroke(myImage,attr)> \r\n <!--- Draw the point at (100,100). ---> \r\n <cfset imageDrawPoint(myImage,100,100)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
 			"result": "",
 			"runnable": false
 		},

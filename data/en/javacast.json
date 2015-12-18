@@ -23,7 +23,7 @@
 		{
 			"title":"Convert a ColdFusion Number to a Java double primative",
 			"description":"Converts the number 180.0 degrees to radians using Java method: Math.toRadians(double degrees)",
-			"code":"createObject(\"java\", \"java.lang.Math\").toRadians( javaCast(\"double\", 180.0) )",
+			"code":"createObject(\"java\", \"java.lang.Math\").toRadians( javacast(\"double\", 180.0) )",
 			"result":"3.14159265359",
 			"runnable":true
 		}

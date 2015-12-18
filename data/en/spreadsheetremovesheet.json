@@ -1,7 +1,7 @@
 {
-	"name":"SpreadSheetRemoveSheet",
+	"name":"spreadsheetRemoveSheet",
 	"type":"function",
-	"syntax":"SpreadsheetRemoveSheet (spreadsheetObj, sheetname);",
+	"syntax":"spreadsheetRemoveSheet (spreadsheetObj, sheetname);",
 	"returns":"",
 	"related":[],
 	"description":" Deletes a spreadsheet..",
@@ -22,7 +22,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset spreadsheetVar= spreadSheetNew('New')> \r\n <cfset spreadsheetCreateSheet(spreadsheetVar,'A')> \r\n <cfset spreadsheetCreateSheet(spreadsheetVar,'B')> \r\n <cfspreadsheet action='write' filename='#dirname#mySpreadSheet.xls'  name='spreadsheetVar' overwrite='true' > \r\n <cfspreadsheet action='read' src='#dirname#mySpreadSheet.xls' name='spreadSheetVar' >     \r\n <cfset spreadsheetRemoveSheet(spreadsheetVar,'B')> \r\n <cfspreadsheet action='write' filename='#dirname#mySpreadSheet.xls'  name='spreadsheetVar' overwrite='true' > \r\n",
+			"code": "<cfset spreadsheetVar= spreadsheetNew('New')> \r\n <cfset spreadsheetCreateSheet(spreadsheetVar,'A')> \r\n <cfset spreadsheetCreateSheet(spreadsheetVar,'B')> \r\n <cfspreadsheet action='write' filename='#dirname#mySpreadSheet.xls'  name='spreadsheetVar' overwrite='true' > \r\n <cfspreadsheet action='read' src='#dirname#mySpreadSheet.xls' name='spreadSheetVar' >     \r\n <cfset spreadsheetRemoveSheet(spreadsheetVar,'B')> \r\n <cfspreadsheet action='write' filename='#dirname#mySpreadSheet.xls'  name='spreadsheetVar' overwrite='true' > \r\n",
 			"result": ""
 		}
 	]

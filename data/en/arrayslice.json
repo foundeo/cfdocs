@@ -22,19 +22,19 @@
 	],
 	"examples": [
 		{
-			"title":"Simple ArraySlice Example",
+			"title":"Simple arraySlice Example",
 			"description":"",
 			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = arraySlice(array, 2, 3);\nwritedump(newArray)",
 			"result":"[2,3,4]"
 		},
 		{
-			"title":"ArraySlice with no length specified",
+			"title":"arraySlice with no length specified",
 			"description":"",
 			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = arraySlice(array, 4);\nwritedump(newArray)",
 			"result":"[4,5,6,7,8]"
 		},
 		{
-			"title":"ArraySlice using a negative offset",
+			"title":"arraySlice using a negative offset",
 			"description":"",
 			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = arraySlice(array, -5, 3);\nwritedump(newArray)",
 			"result":"[4,5,6]"

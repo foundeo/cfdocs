@@ -1,7 +1,7 @@
 {
 	"name":"fileUpload",
 	"type":"function",
-	"syntax":"fileupload(string destination,[string fileField,[string accept,[string nameConflict]]])",
+	"syntax":"fileUpload(string destination,[string fileField,[string accept,[string nameConflict]]])",
 	"returns":"struct",
 	"related":["fileUploadAll"],
 	"description":"Uploads file to a directory on the server.",

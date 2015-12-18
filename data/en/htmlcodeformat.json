@@ -23,7 +23,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset testString=\"This is a test & this is another <This text is in angle brackets> Previous line was blank!!!\">   <cfoutput>#HTMLCodeFormat(testString)#</cfoutput>   ",
+			"code": "<cfset testString=\"This is a test & this is another <This text is in angle brackets> Previous line was blank!!!\">   <cfoutput>#htmlCodeFormat(testString)#</cfoutput>   ",
 			"result": "",
 			"runnable":true
 		}

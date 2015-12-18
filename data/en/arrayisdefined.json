@@ -34,13 +34,13 @@
 		{
 			"title": "Simple example with two dimensional array",
 			"description": "CF8+ To check an array element is define or not",
-			"code": "FirstArray = [1,2,3];\nsecondArray = [11,12,13];\ncombineArray = ArrayNew(2);\nArrayAppend(combineArray, firstArray);\nArrayAppend(combineArray, secondArray);\nwriteOutput(arrayIsDefined(combineArray, 3));",
+			"code": "FirstArray = [1,2,3];\nsecondArray = [11,12,13];\ncombineArray = arrayNew(2);\narrayAppend(combineArray, firstArray);\narrayAppend(combineArray, secondArray);\nwriteOutput(arrayIsDefined(combineArray, 3));",
 			"result": "No"
 		},
 		{
 			"title": "Simple example with two dimensional array",
 			"description": "Lucee4.5+ To check an array element is define or not",
-			"code": "FirstArray = [1,2,3];\nsecondArray = [11,12,13];\ncombineArray = ArrayNew(2);\nArrayAppend(combineArray, firstArray);\nArrayAppend(combineArray, secondArray);\nwriteOutput(arrayIsDefined(combineArray, 2));",
+			"code": "FirstArray = [1,2,3];\nsecondArray = [11,12,13];\ncombineArray = arrayNew(2);\narrayAppend(combineArray, firstArray);\narrayAppend(combineArray, secondArray);\nwriteOutput(arrayIsDefined(combineArray, 2));",
 			"result": "true"
 		}
 	]

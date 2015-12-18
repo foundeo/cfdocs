@@ -23,7 +23,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset jstring = Cjustify(\"ColdFusion\", 35)> \r\n <cfdump var=\"#jstring#\" />   ",
+			"code": "<cfset jstring = cjustify(\"ColdFusion\", 35)> \r\n <cfdump var=\"#jstring#\" />   ",
 			"result": ""
 		}
 	]

@@ -1,5 +1,5 @@
 {
-	"name":"ImageCreateCaptha",
+	"name":"imageCreateCaptcha",
 	"type":"function",
 	"syntax":"imageCreateCaptcha (height, width, text [, difficulty, fonts, fontsize)",
 	"returns":"Image object",
@@ -23,7 +23,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<h1>ImageCreateCaptcha Method</h1> \r\n <cfset funcimg1 = ImageCreateCaptcha(35,400,'loner')>\r\n <cfimage action='writetoBrowser' source='#funcimg1#'>\r\n <cfset funcimg2 = ImageCreateCaptcha(35,400,'loner','high')>\r\n <cfimage action='writetoBrowser' source='#funcimg2#'>\r\n <cfset funcimg3 = ImageCreateCaptcha(35,400,'loner','high','serif,sansserif', '24')>\r\n <cfimage action='writetoBrowser' source='#funcimg3#'>",
+			"code": "<h1>imageCreateCaptcha Method</h1> \r\n <cfset funcimg1 = imageCreateCaptcha(35,400,'loner')>\r\n <cfimage action='writetoBrowser' source='#funcimg1#'>\r\n <cfset funcimg2 = imageCreateCaptcha(35,400,'loner','high')>\r\n <cfimage action='writetoBrowser' source='#funcimg2#'>\r\n <cfset funcimg3 = imageCreateCaptcha(35,400,'loner','high','serif,sansserif', '24')>\r\n <cfimage action='writetoBrowser' source='#funcimg3#'>",
 			"result": ""
 		}
 	]

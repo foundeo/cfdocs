@@ -4,7 +4,7 @@
 	"syntax":"formatBaseN(number, radix)",
 	"returns":"String",
 	"related":[],
-	"description":" String Converts number to a string, in the base specified by\n radix. For example: #FormatBaseN(1024,16)#",
+	"description":" String Converts number to a string, in the base specified by\n radix. For example: #formatBaseN(1024,16)#",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"radix","description":"","required":true,"default":"","type":"Numeric","values":[]}
@@ -23,7 +23,7 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfoutput> \r\n <br>FormatBaseN(10,2): #FormatBaseN(10,2)# \r\n <br>FormatBaseN(1024,16): #FormatBaseN(1024,16)# \r\n <br>FormatBaseN(125,10): #FormatBaseN(125,10)#  \r\n <br>FormatBaseN(10.75,2): #FormatBaseN(10.75,2)# \r\n </cfoutput>   ",
+			"code": "<cfoutput> \r\n <br>formatBaseN(10,2): #formatBaseN(10,2)# \r\n <br>formatBaseN(1024,16): #formatBaseN(1024,16)# \r\n <br>formatBaseN(125,10): #formatBaseN(125,10)#  \r\n <br>formatBaseN(10.75,2): #formatBaseN(10.75,2)# \r\n </cfoutput>   ",
 			"result": ""
 		}
 	]

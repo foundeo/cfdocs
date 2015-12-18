@@ -23,7 +23,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset employee= CreateObject(\"component\", \"employee\")> \r\n <cfset employee.setDepartment(\"ColdFusion\")> \r\n <cfset employee.setCountry(\"USA\")> \r\n <cfset employee=EntityLoadByExample(employee)> ",
+			"code": "<cfset employee= createObject(\"component\", \"employee\")> \r\n <cfset employee.setDepartment(\"ColdFusion\")> \r\n <cfset employee.setCountry(\"USA\")> \r\n <cfset employee=entityLoadByExample(employee)> ",
 			"result": "",
             "runnable":false
 		}

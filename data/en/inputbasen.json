@@ -4,7 +4,7 @@
 	"syntax":"inputBaseN(String, radix)",
 	"returns":"Numeric",
 	"related":[],
-	"description":" Converts string, using the base specified by radix, to an\n integer. For example: #InputBaseN(\"3ff\",16)#",
+	"description":" Converts string, using the base specified by radix, to an\n integer. For example: #inputBaseN(\"3ff\",16)#",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"radix","description":"","required":true,"default":"","type":"String","values":[]}

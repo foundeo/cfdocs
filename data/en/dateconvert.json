@@ -7,7 +7,7 @@
 	"description":" Converts local time to Coordinated Universal Time (UTC),\n or UTC to local time. The function uses the daylight savings\n settings in the executing computer to compute daylight\n savings time, if required. ",
 	"params": [
 		{"name":"type","description":"","required":true,"default":"","type":"String","values":["'local2Utc' - Converts local time to UTC time.","'utc2Local' - Converts UTC time to local time."]},
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["Now()","CreateDateTime()"]}
+		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()","createDateTime()"]}
 
 	],
 	"engines": {
@@ -17,8 +17,8 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dateconvert"}
 	},
 	"examples":[
-		{"title":"Converting Local to UTC", "description":"", "code":"utc_datetime = DateConvert('local2Utc', Now());", "result":""},
-		{"title":"Converting UTC to Local", "description":"This example makes sense only if your server time is UTC. Now() uses your server settings when creating a datetime object.", "code":"local_datetime = DateConvert('utc2Local', Now());", "result":""}
+		{"title":"Converting Local to UTC", "description":"", "code":"utc_datetime = dateConvert('local2Utc', now());", "result":""},
+		{"title":"Converting UTC to Local", "description":"This example makes sense only if your server time is UTC. now() uses your server settings when creating a datetime object.", "code":"local_datetime = dateConvert('utc2Local', now());", "result":""}
 	],
 	"links": [
 

@@ -1,7 +1,7 @@
 {
-	"name":"StoreSetACL",
+	"name":"storeSetACL",
 	"type":"function",
-	"syntax":"StoreSetACL(url, ACLObject);",
+	"syntax":"storeSetACL(url, ACLObject);",
 	"returns":"",
 	"related":[],
 	"description":" Sets the ACL for object or bucket.",
@@ -22,7 +22,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "Use this function to set full permission. The function overwrites all existing permissions. Only the ones you set in the current context exist.",
-			"code": "<cftry> \r\n     <cfset dir = 's3://bucket_name'> \r\n     <cfif !directoryExists(dir)> \r\n         <cfset directorycreate(dir)>     \r\n     </cfif>     \r\n     <cfset perm = structnew()> \r\n     <cfset perm.group = 'all'> \r\n     <cfset perm.permission = 'read'> \r\n     <cfset perm1 = structnew()> \r\n     <cfset perm1.email = 'email ID'> \r\n     <cfset perm1.permission = 'FULL_CONTROL'> \r\n     <cfset myarrray = arrayNew(1)> \r\n     <cfset myarrray = [perm,perm1]> \r\n     <cfset fileWrite('#dir#/test.txt','This is to test all users permission')> \r\n     <cfset StoreSetACL('#dir#/textl.txt','#myarrray#')> \r\n     <cfset test = StoreGetACL ('#dirkey#/test.txt') > \r\n     <cfdump var= 'test'> \r\n     <cfcatch> \r\n         <cfdump var='#cfcatch#'> \r\n     </cfcatch> \r\n </cftry> \r\n",
+			"code": "<cftry> \r\n     <cfset dir = 's3://bucket_name'> \r\n     <cfif !directoryExists(dir)> \r\n         <cfset directorycreate(dir)>     \r\n     </cfif>     \r\n     <cfset perm = structnew()> \r\n     <cfset perm.group = 'all'> \r\n     <cfset perm.permission = 'read'> \r\n     <cfset perm1 = structnew()> \r\n     <cfset perm1.email = 'email ID'> \r\n     <cfset perm1.permission = 'FULL_CONTROL'> \r\n     <cfset myarrray = arrayNew(1)> \r\n     <cfset myarrray = [perm,perm1]> \r\n     <cfset fileWrite('#dir#/test.txt','This is to test all users permission')> \r\n     <cfset storeSetACL('#dir#/textl.txt','#myarrray#')> \r\n     <cfset test = storeGetACL ('#dirkey#/test.txt') > \r\n     <cfdump var= 'test'> \r\n     <cfcatch> \r\n         <cfdump var='#cfcatch#'> \r\n     </cfcatch> \r\n </cftry> \r\n",
 			"result": ""
 		}
 	]

@@ -1,7 +1,7 @@
 {
-	"name":"DecodeFromURL",
+	"name":"decodeFromURL",
 	"type":"function",
-	"syntax":"DecodeFromURL(String encodedinput);",
+	"syntax":"decodeFromURL(String encodedinput);",
 	"returns":"Decoded HTML URL string.",
 	"related":[],
 	"description":" Decodes an encoded HTML URL string.",
@@ -21,7 +21,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset string = 'http://www.adobe.com/'> \r\n <cfset urlencoded = encodeforURL(string)> \r\n <cfset urldecoded = decodefromUrl(urlEncoded)> \r\n <cfoutput> \r\n String: #string# <br/> \r\n URL Encoded: #urlencoded#<br/> \r\n URL Decoded: #urldecoded#<br/> \r\n </cfoutput> \r\n",
+			"code": "<cfset string = 'http://www.adobe.com/'> \r\n <cfset urlencoded = encodeforURL(string)> \r\n <cfset urldecoded = decodeFromURL(urlEncoded)> \r\n <cfoutput> \r\n String: #string# <br/> \r\n URL Encoded: #urlencoded#<br/> \r\n URL Decoded: #urldecoded#<br/> \r\n </cfoutput> \r\n",
 			"result": ""
 		}
 	]

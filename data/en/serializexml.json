@@ -1,7 +1,7 @@
 {
-	"name":"SerializeXML",
+	"name":"serializeXML",
 	"type":"function",
-	"syntax":"serializeXml( Object objToBeSerialized, boolean useCustomSerializer );",
+	"syntax":"serializeXML( Object objToBeSerialized, boolean useCustomSerializer );",
 	"returns":"String",
 	"related":[],
 	"description":" Serializes a ColdFusion object to XML.",
@@ -21,7 +21,7 @@
 	"examples": [
         {
 			"title": "Tag Syntax",
-			"description": "SerializeXML is a new function added in ColdFusion 11. This function will serialize the object to XML using ColdFusion's default serialization mechanism.",
+			"description": "serializeXML is a new function added in ColdFusion 11. This function will serialize the object to XML using ColdFusion's default serialization mechanism.",
 			"code": "... <cfreturn serializeXML(arguments.arg)> \r\n",
 			"result": ""
 		}

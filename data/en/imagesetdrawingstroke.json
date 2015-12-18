@@ -19,12 +19,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",
-			"description": "This example shows how to create an attribute collection for the ImageSetDrawingStroke function and draws a line with those attributes. ",
-			"code": "<!--- Use the ImageNew function to create a ColdFusion image. ---> \r\n <cfset myImage=ImageNew(\"\",200,200)> \r\n <!--- Create an attribute collection to pass to the ImageSetDrawingStroke function. Create a stroke that is 10-pixels wide, has round endcaps, and has a dash pattern of (8,4). ---> \r\n <cfset attr = StructNew()> \r\n <cfset attr.width = 2> \r\n <cfset attr.endcaps = \"round\"> \r\n <cfset dashPattern = ArrayNew(1)> \r\n <cfset dashPattern[1] = 8> \r\n <cfset dashPattern[2] = 4> \r\n <cfset attr.dashArray = dashPattern> \r\n <!--- Apply the attribute collection to the ImageSetDrawingStroke function for the image. ---> \r\n <cfset ImageSetDrawingStroke(myImage,attr)> \r\n <!--- Draw a line on the ColdFusion image with the drawing stroke attributes. ---> \r\n <cfset ImageDrawLine(myImage,20,20,40,150)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"description": "This example shows how to create an attribute collection for the imageSetDrawingStroke function and draws a line with those attributes. ",
+			"code": "<!--- Use the imageNew function to create a ColdFusion image. ---> \r\n <cfset myImage=imageNew(\"\",200,200)> \r\n <!--- Create an attribute collection to pass to the imageSetDrawingStroke function. Create a stroke that is 10-pixels wide, has round endcaps, and has a dash pattern of (8,4). ---> \r\n <cfset attr = structNew()> \r\n <cfset attr.width = 2> \r\n <cfset attr.endcaps = \"round\"> \r\n <cfset dashPattern = arrayNew(1)> \r\n <cfset dashPattern[1] = 8> \r\n <cfset dashPattern[2] = 4> \r\n <cfset attr.dashArray = dashPattern> \r\n <!--- Apply the attribute collection to the imageSetDrawingStroke function for the image. ---> \r\n <cfset imageSetDrawingStroke(myImage,attr)> \r\n <!--- Draw a line on the ColdFusion image with the drawing stroke attributes. ---> \r\n <cfset imageDrawLine(myImage,20,20,40,150)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
 			"result": "",
 			"runnable":false
 		},

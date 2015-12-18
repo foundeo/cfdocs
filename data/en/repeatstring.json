@@ -23,7 +23,7 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "getVal = RepeatString(\"ColdFusion \", 3); \r\n writeDump(getVal);",
+			"code": "getVal = repeatString(\"ColdFusion \", 3); \r\n writeDump(getVal);",
 			"result": "Expected Result: ColdFusion ColdFusion ColdFusion"
 		}
 	]

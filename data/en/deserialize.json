@@ -1,5 +1,5 @@
 {
-	"name":"Deserialize",
+	"name":"deserialize",
 	"type":"function",
 	"syntax":"deserialize( String StringToBeDeserialized, String type, boolean useCustomSerializer );",
 	"returns":"A string",

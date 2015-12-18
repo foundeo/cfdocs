@@ -23,7 +23,7 @@
 		{
 			"title": "Read a file into a variable",
 			"description": "Uses expandPath to grab a file in current directory.",
-			"code": "fileContent = fileRead(ExpandPath(\"./file.txt\"), \"utf-8\")"
+			"code": "fileContent = fileRead(expandPath(\"./file.txt\"), \"utf-8\")"
 		}
 	]
 

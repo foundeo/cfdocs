@@ -18,12 +18,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n  myfile = FileOpen(\"c:\temp\test1.txt\", \"write\"); \r\n     FileWriteLine(myfile,\"This line is new.\"); \r\n     FileClose(myfile);  \r\n </cfscript>  ",
+			"code": "<cfscript> \r\n  myfile = fileOpen(\"c:\temp\test1.txt\", \"write\"); \r\n     fileWriteLine(myfile,\"This line is new.\"); \r\n     fileClose(myfile);  \r\n </cfscript>  ",
 			"result": "",
 			"runnable":false
 		}

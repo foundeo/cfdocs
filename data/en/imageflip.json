@@ -19,12 +19,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to rotate an image by 270 degrees.",
-			"code": "<!--- Create a ColdFusion image from an existing JPEG file. ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/paul03.jpg\" name=\"myImage\"> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset ImageSetAntialiasing(myImage,\"on\")> \r\n <!--- Rotate the image by 270 degrees. ---> \r\n <cfset ImageFlip(myImage,\"270\")> \r\n <!--- Display the modified image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"code": "<!--- Create a ColdFusion image from an existing JPEG file. ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/paul03.jpg\" name=\"myImage\"> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset imageSetAntialiasing(myImage,\"on\")> \r\n <!--- Rotate the image by 270 degrees. ---> \r\n <cfset imageFlip(myImage,\"270\")> \r\n <!--- Display the modified image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
 			"result": "",
 			"runnable": false
 		},

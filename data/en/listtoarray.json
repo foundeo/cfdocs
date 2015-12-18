@@ -25,25 +25,25 @@
         {
             "title": "Simple example for listToArray function",
             "description": "Uses the listToArray() function to retrieve a list as an array",
-            "code": "list = \"red,green,orange\";\ngetArray = listToArray(list);\nsomeJSON = serializeJson(getArray);\nWriteOutput(someJSON);",
+            "code": "list = \"red,green,orange\";\ngetArray = listToArray(list);\nsomeJSON = serializeJson(getArray);\nwriteOutput(someJSON);",
             "result": "[\"red\", \"green\", \"orange\"]"
         },
         {
             "title": "Example for listToArray function with delimiter",
             "description": "Uses the listToArray() function with a semicolon delimiter to retrieve a list as an array",
-            "code": "list = \"coldfusion;php;java;sql\";\ngetArray = listToArray(list,\";\");\nsomeJSON = serializeJson(getArray);\nWriteOutput(someJSON);",
+            "code": "list = \"coldfusion;php;java;sql\";\ngetArray = listToArray(list,\";\");\nsomeJSON = serializeJson(getArray);\nwriteOutput(someJSON);",
             "result": "[\"coldfusion\", \"php\", \"java\", \"sql\"]"
         },
         {
             "title": "Example for listToArray function with includeEmptyFields",
             "description": "If includeEmptyFields is true, empty value add in array elements",
-            "code": "list = \"coldfusion;php;;java;sql\";\ngetArray = listToArray(list,\";\",true);\nsomeJSON = serializeJson(getArray);\nWriteOutput(someJSON);",
+            "code": "list = \"coldfusion;php;;java;sql\";\ngetArray = listToArray(list,\";\",true);\nsomeJSON = serializeJson(getArray);\nwriteOutput(someJSON);",
             "result": "[\"coldfusion\", \"php\", \" \" , \"java\", \"sql\"]"
         },
         {
             "title": "Example for listToArray function with multiCharacterDelimiter",
             "description": "Uses the listToArray() function to retrieve a list as an array with multiCharacterDelimiter",
-            "code": "list = \"coldfusion,php,|test,java,|sql\";\ngetArray = listToArray(list,\",|\",false,true);\nsomeJSON = serializeJson(getArray);\nWriteOutput(someJSON);",
+            "code": "list = \"coldfusion,php,|test,java,|sql\";\ngetArray = listToArray(list,\",|\",false,true);\nsomeJSON = serializeJson(getArray);\nwriteOutput(someJSON);",
             "result": "[\"coldfusion,php\", \"test,java\", \"sql\"]"
         }
     ]

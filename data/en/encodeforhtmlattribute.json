@@ -27,7 +27,7 @@
 	],
 	"examples": [
 		{
-			"title": "Simple EncodeForHTMLAttribute Example",
+			"title": "Simple encodeForHTMLAttribute Example",
 			"description": "Shows how and where encodeForHTMLAttribute would be used.",
 			"code": "<cfoutput><div title=\"#encodeForHTMLAttribute(\"<test>\")#\"></cfoutput>",
 			"result": "<div title=\"&lt;test&gt;\">"

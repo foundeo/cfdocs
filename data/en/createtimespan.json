@@ -25,14 +25,14 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<!--- This example shows the use of CreateTimeSpan with cfquery ---> \r\n <cfquery name = \"GetParks\" datasource = \"cfdocexamples\" cachedWithin = \"#CreateTimeSpan(0, 6, 0, 0)#\"> \r\n SELECT PARKNAME, REGION, STATE \r\n FROM Parks \r\n ORDER by ParkName, State \r\n </cfquery>    ",
+			"code": "<!--- This example shows the use of createTimespan with cfquery ---> \r\n <cfquery name = \"GetParks\" datasource = \"cfdocexamples\" cachedWithin = \"#createTimespan(0, 6, 0, 0)#\"> \r\n SELECT PARKNAME, REGION, STATE \r\n FROM Parks \r\n ORDER by ParkName, State \r\n </cfquery>    ",
 			"result": "",
             "runnable":false
 		},
         {
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfoutput>#CreateTimeSpan(0, 6, 0, 0)#</cfoutput> \r\n    ",
+			"code": "<cfoutput>#createTimespan(0, 6, 0, 0)#</cfoutput> \r\n    ",
 			"result": "0.25"
 		}
 	]
