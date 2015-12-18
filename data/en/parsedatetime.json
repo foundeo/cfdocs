@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<cfset local.dateTimeVar = #DateTimeFormat(NOW(), \"yyyy.MM.dd HH:nn:ss \")# /> \r\n <cfoutput> \r\n #ParseDateTime(form.theTestValue)# \r\n </cfoutput> ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"InputBaseN returns the number obtained by converting a string, using the base specified by Radix,. ",
+			"code":"<cfoutput> \r\n <br>InputBaseN(\"1010\",2): #InputBaseN(\"1010\",2)# \r\n <br>InputBaseN(\"3ff\",16): #InputBaseN(\"3ff\",16)# \r\n <br>InputBaseN(\"125\",10): #InputBaseN(\"125\",10)# \r\n <br>InputBaseN(1010,2): #InputBaseN(1010,2)# \r\n </cfoutput>",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

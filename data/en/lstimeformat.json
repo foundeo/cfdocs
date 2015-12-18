@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"LSTimeFormat returns a time value using the locale convention.  ",
+			"code":"<!--- loop through a list of locales and show time values ---> \r\n <cfloop LIST = \"#Server.Coldfusion.SupportedLocales#\" \r\n index = \"locale\" delimiters = \",\"> \r\n <cfset oldlocale = SetLocale(locale)> \r\n  <cfoutput><p><B><I>#locale#</I></B> \r\n #LSTimeFormat(Now())# \r\n #LSTimeFormat(Now(), 'hh:mm:ss')# \r\n #LSTimeFormat(Now(), 'hh:mm:sst')# \r\n #LSTimeFormat(Now(), 'hh:mm:sstt')# \r\n #LSTimeFormat(Now(), 'HH:mm:ss')# \r\n <hr noshade> \r\n </cfoutput> \r\n </cfloop> ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }
