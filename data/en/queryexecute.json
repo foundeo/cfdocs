@@ -3,7 +3,7 @@
 	"syntax":"queryExecute(sql [, params, options])",
 	"description":"Executes a SQL query, returns the result.",
 	"engines":{
-		"coldfusion":{"minimum_version":"11","docs":"hhttps://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryexecute.html","notes":""},
+		"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryexecute.html","notes":""},
 		"lucee":{"minimum_version":"4.5", "docs":"http://docs.lucee.org/reference/functions/queryexecute.html","notes":""}
 		},
 	"links":[],
