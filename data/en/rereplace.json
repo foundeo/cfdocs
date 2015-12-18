@@ -1,7 +1,7 @@
 {
-	"name":"ReReplace",
+	"name":"reReplace",
 	"type":"function",
-	"syntax":"ReReplace(string, regex, substring [, scope])",
+	"syntax":"reReplace(string, regex, substring [, scope])",
 	"returns":"string",
 	"related":["rereplacenocase","refind","refindnocase","replace","rematch","rematchnocase"],
 	"description":" Uses a regular expression (regex) to search a string for a string\n pattern and replace it with another. The search is\n case-sensitive.",
@@ -32,15 +32,15 @@
 	],
 	"examples": [
 		{
-			"title": "Strip Characters Using ReReplace",
+			"title": "Strip Characters Using reReplace",
 			"description": "This example strips out all characters except a-z and 0-9.",
-			"code": "ReReplace(\"test 123!\", \"[^a-z0-9]\", \"\", \"ALL\")",
+			"code": "reReplace(\"test 123!\", \"[^a-z0-9]\", \"\", \"ALL\")",
 			"result": "test123"
 		},
 		{
 			"title": "Extract Characters Using Back Reference",
 			"description": "Uses a back reference: \\1 to extract the pattern contained within the parenthesis.",
-			"code": "ReReplace(\"123abc456\", \"[0-9]+([a-z]+)[0-9]+\", \"\\1\")",
+			"code": "reReplace(\"123abc456\", \"[0-9]+([a-z]+)[0-9]+\", \"\\1\")",
 			"result": "abc"
 		}
 	]

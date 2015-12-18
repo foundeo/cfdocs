@@ -23,7 +23,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset comparison = CompareNoCase('ColdFusion', 'coldfusion')> \r\n <cfdump var=\"#comparison#\" />    ",
+			"code": "<cfset comparison = compareNoCase('ColdFusion', 'coldfusion')> \r\n <cfdump var=\"#comparison#\" />    ",
 			"result": "0"
 		}
 	]

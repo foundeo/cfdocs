@@ -27,7 +27,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset yourDate = CreateDateTime(\"2015\", \"12\", \"09\", \"6\", \"20\", \"34\")> \r\n <cfdump var=\"#yourDate#\" />     ",
+			"code": "<cfset yourDate = createDateTime(\"2015\", \"12\", \"09\", \"6\", \"20\", \"34\")> \r\n <cfdump var=\"#yourDate#\" />     ",
 			"result": ""
 		}
 	]

@@ -27,7 +27,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to crop an image.",
-			"code": "<!--- Create a ColdFusion image from an existing JPEG file. ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/lori05.jpg\" name=\"myImage\"> \r\n <!--- Crop myImage to 100x100 pixels starting at the coordinates (10,10). ---> \r\n <cfset ImageCrop(myImage,10,10,100,100)> \r\n <!--- Write the result to a file. ---> \r\n <cfimage source=\"#myImage#\" action=\"write\" destination=\"test_myImage.jpg\" overwrite=\"yes\"> \r\n <!--- Display the source image and the new image. ---> \r\n <img src=\"../cfdocs/images/artgallery/lori05.jpg\"/> \r\n <img src=\"test_myImage.jpg\"/>  ",
+			"code": "<!--- Create a ColdFusion image from an existing JPEG file. ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/lori05.jpg\" name=\"myImage\"> \r\n <!--- Crop myImage to 100x100 pixels starting at the coordinates (10,10). ---> \r\n <cfset imageCrop(myImage,10,10,100,100)> \r\n <!--- Write the result to a file. ---> \r\n <cfimage source=\"#myImage#\" action=\"write\" destination=\"test_myImage.jpg\" overwrite=\"yes\"> \r\n <!--- Display the source image and the new image. ---> \r\n <img src=\"../cfdocs/images/artgallery/lori05.jpg\"/> \r\n <img src=\"test_myImage.jpg\"/>  ",
 			"result": "",
 			"runnable": false
 		},

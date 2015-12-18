@@ -1,5 +1,5 @@
 {
-	"name":"REEScape",
+	"name":"reEscape",
 	"type":"function",
 	"syntax":"reEscape(string____);",
 	"returns":"String appended with the escape characters",
@@ -21,7 +21,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfoutput> \r\n #reescape('*.{}[]exam?ple')# \r\n </cfoutput> \r\n",
+			"code": "<cfoutput> \r\n #reEscape('*.{}[]exam?ple')# \r\n </cfoutput> \r\n",
 			"result": ""
 		}
 	]

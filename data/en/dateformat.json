@@ -18,7 +18,7 @@
 	},
 	"links": [
 		{
-			"title":"DateFormat Cheatsheet",
+			"title":"dateFormat Cheatsheet",
 			"description":"Shows masks and what they output.",
 			"url":"http://www.petefreitag.com/cheatsheets/coldfusion/dateformat/"
 		}
@@ -27,19 +27,19 @@
 		{
 			"title":"Using the short mask",
 			"description":"",
-			"code":"DateFormat(\"2015-04-11\", \"short\")",
+			"code":"dateFormat(\"2015-04-11\", \"short\")",
 			"result":"4/11/15"
 		},
 		{
 			"title":"Using the long mask",
 			"description":"",
-			"code":"DateFormat(\"2015-04-11\", \"long\")",
+			"code":"dateFormat(\"2015-04-11\", \"long\")",
 			"result":"April 11, 2015"
 		},
 		{
 			"title":"Using the full mask",
 			"description":"",
-			"code":"DateFormat(\"2015-04-11\", \"full\")",
+			"code":"dateFormat(\"2015-04-11\", \"full\")",
 			"result":"Saturday, April 11, 2015"
 		}
 	]

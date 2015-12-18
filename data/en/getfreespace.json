@@ -1,5 +1,5 @@
 {
-	"name":"GetFreeSpace",
+	"name":"getFreeSpace",
 	"type":"function",
 	"syntax":"getFreeSpace(path);",
 	"returns":"Returns the free space in bytes.",
@@ -27,7 +27,7 @@
         {
 			"title": "Tag Syntax",
 			"description": "space.cfm",
-			"code": "<cfset freeRAMSpace = getFreeSpace('ram:')>\r\n <cfset freeDiskSpace = getFreeSpace('c:')> \r\n Free Application RAM Memory = #DecimalFormat(freeRAMSpace / (1024 * 1024))# MB \r\n <br>Free Hard Disk Space = #DecimalFormat(freeDiskSpace / (1024 * 1024 * 1024))# GB  \r\n",
+			"code": "<cfset freeRAMSpace = getFreeSpace('ram:')>\r\n <cfset freeDiskSpace = getFreeSpace('c:')> \r\n Free Application RAM Memory = #decimalFormat(freeRAMSpace / (1024 * 1024))# MB \r\n <br>Free Hard Disk Space = #decimalFormat(freeDiskSpace / (1024 * 1024 * 1024))# GB  \r\n",
 			"result": ""
 		}
 	]

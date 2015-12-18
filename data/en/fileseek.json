@@ -18,12 +18,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n NewFile = FileOpen(ExpandPath(\".\") & \"\test.txt\",\"write\",\"\",true); \r\n             FileSeek(#NewFile#,0);  \r\n </cfscript>   ",
+			"code": "<cfscript> \r\n NewFile = fileOpen(expandPath(\".\") & \"\test.txt\",\"write\",\"\",true); \r\n             fileSeek(#NewFile#,0);  \r\n </cfscript>   ",
 			"result": "",
 			"runnable":false
 		}

@@ -1,7 +1,7 @@
 {
-	"name":"ImageGetIPTCMetaData",
+	"name":"imageGetIPTCMetaData",
 	"type":"function",
-	"syntax":"ImageGetIPTCMetaData(name)",
+	"syntax":"imageGetIPTCMetaData(name)",
 	"member":"someImage.getIPTCMetaData()",
 	"returns":"Struct",
 	"related":[],

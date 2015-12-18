@@ -1,7 +1,7 @@
 {
-	"name":"EncodeForXPath",
+	"name":"encodeForXPath",
 	"type":"function",
-	"syntax":"encodeForXpath(String inputString, boolean canonicalize);",
+	"syntax":"encodeForXPath(String inputString, boolean canonicalize);",
 	"returns":"Encoded XML string.",
 	"related":[],
 	"description":" Returns an encoded string for using with XPATH.",

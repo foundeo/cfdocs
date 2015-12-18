@@ -1,7 +1,7 @@
 {
-	"name":"SessionRotate",
+	"name":"sessionRotate",
 	"type":"function",
-	"syntax":"SessionRotate()",
+	"syntax":"sessionRotate()",
 	"returns":"void",
 	"related":["sessioninvalidate"],
 	"description":"Creates a new session (using new session ids) and copies session scope into this new session, then invalidates the old session. Used after a valid login to prevent session fixation.",

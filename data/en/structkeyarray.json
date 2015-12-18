@@ -22,7 +22,7 @@
         {
             "title": "Traditional function",
             "description": "",
-            "code": "statusCodes = {\n    OK = 200,\n    CREATED = 201,\n    NOT_MODIFIED = 304,\n    BAD_REQUEST = 400,\n    NOT_FOUND = 404\n};\n\nwriteDump(StructKeyArray(statusCodes));",
+            "code": "statusCodes = {\n    OK = 200,\n    CREATED = 201,\n    NOT_MODIFIED = 304,\n    BAD_REQUEST = 400,\n    NOT_FOUND = 404\n};\n\nwriteDump(structKeyArray(statusCodes));",
             "result": "[NOT_FOUND, BAD_REQUEST, CREATED, OK, NOT_MODIFIED]"
         },
         {

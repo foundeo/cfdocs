@@ -1,7 +1,7 @@
 {
-	"name":"StoreGetMetadata",
+	"name":"storeGetMetadata",
 	"type":"function",
-	"syntax":"StoreGetMetadata(url);",
+	"syntax":"storeGetMetadata(url);",
 	"returns":"Object metadata or bucket metadata",
 	"related":[],
 	"description":" Returns the metadata related to the object or bucket.",
@@ -21,7 +21,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfdump var = #StoreGetMetadata('bucket_Name')#>> \r\n",
+			"code": "<cfdump var = #storeGetMetadata('bucket_Name')#>> \r\n",
 			"result": ""
 		}
 	]

@@ -18,7 +18,7 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dateadd"}
 	},
 	"examples":[
-		{"title":"Add Weeks", "description":"Here we're adding 8 weeks to the date August 3rd, 2014.", "code":"my_new_date = DateAdd('ww', 8, '8/3/2014');", "result":"{ts '2014-09-28 00:00:00'}"}
+		{"title":"Add Weeks", "description":"Here we're adding 8 weeks to the date August 3rd, 2014.", "code":"my_new_date = dateAdd('ww', 8, '8/3/2014');", "result":"{ts '2014-09-28 00:00:00'}"}
 	],
 	"links": [
 

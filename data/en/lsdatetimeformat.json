@@ -24,7 +24,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": " ",
-			"code": "<cfset todayDateTime = Now()> \r\n <body> \r\n <h3>DateTimeFormat Example</h3> \r\n <p>Today's date and time are <cfoutput>#todayDateTime#</cfoutput>. \r\n <p>Using DateTimeFormat, we can display that date and time in different ways: \r\n <cfoutput>  \r\n <ul>  \r\n <li>#DateTimeFormat(todayDateTime, 'yyyy.MM.dd G 'at' HH:nn:ss z')# \r\n <li>#DateTimeFormat(todayDateTime, 'EEE, MMM d, ''yy')# \r\n <li>#DateTimeFormat(todayDateTime, 'h:nn a')# \r\n <li>#DateTimeFormat(todayDateTime, 'hh 'o''clock' a, zzzz')# \r\n <li>#DateTimeFormat(todayDateTime, 'K:nn a, z')# \r\n <li>#DateTimeFormat(todayDateTime, 'yyyyy.MMMMM.dd GGG hh:nn aaa')# \r\n <li>#DateTimeFormat(todayDateTime, 'EEE, d MMM yyyy HH:nn:ss Z')# \r\n <li>#DateTimeFormat(todayDateTime, 'yyMMddHHnnssZ', 'English (UK)', 'GMT')# \r\n </ul> \r\n </cfoutput> \r\n",
+			"code": "<cfset todayDateTime = now()> \r\n <body> \r\n <h3>DateTimeFormat Example</h3> \r\n <p>Today's date and time are <cfoutput>#todayDateTime#</cfoutput>. \r\n <p>Using DateTimeFormat, we can display that date and time in different ways: \r\n <cfoutput>  \r\n <ul>  \r\n <li>#dateTimeFormat(todayDateTime, 'yyyy.MM.dd G 'at' HH:nn:ss z')# \r\n <li>#dateTimeFormat(todayDateTime, 'EEE, MMM d, ''yy')# \r\n <li>#dateTimeFormat(todayDateTime, 'h:nn a')# \r\n <li>#dateTimeFormat(todayDateTime, 'hh 'o''clock' a, zzzz')# \r\n <li>#dateTimeFormat(todayDateTime, 'K:nn a, z')# \r\n <li>#dateTimeFormat(todayDateTime, 'yyyyy.MMMMM.dd GGG hh:nn aaa')# \r\n <li>#dateTimeFormat(todayDateTime, 'EEE, d MMM yyyy HH:nn:ss Z')# \r\n <li>#dateTimeFormat(todayDateTime, 'yyMMddHHnnssZ', 'English (UK)', 'GMT')# \r\n </ul> \r\n </cfoutput> \r\n",
 			"result": ""
 		}
 	]

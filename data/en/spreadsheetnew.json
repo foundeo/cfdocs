@@ -23,14 +23,14 @@
 		{
 			"title":"Create xlsx sheet",
 			"description":"xlsx files with and with out sheet name",
-			"code":"xlsxSheet1 = spreadSheetNew(\"xlsx sheet\",true);\r\nxlsxSheet2 = spreadSheetNew(true);\r\nwriteDump(xlsxSheet1);\r\nwriteDump(xlsxSheet2);",
+			"code":"xlsxSheet1 = spreadsheetNew(\"xlsx sheet\",true);\r\nxlsxSheet2 = spreadsheetNew(true);\r\nwriteDump(xlsxSheet1);\r\nwriteDump(xlsxSheet2);",
 			"result":"",
 			"runnable":true
 		},
 		{
 			"title":"Create xls sheet",
 			"description":"xls files with and with out sheet name",
-			"code":"xlsSheet1 = spreadSheetNew(\"xls sheet\");\r\nxlsSheet2 = spreadSheetNew();\r\nwriteDump(xlsSheet1);\r\nwriteDump(xlsSheet2);",
+			"code":"xlsSheet1 = spreadsheetNew(\"xls sheet\");\r\nxlsSheet2 = spreadsheetNew();\r\nwriteDump(xlsSheet1);\r\nwriteDump(xlsSheet2);",
 			"result":"",
 			"runnable":true
 		}

@@ -1,7 +1,7 @@
 {
-	"name":"StoreSetMetadata",
+	"name":"storeSetMetadata",
 	"type":"function",
-	"syntax":"StoreSetMetadata(url,Struct);",
+	"syntax":"storeSetMetadata(url,Struct);",
 	"returns":"",
 	"related":[],
 	"description":" Sets the metadata on bucket or object.",
@@ -22,7 +22,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfscript>  \r\n       mydate = #Now()#; \r\n       hello = structNew(); \r\n       hello.color = 'grey'; \r\n /cfscript>  \r\n <cfset dir = 's3://mycfbucket'> \r\n       <cffile action='write' file='#dir#/hello5.txt' output='Sample s3 text'> \r\n       <cfset StoreSetMetadata('#dir#/hello5.txt','#hello#')> \r\n       <cfset test = StoreGetMetadata('#dir#/hello5.txt')> \r\n <cfdump var='#test#'> \r\n",
+			"code": "<cfscript>  \r\n       mydate = #now()#; \r\n       hello = structNew(); \r\n       hello.color = 'grey'; \r\n /cfscript>  \r\n <cfset dir = 's3://mycfbucket'> \r\n       <cffile action='write' file='#dir#/hello5.txt' output='Sample s3 text'> \r\n       <cfset storeSetMetadata('#dir#/hello5.txt','#hello#')> \r\n       <cfset test = storeGetMetadata('#dir#/hello5.txt')> \r\n <cfdump var='#test#'> \r\n",
 			"result": ""
 		}
 	]

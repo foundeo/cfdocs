@@ -25,12 +25,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to draw a square with rounded corners. ",
-			"code": "<!--- Create a 200x200-pixel image. ---> \r\n <cfset myImage=ImageNew(\"\",200,200)> \r\n <!--- Set the drawing color for the image to blue. ---> \r\n <cfset ImageSetDrawingColor(myImage,\"blue\")> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset ImageSetAntialiasing(myImage,\"on\")> \r\n <!--- Draw a blue filled square with round corners of arcWidth=10 and arcHeight=2. ---> \r\n <cfset ImageDrawRoundRect(myImage,5,5,190,190,\"yes\",10,2)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"code": "<!--- Create a 200x200-pixel image. ---> \r\n <cfset myImage=imageNew(\"\",200,200)> \r\n <!--- Set the drawing color for the image to blue. ---> \r\n <cfset imageSetDrawingColor(myImage,\"blue\")> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset imageSetAntialiasing(myImage,\"on\")> \r\n <!--- Draw a blue filled square with round corners of arcWidth=10 and arcHeight=2. ---> \r\n <cfset imageDrawRoundRect(myImage,5,5,190,190,\"yes\",10,2)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
 			"result": "",
 			"runnable": false
 		},

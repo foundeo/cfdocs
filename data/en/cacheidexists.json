@@ -1,5 +1,5 @@
 {
-	"name":"CacheIdExists",
+	"name":"cacheIdExists",
 	"type":"function",
 	"syntax":"cacheIdExists(id [,_ region___]);",
 	"returns":"True, if the cached object exists in the specified cache region.",

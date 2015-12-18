@@ -1,5 +1,5 @@
 {
-	"name":"CacheRegionNew",
+	"name":"cacheRegionNew",
 	"type":"function",
 	"syntax":"cacheRegionNew(region,[properties],[throwOnError]__);",
 	"returns":"An error if throwOnError parameter is set to true, provided cache region already exists.",
@@ -23,7 +23,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "Defining properties for the struct ",
-			"code": "<cfset defaultCacheProps = StructNew()> \r\n <cfset defaultCacheProps.CLEARONFLUSH = 'true'> \r\n <cfset defaultCacheProps.DISKEXPIRYTHREADINTERVALSECONDS = '3600'> \r\n <cfset defaultCacheProps.DISKPERSISTENT = 'false'> \r\n <cfset defaultCacheProps.DISKSPOOLBUFFERSIZEMB = '30'> \r\n <cfset defaultCacheProps.ETERNAL = 'false'> \r\n <cfset defaultCacheProps.MAXELEMENTSINMEMORY = '5'> \r\n <cfset defaultCacheProps.MAXELEMENTSONDISK = '10'> \r\n <cfset defaultCacheProps.MEMORYEVICTIONPOLICY = 'LRU'> \r\n <cfset defaultCacheProps.OBJECTTYPE = 'OBJECT'> \r\n <cfset defaultCacheProps.OVERFLOWTODISK = 'true'> \r\n <cfset defaultCacheProps.TIMETOLIVESECONDS = '5'> \r\n <cfset defaultCacheProps.TIMETOIDLESECONDS = '30'> \r\n <cfset cacheRegionNew('testregion',#defaultCacheProps#,false)> \r\n <!--- Defining a struct object ---> \r\n <cfset obj1 = structNew()> \r\n <cfset obj1.name = 'xyz'> \r\n <cfset timeToLive = CreateTimeSpan(0,0,5,0)> \r\n <cfset timeToIdle = CreateTimeSpan(0,0,10,0)> \r\n <!--- Putting Cache in the USD specific cache ---> \r\n <cfoutput>Starting to write to cache.</cfoutput> \r\n <cfset cachePut('obj1',obj1,timetoLive,timeToIdle,'testregion')> \r\n <cfoutput>Trying to fetch cached item...</cfoutput> \r\n <cfset obj = cacheGet('obj1','testregion')> \r\n <br/> \r\n <cfoutput>Done!!<br></cfoutput> \r\n <cfoutput>#obj.name#</cfoutput> \r\n",
+			"code": "<cfset defaultCacheProps = structNew()> \r\n <cfset defaultCacheProps.CLEARONFLUSH = 'true'> \r\n <cfset defaultCacheProps.DISKEXPIRYTHREADINTERVALSECONDS = '3600'> \r\n <cfset defaultCacheProps.DISKPERSISTENT = 'false'> \r\n <cfset defaultCacheProps.DISKSPOOLBUFFERSIZEMB = '30'> \r\n <cfset defaultCacheProps.ETERNAL = 'false'> \r\n <cfset defaultCacheProps.MAXELEMENTSINMEMORY = '5'> \r\n <cfset defaultCacheProps.MAXELEMENTSONDISK = '10'> \r\n <cfset defaultCacheProps.MEMORYEVICTIONPOLICY = 'LRU'> \r\n <cfset defaultCacheProps.OBJECTTYPE = 'OBJECT'> \r\n <cfset defaultCacheProps.OVERFLOWTODISK = 'true'> \r\n <cfset defaultCacheProps.TIMETOLIVESECONDS = '5'> \r\n <cfset defaultCacheProps.TIMETOIDLESECONDS = '30'> \r\n <cfset cacheRegionNew('testregion',#defaultCacheProps#,false)> \r\n <!--- Defining a struct object ---> \r\n <cfset obj1 = structNew()> \r\n <cfset obj1.name = 'xyz'> \r\n <cfset timeToLive = createTimeSpan(0,0,5,0)> \r\n <cfset timeToIdle = createTimeSpan(0,0,10,0)> \r\n <!--- Putting Cache in the USD specific cache ---> \r\n <cfoutput>Starting to write to cache.</cfoutput> \r\n <cfset cachePut('obj1',obj1,timetoLive,timeToIdle,'testregion')> \r\n <cfoutput>Trying to fetch cached item...</cfoutput> \r\n <cfset obj = cacheGet('obj1','testregion')> \r\n <br/> \r\n <cfoutput>Done!!<br></cfoutput> \r\n <cfoutput>#obj.name#</cfoutput> \r\n",
 			"result": ""
 		}
 	]

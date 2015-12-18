@@ -22,12 +22,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to set the background color to green and draws four rectangles in that color on the image.",
-			"code": "<!--- Create a ColdFusion image from an existing JPEG file. ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/jeff05.jpg\" name=\"myImage\"> \r\n <!--- Set the background color to green. ---> \r\n <cfset ImageSetBackgroundColor(myImage,\"green\")> \r\n <!--- Draw four rectangles in the background color. ---> \r\n <cfset ImageClearRect(myImage,10,25,50,50)> \r\n <cfset ImageClearRect(myImage,100,25,50,50)> \r\n <cfset ImageClearRect(myImage,10,100,50,50)> \r\n <cfset ImageClearRect(myImage,100,100,50,50)> \r\n <!--- Save the modified ColdFusion image to a file. ---> \r\n <cfimage source=\"#myImage#\" action=\"write\" destination=\"test_myImage.jpeg\" overwrite=\"yes\"> \r\n <!--- Display the source image and the new image. ---> \r\n <img src=\"../cfdocs/images/artgallery/jeff05.jpg\"/> \r\n <img src=\"test_myImage.jpeg\"/> ",
+			"code": "<!--- Create a ColdFusion image from an existing JPEG file. ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/jeff05.jpg\" name=\"myImage\"> \r\n <!--- Set the background color to green. ---> \r\n <cfset imageSetBackgroundColor(myImage,\"green\")> \r\n <!--- Draw four rectangles in the background color. ---> \r\n <cfset imageClearRect(myImage,10,25,50,50)> \r\n <cfset imageClearRect(myImage,100,25,50,50)> \r\n <cfset imageClearRect(myImage,10,100,50,50)> \r\n <cfset imageClearRect(myImage,100,100,50,50)> \r\n <!--- Save the modified ColdFusion image to a file. ---> \r\n <cfimage source=\"#myImage#\" action=\"write\" destination=\"test_myImage.jpeg\" overwrite=\"yes\"> \r\n <!--- Display the source image and the new image. ---> \r\n <img src=\"../cfdocs/images/artgallery/jeff05.jpg\"/> \r\n <img src=\"test_myImage.jpeg\"/> ",
 			"result": "",
 			"runnable":false
 		},

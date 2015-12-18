@@ -1,7 +1,7 @@
 {
-	"name":"GetCpuUsage",
+	"name":"getCpuUsage",
 	"type":"function",
-	"syntax":"getCPUUsage(); getCPUUsage(long ms);",
+	"syntax":"getCpuUsage(); getCpuUsage(long ms);",
 	"returns":"True if the cache region exists.",
 	"related":[],
 	"description":" Gets the CPU usage with default or custom snapshot interval. The default interval is 1000 milli-seconds.",

@@ -22,7 +22,7 @@
 		{
 			"title": "Simple example with empty array",
 			"description": "To get the largest numeric value of an array",
-			"code": "someArray = ArrayNew(1);\nwriteOutput(arrayMax(someArray));",
+			"code": "someArray = arrayNew(1);\nwriteOutput(arrayMax(someArray));",
 			"result": "0"
 		},
 		{
@@ -36,7 +36,7 @@
 			"description": "CF11+ Lucee4.5+",
 			"code": "someArray = [23,45,0,1,4];\nwriteOutput(someArray.max());",
 			"result": "45"
-		}	
+		}
 	]
 
 }

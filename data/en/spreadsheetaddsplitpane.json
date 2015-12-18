@@ -1,7 +1,7 @@
 {
-	"name":"spreadSheetAddSplitPane",
+	"name":"spreadsheetAddSplitPane",
 	"type":"function",
-	"syntax":"spreadSheetAddSplitPane(spreadsheetObj, x, y, splitColumn, splitRow [, position])",
+	"syntax":"spreadsheetAddSplitPane(spreadsheetObj, x, y, splitColumn, splitRow [, position])",
 	"returns":"void",
 	"related":[],
 	"description":" Adds split pane to spreadsheet.",

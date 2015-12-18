@@ -1,7 +1,7 @@
 {
 	"name":"encodeForXML",
 	"type":"function",
-	"syntax":"encodeforXML(Inputstring , [canonicalize]);",
+	"syntax":"encodeForXML(Inputstring , [canonicalize]);",
 	"returns":"Encoded XML string.",
 	"related":[],
 	"description":" Encodes a string for XML.",

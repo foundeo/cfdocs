@@ -1,10 +1,10 @@
 {
-	"name":"QueryGetRow",
+	"name":"queryGetRow",
 	"type":"function",
-	"syntax":"QueryGetRow( query, rowNumber );",
+	"syntax":"queryGetRow( query, rowNumber );",
 	"returns":"Struct",
 	"related":[],
-	"description":" A new function, QueryGetRow, has been introduced in ColdFusion 11. This function returns a struct having all the columns as keys and their corresponding values:",
+	"description":" A new function, queryGetRow, has been introduced in ColdFusion 11. This function returns a struct having all the columns as keys and their corresponding values:",
 	"params": [
 		{"name":"query","description":"query object do get data from.","required":true,"default":"","type":"","values":[]},
         {"name":"rowNumber","description":"position of the row to be returned.","required":true,"default":"","type":"","values":[]}
@@ -22,7 +22,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfquery name=\"myQuery\" result=\"myresult\" datasource=\"artGallery\" fetchclientinfo=\"yes\" > \r\n select * from art where ARTID ><cfqueryparam value=\"2\" cfsqltype=\"CF_SQL_INTEGER\"> \r\n </cfquery> \r\n <cfdump var='#myQuery#' > \r\n <cfset data = QueryGetRow(myQuery, 1) > \r\n <cfdump var='#data#' > \r\n",
+			"code": "<cfquery name=\"myQuery\" result=\"myresult\" datasource=\"artGallery\" fetchclientinfo=\"yes\" > \r\n select * from art where ARTID ><cfqueryparam value=\"2\" cfsqltype=\"CF_SQL_INTEGER\"> \r\n </cfquery> \r\n <cfdump var='#myQuery#' > \r\n <cfset data = queryGetRow(myQuery, 1) > \r\n <cfdump var='#data#' > \r\n",
 			"result": ""
 		}
 	]

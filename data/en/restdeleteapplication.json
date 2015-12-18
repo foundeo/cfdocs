@@ -1,7 +1,7 @@
 {
-	"name":"RestDeleteApplication",
+	"name":"restDeleteApplication",
 	"type":"function",
-	"syntax":"RestDeleteApplication('dirPath');",
+	"syntax":"restDeleteApplication('dirPath');",
 	"returns":"",
 	"related":[],
 	"description":" Unregisters the directory path if it is already registered.",
@@ -21,7 +21,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset RestDeleteApplication('C:/ColdFusion10/cfusion/wwwroot/restexample/')> \r\n",
+			"code": "<cfset restDeleteApplication('C:/ColdFusion10/cfusion/wwwroot/restexample/')> \r\n",
 			"result": ""
 		}
 	]

@@ -24,12 +24,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to create a bevel-edged rectangle.",
-			"code": "<!--- Use the ImageNew function to create a 200x200-pixel image. ---> \r\n <cfset myImage=ImageNew(\"\",200,200)> \r\n <!--- Turn on antialiasing to improve image quality. --->  \r\n <cfset ImageSetAntialiasing(myImage,\"on\")> \r\n <!--- Set the drawing color for the image to light gray. ---> \r\n <cfset ImageSetDrawingColor(myImage,\"lightgray\")> \r\n <!--- Draw a 3D gray, filled, raised rectangle. --->  \r\n <cfset ImageDrawBeveledRect(myImage,50,50,100,75,\"yes\",\"yes\")> \r\n <!--- Display the image in a browser. --->  \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\">  ",
+			"code": "<!--- Use the imageNew function to create a 200x200-pixel image. ---> \r\n <cfset myImage=imageNew(\"\",200,200)> \r\n <!--- Turn on antialiasing to improve image quality. --->  \r\n <cfset imageSetAntialiasing(myImage,\"on\")> \r\n <!--- Set the drawing color for the image to light gray. ---> \r\n <cfset imageSetDrawingColor(myImage,\"lightgray\")> \r\n <!--- Draw a 3D gray, filled, raised rectangle. --->  \r\n <cfset imageDrawBeveledRect(myImage,50,50,100,75,\"yes\",\"yes\")> \r\n <!--- Display the image in a browser. --->  \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\">  ",
 			"result": "",
 			"runnable": false
 		},

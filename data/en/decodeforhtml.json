@@ -1,7 +1,7 @@
 {
-	"name":"DecodeForHTML",
+	"name":"decodeForHTML",
 	"type":"function",
-	"syntax":"DecodeforHTML(String encodedinput);",
+	"syntax":"decodeForHTML(String encodedinput);",
 	"returns":"Decoded HTML string.",
 	"related":[],
 	"description":" Decodes an HTML encoded string.",
@@ -21,7 +21,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfif isDefined('form.submit')> \r\n <b> \r\n Output:<cfoutput >#DecodeForHTML(form.encodedUserName)#</cfoutput> \r\n </b> \r\n <cfelse> \r\n <cfset form.username=''/> \r\n </cfif> \r\n <cfform> \r\n <cfinput name='encodedUserName' type='text' value='#form.encodedUserName#'> \r\n <cfinput name='submit' type='submit' value='Submit'> \r\n </cfform> \r\n",
+			"code": "<cfif isDefined('form.submit')> \r\n <b> \r\n Output:<cfoutput >#decodeForHTML(form.encodedUserName)#</cfoutput> \r\n </b> \r\n <cfelse> \r\n <cfset form.username=''/> \r\n </cfif> \r\n <cfform> \r\n <cfinput name='encodedUserName' type='text' value='#form.encodedUserName#'> \r\n <cfinput name='submit' type='submit' value='Submit'> \r\n </cfform> \r\n",
 			"result": ""
 		}
 	]

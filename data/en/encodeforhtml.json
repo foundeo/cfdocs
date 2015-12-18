@@ -27,7 +27,7 @@
 	],
 	"examples": [
 		{
-			"title": "Simple EncodeForHTML Example",
+			"title": "Simple encodeForHTML Example",
 			"description": "Pass in a tag and HTML encode the result.",
 			"code": "encodeForHTML(\"<test>\")",
 			"result": "&lt;test&gt;"

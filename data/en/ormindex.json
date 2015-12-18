@@ -20,7 +20,7 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "EmpOBJs = EntitlLoad('employee', {lastname='Bond'}); \r\n for(EmpObj in EmpObjs) \r\n { \r\n ormIndex(empObj); ]r]n } \r\n",
+			"code": "EmpOBJs = entityLoad('employee', {lastname='Bond'}); \r\n for(EmpObj in EmpObjs) \r\n { \r\n ormIndex(empObj); ]r]n } \r\n",
 			"result": ""
 		}
 	]

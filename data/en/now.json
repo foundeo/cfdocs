@@ -14,8 +14,8 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/now"}
 	},
 	"examples":[
-		{"title":"Using Now() in Script", "description":"Let's display the current server datetime using script.", "code":"WriteOutput( 'The current date and time is: ' & Now() );", "result":"The current date and time is: {ts '2014-03-19 15:27:42'}"},
-		{"title":"Using Now() in Tagged CFML", "description":"Let's display the current server datetime using tagged CFML.", "code":"<p>The current date and time is: <cfoutput>#Now()#</cfoutput></p>", "result":"The current date and time is: {ts '2014-03-19 15:27:42'}"}
+		{"title":"Using now() in Script", "description":"Let's display the current server datetime using script.", "code":"writeOutput( 'The current date and time is: ' & now() );", "result":"The current date and time is: {ts '2014-03-19 15:27:42'}"},
+		{"title":"Using now() in Tagged CFML", "description":"Let's display the current server datetime using tagged CFML.", "code":"<p>The current date and time is: <cfoutput>#now()#</cfoutput></p>", "result":"The current date and time is: {ts '2014-03-19 15:27:42'}"}
 	],
 	"links": [
 

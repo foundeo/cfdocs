@@ -23,7 +23,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<!--- clear all object caches ---> \r\n <cfif ArrayLen(cacheGetAllIds()) gt 0> \r\n <cfset cacheRemove(ArrayToList(cacheGetAllIds()))> \r\n </cfif>   ",
+			"code": "<!--- clear all object caches ---> \r\n <cfif arrayLen(cacheGetAllIds()) gt 0> \r\n <cfset cacheRemove(arrayToList(cacheGetAllIds()))> \r\n </cfif>   ",
 			"result": "",
             "runnable":false
 		}

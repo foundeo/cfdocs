@@ -34,7 +34,7 @@
 			"result":"3"
 		},
 		{
-			"title":"ArrayFind is Case Sensitive",
+			"title":"arrayFind is Case Sensitive",
 			"description":"Case sensitive so \"Apple\" is not in the array, returns 0. Use arrayFindNoCase for case insensitive matching.",
 			"code":"arrayFind([\"orange\",\"pineapple\",\"apple\"], \"Apple\")",
 			"result":"0"

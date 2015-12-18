@@ -1,5 +1,5 @@
 {
-	"name":"FileGetMimeType",
+	"name":"fileGetMimeType",
 	"type":"function",
 	"syntax":"{{fileGetMimeType(path, strict) fileGetMimeType(fileObject,strict)}};",
 	"returns":"Returns MIME type.",
@@ -23,7 +23,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "Assume that you have a file named test.pdf in /folder1 and test.txt in the same folder, and you want to check the MIME type. Here test.txt is a copy of test.pdf with extension renamed to txt.",
-			"code": "<cfscript> \r\n //Case 1. \r\n mime.mimeType1 = FilegetMimeType(expandPath(‘/folder1/test.pdf’)); \r\n //Case 2. \r\n mime.mimeType2 = FilegetMimeType(expandPath(‘/folder1/test.pdf’),false); \r\n //Case 3. \r\n mime.mimeType3 =  FilegetMimeType(expandPath(‘/folder1/test.txt’)); \r\n //Case 4. \r\n mime.mimeType4 = FilegetMimeType(expandPath(‘/folder1/test.txt’),false); \r\n writeDump(mime); \r\n </cfscript> \r\n",
+			"code": "<cfscript> \r\n //Case 1. \r\n mime.mimeType1 = fileGetMimeType(expandPath(‘/folder1/test.pdf’)); \r\n //Case 2. \r\n mime.mimeType2 = fileGetMimeType(expandPath(‘/folder1/test.pdf’),false); \r\n //Case 3. \r\n mime.mimeType3 =  fileGetMimeType(expandPath(‘/folder1/test.txt’)); \r\n //Case 4. \r\n mime.mimeType4 = fileGetMimeType(expandPath(‘/folder1/test.txt’),false); \r\n writeDump(mime); \r\n </cfscript> \r\n",
 			"result": "Case 1 and Case 2: Returns application/pdf no matter if strict = true or false because the file is originally a PDF file. \r\n Case 3: Returns application/pdf since by default{{ strict = true}} and the file is originally a PDF which is renamed as TXT. \r\n Case 4: Returns text/plain since strict = false. "
 		}
 	]

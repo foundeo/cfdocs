@@ -24,7 +24,7 @@
         {
             "title": "Using Custom Delimiter",
             "description": "Retrieve a pipe seperated list of keys",
-            "code": "statusCodes = {\n    OK = 200,\n    CREATED = 201,\n    NOT_MODIFIED = 304,\n    BAD_REQUEST = 400,\n    NOT_FOUND = 404\n};\n\nwriteDump(StructKeyList(statusCodes, \" | \"));",
+            "code": "statusCodes = {\n    OK = 200,\n    CREATED = 201,\n    NOT_MODIFIED = 304,\n    BAD_REQUEST = 400,\n    NOT_FOUND = 404\n};\n\nwriteDump(structKeyList(statusCodes, \" | \"));",
             "result": "\"OK | CREATED | NOT_MODIFIED | BAD_REQUEST | NOT_FOUND\""
         },
         {

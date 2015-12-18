@@ -25,13 +25,13 @@
         {
             "title": "Prepend to a List using a dash delimeter",
             "description": "",
-            "code": "someList = \"1-2-3-4\";\nsomeList = ListPrepend(someList,\"0\",\"-\");\nWriteOutput(someList);",
+            "code": "someList = \"1-2-3-4\";\nsomeList = listPrepend(someList,\"0\",\"-\");\nwriteOutput(someList);",
             "result": "\"0-1-2-3-4\""
         },
         {
             "title": "Prepend to a List using the List member function",
             "description": "CF11+ Lucee4.5+",
-            "code": "seinfeldList = \"Close Talker,Soup Nazi\";\nseinfeldList = seinfeldList.listPrepend(\"Puffy Shirt\");\nWriteOutput(seinfeldList);",
+            "code": "seinfeldList = \"Close Talker,Soup Nazi\";\nseinfeldList = seinfeldList.listPrepend(\"Puffy Shirt\");\nwriteOutput(seinfeldList);",
             "result": "\"Puffy Shirt,Close Talker,Soup Nazi\""
         }
     ]
