@@ -18,6 +18,22 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"To evict all the cache data of CArtist entity:",
+			"code":"<cfset ORMEvictEntity(\"CArtists\")> ",
+			"result":"",
+			"runnable":false
+		},
+        {
+			"title":"Tag Example",
+			"description":"To evict the cache data of CArtists entity whose primary key is 1:",
+			"code":"<cfset ORMEvictEntity(\"CArtists\", 1)> ",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }

@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"LSCurrencyFormat returns a currency value using the locale convention. Default value is local. ",
+			"code":"<!--- loop through list of locales; show currency values for 100,000 units ---> \r\n <cfloop LIST = \"#Server.Coldfusion.SupportedLocales#\" \r\n index = \"locale\" delimiters = \",\"> \r\n <cfset oldlocale = SetLocale(locale)> \r\n <cfoutput><p><b><I>#locale#</I></b> \r\n Local: #LSCurrencyFormat(100000, \"local\")# \r\n International: #LSCurrencyFormat(100000, \"international\")# \r\n None: #LSCurrencyFormat(100000, \"none\")# \r\n <hr noshade> \r\n </cfoutput> \r\n </cfloop> ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

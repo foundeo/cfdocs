@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"LSDateFormat formats the date part of a date/time value using the locale convention. ",
+			"code":"<!--- loop through a list of locales; show date values for Now()---> \r\n <cfloop list = \"#Server.Coldfusion.SupportedLocales#\" \r\n index = \"locale\" delimiters = \",\"> \r\n <cfset oldlocale = SetLocale(locale)> \r\n  <cfoutput><p><B><I>#locale#</I></B> \r\n #LSDateFormat(Now(), \"mmm-dd-yyyy\")# \r\n #LSDateFormat(Now(), \"mmmm d, yyyy\")# \r\n #LSDateFormat(Now(), \"mm/dd/yyyy\")# \r\n #LSDateFormat(Now(), \"d-mmm-yyyy\")# \r\n #LSDateFormat(Now(), \"ddd, mmmm dd, yyyy\")# \r\n #LSDateFormat(Now(), \"d/m/yy\")# \r\n #LSDateFormat(Now())# \r\n <hr noshade> \r\n </cfoutput> \r\n </cfloop> ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

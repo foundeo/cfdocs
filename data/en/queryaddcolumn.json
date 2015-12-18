@@ -20,6 +20,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<!--- Make a query. ---> \r\n <cfset myQuery = QueryNew(\"\")> \r\n  <!--- Create an array. ---> \r\n <cfset FastFoodArray = ArrayNew(1)> \r\n <cfset FastFoodArray[1] = \"French Fries\"> \r\n <cfset FastFoodArray[2] = \"Hot Dogs\"> \r\n <cfset FastFoodArray[3] = \"Fried Clams\"> \r\n <cfset FastFoodArray[4] = \"Thick Shakes\"> \r\n <!--- Use the array to add a column to the query. ---> \r\n <cfset nColumnNumber = QueryAddColumn(myQuery, \"FastFood\", \"VarChar\", FastFoodArray)> \r\n <cfdump var=\"#myQuery#\" /> ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

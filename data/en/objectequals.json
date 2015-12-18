@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" No Help Available",
 	"params": [
-		{"name":"Param1","description":"No Help Available","required":true,"default":"","type":"","values":[]},
-		{"name":"Param2","description":"No Help Available","required":true,"default":"","type":"","values":[]}
+		{"name":"Param1","description":"New instance of the CFC on the client.","required":true,"default":"","type":"","values":[]},
+		{"name":"Param2","description":"Original instance of the CFC.","required":true,"default":"","type":"","values":[]}
 
 	],
 	"engines": {
@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<cfset local.isNotConflict = ObjectEquals(originalobject, serverobject)> \r\n <cfdump var=\"#local.isNotConflict#\" /> ",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }

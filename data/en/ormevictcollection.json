@@ -19,6 +19,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"To evict all the association or collection data of collection arts belonging to the component CArtists: ",
+			"code":"<cfset ORMEvictCollection(\"CArtists\", \"arts\")> ",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }
