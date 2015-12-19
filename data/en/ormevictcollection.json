@@ -1,7 +1,7 @@
 {
-	"name":"ormEvictCollection",
+	"name":"ORMEvictCollection",
 	"type":"function",
-	"syntax":"ormEvictCollection(componentName, relationName [, id])",
+	"syntax":"ORMEvictCollection(componentName, relationName [, id])",
 	"returns":"",
 	"related":[],
 	"description":" This will remove all the entries with the specified relation/collection name in the specified component. \normEvictCollection(componentName,relationName,[id])",

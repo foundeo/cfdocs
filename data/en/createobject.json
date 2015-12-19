@@ -35,7 +35,7 @@
         {
 			"title": "Script Syntax",
 			"description": "createObject WebService",
-			"code": "<cfscript> \r\n ws = createObject(\"webservice\", \"http://www.xmethods.net/sd/2001/TemperatureService.wsdl\"); \r\n xlatstring = ws.getTemp(zipcode = \"55987\"); \r\n writeoutput(\"The temperature at 55987 is \" & xlatstring); \r\n </cfscript>      ",
+			"code": "<cfscript> \r\n ws = createObject(\"webservice\", \"http://www.xmethods.net/sd/2001/TemperatureService.wsdl\"); \r\n xlatstring = ws.getTemp(zipcode = \"55987\"); \r\n writeOutput(\"The temperature at 55987 is \" & xlatstring); \r\n </cfscript>      ",
 			"result": ""
 		}
 	]

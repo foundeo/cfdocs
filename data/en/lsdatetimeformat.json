@@ -1,5 +1,5 @@
 {
-	"name":"lsDateTimeFormat",
+	"name":"LSDateTimeFormat",
 	"type":"function",
 	"syntax":"LSDateTimeFormat (date , mask); LSDateTimeFormat (date [, mask, locale]); LSDateTimeFormat (date [, mask, locale, timeZone]);",
 	"returns":"A formatted date and time value.",

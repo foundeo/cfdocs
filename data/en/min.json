@@ -23,7 +23,7 @@
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<cfset local.myNum1 = 4 /> \r\n <cfset local.myNum2 = 9 /> \r\n The minimum of the two numbers is <cfoutput>#Min(local.myNum1, local.myNum2)#</cfoutput> \r\n  ",
+			"code":"<cfset local.myNum1 = 4 /> \r\n <cfset local.myNum2 = 9 /> \r\n The minimum of the two numbers is <cfoutput>#min(local.myNum1, local.myNum2)#</cfoutput> \r\n  ",
 			"result":"",
 			"runnable":true
 		}

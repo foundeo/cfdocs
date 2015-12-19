@@ -1,7 +1,7 @@
 {
-	"name":"ormEvictQueries",
+	"name":"ORMEvictQueries",
 	"type":"function",
-	"syntax":"ormEvictQueries([cacheName])",
+	"syntax":"ORMEvictQueries([cacheName])",
 	"returns":"",
 	"related":[],
 	"description":" This will remove all the queries from the named query cache. \nIf name is not specified, all quiries from default cache will be removed.\normEvictQueries([cacheName])",

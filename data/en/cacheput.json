@@ -25,7 +25,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset cachedData = cacheGet(\"wt-6-cache\")> \r\n <!--- If the data is not cached, create it and do a cache put. ---> \r\n <cfif isNull(cachedData)> \r\n     Cache doesn't exist, so create it.<br /> \r\n     <cfset sleep(1000)> \r\n     <cfset cachedData = \"This date/time IS cached: #now()#<br />\"> \r\n     <cfoutput>#cachedData#</cfoutput> \r\n     <cfset cachePut(\"wt-6-cache\", cachedData, createTimeSpan(0,0,0,10))> \r\n </cfif>  ",
+			"code": "<cfset cachedData = cacheGet(\"wt-6-cache\")> \r\n <!--- If the data is not cached, create it and do a cache put. ---> \r\n <cfif isNull(cachedData)> \r\n     Cache doesn't exist, so create it.<br /> \r\n     <cfset sleep(1000)> \r\n     <cfset cachedData = \"This date/time IS cached: #now()#<br />\"> \r\n     <cfoutput>#cachedData#</cfoutput> \r\n     <cfset cachePut(\"wt-6-cache\", cachedData, createTimespan(0,0,0,10))> \r\n </cfif>  ",
 			"result": "",
             "runnable":false
 		}

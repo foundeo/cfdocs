@@ -1,7 +1,7 @@
 {
-	"name":"ormIndex",
+	"name":"ORMIndex",
 	"type":"function",
-	"syntax":"ormIndex(); ORMIndex('entity_name'); ORMIndex('entity_list'); ORMIndex('entityObject');",
+	"syntax":"ORMIndex(); ORMIndex('entity_name'); ORMIndex('entity_list'); ORMIndex('entityObject');",
 	"returns":"void",
 	"related":[],
 	"description":" Performs offline indexing - using this function without specifying parameters, all perseistent entities of a given application are indexed.",
@@ -17,7 +17,7 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "EmpOBJs = entityLoad('employee', {lastname='Bond'}); \r\n for(EmpObj in EmpObjs) \r\n { \r\n ormIndex(empObj); ]r]n } \r\n",
+			"code": "EmpOBJs = entityLoad('employee', {lastname='Bond'}); \r\n for(EmpObj in EmpObjs) \r\n { \r\n ORMIndex(empObj); ]r]n } \r\n",
 			"result": ""
 		}
 	]

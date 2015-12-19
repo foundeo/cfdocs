@@ -1,7 +1,7 @@
 {
-	"name":"xmlElemNew",
+	"name":"XMLElemNew",
 	"type":"function",
-	"syntax":"xmlElemNew(xmlobj [, namespace], childname)",
+	"syntax":"XMLElemNew(xmlobj [, namespace], childname)",
 	"returns":"Object",
 	"related":[],
 	"description":" Creates an XML document object element",

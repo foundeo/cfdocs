@@ -21,7 +21,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "the in-memory file system memory set in cfadmin and should return that.",
-			"code": "<cfset sql = 'SELECT * from art where artid = ?'> \r\n <cfquery name='q' datasource='cfartgallery' cachedwithin='#createTimeSpan(0, 6, 0, 0)#'> \r\n SELECT * from art where artid = <cfqueryPARAM value = '1' CFSQLType = 'CF_SQL_INTEGER'> \r\n </cfquery> \r\n <cfset a = arrayNew(1)> \r\n <cfset a[1] = 1> \r\n <cfset removeCachedQuery(sql,'cfartgallery', a)> \r\n",
+			"code": "<cfset sql = 'SELECT * from art where artid = ?'> \r\n <cfquery name='q' datasource='cfartgallery' cachedwithin='#createTimespan(0, 6, 0, 0)#'> \r\n SELECT * from art where artid = <cfqueryPARAM value = '1' CFSQLType = 'CF_SQL_INTEGER'> \r\n </cfquery> \r\n <cfset a = arrayNew(1)> \r\n <cfset a[1] = 1> \r\n <cfset removeCachedQuery(sql,'cfartgallery', a)> \r\n",
 			"result": ""
 		}
 	]

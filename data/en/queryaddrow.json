@@ -23,7 +23,7 @@
 		{
 			"title":"Tag Example",
 			"description":" How to add a row to a query. Update the query based on your data to run this. ",
-			"code":"<!--- start by making a query ---> \r\n <cfquery name = \"GetCourses\" datasource = \"cfdocexamples\"> \r\n SELECT Course_ID, Number, Descript \r\n FROM Courses \r\n </cfquery> \r\n <p>The Query \"GetCourses\" has <cfoutput>#GetCourses.RecordCount#</cfoutput> rows. \r\n <cfset CountVar = 0> \r\n <cfloop CONDITION = \"CountVar LT 15\"> \r\n <cfset temp = QueryAddRow(GetCourses)> \r\n <cfset CountVar = CountVar + 1> \r\n <cfset Temp = QuerySetCell(GetCourses, \"Number\", 100*CountVar)> \r\n <cfset Temp = QuerySetCell(GetCourses, \"Descript\", \r\n \"Description of variable #Countvar#\")> \r\n </cfloop>  ",
+			"code":"<!--- start by making a query ---> \r\n <cfquery name = \"GetCourses\" datasource = \"cfdocexamples\"> \r\n SELECT Course_ID, Number, Descript \r\n FROM Courses \r\n </cfquery> \r\n <p>The Query \"GetCourses\" has <cfoutput>#GetCourses.RecordCount#</cfoutput> rows. \r\n <cfset CountVar = 0> \r\n <cfloop CONDITION = \"CountVar LT 15\"> \r\n <cfset temp = queryAddRow(GetCourses)> \r\n <cfset CountVar = CountVar + 1> \r\n <cfset Temp = querySetCell(GetCourses, \"Number\", 100*CountVar)> \r\n <cfset Temp = querySetCell(GetCourses, \"Descript\", \r\n \"Description of variable #Countvar#\")> \r\n </cfloop>  ",
 			"result":"",
 			"runnable":false
 		}

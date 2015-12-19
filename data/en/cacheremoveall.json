@@ -21,7 +21,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "the in-memory file system memory set in cfadmin and should return that.",
-			"code": "<!--- clear all object caches ---> \r\n <cfif arrayLen(cacheGetAllIds()) gt 0> <cfset cacheRemove(arrayToList(cacheGetAllIds()))> \r\n </cfif> \r\n <!--- create few caches ---> \r\n <cfloop from='1' to='10' index='i'> \r\n <cfset id = 'cache_#i#'> \r\n <cfset timeToLive = createTimeSpan(0,0,30,0)> <cfset timeToIdle = createTimeSpan(0,0,30,0)> \r\n <cfset cachePut(id,createQryObj(i),timeToLive,timeToIdle)> \r\n </cfloop> \r\n <cfoutput>Before cacheRemove() :: Number of objects in the cache: #arrayLen(cacheGetAllIds())#<br></cfoutput> \r\n <!--- clear all objects from the cache ---> \r\n <cfset cacheRemoveAll()> \r\n <cfoutput>After cacheRemove() :: Number of objects in the cache: #arrayLen(cacheGetAllIds())#<br><br></cfoutput> \r\n",
+			"code": "<!--- clear all object caches ---> \r\n <cfif arrayLen(cacheGetAllIds()) gt 0> <cfset cacheRemove(arrayToList(cacheGetAllIds()))> \r\n </cfif> \r\n <!--- create few caches ---> \r\n <cfloop from='1' to='10' index='i'> \r\n <cfset id = 'cache_#i#'> \r\n <cfset timeToLive = createTimespan(0,0,30,0)> <cfset timeToIdle = createTimespan(0,0,30,0)> \r\n <cfset cachePut(id,createQryObj(i),timeToLive,timeToIdle)> \r\n </cfloop> \r\n <cfoutput>Before cacheRemove() :: Number of objects in the cache: #arrayLen(cacheGetAllIds())#<br></cfoutput> \r\n <!--- clear all objects from the cache ---> \r\n <cfset cacheRemoveAll()> \r\n <cfoutput>After cacheRemove() :: Number of objects in the cache: #arrayLen(cacheGetAllIds())#<br><br></cfoutput> \r\n",
 			"result": ""
 		}
 	]

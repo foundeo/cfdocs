@@ -1,7 +1,7 @@
 {
-	"name":"reEscape",
+	"name":"REEscape",
 	"type":"function",
-	"syntax":"reEscape(string____);",
+	"syntax":"REEscape(string____);",
 	"returns":"String appended with the escape characters",
 	"related":[],
 	"description":" Takes a string and escapes characters that match regular expression control characters.",
@@ -19,7 +19,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfoutput> \r\n #reEscape('*.{}[]exam?ple')# \r\n </cfoutput> \r\n",
+			"code": "<cfoutput> \r\n #REEscape('*.{}[]exam?ple')# \r\n </cfoutput> \r\n",
 			"result": ""
 		}
 	]

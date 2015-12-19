@@ -1,7 +1,7 @@
 {
-	"name":"lsParseNumber",
+	"name":"LSParseNumber",
 	"type":"function",
-	"syntax":"lsParseNumber(String)",
+	"syntax":"LSParseNumber(String)",
 	"returns":"Numeric",
 	"related":[],
 	"description":" Converts a string that is a valid numeric representation in\n the current locale into a formatted number.",

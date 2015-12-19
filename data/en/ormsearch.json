@@ -1,5 +1,5 @@
 {
-	"name":"ormSearch",
+	"name":"ORMSearch",
 	"type":"function",
 	"syntax":"ORMSearch('query_text', 'entityName')ORMSearch('query_text', 'entityName', fields)ORMSearch('query_text', 'entityName', fields, optionMap);",
 	"returns":"A struct that contains the following: an array of structs or maxTotalRecord.",
@@ -43,6 +43,6 @@
 			"result": ""
 		}
 	]
-	
+
 
 }

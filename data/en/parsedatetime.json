@@ -23,7 +23,7 @@
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<cfset local.dateTimeVar = #DateTimeFormat(NOW(), \"yyyy.MM.dd HH:nn:ss \")# /> \r\n <cfoutput> \r\n #ParseDateTime(form.theTestValue)# \r\n </cfoutput> ",
+			"code":"<cfset local.dateTimeVar = #dateTimeFormat(now(), \"yyyy.MM.dd HH:nn:ss \")# /> \r\n <cfoutput> \r\n #parseDateTime(form.theTestValue)# \r\n </cfoutput> ",
 			"result":"",
 			"runnable":true
 		}

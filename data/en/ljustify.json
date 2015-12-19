@@ -23,7 +23,7 @@
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<cfset local.justifyString = \"abcdefghijklmnop\" /> \r\n <cfset jstring = LJustify(local.justifyString, 10)> \r\n <cfdump var=\"#jstring#\" /> ",
+			"code":"<cfset local.justifyString = \"abcdefghijklmnop\" /> \r\n <cfset jstring = lJustify(local.justifyString, 10)> \r\n <cfdump var=\"#jstring#\" /> ",
 			"result":"",
 			"runnable":true
 		}

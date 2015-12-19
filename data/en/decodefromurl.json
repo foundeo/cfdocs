@@ -20,7 +20,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset string = 'http://www.adobe.com/'> \r\n <cfset urlencoded = encodeforURL(string)> \r\n <cfset urldecoded = decodeFromURL(urlEncoded)> \r\n <cfoutput> \r\n String: #string# <br/> \r\n URL Encoded: #urlencoded#<br/> \r\n URL Decoded: #urldecoded#<br/> \r\n </cfoutput> \r\n",
+			"code": "<cfset string = 'http://www.adobe.com/'> \r\n <cfset urlencoded = encodeForURL(string)> \r\n <cfset urldecoded = decodeFromURL(urlEncoded)> \r\n <cfoutput> \r\n String: #string# <br/> \r\n URL Encoded: #urlencoded#<br/> \r\n URL Decoded: #urldecoded#<br/> \r\n </cfoutput> \r\n",
 			"result": ""
 		}
 	]

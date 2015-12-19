@@ -22,7 +22,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "Checks if the cache object is present in the user-defined cache region",
-			"code": "<!--- Creating a new object ---> \r\n <cfset obj1 = structNew()> \r\n <cfset obj1.name = 'xyz'> \r\n <!--- Defining the time to live and time to Idle parameters ---> \r\n <cfset timeToLive=createtimespan(0,0,0,30)> \r\n <cfset timeToIdle=createtimespan(0,0,0,30)> \r\n <cfoutput>Starting to write to cache..</cfoutput> \r\n <cfset cachePut('obj1',obj1,timeToLive,timeToIdle,'customcache')> \r\n <br/> \r\n <cfoutput>Done!!</cfoutput> \r\n <cfoutput>Trying to check if the cached item is present...</cfoutput> \r\n <cfoutput>#cacheIdExists('obj1','customcache')#</cfoutput> \r\n",
+			"code": "<!--- Creating a new object ---> \r\n <cfset obj1 = structNew()> \r\n <cfset obj1.name = 'xyz'> \r\n <!--- Defining the time to live and time to Idle parameters ---> \r\n <cfset timeToLive=createTimespan(0,0,0,30)> \r\n <cfset timeToIdle=createTimespan(0,0,0,30)> \r\n <cfoutput>Starting to write to cache..</cfoutput> \r\n <cfset cachePut('obj1',obj1,timeToLive,timeToIdle,'customcache')> \r\n <br/> \r\n <cfoutput>Done!!</cfoutput> \r\n <cfoutput>Trying to check if the cached item is present...</cfoutput> \r\n <cfoutput>#cacheIdExists('obj1','customcache')#</cfoutput> \r\n",
 			"result": ""
 		},
         {
