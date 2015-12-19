@@ -1,7 +1,7 @@
 {
-	"name":"xmlValidate",
+	"name":"XMLValidate",
 	"type":"function",
-	"syntax":"xmlValidate(xmlDoc [, validator])",
+	"syntax":"XMLValidate(xmlDoc [, validator])",
 	"returns":"Struct",
 	"related":[],
 	"description":" Uses a Document Type Definition (DTD) or XML Schema\n to validate an XML text document or an XML document object.",

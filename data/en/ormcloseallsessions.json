@@ -1,7 +1,7 @@
 {
 	"name":"ORMCloseAllSessions",
 	"type":"function",
-	"syntax":"ormcloseallsessions();",
+	"syntax":"ORMCloseAllSessions();",
 	"returns":"",
 	"related":[],
 	"description":" Closes all Hibernate sessions in the request.",
@@ -20,7 +20,7 @@
         {
 			"title": "Tag Syntax",
 			"description": "Example 2",
-			"code": "ormcloseallsessions() \r\n",
+			"code": "ORMCloseAllSessions() \r\n",
 			"result": ""
 		}
 	]

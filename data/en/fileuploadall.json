@@ -1,7 +1,7 @@
 {
 	"name":"fileUploadAll",
 	"type":"function",
-	"syntax":"fileupload(string destination,[string accept,[string nameConflict]])",
+	"syntax":"fileUpload(string destination,[string accept,[string nameConflict]])",
 	"returns":"array",
 	"related":["fileUpload"],
 	"description":"Uploads all files sent to the page in an HTTP request to a directory on the server.",

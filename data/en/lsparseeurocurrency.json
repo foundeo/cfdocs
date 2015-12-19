@@ -1,7 +1,7 @@
 {
-	"name":"lsParseEuroCurrency",
+	"name":"LSParseEuroCurrency",
 	"type":"function",
-	"syntax":"lsParseEuroCurrency(currency_string)",
+	"syntax":"LSParseEuroCurrency(currency_string)",
 	"returns":"Numeric",
 	"related":[],
 	"description":" Formats a locale-specific currency string as a number.\n Attempts conversion through each of the default currency\n formats (none, local, international). Ensures correct\n handling of euro currency for Euro zone countries.",

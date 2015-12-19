@@ -8,7 +8,7 @@
 	"params": [
 		{"name":"datepart","description":"","required":true,"default":"","type":"String","values":["'yyyy' - Year","'q' - Quarter","'m' - Month","'y' - Day of year","'d' - Day","'w' - Week day","'ww' - Week","'h' - Hour","'n' - Minute","'s' - Second","'l' - Millisecond"]},
 		{"name":"number","description":"The number of dateparts to add or subtract from the provided date.\n Negative integers move the date into the past, positive into the future.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()","CreateDate(2014,3,15)","\"{ts '2014-03-15 23:59:59'}\"","'3/15/2014'","'2014-03-15'"]}
+		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()","createDate(2014,3,15)","\"{ts '2014-03-15 23:59:59'}\"","'3/15/2014'","'2014-03-15'"]}
 	],
 	"returns":"Date/Time Object",
 	"engines": {

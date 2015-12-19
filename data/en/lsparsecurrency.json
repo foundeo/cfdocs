@@ -1,7 +1,7 @@
 {
-	"name":"lsParseCurrency",
+	"name":"LSParseCurrency",
 	"type":"function",
-	"syntax":"lsParseCurrency(String)",
+	"syntax":"LSParseCurrency(String)",
 	"returns":"String",
 	"related":[],
 	"description":" Converts a locale-specific currency string into a formatted\n number. Attempts conversion by comparing the string with each\n the three supported currency formats (none, local,\n international) and using the first that matches.",

@@ -24,7 +24,7 @@
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<cfset local.myString = \"My Test String\" /> \r\n <cfset local.MySubstring1 = \"Test, String\" /> \r\n <cfset local.mySubString2 = \"Replaced, Sentence\" /> \r\n <p>The result: <cfoutput>#Replacelist(local.myString, local.MySubstring1, local.mySubString2)#</cfoutput> ",
+			"code":"<cfset local.myString = \"My Test String\" /> \r\n <cfset local.MySubstring1 = \"Test, String\" /> \r\n <cfset local.mySubString2 = \"Replaced, Sentence\" /> \r\n <p>The result: <cfoutput>#replaceList(local.myString, local.MySubstring1, local.mySubString2)#</cfoutput> ",
 			"result":"",
 			"runnable":true
 		}

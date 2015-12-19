@@ -1,7 +1,7 @@
 {
 	"name":"WSGetSubscribers",
 	"type":"function",
-	"syntax":"WSgetSubscribers(channel);",
+	"syntax":"WSGetSubscribers(channel);",
 	"returns":"",
 	"related":[],
 	"description":" Returns an array of struct with clientID and subscriberInfo as the keys.",

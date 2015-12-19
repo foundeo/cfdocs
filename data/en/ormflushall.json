@@ -1,7 +1,7 @@
 {
 	"name":"ORMFlushAll",
 	"type":"function",
-	"syntax":"ormflushall();",
+	"syntax":"ORMFlushAll();",
 	"returns":"",
 	"related":[],
 	"description":" Flushes all the current Hibernate sessions in the request.",

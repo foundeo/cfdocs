@@ -20,7 +20,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "Checking to see if the region is present in the cache",
-			"code": "<cfscript> \r\n if(isdefined('form.publish')) \r\n WsPublish(#form.channel#, #form.message#); \r\n </cfscript> \r\n <cfform method='post'> \r\n <cfselect name='channel'> \r\n <option> \r\n stocks \r\n </option> \r\n <option> \r\n news \r\n </option> \r\n <option> \r\n products \r\n </option> \r\n </cfselect> \r\n Message: \r\n <input id='message' name='message' type='text'> \r\n <cfinput id='publish' name='publish' value='publish' type='submit'> \r\n </cfform> \r\n",
+			"code": "<cfscript> \r\n if(isDefined('form.publish')) \r\n WSPublish(#form.channel#, #form.message#); \r\n </cfscript> \r\n <cfform method='post'> \r\n <cfselect name='channel'> \r\n <option> \r\n stocks \r\n </option> \r\n <option> \r\n news \r\n </option> \r\n <option> \r\n products \r\n </option> \r\n </cfselect> \r\n Message: \r\n <input id='message' name='message' type='text'> \r\n <cfinput id='publish' name='publish' value='publish' type='submit'> \r\n </cfform> \r\n",
 			"result": ""
 		}
 	]

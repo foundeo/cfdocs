@@ -1,7 +1,7 @@
 {
-	"name":"lsIsCurrency",
+	"name":"LSIsCurrency",
 	"type":"function",
-	"syntax":"lsIsCurrency(String)",
+	"syntax":"LSIsCurrency(String)",
 	"returns":"boolean",
 	"related":[],
 	"description":" Determines whether a string is a valid representation of a\n currency amount in the current locale.",

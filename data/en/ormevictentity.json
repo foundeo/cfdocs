@@ -1,7 +1,7 @@
 {
-	"name":"ormEvictEntity",
+	"name":"ORMEvictEntity",
 	"type":"function",
-	"syntax":"ormEvictEntity(componentName [, id])",
+	"syntax":"ORMEvictEntity(componentName [, id])",
 	"returns":"",
 	"related":[],
 	"description":" This will remove all the entries for the specified component name from the entity cache.\normEvictEntity(componentName,[id])",

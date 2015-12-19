@@ -1,7 +1,7 @@
 {
-	"name":"reReplaceNoCase",
+	"name":"REReplaceNoCase",
 	"type":"function",
-	"syntax":"reReplaceNoCase(String, reg_expression, substring [, scope])",
+	"syntax":"REReplaceNoCase(String, reg_expression, substring [, scope])",
 	"returns":"String",
 	"related":[],
 	"description":" Uses a regular expression to search a string for a string\n pattern and replace it with another. The search is\n case-insensitive.",
@@ -24,13 +24,13 @@
 		{
 			"title": "Strip Characters Using ReReplace",
 			"description": "This example strips out all characters except a-z and 0-9.",
-			"code": "reReplaceNoCase(\"test 123!\", \"[^a-z0-9]\", \"\", \"ALL\")",
+			"code": "REReplaceNoCase(\"test 123!\", \"[^a-z0-9]\", \"\", \"ALL\")",
 			"result": "test123"
 		},
 		{
 			"title": "Extract Characters Using Back Reference",
 			"description": "Uses a back reference: \\1 to extract the pattern contained within the parenthesis.",
-			"code": "reReplaceNoCase(\"123abc456\", \"[0-9]+([a-z]+)[0-9]+\", \"\\1\")",
+			"code": "REReplaceNoCase(\"123abc456\", \"[0-9]+([a-z]+)[0-9]+\", \"\\1\")",
 			"result": "abc"
 		}
 	]

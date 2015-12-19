@@ -1,7 +1,7 @@
 {
-	"name":"lsParseDateTime",
+	"name":"LSParseDateTime",
 	"type":"function",
-	"syntax":"lsParseDateTime(dt_string)",
+	"syntax":"LSParseDateTime(dt_string)",
 	"returns":"DateTime",
 	"related":[],
 	"description":" Converts a string that is a valid date/time representation in\n the current locale into a date/time object.",

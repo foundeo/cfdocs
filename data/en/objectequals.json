@@ -22,7 +22,7 @@
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<cfset local.isNotConflict = ObjectEquals(originalobject, serverobject)> \r\n <cfdump var=\"#local.isNotConflict#\" /> ",
+			"code":"<cfset local.isNotConflict = objectEquals(originalobject, serverobject)> \r\n <cfdump var=\"#local.isNotConflict#\" /> ",
 			"result":"",
 			"runnable":false
 		}

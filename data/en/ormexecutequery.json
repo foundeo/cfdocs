@@ -1,5 +1,5 @@
 {
-	"name":"ormExecuteQuery",
+	"name":"ORMExecuteQuery",
 	"type":"function",
 	"syntax":"ORMExecuteQuery(hql, params [,unique]);\nORMExecuteQuery(hql, [,unique] [, queryoptions]);\nORMExecuteQuery(hql, params [,unique] [,queryOptions])",
 	"returns":"",
