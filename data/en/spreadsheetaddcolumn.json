@@ -22,6 +22,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"The following example creates an Excel spreadsheet object from a query and inserts a new column 2, with data starting at row 3. The existing columns 2 and greater increment by one. ",
+			"code":"<!--- Get the spreadsheet data as a query. ---> \r\n <cfquery name=\"courses\" datasource=\"cfdocexamples\" \r\n cachedwithin=\"#CreateTimeSpan(0, 6, 0, 0)#\"> \r\n SELECT CORNUMBER,DEPT_ID,COURSE_ID,CORNAME \r\n FROM COURSELIST \r\n </cfquery> \r\n <cfscript> \r\n ///We need an absolute path, so get the current directory path. \r\n theFile=GetDirectoryFromPath(GetCurrentTemplatePath()) & courses.xls\"; \r\n //Create a new Spreadsheet object and add the query data. \r\n theSheet = SpreadsheetNew(\"CourseData\"); \r\n SpreadsheetAddRows(theSheet,courses); \r\n //Insert a new second column to the sheet, with data starting in row 3. \r\n SpreadsheetAddColumn(theSheet, \"Basic,Intermediate,Advanced,Basic,Intermediate,Advanced,Basic,Intermediate, Advanced\" ,3,2,true); \r\n </cfscript> \r\n <!--- Write the spreadsheet to a file, replacing any existing file. ---> \r\n <cfspreadsheet action=\"write\" filename=\"#theFile#\" name=\"theSheet\" sheet=1 sheetname=\"courses\" overwrite=true>", 
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

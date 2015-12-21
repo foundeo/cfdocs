@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Script Example",
+			"description":" ",
+			"code":"<cfscript> \r\n a = SpreadSheetRead('C:\\Files\\Report.xls',\"Annual Report\") \r\n </cfscript>  ",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }

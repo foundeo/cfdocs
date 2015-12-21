@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<!--- Get the spreadsheet data as a query. ---> \r\n <cfquery name=\"courses\" datasource=\"cfdocexamples\" cachedwithin=\"#CreateTimeSpan(0, 6, 0, 0)#\"> \r\n SELECT CORNUMBER,DEPT_ID,COURSE_ID,CORNAME \r\n FROM COURSELIST \r\n </cfquery> \r\n <cfset theFile=GetDirectoryFromPath(GetCurrentTemplatePath()) & courses.xls\"> \r\n <cfspreadsheet action=\"read\" name=theSheet src=\"#theFile#\" sheet=\"1\"> \r\n <cfscript> \r\n SpreadsheetAddRows(theSheet,courses); \r\n     //Set the sheetnumber 2 as active. \r\n SpreadsheetSetActiveSheetNumber (theSheet, 2); \r\n     //Add a new row to the sheet 2. \r\n     SpreadsheetAddRows(theSheet,courses); \r\n </cfscript> \r\n <!--- Write the spreadsheet to a file, replacing any existing file. ---> \r\n <cfspreadsheet action=\"write\" filename=\"#theFile#\" name=\"theSheet\"  sheet=1 sheetname=\"courses\" overwrite=true>  ",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }

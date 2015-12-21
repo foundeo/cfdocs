@@ -19,6 +19,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"The following example creates a PNG format chart, puts it in a new spread sheet as rows 5-12 and column 5-10, and saves the sheet to disk. ",
+			"code":"<cfchart format=\"png\" scalefrom=\"-100\" scaleTo=\"100\" gridlines=\"5\" name=\"test\"> \r\n     <cfchartseries type=\"line\"> \r\n <cfchartdata item=\"Point1\" value=\"-50\"> \r\n <cfchartdata item=\"Point2\" value=\"-25\"> \r\n <cfchartdata item=\"Point3\" value=\"1\"> \r\n <cfchartdata item=\"Point4\" value=\"25\"> \r\n <cfchartdata item=\"Point5\" value=\"50\"> \r\n <cfchartdata item=\"Point6\" value=\"75\"> \r\n <cfchartdata item=\"Point7\" value=\"99\"> \r\n </cfchartseries> \r\n </cfchart> \r\n <cfscript> \r\n theDir=GetDirectoryFromPath(GetCurrentTemplatePath()); \r\n  SpreadsheetObj=SpreadsheetNew();  \r\n SpreadsheetAddImage(SpreadsheetObj,test,\"png\",\"5,5,12,10\"); \r\n </cfscript> \r\n <cfspreadsheet action=\"write\" name=SpreadsheetObj filename=\"#theDir#imagesheet.xls\" sheetname=\"chart\" overwrite=true> ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

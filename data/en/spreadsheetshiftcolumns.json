@@ -20,6 +20,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<cfset SpreadsheetShiftColumns(SpreadsheetObj,l0,11,2)> \r\n <cfscript> \r\n     ///We need an absolute path, so get the current directory path. \r\n       theFile=GetDirectoryFromPath(GetCurrentTemplatePath()) & \"shiftcolumns.xls\"; \r\n     //Create a new Excel spreadsheet object. \r\n     theSheet = SpreadsheetNew(\"Expenses\"); \r\n     //Set some cell values, indicating their initial location. \r\n     SpreadsheetSetCellValue(theSheet,\"Cell D10\",10,4); \r\n     SpreadsheetSetCellValue(theSheet,\"Cell E12\",12,5); \r\n     SpreadsheetSetCellValue(theSheet,\"Cell F12\",12,6); \r\n     SpreadsheetSetCellValue(theSheet,\"Cell G13\",13,7); \r\n     //Shift columns 6 and 7 left 2 columns. \r\n     SpreadsheetShiftColumns(theSheet,6,7,-2); \r\n </cfscript> \r\n <!--- Write the spreadsheet to a file, replacing any existing file. ---> \r\n <cfspreadsheet action=\"write\" filename=\"#theFile#\" name=\"theSheet\" overwrite=true>  ",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }

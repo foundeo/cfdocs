@@ -19,6 +19,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Script Example",
+			"description":" ",
+			"code":"<cfscript> \r\n     //Create a new Excel spreadsheet object. \r\n theSheet=SpreadsheetNew(); \r\n     //Set the value of the cell at row 3 column 5. \r\n SpreadsheetSetCellValue(theSheet,365,3,5); \r\n     //Get the value from the Excel spreadsheet object. \r\n     theValue=SpreadsheetGetCellValue(theSheet,3,5); \r\n WriteOutput(\"The value of column 5 row 3 is: \" & theValue); \r\n </cfscript>  ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

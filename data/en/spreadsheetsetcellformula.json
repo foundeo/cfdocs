@@ -20,6 +20,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Script Example",
+			"description":" ",
+			"code":"<cfscript> \r\n     //Create a new Excel spreadsheet object. \r\n     theSheet=SpreadsheetNew(); \r\n     //Set the values of column 3 rows 1-10 to the row number.  \r\n     for (i=1; i<= 10; i=i+1) \r\n         SpreadsheetSetCellValue(theSheet,i,i,3); \r\n     //Set the fomula for the cell in row 11 column 3 to be the sum of \r\n     //Columns 1-10. \r\n     SpreadsheetSetCellFormula(theSheet,\"SUM(C1:C10)\",11,3); \r\n     //Get the formula from the Excel spreadsheet object. \r\n     theValue=SpreadsheetGetCellFormula(theSheet,11,3); \r\n     //Get the value of row 11 column 5 from the Excel spreadsheet object. \r\n    theValue=SpreadsheetGetCellValue(theSheet,11,3);  \r\n </cfscript> \r\n <cfoutput> \r\n Row 11, Column 3 value: #SpreadsheetGetCellValue(theSheet,11,3)#<br /> \r\n Row 11, Column 3 formula: #SpreadsheetGetCellFormula(theSheet,11,3)#<br /> \r\n </cfoutput>  ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

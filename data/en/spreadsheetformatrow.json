@@ -19,6 +19,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<!--- Get the spreadsheet data as a query. ---> \r\n <cfquery name=\"courses\" datasource=\"cfdocexamples\" cachedwithin=\"#CreateTimeSpan(0, 6, 0, 0)#\"> \r\n SELECT CORNUMBER,DEPT_ID,CORLEVEL,COURSE_ID,CORNAME,CORDESC,LASTUPDATE \r\n FROM COURSELIST \r\n </cfquery> \r\n <cfscript> \r\n     ///We need an absolute path, so get the current directory path. \r\n        theFile=GetDirectoryFromPath(GetCurrentTemplatePath()) & \"courses.xls\"; \r\n     //Create a new Excel spreadsheet object and add the query data. \r\n     theSheet = SpreadsheetNew(\"CourseData\"); \r\n     SpreadsheetAddRows(theSheet,courses); \r\n     // Define a format for the column. \r\n     format1-SructNew() \r\n format1.font=\"Courier\"; \r\n     format1.fontsize=\"10\"; \r\n     format1.color=\"dark_blue;\"; \r\n     format1.italic=\"true\"; \r\n     format1.bold=\"true\"; \r\n  format1.alignment=\"left\";  \r\n     format1.textwrap=\"true\"; \r\n     format1.fgcolor=\"pale_blue\"; \r\n format1.bottomborder=\"thick\"; \r\n     format1.bottombordercolor=\"blue_grey\"; \r\n format1.topbordercolor=\"blue_grey\"; \r\n     format1.topborder=\"thick\"; \r\n format1.leftborder=\"dotted\"; \r\n     format1.leftbordercolor=\"blue_grey\"; \r\n format1.rightborder=\"dotted\"; \r\n     format1.rightbordercolor=\"blue_grey\"; \r\n SpreadsheetFormatRow(theSheet,format1,\"5\"); \r\n </cfscript> \r\n <!--- Write the spreadsheet to a file, replacing any existing file. ---> \r\n <cfspreadsheet action=\"write\" filename=\"#theFile#\" name=\"theSheet\"  sheet=1 sheetname=\"courses\" overwrite=true> ",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }
