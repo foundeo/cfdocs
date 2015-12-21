@@ -1,0 +1,16 @@
+{
+	"name": "datasourceFlushMetacache",
+	"type": "function",
+	"syntax": "datasourceFlushMetacache([datasourceName])",
+	"returns": "boolean",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "datasourceName", "description": "", "required": false, "default": "", "type": "string", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/datasourceflushmetacache.html"}
+	},
+	"examples": [],
+	"links": []
+}

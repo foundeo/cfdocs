@@ -1,0 +1,16 @@
+{
+	"name": "systemCacheClear",
+	"type": "function",
+	"syntax": "systemCacheClear([cacheName])",
+	"returns": "void",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "cacheName", "description": "", "required": false, "default": "", "type": "string", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/systemcacheclear.html"}
+	},
+	"examples": [],
+	"links": []
+}

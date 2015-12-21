@@ -1,0 +1,16 @@
+{
+	"name": "cacheGetDefaultCacheName",
+	"type": "function",
+	"syntax": "cacheGetDefaultCacheName(type)",
+	"returns": "string",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "type", "description": "", "required": true, "default": "", "type": "string", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/cachegetdefaultcachename.html"}
+	},
+	"examples": [],
+	"links": []
+}

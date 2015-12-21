@@ -1,0 +1,20 @@
+{
+	"name": "queryEvery",
+	"type": "function",
+	"syntax": "queryEvery(query, closure [, parallel] [, maxThreads])",
+	"member": "query.every(closure [, parallel] [, maxThreads])",
+	"returns": "boolean",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
+		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
+		{"name": "parallel", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
+		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "number", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryevery.html"}
+	},
+	"examples": [],
+	"links": []
+}

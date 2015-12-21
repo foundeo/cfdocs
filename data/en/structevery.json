@@ -1,0 +1,20 @@
+{
+	"name": "structEvery",
+	"type": "function",
+	"syntax": "structEvery(struct, closure [, parallel] [, maxThreads])",
+	"member": "struct.every(closure [, parallel] [, maxThreads])",
+	"returns": "boolean",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "struct", "description": "", "required": true, "default": "", "type": "struct", "values": []},
+		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
+		{"name": "parallel", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
+		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "number", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/structevery.html"}
+	},
+	"examples": [],
+	"links": []
+}

@@ -1,0 +1,17 @@
+{
+	"name": "arrayToStruct",
+	"type": "function",
+	"syntax": "arrayToStruct(array)",
+	"member": "array.toStruct()",
+	"returns": "struct",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraytostruct.html"}
+	},
+	"examples": [],
+	"links": []
+}
