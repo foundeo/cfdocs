@@ -1,0 +1,16 @@
+{
+	"name": "echo",
+	"type": "function",
+	"syntax": "echo(string)",
+	"returns": "boolean",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/echo.html"}
+	},
+	"examples": [],
+	"links": []
+}

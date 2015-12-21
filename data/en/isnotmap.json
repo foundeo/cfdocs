@@ -1,0 +1,16 @@
+{
+	"name": "isNotMap",
+	"type": "function",
+	"syntax": "isNotMap(obj)",
+	"returns": "boolean",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "obj", "description": "", "required": true, "default": "", "type": "any", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/isnotmap.html"}
+	},
+	"examples": [],
+	"links": []
+}

@@ -1,0 +1,19 @@
+{
+	"name": "LSDayOfWeek",
+	"type": "function",
+	"syntax": "LSDayOfWeek(date [, locale] [, timezone])",
+	"member": "date.lsDayOfWeek([locale] [, timezone])",
+	"returns": "number",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "date", "description": "", "required": true, "default": "", "type": "datetime", "values": []},
+		{"name": "locale", "description": "", "required": false, "default": "", "type": "string", "values": []},
+		{"name": "timezone", "description": "", "required": false, "default": "", "type": "string", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/lsdayofweek.html"}
+	},
+	"examples": [],
+	"links": []
+}

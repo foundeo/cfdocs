@@ -1,0 +1,19 @@
+{
+	"name": "listCompact",
+	"type": "function",
+	"syntax": "listCompact(list [, delimiters] [, multiCharacterDelimiter])",
+	"member": "list.listCompact([delimiters] [, multiCharacterDelimiter])",
+	"returns": "string",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "list", "description": "", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "delimiters", "description": "", "required": false, "default": ",", "type": "string", "values": []},
+		{"name": "multiCharacterDelimiter", "description": "", "required": false, "default": "false", "type": "boolean", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/listcompact.html"}
+	},
+	"examples": [],
+	"links": []
+}

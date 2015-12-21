@@ -1,0 +1,18 @@
+{
+	"name": "imageFilterColorMap",
+	"type": "function",
+	"syntax": "imageFilterColorMap(type [, lineColor1] [, lineColor2])",
+	"returns": "any",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "type", "description": "", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "lineColor1", "description": "", "required": false, "default": "", "type": "string", "values": []},
+		{"name": "lineColor2", "description": "", "required": false, "default": "", "type": "string", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/imagefiltercolormap.html"}
+	},
+	"examples": [],
+	"links": []
+}

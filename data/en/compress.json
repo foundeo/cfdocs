@@ -1,0 +1,20 @@
+{
+	"name": "compress",
+	"type": "function",
+	"syntax": "compress(format, source, target [, includeBaseFolder] [, mode])",
+	"returns": "boolean",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "format", "description": "", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "source", "description": "", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "target", "description": "", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "includeBaseFolder", "description": "", "required": false, "default": "true", "type": "boolean", "values": []},
+		{"name": "mode", "description": "", "required": false, "default": "777", "type": "string", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/compress.html"}
+	},
+	"examples": [],
+	"links": []
+}

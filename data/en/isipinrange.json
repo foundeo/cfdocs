@@ -1,0 +1,17 @@
+{
+	"name": "isIPInRange",
+	"type": "function",
+	"syntax": "isIPInRange(ips, ip)",
+	"returns": "boolean",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "ips", "description": "", "required": true, "default": "", "type": "any", "values": []},
+		{"name": "ip", "description": "", "required": true, "default": "", "type": "string", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/isipinrange.html"}
+	},
+	"examples": [],
+	"links": []
+}

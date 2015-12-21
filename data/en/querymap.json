@@ -1,0 +1,20 @@
+{
+	"name": "queryMap",
+	"type": "function",
+	"syntax": "queryMap(query, closure [, parallel] [, maxThreads])",
+	"member": "query.map(closure [, parallel] [, maxThreads])",
+	"returns": "query",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
+		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
+		{"name": "parallel", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
+		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "number", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querymap.html"}
+	},
+	"examples": [],
+	"links": []
+}

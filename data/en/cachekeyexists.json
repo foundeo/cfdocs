@@ -1,0 +1,17 @@
+{
+	"name": "cacheKeyExists",
+	"type": "function",
+	"syntax": "cacheKeyExists(key [, cacheName])",
+	"returns": "boolean",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "key", "description": "", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "cacheName", "description": "", "required": false, "default": "", "type": "string", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/cachekeyexists.html"}
+	},
+	"examples": [],
+	"links": []
+}

@@ -1,0 +1,18 @@
+{
+	"name": "imageFilter",
+	"type": "function",
+	"syntax": "imageFilter(name, filtername [, parameters])",
+	"returns": "void",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "name", "description": "", "required": true, "default": "", "type": "any", "values": []},
+		{"name": "filtername", "description": "", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "parameters", "description": "", "required": false, "default": "", "type": "struct", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/imagefilter.html"}
+	},
+	"examples": [],
+	"links": []
+}
