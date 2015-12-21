@@ -23,7 +23,7 @@
 	],
 	"examples": [
 		{
-			"title":"Tag Example",
+			"title":"Tag Example ",
 			"description":" ",
 			"code":"<!--- Using the datatype parameter ---> \r\n <cfset val_arr = [\"1.203E+4, 103E4, 11 Oct 1997, 17/08/2001, 07/20/1969, 15 Jan 1945, 23:59pm\"]> \r\n <cfset xlObj = spreadsheetNew(\"testsheet\", true)> \r\n <cfset spreadsheetAddRows(xlObj, val_arr, 1, 1, true, [\"NUMERIC:1;STRING:2,3,4;DATE:\"])> \r\n <cfset spreadsheetwrite(xlObj, \"#expandpath(\"./\")#test_datatype.xlsx\", \"\", true)>  ",
 			"result":"",
