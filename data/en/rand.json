@@ -17,6 +17,19 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "simple example Using rand()",
+			"description": "To generate a random number between 0 to 1",
+			"code": "writeOutput( rand() );"
+		},
+		{
+			"title": "simple example Using rand() with algorithm",
+			"description": "To generate a random number between 0 to 1 by using CFMX_COMPAT algorithm",
+			"code": "writeOutput( rand('CFMX_COMPAT') );"
+		}
+		
 	]
 
 }
