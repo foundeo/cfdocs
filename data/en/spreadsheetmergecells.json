@@ -19,6 +19,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Script Example",
+			"description":" ",
+			"code":"<cfscript> \r\n     ///We need an absolute path, so get the current directory path. \r\n       theFile=GetDirectoryFromPath(GetCurrentTemplatePath()) & \"mergecells.xls\"; \r\n     //Create a new Excel spreadsheet object and add the query data. \r\n     theSheet = SpreadsheetNew(\"CourseData\"); \r\n     //Merges cells 4-6 in the first three rows of the Excel spreadsheet object. \r\n     SpreadsheetMergeCells(theSheet,1,3,4,6);  \r\n     //Set the value of the merged cell. \r\n   SpreadsheetSetCellValue(theSheet,\"Columns 4-6 of rows 1-3 are merged\",1,4); \r\n </cfscript> \r\n <!--- Write the spreadsheet to a file, replacing any existing file. ---> \r\n <cfspreadsheet action=\"write\" filename=\"#theFile#\" name=\"theSheet\" overwrite=true> ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

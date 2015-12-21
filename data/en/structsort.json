@@ -20,6 +20,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Script Example",
+			"description":" ",
+			"code":"<cfscript> \r\n     salaries = StructNew() ; \r\n     employees = StructNew() ; \r\n     departments = StructNew() ; \r\n     for ( i=1; i lt 6; i=i+1 ) \r\n     { \r\n         salary = 120000 - i*10000 ; \r\n         salaries[\"employee#i#\"] = salary ; \r\n         employee = StructNew() ; \r\n         employee[\"salary\"] = salary ;  \r\n         // employee.salary = salary ;  \r\n         employees[\"employee#i#\"] = employee ; \r\n         departments[\"department#i#\"] = StructNew() ; \r\n         departments[\"department#i#\"].boss = employee ;        \r\n     } \r\n </cfscript> \r\n <cfoutput> \r\n <p>list of employees based on the salary (text search): <br> \r\n 1) #ArrayToList( StructSort( salaries ) )#<br>  \r\n </cfoutput>  ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

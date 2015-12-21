@@ -16,6 +16,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<!--- Get the spreadsheet data as a query. ---> \r\n <cfquery name=\"courses\" datasource=\"cfdocexamples\" cachedwithin=\"#CreateTimeSpan(0, 6, 0, 0)#\"> \r\n SELECT CORNUMBER,DEPT_ID,CORLEVEL,COURSE_ID,CORNAME,CORDESC,LASTUPDATE \r\n FROM COURSELIST \r\n </cfquery> \r\n <cfscript> \r\n     ///We need an absolute path, so get the current directory path. \r\n     theFile=GetDirectoryFromPath(GetCurrentTemplatePath()) & courses.xls\"; \r\n     //Create a new Excel spreadsheet object and add the query data. \r\n theSheet = SpreadsheetNew(\"CourseData\"); \r\n     SpreadsheetAddRows(theSheet,courses); \r\n     //Delete row 10. \r\n     SpreadsheetDeleteRow(theSheet,\"10\"); \r\n </cfscript> \r\n <!--- Write the spreadsheet to a file, replacing any existing file. ---> \r\n <cfspreadsheet action=\"write\" filename=\"#theFile#\" name=\"theSheet\"  sheet=1 sheetname=\"courses\" overwrite=true>  ",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }

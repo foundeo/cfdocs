@@ -20,6 +20,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Script Example",
+			"description":" ",
+			"code":"<cfscript> \r\n         spObj = spreadsheetread(\"#dirname#SingleSheet.xls\",\"Sheet2\"); \r\n         spreadsheetCreateSheet(spObj,\"A\"); \r\n         spreadsheetaddrow(spObj,\"x,x,x,x,x\",3,1); \r\n         spreadsheetsetActiveSheet(spObj,\"A\"); \r\n         spreadsheetaddrow(spObj,\"z,z,z,z,z\",3,1); \r\n         spreadsheetsetActiveSheetNumber(spObj,1); \r\n         spreadsheetaddrow(spObj,\"a,b,c,d,e\",3,1); \r\n         SpreadsheetWrite(spObj,\"#dirname#SingleSheet1.xls\",\"yes\"); \r\n </cfscript>  ",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }

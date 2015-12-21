@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<cfscript> \r\n     ///We need an absolute path, so get the current directory path. \r\n        theFile=GetDirectoryFromPath(GetCurrentTemplatePath()) & \"comment.xls\"; \r\n     //Create an Excel spreadsheet object. \r\n     theSheet = SpreadsheetNew(); \r\n     // Define a cell comment. \r\n     comment1.anchor=\"1,1,15,20\"; \r\n     comment1.author=\"Adobe Systems\"; \r\n     comment1.bold=\"true\"; \r\n comment1.color=\"lavender\"; \r\n     comment1.comment=\"This is the cell in row three, column 5 (E).\"; \r\n     comment1.fillcolor=\"yellow\"; \r\n     comment1.font=\"Courier\"; \r\n comment1.horizontalalignment=\"left\"; \r\n     comment1.linestyle=\"dashsys\"; \r\n comment1.size=\"10\"; \r\n     comment1.verticalalignment=\"top\"; \r\n     //Set the comment. \r\n     SpreadsheetSetCellComment(theSheet,comment1,3,5); \r\n     //Get the comment from the Excel spreadsheet object. \r\n     theComment=SpreadsheetGetCellComment(theSheet,3,5); \r\n </cfscript> \r\n <cfoutput> \r\n Row,Column: #theComment.row#,#theComment.column#<br /> \r\n Author: #theComment.author#<br /> \r\n Comment: #theComment.comment# \r\n </cfoutput> \r\n <!--- Write the spreadsheet to a file, replacing any existing file. ---> \r\n <cfspreadsheet action=\"write\" filename=\"#theFile#\" name=\"theSheet\"  sheet=1 sheetname=\"courses\" overwrite=true>  ",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }

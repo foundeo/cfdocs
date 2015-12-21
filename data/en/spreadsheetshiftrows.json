@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Script Example",
+			"description":" ",
+			"code":"<cfscript> \r\n     ///We need an absolute path, so get the current directory path. \r\n       theFile=GetDirectoryFromPath(GetCurrentTemplatePath()) & \"shiftrows.xls\"; \r\n     //Create a new Excel spreadsheet object. \r\n     theSheet = SpreadsheetNew(\"Expenses\"); \r\n     //Set some cell values, indicating their initial location. \r\n     SpreadsheetSetCellValue(theSheet,\"Cell D10\",10,4); \r\n     SpreadsheetSetCellValue(theSheet,\"Cell E11\",11,5); \r\n     SpreadsheetSetCellValue(theSheet,\"Cell A12\",12,1); \r\n     SpreadsheetSetCellValue(theSheet,\"Cell B13\",13,2); \r\n     //Shift rows 10 and 11 down 2 rows. \r\n     SpreadsheetShiftRows(theSheet,10,11,2); \r\n </cfscript> \r\n <!--- Write the spreadsheet to a file, replacing any existing file. ---> \r\n <cfspreadsheet action=\"write\" filename=\"#theFile#\" name=\"theSheet\" overwrite=true> ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }
