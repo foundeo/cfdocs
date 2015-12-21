@@ -16,6 +16,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Create the One dimensional array",
+			"description": "Uses the arrayNew function to create the new array",
+			"code": "newArray = arrayNew(1);\nsomeArray = arraySet(newArray, 1, 4, \"All is well\");\nwriteOutput( serializeJSON(newArray) );",
+			"result": "[\"All is well\", \"All is well\", \"All is well\", \"All is well\"]"
+		},
+		{
+			"title": "Create the Two dimensional array",
+			"description": "Uses the arrayNew function to create the new array",
+			"code": "newArray = arrayNew(2);\nnewArray[1][1] = \"First value\";\nnewArray[1][1] = \"First value\";\nnewArray[1][2] = \"First value\";\nnewArray[2][1] = \"Second value\";\nnewArray[2][2] = \"Second value\";\nwriteOutput( serializeJSON(newArray) );",
+			"result": "[[\"First value\", \"First value\"],[\"Second value\", \"Second value\"]]"
+		}
 	]
 
 }

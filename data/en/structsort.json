@@ -20,6 +20,20 @@
 	},
 	"links": [
 
-	]
+	],
+	"examples": [
+        {
+            "title": "Simple example for structSort function",
+            "description": "Uses the structSort() function to get the sorted structure",
+            "code": "SomeStruct = {red=93,yellow=90,green=94};\nresult = structSort(SomeStruct, \"numeric\", \"desc\");\nwriteOutput( lcase(serializeJSON(result)) );",
+            "result": "[\"green\", \"red\", \"yellow\"]"
+        },
+        {
+            "title": "Simple example for structSort function with pathtosubelement",
+            "description": "Uses the structSort() function to get the sorted structure",
+            "code": "somestruct = {};\nsomeStruct.scott = {age=26, department=\"General\"};\nsomeStruct.glan = {age=29, department=\"computer\"};\nsomeStruct.george = {age=31, department=\"Physical\"};\nresult = structSort(somestruct, \"textnocase\", \"asc\", \"department\");\nwriteOutput( lcase(serializeJSON(result)) );",
+            "result": "[\"glan\",\"scott\",\"george\"]"
+        }
+    ]
 
 }
