@@ -20,6 +20,16 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"",
+			"code":"<cfscript>mySheet =   SpreadsheetNew( \"Test\" ); \r\n  writedump (\"#mySheet#\");   SpreadsheetAddColumn( mySheet,\"MySingleColumn\" ); // Add a row of data: a single value for the single column
+    mySingleColumnValue=\"As you can see, this sentence contains commas, which force the value to be split over 3 columns instead of one.\"; \r\n     SpreadsheetAddRow( mySheet,mySingleColumnValue ); \r\n writedump (\"#mySheet#\"); </cfscript>", 
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

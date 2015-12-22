@@ -19,6 +19,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<!--- Make a spreadsheet object ---> \r\n <cfset s = spreadsheetNew()> \r\n <!--- Add header row ---> \r\n <cfset spreadsheetAddRow(s,\"Name,Beers,Vegetables,Fruits,Meats\")> \r\n <cfdump var=\"#s#\" />",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }
