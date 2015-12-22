@@ -1,0 +1,16 @@
+{
+	"name": "getMemoryUsage",
+	"type": "function",
+	"syntax": "getMemoryUsage([type])",
+	"returns": "query",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "type", "description": "", "required": false, "default": "", "type": "string", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getmemoryusage.html"}
+	},
+	"examples": [],
+	"links": []
+}

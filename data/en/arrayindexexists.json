@@ -1,0 +1,18 @@
+{
+	"name": "arrayIndexExists",
+	"type": "function",
+	"syntax": "arrayIndexExists(array, index)",
+	"member": "array.indexExists(index)",
+	"returns": "boolean",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []},
+		{"name": "index", "description": "", "required": true, "default": "", "type": "number", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arrayindexexists.html"}
+	},
+	"examples": [],
+	"links": []
+}

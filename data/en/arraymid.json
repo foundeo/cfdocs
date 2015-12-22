@@ -1,0 +1,19 @@
+{
+	"name": "arrayMid",
+	"type": "function",
+	"syntax": "arrayMid(array, start [, count])",
+	"member": "array.mid(start [, count])",
+	"returns": "array",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []},
+		{"name": "start", "description": "", "required": true, "default": "", "type": "number", "values": []},
+		{"name": "count", "description": "", "required": false, "default": "", "type": "number", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraymid.html"}
+	},
+	"examples": [],
+	"links": []
+}

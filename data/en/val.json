@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"val(String)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["IsNumeric"],
 	"description":" Converts numeric characters that occur at the beginning of a\n string to a number. If conversion fails, returns zero.",
 	"params": [
 		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]}
@@ -17,6 +17,21 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "simple example Using val()",
+			"description": "To converts numeric characters from string",
+			"code": "SomeString = \"120test12sstring\";\nwriteOutput( val(SomeString) );",
+            "result": "120"
+		},
+		{
+			"title": "simple example Using val()",
+			"description": "To converts numeric characters from string",
+			"code": "SomeString = \"string98\";\nwriteOutput( val(SomeString) );",
+            "result": "0"
+		}
+		
 	]
 
 }

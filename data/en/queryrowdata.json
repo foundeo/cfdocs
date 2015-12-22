@@ -1,0 +1,18 @@
+{
+	"name": "queryRowData",
+	"type": "function",
+	"syntax": "queryRowData(query, rowNumber)",
+	"member": "query.rowData(rowNumber)",
+	"returns": "struct",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
+		{"name": "rowNumber", "description": "", "required": true, "default": "", "type": "number", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryrowdata.html"}
+	},
+	"examples": [],
+	"links": []
+}

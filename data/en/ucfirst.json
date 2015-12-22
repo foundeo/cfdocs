@@ -1,0 +1,19 @@
+{
+	"name": "UCFirst",
+	"type": "function",
+	"syntax": "UCFirst(string [, doAll] [, doLowerIfAllUppercase])",
+	"member": "string.ucFirst([doAll] [, doLowerIfAllUppercase])",
+	"returns": "string",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "doAll", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
+		{"name": "doLowerIfAllUppercase", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/ucfirst.html"}
+	},
+	"examples": [],
+	"links": []
+}

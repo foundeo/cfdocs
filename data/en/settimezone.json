@@ -1,0 +1,16 @@
+{
+	"name": "setTimezone",
+	"type": "function",
+	"syntax": "setTimezone(timezone)",
+	"returns": "string",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "timezone", "description": "", "required": true, "default": "", "type": "string", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/settimezone.html"}
+	},
+	"examples": [],
+	"links": []
+}

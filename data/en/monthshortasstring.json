@@ -1,0 +1,16 @@
+{
+	"name": "monthShortAsString",
+	"type": "function",
+	"syntax": "monthShortAsString(monthnumber)",
+	"returns": "string",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "monthnumber", "description": "", "required": true, "default": "", "type": "number", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/monthshortasstring.html"}
+	},
+	"examples": [],
+	"links": []
+}

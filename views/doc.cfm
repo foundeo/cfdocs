@@ -40,6 +40,18 @@
             <h4><span class="glyphicon glyphicon-warning-sign"></span> Discouraged: #autoLink(htmlEditFormat(data.discouraged))#</h4>
         </div>
     </cfif>
+    <cfif StructKeyExists(data, "engines") AND structCount(data.engines) EQ 1>
+    	<div class="alert alert-warning">
+            This <cfif data.type IS "tag">tag<cfelseif data.type IS "function">function</cfif> requires 
+            	<cfif structKeyExists(data.engines, "coldfusion")> 
+            		Adobe ColdFusion<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)> #data.engines.coldfusion.minimum_version# and up</cfif>.
+            		 <em> Not supported on Lucee, OpenBD, etc.</em>
+            	<cfelseif structKeyExists(data.engines, "lucee")>
+            		Lucee. <em>Not supported on Adobe ColdFusion.</em> 
+            	</cfif>
+            
+        </div>
+    </cfif>
   </div>
 </div>
 <cfif data.type IS NOT "404" AND data.type IS NOT "index">

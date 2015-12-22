@@ -1,0 +1,17 @@
+{
+	"name": "arrayReverse",
+	"type": "function",
+	"syntax": "arrayReverse(array)",
+	"member": "array.reverse()",
+	"returns": "array",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arrayreverse.html"}
+	},
+	"examples": [],
+	"links": []
+}
