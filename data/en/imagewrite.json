@@ -2,24 +2,35 @@
 	"name":"imageWrite",
 	"type":"function",
 	"syntax":"imageWrite(name [, destination] [, quality] [, overwrite])",
+	"member":"someImage.write([destination] [, quality] [, overwrite])",
 	"returns":"void",
 	"related":[],
 	"description":" Writes a ColdFusion image to the specified filename or destination.",
 	"params": [
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"destination","description":"No Help Available","required":false,"default":"","type":"String","values":[]},
-		{"name":"quality","description":"No Help Available","required":false,"default":"","type":"String","values":[]},
-		{"name":"overwrite","description":"No Help Available","required":false,"default":true,"type":"boolean","values":[false,true]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
+		{"name":"destination","description":"The path to write the file.\r\n\r\nIf you create the image with the ImageNew function or another operation where you do not specify the filename, specify the destination parameter. The file format is derived from the extension of the filename. The default value for this parameter is the filename of the original image source.","required":false,"default":"","type":"String","values":[]},
+		{"name":"quality","description":"Defines the JPEG quality used to encode the image. This parameter applies only to destination files with an extension of JPG or JPEG. Valid values are fractions that range from 0 through 1 (the lower the number, the lower the quality). The default value is 0.75.","required":false,"default":"","type":"String","values":[]},
+		{"name":"overwrite","description":"If set to true, overwrites the destination file","required":false,"default":true,"type":"boolean","values":[false,true]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagewrite.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagewrite.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagewrite.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagewrite.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagewrite"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagewrite"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Using write member function",
+			"description":"CF11+ save an image with a new name",
+			"code":"imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\nimgObj.write('newName.png');",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }
+

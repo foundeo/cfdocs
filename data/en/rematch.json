@@ -1,7 +1,7 @@
 {
-	"name":"rematch",
+	"name":"REmatch",
 	"type":"function",
-	"syntax":"rematch(reg_expression, string)",
+	"syntax":"REmatch(reg_expression, string)",
 	"returns":"Array",
 	"related":[],
 	"description":" Uses a regular expression (RE) to search a string for a pattern, starting from a specified position.",

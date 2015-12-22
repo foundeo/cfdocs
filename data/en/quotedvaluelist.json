@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<cfquery name = \"GetCourseList\" datasource = \"cfdocexamples\"> \r\n SELECT * \r\n FROM CourseList \r\n WHERE Dept_ID IN ('#GetDepartments.Dept_ID#') \r\n </cfquery> \r\n <cfoutput> \r\n #quotedValueList(GetCourseList.CorNumber,\";\")# \r\n </cfoutput> ",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }

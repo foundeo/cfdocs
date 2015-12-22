@@ -1,7 +1,7 @@
 {
-	"name":"SessionInvalidate",
+	"name":"sessionInvalidate",
 	"type":"function",
-	"syntax":"SessionInvalidate()",
+	"syntax":"sessionInvalidate()",
 	"returns":"void",
 	"related":["sessionrotate"],
 	"description":"Clears session scope and makes the current session identifiers no longer valid. This function does not invalidate J2EE sessions, only CF sessions (CFID/CFToken)",
@@ -11,14 +11,13 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/sessioninvalidate.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/sessioninvalidate.html"},
-		"railo": {"minimum_version":"4", "notes":"", "docs":"http://railodocs.org/index.cfm/function/sessioninvalidate"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/sessioninvalidate"}
+		"railo": {"minimum_version":"4", "notes":"", "docs":"http://railodocs.org/index.cfm/function/sessioninvalidate"}
 	},
 	"links": [
 		{
-			"title":"SessionInvalidate Backport",
+			"title":"sessionInvalidate Backport",
 			"description":"This backport allows you to invalidate sessions on older versions of CF",
-			"url":"http:\/\/misterdai.yougeezer.co.uk\/2012\/03\/12\/coldfusion-10-backport-sessioninvalidate\/"
+			"url":"http:\/\/misterdai.yougeezer.co.uk\/2012\/03\/12\/coldfusion-10-backport-sessionInvalidate\/"
 		}
 	]
 

@@ -1,7 +1,7 @@
 {
-	"name":"reFind",
+	"name":"REFind",
 	"type":"function",
-	"syntax":"reFind(reg_expression, String [, start] [, returnsubexpressions])",
+	"syntax":"REFind(reg_expression, String [, start] [, returnsubexpressions])",
 	"returns":"Object",
 	"related":["find","refindnocase","findnocase","rereplace"],
 	"description":" ",
@@ -34,8 +34,8 @@
 
 		{
 			"title": "Find an integer in a string",
-			"description": "This example uses REFind to locate an integer in a string, and returns the position of the integer in the string.",
-			"code": "ReFind(\"[0-9]+\", \"test 123!\")",
+			"description": "This example uses reFind to locate an integer in a string, and returns the position of the integer in the string.",
+			"code": "REFind(\"[0-9]+\", \"test 123!\")",
 			"result": "6"
 		}
 

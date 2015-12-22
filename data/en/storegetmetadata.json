@@ -1,7 +1,7 @@
 {
-	"name":"StoreGetMetadata",
+	"name":"storeGetMetadata",
 	"type":"function",
-	"syntax":"StoreGetMetadata(url);",
+	"syntax":"storeGetMetadata(url);",
 	"returns":"Object metadata or bucket metadata",
 	"related":[],
 	"description":" Returns the metadata related to the object or bucket.",
@@ -9,10 +9,7 @@
 		{"name":"url","description":"Amazon S3 URLs (bucket or object).","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/StoreGetMetadata.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/StoreGetMetadata.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/StoreGetMetadata"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/StoreGetMetadata"}
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/StoreGetMetadata.html"}
 	},
 	"links": [
 
@@ -21,7 +18,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfdump var = #StoreGetMetadata('bucket_Name')#>> \r\n",
+			"code": "<cfdump var = #storeGetMetadata('bucket_Name')#>> \r\n",
 			"result": ""
 		}
 	]

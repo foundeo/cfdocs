@@ -22,12 +22,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to draw a square bisected by a diagonal line.",
-			"code": "<!--- Use the ImageNew function to create a 100x100-pixel image. ---> \r\n <cfset myImage=ImageNew(\"\",100,100)> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset ImageSetAntialiasing(myImage,\"on\")> \r\n <!--- Draw a diagonal line that bisects the square. ---> \r\n <cfset ImageDrawLine(myImage,0,0,100,100)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"code": "<!--- Use the imageNew function to create a 100x100-pixel image. ---> \r\n <cfset myImage=imageNew(\"\",100,100)> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset imageSetAntialiasing(myImage,\"on\")> \r\n <!--- Draw a diagonal line that bisects the square. ---> \r\n <cfset imageDrawLine(myImage,0,0,100,100)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
 			"result": "",
 			"runnable": false
 		},

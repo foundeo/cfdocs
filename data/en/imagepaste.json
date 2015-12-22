@@ -21,12 +21,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to copy a small rectangular area of one image and paste it over a larger image.",
-			"code": "<!--- Create a ColdFusion image from an existing JPEG file and name it \"myImage1\". ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/jeff05.jpg\" name=\"myImage1\"> \r\n <!--- Create a ColdFusion image from an existing JPEG file and name it \"myImage2\". ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/maxwell01.jpg\" name=\"myImage2\"> \r\n <!--- Copy a rectangular region of myImage1. ---> \r\n <cfset resImage = ImageCopy(myImage1,1,1,50,50)> \r\n <!--- Paste the rectangular area over myImage2. ---> \r\n <cfset ImagePaste(myImage2,resImage,100,100)> \r\n <!--- Write the second ColdFusion image to result.jpg. ---> \r\n <cfimage source=\"#myImage2#\" action=\"write\" destination=\"test_myImage.jpg\" overwrite=\"yes\"> \r\n <!--- Display the two source images and the new image. ---> \r\n <img src=\"../cfdocs/images/artgallery/jeff05.jpg\"/> \r\n <img src=\"../cfdocs/images/artgallery/maxwell01.jpg\"/> \r\n <img src=\"test_myImage.jpg\"/> ",
+			"code": "<!--- Create a ColdFusion image from an existing JPEG file and name it \"myImage1\". ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/jeff05.jpg\" name=\"myImage1\"> \r\n <!--- Create a ColdFusion image from an existing JPEG file and name it \"myImage2\". ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/maxwell01.jpg\" name=\"myImage2\"> \r\n <!--- Copy a rectangular region of myImage1. ---> \r\n <cfset resImage = imageCopy(myImage1,1,1,50,50)> \r\n <!--- Paste the rectangular area over myImage2. ---> \r\n <cfset imagePaste(myImage2,resImage,100,100)> \r\n <!--- Write the second ColdFusion image to result.jpg. ---> \r\n <cfimage source=\"#myImage2#\" action=\"write\" destination=\"test_myImage.jpg\" overwrite=\"yes\"> \r\n <!--- Display the two source images and the new image. ---> \r\n <img src=\"../cfdocs/images/artgallery/jeff05.jpg\"/> \r\n <img src=\"../cfdocs/images/artgallery/maxwell01.jpg\"/> \r\n <img src=\"test_myImage.jpg\"/> ",
 			"result": "",
 			"runnable":false
 		},{

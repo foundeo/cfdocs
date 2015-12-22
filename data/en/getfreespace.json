@@ -1,5 +1,5 @@
 {
-	"name":"GetFreeSpace",
+	"name":"getFreeSpace",
 	"type":"function",
 	"syntax":"getFreeSpace(path);",
 	"returns":"Returns the free space in bytes.",
@@ -9,10 +9,9 @@
 		{"name":"path","description":"The Path to the Hard Disk Drive or to the in-memory file system - ram.","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/GetFreeSpace.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/GetFreeSpace.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/GetFreeSpace"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/GetFreeSpace"}
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getfreespace.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/getfreespace.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/GetFreeSpace"}
 	},
 	"links": [
 
@@ -27,7 +26,7 @@
         {
 			"title": "Tag Syntax",
 			"description": "space.cfm",
-			"code": "<cfset freeRAMSpace = getFreeSpace('ram:')>\r\n <cfset freeDiskSpace = getFreeSpace('c:')> \r\n Free Application RAM Memory = #DecimalFormat(freeRAMSpace / (1024 * 1024))# MB \r\n <br>Free Hard Disk Space = #DecimalFormat(freeDiskSpace / (1024 * 1024 * 1024))# GB  \r\n",
+			"code": "<cfset freeRAMSpace = getFreeSpace('ram:')>\r\n <cfset freeDiskSpace = getFreeSpace('c:')> \r\n Free Application RAM Memory = #decimalFormat(freeRAMSpace / (1024 * 1024))# MB \r\n <br>Free Hard Disk Space = #decimalFormat(freeDiskSpace / (1024 * 1024 * 1024))# GB  \r\n",
 			"result": ""
 		}
 	]

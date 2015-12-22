@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<cfset local.justifyString = \"abcdefghijklmnop\" /> \r\n <cfset jstring = rJustify(local.justifyString, 10)> \r\n <cfdump var=\"#jstring#\" /> ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

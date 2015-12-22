@@ -48,7 +48,7 @@
 		{
 		   "title": "Substring Search",
 		   "description": "Lucee4.5+",
-		   "code": "words = [ 'hello' , 'world' ];\npositionOfSubstring = ArrayContains( words, 'el', true );\nwriteDump(positionOfSubstring);",
+		   "code": "words = [ 'hello' , 'world' ];\npositionOfSubstring = arrayContains( words, 'el', true );\nwriteDump(positionOfSubstring);",
 		   "result": "1"
 		}
 	]

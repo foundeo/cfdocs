@@ -22,9 +22,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "the in-memory file system memory set in cfadmin and should return that.",
-			"code": "<cfif not isDefined ('form.url')> \r\n <cfset form.url = 'www.adobe.com'>  \r\n </cfif> \r\n
-<cfform action='#cgi.SCRIPT_NAME#' method='post'> \r\n <cfinput name='url' type='text' value='#form.url#'> \r\n
-<cfinput name='submit' type='submit' value='Show link to this URL!!!'> \r\n </cfform> \r\n <hr /> \r\n <cfoutput >  \r\n <b>LINK to URL:</b> \r\n <a target='_blank' href='http:\/\/#encodeForURL(form.url)#'>#encodeForURL(form.url)#</a> \r\n </cfoutput> \r\n",
+			"code": "<cfif not isDefined ('form.url')> \r\n <cfset form.url = 'www.adobe.com'>  \r\n </cfif> \r\n <cfform action='#cgi.SCRIPT_NAME#' method='post'> \r\n <cfinput name='url' type='text' value='#form.url#'> \r\n <cfinput name='submit' type='submit' value='Show link to this URL!!!'> \r\n </cfform> \r\n <hr /> \r\n <cfoutput >  \r\n <b>LINK to URL:</b> \r\n <a target='_blank' href='http:\/\/#encodeForURL(form.url)#'>#encodeForURL(form.url)#</a> \r\n </cfoutput> \r\n",
 			"result": ""
 		}
 	]

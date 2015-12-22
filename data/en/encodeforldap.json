@@ -1,17 +1,17 @@
 {
-	"name":"EncodeForLDAP",
+	"name":"encodeForLDAP",
 	"type":"function",
-	"syntax":"EncodeForLDAP(string);",
+	"syntax":"encodeForLDAP(string);",
 	"returns":"String",
 	"related":[],
-	"description":" Encodes the given string for safe output in LDAP queries. this function is deprecated, use function ESAPIEncode('ldap',...) instead.",
+	"description":"Encodes the given string for safe output in LDAP queries.",
 	"params": [
 		{"name":"string","description":"String to encode.","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/EncodeForLDAP.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/EncodeForLDAP"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/EncodeForLDAP"}
+		"coldfusion": {"minimum_version":"11", "notes":"Works on CF11+ but not documented.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-by-category/display-and-formatting-functions.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/encodeforldap.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/EncodeForLDAP"}
 	},
 	"links": [
 
@@ -20,8 +20,8 @@
         {
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n enc=EncodeForLDAP('<script>'); \r\n writedump(enc); \r\n </cfscript> \r\n",
-			"result": ""
+			"code": "encodeForLDAP(\"pete) (| (password = * ) )\")",
+			"result": "pete\\29 \\28| \\28password = \\2a \\29 \\29"
 		}
 	]
 

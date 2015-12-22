@@ -22,15 +22,15 @@
 	],
 	"examples": [
 		{
-			"title": "DateDiff Example",
+			"title": "dateDiff Example",
 			"description": "Find the difference between two dates.",
-			"code": "DateDiff(\"d\", \"2013-01-15\", \"2013-01-25\")",
+			"code": "dateDiff(\"d\", \"2013-01-15\", \"2013-01-25\")",
 			"result": "10"
 		},
 		{
 			"title": "How old are they?",
 			"description": "Calculates a persons age based on a variable birthDate which contains a date. Uses the now function to get current date.",
-			"code": "DateDiff(\"yyyy\", birthDate, now())"
+			"code": "dateDiff(\"yyyy\", birthDate, now())"
 		}
 	]
 

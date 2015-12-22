@@ -4,7 +4,7 @@
 	"syntax":"createObject(type, context, class, locale, servername, component_name, urltowsdl [, portname])",
 	"returns":"Object",
 	"related":[],
-	"description":" The CreateObject function takes different arguments depending on the value of the first argument:\n\n CreateObject('com', class, context, serverName)\n CreateObject('component', component-name)\n CreateObject('corba', context, class, locale)\n CreateObject('java', class)\n CreateObject('webservice', urltowsdl, [, portname])",
+	"description":" The createObject function takes different arguments depending on the value of the first argument:\n\n createObject('com', class, context, serverName)\n createObject('component', component-name)\n createObject('corba', context, class, locale)\n createObject('java', class)\n createObject('webservice', urltowsdl, [, portname])",
 	"params": [
 		{"name":"type","description":"","required":true,"default":"","type":"String","values":["component","corba","com","java","webservice"]},
 		{"name":"context","description":"","required":true,"default":"","type":"String","values":[]},
@@ -28,14 +28,14 @@
 	"examples": [
 		{
 			"title": "Script Syntax",
-			"description": "CreateObject Component",
-			"code": "<cfscript> \r\n tellTimeCFC=CreateObject(\"component\",\"appResources.components.tellTime\"); \r\n tellTimeCFC.getLocalTime();\r\n </cfscript>       ",
+			"description": "createObject Component",
+			"code": "<cfscript> \r\n tellTimeCFC=createObject(\"component\",\"appResources.components.tellTime\"); \r\n tellTimeCFC.getLocalTime();\r\n </cfscript>       ",
 			"result": ""
 		},
         {
 			"title": "Script Syntax",
-			"description": "CreateObject WebService",
-			"code": "<cfscript> \r\n ws = CreateObject(\"webservice\", \"http://www.xmethods.net/sd/2001/TemperatureService.wsdl\"); \r\n xlatstring = ws.getTemp(zipcode = \"55987\"); \r\n writeoutput(\"The temperature at 55987 is \" & xlatstring); \r\n </cfscript>      ",
+			"description": "createObject WebService",
+			"code": "<cfscript> \r\n ws = createObject(\"webservice\", \"http://www.xmethods.net/sd/2001/TemperatureService.wsdl\"); \r\n xlatstring = ws.getTemp(zipcode = \"55987\"); \r\n writeOutput(\"The temperature at 55987 is \" & xlatstring); \r\n </cfscript>      ",
 			"result": ""
 		}
 	]

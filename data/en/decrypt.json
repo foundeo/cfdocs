@@ -27,7 +27,7 @@
 		{
 			"title":"Encrypt and Decrypt a Secret",
 			"description":"Generate an AES 128 bit key and then use it to encrypt and decrypt a secret.",
-			"code":"ex={};\nex.key = GenerateSecretKey(\"AES\");\nex.secret = \"top secret\";\nex.encrypted=Encrypt(ex.secret, ex.key, \"AES\", \"Base64\");\nex.decrypted=Decrypt(ex.encrypted, ex.key, \"AES\", \"Base64\");\nwriteDump(ex);",
+			"code":"ex={};\nex.key = generateSecretKey(\"AES\");\nex.secret = \"top secret\";\nex.encrypted=encrypt(ex.secret, ex.key, \"AES\", \"Base64\");\nex.decrypted=decrypt(ex.encrypted, ex.key, \"AES\", \"Base64\");\nwriteDump(ex);",
 			"result":""
 		}
 	]

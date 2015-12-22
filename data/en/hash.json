@@ -25,13 +25,13 @@
 		{
 			"title":"SHA-256 Hash Example",
 			"description":"Returns 64 character hex result.",
-			"code":"Hash(\"something\", \"SHA-256\", \"UTF-8\")",
+			"code":"hash(\"something\", \"SHA-256\", \"UTF-8\")",
 			"result":"3FC9B689459D738F8C88A3A48AA9E33542016B7A4052E001AAA536FCA74813CB"
 		},
 		{
 			"title":"MD5 Hash Example",
 			"description":"MD5 is not recommended for use requiring security.",
-			"code":"Hash(\"something\")",
+			"code":"hash(\"something\")",
 			"result":"437B930DB84B8079C2DD804A71936B5F"
 		}
 	]

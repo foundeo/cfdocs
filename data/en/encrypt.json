@@ -30,8 +30,8 @@
 	"examples": [
 		{
 			"title":"Encrypt using AES Encryption",
-			"description":"The key must be generated using the GenerateSecretKey(\"AES\") function.",
-			"code":"Encrypt(\"top secret\", \"WTq8zYcZfaWVvMncigHqwQ==\", \"AES\", \"Base64\")",
+			"description":"The key must be generated using the generateSecretKey(\"AES\") function.",
+			"code":"encrypt(\"top secret\", \"WTq8zYcZfaWVvMncigHqwQ==\", \"AES\", \"Base64\")",
 			"result":"keciULin7bxOWvN/BOarWw=="
 		},
 		{

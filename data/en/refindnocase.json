@@ -1,7 +1,7 @@
 {
-	"name":"refindNoCase",
+	"name":"REFindNoCase",
 	"type":"function",
-	"syntax":"refindNoCase(reg_expression, String [, start] [, returnsubexpressions])",
+	"syntax":"REFindNoCase(reg_expression, String [, start] [, returnsubexpressions])",
 	"returns":"Object",
 	"related":[],
 	"description":" Uses a regular expression (RE) to search a string for a pattern,\n starting from a specified position. The search is\n case-insensitive.",
@@ -25,7 +25,7 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "getVal = ReFindNoCase(\"E\", \"test 123!\"); \r\n writeDump(getVal);",
+			"code": "getVal = REFindNoCase(\"E\", \"test 123!\"); \r\n writeDump(getVal);",
 			"result": "Expected Result is 2"
 		}
 	]

@@ -1,7 +1,7 @@
 {
-	"name":"RestDeleteApplication",
+	"name":"restDeleteApplication",
 	"type":"function",
-	"syntax":"RestDeleteApplication('dirPath');",
+	"syntax":"restDeleteApplication('dirPath');",
 	"returns":"",
 	"related":[],
 	"description":" Unregisters the directory path if it is already registered.",
@@ -9,10 +9,9 @@
 		{"name":"dirPath","description":"Path to the directory to be unregistered. If the path is not valid, it results in an error.","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/RestDeleteApplication.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/RestDeleteApplication.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/RestDeleteApplication"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/RestDeleteApplication"}
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/restdeleteapplication.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/restdeleteapplication.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/RestDeleteApplication"}
 	},
 	"links": [
 
@@ -21,7 +20,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset RestDeleteApplication('C:/ColdFusion10/cfusion/wwwroot/restexample/')> \r\n",
+			"code": "<cfset restDeleteApplication('C:/ColdFusion10/cfusion/wwwroot/restexample/')> \r\n",
 			"result": ""
 		}
 	]

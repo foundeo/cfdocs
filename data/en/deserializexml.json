@@ -1,5 +1,5 @@
 {
-	"name":"DeserializeXML",
+	"name":"deserializeXML",
 	"type":"function",
 	"syntax":"deserializeXML( String strToDeserialize, boolean useCustomSerializer );",
 	"returns":"Object",
@@ -10,10 +10,7 @@
         {"name":"useCustomSerializer","description":"Boolean. Whether to use the custom serializer or not. The default value is true. The custom serializer will be always used for XML deserialization. If false, the XML/JSON deserialization will be done using the default ColdFusion behavior. If any other type is passed with useCustomSerializer as false, then TypeNotSupportedException will be thrown.","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DeserializeXML.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/DeserializeXML.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/DeserializeXML"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/DeserializeXML"}
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/deserializexml.html"}
 	},
 	"links": [
 
@@ -22,7 +19,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset value = deserializeXML(ToString(xmlDoc.root.XMLChildren[i].XMLChildren[1]), true)> \r\n",
+			"code": "<cfset value = deserializeXML(toString(xmlDoc.root.XMLChildren[i].XMLChildren[1]), true)> \r\n",
 			"result": ""
 		}
 	]

@@ -1,17 +1,17 @@
 {
-	"name":"EncodeForDN",
+	"name":"encodeForDN",
 	"type":"function",
-	"syntax":"EncodeForDN( string );",
+	"syntax":"encodeForDN( string );",
 	"returns":"String",
 	"related":[],
-	"description":" Encodes the given string for safe output in LDAP Distinguished Names. this function is deprecated, use function ESAPIEncode('dn',...) instead.",
+	"description":"Encodes the given string for safe output in LDAP Distinguished Names. Lucee only, not supported on Adobe CF.",
 	"params": [
 		{"name":"string","description":"string to encode.","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/EncodeForDN.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/EncodeForDN"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/EncodeForDN"}
+		"coldfusion": {"minimum_version":"11", "notes":"Works on CF11+ but not documented.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-by-category/display-and-formatting-functions.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/encodefordn.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/EncodeForDN"}
 	},
 	"links": [
 
@@ -20,7 +20,7 @@
         {
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n enc=EncodeForDN('<script>'); \r\n writedump(enc); \r\n </cfscript> \r\n",
+			"code": "<cfscript> \r\n enc=encodeForDN('<script>'); \r\n writeDump(enc); \r\n </cfscript> \r\n",
 			"result": ""
 		}
 	]

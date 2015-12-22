@@ -1,7 +1,7 @@
 {
-	"name":"SessionGetMetadata",
+	"name":"sessionGetMetadata",
 	"type":"function",
-	"syntax":"sessionGetMetaData();",
+	"syntax":"sessionGetMetadata();",
 	"returns":"Meta data structure related to the current session",
 	"related":[],
 	"description":" Returns meta data related to the current session.",
@@ -9,10 +9,7 @@
 		{"name":"region","description":"Name of the cache region.","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/SessionGetMetadata.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/SessionGetMetadata.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/SessionGetMetadata"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/SessionGetMetadata"}
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/sessiongetmetadata.html"}
 	},
 	"links": [
 
@@ -21,7 +18,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset metaData = sessionGetMetaData() > \r\n",
+			"code": "<cfset metaData = sessionGetMetadata() > \r\n",
 			"result": ""
 		}
 	]

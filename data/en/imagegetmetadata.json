@@ -1,7 +1,7 @@
 {
-	"name":"ImageGetMetadata",
+	"name":"imageGetMetadata",
 	"type":"function",
-	"syntax":"ImageGetMetadata(image)",
+	"syntax":"imageGetMetadata(image)",
 	"member":"someImage.getMetadata()",
 	"returns":"Struct",
 	"related":[],
@@ -21,7 +21,7 @@
 		{
 			"title": "Tag Usage",
 			"description":"CF11+ Extract the meta data from an image",
-			"code":"<cfimage action=\"read\" name=\"myImage\" source=\"http://www.exiv2.org/include/img_1771.jpg\">\r\n<cfset metaData = ImageGetMetadata(myImage)>\r\n<cfdump var=\"#metaData#\">",
+			"code":"<cfimage action=\"read\" name=\"myImage\" source=\"http://www.exiv2.org/include/img_1771.jpg\">\r\n<cfset metaData = imageGetMetadata(myImage)>\r\n<cfdump var=\"#metaData#\">",
 			"result": "",
 			"runnable": true
 		},

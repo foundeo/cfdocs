@@ -40,7 +40,7 @@ h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier Ne
   padding: 3px 20px;
 }
 
-.tt-suggestion:hover {
+.tt-suggestion:hover, .tt-cursor {
   color: #fff;
   cursor: pointer;
   background-color: #0081c2;
@@ -90,7 +90,7 @@ footer { text-align: center; margin-top: 10px; font-size:smaller; }
 }
 .syntax-highlight {
   color: #c7254e;
-  background-color: #ffffe0;
+  font-weight:bold;
 }
 
 .alert-warning a {

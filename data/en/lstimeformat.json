@@ -1,7 +1,7 @@
 {
-	"name":"lsTimeFormat",
+	"name":"LSTimeFormat",
 	"type":"function",
-	"syntax":"lsTimeFormat(time [, mask])",
+	"syntax":"LSTimeFormat(time [, mask])",
 	"returns":"String",
 	"related":[],
 	"description":" Formats the time part of a date/time string into a string in a\n locale-specific format.\n [mask - quicky]\n h,hh,H,HH: Hours; m,mm: Minutes; s,ss: Seconds;\n l: Milliseconds; t: A or P; tt: AM or PM\n \"short\" = h:mm tt; \"medium\" = h:mm:ss tt",
@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"LSTimeFormat returns a time value using the locale convention.  ",
+			"code":"<!--- loop through a list of locales and show time values ---> \r\n <cfloop LIST = \"#Server.Coldfusion.SupportedLocales#\" \r\n index = \"locale\" delimiters = \",\"> \r\n <cfset oldlocale = setLocale(locale)> \r\n  <cfoutput><p><B><I>#locale#</I></B> \r\n #LSTimeFormat(now())# \r\n #LSTimeFormat(now(), 'hh:mm:ss')# \r\n #LSTimeFormat(now(), 'hh:mm:sst')# \r\n #LSTimeFormat(now(), 'hh:mm:sstt')# \r\n #LSTimeFormat(now(), 'HH:mm:ss')# \r\n <hr noshade> \r\n </cfoutput> \r\n </cfloop> ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

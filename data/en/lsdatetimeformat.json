@@ -1,5 +1,5 @@
 {
-	"name":"lsDateTimeFormat",
+	"name":"LSDateTimeFormat",
 	"type":"function",
 	"syntax":"LSDateTimeFormat (date , mask); LSDateTimeFormat (date [, mask, locale]); LSDateTimeFormat (date [, mask, locale, timeZone]);",
 	"returns":"A formatted date and time value.",
@@ -12,10 +12,9 @@
         {"name":"locale","description":"Locale to use instead of the locale of the page when processing the function..","required":false,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/lsDateTimeFormat.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/lsDateTimeFormat.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsDateTimeFormat"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsDateTimeFormat"}
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/lsdatetimeformat.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/lsdatetimeformat.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsDateTimeFormat"}
 	},
 	"links": [
 
@@ -24,7 +23,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": " ",
-			"code": "<cfset todayDateTime = Now()> \r\n <body> \r\n <h3>DateTimeFormat Example</h3> \r\n <p>Today's date and time are <cfoutput>#todayDateTime#</cfoutput>. \r\n <p>Using DateTimeFormat, we can display that date and time in different ways: \r\n <cfoutput>  \r\n <ul>  \r\n <li>#DateTimeFormat(todayDateTime, 'yyyy.MM.dd G 'at' HH:nn:ss z')# \r\n <li>#DateTimeFormat(todayDateTime, 'EEE, MMM d, ''yy')# \r\n <li>#DateTimeFormat(todayDateTime, 'h:nn a')# \r\n <li>#DateTimeFormat(todayDateTime, 'hh 'o''clock' a, zzzz')# \r\n <li>#DateTimeFormat(todayDateTime, 'K:nn a, z')# \r\n <li>#DateTimeFormat(todayDateTime, 'yyyyy.MMMMM.dd GGG hh:nn aaa')# \r\n <li>#DateTimeFormat(todayDateTime, 'EEE, d MMM yyyy HH:nn:ss Z')# \r\n <li>#DateTimeFormat(todayDateTime, 'yyMMddHHnnssZ', 'English (UK)', 'GMT')# \r\n </ul> \r\n </cfoutput> \r\n",
+			"code": "<cfset todayDateTime = now()> \r\n <body> \r\n <h3>DateTimeFormat Example</h3> \r\n <p>Today's date and time are <cfoutput>#todayDateTime#</cfoutput>. \r\n <p>Using DateTimeFormat, we can display that date and time in different ways: \r\n <cfoutput>  \r\n <ul>  \r\n <li>#dateTimeFormat(todayDateTime, 'yyyy.MM.dd G 'at' HH:nn:ss z')# \r\n <li>#dateTimeFormat(todayDateTime, 'EEE, MMM d, ''yy')# \r\n <li>#dateTimeFormat(todayDateTime, 'h:nn a')# \r\n <li>#dateTimeFormat(todayDateTime, 'hh 'o''clock' a, zzzz')# \r\n <li>#dateTimeFormat(todayDateTime, 'K:nn a, z')# \r\n <li>#dateTimeFormat(todayDateTime, 'yyyyy.MMMMM.dd GGG hh:nn aaa')# \r\n <li>#dateTimeFormat(todayDateTime, 'EEE, d MMM yyyy HH:nn:ss Z')# \r\n <li>#dateTimeFormat(todayDateTime, 'yyMMddHHnnssZ', 'English (UK)', 'GMT')# \r\n </ul> \r\n </cfoutput> \r\n",
 			"result": ""
 		}
 	]

@@ -23,7 +23,7 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "base64Value = toBase64( \"stringValue\" ); \r\n binaryValue = toBinary( base64Value ); \r\n stringValue = toString( binaryValue ); \r\n writedump(stringValue);",
+			"code": "base64Value = toBase64( \"stringValue\" ); \r\n binaryValue = toBinary( base64Value ); \r\n stringValue = toString( binaryValue ); \r\n writeDump(stringValue);",
 			"result": "Expected Result: stringValue"
 		}
 	]

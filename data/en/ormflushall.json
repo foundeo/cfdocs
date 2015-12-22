@@ -1,7 +1,7 @@
 {
 	"name":"ORMFlushAll",
 	"type":"function",
-	"syntax":"ormflushall();",
+	"syntax":"ORMFlushAll();",
 	"returns":"",
 	"related":[],
 	"description":" Flushes all the current Hibernate sessions in the request.",
@@ -9,10 +9,7 @@
 		{"name":"region","description":"Name of the cache region.","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ORMFlushAll.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/ORMFlushAll.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ORMFlushAll"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ORMFlushAll"}
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormflushall.html"}
 	},
 	"links": [
 

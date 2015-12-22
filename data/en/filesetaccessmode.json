@@ -23,7 +23,7 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n FileSetAccessMode(\"test1.txt\", \"004\"); \r\n </cfscript>   ",
+			"code": "<cfscript> \r\n fileSetAccessMode(\"test1.txt\", \"004\"); \r\n </cfscript>   ",
 			"result": "",
 			"runnable":false
 		}

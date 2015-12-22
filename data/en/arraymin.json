@@ -4,10 +4,10 @@
 	"syntax":"arrayMin(array)",
 	"member":"someArray.min()",
 	"returns":"Numeric",
-	"related":[],
+	"related":["ArrayMax"],
 	"description":" Returns the smallest numeric value in an array. If the array\n parameter value is an empty array, returns zero.\n All elements must contain values that can be automatically\n converted to numeric values.",
 	"params": [
-		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]}
+		{"name":"array","description":"An array or variable name","required":true,"default":"","type":"Array","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,26 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Simple example with empty array",
+			"description": "To get the smallest numeric value of an array",
+			"code": "someArray = arrayNew(1);\nwriteOutput(arrayMin(someArray));",
+			"result": "0"
+		},
+		{
+			"title": "Get smallest numeric value of an array",
+			"description": "Uses the arrayMin function to get the smallest numeric value of an array",
+			"code": "someArray = [23,45,87,2,4];\nwriteOutput(arrayMin(someArray));",
+			"result": "2"
+		},
+		{
+			"title": "Get smallest numeric value of an array using member function",
+			"description": "CF11+ Lucee4.5+",
+			"code": "someArray = [23,45,99,1,4];\nwriteOutput(someArray.Min());",
+			"result": "1"
+		}
 	]
 
 }

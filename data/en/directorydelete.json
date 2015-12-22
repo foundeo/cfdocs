@@ -23,7 +23,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset delDirectory = \"someDirPath\" /> \r\n <cfset recurse = true /> \r\n <cfset DirectoryDelete(delDirectory,recurse)>   ",
+			"code": "<cfset delDirectory = \"someDirPath\" /> \r\n <cfset recurse = true /> \r\n <cfset directoryDelete(delDirectory,recurse)>   ",
 			"result": "",
             "runnable":false
 		}

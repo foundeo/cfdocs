@@ -1,7 +1,7 @@
 {
 	"name":"callStackGet",
 	"type":"function",
-	"syntax":"callStageGet();",
+	"syntax":"callStackGet();",
 	"returns":"void",
 	"related":[],
 	"description":" Returns an array of structs. Each struct contains template name, line nbr, and if function name (if applicable). This is a snapshot of all function calls or invocations.",
@@ -9,9 +9,8 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CallStackGet.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/CallStackGet.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/CallStackGet"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/CallStackGet"}
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/callstackget.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/CallStackGet"}
 	},
 	"links": [
 
@@ -26,7 +25,7 @@
         {
 			"title": "Script Syntax",
 			"description": "This example the factorial of a number is computed.",
-			"code": "<!--- fact.cfm ---> \r\n <cfscript> \r\n numeric function factorial(n) \r\n { \r\n if(n == 1) \r\n writedump(callstackGet()); \r\n writeoutput('<br>'); \r\n return 1; \r\n } \r\n else \r\n } \r\n writedump(callStackGet()); \r\n writeoutput('<br>'); \r\n return n * factorial(n-1); \r\n } \r\n } \r\n factorial(5); \r\n <cfscript> \r\n ",
+			"code": "<!--- fact.cfm ---> \r\n <cfscript> \r\n numeric function factorial(n) \r\n { \r\n if(n == 1) \r\n writeDump(callStackGet()); \r\n writeOutput('<br>'); \r\n return 1; \r\n } \r\n else \r\n } \r\n writeDump(callStackGet()); \r\n writeOutput('<br>'); \r\n return n * factorial(n-1); \r\n } \r\n } \r\n factorial(5); \r\n <cfscript> \r\n ",
 			"result": ""
 		}
 	]

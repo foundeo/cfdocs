@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<cfoutput> \r\n #spanExcluding('This is Great', 'r')# \r\n </cfoutput>  ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

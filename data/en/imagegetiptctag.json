@@ -14,8 +14,7 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagegetiptctag.html"},
 		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagegetiptctag.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagegetiptctag"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagegetiptctag"}
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagegetiptctag"}
 	},
 	"links": [
 
@@ -24,7 +23,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to retrieve the caption for a JPEG file.  ",
-			"code": "<!--- Create a ColdFusion image from a JPEG file. ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/paul05.jpg\" name=\"myImage\" action=\"read\"> \r\n <!--- Retrieve the camera make used to take the original picture. ---> \r\n <cfset cameraMake=ImageGetIPTCTag(myImage,\"make\")> \r\n <cfdump var=\"#cameraMake#\"> ",
+			"code": "<!--- Create a ColdFusion image from a JPEG file. ---> \r\n <cfimage source=\"../cfdocs/images/artgallery/paul05.jpg\" name=\"myImage\" action=\"read\"> \r\n <!--- Retrieve the camera make used to take the original picture. ---> \r\n <cfset cameraMake=imageGetIPTCtag(myImage,\"make\")> \r\n <cfdump var=\"#cameraMake#\"> ",
 			"result": "",
 			"runnable": false
 		},

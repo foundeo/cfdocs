@@ -1,7 +1,7 @@
 {
-	"name":"DecodeForHTML",
+	"name":"decodeForHTML",
 	"type":"function",
-	"syntax":"DecodeforHTML(String encodedinput);",
+	"syntax":"decodeForHTML(String encodedinput);",
 	"returns":"Decoded HTML string.",
 	"related":[],
 	"description":" Decodes an HTML encoded string.",
@@ -10,9 +10,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DecodeForHTML.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/DecodeForHTML.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/DecodeForHTML"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/DecodeForHTML"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/decodeforhtml"}
 	},
 	"links": [
 
@@ -21,7 +19,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfif isDefined('form.submit')> \r\n <b> \r\n Output:<cfoutput >#DecodeForHTML(form.encodedUserName)#</cfoutput> \r\n </b> \r\n <cfelse> \r\n <cfset form.username=''/> \r\n </cfif> \r\n <cfform> \r\n <cfinput name='encodedUserName' type='text' value='#form.encodedUserName#'> \r\n <cfinput name='submit' type='submit' value='Submit'> \r\n </cfform> \r\n",
+			"code": "<cfif isDefined('form.submit')> \r\n <b> \r\n Output:<cfoutput >#decodeForHTML(form.encodedUserName)#</cfoutput> \r\n </b> \r\n <cfelse> \r\n <cfset form.username=''/> \r\n </cfif> \r\n <cfform> \r\n <cfinput name='encodedUserName' type='text' value='#form.encodedUserName#'> \r\n <cfinput name='submit' type='submit' value='Submit'> \r\n </cfform> \r\n",
 			"result": ""
 		}
 	]

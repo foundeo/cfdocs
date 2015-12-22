@@ -1,7 +1,7 @@
 {
-	"name":"spreadSheetAddSplitPane",
+	"name":"spreadsheetAddSplitPane",
 	"type":"function",
-	"syntax":"spreadSheetAddSplitPane(spreadsheetObj, x, y, splitColumn, splitRow [, position])",
+	"syntax":"spreadsheetAddSplitPane(spreadsheetObj, x, y, splitColumn, splitRow [, position])",
 	"returns":"void",
 	"related":[],
 	"description":" Adds split pane to spreadsheet.",
@@ -16,8 +16,6 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetaddsplitpane.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/spreadsheetaddsplitpane.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetaddsplitpane"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetaddsplitpane"}
 	},
 	"links": [

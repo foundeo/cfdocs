@@ -26,7 +26,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<h3>AddSOAPRequestHeader Example</h3> \r\n <cfscript> \r\n     // Create the web service object. \r\n     ws = CreateObject(\"webservice\", \"http://localhost/soapheaders/headerservice.cfc?WSDL\"); \r\n     // Set the username header as a string. \r\n addSOAPRequestHeader(ws, \"http://mynamespace/\", \"username\", \"tom\", false); \r\n </cfscript>",
+			"code": "<h3>addSOAPRequestHeader Example</h3> \r\n <cfscript> \r\n     // Create the web service object. \r\n     ws = createObject(\"webservice\", \"http://localhost/soapheaders/headerservice.cfc?WSDL\"); \r\n     // Set the username header as a string. \r\n addSOAPRequestHeader(ws, \"http://mynamespace/\", \"username\", \"tom\", false); \r\n </cfscript>",
 			"result": "",
             "runnable":false
 		}

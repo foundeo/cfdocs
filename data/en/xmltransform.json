@@ -1,7 +1,7 @@
 {
-	"name":"xmlTransform",
+	"name":"XMLTransform",
 	"type":"function",
-	"syntax":"xmlTransform(xml, xsl [, parameters])",
+	"syntax":"XMLTransform(xml, xsl [, parameters])",
 	"returns":"String",
 	"related":[],
 	"description":" Applies an Extensible Stylesheet Language Transformation (XSLT)\n to an XML document object that is represented as a string\n variable. An XSLT converts an XML document to another format\n or representation by applying an Extensible Stylesheet\n Language (XSL) stylesheet to it.",

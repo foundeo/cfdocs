@@ -4,7 +4,7 @@
 	"syntax":"inputBaseN(String, radix)",
 	"returns":"Numeric",
 	"related":[],
-	"description":" Converts string, using the base specified by radix, to an\n integer. For example: #InputBaseN(\"3ff\",16)#",
+	"description":" Converts string, using the base specified by radix, to an\n integer. For example: #inputBaseN(\"3ff\",16)#",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"radix","description":"","required":true,"default":"","type":"String","values":[]}
@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"InputBaseN returns the number obtained by converting a string, using the base specified by Radix,. ",
+			"code":"<cfoutput> \r\n <br>inputBaseN(\"1010\",2): #inputBaseN(\"1010\",2)# \r\n <br>inputBaseN(\"3ff\",16): #inputBaseN(\"3ff\",16)# \r\n <br>inputBaseN(\"125\",10): #inputBaseN(\"125\",10)# \r\n <br>inputBaseN(1010,2): #inputBaseN(1010,2)# \r\n </cfoutput>",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"The following example calls the Randomize function to seed the random number generator and generates 10 random numbers.  ",
+			"code":"<cfset randomize(12345)> <!--- if one was to remove this line, the random numbers are different every time ---> \r\n <cfloop index=\"i\" from=\"1\" to=\"10\"> \r\n <cfoutput>#rand()#</cfoutput> \r\n </cfloop> ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

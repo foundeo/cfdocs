@@ -1,7 +1,7 @@
 {
-	"name":"ImageGetExifMetaData",
+	"name":"imageGetExifMetaData",
 	"type":"function",
-	"syntax":"ImageGetExifMetaData(name)",
+	"syntax":"imageGetExifMetaData(name)",
 	"member":"someImage.getExifMetaData()",
 	"returns":"Struct",
 	"related":[],

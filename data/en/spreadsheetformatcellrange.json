@@ -1,7 +1,7 @@
 {
-	"name":"SpreadsheetFormatCellRange",
+	"name":"spreadsheetFormatCellRange",
 	"type":"function",
-	"syntax":"SpreadsheetFormatCellRange (spreadsheetObj, format, startRow, startColumn, endRow, endColumn);",
+	"syntax":"spreadsheetFormatCellRange (spreadsheetObj, format, startRow, startColumn, endRow, endColumn);",
 	"returns":"",
 	"related":[],
 	"description":" Formats the cells within the given range.",
@@ -14,10 +14,7 @@
         {"name":"endColumn","description":"The number of the last column to format.","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/SpreadsheetFormatCellRange.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/SpreadsheetFormatCellRange.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/SpreadsheetFormatCellRange"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/SpreadsheetFormatCellRange"}
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetformatcellrange.html"}
 	},
 	"links": [
 
@@ -26,7 +23,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "Checking to see if the region is present in the cache",
-			"code": "<!--- Get the spreadsheet data as a query. ---> \r\n <cfquery \r\n     name='courses' datasource='cfdocexamples' \r\n     cachedwithin='#CreateTimeSpan(0, 6, 0, 0)#'> \r\n     SELECT CORNUMBER,DEPT_ID,CORLEVEL,COURSE_ID,CORNAME,CORDESC,LASTUPDATE \r\n     FROM COURSELIST \r\n </cfquery> \r\n <cfscript> \r\n     ///We need an absolute path, so get the current directory path. \r\n     theFile=GetDirectoryFromPath(GetCurrentTemplatePath()) & 'courses.xls'; \r\n     //Create a new Excel spreadsheet object and add the query data.    \r\n theSheet = SpreadsheetNew('CourseData'); \r\n     SpreadsheetAddRows(theSheet,courses); \r\n     // Define a format for the column. \r\n     format1=SructNew() \r\n     format1.font='Courier'; \r\n     format1.fontsize='10'; \r\n     format1.color='dark_blue;'; \r\n     format1.italic='true'; \r\n     format1.bold='true'; \r\n     format1.alignment='left'; \r\n     SpreadsheetFormatCellRange(theSheet,format1, 3,4,30,10); \r\n </cfscript> \r\n <!--- Write the spreadsheet to a file, replacing any existing file. ---> \r\n <cfspreadsheet action='write' filename='#theFile#' name='theSheet' sheet=1 sheetname='courses' overwrite=true> \r\n", 
+			"code": "<!--- Get the spreadsheet data as a query. ---> \r\n <cfquery \r\n     name='courses' datasource='cfdocexamples' \r\n     cachedwithin='#createTimespan(0, 6, 0, 0)#'> \r\n     SELECT CORNUMBER,DEPT_ID,CORLEVEL,COURSE_ID,CORNAME,CORDESC,LASTUPDATE \r\n     FROM COURSELIST \r\n </cfquery> \r\n <cfscript> \r\n     ///We need an absolute path, so get the current directory path. \r\n     theFile=getDirectoryFromPath(getCurrentTemplatePath()) & 'courses.xls'; \r\n     //Create a new Excel spreadsheet object and add the query data.    \r\n theSheet = spreadsheetNew('CourseData'); \r\n     spreadsheetAddRows(theSheet,courses); \r\n     // Define a format for the column. \r\n     format1=structNew() \r\n     format1.font='Courier'; \r\n     format1.fontsize='10'; \r\n     format1.color='dark_blue;'; \r\n     format1.italic='true'; \r\n     format1.bold='true'; \r\n     format1.alignment='left'; \r\n     spreadsheetFormatCellRange(theSheet,format1, 3,4,30,10); \r\n </cfscript> \r\n <!--- Write the spreadsheet to a file, replacing any existing file. ---> \r\n <cfspreadsheet action='write' filename='#theFile#' name='theSheet' sheet=1 sheetname='courses' overwrite=true> \r\n",
 			"result": ""
 		}
 	]

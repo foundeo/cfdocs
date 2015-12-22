@@ -2,24 +2,32 @@
 	"name":"imageShear",
 	"type":"function",
 	"syntax":"imageShear(name, shear [, direction] [, interpolation])",
+	"member":"someImage.shear(shear [, direction] [, interpolation])",
 	"returns":"void",
 	"related":[],
 	"description":" Shears an image either horizontally or vertically.",
 	"params": [
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"shear","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"direction","description":"No Help Available","required":false,"default":"","type":"String","values":[]},
-		{"name":"interpolation","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
+		{"name":"shear","description":"Shear value. Coordinates can be integers or real numbers.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"direction","description":"Shear direction","required":false,"default":"horizontal","type":"String","values":["horizontal","vertical"]},
+		{"name":"interpolation","description":"Type of interpolation","required":false,"default":"nearest","type":"String","values":["nearest: Applies the nearest neighbor method of interpolation. Image quality is lower than the other interpolation methods, but processing is fastest.","bilinear: Applies the bilinear method of interpolation. The quality of the image is less pixelated than the default, but processing is slower.","bicubic: Applies the bicubic method of interpolation. Generally, the quality of image is highest with this method and processing is slowest."]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imageshear.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imageshear.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imageshear"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imageshear"}
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imageshear.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imageshear.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imageshear"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Using shear member function",
+			"description":"CF11+ Shear the image by a factor of 1 on a horizontal axis",
+			"code":"imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\nimgObj.shear(1);\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result":"",
+			"runnable":true
+		}
 	]
-
 }

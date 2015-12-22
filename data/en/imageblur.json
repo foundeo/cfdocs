@@ -24,7 +24,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to blur an image by a radius of 10.",
-			"code": "<cfset ImageBlur(myImage,10)>   ",
+			"code": "<cfset imageBlur(myImage,10)>   ",
 			"result": "",
 			"runnable": false
 		},

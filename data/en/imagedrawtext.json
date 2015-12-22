@@ -22,12 +22,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to create a text string image. ",
-			"code": "<!--- Use the ImageNew function to create a 200x100-pixel image. ---> \r\n <cfset myImage=ImageNew(\"\",200,100)> \r\n <!--- Set the drawing color to green. ---> \r\n <cfset ImageSetDrawingColor(myImage,\"green\")> \r\n <!--- Specify the text string and the start point for the text. ---> \r\n <cfset ImageDrawText(myImage,\"It's not easy being green.\",10,50)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"code": "<!--- Use the imageNew function to create a 200x100-pixel image. ---> \r\n <cfset myImage=imageNew(\"\",200,100)> \r\n <!--- Set the drawing color to green. ---> \r\n <cfset imageSetDrawingColor(myImage,\"green\")> \r\n <!--- Specify the text string and the start point for the text. ---> \r\n <cfset imageDrawText(myImage,\"It's not easy being green.\",10,50)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
 			"result": "",
 			"runnable": false
 		},

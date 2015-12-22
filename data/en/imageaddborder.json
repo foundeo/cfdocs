@@ -26,28 +26,28 @@
 		{
 			"title": "Tag Syntax",
 			"description": "Draw a green border around the outside edge of the red border. ",
-			"code": "<cfset ImageAddBorder(myImage,5,\"green\")>    ",
+			"code": "<cfset imageAddBorder(myImage,5,\"green\")>    ",
 			"result": "",
 			"runnable":false
 		},
         {
 			"title": "Tag Syntax",
 			"description": "Add a 50-pixel-wide border to the outside edge of the image that is a tiled version of the image itself.",
-			"code": "<cfset ImageAddBorder(myImage,50,\"\",\"wrap\")>    ",
+			"code": "<cfset imageAddBorder(myImage,50,\"\",\"wrap\")>    ",
 			"result": "",
 			"runnable":false
 		},
         {
 			"title": "Tag Syntax",
 			"description": "Create the border.",
-			"code": "<cfset ImageAddBorder(myImage,100,\"\",\"reflect\")> ",
+			"code": "<cfset imageAddBorder(myImage,100,\"\",\"reflect\")> ",
 			"result": "",
 			"runnable":false
 		},
         {
 			"title": "Tag Syntax",
 			"description": "Create a ColdFusion image from an existing JPEG file.",
-			"code": "<cfset ImageAddBorder(myImage,100,\"\",\"copy\")>  ",
+			"code": "<cfset imageAddBorder(myImage,100,\"\",\"copy\")>  ",
 			"result": "",
 			"runnable": false
 		},

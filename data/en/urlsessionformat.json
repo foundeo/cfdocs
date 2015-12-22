@@ -1,7 +1,7 @@
 {
-	"name":"urlSessionFormat",
+	"name":"URLSessionFormat",
 	"type":"function",
-	"syntax":"urlSessionFormat(requesturl)",
+	"syntax":"URLSessionFormat(requesturl)",
 	"returns":"URL",
 	"related":[],
 	"description":" Depending on whether a client computer accepts cookies, this\n function does the following:\n * If the client does not accept cookies: automatically appends\n all required client identification information to a URL\n * If the client accepts cookies: does not append information",

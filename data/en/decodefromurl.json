@@ -1,7 +1,7 @@
 {
-	"name":"DecodeFromURL",
+	"name":"decodeFromURL",
 	"type":"function",
-	"syntax":"DecodeFromURL(String encodedinput);",
+	"syntax":"decodeFromURL(String encodedinput);",
 	"returns":"Decoded HTML URL string.",
 	"related":[],
 	"description":" Decodes an encoded HTML URL string.",
@@ -10,9 +10,8 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DecodeFromURL.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/DecodeFromURL.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/DecodeFromURL"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/DecodeFromURL"}
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/decodefromurl.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/DecodeFromURL"}
 	},
 	"links": [
 
@@ -21,7 +20,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset string = 'http://www.adobe.com/'> \r\n <cfset urlencoded = encodeforURL(string)> \r\n <cfset urldecoded = decodefromUrl(urlEncoded)> \r\n <cfoutput> \r\n String: #string# <br/> \r\n URL Encoded: #urlencoded#<br/> \r\n URL Decoded: #urldecoded#<br/> \r\n </cfoutput> \r\n",
+			"code": "<cfset string = 'http://www.adobe.com/'> \r\n <cfset urlencoded = encodeForURL(string)> \r\n <cfset urldecoded = decodeFromURL(urlEncoded)> \r\n <cfoutput> \r\n String: #string# <br/> \r\n URL Encoded: #urlencoded#<br/> \r\n URL Decoded: #urldecoded#<br/> \r\n </cfoutput> \r\n",
 			"result": ""
 		}
 	]

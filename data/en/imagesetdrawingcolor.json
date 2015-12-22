@@ -19,12 +19,12 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to set the drawing color and draw several objects in that color. ",
-			"code": "<!--- Use the ImageNew function to create a ColdFusion image. ---> \r\n <cfset myImage=ImageNew(\"\",200,300)> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset ImageSetAntialiasing(myImage)> \r\n <!--- Set the drawing color to pink. ---> \r\n <cfset ImageSetDrawingColor(myImage,\"pink\")> \r\n <!--- Draw a pink line. ---> \r\n <cfset ImageDrawLine(myImage,1,1,200,300)> \r\n <!--- Draw a pink oval. ---> \r\n <cfset ImageDrawOval(myImage,40,50,80,40)> \r\n <!--- Draw another pink oval. ---> \r\n <cfset ImageDrawOval(myImage,15,180,80,40)> \r\n <!--- Draw a pink rectangle. ---> \r\n <cfset ImageDrawRect(myImage,100,100,45,65)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowse\"> ",
+			"code": "<!--- Use the imageNew function to create a ColdFusion image. ---> \r\n <cfset myImage=imageNew(\"\",200,300)> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset imageSetAntialiasing(myImage)> \r\n <!--- Set the drawing color to pink. ---> \r\n <cfset imageSetDrawingColor(myImage,\"pink\")> \r\n <!--- Draw a pink line. ---> \r\n <cfset imageDrawLine(myImage,1,1,200,300)> \r\n <!--- Draw a pink oval. ---> \r\n <cfset imageDrawOval(myImage,40,50,80,40)> \r\n <!--- Draw another pink oval. ---> \r\n <cfset imageDrawOval(myImage,15,180,80,40)> \r\n <!--- Draw a pink rectangle. ---> \r\n <cfset imageDrawRect(myImage,100,100,45,65)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowse\"> ",
 			"result": "",
 			"runnable":false
 		},

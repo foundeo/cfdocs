@@ -13,8 +13,7 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entityloadbyexample.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/entityloadbyexample.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entityloadbyexample"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/entityloadbyexample"}
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entityloadbyexample"}
 	},
 	"links": [
 
@@ -23,7 +22,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset employee= CreateObject(\"component\", \"employee\")> \r\n <cfset employee.setDepartment(\"ColdFusion\")> \r\n <cfset employee.setCountry(\"USA\")> \r\n <cfset employee=EntityLoadByExample(employee)> ",
+			"code": "<cfset employee= createObject(\"component\", \"employee\")> \r\n <cfset employee.setDepartment(\"ColdFusion\")> \r\n <cfset employee.setCountry(\"USA\")> \r\n <cfset employee=entityLoadByExample(employee)> ",
 			"result": "",
             "runnable":false
 		}

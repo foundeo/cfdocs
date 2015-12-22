@@ -19,7 +19,7 @@
 		{
 			"title": "The following example shows how to use the function cacheGetSession to operate on default caches:",
 			"description": "",
-			"code": "<!--- put an object into user-defined object cache --->\n<cfset cachePut(\"cache1\",\"hello\",15,15)>\n\n<!--- get underlying user-defined object cache --->\n\n<cfset objectCache = cachegetsession(\"object\",true)>\n\n<!--- get/print user-defined object cache properties --->\n\n<cfdump var = \"#objectCache.getCacheConfiguration()#\">",
+			"code": "<!--- put an object into user-defined object cache --->\n<cfset cachePut(\"cache1\",\"hello\",15,15)>\n\n<!--- get underlying user-defined object cache --->\n\n<cfset objectCache = cacheGetSession(\"object\",true)>\n\n<!--- get/print user-defined object cache properties --->\n\n<cfdump var = \"#objectCache.getCacheConfiguration()#\">",
 			"result": "cache object"
 		}
 	]
