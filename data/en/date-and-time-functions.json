@@ -1,6 +1,6 @@
 {
 	"name":"Date / Time Functions",
 	"type":"listing",
-	"related":["createDate","createDateTime","createODBCDate","createODBCDateTime","createODBCTime","createTime","createTimeSpan","dateAdd","dateCompare","dateConvert","dateDiff","dateFormat","datePart","day","dayOfWeek","dayOfWeekAsString","dayOfYear","daysInMonth","daysInYear","firstDayOfMonth","getHTTPTimeString","getTickCount","getTimeZoneInfo","hour","isDate","isLeapYear","isNumericDate","lsDateFormat","lsIsDate","lsParseDateTime","lsTimeFormat","minute","month","monthAsString","now","parseDateTime","quarter","second","timeFormat","year"],
+	"related":["createDate","createDateTime","createODBCDate","createODBCDateTime","createODBCTime","createTime","createTimespan","dateAdd","dateCompare","dateConvert","dateDiff","dateFormat","datePart","day","dayOfWeek","dayOfWeekAsString","dayOfWeekShortAsString","dayOfYear","daysInMonth","daysInYear","firstDayOfMonth","getHTTPTimeString","getNumericDate","getTickCount","getTimezone","getTimezoneInfo","hour","isDate","isLeapYear","isNumericDate","LSDateFormat","LSDayOfWeek","LSIsDate","LSParseDateTime","LSTimeFormat","minute","month","monthAsString","monthShortAsString","now","parseDateTime","quarter","second","setTimezone","timeFormat","year"],
 	"description":"A listing of CFML Date / Time Functions."
 }
