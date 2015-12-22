@@ -23,9 +23,9 @@
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<!--- Get the spreadsheet data as a query. ---> \r\n <cfquery name=\"courses\" datasource=\"cfdocexamples\" cachedwithin=\"#CreateTimeSpan(0, 6, 0, 0)#\"> \r\n SELECT CORNUMBER,DEPT_ID,COURSE_ID,CORNAME \r\n FROM COURSELIST \r\n </cfquery> \r\n <cfscript> \r\n     ///We need an absolute path, so get the current directory path. theFile=GetDirectoryFromPath(GetCurrentTemplatePath()) & courses.xls\"; \r\n     //Create a new Excel spreadsheet object and add the query data. \r\n     theSheet = SpreadsheetNew(\"CourseData\"); \r\n     SpreadsheetAddRows(theSheet,courses); \r\n    //Delete the second column of the sheet. \r\n     SpreadsheetDeleteColumn(theSheet,2); \r\n </cfscript> \r\n <!--- Write the spreadsheet to a file, replacing any existing file. ---> \r\n <cfspreadsheet action=\"write\" filename=\"#theFile#\" name=\"theSheet\"      sheet=1 sheetname=\"courses\" overwrite=true> ",
+			"code":"<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \r\n <!---<cfloop index=\"x\" from=\"1\" to=\"10\">---> \r\n <cfset queryAddRow(q)> \r\n <cfset querySetCell(q, \"Name\", \"John\")> \r\n <cfset querySetCell(q, \"Beers\", \"1\")> \r\n <cfset querySetCell(q, \"Vegetables\", \"1\")> \r\n <cfset querySetCell(q, \"Fruits\", \"1\")> \r\n <cfset querySetCell(q, \"Meats\", \"1\")> \r\n <cfset mySheet =   SpreadsheetNew( \"Test\"  ) /> \r\n <!--- Make a spreadsheet object ---> \r\n <cfset s = spreadsheetNew()> \r\n <!--- Add header row ---> \r\n <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \r\n <!--- Add query ---> \r\n <cfset SpreadsheetDeleteColumn(s,2-3) > \r\n <cfdump var=\"#s#\" /> <cfheader name=\"Content-Disposition\" value=\"inline; filename=testFile.xls\">  <cfcontent type=\"application/vnd.msexcel\" variable=\"#SpreadSheetReadBinary(s)#\"> ",
 			"result":"",
-			"runnable":false
+			"runnable":true
 		}
 	]
 

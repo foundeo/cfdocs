@@ -23,9 +23,9 @@
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<cfspreadsheet action=\"read\" src=\"#filename#\" name=\"a\" > \r\n <cfset info = StructNew()> \r\n <cfset info.title=\"Title\"> \r\n <cfset info.category=\"Category test\"> \r\n <cfset info.author=\"ABC\"> \r\n <cfset info.comments=\"Comments for this file\"> \r\n <cfset spreadsheetaddInfo(a,info)> \r\n <cfspreadsheet action=\"write\" filename=\"#dirname#SingleSheet.xls\" name=a overwrite=\"yes\">  ",
+			"code":"<cfset a = SpreadsheetNew( \"Test\" )> \r\n  <cfset info = StructNew()> \r\n  <cfset info.title=\"Title\"> \r\n  <cfset info.category=\"Category test\"> \r\n  <cfset info.author=\"ABC\"> \r\n  <cfset info.comments=\"Comments for this file\"> \r\n  <cfset spreadsheetAddInfo(a,info)> \r\n <cfdump var=\"#a#\" />  ",
 			"result":"",
-			"runnable":false
+			"runnable":true
 		}
 	]
 

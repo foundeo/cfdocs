@@ -24,7 +24,7 @@
 		{
 			"title":"Script Example",
 			"description":" ",
-			"code":"<cfscript> \r\n     //Create a new Excel spreadsheet object. \r\n theSheet=SpreadsheetNew(); \r\n     //Set the value of the cell at row 3 column 5. \r\n SpreadsheetSetCellValue(theSheet,365,3,5); \r\n     //Get the value from the Excel spreadsheet object. \r\n     theValue=SpreadsheetGetCellValue(theSheet,3,5); \r\n WriteOutput(\"The value of column 5 row 3 is: \" & theValue); \r\n </cfscript>  ",
+			"code":"<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \r\n  <cfset queryAddRow(q)> \r\n  <cfset querySetCell(q, \"Name\", \"John\")> \r\n  <cfset querySetCell(q, \"Beers\", \"1\")> \r\n  <cfset querySetCell(q, \"Vegetables\", \"1\")> \r\n  <cfset querySetCell(q, \"Fruits\", \"1\")> \r\n  <cfset querySetCell(q, \"Meats\", \"1\")> \r\n  <cfset mySheet =   SpreadsheetNew( \"Test\"  ) /> \r\n  <!--- Make a spreadsheet object ---> \r\n  <cfset s = spreadsheetNew()> \r\n  <!--- Add header row ---> \r\n  <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \r\n  <!--- Add query ---> \r\n   <cfscript> \r\n   theFormula=SpreadsheetGetCellFormula(s,1,1); \r\n </cfscript> \r\n <cfoutput> \r\n Row,Column: #theFormula# \r\n </cfoutput> ",
 			"result":"",
 			"runnable":true
 		}
