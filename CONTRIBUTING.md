@@ -17,3 +17,12 @@ The main README has that documented: https://github.com/foundeo/cfdocs#json-file
 It should run on Adobe ColdFusion 10+ or Lucee 4.5+ please make sure any changes 
 made to the codebase work on these platforms. Sadly that means you can't use member
 functions at this time.
+
+### How are my contributions licensed?
+
+Please see the [LICENSE](LICENSE) file.
+
+### Can I copy code examples from other sources?
+
+No - any examples or code submitted must be your own work.
+
