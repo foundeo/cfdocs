@@ -153,7 +153,7 @@
 		{
 			"name":"interpolation",
 			"description":"CF10+ Used when action=resize determines the interpolation algorithm to use.",
-			"requried":false,
+			"required":false,
 			"default":"highestQuality",
 			"type":"string",
 			"values": ["highestQuality","highQuality","mediumQuality","highestPerformance","highPerformance","mediumPerformance","nearest","bilinear","bicubic","bessel","blackman","hamming","hanning","hermite","lanczos","mitchell","quadratic"]
