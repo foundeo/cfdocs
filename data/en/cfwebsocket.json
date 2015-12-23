@@ -1,0 +1,106 @@
+{
+	"name":"cfwebsocket",
+	"type":"tag",
+	"syntax":"<cfwebsocket name=\"\" onMessage=\"\">",
+	"returns":"",
+	"related":[],
+	"description":"Includes the required JavaScript files in your CFM template and creates a global JavaScript reference to the WebSocket Object on the client-side.",
+	"params": [
+		{	"name":"name",
+			"description":"",
+			"required":true,
+			"default":"",
+			"type":"string",
+			"values":[]
+		},
+		{	"name":"onMessage",
+			"description":"The JavaScript function that is called when the WebSocket receives a message from the server.",
+			"required":true,
+			"default":"",
+			"type":"string",
+			"values":[]
+		},
+		{	"name":"onOpen",
+			"description":"The JavaScript function that is called when the WebSocket establishes a connection.",
+			"required":false,
+			"default":"",
+			"type":"string",
+			"values":[]
+		},
+		{	"name":"onClose",
+			"description":"The JavaScript function that is called when the WebSocket closes a connection.",
+			"required":false,
+			"default":"",
+			"type":"string",
+			"values":[]
+		},
+		{	"name":"onError",
+			"description":"The JavaScript function that is called if there is an error while performing an action over the WebSocket connection.",
+			"required":false,
+			"default":"",
+			"type":"string",
+			"values":[]
+		},
+		{	"name":"usecfAuth",
+			"description":"If set to true (default), users need not authenticate for WebSocket connection (provided they have already logged in to the application). This is the default value. If false, users have to specify the credentials for the WebSocket connection.",
+			"required":false,
+			"default":"false",
+			"type":"boolean",
+			"values":[]
+		},
+		{	"name":"subscribeTo",
+			"description":"Comma-separated list of channels to subscribe to. You can specify any or all channels set in the Application.cfc.",
+			"required":false,
+			"default":"",
+			"type":"string",
+			"values":[]
+		},
+		{	"name":"secure",
+			"description":"If true, the web socket communication will happen over SSL. CF11+",
+			"required":false,
+			"default":"",
+			"type":"boolean",
+			"values":[]
+		}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"10", "notes":"SSL is only available on CF11+", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfwebsocket.html"},
+	},
+	"links": [
+		{
+			"title":"ColdFusion Summit Presentation Code and Slides ( 2014 / 2015 ) by Giancarlo Gomez",
+			"description":"Slides and Code from the \"Realtime with Websockets\" presentation at ColdFusion Summit 2014 & 2015. Includes AdvancedSocket which aims to help handling connectivity issues from the client side when using ColdFusion WebSocket solution. As well as a drop in test suite within the console folder which was re-skinned and updated from Adobe's original example.",
+			"url":"https:\/\/github.com\/GiancarloGomez\/ColdFusion-CFSummit-WebSockets"
+		},
+		{
+			"title":"HTML5 WebSockets and ColdFusion by Awdhesh Kumar",
+			"description":"Original post from 2012 by Awdhesh Kumar regarding using WebSockets in ColdFusion 10.",
+			"url":"http:\/\/www.adobe.com\/devnet\/coldfusion\/articles\/using-websocket.html"
+		},
+		{
+			"title":"Using WebSocket with ColdFusion 11 by Awdhesh Kumar",
+			"description":"Follow up post by Awdhesh Kumar in 2014 regarding enhancements to WebSockets in ColdFusion 11.",
+			"url":"http:\/\/www.adobe.com\/devnet\/coldfusion\/articles\/html5-websockets-coldfusion-pt1.html"
+		}
+
+
+
+
+	],
+	"examples": [
+		{
+			"title":"Script Syntax (CF11+)",
+			"description":"",
+			"code":"cfwebsocket(name=\"ws\", onMessage=\"handleMessage\");",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfwebsocket name=\"ws\" onMessage=\"handleMessage\" \/>",
+			"result": "",
+			"runnable":false
+		}
+	]
+}
