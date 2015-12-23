@@ -190,30 +190,30 @@
 	],
 	"examples": [
 		{ "title": "Border action", "description": "Add a red border of 5 pixels to an image, write the output to a variable.",
-			"code": "<cfimage action=\"border\" source=\"#sourceImage#\" size=5 color=\"red\" name=\"withborder\">" },
+			"code": "<cfimage action=\"border\" source=\"#sourceImage#\" size=5 color=\"red\" name=\"withborder\">", "runnable":false },
 
 		{ "title": "Captcha action", "description": "Generate a CAPTCHA style image using medium difficulty.",
-			"code": "<cfimage action=\"captcha\" text=\"Captcha!\" difficulty=\"medium\" fontSize=\"18\" fonts=\"Comic Sans MS,Times New Roman\">" },
+			"code": "<cfimage action=\"captcha\" text=\"Captcha!\" difficulty=\"medium\" fontSize=\"18\" fonts=\"Comic Sans MS,Times New Roman\">","runnable":false },
 
 		{ "title": "Convert action", "description": "Convert an image to a different format (in this case PNG).",
-			"code": "<cfimage action=\"convert\" source=\"#sourceImage#\" destination=\"#expandPath( 'destination.png' )#\" overwrite=\"true\">" },
+			"code": "<cfimage action=\"convert\" source=\"#sourceImage#\" destination=\"#expandPath( 'destination.png' )#\" overwrite=\"true\">","runnable":false },
 
 		{ "title": "Info action", "description": "Retrieve meta data from an image and stores that as a structure in a variable.",
-			"code": "<cfimage action=\"info\" source=\"#sourceImage#\" structname=\"imageInfo\">" },
+			"code": "<cfimage action=\"info\" source=\"http://lorempixel.com/60/50/\" structname=\"imageInfo\">\n<cfdump var=\"#imageInfo#\">","runnable":false },
 
 		{ "title": "Read action", "description": "Tag syntax for reading an image from a URL.",
-			"code": "<cfimage action=\"read\" name=\"sourceImage\" source=\"http://www.example.com/myImage.jpg\">" },
+			"code": "<cfimage action=\"read\" name=\"sourceImage\" source=\"http://lorempixel.com/60/50/\">","runnable":false },
 
 		{ "title": "Resize action", "description": "Example of resizing an image stored in a variable and storing the result in a variable.",
-			"code": "<cfimage action=\"resize\" source=\"#sourceImage#\" height=\"200\" width=\"200\" name=\"resized\">" },
+			"code": "<cfimage action=\"resize\" source=\"#sourceImage#\" height=\"200\" width=\"200\" name=\"resized\">","runnable":false },
 
 		{ "title": "Rotate action", "description": "Rotate an image 30 degrees clockwise.",
-			"code": "<cfimage action=\"rotate\" source=\"#sourceImage#\" destination=\"#expandPath( 'rotated.jpg' )#\" overwrite=\"true\" angle=\"30\" quality=\"1\">" },
+			"code": "<cfimage action=\"rotate\" source=\"#sourceImage#\" destination=\"#expandPath( 'rotated.jpg' )#\" overwrite=\"true\" angle=\"30\" quality=\"1\">","runnable":false },
 
 		{ "title": "Write action", "description": "Example of writing an image as an 80% compressed jpg image.",
-			"code": "<cfimage action=\"write\" source=\"#sourceImage#\" destination=\"#expandPath( 'newImage.jpg' )#\" overwrite=\"true\" quality=\".2\">" },
+			"code": "<cfimage action=\"write\" source=\"#sourceImage#\" destination=\"#expandPath( 'newImage.jpg' )#\" overwrite=\"true\" quality=\".2\">","runnable":false },
 
 		{ "title": "WriteToBrowser action", "description": "Generates HTML to output the image in place.",
-			"code": "<cfimage action=\"writeToBrowser\" source=\"#sourceImage#\">" }
+			"code": "<cfimage action=\"writeToBrowser\" source=\"#sourceImage#\">","runnable":false }
 	]
 }
