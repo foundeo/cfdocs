@@ -3,7 +3,7 @@
 	"type": "tag",
 	"syntax": "<cfimage>",
 	"returns": "",
-	"related": [],
+	"related": ["imageRead", "imageWrite", "imageResize","imageScaleToFit"],
 	"description": "Creates a ColdFusion image that can be manipulated by using image functions.\nYou can use the cfimage tag to perform common image manipulation operations as a shortcut to Image functions.\nYou can use the cfimage tag independently or in conjunction with image functions.",
 	"params": [
 		{
@@ -112,7 +112,7 @@
 		},
 		{
 			"name": "structName",
-			"description": "() Name of the ColdFusion structure to be created.",
+			"description": "Name of the ColdFusion structure to be created.",
 			"required": false,
 			"default": "",
 			"type": "String",
@@ -149,16 +149,24 @@
 			"default": "",
 			"type": "String",
 			"values": []
+		},
+		{
+			"name":"interpolation",
+			"description":"CF10+ Used when action=resize determines the interpolation algorithm to use.",
+			"requried":false,
+			"default":"highestQuality",
+			"type":"string",
+			"values": ["highestQuality","highQuality","mediumQuality","highestPerformance","highPerformance","mediumPerformance","nearest","bilinear","bicubic","bessel","blackman","hamming","hanning","hermite","lanczos","mitchell","quadratic"]
 		}
 	],
 	"engines": {
 		"coldfusion": {
-			"minimum_version": "",
+			"minimum_version": "8",
 			"notes": "",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfimage.html"
 		},
 		"lucee": {
-			"minimum_version": "",
+			"minimum_version": "4.5",
 			"notes": "",
 			"docs": "http://docs.lucee.org/reference/tags/image.html"
 		},
@@ -173,7 +181,13 @@
 			"docs": "http://openbd.org/manual/?/tag/cfimage"
 		}
 	},
-	"links": [],
+	"links": [
+		{
+			"title":"CFML Image Functions Listing",
+			"url":"http://cfdocs.org/image-functions",
+			"description":"List of image manipulation functions in CFML. Most of what you can do with the cfimage tag can also be done with image functions."
+		}
+	],
 	"examples": [
 		{ "title": "Border action", "description": "Add a red border of 5 pixels to an image, write the output to a variable.",
 			"code": "<cfimage action=\"border\" source=\"#sourceImage#\" size=5 color=\"red\" name=\"withborder\">" },
