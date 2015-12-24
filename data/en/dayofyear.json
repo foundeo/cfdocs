@@ -3,10 +3,10 @@
 	"type":"function",
 	"syntax":"dayOfYear(date)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["Day", "DayOfWeek", "DayOfWeekAsString", "DaysInMonth", "DaysInYear", "FirstDayOfMonth"],
 	"description":" Determines the day of the year, in a date.",
 	"params": [
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
+		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"DateTime","values":["now()"]}
 
 	],
 	"engines": {
@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Determines the day of the year",
+			"description": "Uses the dayOfYear function to determine the day of the year",
+			"code": "<cfset Date = CreateDate(2012, 12, 30)>\r\n<cfset result = dayOfYear(Date)>\r\n<cfoutput>#result#</cfoutput>",
+			"result": "365"
+		}
 	]
 
 }
