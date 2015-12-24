@@ -3,10 +3,10 @@
 	"type":"function",
 	"syntax":"daysInYear(date)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["Day", "DayOfWeek", "DayOfWeekAsString", "DayOfYear", "DaysInMonth", "FirstDayOfMonth", "IsLeapYear"],
 	"description":" Determines the number of days in a year.",
 	"params": [
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
+		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"DateTime","values":["now()"]}
 
 	],
 	"engines": {
@@ -17,6 +17,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Simple example",
+			"description": "Uses the daysInYear function to determine the number of days in a year",
+			"code": "<cfset result = daysInYear(now())>\r\n<cfoutput>#result#</cfoutput>",
+			"result": "365"
+		},
+		{
+			"title": "Simple example with leap year",
+			"description": "To determine the number of days in a year",
+			"code": "<cfset Date = CreateDate(2012, 02, 03)>\r\n<cfset result = daysInYear(Date)>\r\n<cfoutput>#result#</cfoutput>",
+			"result": "366"
+		}
 	]
 
 }

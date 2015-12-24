@@ -3,10 +3,10 @@
 	"type":"function",
 	"syntax":"day(date)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["DayOfWeek", "DayOfWeekAsString", "DayOfYear", "DaysInMonth", "DaysInYear", "FirstDayOfMonth"],
 	"description":" Determines the day of the month, in a date.\n The ordinal for the day of the month, ranging from 1 to 31.",
 	"params": [
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
+		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"DateTime","values":["now()"]}
 
 	],
 	"engines": {
@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Determines the day of the month",
+			"description": "Uses the day function to determine the day of the month",
+			"code": "<cfset Date = CreateDate(2010, 09, 08)>\r\n<cfset result = day(Date)>\r\n<cfoutput>#result#</cfoutput>",
+			"result": "8"
+		}
 	]
 
 }
