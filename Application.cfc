@@ -23,14 +23,14 @@
 				<cfset local.fileObj = fileOpen(ExpandPath("./guides/en/#local.guide#.md"),"read")>
 				<cfset local.title = fileReadLine(local.fileObj)>
 				<cfset fileClose(local.fileObj)>
-				<cfif Left(local.title, 1) IS "##"> 
+				<cfif Left(local.title, 1) IS "##">
 					<cfset local.title = Replace(local.title, "## ", "")>
 				<cfelse>
 					<cfset local.title = local.guide>
 				</cfif>
 				<cfset application.guides[local.guide] = local.title>
 			</cfloop>
-			
+
 		</cfif>
 		<cfset request.content = "">
 		<!--- cache for one day --->
@@ -40,7 +40,7 @@
 			<cfset local.assetInfo = directoryList(ExpandPath("./assets/"), false, "query")>
 			<cfset request.assetBaseURL = "/assets/v-" & LCase(Hash(ValueList(local.assetInfo.dateLastModified))) & "/">
 		</cfif>
-		
+
 		<cfsavecontent variable="request.content"><cfinclude template="#arguments.targetPage#"></cfsavecontent>
 		<cfparam name="request.cacheControlMaxAge" default="86400" type="integer">
 		<cfheader name="Cache-Control" value="max-age=#Int(request.cacheControlMaxAge)#">
@@ -87,13 +87,30 @@
 
 	<cffunction name="findCategory">
 		<cfargument name="name"  default="#url.name#">
-		<cfset var cat = "">
-		<cfloop list="#StructKeyList(application.categories)#" index="cat">
-			<cfif cat IS NOT "all" AND arrayFindNoCase(application.categories[cat].items, arguments.name)>
-				<cfreturn cat>
-			</cfif>
-		</cfloop>
-		<cfreturn "all">
+		<cfscript>
+			var cat 		= "all";
+			var categories 	= ListToArray(StructKeyList(application.categories));
+			var reOrderKeys = "tags,functions,all";
+			var key 		= "";
+			// move tags and functions to bottom of array (remove all)
+			for (key in reOrderKeys){
+				if (arrayFind(categories,key)){
+					// remove
+					arrayDeleteAt(categories,arrayFind(categories,key));
+					// add to bottom
+					if (compare(key,"all"))
+						arrayAppend(categories,key);
+				}
+			}
+			// loop thru categories to return category
+			for (key in categories){
+				if ( arrayFindNoCase(application.categories[key].items, arguments.name) ){
+					cat = key;
+					break;
+				}
+			}
+			return cat;
+		</cfscript>
 	</cffunction>
 
 	<cffunction name="onError">

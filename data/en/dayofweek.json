@@ -3,10 +3,10 @@
 	"type":"function",
 	"syntax":"dayOfWeek(date)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["Day", "DayOfWeekAsString", "DayOfYear", "DaysInMonth", "DaysInYear", "FirstDayOfMonth"],
 	"description":" Determines the day of the week, in a date. Returns the ordinal for the day of the week, as an integer in the range 1 (Sunday) to 7 (Saturday).",
 	"params": [
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
+		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"DateTime","values":["now()"]}
 
 	],
 	"engines": {
@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Determines the day of the week",
+			"description": "Uses the dayOfWeek function to determine the day of the week",
+			"code": "<cfset Date = CreateDate(2010, 09, 08)>\r\n<cfset result = dayOfWeek(Date)>\r\n<cfoutput>#result#</cfoutput>",
+			"result": "4"
+		}
 	]
 
 }
