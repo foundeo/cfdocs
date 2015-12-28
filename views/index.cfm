@@ -25,7 +25,7 @@
 
   <br><hr><br>
   <cftry>
-    <cfhttp url="https://api.github.com/repos/foundeo/cfdocs/stats/contributors" method="GET" charset="utf-8" result="statResult" throwonerror="false"></cfhttp>
+    <cfhttp url="https://api.github.com/repos/foundeo/cfdocs/stats/contributors" method="GET" charset="utf-8" result="statResult" throwonerror="false" timeout="3"></cfhttp>
       <cfif statResult.statusCode contains "200" AND IsJSON(statResult.fileContent)>
         <cfset stats = DeserializeJSON(statResult.fileContent)>
         <h2 class="text-center"><cfoutput>#ArrayLen(stats)#</cfoutput> Awesome Contributors <br><small>The Leader Board</small></h2>
