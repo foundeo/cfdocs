@@ -1,74 +1,345 @@
 {
-  "name": "cfmail",
-  "type": "tag",
-  "syntax": "<cfmail to=\"\" from=\"\" subject=\"\">",
-  "returns": "",
-  "related": [
-    "cfmailpart",
-    "cfmailparam",
-    "savecontent"
-  ],
-  "description": " Sends an email message that optionally contains query output, using an SMTP server.",
-  "params": [
-    { "name": "bcc", "required": false, "type": "string", "description": "Email address(es) to which to copy the message, without listing them in the message header.", "default": "", "values": [] },
-    { "name": "cc", "required": false, "type": "string", "description": "Email address(es) to which to copy the message", "default": "", "values": [] },
-    { "name": "charset", "required": false, "type": "string", "description": "The character encoding in which the text part is encoded.", "default": "", "values": [ "utf-8", "iso-8859-1", "windows-1252", "us-ascii", "shift_jis", "iso-2022-jp", "euc-jp", "euc-kr", "big5", "euc-cn", "utf-16" ] },
-    { "name": "debug", "required": false, "type": "boolean", "description": "true: sends debugging output to standard output. By default, if the console window is unavailable, ColdFusion sends output to cf_root\\runtime\\logs\\coldfusion-out.log on server configurations. On J2EE configurations, with JRun, the default location is jrun_home/logs/servername-out.log.\nfalse: does not generate debugging output.", "default": "false", "values": [ true, false ] },
-    { "name": "encrypt", "required": false, "type": "boolean", "description": "CF11+ Toggles email message encryption", "default": "false", "values": [ true, false ] },
-    { "name": "encryptionalgorithm", "required": false, "type": "string", "description": "CF11+ Algorithm to use when encrypt=true\nEncryption support is provided through S/MIME.", "values": [ "DES_EDE3_CBC", "RC2_CBC", "AES128_CBC", "AES192_CBC", "AES256_CBC" ] },
-    { "name": "failto", "required": false, "type": "string", "description": "Email address to which mailing systems should send delivery failure notifications. Sets the mail envelope reverse-path value.", "default": "", "values": [] },
-    { "name": "from", "required": true, "type": "string", "description": "Message sender email address.", "default": "", "values": [] },
-    { "name": "group", "required": false, "type": "string", "description": "Query column to use when you group sets of records to send as a message. For example, to send a set of billing statements to a customer, group on \"Customer_ID.\" Case-sensitive. Eliminates adjacent duplicates when data is sorted by the specified field.", "default": "", "values": [] },
-    { "name": "groupcasesensitive", "required": false, "type": "boolean", "description": "Whether to consider case when using the group attribute. To group on case-sensitive records, set this attribute to Yes.", "default": "", "values": [ true, false ] },
-    { "name": "keyalias", "required": false, "type": "string", "description": "Alias of the key with which the certificate and private key is stored in keystore. If it is not specified then the first entry in the keystore will be picked up.", "default": "", "values": [] },
-    { "name": "keypassword", "required": false, "type": "string", "description": "Password with which the private key is stored. If it is not specified, keystorepassword will be used as keypassword as well.", "default": "", "values": [] },
-    { "name": "keystore", "required": false, "type": "string", "description": "Keystore containing the private key and certificate. The supported type is JKS (java key store) and pkcs12", "default": "", "values": [] },
-    { "name": "keystorepassword", "required": false, "type": "string", "description": "Password of the keystore", "default": "", "values": [] },
-    { "name": "mailerid", "required": false, "type": "string", "description": "Mailer ID to be passed in X-Mailer SMTP header, which identifies the mailer application.", "default": "", "values": [] },
-    { "name": "maxrows", "required": false, "type": "numeric", "description": "Maximum number of messages to send when looping over a query.", "default": "", "values": [] },
-    { "name": "mimeattach", "required": false, "type": "string", "description": "Path of file to attach to message. Attached file is MIME-encoded. CFML attempts to determine the MIME type of the file; use the cfmailparam tag to send an attachement and specify the MIME type.", "default": "", "values": [] },
-    { "name": "password", "required": false, "type": "string", "description": "A password to send to SMTP servers that require authentication. Requires a username attribute.", "default": "", "values": [] },
-    { "name": "port", "required": false, "type": "numeric", "description": "TCP/IP port on which SMTP server listens for requests (normally 25). A value here overrides the Administrator.", "default": "", "values": [] },
-    { "name": "priority", "required": false, "type": "string", "description": "The message priority level. Can be an integer in the range 1-5; 1 represents the highest priority, or one of the following string values, which correspond to the numeric values", "default": "normal", "values": [ "highest", "urgent", "high", "normal", "low", "lowest", "non-urgent" ] },
-    { "name": "query", "required": false, "type": "query", "description": "Name of cfquery from which to draw data for message(s). Use this attribute to send more than one message, or to send query results within a message.", "default": "", "values": [] },
-    { "name": "recipientcert", "required": false, "type": "string", "description": "CF11+ Path to the public key certificate of the recipient." },
-    { "name": "remove", "required": false, "type": "boolean", "description": "Tells ColdFusion to remove any attachments after successful mail delivery.", "default": "", "values": [] },
-    { "name": "replyto", "required": false, "type": "string", "description": "Email address(es) to which the recipient is directed to send replies.", "default": "", "values": [] },
-    { "name": "server", "required": false, "type": "string", "description": "SMTP server address, or (Enterprise edition only) a comma-delimited list of server addresses, to use for sending messages. At least one server must be specified here or in the CFML MX Administrator. A value here overrides the Administrator. A value that includes a port specification overrides the port attribute. See the Usage section for details.", "default": "", "values": [] },
-    { "name": "sign", "required": false, "type": "boolean", "description": "Mail will be signed when set to true", "default": "", "values": [] },
-    { "name": "spoolenable", "required": false, "type": "boolean", "description": "Specifies whether to spool mail or always send it Immediately. Overrides the CFML MX Administrator Spool mail messages to disk for delivery setting.", "default": "", "values": [ true, false ] },
-    { "name": "startrow", "required": false, "type": "numeric", "description": "Row in a query to start from.", "default": 1, "values": [] },
-    { "name": "subject", "required": true, "type": "string", "description": "Message subject. Can be dynamically generated.", "default": "", "values": [] },
-    { "name": "timeout", "required": false, "type": "numeric", "description": "Number of seconds to wait before timing out connection to SMTP server. A value here overrides the Administrator.", "default": "", "values": [] },
-    { "name": "to", "required": true, "type": "string", "description": "Message recipient email addresses.", "default": "", "values": [] },
-    { "name": "type", "required": false, "type": "string", "description": "The MIME media type of the part. Can be a can be valid MIME media type", "default": "text/plain", "values": [ "plain", "html", "text", "text/html", "text/plain" ] },
-    { "name": "username", "required": false, "type": "string", "description": "A user name to send to SMTP servers that require authentication. Requires a password attribute", "default": "", "values": [] },
-    { "name": "usessl", "required": false, "type": "boolean", "description": "Whether to use Secure Sockets Layer.", "default": "", "values": [ true, false ] },
-    { "name": "usetls", "required": false, "type": "boolean", "description": "Whether to use Transport Level Security.", "default": "", "values": [ true, false ] },
-    { "name": "wraptext", "required": false, "type": "numeric", "description": "Specifies the maximum line length, in characters of the mail text. If a line has more than the specified number of characters, replaces the last white space character, such as a tab or space, preceding the specified position with a line break. If there are no white space characters, inserts a line break at the specified position. A common value for this attribute is 72.", "default": "", "values": [] }
-  ],
-  "engines": {
-    "coldfusion"  : { "minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmail.html" },
-    "lucee"       : { "minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/tags/mail.html" },
-    "railo"       : { "minimum_version": "", "notes": "", "docs": "http://railodocs.org/index.cfm/tag/cfmail" },
-    "openbd"      : { "minimum_version": "", "notes": "", "docs": "http://openbd.org/manual/?/tag/cfmail" }
-  },
-  "links": [
-    {
-      "title" : "More information on character encodings",
-      "url" : "http://www.w3.org/International/O-charset.html"
-    }
-  ],
-  "examples": [
-    {
-      "title": "Script Syntax",
-      "description": "It's a good idea to build your message in a savecontent block",
-      "code": "savecontent variable=\"mailBody\" {\n  writeOutput(\"Your Email Message!!\");\n};\n\n// Create and populate the mail object\nmailService = new mail(\n  to = \"your@email.com\",\n  from = \"another@email.com\",\n  subject = \"CFMail Example\",\n  body = mailBody\n);\n\n// Send\nmailService.send();"
-    },
-    {
-      "title": "Tag Syntax",
-      "description": "",
-      "code": "<cfmail to=\"your@email.com\" from=\"another@email.com\" subject=\"CFMail Example\">\r\n  Your Email Message!!\r\n</cfmail>"
-    }
-  ]
+	"name": "cfmail",
+	"type": "tag",
+	"syntax": "<cfmail to=\"\" from=\"\" subject=\"\">",
+	"returns": "",
+	"related": [ "cfmailpart", "cfmailparam", "savecontent"	],
+	"description": "Sends an email message that optionally contains query output, using an SMTP server.",
+	"params": [
+		{
+			"name": "bcc",
+			"required": false,
+			"type": "string",
+			"description": "Email address(es) to which to copy the message, without listing them in the message header.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "cc",
+			"required": false,
+			"type": "string",
+			"description": "Email address(es) to which to copy the message",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "charset",
+			"required": false,
+			"type": "string",
+			"description": "The character encoding in which the text part is encoded.",
+			"default": "",
+			"values": [ "utf-8", "iso-8859-1", "windows-1252", "us-ascii", "shift_jis", "iso-2022-jp", "euc-jp", "euc-kr", "big5", "euc-cn", "utf-16" ]
+		},
+		{
+			"name": "debug",
+			"required": false,
+			"type": "boolean",
+			"description": "true: sends debugging output to standard output. By default, if the console window is unavailable, ColdFusion sends output to cf_root\\runtime\\logs\\coldfusion-out.log on server configurations. On J2EE configurations, with JRun, the default location is jrun_home/logs/servername-out.log.\nfalse: does not generate debugging output.",
+			"default": "false",
+			"values": [ true, false ]
+		},
+		{
+			"name": "encrypt",
+			"required": false,
+			"type": "boolean",
+			"description": "CF11+ Toggles email message encryption",
+			"default": "false",
+			"values": [ true, false ]
+		},
+		{
+			"name": "encryptionalgorithm",
+			"required": false,
+			"type": "string",
+			"description": "CF11+ Algorithm to use when encrypt=true\nEncryption support is provided through S/MIME.",
+			"values": [ "DES_EDE3_CBC", "RC2_CBC", "AES128_CBC", "AES192_CBC", "AES256_CBC" ]
+		},
+		{
+			"name": "failto",
+			"required": false,
+			"type": "string",
+			"description": "Email address to which mailing systems should send delivery failure notifications. Sets the mail envelope reverse-path value.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "from",
+			"required": true,
+			"type": "string",
+			"description": "Message sender email address.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "group",
+			"required": false,
+			"type": "string",
+			"description": "Query column to use when you group sets of records to send as a message. For example, to send a set of billing statements to a customer, group on \"Customer_ID.\" Case-sensitive. Eliminates adjacent duplicates when data is sorted by the specified field.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "groupcasesensitive",
+			"required": false,
+			"type": "boolean",
+			"description": "Whether to consider case when using the group attribute. To group on case-sensitive records, set this attribute to Yes.",
+			"default": "",
+			"values": [ true, false ]
+		},
+		{
+			"name": "keyalias",
+			"required": false,
+			"type": "string",
+			"description": "Alias of the key with which the certificate and private key is stored in keystore. If it is not specified then the first entry in the keystore will be picked up.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "keypassword",
+			"required": false,
+			"type": "string",
+			"description": "Password with which the private key is stored. If it is not specified, keystorepassword will be used as keypassword as well.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "keystore",
+			"required": false,
+			"type": "string",
+			"description": "Keystore containing the private key and certificate. The supported type is JKS (java key store) and pkcs12",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "keystorepassword",
+			"required": false,
+			"type": "string",
+			"description": "Password of the keystore",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "mailerid",
+			"required": false,
+			"type": "string",
+			"description": "Mailer ID to be passed in X-Mailer SMTP header, which identifies the mailer application.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "maxrows",
+			"required": false,
+			"type": "numeric",
+			"description": "Maximum number of messages to send when looping over a query.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "mimeattach",
+			"required": false,
+			"type": "string",
+			"description": "Path of file to attach to message. Attached file is MIME-encoded. CFML attempts to determine the MIME type of the file; use the cfmailparam tag to send an attachement and specify the MIME type.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "password",
+			"required": false,
+			"type": "string",
+			"description": "A password to send to SMTP servers that require authentication. Requires a username attribute.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "port",
+			"required": false,
+			"type": "numeric",
+			"description": "TCP/IP port on which SMTP server listens for requests (normally 25). A value here overrides the Administrator.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "priority",
+			"required": false,
+			"type": "string",
+			"description": "The message priority level. Can be an integer in the range 1-5; 1 represents the highest priority, or one of the following string values, which correspond to the numeric values",
+			"default": "normal",
+			"values": [ "highest", "urgent", "high", "normal", "low", "lowest", "non-urgent" ]
+		},
+		{
+			"name": "query",
+			"required": false,
+			"type": "query",
+			"description": "Name of cfquery from which to draw data for message(s). Use this attribute to send more than one message, or to send query results within a message.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "recipientcert",
+			"required": false,
+			"type": "string",
+			"description": "CF11+ Path to the public key certificate of the recipient."
+		},
+		{
+			"name": "remove",
+			"required": false,
+			"type": "boolean",
+			"description": "Tells ColdFusion to remove any attachments after successful mail delivery.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "replyto",
+			"required": false,
+			"type": "string",
+			"description": "Email address(es) to which the recipient is directed to send replies.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "server",
+			"required": false,
+			"type": "string",
+			"description": "SMTP server address, or (Enterprise edition only) a comma-delimited list of server addresses, to use for sending messages. At least one server must be specified here or in the CFML MX Administrator. A value here overrides the Administrator. A value that includes a port specification overrides the port attribute.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "sign",
+			"required": false,
+			"type": "boolean",
+			"description": "Mail will be signed when set to true",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "spoolenable",
+			"required": false,
+			"type": "boolean",
+			"description": "Specifies whether to spool mail or always send it Immediately. Overrides the CFML MX Administrator Spool mail messages to disk for delivery setting.",
+			"default": "",
+			"values": [ true, false ]
+		},
+		{
+			"name": "startrow",
+			"required": false,
+			"type": "numeric",
+			"description": "Row in a query to start from.",
+			"default": 1,
+			"values": []
+		},
+		{
+			"name": "subject",
+			"required": true,
+			"type": "string",
+			"description": "Message subject. Can be dynamically generated.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "timeout",
+			"required": false,
+			"type": "numeric",
+			"description": "Number of seconds to wait before timing out connection to SMTP server. A value here overrides the Administrator.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "to",
+			"required": true,
+			"type": "string",
+			"description": "Message recipient email addresses.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "type",
+			"required": false,
+			"type": "string",
+			"description": "The MIME media type of the part. Can be a can be valid MIME media type",
+			"default": "text/plain",
+			"values": [ "plain", "html", "text", "text/html", "text/plain" ]
+		},
+		{
+			"name": "username",
+			"required": false,
+			"type": "string",
+			"description": "A user name to send to SMTP servers that require authentication. Requires a password attribute",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "usessl",
+			"required": false,
+			"type": "boolean",
+			"description": "Whether to use Secure Sockets Layer.",
+			"default": "",
+			"values": [ true, false ]
+		},
+		{
+			"name": "usetls",
+			"required": false,
+			"type": "boolean",
+			"description": "Whether to use Transport Level Security.",
+			"default": "",
+			"values": [ true, false ]
+		},
+		{
+			"name": "wraptext",
+			"required": false,
+			"type": "numeric",
+			"description": "Specifies the maximum line length, in characters of the mail text. If a line has more than the specified number of characters, replaces the last white space character, such as a tab or space, preceding the specified position with a line break. If there are no white space characters, inserts a line break at the specified position. A common value for this attribute is 72.",
+			"default": "",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmail.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://docs.lucee.org/reference/tags/mail.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/tag/cfmail"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/tag/cfmail"
+		}
+	},
+	"links": [
+		{
+			"title": "More information on character encodings",
+			"url": "http://www.w3.org/International/O-charset.html"
+		}
+	],
+	"examples": [
+		{
+			"title": "Send basic email message",
+			"description": "The SMTP server details are provided through the Administrator.",
+			"code": "<cfmail to=\"receipient@example.com\" from=\"sender@example.com\" subject=\"Example email\">\n  Your Email Message!!\n</cfmail>"
+		},
+		{
+			"title": "Send basic email message overriding default SMTP server",
+			"description": "The SMTP server details are provided in code.",
+			"code": "<cfmail to=\"receipient@example.com\" from=\"sender@example.com\" subject=\"Example email\" server=\"smtp.example.com\" port=\"25\" username=\"myUsername\" password=\"myPassword\">\n  Your Email Message!!\n</cfmail>"
+		},
+		{
+			"title": "Send email messages using a query",
+			"description": "Loop through database records and sends one email per row.",
+			"code": "<cfset myQuery = queryNew( \"receipient,lastname,firstname\" )>\n<cfset queryAddRow( myQuery, { receipient = \"receipient@example.com\", lastname = \"Doe\", firstname = \"John\" }) />\n\n<cfmail to=\"#receipient#\" from=\"sender@example.com\" subject=\"Example email\" query=\"myQuery\">\n  Dear #lastname#,\n\n  Text here, containing any variable in the myQuery scope.\n</cfmail>"
+		},
+		{
+			"title": "Script syntax using new mail()",
+			"description": "CF9+ The cfmail features are also available through the mail component.",
+			"code": "savecontent variable=\"mailBody\" {\n  writeOutput( \"Your Email Message!!\" );\n};\n\n// Create and populate the mail object\nmailService = new mail(\n  to = \"receipient@example.com\",\n  from = \"sender@example.com\",\n  subject = \"Example email\",\n  body = mailBody\n);\n\n// Send\nmailService.send();"
+		}
+	]
 }
