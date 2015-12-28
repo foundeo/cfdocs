@@ -74,7 +74,7 @@
               </div>
               </cfoutput>
             </cfloop> 
-        <div id="test-tool"><small>Contributions not showing up? Test them with this tool. <a href="http://contribution-checker.herokuapp.com/" rel="nofollow">http://contribution-checker.herokuapp.com</a>.<small></div>
+       
       <cfelse>
         <!--- error connecting to github so tell CDN to only cache for 30 seconds --->
         <cfset request.cacheControlMaxAge = 30> 
