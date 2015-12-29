@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cfwebsocket name=\"\" onMessage=\"\">",
 	"returns":"",
-	"related":[],
+	"related":["WSGetAllChannels","WSPublish","WSgetSubscribers"],
 	"description":"Includes the required JavaScript files in your CFM template and creates a global JavaScript reference to the WebSocket Object on the client-side.",
 	"params": [
 		{	"name":"name",
@@ -49,7 +49,7 @@
 			"values":[]
 		},
 		{	"name":"subscribeTo",
-			"description":"Comma-separated list of channels to subscribe to. You can specify any or all channels set in the Application.cfc.",
+			"description":"Comma-separated list of channels to subscribe to. You can specify any or all channels set in your <a href=\"\/application-cfc#wschannels\">Application this.wschannels settings<\/a>",
 			"required":false,
 			"default":"",
 			"type":"string",
@@ -81,10 +81,12 @@
 			"title":"Using WebSocket with ColdFusion 11 by Awdhesh Kumar",
 			"description":"Follow up post by Awdhesh Kumar in 2014 regarding enhancements to WebSockets in ColdFusion 11.",
 			"url":"http:\/\/www.adobe.com\/devnet\/coldfusion\/articles\/html5-websockets-coldfusion-pt1.html"
+		},
+		{
+			"title":"Using WebSocket to broadcast messages - Adobe",
+			"description":"Examples available on ColdFusion documentation",
+			"url":"https:\/\/helpx.adobe.com\/coldfusion\/developing-applications\/coldfusion-and-html-5\/using-coldfusion-websocket\/using-websocket-to-broadcast-messages.html"
 		}
-
-
-
 
 	],
 	"examples": [
@@ -97,8 +99,15 @@
 		},
 		{
 			"title": "Tag Syntax",
-			"description": "",
-			"code": "<cfwebsocket name=\"ws\" onMessage=\"handleMessage\" \/>",
+			"description": "This example creates a JavaScript WebSocket object named <code>ws<\/code>. When a message is pushed, the client runs the <code>handleMessage<\/code> JavaScript function. This example also uses the <code>subscribeTo<\/code> attribute so it will automatically subscribe to the channel <code>chat<\/code>.",
+			"code": "<cfwebsocket name=\"ws\" onMessage=\"handleMessage\" subscribeTo=\"chat\" \/>\n<script>\n  function handleMessage(message)  {\n    \/\/ Output message object to console\n    console.log(message);\n  }\n<\/script> ",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title": "Sub-channels",
+			"description": "Sub-channels are created dynamically and are referenced by dot notation. When a message is broadcasted to a channel all its sub-channels receive the message as well. This only goes from top to bottom and not the other way around.",
+			"code": "<cfwebsocket name=\"ws.subchannel\" onMessage=\"handleMessage\" \/>",
 			"result": "",
 			"runnable":false
 		}
