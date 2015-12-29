@@ -26,3 +26,11 @@ Please see the [LICENSE](LICENSE) file.
 
 No - any examples or code submitted must be your own work.
 
+### My contribution is not showing up on cfdocs.org
+
+The main site is cached by Amazon CloudFront for performance, so changes
+do not show up right away. Most pages are cached for 24 hours.
+
+If you are not showing up on the leaderboard after 24 hours you might need to 
+try this: http://contribution-checker.herokuapp.com/
+

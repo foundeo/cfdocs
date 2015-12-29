@@ -25,7 +25,7 @@
 
   <br><hr><br>
   <cftry>
-    <cfhttp url="https://api.github.com/repos/foundeo/cfdocs/stats/contributors" method="GET" charset="utf-8" result="statResult" throwonerror="false"></cfhttp>
+    <cfhttp url="https://api.github.com/repos/foundeo/cfdocs/stats/contributors" method="GET" charset="utf-8" result="statResult" throwonerror="false" timeout="3"></cfhttp>
       <cfif statResult.statusCode contains "200" AND IsJSON(statResult.fileContent)>
         <cfset stats = DeserializeJSON(statResult.fileContent)>
         <h2 class="text-center"><cfoutput>#ArrayLen(stats)#</cfoutput> Awesome Contributors <br><small>The Leader Board</small></h2>
@@ -74,7 +74,7 @@
               </div>
               </cfoutput>
             </cfloop> 
-        <div id="test-tool"><small>Contributions not showing up? Test them with this tool. <a href="http://contribution-checker.herokuapp.com/" rel="nofollow">http://contribution-checker.herokuapp.com</a>.<small></div>
+       
       <cfelse>
         <!--- error connecting to github so tell CDN to only cache for 30 seconds --->
         <cfset request.cacheControlMaxAge = 30> 
