@@ -96,5 +96,15 @@ footer { text-align: center; margin-top: 10px; font-size:smaller; }
 .alert-warning a {
   color: #fff;
 }
+/* for use in page anchor - moves -100px to allow space for toolbar */
+.page-anchor{
+  position:absolute;
+  margin-top:-80px;
+}
+/* normal placement in examples */
+p.clearfix .page-anchor{
+  position:absolute;
+  margin-top:-100px;
+}
 
 iframe { border:0px;}
