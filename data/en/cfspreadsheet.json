@@ -11,13 +11,13 @@
 			"description": "read - Reads the contents of an XLS format file.\nupdate - Adds a new sheet to an existing XLS file. You cannot use the update action to change a sheet in an existing file.\nwrite - Writes a new XLS format file or overwrites an existing file.",
 			"required": true,
 			"type": "string",
-			"values": [ "read", "update", "write" ]
+			"values": ["read", "update", "write"]
 		},
 		{
 			"name": "autosize",
 			"description": "CF11+ Toggles automatically ajusting the width of columns to accomodate their contents.",
-			"default": "true",
 			"required": false,
+			"default": "true",
 			"type": "boolean"
 		},
 		{
@@ -38,7 +38,7 @@
 			"required": false,
 			"default": "false",
 			"type": "boolean",
-			"values": [ true, false ]
+			"values": [true, false]
 		},
 		{
 			"name": "filename",
@@ -51,7 +51,7 @@
 			"description": "Format of the data represented by the name variable.",
 			"required": false,
 			"type": "string",
-			"values": [ "html", "csv" ]
+			"values": ["html", "csv"]
 		},
 		{
 			"name": "headerrow",
@@ -70,7 +70,7 @@
 			"description": "A Boolean value specifying whether to overwrite an existing file.",
 			"required": false,
 			"type": "boolean",
-			"values": [ true, false ]
+			"values": [true, false]
 		},
 		{
 			"name": "password",
@@ -115,23 +115,12 @@
 			"notes": "",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfspreadsheet.html"
 		},
-		"lucee": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "http://docs.lucee.org/reference/tags/spreadsheet.html"
-		},
-		"railo": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "http://railodocs.org/index.cfm/tag/cfspreadsheet"
-		},
 		"openbd": {
 			"minimum_version": "",
 			"notes": "",
 			"docs": "http://openbd.org/manual/?/tag/cfspreadsheet"
 		}
 	},
-	"links": [],
 	"examples": [
 		{
 			"title": "Read an Excel file as variable",
@@ -151,5 +140,6 @@
 			"code": "cfspreadsheet( action=\"write\", fileName=expandPath( 'new-example.xls' ), query=\"foo\", overwrite=true );",
 			"runnable": false
 		}
-	]
+	],
+	"links": []
 }

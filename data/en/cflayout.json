@@ -1,35 +1,130 @@
 {
-	"name":"cflayout",
-	"type":"tag",
-	"syntax":"<cflayout type=\"accordion\">",
-	"returns":"",
-	"related":[],
-	"description":" Creates a region of its container (such as the browser \n window or a cflayoutarea tag) with a specific layout \n behavior: a bordered area, a horizontal or vertically \n arranged box, or a tabbed navigator.",
+	"name": "cflayout",
+	"type": "tag",
+	"syntax": "<cflayout type=\"accordion\">",
+	"returns": "",
+	"related": [],
+	"description": "Creates a region of its container (such as the browser \n window or a cflayoutarea tag) with a specific layout \n behavior: a bordered area, a horizontal or vertically \n arranged box, or a tabbed navigator.",
 	"params": [
-		{"name":"type","description":"The type of layout.","required":true,"default":"border","type":"String","values":["accordion","border","hbox","tab","vbox"]},
-		{"name":"align","description":"Specifies the default alignment of the content of \n child layout areas. Each cflayoutarea tag can specify \n an alignment attribute to override this value.","required":false,"default":"center","type":"String","values":["center","justify","left","right"]},
-		{"name":"name","description":"The name of the layout region. Must be unique \n on a page.","required":false,"default":"","type":"String","values":[]},
-		{"name":"padding","description":"Applies only to hbox and vbox layouts.\n You can use any valid CSS length or percent format, \n such as 10, 10% 10px, or 10em, for this attribute. \n The padding is included in the child layout area \n and takes the style of the layout area.","required":false,"default":"","type":"String","values":[]},
-		{"name":"style","description":"A CSS style specification that defines layout styles.","required":false,"default":"","type":"String","values":[]},
-		{"name":"tabheight","description":"A CSS style specification that defines layout stApplies only to tab type layouts. Specifies the \n height of the content area of all child layout \nareas. You can override this setting by \nspecifying a hight setting in a individual \ncflayoutarea tag style attributes.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"tabposition","description":"Applies only to tab type layouts. Specifies the \n location of the tabs relative to the tab region \n contents.","required":false,"default":"top","type":"Numeric","values":["top","bottom"]},
-		{"name":"titlecollapse","description":"Specify whether title bar should act as collapse\/expand toggle or not; default=true.","required":false,"default":true,"type":"Boolean","values":[true,false]},
-		{"name":"activeontop","description":"Specify whether active tab needs to be on top always; default=false.","required":false,"default":false,"type":"Boolean","values":[true,false]},
-		{"name":"fillheight","description":"True to adjust the active item's height to fill the available space in the container; default=true.","required":false,"default":true,"type":"Boolean","values":[true,false]},
-		{"name":"fitToWindow","description":"A Boolean value that specifies whether the border layout should occupy 100% of the width and height of the window","required":false,"default":true,"type":"Boolean","values":[true,false]},
-		{"name":"height","description":"","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"width","description":"","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"buttonStyle","description":"","required":false,"default":"","type":"String","values":[]}
-
+		{
+			"name": "type",
+			"description": "The type of layout.",
+			"required": true,
+			"default": "border",
+			"type": "String",
+			"values": ["accordion", "border", "hbox", "tab", "vbox"]
+		},
+		{
+			"name": "align",
+			"description": "Specifies the default alignment of the content of \n child layout areas. Each cflayoutarea tag can specify \n an alignment attribute to override this value.",
+			"required": false,
+			"default": "center",
+			"type": "String",
+			"values": ["center", "justify", "left", "right"]
+		},
+		{
+			"name": "name",
+			"description": "The name of the layout region. Must be unique \n on a page.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "padding",
+			"description": "Applies only to hbox and vbox layouts.\n You can use any valid CSS length or percent format, \n such as 10, 10% 10px, or 10em, for this attribute. \n The padding is included in the child layout area \n and takes the style of the layout area.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "style",
+			"description": "A CSS style specification that defines layout styles.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "tabheight",
+			"description": "A CSS style specification that defines layout stApplies only to tab type layouts. Specifies the \n height of the content area of all child layout \nareas. You can override this setting by \nspecifying a hight setting in a individual \ncflayoutarea tag style attributes.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "tabposition",
+			"description": "Applies only to tab type layouts. Specifies the \n location of the tabs relative to the tab region \n contents.",
+			"required": false,
+			"default": "top",
+			"type": "Numeric",
+			"values": ["top", "bottom"]
+		},
+		{
+			"name": "titlecollapse",
+			"description": "Specify whether title bar should act as collapse/expand toggle or not; default=true.",
+			"required": false,
+			"default": true,
+			"type": "Boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "activeontop",
+			"description": "Specify whether active tab needs to be on top always; default=false.",
+			"required": false,
+			"default": false,
+			"type": "Boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "fillheight",
+			"description": "True to adjust the active item's height to fill the available space in the container; default=true.",
+			"required": false,
+			"default": true,
+			"type": "Boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "fitToWindow",
+			"description": "A Boolean value that specifies whether the border layout should occupy 100% of the width and height of the window",
+			"required": false,
+			"default": true,
+			"type": "Boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "height",
+			"description": "",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "width",
+			"description": "",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "buttonStyle",
+			"description": "",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cflayout.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/layout.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflayout"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflayout"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cflayout.html"
+		}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

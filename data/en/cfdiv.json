@@ -1,26 +1,68 @@
 {
-	"name":"cfdiv",
-	"type":"tag",
-	"syntax":"<cfdiv>",
-	"returns":"",
-	"related":[],
-	"description":" Creates an HTML tag with specified contents and lets you to use bind expressions to \n dynamically control the tag contents.",
+	"name": "cfdiv",
+	"type": "tag",
+	"syntax": "<cfdiv>",
+	"returns": "",
+	"related": [],
+	"description": "Creates an HTML tag with specified contents and lets you to use bind expressions to \n dynamically control the tag contents.",
 	"params": [
-		{"name":"id","description":"The HTML ID attribute value to assign to the \n generated container tag.","required":false,"default":"","type":"String","values":[]},
-		{"name":"onBindError","description":"The name of a JavaScript function to execute if \n evaluating a bind expression results in an error. The \n function must take two attributes: an HTTP status \n code and a message. \n If you omit this attribute, and have specified a \n global error handler (by using the \n ColdFusion.setGlobalErrorHandler function), it \n displays the error message; otherwise a default \n error pop-up displays.","required":false,"default":"","type":"String","values":[]},
-		{"name":"bind","description":"A bind expression that returns the container \n contents. \n Note: If a CFML page specified in this attribute \n contains tags that use AJAX features, such as \n cfform, cfgrid, and cfwindow, you must use a \n tag on the page with the tag. \n For more information, see cfajaximport.","required":false,"default":"","type":"String","values":[]},
-		{"name":"tagName","description":"The HTML container tag to create.","required":false,"default":"div","type":"String","values":["div","span"]},
-		{"name":"bindonload","description":"* true: executes the bind attribute expression when first loading the tag.\n * false: does not execute the bind attribute expression until the first bound event .\nTo use this attribute, you must also specify a bind attribute.","required":false,"default":true,"type":"Boolean","values":[false,true]}
-
+		{
+			"name": "id",
+			"description": "The HTML ID attribute value to assign to the \n generated container tag.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "onBindError",
+			"description": "The name of a JavaScript function to execute if \n evaluating a bind expression results in an error. The \n function must take two attributes: an HTTP status \n code and a message. \n If you omit this attribute, and have specified a \n global error handler (by using the \n ColdFusion.setGlobalErrorHandler function), it \n displays the error message; otherwise a default \n error pop-up displays.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "bind",
+			"description": "A bind expression that returns the container \n contents. \n Note: If a CFML page specified in this attribute \n contains tags that use AJAX features, such as \n cfform, cfgrid, and cfwindow, you must use a \n tag on the page with the tag. \n For more information, see cfajaximport.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "tagName",
+			"description": "The HTML container tag to create.",
+			"required": false,
+			"default": "div",
+			"type": "String",
+			"values": ["div", "span"]
+		},
+		{
+			"name": "bindonload",
+			"description": "* true: executes the bind attribute expression when first loading the tag.\n * false: does not execute the bind attribute expression until the first bound event .\nTo use this attribute, you must also specify a bind attribute.",
+			"required": false,
+			"default": true,
+			"type": "Boolean",
+			"values": [false, true]
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfdiv.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/div.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdiv"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdiv"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfdiv.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://docs.lucee.org/reference/tags/div.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/tag/cfdiv"
+		}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

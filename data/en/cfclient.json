@@ -1,1 +1,40 @@
-{"syntax":"<cfclient> ...output... <\/cfclient>","description":"Part of the CF11 mobile features for client side (JS) development. Enables output of CFcode to JS. Must read the wikidoc for full understanding of this new cf tag. \r\n<a href=\"https:\/\/wikidocs.adobe.com\/wiki\/pages\/viewpage.action?pageId=138577945\" target=\"_blank\">Please click here to read the Adobe WikiDoc for CFClient<\/a>\r\n\r\n","engines":{"coldfusion":{"minimum_version":"11","docs":"https:\/\/wikidocs.adobe.com\/wiki\/pages\/viewpage.action?pageId=138577945","notes":"https:\/\/wikidocs.adobe.com\/wiki\/pages\/viewpage.action?pageId=138577945"}},"name":"cfclient","links":[{"title":"","description":"","url":""}],"params":[{"values":[],"default":"","description":"","name":"","type":"Any","required":"0"}],"returns":"void","examples":[{"result":"","title":"Basic Example","description":"Very basic example. Please read the wikidoc entry at Adobe for futher usage scenarios.","code":"<cfclient>\r\n <cfset myvar = \u201cHello World\u201d>\r\n <cfoutput>#myvar#<\/cfoutput>\r\n<\/cfclient>"}],"type":"tag","related":["cfclientsettings"]}
+{
+	"name": "cfclient",
+	"type": "tag",
+	"syntax": "<cfclient> ...output... </cfclient>",
+	"returns": "void",
+	"related": ["cfclientsettings"],
+	"description": "Part of the CF11 mobile features for client side (JS) development. Enables output of CFcode to JS. Must read the wikidoc for full understanding of this new cf tag. \r\n<a href=\"https://wikidocs.adobe.com/wiki/pages/viewpage.action?pageId=138577945\" target=\"_blank\">Please click here to read the Adobe WikiDoc for CFClient</a>",
+	"params": [
+		{
+			"name": "",
+			"description": "",
+			"required": "0",
+			"default": "",
+			"type": "Any",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "11",
+			"notes": "https://wikidocs.adobe.com/wiki/pages/viewpage.action?pageId=138577945",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfclient.html"
+		}
+	},
+	"examples": [
+		{
+			"title": "Basic Example",
+			"description": "Very basic example. Please read the wikidoc entry at Adobe for futher usage scenarios.",
+			"code": "<cfclient>\r\n <cfset myvar = \u201cHello World\u201d>\r\n <cfoutput>#myvar#</cfoutput>\r\n</cfclient>",
+			"result": ""
+		}
+	],
+	"links": [
+		{
+			"title": "",
+			"description": "",
+			"url": ""
+		}
+	]
+}

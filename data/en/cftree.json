@@ -1,53 +1,279 @@
 {
-	"name":"cftree",
-	"type":"tag",
-	"syntax":"<cftree name=\"\">",
-	"returns":"",
-	"related":[],
-	"description":" Inserts a tree control in a form. Validates user selections.\n Used within a cftree tag block. You can use a CFML query\n to supply data to the tree.",
+	"name": "cftree",
+	"type": "tag",
+	"syntax": "<cftree name=\"\">",
+	"returns": "",
+	"related": [],
+	"description": "Inserts a tree control in a form. Validates user selections.\n Used within a cftree tag block. You can use a CFML query\n to supply data to the tree.",
 	"params": [
-		{"name":"name","description":"Name for tree control.","required":true,"default":"","type":"String","values":[]},
-		{"name":"format","description":"- applet: displays the tree using a Java applet in the\n browser,\n - flash: displays the tree using a Flash control\n - object: returns the tree as a ColdFusion structure with the\n name specified by the name attribute, For details of the\n structure contents, see \"object format\", below.\n - xml: Generates an XMLrepresentation of the tree.\n In XML format forms, includes the generated XML in the\n form. and puts the XML in a string variable with the name\n specified by the name attribute.\n Default: applet","required":false,"default":"applet","type":"String","values":["applet","flash","html","object","xml"]},
-		{"name":"required","description":"- true: user must select an item in tree control\n - false: they do not\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"delimiter","description":"Character to separate elements in form variable path.\n Default: \\\\","required":false,"default":"\\\\","type":"String","values":["\\\\",",",";","|",":"]},
-		{"name":"completepath","description":"- true: start the Form.treename.path variable with the root\n of the tree path when cftree is submitted.\n - false: omit the root level from the Form.treename.path\n variable; the value starts with the first child node in the\n tree.\n For the preserveData attribute of cfform to work with the\n tree, you must set this attribute to Yes.\n For tree items populated by a query, if you use the\n cftreeitem queryasroot attribute to specify a root name,\n that value is returned. If you do not specify a root name,\n ColdFusion returns the query name.\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"appendkey","description":"- true: if you use cftreeitem href attributes, ColdFusion\n appends a CFTREEITEMKEY query string variable with\n the value of the selected tree item to the cfform action URL.\n - false: do not append the tree item value to the URL.\n Default: true","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"highlighthref","description":"- true: highlights as a link the displayed value for any\n cftreeitem tag that specifies a href attribute.\n - false: disables highlighting.\n Default: true","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"onvalidate","description":"JavaScript function to validate user input. The form object,\n input object, and input object value are passed to the\n specified routine, which should return True if validation\n succeeds; False, otherwise.","required":false,"default":"","type":"String","values":[]},
-		{"name":"message","description":"Message to display if validation fails.","required":false,"default":"","type":"String","values":[]},
-		{"name":"onerror","description":"JavaScript function to execute if validation fails.","required":false,"default":"","type":"String","values":[]},
-		{"name":"lookandfeel","description":"- motif: renders slider in Motif style\n - windows: renders slider in Windows style\n - metal: renders slider in Java Swing style\n If platform does not support style option, tag defaults to\n platform default style.\n Default: windows","required":false,"default":"windows","type":"String","values":["motif","windows","metal"]},
-		{"name":"font","description":"Font name for data in tree control.","required":false,"default":"arial","type":"String","values":["arial","times","courier","arialunicodeMS"]},
-		{"name":"fontsize","description":"Font size for text in tree control, in points.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"italic","description":"- true: displays tree control text in italics\n - false: it does not\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"bold","description":"- true: displays tree control text in bold\n - false: it does not\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"height","description":"Tree control height, in pixels. If you omit this attribute in\n Flash format, Flash automatically sizes the tree.\n Default: 320 (applet only)","required":false,"default":320,"type":"Numeric","values":[]},
-		{"name":"width","description":"Tree control width, in pixels. If you omit this attribute in\n Flash format, Flash automatically sizes the tree.\n Default: 200 (applet only)","required":false,"default":200,"type":"Numeric","values":[]},
-		{"name":"vspace","description":"Vertical margin above and below tree control, in pixels.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"hspace","description":"Horizontal spacing to left and right of tree control, in pixels.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"align","description":"Alignment of the tree control applet object.","required":false,"default":"","type":"String","values":["top","left","bottom","baseline","texttop","absbottom","middle","absmiddle","right"]},
-		{"name":"border","description":"- true: display a border around the tree control.\n - false: no border\n Default: true","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"hscroll","description":"- true: permits horizontal scrolling\n - false: no horizontal scrolling\n Default: true","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"vscroll","description":"- true: permits vertical scrolling\n - false: no vertical scrolling\n Default: true","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"style","description":"Flash only: Must be a style specification in CSS format, with the same\n syntax and contents as used in Macromedia Flex for the\n corresponding Flash element.","required":false,"default":"","type":"String","values":[]},
-		{"name":"enabled","description":"Flash only: Boolean value specifying whether the\n control is enabled. A disabled control appears in light gray.\n Default: true","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"visible","description":"Flash only: Boolean value specifying whether to\n show the control. Space that would be occupied by an\n invisible control is blank.\n Default: true","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"tooltip","description":"Flash only: Text to display when the mouse pointer\n hovers over the control.","required":false,"default":"","type":"String","values":[]},
-		{"name":"onchange","description":"Flash only: ActionScript to run when the control changes due to user action.\n If you specify an onChange event handler, the Form scope of\n the ColdFusion action page does not automatically get\n information about selected items. The ActionScript onChange\n event handler must handle all changes and selections.","required":false,"default":"","type":"String","values":[]},
-		{"name":"onblur","description":"Flash only: ActionScript that runs when the calendar loses focus.\n (Added in 7.0.1)","required":false,"default":"","type":"String","values":[]},
-		{"name":"onfocus","description":"Flash only: ActionScript that runs when the calendar loses focus.\n (Added in 7.0.1)","required":false,"default":"","type":"String","values":[]},
-		{"name":"notsupported","description":"Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.\n Default:\n \"<b>Browser must support Java to <br>view ColdFusion Java\n Applets!<\/b>\"","required":false,"default":"<b>Browser must support Java to <br>view ColdFusion Java Applets!<\/b>","type":"String","values":[]},
-		{"name":"cache","description":"A Boolean value that specifies whether to get new data each time the user expands tree nodes, as follows:\n * yes: fetches a node's child items only once, when the node is first expanded\n * no: fetches child items each time the node is expanded.","required":false,"default":true,"type":"Boolean","values":[true,false]}
-
+		{
+			"name": "name",
+			"description": "Name for tree control.",
+			"required": true,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "format",
+			"description": "- applet: displays the tree using a Java applet in the\n browser,\n - flash: displays the tree using a Flash control\n - object: returns the tree as a ColdFusion structure with the\n name specified by the name attribute, For details of the\n structure contents, see \"object format\", below.\n - xml: Generates an XMLrepresentation of the tree.\n In XML format forms, includes the generated XML in the\n form. and puts the XML in a string variable with the name\n specified by the name attribute.\n Default: applet",
+			"required": false,
+			"default": "applet",
+			"type": "String",
+			"values": ["applet", "flash", "html", "object", "xml"]
+		},
+		{
+			"name": "required",
+			"description": "- true: user must select an item in tree control\n - false: they do not\n Default: false",
+			"required": false,
+			"default": false,
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "delimiter",
+			"description": "Character to separate elements in form variable path.\n Default: \\\\",
+			"required": false,
+			"default": "\\\\",
+			"type": "String",
+			"values": ["\\\\", ", ", ";", "|", ":"]
+		},
+		{
+			"name": "completepath",
+			"description": "- true: start the Form.treename.path variable with the root\n of the tree path when cftree is submitted.\n - false: omit the root level from the Form.treename.path\n variable; the value starts with the first child node in the\n tree.\n For the preserveData attribute of cfform to work with the\n tree, you must set this attribute to Yes.\n For tree items populated by a query, if you use the\n cftreeitem queryasroot attribute to specify a root name,\n that value is returned. If you do not specify a root name,\n ColdFusion returns the query name.\n Default: false",
+			"required": false,
+			"default": false,
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "appendkey",
+			"description": "- true: if you use cftreeitem href attributes, ColdFusion\n appends a CFTREEITEMKEY query string variable with\n the value of the selected tree item to the cfform action URL.\n - false: do not append the tree item value to the URL.\n Default: true",
+			"required": false,
+			"default": true,
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "highlighthref",
+			"description": "- true: highlights as a link the displayed value for any\n cftreeitem tag that specifies a href attribute.\n - false: disables highlighting.\n Default: true",
+			"required": false,
+			"default": true,
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "onvalidate",
+			"description": "JavaScript function to validate user input. The form object,\n input object, and input object value are passed to the\n specified routine, which should return True if validation\n succeeds; False, otherwise.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "message",
+			"description": "Message to display if validation fails.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "onerror",
+			"description": "JavaScript function to execute if validation fails.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "lookandfeel",
+			"description": "- motif: renders slider in Motif style\n - windows: renders slider in Windows style\n - metal: renders slider in Java Swing style\n If platform does not support style option, tag defaults to\n platform default style.\n Default: windows",
+			"required": false,
+			"default": "windows",
+			"type": "String",
+			"values": ["motif", "windows", "metal"]
+		},
+		{
+			"name": "font",
+			"description": "Font name for data in tree control.",
+			"required": false,
+			"default": "arial",
+			"type": "String",
+			"values": ["arial", "times", "courier", "arialunicodeMS"]
+		},
+		{
+			"name": "fontsize",
+			"description": "Font size for text in tree control, in points.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "italic",
+			"description": "- true: displays tree control text in italics\n - false: it does not\n Default: false",
+			"required": false,
+			"default": false,
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "bold",
+			"description": "- true: displays tree control text in bold\n - false: it does not\n Default: false",
+			"required": false,
+			"default": false,
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "height",
+			"description": "Tree control height, in pixels. If you omit this attribute in\n Flash format, Flash automatically sizes the tree.\n Default: 320 (applet only)",
+			"required": false,
+			"default": 320,
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "width",
+			"description": "Tree control width, in pixels. If you omit this attribute in\n Flash format, Flash automatically sizes the tree.\n Default: 200 (applet only)",
+			"required": false,
+			"default": 200,
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "vspace",
+			"description": "Vertical margin above and below tree control, in pixels.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "hspace",
+			"description": "Horizontal spacing to left and right of tree control, in pixels.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "align",
+			"description": "Alignment of the tree control applet object.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": ["top", "left", "bottom", "baseline", "texttop", "absbottom", "middle", "absmiddle", "right"]
+		},
+		{
+			"name": "border",
+			"description": "- true: display a border around the tree control.\n - false: no border\n Default: true",
+			"required": false,
+			"default": true,
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "hscroll",
+			"description": "- true: permits horizontal scrolling\n - false: no horizontal scrolling\n Default: true",
+			"required": false,
+			"default": true,
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "vscroll",
+			"description": "- true: permits vertical scrolling\n - false: no vertical scrolling\n Default: true",
+			"required": false,
+			"default": true,
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "style",
+			"description": "Flash only: Must be a style specification in CSS format, with the same\n syntax and contents as used in Macromedia Flex for the\n corresponding Flash element.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "enabled",
+			"description": "Flash only: Boolean value specifying whether the\n control is enabled. A disabled control appears in light gray.\n Default: true",
+			"required": false,
+			"default": true,
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "visible",
+			"description": "Flash only: Boolean value specifying whether to\n show the control. Space that would be occupied by an\n invisible control is blank.\n Default: true",
+			"required": false,
+			"default": true,
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "tooltip",
+			"description": "Flash only: Text to display when the mouse pointer\n hovers over the control.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "onchange",
+			"description": "Flash only: ActionScript to run when the control changes due to user action.\n If you specify an onChange event handler, the Form scope of\n the ColdFusion action page does not automatically get\n information about selected items. The ActionScript onChange\n event handler must handle all changes and selections.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "onblur",
+			"description": "Flash only: ActionScript that runs when the calendar loses focus.\n (Added in 7.0.1)",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "onfocus",
+			"description": "Flash only: ActionScript that runs when the calendar loses focus.\n (Added in 7.0.1)",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "notsupported",
+			"description": "Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.\n Default:\n \"<b>Browser must support Java to <br>view ColdFusion Java\n Applets!</b>\"",
+			"required": false,
+			"default": "<b>Browser must support Java to <br>view ColdFusion Java Applets!</b>",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "cache",
+			"description": "A Boolean value that specifies whether to get new data each time the user expands tree nodes, as follows:\n * yes: fetches a node's child items only once, when the node is first expanded\n * no: fetches child items each time the node is expanded.",
+			"required": false,
+			"default": true,
+			"type": "Boolean",
+			"values": [true, false]
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cftree.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/tree.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cftree"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cftree"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cftree.html"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/tag/cftree"
+		}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }
