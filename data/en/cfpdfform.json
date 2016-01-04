@@ -1,32 +1,106 @@
 {
-	"name":"cfpdfform",
-	"type":"tag",
-	"syntax":"<cfpdfform action=\"populate\" source=\"\">",
-	"returns":"",
-	"related":[],
-	"description":" Manipulates existing Adobe Acrobat forms and Adobe LiveCycle forms.\n The following list describes some of the tasks you can perform with the cfpdfform tag:\n Embed an interactive Acrobat form or LiveCycle form within a PDF document.\n You use the cfpdfform tag to embed the PDF form within a cfdocument tag.\n Render an existing Acrobat form or LiveCycle form. This includes prefilling\n fields from a database or an XML data file and processing form data submitted\n via HTTP post or PDF format.\n Extract or prefill values in stored PDF forms and save the output to a file\n or use it to update a data source.",
+	"name": "cfpdfform",
+	"type": "tag",
+	"syntax": "<cfpdfform action=\"populate\" source=\"\">",
+	"returns": "",
+	"related": [],
+	"description": "Manipulates existing Adobe Acrobat forms and Adobe LiveCycle forms.\n The following list describes some of the tasks you can perform with the cfpdfform tag:\n Embed an interactive Acrobat form or LiveCycle form within a PDF document.\n You use the cfpdfform tag to embed the PDF form within a cfdocument tag.\n Render an existing Acrobat form or LiveCycle form. This includes prefilling\n fields from a database or an XML data file and processing form data submitted\n via HTTP post or PDF format.\n Extract or prefill values in stored PDF forms and save the output to a file\n or use it to update a data source.",
 	"params": [
-		{"name":"action","description":"The action to perform on the source:\n populate\n read (required)","required":true,"default":"","type":"String","values":["populate","read"]},
-		{"name":"datafile","description":"(populate read) Pathname for the XML data file.\n if action=\"populate\", the data from this file\n populates the fields of the PDF form.\n if action=\"read\", ColdFusion writes the data\n to this file.\n You can specify a pathname relative to the context\n root or a relative pathname.\n You must specify either the datafile attribute\n or the result attribute for the read action;\n you can specify both. (optional)","required":false,"default":"","type":"String","values":[]},
-		{"name":"destination","description":"(populate) Pathname for the output file.\n You can specify an absolute pathname or\n a pathname relative to the context root.\n The file extension must be PDF or XDP.\n The file extension determines the format\n of the file. (The XDP format applies only\n to LiveCycle forms.)\n If you do not specify the destination,\n ColdFusion displays the form in the browser.\n Do not specify the destination when you\n embed a form in a PDF document. (optional)","required":false,"default":"","type":"String","values":[]},
-		{"name":"overwrite","description":"(populate, read) Overwrite the destination file\n (if action=\"populate)\n or the data file (if action=\"read\"):\n yes\n no (optional)","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"overwritedata","description":"Specifies whether to overwrite existing data in PDF form fields with data from the data source:\n\n * yes: Overwrite existing data in the form fields with that from the data source.\n * no: Retain existing data in form fields and populate only those fields without data.","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"result","description":"(read) ColdFusion structure that contains the form field values.\n You must specify the datafile attribute or the result attribute;\n you can specify both. (optional)","required":false,"default":"","type":"Any","values":[]},
-		{"name":"source","description":"(populate, read) Pathname of the source PDF (absolute path or path\n relative to the context root) or byte array representing a PDF. (required)","required":true,"default":"","type":"String","values":[]},
-		{"name":"xmldata","description":"Pathname for the XML data file.\n\n * If action=\"populate\", the data from this file, XML object, or XML string populates the form fields. You can specify a pathname relative to the context root or a relative pathname.\n * If action=\"read\", ColdFusion writes the data to the variable.","required":false,"default":"","type":"Boolean","values":["populate","read"]},
-		{"name":"name","description":"Specify the PDF document variable name, for example, myPDFdoc.\n If the source is a PDF document variable, you cannot specify the\n name attribute again; you can write the modified PDF document\n to the destination. (optional)","required":false,"default":"","type":"String","values":[]},
-		{"name":"fdf","description":"If set to true, the system creates FDF with subforms and params instead of an XML","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"fdfData","description":"For populate, you specify the file name from where the FDF data will be imported.\nFor read, you specify the file name where the FDF data will be exported.","required":false,"default":"","type":"String","values":[]}
-
+		{
+			"name": "action",
+			"description": "The action to perform on the source:\n populate\n read (required)",
+			"required": true,
+			"default": "",
+			"type": "String",
+			"values": ["populate", "read"]
+		},
+		{
+			"name": "datafile",
+			"description": "(populate read) Pathname for the XML data file.\n if action=\"populate\", the data from this file\n populates the fields of the PDF form.\n if action=\"read\", ColdFusion writes the data\n to this file.\n You can specify a pathname relative to the context\n root or a relative pathname.\n You must specify either the datafile attribute\n or the result attribute for the read action;\n you can specify both. (optional)",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "destination",
+			"description": "(populate) Pathname for the output file.\n You can specify an absolute pathname or\n a pathname relative to the context root.\n The file extension must be PDF or XDP.\n The file extension determines the format\n of the file. (The XDP format applies only\n to LiveCycle forms.)\n If you do not specify the destination,\n ColdFusion displays the form in the browser.\n Do not specify the destination when you\n embed a form in a PDF document. (optional)",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "overwrite",
+			"description": "(populate, read) Overwrite the destination file\n (if action=\"populate)\n or the data file (if action=\"read\"):\n yes\n no (optional)",
+			"required": false,
+			"default": "",
+			"type": "Boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "overwritedata",
+			"description": "Specifies whether to overwrite existing data in PDF form fields with data from the data source:\n\n * yes: Overwrite existing data in the form fields with that from the data source.\n * no: Retain existing data in form fields and populate only those fields without data.",
+			"required": false,
+			"default": "",
+			"type": "Boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "result",
+			"description": "(read) ColdFusion structure that contains the form field values.\n You must specify the datafile attribute or the result attribute;\n you can specify both. (optional)",
+			"required": false,
+			"default": "",
+			"type": "Any",
+			"values": []
+		},
+		{
+			"name": "source",
+			"description": "(populate, read) Pathname of the source PDF (absolute path or path\n relative to the context root) or byte array representing a PDF. (required)",
+			"required": true,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "xmldata",
+			"description": "Pathname for the XML data file.\n\n * If action=\"populate\", the data from this file, XML object, or XML string populates the form fields. You can specify a pathname relative to the context root or a relative pathname.\n * If action=\"read\", ColdFusion writes the data to the variable.",
+			"required": false,
+			"default": "",
+			"type": "Boolean",
+			"values": ["populate", "read"]
+		},
+		{
+			"name": "name",
+			"description": "Specify the PDF document variable name, for example, myPDFdoc.\n If the source is a PDF document variable, you cannot specify the\n name attribute again; you can write the modified PDF document\n to the destination. (optional)",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "fdf",
+			"description": "If set to true, the system creates FDF with subforms and params instead of an XML",
+			"required": false,
+			"default": "",
+			"type": "Boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "fdfData",
+			"description": "For populate, you specify the file name from where the FDF data will be imported.\nFor read, you specify the file name where the FDF data will be exported.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpdfform.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/pdfform.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfpdfform"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfpdfform"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpdfform.html"
+		}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

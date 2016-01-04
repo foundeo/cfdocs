@@ -1,38 +1,154 @@
 {
-	"name":"cfmediaplayer",
-	"type":"tag",
-	"syntax":"<cfmediaplayer source=\"\">",
-	"returns":"",
-	"related":[],
-	"description":" Creates an in-built media player that lets you play FLV files",
+	"name": "cfmediaplayer",
+	"type": "tag",
+	"syntax": "<cfmediaplayer source=\"\">",
+	"returns": "",
+	"related": [],
+	"description": "Creates an in-built media player that lets you play FLV files",
 	"params": [
-		{"name":"width","description":"Width of the media player, in pixels.","required":false,"default":"","type":"String","values":[]},
-		{"name":"height","description":"Height of the media player, in pixels.","required":false,"default":"","type":"String","values":[]},
-		{"name":"fullscreencontrol","description":"Whether full screen is enabled","required":false,"default":"","type":"Boolean","values":[false,true]},
-		{"name":"hideBorder","description":"A Boolean value that specifies if you want to hide border for the media player panel","required":false,"default":"","type":"Boolean","values":[false,true]},
-		{"name":"controlbar","description":"A Boolean value that specifies if you want to display the control panel for the media player","required":false,"default":"","type":"Boolean","values":[false,true]},
-		{"name":"align","description":"Specifies the vertical alignment of the media player.","required":false,"default":"","type":"String","values":["left","right","center"]},
-		{"name":"onload","description":"Custom JavaScript function to run on loading th player component.","required":false,"default":"","type":"String","values":[]},
-		{"name":"bgcolor","description":"The background color of the media player specified as a Hexadecimal value without a \"#\"","required":false,"default":"","type":"String","values":[]},
-		{"name":"source","description":"The URL to the FLV file.","required":true,"default":"","type":"String","values":[]},
-		{"name":"name","description":"Name of the media player.\nThe name attribute is required when you invoke JavaScript functions.","required":false,"default":"","type":"String","values":[]},
-		{"name":"quality","description":"The quality of the media playback","required":false,"default":"","type":"String","values":["high","medium","low"]},
-		{"name":"hideTitle","description":"A Boolean value that specifies if you want to hide title for the media player panel","required":false,"default":"","type":"Boolean","values":[false,true]},
-		{"name":"oncomplete","description":"Custom JavaScript function to run when the FLV file has finished playing.","required":false,"default":"","type":"String","values":[]},
-		{"name":"onstart","description":"Custom JavaScript function to run when the FLV file starts playing.","required":false,"default":"","type":"String","values":[]},
-		{"name":"wmode","description":"Specifies the absolute positioning and layering capabilities in your browser","required":false,"default":"","type":"String","values":["opaque","transparent","window"]},
-		{"name":"autoPlay","description":"A Boolean value that specifies if the media player should automatically play the FLV file on loading the CFM page.","required":false,"default":"","type":"Boolean","values":[false,true]},
-		{"name":"style","description":"Specify style for mediaplayer","required":false,"default":"","type":"String","values":[]}
-
+		{
+			"name": "width",
+			"description": "Width of the media player, in pixels.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "height",
+			"description": "Height of the media player, in pixels.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "fullscreencontrol",
+			"description": "Whether full screen is enabled",
+			"required": false,
+			"default": "",
+			"type": "Boolean",
+			"values": [false, true]
+		},
+		{
+			"name": "hideBorder",
+			"description": "A Boolean value that specifies if you want to hide border for the media player panel",
+			"required": false,
+			"default": "",
+			"type": "Boolean",
+			"values": [false, true]
+		},
+		{
+			"name": "controlbar",
+			"description": "A Boolean value that specifies if you want to display the control panel for the media player",
+			"required": false,
+			"default": "",
+			"type": "Boolean",
+			"values": [false, true]
+		},
+		{
+			"name": "align",
+			"description": "Specifies the vertical alignment of the media player.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": ["left", "right", "center"]
+		},
+		{
+			"name": "onload",
+			"description": "Custom JavaScript function to run on loading th player component.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "bgcolor",
+			"description": "The background color of the media player specified as a Hexadecimal value without a \"#\"",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "source",
+			"description": "The URL to the FLV file.",
+			"required": true,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "name",
+			"description": "Name of the media player.\nThe name attribute is required when you invoke JavaScript functions.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "quality",
+			"description": "The quality of the media playback",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": ["high", "medium", "low"]
+		},
+		{
+			"name": "hideTitle",
+			"description": "A Boolean value that specifies if you want to hide title for the media player panel",
+			"required": false,
+			"default": "",
+			"type": "Boolean",
+			"values": [false, true]
+		},
+		{
+			"name": "oncomplete",
+			"description": "Custom JavaScript function to run when the FLV file has finished playing.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "onstart",
+			"description": "Custom JavaScript function to run when the FLV file starts playing.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "wmode",
+			"description": "Specifies the absolute positioning and layering capabilities in your browser",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": ["opaque", "transparent", "window"]
+		},
+		{
+			"name": "autoPlay",
+			"description": "A Boolean value that specifies if the media player should automatically play the FLV file on loading the CFM page.",
+			"required": false,
+			"default": "",
+			"type": "Boolean",
+			"values": [false, true]
+		},
+		{
+			"name": "style",
+			"description": "Specify style for mediaplayer",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmediaplayer.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/mediaplayer.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmediaplayer"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmediaplayer"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmediaplayer.html"
+		}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }
