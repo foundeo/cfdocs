@@ -81,7 +81,10 @@
 		<cfif REFind("Lucee[0-9.]+\+", arguments.content)>
 			<cfset arguments.content = ReReplace(arguments.content, "Lucee([0-9.]+\+)", "<span class=""label label-lucee"" title=""Requires Lucee \1"">Lucee \1</span>", "ALL")>
 		</cfif>
+		<!--- replace \n with br tags --->
 		<cfset arguments.content = Replace(arguments.content, "#Chr(10)#", "<br />", "ALL")>
+		<!--- replace backticks with code tag block --->
+		<cfset arguments.content = ReReplace(arguments.content, "`([^`]+)`", "<code>\1</code>", "ALL")>
 		<cfreturn arguments.content>
 	</cffunction>
 

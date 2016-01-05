@@ -129,10 +129,10 @@
 							#autoLink(p.description)#
 							<cfif StructKeyExists(p, "values") AND IsArray(p.values) AND ArrayLen(p.values)>
 								<cfif uCase(arrayToList(p.values)) IS NOT "YES,NO">
-									<p>Example Values:</p>
+									
 									<ul>
 										<cfloop array="#p.values#" index="i">
-											<li>#XmlFormat(i)#</li>
+											<li><code>#XmlFormat(i)#</code></li>
 										</cfloop>
 									</ul>
 								</cfif>
