@@ -14,6 +14,28 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/ucfirst.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title": "Basic usage",
+			"description": "Lucee4.5+ Capitalizes the first character of the first word only.",
+			"code": "ucFirst(\"hello world!\")",
+			"result": "Hello world!",
+			"runnable":true
+		},
+		{
+			"title": "Capitalize all the words in string",
+			"description": "Lucee4.5+ Using the optional doAll parameter capitalizes the first character of all words. Word separators are: whitespace, period, parenthesis, or dash.",
+			"code": "ucFirst(\"cfdocs.org is your (everyone's) resource for cf-related documentation!\", true)",
+			"result": "Cfdocs.Org Is Your (Everyone's) Resource For Cf-Related Documentation!",
+			"runnable":true
+		},
+		{
+			"title": "Handling of strings in all uppercase",
+			"description": "Lucee4.5+ Using the optional doLowerIfAllUppercase parameter allows for intelligent capitalization of words in all caps.",
+			"code": "ucFirst(\"CFDOCS.ORG YOUR (EVERYONE'S) RESOURCE FOR CF-RELATED DOCUMENTATION!\", true, true)",
+			"result": "Cfdocs.Org Your (Everyone's) Resource For Cf-Related Documentation!",
+			"runnable":true
+		}
+	],
 	"links": []
 }
