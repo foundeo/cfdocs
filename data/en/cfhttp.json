@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cfhttp url=\"\">",
 	"returns":"",
-	"related":["cfhttppram", "cfdump", "writedump"],
+	"related":["cfhttpparam", "cfdump", "writedump"],
 	"description":" Generates an HTTP request and handles the response from the\n server.",
 	"params": [
 		{"name":"url","description":"Address of the resource on the server which will handle\n the request. The URL must include the hostname or IP\n address.\n\n If you do not specify the transaction protocol (http:\/\/ or\n https:\/\/), CFML defaults to http.\n\n If you specify a port number in this attribute, it\n overrides any port attribute value.\n\n The cfhttppparam tag URL attribute appends query string\n attribute-value pairs to the URL.","required":true,"default":"","type":"URL","values":[]},
