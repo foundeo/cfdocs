@@ -5,6 +5,7 @@
 <cfset guides = []>
 <cfset all = []>
 <cfset categories = []>
+<cfset versions = {4=[],5=[],6=[],7=[],8=[],9=[],10=[],11=[]}>
 <cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
 	<cfset json = fileRead(filePath,"utf-8")>
 	<cftry>
@@ -20,6 +21,12 @@
 				<cfset arrayAppend(all, nameKey)>
 			<cfelseif data.type IS "listing">
 				<cfset arrayAppend(categories, nameKey)>
+			</cfif>
+			<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "coldfusion") AND structKeyExists(data.engines.coldfusion, "minimum_version") AND isNumeric(data.engines.coldfusion.minimum_version)>
+
+				<cfif structKeyExists(versions, int(data.engines.coldfusion.minimum_version))>
+					<cfset arrayAppend(versions[int(data.engines.coldfusion.minimum_version)], data.name)>
+				</cfif>
 			</cfif>
 		</cfif>
 		<cfcatch>
@@ -73,6 +80,12 @@
 <cfset gData.related = guides>
 <cfset fileWrite(dataDir & "/guides.json", prettyJSON(serializeJSON(gData), "utf-8"))>
 <p>Wrote guides.json</p>
+
+<cfloop array="#structKeyArray(versions)#" index="v">
+	<cfset vData = {"name"="ColdFusion #v# New Functions and Tags","type"="listing","description"="List of tags and functions added in ColdFusion #v#", "related"=versions[v]}>
+	<cfset fileWrite(dataDir & "/cf#int(v)#.json", prettyJSON(serializeJSON(vData), "utf-8"))>
+	<p>Wrote cf<cfoutput>#v#</cfoutput>.json</p>
+</cfloop>
 
 <cfset applicationStop()>
 <p>Stopped application so it can reinit</p>
