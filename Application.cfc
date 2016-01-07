@@ -55,8 +55,11 @@
 
 	<cffunction name="autoLink" output="false">
 		<cfargument name="content">
-		<cfargument name="exclude" default="#url.name#">
+		<cfargument name="exclude" default="">
 		<cfset var i = "">
+		<cfif NOT len(arguments.exclude) AND structKeyExists(url, "name")>
+			<cfset arguments.exclude = url.name>
+		</cfif>
 		<cfif ReFindNoCase("[^""]https?://", arguments.content)>
 			<cfset arguments.content = ReReplaceNoCase(arguments.content, "([^""])(https?://[a-zA-Z0-9._/=&%?##+-]+)", "\1<a href=""\2"">\2</a>", "ALL")>
 		</cfif>

@@ -57,6 +57,9 @@
 <cfif data.type IS NOT "404" AND data.type IS NOT "index">
 	<ol class="breadcrumb container">
 	  <li><a href="/">CFDocs</a></li>
+	  <cfif NOT structKeyExists(url, "name")>
+	  	<cfset url.name = data.name>
+	  </cfif>
 	  <cfif data.type IS "function" OR url.name contains "-functions"><li><a href="#linkTo("functions")#">Functions</a></li></cfif>
 	  <cfif data.type IS "tag" OR url.name contains "-tags"><li><a href="#linkTo("tags")#">Tags</a></li></cfif>
 	  <cfset cat = findCategory(url.name)>
