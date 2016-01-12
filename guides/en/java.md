@@ -33,9 +33,18 @@ Often when you have an API to interact with you can look through the Java API do
 	runtime = createObject("java"m "java.lang.Runtime").getRuntime();
 	writeOutput( runtime.availableProcessors() );
 
+#### Type Casting 
+
+Because CFML is a typeless language and Java is not, when you want to pass a java primitive `int` into a method you can use the javaCast function.
+
+	integerObject = createObject("java", "java.lang.Integer");
+	maxInt = integerObject.max(javaCast("int", 5), javaCast("int", 6));
+
 ## Using third party Java Libraries (jar files) in CFML
 
 To use a third party Java library, you will need to let the Java Runtime Environment know where to find the executable code. Java libraries are distributed as _jar_ files. Java uses _class loaders_ to load jar files and point to class implementations.
+
+Once the jar file is loaded and accessible to the CFML server / JVM you can use `createObject` just like above to work with the third party Java API.
 
 #### Using this.javaSettings to load jar files in CF10+
 
@@ -55,3 +64,8 @@ The variable `this.javaSettings.loadPaths` is an array of jar files or java clas
 If you want a Java library to be accessible to the entire server you can add it to the Java classpath. There are a few ways you can do this. On most ColdFusion servers the classpath is specified in the jvm.config file, you can also use the ColdFusion administrator to add jar file paths (it simply updates the jvm.config file for you) under the _Java and JVM Settings_ page.
 
 Most JEE/CFML servers also are configured to pick up any jar files placed in `WEB-INF/lib` automatically on server startup.
+
+## More Info
+
+* [Enhanced Java Integration in ColdFusion 10](http://help.adobe.com/en_US/ColdFusion/10.0/Developing/WSe61e35da8d318518-106e125d1353e804331-8000.html)
+* [JavaLoader - dynamic classloader for CFML](https://github.com/markmandel/JavaLoader)
