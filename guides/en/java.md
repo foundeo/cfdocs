@@ -30,7 +30,7 @@ we can do so like this:
 
 Often when you have an API to interact with you can look through the Java API documentation for static methods which are sometimes the entry point into an API (they return an instance of the Object you want to use). For example to interact with the Java Runtime, you can call the static method `getRuntime()` on the [`java.lang.Runtime`](http://javadocs.org/runtime) class.
 
-	runtime = createObject("java"m "java.lang.Runtime").getRuntime();
+	runtime = createObject("java", "java.lang.Runtime").getRuntime();
 	writeOutput( runtime.availableProcessors() );
 
 #### Type Casting 
