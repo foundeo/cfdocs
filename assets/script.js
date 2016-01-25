@@ -16,7 +16,7 @@ $(document).ready(function() {
     prefetch: {
           url:'data/en/index.json',
           ttl: 86400000*7,
-          cache: false,
+          cache: true,
           transform: function(d){return d.tags.concat(d.functions, d.categories);}
         }
   });
