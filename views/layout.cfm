@@ -96,7 +96,7 @@
     <cfoutput><script src="#request.assetBaseURL#script.js"></script></cfoutput>
     <cfparam name="request.gitFilePath" default="/">
     <cfoutput>
-    	<a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="https://aral.github.com/fork-me-on-github-retina-ribbons/right-white@2x.png" alt="Fork me on GitHub"></a>
+    	<a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="/assets/img/fork.png" alt="Fork me on GitHub"></a>
     </cfoutput>
 <cfabort>
   </body>
