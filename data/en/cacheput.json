@@ -6,10 +6,10 @@
 	"related":[],
 	"description":" Stores an object in the cache.",
 	"params": [
-		{"name":"id","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"value","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"timespan","description":"No Help Available","required":false,"default":"","type":"DateTime","values":[]},
-		{"name":"idleTime","description":"No Help Available","required":false,"default":"","type":"DateTime","values":[]}
+		{"name":"id","description":"Unique identifier for the cached value","required":true,"default":"","type":"String","values":[]},
+		{"name":"value","description":"The value to cache","required":true,"default":"","type":"String","values":[]},
+		{"name":"timespan","description":"The interval until the object is flushed from the cache, as a decimal number of days. One way to set the value is to use the return value from the CreateTimeSpan function. The default is to not time out the object.","required":false,"default":"","type":"DateTime","values":[]},
+		{"name":"idleTime","description":"A decimal number of days after which the object is flushed from the cache if it is not accessed during that time. One way to set the value is to use the return value from the CreateTimeSpan function.","required":false,"default":"","type":"DateTime","values":[]}
 
 	],
 	"engines": {
