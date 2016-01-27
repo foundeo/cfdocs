@@ -23,9 +23,8 @@
 		{
 			"title":"Convert JSON into CF Structure",
 			"description":"",
-			"code":"person = deserializeJSON(\"{\"\"company\"\":\"\"Foundeo\"\",\"\"name\"\":\"\"Pete Freitag\"\"}\");\nwriteOutput( person.company );",
+			"code":"person = deserializeJSON( '{\"company\":\"Foundeo\",\"name\":\"Pete Freitag\"}' );\r\nwriteOutput( person.company );",
 			"result": "Foundeo"
 		}
 	]
-
 }
