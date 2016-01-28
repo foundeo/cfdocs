@@ -35,12 +35,22 @@
             </cfif>
         </cfif>
 	</cfif>
-    <cfif StructKeyExists(data, "discouraged") AND Len(data.discouraged)>
-        <div class="alert alert-danger">
-            <h4><span class="glyphicon glyphicon-warning-sign"></span> Discouraged: #autoLink(htmlEditFormat(data.discouraged))#</h4>
+    
+    <cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "coldfusion") AND structKeyExists(data.engines.coldfusion, "deprecated") AND len(data.engines.coldfusion.deprecated)>
+
+    	<div class="alert alert-danger">
+            <h4>
+            	<span class="glyphicon glyphicon-warning-sign"></span>
+            	<cfif structKeyExists(data.engines.coldfusion, "removed") AND len(data.engines.coldfusion.removed)>
+
+            		The #data.name# <cfif data.type IS "tag">tag<cfelseif data.type IS "function">function</cfif> was <strong>REMOVED</strong> from ColdFusion #encodeForHTML(data.engines.coldfusion.removed)# <cfif data.engines.coldfusion.removed IS NOT data.engines.coldfusion.deprecated> and has been <strong>DEPRECATED</strong> since ColdFusion #encodeForHTML(data.engines.coldfusion.deprecated)#</cfif>
+
+            	<cfelse>
+            		The #data.name# <cfif data.type IS "tag">tag<cfelseif data.type IS "function">function</cfif> is <strong>DEPRECATED</strong> as of ColdFusion #encodeForHTML(data.engines.coldfusion.deprecated)#
+            	</cfif>
+            </h4>
         </div>
-    </cfif>
-    <cfif StructKeyExists(data, "engines") AND structCount(data.engines) EQ 1>
+    <cfelseif StructKeyExists(data, "engines") AND structCount(data.engines) EQ 1>
     	<div class="alert alert-warning">
             This <cfif data.type IS "tag">tag<cfelseif data.type IS "function">function</cfif> requires 
             	<cfif structKeyExists(data.engines, "coldfusion")> 
@@ -50,6 +60,11 @@
             		Lucee. <em>Not supported on Adobe ColdFusion.</em> 
             	</cfif>
             
+        </div>
+    </cfif>
+    <cfif StructKeyExists(data, "discouraged") AND Len(data.discouraged)>
+        <div class="alert alert-danger">
+            <h4><span class="glyphicon glyphicon-warning-sign"></span> Discouraged: #autoLink(htmlEditFormat(data.discouraged))#</h4>
         </div>
     </cfif>
   </div>
@@ -149,7 +164,7 @@
 	<cfif StructKeyExists(data, "engines")>
 		<cfset compatibilityData = "">
 		<cfloop index="i" list="#StructKeyList(data.engines)#">
-			<cfif StructKeyExists(data.engines[i], "notes") AND Len(data.engines[i].notes)>
+			<cfif (StructKeyExists(data.engines[i], "notes") AND Len(data.engines[i].notes)) OR ( StructKeyExists(data.engines[i], "deprecated") AND Len(data.engines[i].deprecated) )>
 				<cfsavecontent variable="compatibilityData">
 					#compatibilityData#
 					<div class="row">
@@ -159,10 +174,22 @@
 						</h4>
 					</div>
 					<div class="col-xs-8">
-						<div class="alert alert-warning">
-							<cfif Len(data.engines[i].minimum_version)><span class="label label-danger">Version #XmlFormat(data.engines[i].minimum_version)#+</span></cfif>
-							#autoLink(XmlFormat(data.engines[i].notes))#</div>
-						</div>
+						<cfif StructKeyExists(data.engines[i], "deprecated") AND Len(data.engines[i].deprecated)>
+							<div class="alert alert-danger">
+								<strong>DEPRECATED</strong> since version #encodeForHTML(data.engines[i].deprecated)#
+								<cfif StructKeyExists(data.engines[i], "removed") AND Len(data.engines[i].removed)>
+									<strong>REMOVED</strong> in version #encodeForHTML(data.engines[i].removed)#
+								</cfif>
+								<cfif StructKeyExists(data.engines[i], "notes") AND Len(data.engines[i].notes)>
+									#autoLink(XmlFormat(data.engines[i].notes))#
+								</cfif>
+							</div>
+						<cfelse>
+							<div class="alert alert-warning">
+								<cfif Len(data.engines[i].minimum_version)><span class="label label-danger">Version #XmlFormat(data.engines[i].minimum_version)#+</span></cfif>
+								#autoLink(XmlFormat(data.engines[i].notes))#</div>
+							</div>
+						</cfif>
 					</div>
 				</cfsavecontent>
 			</cfif>
