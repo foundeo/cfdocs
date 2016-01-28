@@ -57,9 +57,10 @@
 	],
 	"engines": {
 		"coldfusion": {
-			"minimum_version": "",
+			"minimum_version": "8",
 			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfsprydataset.html"
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfsprydataset.html",
+			"deprecated":"11"
 		}
 	},
 	"links": []
