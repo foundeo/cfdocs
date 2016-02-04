@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \r\n  <cfset queryAddRow(q)> \r\n  <cfset querySetCell(q, \"Name\", \"John\")> \r\n  <cfset querySetCell(q, \"Beers\", \"1\")> \r\n  <cfset querySetCell(q, \"Vegetables\", \"1\")> \r\n  <cfset querySetCell(q, \"Fruits\", \"1\")> \r\n  <cfset querySetCell(q, \"Meats\", \"1\")> \r\n  <cfset mySheet =   SpreadsheetNew( \"Test\"  ) /> \r\n  <!--- Make a spreadsheet object ---> \r\n  <cfset s = spreadsheetNew()> \r\n  <!--- Add header row ---> \r\n  <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \r\n  <!--- Add query ---> \r\n   <cfscript> \r\n   comment1=structNew() ; \r\n     comment1.anchor=\"0,0,5,8\"; \r\n     comment1.author=\"John Jones\"; \r\n     comment1.comment=\"This is a test comment\"; \r\n     comment1.size=\"10\"; \r\n     //Set the comment. \r\n SpreadsheetSetCellComment(s,comment1,3,5); \r\n     //Get the comment from the Excel spreadsheet object. \r\n   theComment=SpreadsheetGetCellComment(s,3,5); \r\n </cfscript> \r\n <cfoutput> \r\n Row,Column: #theComment.row#,#theComment.column#<br /> \r\n Author: #theComment.author#<br /> \r\n Comment: #theComment.comment# \r\n </cfoutput> ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

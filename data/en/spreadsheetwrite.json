@@ -20,6 +20,22 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Script Example",
+			"description":" ",
+			"code":"<cfscript> \r\n         spObj = spreadsheetread(\"#dirname#SingleSheet.xls\",\"Sheet2\"); \r\n         spreadsheetCreateSheet(spObj,\"A\"); \r\n         spreadsheetaddrow(spObj,\"x,x,x,x,x\",3,1); \r\n         spreadsheetsetActiveSheet(spObj,\"A\"); \r\n         spreadsheetaddrow(spObj,\"z,z,z,z,z\",3,1); \r\n         spreadsheetsetActiveSheetNumber(spObj,1); \r\n         spreadsheetaddrow(spObj,\"a,b,c,d,e\",3,1); \r\n         SpreadsheetWrite(spObj,\"#dirname#SingleSheet1.xls\",\"yes\"); \r\n </cfscript>  ",
+			"result":"",
+			"runnable":false
+		},
+        {
+			"title":"Script Example",
+			"description":"This will work if there was a place to store the xls file. ",
+			"code":"<cfset filename = 'pathToFile.xls' /> \r\n<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \r\n  <cfset queryAddRow(q)> \r\n  <cfset querySetCell(q, \"Name\", \"John\")> \r\n  <cfset querySetCell(q, \"Beers\", \"1\")> \r\n  <cfset querySetCell(q, \"Vegetables\", \"1\")> \r\n  <cfset querySetCell(q, \"Fruits\", \"1\")> \r\n  <cfset querySetCell(q, \"Meats\", \"1\")> \r\n  <cfset mySheet =   SpreadsheetNew( \"Test\"  ) /> \r\n  <!--- Make a spreadsheet object ---> \r\n  <cfset s = spreadsheetNew()> \r\n  <!--- Add header row ---> \r\n  <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \r\n <cfset spreadsheetAddRow(s, \"Name1,Beers1,Vegetables1,Fruits1,Meats1\")>\r\n  <cfset spreadsheetWrite(s, filename, true) /> \r\n  ",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }
