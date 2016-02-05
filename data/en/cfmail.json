@@ -343,7 +343,7 @@
 		}
 		{
 			"title": "Script syntax using new mail()",
-			"description": "CF9+ The cfmail features are also available through the mail component.",
+			"description": "CF11+ The cfmail features are also available through the mail component.",
 			"code": "savecontent variable=\"mailBody\" {\n  writeOutput( \"Your Email Message!!\" );\n};\n\n// Send the email\ncfmail( to = \"recipient@example.com\", from = \"sender@example.com\", subject = \"Example email\" ) {\n  WriteOutput( mailBody );\n}"
 		}
 	]
