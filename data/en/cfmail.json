@@ -342,8 +342,8 @@
 			"code": "savecontent variable=\"mailBody\" {\n  writeOutput( \"Your Email Message!!\" );\n};\n\n// Create and populate the mail object\nmailService = new mail(\n  to = \"recipient@example.com\",\n  from = \"sender@example.com\",\n  subject = \"Example email\",\n  body = mailBody\n);\n\n// Send\nmailService.send();"
 		}
 		{
-			"title": "Script syntax using new mail()",
-			"description": "CF11+ Send basic email using script syntax.",
+			"title": "Script syntax using function call",
+			"description": "CF11+ Send basic email using function call.",
 			"code": "cfmail( to = \"recipient@example.com\", from = \"sender@example.com\", subject = \"Example email\" ) { WriteOutput( \"Your Email Message!!\" ); }"
 		}
 	]
