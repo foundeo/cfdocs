@@ -49,20 +49,20 @@
         {
 			"title": "Loop Over an Array (Script Syntax)",
 			"description": "Array Loop",
-			"code": "// Define our array \r\n myArray = [\"a\", \"b\", \"c\"]; \r\n // By index \r\n // Note the use of the newer member function syntax for arrayLen() \r\n for (i = 1; i <= myArray.len(); i++) { \r\n writeOutput(myArray[i]); \r\n } \r\n // By array \r\n for (currentIndex in myArray) { \r\n writeOutput(currentIndex); \r\n } \r\n // By arrayEach() \r\n myArray.each(function(element, index) { \r\n   writeOuput(element & \" : \" & index); \r\n });",
+			"code": "myArray = [\"a\", \"b\", \"c\"];\n// For Loop By index for CF9.0.0 and lower \nfor (i = 1; i <= arrayLen(myArray); i++) {\n    writeOutput(myArray[i]);\n}\n// By For In CF9.0.1+ \nfor (currentIndex in myArray) {\n    writeOutput(currentIndex);\n}\n// By arrayEach() member function CF11+\nmyArray.each(function(element, index) {\n    writeOuput(element & \" : \" & index);\n});",
 			"result": ""
 		},
 		
         {
             "title": "CFLoop over an Array",
             "description": "Array Loop",
-            "code": "<!--- Define our array --->\r\n <cfset myArray = [\"a\", \"b\", \"c\"]> \r\n <!--- By index ---> \r\n <cfloop index=\"i\" from=\"1\" to=\"#arrayLen(myArray)#\"> \r\n <cfoutput>#myArray[i]#</cfoutput> \r\n </cfloop> \r\n <!--- By array ---> \r\n <cfloop index=\"currentIndex\" array=\"#myArray#\"> \r\n <cfoutput>#currentIndex#</cfoutput> \r\n </cfloop>",
+            "code": "<cfset myArray = [\"a\", \"b\", \"c\"]> \r\n <!--- By index ---> \r\n <cfloop index=\"i\" from=\"1\" to=\"#arrayLen(myArray)#\"> \r\n <cfoutput>#myArray[i]#</cfoutput> \r\n </cfloop> \r\n <!--- By array ---> \r\n <cfloop index=\"currentIndex\" array=\"#myArray#\"> \r\n <cfoutput>#currentIndex#</cfoutput> \r\n </cfloop>",
             "result": ""
         },
 	    {
 			"title": "Loop over a Struct (Script Syntax)",
 			"description": "Struct Loop",
-			"code": "// Define our struct \r\n myStruct = {name: \"Tony\", state: \"Florida\"}; \r\n // By struct \r\n for (currentKey in myStruct) { \r\n writeOutput(\"<li>#currentKey# : #myStruct[currentKey]#</li>\"); \r\n } \r\n // By structEach() \r\n myStruct.each(function(key, value) { \r\n writeOutput(\"<li>#key# : #value#</li>\"); \r\n }); \r\n ",
+			"code": "myStruct = {name: \"Tony\", state: \"Florida\"}; \r\n // By struct \r\n for (currentKey in myStruct) { \r\n writeOutput(\"<li>#currentKey# : #myStruct[currentKey]#</li>\"); \r\n } \r\n // By structEach() \r\n myStruct.each(function(key, value) { \r\n writeOutput(\"<li>#key# : #value#</li>\"); \r\n }); \r\n ",
 			"result": ""
 		},
 		
