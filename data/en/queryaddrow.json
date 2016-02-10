@@ -7,7 +7,7 @@
 	"description":" Adds a specified number of empty rows to a query.",
 	"params": [
 		{"name":"query","description":"","required":true,"default":"","type":"Query","values":[]},
-		{"name":"number/row(s)","description":"As of CF10 you can pass a Structure whose keys map to the query column names to insert a row of data; or an Array of those Structures to insert multiple rows at once.","required":false,"default":"","type":"Numeric / Array / Struct","values":[]}
+		{"name":"number/row(s)","description":"As of CF10+ you can pass a Structure whose keys map to the query column names to insert a row of data; or an Array of those Structures to insert multiple rows at once.","required":false,"default":"","type":"Numeric / Array / Struct","values":[]}
 
 	],
 	"engines": {
@@ -21,12 +21,20 @@
 	],
 	"examples": [
 		{
-			"title":"Tag Example",
-			"description":" How to add a row to a query. Update the query based on your data to run this. ",
-			"code":"<!--- start by making a query ---> \r\n <cfquery name = \"GetCourses\" datasource = \"cfdocexamples\"> \r\n SELECT Course_ID, Number, Descript \r\n FROM Courses \r\n </cfquery> \r\n <p>The Query \"GetCourses\" has <cfoutput>#GetCourses.RecordCount#</cfoutput> rows. \r\n <cfset CountVar = 0> \r\n <cfloop CONDITION = \"CountVar LT 15\"> \r\n <cfset temp = queryAddRow(GetCourses)> \r\n <cfset CountVar = CountVar + 1> \r\n <cfset Temp = querySetCell(GetCourses, \"Number\", 100*CountVar)> \r\n <cfset Temp = querySetCell(GetCourses, \"Descript\", \r\n \"Description of variable #Countvar#\")> \r\n </cfloop>  ",
-			"result":"",
-			"runnable":false
+			"title":"Builds a simple query using queryNew and queryAddRow",
+			"description":"CF10+ Pass in row data directly to queryAddRow argument.",
+			"code":"news = queryNew(\"id,title\", \"integer,varchar\");\nqueryAddRow(news, {\"id\"=1,\"title\"=\"Dewey defeats Truman\"});\nwriteDump(news);",
+			"result":""
+
+		},
+		{
+			"title":"Builds a simple query using queryNew queryAddRow and querySetCell",
+			"description":"Using Script with the queryAddRow querySetCell functions to populate the query.",
+			"code":"news = queryNew(\"id,title\", \"integer,varchar\");\nqueryAddRow(news);\nquerySetCell(news, \"id\", \"1\");\nquerySetCell(news, \"title\", \"Dewey defeats Truman\");\nqueryAddRow(news);\nquerySetCell(news, \"id\", \"2\");\nquerySetCell(news, \"title\", \"Men walk on Moon\");\nwriteDump(news);",
+			"result":""
+
 		}
+		
 	]
 
 }
