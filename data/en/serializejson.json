@@ -32,6 +32,14 @@
 			"code":"person = {\"name\"=\"Pete Freitag\", \"company\"=\"Foundeo\"};\nwriteOutput( serializeJSON(person) );",
 			"result": "{\"company\":\"Foundeo\",\"name\":\"Pete Freitag\"}"
 		}
+	],
+	"ACF11 Issues": [
+		{
+			"title": "Incorrect serialization of strings",
+			"description": "Some strings that can be automatically converted into other types, like numbers or booleans, are wrongly changed.",
+			"code":"person = { \"phone\"=\"123456789\", \"firstname\"=\"no\",\"lastname\"=\"yes\" };\nwriteOutput( serializeJson(person) );",
+			"result": "{\"phone\":123456789,\"firstname\":false,\"lastname\":true}"
+		}
 	]
 
 }
