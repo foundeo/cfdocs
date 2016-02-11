@@ -31,12 +31,10 @@
 			"description":"Same as above but they variable names are case sensitive by quoting them.",
 			"code":"person = {\"name\"=\"Pete Freitag\", \"company\"=\"Foundeo\"};\nwriteOutput( serializeJSON(person) );",
 			"result": "{\"company\":\"Foundeo\",\"name\":\"Pete Freitag\"}"
-		}
-	],
-	"ACF11 Issues": [
+		},
 		{
-			"title": "Incorrect serialization of strings",
-			"description": "Some strings that can be automatically converted into other types, like numbers or booleans, are wrongly changed.",
+			"title": "Possible Issues",
+			"description": "ACF11+ incorrectly serializes some strings if they can be automatically converted into other types, like numbers or booleans.",
 			"code":"person = { \"phone\"=\"123456789\", \"firstname\"=\"no\",\"lastname\"=\"yes\" };\nwriteOutput( serializeJson(person) );",
 			"result": "{\"phone\":123456789,\"firstname\":false,\"lastname\":true}"
 		}
