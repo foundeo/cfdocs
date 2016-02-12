@@ -340,7 +340,7 @@
 			"title": "Script syntax using new mail()",
 			"description": "CF9+ The cfmail features are also available through the mail component.",
 			"code": "savecontent variable=\"mailBody\" {\n  writeOutput( \"Your Email Message!!\" );\n};\n\n// Create and populate the mail object\nmailService = new mail(\n  to = \"recipient@example.com\",\n  from = \"sender@example.com\",\n  subject = \"Example email\",\n  body = mailBody\n);\n\n// Send\nmailService.send();"
-		}
+		},
 		{
 			"title": "Script syntax using function call",
 			"description": "CF11+ Send basic email using function call.",
