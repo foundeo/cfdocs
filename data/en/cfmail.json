@@ -324,22 +324,27 @@
 		{
 			"title": "Send basic email message",
 			"description": "The SMTP server details are provided through the Administrator.",
-			"code": "<cfmail to=\"receipient@example.com\" from=\"sender@example.com\" subject=\"Example email\">\n  Your Email Message!!\n</cfmail>"
+			"code": "<cfmail to=\"recipient@example.com\" from=\"sender@example.com\" subject=\"Example email\">\n  Your Email Message!!\n</cfmail>"
 		},
 		{
 			"title": "Send basic email message overriding default SMTP server",
 			"description": "The SMTP server details are provided in code.",
-			"code": "<cfmail to=\"receipient@example.com\" from=\"sender@example.com\" subject=\"Example email\" server=\"smtp.example.com\" port=\"25\" username=\"myUsername\" password=\"myPassword\">\n  Your Email Message!!\n</cfmail>"
+			"code": "<cfmail to=\"recipient@example.com\" from=\"sender@example.com\" subject=\"Example email\" server=\"smtp.example.com\" port=\"25\" username=\"myUsername\" password=\"myPassword\">\n  Your Email Message!!\n</cfmail>"
 		},
 		{
 			"title": "Send email messages using a query",
 			"description": "Loop through database records and sends one email per row.",
-			"code": "<cfset myQuery = queryNew( \"receipient,lastname,firstname\" )>\n<cfset queryAddRow( myQuery, { receipient = \"receipient@example.com\", lastname = \"Doe\", firstname = \"John\" }) />\n\n<cfmail to=\"#receipient#\" from=\"sender@example.com\" subject=\"Example email\" query=\"myQuery\">\n  Dear #lastname#,\n\n  Text here, containing any variable in the myQuery scope.\n</cfmail>"
+			"code": "<cfset myQuery = queryNew( \"recipient,lastname,firstname\" )>\n<cfset queryAddRow( myQuery, { receipient = \"receipient@example.com\", lastname = \"Doe\", firstname = \"John\" }) />\n\n<cfmail to=\"#recipient#\" from=\"sender@example.com\" subject=\"Example email\" query=\"myQuery\">\n  Dear #lastname#,\n\n  Text here, containing any variable in the myQuery scope.\n</cfmail>"
 		},
 		{
 			"title": "Script syntax using new mail()",
 			"description": "CF9+ The cfmail features are also available through the mail component.",
-			"code": "savecontent variable=\"mailBody\" {\n  writeOutput( \"Your Email Message!!\" );\n};\n\n// Create and populate the mail object\nmailService = new mail(\n  to = \"receipient@example.com\",\n  from = \"sender@example.com\",\n  subject = \"Example email\",\n  body = mailBody\n);\n\n// Send\nmailService.send();"
+			"code": "savecontent variable=\"mailBody\" {\n  writeOutput( \"Your Email Message!!\" );\n};\n\n// Create and populate the mail object\nmailService = new mail(\n  to = \"recipient@example.com\",\n  from = \"sender@example.com\",\n  subject = \"Example email\",\n  body = mailBody\n);\n\n// Send\nmailService.send();"
+		},
+		{
+			"title": "Script syntax using function call",
+			"description": "CF11+ Send basic email using function call.",
+			"code": "cfmail( to = \"recipient@example.com\", from = \"sender@example.com\", subject = \"Example email\" ) { WriteOutput( \"Your Email Message!!\" ); }"
 		}
 	]
 }
