@@ -58,12 +58,12 @@
 			"code": "httpService = new http(method = \"GET\", charset = \"utf-8\", url = \"https://www.google.com/\"); \r\n httpService.addParam(name = \"q\", type = \"formfield\", value = \"cfml\"); \r\n result = httpService.send().getPrefix(); \r\n writeDump(result);",
 			"result": ""
 		},
-	        {
-	            "title": "Tag Syntax",
-	            "description": "",
-	            "code": "<cfhttp result=\"result\" method=\"GET\" charset=\"utf-8\" url=\"https://www.google.com/\"> \r\n <cfhttpparam name=\"q\" type=\"formfield\" value=\"cfml\"> \r\n </cfhttp> \r\n <cfdump var=\"#result#\">",
-	            "result": ""
-	        }
+        {
+            "title": "CFHTTP Tag Syntax",
+            "description": "",
+            "code": "<cfhttp result=\"result\" method=\"GET\" charset=\"utf-8\" url=\"https://www.google.com/\">\r\n    <cfhttpparam name=\"q\" type=\"formfield\" value=\"cfml\">\r\n</cfhttp>\r\n<cfdump var=\"#result#\">",
+            "result": ""
+        }
 	]
 
 }
