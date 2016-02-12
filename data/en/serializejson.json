@@ -33,8 +33,8 @@
 			"result": "{\"company\":\"Foundeo\",\"name\":\"Pete Freitag\"}"
 		},
 		{
-			"title": "Possible Issues",
-			"description": "ACF11+ incorrectly serializes some strings if they can be automatically converted into other types, like numbers or booleans.",
+			"title": "ACF Possible Issues",
+			"description": "Adobe ColdFusion may incorrectly serializes some strings if they can be automatically converted into other types, like numbers or booleans. One workaround is to use a CFC with cfproperty to specify types. Another workaround is to prepend Chr(2) to the value and it will be forced to a string, however that is an unofficial / undocumented workaround.",
 			"code":"person = { \"phone\"=\"123456789\", \"firstname\"=\"no\",\"lastname\"=\"yes\" };\nwriteOutput( serializeJson(person) );",
 			"result": "{\"phone\":123456789,\"firstname\":false,\"lastname\":true}"
 		}
