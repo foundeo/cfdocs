@@ -1,7 +1,7 @@
 {
 	"name":"directoryList",
 	"type":"function",
-	"syntax":"directoryList(path [, recurse] [, returnType] [, filter] [, sort] [, type])",
+	"syntax":"directoryList(path [, recurse] [, listInfo] [, filter] [, sort] [, type])",
 	"returns":"Object",
 	"related":[],
 	"description":" Lists the directory and returns the list of files under it as array or query",
