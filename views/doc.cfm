@@ -215,7 +215,7 @@
             <cfset example_index = example_index + 1>
             
 			<br />
-			<h4>
+			<h4 id="ex#example_index#">
                 #XmlFormat(ex.title)#
                 <cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
 	                <div class="pull-right">
