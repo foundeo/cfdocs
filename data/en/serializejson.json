@@ -21,6 +21,11 @@
 			"title":"JSON Overview",
 			"description":"Overview of the JSON spec.",
 			"url":"http://www.json.org/"
+		},
+		{
+			"title":"JSONUtil.cfc",
+			"description":"A CFC that provides JSON serialization and deserializtion. It is written in CFML so it works on versions prior to CF8. It may be useful if you are experiencing automatic type conversion issues with the builtin serializeJSON function.",
+			"url":"https://github.com/CFCommunity/jsonutil"
 		}
 	],
 	"examples": [
