@@ -345,7 +345,7 @@ angular.module('code.editor', [])
 
 				// Resize the editor to fit the new dimensions.
 				aceEditor.resize(true);
-
+				scope.toggleFullscreen = toggleFullscreen;
 				editor.show();
 
 				// Force fullscreen if fullscreen attribute was passed in and true.
@@ -429,7 +429,7 @@ angular.module('code.editor', [])
 				      	if( scope.setupCodeGist !== undefined && scope.setupCodeGist.length > 0 ){
 				      		url+= '?setupCodeGistId='+ scope.setupCodeGist;
 				      	}
-				      	if( scope.theme.length > 0 ){
+				      	if(scope.theme !== undefined && scope.theme.length > 0 ){
 							url+= (url.indexOf('?') > 0 ? '&' : '?') + 'theme='+ scope.theme;
 				      	}
 				        message.html('<span class="alert alert-success" style="padding: 5px;margin: 5px 0 0 3px;display: inline-block;"><i class="icon-check icon-white"></i> Saved Gist: <a href="http://trycf.com'+ url + '">'+response.id+'</a></span>');
@@ -612,7 +612,7 @@ angular.module('code.editor', [])
 				}
 
 				/* UTILITY FUNCTIONS */
-				scope.toggleFullscreen = function(){
+				function toggleFullscreen(){
 
 					element.find( '.editor-container' ).toggleClass( 'fullscreen' );
 					element.find( '.toggle-fullscreen i' ).toggleClass( 'icon-resize-full' ).toggleClass( 'icon-resize-small' );
