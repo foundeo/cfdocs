@@ -17,6 +17,18 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Output the literal string \"Hello World\"",
+			"description":"",
+			"code":"writeOutput(\"Hello World\");"
+		},
+		{
+			"title":"Output the equivalent string as a variable",
+			"description":"",
+			"code":"greeting = \"Hello World\";\nwriteOutput(greeting);"
+		}
 	]
 
 }
