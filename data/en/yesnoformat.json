@@ -4,9 +4,9 @@
 	"syntax":"yesNoFormat(value)",
 	"returns":"String",
 	"related":["booleanFormat","isBoolean"],
-	"description":" Yes, for a true value; No for a false value. Throws exception when non-boolean input.",
+	"description":" Yes, for a true value; No for a false value, empty string or null. Throws an exception for other values.",
 	"params": [
-		{"name":"value","description":"A number or Boolean value","required":true,"default":"","type":"boolean","values":[true,false]}
+		{"name":"value","description":"A Boolean value or empty string","required":true,"default":"","type":"object","values":[]}
 
 	],
 	"engines": {
@@ -29,6 +29,12 @@
 			"title":"Example of No",
 			"description":"Pass in a false value outputs No",
 			"code":"yesNoFormat(false)",
+			"result":"No"
+		},
+		{
+			"title":"Example of empty string",
+			"description":"Pass in an empty string outputs No",
+			"code":"yesNoFormat(\"\")",
 			"result":"No"
 		}
 	]
