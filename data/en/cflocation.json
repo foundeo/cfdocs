@@ -1,7 +1,7 @@
 {
 	"name":"cflocation",
 	"type":"tag",
-	"syntax":"<cflocation url=\"page.cfm\" addtoken=\"false\">",
+	"syntax":"<cflocation url=\"page.cfm\" addtoken=\"false\" statusCode=\"301\">",
 	"script":"location(\"mypage.cfm\", \"false\", \"301\");",
 	"returns":"",
 	"related":[],
