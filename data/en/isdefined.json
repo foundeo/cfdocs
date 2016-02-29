@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Using IsDefined",
+			"description":"Checking for the existence of a form variable",
+			"code":"<cfif isDefined(\"form.submit\")>\n ...\n</cfif>",
+			"result":""
+		}
 	]
 
 }
