@@ -1,13 +1,13 @@
 {
 	"name":"writeOutput",
 	"type":"function",
-	"syntax":"writeOutput(String)",
+	"syntax":"writeOutput(string)",
 	"returns":"String",
-	"related":[],
+	"related":["cfoutput","encodeForHTML"],
 	"description":" Appends text to the page-output stream.\n This function writes to the page-output stream regardless of\n conditions established by the cfsetting tag.",
 	"params": [
-		{"name":"String","description":"A string, or a variable that contains one","required":true,"default":"","type":"String","values":[]}
-
+		{"name":"string","description":"A string, or a variable that contains one","required":true,"default":"","type":"String","values":[]},
+		{"name":"encodeFor","description":"CF2016+ Wraps the result with an encodeFor function.","required":false,"default":"","type":"string","values":["html","htmlattribute","javascript","css","xml","xmlattribute","url","xpath","ldap","dn"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/writeoutput.html"},
@@ -17,6 +17,22 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Simple Example",
+			"description":"",
+			"code":"name = \"Pete\";\r\nwriteOutput(\"Hello \" & name);",
+			"result":"Hello Pete",
+			"runnable":true
+		},
+		{
+			"title":"Using the encodeFor argument",
+			"description":"CF2016+ Passing in `html` to the `encodeFor` argument wraps the result with a call to encodeForHTML.",
+			"code":"name = \"Pete\";\r\nwriteOutput(\"Hello \" & name, \"html\");",
+			"result":"Hello Pete",
+			"runnable":true
+		}
 	]
 
 }
