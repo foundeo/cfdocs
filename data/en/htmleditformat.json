@@ -36,8 +36,8 @@
 
   "examples": [
     {
-      "title": "",
-      "description": "Escapes the HTML characters",
+      "title": "Escapes the HTML characters",
+      "description": "",
       "code": "HTMLEditFormat( \"This is a test & this is another <This text is in angle brackets> Previous line was blank!!!\" )",
       "result": "This is a test &amp; this is another &lt;This text is in angle brackets&gt; Previous line was blank!!!",
       "runnable": true
