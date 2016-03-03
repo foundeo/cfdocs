@@ -81,11 +81,6 @@
         <cfset request.cacheControlMaxAge = 30> 
       </cfif>
   
-    <style>
-        .contributor { background-color: #f1f1f1; border-radius: 7px; margin: 5px 0; padding:15px 10px; }
-        .contributor img { width: 75px; height: 75px; display: block; margin: 0 auto; }
-        #test-tool { text-align: center;}
-    </style>
     <cfcatch>
       <small>Some sort of error occurred constructing the leaderboard, please check back later.</small>
       <cfset request.cacheControlMaxAge = 30> 
