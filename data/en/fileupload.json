@@ -39,7 +39,7 @@
     },
     {
       "name": "accept",
-      "description": "This attribute takes comma-delimited list of file extensions, or MIME types as values.\nSpecify the extensions with a <code>.</code> prefix. That is, only <code>.txt</code> is supported and not <code>txt</code>, <code>*.txt</code>, or <code>*.*</code>. However, you can use <code>*</code> as a wildcard to accept all files.\nIf you specify a file extension as value, the file is checked, only to ensure if it matches the list of extensions you specified in comma-separated list. If it matches, the file is uploaded.",
+      "description": "Specify a comma-delimited list of MIME types and/or file extensions to test the uploaded file agains. If the file is not of any of the types in this list, an error of type <code>coldfusion.tagext.io.FileUtils$InvalidUploadTypeException</code>is thrown.\nIf you specify file extensions, use this format: <code>.txt,.jpg</code>, not <code>txt</code>, <code>*.txt</code>, or <code>*.*</code>. You can use <code>*</code> as a wildcard to accept all files.",
       "required": false,
       "default": "",
       "type": "String",
@@ -47,9 +47,10 @@
     },
     {
       "name": "strict",
-      "description": "CF10+ If strict is set to true, file extensions in the <code>accept</code> attribute are ignored and the MIME type is used.\nThe first few bytes of the file are read to determine the MIME type, if that matches with what you have specified, upload occurs, otherwise an error of type <code>coldfusion.tagext.io.FileUtils$InvalidUploadTypeException</code> is thrown.",
+      "description": "CF10+ Defines which method is used to determine the file type to check agains the value of the <code>accept</code> attribute.\n<code>true:</code> The first few bytes of the uploaded file are used to determine the MIME type.\n<code>false:</code> The MIME type provided by the browser in the request payload is used.",
+
       "required": false,
-      "default": false,
+      "default": "true",
       "type": "boolean",
       "values": [
         true,
@@ -78,7 +79,7 @@
     {
       "title": "Upload form with strict check on MIME type",
       "description": "",
-      "code": "<form method=\"post\" enctype=\"multipart/form-data\">\r\n  <input type=\"file\" name=\"myFile\">\r\n  <button type=\"submit\">Upload</button>\r\n</form>\r\n\r\n<cfscript>\r\n  if( isDefined( \"form.myFile\" )) {\r\n    try {\r\n\r\n      fu = fileUpload( \"./\", \"myFile\", \"text/plain\", true );\r\n\r\n      writeDump( fu );\r\n    } catch ( coldfusion.tagext.io.FileUtils$InvalidUploadTypeException e ) {\r\n      writeOutput( \"This upload form only accepts text files.\" );\r\n    }\r\n  }\r\n</cfscript>",
+      "code": "<form method=\"post\" enctype=\"multipart/form-data\">\r\n  <input type=\"file\" name=\"myFile\">\r\n  <button type=\"submit\">Upload</button>\r\n</form>\r\n\r\n<cfscript>\r\n  if( isDefined( \"form.myFile\" )) {\r\n    try {\r\n\r\n      fu = fileUpload( \"./\", \"myFile\", \"image/jpeg,image/pjpeg\", \"MakeUnique\", true );\r\n\r\n      writeDump(fu);\r\n    } catch ( coldfusion.tagext.io.FileUtils$InvalidUploadTypeException e ) {\r\n      writeOutput( \"This upload form only accepts JPEG files.\" );\r\n    }\r\n  }\r\n</cfscript>",
       "result": "",
       "runnable": false
     }
