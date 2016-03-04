@@ -1,30 +1,64 @@
 {
-	"name":"arrayContainsNoCase",
-	"type":"function",
-	"syntax":"arrayContainsNoCase(array, object)",
-	"member":"someArray.containsNoCase(object)",
-	"returns":"numeric",
-	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
-	"description":"Used to determine if an object is in the given array, case insensitive.  Railo returns the numeric index if the object is found, 0 if not.  OpenBD returns a boolean.  Adobe CF does not implement this function.",
-	"params": [
-		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
-		{"name":"object","description":"","required":true,"default":"","type":"Any","values":[]}
-	],
-	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arraycontainsnocase.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://www.railodocs.org/index.cfm/function/arraycontainsnocase"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraycontainsnocase"}
-	},
-	"links": [
-
-	],
-	"examples": [
-		{
-			"title": "Tag Syntax",
-			"description": "",
-			"code": "<cfscript> \r\n writeOutput(arrayContainsNoCase([\"STRING\",\"STRING\"], \"string\")); \r\n </cfscript> ",
-			"result": "",
-            "runnable":false
-		}
-	]
+  "name": "arrayContainsNoCase",
+  "type": "function",
+  "syntax": "arrayContainsNoCase(array, object)",
+  "member": "someArray.containsNoCase(object)",
+  "returns": "boolean",
+  "related": [ "arrayContains", "arrayFind", "arrayFindNoCase", "arrayFindAll", "arrayFindAllNoCase" ],
+  "description": "Used to determine if an object is in the given array, case insensitive.",
+  "params": [
+    {
+      "name": "array",
+      "description": "",
+      "required": true,
+      "default": "",
+      "type": "array",
+      "values": []
+    },
+    {
+      "name": "object",
+      "description": "",
+      "required": true,
+      "default": "",
+      "type": "any",
+      "values": []
+    }
+  ],
+  "engines": {
+    "lucee": {
+      "minimum_version": "",
+      "notes": "Returns index of first occurance",
+      "docs": "http://docs.lucee.org/reference/functions/arraycontainsnocase.html"
+    },
+    "railo": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://www.railodocs.org/index.cfm/function/arraycontainsnocase"
+    },
+    "openbd": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://openbd.org/manual/?/function/arraycontainsnocase"
+    },
+    "coldfusion": {
+      "minimum_version": "2016",
+      "notes": "Member function is not available.",
+      "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraycontainsnocase.html"
+    }
+  },
+  "links": [],
+  "examples": [
+    {
+      "title": "Basic example",
+      "description": "CF2016+",
+      "code": "writeOutput(arrayContainsNoCase([\"first\", \"SECOND\"], \"First\"));",
+      "runnable": true
+    },
+    {
+      "title": "Member function syntax",
+      "description":"Lucee4+",
+      "code": "arrayWithStrings = [\"first\", \"SECOND\"];\r\nwriteOutput(arrayWithStrings.containsNoCase(\"FIrst\"));",
+      "runnable": true
+    }
+  ]
 }
