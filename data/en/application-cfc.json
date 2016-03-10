@@ -62,8 +62,8 @@
         {"name":"this.typeChecking","description":"Lucee4+ If set to false Lucee ignores type defintions with function arguments and return values","required":false,"default":"","type":"boolean","values":[]},
         {"name":"this.compression","description":"Lucee4+ Enables Gzip compression on the HTTP response when true","required":false,"default":"false","type":"boolean","values":[]},
 
-        {"name":"this.passArrayByReference","description":"CF2016+ <code>true</code>: Arrays will be passed by reference instead of by value for this application.","required":false,"default":"false","type":"boolean","values":[true,false]},
-        {"name":"this.searchImplicitScopes","description":"CF2016+ Defines the way non-scoped variables are found.\n<code>false</code>: Only the variables, local and arguments scopes are searched.\n<code>true</code>: Default and &lt; CF2016 behaviour. All scopes are searched in the following order: local, arguments, thread local, query, thread, variables, cgi, cffile, url, form, cookie, client.","required":false,"default":"true","type":"boolean","values":[true,false]}
+        {"name":"this.passArrayByReference","description":"CF2016+ `true`: Arrays will be passed by reference instead of by value for this application.","required":false,"default":"false","type":"boolean","values":[true,false]},
+        {"name":"this.searchImplicitScopes","description":"CF2016+ Defines the way non-scoped variables are found.\n`false`: Only the variables, local and arguments scopes are searched.\n`true`: Default and &lt; CF2016 behaviour. All scopes are searched in the following order: local, arguments, thread local, query, thread, variables, cgi, cffile, url, form, cookie, client.","required":false,"default":"true","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/application-cfc-reference.html"},

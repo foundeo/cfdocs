@@ -61,7 +61,7 @@
 		},
 		{
 			"name": "name",
-			"description": "<code>action=\"read\"</code> The variable in which to store the spreadsheet file data. You must specify name or query. If format=\"csv\" then name will contain csv variable.\nif format=\"html\" then name will contain html content.\n<code>action=\"write|update\"</code> A variable containing CSV-format data or an ColdFusion spreadsheet object containing the data to write. You must specify name or query.",
+			"description": "`action=\"read\"` The variable in which to store the spreadsheet file data. You must specify name or query. If format=\"csv\" then name will contain csv variable.\nif format=\"html\" then name will contain html content.\n`action=\"write|update\"` A variable containing CSV-format data or an ColdFusion spreadsheet object containing the data to write. You must specify name or query.",
 			"required": false,
 			"type": "string"
 		},
@@ -80,7 +80,7 @@
 		},
 		{
 			"name": "query",
-			"description": "<code>action=\"read\"</code> The query in which to store the converted spreadsheet file. You must specify format, name, or query.\n<code>action=\"write|update\"</code> A query variable containing the data to write. You must specify name or query.",
+			"description": "`action=\"read\"` The query in which to store the converted spreadsheet file. You must specify format, name, or query.\n`action=\"write|update\"` A query variable containing the data to write. You must specify name or query.",
 			"required": false,
 			"type": "string"
 		},
