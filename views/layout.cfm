@@ -98,7 +98,6 @@
     <cfoutput>
     	<a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="/assets/img/fork.png" alt="Fork me on GitHub"></a>
     </cfoutput>
-<cfabort>
   </body>
 </html>
 </cfif>
