@@ -7,17 +7,25 @@
 	"description":" Gets an object that is stored in the cache.",
 	"params": [
 		{"name":"id","description":"The ID value assigned to the cache object when it was created","required":true,"default":"","type":"String","values":[]},
-		{"name":"region","description":"CF10+ The cache region where the object was stored","required":false,"default":"","type":"String","values":[]}
+		{"name":"region","description":"CF10+ The name of the cache region where the object was stored","required":false,"default":"","type":"String","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheGet.html"},
-		"lucee": {"minimum_version":"", "notes":"Lucee implementation is incompatible with ACF when using a region. For lucee the method signature is: `cacheGet( id [, throwWhenNotExist [, cacheName ] ] )
-`", "docs":"http://docs.lucee.org/reference/functions/cacheget.html"},
+		"lucee": {"minimum_version":"", "notes":"For lucee the method signature is: `cacheGet( id [, throwWhenNotExist [, cacheName ] ] )
+` however it does support passing a cacheName in as the second argument for compatibility with ACF.", "docs":"http://docs.lucee.org/reference/functions/cacheget.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cacheget"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cacheget"}
 	},
 	"links": [
 
+	], 
+	"examples": [
+		{
+			"title":"Simple Example",
+			"code":"cowSays = cacheGet(\"cow\");\nif (isNull(cowSays)) {\n    cachePut(\"cow\", \"moo\");\n    cowSays=\"moo\";\n}\nwriteOutput( \"The cow says \" & cowSays );",
+			"description":"Puts an element in the cache and then retreives it.",
+			"result":"The cow says moo"
+		}
 	]
 
 }
