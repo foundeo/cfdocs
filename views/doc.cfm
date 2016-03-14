@@ -225,7 +225,7 @@
 	            </cfif>
             </h4>
 			<p class="clearfix">#autoLink(ex.description)#</p>
-			<pre>#HTMLEditFormat(ex.code)#</pre>
+			<pre class="prettyprint">#HTMLEditFormat(ex.code)#</pre>
 			<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
 				<p><strong>Expected Result: </strong> #XmlFormat(ex.result)#</p>
 			</cfif>
@@ -247,4 +247,8 @@
 
 	</cfif>
 </div>
+
+<link rel="stylesheet" href="#request.assetBaseURL#vendor/google/code-prettify/theme-github.css" />
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
 </cfoutput>
