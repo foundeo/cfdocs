@@ -249,7 +249,6 @@
 </div>
 
 <link rel="stylesheet" href="#request.assetBaseURL#vendor/google/code-prettify/theme-github.css" />
-<script src="#request.assetBaseURL#vendor/google/code-prettify/prettify.js"></script>
-<script>window.onload=prettyPrint;</script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
 </cfoutput>
