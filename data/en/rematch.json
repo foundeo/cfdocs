@@ -17,7 +17,20 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/rematch"}
 	},
 	"links": [
-
+		{
+			"title":"Learning ReMatch by Ben Nadel",
+			"url":"http://www.bennadel.com/blog/769-learning-coldfusion-8-rematch-for-regular-expression-matching.htm",
+			"description":"Tutorial style article on using the REMatch function in CFML."
+		}
+	],
+	"examples": [
+		{
+			"title":"Simple REMatch Example",
+			"description":"Extracts numbers from a string and returns them as an array",
+			"code":"serializeJSON( reMatch(\"[0-9]+\", \"1 way to extract any number like 45, 38\") )",
+			"result":"[1,45,38]",
+			"runnable":true
+		}
 	]
 
 }
