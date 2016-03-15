@@ -210,6 +210,7 @@
 		</ul>
 	</cfif>
 	<cfif StructKeyExists(data, "examples") AND IsArray(data.examples) AND ArrayLen(data.examples)>
+		<cfset request.hasExamples = true>
 		<h2 id="examples">Examples <small>sample code <cfif data.type IS "function">invoking<cfelse>using</cfif> the #data.name# <cfif data.type IS "tag">tag<cfelse>function</cfif></small></h2>
         <cfset example_index = 0>
 		<cfloop array="#data.examples#" index="ex">
@@ -247,9 +248,5 @@
 
 	</cfif>
 </div>
-
-<link rel="stylesheet" href="#request.assetBaseURL#vendor/google/code-prettify/theme-monokai.css" />
-<script src="#request.assetBaseURL#vendor/google/code-prettify/prettify.js"></script>
-<script>window.onload = prettyPrint;</script>
 
 </cfoutput>
