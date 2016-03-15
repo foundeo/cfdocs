@@ -1,20 +1,69 @@
 {
-	"name":"structNew",
-	"type":"function",
-	"syntax":"structNew()",
-	"returns":"Struct",
-	"related":[],
-	"description":" Creates a structure.",
-	"params": [
-	],
-	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structnew.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/structnew.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structnew"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structnew"}
-	},
-	"links": [
-
-	]
-
+  "name": "structNew",
+  "type": "function",
+  "syntax": "structNew([structType])",
+  "returns": "Struct",
+  "related": ["struct-functions"],
+  "description": "Creates a structure.",
+  "params": [
+    {
+      "name": "structType",
+      "description": "CF2016+ If set to `ordered` the order in which elements are added to the structure will be maintained.",
+      "required": false,
+      "default": "",
+      "type": "string",
+      "values": [
+        "ordered"
+      ]
+    }
+  ],
+  "engines": {
+    "coldfusion": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structnew.html"
+    },
+    "lucee": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://docs.lucee.org/reference/functions/structnew.html"
+    },
+    "railo": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://railodocs.org/index.cfm/function/structnew"
+    },
+    "openbd": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://openbd.org/manual/?/function/structnew"
+    }
+  },
+  "links": [],
+  "examples": [
+    {
+      "title": "New struct using literal notation",
+      "description": "Creates an unordered struct.",
+      "code": "unordered = { a=1, c=3, b=2 };\r\nwriteDump( unordered );",
+      "result": ""
+    },
+    {
+      "title": "New struct using function",
+      "description": "Creates an unordered struct.",
+      "code": "unordered = structNew();\r\nunordered.a = 1;\r\nunordered.b = 2;\r\nunordered.c = 3;\r\nwriteDump( unordered );",
+      "result": ""
+    },
+    {
+      "title": "New ordered struct using literal notation",
+      "description": "CF2016+ Creates an ordered struct. Note the square brackets.",
+      "code": "ordered = [ a=1, b=2, c=3 ];\r\nwriteDump( ordered );",
+      "result": ""
+    },
+    {
+      "title": "New ordered struct using function",
+      "description": "CF2016+ Creates an ordered struct.",
+      "code": "ordered = structNew( \"ordered\" );\r\nordered.a = 1;\r\nordered.b = 2;\r\nordered.c = 3;\r\nwriteDump( ordered );",
+      "result": ""
+    }
+  ]
 }
