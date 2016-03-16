@@ -28,7 +28,7 @@
 			"title":"Simple REMatch Example",
 			"description":"Extracts numbers from a string and returns them as an array",
 			"code":"serializeJSON( reMatch(\"[0-9]+\", \"1 way to extract any number like 45, 38\") )",
-			"result":"[1,45,38]",
+			"result":"[\"1\",\"45\",\"38\"]",
 			"runnable":true
 		}
 	]
