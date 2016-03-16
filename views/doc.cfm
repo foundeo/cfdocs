@@ -35,7 +35,7 @@
             </cfif>
         </cfif>
 	</cfif>
-    
+
     <cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "coldfusion") AND structKeyExists(data.engines.coldfusion, "deprecated") AND len(data.engines.coldfusion.deprecated)>
 
     	<div class="alert alert-danger">
@@ -52,14 +52,14 @@
         </div>
     <cfelseif StructKeyExists(data, "engines") AND structCount(data.engines) EQ 1>
     	<div class="alert alert-warning">
-            This <cfif data.type IS "tag">tag<cfelseif data.type IS "function">function</cfif> requires 
-            	<cfif structKeyExists(data.engines, "coldfusion")> 
+            This <cfif data.type IS "tag">tag<cfelseif data.type IS "function">function</cfif> requires
+            	<cfif structKeyExists(data.engines, "coldfusion")>
             		Adobe ColdFusion<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)> #data.engines.coldfusion.minimum_version# and up</cfif>.
             		 <em> Not supported on Lucee, OpenBD, etc.</em>
             	<cfelseif structKeyExists(data.engines, "lucee")>
-            		Lucee. <em>Not supported on Adobe ColdFusion.</em> 
+            		Lucee. <em>Not supported on Adobe ColdFusion.</em>
             	</cfif>
-            
+
         </div>
     </cfif>
     <cfif StructKeyExists(data, "discouraged") AND Len(data.discouraged)>
@@ -147,7 +147,7 @@
 							#autoLink(p.description)#
 							<cfif StructKeyExists(p, "values") AND IsArray(p.values) AND ArrayLen(p.values)>
 								<cfif uCase(arrayToList(p.values)) IS NOT "YES,NO">
-									
+
 									<ul>
 										<cfloop array="#p.values#" index="i">
 											<li><code>#XmlFormat(i)#</code></li>
@@ -168,28 +168,29 @@
 				<cfsavecontent variable="compatibilityData">
 					#compatibilityData#
 					<div class="row">
-					<div class="col-xs-2 text-right">
-						<h4>
-							<cfif i IS "coldfusion">ColdFusion<cfelseif i IS "railo">Railo<cfelseif i IS "openbd">OpenBD<cfelseif i IS "lucee">Lucee</cfif>: 						
-						</h4>
-					</div>
-					<div class="col-xs-8">
-						<cfif StructKeyExists(data.engines[i], "deprecated") AND Len(data.engines[i].deprecated)>
-							<div class="alert alert-danger">
-								<strong>DEPRECATED</strong> since version #encodeForHTML(data.engines[i].deprecated)#
-								<cfif StructKeyExists(data.engines[i], "removed") AND Len(data.engines[i].removed)>
-									<strong>REMOVED</strong> in version #encodeForHTML(data.engines[i].removed)#
-								</cfif>
-								<cfif StructKeyExists(data.engines[i], "notes") AND Len(data.engines[i].notes)>
+						<div class="col-xs-2 text-right">
+							<h4>
+								<cfif i IS "coldfusion">ColdFusion<cfelseif i IS "railo">Railo<cfelseif i IS "openbd">OpenBD<cfelseif i IS "lucee">Lucee</cfif>:
+							</h4>
+						</div>
+						<div class="col-xs-8">
+							<cfif StructKeyExists(data.engines[i], "deprecated") AND Len(data.engines[i].deprecated)>
+								<div class="alert alert-danger">
+									<strong>DEPRECATED</strong> since version #encodeForHTML(data.engines[i].deprecated)#
+									<cfif StructKeyExists(data.engines[i], "removed") AND Len(data.engines[i].removed)>
+										<strong>REMOVED</strong> in version #encodeForHTML(data.engines[i].removed)#
+									</cfif>
+									<cfif StructKeyExists(data.engines[i], "notes") AND Len(data.engines[i].notes)>
+										#autoLink(XmlFormat(data.engines[i].notes))#
+									</cfif>
+								</div>
+							<cfelse>
+								<div class="alert alert-warning">
+									<cfif Len(data.engines[i].minimum_version)><span class="label label-danger">Version #XmlFormat(data.engines[i].minimum_version)#+</span></cfif>
 									#autoLink(XmlFormat(data.engines[i].notes))#
-								</cfif>
-							</div>
-						<cfelse>
-							<div class="alert alert-warning">
-								<cfif Len(data.engines[i].minimum_version)><span class="label label-danger">Version #XmlFormat(data.engines[i].minimum_version)#+</span></cfif>
-								#autoLink(XmlFormat(data.engines[i].notes))#</div>
-							</div>
-						</cfif>
+								</div>
+							</cfif>
+						</div>
 					</div>
 				</cfsavecontent>
 			</cfif>
@@ -209,25 +210,14 @@
 		</ul>
 	</cfif>
 	<cfif StructKeyExists(data, "examples") AND IsArray(data.examples) AND ArrayLen(data.examples)>
+		<cfset request.hasExamples = true>
 		<h2 id="examples">Examples <small>sample code <cfif data.type IS "function">invoking<cfelse>using</cfif> the #data.name# <cfif data.type IS "tag">tag<cfelse>function</cfif></small></h2>
         <cfset example_index = 0>
 		<cfloop array="#data.examples#" index="ex">
             <cfset example_index = example_index + 1>
-            <cfif findNoCase( 'monthAsString', data.name )>
-            	<cfoutput>#data.name#</cfoutput>
-            	<cfoutput>#ReFindNoCase( '\b#data.name#\b\(', HTMLEditFormat(ex.code) )#</cfoutput>
-            </cfif>
-            <cfset parsedCode = ReReplaceNoCase( HTMLEditFormat(ex.code), '&lt;\b#data.name#\b', '&lt;<span class="syntax-highlight">#data.name#</span>', 'all' )>
-            <cfset parsedCode = ReReplaceNoCase( parsedCode, '\b#data.name#\b\(', '<span class="syntax-highlight">#data.name#</span>(', 'all' )>
-            <cfif StructKeyExists(data, "script")>
-            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, '(' ), '<span class="syntax-highlight">#ListFirst( data.script, '(' )#</span>', 'all' )>
-            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( data.script, ' ' ), '<span class="syntax-highlight">#ListFirst( data.script, ' ' )#</span>', 'all' )>
-            </cfif>
-            <cfif StructKeyExists(data, "member")>
-	            	<cfset parsedCode = ReplaceNoCase( parsedCode, ListFirst( ListLast( data.member, '.' ), '(' ), '<span class="syntax-highlight">#listFirst( ListLast( data.member, '.' ), '(' )#</span>', 'all' )>
-            </cfif>
+
 			<br />
-			<h4>
+			<h4 id="ex#example_index#">
                 #XmlFormat(ex.title)#
                 <cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
 	                <div class="pull-right">
@@ -236,7 +226,7 @@
 	            </cfif>
             </h4>
 			<p class="clearfix">#autoLink(ex.description)#</p>
-			<pre><code>#parsedCode#</code></pre>
+			<pre class="prettyprint"><code>#HTMLEditFormat(ex.code)#</code></pre>
 			<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
 				<p><strong>Expected Result: </strong> #XmlFormat(ex.result)#</p>
 			</cfif>
@@ -258,4 +248,5 @@
 
 	</cfif>
 </div>
+
 </cfoutput>

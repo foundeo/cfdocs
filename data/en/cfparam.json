@@ -35,6 +35,12 @@
 				"description":"A very basic cfscript cfparam example",
 				"code" : "cfparam(name=\"userID\", default=0);",
 				"result":""
+		},
+		{
+				"title":"Tag syntax using a regex",
+				"description": "Throws an error if the value is not one of a list of possible values",
+				"code":"<cfparam name=\"sortdir\" default=\"ASC\" type=\"regex\" pattern=\"ASC|DESC\"/>",
+				"result":""
 		}
 	]
 }

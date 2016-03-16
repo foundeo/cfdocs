@@ -99,7 +99,7 @@
 		},
 		{
 			"title": "Tag Syntax",
-			"description": "This example creates a JavaScript WebSocket object named <code>ws<\/code>. When a message is pushed, the client runs the <code>handleMessage<\/code> JavaScript function. This example also uses the <code>subscribeTo<\/code> attribute so it will automatically subscribe to the channel <code>chat<\/code>.",
+			"description": "This example creates a JavaScript WebSocket object named `ws`. When a message is pushed, the client runs the `handleMessage` JavaScript function. This example also uses the `subscribeTo` attribute so it will automatically subscribe to the channel `chat`.",
 			"code": "<cfwebsocket name=\"ws\" onMessage=\"handleMessage\" subscribeTo=\"chat\" \/>\n<script>\n  function handleMessage(message)  {\n    \/\/ Output message object to console\n    console.log(message);\n  }\n<\/script> ",
 			"result": "",
 			"runnable":false

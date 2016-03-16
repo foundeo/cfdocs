@@ -42,6 +42,10 @@ $(document).ready(function() {
       $('.example-modal').modal();
   });
 
+  if ($('.prettyprint').length != 0 && typeof(prettyPrint) == "function") {
+      prettyPrint();
+  }
+
 });
 //search submit
 function submitSearch() {

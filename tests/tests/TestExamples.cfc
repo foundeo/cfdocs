@@ -12,6 +12,10 @@ component extends="testbox.system.BaseSpec" {
 					if (isItJson && find("""code""",json) && !listFind("queryexecute.json,entityload.json", fileName)) {
 						json = deserializeJSON(json);
 						if (json.keyExists("examples") && isArray(json.examples) && arrayLen(json.examples)) {
+							if (structKeyExists(server, "lucee") AND NOT structKeyExists(json.engines, "lucee")) {
+								//skip this test because it does not run on lucee, ACF specific tag or function
+								continue;
+							}
 							for (var e in json.examples) {
 								if (e.keyExists("code") && e.keyExists("result") && Len(e.result)) {
 									if (!find("<cf", e.code) && !find(";", e.code) && !find("{", e.code)) {

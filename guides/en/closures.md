@@ -282,7 +282,7 @@ http://taha-sh.com/blog/understanding-closures-in-javascript
 * [ArrayFilter](/arrayfilter)
 * [StructFilter](/structfilter)
 * [ListFilter](/ListFilter)
-* [ArrayFindAt ](/ArrayFindAt)
+* [ArrayFindAll ](/ArrayFindAll)
 * [ArrayFindAllNoCase](/ArrayFindAllNoCase)
   
 

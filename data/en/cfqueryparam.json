@@ -1,48 +1,159 @@
 {
-	"name":"cfqueryparam",
-	"type":"tag",
-	"syntax":"<cfqueryparam>",
-	"returns":"",
-	"related":["cfquery"],
-	"description":" Verifies the data type of a query parameter and, for DBMSs that\n support bind variables, enables CFML to use bind variables\n in the SQL statement. Bind variable usage enhances performance\n when executing a cfquery statement multiple times.\n\n This tag is nested within a cfquery tag, embedded in a query SQL\n statement. If you specify optional parameters, this tag performs\n data validation.",
-	"params": [
-		{"name":"value","description":"Value that CFML passes to the right of the comparison\n operator in a where clause.\n\n If CFSQLType is a date or time option, ensure that the date\n value uses your DBMS-specific date format. Use the\n CreateODBCDateTime or DateFormat and TimeFormat functions\n to format the date value.","required":false,"default":"","type":"String","values":[]},
-		{"name":"cfsqltype","description":"SQL type that parameter (any type) is bound to.","required":false,"default":"","type":"String","values":["cf_sql_bigint","cf_sql_bit","cf_sql_char","cf_sql_blob","cf_sql_clob","cf_sql_date","cf_sql_decimal","cf_sql_double","cf_sql_float","cf_sql_idstamp","cf_sql_integer","cf_sql_longvarchar","cf_sql_money","cf_sql_money4","cf_sql_numeric","cf_sql_real","cf_sql_refcursor","cf_sql_smallint","cf_sql_time","cf_sql_timestamp","cf_sql_tinyint","cf_sql_varchar"]},
-		{"name":"maxlength","description":"Maximum length of parameter.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"scale","description":"Number of decimal places in parameter. Applies to\n CF_SQL_NUMERIC and CF_SQL_DECIMAL.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"null","description":"Whether parameter is passed as a null value.\n\n Yes: tag ignores the value attribute\n No: does not","required":false,"default":"","type":"boolean","values":[true,false]},
-		{"name":"list","description":"Yes: The value attribute value is a delimited list\n No: it is not","required":false,"default":"","type":"boolean","values":[true,false]},
-		{"name":"separator","description":"Character that separates values in list, in value attribute.","required":false,"default":"","type":"char","values":[",",";","|",":"]}
-
-	],
-	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfqueryparam.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/queryparam.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfqueryparam"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfqueryparam"}
-	},
-	"links": [
-
-	],
-	"examples":[
-		{
-			"title": "Example CFQuery with CFQueryParam",
-			"description": "Shows how to use a cfqueryparam tag within cfquery.",
-			"code": "<cfquery name=\"news\">\n    SELECT id,title,story\n    FROM news\n    WHERE id = <cfqueryparam value=\"#url.id#\" cfsqltype=\"cf_sql_integer\">\n</cfquery>",
-			"result": ""
-		},
-		{
-			"title": "Example List with CFQueryParam",
-			"description": "Assumes url.idList is a comma seperated list of integers, eg: 1,2,3",
-			"code": "<cfquery name=\"news\">\n    SELECT id,title,story\n    FROM news\n    WHERE id IN (<cfqueryparam value=\"#url.idList#\" cfsqltype=\"cf_sql_integer\" list=\"true\">)\n</cfquery>",
-			"result": ""
-		},
-		{
-    			"title": "Example CFQueryParam in cfscript and CF11",
-    			"description": "CF 11 script syntax in a function with cfqueryparam",
-    			"code": "public any function myFunction(string myParam=\"\")\n     output=\"false\"\n     {\n        var res = \"\";\n            res = queryExecute(\n                \"SELECT Column\n                 FROM  myDatabase\n                  WHERE Column = :param\"\n                 ,{\n                param={value=arguments.myParam, cfsqltype=\"cf_sql_varchar\"}\n                 }\n               ,{datasource=\"myDataSource\"});\n                \n                return qry.execute().getPrefix();\n            }\n                                }\n",
-    			"result": ""
-		}
-	]
-
+  "name": "cfqueryparam",
+  "type": "tag",
+  "syntax": "<cfqueryparam>",
+  "returns": "",
+  "related": [
+    "cfquery","queryExecute"
+  ],
+  "description": " Verifies the data type of a query parameter and, for DBMSs that\n support bind variables, enables CFML to use bind variables\n in the SQL statement. Bind variable usage enhances performance\n when executing a cfquery statement multiple times.\n\n This tag is nested within a cfquery tag, embedded in a query SQL\n statement. If you specify optional parameters, this tag performs\n data validation.",
+  "params": [
+    {
+      "name": "value",
+      "description": "Value that CFML passes to the right of the comparison\n operator in a where clause.\n\n If CFSQLType is a date or time option, ensure that the date\n value uses your DBMS-specific date format. Use the\n CreateODBCDateTime or DateFormat and TimeFormat functions\n to format the date value.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "cfsqltype",
+      "description": "SQL type that parameter (any type) is bound to.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": [
+        "cf_sql_bigint",
+        "cf_sql_bit",
+        "cf_sql_char",
+        "cf_sql_blob",
+        "cf_sql_clob",
+        "cf_sql_date",
+        "cf_sql_decimal",
+        "cf_sql_double",
+        "cf_sql_float",
+        "cf_sql_idstamp",
+        "cf_sql_integer",
+        "cf_sql_longvarchar",
+        "cf_sql_money",
+        "cf_sql_money4",
+        "cf_sql_numeric",
+        "cf_sql_real",
+        "cf_sql_refcursor",
+        "cf_sql_smallint",
+        "cf_sql_time",
+        "cf_sql_timestamp",
+        "cf_sql_tinyint",
+        "cf_sql_varchar"
+      ]
+    },
+    {
+      "name": "maxlength",
+      "description": "Maximum length of parameter.",
+      "required": false,
+      "default": "",
+      "type": "Numeric",
+      "values": []
+    },
+    {
+      "name": "scale",
+      "description": "Number of decimal places in parameter. Applies to\n CF_SQL_NUMERIC and CF_SQL_DECIMAL.",
+      "required": false,
+      "default": "",
+      "type": "Numeric",
+      "values": []
+    },
+    {
+      "name": "null",
+      "description": "Whether parameter is passed as a null value.\n\n Yes: tag ignores the value attribute\n No: does not",
+      "required": false,
+      "default": "",
+      "type": "boolean",
+      "values": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "list",
+      "description": "Yes: The value attribute value is a delimited list\n No: it is not",
+      "required": false,
+      "default": "",
+      "type": "boolean",
+      "values": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "separator",
+      "description": "Character that separates values in list, in value attribute.",
+      "required": false,
+      "default": "",
+      "type": "char",
+      "values": [
+        ",",
+        ";",
+        "|",
+        ":"
+      ]
+    }
+  ],
+  "engines": {
+    "coldfusion": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfqueryparam.html"
+    },
+    "lucee": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://docs.lucee.org/reference/tags/queryparam.html"
+    },
+    "railo": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://railodocs.org/index.cfm/tag/cfqueryparam"
+    },
+    "openbd": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://openbd.org/manual/?/tag/cfqueryparam"
+    }
+  },
+  "links": [],
+  "examples": [
+    {
+      "runnable": false,
+      "title": "Basic example",
+      "description": "Shows how to use a cfqueryparam tag within cfquery.",
+      "code": "<cfquery name=\"news\">\n    SELECT id,title,story\n    FROM news\n    WHERE id = <cfqueryparam value=\"#url.id#\" cfsqltype=\"cf_sql_integer\">\n</cfquery>",
+      "result": ""
+    },
+    {
+      "runnable": false,
+      "title": "Using a list on an IN statement",
+      "description": "Assumes url.idList is a comma seperated list of integers, eg: 1,2,3",
+      "code": "<cfquery name=\"news\">\n    SELECT id,title,story\n    FROM news\n    WHERE id IN (<cfqueryparam value=\"#url.idList#\" cfsqltype=\"cf_sql_integer\" list=\"true\">)\n</cfquery>",
+      "result": ""
+    },
+    {
+      "title": "cfscript exuivalent of cfqueryparam",
+      "description": "CF11+ script syntax using queryExecute and full array notation",
+      "code": "exampleData = queryNew(\"id,title\",\"integer,varchar\",[{\"id\":1,\"title\":\"Dewey defeats Truman\"},{\"id\":2,\"title\":\"Man walks on Moon\"}]);\r\n\r\nresult = queryExecute(\r\n  \"SELECT title FROM exampleData WHERE id = ?\", \r\n  [\r\n    { value=2, cfsqltype=\"cf_sql_varchar\" }\r\n  ],\r\n  { dbtype=\"query\" }\r\n);\r\n\r\nwriteOutput( result.title[1] );",
+      "result": "Man walks on Moon"
+    },
+    {
+      "title": "cfscript exuivalent of cfqueryparam",
+      "description": "CF11+ script syntax using queryExecute and array shorthand",
+      "code": "exampleData = queryNew(\"id,title\",\"integer,varchar\",[{\"id\":1,\"title\":\"Dewey defeats Truman\"},{\"id\":2,\"title\":\"Man walks on Moon\"}]);\r\n\r\nresult = queryExecute(\r\n  \"SELECT title FROM exampleData WHERE id = ?\", \r\n  [ 2 ],\r\n  { dbtype=\"query\" }\r\n);\r\n\r\nwriteOutput( result.title[1] );",
+      "result": "Man walks on Moon"
+    },
+    {
+      "title": "cfscript exuivalent of cfqueryparam",
+      "description": "CF11+ script syntax using queryExecute and struct notation",
+      "code": "exampleData = queryNew(\"id,title\",\"integer,varchar\",[{\"id\":1,\"title\":\"Dewey defeats Truman\"},{\"id\":2,\"title\":\"Man walks on Moon\"}]);\r\n\r\nresult = queryExecute(\r\n  \"SELECT title FROM exampleData WHERE id = :id\", \r\n  { id = 2 },\r\n  { dbtype=\"query\" }\r\n);\r\n\r\nwriteOutput( result.title[1] );",
+      "result": "Man walks on Moon"
+    }
+  ]
 }

@@ -1,0 +1,47 @@
+{
+  "name": "arrayDeleteNoCase",
+  "type": "function",
+  "syntax": "arrayDeleteNoCase(array, object)",
+
+  "returns": "boolean",
+  "related": [
+    "arrayDeleteAt",
+    "arrayDelete"
+  ],
+  "description": "Deletes the first element in an array that matches the value of `object`.\nThe search is case insensitive.\nReturns `true` if the element was found and removed.\nThe array will be resized, so that the deleted element doesn't leave a gap.",
+  "params": [
+    {
+      "name": "array",
+      "description": "",
+      "required": true,
+      "default": "",
+      "type": "array",
+      "values": []
+    },
+    {
+      "name": "object",
+      "description": "A string, numeric or boolean value on which to search. Case insensitive.",
+      "required": true,
+      "default": "",
+      "type": "any",
+      "values": []
+    }
+  ],
+  "engines": {
+    "coldfusion": {
+      "minimum_version": "2016",
+      "notes": "Member function is not available",
+      "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraydeletenocase.html"
+    }
+  },
+  "links": [],
+  "examples": [
+    {
+      "title": "Delete an element from an array",
+      "description": "Deletes the first `apple` element from the array `arr`.",
+      "code": "arr = ['apple', 'orange', 'pear', 'Apple'];\narrayDeleteNoCase(arr, 'Apple');\n\nwriteDump(arr);",
+      "result": "['orange','pear','Apple']",
+      "runnable": true
+    }
+  ]
+}

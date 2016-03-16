@@ -108,3 +108,11 @@ p.clearfix .page-anchor{
 }
 
 iframe { border:0px;}
+
+.contributor { background-color: #f1f1f1; border-radius: 7px; margin: 5px 0; padding:15px 10px; }
+.contributor img { width: 75px; height: 75px; display: block; margin: 0 auto; }
+
+pre.prettyprint {
+	padding: 5px 8px !important;
+	border: 1px solid #CCC !important;
+}
