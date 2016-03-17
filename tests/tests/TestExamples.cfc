@@ -1,4 +1,7 @@
 component extends="testbox.system.BaseSpec" {
+
+	variables.supportedFunctions = structKeyList(getFunctionList());
+
 	function run(testResults, testBox) {
 		dataDir = ExpandPath("../data/en");
 		files = directoryList(dataDir, false, "array");
@@ -17,7 +20,12 @@ component extends="testbox.system.BaseSpec" {
 								continue;
 							}
 							for (var e in json.examples) {
+
 								if (e.keyExists("code") && e.keyExists("result") && Len(e.result)) {
+									if (json.type == "function" && !listFindNoCase(variables.supportedFunctions, json.name)) {
+										//skip because it is not supported by current engine
+										continue;
+									}
 									if (!find("<cf", e.code) && !find(";", e.code) && !find("{", e.code)) {
 										var actualResult = "";
 										try {
