@@ -12,6 +12,12 @@ This setting was added in CF2016+ to address issues:
 
 The ColdFusion 2016 [release notes](https://helpx.adobe.com/coldfusion/release-note/coldfusion-2016-release-notes.html) instruct you to set `-Dcoldfusion.udf.reuseTagInstances=false` if you see those issues.
 
+## `-Dhttps.protocols`
+
+Set this to restrict the SSL and or TLS protocols that will be used by tags such as CFHTTP. The possible values are: SSLv3, TLSv1, TLSv1.1, TLSv1.2 and can be combined as a comma separated list.
+
+For CF10 update 18 and CF11+ [Read more](http://www.trunkful.com/index.cfm/2014/12/8/Preventing-SSLv3-Fallback-in-ColdFusion)
+
 ## `-Dcoldfusion.disablejsafe`
 
 Set this to `true` if you want to disable the RSA BSafe CryptoJ JCE (enterprise edition only), and use the default Oracle JCE (or another provider). 
