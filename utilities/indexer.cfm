@@ -6,6 +6,7 @@
 <cfset all = []>
 <cfset categories = []>
 <cfset versions = {4=[],5=[],6=[],7=[],8=[],9=[],10=[],11=[],2016=[]}>
+<cfset lucee_versions = {5=[]}>
 <cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
 	<cfset json = fileRead(filePath,"utf-8")>
 	<cftry>
@@ -27,6 +28,14 @@
 				<cfif structKeyExists(versions, int(data.engines.coldfusion.minimum_version))>
 					<cfset arrayAppend(versions[int(data.engines.coldfusion.minimum_version)], data.name)>
 				</cfif>
+			</cfif>
+
+			<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "lucee") AND structKeyExists(data.engines.lucee, "minimum_version") AND isNumeric(data.engines.lucee.minimum_version)>
+
+				<cfif structKeyExists(lucee_versions, int(data.engines.lucee.minimum_version))>
+					<cfset arrayAppend(lucee_versions[int(data.engines.lucee.minimum_version)], data.name)>
+				</cfif>
+
 			</cfif>
 		</cfif>
 		<cfcatch>
@@ -85,6 +94,12 @@
 	<cfset vData = {"name"="ColdFusion #v# New Functions and Tags","type"="listing","description"="List of tags and functions added in ColdFusion #v#", "related"=versions[v]}>
 	<cfset fileWrite(dataDir & "/cf#int(v)#.json", prettyJSON(serializeJSON(vData), "utf-8"))>
 	<p>Wrote cf<cfoutput>#v#</cfoutput>.json</p>
+</cfloop>
+
+<cfloop array="#structKeyArray(lucee_versions)#" index="v">
+	<cfset vData = {"name"="Lucee #v# New Functions and Tags","type"="listing","description"="List of tags and functions added in Lucee #v#", "related"=lucee_versions[v]}>
+	<cfset fileWrite(dataDir & "/lucee#int(v)#.json", prettyJSON(serializeJSON(vData), "utf-8"))>
+	<p>Wrote lucee<cfoutput>#v#</cfoutput>.json</p>
 </cfloop>
 
 <cfset applicationStop()>
