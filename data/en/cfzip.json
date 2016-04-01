@@ -30,6 +30,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Extract / Unzip a zip file into a folder",
+			"description":"Uses `action=\"unzip\"` in the cfzip tag to unzip into the temp directory.",
+			"code":"<cfzip action=\"unzip\" destination=\"#getTempDirectory()#\" file=\"#zipFilePath#\">",
+			"runnable":false
+		}
 	]
 
 }
