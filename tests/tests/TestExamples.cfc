@@ -41,8 +41,16 @@ component extends="testbox.system.BaseSpec" {
 												e.result = e.result & ",";
 											}
 										}
-
-										expect(actualResult).toBe(e.result, "#fileName# example result is:#e.result# but evaluated to:#actualResult#");
+										if (isBoolean(e.result)) {
+											if (e.result == true) {
+												expect(actualResult).toBeTrue("#fileName# example result is:#e.result# but evaluated to:#actualResult#");
+											} else {
+												expect(actualResult).toBeFalse("#fileName# example result is:#e.result# but evaluated to:#actualResult#");
+											}
+										} else {
+											expect(actualResult).toBe(e.result, "#fileName# example result is:#e.result# but evaluated to:#actualResult#");	
+										}
+										
 									}
 								}
 							} 
