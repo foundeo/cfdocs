@@ -18,6 +18,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Check if Date is instance of java.util.Date",
+			"description":"Dates in CFML are instances of the java class: `java.util.Date`",
+			"code":"isInstanceOf(now(), \"java.util.Date\")",
+			"result":true
+		}
 	]
 
 }
