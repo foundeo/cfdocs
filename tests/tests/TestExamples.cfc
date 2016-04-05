@@ -41,7 +41,7 @@ component extends="testbox.system.BaseSpec" {
 												e.result = e.result & ",";
 											}
 										}
-										if (isBoolean(e.result)) {
+										if (isBoolean(e.result) && !isNumeric(e.result)) {
 											if (e.result == true) {
 												expect(actualResult).toBeTrue("#fileName# example result is:#e.result# but evaluated to:#actualResult#");
 											} else {
