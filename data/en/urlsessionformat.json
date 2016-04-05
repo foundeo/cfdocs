@@ -5,7 +5,7 @@
 	"returns":"URL",
 	"related":[],
 	"discouraged":"Putting session identifiers in the URL may lead to session hijacking.",
-	"description":"Depending on whether a client computer accepts cookies, this function does the following:\n * If the client does not accept cookies: automatically appends\n all required client identification information to a URL\n * If the client accepts cookies: does not append information",
+	"description":"If the client does not accept cookies appends session identifiers `CFID`, `CFTOKEN` and / or `JSESSIONID` to the URL.",
 	"params": [
 		{"name":"requesturl","description":"URL of a CFML page","required":true,"default":"","type":"URL","values":["cgi.script_name"]}
 	],
