@@ -4,11 +4,11 @@
 	"syntax":"randRange(number1, number2 [, algorithm])",
 	"returns":"Numeric",
 	"related":[],
-	"description":" Generates a random integer between two specified numbers.\n Requests for random integers that are greater than 100,000,000\n result in non-random numbers, to prevent overflow during\n internal computations.",
+	"description":"Generates a random integer between two specified numbers.\n Requests for random integers that are greater than 100,000,000\n result in non-random numbers, to prevent overflow during\n internal computations.",
 	"params": [
 		{"name":"number1","description":"","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"number2","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"algorithm","description":"The algorithm to use to generated the random number.","required":false,"default":"CFMX_COMPAT","type":"String","values":["CFMX_COMPAT","SHA1PRNG","IBMSecureRandom"]}
+		{"name":"algorithm","description":"CF7+ The algorithm to use to generated the random number.","required":false,"default":"CFMX_COMPAT","type":"String","values":["CFMX_COMPAT","SHA1PRNG","IBMSecureRandom"]}
 
 	],
 	"engines": {
@@ -18,7 +18,11 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/randrange"}
 	},
 	"links": [
-
+		{
+			"title":"A better RandRange",
+			"link":"http://ryanguill.com/cfml/math/2016/02/21/a-better-randrange.html",
+			"description":"RandRange cannot handle large integers and you will encounter bugs when you try to use min or max values that are near the maximum and minimum integer sizes. This shows another way to generate a random int or long."
+		}
 	],
 	"examples": [
 		{
