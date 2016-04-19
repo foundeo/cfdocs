@@ -70,6 +70,7 @@ Member functions for the following data types are supported:
 - ArrayMax: `someVar.max()`
 - ArrayMin: `someVar.min()`
 - ArrayPrepend: `someVar.prepend()`
+- ArrayReduce: `someVar.reduce()`
 - ArrayResize: `someVar.resize()`
 - ArraySet: `someVar.set()`
 - ArraySlice: `someVar.slice()`
