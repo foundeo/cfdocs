@@ -24,6 +24,13 @@
 			"description": "",
 			"code": "encodeForURL(\"<tag>\")",
 			"result": "%3Ctag%3E"
+		},
+		{
+			"title":"Example Usage",
+			"description":"",
+			"code":"<cfset formula = \"5+3=8\">\r\n<cfoutput>http://example.com/math?formula=#encodeForURL(formula)#</cfoutput>",
+			"result":"http://example.com/math?formula=5%2B3%3D8",
+			"runnable":true
 		}
 	]
 
