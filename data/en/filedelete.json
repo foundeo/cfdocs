@@ -4,9 +4,9 @@
 	"syntax":"fileDelete(file)",
 	"returns":"void",
 	"related":[],
-	"description":" No Help Available",
+	"description":"Deletes the specified file on the server.",
 	"params": [
-		{"name":"file","description":"No Help Available","required":true,"default":"","type":"","values":[]}
+		{"name":"filepath","description":"Pathname of the file to delete. If not an absolute path (starting with a drive letter and a colon, or a forward or backward slash), it is relative to the ColdFusion temporary directory, which is returned by the GetTempDirectory function.","required":true,"default":"","type":"","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "The following example deletes the file c:\productiondir\test1.txt before moving c:\testdir\test1.txt:",
+			"code": "<cfset sourcefile=\"c:\testdir\test1.txt\">\r\n<cfset destinationfile=\"c:\productiondir\test1.txt\">\r\n\r\n<cfif FileExists(#sourcefile#)>\r\n<cfif FileExists(#destinationfile#)>\r\n\r\n<cfoutput>The destination file already exists.<br>\r\n\r\nDeleting previous copy of #destinationfile#.<br>\r\n\r\nMoving: #sourcefile# <br>\r\n\r\nTo: <br> #destinationfile#.</cfoutput><br>\r\n\r\n<cfscript>\r\n\r\nFileDelete(#destinationfile#);\r\n\r\nFileMove(#sourcefile#, #destinationfile#);\r\n\r\n</cfscript>\r\n\r\n<cfelse>\r\n\r\n<cfscript>\r\n\r\nFileMove(#sourcefile#, #destinationfile#);\r\n\r\n</cfscript>\r\n\r\n<cfoutput>Moved: #sourcefile# <br>\r\n\r\nTo: <br> #destinationfile#.</cfoutput><br>\r\n\r\n</cfif>\r\n\r\n<cfelse>\r\n\r\n<cfoutput>The source file does not exist.</cfoutput><br>\r\n\r\n</cfif>",
+			"result": "",
+            "runnable":false
+		}
 	]
 
 }
