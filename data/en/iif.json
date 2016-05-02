@@ -3,12 +3,13 @@
 	"type":"function",
 	"syntax":"iIf(condition, expression1, expression2)",
 	"returns":"String",
-	"related":[],
-	"description":" Evaluates a Boolean conditional dynamic expression. Depending\n on whether the expression is true or false, dynamically\n evaluates one of two string expressions and returns the result.",
+	"related":["evaluate", "de"],
+	"description":"A boolean condition or value is passed into the first argument. If the condition is `true` the second argument is evaluated and returned, if `false` the third argument is evaluated and returned.",
+	"discouraged":"Use the ternary operator CF9+ instead because it does not evaluate.\nExample ternary operator: `( (condition) ? valueIfTrue : valueIfFalse )`",
 	"params": [
-		{"name":"condition","description":"","required":true,"default":"","type":"boolean","values":[]},
-		{"name":"expression1","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"expression2","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"condition","description":"A boolean value or an expression that evaluates to a boolean.","required":true,"default":"","type":"boolean","values":[]},
+		{"name":"expression1","description":"A CFML expression that is evaluated dynamically using Evaluate if the condition is `true`.","required":true,"default":"","type":"String","values":[]},
+		{"name":"expression2","description":"A CFML expression that is evaluated dynamically using Evaluate if the condition is `false`.","required":true,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
@@ -22,17 +23,10 @@
 	],
     "examples": [
 		{
-			"title": "Script Syntax",
+			"title": "Simple iIf Example",
 			"description": "",
-			"code": "#iIf( \r\n randRange( 0, 1 ), \r\n  \"arrValuesA[ randRange( 1, 2 ) ]\", \r\n \"arrValuesB[ randRange( 1, 2 ) ]\" \r\n )#   ",
-			"result": "",
-			"runnable":false
-		},
-        {
-			"title": "Script Syntax",
-			"description": "",
-			"code": "<cfoutput> \r\n #iIf(isDefined(\"Form.Deliver\"), evaluate(de(\"Form.Deliver\")), de(\"no\"))# \r\n </cfoutput>    ",
-			"result": "",
+			"code": "iIf( server.os.name IS \"Bacon\", de(\"Running Bacon OS\"), de(\"Not Running Bacon OS\") )",
+			"result": "Not Running Bacon OS",
 			"runnable":true
 		}
 	]

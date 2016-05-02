@@ -2,8 +2,26 @@
     "name":"CFDocs",
     "version":"1.0.0",
     "author":"Pete Freitag / Foundeo Inc.",
+    "location":"",
+    "directory":"",
+    "createPackageDirectory":true,
+    "packageDirectory":"",
+    "homepage":"",
+    "documentation":"",
+    "repository":{
+        "type":"",
+        "URL":""
+    },
+    "bugs":"",
     "slug":"cfdocs-site",
     "shortDescription":"The cfdocs.org site",
+    "description":"",
+    "instructions":"",
+    "changelog":"",
+    "type":"",
+    "keywords":[
+        
+    ],
     "private":false,
     "engines":[
         {
@@ -20,7 +38,19 @@
         }
     ],
     "defaultEngine":"",
-    "defaultPort":8411,
+    "projectURL":"",
+    "license":[
+        {
+            "type":"",
+            "URL":""
+        }
+    ],
+    "contributors":[
+        
+    ],
+    "dependencies":{
+        
+    },
     "devDependencies":{
         "testbox":"2.0.0"
     },
@@ -31,5 +61,34 @@
         "**/.*",
         "test",
         "tests"
-    ]
+    ],
+    "testbox":{
+        "runner":[
+            {
+                "default":""
+            }
+        ],
+        "labels":[
+            
+        ],
+        "reporter":"",
+        "reporterResults":"",
+        "bundles":[
+            ""
+        ],
+        "directory":{
+            "mapping":"",
+            "recurse":true
+        },
+        "watchers":[
+            
+        ],
+        "notify":{
+            "emails":[
+                
+            ],
+            "growl":"",
+            "URL":""
+        }
+    }
 }

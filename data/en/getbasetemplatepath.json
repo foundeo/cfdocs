@@ -3,8 +3,8 @@
 	"type":"function",
 	"syntax":"getBaseTemplatePath()",
 	"returns":"String",
-	"related":[],
-	"description":" Gets the absolute path of an application's base page.",
+	"related":["getCurrentTemplatePath"],
+	"description":"Gets the absolute server file system path of the requested CFML file.",
 	"params": [
 	],
 	"engines": {
@@ -15,6 +15,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Basic Example",
+			"description":"",
+			"code": "getBaseTemplatePath()",
+			"result":""
+		}
 	]
 
 }

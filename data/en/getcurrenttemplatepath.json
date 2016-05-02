@@ -3,8 +3,8 @@
 	"type":"function",
 	"syntax":"getCurrentTemplatePath()",
 	"returns":"String",
-	"related":[],
-	"description":" Gets the absolute path of the page that calls this function.",
+	"related":["getBaseTemplatePath"],
+	"description":"Gets the absolute server file system path of the file that calls this function.",
 	"params": [
 	],
 	"engines": {

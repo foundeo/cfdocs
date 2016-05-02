@@ -116,3 +116,10 @@ pre.prettyprint {
 	padding: 5px 8px !important;
 	border: 1px solid #CCC !important;
 }
+
+.alert-danger h4 { line-height: 1.5; }
+
+#search { margin-right:100px; }
+@media (max-width:991px) {
+  #search { margin-right:10px; }
+}

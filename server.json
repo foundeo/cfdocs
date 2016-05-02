@@ -1,0 +1,13 @@
+{
+    "trayIcon":"apple-touch-icon.png",
+    "name":"cfdocs",
+    "web":{
+        "rewrites":{
+            "config":"rewrites.xml",
+            "enable":"true"
+        },
+        "http":{
+            "port":8411
+        }
+    }
+}
