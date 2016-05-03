@@ -7,7 +7,7 @@
 	"related":["cfloop"],
 	"description":"Loops while the condition is true or until break.",
 	"params": [
-		{"name":"condition","description":"A boolen condition that determins if the loop should continue.","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"condition","description":"A boolean condition that determines if the loop should continue.","required":false,"default":"","type":"boolean","values":[]},
 		{"name":"label","description":"Used to address loop from `break` or `continue` statement instead of innermost loop.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {

@@ -7,7 +7,7 @@
 	"related":["cffunction"],
 	"description":" Creates a parameter definition within a component definition.\n Defines a function argument. Used within a cffunction tag.",
 	"params": [
-		{"name":"name","description":"An argument name.","required":true,"default":"","type":"Stirng","values":[]},
+		{"name":"name","description":"An argument name.","required":true,"default":"","type":"String","values":[]},
 		{"name":"type","description":"a type name; data type of the argument.","required":false,"default":"","type":"String","values":["any","array","binary","boolean","date","guid","numeric","query","string","struct","uuid","xml","variablename","(component name)"]},
 		{"name":"required","description":"Whether the parameter is required to execute the component\n method.","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"default","description":"If no argument is passed, specifies a default argument\n value.","required":false,"default":"","type":"String","values":[]},
