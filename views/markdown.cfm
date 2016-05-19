@@ -4,7 +4,7 @@
 	</cfif>
 	<br><br>
 	<div class="container">
-		<cfoutput>#autoLink(variables.data)#</cfoutput>
+		<cfoutput>#autoLink(variables.data,"",true)#</cfoutput>
 	</div>
 <cfelse>
 	<em>No data.</em>
