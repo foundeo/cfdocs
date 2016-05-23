@@ -56,6 +56,7 @@
 	<cffunction name="autoLink" output="false">
 		<cfargument name="content">
 		<cfargument name="exclude" default="">
+		<cfargument name="isMarkdown" default=false>
 		<cfset var i = "">
 		<cfif NOT len(arguments.exclude) AND structKeyExists(url, "name")>
 			<cfset arguments.exclude = url.name>
@@ -85,7 +86,9 @@
 			<cfset arguments.content = ReReplace(arguments.content, "Lucee([0-9.]+\+)", "<span class=""label label-lucee"" title=""Requires Lucee \1"">Lucee \1</span>", "ALL")>
 		</cfif>
 		<!--- replace \n with br tags --->
-		<cfset arguments.content = Replace(arguments.content, "#Chr(10)#", "<br />", "ALL")>
+		<cfif not isMarkdown>
+			<cfset arguments.content = Replace(arguments.content, "#Chr(10)#", "<br />", "ALL")>
+		</cfif>
 		<!--- replace backticks with code tag block --->
 		<cfset arguments.content = ReReplace(arguments.content, "`([^`]+)`", "<code>\1</code>", "ALL")>
 		<cfreturn arguments.content>
