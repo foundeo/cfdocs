@@ -114,7 +114,7 @@ We then append that hashed value with the value of the heartbeat field, and hash
 We then replace the value of the user's password field with the hashed password + heartbeat value.
 Then we submit the form.
 
-In doing so, we have obfuscated the users password and prevented disclosure fromt he browser to the server in plain-text. This has a drawback with some older browsers which will save the hashed password when choosing to 'save my password for this site', but then users really ought not be letting the browser save their passwords anyway. Modern browsers understand what is going on with this code, however, and will rightly save the actual password typed in by the user.
+In doing so, we have obfuscated the users password and prevented disclosure from the browser to the server in plain-text. This has a drawback with some older browsers which will save the hashed password when choosing to 'save my password for this site', but then users really ought not be letting the browser save their passwords anyway. Modern browsers understand what is going on with this code, however, and will rightly save the actual password typed in by the user.
 
 In just a few simple lines of code (which are spelled out here to show the process more thoroughly and could be quite truncated to further obscure what the JavaScript is intended to do), we have a) federated our login form with a cookie, b) eliminated any lingering session values for that session and c) ensured that the users password is protected from disclosure when being sent to the server from the browser.
 
@@ -202,7 +202,7 @@ And now, assuming the user has provided the proper password upon login, we gener
 
 The above is one example of storing useful information in the session object, but is by no means complete and by no means required. You are free to come up with your own session object bean and populate it as needed for your particular application.
 
-We then set a cookie for the user with an encrypted value, which we will then use during session management to manage the users session after they have successfully authenticated:
+We then set a cookie for the user with an encrypted value, which we will then use during [session management](/security-session-management) to manage the users session after they have successfully authenticated:
 
     // set the session cookie with the new encrypted session id
     getPageContext().getResponse().addHeader("Set-Cookie", "#application.cookieName#=#application.securityService.setSessionIdForCookie( session.sessionObj.getSessionId() )#;path=/;domain=.#CGI.HTTP_HOST#;HTTPOnly");

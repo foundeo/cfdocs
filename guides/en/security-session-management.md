@@ -2,7 +2,7 @@
 
 If you missed our [Obfuscation](/security-obfuscation), [Encryption](/security-encryption) or [Authentication](/security-authentication) guides, we strongly recommend that you read those guides first as this guide builds on some of the principles outlined in those guides to build a more secure session management system.
 
-This guide **does not** cover using much of the built-in session management functions available with CFML. Instead, we approach this topic using a ground-up approach that offers complete control over the session management process. This roll-your-own approach has been found to be more secure and more concise than the built-in functions of CFML, and for many the concepts are easier to grasp as we walk you through the entire session management lifecycle.
+This guide **does not** cover using much of the built-in session management functions available with CFML. Instead, we approach this topic using a ground-up approach that offers complete control over the session management process. This roll-your-own approach has been found to be more secure and more concise than the built-in functions of CFML, and for many the concepts are easier to grasp as they require your to walk you through the entire session management lifecycle.
 
 Once your user has [authenticated](/security-authentication) with your system securely, you will need to ensure that the session management lifecycle is secure and concise. We begin to do that by understanding some of the basic concepts of session management. Note that some of this information is repetitive if you've been following along with all our security guides, but is presented here again for a more complete picture of session management if you've **not** already read our other guides.
 
@@ -23,7 +23,7 @@ Which might confuse the hacker into believing that this is a Google Analytics co
 
 ### Session timeout
 
-If a user is idle for a period of time, then we want to invalidate that user's session and force them to login again to help ensure our session management remains secure. This is a best practice you should not avoid this else you open yourself up to another vector of attack where a MITM attacker could hijack a user's session and begin attacking your application as an authenticated user. For this reason, we will set a timeout value in the *application* scope of your *Application.cfc*, as follows:
+If a user is idle for a period of time, then we want to invalidate that user's session and force them to login again to help ensure our session management remains secure. This is a best practice you should not avoid... else you open yourself up to another vector of attack where a MITM attacker could hijack a user's session and begin attacking your application as an authenticated user. For this reason, we will set a timeout value in the *application* scope of your *Application.cfc*, as follows:
 
     // set number of minutes before a session is timed out
     application.timeoutMinutes = 30; // 30 minutes 
@@ -105,7 +105,7 @@ Our *checkUserSession()* function has the following code:
         }
     }
 
-Here we are first checking if the session object exists in our cache. If it does **not** exist, then we return an empty bean which we will check next. We then compare the last action of the user as stored in the session object with the timeout we specified in our application scope. If the users last action timespan is longer than the session timeout specified, then we again return an empty bean. Otherwise, the user has a valid session object and we return the populated bean we have stored in our cache. Again, this storage mechanism is arbitrary and could be any other storage mechanism - for speed and for distributed caching capabilities, however, we feel that using the cache functions is the most appropriate method of handling user sessions and recommend using it.
+Here we are first checking if the session object exists in our cache. If it does **not** exist, then we return an empty bean which we will check after returning from this function. We then compare the last action of the user as stored in the session object with the timeout we specified in our application scope. If the users last action timespan is longer than the session timeout specified, then we again return an empty bean. Otherwise, the user has a valid session object and we return the populated bean we have stored in our cache. Again, this storage mechanism is arbitrary and could be any other storage mechanism - for speed and for distributed caching capabilities, however, we feel that using the cache functions is the most appropriate method of handling user sessions and recommend using it.
 
 Now that we have a sesson object (bean) to check, we have to see if the user id returned is valid (any non-zero value) or invalid (a zero value), as follows:
 
@@ -115,7 +115,7 @@ Now that we have a sesson object (bean) to check, we have to see if the user id 
             variables.fw.redirect( action = 'main.login', queryString = "msg=502" );            
         }
 
-In the above code we check if the user id is zero, as specified in our bean's init() method upon creation. If it *is* zero, then the user does not have a valid session and is redirected back to the login page. If the user is is a non-zero value, then we know we now have a valid session and can proceed to operate on that session object to a) rotate the users session and b) update the users session with the last action datetime, as follows:
+In the above code we check if the user id is zero, which is specified as the default value in our bean's init() method upon creation. If it *is* zero, then the user does not have a valid session and is redirected back to the login page. If the user is is a non-zero value, then we know we now have a valid session and can proceed to operate on that session object to a) rotate the users session and b) update the users session with the last action datetime, as follows:
 
         // lock the session and rotate the session id (for every request)
         lock scope='session' timeout='10' {
@@ -141,7 +141,7 @@ This function sets a new session id into our session object (bean) using the *ge
         return sessionId;
     }
 
-We then update the session's last action and save the session back into the cache with the *updateUserSession()& function of the SecurityService CFC, which has the following code:
+We then update the session's last action and save the session back into the cache with the *updateUserSession()* function of the SecurityService CFC, which has the following code:
 
     public any function updateUserSession( required any sessionObj ) {
         clearUserSession( arguments.sessionObj );
@@ -150,9 +150,9 @@ We then update the session's last action and save the session back into the cach
         return arguments.sessionObj;
     }
 
-This code first clears any existing session object from the cache, then updates the session object's (bean's) last action datetime, saves the user session back to the cache and returns the updated session object.
+This code first clears any existing session object from the cache, then updates the session object's (bean's) last action datetime, saves the user's session object (bean) back to the cache and returns the updated session object.
 
-We split this into two parts because session rotation can be tricky in some applications. For example, using the browsers 'back' function can (and will) cause the cookie being sent from the browser to be the formerly assigned cookie value which is no longer valid. For this reason and for some applications we simply comment out, or leave out compeltely, the session rotation. It is also possible, and valid, to maintain the previous session cookie's value and check for it's existence to avoid the 'back' issue, but less secure than forcing the user to login again. This methodology is not recommended and is beyond the scope of this guide.
+We split this into two parts because session rotation can be tricky in some applications. For example, using the browsers 'back' function can (and will) cause the cookie being sent from the browser to be the formerly assigned cookie value which is no longer valid. For this reason and for some applications we simply comment out, or leave out compeltely, the session rotation.
 
 Finally, we re-set the users cookie value with the new (rotated) and encrypted session id, as follows:
 
