@@ -1,6 +1,6 @@
 ### Obfuscation Guide
 
-It's a funny sounding word, but it means to 'render obscure, unclear, or unintelligible', or what us older folk used to call 'security through obscurity', essentially. When it comes to code, there are lots of things that should be obscured to enhance security, such as form and URL parameters. How often to you see parameters in URL's like the following?
+It's a funny sounding word, but it means to 'render obscure, unclear, or unintelligible', or what us older folk used to call 'security through obscurity', essentially. When it comes to code, there are lots of things that should be obscured to enhance security, such as form and URL parameters. How often do you see parameters in URL's like the following?
 
     Profile.cfm?userId=911&name=Bob&departmentId=5
 
@@ -10,7 +10,7 @@ What if, instead of giving hackers the information they need right on the URL, w
 
     Profile.cfm?vc5c71dd0fbb58b1de4df=911&vfe6f54c33f9064833ee8=Bob&va929c5b94ad8ed832a38=5
 
-These are contrived values, mind you, but now that these parameter names are obfuscated, you really don't know what the values are for. You could still monkey with the values and see what happens, and we'll explain how to rectify that problem next, but you won't instinctively understand what any one of those parameters do just by looking at the URL anymore.
+These are contrived values, mind you, but now that these parameter names are obfuscated, you really don't know what the values are for. You could still monkey with the values and see what happens, and we'll explain how to rectify that problem in our [Encryption](/security-encryption) guide, but you won't instinctively understand what any one of those parameters do just by looking at the URL anymore.
 
 I can hear some of you already asking… 'Wait. Do you mean I have to come up with obscure parameter names and then try and remember where I used them?' The answer is no, you do not. Thankfully there is an easy way to obscure the parameter names you already use… we [hash()](/hash) them:
 
