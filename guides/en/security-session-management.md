@@ -2,7 +2,7 @@
 
 If you missed our [Obfuscation](/security-obfuscation), [Encryption](/security-encryption) or [Authentication](/security-authentication) guides, we strongly recommend that you read those guides first as this guide builds on some of the principles outlined in those guides to build a more secure session management system.
 
-This guide **does not** cover using much of the built-in session management functions available with CFML. Instead, we approach this topic using a ground-up approach that offers complete control over the session management process. This roll-your-own approach has been found to be more secure and more concise than the built-in functions of CFML, and for many the concepts are easier to grasp as they require your to walk you through the entire session management lifecycle.
+This guide **does not** cover using much of the built-in session management functions available with CFML. Instead, we approach this topic using a ground-up approach that offers complete control over the session management process. This roll-your-own approach has been found to be more secure and more concise than the built-in functions of CFML, and for many the concepts are easier to grasp as they require you to walk through the entire session management lifecycle.
 
 Once your user has [authenticated](/security-authentication) with your system securely, you will need to ensure that the session management lifecycle is secure and concise. We begin to do that by understanding some of the basic concepts of session management. Note that some of this information is repetitive if you've been following along with all our security guides, but is presented here again for a more complete picture of session management if you've **not** already read our other guides.
 
