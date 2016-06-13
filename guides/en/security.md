@@ -14,17 +14,12 @@ Entire books have been written about server security and will generally include 
 
 [ColdFusion 11 Lockdown Guide (PDF)](http://adobe.ly/1mdJkEk)
 
-<<<<<<< HEAD
 [ColdFusion 2016 Lockdown Guide (PDF)](http://adobe.ly/1ZIK4zi)
-=======
-[ColdFusion 2016 Lockdown Guide (PDF)](http://wwwimages.adobe.com/content/dam/acom/en/products/coldfusion/pdfs/coldfusion-2016-lockdown-guide.pdf)
->>>>>>> refs/remotes/foundeo/master
 
 There has been some attempt made at putting together a Lucee lockdown guide, but it is incomplete. A Google search for 'Lucee lockdown guide' provides useful links to blog posts and the following start to a guide:
 
 [Lucee Lockdown Guide (HTML)](http://bit.ly/1OebHiz)
 
-<<<<<<< HEAD
 These lockdown guides will give you an excellent head start on protecting your servers, your application servers and your network, and those tasks while not (yet) explicitly called out in Lucee documentation, certainly all apply to Lucee equally. I suggest using the most recent Adobe lockdown guide as your basis for what to also apply to your Lucee servers, Adobe specific nuances aside, of course.
 
 ## ColdFusion Version Security
@@ -34,9 +29,6 @@ It is important to note that Adobe ColdFusion versions prior to version 10+, and
 If you are running Adobe ColdFusion versions prior to 10+ (e.g. v7, v8, v9, etc.), or any version of Railo, then you are currently **at high risk** of being attacked and should consider upgrading your version of Adobe to the latest version, or if you are using Railo to migrate to Railo's replacement server - [Lucee](http://bit.ly/1LWdyrv).
 
 It is also important to note that Adobe, and Lucee, regularly release security patches for those application servers and you should regularly ensure that your server is on the latest security point release to avoid being the target of potential hackers. Likewise, much of the underlying infrastructure of these application servers, including Java, Tomcat, Apache, nginx, etc. also have security releases and it is important to keep these underlying services up to date with the latest security point release.
-=======
-These lockdown guides will give you an excellent head start on protecting your servers, your application servers and your network, and those tasks while not (yet) explicitly called out in Lucee documentation, certainly all apply to Lucee equally. Consider using the CF2016 lockdown guide as your basis for what to also apply to your lucee servers, Adobe specific nuances aside, of course.
->>>>>>> refs/remotes/foundeo/master
 
 ## Network Security
 
