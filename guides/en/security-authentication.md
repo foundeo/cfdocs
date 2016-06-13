@@ -1,4 +1,4 @@
-### Authentication Guide
+# Authentication Guide
 
 If you missed our [Obfuscation](/security-obfuscation) or [Encryption](/security-encryption) guides, we strongly recommend that you read those guides first as this guide builds on some of the principles outlined in those guides to build a robust authentication system.
 

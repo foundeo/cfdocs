@@ -1,4 +1,4 @@
-### Session Management Guide
+# Session Management Guide
 
 If you missed our [Obfuscation](/security-obfuscation), [Encryption](/security-encryption) or [Authentication](/security-authentication) guides, we strongly recommend that you read those guides first as this guide builds on some of the principles outlined in those guides to build a more secure session management system.
 
