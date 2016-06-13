@@ -7,7 +7,9 @@
   <cfparam name="request.title" default="">
   <cfparam name="request.assetBaseURL" default="/assets/">
   <title><cfoutput>#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation</cfoutput></title>
-  <link href="//netdna.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css" rel="stylesheet">
+  <link href="https://netdna.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css" rel="stylesheet">
+  <cfparam name="request.hasExamples" default="false">
+  <cfif request.hasExamples><link rel="stylesheet" href="https://cdn.rawgit.com/foundeo/cfdocs/3da43f03663c57f499cf2de82ef82d4f74fe04cd/assets/vendor/google/code-prettify/theme-monokai.css" /></cfif>
   <cfoutput><link href="#request.assetBaseURL#style.css" rel="stylesheet"></cfoutput>
   <!--[if lt IE 9]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
@@ -80,25 +82,23 @@
 
     <cfoutput>#request.content#</cfoutput>
 
-      <hr>
+    <hr>
 
-      <footer>
-      	<div class="container">
-        		<p>Built &amp; Hosted by <a href="http://foundeo.com/">Foundeo Inc.</a> | ColdFusion is a trademark of Adobe Systems Incorporated.</p>
-		</div>
-      </footer>
-    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <p>Built &amp; Hosted by <a href="https://foundeo.com/">Foundeo Inc.</a> | ColdFusion is a trademark of Adobe Systems Incorporated.</p>
+		  </div>
+    </footer>
+  </div> <!-- /container -->
 
 
-   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	 <script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
-    <cfoutput><script src="#request.assetBaseURL#script.js"></script></cfoutput>
-    <cfparam name="request.gitFilePath" default="/">
-    <cfoutput>
-    	<a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-white@2x.png" alt="Fork me on GitHub"></a>
-    </cfoutput>
-<cfabort>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+  <cfoutput><script src="#request.assetBaseURL#script.js"></script></cfoutput>
+  <cfparam name="request.gitFilePath" default="/">
+  <cfoutput><a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="https://cdn.rawgit.com/foundeo/cfdocs/88847869f4bf61a96185fe01290165b00a2bf4e1/assets/img/fork.png" alt="Fork me on GitHub"></a></cfoutput>
+  <cfif request.hasExamples><script src="https://cdn.rawgit.com/foundeo/cfdocs/3da43f03663c57f499cf2de82ef82d4f74fe04cd/assets/vendor/google/code-prettify/prettify.js"></script></cfif>
+</body>
 </html>
 </cfif>

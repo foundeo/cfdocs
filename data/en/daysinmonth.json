@@ -3,10 +3,10 @@
 	"type":"function",
 	"syntax":"daysInMonth(date)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["Day", "DayOfWeek", "DayOfWeekAsString", "DayOfYear", "DaysInYear", "FirstDayOfMonth"],
 	"description":" Determines the number of days in a month.",
 	"params": [
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
+		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"DateTime","values":["now()"]}
 
 	],
 	"engines": {
@@ -17,6 +17,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Determines the number of days in a month",
+			"description": "Uses the daysInMonth function to determine the number of days in a month",
+			"code": "<cfset Date = CreateDate(2012, 12, 30)>\r\n<cfset result = daysInMonth(Date)>\r\n<cfoutput>#result#</cfoutput>",
+			"result": "31"
+		},
+		{
+			"title": "Simple example",
+			"description": "To determine the number of days in a month",
+			"code": "<cfset Date = CreateDate(2012, 02, 03)>\r\n<cfset result = daysInMonth(Date)>\r\n<cfoutput>#result#</cfoutput>",
+			"result": "29"
+		}
 	]
 
 }

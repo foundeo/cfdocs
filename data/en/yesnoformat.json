@@ -3,10 +3,10 @@
 	"type":"function",
 	"syntax":"yesNoFormat(value)",
 	"returns":"String",
-	"related":[],
-	"description":" Yes, for a non-zero value; No, otherwise.",
+	"related":["booleanFormat","isBoolean"],
+	"description":" Yes, for a true value; No for a false value, empty string or null. Throws an exception for other values.",
 	"params": [
-		{"name":"value","description":"A number or Boolean value","required":true,"default":"","type":"boolean","values":[true,false]}
+		{"name":"value","description":"A Boolean value or empty string","required":true,"default":"","type":"object","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,26 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Example of Yes",
+			"description":"Pass in a true value outputs Yes",
+			"code":"yesNoFormat(true)",
+			"result":"Yes"
+		},
+		{
+			"title":"Example of No",
+			"description":"Pass in a false value outputs No",
+			"code":"yesNoFormat(false)",
+			"result":"No"
+		},
+		{
+			"title":"Example of empty string",
+			"description":"Pass in an empty string outputs No",
+			"code":"yesNoFormat(\"\")",
+			"result":"No"
+		}
 	]
 
 }

@@ -26,7 +26,9 @@
 		{"name":"proxyport","description":"Port number to use on the proxy server.","required":false,"default":80,"type":"Numeric","values":[]},
 		{"name":"proxyuser","description":"User name to provide to the proxy server.","required":false,"default":"","type":"String","values":[]},
 		{"name":"proxypassword","description":"Password to provide to the proxy server.","required":false,"default":"","type":"String","values":[]},
-		{"name":"resolveurl","description":"Yes: resolve links in the output page to absolute\n references\n No: does not","required":false,"default":false,"type":"boolean","values":[true,false]}
+		{"name":"resolveurl","description":"Yes: resolve links in the output page to absolute\n references\n No: does not","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"group","description":"The group to which the scheduled task belongs.","required":false,"default":"default","type":"String"},
+		{"name":"mode","description":"If the task is server-specific or application specific.","required":false,"default":"server","type":"String"}
 
 	],
 	"engines": {

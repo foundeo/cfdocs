@@ -5,6 +5,8 @@
 <cfset guides = []>
 <cfset all = []>
 <cfset categories = []>
+<cfset versions = {4=[], "4.5"=[],5=[],6=[],7=[],8=[],9=[],10=[],11=[],2016=[]}>
+<cfset lucee_versions = {5=[]}>
 <cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
 	<cfset json = fileRead(filePath,"utf-8")>
 	<cftry>
@@ -20,6 +22,20 @@
 				<cfset arrayAppend(all, nameKey)>
 			<cfelseif data.type IS "listing">
 				<cfset arrayAppend(categories, nameKey)>
+			</cfif>
+			<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "coldfusion") AND structKeyExists(data.engines.coldfusion, "minimum_version") AND isNumeric(data.engines.coldfusion.minimum_version)>
+
+				<cfif structKeyExists(versions, val(data.engines.coldfusion.minimum_version))>
+					<cfset arrayAppend(versions[val(data.engines.coldfusion.minimum_version)], data.name)>
+				</cfif>
+			</cfif>
+
+			<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "lucee") AND structKeyExists(data.engines.lucee, "minimum_version") AND isNumeric(data.engines.lucee.minimum_version)>
+
+				<cfif structKeyExists(lucee_versions, val(data.engines.lucee.minimum_version))>
+					<cfset arrayAppend(lucee_versions[val(data.engines.lucee.minimum_version)], data.name)>
+				</cfif>
+
 			</cfif>
 		</cfif>
 		<cfcatch>
@@ -73,6 +89,18 @@
 <cfset gData.related = guides>
 <cfset fileWrite(dataDir & "/guides.json", prettyJSON(serializeJSON(gData), "utf-8"))>
 <p>Wrote guides.json</p>
+
+<cfloop array="#structKeyArray(versions)#" index="v">
+	<cfset vData = {"name"="ColdFusion #v# New Functions and Tags","type"="listing","description"="List of tags and functions added in ColdFusion #v#", "related"=versions[v]}>
+	<cfset fileWrite(dataDir & "/cf#reReplace(v, "[^0-9]", "", "ALL")#.json", prettyJSON(serializeJSON(vData), "utf-8"))>
+	<p>Wrote cf<cfoutput>#v#</cfoutput>.json</p>
+</cfloop>
+
+<cfloop array="#structKeyArray(lucee_versions)#" index="v">
+	<cfset vData = {"name"="Lucee #v# New Functions and Tags","type"="listing","description"="List of tags and functions added in Lucee #v#", "related"=lucee_versions[v]}>
+	<cfset fileWrite(dataDir & "/lucee#reReplace(v, "[^0-9]", "", "ALL")#.json", prettyJSON(serializeJSON(vData), "utf-8"))>
+	<p>Wrote lucee<cfoutput>#v#</cfoutput>.json</p>
+</cfloop>
 
 <cfset applicationStop()>
 <p>Stopped application so it can reinit</p>

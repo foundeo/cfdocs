@@ -4,17 +4,16 @@
 	"syntax":"arrayEvery(array array, function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
 	"member":"someArray.every(function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
 	"returns":"boolean",
-	"related":["arraySome"],
+	"related":["arraySome", "arrayEach"],
 	"description":"returns true if every closure returns true, otherwise false",
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
-		{"name":"closure","description":"function / closure with the signature: any function (any item, [numeric index], [array array]) : boolean","required":true,"default":"","type":"Closure","values":[]},
-		{"name":"parallel","description":"Railo only option, true or false if the items can be executed in parallel","required":false,"default":"false","type":"Boolean","values":[true, false]},
-		{"name":"maxThreads","description":"Railo only option, the number of threads to use when parallel = true","required":false,"default":"20","type":"Boolean","values":[]}
+		{"name":"closure","description":"A function / closure with the signature: `boolean function (any item, [numeric index], [array array])`","required":true,"default":"","type":"Closure","values":[]},
+		{"name":"parallel","description":"When `true` the items can be executed in parallel","required":false,"default":"false","type":"Boolean","values":[true, false]},
+		{"name":"maxThreads","description":"The number of threads to use when `parallel=true`","required":false,"default":"20","type":"Boolean","values":[]}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayevery.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://www.railodocs.org/index.cfm/function/arrayevery/"}
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayevery.html"}
 	},
 	"links": [
 

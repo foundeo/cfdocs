@@ -4,7 +4,7 @@
 	"syntax":"de(String)",
 	"returns":"Object",
 	"related":[],
-	"description":" Postpones evaluation of a string as an expression, when it is\n passed as a parameter to the IIf or Evaluate functions. Escapes\n any double quotation marks in the parameter and wraps the\n result in double quotation marks.",
+	"description":"Delay evaluation of a string as an expression, when it is passed as a parameter to the IIf or Evaluate functions. Escapes any double quotation marks in the parameter and wraps the result in double quotation marks. It does not escape `#` so the string could still be evaluated in some cases.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
 
@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples":[
+		{
+			"title":"Simple Example",
+			"description":"",
+			"code":"de(\"pete\")",
+			"result":"\"pete\""
+		}
 	]
 
 }

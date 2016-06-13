@@ -1,41 +1,178 @@
 {
-	"name":"cfwindow",
-	"type":"tag",
-	"syntax":"<cfwindow>",
-	"returns":"",
-	"related":[],
-	"description":" Creates a pop-up window in the browser. Does not create a \n separate browser pop-up instance.",
+	"name": "cfwindow",
+	"type": "tag",
+	"syntax": "<cfwindow>",
+	"returns": "",
+	"related": [],
+	"description": "Creates a pop-up window in the browser. Does not create a \n separate browser pop-up instance.",
 	"params": [
-		{"name":"bodyStyle","description":"A CSS style specification for the window body. As a \n general rule, use this attribute to set color and \n font styles. Using this attribute to set the height \n and width, for example, can result in distorted output.","required":false,"default":"","type":"String","values":[]},
-		{"name":"center","description":"A Boolean value specifying whether to center\n the window over the browser window.\n ‚Ä¢ If true, ColdFusion ignores the x and y\n attribute values.\n ‚Ä¢ If false, and you do not specify x and y\n attributes, ColdFusion centers the window.","required":false,"default":false,"type":"Boolean","values":[true,false]},
-		{"name":"closable","description":"A Boolean value specifying whether the user can \n close the window. If true, the window has an X \n close icon.","required":false,"default":true,"type":"Boolean","values":[true,false]},
-		{"name":"draggable","description":"A Boolean value specifying whether the user can \n drag the window. To drag the window, click the \n mouse on the title bar and hold the button down \n while dragging. If the window does not have a \n title, users cannot drag it.","required":false,"default":true,"type":"Boolean","values":[true,false]},
-		{"name":"headerStyle","description":"A CSS style specification for the window header. \n As a general rule, use this attribute to set \n color and font styles. Using this attribute to \n set the height and width, for example, can \n result in distorted output.","required":false,"default":"","type":"String","values":[]},
-		{"name":"height","description":"Height of the window in pixels. If you specify \n a value greater than the available space, the \n window occupies the available space and the \n resize handles do not appear. Default is 300.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"initShow","description":"A Boolean value specifying whether to display \n the window when the containing page first displays. \n If this value is false, use the \n ColdFusion.Layout.show JavaScript function to \n display the window.","required":false,"default":false,"type":"Boolean","values":[true,false]},
-		{"name":"minHeight","description":"The minimum height, in pixels, to which users \n can resize the window. Default is 0.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"minWidth","description":"The minimum width, in pixels, to which users \n can resize the window. Default is 0.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"modal","description":"A Boolean value specifying whether the window \n is modal, that is, whether the user can interact \n with the main window while this window displays. \n If true, the user cannot interact with the main \n window.","required":false,"default":false,"type":"Boolean","values":[true,false]},
-		{"name":"name","description":"The name of the window. Must be unique on the \n pages. This attribute is required to interact \n with the window, including to dynamically show \n or hide it.","required":false,"default":"","type":"String","values":[]},
-		{"name":"onBindError","description":"The name of a JavaScript function to execute \n if evaluating a bind expression results in an \n error. The function must take two attributes: \n an HTTP status code and a message. \n If you omit this attribute, and have specified \n a global error handler \n (by using the ColdFusion.setGlobalErrorHandlerfunction ), \n it displays the error message; otherwise a default \n error pop-up displays.","required":false,"default":"","type":"String","values":[]},
-		{"name":"resizable","description":"A Boolean value specifying whether the user can \n resize the window.","required":false,"default":false,"type":"Boolean","values":[true,false]},
-		{"name":"source","description":"A URL that returns the window contents. This \n attribute can use URL parameters to pass data \n to the page. ColdFusion uses standard page path \n resolution rules to locate the page. You can use \n a bind expressions in this attribute; for more \n information see the Usage section. Note: If a \n CFML page specified in this attribute contains \n tags that use AJAX features, such as cfform, \n cfgrid, and cfpod, you must use a cfajaximport \n tag on the page with the cfwindow tag. \n For more information, see cfajaximport","required":false,"default":"","type":"String","values":[]},
-		{"name":"title","description":"Text to display in the window's title bar. You \n can use HTML mark up to control the title \n appearance, of example to show the text in \n red italic font. If you omit this attribute, \n the window does not have a title bar.","required":false,"default":"","type":"String","values":[]},
-		{"name":"width","description":"Width of the control, including the title bar \n and borders, in pixels. Default is 500.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"x","description":"The X (horizontal) coordinate of the upper-left \n corner of the window, relative to the browser \n window. ColdFusion ignores this attribute if \n the center attribute value is true and if you \n do not set the y attribute value.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"y","description":"The Y (vertical) coordinate of the upper-left \n corner of the window, relative to the browser \n window. ColdFusion ignores this attribute if \n the center attribute value is true and if you \n do not set the x attribute value.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"refreshonshow","description":"* true Refresh the contents of the window by running the source bind expression whenever the window shows (for example, by calling the ColdFusion.Window.show JavaScript function), in addition to when bind events occur\n * false Refresh the window only when the bind expression is triggered by its bind event.","required":false,"default":false,"type":"Boolean","values":[true,false]},
-		{"name":"destroyOnClose","description":"When destroyOnClose is true, destroys the window when it is closed. By default, this is is false and the window is hidden when it is closed.","required":false,"default":"","type":"Boolean","values":[true,false]}
-
+		{
+			"name": "bodyStyle",
+			"description": "A CSS style specification for the window body. As a \n general rule, use this attribute to set color and \n font styles. Using this attribute to set the height \n and width, for example, can result in distorted output.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "center",
+			"description": "A Boolean value specifying whether to center\n the window over the browser window.\n \u00e2\u20ac\u0161\u00c3\u201e\u00c2\u00a2 If true, ColdFusion ignores the x and y\n attribute values.\n \u00e2\u20ac\u0161\u00c3\u201e\u00c2\u00a2 If false, and you do not specify x and y\n attributes, ColdFusion centers the window.",
+			"required": false,
+			"default": false,
+			"type": "Boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "closable",
+			"description": "A Boolean value specifying whether the user can \n close the window. If true, the window has an X \n close icon.",
+			"required": false,
+			"default": true,
+			"type": "Boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "draggable",
+			"description": "A Boolean value specifying whether the user can \n drag the window. To drag the window, click the \n mouse on the title bar and hold the button down \n while dragging. If the window does not have a \n title, users cannot drag it.",
+			"required": false,
+			"default": true,
+			"type": "Boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "headerStyle",
+			"description": "A CSS style specification for the window header. \n As a general rule, use this attribute to set \n color and font styles. Using this attribute to \n set the height and width, for example, can \n result in distorted output.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "height",
+			"description": "Height of the window in pixels. If you specify \n a value greater than the available space, the \n window occupies the available space and the \n resize handles do not appear. Default is 300.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "initShow",
+			"description": "A Boolean value specifying whether to display \n the window when the containing page first displays. \n If this value is false, use the \n ColdFusion.Layout.show JavaScript function to \n display the window.",
+			"required": false,
+			"default": false,
+			"type": "Boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "minHeight",
+			"description": "The minimum height, in pixels, to which users \n can resize the window. Default is 0.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "minWidth",
+			"description": "The minimum width, in pixels, to which users \n can resize the window. Default is 0.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "modal",
+			"description": "A Boolean value specifying whether the window \n is modal, that is, whether the user can interact \n with the main window while this window displays. \n If true, the user cannot interact with the main \n window.",
+			"required": false,
+			"default": false,
+			"type": "Boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "name",
+			"description": "The name of the window. Must be unique on the \n pages. This attribute is required to interact \n with the window, including to dynamically show \n or hide it.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "onBindError",
+			"description": "The name of a JavaScript function to execute \n if evaluating a bind expression results in an \n error. The function must take two attributes: \n an HTTP status code and a message. \n If you omit this attribute, and have specified \n a global error handler \n (by using the ColdFusion.setGlobalErrorHandlerfunction ), \n it displays the error message; otherwise a default \n error pop-up displays.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "resizable",
+			"description": "A Boolean value specifying whether the user can \n resize the window.",
+			"required": false,
+			"default": false,
+			"type": "Boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "source",
+			"description": "A URL that returns the window contents. This \n attribute can use URL parameters to pass data \n to the page. ColdFusion uses standard page path \n resolution rules to locate the page. You can use \n a bind expressions in this attribute; for more \n information see the Usage section. Note: If a \n CFML page specified in this attribute contains \n tags that use AJAX features, such as cfform, \n cfgrid, and cfpod, you must use a cfajaximport \n tag on the page with the cfwindow tag. \n For more information, see cfajaximport",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "title",
+			"description": "Text to display in the window's title bar. You \n can use HTML mark up to control the title \n appearance, of example to show the text in \n red italic font. If you omit this attribute, \n the window does not have a title bar.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "width",
+			"description": "Width of the control, including the title bar \n and borders, in pixels. Default is 500.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "x",
+			"description": "The X (horizontal) coordinate of the upper-left \n corner of the window, relative to the browser \n window. ColdFusion ignores this attribute if \n the center attribute value is true and if you \n do not set the y attribute value.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "y",
+			"description": "The Y (vertical) coordinate of the upper-left \n corner of the window, relative to the browser \n window. ColdFusion ignores this attribute if \n the center attribute value is true and if you \n do not set the x attribute value.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "refreshonshow",
+			"description": "* true Refresh the contents of the window by running the source bind expression whenever the window shows (for example, by calling the ColdFusion.Window.show JavaScript function), in addition to when bind events occur\n * false Refresh the window only when the bind expression is triggered by its bind event.",
+			"required": false,
+			"default": false,
+			"type": "Boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "destroyOnClose",
+			"description": "When destroyOnClose is true, destroys the window when it is closed. By default, this is is false and the window is hidden when it is closed.",
+			"required": false,
+			"default": "",
+			"type": "Boolean",
+			"values": [true, false]
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfwindow.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/window.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfwindow"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfwindow"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfwindow.html"
+		}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

@@ -1,4 +1,4 @@
-### Obfuscation Guide
+# Obfuscation Guide
 
 It's a funny sounding word, but it means to 'render obscure, unclear, or unintelligible', or what us older folk used to call 'security through obscurity', essentially. When it comes to code, there are lots of things that should be obscured to enhance security, such as form and URL parameters. How often do you see parameters in URL's like the following?
 

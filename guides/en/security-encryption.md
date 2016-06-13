@@ -1,4 +1,4 @@
-### Encryption Guide
+# Encryption Guide
 
 If you missed our [Obfuscation Guide](/security-obfuscation), we suggest you read it before reading this one, as this guide builds on the principles established in the [Obfuscation Guide](/security-obfuscation).
 

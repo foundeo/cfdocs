@@ -4,9 +4,9 @@
 	"syntax":"fileDelete(file)",
 	"returns":"void",
 	"related":[],
-	"description":" No Help Available",
+	"description":"Deletes the specified file on the server.",
 	"params": [
-		{"name":"file","description":"No Help Available","required":true,"default":"","type":"","values":[]}
+		{"name":"filepath","description":"Pathname of the file to delete. If not an absolute path (starting with a drive letter and a colon, or a forward or backward slash), it is relative to the ColdFusion temporary directory, which is returned by the GetTempDirectory function.","required":true,"default":"","type":"","values":[]}
 
 	],
 	"engines": {
@@ -18,5 +18,4 @@
 	"links": [
 
 	]
-
 }

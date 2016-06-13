@@ -1,29 +1,93 @@
 {
-	"name":"cfapplet",
-	"type":"tag",
-	"syntax":"<cfapplet appletsource=\"\" name=\"\">",
-	"returns":"",
-	"related":[],
-	"description":" This tag references a registered custom Java applet. To\n register a Java applet, in the CFML Administrator, click\n Extensions/Java Applets.\n Using this tag within a cfform tag is optional. If you use it\n within cfform, and the method attribute is defined in the\n Administrator, the return value is incorporated into the\n form.",
+	"name": "cfapplet",
+	"type": "tag",
+	"syntax": "<cfapplet appletsource=\"\" name=\"\">",
+	"returns": "",
+	"related": [],
+	"description": "This tag references a registered custom Java applet. To\n register a Java applet, in the CFML Administrator, click\n Extensions/Java Applets.\n Using this tag within a cfform tag is optional. If you use it\n within cfform, and the method attribute is defined in the\n Administrator, the return value is incorporated into the\n form.",
 	"params": [
-		{"name":"appletsource","description":"Name of registered applet","required":true,"default":"","type":"String","values":[]},
-		{"name":"name","description":"Form variable name for applet","required":true,"default":"","type":"String","values":[]},
-		{"name":"height","description":"Control's height, in pixels.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"width","description":"Control's width, in pixels.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"vspace","description":"Vertical margin above and below control, in pixels.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"hspace","description":"Horizontal spacing to left and right of control, in pixels.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"align","description":"Alignment","required":false,"default":"","type":"String","values":["top","left","bottom","baseline","texttop","absbottom","middle","absmiddle","right"]},
-		{"name":"notsupported","description":"Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.\n Default:\n \"<b>Browser must support Java to <br>view ColdFusion Java\n Applets!<\/b>\"","required":false,"default":"<b>Browser must support Java to <br>view ColdFusion Java Applets!<\/b>","type":"String","values":[]}
-
+		{
+			"name": "appletsource",
+			"description": "Name of registered applet",
+			"required": true,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "name",
+			"description": "Form variable name for applet",
+			"required": true,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "height",
+			"description": "Control's height, in pixels.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "width",
+			"description": "Control's width, in pixels.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "vspace",
+			"description": "Vertical margin above and below control, in pixels.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "hspace",
+			"description": "Horizontal spacing to left and right of control, in pixels.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "align",
+			"description": "Alignment",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": ["top", "left", "bottom", "baseline", "texttop", "absbottom", "middle", "absmiddle", "right"]
+		},
+		{
+			"name": "notsupported",
+			"description": "Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.\n Default:\n \"<b>Browser must support Java to <br>view ColdFusion Java\n Applets!</b>\"",
+			"required": false,
+			"default": "<b>Browser must support Java to <br>view ColdFusion Java Applets!</b>",
+			"type": "String",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-a-b/cfapplet.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/applet.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfapplet"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfapplet"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-a-b/cfapplet.html",
+			"deprecated":"11"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://docs.lucee.org/reference/tags/applet.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/tag/cfapplet"
+		}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

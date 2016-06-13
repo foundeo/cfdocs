@@ -3,8 +3,8 @@
 	"type":"function",
 	"syntax":"isNumeric(String)",
 	"returns":"boolean",
-	"related":[],
-	"description":" Determines whether a string can be converted to a numeric value.\n Supports numbers in U.S. number format. For other number support\n use LSIsNumeric.",
+	"related":["isValid"],
+	"description":"Determines whether a string can be converted to a numeric value. Supports numbers in U.S. number format. For other number support use LSIsNumeric.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
 
@@ -17,6 +17,26 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Integer isNumeric",
+			"description":"",
+			"code":"isNumeric(23)",
+			"result":"YES"
+		},
+		{
+			"title":"String isNumeric",
+			"description":"",
+			"code":"isNumeric(\"twenty\")",
+			"result":"NO"
+		},
+		{
+			"title":"Scientific Notation",
+			"description":"The number `5e2` is scientific notation for `5 x 10^2` aka `500`",
+			"code":"isNumeric(\"5e2\")",
+			"result":"YES"
+		}
 	]
 
 }

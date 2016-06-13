@@ -3,12 +3,12 @@
 	"type":"tag",
 	"syntax":"<cfhttp url=\"\">",
 	"returns":"",
-	"related":["cfhttppram", "cfdump", "writedump"],
+	"related":["cfhttpparam", "cfdump", "writedump"],
 	"description":" Generates an HTTP request and handles the response from the\n server.",
 	"params": [
-		{"name":"url","description":"Address of the resource on the server which will handle\n the request. The URL must include the hostname or IP\n address.\n\n If you do not specify the transaction protocol (http:\/\/ or\n https:\/\/), CFML defaults to http.\n\n If you specify a port number in this attribute, it\n overrides any port attribute value.\n\n The cfhttppparam tag URL attribute appends query string\n attribute-value pairs to the URL.","required":true,"default":"","type":"URL","values":[]},
+		{"name":"url","description":"Address of the resource on the server which will handle\n the request. The URL must include the hostname or IP\n address.\n\n If you do not specify the transaction protocol (http:\/\/ or\n https:\/\/), CFML defaults to http.\n\n If you specify a port number in this attribute, it\n overrides any port attribute value.\n\n The cfhttpparam tag URL attribute appends query string\n attribute-value pairs to the URL.","required":true,"default":"","type":"URL","values":[]},
 		{"name":"port","description":"Port number on the server to which to send the request.\n A port value in the url attribute overrides this value.\n (default: http 80 - https 443)","required":false,"default":80,"type":"Numeric","values":[]},
-		{"name":"method","description":"* GET Requests information from the server. Any data that\n the server requires to identify the requested\n information must be in the URL or in cfhttp type=\"URL\"\n tags.\n * POST Sends information to the server for processing.\n Requires one or more cfhttpparam tags. Often used for\n submitting form-like data.\n * PUT Requests the server to store the message body at the\n specified URL. Use this method to send files to the\n server.\n * DELETE Requests the server to delete the specified URL.\n * HEAD Identical to the GET method, but the server does\n not send a message body in the response. Use this\n method for testing hypertext links for validity and\n accessibility, determining the type or modification\n time of a document, or determining the type of server.\n * TRACE Requests that the server echo the received HTTP\n headers back to the sender in the response body. Trace\n requests cannot have bodies. This method enables the\n CFML application to see what is being received\n at the server, and use that data for testing or\n diagnostic information.\n * OPTIONS A request for information about the\n communication options available for the server or the\n specified URL. This method enables the CFML\n application to determine the options and requirements\n associated with a URL, or the capabilities of a server,\n without requesting any additional activity by the\n server.","required":false,"default":"get","type":"String","values":["get","post","put","delete","head","trace","options"]},
+		{"name":"method","description":"* GET Requests information from the server. Any data that\n the server requires to identify the requested\n information must be in the URL or in cfhttp type=\"URL\"\n tags.\n * POST Sends information to the server for processing.\n Requires one or more cfhttpparam tags. Often used for\n submitting form-like data.\n * PUT Requests the server to store the message body at the\n specified URL. Use this method to send files to the\n server.\n * DELETE Requests the server to delete the specified URL.\n * HEAD Identical to the GET method, but the server does\n not send a message body in the response. Use this\n method for testing hypertext links for validity and\n accessibility, determining the type or modification\n time of a document, or determining the type of server.\n * TRACE Requests that the server echo the received HTTP\n headers back to the sender in the response body. Trace\n requests cannot have bodies. This method enables the\n CFML application to see what is being received\n at the server, and use that data for testing or\n diagnostic information.\n * OPTIONS A request for information about the\n communication options available for the server or the\n specified URL. This method enables the CFML\n application to determine the options and requirements\n associated with a URL, or the capabilities of a server,\n without requesting any additional activity by the\n server.\n * PATCH: requests partial updates to the requested entity at the specified URL. Use this method to modify parts of the resource whereas use PUT method to completely replace the resource at the specified URL. CF11+ ","required":false,"default":"get","type":"String","values":["get","post","put","delete","head","trace","options","patch"]},
 		{"name":"proxyserver","description":"The proxy server required to access the URL.","required":false,"default":"","type":"String","values":[]},
 		{"name":"proxyport","description":"The port to use on The proxy server.","required":false,"default":80,"type":"Numeric","values":[]},
 		{"name":"proxyuser","description":"The user ID to send to the proxy server.","required":false,"default":"","type":"String","values":[]},
@@ -28,13 +28,16 @@
 		{"name":"columns","description":"The column names for the query, separated by commas, with no\n spaces. Column names must start with a letter. The remaining\n characters can be letters, numbers, or underscore\n characters (_).\n \n If there are no column name headers in the response,\n specify this attribute to identify the column names.\n \n If you specify this attribute, and the firstrowasHeader\n attribute is True (the default), the column names specified\n by this attribute replace the first line of the response.\n You can use this behavior to replace the column names\n retrieved by the request with your own names.\n \n If a duplicate column heading is encountered in either this\n attribute or in the column names from the response,\n ColdFusion appends an underscore to the name to make it\n unique.\n \n If the number of columns specified by this attribute does\n not equal the number of columns in the HTTP response body,\n ColdFusion generates an error.","required":false,"default":"","type":"String","values":[]},
 		{"name":"firstrowasheaders","description":"Determines how ColdFusion processes the first row of the\n query record set:\n * yes: processes the first row as column heads. If you\n specify a columns attribute, ColdFusion ignores the\n first row of the file.\n * no: processes the first row as data. If you do not\n specify a columns attribute, ColdFusion generates column\n names by appending numbers to the word \"column\"; for\n example, \"column_1\".","required":false,"default":true,"type":"boolean","values":[true,false]},
 		{"name":"textqualifier","description":"A character that, optionally, specifies the start and end\n of a text column. This character must surround any text\n fields in the response body that contain the delimiter\n character as part of the field value.\n \n To include this character in column text, escape it by\n using two characters in place of one. For example, if the\n qualifier is a double-quotation mark, escape it as \"\".","required":false,"default":"\"","type":"String","values":["\"","'"]},
-		{"name":"file","description":"Name of the file in which to store the response body.","required":false,"default":"","type":"String","values":[]},
+		{"name":"file","description":"Name of the file in which to store the response body. The directory that the file will be written to must be passed in the `path` attribute.","required":false,"default":"","type":"String","values":[]},
 		{"name":"multipart","description":"Tells ColdFusion to send all data specified by cfhttpparam type=\"formField\" tags as multipart form data, with a Content-Type of multipart\/form-data.","required":false,"default":false,"type":"Boolean","values":[false,true]},
+        {"name":"multipartType","description":"Allows you to set the multipart header field to related or form-data. By default, the value is form-data.","required":false,"default":"form-data","type":"String","values":["form-data","related"]},
 		{"name":"clientcertpassword","description":"Password used to decrypt the client certificate.","required":false,"default":"","type":"String","values":[]},
 		{"name":"path","description":"Required if File is specified. Tells ColdFusion to save the HTTP response body in a file. Contains the absolute path to the directory in which to store the file.","required":false,"default":"","type":"String","values":[]},
 		{"name":"clientcert","description":"The full path to a PKCS12 format file that contains the client certificate for the request.","required":false,"default":"","type":"String","values":[]},
-		{"name":"compression","description":"Compression type","required":false,"default":"","type":"String","values":[]}
-
+		{"name":"compression","description":"Compression type","required":false,"default":"","type":"String","values":[]},
+        {"name":"authType","description":"CF11+ The supported values are:\n * BASIC\n * NTLM\n NOTE When authentication type is NTLM, do not set the redirect as false.","required":false,"default":"BASIC","type":"String","values":["BASIC","NTLM"]},
+        {"name":"domain","description":"CF11+ The domain name for authentication. (Use for NTLM-based authentication)","required":false,"default":"","type":"String","values":[]},
+        {"name":"workstation","description":"CF11+ The workstation name for authentication. (Use for NTLM-based authentication)","required":false,"default":"","type":"String","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfhttp.html"},
@@ -58,12 +61,12 @@
 			"code": "httpService = new http(method = \"GET\", charset = \"utf-8\", url = \"https://www.google.com/\"); \r\n httpService.addParam(name = \"q\", type = \"formfield\", value = \"cfml\"); \r\n result = httpService.send().getPrefix(); \r\n writeDump(result);",
 			"result": ""
 		},
-	        {
-	            "title": "Tag Syntax",
-	            "description": "",
-	            "code": "<cfhttp result=\"result\" method=\"GET\" charset=\"utf-8\" url=\"https://www.google.com/\"> \r\n <cfhttpparam name=\"q\" type=\"formfield\" value=\"cfml\"> \r\n </cfhttp> \r\n <cfdump var=\"#result#\">",
-	            "result": ""
-	        }
+        {
+            "title": "CFHTTP Tag Syntax",
+            "description": "",
+            "code": "<cfhttp result=\"result\" method=\"GET\" charset=\"utf-8\" url=\"https://www.google.com/\">\r\n    <cfhttpparam name=\"q\" type=\"formfield\" value=\"cfml\">\r\n</cfhttp>\r\n<cfdump var=\"#result#\">",
+            "result": ""
+        }
 	]
 
 }

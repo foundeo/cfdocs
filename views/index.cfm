@@ -25,10 +25,11 @@
 
   <br><hr><br>
   <cftry>
-    <cfhttp url="https://api.github.com/repos/foundeo/cfdocs/stats/contributors" method="GET" charset="utf-8" result="statResult" throwonerror="false"></cfhttp>
+    <cfhttp url="https://api.github.com/repos/foundeo/cfdocs/stats/contributors" method="GET" charset="utf-8" result="statResult" throwonerror="false" timeout="3"></cfhttp>
       <cfif statResult.statusCode contains "200" AND IsJSON(statResult.fileContent)>
         <cfset stats = DeserializeJSON(statResult.fileContent)>
         <h2 class="text-center"><cfoutput>#ArrayLen(stats)#</cfoutput> Awesome Contributors <br><small>The Leader Board</small></h2>
+          <div class="row">
             <!--- seams to be in reverse order --->
             <cfset i = 0>
             <cfloop from="#ArrayLen(stats)#" to="1" index="s" step="-1">
@@ -54,18 +55,17 @@
                 </cfloop>
               </cfsilent>
               <cfoutput>
-              <div class="contributor">
-                <div class="row">
-                  <div class="col-sm-4 text-center">
-                    <a href="#encodeForHTMLAttribute(stat.author.html_url)#" rel="nofollow"><img src="#encodeForHTMLAttribute(stat.author.avatar_url)#" class="img-rounded" height="75" width="75" /></a> 
-                    <br>
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="contributor row">
+                  <div class="col-xs-5 text-center">
+                    <a href="#encodeForHTMLAttribute(stat.author.html_url)#" rel="nofollow"><img src="#encodeForHTMLAttribute(stat.author.avatar_url)#" class="img-rounded" /></a> 
                     <div class="text-muted"><strong>#encodeForHTML(stat.author.login)#</strong></div>
                   </div>
-                  <div class="col-sm-4">
+                  <div class="col-xs-7">
                     
                     <span class="label label-primary">#Val(stat.total)# Contribution<cfif Val(stat.total) NEQ 1>s</cfif></span><br>
                     
-                    <span class="label label-info">#Val(a+d)# Line<cfif Val(a+d) NEQ 1>s</cfif> Altered</span>
+                    <span class="label label-info">#Val(a+d)# Line<cfif Val(a+d) NEQ 1>s</cfif> Altered</span><br>
                     <cfset weeksAgo = DateDiff("w", DateAdd("s", lastMod, "1970-01-01 00:00:00"), now())>
                     <span class="label label-success"><cfif weeksAgo EQ 0>Contributed this week!<cfelse>#weeksAgo# week<cfif weeksAgo NEQ 1>s</cfif> ago</cfif></span>
                   </div>
@@ -74,16 +74,13 @@
               </div>
               </cfoutput>
             </cfloop> 
-        <div id="test-tool"><small>Contributions not showing up? Test them with this tool. <a href="http://contribution-checker.herokuapp.com/" rel="nofollow">http://contribution-checker.herokuapp.com</a>.<small></div>
+       
+          </div>
       <cfelse>
         <!--- error connecting to github so tell CDN to only cache for 30 seconds --->
         <cfset request.cacheControlMaxAge = 30> 
       </cfif>
   
-    <style>
-        .contributor { width: 320px; display:inline-block; background-color: #f1f1f1; border-radius: 7px; margin: 5px 20px; padding:15px 10px; }
-        #test-tool { text-align: center;}
-    </style>
     <cfcatch>
       <small>Some sort of error occurred constructing the leaderboard, please check back later.</small>
       <cfset request.cacheControlMaxAge = 30> 

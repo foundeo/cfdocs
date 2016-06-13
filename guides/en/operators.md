@@ -56,4 +56,4 @@ Both code examples are equivilent.
 
 ## Compatibility Notes
 
-The operators `==` `!=` `<` `<=` `>` `>=` do not work in tags such as cfif or cfset in Adobe ColdFusion (as of Version 11), however they work from tags on Lucee.
+The operators `==` `!=` `<` `<=` `>` `>=` do not work in tags such as cfif or cfset in Adobe ColdFusion (as of Version 2016). However the `==` `!=` `<` `<=` operators work from tags on Lucee, but `>` `>=` do not.

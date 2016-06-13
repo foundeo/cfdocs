@@ -7,7 +7,7 @@ h2 { border-bottom:1px solid #f1f1f1; padding-bottom: 12px; }
 
 h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
 .p-name { font-weight:bold; font-size:larger;}
-.listing { display:inline; margin: 8px; line-height:60px;}
+h2.listing { display:inline; line-height:60px;}
 #syntax { font-weight:bold; }
 #forkme { position: absolute; top: 0; right: 0; border: 0; z-index: 9999; width:149px; height:149px;}
 .twitter-typeahead .tt-query,
@@ -96,5 +96,30 @@ footer { text-align: center; margin-top: 10px; font-size:smaller; }
 .alert-warning a {
   color: #fff;
 }
+/* for use in page anchor - moves -100px to allow space for toolbar */
+.page-anchor{
+  position:absolute;
+  margin-top:-80px;
+}
+/* normal placement in examples */
+p.clearfix .page-anchor{
+  position:absolute;
+  margin-top:-100px;
+}
 
 iframe { border:0px;}
+
+.contributor { background-color: #f1f1f1; border-radius: 7px; margin: 5px 0; padding:15px 10px; }
+.contributor img { width: 75px; height: 75px; display: block; margin: 0 auto; }
+
+pre.prettyprint {
+	padding: 5px 8px !important;
+	border: 1px solid #CCC !important;
+}
+
+.alert-danger h4 { line-height: 1.5; }
+
+#search { margin-right:100px; }
+@media (max-width:991px) {
+  #search { margin-right:10px; }
+}

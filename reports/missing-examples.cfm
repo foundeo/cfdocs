@@ -35,5 +35,5 @@
 <cfset percentExamples = NumberFormat ( (hasExample/total) * 100 , "_.__")>
 <cfset data.description = "Out of #total# tags and functions, #hasExample# have examples, #percentExamples#%. Here are #ArrayLen(data.related)# good ones to start with.">
 <cfset url.name = "missing-examples">
-<cfset request.gitFilePath = "/edit/master/reports/" & url.name & ".cfm">
+<cfset request.gitFilePath = "/edit/master/reports/missing-examples.cfm">
 <cfinclude template="../views/doc.cfm">
