@@ -10,11 +10,12 @@ Since then several 'flavors' of web application authentication have come along t
 
 ### Federated Authentication
 
-Federated authentication was born to address the need to ensure that a user was logging in from your server and not from someone else's server. The first attempts at federation were to ensure that the value of the referrerr HTTP header value matched that of your domain. While this is still a good practice, modern languages can easily fake the referrer in the HTTP header itself, so another method of federation needs to be layered upon this one - federated cookies.
+Federated authentication was born to address the need to ensure that a user was logging in from your server and not from someone else's server. Federation helps prevent someone from generating a form on their site that then logs into your site, exposing your authentication to abuse by servers not under your control.
 
-Federated cookies are more secure in that it is (now) much more difficult to fake a cookie on an HTTP request than it was in the past. If your cookies are domain specific (and they should be), then it is harder to provide a domain specific cookie served by another server. 
+The first step to federation is to ensure that the value of the referrerr HTTP header value matches that of your domain. While this is still a good practice, modern languages can easily fake the referrer in the HTTP header itself, so another method of federation needs to be layered upon this one - federated cookies.
 
-Federation helps prevent someone from generating a form on their site that then logs into your site, exposing your authentication to abuse by servers not under your control.
+Federated cookies, when layered with the referrer check, provide a more secure login form by requiring that your domain specific cookie is provided to your server on the authentication request. While it is still feasible to provide this cookie from another server, it makes your authentication more robust and can help ward off those scripts that cannot, or does not, provide for these kinds of added protections. This is not a failsafe, it merely adds upon the layers your authentication requires, thus making it more difficult and time consuming to hack. 
+
 
 ### Disclosure Prevention
 
