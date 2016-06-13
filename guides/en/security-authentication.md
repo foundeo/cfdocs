@@ -75,7 +75,7 @@ The second field, which is a hashed 'token' utilizes CFML's [CSRFGenerateToken()
 
 We then proceed to provide the username and password fields as we normally would, giving an id to our password field, something along the lines of:
 
-    <input class="form-control" placeholder="Password" name="password" id="password" type="password" value="" autocomplete="off" required>
+    <input name="password" id="password" type="password" value="" autocomplete="off" required>
 
 We can now use these two form fields, along with a bit of JavaScript, to protect the user's password from disclosure - by not sending the password from the browser to the server in plain-text, we ensure that the users password is protected from that disclosure. By using the randomly generated heartbeat value in connection with our hashing algorithm, which we'll explore below, we ensure that the password cannot be matched to a rainbow table with relative ease.
 
@@ -117,7 +117,7 @@ Then we submit the form.
 
 In doing so, we have obfuscated the users password and prevented disclosure from the browser to the server in plain-text. This has a drawback with some older browsers which will save the hashed password when choosing to 'save my password for this site', but then users really ought not be letting the browser save their passwords anyway. Modern browsers understand what is going on with this code, however, and will rightly save the actual password typed in by the user.
 
-In just a few simple lines of code (which are spelled out here to show the process more thoroughly and could be quite truncated to further obscure what the JavaScript is intended to do), we have a) federated our login form with a cookie, b) eliminated any lingering session values for that session and c) ensured that the users password is protected from disclosure when being sent to the server from the browser.
+In just a few simple lines of code (which are spelled out here to show the process more thoroughly and could be truncated to further obscure what the JavaScript is intended to do), we have a) federated our login form with a cookie, b) eliminated any lingering session values for that session, c) ensured that the users password is protected from disclosure when being sent to the server from the browser and d) helped protect against CSRF attacks by generating a token.
 
 ### Authentication
 
@@ -214,5 +214,7 @@ And then we redirect the user to whichever page within our system we consider th
     variables.fw.redirect( 'main.dashboard' );
 
 And presto! A secure authentication has been made and we are now ready to serve content to this authenticated user.
+
+This combination of layered security best practices ensures that any hacker wanting to break into our authentication mechanisms would need to spend a fair amount of time reverse-engineering the process and mimicking both the browser and potential server responses. If a hacker really wants to try and break your authentication, they can still do it but it will take considerable effort on their part. Less capable and less interested hackers will simply move on to easier targets, of which there are many.
 
 All of these concepts can be found in convenient functions in my [SecurityService.cfc](http://bit.ly/1IkY5zK) service, [main.cfc](http://bit.ly/1S1syAp) controller and [default.cfm](http://bit.ly/1XhyJrX) view, which are part of a larger example of using these and other security techniques to create a [secure](http://bit.ly/1Msdwkt), or [two-factor](http://bit.ly/1Yx4hGt), [framework one (FW/1)](http://bit.ly/22lB2eu) application.
