@@ -89,7 +89,7 @@
             "result": ""
         },
 	    {
-			"title": "Loop over a Querty (Script Syntax)",
+			"title": "Loop over a Query (Script Syntax)",
 			"description": "Query Loop",
 			"code": "// Define our query \r\n platform = [\"Adobe ColdFusion\", \"Railo\", \"Lucee\"]; \r\n myQuery = queryNew(\" \"); \r\n queryAddColumn(myQuery, \"platform\", \"CF_SQL_VARCHAR\", platform); \r\n // By row index \r\n for (i = 1; i <= myQuery.recordCount; i++) { \r\n writeOutput(\"<li>#myQuery[\"platform\"][i]#</li>\"); \r\n } \r\n // By query \r\n for (row in myQuery) { \r\n writeOutput(\"<li>#row.platform#</li>\"); \r\n }",
 			"result": ""
