@@ -6,7 +6,7 @@ This document will outline some of the basics of each, and link to further infor
 
 ## Server Security
 
-Entire books have been written about server security and will generally include topics covering everything the physical security of your server (e.g. can someone walk right up and take it) to common sense protections you can commonly take to harden your server and the application software using it. For our purposes, we're going to focus on hardening your Adobe ColdFusion server(s) using the handy lock-down guides:
+Entire books have been written about server security and will generally include topics covering everything from the physical security of your server (e.g. can someone walk right up and take it) to common sense protections you should take to harden your server and the application software using it. For our purposes, we're going to focus on hardening your Adobe ColdFusion server(s) using the handy lock-down guides:
 
 [ColdFusion 9 Lockdown Guide (PDF)](http://adobe.ly/1IeIilP)
 
@@ -14,13 +14,21 @@ Entire books have been written about server security and will generally include 
 
 [ColdFusion 11 Lockdown Guide (PDF)](http://adobe.ly/1mdJkEk)
 
-[ColdFusion 2016 Lockdown Guide (PDF)](http://wwwimages.adobe.com/content/dam/acom/en/products/coldfusion/pdfs/coldfusion-2016-lockdown-guide.pdf)
+[ColdFusion 2016 Lockdown Guide (PDF)](http://adobe.ly/1ZIK4zi)
 
 There has been some attempt made at putting together a Lucee lockdown guide, but it is incomplete. A Google search for 'Lucee lockdown guide' provides useful links to blog posts and the following start to a guide:
 
 [Lucee Lockdown Guide (HTML)](http://bit.ly/1OebHiz)
 
-These lockdown guides will give you an excellent head start on protecting your servers, your application servers and your network, and those tasks while not (yet) explicitly called out in Lucee documentation, certainly all apply to Lucee equally. Consider using the CF2016 lockdown guide as your basis for what to also apply to your lucee servers, Adobe specific nuances aside, of course.
+These lockdown guides will give you an excellent head start on protecting your servers, your application servers and your network, and those tasks while not (yet) explicitly called out in Lucee documentation, certainly all apply to Lucee equally. I suggest using the most recent Adobe lockdown guide as your basis for what to also apply to your Lucee servers, Adobe specific nuances aside, of course.
+
+## ColdFusion Version Security
+
+It is important to note that Adobe ColdFusion versions prior to version 10+, and all Railo server versions, have inherent security flaws that are not and will not be addressed. These weaknesses can be, and very often are, primary attack vectors for exploitation of those insecure systems. 
+
+If you are running Adobe ColdFusion versions prior to 10+ (e.g. v7, v8, v9, etc.), or any version of Railo, then you are currently **at high risk** of being attacked and should consider upgrading your version of Adobe to the latest version, or if you are using Railo to migrate to Railo's replacement server - [Lucee](http://bit.ly/1LWdyrv).
+
+It is also important to note that Adobe, and Lucee, regularly release security patches for those application servers and you should regularly ensure that your server is on the latest security point release to avoid being the target of potential hackers. Likewise, much of the underlying infrastructure of these application servers, including Java, Tomcat, Apache, nginx, etc. also have security releases and it is important to keep these underlying services up to date with the latest security point release.
 
 ## Network Security
 
@@ -47,14 +55,29 @@ Here are some popular WAFs for use with CFML:
 
 
 ### OWASP
+
 The [Online Web Application Security Project](http://bit.ly/1devYyR) is the go-to resource for all things related to web application security - from threat assessments to tools, tips and techniques on how to avoid security pitfalls, this is the place to be and should be on your reference list. [OWASP Top 10 Security Threats](http://bit.ly/1bJUzsy) is an excellent place to start exploring.
 
 ### Obfuscation
+
 Obfuscation is the art of hiding things in plain sight, and using obfuscation in our application designs can significantly improve application security.
 
 [Click Here](/security-obfuscation) to learn how obscuring data will help protect you from paramter tampering.
 
 ### Encryption
+
 Encryption is the technology that allows us to take plain text messages and make them unreadable by both humans and other machines that do not have access to the encryption key used to [encrypt()](/encrypt) the data.
 
 [Click Here](/security-encryption) to learn how encrypting your data will help protect you from both parameter tampering and information disclosure.
+
+### Authentication
+
+Authentication is the process by which you validate that a particular user is allowed to login to your application. This should not be confused with *access control*, which determines what parts of your application a user has access to. Authentication is merely the process of ensuring a user can login.
+
+[Click Here](/security-authentication) to learn how authentication can be used to provide logins for your users to your application.
+
+### Session Management
+
+Session management is the process by which you ensure that a logged in user maintains a valid session throughout the session lifecycle and is used to ensure that your user has not timed out or has not had their session hijacked by a potential hacker.
+
+[Click Here](/security-session-management) to learn how to build your own session management routines to maintain sessions for your logged in users.
