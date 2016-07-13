@@ -28,7 +28,7 @@ If a user is idle for a period of time, then we want to invalidate that user's s
     // set number of minutes before a session is timed out
     application.timeoutMinutes = 30; // 30 minutes 
 
-Depending on the application, you will want to adjust the timeout value to a number of minutes equivalent to the longest process within your application. For example, if you have long forms in your application that could take the user 20 minutes to fill out compeltely before posting the form, then you will want to allow for that time between requests to avoid the user submitting the form and being immediately timed out for inactivity.
+Depending on the application, you will want to adjust the timeout value to a number of minutes equivalent to the longest process within your application. For example, if you have long forms in your application that could take the user 20 minutes to fill out completely before posting the form, then you will want to allow for that time between requests to avoid the user submitting the form and being immediately timed out for inactivity.
 
 ### Session storage
 
@@ -55,7 +55,7 @@ In this example we're using fw/1's *rc.action* variable to determine if we're in
             variables.fw.redirect( action = 'main.login', queryString = "msg=501" );  
         }
 
-In the above code, we check if our *application.cookieName* variables is defined in the COOKIE scope by using the [structKeyExists()](/structkeyexists) function. If the cookie is **not** defined, then we redirect the user to the login page, passing some parameter we can use to provide a message to the user about why they have to authenticate (session expired, etc.). Again, we're using fw/1 in this example, but you could also simply check for the existence of the cookie and then use [cflocation](/cflocation) to redirect the user to the login page.
+In the above code, we check if our *application.cookieName* variable is defined in the COOKIE scope by using the [structKeyExists()](/structkeyexists) function. If the cookie is **not** defined, then we redirect the user to the login page, passing some parameter we can use to provide a message to the user about why they have to authenticate (session expired, etc.). Again, we're using fw/1 in this example, but you could also simply check for the existence of the cookie and then use [cflocation](/cflocation) to redirect the user to the login page.
 
 When we [authenticated](/security-authentication) our user, we set an [encrypted](/encrypt) cookie value to store the users session id. Once we have checked for the existence of the cookie, we will then attempt to [decrypt()](/decrypt) the cookie's value using a [try](/cftry)/[catch](/cfcatch) block, as follows:
 
