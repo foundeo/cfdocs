@@ -18,15 +18,22 @@
 	"examples": [
 		{
 			"title":"CSRF Form Validation",
-			"description":"Use CSRFVerifyToken() to Verify a unique token for each form submission. This example also uses obfuscation (hash()) and encryption (encrypt()) techniques.",
-			"code":"<cfscript>\r\n\tparam name=\"FORM[ 'f' & hash( 'userId', 'SHA-384', 'UTF-8', 1000 )]\" default=\"0\";\r\n\tparam name=\"FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )]\" default=\"0\";\r\n\tparam name=\"FORM.emailAddress\" default=\"\";\r\n\tparam name=\"FORM.phoneNumber\" default=\"\";\r\n\r\n\tif( !FORM[ 'f' & hash( 'userId', 'SHA-384', 'UTF-8', 1000 )]\r\n\t\t|| !FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )]\r\n\t\t|| !CSRFVerifyToken( FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )] )\r\n\t) {\r\n\t\t// userId or formToken not provided, or formToken is not a valid token\r\n\t\t// redirect user to login form (etc.)\r\n\t}\r\n</cfscript>",
+			"description":"Use CSRFVerifyToken() to Verify a unique token for each form submission.",
+			"code":"<cfscript>\r\n\tparam name=\"FORM[ 'f' & hash( 'userId', 'SHA-384', 'UTF-8', 1000 )]\" default=\"0\";\r\n\tparam name=\"FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )]\" default=\"0\";\r\n\tparam name=\"FORM.emailAddress\" default=\"\";\r\n\tparam name=\"FORM.phoneNumber\" default=\"\";\r\n\r\n\tif( !CSRFVerifyToken( FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )] )\r\n\t) {\r\n\t\t// formToken is not a valid token\r\n\t\t// redirect user to login form (etc.)\r\n\t}\r\n</cfscript>",
 			"result":"",
 			"runnable":false
 		},
 		{
 			"title":"CSRF Form Validation w/ specified key",
-			"description":"Use CSRFVerifyToken() to Verify a unique token for each form submission. This example also uses obfuscation (hash()) and encryption (encrypt()) techniques.",
-			"code":"<cfscript>\r\n\tparam name=\"FORM[ 'f' & hash( 'userId', 'SHA-384', 'UTF-8', 1000 )]\" default=\"0\";\r\n\tparam name=\"FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )]\" default=\"0\";\r\n\tparam name=\"FORM.emailAddress\" default=\"\";\r\n\tparam name=\"FORM.phoneNumber\" default=\"\";\r\n\r\n\tif( !FORM[ 'f' & hash( 'userId', 'SHA-384', 'UTF-8', 1000 )]\r\n\t\t|| !FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )]\r\n\t\t|| !CSRFVerifyToken( FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )], 'profile' )\r\n\t) {\r\n\t\t// userId or formToken not provided, or formToken is not a valid token\r\n\t\t// redirect user to login form (etc.)\r\n\t}\r\n</cfscript>",
+			"description":"Use CSRFVerifyToken() to Verify a unique token for each form submission.",
+			"code":"<cfscript>\r\n\tparam name=\"FORM[ 'f' & hash( 'userId', 'SHA-384', 'UTF-8', 1000 )]\" default=\"0\";\r\n\tparam name=\"FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )]\" default=\"0\";\r\n\tparam name=\"FORM.emailAddress\" default=\"\";\r\n\tparam name=\"FORM.phoneNumber\" default=\"\";\r\n\r\n\tif( !CSRFVerifyToken( FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )], 'profile' )\r\n\t) {\r\n\t\t// formToken is not a valid token\r\n\t\t// redirect user to login form (etc.)\r\n\t}\r\n</cfscript>",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"CSRF Form Validation w/ automated key validation",
+			"description":"Use CSRFVerifyToken() to Verify a unique token with a unique session variable for each form submission (for multiple open browser tabs).",
+			"code":"<cfscript>\r\n\tparam name=\"FORM[ 'f' & hash( 'userId', 'SHA-384', 'UTF-8', 1000 )]\" default=\"0\";\r\n\tparam name=\"FORM[ 'f' & hash( 'tokenVar', 'SHA-512', 'UTF-8', 500 )]\" default=\"0\";\r\n\tparam name=\"FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )]\" default=\"0\";\r\n\tparam name=\"FORM.emailAddress\" default=\"\";\r\n\tparam name=\"FORM.phoneNumber\" default=\"\";\r\n\r\n\tif( !CSRFVerifyToken( FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )], FORM[ 'f' & hash( 'tokenVar', 'SHA-512', 'UTF-8', 500 )] )\r\n\t) {\r\n\t\t// formToken is not a valid token\r\n\t\t// redirect user to login form (etc.)\r\n\t}\r\n</cfscript>",
 			"result":"",
 			"runnable":false
 		}
