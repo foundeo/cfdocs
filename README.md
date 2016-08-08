@@ -79,7 +79,7 @@ We need help expanding existing tag and function documentation. Look through the
     		{
     			"title":"Title of a blog entry that has good info about this.",
     			"description":"Description of the link",
-    			"url":"http:\/\/www.example.com\/a\/b.cfm"
+    			"url":"http://www.example.com/a/b.cfm"
     		}
     	],
         "examples": [
