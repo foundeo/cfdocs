@@ -5,7 +5,16 @@
 	"lucee":{"minimum_version":"4.5", "docs":"http://docs.lucee.org/reference/functions/listmap.html","notes":""}
 },
 "name":"listMap",
-"links":[],
+"links":[{
+	"title":"Map, Reduce and other Higher Order Functions",
+	"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
+	"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+},
+{
+	"title": "ColdFusion 11: .map() and .reduce()",
+	"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
+	"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
+}],
 "params":[
 	{"values":[],"default":"","description":"The input list.","name":"list","type":"String","required":"1"},
 	{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: value\r\nindex : current index for the iteration\r\nlist : reference of the original list","name":"function","type":"Any","required":"1"},
