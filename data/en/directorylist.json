@@ -1,35 +1,117 @@
 {
-	"name":"directoryList",
-	"type":"function",
-	"syntax":"directoryList(path [, recurse] [, listInfo] [, filter] [, sort] [, type])",
-	"returns":"Object",
-	"related":[],
-	"description":" Lists the directory and returns the list of files under it as array or query",
+	"name": "directoryList",
+	"type": "function",
+	"syntax": "directoryList(path [, recurse] [, listInfo] [, filter] [, sort] [, type])",
+	"returns": "query|array",
+	"related": [
+		"cfdirectory"
+	],
+	"description": "List the contents of a directory. Returns either an array, or a query.",
 	"params": [
-		{"name":"path","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"recurse","description":"","required":false,"default":false,"type":"Boolean","values":[true,false]},
-		{"name":"listInfo","description":"<ul><li>name: returns an array of names of files and directories</li><li>path: returns an array of paths of files and directories</li><li>query: returns a query</li></ul>","required":false,"default":"query","type":"String","values":[]},
-		{"name":"filter","description":"File extension filter applied to returned names, for example, *.cfm. Multiple filters can be applied by using a pipe delimiter. For example: *.beer|*.cookies","required":false,"default":"","type":"String","values":[]},
-		{"name":"sort","description":"Query columns by which to sort. e.g. 'directory ASC, size DESC, datelastmodified'","required":false,"default":"","type":"String","values":[]},
-		{"name":"type","description":"<ul><li>file: includes only filenames</li><li>dir: includes only directory names</li><li>all: includes both filenames and directory names</li></ul> Adobe CF only","required":false,"default":"all","type":"String","values":[]}
+		{
+			"name": "path",
+			"description": "The path to a directory. If given a relative path, that path will be relative to the server\"s temp directory.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "recurse",
+			"description": "If `true` directoryList traverses the directory tree.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": [
+				true,
+				false
+			]
+		},
+		{
+			"name": "listInfo",
+			"description": "Sets the return type. `name` returns an array with only the file names, `path` returns an array with the full path names and `query` returns a query containing the follwing fields: `Attributes`, `DateLastModified`, `Directory`, `Link`, `Mode`, `Name`, `Size`, `Type`.",
+			"required": false,
+			"default": "path",
+			"type": "string",
+			"values": [
+				"name",
+				"path",
+				"query"
+			]
+		},
+		{
+			"name": "filter",
+			"description": "Applies a filter to the listed files, for example, `*.jpg`. Multiple filters can be applied by using a pipe delimiter. For example: `*.doc|*.xls`",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "sort",
+			"description": "Columns by which to sort. e.g. `Directory, Size DESC, DateLastModified`.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "type",
+			"description": "Filter the result to only include files, directories, or both.",
+			"required": false,
+			"default": "all",
+			"type": "string",
+			"values": [
+				"file",
+				"dir",
+				"all"
+			]
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DirectoryList.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/directorylist.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/directorylist"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/directorylist"}
+		"coldfusion": {
+			"minimum_version": "9",
+			"notes": "Only ColdFusion supports the type argument.",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DirectoryList.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "The sort argument only works when `listInfo=\"query\"`.",
+			"docs": "http://docs.lucee.org/reference/functions/directorylist.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/directorylist"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/directorylist"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title": "Tag Syntax",
+			"title": "An array of files in this directory",
 			"description": "",
-			"code": "<cfset listDirectory = \"someDirPath\" /> \r\n <cfset recurse = true /> \r\n <cfset listInfo = \"name\" /> \r\n <cfset filter = \"someFilter\" /> \r\n <cfset res= directoryList(listDirectory,recurse,listInfo,filter)>    ",
+			"code": "arrayOfLocalFiles = directoryList( expandPath( \"./\" ), false, \"name\" );",
 			"result": "",
-            "runnable":false
+			"runnable": false
+		},
+		{
+			"title": "A query of files in this directory sorted by date last modified",
+			"description": "",
+			"code": "queryOfFiles = directoryList( expandPath( \"./\" ), false, \"query\", \"\", \"DateLastModified DESC\" );",
+			"result": "",
+			"runnable": false
+		},
+		{
+			"title": "An array of files in the temp directory",
+			"description": "Including sub-directories and as an array containing full paths",
+			"code": "arrayOfTempFiles = directoryList( \"./\", true );",
+			"result": "",
+			"runnable": false
 		}
 	]
-
 }

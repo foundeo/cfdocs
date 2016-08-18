@@ -135,8 +135,9 @@ CF901+ Lets you specify if ColdFusion must skip the CFCs that have errors. If `t
 
 ### `string SQLScript`
 
-_This setting is used only when dbcreate="dropcreate"_
-Absolute file path to the SQL script file that gets executed after ORM is initialized. Usefull for populating the database with test data before the application is accessed.
+_This setting is used only when `dbcreate="dropcreate"`_
+
+Absolute file path to the SQL script file that gets executed after ORM is initialized. Useful for populating the database with test data before the application is accessed.
 
 ### `boolean useDBForMapping`
 
@@ -148,5 +149,4 @@ Specifies whether the database has to be inspected to identify the missing infor
 
 Default: `false`
 
-Specifies whether secondary caching should be enabled. 
-
+Specifies whether secondary caching should be enabled.
