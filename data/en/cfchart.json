@@ -55,11 +55,18 @@
 	],
 	"examples": [
 		{
-			"title":"A Simple PIE Chart",
-			"description":"A chart with hard coded data.",
+			"title":"CFHTTP Tag Syntax",
+			"description":"A Simple PIE chart with hard coded data.",
 			"code":"<cfchart format=\"html\" title=\"Sales Report\">\r\n\t<cfchartseries type=\"pie\">\r\n\t\t<cfchartdata item=\"2012\" value=\"#RandRange(300000,900000)#\">\r\n\t\t<cfchartdata item=\"2013\" value=\"#RandRange(300000,900000)#\">\r\n\t\t<cfchartdata item=\"2014\" value=\"#RandRange(300000,900000)#\">\r\n\t\t<cfchartdata item=\"2015\" value=\"#RandRange(300000,900000)#\">\r\n\t</cfchartseries>\r\n</cfchart>",
 			"result":"",
 			"runnable":false
+		},
+		{
+			"title": "Script Syntax (CF11+)",
+			"description": "A Simple PIE chart with hard coded data.",
+			"code": "cfchart(format = \"html\", title = \"Sales Report\") {\r\n\tcfchartseries(type = \"pie\") {\r\n\t\tcfchartdata(item = \"2012\", value = \"#RandRange(300000, 900000)#\");\r\n\t\tcfchartdata(item = \"2013\", value = \"#RandRange(300000, 900000)#\");\r\n\t\tcfchartdata(item = \"2014\", value = \"#RandRange(300000, 900000)#\");\r\n\t\tcfchartdata(item = \"2015\", value = \"#RandRange(300000, 900000)#\");\r\n\t}\r\n}",
+			"result": "",
+			"runnable": false
 		}
 	]
 
