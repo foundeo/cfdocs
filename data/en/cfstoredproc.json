@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cfstoredproc procedure=\"\">",
 	"returns":"",
-	"related":[],
+	"related":["cfprocparam","cfprocresult"],
 	"description":" Executes a stored procedure in a server database. It\n specifies database connection information and identifies\n the stored procedure.",
 	"params": [
 		{"name":"procedure","description":"Name of stored procedure on database server.","required":true,"default":"","type":"String","values":[]},
