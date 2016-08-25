@@ -29,12 +29,15 @@ file: Dog.cfc
         }
     }
 
+example using cfscript
+
     pet = new Dog( "fido" );
 
 example using named arguments
 
     <cfset pet = new Dog( breed="pitbull", name="hank" )>
 or
+
     pet = new Dog( breed="pitbull", name="hank" );
     
-Any of the script functions implemented as cfc can be instantiate using the new operator.
+Any of the script functions implemented as a cfc can be instantiate using the new operator.
