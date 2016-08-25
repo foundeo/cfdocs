@@ -2,7 +2,7 @@
 
 CF9+ New operator added in ColdFusion 9
 
-The new operator is an alternate way to instantiate a component.  The other methods being: cfobject, createObject, cfinvoke and entityNew.  The CFML engine will automatically call the component constructor which by default is the init method.  The init method can be overridden by the initmethod attribute.  If neither the init method or initmethod attribute are present an instance is created but no methods are ran.  The constructor will determine the value returned and can be anything allowed by cffunction.  A return value of void will cause an instance of the component to be returned.  The constructor can accept arguments by location or by value just like a normal function call.
+The new operator is an alternate way to instantiate a component.  The other methods being: cfobject, createObject, cfinvoke and entityNew.  The CFML engine will automatically call the component constructor which by default is the init method.  The init method can be overridden by the initmethod attribute.  If neither the init method or initmethod attribute are present an instance is created but no methods are ran.  The constructor will determine the value returned and can be anything allowed by cffunction.  A return value of void will cause an instance of the component to be returned.  The constructor can accept arguments by position or named just like a normal function call.
 
 file: Person.cfc
 
