@@ -6,34 +6,35 @@ The new operator is an alternate way to instantiate a component.  The other meth
 
 file: Person.cfc
 
-	component {
-		public component function init(){
-			return this
-		}
-
-	}
+    component {
+        public component function init(){
+            return this
+        }
+    }
 
 example creating an instance of the Person component and the equivalent using createObject.
 
     <cfset bob = new Person()>
 
-	<cfset bob = createObject( "component", "Person" ).init();
+    <cfset bob = createObject( "component", "Person" ).init();
 
 example using the initmethod attribute
 
 file: Dog.cfc
 
-	component initmethod="birth" {
-		public component function birth( required string name, string breed="mixed" ){
-			variables.name = name;
-			return this
-		}
+    component initmethod="birth" {
+        public component function birth( required string name, string breed="mixed" ){
+            variables.name = name;
+            return this
+        }
+    }
 
-	}
-
-	<cfset pet = new Dog( "fido" )>
+    pet = new Dog( "fido" );
 
 example using named arguments
 
-	<cfset pet = new Dog( breed="pitbull", name="hank" )>
-
+    <cfset pet = new Dog( breed="pitbull", name="hank" )>
+or
+    pet = new Dog( breed="pitbull", name="hank" );
+    
+Any of the script functions implemented as cfc can be instantiate using the new operator.
