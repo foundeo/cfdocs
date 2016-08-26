@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"asin(number)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["acos","atn","cos","exp","log","log10","sin","tan"],
 	"description":" Determines the arcsine of a number. The arcsine is the angle\n whose sine is number.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
