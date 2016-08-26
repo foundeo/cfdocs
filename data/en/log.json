@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"log(number)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["exp"],
 	"description":" Calculates the natural logarithm of a number. Natural\n logarithms are based on the constant e (2.71828182845904).",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
@@ -17,6 +17,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"logarithm of 3.1",
+			"description":"",
+			"code":"log(3.1)",
+			"result":"1.13140211149",
+			"runnable":true
+		}
 	]
 
 }
