@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"cos(number)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["acos","asin","atn","exp","log","log10","sin","tan"],
 	"description":" Calculates the cosine of an angle that is entered\n in radians.\n A number; the cosine of the angle.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
@@ -17,6 +17,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Cosine of 0.3",
+			"description":"",
+			"code":"cos(0.3)",
+			"result":"0.955336489126",
+			"runnable":true
+		}
 	]
 
 }
