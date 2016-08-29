@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"acos(number)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["asin","atn","cos","exp","log","log10","sin","tan"],
 	"description":" Returns the angle whose cosine is the value passed as the argument.",
 	"params": [
 		{"name":"number","description":"The value to be converted into an angle. Must be between -1 and 1.","required":true,"default":"","type":"Numeric","values":[]}
@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Angle Cosine of 0.3",
+			"description":"",
+			"code":"acos(0.3)",
+			"result":"1.266103672779",
+			"runnable":true
+		}
 	]
-
 }
