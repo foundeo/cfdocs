@@ -3,8 +3,8 @@
 	"type":"function",
 	"syntax":"precisionEvaluate(expressions)",
 	"returns":"Numeric",
-	"related":[],
-	"description":" Evaluates one or more string expressions.",
+	"related":["evaluate"],
+	"description":" Evaluates one or more string expressions using BigDecimal precision arithmetic.  If the results ends in a infinitely repeating decimal value only the first 20 digits of the decimal portion will be used.  BigDecimal precision results only work with addition, subtraction, multiplication and division.  The use of ^, MOD, % or \ arithmetic operators will result in normal integer precision.",
 	"params": [
 		{"name":"expressions","description":"Expressions to evaluate","required":true,"default":"","type":"String","values":[]}
 
@@ -16,6 +16,20 @@
 	},
 	"links": [
 
-	]
-
+	],
+	"examples": [
+		{
+			"title":"precisionEvaluate of 1/3 plus 5",
+			"description":"1/3 is calculated then 5 is added to the total.  Display is limited to 20 threes.",
+			"code":"precisionEvaluate( 1/3 + 5 )",
+			"result":"5.3333333333333333333333333333333333",
+			"runnable":true
+		},
+		{
+			"title":"precisionEvaluate of 1/(7*12)",
+			"description":"Calculated 1 divided by the product of 7 x 12",
+			"code":"precisionEvaluate( 1/(7*12) )",
+			"result":"0.01190476190476190476190476190476190",
+			"runnable":true
+		}
 }
