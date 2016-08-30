@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"asc(String)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["chr"],
 	"description":" Determines the value of a character.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"character and value of korean currency symbol ( unicode number 8361 )",
+			"description":"",
+			"code":"x = chr( 8361 ); \n writeoutput( 'character: #x#' ); \n x = asc( x ); \n writeoutput( '<br>Unicode value: #x#');",
+			"result":"",
+			"runnable":true
+		}
 	]
-
 }
