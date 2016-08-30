@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"trim(String)",
 	"returns":"String",
-	"related":[],
+	"related":["ltrim","trim","rtrim"],
 	"description":" Removes leading and trailing spaces from a string.",
 	"params": [
 		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]}
@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Trim",
+			"description":"",
+			"code":"trim('     CFDocs    ')",
+			"result":"CFDocs",
+			"runnable":true
+		}
 	]
-
 }
