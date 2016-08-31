@@ -22,8 +22,8 @@
 		{
 			"title":"Trim",
 			"description":"",
-			"code":"trim('     CFDocs    ')",
-			"result":"CFDocs",
+			"code":"'>' & trim('    CFDocs    ') & '<'",
+			"result":">CFDocs<",
 			"runnable":true
 		}
 	]

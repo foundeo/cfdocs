@@ -22,8 +22,8 @@
 		{
 			"title":"Left Trim",
 			"description":"",
-			"code":"lTrim('    CFDocs')",
-			"result":"CFDocs",
+			"code":"'>' & lTrim('    CFDocs    ') & '<'",
+			"result":">CFDocs    <",
 			"runnable":true
 		}
 	]
