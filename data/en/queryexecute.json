@@ -19,6 +19,7 @@
 		{"title":"Passing Query Parameters using Array", "description":"When passing with an array use the ? as a placeholder in your sql", "code":"qryResult = queryExecute(\"SELECT * FROM Employees WHERE empid = ? AND country = ?\", [1,\"USA\"]);", "result":""},
 		{"title":"Passing Query Parameters using Struct of Structs", "description":"If you need to pass the cfsqltype or other cfqueryparam attributes you can pass a struct for each param.", "code":"qryResult = queryExecute(\"SELECT * FROM Employees WHERE empid = :empid AND country = :country\", {country={value=\"USA\", cfsqltype=\"cf_sql_varchar\"}, empid={value=1, cfsqltype=\"cf_sql_integer\"}});", "result":""},
 		{"title":"Specifying the Datasource", "description":"If you have not defined the datasource using this.datasource in Application.cfc or want to explicitly specify the datasource use the third argument.", "code":"qryResult = queryExecute(\"SELECT * FROM Employees\", {}, {datasource=\"myDataSourceName\"});", "result":""}
+		{"title":"IN Query using lists", "description":"Query the database using a list of values", "code":"keys = '1,2,3,4,5,6,7';\ndata = queryExecute(\"select * from sometable where somecolumn in (:keys)\",{keys={value=keys,list=true}}); ", "result":""}
 	]
 	,"type":"function",
 	"related":["cfquery","cfqueryparam"]
