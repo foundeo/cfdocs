@@ -16,7 +16,15 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ucase"}
 	},
 	"links": [
-
+	],
+	"examples": [
+		{
+			"title":"uppercase CFDocs Rock",
+			"description":"",
+			"code":"uCase('CFDocs Rock')",
+			"result":"CFDOCS ROCK",
+			"runnable":true
+		}
 	]
 
 }

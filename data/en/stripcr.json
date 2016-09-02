@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Removing carriage returns (cr) from a string",
+			"description": "",
+			"code": "x = 'A' & chr(13) & 'B' & chr(13); \r\n y = stripcr( x ); \r\n writeoutput( 'Original: ' & x & ' Length: #len(x)#<br>' ); \r\n writeoutput( 'Stripped: ' & y & ' Length: #len(y)#' );",
+			"result": ""
+		}
 	]
 
 }

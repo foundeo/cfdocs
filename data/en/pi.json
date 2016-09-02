@@ -15,6 +15,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"pi to 11 digits, to display all 15 digits use numberFormat( pi() )",
+			"description":"",
+			"code":"pi()",
+			"result":"3.14159265359",
+			"runnable":true
+		}
 	]
-
 }
