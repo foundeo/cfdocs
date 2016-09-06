@@ -25,7 +25,7 @@
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<!--- start by making a query ---> \r\n <cfquery name = \"GetCourses\" datasource = \"cfdocexamples\"> \r\n SELECT Course_ID, Descript \r\n FROM Courses \r\n </cfquery> <cfset temp = queryAddRow(GetCourses)> <cfset Temp = querySetCell(GetCourses, \"Number\", 100*CountVar)> ",
+			"code":"<!--- start by making a query ---> \r\n <cfquery name = \"GetCourses\" datasource = \"cfdocexamples\"> \r\n SELECT Course_ID, Descript \r\n FROM Courses \r\n </cfquery> \r\n<cfset temp = queryAddRow(GetCourses)> \r\n<cfset Temp = querySetCell(GetCourses, \"Number\", 100*CountVar)> ",
 			"result":"",
 			"runnable":false
 		}
