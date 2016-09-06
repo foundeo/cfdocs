@@ -107,7 +107,7 @@
 		{
 			"title": "Sub-channels",
 			"description": "Sub-channels are created dynamically and are referenced by dot notation. When a message is broadcasted to a channel all its sub-channels receive the message as well. This only goes from top to bottom and not the other way around.  In this example we create a JavaScript object called `ws` and subscribe to the `room-general` subchannel of the main `chat` channel.",
-			"code": "<cfwebsocket name=\"ws\" onMessage=\"handleMessage\" subscribeTo=\"chat.room-general\"" \/>",
+			"code": "<cfwebsocket name=\"ws\" onMessage=\"handleMessage\" subscribeTo=\"chat.room-general\" \/>",
 			"result": "",
 			"runnable":false
 		}
