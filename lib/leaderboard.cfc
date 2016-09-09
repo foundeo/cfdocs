@@ -1,59 +1,99 @@
 component {
 
-	public array function getContributors(){
-		var link = "https://api.github.com/repos/foundeo/cfdocs/stats/contributors";
+/* **********************************************************************************
+ *    name: init                                                                    *
+ *  author: Andrew Penhorwood                                                       *
+ * created: 2016-09-09                                                              *
+ * purpose: component constructor. requires a gitHUB.com REPO stats URL             *
+ * example: https://api.github.com/repos/{login}/{repo}/stats/contributors          *
+ * *********************************************************************************/
+	public component function init( required string url, numeric timeout = 2 ){
+		variables['link'] = arguments.url;
+		variables['timeout'] = arguments.timeout;
 
-		oService = new http( url=link, method="GET", charset="utf-8", throwonerror="false", timeout="3" );
-		response = oService.send().getPrefix();
+		return this;
+	}
+
+/* **********************************************************************************
+ *    name: get                                                                     *
+ *  author: Andrew Penhorwood                                                       *
+ * created: 2016-09-09                                                              *
+ * purpose: retrieves the gitHub contributor statistics processed into a array      *
+ * *********************************************************************************/
+	public array function get(){
+		var stats = getContributors();
+		return processContributors( stats );
+	}
+
+/* **********************************************************************************
+ *    name: getContributors                                                         *
+ *  author: Andrew Penhorwood                                                       *
+ * created: 2016-09-09                                                              *
+ * purpose:                                                                         *
+ * *********************************************************************************/
+	private array function getContributors(){
+		var service = new http( url=variables.link, method="GET", charset="utf-8", throwonerror="false", timeout=variables.timeout );
+		var response = service.send().getPrefix();
 
 		if( response.statusCode contains "200" AND IsJSON( response.fileContent ) ){
 			return deserializeJSON( response.fileContent );
 		}
+
 		return {};
 	}
 
-	public array function calcStatistics( required array stats ){
+/* **********************************************************************************
+ *    name: processContributors                                                     *
+ *  author: Andrew Penhorwood                                                       *
+ * created: 2016-09-09                                                              *
+ * purpose:                                                                         *
+ * *********************************************************************************/
+	private array function processContributors( required array stats ){
 		var contributors = [];
-		var count = arrayLen(stats);
 
-		for( x=count; x >= 1; x-- ){
-			stat = stats[x];
+		for( var stat in stats ){
+			if( structKeyExists(stat, "author") and isStruct(stat.author) and structKeyExists(stat.author, "html_url") ){
+				var person = {};
 
-			if(    !structKeyExists(stat, "author")
-				OR isNull(stat.author)
-				OR !isStruct(stat.author)
-				OR !structKeyExists(stat.author, "html_url") ){
-				continue;  // for some cases possibly a bug on github side the author key is null or empty
+				person['link']   = stat.author.html_url;
+				person['avator'] = len(stat.author.gravatar_id) ? stat.author.gravatar_id : stat.author.avatar_url;
+				person['login']  = stat.author.login;
+
+				structAppend( person, calcStatistics( stat.weeks ) );
+				arrayAppend( contributors, person );
 			}
+		}
+		return contributors;
+	}
 
-			person = {};
+/* **********************************************************************************
+ *    name: calcStatistics                                                          *
+ *  author: Andrew Penhorwood                                                       *
+ * created: 2016-09-09                                                              *
+ * purpose: calculate the statistics of a constibutor                               *
+ * *********************************************************************************/
+	private struct function calcStatistics( required array weeks ){
+		var contributor = {};
+		var additions = 0;
+		var deletions = 0;
+		var commits = 0;
+		var lastMod = 0;
 
-			person['link']   = stat.author.html_url;
-			person['avator'] = len(stat.author.gravatar_id) ? stat.author.gravatar_id : stat.author.avatar_url;
-			person['login']  = stat.author.login;
+		for( var wk in weeks ){
+			additions = additions + wk.a;
+			deletions = deletions + wk.d;
+			commits = commits + wk.c;
 
-			var additions = 0;
-			var deletions = 0;
-			var commits = 0;
-			var lastMod = 0;
-
-			for( w in stat.weeks ){
-				additions = additions + w.a;
-				deletions = deletions + w.d;
-				commits = commits + w.c;
-
-				if( w.a > 0 OR w.d > 0 OR w.c > 0 AND w.w > lastMod ){
-					lastMod = w.w;
-				}
+			if( wk.a > 0 OR wk.d > 0 OR wk.c > 0 AND wk.w > lastMod ){
+				lastMod = wk.w;
 			}
-
-			person['lines'] = additions + deletions;
-			person['commits'] = commits;
-			person['weeksAgo'] = DateDiff( "w", DateAdd("s", lastMod, "1970-01-01 00:00:00"), now() );
-
-			arrayAppend( contributors, person );
 		}
 
-		return contributors;
+		contributor['lines'] = additions + deletions;
+		contributor['commits'] = commits;
+		contributor['lastcommit'] = DateAdd("s", lastMod, "1970-01-01 00:00:00");
+		contributor['weeksAgo']   = DateDiff( "w", contributor.lastcommit, now() );
+
+		return contributor;
 	}
 }
