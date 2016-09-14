@@ -8,19 +8,30 @@ component {
  * example: https://api.github.com/repos/{login}/{repo}/stats/contributors          *
  * *********************************************************************************/
 	public component function init( required struct config ){
-		variables['config'] = {
-			  'url':''
-			, 'timeout':2
-			, 'lookup':false
-			, 'token':''
-		};
-
-		structAppend( variables.config, arguments.config );  // overlay user config on defaults
-
+		setConfig( config );
 		checkConfig();
 		processConfig();
 
 		return this;
+	}
+
+/* **********************************************************************************
+ *    name: checkConfig                                                             *
+ *  author: Andrew Penhorwood                                                       *
+ * created: 2016-09-10                                                              *
+ * purpose:                                                                         *
+ * *********************************************************************************/
+	private void function setConfig( required struct config ){
+		var defaults = {
+			  'url':''
+			, 'lookup':false
+			, 'timeout':2
+			, 'token':''
+		};
+
+		structAppend( defaults, arguments.config );  // overlay user config on defaults
+
+		variables['config'] = defaults;
 	}
 
 /* **********************************************************************************
@@ -55,7 +66,8 @@ component {
  * *********************************************************************************/
 	public query function get(){
 		var stats = getContributors();
-		return processContributors( stats );
+		var qPeople = processContributors( stats );
+		return sortPeople( qPeople );
 	}
 
 /* **********************************************************************************
@@ -151,6 +163,7 @@ component {
 		var deletions = 0;
 		var commits = 0;
 		var lastMod = 0;
+		var factor = 10; // give more weight to commits over lines altered
 
 		for( var wk in weeks ){
 			additions = additions + wk.a;
@@ -162,12 +175,29 @@ component {
 			}
 		}
 
-		contributor['lines'] = additions + deletions;
+		contributor['lines']   = additions + deletions;
 		contributor['commits'] = commits;
+		contributor['effort']  = contributor.lines + ( contributor.commits * factor );
 		contributor['lastcommit'] = DateAdd("s", lastMod, "1970-01-01 00:00:00");
 		contributor['weeksAgo']   = DateDiff( "w", contributor.lastcommit, now() );
 
 		return contributor;
+	}
+
+/* **********************************************************************************
+ *    name: sortPeople                                                              *
+ *  author: Andrew Penhorwood                                                       *
+ * created: 2016-10-14                                                              *
+ * purpose:                                                                         *
+ * *********************************************************************************/
+	private query function sortPeople( required query qPeople ){
+		var qry = new Query();
+
+		qry.setDBType('query');
+		qry.setAttributes(p:qPeople);
+		qry.setSQL( "SELECT * FROM p ORDER BY p.effort DESC" );
+
+		return qry.execute().getResult();
 	}
 
 /* **********************************************************************************
@@ -177,8 +207,8 @@ component {
  * purpose:                                                                         *
  * *********************************************************************************/
 	private query function createQuery(){
-		var columns = "name,link,avator,lines,commits,lastcommit,weeksago";
-		var dbtypes = "varchar,varchar,varchar,integer,integer,date,integer";
+		var columns = "name,link,avator,lines,commits,effort,lastcommit,weeksago";
+		var dbtypes = "varchar,varchar,varchar,integer,integer,integer,date,integer";
 
 		return queryNew( columns, dbtypes );
 	}
