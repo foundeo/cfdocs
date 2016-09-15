@@ -24,25 +24,25 @@
 		{
 			"title":"Find an \"apple\" in an array of Fruit",
 			"description":"Returns the index of the element \"apple\" in the array",
-			"code":"arrayFind([\"orange\",\"pineapple\",\"apple\"], \"apple\")",
+			"code":"writeOutput( arrayFind( [\"orange\",\"pineapple\",\"apple\"], \"apple\" ));",
 			"result":"3"
 		},
 		{
 			"title":"Member Functions: Find an \"apple\" in an array of Fruit",
 			"description":"Calls the find member function of the array object. Requires CF11+ or Lucee4.5+",
-			"code":"fruit = [\"orange\",\"pineapple\",\"apple\"];\nwriteOutput( fruit.find(\"apple\") );",
+			"code":"fruit = [ \"orange\", \"pineapple\", \"apple\" ];\r\nwriteOutput( fruit.find( \"apple\" ) );",
 			"result":"3"
 		},
 		{
 			"title":"arrayFind is Case Sensitive",
 			"description":"Case sensitive so \"Apple\" is not in the array, returns 0. Use arrayFindNoCase for case insensitive matching.",
-			"code":"arrayFind([\"orange\",\"pineapple\",\"apple\"], \"Apple\")",
+			"code":"writeOutput( arrayFind([\"orange\",\"pineapple\",\"apple\"], \"Apple\") );",
 			"result":"0"
 		},
 		{
 			"title":"Using arrayFind with a closure / callback function",
 			"description":"The arrayFind function passes each array value into the supplied function. The function returns a boolean, `true` if you found what you are looking for. The result of the arrayFind function is the index of the array element that was found, or `0` if not found.",
-			"code":"a = [5,4,3,2,1];\nwritedump(arrayFind(a, function(item) { return item == 2;}));",
+			"code":"a = [5,4,3,2,1];\nwriteOutput(arrayFind(a, function(item) { return item == 2;}));",
 			"result":""
 		}
 	]
