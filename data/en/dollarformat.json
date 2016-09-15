@@ -20,14 +20,14 @@
 	],
 	"examples": [
 		{
-			"title":"",
+			"title":"Format Positive Numbers",
 			"description":"Dollar Format is about $, commas, and 2 decimal places",
 			"code":"dollarFormat(1236598.2)",
 			"result":"$1,236,598.20",
 			"runnable":true
 		},
 		{
-			"title":"",
+			"title":"Format Negative Numbers",
 			"description":"Negative numbers appear with parentheses.",
 			"code":"dollarFormat(-11.34)",
 			"result":"($11.34)",
