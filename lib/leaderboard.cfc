@@ -76,7 +76,7 @@ component {
  * created: 2016-09-09                                                              *
  * purpose:                                                                         *
  * *********************************************************************************/
-	private array function getContributors(){
+	private any function getContributors(){
 		return call( variables.config.url );
 	}
 
