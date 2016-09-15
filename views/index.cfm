@@ -42,7 +42,8 @@ qPeople = oLeader.get();
             <div class="col-xs-7">
               <span class="label label-primary">#Val(qPeople.commits)# Contribution<cfif Val(qPeople.commits) NEQ 1>s</cfif></span><br>
               <span class="label label-info">#qPeople.lines# Line<cfif qPeople.lines NEQ 1>s</cfif> Altered</span><br>
-              <span class="label label-success"><cfif qPeople.weeksAgo EQ 0>Contributed this week!<cfelse>#qPeople.weeksAgo# week<cfif qPeople.weeksAgo NEQ 1>s</cfif> ago</cfif></span>
+              <span class="label label-success"><cfif qPeople.weeksAgo EQ 0>Contributed this week!<cfelse>#qPeople.weeksAgo# week<cfif qPeople.weeksAgo NEQ 1>s</cfif> ago</cfif></span><br>
+              <span class="label label-danger">#round(qPeople.effort)# Points</span><br>
             </div>
           </div>
         </div>
