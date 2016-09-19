@@ -15,12 +15,19 @@
 	},
 	"examples": [
 		{
-			"title": "",
-			"code": "myQuery = queryNew( 'ID,name,age' );\r\nwriteOutput( queryColumnList( myQuery ) );\r\n // using a member function \r\nwriteOutput( myQuery.columnList() );",
+			"title": "Create a query and output the column list",
+			"code": "myQuery = queryNew( 'ID,name,age' );\r\nwriteOutput( queryColumnList( myQuery ) );",
 			"description":"",
-			"runnable":false
+			"result": "ID,name,age",
+			"runnable":true
+		},
+		{
+			"title": "Using a member function",
+			"code": "myQuery = queryNew( 'ID,name,age' );\r\nwriteOutput( myQuery.columnList() );",
+			"description":"",
+			"result": "ID,name,age",
+			"runnable":true
 		}
-
 	],
 	"links": []
 }
