@@ -24,7 +24,7 @@
 		{
 			"title":"Find an \"Apple\" in an array of Fruit",
 			"description":"Returns the index of the element \"Apple\" in the array",
-			"code":"arrayFindNoCase([\"orange\",\"pineapple\",\"apple\"], \"Apple\")",
+			"code":"writeOutput( arrayFindNoCase([\"orange\",\"pineapple\",\"apple\"], \"Apple\" ) );",
 			"result":"3"
 		},
 		{
@@ -34,5 +34,4 @@
 			"result":"3"
 		}
 	]
-
 }
