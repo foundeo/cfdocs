@@ -11,6 +11,7 @@
   <cfparam name="request.hasExamples" default="false">
   <cfif request.hasExamples><link rel="stylesheet" href="https://cdn.rawgit.com/foundeo/cfdocs/3da43f03663c57f499cf2de82ef82d4f74fe04cd/assets/vendor/google/code-prettify/theme-monokai.css" /></cfif>
   <cfoutput><link href="#request.assetBaseURL#style.css" rel="stylesheet"></cfoutput>
+  <link rel="search" type="application/opensearchdescription+xml" title="Search CFML Documentation" href="/opensearch.xml" />
   <!--[if lt IE 9]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"></script>
