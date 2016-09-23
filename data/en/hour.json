@@ -4,7 +4,7 @@
 	"syntax":"hour(date)",
 	"returns":"Numeric",
 	"related":[],
-	"description":" Gets the current hour of the day.\n Ordinal value of the hour, in the range 0 - 23.",
+	"description":" Extracts the hour of the day from a date/time object.\n Ordinal value of the hour, in the range 0 - 23.",
 	"params": [
 		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
 
@@ -17,6 +17,19 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Hour of a datatime object",
+			"description": "",
+			"code": "hour( createdatetime(2016,1,1,5,30,25) );",
+			"result": "5"
+		},
+		{
+			"title": "Current Hour of the day",
+			"description": "",
+			"code": "hour( now() )",
+			"result": ""
+		}
 	]
-
 }

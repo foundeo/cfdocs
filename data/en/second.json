@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"second(date)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["hour","minute","second","month","quarter","week","year"],
 	"description":" Extracts the ordinal for the second from a date/time object.",
 	"params": [
 		{"name":"date","description":"A date\/time object","required":true,"default":"","type":"DateTime","values":["now()"]}
@@ -17,6 +17,13 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Seconds of a datatime object",
+			"description": "",
+			"code": "second( createdatetime(2016,1,1,5,30,25) );",
+			"result": "25"
+		}
 	]
-
 }

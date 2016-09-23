@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"week(date)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["hour","minute","second","month","quarter","week","year"],
 	"description":" From a date/time object, determines the week number within\n the year. An integer in the range 1-53; the ordinal of the\n week, within the year.",
 	"params": [
 		{"name":"date","description":"A date\/time object in the range 100 AD-9999 AD.","required":true,"default":"","type":"DateTime","values":["now()"]}
@@ -16,7 +16,13 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/week"}
 	},
 	"links": [
-
+	],
+	"examples": [
+		{
+			"title": "Week of a datatime object",
+			"description": "",
+			"code": "week( createdatetime(2016,1,1,5,30,25) );",
+			"result": "1"
+		}
 	]
-
 }

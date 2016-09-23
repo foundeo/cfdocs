@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"year(date)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["hour","minute","second","month","quarter","week","year"],
 	"description":" From a date/time object, gets the year value.",
 	"params": [
 		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
@@ -16,7 +16,13 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/year"}
 	},
 	"links": [
-
+	],
+	"examples": [
+		{
+			"title": "Year of a datatime object",
+			"description": "",
+			"code": "year( createdatetime(2016,1,1,5,30,25) );",
+			"result": "2016"
+		}
 	]
-
 }
