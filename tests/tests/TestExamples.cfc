@@ -5,7 +5,7 @@ component extends="testbox.system.BaseSpec" {
 	function run(testResults, testBox) {
 		dataDir = ExpandPath("../data/en");
 		files = directoryList(dataDir, false, "array");
-		
+
 		describe("Test Examples", function() {
 			it("should match the expected result", function() {
 				for (filePath in files) {
@@ -19,8 +19,9 @@ component extends="testbox.system.BaseSpec" {
 								//skip this test because it does not run on lucee, ACF specific tag or function
 								continue;
 							}
+              				var idx=0;
 							for (var e in json.examples) {
-
+                				idx++;
 								if (e.keyExists("code") && e.keyExists("result") && Len(e.result)) {
 									if (json.type == "function" && !listFindNoCase(variables.supportedFunctions, json.name)) {
 										//skip because it is not supported by current engine
@@ -31,9 +32,9 @@ component extends="testbox.system.BaseSpec" {
 										try {
 											actualResult = evaluate(e.code);
 										} catch(any ex) {
-											actualResult = "EXCEPTION: #ex.message#";
+											actualResult = "EXCEPTION in example #idx#: #ex.message#";
 										}
-										
+
 										//workaround bug: listRemoveDuplicates adds trailing comma in lucee
 										//https://luceeserver.atlassian.net/browse/LDEV-387
 										if (json.name == "listRemoveDuplicates" && server.keyExists("lucee")) {
@@ -48,17 +49,17 @@ component extends="testbox.system.BaseSpec" {
 												expect(actualResult).toBeFalse("#fileName# example result is:#e.result# but evaluated to:#actualResult#");
 											}
 										} else {
-											expect(actualResult).toBe(e.result, "#fileName# example result is:#e.result# but evaluated to:#actualResult#");	
+											expect(actualResult).toBe(e.result, "#fileName# example result is:#e.result# but evaluated to:#actualResult#");
 										}
-										
+
 									}
 								}
-							} 
+							}
 						}
 					}
-					
+
 				}
-				
+
 			});
 		});
 	}

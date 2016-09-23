@@ -74,7 +74,7 @@ Here are some more:
 	expect(value).toBeCloseTo(expected, delta, datePart, message);
 
 	//assert value is of CFML type using isValid function.
-	expect(value).toBeOfType(type, message);
+	expect(value).toBeTypeOf(type, message);
 
 	//assert value an instance of named object type.
 	expect(value).toBeInstanceOf(typeName, message);
