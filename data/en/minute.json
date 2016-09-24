@@ -22,7 +22,7 @@
 		{
 			"title": "Minutes of a datatime object",
 			"description": "",
-			"code": "dt = createdatetime(2016,1,1,5,30,25);\nm = minutes( dt );\nwriteoutput( m );",
+			"code": "dt = createdatetime(2016,1,1,5,30,25);\nm = minute( dt );\nwriteoutput( m );",
 			"result": "30"
 		}
 	]
