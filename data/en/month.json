@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"month(date)",
 	"returns":"Numeric",
-	"related":["hour","minute","second","month","quarter","week","year"],
+	"related":["hour","minute","second","quarter","week","year"],
 	"description":" Extracts the month value from a date/time object.",
 	"params": [
 		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
@@ -21,7 +21,7 @@
 		{
 			"title": "Month of a datatime object",
 			"description": "",
-			"code": "month( createdatetime(2016,1,1,5,30,25) );",
+			"code": "dt = createdatetime(2016,1,1,5,30,25);\nm = month( dt );\nwriteoutput( m );",
 			"result": "1"
 		}
 	]

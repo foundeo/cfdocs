@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"quarter(date)",
 	"returns":"Numeric",
-	"related":["hour","minute","second","month","quarter","week","year"],
+	"related":["hour","minute","second","month","week","year"],
 	"description":" Calculates the quarter of the year in which a date falls.",
 	"params": [
 		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
@@ -21,7 +21,7 @@
 		{
 			"title": "Quarter of a datatime object",
 			"description": "",
-			"code": "quarter( createdatetime(2016,1,1,5,30,25) );",
+			"code": "dt = createdatetime(2016,1,1,5,30,25);\nq = quarter( dt );\nwriteoutput( q );",
 			"result": "1"
 		}
 	]

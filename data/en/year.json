@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"year(date)",
 	"returns":"Numeric",
-	"related":["hour","minute","second","month","quarter","week","year"],
+	"related":["hour","minute","second","month","quarter","week"],
 	"description":" From a date/time object, gets the year value.",
 	"params": [
 		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/year.html"},
@@ -21,7 +20,7 @@
 		{
 			"title": "Year of a datatime object",
 			"description": "",
-			"code": "year( createdatetime(2016,1,1,5,30,25) );",
+			"code": "dt = createdatetime(2016,1,1,5,30,25);\ny = year( dt );\nwriteoutput( y );",
 			"result": "2016"
 		}
 	]
