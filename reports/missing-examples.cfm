@@ -17,11 +17,7 @@ request.gitFilePath = "/edit/master/reports/missing-examples.cfm";
 </cfscript>
 
 <cfoutput>
-	<style>
-	div.missbox {display: inline-block; width: 400px; margin-right: 30px;}
-	div.missbox ul {height: 400px; overflow-y: scroll; border: 2px solid ##CBCBCB; background-color: white;}
-	div.missbox h4 {font-weight: bold; background-color: ##CBCBCB; padding: 5px; margin: 0; border-radius: 4px 4px 0 0;}
-	</style>
+	
 	<div class="jumbotron">
 		<div class="container">
 			<h1 id="docname">#url.name#</h1>
@@ -29,21 +25,32 @@ request.gitFilePath = "/edit/master/reports/missing-examples.cfm";
 		</div>
 	</div>
 	<div class="container">
-		<div class="missbox">
-			<h4>Tags (#arrayLen(page.tags.examples)#)</h4>
-			<ul>
-			<cfloop index="r" array="#page.tags.examples#">
-				<li><a href="/#r#">#r#</a></li>
-			</cfloop>
-			</ul>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="panel panel-default">
+					<div class="panel-heading"><h3 class="panel-title">Tags <span class="badge badge-primary">#arrayLen(page.tags.examples)#</span></h3></div>
+  					<div class="panel-body">
+    					<ul>
+							<cfloop index="r" array="#page.tags.examples#">
+								<li><a href="/#r#">#r#</a></li>
+							</cfloop>
+						</ul>
+  					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="panel panel-default">
+					<div class="panel-heading"><h3 class="panel-title">Functions <span class="badge badge-primary">#arrayLen(page.functions.examples)#</span></h3></div>
+  					<div class="panel-body">
+    					<ul>
+							<cfloop index="r" array="#page.functions.examples#">
+								<li><a href="/#r#">#r#</a></li>
+							</cfloop>
+						</ul>
+  					</div>
+				</div>
+			</div>
 		</div>
-		<div class="missbox">
-			<h4>Functions (#arrayLen(page.functions.examples)#)</h4>
-			<ul>
-			<cfloop index="r" array="#page.functions.examples#">
-				<li><a href="/#r#">#r#</a></li>
-			</cfloop>
-			</ul>
-		</div>
+		
 	</div>
 </cfoutput>
