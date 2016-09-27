@@ -12,7 +12,7 @@ component {
 
 /* **********************************************************************************
  *    name: process                                                                 *
- *  author: Andrew Penhorwood                                                       *
+ *  author: Andrew Penhorwood based on code by Pete Freitag                         *
  * created: 2016-09-26                                                              *
  * purpose:                                                                         *
  * *********************************************************************************/
@@ -44,7 +44,7 @@ component {
 
 /* **********************************************************************************
  *    name: hasExample                                                              *
- *  author: Andrew Penhorwood                                                       *
+ *  author: Andrew Penhorwood based on code by Pete Freitag                         *
  * created: 2016-09-26                                                              *
  * purpose:                                                                         *
  * *********************************************************************************/
@@ -57,7 +57,7 @@ component {
 
 /* **********************************************************************************
  *    name: hasRelated                                                              *
- *  author: Andrew Penhorwood                                                       *
+ *  author: Andrew Penhorwood based on code by Pete Freitag                         *
  * created: 2016-09-27                                                              *
  * purpose:                                                                         *
  * *********************************************************************************/
