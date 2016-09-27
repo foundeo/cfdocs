@@ -2,6 +2,7 @@
 	"name":"dateConvert",
 	"type":"function",
 	"syntax":"dateConvert(type, date)",
+	"member":"date.convert(type)",
 	"returns":"DateTime",
 	"related":["Now","CreateDateTime"],
 	"description":" Converts local time to Coordinated Universal Time (UTC),\n or UTC to local time. The function uses the daylight savings\n settings in the executing computer to compute daylight\n savings time, if required. ",
@@ -11,8 +12,8 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateConvert.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/dateconvert.html"},
+		"coldfusion": {"minimum_version":"4", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateConvert.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is not available.", "docs":"http://docs.lucee.org/reference/functions/dateconvert.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/dateconvert"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dateconvert"}
 	},

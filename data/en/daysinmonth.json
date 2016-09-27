@@ -2,6 +2,7 @@
 	"name":"daysInMonth",
 	"type":"function",
 	"syntax":"daysInMonth(date)",
+	"member":"date.daysInMonth()",
 	"returns":"Numeric",
 	"related":["Day", "DayOfWeek", "DayOfWeekAsString", "DayOfYear", "DaysInYear", "FirstDayOfMonth"],
 	"description":" Determines the number of days in a month.",
@@ -10,8 +11,8 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DaysInMonth.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/daysinmonth.html"},
+		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DaysInMonth.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+.", "docs":"http://docs.lucee.org/reference/functions/daysinmonth.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/daysinmonth"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/daysinmonth"}
 	},
