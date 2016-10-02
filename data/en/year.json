@@ -2,6 +2,7 @@
 	"name":"year",
 	"type":"function",
 	"syntax":"year(date)",
+	"member":"date.year()",
 	"returns":"Numeric",
 	"related":["hour","minute","second","month","quarter","week"],
 	"description":" From a date/time object, gets the year value.",
@@ -9,8 +10,8 @@
 		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/year.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/year.html"},
+		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/year.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+.", "docs":"http://docs.lucee.org/reference/functions/year.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/year"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/year"}
 	},
