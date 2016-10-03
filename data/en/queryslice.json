@@ -5,15 +5,28 @@
 	"member": "query.slice(offset [, length])",
 	"returns": "query",
 	"related": [],
-	"description": "",
+	"description": "Returns a query containing a subset of another query",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
-		{"name": "offset", "description": "", "required": true, "default": "", "type": "number", "values": []},
-		{"name": "length", "description": "", "required": false, "default": "", "type": "number", "values": []}
+		{"name": "offset", "description": "The first row to include in the new query", "required": true, "default": "", "type": "number", "values": []},
+		{"name": "length", "description": "The number of rows to include in the new query, defaults to all remaining rows", "required": false, "default": "", "type": "number", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryslice.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title": "Create a query with 4 rows and return a new query containing the 2nd and 3rd rows of the first",
+			"code": "data = [\n\t[ 1,'James' ],\n\t[ 2,'Alfred' ],\n\t[ 3,'Amisha' ],\n\t[ 4,'Terri' ]\n];\nmyQuery = QueryNew( 'ID,name','int,varchar',data );\nresult = QuerySlice( myQuery,2,2 );\nDump( var='#result#' );",
+			"description":"",
+			"runnable":true
+		},
+		{
+			"title": "Using a member function",
+			"code": "data = [\n\t[ 1,'James' ],\n\t[ 2,'Alfred' ],\n\t[ 3,'Amisha' ],\n\t[ 4,'Terri' ]\n];\nmyQuery = QueryNew( 'ID,name','int,varchar',data );\nresult = myQuery.slice( 2,2 );\nDump( var='#result#' );",
+			"description":"",
+			"runnable":true
+		}
+	],
 	"links": []
 }
