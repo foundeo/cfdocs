@@ -38,5 +38,22 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfschedule"}
 	},
 	"links": [
-	]
+	],
+  "examples": [
+    {
+      "title": "Create or update a task",
+      "description": "Tell Coldfusion to run 'importData.cfm' daily at 7AM",
+      "code": "<cfschedule\r\n action=\"update\"\r\n task=\"importMyCSVFileToDB\"\r\n operation=\"HTTPRequest\"\r\n startDate=\"5/12/2016\"\r\n startTime=\"7:00 AM\"\r\n url=\"http://www.mydomain.com/scheduled/importData.cfm\"\r\n interval=\"daily\" />",
+      "result": "",
+      "runnable":false
+    },
+    {
+      "title": "Delete a scheduled task",
+      "description": "Delete the task 'importMyCSVFileToDB' from the list of Coldfusion scheduled jobs",
+      "code": "<cfschedule\r\n action=\"delete\"\r\n task=\"importMyCSVFileToDB\" />",
+      "result": "",
+      "runnable":false
+    }
+
+  ]
 }
