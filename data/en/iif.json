@@ -28,6 +28,13 @@
 			"code": "iIf( server.os.name IS \"Bacon\", de(\"Running Bacon OS\"), de(\"Not Running Bacon OS\") )",
 			"result": "Not Running Bacon OS",
 			"runnable":true
+		},
+		{
+			"title": "Simple Example using Ternary Operator Instead",
+			"description" : "Instead of using iif, you should use the ternary operator CF9+",
+			"code" : "( (server.os.name IS \"Bacon\") ? \"Running Bacon OS\" : \"Not Running Bacon OS\")",
+			"result": "Not Running Bacon OS",
+			"runnable":true
 		}
 	]
 

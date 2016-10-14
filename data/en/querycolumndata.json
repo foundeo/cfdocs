@@ -5,7 +5,7 @@
 	"member": "query.columnData(columnName [, closure])",
 	"returns": "array",
 	"related": [],
-	"description": "",
+	"description": "Returns the data in a query column",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "columnName", "description": "", "required": true, "default": "", "type": "string", "values": []},
@@ -14,6 +14,19 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querycolumndata.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title": "Create and populate a query and output the 'name' column data as an array",
+			"code": "myQuery = QueryNew( '' );\nnames = [ 'Indra','Elizabeth','Harry','Seth' ];\nqueryAddColumn( myQuery,'name','varchar',names );\nresult = queryColumnData( myQuery,'name' );\nDump( var='#result#' );",
+			"description":"",
+			"runnable":true
+		},
+		{
+			"title": "Using a member function",
+			"code": "myQuery = QueryNew( '' );\nnames = [ 'Indra','Elizabeth','Harry','Seth' ];\nqueryAddColumn( myQuery,'name','varchar',names );\nresult = myQuery.columnData( 'name' );\nDump( var='#result#' );",
+			"description":"",
+			"runnable":true
+		}
+	],
 	"links": []
 }
