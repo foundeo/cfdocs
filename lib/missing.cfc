@@ -17,7 +17,7 @@ component {
  * purpose:                                                                         *
  * *********************************************************************************/
 	public struct function process( required array routines ){
-		var need = {'file':[],'examples':[],'related':[]};
+		var need = {'file':[],'examples':[],'related':[],'descriptions':[]};
 
 		for( r in routines ){
 			var path2file = ExpandPath("../data/en/#LCase(r)#.json");
@@ -31,6 +31,10 @@ component {
 
 				if( !hasRelated( doc ) ){
 					arrayAppend( need.related, r );
+				}
+
+				if( !hasDescription( doc ) ){
+					arrayAppend( need.descriptions, r );
 				}
 
 			}
@@ -50,6 +54,19 @@ component {
  * *********************************************************************************/
 	public boolean function hasExample( required struct doc ){
 		if( structKeyExists(doc, "examples") AND isArray(doc.examples) AND ArrayLen(doc.examples) ){
+			return true;
+		}
+		return false;
+	}
+
+/* **********************************************************************************
+ *    name: hasDescription                                                          *
+ *  author: Andrew Penhorwood 	                                                    *
+ * created: 2016-10-14                                                              *
+ * purpose:                                                                         *
+ * *********************************************************************************/
+	public boolean function hasDescription( required struct doc ){
+		if( structKeyExists(doc, "description") AND len(doc.description) ){
 			return true;
 		}
 		return false;
