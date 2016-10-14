@@ -17,7 +17,18 @@ component {
  * purpose:                                                                         *
  * *********************************************************************************/
 	public struct function process( required array routines ){
-		var need = {'file':[],'examples':[],'related':[],'descriptions':[]};
+		var need = {
+			  'file':[]
+			, 'name':[]
+			, 'type':[]
+			, 'syntax':[]
+			, 'returns':[]
+			, 'related':[]
+			, 'descriptions':[]
+			, 'params':[]
+			, 'links':[]
+			, 'examples':[]
+		};
 
 		for( r in routines ){
 			var path2file = ExpandPath("../data/en/#LCase(r)#.json");
@@ -25,16 +36,40 @@ component {
 			if( fileExists( path2file ) ){
 				var doc = DeserializeJSON( FileRead( path2file ) );
 
-				if( !hasExample( doc ) ){
-					arrayAppend( need.examples, r );
+				if( !hasSimpleNode( "name", doc ) ){
+					arrayAppend( need.name, r );
 				}
 
-				if( !hasRelated( doc ) ){
+				if( !hasSimpleNode( "type", doc ) ){
+					arrayAppend( need.type, r );
+				}
+
+				if( !hasSimpleNode( "syntax", doc ) ){
+					arrayAppend( need.syntax, r );
+				}
+
+				if( !hasSimpleNode( "returns", doc ) ){
+					arrayAppend( need.returns, r );
+				}
+
+				if( !hasArrayNode( "related", doc ) ){
 					arrayAppend( need.related, r );
 				}
 
-				if( !hasDescription( doc ) ){
+				if( !hasSimpleNode( "descriptions", doc ) ){
 					arrayAppend( need.descriptions, r );
+				}
+
+				if( !hasArrayNode( "params", doc ) ){
+					arrayAppend( need.params, r );
+				}
+
+				if( !hasArrayNode( "links", doc ) ){
+					arrayAppend( need.links, r );
+				}
+
+				if( !hasArrayNode( "examples", doc ) ){
+					arrayAppend( need.examples, r );
 				}
 
 			}
@@ -47,41 +82,29 @@ component {
 	}
 
 /* **********************************************************************************
- *    name: hasExample                                                              *
- *  author: Andrew Penhorwood based on code by Pete Freitag                         *
- * created: 2016-09-26                                                              *
- * purpose:                                                                         *
- * *********************************************************************************/
-	public boolean function hasExample( required struct doc ){
-		if( structKeyExists(doc, "examples") AND isArray(doc.examples) AND ArrayLen(doc.examples) ){
-			return true;
-		}
-		return false;
-	}
-
-/* **********************************************************************************
- *    name: hasDescription                                                          *
+ *    name: hasName                                                                 *
  *  author: Andrew Penhorwood 	                                                    *
  * created: 2016-10-14                                                              *
  * purpose:                                                                         *
  * *********************************************************************************/
-	public boolean function hasDescription( required struct doc ){
-		if( structKeyExists(doc, "description") AND len(doc.description) ){
+	public boolean function hasSimpleNode( required string node, required struct doc ){
+		if( structKeyExists(doc, node) AND len(doc[node]) ){
 			return true;
 		}
 		return false;
 	}
 
 /* **********************************************************************************
- *    name: hasRelated                                                              *
+ *    name: hasArrayNode                                                            *
  *  author: Andrew Penhorwood based on code by Pete Freitag                         *
- * created: 2016-09-27                                                              *
+ * created: 2016-09-26                                                              *
  * purpose:                                                                         *
  * *********************************************************************************/
-	public boolean function hasRelated( required struct doc ){
-		if( structKeyExists(doc, "related") AND isArray(doc.related) AND ArrayLen(doc.related) ){
+	public boolean function hasArrayNode( required string node, required struct doc ){
+		if( structKeyExists(doc, node) AND isArray(doc[node]) AND ArrayLen(doc[node]) ){
 			return true;
 		}
 		return false;
 	}
+
 }

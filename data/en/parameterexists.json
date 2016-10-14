@@ -1,10 +1,10 @@
 {
 	"name":"parameterExists",
 	"type":"function",
-	"syntax":"",
+	"syntax":"parameterExists(name)",
 	"returns":"",
 	"related":[],
-	"description":" This function is deprecated. Use the IsDefined function.Determines whether a parameter exists. ColdFusion does not evaluate the argument.",
+	"description":" This function is deprecated. Use the IsDefined or StructKeyExists functions. Determines whether a parameter exists. ColdFusion does not evaluate the argument.",
 	"params": [
 		{"name":"region","description":"Name of the cache region.","required":true,"default":"","type":"","values":[]}
 	],

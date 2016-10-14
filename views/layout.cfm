@@ -73,6 +73,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="/reports/missing-descriptions.cfm">Missing Descriptions</a></li>
 						<li><a href="/reports/missing-examples.cfm">Missing Examples</a></li>
+						<li><a href="/reports/missing-related.cfm">Missing Related Links</a></li>
 					</ul>
 				</li>
 			</cfoutput>
