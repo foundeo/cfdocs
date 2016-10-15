@@ -15,6 +15,11 @@ page.description = replace( page.description, "{total}", page.total );
 page.description = replace( page.description, "{complete}", page.complete );
 page.description = replace( page.description, "{percent}", page.percent );
 
+if( structKeyExists( page, "dump" ) && page.dump ){
+	writedump( page );
+	abort;
+}
+
 request.gitFilePath = "/edit/master/reports/missing-#page.node#.cfm";
 </cfscript>
 

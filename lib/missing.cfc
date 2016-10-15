@@ -24,7 +24,7 @@ component {
 			, 'syntax':[]
 			, 'returns':[]
 			, 'related':[]
-			, 'descriptions':[]
+			, 'description':[]
 			, 'params':[]
 			, 'links':[]
 			, 'examples':[]
@@ -56,8 +56,8 @@ component {
 					arrayAppend( need.related, r );
 				}
 
-				if( !hasSimpleNode( "descriptions", doc ) ){
-					arrayAppend( need.descriptions, r );
+				if( !hasSimpleNode( "description", doc ) ){
+					arrayAppend( need.description, r );
 				}
 
 				if( !hasArrayNode( "params", doc ) ){
