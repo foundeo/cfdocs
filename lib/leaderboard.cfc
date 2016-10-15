@@ -134,7 +134,7 @@ component {
  * created: 2016-09-09                                                              *
  * purpose:                                                                         *
  * *********************************************************************************/
-	private query function processContributors( required array stats ){
+	private query function processContributors( required any stats ){
 		var qContributors = createQuery();
 
 		for( var stat in stats ){

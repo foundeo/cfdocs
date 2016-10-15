@@ -11,57 +11,100 @@ component {
 	}
 
 /* **********************************************************************************
- *    name: processFunctions                                                        *
- *  author: Andrew Penhorwood                                                       *
+ *    name: process                                                                 *
+ *  author: Andrew Penhorwood based on code by Pete Freitag                         *
  * created: 2016-09-26                                                              *
  * purpose:                                                                         *
  * *********************************************************************************/
-	public struct function processFunctions( required array functions ){
-		var tmp = {};
+	public struct function process( required array routines ){
+		var need = {
+			  'file':[]
+			, 'name':[]
+			, 'type':[]
+			, 'syntax':[]
+			, 'returns':[]
+			, 'related':[]
+			, 'descriptions':[]
+			, 'params':[]
+			, 'links':[]
+			, 'examples':[]
+		};
 
-		for( f in functions ){
-			var filePath = ExpandPath("../data/en/#LCase(i)#.json");
+		for( r in routines ){
+			var path2file = ExpandPath("../data/en/#LCase(r)#.json");
 
-			if( fileExists( filePath ){
-				d = DeserializeJSON( FileRead(filePath) );
+			if( fileExists( path2file ) ){
+				var doc = DeserializeJSON( FileRead( path2file ) );
 
-				if( NOT StructKeyExists(d, "examples") OR NOT IsArray(d.examples) OR NOT ArrayLen(d.examples) ){
-					if( StructKeyExists(d, "params") AND ArrayLen(d.params) GT 1 ){
-						if(    NOT StructKeyExists(d.params[1], "description")
-						    OR NOT Len(d.params[1].description)
-						    OR d.params[1].description contains "No Help" ){
-
-							<cfset arrayAppend(data.related, i)>
-						}
-					}
+				if( !hasSimpleNode( "name", doc ) ){
+					arrayAppend( need.name, r );
 				}
+
+				if( !hasSimpleNode( "type", doc ) ){
+					arrayAppend( need.type, r );
+				}
+
+				if( !hasSimpleNode( "syntax", doc ) ){
+					arrayAppend( need.syntax, r );
+				}
+
+				if( !hasSimpleNode( "returns", doc ) ){
+					arrayAppend( need.returns, r );
+				}
+
+				if( !hasArrayNode( "related", doc ) ){
+					arrayAppend( need.related, r );
+				}
+
+				if( !hasSimpleNode( "descriptions", doc ) ){
+					arrayAppend( need.descriptions, r );
+				}
+
+				if( !hasArrayNode( "params", doc ) ){
+					arrayAppend( need.params, r );
+				}
+
+				if( !hasArrayNode( "links", doc ) ){
+					arrayAppend( need.links, r );
+				}
+
+				if( !hasArrayNode( "examples", doc ) ){
+					arrayAppend( need.examples, r );
+				}
+
+			}
+			else {
+				arrayAppend( need.file, r );
 			}
 		}
 
-		return tmp;
+		return need;
 	}
 
 /* **********************************************************************************
- *    name: processTags                                                             *
- *  author: Andrew Penhorwood                                                       *
+ *    name: hasName                                                                 *
+ *  author: Andrew Penhorwood 	                                                    *
+ * created: 2016-10-14                                                              *
+ * purpose:                                                                         *
+ * *********************************************************************************/
+	public boolean function hasSimpleNode( required string node, required struct doc ){
+		if( structKeyExists(doc, node) AND len(doc[node]) ){
+			return true;
+		}
+		return false;
+	}
+
+/* **********************************************************************************
+ *    name: hasArrayNode                                                            *
+ *  author: Andrew Penhorwood based on code by Pete Freitag                         *
  * created: 2016-09-26                                                              *
  * purpose:                                                                         *
  * *********************************************************************************/
-	public struct function processTags( required array tags ){
-		var tmp = {};
-
-		<cfloop array="#application.index.tags#" index="i">
-		    <cfset filePath = ExpandPath("../data/en/#LCase(i)#.json")>
-		    <cfif fileExists(filePath)>
-		        <cfset d = DeserializeJSON( FileRead(filePath))>
-		        <cfif NOT StructKeyExists(d, "examples") OR NOT IsArray(d.examples) OR NOT ArrayLen(d.examples)>
-		            <cfif StructKeyExists(d, "params") AND ArrayLen(d.params) GT 1>
-		                <cfset arrayAppend(data.related, i)>
-		            </cfif>
-		        <cfelse>
-		            <cfset hasExample = hasExample+1>
-		        </cfif>
-		    </cfif>
-		</cfloop>
+	public boolean function hasArrayNode( required string node, required struct doc ){
+		if( structKeyExists(doc, node) AND isArray(doc[node]) AND ArrayLen(doc[node]) ){
+			return true;
+		}
+		return false;
 	}
+
 }
