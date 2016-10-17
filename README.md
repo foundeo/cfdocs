@@ -149,4 +149,4 @@ Show example code. It is very helpful to readers to use the `result` to show the
 
 We have an [example JSON utility](http://cfdocs.org/utilities/json/) that can be used to create the JSON by filling out a form. 
 
-Please see the [cfdocs contributor guide](CONTRIB.md) for frequently asked questions.
+Please see the [cfdocs contributor guide](CONTRIBUTING.md) for frequently asked questions.
