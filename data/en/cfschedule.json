@@ -19,7 +19,7 @@
 		{"name":"endDate","description":"Date when scheduled task ends.","required":false,"default":"","type":"String","values":[]},
 		{"name":"endTime","description":"Time when scheduled task ends (seconds).","required":false,"default":"","type":"Numeric","values":[]},
 		{"name":"interval","description":"Interval at which task is scheduled.\n * number of seconds (minimum is 60)\n * once\n * daily\n * weekly\n * monthly","required":false,"default":"","type":"String","values":["once","daily","weekly","monthly"]},
-		{"name":"requesttimeout","description":"Can be used to extend the default timeout period.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"requesttimeout","description":"Deprecated as of CF11+ used to extend the default timeout period.","required":false,"default":"","type":"Numeric","values":[]},
 		{"name":"username","description":"Username, if URL is protected.","required":false,"default":"","type":"String","values":[]},
 		{"name":"password","description":"Password, if URL is protected.","required":false,"default":"","type":"String","values":[]},
 		{"name":"proxyserver","description":"Host name or IP address of a proxy server.","required":false,"default":"","type":"String","values":[]},

@@ -208,7 +208,7 @@
 		},
 		{
 			"name": "format",
-			"description": "Specifies file format for conversion",
+			"description": "Specifies file format for conversion. The `flashpaper` format has been deprecated since CF11+",
 			"required": false,
 			"default": "",
 			"type": "String",
