@@ -175,13 +175,11 @@ component {
 			}
 		}
 
-		contributor['lines']   = additions + deletions;
+		contributor['lines'] = additions + deletions;
 		contributor['commits'] = commits;
 		contributor['lastcommit'] = DateAdd("s", lastMod, "1970-01-01 00:00:00");
-		contributor['weeksAgo']   = DateDiff( "w", contributor.lastcommit, now() );
-		contributor['effort']  = (contributor.lines/(1+val(contributor['weeksAgo'])) ) + ( contributor.commits * factor );
-		
-		
+		contributor['weeksAgo'] = val( DateDiff( "w", contributor.lastcommit, now() ) );
+		contributor['effort'] = ( contributor.lines/(1+contributor.weeksAgo) ) + ( contributor.commits * factor );
 
 		return contributor;
 	}
