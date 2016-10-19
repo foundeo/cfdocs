@@ -13,13 +13,27 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/structsort"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structsort.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/structsort.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structsort"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structsort"}
 	},
 	"links": [
 
-	]
+	],
+	"examples": [
+        {
+            "title": "Simple example for structSort function",
+            "description": "Uses the structSort() function to get the sorted structure",
+            "code": "SomeStruct = {red=93,yellow=90,green=94};\nresult = structSort(SomeStruct, \"numeric\", \"desc\");\nwriteOutput( lcase(serializeJSON(result)) );",
+            "result": "[\"green\", \"red\", \"yellow\"]"
+        },
+        {
+            "title": "Simple example for structSort function with pathtosubelement",
+            "description": "Uses the structSort() function to get the sorted structure",
+            "code": "somestruct = {};\nsomeStruct.scott = {age=26, department=\"General\"};\nsomeStruct.glan = {age=29, department=\"computer\"};\nsomeStruct.george = {age=31, department=\"Physical\"};\nresult = structSort(somestruct, \"textnocase\", \"asc\", \"department\");\nwriteOutput( lcase(serializeJSON(result)) );",
+            "result": "[\"glan\",\"scott\",\"george\"]"
+        }
+    ]
 
 }

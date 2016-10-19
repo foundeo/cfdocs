@@ -11,13 +11,20 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/spreadsheetsetactivesheetnumber"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/spreadsheetsetactivesheetnumber.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetsetactivesheetnumber"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetsetactivesheetnumber.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetsetactivesheetnumber"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \r\n  <cfset queryAddRow(q)> \r\n  <cfset querySetCell(q, \"Name\", \"John\")> \r\n  <cfset querySetCell(q, \"Beers\", \"1\")> \r\n  <cfset querySetCell(q, \"Vegetables\", \"1\")> \r\n  <cfset querySetCell(q, \"Fruits\", \"1\")> \r\n  <cfset querySetCell(q, \"Meats\", \"1\")> \r\n  <cfset mySheet =   SpreadsheetNew( \"Test\"  ) /> \r\n  <!--- Make a spreadsheet object ---> \r\n  <cfset s = spreadsheetNew()> \r\n  <!--- Add header row ---> \r\n  <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \r\n  <!--- Add query ---> \r\n   <cfscript> \r\n SpreadsheetCreateSheet (s, \"TestSheet\");  \r\n    SpreadsheetSetActiveSheetNumber(s, 2); \r\n </cfscript> \r\n <cfoutput> \r\n \r\n <cfdump var=\"#s#\" /> \r\n <cfheader name=\"Content-Disposition\" value=\"inline; filename=testFile.xls\">  <cfcontent type=\"application/vnd.msexcel\" variable=\"#SpreadSheetReadBinary(s)#\">\r\n </cfoutput> ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

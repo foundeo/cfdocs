@@ -1,0 +1,48 @@
+{
+	"name":"floor",
+	"type":"function",
+	"syntax":"floor(number)",
+	"returns":"Integer",
+	"related":["int"],
+	"description":"Returns the integer less than or equal to the input. This function is equivilant to the int function.",
+	"params": [
+		{"name":"number","description":"A numeric value","required":true,"default":"","type":"Numeric","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/floor.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Floor Value of 4.0",
+			"description":"Requires CF2016+",
+			"code":"floor(4.0)",
+			"result":"4",
+			"runnable":true
+		},
+		{
+			"title":"Floor Value of 4.3",
+			"description":"Requires CF2016+",
+			"code":"floor(4.3)",
+			"result":"4",
+			"runnable":true
+		},
+		{
+			"title":"Floor Value of 4.7",
+			"description":"Requires CF2016+",
+			"code":"floor(4.7)",
+			"result":"4",
+			"runnable":true
+		},
+		{
+			"title":"Floor Value of -4.3",
+			"description":"Requires CF2016+",
+			"code":"floor(-4.3)",
+			"result":"-4",
+			"runnable":true
+		}
+	]
+
+}

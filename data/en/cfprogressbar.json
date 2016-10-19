@@ -1,31 +1,98 @@
 {
-	"name":"cfprogressbar",
-	"type":"tag",
-	"syntax":"<cfprogressbar name=\"\">",
-	"returns":"",
-	"related":[],
-	"description":" Creates progressbar",
+	"name": "cfprogressbar",
+	"type": "tag",
+	"syntax": "<cfprogressbar name=\"\">",
+	"returns": "",
+	"related": [],
+	"description": "Creates progressbar",
 	"params": [
-		{"name":"width","description":"Width in pixel. Default='300'","required":false,"default":"","type":"String","values":[]},
-		{"name":"height","description":"Height in pixel.","required":false,"default":"","type":"String","values":[]},
-		{"name":"bind","description":"A bind expression specifying a client JavaScript function or server CFC that the control calls to get progress information each time the period defined by the\ninterval attribute elapses. You cannot use this attribute with a duration attribute.","required":false,"default":"","type":"String","values":[]},
-		{"name":"oncomplete","description":"This function will be called by CF once work is done. This can be used to reset status of progress bar text or enabling the button, which might be in disable mode while task was under progress or something more.","required":false,"default":"","type":"String","values":[]},
-		{"name":"name","description":"Name of the progressBar.","required":true,"default":"","type":"String","values":[]},
-		{"name":"duration","description":"If callback is not defined then based on this value, ColdFusion will decide percentage work done. One of the callback or totaltime attribute needs to be defined.","required":false,"default":"","type":"String","values":[]},
-		{"name":"interval","description":"Time interval on which progressbar will keep on updating.","required":false,"default":"","type":"String","values":[]},
-		{"name":"style","description":"The following are the supported styles:‚Ä¢\nbgcolor: The background color for the progress bar. A hexadecimal value without ‚Äú#‚Äù prefixed.\ntextcolor: Text color on progress bar.\nprogresscolor: Color used to indicate the progress","required":false,"default":"","type":"String","values":["bgcolor","progresscolor","textcolor"]},
-		{"name":"autoDisplay","description":"Set to true to display the progress bar.","required":false,"default":"","type":"String","values":[true,false]},
-		{"name":"onError","description":"The JavaScript function to run on an error condition. The error can be a network error or server-side error.","required":false,"default":"","type":"String","values":[]}
-
+		{
+			"name": "width",
+			"description": "Width in pixel. Default='300'",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "height",
+			"description": "Height in pixel.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "bind",
+			"description": "A bind expression specifying a client JavaScript function or server CFC that the control calls to get progress information each time the period defined by the\ninterval attribute elapses. You cannot use this attribute with a duration attribute.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "oncomplete",
+			"description": "This function will be called by CF once work is done. This can be used to reset status of progress bar text or enabling the button, which might be in disable mode while task was under progress or something more.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "name",
+			"description": "Name of the progressBar.",
+			"required": true,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "duration",
+			"description": "If callback is not defined then based on this value, ColdFusion will decide percentage work done. One of the callback or totaltime attribute needs to be defined.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "interval",
+			"description": "Time interval on which progressbar will keep on updating.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "style",
+			"description": "The following are the supported styles:\u00e2\u20ac\u0161\u00c3\u201e\u00c2\u00a2\nbgcolor: The background color for the progress bar. A hexadecimal value without \u00e2\u20ac\u0161\u00c3\u201e\u00c3\u00ba#\u00e2\u20ac\u0161\u00c3\u201e\u00c3\u00b9 prefixed.\ntextcolor: Text color on progress bar.\nprogresscolor: Color used to indicate the progress",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": ["bgcolor", "progresscolor", "textcolor"]
+		},
+		{
+			"name": "autoDisplay",
+			"description": "Set to true to display the progress bar.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": [true, false]
+		},
+		{
+			"name": "onError",
+			"description": "The JavaScript function to run on an error condition. The error can be a network error or server-side error.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfprogressbar"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/progressbar.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfprogressbar"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfprogressbar"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfprogressbar.html"
+		}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

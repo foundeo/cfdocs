@@ -1,9 +1,12 @@
-# CFDocs
+# CFDocs 
 
 CFDocs is a community maintained CFML reference tool available at [cfdocs.org](http://cfdocs.org). It features:
 * Hosting on Amazon CloudFront CDN for fast responses around the globe. Sponsored by [Foundeo Inc.](http://foundeo.com).
 * Easy to use urls like: [cfdocs.org/hash](http:cfdocs.org/hash) just hit /tag-name or /function-name.
 * Publicly maintained on [GitHub](http://github.com/foundeo/cfdocs)
+
+[![Build Status](https://travis-ci.org/foundeo/cfdocs.svg?branch=master)](https://travis-ci.org/foundeo/cfdocs)
+
 
 ## How reference data is structured
 
@@ -13,7 +16,7 @@ This makes the documentation super easy to edit and allows developers to run a l
 
 ## Running CFDocs locally for dev or pleasure
 
-The cfdocs.org site can run locally pretty easily, it doesn't need anything except CF or Lucee to run (no database or anything), it utilizes a .htaccess file for url rewriting, but you could still test things by hitting /doc.cfm?name=getsafehtml if you just want to drop it in a directory somewhere.
+The cfdocs.org site can run locally pretty easily, it doesn't need anything except CF 10+ or Lucee to run (no database or anything), it utilizes a .htaccess file for url rewriting, but you could still test things by hitting /doc.cfm?name=getsafehtml if you just want to drop it in a directory somewhere.
 
 ### Running locally with CommandBox (EASIEST WAY)!
 
@@ -49,8 +52,8 @@ CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. att
 
 We need help expanding existing tag and function documentation. Look through the reference pages till you find one needing more definitions or examples. Also see:
 
-* [List of Tags and Functions that do not have examples](http://cfdocs.org/report/missing-examples.cfm)
-* [Missing Functions](http://cfdocs.org/report/todo.cfm)
+* [List of Tags and Functions that do not have examples](http://cfdocs.org/reports/missing-examples.cfm)
+* [Missing Functions](http://cfdocs.org/reports/todo.cfm)
 
 ### JSON File Documentation
 
@@ -58,6 +61,7 @@ We need help expanding existing tag and function documentation. Look through the
     	"name":"NameOfTagOrFunction",
     	"type":"function|tag",
     	"syntax":"Tag(arg)|<cftag attr=1>",
+        "member":"item.memberFunction([args])",
         "script":"cftag(attr=1);",
     	"returns":"void",
     	"related":["tag","function"],
@@ -75,7 +79,7 @@ We need help expanding existing tag and function documentation. Look through the
     		{
     			"title":"Title of a blog entry that has good info about this.",
     			"description":"Description of the link",
-    			"url":"http:\/\/www.example.com\/a\/b.cfm"
+    			"url":"http://www.example.com/a/b.cfm"
     		}
     	],
         "examples": [
@@ -83,7 +87,8 @@ We need help expanding existing tag and function documentation. Look through the
     			"title": "Name of the code example",
     			"description": "Description of the code example",
     			"code": "<cf_examplecodehere>",
-    			"result": "The expected output of the code example"
+    			"result": "The expected output of the code example",
+                "runnable":true
             }
         ]
 
@@ -105,6 +110,10 @@ The basic syntax of the tag or function
 ##### script
 
 For tags, shows how the tag would be invoked from cfscript.
+
+##### member
+
+For functions, shows the available member function syntax.
 
 ##### returns
 
@@ -136,4 +145,8 @@ Use this to link to blog entries or other useful related content.
 
 ##### examples
 
-Show example code. It is very helpful to readers to use the `result` to show the expected result of the code sample when applicable.
+Show example code. It is very helpful to readers to use the `result` to show the expected result of the code sample when applicable. This has to be JSON, so  you can to do `\n` for newline, double quotes must be escaped `\"`. The `runnable` is a boolean that determines if the _Run Code_ button shows up next to the example.
+
+We have an [example JSON utility](http://cfdocs.org/utilities/json/) that can be used to create the JSON by filling out a form. 
+
+Please see the [cfdocs contributor guide](CONTRIBUTING.md) for frequently asked questions.

@@ -1,0 +1,118 @@
+# Encryption Guide
+
+If you missed our [Obfuscation Guide](/security-obfuscation), we suggest you read it before reading this one, as this guide builds on the principles established in the [Obfuscation Guide](/security-obfuscation).
+
+Encrypting data is different than [obfuscating](/security-obfuscation) data in one key sense – obfuscation, or [hash()](/hash)ing in our case, is a one-way encryption technique. There is no practical way, other than building and using a [rainbow table](http://bit.ly/1TQzXG7), to decrypt the value produced by the hashing algorithm. This is perfect for parameter names because we know ahead of time what that parameter name is going to be. This isn't usually the case for the values assigned to those parameters, however, which is usually dynamic.
+
+Encryption, on the other hand, **is** reversible and allows you to safely encode the values of your URL and FORM (and COOKIE, RC, and other scope) values for passage on the URL or in hidden FORM fields.
+
+Before we dive much further into actual encryption, we need to visit another function that helps us to generate the encryption keys we'll use… [generateSecretKey()](/generatesecretkey):
+
+    \\ generate a 128 bit AES encryption key
+    writeOutput( generateSecretKey( 'AES' );
+    
+    \\ generate a 256 bit AES encryption key CF10+ Lucee4.5+
+    writeOutput( generateSecretKey( 'AES', 256 );
+
+Note that by default [generateSecretKey()](/generatesecretkey) generates 128-bit encryption keys. You can pass the optional parameter for key size to this function, however, and generate 256 bit (and indeed, 512 bit, 1024 bit, etc.) keys. As of this writing, 256 bit keys are supported for the AES and BLOWFISH encryption algorithms. If you're using CF10+ or Lucee4.5+ then you can generate and use 256 bit keys instead of 128 bit keys.
+
+I have used 256 bit keys in my examples here, and I tend to use 256 bit keys only in those applications that demand a high level of security, however there is a (very) good argument to be made against using 256 bit keys as they are, at present, no more secure than 128 bit encryption and require up to 40% more processing cycles than 128 bit keys. In short, 128 bit keys are sufficient to safely encrypt your data as of today. One day, when quantum computers are all the rage, 128 bit is unlikely to be enough as the quantum bit halves the effective key size  (quantum computers can decrypt 2n/2 vs. current processors which can only decrypt 2n). Mass market quantum computing may yet be 20 or more years out, however, so honestly my use of 256 bit keys could be considered overkill presently.
+
+Also before we get into the nuts and bolts of the [encrypt()](/encrypt) and [decrypt()](/decrypt) functions we'll use, it is helpful to note that there are a couple of caveats with the default functionality of these functions.
+
+The first of these is that, by default, [encrypt()](/encrypt) and [decrypt()](/decrypt) utilize the ECB, or Electronic Code Book, mode of encryption. ECB is a weak cipher mode which encrypts blocks of data in parallel. This cipher mode allows forced decryption to occur in parallel, further enhancing the chances of breaking the encryption and finding the key. Once one block has been decrypted, the key is known and all remaining blocks can be decrypted.
+
+You can instead specify that you want to use CBC, or Cipher-Block Chaining, mode which uses an XOR of the previously encrypted block as its initialization vector for the next block to be encrypted. Decryption therefore requires each previous block to decrypt, though decryption can still occur in parallel, but only if the key is already known – it is much harder to decipher the key from any given block of data when using CBC mode and thus, you're better protected from a forced decryption attempt if your data is ever disclosed (a nice way of saying 'stolen').
+
+Our examples will utilize CBC mode with PKCS5Padding to demonstrate how to best use encryption in CFML. One caveat to using CBC mode with PKCS5Padding, which is a bonus in most circumstances, is that it will generate a unique encrypted output value every time you run the same input value through [encrypt()](/encrypt). So, if you [encrypt()](/encrypt) 'dog' twice, it will encrypt to a different final value on each pass:
+
+    myString = 'dog';
+    myKey = 'ITRkCTb/XMtGT0g99WUkKak/hhNvPml3k+UbsVDqSBE=';
+    myAlgorithm = 'AES/CBC/PKCS5Padding';
+    myEncoding = 'HEX';
+    encString = encrypt( myString, myKey, myAlgorithm, myEncoding );
+    writeOutput( encString );
+
+This is desirable behavior 99.99% of the time, but there is one use case where this behavior is less than favorable – user authentication. Typically, you'll [encrypt()](/encrypt) your user's username and [hash()](/hash) and [encrypt()](/encrypt) your user's password. If you use CBC mode to encrypt the username, and then later wish to query this username upon user login, you will be unable to find the user due to the unique output values generated by using the CBC/PKCS5Padding option. In these cases, you will want to use ECB instead of CBC cipher mode, and encrypt in multiple passes:
+
+    myUsername = 'bob@bob.com';
+    myKey1 = 'RQr9IRygGQtguVEHvKh4WLgs5wz3V+BZIq82GKM5FrI=';
+    myAlgorithm1 = 'AES';
+    myEncoding1 = 'HEX';
+    myKey2 = '7SlPIgphVuR8sTGjBdKHBUqw2wss1XKwz5vYZXn7TY0=';
+    myAlgorithm2 = 'BLOWFISH';
+    myEncoding2 = 'BASE64';
+    myKey3 = 'zZYZVmsNFMqZcz0SzKMGPtCixdP9CWfmV3/xu9cwCRA=';
+    myAlgorithm3 = 'AES';
+    myEncoding3 = 'HEX';
+    encUsername = encrypt( myUsername, myKey1, myAlgorithm1, myEncoding1 );
+    encUsername = encrypt( encUsername, myKey2, myAlgorithm2, myEncoding2 );
+    encUsername = encrypt( encUsername, myKey3, myAlgorithm3, myEncoding3 );
+    writeOutput( encUsername );
+
+This will allow you to easily replicate the encrypted value and query the user by their encrypted username, while still protecting the username reasonably well from disclosure if your database is ever hacked. You should still [encrypt()](/encrypt) the password with CBC/PKCS5Padding, of course, to help further protect against information disclosure.
+
+As we discovered previously in our [Obfuscation Guide](/security-obfuscation), obfuscating URL and form parameter names makes parameter tampering a 'shot in the dark' prospect, but because the values of those parameters are still being sent in clear text, enough fiddling around and one can guesstimate what the values are for, and, of course, one can still directly tamper with the parameter values with ease. Encryption helps us to solve the plain text value problem:
+
+    myKey = 'Ng12PCeRET7ESEfUqwJCA2TgWh3wadBk/SDx10U/8lI=';
+    myAlgorithm = 'AES/CBC/PKCS5Padding';
+    myEncoding = 'HEX';
+    <a href="Profile.cfm?v#hash( 'userId', 'SHA-384', 'UTF-8', 500 )#=#encrypt( local.userId, myKey, myAlgorithm, myEncoding )#
+    &amp;v#hash( 'name', 'SHA-384', 'UTF-8', '1000' )#=#encrypt( local.firstName, myKey, myAlgorithm, myEncoding )#
+    &amp;v#hash( 'departmentId', 'SHA-384', 'UTF-8', 750 )=#encrypt( local.departmentId, myKey, myAlgorithm, myEncoding )#">Edit Profile</a>
+
+This leads to a URL that looks more like the following (parameter names and values are contrived for brevity):
+
+    Profile.cfm?vc5c71dd0fbb58b1de4df=B5AF357FCCDD45&vfe6f54c33f9064833ee8=195A550ED9D9C08&va929c5b94ad8ed832a38=D5C0C93E4
+
+Now that the values of the parameters are encrypted, it is nearly impossible to guess which parameter does what, and it is pretty much impossible to tamper with these values without knowing the encryption key. This has the additional benefit of allowing you to check for failed decryption in your application and flag this as a parameter tampering event, perhaps leading to other actions such as IP banning whoever is attempting to tamper with the parameters, after some value of N unsuccessful attempts, for example.
+
+To access these newly encrypted values we simply [decrypt()](/decrypt) them in a try/catch block within our page processing, after validating all parameters have been passed and are valid, to handle parameter tampering causing decryption errors:
+
+    // set-up encryption details
+    myKey = 'HIjv4jTHeknV7mY4CFBqdgOv1vWX4i/G9zPrctJjl0c=';
+    myAlgorithm = 'AES/CBC/PKCS5Padding';
+    myEncoding = 'HEX';
+    
+    // parameterize
+    param name="URL['v' & hash( 'userId', 'SHA-384', 'UTF-8', 500 )]" default="0";
+    param name="URL['v' & hash( 'name', 'SHA-384', 'UTF-8', 1000 )]" default="";
+    param name="URL['v' & hash( 'departmentId', 'SHA-384', 'UTF-8', 750 )]" default="0";
+    
+    // check for validity of parameter values
+    if( URL['v' & hash( 'userId', 'SHA-384', 'UTF-8', 500 )] eq 0 ) {
+        // invalid or no user id submitted
+    } else if ( !len( URL['v' & hash( 'name', 'SHA-384', 'UTF-8', 1000 )] ) ) {
+        // invalid or no name submitted
+    } else if ( URL['v' & hash( 'departmentId', 'SHA-384', 'UTF-8', 750 )] eq 0 ) {
+        // invalid or no departmentId submitted
+    }
+    
+    // try to decrypt passed values
+    try {
+    
+        userId = decrypt( URL['v' & hash( 'userId', 'SHA-384', 'UTF-8', 500 )] , myKey, myAlgorithm, myEncoding );
+        name = decrypt( URL['v' & hash( 'name', 'SHA-384', 'UTF-8', 1000 )], myKey, myAlgorithm, myEncoding );
+        departmentId = decrypt( URL['v' & hash( 'departmentId', 'SHA-384', 'UTF-8', 750 )], myKey, myAlgorithm, myEncoding );
+    
+    } catch( any e ) {
+        // deal with decryption errors
+    }
+
+Now if the hacker attempts to modify the values of the parameters, they will quickly find themselves throwing decryption errors and you'll be able to quickly identify when hacking attempts are being made and take a suitable action (like IP banning the offender).
+
+This layered approach works equally well for hidden form fields – you obfuscate the form field name and encrypt the form field value, then decrypt on form submission and process as you normally would:
+
+    myKey = 'tf0wcU7556DTt0ftUSkWOZlk82FkL7acSCnsCuWPHZ8=';
+    myAlgorithm = 'BLOWFISH/CBC/PKCS5Padding';
+    myEncoding = 'HEX';
+    
+    writeOutput( "<input type="hidden" name="ff#hash( 'userId', 'SHA-512', 'UTF-8', 825 )#" value="#encrypt( local.userId, myKey, myAlgorithm, myEncoding )#" />" );
+
+If you're a keen observer you'll notice that, in addition to using a different [hash()](/hash) algorithm for form scoped parameter names vs. the URL scoped parameter names, I use a different key and algorithm when encrypting form parameter values vs. URL parameter values. This further obfuscates these values and makes them impossible to match up between a GET and POST request. It is recommended to use a different algorithm and key for each scope where you will be storing encrypted information, such as URL, form and cookie scopes.
+
+The last, and arguably the most important, use of encryption is to secure the data stored in your database, typically anything that is considered Personally Identifiable Information (PII, for short). While there are dozens of differing opinions online as to what constitutes personally identifiable information, the [NIST Guide to Protecting the Confidentiality of Personally Identifiable Information](http://1.usa.gov/1DgxrRy), covers what should be protected at a minimum. Names, addresses, email addresses, phone numbers, social security numbers, credit card numbers (which you ought not store at all if you can avoid it) and date of birth are some examples of what should be encrypted in your database.
+
+In addition, use of CBC/PKCS5Padding and multi-pass encryption is highly recommended when storing PII – though the NIST standards are less restrictive, more encryption is almost always better than less encryption and a couple extra encryption passes can have a big impact on security for the small cost of a couple of extra compute cycles. That being said, however, use your best judgement based on the expected server load and available hardware as to how many passes you should give PII before storing it in your database so you don't accidentally create an artificial bottleneck. As mentioned previously, 128 bit keys are suitable for encrypting data today with AES or BLOWFISH algorithms, but use of 256-bit keys are supported.
+
+All of these concepts – different keys and algorithms depending on scope, repeatable but secure encryption, and multi-pass encryption for database storage – can all be found in convenient dataEnc( string, scope ) and dataDec( string, scope ) functions in my [SecurityService.cfc available on GitHub](http://bit.ly/1IkY5zK), which are part of a larger example of using the other security techniques outlined in this document to create a [secure](http://bit.ly/1Msdwkt), or [two-factor](http://bit.ly/1Yx4hGt), [framework one (FW/1)](http://bit.ly/22lB2eu) application.

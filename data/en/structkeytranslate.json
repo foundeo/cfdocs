@@ -1,0 +1,19 @@
+{
+	"name": "structKeyTranslate",
+	"type": "function",
+	"syntax": "structKeyTranslate(structure [, deepTranslation] [, leaveOriginalKey])",
+	"member": "structure.keyTranslate([deepTranslation] [, leaveOriginalKey])",
+	"returns": "number",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "structure", "description": "", "required": true, "default": "", "type": "struct", "values": []},
+		{"name": "deepTranslation", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
+		{"name": "leaveOriginalKey", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/structkeytranslate.html"}
+	},
+	"examples": [],
+	"links": []
+}

@@ -1,7 +1,7 @@
 {
 	"name":"cflocation",
 	"type":"tag",
-	"syntax":"<cflocation url=\"page.cfm\" addtoken=\"false\">",
+	"syntax":"<cflocation url=\"page.cfm\" addtoken=\"false\" statusCode=\"301\">",
 	"script":"location(\"mypage.cfm\", \"false\", \"301\");",
 	"returns":"",
 	"related":[],
@@ -13,7 +13,7 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cflocation"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cflocation.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/location.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflocation"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflocation"}

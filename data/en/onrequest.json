@@ -9,7 +9,8 @@
 		{"name":"targetPage","description":"Requested template path relative to the webroot","required":true,"default":"","type":"String","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/onRequest"}
+		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/application-cfc-reference/onrequest.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":""}
 	},
 	"links": [
 

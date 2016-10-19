@@ -10,13 +10,22 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/ceiling"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/Ceiling.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/ceiling.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ceiling"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ceiling"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Ceiling of 1.1",
+			"description":"",
+			"code":"ceiling(1.1)",
+			"result":"2",
+			"runnable":true
+		}
 	]
 
 }

@@ -11,13 +11,20 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/spreadsheetaddinfo"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/spreadsheetaddinfo.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetaddinfo"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetaddinfo.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetaddinfo"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<cfset a = SpreadsheetNew( \"Test\" )> \r\n  <cfset info = StructNew()> \r\n  <cfset info.title=\"Title\"> \r\n  <cfset info.category=\"Category test\"> \r\n  <cfset info.author=\"ABC\"> \r\n  <cfset info.comments=\"Comments for this file\"> \r\n  <cfset spreadsheetAddInfo(a,info)> \r\n <cfdump var=\"#a#\" />  ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

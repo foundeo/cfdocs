@@ -1,17 +1,17 @@
 {
 	"name":"queryNew",
 	"type":"function",
-	"syntax":"queryNew(columnlist [, columntypelist])",
+	"syntax":"queryNew(columnList [, columnTypeList [, rowData]])",
 	"returns":"Query",
 	"related":["queryaddrow","querysetcell","queryaddcolumn"],
-	"description":" Creates an empty query (query object).",
+	"description":"Creates a new query object. The query can be populated with data using functions queryAddRow, querySetCell, or by passing it in to the rowData argument.",
 	"params": [
-		{"name":"columnlist","description":"A string or a variable that contains one. Delimited list\n of column names, or an empty string.","required":true,"default":"","type":"String","values":[]},
-		{"name":"columntypelist","description":"Comma-delimited list specifying column data types.","required":false,"default":"","type":"String","values":["Integer","BigInt","Double","Decimal","VarChar","Binary","Bit","Time","Data"]}
-
+		{"name":"columnList","description":"A string or a variable that contains one. Delimited list\n of column names, or an empty string.","required":true,"default":"","type":"String","values":[]},
+		{"name":"columnTypeList","description":"CF7+ Comma-delimited list specifying column data types.","required":false,"default":"","type":"String","values":["Integer","BigInt","Double","Decimal","VarChar","Binary","Bit","Time","Data"]},
+		{"name":"rowData","description":"CF10+ Data to populate the query. Can be a struct (with keys matching column names), an array of structs, or an array of arrays (in same order as columnList)","required":false,"default":"","type":"any","values":[]}		
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/querynew"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querynew.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/querynew.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/querynew"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/querynew"}
@@ -22,18 +22,31 @@
 	"examples": [
 		{
 			"title":"Builds a simple query using queryNew",
-			"description":"Using Script",
+			"description":"Using Script with the queryAddRow querySetCell functions to populate the query.",
 			"code":"news = queryNew(\"id,title\", \"integer,varchar\");\nqueryAddRow(news);\nquerySetCell(news, \"id\", \"1\");\nquerySetCell(news, \"title\", \"Dewey defeats Truman\");\nqueryAddRow(news);\nquerySetCell(news, \"id\", \"2\");\nquerySetCell(news, \"title\", \"Men walk on Moon\");\nwriteDump(news);",
 			"result":""
 
 		},
 		{
 			"title":"Builds a simple query using queryNew",
-			"description":"Using CFML Tags",
+			"description":"Using CFML Tags with the queryAddRow querySetCell functions to populate the query.",
 			"code":"<cfset news = queryNew(\"id,title\", \"integer,varchar\")>\n<cfset queryAddRow(news)>\n<cfset querySetCell(news, \"id\", \"1\")>\n<cfset querySetCell(news, \"title\", \"Dewey defeats Truman\")>\n<cfset queryAddRow(news)>\n<cfset querySetCell(news, \"id\", \"2\")>\n<cfset querySetCell(news, \"title\", \"Men walk on Moon\")>\n<cfset writeDump(news)>",
 			"result":""
 
+		},
+		{
+			"title":"Creating and Populating a query using an array rowData in queryNew",
+			"description":"CF10+ Passes an array of structs to create a new query.",
+			"code":"news = queryNew(\"id,title\",\n    \"integer,varchar\",\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nwriteDump(news);",
+			"result":""
+		},
+		{
+			"title":"Creating and Populating a single row query using rowData in queryNew",
+			"description":"CF10+ If you only need one row you can pass a single struct instead of an array into the rowData argument.",
+			"code":"news = queryNew(\"id,title\",\n    \"integer,varchar\",\n    {\"id\":1,\"title\":\"Dewey defeats Truman\"});\nwriteDump(news);",
+			"result":""
 		}
+
 	]
 
 }

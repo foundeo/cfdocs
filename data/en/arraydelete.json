@@ -1,23 +1,77 @@
 {
-	"name":"arrayDelete",
-	"type":"function",
-	"syntax":"arrayDelete(array, object)",
-	"returns":"boolean",
-	"related":[],
-	"description":" Deletes specified object from given array",
-	"params": [
-		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
-		{"name":"object","description":"","required":true,"default":"","type":"Any","values":[]}
-
-	],
-	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/arraydelete"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arraydelete.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arraydelete"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraydelete"}
-	},
-	"links": [
-
-	]
-
+  "name": "arrayDelete",
+  "type": "function",
+  "syntax": "arrayDelete(array, object)",
+  "member": "someArray.delete(object)",
+  "returns": "boolean",
+  "related": [
+    "arrayDeleteAt",
+    "arrayDeleteNoCase"
+  ],
+  "description": "Deletes the first element in an array that matches the value of `object`.\nThe search is case sensitive.\nReturns `true` if the element was found and removed.\nThe array will be resized, so that the deleted element doesn't leave a gap.",
+  "params": [
+    {
+      "name": "array",
+      "description": "",
+      "required": true,
+      "default": "",
+      "type": "array",
+      "values": []
+    },
+    {
+      "name": "object",
+      "description": "A string, numeric or boolean value on which to search. Case sensitive.",
+      "required": true,
+      "default": "",
+      "type": "any",
+      "values": []
+    },
+    {
+      "name": "scope",
+      "description": "Lucee4.5+ remove one (default) or all occurances of the object",
+      "required": false,
+      "default": "one",
+      "type": "string",
+      "values": [
+        "one",
+        "all"
+      ]
+    }
+  ],
+  "engines": {
+    "coldfusion": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraydelete.html"
+    },
+    "lucee": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://docs.lucee.org/reference/functions/arraydelete.html"
+    }
+  },
+  "links": [],
+  "examples": [
+    {
+      "title": "Delete an element from an array",
+      "description": "Uses the arrayDelete function to delete an element from an array",
+      "code": "arr = ['apple', 'orange', 'pear', 'apple'];\narrayDelete(arr, 'apple');\n\nwriteDump(arr);",
+      "result": "['orange','pear','apple']",
+      "runnable": true
+    },
+    {
+      "title": "Delete an element from an array using the Array member function",
+      "description": "CF11+ Lucee4.5+ Invoking the delete function on an array is the same as running arrayDelete.",
+      "code": "arr = ['apple', 'orange', 'pear', 'apple'];\narr.delete('apple');\n\nwriteDump(arr);",
+      "result": "['orange','pear','apple']",
+      "runnable": true
+    },
+    {
+      "title": "Use of scope parameter",
+      "description": "Lucee4.5+ Use scope to remove one or all occurances of the object",
+      "code": "arr = ['apple', 'orange', 'pear', 'apple'];\narr.delete('apple', 'all');\n\nwriteDump(arr);",
+      "result": "['orange','pear']",
+      "runnable": true
+    }
+  ]
 }

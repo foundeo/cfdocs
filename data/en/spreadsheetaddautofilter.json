@@ -1,1 +1,16 @@
-{"syntax":"SpreadSheetAddAutofilter(SpreadsheetObj, autofilter)","description":"A function to add auto filters to the spreadsheet.","engines":{"coldfusion":{"minimum_version":"11","docs":"https:\/\/wikidocs.adobe.com\/wiki\/display\/coldfusionen\/SpreadSheetAddAutofilter","notes":""}},"name":"SpreadSheetAddAutofilter","links":[],"params":[{"values":[],"default":"","description":"Excel spreadsheet object","name":"spreadsheetObj","type":"Any","required":"1"},{"values":[],"default":"","description":"The Excel filter that needs to be applied to the sheet. Note that the vale should not contain spaces or invalid characters.","name":"autofilter","type":"String","required":"1"}],"returns":"void","examples":[],"type":"function","related":["SpreadsheetRead","SpreadsheetNew"]}
+{"syntax":"spreadsheetAddAutoFilter(SpreadsheetObj, autofilter)",
+"description":"A function to add auto filters to the spreadsheet.",
+"engines":{
+	"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetaddautofilter.html","notes":""}
+},
+"name":"spreadsheetAddAutoFilter",
+"links":[],
+"params":[
+	{"values":[],"default":"","description":"Excel spreadsheet object","name":"spreadsheetObj","type":"Any","required":"1"},
+	{"values":[],"default":"","description":"The Excel filter that needs to be applied to the sheet. Note that the vale should not contain spaces or invalid characters.","name":"autofilter","type":"String","required":"1"}
+],
+"returns":"void",
+"examples":[],
+"type":"function",
+"related":["spreadsheetRead","spreadsheetNew"]
+}

@@ -10,13 +10,22 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/sqr"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/sqr.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/sqr.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/sqr"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/sqr"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Square Root of 144",
+			"description":"",
+			"code":"sqr(144)",
+			"result":"12",
+			"runnable":true
+		}
 	]
 
 }

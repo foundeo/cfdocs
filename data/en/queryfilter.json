@@ -1,0 +1,29 @@
+{
+	"name": "queryFilter",
+	"type": "function",
+	"syntax": "queryFilter(query, filter [, parallel] [, maxThreads])",
+	"member": "query.filter(filter [, parallel] [, maxThreads])",
+	"returns": "query",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
+		{"name": "filter", "description": "", "required": true, "default": "", "type": "function", "values": []},
+		{"name": "parallel", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
+		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "number", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryfilter.html"}
+	},
+	"examples": [],
+	"links":[{
+		"title":"Map, Reduce and other Higher Order Functions",
+		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
+		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+	},
+	{
+		"title": "ColdFusion 11: .map() and .reduce()",
+		"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
+		"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
+	}]
+}

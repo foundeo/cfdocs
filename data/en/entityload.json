@@ -1,7 +1,7 @@
 {
-	"name":"EntityLoad",
+	"name":"entityLoad",
 	"type":"function",
-	"syntax":"EntityLoad(entityName [, filterCriteria] [, unique])\n EntityLoad(entityName [, filterCriteria] [, sortOrder] [, options])",
+	"syntax":"entityLoad(entityName [, filterCriteria] [, unique])\n entityLoad(entityName [, filterCriteria] [, sortOrder] [, options])",
 	"returns":"array|object",
 	"related":["entitynew","entityget", "entityloadbypk","entityloadbyexample", "entityreload", "ormexecutequery"],
 	"description":"Loads and returns an array of entities of the specified entityname or an entity if unique=true or if a primary key id is passed in to filterCriteria.",
@@ -14,10 +14,9 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/entityload"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entityload.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/entityload.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entityload"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/entityload"}
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entityload"}
 	},
 	"links": [
 
@@ -26,13 +25,13 @@
 		{
 			"title": "Load by PK",
 			"description": "Loads an entity by primary key value",
-			"code": "EntityLoad(\"Employee\", url.employee_id)",
+			"code": "entityLoad(\"Employee\", url.employee_id)",
 			"result": "An Employee CFC Instance"
 		},
 		{
 			"title": "Get multiple entities",
 			"description": "Returns an array of Employee instances with last name Smith",
-			"code": "EntityLoad(\"Employee\", {LastName=\"Smith\"})",
+			"code": "entityLoad(\"Employee\", {LastName=\"Smith\"})",
 			"result": "array"
 		}
 	]

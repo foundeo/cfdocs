@@ -1,0 +1,18 @@
+{
+	"name": "urlEncode",
+	"type": "function",
+	"syntax": "urlEncode(string [, charset] [, force])",
+	"returns": "string",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "charset", "description": "", "required": false, "default": "utf-8", "type": "string", "values": []},
+		{"name": "force", "description": "", "required": false, "default": "true", "type": "boolean", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/urlencode.html"}
+	},
+	"examples": [],
+	"links": []
+}

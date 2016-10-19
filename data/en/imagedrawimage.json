@@ -1,0 +1,19 @@
+{
+	"name": "imageDrawImage",
+	"type": "function",
+	"syntax": "imageDrawImage(name, image, x, y)",
+	"returns": "void",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "name", "description": "", "required": true, "default": "", "type": "any", "values": []},
+		{"name": "image", "description": "", "required": true, "default": "", "type": "any", "values": []},
+		{"name": "x", "description": "", "required": true, "default": "", "type": "number", "values": []},
+		{"name": "y", "description": "", "required": true, "default": "", "type": "number", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/imagedrawimage.html"}
+	},
+	"examples": [],
+	"links": []
+}

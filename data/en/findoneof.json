@@ -37,7 +37,7 @@
 		"coldfusion": {
 			"minimum_version": "",
 			"notes": "",
-			"docs": "http://learn.adobe.com/wiki/display/coldfusionen/findoneof"
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/findoneof.html"
 		},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/findoneof.html"},
 		"railo": {
@@ -56,19 +56,19 @@
 			"result": "7",
 			"title": "Find first instance starting from beginning of string.",
 			"description": "We're not passing a start index in this example.",
-			"code": "string_to_search = 'The rain in Spain falls mainly in the plains.';\nWriteOutput( findOneOf('in', string_to_search) );"
+			"code": "string_to_search = 'The rain in Spain falls mainly in the plains.';\nwriteOutput( findOneOf('in', string_to_search) );"
 		},
 		{
 			"result": "16",
 			"title": "Find first instance starting from the twelfth character.",
 			"description": "Let's pass in a starting index of 12. The search will start at the twelfth character, just before the word 'Spain'.",
-			"code": "string_to_search = 'The rain in Spain falls mainly in the plains.';\nWriteOutput( findOneOf('in', string_to_search, 12) );"
+			"code": "string_to_search = 'The rain in Spain falls mainly in the plains.';\nwriteOutput( findOneOf('in', string_to_search, 12) );"
 		},
 		{
 			"result": "3",
 			"title": "Example showing this function will search all characters from the 'set' argument in the 'string' argument.",
 			"description": "This function is case-sensitive so 't' does NOT match the first 'T'. It's the same for 'H' NOT matching the first 'h'. But 'e' matches the 'e' at the third position.\nSince this is the first match, this is the index that is returned.",
-			"code": "string_to_search = 'The rain in Spain falls mainly in the plains.';\nWriteOutput( findOneOf('tHe', string_to_search, 1) );"
+			"code": "string_to_search = 'The rain in Spain falls mainly in the plains.';\nwriteOutput( findOneOf('tHe', string_to_search, 1) );"
 		}
 	],
 	"links": []

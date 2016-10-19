@@ -10,7 +10,7 @@
     "documentation":"",
     "repository":{
         "type":"",
-        "url":""
+        "URL":""
     },
     "bugs":"",
     "slug":"cfdocs-site",
@@ -25,6 +25,10 @@
     "private":false,
     "engines":[
         {
+            "type":"lucee",
+            "version":">=4.5.x"
+        },
+        {
             "type":"railo",
             "version":">=4.1.x"
         },
@@ -34,12 +38,11 @@
         }
     ],
     "defaultEngine":"",
-    "defaultPort":8411,
     "projectURL":"",
     "license":[
         {
             "type":"",
-            "url":""
+            "URL":""
         }
     ],
     "contributors":[
@@ -49,10 +52,10 @@
         
     },
     "devDependencies":{
-        
+        "testbox":"2.3.0"
     },
     "installPaths":{
-        
+        "testbox":"tests/testbox"
     },
     "ignore":[
         "**/.*",
@@ -85,7 +88,7 @@
                 
             ],
             "growl":"",
-            "url":""
+            "URL":""
         }
     }
 }

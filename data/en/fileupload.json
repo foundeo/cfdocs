@@ -1,24 +1,88 @@
 {
-	"name":"fileUpload",
-	"type":"function",
-	"syntax":"fileupload(string destination,[string fileField,[string accept,[string nameConflict]]])",
-	"returns":"struct",
-	"related":["fileUploadAll"],
-	"description":"Uploads file to a directory on the server.",
-	"params": [ 
-		{"name":"destination","description":"Path of directory in which to upload the file. If not an absolute path (starting with a drive letter and a colon, or a forward or backward slash), it is relative to the ColdFusion temporary directory returned by the function getTempDirectory. If the destination you specify does not exist, ColdFusion creates a file with the specified destination name.","required":true,"default":"","type":"String","values":[]},
-		{"name":"fileField","description":"Name of form field used to select the file. Do not use number signs (#) to specify the field name.","required":false,"default":"","type":"String","values":[]},
-		{"name":"accept","description":"Limits the MIME types to accept. Comma-delimited list. For example, the following code permits JPEG and Microsoft Word file uploads:'image/jpg,application/msword' .The browser uses the filename extension to determine file type.","required":false,"default":"","type":"String","values":[]},
-		{"name":"nameConflict","description":"Action to take if file has the same name of a file in the directory.","required":false,"default":"","type":"String","values":["Error","Skip","Overwrite","MakeUnique"]}
-	],
-	"engines": {
-		"coldfusion": {"minimum_version":"9.0.1", "notes":"", "docs":"https://wikidocs.adobe.com/wiki/display/coldfusionen/FileUpload"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/fileupload.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/fileupload/"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/fileUpload"}
-	},
-	"links": [
-		
-	]
-	
+  "name": "fileUpload",
+  "type": "function",
+  "syntax": "fileUpload(string destination,[string fileField,[string accept,[string nameConflict]]])",
+  "returns": "struct",
+  "related": [
+    "fileUploadAll"
+  ],
+  "description": "Uploads file to a directory on the server.",
+  "params": [
+    {
+      "name": "destination",
+      "description": "Path of directory in which to upload the file. If not an absolute path (starting with a drive letter and a colon, or a forward or backward slash), it is relative to the ColdFusion temporary directory returned by the function getTempDirectory. If the destination you specify does not exist, ColdFusion creates a file with the specified destination name.",
+      "required": true,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "fileField",
+      "description": "Name of form field used to select the file. Do not use number signs (#) to specify the field name.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "nameConflict",
+      "description": "Action to take if file has the same name of a file in the directory.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": [
+        "error",
+        "skip",
+        "overwrite",
+        "makeunique"
+      ]
+    },
+    {
+      "name": "accept",
+      "description": "Specify a comma-delimited list of MIME types and/or file extensions to test the uploaded file agains. If the file is not of any of the types in this list, an error of type `coldfusion.tagext.io.FileUtils$InvalidUploadTypeException`is thrown.\nIf you specify file extensions, use this format: `.txt,.jpg`, not `txt`, `*.txt`, or `*.*`. You can use `*` as a wildcard to accept all files.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "strict",
+      "description": "CF10+ Defines which method is used to determine the file type to check agains the value of the `accept` attribute.\n`true:` The first few bytes of the uploaded file are used to determine the MIME type.\n`false:` The MIME type provided by the browser in the request payload is used.",
+
+      "required": false,
+      "default": "true",
+      "type": "boolean",
+      "values": [
+        true,
+        false
+      ]
+    }
+  ],
+  "engines": {
+    "coldfusion": {
+      "minimum_version": "9.0.1",
+      "notes": "",
+      "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileupload.html"
+    },
+    "lucee": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://docs.lucee.org/reference/functions/fileupload.html"
+    },
+    "openbd": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://openbd.org/manual/?/function/fileupload"
+    }
+  },
+  "examples": [
+    {
+      "title": "Upload form with strict check on MIME type",
+      "description": "",
+      "code": "<form method=\"post\" enctype=\"multipart\/form-data\">\r\n  <input type=\"file\" name=\"fileInput\">\r\n  <button type=\"submit\">Upload<\/button>\r\n<\/form>\r\n\r\n<cfscript>\r\n  if( structKeyExists( form, \"fileInput\" )) {\r\n    try {\r\n      uploadedFile = fileUpload( \".\/\", \"fileInput\", \"image\/jpeg,image\/pjpeg\", \"MakeUnique\" );\r\n\r\n      \/\/ do stuff with uploadedFile...\r\n    } catch ( coldfusion.tagext.io.FileUtils$InvalidUploadTypeException e ) {\r\n      writeOutput( \"This upload form only accepts JPEG files.\" );\r\n    }\r\n  }\r\n<\/cfscript>",
+      "result": "",
+      "runnable": false
+    }
+  ],
+  "links": []
 }

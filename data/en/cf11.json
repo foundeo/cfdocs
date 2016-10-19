@@ -1,6 +1,4 @@
 {
-	"name":"ColdFusion 11 New Tags and Functions",
-	"type":"listing",
-	"related":["ArrayMap","ArrayReduce","cf_socialplugin","cfclient","cfclientsettings","cfhtmltopdf","cfhtmltopdfitem","cfimapfilter","cfoauth","GeneratePBKDFKey","GetSafeHTML","IsSafeHTML","ListMap","ListReduce","QueryExecute","SpreadSheetAddAutoFilter","SpreadSheetAddPageBreaks","StructMap","StructReduce"],
-	"description":"A listing of new tags and functions added to ColdFusion 11 (Splendor)."
+	"related":["arrayMap","arrayReduce","cf_socialplugin","cfclient","cfclientsettings","cfhtmltopdf","cfhtmltopdfitem","cfimapfilter","cfoauth","encodeForDN","encodeForLDAP","generatePBKDFKey","getSafeHTML","isSafeHTML","listMap","listReduce","queryExecute","spreadsheetAddAutoFilter","spreadsheetAddPagebreaks","structMap","structReduce"],
+	"description":"List of tags and functions added in ColdFusion 11","type":"listing","name":"ColdFusion 11 New Functions and Tags"
 }

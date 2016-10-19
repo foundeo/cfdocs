@@ -6,17 +6,26 @@
 	"related":[],
 	"description":" Creates a ColdFusion image from a Base64 string.",
 	"params": [
-		{"name":"string","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"string","description":"a variable or Base64 string","required":true,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/imagereadbase64"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagereadbase64.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagereadbase64.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagereadbase64.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagereadbase64"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagereadbase64"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Using script syntax",
+			"description":"convert base64 representation of a small red dot to an image ",
+			"code":"imgObj = imageReadBase64('iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==');\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

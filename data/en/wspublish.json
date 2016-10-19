@@ -1,0 +1,28 @@
+{
+	"name":"WSPublish",
+	"type":"function",
+	"syntax":"WSPublish(String channel, Object message); WSPublish(channel,message [,filterCriteria]);",
+	"returns":"True if the cache region exists.",
+	"related":[],
+	"description":" Sends messages to a specific channel based on the filter criteria (which is a struct).",
+	"params": [
+		{"name":"channel","description":"Specific channel to which the server publishes its response.","required":true,"default":"","type":"","values":[]},
+        {"name":"message","description":"Response sent by the server to all clients subscribed to a specific channel.","required":true,"default":"","type":"","values":[]},
+        {"name":"filterCriteria","description":"Conditions to filter eligible clients that need to be notified for a given channel.","required":false,"default":"","type":"","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/wspublish.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "Checking to see if the region is present in the cache",
+			"code": "<cfscript> \r\n if(isDefined('form.publish')) \r\n WSPublish(#form.channel#, #form.message#); \r\n </cfscript> \r\n <cfform method='post'> \r\n <cfselect name='channel'> \r\n <option> \r\n stocks \r\n </option> \r\n <option> \r\n news \r\n </option> \r\n <option> \r\n products \r\n </option> \r\n </cfselect> \r\n Message: \r\n <input id='message' name='message' type='text'> \r\n <cfinput id='publish' name='publish' value='publish' type='submit'> \r\n </cfform> \r\n",
+			"result": ""
+		}
+	]
+
+}

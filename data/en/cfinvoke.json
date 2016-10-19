@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cfinvoke method=\"\">",
 	"returns":"",
-	"related":[],
+	"related":["cfinvokeargument","createObject","cfobject"],
 	"description":" Does either of the following:\n\n * Invokes a component method from within a CFML page or\n component.\n * Invokes a web service.\n Different attribute combonations make some attributes required\n at sometimes and not at others.",
 	"params": [
 		{"name":"component","description":"String or component object; a reference to a component, or\n component to instantiate.","required":false,"default":"","type":"String","values":[]},
@@ -18,19 +18,29 @@
 		{"name":"proxyport","description":"The port to use on The proxy server.","required":false,"default":"","type":"Numeric","values":[]},
 		{"name":"proxyuser","description":"The user ID to send to the proxy server.","required":false,"default":"","type":"String","values":[]},
 		{"name":"proxypassword","description":"The user's password on the proxy server.","required":false,"default":"","type":"String","values":[]},
-		{"name":"serviceport","description":"The port name for the web service. This value is\n case-sensitive and corresponds to the port element's\n name attribute under the service element. Specify this\n attribute if the web service contains multiple ports.\n Default: first port found in the WSDL.","required":false,"default":"","type":"String","values":[]},
-		{"name":"refreshwsdl","description":"* yes: reload the WSDL file and regenerate the artifacts used to consume the web service\n * no","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"wsdl2javaargs","description":"A string that contains a space-delimited list of arguments to pass to the WSDL2Java tool that generates Java stubs for the web services.","required":false,"default":"","type":"String","values":[]}
+		{"name":"serviceport","description":"CF7+ The port name for the web service. This value is\n case-sensitive and corresponds to the port element's\n name attribute under the service element. Specify this\n attribute if the web service contains multiple ports.\n Default: first port found in the WSDL.","required":false,"default":"","type":"String","values":[]},
+		{"name":"refreshwsdl","description":"CF8+ * yes: reload the WSDL file and regenerate the artifacts used to consume the web service\n * no","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"wsdl2javaargs","description":"CF8+ A string that contains a space-delimited list of arguments to pass to the WSDL2Java tool that generates Java stubs for the web services.","required":false,"default":"","type":"String","values":[]},
+		{"name":"wsVersion","description":"CF10+ Used to specify the version of Apache Axis (web service engine used by CF) to use. Specify 1 for Axis Version 1 or 2 for Axis 2.","required":false,"default":"","type":"String","values":["1","2"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfinvoke"},
+		"coldfusion": {"minimum_version":"6", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfinvoke.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/invoke.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfinvoke"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfinvoke"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Invoke a SOAP webservice using cfinvoke",
+			"description":"Calls a remote web service to perform an addition, uses cfinvokeargument to pass the arguments to the method.",
+			"code":"<cfinvoke webservice=\"http://soaptest.parasoft.com/calculator.wsdl\" method=\"add\" returnvariable=\"answer\">\r\n    <cfinvokeargument name=\"x\" value=\"2\">\r\n    <cfinvokeargument name=\"y\" value=\"3\">\r\n</cfinvoke>\r\n<cfoutput>#answer#</cfoutput>",
+			"result":"5.0",
+			"runnable":true
+		}
 	]
 
 }

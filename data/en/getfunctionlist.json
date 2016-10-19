@@ -4,17 +4,24 @@
 	"syntax":"getFunctionList()",
 	"returns":"Struct",
 	"related":[],
-	"description":" Displays a list of the functions that are available in\n CFML.",
-	"params": [
-	],
+	"description":"Returns a struct with keys of the names of functions that are available in CFML.",
+	"params": [],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/getfunctionlist"},
+		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getfunctionlist.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/getfunctionlist.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getfunctionlist"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getfunctionlist"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Check to see if a function exists",
+			"description":"CF11+ Uses the member function of structKeyExists.",
+			"code":"getFunctionList().keyExists(\"reMatch\")",
+			"result":"YES"
+		}
 	]
 
 }

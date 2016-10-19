@@ -3,21 +3,30 @@
 	"type":"function",
 	"syntax":"serializeJSON(var [, serializeQueryByColumns, useCustomSerializer])",
 	"returns":"String",
-	"related":[],
-	"description":" Converts ColdFusion data into a JSON (JavaScript Object Notation) representation of the data.",
+	"related":["deserializeJSON"],
+	"description":"Converts a ColdFusion variable into a JSON (JavaScript Object Notation) string.",
 	"params": [
-		{"name":"var","description":"A ColdFusion data value or variable that represents one.","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"serializeQueryByColumns","description":"A Boolean value that specifies how to serialize ColdFusion queries.","required":false,"default":"","type":"boolean","values":[]},
-		{"name":"useCustomSerializer","description":"CF11+ Use custom serializer if defined. See: https://wikidocs.adobe.com/wiki/display/coldfusionen/RESTful+Web+Services+in+ColdFusion#RESTfulWebServicesinColdFusion-Supportforpluggableserializeranddeserializer","required":true,"default":"true","type":"boolean","values":[]}
+		{"name":"var","description":"A ColdFusion variable.","required":true,"default":"","type":"Variablename","values":[]},
+		{"name":"serializeQueryByColumns","description":"A Boolean value that specifies how to serialize ColdFusion queries.","required":false,"default":"false","type":"boolean","values":[]},
+		{"name":"useCustomSerializer","description":"CF11+ Use custom serializer if defined. See: https://helpx.adobe.com/coldfusion/developing-applications/changes-in-coldfusion/restful-web-services-in-coldfusion.html","required":false,"default":"true","type":"boolean","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"CF11+ Added Application.cfc setting this.serialization.preserveCaseForStructKey which defaults to true, also added useCustomSerializer argument.", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/serializejson"},
+		"coldfusion": {"minimum_version":"8", "notes":"CF11+ Added Application.cfc setting this.serialization.preserveCaseForStructKey which defaults to true, also added useCustomSerializer argument.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/serializejson.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/serializejson.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/serializejson"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/serializejson"}
 	},
 	"links": [
-
+		{
+			"title":"JSON Overview",
+			"description":"Overview of the JSON spec.",
+			"url":"http://www.json.org/"
+		},
+		{
+			"title":"JSONUtil.cfc",
+			"description":"A CFC that provides JSON serialization and deserializtion. It is written in CFML so it works on versions prior to CF8. It may be useful if you are experiencing automatic type conversion issues with the builtin serializeJSON function.",
+			"url":"https://github.com/CFCommunity/jsonutil"
+		}
 	],
 	"examples": [
 		{
@@ -31,6 +40,18 @@
 			"description":"Same as above but they variable names are case sensitive by quoting them.",
 			"code":"person = {\"name\"=\"Pete Freitag\", \"company\"=\"Foundeo\"};\nwriteOutput( serializeJSON(person) );",
 			"result": "{\"company\":\"Foundeo\",\"name\":\"Pete Freitag\"}"
+		},
+		{
+			"title": "ACF Possible Issues",
+			"description": "Adobe ColdFusion may incorrectly serializes some strings if they can be automatically converted into other types, like numbers or booleans. One workaround is to use a CFC with cfproperty to specify types. Another workaround is to prepend Chr(2) to the value and it will be forced to a string, however that is an unofficial / undocumented workaround.",
+			"code":"person = { \"phone\"=\"123456789\", \"firstname\"=\"no\",\"lastname\"=\"yes\" };\nwriteOutput( serializeJson(person) );",
+			"result": "{\"phone\":123456789,\"firstname\":false,\"lastname\":true}"
+		},
+		{
+			"title":"Using setMetadata to force types",
+			"description":"As of CF2016.0.2+ (update 2) you can call `setMetadata()` as a member function on a struct to force a type",
+			"code":"myStruct = {\"zip\"=\"00123\"};\nmyStruct.setMetadata( { \"zip\": \"String\" } );\nwriteOutput(serializeJSON(myStruct));",
+			"result": "{\"zip\":\"00123\"}"
 		}
 	]
 

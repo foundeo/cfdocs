@@ -11,13 +11,43 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/right"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/right.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/right.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/right"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/right"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Using right() on a string",
+			"description": "In this example we'll use right() to return part of a string.",
+			"code": "writeOutput( right( 'The quick brown fox jumped over the lazy dog', 8 ) );",
+			"result": "lazy dog",
+			"runnable":true
+		},
+		{
+			"title": "Using right() in a function",
+			"description": "In this example we'll use right() in a function to help us to capitalize the last letter in a string.",
+			"code": "public string function capitalizeLast( required string text ) {\r\n\treturn  left( arguments.text, len( arguments.text ) - 1 ) & uCase( right( arguments.text, 1 ) );\r\n}",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title": "Using right() to test values",
+			"description": "In this example we'll use right() to test the last five characters of a request context variable.",
+			"code": "if( listFindNoCase( 'super,great,coder,rulez', right( rc.answer, 5 ) ) ) {\r\n\twriteOutput( 'You are an awesome developer!' );\r\n}",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title": "Using right() as a member function",
+			"description": "CF11+ Lucee4.5+ In this example we'll use right() as a member function inside a function to help us to capitalize the last letter in a string.",
+			"code": "public string function capitalizeLast( required string text ) {\r\n\treturn arguments.text.left( arguments.text.len() - 1 ) & arguments.text.right( 1 ).ucase();\r\n}",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

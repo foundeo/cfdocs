@@ -3,21 +3,37 @@
 	"type":"function",
 	"syntax":"spreadsheetNew([sheetname] [, xmlFormat])",
 	"returns":"",
-	"related":[],
+	"related":["spreadsheetAddRow","spreadsheetRead","spreadsheetformatCell","spreadsheetWrite"],
 	"description":" Creates a ColdFusion spreadsheet object, which represents a single sheet of an Excel document.",
 	"params": [
-		{"name":"sheetname","description":"No Help Available","required":false,"default":"","type":"String","values":[]},
-		{"name":"xmlFormat","description":"No Help Available","required":false,"default":"","type":"boolean","values":[true,false]}
+		{"name":"sheetname","description":"String value to be used as the sheet name.","required":false,"default":"","type":"String","values":[]},
+		{"name":"xmlFormat","description":"Boolean value to indicate the use of Excels xlsx format.","required":false,"default":"false","type":"boolean","values":[true,false]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/spreadsheetnew"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetnew.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/spreadsheetnew.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetnew"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetnew"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Create xlsx sheet",
+			"description":"xlsx files with and with out sheet name",
+			"code":"xlsxSheet1 = spreadsheetNew(\"xlsx sheet\",true);\r\nxlsxSheet2 = spreadsheetNew(true);\r\nwriteDump(xlsxSheet1);\r\nwriteDump(xlsxSheet2);",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Create xls sheet",
+			"description":"xls files with and with out sheet name",
+			"code":"xlsSheet1 = spreadsheetNew(\"xls sheet\");\r\nxlsSheet2 = spreadsheetNew();\r\nwriteDump(xlsSheet1);\r\nwriteDump(xlsSheet2);",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

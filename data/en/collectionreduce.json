@@ -1,0 +1,18 @@
+{
+	"name": "collectionReduce",
+	"type": "function",
+	"syntax": "collectionReduce(collection, closure [, initalValue])",
+	"returns": "any",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "collection", "description": "", "required": true, "default": "", "type": "object", "values": []},
+		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
+		{"name": "initalValue", "description": "", "required": false, "default": "", "type": "object", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/collectionreduce.html"}
+	},
+	"examples": [],
+	"links": []
+}

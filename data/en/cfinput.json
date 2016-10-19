@@ -20,7 +20,7 @@
 		{"name":"required","description":"* yes: the field must contain data.\n * no: allows an empty field.","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"mask","description":"A mask pattern that controls the character pattern that\n users can enter, or that the form sends to ColdFusion.\n In HTML and Flash for type=text use:\n - A = [A-Za-z]\n - X = [A-Za-z0-9]\n - 9 = [0-9]\n - ? = Any character\n - all other = the literal character\n In Flash for type=datefield use:\n - D = day; can use 0-2 mask characters.\n - M = month; can use 0-4 mask characters.\n - Y = year; can use 0, 2, or 4 characters.\n - E = day in week; can use 0-4 characters.","required":false,"default":"","type":"String","values":[]},
 		{"name":"validate","description":"date: verifies format mm\/dd\/yy.\n eurodate: verifies date format dd\/mm\/yyyy.\n time: verifies time format hh:mm:ss.\n float: verifies floating point format.\n integer: verifies integer format.\n telephone: verifies telephone format ###-###-####. The\n separator can be a blank. Area code and exchange must\n begin with digit 1 - 9.\n zipcode: verifies, in U.S. formats only, 5- or 9-digit\n format #####-####. The separator can be a blank.\n creditcard: strips blanks and dashes; verifies number using\n mod10 algorithm. Number must have 13-16 digits.\n social_security_number: verifies format ###-##-####. The\n separator can be a blank.\n regular_expression: matches input against pattern\n attribute.","required":false,"default":"","type":"String","values":["date","eurodate","time","float","integer","telephone","zipcode","creditcard","social_security_number","regular_expression"]},
-		{"name":"validateat","description":"How to do the validation; one or more of the following:\n onSubmit, onServer or onBlur.\n onBlur and onSubmit are identical in Flash forms. For\n multiple values, use a comma-delimited list.\n Default: onSubmit","required":false,"default":"onSubmit","type":"String","values":["onSubmit","onServer","onBlur"]},
+		{"name":"validateat","description":"How to do the validation; one or more of the following:\n onSubmit, onServer or onBlur.\n onBlur and onSubmit are identical in Flash forms. For\n multiple values, use a comma-delimited list.\n Not supported on Railo/Lucee.","required":false,"default":"onSubmit","type":"String","values":["onSubmit","onServer","onBlur"]},
 		{"name":"message","description":"Message text to display if validation fails","required":false,"default":"","type":"String","values":[]},
 		{"name":"range","description":"Minimum and maximum value range, separated by a comma. If\n type = \"text\" or \"password\", this applies only to numeric\n data.","required":false,"default":"","type":"String","values":[]},
 		{"name":"maxlength","description":"Maximum length of text entered, if type=text or password.","required":false,"default":"","type":"Numeric","values":[]},
@@ -58,8 +58,8 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfinput"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/input.html"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfinput.html"},
+		"lucee": {"minimum_version":"", "notes":"Does not suppport `validateAt` attribute.", "docs":"http://docs.lucee.org/reference/tags/input.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfinput"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfinput"}
 	},

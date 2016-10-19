@@ -1,7 +1,7 @@
 {
-	"name":"xmlFormat",
+	"name":"XMLFormat",
 	"type":"function",
-	"syntax":"xmlFormat(String [, escapeNewSet])",
+	"syntax":"XMLFormat(String [, escapeNewSet])",
 	"returns":"String",
 	"related":[],
 	"description":" Escapes special XML characters in a string, so that the\n string is safe to use with XML.",
@@ -11,13 +11,29 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/xmlformat"},
+		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlformat.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/xmlformat.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/xmlformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/xmlformat"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Basic XMLFormat() usage",
+			"description":"In this example we demonstrate passing the invalid characters < and & into the XMLFormat() function to make them XML safe.",
+			"code":"writeOutput( XMLFormat( '<node>Good &amp; Juicy</node>') );",
+			"result":"&lt;node&gt;Good &amp;amp; Juicy&lt;/node&gt;",
+			"runnable":true
+		},
+		{
+			"title":"Advanced XMLFormat() usage",
+			"description":"In this example we demonstrate parsing the cfdocs.org index page into XMLFormat() to make it safe for XML storage.",
+			"code":"httpService = new http();\r\nhttpService.setMethod( 'get' );\r\nhttpService.setCharset( 'utf-8' );\r\nhttpService.setUrl( 'http://cfdocs.org/' );\r\n\r\nxmlDoc = '<node>' & XMLFormat( httpService.send().getPrefix().fileContent ) & '</node>';\r\n\r\nwriteOutput( xmlDoc );\r\n// NOTE: View results frame source in TryCF to see actual encoding",
+			"result":"<node> [parsed HTML document] </node>",
+			"runnable":true
+		}
 	]
 
 }

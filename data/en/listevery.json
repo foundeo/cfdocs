@@ -1,0 +1,27 @@
+{
+	"name": "listEvery",
+	"type": "function",
+	"syntax": "listEvery(list, closure [, delimiter] [, includeEmptyFields] [, multiCharacterDelimiter] [, parallel] [, maxThreads])",
+	"member": "list.listEvery(closure [, delimiter] [, includeEmptyFields] [, multiCharacterDelimiter] [, parallel] [, maxThreads])",
+	"returns": "boolean",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "list", "description": "", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
+		{"name": "delimiter", "description": "", "required": false, "default": ",", "type": "string", "values": []},
+		{"name": "includeEmptyFields", "description": "", "required": false, "default": "false", "type": "boolean", "values": []},
+		{"name": "multiCharacterDelimiter", "description": "", "required": false, "default": "true", "type": "boolean", "values": []},
+		{"name": "parallel", "description": "", "required": false, "default": "false", "type": "boolean", "values": []},
+		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "number", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/listevery.html"}
+	},
+	"examples": [],
+	"links": [{
+		"title":"Map, Reduce and other Higher Order Functions",
+		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
+		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+	}]
+}

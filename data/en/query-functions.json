@@ -1,6 +1,6 @@
 {
 	"name":"Query Manipulation Functions",
 	"type":"listing",
-	"related":["entitytoquery","isquery","ormexecutequery","queryaddcolumn","queryaddrow","queryconvertforgrid","querynew","querysetcell"],
+	"related":["entityToQuery","isQuery","ORMExecuteQuery","query","queryAddColumn","queryAddRow","queryColumnArray","queryColumnCount","queryColumnData","queryColumnExists","queryColumnList","queryConvertForGrid","queryCurrentRow","queryDeleteColumn","queryDeleteRow","queryEach","queryEvery","queryFilter","queryGetCell","queryMap","queryNew","queryRecordCount","queryReduce","queryRowData","querySetCell","querySlice","querySome","querySort","quotedValueList","valueList"],
 	"description":"A listing of CFML Query Manipulation Functions."
 }

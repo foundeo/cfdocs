@@ -11,13 +11,20 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/listlast"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listlast.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/listlast.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listlast"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listlast"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+				"title":"Simple listLast Example",
+				"description":"A very basic listLast example",
+				"code" : "listLast(\"one,two,three,four\");",
+				"result":"four"
+		}
 	]
-
 }

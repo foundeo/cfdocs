@@ -1,7 +1,7 @@
 {
-	"name":"ormEvictQueries",
+	"name":"ORMEvictQueries",
 	"type":"function",
-	"syntax":"ormEvictQueries([cacheName])",
+	"syntax":"ORMEvictQueries([cacheName])",
 	"returns":"",
 	"related":[],
 	"description":" This will remove all the queries from the named query cache. \nIf name is not specified, all quiries from default cache will be removed.\normEvictQueries([cacheName])",
@@ -10,10 +10,9 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/ormevictqueries"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormevictqueries.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/ormevictqueries.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ormevictqueries"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ormevictqueries"}
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ormevictqueries"}
 	},
 	"links": [
 

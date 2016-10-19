@@ -28,46 +28,51 @@
 		{"name":"name","description":"Query name of directory listing.","required":false,"default":"","type":"String","values":[]},
 		{"name":"result","description":"Specifies a name for the structure in which cfftp\n stores the returnValue variable. If set, this value\n replaces cfftp as the prefix to use when accessing\n returnVariable.","required":false,"default":"","type":"String","values":[]},
 		{"name":"attributes","description":"Attributes of the current element: normal or Directory.","required":false,"default":"","type":"String","values":[]},
-		{"name":"passphrase","description":"Used when key is specified. Because private keys are stored in an encrypted form on the client host, the user must supply a passphrase to enable generating the signature.","required":false,"default":"","type":"String","values":[]},
+		{"name":"passphrase","description":"CF8+ Used when `key` is specified. Because private keys are stored in an encrypted form on the client host, the user must supply a passphrase to enable generating the signature.","required":false,"default":"","type":"String","values":[]},
 		{"name":"buffersize","description":"Buffer size in bytes.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"secure","description":"* yes: enables secure FTP\n * no","required":false,"default":false,"type":"String","values":[true,false]},
+		{"name":"secure","description":"CF8+ `yes`: enables secure FTP","required":false,"default":false,"type":"String","values":[true,false]},
 		{"name":"asciiextensionlist","description":"Delimited list of file extensions that force ASCII\n transfer mode, if transferMode = \"auto\".","required":false,"default":"","type":"String","values":[]},
-		{"name":"key","description":"Public-key-based authentication. Refers to the absolute path to the private key of the user. \nPossession of a private key provides authentication by sending a signature created with a private key. \nThe server must ensure that the key is a valid authentication for the user and that the signature is valid. \nBoth must be valid to accept the authentication.","required":false,"default":"","type":"String","values":[]},
+		{"name":"key","description":"CF8+ Public-key-based authentication. Refers to the absolute path to the private key of the user. \nPossession of a private key provides authentication by sending a signature created with a private key. \nThe server must ensure that the key is a valid authentication for the user and that the signature is valid. \nBoth must be valid to accept the authentication.","required":false,"default":"","type":"String","values":[]},
 		{"name":"actionparam","description":"Used only when action is quote, site, or acct. Specifies the command when action is quote or site; specifies account information when action is acct.","required":false,"default":"","type":"String","values":[]},
-		{"name":"fingerprint","description":"Fingerprint of the host key in the form ssh-dss.ssh-rsa, which is a 16-byte unique identifier for the server attribute that you specify.","required":false,"default":"","type":"String","values":[]}
+		{"name":"fingerprint","description":"CF8+ Fingerprint of the host key in the form ssh-dss.ssh-rsa, which is a 16-byte unique identifier for the server attribute that you specify.","required":false,"default":"","type":"String","values":[]},
+		{"name":"systemtype","description":"CF11.0.3+ Specifies how to parse file list response, specify `WINDOWS` or `UNIX` or a class which implements `org.apache.commons.net.ftp.FTPFileEntryParser`","required":false,"default":"","type":"String","values":["WINDOWS","UNIX"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfftp"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/ftp.html"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-f/cfftp.html"},
+		"lucee": {"minimum_version":"", "notes":"Lucee does not support authentication by public key.", "docs":"http://docs.lucee.org/reference/tags/ftp.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfftp"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfftp"}
 	},
 	"links": [
-
+		{
+			"title":"Use of systemtype attribute",
+			"description": "Describes and documents the systemtype attribute which was added in CF11 update 3.",
+			"url":"http://cfpavankumar.blogspot.ca/2015/07/cfftp-listdir-fails-when-syst-command.html"
+		}
 	],
 	"examples": [
-	        {
-	            "title": "Script Syntax",
-	            "description": "",
-	            "code": "// Create FTP service and set attributes for connection \r\n ftpService = new ftp(); \r\n ftpService.setConnection(\"myConn\"); \r\n ftpService.setUsername(\"myUName\"); \r\n ftpService.setPassword(\"myPW\"); \r\n ftpService.setServer(\"ftp.server.com\"); \r\n ftpService.setStopOnError(true); \r\n // Open connection \r\n ftpService.open(); \r\n // Get list of dir \r\n fileList = ftpService.listdir(directory = \"/ \", stopOnError = true).getResult(); \r\n // Close connection \r\n ftpService.close();",
-	            "result": ""
-	        },
-	        {
-			"title": "Tag Syntax",
-			"description": "Open Connection",
+        {
+            "title": "Script Syntax",
+            "description": "CF9+ using the CFIDE script components",
+            "code": "// Create FTP service and set attributes for connection \r\n ftpService = new ftp(); \r\n ftpService.setConnection(\"myConn\"); \r\n ftpService.setUsername(\"myUName\"); \r\n ftpService.setPassword(\"myPW\"); \r\n ftpService.setServer(\"ftp.server.com\"); \r\n ftpService.setStopOnError(true); \r\n // Open connection \r\n ftpService.open(); \r\n // Get list of dir \r\n fileList = ftpService.listdir(directory = \"/ \", stopOnError = true).getResult(); \r\n // Close connection \r\n ftpService.close();",
+            "result": ""
+        },
+	    {
+			"title": "Open Connection",
+			"description": "",
 			"code": "<cfftp action=\"open\" connection=\"myConn\" username=\"myUName\" password=\"myPW\" server=\"ftp.server.com\" stopOnError=\"true\">",
 			"result": ""
 		},
 		{
-			"title": "Tag Syntax",
-			"description": "Get List of Directories",
+			"title": "Get List of Directories",
+			"description": "",
 			"code": "<cfftp action=\"listdir\" connection=\"myConn\" name=\"filesList\" directory=\"/\" stopOnError=\"true\">",
 			"result": ""
 		},
 		{
-			"title": "Tag Syntax",
-			"description": "Close Connection",
+			"title": "Close Connection",
+			"description": "",
 			"code": "<cfftp action=\"close\" connection=\"myConn\" stopOnError=\"true\">",
 			"result": ""
 		}

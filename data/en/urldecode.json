@@ -1,23 +1,53 @@
 {
-	"name":"urlDecode",
+	"name":"URLDecode",
 	"type":"function",
-	"syntax":"urlDecode(urlencodedstring [, charset])",
+	"syntax":"URLDecode(urlencodedstring [, charset])",
 	"returns":"String",
 	"related":[],
-	"description":" Decodes a URL-encoded string.",
+	"description":"Decodes a URL-encoded string.",
 	"params": [
 		{"name":"urlencodedstring","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"charset","description":"The character encoding in which the string is encoded.","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/urldecode"},
+		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/urldecode.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/urldecode.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/urldecode"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/urldecode"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Simple URLDecode() example",
+			"description":"Shows how it takes an input of: %21 and returns: !",
+			"code":"URLDecode( \"%21\")",
+			"result":"!",
+			"runnable":true
+		},
+		{
+			"title":"Basic URLDecode() usage",
+			"description":"In this example we demonstrate taking a URL encoded message passed on the request context and displaying it decoded.",
+			"code":"if( len( rc.msg ) ) {\r\n\twriteOutput( encodeForHTML( URLDecode( rc.msg ) ) );\r\n}",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"URLDecode() in obfuscation",
+			"description":"In this example we demonstrate url encoding a password before it is encrypted, and then decoding it after it is decrypted.",
+			"code":"pwd = URLEncodedFormat( '$18$f^$XlTe41' );\r\nwriteOutput( pwd & ' : ' );\r\npwd = encrypt( pwd, '7Z8of/gKWpqsx/v6O5yHRKanrXsp93B4xIHV97zf88Q=', 'BLOWFISH/CBC/PKCS5Padding', 'HEX' );\r\nwriteOutput( pwd & ' : ' );\r\ndecpwd = decrypt( pwd, '7Z8of/gKWpqsx/v6O5yHRKanrXsp93B4xIHV97zf88Q=', 'BLOWFISH/CBC/PKCS5Padding', 'HEX' );\r\nwriteOutput( decpwd & ' : ' );\r\ndecpwd = URLDecode( decpwd );\r\nwriteOutput( decpwd );",
+			"result":"%2418%24f%5E%24XlTe41 : <some encrypted value> : %2418%24f%5E%24XlTe41 : $18$f^$XlTe41",
+			"runnable":true
+		},
+		{
+			"title":"URLDecode() usage as a member function",
+			"description":"In this example we demonstrate taking a URL encoded message passed on the request context and displaying it decoded using the URLDecode() member function.",
+			"code":"if( len( rc.msg ) ) {\r\n\twriteOutput( encodeForHTML( rc.msg.urlDecode() ) );\r\n}",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }

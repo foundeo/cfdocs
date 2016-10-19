@@ -1,6 +1,6 @@
 {
 	"name":"Array Functions",
 	"type":"listing",
-	"related":["arrayappend","arrayavg","arrayclear","arraycontains","arraydelete","arraydeleteat","arrayfind","arrayfindnocase","arrayinsertat","arrayisdefined","arrayisempty","arraylen","arraymap","arraymax","arraymin","arraynew","arrayprepend","arrayreduce","arrayresize","arrayset","arraysort","arraysum","arrayswap","arraytolist","isarray","listtoarray","structkeyarray"],
+	"related":["arrayAppend","arrayAvg","arrayClear","arrayContains","arrayContainsNoCase","arrayDelete","arrayDeleteAt","arrayEach","arrayEvery","arrayFilter","arrayFind","arrayFindAll","arrayFindAllNoCase","arrayFindNoCase","arrayFirst","arrayIndexExists","arrayInsertAt","arrayIsDefined","arrayIsEmpty","arrayLast","arrayLen","arrayMap","arrayMax","arrayMedian","arrayMerge","arrayMid","arrayMin","arrayNew","arrayPrepend","arrayReduce","arrayResize","arrayReverse","arraySet","arraySlice","arraySome","arraySort","arraySum","arraySwap","arrayToList","arrayToStruct","isArray","javacast","listToArray","queryColumnArray","structKeyArray","valueArray"],
 	"description":"A listing of CFML Array Functions."
 }

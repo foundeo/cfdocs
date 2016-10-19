@@ -27,7 +27,7 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfquery"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfquery.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/query.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfquery"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfquery"}
@@ -35,7 +35,7 @@
 	"links": [
 		{
 			"title":"Adobe Query of Queries User Guide",
-			"url":"https://wikidocs.adobe.com/wiki/display/coldfusionen/Query+of+Queries+user+guide",
+			"url":"https://helpx.adobe.com/coldfusion/developing-applications/accessing-and-using-data/using-query-of-queries/query-of-queries-user-guide.html",
 			"description":"From the Adobe documentation, useful to see what SQL statements are supported."
 		}
 	],
@@ -49,7 +49,7 @@
 		{
 			"title": "Script Syntax using QueryExecute",
 			"description": "Also see the Tags Implemented as Components section for another method of using <cfquery> in script.",
-			"code": "myQuery = queryExecute(\r\n \"SELECT myCol1, myCol2 FROM myTable \r\n  WHERE myCol1=? \r\n  ORDER BY myCol1 ASC \", \r\n  {myid: 5}, \r\n  {datasource = \"myDSN\"} \r\n );",
+			"code": "myQuery = queryExecute(\r\n \"SELECT myCol1, myCol2 FROM myTable \r\n  WHERE myCol1 = :myid \r\n  ORDER BY myCol1 ASC \", \r\n  {myid: 5}, \r\n  {datasource = \"myDSN\"} \r\n );",
 			"result": ""
 		},
 		{
@@ -57,7 +57,15 @@
 			"description":"A dummy query is first created from scratch using queryNew, then sorted. A query of query is performed by specifying dbtype=\"query\" and then using a query object variable name as in the FROM statement.",
 			"code":"<!--- create a dummy query using queryNew --->\n<cfset news = queryNew(\"id,title\", \"integer,varchar\")>\n<cfset queryAddRow(news)>\n<cfset querySetCell(news, \"id\", \"1\")>\n<cfset querySetCell(news, \"title\", \"Dewey defeats Truman\")>\n<cfset queryAddRow(news)>\n<cfset querySetCell(news, \"id\", \"2\")>\n<cfset querySetCell(news, \"title\", \"Men walk on Moon\")>\n<cfset writeDump(news)>\n\n<!--- run QofQ (query of query) --->\n<cfquery name=\"sortedNews\" dbtype=\"query\">\n    SELECT id, title FROM news\n    ORDER BY title DESC\n</cfquery>\n<cfset writeDump(sortedNews)>",
 			"result":""
+		},
+		{
+			"title": "Script Syntax using new Query()",
+			"description": "This syntax was implemented by script-based components in CF 9 & 10. It is superceeded by queryExecute() in CF11.",
+			"code": "queryObj = new Query(\r\n name=\"qryDemo\",\r\n datasource=\"mydatasourcename\",\r\n sql = \"SELECT col1, col2\r\n FROM myTable\r\n WHERE id=:id\"\r\n); \r\nqueryObj.addParam(name=\"id\",value=arguments.id, cfsqltype=\"cf_sql_integer\");\r\nresultset=queryObj.execute().getResult();",
+			"result": ""
 		}
+
+
 	]
 
 

@@ -10,16 +10,26 @@
 		{"name":"key","description":"The secret key.","required":true,"default":"","type":"String","values":[]},
 		{"name":"algorithm","description":"An algorithm supported by the java crypto provider, for example HMACSHA256", "required":false,"default":"HMACMD5","type":"String","values":["HMACMD5","HMACSHA1","HMACSHA256","HMACSHA384","HMACSHA512"]},
 		{"name":"encoding","description":"The character encoding to use when converting the message to bytes. Must be a character encoding name recognized by the Java runtime.","required":false,"default":"utf-8","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
-
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://wikidocs.adobe.com/wiki/display/coldfusionen/hmac"},
+		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/hmac.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/hmac.html"},
-		"railo": {"minimum_version":"4.1", "notes":"", "docs":"http://railodocs.org/index.cfm/function/hmac"},
 		"openbd": {"minimum_version":"3.1", "notes":"", "docs":"http://openbd.org/manual/?/function/hmac"}
 	},
 	"links": [
-		
+		{
+			"title":"How and when do I use a HMAC?",
+			"description":"A detailed answer from the Security StackExcange.",
+			"url":"http://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301"
+		}
+	],
+	"examples": [
+		{
+			"title":"Example HMAC Using HMACSHA256",
+			"description":"",
+			"code":"hmac(\"msg\", \"secret\", \"HMACSHA256\")",
+			"result":"FE4F9C418F683F034F6AF90D1DD5B86AC0355DD96332C59CC74598D0736107F6"
+		}
 	]
 	
 }

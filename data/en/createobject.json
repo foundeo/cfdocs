@@ -1,12 +1,12 @@
 {
 	"name":"createObject",
 	"type":"function",
-	"syntax":"createObject(type, context, class, locale, servername, component_name, urltowsdl [, portname])",
+	"syntax":"createObject(type, class)",
 	"returns":"Object",
-	"related":[],
-	"description":" The CreateObject function takes different arguments depending on the value of the first argument:\n\n CreateObject('com', class, context, serverName)\n CreateObject('component', component-name)\n CreateObject('corba', context, class, locale)\n CreateObject('java', class)\n CreateObject('webservice', urltowsdl, [, portname])",
+	"related":["cfobject","cfinvoke"],
+	"description":"The createObject function takes different arguments depending on the value of the type argument:\n\n createObject('component', cfcName)\n createObject('java', class)\n createObject('webservice', urltowsdl, [, portname])\n createObject('.NET', class, assembly [, server, port, protocol, secure])\n createObject('com', class, context, serverName)",
 	"params": [
-		{"name":"type","description":"","required":true,"default":"","type":"String","values":["component","corba","com","java","webservice"]},
+		{"name":"type","description":"The type of ","required":true,"default":"","type":"String","values":["component","corba","com","java","webservice",".NET","dotnet"]},
 		{"name":"context","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"class","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"locale","description":"","required":true,"default":"","type":"String","values":[]},
@@ -17,13 +17,27 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/createobject"},
+		"coldfusion": {"minimum_version":"", "notes":"CORBA support DEPRECATED in CF11+", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateObject.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/createobject.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createobject"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createobject"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Create a CFC / Component Instance",
+			"description": "createObject Component",
+			"code": "<cfscript> \r\n tellTimeCFC=createObject(\"component\",\"appResources.components.tellTime\"); \r\n tellTimeCFC.getLocalTime();\r\n </cfscript>       ",
+			"result": ""
+		},
+        {
+			"title": "Create a SOAP WebService Instance",
+			"description": "createObject WebService",
+			"code": "<cfscript> \r\n ws = createObject(\"webservice\", \"http://www.xmethods.net/sd/2001/TemperatureService.wsdl\"); \r\n xlatstring = ws.getTemp(zipcode = \"55987\"); \r\n writeOutput(\"The temperature at 55987 is \" & xlatstring); \r\n </cfscript>      ",
+			"result": ""
+		}
 	]
 
 }

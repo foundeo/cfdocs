@@ -15,7 +15,7 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"CF7+ Added support for additional algorithms", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/encrypt"},
+		"coldfusion": {"minimum_version":"", "notes":"CF7+ Added support for additional algorithms", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/encrypt.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/encrypt.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/encrypt"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/encrypt"}
@@ -30,9 +30,16 @@
 	"examples": [
 		{
 			"title":"Encrypt using AES Encryption",
-			"description":"The key must be generated using the GenerateSecretKey(\"AES\") function.",
-			"code":"Encrypt(\"top secret\", \"WTq8zYcZfaWVvMncigHqwQ==\", \"AES\", \"Base64\")",
+			"description":"The key must be generated using the generateSecretKey(\"AES\") function.",
+			"code":"encrypt(\"top secret\", \"WTq8zYcZfaWVvMncigHqwQ==\", \"AES\", \"Base64\")",
 			"result":"keciULin7bxOWvN/BOarWw=="
+		},
+		{
+			"title":"Encrypt using Cipher Block Chaining (CBC) mode",
+			"description":"By default encrypt() uses the Electronic Code Book (ECB) mode for encryption.\r\n For increased security you should specify the mode and padding to use. In this example we will use CBC mode and PKCS5Padding.",
+			"code":"msg = 'data to encrypt';\r\nkey = generateSecretKey('AES');\r\nencMsg = encrypt( msg, key, 'AES/CBC/PKCS5Padding', 'HEX');\r\nwriteOutput( encMsg );",
+			"result":"",
+			"runnable":true
 		}
 	]
 

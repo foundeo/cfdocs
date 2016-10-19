@@ -1,7 +1,7 @@
 {
-	"name":"lsIsNumeric",
+	"name":"LSIsNumeric",
 	"type":"function",
-	"syntax":"lsIsNumeric(String)",
+	"syntax":"LSIsNumeric(String)",
 	"returns":"boolean",
 	"related":[],
 	"description":" Determines whether a string is a valid representation of a\n number in the current locale.",
@@ -10,7 +10,7 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/lsisnumeric"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/lsisnumeric.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/lsisnumeric.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsisnumeric"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsisnumeric"}

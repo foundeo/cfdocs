@@ -1,23 +1,62 @@
 {
-	"name":"arrayDeleteAt",
-	"type":"function",
-	"syntax":"arrayDeleteAt(array, position)",
-	"returns":"boolean",
-	"related":[],
-	"description":" Deletes an element from an array and resizes the array\n so that the deleted element doesn't leave a gap.",
-	"params": [
-		{"name":"array","description":"The array that the element will be deleted from.","required":true,"default":"","type":"Array","values":[]},
-		{"name":"position","description":"The numeric position of the element. Remember that\n ColdFusion arrays start at 1 not 0.","required":true,"default":"","type":"Numeric","values":[]}
-
-	],
-	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/arraydeleteat"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arraydeleteat.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arraydeleteat"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraydeleteat"}
-	},
-	"links": [
-
-	]
-
+  "name": "arrayDeleteAt",
+  "type": "function",
+  "syntax": "arrayDeleteAt(array, position)",
+  "member": "someArray.deleteAt(position)",
+  "returns": "boolean",
+  "related": [
+    "arrayDelete",
+    "arrayDeleteNoCase"
+  ],
+  "description": "Deletes the element at `position` from an array\nThe array will be resized, so that the deleted element doesn't leave a gap.",
+  "params": [
+    {
+      "name": "array",
+      "description": "The array that the element will be deleted from.",
+      "required": true,
+      "default": "",
+      "type": "array",
+      "values": []
+    },
+    {
+      "name": "position",
+      "description": "The numeric position of the element. Remember that ColdFusion arrays start at 1 not 0.",
+      "required": true,
+      "default": "",
+      "type": "numeric",
+      "values": []
+    }
+  ],
+  "engines": {
+    "coldfusion": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraydeleteat.html"
+    },
+    "lucee": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://docs.lucee.org/reference/functions/arraydeleteat.html"
+    },
+    "openbd": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://openbd.org/manual/?/function/arraydeleteat"
+    }
+  },
+  "links": [],
+  "examples": [
+    {
+      "title": "Simple example for arrayDeleteAt function",
+      "description": "Uses the arrayDeleteAt function to delete the value in specific position",
+      "code": "someArray = [\"Red\", \"White\", \"Green\", \"Blue\", \"Pink\"];\narrayDeleteAt(someArray, 3);\nwriteOutput(serializeJSON(someArray));",
+      "result": "[\"Red\", \"White\", \"Blue\", \"Pink\"]"
+    },
+    {
+      "title": "Simple example with member function",
+      "description": "CF11+ Lucee4.5+ Uses the member function is the same as running arrayDeleteAt.",
+      "code": "someArray = [\"Red\", \"White\", \"Green\", \"Blue\", \"Pink\"];\nsomeArray.DeleteAt(2);\nwriteOutput(serializeJSON(someArray));",
+      "result": "[\"Red\", \"Green\", \"Blue\", \"Pink\"]"
+    }
+  ]
 }

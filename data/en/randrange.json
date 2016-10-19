@@ -4,21 +4,51 @@
 	"syntax":"randRange(number1, number2 [, algorithm])",
 	"returns":"Numeric",
 	"related":[],
-	"description":" Generates a random integer between two specified numbers.\n Requests for random integers that are greater than 100,000,000\n result in non-random numbers, to prevent overflow during\n internal computations.",
+	"description":"Generates a random integer between two specified numbers.\n Requests for random integers that are greater than 100,000,000\n result in non-random numbers, to prevent overflow during\n internal computations.",
 	"params": [
 		{"name":"number1","description":"","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"number2","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"algorithm","description":"The algorithm to use to generated the random number.","required":false,"default":"CFMX_COMPAT","type":"String","values":["CFMX_COMPAT","SHA1PRNG","IBMSecureRandom"]}
+		{"name":"algorithm","description":"CF7+ The algorithm to use to generated the random number.","required":false,"default":"CFMX_COMPAT","type":"String","values":["CFMX_COMPAT","SHA1PRNG","IBMSecureRandom","NativePRNG","NativePRNGBlocking","NativePRNGNonBlocking"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/randrange"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/randrange.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/randrange.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/randrange"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/randrange"}
 	},
 	"links": [
-
+		{
+			"title":"A better RandRange",
+			"url":"http://ryanguill.com/cfml/math/2016/02/21/a-better-randrange.html",
+			"description":"RandRange cannot handle large integers and you will encounter bugs when you try to use min or max values that are near the maximum and minimum integer sizes. This shows another way to generate a random int or long."
+		},
+		{
+			"title":"ACF Bug 4132630 - RandRange issues dealing with large integers",
+			"url":"https://bugbase.adobe.com/index.cfm?event=bug&id=4132630",
+			"description":"Does not produce random results when range values are very large."
+		},
+		{
+			"title":"The Right way to use SecureRandom",
+			"url":"https://tersesystems.com/2015/12/17/the-right-way-to-use-securerandom/",
+			"description":"Good information about choosing a random number algorithm."
+		}
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"The following example calls the Randomize function to seed the random number generator and generates 10 random numbers.  ",
+			"code":"<cfset r = randomize(7, \"SHA1PRNG\")> \r\n <cfset local.myInt = 1 /> \r\n <cfset local.myInt2 = 999 /> \r\n<!--- Generate and display the random number. ---> \r\n <cfoutput><p><b> \r\n RandRange returned: #randRange(local.myInt, local.myInt2, \"SHA1PRNG\")# \r\n </cfoutput></b></p> \r\n </cfif>  ",
+			"result":"",
+			"runnable":true
+		},
+        {
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<cfscript> \r\n bytes = []; \r\n bytecount = 32; \r\n arrayResize( bytes, byteCount ); \r\n for (  i = 1 ; i <= byteCount ; i++ ) { \r\n  bytes[ i ] = randRange( -128, 127, \"SHA1PRNG\" ); \r\n         } \r\n </cfscript> \r\n <cfdump var=\"#bytes#\" />  ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

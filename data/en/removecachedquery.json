@@ -1,0 +1,29 @@
+{
+	"name":"removeCachedQuery",
+	"type":"function",
+	"syntax":"removeCachedQuery(SQL_, datasource, params, region___);",
+	"returns":"",
+	"related":[],
+	"description":" Removes the query with the details you provide from query cache.",
+	"params": [
+		{"name":"SQL","description":"The Query SQL.","required":true,"default":"","type":"","values":[]},
+        {"name":"datasource","description":"The datasource you ran the query on..","required":true,"default":"","type":"","values":[]},
+        {"name":"params","description":" Array of parameter values passed to SQL.","required":false,"default":"","type":"","values":[]},
+        {"name":"region","description":"Specifies the cache region where you can place the cache object.","required":false,"default":"","type":"","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/removecachedquery.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "the in-memory file system memory set in cfadmin and should return that.",
+			"code": "<cfset sql = 'SELECT * from art where artid = ?'> \r\n <cfquery name='q' datasource='cfartgallery' cachedwithin='#createTimespan(0, 6, 0, 0)#'> \r\n SELECT * from art where artid = <cfqueryPARAM value = '1' CFSQLType = 'CF_SQL_INTEGER'> \r\n </cfquery> \r\n <cfset a = arrayNew(1)> \r\n <cfset a[1] = 1> \r\n <cfset removeCachedQuery(sql,'cfartgallery', a)> \r\n",
+			"result": ""
+		}
+	]
+
+}

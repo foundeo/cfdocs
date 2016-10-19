@@ -1,28 +1,91 @@
 {
-	"name":"cfpod",
-	"type":"tag",
-	"syntax":"<cfpod>",
-	"returns":"",
-	"related":[],
-	"description":"Creates a pod, an area of the browser window or layout \n area with an optional title bar and body that contains \n display elements.",
-	"discouraged":"The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html",
+	"name": "cfpod",
+	"type": "tag",
+	"syntax": "<cfpod>",
+	"returns": "",
+	"related": [],
+	"description": "Creates a pod, an area of the browser window or layout \n area with an optional title bar and body that contains \n display elements.",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html",
 	"params": [
-		{"name":"bodyStyle","description":"A CSS style specification for the pod body. As a \n general rule, use this attribute to set color and \n font styles. Using this attribute to set the height \n and width, for example, can result in distorted output.","required":false,"default":"","type":"String","values":[]},
-		{"name":"headerStyle","description":"A CSS style specification for the pod header. As a \n general rule, use this attribute to set color and font \n styles. Using this attribute to set the height and width, \n for example, can result in distorted output.","required":false,"default":"","type":"String","values":[]},
-		{"name":"height","description":"Height if the control, including the title bar and borders, \n in pixels. Default is 100.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"name","description":"Name of the pod control.","required":false,"default":"","type":"String","values":[]},
-		{"name":"onBindError","description":"The name of a JavaScript function to execute if \n evaluating a bind expression results in an error. \n The function must take two attributes: an HTTP \n status code and a message. If you omit this \n attribute, and have specified a global error handler \n (by using the ColdFusion.setGlobalErrorHandler \n function), it displays the error message; otherwise \n a default error pop-up displays.","required":false,"default":"","type":"String","values":[]},
-		{"name":"overflow","description":"Specifies how to display child content whose size \n would cause the control to overflow the pod \n boundaries. Note: In Internet Explorer, pods \n with the visible setting expand to fit the size of \n the contents, rather than having the contents extend \n beyond the layout area.","required":false,"default":"auto","type":"String","values":["auto","hidden","scroll","visible"]},
-		{"name":"source","description":"A URL that returns the pod contents. ColdFusion \n uses standard page path resolution rules. If you \n specify this attribute and the cfpod tag has a body, \n ColdFusion ignores the body contents. You can use a a \n bind expression with dependencies in this \n attribute; for more information see the Usage section. \n Note: If a CFML page specified in this attribute contains \n tags that use AJAX features, such as cfform, cfgrid, \n and cfwindow, you must use a cfajaximport tag on the \n page with the cfpod tag. \n For more information, see cfajaximport.","required":false,"default":"","type":"String","values":[]},
-		{"name":"title","description":"Text to display in the podÔøΩs title bar. You can use \n HTML mark up to control the title appearance, of \n example to show the text in red italic font. \n If you omit this attribute, the pod does not \n have a title bar.","required":false,"default":"","type":"String","values":[]},
-		{"name":"width","description":"Width if the control, including the title bar and \n borders, in pixels. Default is 500.","required":false,"default":"","type":"Numeric","values":[]}
-
+		{
+			"name": "bodyStyle",
+			"description": "A CSS style specification for the pod body. As a \n general rule, use this attribute to set color and \n font styles. Using this attribute to set the height \n and width, for example, can result in distorted output.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "headerStyle",
+			"description": "A CSS style specification for the pod header. As a \n general rule, use this attribute to set color and font \n styles. Using this attribute to set the height and width, \n for example, can result in distorted output.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "height",
+			"description": "Height if the control, including the title bar and borders, \n in pixels. Default is 100.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		},
+		{
+			"name": "name",
+			"description": "Name of the pod control.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "onBindError",
+			"description": "The name of a JavaScript function to execute if \n evaluating a bind expression results in an error. \n The function must take two attributes: an HTTP \n status code and a message. If you omit this \n attribute, and have specified a global error handler \n (by using the ColdFusion.setGlobalErrorHandler \n function), it displays the error message; otherwise \n a default error pop-up displays.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "overflow",
+			"description": "Specifies how to display child content whose size \n would cause the control to overflow the pod \n boundaries. Note: In Internet Explorer, pods \n with the visible setting expand to fit the size of \n the contents, rather than having the contents extend \n beyond the layout area.",
+			"required": false,
+			"default": "auto",
+			"type": "String",
+			"values": ["auto", "hidden", "scroll", "visible"]
+		},
+		{
+			"name": "source",
+			"description": "A URL that returns the pod contents. ColdFusion \n uses standard page path resolution rules. If you \n specify this attribute and the cfpod tag has a body, \n ColdFusion ignores the body contents. You can use a a \n bind expression with dependencies in this \n attribute; for more information see the Usage section. \n Note: If a CFML page specified in this attribute contains \n tags that use AJAX features, such as cfform, cfgrid, \n and cfwindow, you must use a cfajaximport tag on the \n page with the cfpod tag. \n For more information, see cfajaximport.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "title",
+			"description": "Text to display in the pod\u00c3\u201d\u00c3\u00b8\u00ce\u00a9s title bar. You can use \n HTML mark up to control the title appearance, of \n example to show the text in red italic font. \n If you omit this attribute, the pod does not \n have a title bar.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "width",
+			"description": "Width if the control, including the title bar and \n borders, in pixels. Default is 500.",
+			"required": false,
+			"default": "",
+			"type": "Numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfpod"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/pod.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfpod"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfpod"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpod.html"
+		}
 	},
 	"links": [
 		{
@@ -31,5 +94,4 @@
 			"url": "http://static.raymondcamden.com/cfuitherightway/cfpod/index.html"
 		}
 	]
-
 }

@@ -1,32 +1,107 @@
 {
-	"name":"cfmenu",
-	"type":"tag",
-	"syntax":"<cfmenu>",
-	"returns":"",
-	"related":[],
-	"description":" Creates a menu or tool bar (a horizontally arranged menu). Any menu item can be the top \n level of a submenu.",
+	"name": "cfmenu",
+	"type": "tag",
+	"syntax": "<cfmenu>",
+	"returns": "",
+	"related": [],
+	"description": "Creates a menu or tool bar (a horizontally arranged menu). Any menu item can be the top \n level of a submenu.",
 	"params": [
-		{"name":"bgcolor","description":"The color of the menu background. You can \n use any valid HTML color specification. \n This specification is locally overridden by the \n menuStyle attribute of this tag and any \n cfmenuitem tag, but does affect the background \n of the surrounding color of a submenu whose \n background is controlled by a childStyle \n attribute","required":false,"default":"","type":"String","values":[]},
-		{"name":"childstyle","description":"A CSS style specification that applies to the \n items of the top level menu and all child menu \n items, including the children of submenus. This \n attribute lets you use a single style specification \n for all menu items.","required":false,"default":"","type":"String","values":[]},
-		{"name":"font","description":"The font to be use for all child menu items. You \n can use any valid HTML font-family style \n attribute.","required":false,"default":"","type":"String","values":[]},
-		{"name":"fontcolor","description":"The color of the menu text. You can use any \n valid HTML color specification.","required":false,"default":"","type":"String","values":[]},
-		{"name":"fontsize","description":"The size of the font. Use a numeric value, such \n as 8, to specify a pixel character size. Use a \n percentage value, such as 80% to specify a \n size relative to the default font size. \n Font sizes over 20 pixels can result in submenu \n text exceeding the menu boundary.","required":false,"default":"","type":"String","values":[]},
-		{"name":"menustyle","description":"A CSS style specification that applies to the \n menu, including any parts of the menu that do not \n have items. If you do not specify style information \n in the cfmenuitem tags, this attribute controls the \n style of the top-level items.","required":false,"default":"","type":"String","values":[]},
-		{"name":"name","description":"The name of the menu.","required":false,"default":"","type":"String","values":[]},
-		{"name":"selectedfontcolor","description":"The color of the text for the menu item that has \n the focus. You can use any valid HTML color \n specification.","required":false,"default":"","type":"String","values":[]},
-		{"name":"selecteditemcolor","description":"The color that highlights the menu item that has \n the focus. You can use any valid HTML color \n specification.","required":false,"default":"","type":"String","values":[]},
-		{"name":"type","description":"The orientation of menu.","required":false,"default":"horizontal","type":"String","values":["horizontal","vertical"]},
-		{"name":"width","description":"The width of a vertical menu; not valid for \n horizontal menus.","required":false,"default":"","type":"String","values":[]}
-
+		{
+			"name": "bgcolor",
+			"description": "The color of the menu background. You can \n use any valid HTML color specification. \n This specification is locally overridden by the \n menuStyle attribute of this tag and any \n cfmenuitem tag, but does affect the background \n of the surrounding color of a submenu whose \n background is controlled by a childStyle \n attribute",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "childstyle",
+			"description": "A CSS style specification that applies to the \n items of the top level menu and all child menu \n items, including the children of submenus. This \n attribute lets you use a single style specification \n for all menu items.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "font",
+			"description": "The font to be use for all child menu items. You \n can use any valid HTML font-family style \n attribute.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "fontcolor",
+			"description": "The color of the menu text. You can use any \n valid HTML color specification.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "fontsize",
+			"description": "The size of the font. Use a numeric value, such \n as 8, to specify a pixel character size. Use a \n percentage value, such as 80% to specify a \n size relative to the default font size. \n Font sizes over 20 pixels can result in submenu \n text exceeding the menu boundary.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "menustyle",
+			"description": "A CSS style specification that applies to the \n menu, including any parts of the menu that do not \n have items. If you do not specify style information \n in the cfmenuitem tags, this attribute controls the \n style of the top-level items.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "name",
+			"description": "The name of the menu.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "selectedfontcolor",
+			"description": "The color of the text for the menu item that has \n the focus. You can use any valid HTML color \n specification.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "selecteditemcolor",
+			"description": "The color that highlights the menu item that has \n the focus. You can use any valid HTML color \n specification.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		},
+		{
+			"name": "type",
+			"description": "The orientation of menu.",
+			"required": false,
+			"default": "horizontal",
+			"type": "String",
+			"values": ["horizontal", "vertical"]
+		},
+		{
+			"name": "width",
+			"description": "The width of a vertical menu; not valid for \n horizontal menus.",
+			"required": false,
+			"default": "",
+			"type": "String",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfmenu"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/menu.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmenu"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmenu"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmenu.html",
+			"deprecated":"2016"
+		}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

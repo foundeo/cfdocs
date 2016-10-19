@@ -12,7 +12,7 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/mid"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/mid.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/mid.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/mid"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/mid"}
@@ -24,7 +24,7 @@
 		{
 			"title": "Extract month from date",
 			"description": "Grabs the month out of a raw date yyyymmdd value.",
-			"code": "Mid(\"20001122\", \"5\", \"2\")",
+			"code": "mid(\"20001122\", \"5\", \"2\")",
 			"result": "11"
 		}
 	]

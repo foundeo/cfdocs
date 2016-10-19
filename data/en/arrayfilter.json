@@ -2,24 +2,45 @@
 	"name":"arrayFilter",
 	"type":"function",
 	"syntax":"arrayFilter(array array, function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
+	"member":"someArray.filter(function(item, [index, [array]]), [boolean parallel], [number maxThreads]);",
 	"returns":"array",
 	"related":["arrayEach", "arrayReduce"],
 	"description":"Used to filter an array to items for which the closure function returns true.",
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
-		{"name":"closure","description":"function / closure with the signature: any function (any item, [numeric index], [array array]):boolean","required":true,"default":"","type":"Closure","values":[]},
-		{"name":"parallel","description":"Railo only option, true or false if the items can be executed in parallel","required":false,"default":"false","type":"Boolean","values":[true, false]},
-		{"name":"maxThreads","description":"Railo only option, the number of threads to use when parallel = true","required":false,"default":"20","type":"Boolean","values":[]}
+		{"name":"function","description":"Inline closure function executed for each element in the array. Returns true if the array element should be included in the filtered array. Support for passing the original array to the closure function added in CF11 Update 5.","required":true,"default":"","type":"Closure","values":[]},
+		{"name":"parallel","description":"Lucee only option, true or false if the items can be executed in parallel","required":false,"default":"false","type":"Boolean","values":[true, false]},
+		{"name":"maxThreads","description":"Lucee only option, the number of threads to use when parallel = true","required":false,"default":"20","type":"Boolean","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://wikidocs.adobe.com/wiki/display/coldfusionen/arrayFilter"},
+		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayfilter.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayfilter.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://www.railodocs.org/index.cfm/function/arrayFilter/"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayFilter"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayfilter"}
 	},
-	"links": [
-
+	"links":[{
+		"title":"Map, Reduce and other Higher Order Functions",
+		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
+		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+	},
+	{
+		"title": "ColdFusion 11: .map() and .reduce()",
+		"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
+		"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
+	}],
+	"examples": [
+		{
+			"title": "Example using a simple numeric comparison",
+			"description": "Take an array of struct items and use arrayFilter to return ones of a rating 3 and higher.",
+			"code": "fruitArray = [{fruit='apple', rating=4}, {fruit='banana', rating=1}, {fruit='orange', rating=5}, {fruit='mango', rating=2}, {fruit='kiwi', rating=3}];\n\nfavoriteFruits = arrayFilter(fruitArray, function(item){\n     return item.rating >= 3;\n});\nwritedump(favoriteFruits);",
+			"result": "Array with the structs for apple, orange and kiwi."
+		},
+		{
+			"title": "Example using a member function",
+			"description": "This is the same example as above, but using a member function on the array instead of a standalone function.",
+			"code": "fruitArray = [{fruit='apple', rating=4}, {fruit='banana', rating=1}, {fruit='orange', rating=5}, {fruit='mango', rating=2}, {fruit='kiwi', rating=3}];\n\nfavoriteFruits = fruitArray.filter(function(item){\n     return item.rating >= 3;\n});\nwritedump(favoriteFruits);",
+			"result": "Array with the structs for apple, orange and kiwi."
+		}
 	]
 
 }

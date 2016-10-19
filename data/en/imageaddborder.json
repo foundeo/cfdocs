@@ -2,24 +2,62 @@
 	"name":"imageAddBorder",
 	"type":"function",
 	"syntax":"imageAddBorder(name, thickness [, color] [, bordertype])",
+	"member":"someImage.addBorder(thickness [, color] [, bordertype])",
 	"returns":"void",
 	"related":[],
 	"description":" Adds a rectangular border around the outside edge of a ColdFusion image.",
 	"params": [
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"thickness","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"color","description":"No Help Available","required":false,"default":"","type":"String","values":[]},
-		{"name":"bordertype","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
+		{"name":"thickness","description":"Thickness of the border in pixels. The default value is 1. The border is added to the outside edge of the image; the image area is increased accordingly.","required":true,"default":"","type":"String","values":[]},
+		{"name":"color","description":"Only valid if the borderType is not specified or if borderType = 'constant'.","required":false,"default":"black","type":"String","values":[]},
+		{"name":"bordertype","description":"The type of border.","required":false,"default":"constant","type":"String","values":["zero","constant","copy","reflect","wrap"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/imageaddborder"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imageaddborder.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imageaddborder.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imageaddborder.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imageaddborder"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imageaddborder"}
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "Draw a green border around the outside edge of the red border. ",
+			"code": "<cfset imageAddBorder(myImage,5,\"green\")>    ",
+			"result": "",
+			"runnable":false
+		},
+        {
+			"title": "Tag Syntax",
+			"description": "Add a 50-pixel-wide border to the outside edge of the image that is a tiled version of the image itself.",
+			"code": "<cfset imageAddBorder(myImage,50,\"\",\"wrap\")>    ",
+			"result": "",
+			"runnable":false
+		},
+        {
+			"title": "Tag Syntax",
+			"description": "Create the border.",
+			"code": "<cfset imageAddBorder(myImage,100,\"\",\"reflect\")> ",
+			"result": "",
+			"runnable":false
+		},
+        {
+			"title": "Tag Syntax",
+			"description": "Create a ColdFusion image from an existing JPEG file.",
+			"code": "<cfset imageAddBorder(myImage,100,\"\",\"copy\")>  ",
+			"result": "",
+			"runnable": false
+		},
+		{
+			"title":"Using addBorder member function",
+			"description":"CF11+ Lucee4.5+ Add border with optional color parameter",
+			"code":"imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\nimgObj.addBorder(5,\"005100\");\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

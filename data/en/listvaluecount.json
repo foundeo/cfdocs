@@ -12,13 +12,29 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/listvaluecount"},
+		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listvaluecount.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/listvaluecount.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listvaluecount"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listvaluecount"}
 	},
 	"links": [
 
-	]
+	],
+	"examples": [
+        {
+            "title": "Simple Example",
+            "description": "Counts instances of 'foo' in the list",
+            "code": "listValueCount(\"foo,bar,lorem,foo,ipsum\", \"foo\")",
+            "result": 2,
+            "runnable":true
+        },
+        {
+            "title": "Example with Custom Delimiter",
+            "description": "Counts instances of 'foo' in the list with a custom delimiter",
+            "code": "listValueCount(\"bar|foo|lorem,ipsum|me|foo,something|foo|FOO\", \"foo\", \"|\")",
+            "result": 2,
+            "runnable":true
+        }
+    ]
 
 }
