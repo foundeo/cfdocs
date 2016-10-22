@@ -4,7 +4,7 @@
 	"syntax": "<cffileupload url=\"\">",
 	"returns": "",
 	"related": [],
-	"description": "Ajax File upload",
+	"description":"Ajax File upload",
 	"params": [
 		{
 			"name": "url",
@@ -187,7 +187,8 @@
 		"coldfusion": {
 			"minimum_version": "",
 			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-f/cffileupload.html"
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-f/cffileupload.html",
+			"deprecated":"2016"
 		}
 	},
 	"links": []
