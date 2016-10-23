@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"replaceList(String, list1, list2, includeEmptyFields)\nreplaceList(String, list1, list2, delimiter, includeEmptyFields)\nreplaceList(String, list1, list2, delimiterList1, delimiterList2, includeEmptyFields)",
 	"returns":"String",
-	"related":[],
+	"related":["replaceListNoCase"],
 	"description":"Replaces occurrences of the elements from a delimited list\n in a string with corresponding elements from another delimited\n list. The search is case-sensitive.",
 	"params": [
 		{"name":"String","description":"A string, or a variable that contains one, within which to replace substring","required":true,"default":"","type":"String","values":[]},
