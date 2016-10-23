@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "valueArray(query_column)",
 	"returns": "array",
-	"related": [],
+	"related": ["queryColumnData"],
 	"description": "",
 	"params": [
 		{"name": "query_column", "description": "", "required": true, "default": "", "type": "queryColumn", "values": []}
