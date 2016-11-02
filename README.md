@@ -16,15 +16,18 @@ This makes the documentation super easy to edit and allows developers to run a l
 
 ## Running CFDocs locally for dev or pleasure
 
-The cfdocs.org site can run locally pretty easily, it doesn't need anything except CF 10+ or Lucee to run (no database or anything), it utilizes a .htaccess file for url rewriting, but you could still test things by hitting /doc.cfm?name=getsafehtml if you just want to drop it in a directory somewhere.
 
-### Running locally with CommandBox (EASIEST WAY)!
+### Running CFDocs Locally
 
-1. Go download [CommandBox](https://www.ortussolutions.com/products/commandbox) if you have not already.
+The cfdocs.org site can run locally very easily thanks to CommandBox.
+
+1. Go download [CommandBox](https://www.ortussolutions.com/products/commandbox) if you do not have it already.
 2. Download this repository and extract it to a folder, or clone it from this repository. If you are going to be making changes to the docs I would suggest you fork it, see Adam Tuttle's guide: [GitHub tip for your first pull request](http://fusiongrokker.com/post/github-tip-for-your-first-pull-request)
 3. Run `box server start` from Command Prompt or Terminal in the root directory.
 
 CommandBox will start an embedded CFML server on port 8411, and you can browse to [http://localhost:8411/](http://localhost:8411/) to view the docs.
+
+If you don't want to go the commandbox route you can simply download it and unzip it to a web root and try it out (requires CF10+ or Lucee 4.5+), but you will probably spend more time trying to get it working than the 1-2 minutes it will take to download and learn how to use commandbox.
 
 ## How to contribute
 
