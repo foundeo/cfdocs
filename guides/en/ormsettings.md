@@ -60,6 +60,8 @@ Specifies the data source that should be used by ORM. If it is not specified her
 
 ### `string DBCreate`
 
+Default: `none`
+
 ColdFusion ORM can automatically create the tables for your application in the database when ORM is initialized for the application. This can be enabled by using this setting. It takes the following values:
 
 * `dropcreate` Drops and recreates every table specified in the ORM. Does not drop other existing tables.
