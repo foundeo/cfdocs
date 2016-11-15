@@ -6,7 +6,7 @@
 	"related":["cfchartseries","cfchartdata"],
 	"description":"Generates and displays a chart.",
 	"params": [
-		{"name":"format","description":"File format in which to save graph.","required":false,"default":false,"type":"String","values":["flash","jpg","png"]},
+		{"name":"format","description":"File format in which to save graph. `format=flash` has been deprecated in CF2016+","required":false,"default":false,"type":"String","values":["flash","jpg","png"]},
 		{"name":"chartheight","description":"Chart height; integer number of pixels","required":false,"default":240,"type":"Numeric","values":[]},
 		{"name":"chartwidth","description":"Chart width; integer number of pixels","required":false,"default":320,"type":"Numeric","values":[]},
 		{"name":"scalefrom","description":"Y-axis minimum value; integer","required":false,"default":"","type":"Numeric","values":[]},

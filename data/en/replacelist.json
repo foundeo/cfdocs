@@ -1,14 +1,18 @@
 {
 	"name":"replaceList",
 	"type":"function",
-	"syntax":"replaceList(String, list1, list2)",
+	"syntax":"replaceList(String, list1, list2, includeEmptyFields)\nreplaceList(String, list1, list2, delimiter, includeEmptyFields)\nreplaceList(String, list1, list2, delimiterList1, delimiterList2, includeEmptyFields)",
 	"returns":"String",
-	"related":[],
-	"description":" Replaces occurrences of the elements from a delimited list\n in a string with corresponding elements from another delimited\n list. The search is case-sensitive.",
+	"related":["replaceListNoCase"],
+	"description":"Replaces occurrences of the elements from a delimited list\n in a string with corresponding elements from another delimited\n list. The search is case-sensitive.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"list1","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"list2","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"String","description":"A string, or a variable that contains one, within which to replace substring","required":true,"default":"","type":"String","values":[]},
+		{"name":"list1","description":"List of substrings for which to search","required":true,"default":"","type":"String","values":[]},
+		{"name":"list2","description":"List of replacement substrings","required":true,"default":"","type":"String","values":[]},
+		{"name":"delimiter","description":"Common delimiter for both search and replacement.","required":false,"default":",","type":"String","values":[]},
+		{"name":"delimiterList1","description":"Delimiter for search.","required":false,"default":",","type":"String","values":[]},
+		{"name":"delimiterList2","description":"Delimiter for replacement.","required":false,"default":",","type":"String","values":[]},
+		{"name":"includeEmptyFields","description":"When true, zero-length list elements are preserved.","required":false,"default":"false","type":"Boolean","values":[]}
 
 	],
 	"engines": {
