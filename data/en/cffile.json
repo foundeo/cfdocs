@@ -43,7 +43,7 @@
 		{
 			"title": "Script Syntax",
 			"description": "File Append - There is no fileAppend() so we access the file and use fileWriteLine()",
-			"code": "fmyFile = fileOpen(expandPath(\"./myFile.txt\"), \"write\"); \r\n fileWriteLine(myFile, \"Here's some new content.\"); \r\n fileClose(myFile);",
+			"code": "myFile = fileOpen(expandPath(\"./myFile.txt\"), \"write\"); \r\n fileWriteLine(myFile, \"Here's some new content.\"); \r\n fileClose(myFile);",
 			"result": ""
 		},
 		{
