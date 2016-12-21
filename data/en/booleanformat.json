@@ -1,7 +1,7 @@
 {
 	"name":"booleanFormat",
 	"type":"function",
-	"syntax":"abs(number)",
+	"syntax":"booleanFormat(number)",
 	"returns":"Numeric",
 	"related":["yesNoFormat", "isBoolean"],
 	"description":"Evaluates the input as a boolean, and outputs either true or false. If not a boolean throws an exception.",
