@@ -3,7 +3,7 @@
 	"type":"component",
 	"syntax":"component { this.name=\"myApp\"; }",
 	"returns":"",
-	"related":["cfapplication","onapplicationstart","onapplicationend","onsessionstart","onsessionend","onrequest","onrequeststart","onrequestend","onerror","onmissingtemplate"],
+	"related":["cfapplication","onapplicationstart","onapplicationend","onsessionstart","onsessionend","onrequest","onrequeststart","onrequestend","onerror","onmissingtemplate","onserverstart"],
 	"description":"Defines application level variables and event handlers (functions invoked at various application lifecycle events).",
 	"params": [
 		{"name":"this.name","description":"Name of application. Up to 64 characters","required":false,"default":"","type":"String","values":[]},
@@ -75,7 +75,12 @@
             "title":"Learn CF in a Week: Application.cfc",
             "description":"Tutorial showing how to use Application.cfc",
             "url":"http://www.learncfinaweek.com/week1/Application_cfc/"
-        }
+        },
+	{
+            "title":"onServerStart function",
+            "description":"Explanation of how onServerStart is implemented",
+            "url":"https://helpx.adobe.com/coldfusion/cfml-reference/application-cfc-reference/onserverstart.html"
+	}
 	],
     "examples": [
         {
