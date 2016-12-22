@@ -4,7 +4,7 @@
 	"syntax":"isQuery(value)",
 	"returns":"boolean",
 	"related":[],
-	"description":" Determines whether value is a query.",
+	"description":" Determines whether a value is a query.",
 	"params": [
 		{"name":"value","description":"","required":true,"default":"","type":"String","values":[]}
 
@@ -17,6 +17,13 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Create and populate a query and output the 'name' column as a list if it is a valid query",
+			"code": "names = queryNew( 'name','varchar' );\nqueryAddRow( names );\nquerySetCell( names,'name','Seth' );\nqueryAddRow( names );\nquerySetCell( names,'name','Jen' );\nif( isQuery( names ) ) {\n   writeOutput( valueList( names.name ) );\n}",
+			"description":"",
+			"runnable":true
+		}
 	]
-
 }
