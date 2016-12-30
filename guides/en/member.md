@@ -318,6 +318,7 @@ Member functions for the following data types are supported:
 ## Query member functions
 
 - QueryAddColumn : `someVar.addColumn()`
+- QueryGetResult : `someVar.getResult()`
 - QueryGetRow : `someVar.getRow()`
 - QueryConvertForGrid : `someVar.convertForGrid()`
 - QuerySetCell : `someVar.setCell()`
