@@ -4,7 +4,7 @@
 	"syntax":"REFind(reg_expression, String [, start] [, returnsubexpressions])",
 	"returns":"Object",
 	"related":["find","refindnocase","findnocase","rereplace"],
-	"description":" ",
+	"description":" Uses a regular expression (RE) to search a string for a pattern,\n starting from a specified position. The search is case sensitive.",
 	"params": [
 		{"name":"reg_expression","description":"","required":true,"default":"","type":"Regex","values":[]},
 		{"name":"String","description":"A string or a variable that contains one. String in which\n to search.","required":true,"default":"","type":"String","values":[]},

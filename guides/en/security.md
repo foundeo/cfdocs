@@ -18,7 +18,7 @@ Entire books have been written about server security and will generally include 
 
 There has been some attempt made at putting together a Lucee lockdown guide, but it is incomplete. A Google search for 'Lucee lockdown guide' provides useful links to blog posts and the following start to a guide:
 
-[Lucee Lockdown Guide (HTML)](http://bit.ly/1OebHiz)
+[Lucee Lockdown Guide (HTML)](http://bit.ly/2imMVTF)
 
 These lockdown guides will give you an excellent head start on protecting your servers, your application servers and your network, and those tasks while not (yet) explicitly called out in Lucee documentation, certainly all apply to Lucee equally. I suggest using the most recent Adobe lockdown guide as your basis for what to also apply to your Lucee servers, Adobe specific nuances aside, of course.
 
