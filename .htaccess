@@ -17,6 +17,8 @@ RewriteRule ^try/([^./]+)/? /trycf.cfm?name=$1
 #rewrite trailing slash on tag
 RewriteRule ^(cf[a-zA-Z]+)/$ /ucase.cfm?uri=$1 [L]
 
+RewriteRule ^application.cfc /application-cfc [R=301,L]
+
 ErrorDocument 404 /404.cfm
 
 #block access to some urls
