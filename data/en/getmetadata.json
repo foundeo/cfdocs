@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Dump MetaData of CFC Instance",
+			"description":"CF9+",
+			"code":"writeDump(getMetaData(new Query()));",
+			"result":""
+		}
 	]
 
 }

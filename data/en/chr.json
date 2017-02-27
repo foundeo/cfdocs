@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"chr(number)",
 	"returns":"char",
-	"related":[],
+	"related":["asc"],
 	"description":" Converts a numeric value to a UCS-2 character.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":["9: \\t tab", "10: \\n New Line", "13: \\r Carriage Return"]}
@@ -16,7 +16,15 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/chr"}
 	},
 	"links": [
-
+	],
+	"examples": [
+		{
+			"title":"character and value of korean currency symbol ( unicode number 8361 )",
+			"description":"",
+			"code":"x = chr( 8361 ); \n writeoutput( 'character: #x#' ); \n x = asc( x ); \n writeoutput( '<br>Unicode value: #x#');",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

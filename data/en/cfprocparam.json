@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cfprocparam cfsqltype=\"CF_SQL_BIGINT\">",
 	"returns":"",
-	"related":[],
+	"related":["cfstoredproc","cfprocresult"],
 	"description":" Defines stored procedure parameters. This tag is nested within\n a cfstoredproc tag.",
 	"params": [
 		{"name":"type","description":"in: The parameter is used to send data to the database\n system only. Passes the parameter by value.\n out: The parameter is used to receive data from the\n database system only. Passes the parameter as a bound\n variable.\n inout: The parameter is used to send and receive data.\n Passes the parameter as a bound variable.","required":false,"default":"in","type":"String","values":["in","out","inout"]},

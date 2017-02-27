@@ -18,7 +18,7 @@
     },
     {
       "name": "cfsqltype",
-      "description": "SQL type that parameter (any type) is bound to.",
+      "description": "SQL type that parameter (any type) is bound to. As of CF11+ or Lucee 4.5+ you can omit the `cf_sql_` prefix.",
       "required": false,
       "default": "",
       "type": "String",
@@ -35,6 +35,7 @@
         "cf_sql_idstamp",
         "cf_sql_integer",
         "cf_sql_longvarchar",
+        "cf_sql_longnvarchar",
         "cf_sql_money",
         "cf_sql_money4",
         "cf_sql_numeric",
@@ -44,7 +45,12 @@
         "cf_sql_time",
         "cf_sql_timestamp",
         "cf_sql_tinyint",
-        "cf_sql_varchar"
+        "cf_sql_varchar",
+        "cf_sql_nvarchar",
+        "integer",
+        "varchar",
+        "timestamp",
+        "date"
       ]
     },
     {
@@ -57,7 +63,7 @@
     },
     {
       "name": "scale",
-      "description": "Number of decimal places in parameter. Applies to\n CF_SQL_NUMERIC and CF_SQL_DECIMAL.",
+      "description": "Number of decimal places in parameter. Applies to `CF_SQL_NUMERIC` and `CF_SQL_DECIMAL`.",
       "required": false,
       "default": "",
       "type": "Numeric",
@@ -65,7 +71,7 @@
     },
     {
       "name": "null",
-      "description": "Whether parameter is passed as a null value.\n\n Yes: tag ignores the value attribute\n No: does not",
+      "description": "Whether parameter is passed as a `NULL` value.\n\n `true`: ignores the `value` attribute and passes `NULL`\n `false`: passes the `value` attribute",
       "required": false,
       "default": "",
       "type": "boolean",
@@ -144,7 +150,7 @@
       "result": "Man walks on Moon"
     },
     {
-      "title": "cfscript exuivalent of cfqueryparam",
+      "title": "cfscript equivalent of cfqueryparam",
       "description": "CF11+ script syntax using queryExecute and array shorthand",
       "code": "exampleData = queryNew(\"id,title\",\"integer,varchar\",[{\"id\":1,\"title\":\"Dewey defeats Truman\"},{\"id\":2,\"title\":\"Man walks on Moon\"}]);\r\n\r\nresult = queryExecute(\r\n  \"SELECT title FROM exampleData WHERE id = ?\", \r\n  [ 2 ],\r\n  { dbtype=\"query\" }\r\n);\r\n\r\nwriteOutput( result.title[1] );",
       "result": "Man walks on Moon"

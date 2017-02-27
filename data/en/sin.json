@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"sin(number)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["acos","asin","atn","cos","exp","log","log10","tan"],
 	"description":" Calculates the sine of an angle that is entered in radians.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
@@ -17,6 +17,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Sine of 0.3",
+			"description":"",
+			"code":"sin(0.3)",
+			"result":"0.295520206661",
+			"runnable":true
+		}
 	]
 
 }

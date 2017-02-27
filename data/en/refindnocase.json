@@ -7,7 +7,7 @@
 	"description":" Uses a regular expression (RE) to search a string for a pattern,\n starting from a specified position. The search is\n case-insensitive.",
 	"params": [
 		{"name":"reg_expression","description":"","required":true,"default":"","type":"Regex","values":[]},
-		{"name":"String","description":"A string or a variable that contains one. String in which\n to search.","required":true,"default":1,"type":"String","values":[1]},
+		{"name":"String","description":"A string or a variable that contains one. String in which\n to search.","required":true,"default":1,"type":"String","values":[]},
 		{"name":"start","description":"","required":false,"default":"","type":"Numeric","values":[]},
 		{"name":"returnsubexpressions","description":"True: if the regular expression is found, the first array\n element contains the length and position, respectively,\n of the first match.\n If the regular expression contains parentheses that\n group subexpressions, each subsequent array element\n contains the length and position, respectively, of\n the first occurrence of each group.\n If the regular expression is not found, the arrays each\n contain one element with the value 0.\n False: the function returns the position in the string\n where the match begins. Default.","required":false,"default":false,"type":"boolean","values":[true,false]}
 

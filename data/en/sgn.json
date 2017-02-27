@@ -17,6 +17,29 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Sign of any number greater than 0",
+			"description":"",
+			"code":"sgn(0.3)",
+			"result":"1",
+			"runnable":true
+		},
+		{
+			"title":"Sign of 0",
+			"description":"",
+			"code":"sgn(0)",
+			"result":"0",
+			"runnable":true
+		},
+		{
+			"title":"Sign of any number less than 0",
+			"description":"",
+			"code":"sgn(-0.3)",
+			"result":"-1",
+			"runnable":true
+		}
 	]
 
 }

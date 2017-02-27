@@ -4,7 +4,7 @@
 	"syntax":"reverse(String)",
 	"returns":"String",
 	"related":[],
-	"description":" Reverses the order of items, such as the characters in a\n string, the digits in a number, or the elements in an array.",
+	"description":" Reverses the order of items, such as the characters in a\n string and the digits in a number",
 	"params": [
 		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]}
 
@@ -17,6 +17,19 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Reverse a string",
+			"description": "",
+			"code": "reverse('Hello World')",
+			"result": "dlroW olleH"
+		},
+		{
+			"title": "Reverse a number",
+			"description": "",
+			"code": "reverse(123456789)",
+			"result": "987654321"
+		}
 	]
-
 }

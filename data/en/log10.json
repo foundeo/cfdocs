@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"log10(number)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["acos","asin","atn","cos","exp","log","sin","tan"],
 	"description":" Calculates the logarithm of number, to base 10.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
@@ -17,6 +17,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"logarithm 3.1 to base 10",
+			"description":"",
+			"code":"log10(3.1)",
+			"result":"0.491361693834",
+			"runnable":true
+		}
 	]
 
 }
