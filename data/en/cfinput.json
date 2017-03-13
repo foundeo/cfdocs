@@ -1,70 +1,535 @@
 {
-	"name":"cfinput",
-	"type":"tag",
-	"syntax":"<cfinput name=\"\">",
-	"returns":"",
-	"related":[],
-	"description":" Used within the cfform tag, to place radio buttons, check boxes, or text boxes on a form. Provides input validation for the specified control type.",
-	"params": [
-		{"name":"name","description":"Name for form input element.","required":true,"default":"","type":"String","values":[]},
-		{"name":"autosuggest","description":"Specifies entry completion suggestions to display as the user types into a text input. The user can select a suggestion to complete the text entry. The valid value can be either of the following: ‚Ä¢ A string consisting of the suggestion values separated by the delimiter specified by the delimiter attribute. ‚Ä¢ A bind expression that gets the suggestion values based on the current input text. Valid only for cfinput type=\"text\".","required":false,"default":"","type":"String","values":[]},
-		{"name":"autoSuggestBindDelay","description":"The minimum time between autosuggest bind expression invocations, in seconds. Use this attribute to limit the number of requests that are sent to the server when a user types. Valid only for cfinput type=\"text\"","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"autoSuggestMinLength","description":"The minimum number of characters required in the text box before invoking a bind expression to return items for suggestion. Valid only for cfinput type=\"text\".","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"bindAttribute","description":"Specifies the HTML tag attribute whose value is set by the bind attribute. You can only specify attributes in the browser‚ HTML DOM tree, not ColdFusion-specific attributes. Ignored if there is no bind attribute. Valid only for cfinput type=\"text\".","required":false,"default":"","type":"String","values":[]},
-		{"name":"bindonload","description":"A Boolean value that specifies whether to execute the bind attribute expression when first loading the form. Ignored if there is no bind attribute. Valid only for cfinput type=\"text\".","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"id","description":"ID for form input element.","required":false,"default":"","type":"String","values":[]},
-		{"name":"type","description":"The input control type to create: - button: push button. - checkbox: check box. - file: file selector; not supported in Flash. - hidden: invisible control. - image: clickable button with an image. - password: password entry control; hides input values. - radio: radio button. - reset: form reset button. - submit: form submission button. - text: text entry box. - datefield: Flash only; date entry field with an expanding calendar for selecting dates.","required":false,"default":"text","type":"String","values":["button","checkbox","file","hidden","image","password","radio","reset","submit","text","datefield","autosuggest"]},
-		{"name":"label","description":"Label to put next to the control on a Flash or XML form. Not used for button, hidden, image, reset, or submit types.","required":false,"default":"","type":"String","values":[]},
-		{"name":"style","description":"In HTML or XML format, ColdFusion passes the style attribute to the browser or XML. In Flash format, must be a style specification in CSS format.","required":false,"default":"","type":"String","values":[]},
-		{"name":"class","description":"Stylesheet class for form input element.","required":false,"default":"","type":"String","values":[]},
-		{"name":"required","description":"* yes: the field must contain data. * no: allows an empty field.","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"mask","description":"A mask pattern that controls the character pattern that users can enter, or that the form sends to ColdFusion. In HTML and Flash for type=text use: - A = [A-Za-z] - X = [A-Za-z0-9] - 9 = [0-9] - ? = Any character - all other = the literal character In Flash for type=datefield use: - D = day; can use 0-2 mask characters. - M = month; can use 0-4 mask characters. - Y = year; can use 0, 2, or 4 characters. - E = day in week; can use 0-4 characters.","required":false,"default":"","type":"String","values":[]},
-		{"name":"validate","description":"date: verifies format mm\/dd\/yy. eurodate: verifies date format dd\/mm\/yyyy. time: verifies time format hh:mm:ss. float: verifies floating point format. integer: verifies integer format. telephone: verifies telephone format ###-###-####. The separator can be a blank. Area code and exchange must begin with digit 1 - 9. zipcode: verifies, in U.S. formats only, 5- or 9-digit format #####-####. The separator can be a blank. creditcard: strips blanks and dashes; verifies number using mod10 algorithm. Number must have 13-16 digits. social_security_number: verifies format ###-##-####. The separator can be a blank. regular_expression: matches input against pattern attribute.","required":false,"default":"","type":"String","values":["date","eurodate","time","float","integer","telephone","zipcode","creditcard","social_security_number","regular_expression"]},
-		{"name":"validateat","description":"How to do the validation; one or more of the following: onSubmit, onServer or onBlur. onBlur and onSubmit are identical in Flash forms. For multiple values, use a comma-delimited list. Not supported on Railo/Lucee.","required":false,"default":"onSubmit","type":"String","values":["onSubmit","onServer","onBlur"]},
-		{"name":"message","description":"Message text to display if validation fails","required":false,"default":"","type":"String","values":[]},
-		{"name":"range","description":"Minimum and maximum value range, separated by a comma. If type = \"text\" or \"password\", this applies only to numeric data.","required":false,"default":"","type":"String","values":[]},
-		{"name":"maxlength","description":"Maximum length of text entered, if type=text or password.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"pattern","description":"JavaScript regular expression pattern to validate input. ColdFusion uses this attribute only if you specify regex in the validate attribute. Omit leading and trailing slashes.","required":false,"default":"","type":"Regex","values":[]},
-		{"name":"onvalidate","description":"Custom JavaScript function to validate user input. The form object, input object, and input object values are passed to the routine, which should return True if validation succeeds, and False otherwise. If used, the validate attribute is ignored.","required":false,"default":"","type":"String","values":[]},
-		{"name":"onerror","description":"Custom JavaScript function to execute if validation fails.","required":false,"default":"","type":"String","values":[]},
-		{"name":"size","description":"Size of input control. Ignored, if type=radio or checkbox. If specified in a Flash form, ColdFusion sets the control width pixel value to 10 times the specified size and ignores the width attribute.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"value","description":"HTML: corresponds to the HTML value attribute. Its use depends on control type. Flash: optional; specifies text for button type inputs: button, submit, and image.","required":false,"default":"","type":"String","values":[]},
-		{"name":"bind","description":"A Flash bind expression that populates the field with information from other form fields.","required":false,"default":"","type":"String","values":[]},
-		{"name":"checked","description":"Selects a control. No value is required. Applies if type=radio or checkbox. Default: false","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"disabled","description":"Disables user input, making the control read-only. To disable input, specify disabled without an attribute or disabled=\"true\". To enable input, omit the attribute or specify disabled=\"false\".","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"src","description":"Applies to Flash button, reset, submit, and image types, and the HTML image type. URL of an image to use on the button. Flash does not support GIF images.","required":false,"default":"","type":"String","values":[]},
-		{"name":"onkeyup","description":"JavaScript (HTML\/XML) or ActionScript (Flash) to run when the user releases a keyboard key in the control.","required":false,"default":"","type":"String","values":[]},
-		{"name":"onkeydown","description":"JavaScript (HTML\/XML) or ActionScript (Flash) ActionScript to run when the user presses a keyboard key in the control.","required":false,"default":"","type":"String","values":[]},
-		{"name":"onmouseup","description":"JavaScript (HTML\/XML) or ActionScript (Flash) to run when the user presses a mouse button in the control.","required":false,"default":"","type":"String","values":[]},
-		{"name":"onmousedown","description":"JavaScript (HTML\/XML) or ActionScript (Flash) to run when the user releases a mouse button in the control.","required":false,"default":"","type":"String","values":[]},
-		{"name":"onchange","description":"JavaScript (HTML\/XML) or ActionScript (Flash) to run when the control changes due to user action. In Flash, applies to datefield, password, and text types only.","required":false,"default":"","type":"String","values":[]},
-		{"name":"onclick","description":"JavaScript (HTML\/XML) or ActionScript (Flash) to run when the user clicks the control. In Flash, applies to button, checkbox, image, radio, reset, and submit types only.","required":false,"default":"","type":"String","values":[]},
-		{"name":"daynames","description":"A comma-delimited list that sets the names of the weekdays displayed in the calendar. Sunday is the first day and the rest of the weekday names follow in the normal order. Default is: S,M,T,W,Th,F,S","required":false,"default":"","type":"String","values":["S","M","T","W","Th","F","Sa","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sun","Mon","Tue","Wed","Thu","Fri","Sat"]},
-		{"name":"firstdayofweek","description":"Integer in the range 0-6 specifying the first day of the week in the calendar, 0 indicates Sunday, 6 indicates Saturday. Default is: 0","required":false,"default":0,"type":"Numeric","values":[0,1,2,3,4,5,6]},
-		{"name":"monthnames","description":"A comma-delimited list of the month names that are displayed at the top of the calendar.","required":false,"default":"","type":"String","values":["January","February","March","April","May","June","July","August","September","October","November","December","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]},
-		{"name":"enabled","description":"Flash only: Boolean value specifying whether the control is enabled. A disabled control appears in light gray. The inverse of the disabled attribute. Flash only. Default: true","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"visible","description":"Flash only: Boolean value specifying whether to show the control. Space that would be occupied by an invisible control is blank. Default: true","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"tooltip","description":"Flash only: Text to display when the mouse pointer hovers over the control.","required":false,"default":"","type":"String","values":[]},
-		{"name":"width","description":"Applies to most Flash types, HTML image type on some browsers. The width of the control, in pixels. For Flash forms, ColdFusion ignores this attribute if you also specify a size attribute value.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"height","description":"Applies to most Flash types, HTML image type on some browsers. The height of the control, in pixels. The displayed height might be less than the specified size.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"passthrough","description":"This attribute is deprecated. Passes arbitrary attribute-value pairs to the HTML code that is generated for the tag. You can use either of the following formats: passthrough=\"title=\"\"myTitle\"\"\" passthrough='title=\"mytitle\"'","required":false,"default":"","type":"String","values":[]},
-		{"name":"delimiter","description":"The delimiter to use to separate entries in a static autosuggest list. This attribute is meaningful only if the autosuggest attribute is a string of delimited values.","required":false,"default":"","type":"String","values":[]},
-		{"name":"maxresultsdisplayed","description":"The maximum number suggestions to display in the autosuggest list.\nValid only for cfinput type=\"text\".","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"onbinderror","description":"The name of a JavaScript function to execute if evaluating a bind expression, including an autosuggest bind expression, results in an error. The function must take two attributes: an HTTP status code and a message.","required":false,"default":"","type":"String","values":[]},
-		{"name":"showautosuggestloadingicon","description":"A Boolean value that specifies whether to display an animated icon when loading an autosuggest value for a text input.","required":false,"default":true,"type":"Boolean","values":[true,false]},
-		{"name":"sourcefortooltip","description":"The URL of a page to display as a tool tip. The page can include HTML markup to control the format, and the tip can include images.\nIf you specify this attribute, an animated icon appears with the text \"Loading...\" while the tip is being loaded.","required":false,"default":"","type":"String","values":[]},
-		{"name":"typeahead","description":"A Boolean value that specifies whether the autosuggest feature should automatically complete a user's entry with the first result in the suggestion list.\nValid only for cfinput type=\"text\".","required":false,"default":false,"type":"Boolean","values":[true,false]},
-		{"name":"matchContains","description":"true, match returned \"contains\" the query string. Default is false so that only results that \"start with\" the query string are returned.","required":false,"default":false,"type":"Boolean","values":[true,false]}
-
-	],
-	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfinput.html"},
-		"lucee": {"minimum_version":"", "notes":"Does not suppport `validateAt` attribute.", "docs":"http://docs.lucee.org/reference/tags/input.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfinput"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfinput"}
-	},
-	"links": [
-
-	]
-
+  "name": "cfinput",
+  "type": "tag",
+  "syntax": "<cfinput name=\"\">",
+  "returns": "",
+  "related": [],
+  "description": " Used within the cfform tag, to place radio buttons, check boxes, or text boxes on a form. Provides input validation for the specified control type.",
+  "params": [
+    {
+      "name": "name",
+      "description": "Name for form input element.",
+      "required": true,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "autosuggest",
+      "description": "Specifies entry completion suggestions to display as the user types into a text input. The user can select a suggestion to complete the text entry. The valid value can be either of the following: ‚Ä¢ A string consisting of the suggestion values separated by the delimiter specified by the delimiter attribute. ‚Ä¢ A bind expression that gets the suggestion values based on the current input text. Valid only for cfinput type=\"text\".",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "autoSuggestBindDelay",
+      "description": "The minimum time between autosuggest bind expression invocations, in seconds. Use this attribute to limit the number of requests that are sent to the server when a user types. Valid only for cfinput type=\"text\"",
+      "required": false,
+      "default": "",
+      "type": "Numeric",
+      "values": []
+    },
+    {
+      "name": "autoSuggestMinLength",
+      "description": "The minimum number of characters required in the text box before invoking a bind expression to return items for suggestion. Valid only for cfinput type=\"text\".",
+      "required": false,
+      "default": "",
+      "type": "Numeric",
+      "values": []
+    },
+    {
+      "name": "bindAttribute",
+      "description": "Specifies the HTML tag attribute whose value is set by the bind attribute. You can only specify attributes in the browser‚ HTML DOM tree, not ColdFusion-specific attributes. Ignored if there is no bind attribute. Valid only for cfinput type=\"text\".",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "bindonload",
+      "description": "A Boolean value that specifies whether to execute the bind attribute expression when first loading the form. Ignored if there is no bind attribute. Valid only for cfinput type=\"text\".",
+      "required": false,
+      "default": false,
+      "type": "boolean",
+      "values": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "id",
+      "description": "ID for form input element.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "type",
+      "description": "The input control type to create: - button: push button. - checkbox: check box. - file: file selector; not supported in Flash. - hidden: invisible control. - image: clickable button with an image. - password: password entry control; hides input values. - radio: radio button. - reset: form reset button. - submit: form submission button. - text: text entry box. - datefield: Flash only; date entry field with an expanding calendar for selecting dates.",
+      "required": false,
+      "default": "text",
+      "type": "String",
+      "values": [
+        "button",
+        "checkbox",
+        "file",
+        "hidden",
+        "image",
+        "password",
+        "radio",
+        "reset",
+        "submit",
+        "text",
+        "datefield",
+        "autosuggest"
+      ]
+    },
+    {
+      "name": "label",
+      "description": "Label to put next to the control on a Flash or XML form. Not used for button, hidden, image, reset, or submit types.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "style",
+      "description": "In HTML or XML format, ColdFusion passes the style attribute to the browser or XML. In Flash format, must be a style specification in CSS format.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "class",
+      "description": "Stylesheet class for form input element.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "required",
+      "description": "* yes: the field must contain data. * no: allows an empty field.",
+      "required": false,
+      "default": false,
+      "type": "boolean",
+      "values": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "mask",
+      "description": "A mask pattern that controls the character pattern that users can enter, or that the form sends to ColdFusion. In HTML and Flash for type=text use: - A = [A-Za-z] - X = [A-Za-z0-9] - 9 = [0-9] - ? = Any character - all other = the literal character In Flash for type=datefield use: - D = day; can use 0-2 mask characters. - M = month; can use 0-4 mask characters. - Y = year; can use 0, 2, or 4 characters. - E = day in week; can use 0-4 characters.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "validate",
+      "description": "date: verifies format mm/dd/yy. eurodate: verifies date format dd/mm/yyyy. time: verifies time format hh:mm:ss. float: verifies floating point format. integer: verifies integer format. telephone: verifies telephone format ###-###-####. The separator can be a blank. Area code and exchange must begin with digit 1 - 9. zipcode: verifies, in U.S. formats only, 5- or 9-digit format #####-####. The separator can be a blank. creditcard: strips blanks and dashes; verifies number using mod10 algorithm. Number must have 13-16 digits. social_security_number: verifies format ###-##-####. The separator can be a blank. regular_expression: matches input against pattern attribute.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": [
+        "date",
+        "eurodate",
+        "time",
+        "float",
+        "integer",
+        "telephone",
+        "zipcode",
+        "creditcard",
+        "social_security_number",
+        "regular_expression"
+      ]
+    },
+    {
+      "name": "validateat",
+      "description": "How to do the validation; one or more of the following: onSubmit, onServer or onBlur. onBlur and onSubmit are identical in Flash forms. For multiple values, use a comma-delimited list. Not supported on Railo/Lucee.",
+      "required": false,
+      "default": "onSubmit",
+      "type": "String",
+      "values": [
+        "onSubmit",
+        "onServer",
+        "onBlur"
+      ]
+    },
+    {
+      "name": "message",
+      "description": "Message text to display if validation fails",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "range",
+      "description": "Minimum and maximum value range, separated by a comma. If type = \"text\" or \"password\", this applies only to numeric data.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "maxlength",
+      "description": "Maximum length of text entered, if type=text or password.",
+      "required": false,
+      "default": "",
+      "type": "Numeric",
+      "values": []
+    },
+    {
+      "name": "pattern",
+      "description": "JavaScript regular expression pattern to validate input. ColdFusion uses this attribute only if you specify regex in the validate attribute. Omit leading and trailing slashes.",
+      "required": false,
+      "default": "",
+      "type": "Regex",
+      "values": []
+    },
+    {
+      "name": "onvalidate",
+      "description": "Custom JavaScript function to validate user input. The form object, input object, and input object values are passed to the routine, which should return True if validation succeeds, and False otherwise. If used, the validate attribute is ignored.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "onerror",
+      "description": "Custom JavaScript function to execute if validation fails.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "size",
+      "description": "Size of input control. Ignored, if type=radio or checkbox. If specified in a Flash form, ColdFusion sets the control width pixel value to 10 times the specified size and ignores the width attribute.",
+      "required": false,
+      "default": "",
+      "type": "Numeric",
+      "values": []
+    },
+    {
+      "name": "value",
+      "description": "HTML: corresponds to the HTML value attribute. Its use depends on control type. Flash: optional; specifies text for button type inputs: button, submit, and image.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "bind",
+      "description": "A Flash bind expression that populates the field with information from other form fields.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "checked",
+      "description": "Selects a control. No value is required. Applies if type=radio or checkbox. Default: false",
+      "required": false,
+      "default": false,
+      "type": "boolean",
+      "values": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "disabled",
+      "description": "Disables user input, making the control read-only. To disable input, specify disabled without an attribute or disabled=\"true\". To enable input, omit the attribute or specify disabled=\"false\".",
+      "required": false,
+      "default": false,
+      "type": "boolean",
+      "values": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "src",
+      "description": "Applies to Flash button, reset, submit, and image types, and the HTML image type. URL of an image to use on the button. Flash does not support GIF images.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "onkeyup",
+      "description": "JavaScript (HTML/XML) or ActionScript (Flash) to run when the user releases a keyboard key in the control.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "onkeydown",
+      "description": "JavaScript (HTML/XML) or ActionScript (Flash) ActionScript to run when the user presses a keyboard key in the control.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "onmouseup",
+      "description": "JavaScript (HTML/XML) or ActionScript (Flash) to run when the user presses a mouse button in the control.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "onmousedown",
+      "description": "JavaScript (HTML/XML) or ActionScript (Flash) to run when the user releases a mouse button in the control.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "onchange",
+      "description": "JavaScript (HTML/XML) or ActionScript (Flash) to run when the control changes due to user action. In Flash, applies to datefield, password, and text types only.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "onclick",
+      "description": "JavaScript (HTML/XML) or ActionScript (Flash) to run when the user clicks the control. In Flash, applies to button, checkbox, image, radio, reset, and submit types only.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "daynames",
+      "description": "A comma-delimited list that sets the names of the weekdays displayed in the calendar. Sunday is the first day and the rest of the weekday names follow in the normal order. Default is: S,M,T,W,Th,F,S",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": [
+        "S",
+        "M",
+        "T",
+        "W",
+        "Th",
+        "F",
+        "Sa",
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ]
+    },
+    {
+      "name": "firstdayofweek",
+      "description": "Integer in the range 0-6 specifying the first day of the week in the calendar, 0 indicates Sunday, 6 indicates Saturday. Default is: 0",
+      "required": false,
+      "default": 0,
+      "type": "Numeric",
+      "values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "monthnames",
+      "description": "A comma-delimited list of the month names that are displayed at the top of the calendar.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
+    },
+    {
+      "name": "enabled",
+      "description": "Flash only: Boolean value specifying whether the control is enabled. A disabled control appears in light gray. The inverse of the disabled attribute. Flash only. Default: true",
+      "required": false,
+      "default": true,
+      "type": "boolean",
+      "values": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "visible",
+      "description": "Flash only: Boolean value specifying whether to show the control. Space that would be occupied by an invisible control is blank. Default: true",
+      "required": false,
+      "default": true,
+      "type": "boolean",
+      "values": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "tooltip",
+      "description": "Flash only: Text to display when the mouse pointer hovers over the control.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "width",
+      "description": "Applies to most Flash types, HTML image type on some browsers. The width of the control, in pixels. For Flash forms, ColdFusion ignores this attribute if you also specify a size attribute value.",
+      "required": false,
+      "default": "",
+      "type": "Numeric",
+      "values": []
+    },
+    {
+      "name": "height",
+      "description": "Applies to most Flash types, HTML image type on some browsers. The height of the control, in pixels. The displayed height might be less than the specified size.",
+      "required": false,
+      "default": "",
+      "type": "Numeric",
+      "values": []
+    },
+    {
+      "name": "passthrough",
+      "description": "This attribute is deprecated. Passes arbitrary attribute-value pairs to the HTML code that is generated for the tag. You can use either of the following formats: passthrough=\"title=\"\"myTitle\"\"\" passthrough='title=\"mytitle\"'",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "delimiter",
+      "description": "The delimiter to use to separate entries in a static autosuggest list. This attribute is meaningful only if the autosuggest attribute is a string of delimited values.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "maxresultsdisplayed",
+      "description": "The maximum number suggestions to display in the autosuggest list.\nValid only for cfinput type=\"text\".",
+      "required": false,
+      "default": "",
+      "type": "Numeric",
+      "values": []
+    },
+    {
+      "name": "onbinderror",
+      "description": "The name of a JavaScript function to execute if evaluating a bind expression, including an autosuggest bind expression, results in an error. The function must take two attributes: an HTTP status code and a message.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "showautosuggestloadingicon",
+      "description": "A Boolean value that specifies whether to display an animated icon when loading an autosuggest value for a text input.",
+      "required": false,
+      "default": true,
+      "type": "Boolean",
+      "values": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "sourcefortooltip",
+      "description": "The URL of a page to display as a tool tip. The page can include HTML markup to control the format, and the tip can include images.\nIf you specify this attribute, an animated icon appears with the text \"Loading...\" while the tip is being loaded.",
+      "required": false,
+      "default": "",
+      "type": "String",
+      "values": []
+    },
+    {
+      "name": "typeahead",
+      "description": "A Boolean value that specifies whether the autosuggest feature should automatically complete a user's entry with the first result in the suggestion list.\nValid only for cfinput type=\"text\".",
+      "required": false,
+      "default": false,
+      "type": "Boolean",
+      "values": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "matchContains",
+      "description": "true, match returned \"contains\" the query string. Default is false so that only results that \"start with\" the query string are returned.",
+      "required": false,
+      "default": false,
+      "type": "Boolean",
+      "values": [
+        true,
+        false
+      ]
+    }
+  ],
+  "engines": {
+    "coldfusion": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfinput.html"
+    },
+    "lucee": {
+      "minimum_version": "",
+      "notes": "Does not suppport `validateAt` attribute.",
+      "docs": "http://docs.lucee.org/reference/tags/input.html"
+    },
+    "railo": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://railodocs.org/index.cfm/tag/cfinput"
+    },
+    "openbd": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://openbd.org/manual/?/tag/cfinput"
+    }
+  },
+  "links": []
 }
