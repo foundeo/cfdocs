@@ -88,7 +88,7 @@
 		},
 		{
 			"name": "bgcolor",
-			"description": "The background color for the file upload control. A hexadecimal value without \u00e2\u20ac\u0161\u00c3\u201e\u00c3\u00ba#\u00e2\u20ac\u0161\u00c3\u201e\u00c3\u00b9 prefixed.",
+			"description": "The background color for the file upload control. A hexadecimal value without &quot;#&quot; prefixed.",
 			"required": false,
 			"default": "",
 			"type": "String",
