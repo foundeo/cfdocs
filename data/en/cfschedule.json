@@ -11,7 +11,7 @@
 		{"name":"operation","description":"Operation that the scheduler performs. Must be HTTPRequest.","required":false,"default":"","type":"String","values":[]},
 		{"name":"file","description":"Name of the file in which to store the published output of\n the scheuled task","required":false,"default":"","type":"String","values":[]},
 		{"name":"path","description":"Path to the directory in which to put the published file.","required":false,"default":"","type":"String","values":[]},
-		{"name":"startdate","description":"Date on which to first run the scheuled task.","required":false,"default":"","type":"String","values":[]},
+		{"name":"startdate","description":"Date on which to first run the scheduled task.","required":false,"default":"","type":"String","values":[]},
 		{"name":"starttime","description":"Time at which to run the scheduled of task starts.","required":false,"default":"","type":"String","values":[]},
 		{"name":"URL","description":"URL of the page to execute.","required":false,"default":"","type":"URL","values":[]},
 		{"name":"port","description":"Port to use on the server that is specified by the url\n parameter. If resolveURL = \"yes\", retrieved document URLs\n that specify a port number are automatically resolved, to\n preserve links in the retrieved document. A port value in\n the url attribute overrides this value.","required":false,"default":80,"type":"Numeric","values":[]},
