@@ -12,7 +12,7 @@
 		{"name":"groupcasesensitive","description":"Whether to consider the case in grouping rows.","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"startrow","description":"Row from which to start output.","required":false,"default":"","type":"Numeric","values":[]},
 		{"name":"maxrows","description":"Maximum number of rows to display.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"encodefor","description":"CF2016+ When set applies an encoder to all variables to prevent XSS. For example if you specify `html` each variable will be wrapped by a call to the `encodeForHTML` function.","required":false,"default":"","type":"string","values":["html","htmlattribute","javascript","css","xml","xmlattribute","url","xpath","ldap","dn"]}
+		{"name":"encodefor","description":"CF2016+ Lucee5.1+ When set applies an encoder to all variables to prevent XSS. For example if you specify `html` each variable will be wrapped by a call to the `encodeForHTML` function.","required":false,"default":"","type":"string","values":["html","htmlattribute","javascript","css","xml","xmlattribute","url","xpath","ldap","dn"]}
 
 	],
 	"engines": {
@@ -39,7 +39,7 @@
 	    },
 	    {
 	            "title": "Using the encodeFor attribute",
-	            "description": "CF2016+ By specifying `encodefor=\"html\"` each varaible is encoded using the `encodeForHTML` function before it is output.",
+	            "description": "CF2016+ Lucee5.1+ By specifying `encodefor=\"html\"` each varaible is encoded using the `encodeForHTML` function before it is output.",
 	            "code": "<cfoutput query=\"news\" encodefor=\"html\">\n    <h2>#news.headline#</h2>\n    <p>#news.byline#</p>\n</cfoutput>",
 	            "result": ""
 	    },
