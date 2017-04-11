@@ -6,19 +6,27 @@
 	"related":[],
 	"description":" Finds the first occurrence of a substring in a string, from a\n specified start position. The search is case-sensitive.",
 	"params": [
-		{"name":"substring","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"start","description":"","required":false,"default":1,"type":"Numeric","values":[1]}
+		{"name":"substring","description":"The string you are looking for.","required":true,"default":"","type":"String","values":[]},
+		{"name":"String","description":"The string to search in.","required":true,"default":"","type":"String","values":[]},
+		{"name":"start","description":"The position to start searching in the string (starts at 1)","required":false,"default":1,"type":"Numeric","values":[1]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/find"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/find.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/find.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/find"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/find"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Find apple in the string",
+			"description":"Returns the index of apple in the string.",
+			"code":"find(\"apple\", \"An apple a day keeps the doctor away.\")",
+			"result": "4"
+		}
 	]
 
 }

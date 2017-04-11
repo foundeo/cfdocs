@@ -3,14 +3,14 @@
 	"type":"function",
 	"syntax":"jsStringFormat(String)",
 	"returns":"String",
-	"related":[],
+	"related":["encodeForJavaScript"],
 	"description":" Escapes special JavaScript characters, such as single quotation\n mark, double quotation mark, and newline",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/jsstringformat"},
+		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/jsstringformat.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/jsstringformat.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/jsstringformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/jsstringformat"}

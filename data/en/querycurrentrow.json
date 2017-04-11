@@ -1,0 +1,17 @@
+{
+	"name": "queryCurrentRow",
+	"type": "function",
+	"syntax": "queryCurrentRow(query)",
+	"member": "query.currentRow()",
+	"returns": "numeric",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querycurrentrow.html"}
+	},
+	"examples": [],
+	"links": []
+}

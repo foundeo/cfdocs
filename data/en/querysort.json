@@ -1,0 +1,28 @@
+{
+	"name": "querySort",
+	"type": "function",
+	"syntax": "querySort(query, sortFunction)",
+	"member": "query.sort(sortFunction)",
+	"returns": "boolean",
+	"related": [],
+	"description": "Sorts a query.",
+	"params": [
+		{"name": "query", "description": "The query you want to sort", "required": true, "default": "", "type": "query", "values": []},
+		{"name": "sortFunction", "description": "CF2016+ or Lucee5.1.0.13+ a function with two arguments each corresponding to a query row. The function returns -1 if first row is less than second, 0 if equal, or 1 if first row is greater than second. Lucee4.5+ accepts a column name to sort by instead of a function.", "required": true, "default": "", "type": "function", "values": []},
+		{"name": "direction", "description": "Lucee4.5+ Only supported on Lucee when second argument is a column name instead of a callback function.", "required": false, "default": "", "type": "string", "values": []}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querysort.html"},
+		"lucee": {"minimum_version": "", "notes": "Lucee also supports `querySort(query, column_name [, direction])` syntax. As of 5.1.0.13 it accepts a callback function. When called as a member function query.sort() is chainable.", "docs": "http://docs.lucee.org/reference/functions/querysort.html"}
+	},
+	"examples": [
+		{
+			"title":"Sorting a query using sort member function",
+			"description":"",
+			"code":"//build a query\r\nnews = queryNew(\"id,title\",\r\n    \"integer,varchar\",\r\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\r\n//sort it\r\nnews.sort(function(rowA, rowB) { return compare(rowA.title, rowB.title); });\r\n//dump it\r\nwriteDump(news);\r\n",
+			"result":"",
+			"runnable":true
+		}
+	],
+	"links": []
+}

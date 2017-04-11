@@ -4,21 +4,35 @@
 	"syntax":"dateCompare(date1, date2 [, datePart])",
 	"returns":"Numeric",
 	"related":[],
-	"description":" Performs a full date/time comparison of two dates.\n -1, if date1 is less than date2\n 0, if date1 is equal to date2\n 1, if date1 is greater than date2\n [datepart - quicky]\n yyyy: Year; q: Quarter; m: Month; y: Day of year; d: Day\n w: Weekday; ww: Week; h: Hour; n: Minute; s: Second;\n l: Millisecond",
+	"description":"Performs a full date/time comparison of two dates.\n `-1` if date1 is less than date2\n `0` if date1 is equal to date2\n `1` if date1 is greater than date2\n [DatePart] `yyyy`: Year; `m`: Month; `d`: Day; `h`: Hour; `n`: Minute; `s`: Second",
 	"params": [
-		{"name":"date1","description":"","required":true,"default":"","type":"DateTime","values":["now()"]},
-		{"name":"date2","description":"","required":true,"default":"","type":"DateTime","values":["now()"]},
-		{"name":"datePart","description":"","required":false,"default":"","type":"String","values":["yyyy","q","m","y","d","w","ww","h","n","s","l"]}
+		{"name":"date1","description":"A date to compare","required":true,"default":"","type":"DateTime","values":[]},
+		{"name":"date2","description":"Another date to compare","required":true,"default":"","type":"DateTime","values":[]},
+		{"name":"datePart","description":"","required":false,"default":"s","type":"String","values":["yyyy","m","y","d","h","n","s"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/datecompare"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateCompare.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/datecompare.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/datecompare"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/datecompare"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Compare Two Dates by Year",
+			"description": "",
+			"code": "dateCompare('12/30/2015', '12/02/2015', 'yyyy')",
+			"result": "0"
+		},
+		{
+			"title": "Compare Two Dates by Day",
+			"description": "Returns 1 because date1 is greater than date 2",
+			"code": "dateCompare('12/30/2015', '12/02/2015', 'd')",
+			"result": "1"
+		}
 	]
 
 }

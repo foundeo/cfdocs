@@ -3,20 +3,40 @@
 	"type":"function",
 	"syntax":"yesNoFormat(value)",
 	"returns":"String",
-	"related":[],
-	"description":" Yes, for a non-zero value; No, otherwise.",
+	"related":["booleanFormat","isBoolean"],
+	"description":" Yes, for a true value; No for a false value, empty string or null. Throws an exception for other values.",
 	"params": [
-		{"name":"value","description":"A number or Boolean value","required":true,"default":"","type":"boolean","values":[true,false]}
+		{"name":"value","description":"A Boolean value or empty string","required":true,"default":"","type":"object","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/yesnoformat"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/yesnoformat.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/yesnoformat.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/yesnoformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/yesnoformat"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Example of Yes",
+			"description":"Pass in a true value outputs Yes",
+			"code":"yesNoFormat(true)",
+			"result":"Yes"
+		},
+		{
+			"title":"Example of No",
+			"description":"Pass in a false value outputs No",
+			"code":"yesNoFormat(false)",
+			"result":"No"
+		},
+		{
+			"title":"Example of empty string",
+			"description":"Pass in an empty string outputs No",
+			"code":"yesNoFormat(\"\")",
+			"result":"No"
+		}
 	]
 
 }

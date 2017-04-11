@@ -11,13 +11,22 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/setencoding"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/setencoding.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/setencoding.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/setencoding"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/setencoding"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Script Example",
+			"description":" ",
+			"code":"<!--- This example sends and interprets the contents of two fields as big5 encoded text. Note that the form fields are received as URL variables because the form uses the GET method. ---> \r\n <cfcontent type=\"text/html; charset=big5\"> \r\n <form action='#cgi.script_name#' method='get'> \r\n <input name='xxx' type='text'> \r\n <input name='yyy' type='text'> \r\n <input type=\"Submit\" value=\"Submit\"> \r\n </form> \r\n <cfif isDefined(\"URL.xxx\")> \r\n <cfscript> \r\n setEncoding(\"url\", \"big5\"); \r\n writeOutput(\"URL.XXX is \" & URL.xxx & \"<br>\"); \r\n writeOutput(\"URL.YYY is \" & URL.yyy & \"<br>\"); \r\n theEncoding = getEncoding(\"URL\"); \r\n writeOutput(\"The URL variables were decoded using '\" & theEncoding & \"' encoding.\"); \r\n writeOutput(\"The encoding is \" & theEncoding); \r\n </cfscript> \r\n </cfif>",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

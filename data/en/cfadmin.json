@@ -1,0 +1,27 @@
+{
+	"name":"cfadmin",
+	"type":"tag",
+	"syntax":"<cfadmin>",
+	"returns":"",
+	"related":[],
+	"description":"Used internally by Lucee (and Railo) in the administrator to apply settings. This tag is considered undocumented / subject to change.",
+	"params": [
+		{"name":"action","description":"The administrative action to perform.","required":true,"default":"","type":"String","values":[]},
+		{"name":"type","description":"The admin context: `web` or `server`","required":true,"default":"","type":"String","values":["web","server"]},
+		{"name":"password","description":"The admin password.","required":true,"default":"","type":"String","values":[]}
+	],
+	"engines": {
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/"}
+	},
+	"links": [
+		{
+			"title":"Old Railo CFAdmin Reference",
+			"url":"http://web.archive.org/web/20160430035417/http://www.getrailo.org/index.cfm/documentation/cfadmin-doc/",
+			"description":"Railo documentation for cfadmin tag."
+		}
+	],
+	"examples": [
+		
+	]
+
+}

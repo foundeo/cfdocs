@@ -4,19 +4,27 @@
 	"syntax":"de(String)",
 	"returns":"Object",
 	"related":[],
-	"description":" Postpones evaluation of a string as an expression, when it is\n passed as a parameter to the IIf or Evaluate functions. Escapes\n any double quotation marks in the parameter and wraps the\n result in double quotation marks.",
+	"description":"Delay evaluation of a string as an expression, when it is passed as a parameter to the IIf or Evaluate functions. Escapes any double quotation marks in the parameter and wraps the result in double quotation marks. It does not escape `#` so the string could still be evaluated in some cases.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/de"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DE.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/de.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/de"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/de"}
 	},
 	"links": [
 
+	],
+	"examples":[
+		{
+			"title":"Simple Example",
+			"description":"",
+			"code":"de(\"pete\")",
+			"result":"\"pete\""
+		}
 	]
 
 }

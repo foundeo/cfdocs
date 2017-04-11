@@ -1,18 +1,18 @@
 {
-	"name":"xmlParse",
+	"name":"XMLParse",
 	"type":"function",
-	"syntax":"xmlParse(xmlstring [, casesensitive] [, validator])",
+	"syntax":"XMLParse(xmlString [, caseSensitive] [, validator])",
 	"returns":"Object",
 	"related":[],
 	"description":" Converts an XML document that is represented as a string\n variable into an XML document object.",
 	"params": [
-		{"name":"xmlstring","description":"Any of the following:\n - A string containing XML text.\n - The name of an XML file.\n - The URL of an XML file; valid protocol identifiers\n include http, https, ftp, and file.","required":true,"default":"","type":"String","values":[]},
-		{"name":"casesensitive","description":"Maintains the case of document elements and attributes.\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"xmlString","description":"Any of the following:\n - A string containing XML text.\n - The name of an XML file.\n - The URL of an XML file; valid protocol identifiers\n include http, https, ftp, and file.","required":true,"default":"","type":"String","values":[]},
+		{"name":"caseSensitive","description":"Maintains the case of document elements and attributes.\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"validator","description":"Any of the following:\n - The name of a Document Type Definition (DTD) or\n XML Schema file.\n - The URL of a DTD or Schema file; valid protocol\n identifiers include http, https, ftp, and file.\n - A string representation of a DTD or Schema.\n - An empty string; in this case, the XML file must\n contain an embedded DTD or Schema identifier, which\n is used to validate the document.","required":false,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/xmlparse"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlparse.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/xmlparse.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/xmlparse"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/xmlparse"}

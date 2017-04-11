@@ -1,25 +1,35 @@
 {
 	"name":"imageTranslateDrawingAxis",
 	"type":"function",
-	"syntax":"imageTranslateDrawingAxis(Param1, name, x, y)",
+	"syntax":"imageTranslateDrawingAxis(name, x, y)",
+	"member":"someImage.translateDrawingAxis(x, y)",
 	"returns":"void",
 	"related":[],
-	"description":" Translates the origin of the image context to the point (x,y) in the current coordinate system. Modifies the image context so that its new origin corresponds to the point (x,y) in the image\'s original coordinate system.",
+	"description":" Translates the origin of the image context to the point (x,y) in the current coordinate system. Modifies the image context so that its new origin corresponds to the point (x,y) in the image's original coordinate system.",
 	"params": [
-		{"name":"Param1","description":"No Help Available","required":true,"default":"","type":"","values":[]},
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"x","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"y","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"","values":[]},
+		{"name":"x","description":"x coordinate","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"y","description":"y coordinate","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/imagetranslatedrawingaxis"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagetranslatedrawingaxis.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagetranslatedrawingaxis"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagetranslatedrawingaxis"}
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagetranslatedrawingaxis.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagetranslatedrawingaxis.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagetranslatedrawingaxis"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Using translateDrawingAxis member function",
+			"description":"CF11+ Draw a rectangle after the drawing axis has been moved",
+			"code":"imgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.translateDrawingAxis(50,50);\r\nimgObj.drawRect(40,50,70,50,\"yes\");\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }
+
+

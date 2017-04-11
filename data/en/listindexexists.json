@@ -1,0 +1,20 @@
+{
+	"name": "listIndexExists",
+	"type": "function",
+	"syntax": "listIndexExists(list, index [, delimiter] [, includeEmptyFields])",
+	"member": "list.listIndexExists(index [, delimiter] [, includeEmptyFields])",
+	"returns": "boolean",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "list", "description": "", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "index", "description": "", "required": true, "default": "", "type": "number", "values": []},
+		{"name": "delimiter", "description": "", "required": false, "default": ",", "type": "string", "values": []},
+		{"name": "includeEmptyFields", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/listindexexists.html"}
+	},
+	"examples": [],
+	"links": []
+}

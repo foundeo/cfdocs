@@ -2,22 +2,39 @@
 	"name":"imageSetDrawingColor",
 	"type":"function",
 	"syntax":"imageSetDrawingColor(name, color)",
+	"member":"someImage.setDrawingColor(color)",
 	"returns":"void",
 	"related":[],
 	"description":" Sets the current drawing color for ColdFusion images. All subsequent graphics operations use the specified color.",
 	"params": [
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"color","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"name","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
+		{"name":"color","description":"Color","required":true,"default":"black","type":"","values":["Hexadecimal value of RGB color. For example, specify the color white as ##FFFFFF or FFFFFF.","String value of color (for example, 'black'', 'red'', 'green').","List of three numbers for (R,G,B) values. Each value must be in the range 0–255."]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/imagesetdrawingcolor"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagesetdrawingcolor.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagesetdrawingcolor.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagesetdrawingcolor.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagesetdrawingcolor"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagesetdrawingcolor"}
 	},
 	"links": [
 
+	],
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "This example shows how to set the drawing color and draw several objects in that color. ",
+			"code": "<!--- Use the imageNew function to create a ColdFusion image. ---> \r\n <cfset myImage=imageNew(\"\",200,300)> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset imageSetAntialiasing(myImage)> \r\n <!--- Set the drawing color to pink. ---> \r\n <cfset imageSetDrawingColor(myImage,\"pink\")> \r\n <!--- Draw a pink line. ---> \r\n <cfset imageDrawLine(myImage,1,1,200,300)> \r\n <!--- Draw a pink oval. ---> \r\n <cfset imageDrawOval(myImage,40,50,80,40)> \r\n <!--- Draw another pink oval. ---> \r\n <cfset imageDrawOval(myImage,15,180,80,40)> \r\n <!--- Draw a pink rectangle. ---> \r\n <cfset imageDrawRect(myImage,100,100,45,65)> \r\n <!--- Display the image in a browser. ---> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowse\"> ",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title":"Using setDrawingColor member function",
+			"description":"CF11+ Create a new image and with this image draw a 'W' in blue (#116185)",
+			"code":"imgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.setDrawingColor('116185');\r\nimgObj.drawLines([0,38,76,114,152],[0,152,0,152,0],\"no\",\"no\");\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

@@ -1,0 +1,16 @@
+{
+	"name": "empty",
+	"type": "function",
+	"syntax": "empty(variable)",
+	"returns": "boolean",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "variable", "description": "", "required": true, "default": "", "type": "variablestring", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/empty.html"}
+	},
+	"examples": [],
+	"links": []
+}

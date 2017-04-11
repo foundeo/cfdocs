@@ -1,0 +1,43 @@
+{
+	"name": "arrayIndexExists",
+	"type": "function",
+	"syntax": "arrayIndexExists(array, index)",
+	"member": "array.indexExists(index)",
+	"returns": "boolean",
+	"related": [],
+	"description": "",
+	"params": [
+		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []},
+		{"name": "index", "description": "", "required": true, "default": "", "type": "number", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arrayindexexists.html"}
+	},
+	"examples": [
+		{
+			"title": "Standard function call when checking for an existing element",
+			"description": "In this example, the index we are checking exists in the array so the check returns true.",
+			"code": "myArray=[];\nmyArray[1]='one';\nmyArray[2]='two';\nmyArray[3]='three';\nmyArray[4]='four';\nmyArray[5]='five';\nresult = arrayIndexExists(myArray, 3);\nwriteOutput(result);",
+			"result": "true"
+		},
+		{
+			"title": "Standard function call when checking for a nonexisting element",
+			"description": "In this example, there is no element at the index we're checking so the check returns false.",
+			"code": "myArray=[];\nmyArray[1]='one';\nmyArray[2]='two';\n// no element at index 3\nmyArray[4]='four';\nmyArray[5]='five';\nresult = arrayIndexExists(myArray, 3);\nwriteOutput(result);",
+			"result": "false"
+		},
+		{
+			"title": "Standard function call when checking an empty array",
+			"description": "In this example, the array we are searching is empty so the check returns false.",
+			"code": "myArray=[];\nresult = arrayIndexExists(myArray, 3);\nwriteOutput(result);",
+			"result": "false"
+		},
+		{
+			"title": "Member function syntax",
+			"description": "In this example, the index we are checking exists in the array so the check returns true.",
+			"code": "myArray=[];\nmyArray[1]='one';\nmyArray[2]='two';\nmyArray[3]='three';\nmyArray[4]='four';\nmyArray[5]='five';\nresult = myArray.indexExists(3);\nwriteOutput(result);",
+			"result": "true"
+		}
+	],
+	"links": []
+}

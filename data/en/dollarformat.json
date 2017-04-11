@@ -4,19 +4,35 @@
 	"syntax":"dollarFormat(number)",
 	"returns":"String",
 	"related":[],
-	"description":" Formats a string in U.S. format. (For other currencies, use\n LSCurrencyFormat or LSEuroCurrencyFormat.)",
+	"description":" Formats a string in U.S. currency format. (For other currencies, use\n LSCurrencyFormat or LSEuroCurrencyFormat.).",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/dollarformat"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/dollarformat.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/dollarformat.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/dollarformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dollarformat"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Format Positive Numbers",
+			"description":"Dollar Format is about $, commas, and 2 decimal places",
+			"code":"dollarFormat(1236598.2)",
+			"result":"$1,236,598.20",
+			"runnable":true
+		},
+		{
+			"title":"Format Negative Numbers",
+			"description":"Negative numbers appear with parentheses.",
+			"code":"dollarFormat(-11.34)",
+			"result":"($11.34)",
+			"runnable":true
+		}
 	]
 
 }

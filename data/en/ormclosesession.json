@@ -1,17 +1,17 @@
 {
-	"name":"ormCloseSession",
+	"name":"ORMCloseSession",
 	"type":"function",
-	"syntax":"ormCloseSession()",
+	"syntax":"ORMCloseSession([datasource])",
 	"returns":"void",
 	"related":[],
-	"description":" No Help Available",
+	"description":"Closes the current ORM session for the given datasource. When the datasource argument is not passed then it uses the default datasource defined in Application.cfc.",
 	"params": [
+		{"name":"datasource","description":"Name of the datasource for the ORM session","required":false,"default":"","type":"String","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/ormclosesession"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormclosesession.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/ormclosesession.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ormclosesession"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ormclosesession"}
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ormclosesession"}
 	},
 	"links": [
 

@@ -1,5 +1,5 @@
 /*
-	Copyright (c) 2015, Abram Adams
+	Copyright (c) 2013, Abram Adams
 
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
@@ -106,9 +106,10 @@ angular.module('code.editor', [])
 	'				<label class="control-label">Change CFML Engine</label>'+
 	'		        <div>'+
 	'		         <select id="engine" class="form-control">'+
-	'		             <option value="lucee5">Lucee 5.0.0.49 (beta)</option>'+
+	'		             <option value="lucee5">Lucee 5.0.0.* (beta)</option>'+
 	'		             <option value="lucee">Lucee 4.5</option>'+
 	'		             <option value="railo">Railo 4.2</option>'+
+	'				     <option value="acf2016">Adobe ColdFusion 2016</option>'+
 	'				     <option value="acf11">Adobe ColdFusion 11</option>'+
 	'		             <option value="acf">Adobe ColdFusion 10</option>'+
 	'		         </select>'+
@@ -172,7 +173,7 @@ angular.module('code.editor', [])
 				scope.setupCodeGist = attrs.setupCodeGist;
 				scope.asserts = attrs.asserts;
 				scope.fullscreen = attrs.fullscreen;
-				scope.engines = {'acf11':'Adobe ColdFusion 11', 'acf':'Adobe ColdFusion 10', 'railo':'Railo 4.2', 'lucee':'Lucee 4.5', 'lucee5':'Lucee 5', 'lucee5.0.0.45':'Lucee 5.0.0.45'};
+				scope.engines = {'acf2016':'Adobe ColdFusion 2016','acf11':'Adobe ColdFusion 11', 'acf':'Adobe ColdFusion 10', 'railo':'Railo 4.2', 'lucee':'Lucee 4.5', 'lucee5':'Lucee 5', 'lucee5.0.0.45':'Lucee 5.0.0.45'};
 				scope.engine = attrs.engine || 'lucee';
 				scope.basepath = attrs.basepath || '/gist/';
 
@@ -211,7 +212,8 @@ angular.module('code.editor', [])
         			    "lucee5" : [ "http://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
         			    "lucee5.0.0.45" : [ "http://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
                     	"acf" 	: [ "http://acf10-sbx.trycf.com/cfusion/getremote.cfm" ],
-						"acf11" : [ "http://acf11-sbx.trycf.com/cfusion/getremote.cfm" ]
+						"acf11" : [ "http://acf11-sbx.trycf.com/cfusion/getremote.cfm" ],
+						"acf2016" : [ "http://acf12-sbx.trycf.com/getremote.cfm" ]
                     },
                     url = attrs.url || urlPool[scope.engine][Math.floor(Math.random()*urlPool[scope.engine].length)];
 
@@ -343,9 +345,9 @@ angular.module('code.editor', [])
 
 				// Resize the editor to fit the new dimensions.
 				aceEditor.resize(true);
-
-				editor.show();
 				scope.toggleFullscreen = toggleFullscreen;
+				editor.show();
+
 				// Force fullscreen if fullscreen attribute was passed in and true.
 				if( attrs.fullscreen !== undefined && attrs.fullscreen ==	 "true"){
 					toggleFullscreen();
@@ -427,10 +429,10 @@ angular.module('code.editor', [])
 				      	if( scope.setupCodeGist !== undefined && scope.setupCodeGist.length > 0 ){
 				      		url+= '?setupCodeGistId='+ scope.setupCodeGist;
 				      	}
-				      	if( scope.theme !== undefined && scope.theme.length > 0 ){
+				      	if(scope.theme !== undefined && scope.theme.length > 0 ){
 							url+= (url.indexOf('?') > 0 ? '&' : '?') + 'theme='+ scope.theme;
 				      	}
-				        message.html('<span class="alert alert-success" style="padding: 5px;margin: 5px 0 0 3px;display: inline-block;"><i class="icon-check icon-white"></i> Saved Gist: <a href="http://trycf.com'+ url + '" target="_blank">'+response.id+'</a></span>');
+				        message.html('<span class="alert alert-success" style="padding: 5px;margin: 5px 0 0 3px;display: inline-block;"><i class="icon-check icon-white"></i> Saved Gist: <a href="http://trycf.com'+ url + '">'+response.id+'</a></span>');
 				      })
 				      .error( function(e) {
 				        console.warn("gist save error", e);
@@ -616,16 +618,16 @@ angular.module('code.editor', [])
 					element.find( '.toggle-fullscreen i' ).toggleClass( 'icon-resize-full' ).toggleClass( 'icon-resize-small' );
 
 					if( element.find( '.editor-container' ).hasClass( 'fullscreen' ) ){
-						$( document ).on( 'keyup', handleEscape );
+						$( document ).on( 'keyup', scope.handleEscape );
 					}else{
-						$( document ).off( 'keyup', handleEscape );
+						$( document ).off( 'keyup', scope.handleEscape );
 					}
 					aceEditor.resize(true);
 				}
-				function handleEscape( e ){
+				scope.handleEscape = function( e ){
 					// register listener to restore editor size when escape is pressed
 					if ( e.keyCode == 27 ) { // esc
-						toggleFullscreen();
+						scope.toggleFullscreen();
 					}
 				}
 

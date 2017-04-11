@@ -6,19 +6,26 @@
 	"related":[],
 	"description":" Removes characters from a string.",
 	"params": [
-		{"name":"String","description":"The string or variable containing a string to search.","required":true,"default":"","type":"String","values":[]},
-		{"name":"start","description":"The starting position in the string to search.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"String","description":"The string or variable containing a string to process.","required":true,"default":"","type":"String","values":[]},
+		{"name":"start","description":"The starting position in the string to process.","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"count","description":"Number of characters to remove.","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/removechars"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/removechars.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/removechars.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/removechars"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/removechars"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Remove a string",
+			"description": "",
+			"code": "removeChars('Hello CFML World',6,5)",
+			"result": "Hello World"
+		}
 	]
-
 }

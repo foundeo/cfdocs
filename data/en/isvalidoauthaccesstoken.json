@@ -1,0 +1,27 @@
+{
+	"name":"isValidOauthAccesstoken",
+	"type":"function",
+	"syntax":"isValidOauthAccesstoken(token,type);",
+	"returns":"Boolean",
+	"related":[],
+	"description":" Checks if the OAUTH access token is still valid.",
+	"params": [
+		{"name":"token","description":"The access token to check.","required":true,"default":"","type":"","values":[]},
+        {"name":"type","description":"The type of the OAUTH server (facebook/google).","required":true,"default":"","type":"","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isvalidoauthaccesstoken.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "isValidOauthAccesstoken(\"any_token_value\",\"facebook\") \r\n",
+			"result": ""
+		}
+	]
+
+}

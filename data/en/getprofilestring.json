@@ -3,8 +3,8 @@
 	"type":"function",
 	"syntax":"getProfileString(inipath, section, entry)",
 	"returns":"String",
-	"related":[],
-	"description":" Gets an initialization file entry.\n An initialization file assigns values to configuration\n variables, also known as entries, that are set when the system\n boots, the operating system comes up, or an application starts.\n Returns the entry - if no value, returns an empty string.",
+	"related":["setProfileString"],
+	"description":"Gets an initialization file entry. An initialization file assigns values to configuration variables, also known as entries, that are set when the system\n boots, the operating system comes up, or an application starts. Returns the entry - if no value, returns an empty string.",
 	"params": [
 		{"name":"inipath","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"section","description":"","required":true,"default":"","type":"String","values":[]},
@@ -12,13 +12,22 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/getprofilestring"},
+		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getprofilestring.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/getprofilestring.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getprofilestring"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getprofilestring"}
 	},
 	"links": [
 
+	], 
+    "examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset IniPath = \"c:\\myboot.ini\"> \r\n <cfset Section = \"boot loader\"> \r\n <cfset timeout = getProfileString(IniPath, Section, \"timeout\")>    ",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

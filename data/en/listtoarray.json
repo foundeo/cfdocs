@@ -3,23 +3,49 @@
 	"type":"function",
 	"syntax":"listToArray(list [, delimiters] [, includeEmptyFields] [, multiCharacterDelimiter])",
 	"returns":"Array",
-	"related":[],
+	"related":["ArrayToList"],
 	"description":" Copies the elements of a list to an array.",
 	"params": [
-		{"name":"list","description":"","required":true,"default":"","type":"String","values":[]},
+		{"name":"list","description":"A list or variable name","required":true,"default":"","type":"String","values":[]},
 		{"name":"delimiters","description":"","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]},
 		{"name":"includeEmptyFields","description":"A Boolean value specifying whether to create empty array entries if there are two delimiters in a row.","required":false,"default":"","type":"Boolean","values":[true,false]},
 		{"name":"multiCharacterDelimiter","description":"A Boolean value specifying whether the delimiters parameter specifies a multi-character delimiter.","required":false,"default":"","type":"Boolean","values":[true,false]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/listtoarray"},
+		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listtoarray.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/listtoarray.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listtoarray"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listtoarray"}
 	},
 	"links": [
 
-	]
+	],
+	"examples": [
+        {
+            "title": "Simple example for listToArray function",
+            "description": "Uses the listToArray() function to retrieve a list as an array",
+            "code": "list = \"red,green,orange\";\ngetArray = listToArray(list);\nsomeJSON = serializeJSON(getArray);\nwriteOutput(someJSON);",
+            "result": "[\"red\", \"green\", \"orange\"]"
+        },
+        {
+            "title": "Example for listToArray function with delimiter",
+            "description": "Uses the listToArray() function with a semicolon delimiter to retrieve a list as an array",
+            "code": "list = \"coldfusion;php;java;sql\";\ngetArray = listToArray(list,\";\");\nsomeJSON = serializeJSON(getArray);\nwriteOutput(someJSON);",
+            "result": "[\"coldfusion\", \"php\", \"java\", \"sql\"]"
+        },
+        {
+            "title": "Example for listToArray function with includeEmptyFields",
+            "description": "If includeEmptyFields is true, empty value add in array elements",
+            "code": "list = \"coldfusion;php;;java;sql\";\ngetArray = listToArray(list,\";\",true);\nsomeJSON = serializeJSON(getArray);\nwriteOutput(someJSON);",
+            "result": "[\"coldfusion\", \"php\", \" \" , \"java\", \"sql\"]"
+        },
+        {
+            "title": "Example for listToArray function with multiCharacterDelimiter",
+            "description": "Uses the listToArray() function to retrieve a list as an array with multiCharacterDelimiter",
+            "code": "list = \"coldfusion,php,|test,java,|sql\";\ngetArray = listToArray(list,\",|\",false,true);\nsomeJSON = serializeJSON(getArray);\nwriteOutput(someJSON);",
+            "result": "[\"coldfusion,php\", \"test,java\", \"sql\"]"
+        }
+    ]
 
 }

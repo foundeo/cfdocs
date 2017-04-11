@@ -1,0 +1,30 @@
+{
+	"name": "arrayFirst",
+	"type": "function",
+	"syntax": "arrayFirst(array)",
+	"member": "array.first()",
+	"returns": "any",
+	"related": ["arrayLast"],
+	"description": "Returns the first item from an array.",
+	"params": [
+		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arrayfirst.html"}
+	},
+	"examples": [
+        {
+            "title": "Member Function",
+            "description": "Use the member function to return the first item from an array",
+            "code": "someArray = [1,2,3,4];\nWriteOutput(someArray.first());",
+            "result": "1"
+        },
+        {
+            "title": "Non-Member Function",
+            "description": "Return the first item from an array",
+            "code": "seinfeldArray = [\"Jerry\",\"Elaine\",\"Kramer\",\"George\"];\nWriteOutput(arrayFirst(seinfeldArray));",
+            "result": "\"Jerry\""
+        }
+    ],
+	"links": []
+}

@@ -2,22 +2,36 @@
 	"name":"arrayFindNoCase",
 	"type":"function",
 	"syntax":"arrayFindNoCase(array, object)",
+	"member":"someArray.findNoCase(object)",
 	"returns":"Numeric",
-	"related":[],
+	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
 	"description":" These functions performs a case-insensitive search in the array for the specified object. Returns the array index of the first match; 0 if not found.",
 	"params": [
-		{"name":"array","description":"No Help Available","required":true,"default":"","type":"Array","values":[]},
-		{"name":"object","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]}
+		{"name":"array","description":"The array to search","required":true,"default":"","type":"Array","values":[]},
+		{"name":"object","description":"The value you are looking for in the array.","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/arrayfindnocase"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayfindnocase.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayfindnocase.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arrayfindnocase"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayfindnocase"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Find an \"Apple\" in an array of Fruit",
+			"description":"Returns the index of the element \"Apple\" in the array",
+			"code":"writeOutput( arrayFindNoCase([\"orange\",\"pineapple\",\"apple\"], \"Apple\" ) );",
+			"result":"3"
+		},
+		{
+			"title":"Member Functions: Find an \"Apple\" in an array of Fruit",
+			"description":"Calls the findNoCase member function of the array object. Requires CF11+ or Lucee4.5+",
+			"code":"fruit = [\"orange\",\"pineapple\",\"apple\"];\nwriteOutput( fruit.findNoCase(\"Apple\") );",
+			"result":"3"
+		}
 	]
-
 }

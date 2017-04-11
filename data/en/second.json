@@ -2,21 +2,27 @@
 	"name":"second",
 	"type":"function",
 	"syntax":"second(date)",
+	"member":"date.second()",
 	"returns":"Numeric",
-	"related":[],
+	"related":["hour","minute","month","quarter","week","year"],
 	"description":" Extracts the ordinal for the second from a date/time object.",
 	"params": [
 		{"name":"date","description":"A date\/time object","required":true,"default":"","type":"DateTime","values":["now()"]}
-
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/second"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/second.html"},
+		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/second.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+.", "docs":"http://docs.lucee.org/reference/functions/second.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/second"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/second"}
 	},
 	"links": [
-
+	],
+	"examples": [
+		{
+			"title": "Seconds of a datatime object",
+			"description": "",
+			"code": "dt = createdatetime(2016,1,1,5,30,25);\ns = second( dt );\nwriteoutput( s );",
+			"result": "25"
+		}
 	]
-
 }

@@ -1,11 +1,34 @@
 $(document).ready(function() {
+
+ var tags_fns = new Bloodhound({
+    datumTokenizer: function(d) {
+      var test = Bloodhound.tokenizers.whitespace(d);
+          $.each(test,function(k,v){
+              var i = 0;
+              while( (i+1) < v.length ){
+                  test.push(v.substr(i,v.length));
+                  i++;
+              }
+          })
+          return test;
+    },
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    prefetch: {
+          url:'data/en/index.json',
+          ttl: 86400000*7,
+          cache: true,
+          transform: function(d){return d.tags.concat(d.functions, d.categories);}
+        }
+  });
   $('#lookup-box').typeahead({
+      hint: true,
+      highlight: true,
+      minLength: 1
+  },
+  {
   		name: 'tags-fns',
-  		prefetch: {
-  			url:'data/en/index.json',
-  			ttl: 86400000*7,
-  			filter: function(d){return d.tags.concat(d.functions, d.categories);}
-  		}
+  		source: tags_fns,
+      limit: 10
   });
   $('.tt-hint').addClass('form-control');
   $('#search').submit(submitSearch);
@@ -17,7 +40,14 @@ $(document).ready(function() {
       var index = $(this).attr('data-index');
       $('#example-modal-content').html('<iframe width="100%" height="450" border="0" src="/try/' + name + '/' + index + '">');
       $('.example-modal').modal();
+      if (document.location.protocol == "https:") {
+        alert("FYI Running Examples over HTTPS may not work on some browsers because trycf.com does not also run over HTTPS. Browsers with strong mixed content controls will block the cross domain execution.")
+      }
   });
+
+  if ($('.prettyprint').length != 0 && typeof(prettyPrint) == "function") {
+      prettyPrint();
+  }
 
 });
 //search submit

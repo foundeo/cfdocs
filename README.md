@@ -5,6 +5,9 @@ CFDocs is a community maintained CFML reference tool available at [cfdocs.org](h
 * Easy to use urls like: [cfdocs.org/hash](http:cfdocs.org/hash) just hit /tag-name or /function-name.
 * Publicly maintained on [GitHub](http://github.com/foundeo/cfdocs)
 
+[![Build Status](https://travis-ci.org/foundeo/cfdocs.svg?branch=master)](https://travis-ci.org/foundeo/cfdocs)
+
+
 ## How reference data is structured
 
 All of the tag and function documentation are defined in json files under [*data/en/functionname.json*](https://github.com/foundeo/cfdocs/tree/master/data/en)  [function example](https://github.com/foundeo/cfdocs/blob/master/data/en/sessioninvalidate.json) [tag example](https://github.com/foundeo/cfdocs/blob/master/data/en/cfhtmltopdf.json).
@@ -13,17 +16,18 @@ This makes the documentation super easy to edit and allows developers to run a l
 
 ## Running CFDocs locally for dev or pleasure
 
-The cfdocs.org site can run locally pretty easily, it doesn't need anything except CF or Lucee to run (no database or anything), it utilizes a .htaccess file for url rewriting, but you could still test things by hitting /doc.cfm?name=getsafehtml if you just want to drop it in a directory somewhere.
 
-### Running locally with CommandBox (EASIEST WAY)!
+### Running CFDocs Locally
 
-1. Go download [CommandBox](https://www.ortussolutions.com/products/commandbox) if you have not already.
+The cfdocs.org site can run locally very easily thanks to CommandBox.
+
+1. Go download [CommandBox](https://www.ortussolutions.com/products/commandbox) if you do not have it already.
 2. Download this repository and extract it to a folder, or clone it from this repository. If you are going to be making changes to the docs I would suggest you fork it, see Adam Tuttle's guide: [GitHub tip for your first pull request](http://fusiongrokker.com/post/github-tip-for-your-first-pull-request)
-3. Run `box recipe server-start.boxr` from Command Prompt or Terminal in the root directory.
+3. Run `box server start` from Command Prompt or Terminal in the root directory.
 
 CommandBox will start an embedded CFML server on port 8411, and you can browse to [http://localhost:8411/](http://localhost:8411/) to view the docs.
 
-Note: To restart the server, don't use `server restart`, instead use `server stop` and then `recipe server-start.boxr` due to a [bug](https://ortussolutions.atlassian.net/browse/COMMANDBOX-245) in CommandBox the rewrite rules will not be added when the server restarts.
+If you don't want to go the commandbox route you can simply download it and unzip it to a web root and try it out (requires CF10+ or Lucee 4.5+), but you will probably spend more time trying to get it working than the 1-2 minutes it will take to download and learn how to use commandbox.
 
 ## How to contribute
 
@@ -49,8 +53,10 @@ CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. att
 
 We need help expanding existing tag and function documentation. Look through the reference pages till you find one needing more definitions or examples. Also see:
 
-* [List of Tags and Functions that do not have examples](http://cfdocs.org/report/missing-examples.cfm)
-* [Missing Functions](http://cfdocs.org/report/todo.cfm)
+* [Missing Descriptions](http://cfdocs.org/reports/missing-descriptions.cfm)
+* [Missing Examples](http://cfdocs.org/reports/missing-examples.cfm)
+* [Missing Related Links](http://cfdocs.org/reports/missing-related.cfm)
+* [Missing Functions](http://cfdocs.org/reports/todo.cfm)
 
 ### JSON File Documentation
 
@@ -58,6 +64,7 @@ We need help expanding existing tag and function documentation. Look through the
     	"name":"NameOfTagOrFunction",
     	"type":"function|tag",
     	"syntax":"Tag(arg)|<cftag attr=1>",
+        "member":"item.memberFunction([args])",
         "script":"cftag(attr=1);",
     	"returns":"void",
     	"related":["tag","function"],
@@ -75,7 +82,7 @@ We need help expanding existing tag and function documentation. Look through the
     		{
     			"title":"Title of a blog entry that has good info about this.",
     			"description":"Description of the link",
-    			"url":"http:\/\/www.example.com\/a\/b.cfm"
+    			"url":"http://www.example.com/a/b.cfm"
     		}
     	],
         "examples": [
@@ -83,7 +90,8 @@ We need help expanding existing tag and function documentation. Look through the
     			"title": "Name of the code example",
     			"description": "Description of the code example",
     			"code": "<cf_examplecodehere>",
-    			"result": "The expected output of the code example"
+    			"result": "The expected output of the code example",
+                "runnable":true
             }
         ]
 
@@ -105,6 +113,10 @@ The basic syntax of the tag or function
 ##### script
 
 For tags, shows how the tag would be invoked from cfscript.
+
+##### member
+
+For functions, shows the available member function syntax.
 
 ##### returns
 
@@ -136,4 +148,8 @@ Use this to link to blog entries or other useful related content.
 
 ##### examples
 
-Show example code. It is very helpful to readers to use the `result` to show the expected result of the code sample when applicable.
+Show example code. It is very helpful to readers to use the `result` to show the expected result of the code sample when applicable. This has to be JSON, so  you can to do `\n` for newline, double quotes must be escaped `\"`. The `runnable` is a boolean that determines if the _Run Code_ button shows up next to the example.
+
+We have an [example JSON utility](http://cfdocs.org/utilities/json/) that can be used to create the JSON by filling out a form.
+
+Please see the [cfdocs contributor guide](CONTRIBUTING.md) for frequently asked questions.

@@ -1,0 +1,43 @@
+{
+	"name":"ORMSearchOffline",
+	"type":"function",
+	"syntax":"ORMSearchOffline(query_text, entityName, fields_to_be_selected);ORMSearchOffline(query_text, entityName, fields_to_be_selected, fields);ORMSearchOffline(query_text, entityName, fields_to_be_selected, fields, optionMap);",
+	"returns":"A struct that contains an array of structs, maxTotalRecord, fields_to_bo_selected as keys",
+	"related":[],
+	"description":" Performs search on the indexed properties but returns only the stored fields.For this function to work, specify indexStore=true on the properties on which you want to perform the search.",
+	"params": [
+		{"name":"query_text","description":"The text to be searched for or a complete Lucene query.For details of Lucene query, see http://lucene.apache.org/core/old_versioned_docs/versions/.","required":true,"default":"","type":"","values":[]},
+        {"name":"entityName","description":"Name of the entity to be searched.","required":true,"default":"","type":"","values":[]},
+        {"name":"fieldss_to_be_selected","description":"Fields to be returned as keys in the resultant struct.","required":true,"default":"","type":"","values":[]},
+        {"name":"fields","description":"Fields in which search has to be performed.","required":true,"default":"","type":"","values":[]},
+        {"name":"optionMap","description":"","required":false,"default":"","type":"","values":[]},
+        {"name":"extra options","description":" can be passed while executing Lucene query. The options can be: sort, offset, maxResults","required":false,"default":"","type":"","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormsearchoffline.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "ORMSearchOffline('FirstName:'ch*','Employee',['id','firstname']); \r\n",
+			"result": ""
+		},
+        {
+			"title": "Tag Syntax",
+			"description": "In the following example, offline search is performed on the property FirstName and first name and last name are returned as keys in the resultant struct.",
+			"code": "ORMSearchOffline('ch*','Employee',['FirstName','LastName'],['FirstName'],{sort='salary',maxresults=5,offset=2}); \r\n",
+			"result": ""
+		},
+        {
+			"title": "Tag Syntax",
+			"description": "In this example, the resultObj in the query is an array of structs. The individual structs contain all the selected fields (passed as third parameter).",
+			"code": "<cfset resultObj =ORMSearchOffline('Java Rocks', 'Book', [bookId, summary, Author.name, title],[title, short_summary])> \r\n",
+			"result": ""
+		}
+	]
+
+}

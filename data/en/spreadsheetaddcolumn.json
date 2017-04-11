@@ -15,13 +15,20 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/spreadsheetaddcolumn"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/spreadsheetaddcolumn.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetaddcolumn"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetaddcolumn.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetaddcolumn"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"",
+			"code":"<cfscript>\nmySheet = SpreadsheetNew( \"Test\" );\nwriteDump( mySheet );\nSpreadsheetAddColumn( mySheet, \"MySingleColumn\" ); // Add a row of data: a single value for the single column\nmySingleColumnValue = \"As you can see, this sentence contains commas, which force the value to be split over 3 columns instead of one.\";\nSpreadsheetAddRow( mySheet, mySingleColumnValue );\nwriteDump( mySheet );\n</cfscript>",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

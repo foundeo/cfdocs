@@ -1,1 +1,49 @@
-{"syntax":" <cfclientsettings enableDeviceAPI = \"true|false\" detectDevice = \"true|false\" deviceTimeout = Number > ","description":"Part of the new CF11 mobile development features. This tag is similar to cfprocessingdirective and acts as a compiler directive to include plugins for various features (device detection and device API). You can use this tag to load all the required device detection plugins.\r\n\r\nPlease read the full scope of this new directive at <a href=\"https:\/\/wikidocs.adobe.com\/wiki\/display\/coldfusionen\/cfclientsettings\" target=\"_blank\">Adobe WikiDoc CFClientSettings<\/a>","engines":{"coldfusion":{"minimum_version":"11","docs":"https:\/\/wikidocs.adobe.com\/wiki\/display\/coldfusionen\/cfclientsettings","notes":""}},"name":"cfclientsettings","links":[{"title":"","description":"","url":""}],"params":[{"values":[],"default":"false","description":"Enable\/disable the device API","name":"enableDeviceAPI","type":"Boolean","required":"0"},{"values":[],"default":"false","description":"Enable\/disable the device detection plugin.","name":"detectDevice","type":"Boolean","required":"0"},{"values":[],"default":"10","description":"The timeout for loading the plugins (in seconds).","name":"deviceTimeout","type":"Numeric","required":"0"}],"returns":"void","examples":[{"result":"","title":"","description":"","code":""}],"type":"tag","related":["cfclient"]}
+{
+	"name": "cfclientsettings",
+	"type": "tag",
+	"syntax": " <cfclientsettings enableDeviceAPI = \"true|false\" detectDevice = \"true|false\" deviceTimeout = Number > ",
+	"returns": "void",
+	"related": ["cfclient"],
+	"description": "Part of the new CF11 mobile development features. This tag is similar to cfprocessingdirective and acts as a compiler directive to include plugins for various features (device detection and device API). You can use this tag to load all the required device detection plugins.\r\n\r\nPlease read the full scope of this new directive at <a href=\"https://wikidocs.adobe.com/wiki/display/coldfusionen/cfclientsettings\" target=\"_blank\">Adobe WikiDoc CFClientSettings</a>",
+	"params": [
+		{
+			"name": "enableDeviceAPI",
+			"description": "Enable/disable the device API",
+			"required": "0",
+			"default": "false",
+			"type": "Boolean",
+			"values": []
+		},
+		{
+			"name": "detectDevice",
+			"description": "Enable/disable the device detection plugin.",
+			"required": "0",
+			"default": "false",
+			"type": "Boolean",
+			"values": []
+		},
+		{
+			"name": "deviceTimeout",
+			"description": "The timeout for loading the plugins (in seconds).",
+			"required": "0",
+			"default": "10",
+			"type": "Numeric",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "11",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfclientsettings.html"
+		}
+	},
+	"examples": [],
+	"links": [
+		{
+			"title": "",
+			"description": "",
+			"url": ""
+		}
+	]
+}

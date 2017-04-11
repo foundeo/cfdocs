@@ -11,13 +11,26 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/listfirst"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listfirst.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/listfirst.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listfirst"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listfirst"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+				"title":"Simple listFirst Example",
+				"description":"A very basic listFirst example",
+				"code" : "listFirst(\"one,two,three,four\");",
+				"result":"one"
+		},
+		{
+				"title":"Traversing a List with listFirst and listRest",
+				"description":"Nesting list functions lets you move through the list in pieces.",
+				"code" : "listFirst(listRest(listRest(\"one,two,three,four\")));",
+				"result":"three"
+		}
 	]
-
 }

@@ -11,13 +11,29 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cfabort"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-a-b/cfabort.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/abort.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfabort"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfabort"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Example of using abort() to stop processing after an error occurs",
+			"description":"In this example we demonstrate using the abort() function to stop any further processing after we deliberately call a non-existent function.",
+			"code":"try {\r\n\t// make a call to a non-existent function\r\n\tfirstName = userService.getUserById( 1 ).getFirstName();\r\n// catch any errors    \r\n} catch ( any e ) {\r\n\t// dump the error to the browser\r\n\twriteDump( e );\r\n\t// abort further processing\r\n\tabort;\r\n}",
+			"result":"Error page: Variable USERSERVICE is undefined.",
+			"runnable":true
+		},
+		{
+			"title":"Example of using <cfabort> to stop processing after an error occurs",
+			"description":"In this example we demonstrate using the <cfabort> tag to stop any further processing after we deliberately call a non-existent function.",
+			"code":"<cftry>\r\n\t<!--- make a call to a non-existent function --->\r\n\t<cfset firstName = userService.getUserById( 1 ).getFirstName()>\r\n<!--- catch any errors --->\r\n<cfcatch type=\"any\">\r\n\t<!--- dump the error to the browser --->\r\n\t<cfdump var=\"#cfcatch#\">\r\n\t<!--- abort further processing --->\r\n\t<cfabort>\r\n</cfcatch>\r\n</cftry>",
+			"result":"Error page: Variable USERSERVICE is undefined.",
+			"runnable":true
+		}
 	]
 
 }

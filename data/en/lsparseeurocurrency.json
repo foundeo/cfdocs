@@ -1,7 +1,7 @@
 {
-	"name":"lsParseEuroCurrency",
+	"name":"LSParseEuroCurrency",
 	"type":"function",
-	"syntax":"lsParseEuroCurrency(currency_string)",
+	"syntax":"LSParseEuroCurrency(currency_string)",
 	"returns":"Numeric",
 	"related":[],
 	"description":" Formats a locale-specific currency string as a number.\n Attempts conversion through each of the default currency\n formats (none, local, international). Ensures correct\n handling of euro currency for Euro zone countries.",
@@ -10,7 +10,7 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/lsparseeurocurrency"},
+		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/lsparseeurocurrency.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/lsparseeurocurrency.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsparseeurocurrency"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsparseeurocurrency"}

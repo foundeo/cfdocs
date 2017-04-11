@@ -1,6 +1,6 @@
 {
 	"name":"Cache Functions",
 	"type":"listing",
-	"related":["cacheget","cachegetallids","cachegetmetadata","cachegetproperties","cacheput","cacheremove","cachesetproperties"],
+	"related":["cacheClear","cacheCount","cacheDelete","cacheGet","cacheGetAll","cacheGetAllIds","cacheGetDefaultCacheName","cacheGetMetadata","cacheGetProperties","cacheGetSession","cachePut","cacheRemove","cacheSetProperties"],
 	"description":"A listing of CFML Cache Functions."
 }

@@ -3,7 +3,8 @@
 	"type":"function",
 	"syntax":"left(String, count)",
 	"returns":"String",
-	"related":[],
+	"related":["right","mid"],
+	"member":"string.left(count)",
 	"description":" Returns the leftmost count characters in a string.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
@@ -11,13 +12,43 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/left"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/left.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/left.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/left"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/left"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Using left() on a string",
+			"description": "In this example we'll use left() to return part of a string.",
+			"code": "writeOutput( left( 'The quick brown fox jumped over the lazy dog', 19 ) );",
+			"result": "The quick brown fox",
+			"runnable":true
+		},
+		{
+			"title": "Using left() in a function",
+			"description": "In this example we'll use left() in a function to help us to capitalize the first letter in a string.",
+			"code": "public string function capitalize( required string text ) {\r\n\treturn uCase( left( arguments.text, 1 ) ) & right( arguments.text, len( arguments.text ) - 1 );\r\n}",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title": "Using left() to test values",
+			"description": "In this example we'll use left() to test the first five characters of a request context variable.",
+			"code": "if( listFindNoCase( 'super,great,coder,rulez', left( rc.answer, 5 ) ) ) {\r\n\twriteOutput( 'You are an awesome developer!' );\r\n}",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title": "Using left() as a member function",
+			"description": "CF11+ Lucee4.5+ In this example we'll use left() as a member function inside a function to help us to capitalize the first letter in a string.",
+			"code": "public string function capitalize( required string text ) {\r\n\treturn arguments.text.left( 1 ).ucase() & arguments.text.right( arguments.text.len() - 1 );\r\n}",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

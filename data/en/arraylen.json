@@ -1,22 +1,36 @@
 {
-	"name":"arraylen",
+	"name":"arrayLen",
 	"type":"function",
-	"syntax":"arraylen(array)",
+	"syntax":"arrayLen(array)",
+	"member":"someArray.len()",
 	"returns":"Numeric",
-	"related":[],
+	"related":["arrayAvg"],
 	"description":" Determines the number of elements in an array.\n CFML MX: this function can be used on child XML objects.",
 	"params": [
-		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]}
+		{"name":"array","description":"An array which to determine length","required":true,"default":"","type":"Array","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/arraylen"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraylen.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arraylen.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arraylen"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraylen"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Simple example for arrayLen function",
+			"description": "Uses the arrayLen function to get the total length of an array",
+			"code": "numberArray = [1,2,3,4];\nwriteOutput(arrayLen(numberArray));",
+			"result": "4"
+		},
+		{
+			"title": "Total length of an array using the member function",
+			"description": "CF11+ Lucee4.5+ Uses the len member function is the same as running arrayLen.",
+			"code": "colorArray = ['Green','red','blue'];\nwriteOutput(colorArray.len());",
+			"result": "3"
+		}
 	]
 
 }

@@ -1,0 +1,26 @@
+{
+	"name":"storeGetMetadata",
+	"type":"function",
+	"syntax":"storeGetMetadata(url);",
+	"returns":"Object metadata or bucket metadata",
+	"related":[],
+	"description":" Returns the metadata related to the object or bucket.",
+	"params": [
+		{"name":"url","description":"Amazon S3 URLs (bucket or object).","required":true,"default":"","type":"","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/StoreGetMetadata.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfdump var = #storeGetMetadata('bucket_Name')#>> \r\n",
+			"result": ""
+		}
+	]
+
+}

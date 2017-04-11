@@ -14,6 +14,10 @@ RewriteRule ^([^./]+)$ /doc.cfm?name=$1 [L]
 #trycf rules
 RewriteRule ^try/([^./]+)/([0-9]+)/? /trycf.cfm?name=$1&index=$2 [L]
 RewriteRule ^try/([^./]+)/? /trycf.cfm?name=$1
+#rewrite trailing slash on tag
+RewriteRule ^(cf[a-zA-Z]+)/$ /ucase.cfm?uri=$1 [L]
+
+RewriteRule ^application.cfc /application-cfc [R=301,L]
 
 ErrorDocument 404 /404.cfm
 
@@ -21,3 +25,4 @@ ErrorDocument 404 /404.cfm
 RedirectMatch 403 (?i)\.git
 RedirectMatch 403 (?i)views/
 RedirectMatch 403 (?i)CFIDE/
+RedirectMatch 403 (?i)tests/

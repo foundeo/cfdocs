@@ -1,0 +1,33 @@
+{
+	"name": "queryColumnList",
+	"type": "function",
+	"syntax": "queryColumnList(query [, delimiter])",
+	"member": "query.columnList([delimiter])",
+	"returns": "string",
+	"related": [],
+	"description": "Returns the column names of a query as a list.",
+	"params": [
+		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
+		{"name": "delimiter", "description": "", "required": false, "default": ",", "type": "string", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querycolumnlist.html"}
+	},
+	"examples": [
+		{
+			"title": "Create a query and output the column list",
+			"code": "myQuery = queryNew( 'ID,name,age' );\r\nwriteOutput( queryColumnList( myQuery ) );",
+			"description":"",
+			"result": "ID,name,age",
+			"runnable":true
+		},
+		{
+			"title": "Using a member function",
+			"code": "myQuery = queryNew( 'ID,name,age' );\r\nwriteOutput( myQuery.columnList() );",
+			"description":"",
+			"result": "ID,name,age",
+			"runnable":true
+		}
+	],
+	"links": []
+}

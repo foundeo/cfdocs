@@ -11,13 +11,20 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/spreadsheetcreatesheet"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/spreadsheetcreatesheet.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetcreatesheet"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetcreatesheet.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetcreatesheet"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":"The following example creates two sheets: CourseData and EvaluationSheet. ",
+			"code":"<cfscript>\r\n// Make a spreadsheet object\r\nspreadsheet = spreadsheetNew(\"Sheet A\");\r\n\r\n// add a new sheet\r\nspreadsheetCreateSheet(spreadsheet, \"Sheet B\");\r\n\r\n// set the new sheet to be the active one\r\nSpreadsheetSetActiveSheet(spreadsheet, \"Sheet B\");\r\n\r\n// populate Sheet B\r\ni = 1;\r\nwhile (i < 10) {\r\n    SpreadsheetSetCellValue(spreadsheet, \"col #i#\", 1, i);\r\n    i++;\r\n}\r\n\r\n</cfscript>\r\n<cfheader name=\"Content-Disposition\" value=\"inline; filename=testFile.xls\">\r\n<cfcontent type=\"application/vnd.msexcel\" variable=\"#SpreadSheetReadBinary(spreadsheet)#\">",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

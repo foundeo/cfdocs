@@ -1,0 +1,32 @@
+{
+    "name":"listRemoveDuplicates",
+    "type":"function",
+    "syntax":"listRemoveDuplicates(list[, delimiter] [, ignoreCase])",
+    "returns":"string",
+    "description":"Removes duplicate values (if they exist) in a list.",
+    "params": [
+        {"name":"list","description":"Required. List of objects.","required":true,"type":"string", "default":""},
+        {"name":"delimiter","description":"Optional. Character(s) that separate list elements. The default value is comma.","required":false,"default":",","type":"string"},
+        {"name":"ignoreCase","description":"Optional. If true, ignores the case of strings in the list. By default the value is set to false.","required":false,"default":false,"type":"boolean"}
+    ],
+    "engines": {
+        "coldfusion": {"minimum_version":"10", "notes":"ColdFusion 10: Added this function", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listremoveduplicates.html"},
+        "railo": {"minimum_version":"4.0", "notes":"", "docs":"http://www.getrailo.org/javadoc-4-0/railo/runtime/functions/list/ListRemoveDuplicates.html"},
+        "lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/listremoveduplicates.html"}
+    },
+    "examples": [
+        {
+            "title": "Basic usage (case sensitive)",
+            "description": "Basic usage. Optional arguments left as defaults.",
+            "code": "listRemoveDuplicates(\"one,two,three,four,five,one,five,three\")",
+            "result": "one,two,three,four,five"
+        },
+        {
+            "title": "Optional arguments usage (ignore case = true)",
+            "description": "Optional arguments being set. Ignore case set to true",
+            "code": "listRemoveDuplicates(\"one,two,three,four,five,ONE,TWO,THREE\", \",\", true)",
+            "result": "one,two,three,four,five"
+        }
+    ]
+
+}

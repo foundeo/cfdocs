@@ -1,25 +1,50 @@
 {
 	"name":"cachePut",
 	"type":"function",
-	"syntax":"cachePut(id, value [, timespan] [, idelTime])",
+	"syntax":"cachePut(id, value [, timespan] [, idleTime])",
 	"returns":"void",
 	"related":[],
 	"description":" Stores an object in the cache.",
 	"params": [
-		{"name":"id","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"value","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"timespan","description":"No Help Available","required":false,"default":"","type":"DateTime","values":[]},
-		{"name":"idelTime","description":"No Help Available","required":false,"default":"","type":"DateTime","values":[]}
+		{"name":"id","description":"Unique identifier for the cached value","required":true,"default":"","type":"String","values":[]},
+		{"name":"value","description":"The value to cache","required":true,"default":"","type":"String","values":[]},
+		{"name":"timespan","description":"The interval until the object is flushed from the cache, as a decimal number of days. One way to set the value is to use the return value from the CreateTimeSpan function. The default is to not time out the object.","required":false,"default":"","type":"DateTime","values":[]},
+		{"name":"idleTime","description":"A decimal number of days after which the object is flushed from the cache if it is not accessed during that time. One way to set the value is to use the return value from the CreateTimeSpan function.","required":false,"default":"","type":"DateTime","values":[]},
+		{"name":"region","description":"CF10+ Specifies the cache region where you can place the cache object. Applies only to ACF.","required":false,"default":"","type":"String","values":[]},
+		{"name":"cacheName","description":"Lucee4.5+ Definition of the cache used by name. Applies only to Lucee.","required":false,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/cacheput"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CachePut.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/cacheput.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cacheput"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cacheput"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset cachedData = cacheGet(\"wt-6-cache\")> \r\n <!--- If the data is not cached, create it and do a cache put. ---> \r\n <cfif isNull(cachedData)> \r\n     Cache doesn't exist, so create it.<br /> \r\n     <cfset sleep(1000)> \r\n     <cfset cachedData = \"This date/time IS cached: #now()#<br />\"> \r\n     <cfoutput>#cachedData#</cfoutput> \r\n     <cfset cachePut(\"wt-6-cache\", cachedData, createTimespan(0,0,0,10))> \r\n </cfif>  ",
+			"result": "",
+            "runnable":false
+		},
+		{
+			"title":"Script Syntax",
+			"description":"I place data into the default cache.",
+			"code":"<cfscript>\r\n// generate some data to cache\r\ndata = { bar = 'foo', foo = 'bar' };\r\n\r\n// add the data to a named cache\r\ncachePut( 'cached_object_name_or_id', data, createTimeSpan( 0, 0, 30, 0 ), createTimeSpan( 0, 0, 15, 0 ) );\r\n</cfscript>",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Script Syntax - Named Cache",
+			"description":"I place data into a named cache. CF10+ Lucee4.5+",
+			"code":"<cfscript>\r\n// generate some data to cache\r\ndata = { bar = 'foo', foo = 'bar' };\r\n\r\n// add the data to a named cache\r\ncachePut( 'cached_object_name_or_id', data, createTimeSpan( 0, 0, 30, 0 ), createTimeSpan( 0, 0, 15, 0 ), 'region_cacheName' );\r\n</cfscript>",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }

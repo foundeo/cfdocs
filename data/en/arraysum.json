@@ -2,21 +2,41 @@
 	"name":"arraySum",
 	"type":"function",
 	"syntax":"arraySum(array)",
+	"member":"someArray.sum()",
 	"returns":"Numeric",
 	"related":[],
 	"description":" The sum of values in an array. If the array parameter value is\n an empty array, returns zero.",
 	"params": [
-		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]}
+		{"name":"array","description":"An array name or variable name","required":true,"default":"","type":"Array","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/arraysum"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraysum.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arraysum.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arraysum"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraysum"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Sum of values in an array",
+			"description": "Uses the arraySum function to get sum of values in an array",
+			"code": "numberArray = [10,99,27,72];\nwriteOutput( arraySum(numberArray));",
+			"result": "208"
+		},
+		{
+			"title": "Sum of values in an array",
+			"description": "To get sum of values in an empty array",
+			"code": "numberArray = [];\nwriteOutput( arraySum(numberArray));",
+			"result": "0"
+		},
+		{
+			"title": "Sum of values in an array",
+			"description": "CF11+ Lucee4.5+ Uses the sum member function is the same as running arraySum.",
+			"code": "numberArray = [10,99,27,72];\nwriteOutput( numberArray.sum() );",
+			"result": "208"
+		}
 	]
 
 }

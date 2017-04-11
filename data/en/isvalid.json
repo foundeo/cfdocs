@@ -3,10 +3,10 @@
 	"type":"function",
 	"syntax":"isValid(type, value, min, max, pattern)",
 	"returns":"boolean",
-	"related":[],
-	"description":" Tests whether a value meets a validation or data type rule.",
+	"related":["isarray", "issimplevalue","isnumeric","isboolean","isdate","cfparam"],
+	"description":"Tests whether a value meets a validation or data type rule.",
 	"params": [
-		{"name":"type","description":"The valid format for the data.","required":true,"default":"","type":"String","values":["Any","Array","Binary","boolean","creditcard","date","time","email","eurodate","float","Numeric","guid","integer","Query","range","Regex","regular_expression","ssn","social_security_number","String","Struct","telephone","URL","UUID","usdate","variablename","xml","zipcode"]},
+		{"name":"type","description":"The valid format for the data.","required":true,"default":"","type":"String","values":["Any","Array","Binary","boolean","creditcard","date","time","email","eurodate","float","Numeric","guid","integer","Query","range","Regex","regular_expression","ssn","social_security_number","String","Struct","telephone","URL","UUID","usdate","variablename","xml","zipcode","component"]},
 		{"name":"value","description":"The value to test.","required":true,"default":"","type":"Object","values":[]},
 		{"name":"min","description":"The minimum valid value; used only for range validation.","required":true,"default":"","type":"Numeric","values":[]},
 		{"name":"max","description":"The maximum valid value; used only for range validation.","required":true,"default":"","type":"Numeric","values":[]},
@@ -14,13 +14,27 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/isvalid"},
+		"coldfusion": {"minimum_version":"7", "notes":"CF8+ - added component as a type option.\nCF11+ - no longer allows currency symbols at the start and commas inside a number. Can be reverted to legacy mode by setting this.strictNumberValidation = false in Application.cfc", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isvalid.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/isvalid.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isvalid"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isvalid"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Check to see if a 235 is an integer",
+			"description":"Use the isValid function with integer as the type.",
+			"code":"isValid(\"integer\", 235)",
+			"result":"true"
+		},
+		{
+			"title":"Validate an Email Address",
+			"description":"Use the isValid function with email as the type.",
+			"code":"isValid(\"email\", \"user@example.com\")",
+			"result":"true"
+		}
 	]
 
 }

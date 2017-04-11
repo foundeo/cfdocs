@@ -11,13 +11,20 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/spreadsheetdeletecolumn"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/spreadsheetdeletecolumn.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/spreadsheetdeletecolumn"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetdeletecolumn.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetdeletecolumn"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Example",
+			"description":" ",
+			"code":"<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \r\n <!---<cfloop index=\"x\" from=\"1\" to=\"10\">---> \r\n <cfset queryAddRow(q)> \r\n <cfset querySetCell(q, \"Name\", \"John\")> \r\n <cfset querySetCell(q, \"Beers\", \"1\")> \r\n <cfset querySetCell(q, \"Vegetables\", \"1\")> \r\n <cfset querySetCell(q, \"Fruits\", \"1\")> \r\n <cfset querySetCell(q, \"Meats\", \"1\")> \r\n <cfset mySheet =   SpreadsheetNew( \"Test\"  ) /> \r\n <!--- Make a spreadsheet object ---> \r\n <cfset s = spreadsheetNew()> \r\n <!--- Add header row ---> \r\n <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \r\n <!--- Add query ---> \r\n <cfset SpreadsheetDeleteColumn(s,3) > \r\n <cfdump var=\"#s#\" /> <cfheader name=\"Content-Disposition\" value=\"inline; filename=testFile.xls\">  <cfcontent type=\"application/vnd.msexcel\" variable=\"#SpreadSheetReadBinary(s)#\">   ",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

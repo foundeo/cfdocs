@@ -1,0 +1,28 @@
+{
+	"name":"getTotalSpace",
+	"type":"function",
+	"syntax":"getTotalSpace(path);",
+	"returns":"Total space in bytes",
+	"related":[],
+	"description":" Returns the total disk space or in-memory space avaialbe for an appliation.",
+	"params": [
+		{"name":"path","description":"path to the hard drive or for in memory file system.","required":true,"default":"","type":"","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/gettotalspace.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/gettotalspace.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getTotalSpace"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "the in-memory file system memory set in cfadmin and should return that.",
+			"code": "<cfset totalRMSSpace = getTotalSpace('ram')> \r\n <cfoutput>total app ram memory: #decimalFormat(totalRamSpace)/(1024 * 1024)# mb </cfoutput> \r\n",
+			"result": ""
+		}
+	]
+
+}

@@ -1,6 +1,6 @@
 {
 	"name":"Conversion Functions",
 	"type":"listing",
-	"related":["applicationstop","arraytolist","bitor","dateformat","decimalformat","directorycreate","directorydelete","directoryexists","directorylist","directoryrename","directorysize","dollarformat","dotnettocftype","entitytoquery","formatbasen","getdirectoryfrompath","getreadableimageformats","gettempdirectory","gettoken","getwriteableimageformats","htmlcodeformat","htmleditformat","imagescaletofit","iscustomfunction","isspreadsheetobject","jsstringformat","listtoarray","lscurrencyformat","lsdateformat","lseurocurrencyformat","lsnumberformat","lstimeformat","numberformat","ormgetsessionfactory","paragraphformat","spreadsheetformatcell","spreadsheetformatcolumn","spreadsheetformatcolumns","spreadsheetformatrow","spreadsheetformatrows","timeformat","tobase64","tobinary","toscript","tostring","urlencodedformat","urlsessionformat","xmlformat","yesnoformat"],
+	"related":["arrayToList","binaryDecode","binaryEncode","charsetDecode","charsetEncode","deserializeJSON","dotNetToCFType","entityToQuery","hash","hmac","HTMLParse","lCase","listToArray","parseNumber","serializeJSON","toBase64","toBinary","toScript","toString","URLDecode","URLEncode","URLEncodedFormat","val","XMLFormat","XMLParse","XMLTransform"],
 	"description":"A listing of CFML Conversion Functions."
 }

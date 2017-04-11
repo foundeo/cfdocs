@@ -1,0 +1,29 @@
+{
+	"name":"encodeForXMLAttribute",
+	"type":"function",
+	"syntax":"encodeForXMLAttribute(string inputString, boolean canonicalize);",
+	"returns":"string.",
+	"related":["encodeForXML", "canonicalize"],
+	"description":"Encodes a string for safe output within an XML attribute. Use encodeForXML when outputting a variable inside a XML tag body.",
+	"params": [ 
+		{"name":"inputString","description":"The string to encode.","required":true,"default":"","type":"","values":[]},
+        {"name":"canonicalize","description":"When `true` the canonicalize function is called before encoding the input. If set to false, the given input string will just be encoded, both mixed and multiple encodings will be allowed.","required":false,"default":"false","type":"boolean","values":["true","false"]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"11", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/encodeforxmlattribute.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"Lucee does not support the `canonicalize` argument.", "docs":"http://docs.lucee.org/reference/functions/encodeforxmlattribute.html"},
+		"railo": {"minimum_version":"4", "notes":"", "docs":"http://railodocs.org/index.cfm/function/EncodeForXMLAttribute"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Simple encodeForXMLAttribute Example",
+			"description": "Encodes the single quote into an XML entity.",
+			"code": "encodeForXMLAttribute(\"It's for use in attribute values\")",
+			"result": "It&#x27;s for use in attribute values"
+		}
+	]
+
+}

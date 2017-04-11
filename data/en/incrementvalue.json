@@ -3,20 +3,27 @@
 	"type":"function",
 	"syntax":"incrementValue(number)",
 	"returns":"Numeric",
-	"related":[],
-	"description":" Adds one to an integer. same as x=x+1\n Why bother?",
+	"related":["decrementValue"],
+	"description":" Increment the integer part of a number.\n same as x=x+1 or x++",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/incrementvalue"},
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/incrementvalue.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/incrementvalue.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/incrementvalue"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/incrementvalue"}
 	},
 	"links": [
-
+	],
+	"examples": [
+		{
+			"title":"Increment 7.5",
+			"description":"There is a difference between CFML engines.  ACF will return the integer incremented removing the decimal part.  Lucee will increment the integer part but return both.",
+			"code":"incrementValue(7.5)",
+			"result":"8.5",
+			"runnable":true
+		}
 	]
-
 }

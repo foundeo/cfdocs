@@ -1,14 +1,18 @@
 <cfset dataDir = ExpandPath("../data/en")>
+<cfset guideDir = ExpandPath("../guides/en")>
 <cfset tags = []>
 <cfset functions = []>
+<cfset guides = []>
 <cfset all = []>
 <cfset categories = []>
+<cfset versions = {4=[], "4.5"=[],5=[],6=[],7=[],8=[],9=[],10=[],11=[],2016=[]}>
+<cfset lucee_versions = {5=[]}>
 <cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
 	<cfset json = fileRead(filePath,"utf-8")>
 	<cftry>
 		<cfset data = deserializeJSON(json)>
 		<cfset nameKey = getFileFromPath(filePath)>
-		<cfset nameKey = Replace(nameKey, ".json", "")>
+		<cfset nameKey = LCase(Replace(nameKey, ".json", ""))>
 		<cfif StructKeyExists(data, "type")>
 			<cfif data.type IS "tag">
 				<cfset arrayAppend(tags, nameKey)>
@@ -19,6 +23,20 @@
 			<cfelseif data.type IS "listing">
 				<cfset arrayAppend(categories, nameKey)>
 			</cfif>
+			<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "coldfusion") AND structKeyExists(data.engines.coldfusion, "minimum_version") AND isNumeric(data.engines.coldfusion.minimum_version)>
+
+				<cfif structKeyExists(versions, val(data.engines.coldfusion.minimum_version))>
+					<cfset arrayAppend(versions[val(data.engines.coldfusion.minimum_version)], data.name)>
+				</cfif>
+			</cfif>
+
+			<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "lucee") AND structKeyExists(data.engines.lucee, "minimum_version") AND isNumeric(data.engines.lucee.minimum_version)>
+
+				<cfif structKeyExists(lucee_versions, val(data.engines.lucee.minimum_version))>
+					<cfset arrayAppend(lucee_versions[val(data.engines.lucee.minimum_version)], data.name)>
+				</cfif>
+
+			</cfif>
 		</cfif>
 		<cfcatch>
 			<cfoutput><h2>Error Parsing File: #filePath#</h2></cfoutput>
@@ -26,11 +44,25 @@
 		</cfcatch>
 	</cftry>
 </cfloop>
+<cfloop array="#directoryList(guideDir, false, "array")#" index="filePath">
+	<cfset nameKey = getFileFromPath(filePath)>
+	<cfif listLast(nameKey,".") IS "md">
+		<cftry>
+			<cfset nameKey = LCase(Replace(nameKey, ".md", ""))>
+			<cfset arrayAppend(guides, nameKey)>
+		<cfcatch>
+			<cfoutput><h2>Error Parsing File: #filePath#</h2></cfoutput>
+			<cfdump var="#cfcatch#">
+		</cfcatch>
+		</cftry>
+	</cfif>	
+</cfloop>
 <cfset arraySort(tags, "text")>
 <cfset arraySort(functions, "text")>
+<cfset arraySort(guides, "text")>
 <cfset arraySort(categories, "text")>
 <cfset arraySort(all, "text")>
-<cfset index = {"tags"=tags, "functions"=functions,"categories"=categories}>
+<cfset index = {"tags"=tags, "functions"=functions,"categories"=categories, "guides"=guides}>
 <cfset fileWrite(dataDir & "/index.json", prettyJSON(serializeJSON(index)), "utf-8")>
 <p>Wrote index.json</p>
 
@@ -47,10 +79,31 @@
 <p>Wrote functions.json</p>
 
 <cfset aJSON = fileRead(dataDir & "/all.json", "utf-8")>
-<cfset aData = deserializeJSON(fJSON)>
+<cfset aData = deserializeJSON(aJSON)>
 <cfset aData.related = functions>
 <cfset fileWrite(dataDir & "/all.json", prettyJSON(serializeJSON(aData), "utf-8"))>
 <p>Wrote all.json</p>
+
+<cfset gJSON = fileRead(dataDir & "/guides.json", "utf-8")>
+<cfset gData = deserializeJSON(gJSON)>
+<cfset gData.related = guides>
+<cfset fileWrite(dataDir & "/guides.json", prettyJSON(serializeJSON(gData), "utf-8"))>
+<p>Wrote guides.json</p>
+
+<cfloop array="#structKeyArray(versions)#" index="v">
+	<cfset vData = {"name"="ColdFusion #v# New Functions and Tags","type"="listing","description"="List of tags and functions added in ColdFusion #v#", "related"=versions[v]}>
+	<cfset fileWrite(dataDir & "/cf#reReplace(v, "[^0-9]", "", "ALL")#.json", prettyJSON(serializeJSON(vData), "utf-8"))>
+	<p>Wrote cf<cfoutput>#v#</cfoutput>.json</p>
+</cfloop>
+
+<cfloop array="#structKeyArray(lucee_versions)#" index="v">
+	<cfset vData = {"name"="Lucee #v# New Functions and Tags","type"="listing","description"="List of tags and functions added in Lucee #v#", "related"=lucee_versions[v]}>
+	<cfset fileWrite(dataDir & "/lucee#reReplace(v, "[^0-9]", "", "ALL")#.json", prettyJSON(serializeJSON(vData), "utf-8"))>
+	<p>Wrote lucee<cfoutput>#v#</cfoutput>.json</p>
+</cfloop>
+
+<cfset applicationStop()>
+<p>Stopped application so it can reinit</p>
 
 <cffunction name="prettyJSON" returntype="string" output="false">
 	<cfargument name="json" type="string">
