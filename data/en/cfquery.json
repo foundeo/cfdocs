@@ -23,7 +23,8 @@
 		{"name":"cacheID","description":"CF10+ A value to serve as cache identifier when cachedWithin or cachedAfter are specified.","required":false,"default":"","type":"String","values":[]},
 		{"name":"cacheRegion","description":"CF10+ The name of the region  cachedWithin or cachedAfter are specified.","required":false,"default":"","type":"String","values":[]},
 		{"name":"clientInfo","description":"CF10+ A structure containing properties to be set on the database connection.","required":false,"default":"","type":"Struct","values":[]},
-		{"name":"fetchClientInfo","description":"CF10+ When true returns a struct with the clientInfo argument value passed by the last query","required":false,"default":"false","type":"Boolean","values":[]}
+		{"name":"fetchClientInfo","description":"CF10+ When true returns a struct with the clientInfo argument value passed by the last query","required":false,"default":"false","type":"Boolean","values":[]},
+		{"name":"lazy","description":"Lucee4.5+ If 'lazy' is set to true (default "false") Lucee does not initially load all the data from the datasource. When "true" the data is only loaded when requested, this means the data is dependant on the datasource connection. If the datasource connection has been lost for some reason and the data has not yet been requested, Lucee throws an error if you try to access the data. The 'lazy' attribute only works if the following attributes are not used: cachewithin, cacheafter and result.","required":false,"default":"false","type":"Boolean","values":[]}
 
 	],
 	"engines": {
