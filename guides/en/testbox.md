@@ -84,6 +84,9 @@ Here are some more:
 
 	//assert function throws exception, optionally specify type or regex.
 	expect( function(){ x=1/0; } ).toThrow(type, regex, message);
+	
+	// asset that value is a JSON string.
+	expect(value).toBeJSON();
 
 You can prefix any of the expectations with `not`, to negate its meaning, for example
 
