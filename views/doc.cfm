@@ -77,7 +77,7 @@
 			<cfif Len(cat)><li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li></cfif>
 			<li class="active">#data.name#</li>
 
-			<hr class="visible-xs-block" />
+			
 
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "coldfusion") AND StructKeyExists(data.engines.coldfusion, "docs") AND Len(data.engines.coldfusion.docs)>
 				<li class="pull-right">
@@ -129,40 +129,32 @@
 		<cfif StructKeyExists(data, "params") AND ArrayLen(data.params)>
 			<h2>
 				<cfif data.type IS "tag">
-					Attribute Reference <small>for the <span class="item-name">#data.name#</span> tag</small>
+					#encodeForHTML(data.name)# Attribute Reference
 				<cfelseif data.type IS "function">
-					Argument Reference <small>for the <span class="item-name">#data.name#</span> function</small>
+					#encodeForHTML(data.name)# Argument Reference
 				<cfelse>
 					<span class="item-name">#data.name#</span>
 				</cfif>
 			</h2>
 
-			<div class="row hidden-xs">
-				<div class="col-sm-3"><strong>Name</strong></div>
-				<div class="col-sm-1"><strong>Required</strong></div>
-				<div class="col-sm-2"><strong>Default</strong></div>
-				<div class="col-sm-6"><strong>Description</strong></div>
-			</div>
+			
 
-			<hr class="hidden-xs" />
 
 			<cfloop array="#data.params#" index="p">
-				<div class="row" id="p-#XmlFormat(p.name)#">
-					<div class="col-sm-3"><h4>#XmlFormat(p.name)#</h4></div>
-					<div class="col-sm-1"><strong class="visible-xs-inline">Required: </strong><cfif IsBoolean(p.required)>#YesNoFormat(p.required)#<cfelse>#p.required#</cfif></div>
-					<cfif structKeyExists(p, "default") and len( trim( p.default ) )>
-						<div class="col-sm-2">
-							<strong class="visible-xs-inline">Default: </strong>
-							#XmlFormat(p.default)#
-						</div>
-					<cfelse>
-						<div class="col-sm-2 hidden-xs"></div>
-					</cfif>
-					<div class="col-sm-6">
-						#autoLink( p.description )#
+				<div class="param" id="p-#XmlFormat(p.name)#">
+					<h4>
+						#encodeForHTML(p.name)#
+						<cfif IsBoolean(p.required) AND p.required><div class="pull-right"><span class="label label-danger">Required</span></div></cfif>
+						<cfif structKeyExists(p, "default") and len( trim( p.default ) )>
+								<div class="p-default pull-right"><span class="text-muted">Default:</span> <code>#encodeForHTML(p.default)#</code></div>
+						</cfif>
+					</h4>
+					<div class="p-desc">
+						
+						#autoLink( p.description )# 
 						<cfif StructKeyExists(p, "values") AND IsArray(p.values) AND ArrayLen(p.values)>
 							<cfif uCase(arrayToList(p.values)) IS NOT "YES,NO">
-								<strong class="visible-xs-block">Values: </strong>
+								<strong>Values: </strong>
 								<ul>
 									<cfloop array="#p.values#" index="i">
 										<li><code>#XmlFormat(i)#</code></li>
@@ -170,9 +162,11 @@
 								</ul>
 							</cfif>
 						</cfif>
+						
 					</div>
-				</div>
-				<hr class="visible-xs-block" />
+				</div> 
+				
+				
 			</cfloop>
 		</cfif>
 
