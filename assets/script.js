@@ -46,6 +46,18 @@ $(document).ready(function() {
   if ($('.prettyprint').length != 0 && typeof(prettyPrint) == "function") {
       prettyPrint();
   }
+  if (window.innerWidth > 780) {
+    $( window ).scroll(function(e) {
+      var top  = window.pageYOffset || document.documentElement.scrollTop;
+      if (top > 100) {
+        //show
+        $('#foundeo').addClass('foundeoAppear');
+      } else {
+        //hide
+        $('#foundeo').removeClass('foundeoAppear'); 
+      }
+    });
+  }
 
 });
 //search submit
