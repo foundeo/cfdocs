@@ -16,7 +16,7 @@
 
 ## Expectation Reference
 
-See the [`testbox.system.Expectation`](http://apidocs.ortussolutions.com/testbox/2.3.0/index.html?testbox/system/Expectation.html) class for a full list of expectations. The `message` argument is optional in all cases. Here are some common expectations:
+See the [`testbox.system.Expectation`](http://apidocs.ortussolutions.com/testbox/current/index.html?testbox/system/Expectation.html) class for a full list of expectations. The `message` argument is optional in all cases. Here are some common expectations:
 
 	//assert value==expected, not case sensitive
 	expect(value).toBe(expected, message);
@@ -107,3 +107,24 @@ You can also chain expectations:
 		}
 
 	}
+
+See the [`testbox.system.Assertion`](http://apidocs.ortussolutions.com/testbox/current/index.html?testbox/system/Assertion.html) class for a full list of Assertions. Here are some common assertions, the `message` argument is optional.
+
+	//assert that value is true
+	$assert.isTrue(value, message);
+
+	//assert that value is false
+	$assert.isFalse(value, message);
+
+	//assert that expected is equal actual, no case is required.
+	$assert.isEqual(expected, actual, message);
+
+	//assert that the struct has the given key
+	$assert.key(struct, key, message);
+
+	//assert the length of a string, array, structure or query
+	$assert.lengthOf(object, length, message);
+
+
+
+
