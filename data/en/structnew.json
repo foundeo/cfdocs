@@ -8,7 +8,7 @@
   "params": [
     {
       "name": "structType",
-      "description": "CF2016+ If set to `ordered` the order in which elements are added to the structure will be maintained.",
+      "description": "CF2016+ Lucee4.5+ If set to `ordered` the order in which elements are added to the structure will be maintained. In Lucee `linked` can be used in place of `ordered`.",
       "required": false,
       "default": "",
       "type": "string",

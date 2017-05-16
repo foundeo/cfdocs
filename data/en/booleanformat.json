@@ -9,7 +9,8 @@
 		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/booleanformat.html"}
+		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/booleanformat.html"},
+		"lucee": {"minimum_version":"5.1.0.1", "notes":""}
 	},
 	"links": [
 

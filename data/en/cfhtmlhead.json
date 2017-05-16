@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Writes text to the head section of a generated HTML page. It is\n useful for embedding JavaScript code, or putting other HTML\n tags, such as meta, link, title, or base in an HTML page\n header.",
 	"params": [
-		{"name":"text","description":"Text to add to the <head> area of an HTML page.","required":true,"default":"","type":"String","values":[]}
+		{"name":"text","description":"Text to add to the head area of an HTML page.","required":true,"default":"","type":"String","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,26 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Add RSS feed link to the HTML head section",
+			"description": "",
+			"code": "<cfhtmlhead text='<link href=\"/news.xml\" rel=\"alternate\" type=\"application/rss+xml\" title=\"Latest News\" />'>",
+			"runnable": "false"
+		},
+		{
+			"title": "Using script",
+			"description": "",
+			"code": "cfhtmlhead( text='<link href=\"/news.xml\" rel=\"alternate\" type=\"application/rss+xml\" title=\"Latest News\" />');",
+			"runnable": "false"
+		},
+		{
+			"title": "Lucee only: script alternative",
+			"description": "",
+			"code": "htmlhead text='<link href=\"/news.xml\" rel=\"alternate\" type=\"application/rss+xml\" title=\"Latest News\" />';",
+			"runnable": "false"
+		}
 	]
 
 }
