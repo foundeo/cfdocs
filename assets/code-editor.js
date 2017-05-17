@@ -205,15 +205,13 @@ angular.module('code.editor', [])
 					showOptions = typeof attrs.showOptions !== 'undefined' ? attrs.showOptions === "true" || attrs.showOptions === "1" : true,
 					showResults = typeof attrs.showResults !== 'undefined' ? attrs.showResults === "true" || attrs.showResults === "1" : true,
                     urlPool = {
-                    	"railo" : [ location.protocol + "//railo-sbx.trycf.com/getremote.cfm" ],
-        			    // "lucee" : [ "http://sbx-lucee.aws.af.cm/getremote.cfm" ],
-        			    "lucee" : [ location.protocol + "//lucee4-sbx.trycf.com/lucee4/getremote.cfm" ],
-        			    // "lucee5.0.0.45" : [ "http://lucee5-0-0-45-sbx.trycf.com/lucee5.0.0.45/getremote.cfm" ],
-        			    "lucee5" : [ location.protocol + "//lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
-        			    "lucee5.0.0.45" : [ location.protocol + "//lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
-                    	"acf" 	: [ location.protocol + "//acf10-sbx.trycf.com/cfusion/getremote.cfm" ],
-						"acf11" : [ location.protocol + "//acf11-sbx.trycf.com/cfusion/getremote.cfm" ],
-						"acf2016" : [ location.protocol + "//acf12-sbx.trycf.com/getremote.cfm" ]
+                    	"railo" : [ "https://railo-sbx.trycf.com/getremote.cfm" ],
+        			    "lucee" : [ "https://lucee4-sbx.trycf.com/lucee4/getremote.cfm" ],
+        			    "lucee5" : [ "https://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
+        			    "lucee5.0.0.45" : [ "https://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
+                    	"acf" 	: [ "https://acf10-sbx.trycf.com/cfusion/getremote.cfm" ],
+						"acf11" : [ "https://acf11-sbx.trycf.com/cfusion/getremote.cfm" ],
+						"acf2016" : [ "https://acf12-sbx.trycf.com/getremote.cfm" ]
                     },
                     url = attrs.url || urlPool[scope.engine][Math.floor(Math.random()*urlPool[scope.engine].length)];
 
