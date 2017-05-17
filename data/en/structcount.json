@@ -17,6 +17,19 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+	    {
+		"title": "Using structCount as a function",
+		"description": "Pass a structure as an argument to the function.",
+		"code": "user = {\n    id = 1,\n    firstname = \"Han\",\n    lastname = \"Solo\",\n    movie = \"Star Wars\"\n};\n\nwriteDump( structCount( user ) );",
+		"result": "4"
+	    },
+	    {
+		"title": "Using structCount as a Member Function",
+		"description": "Having a reference of a stricture as a variable, use the dot notation to get a key count on it using a member function.",
+		"code": "user = {\n    id = 1,\n    firstname = \"Han\",\n    lastname = \"Solo\",\n    movie = \"Star Wars\"\n};\n\nwriteDump( user.count() );",
+		"result": "4"
+	    }
 	]
-
 }
