@@ -27,7 +27,7 @@
 	    },
 	    {
 		"title": "Using structCount as a Member Function",
-		"description": "Having a reference of a stricture as a variable, use the dot notation to get a key count on it using a member function.",
+		"description": "CF11+ Lucee4.5+ Having a reference of a structure as a variable, use the dot notation to get a key count on it using a member function.",
 		"code": "user = {\n    id = 1,\n    firstname = \"Han\",\n    lastname = \"Solo\",\n    movie = \"Star Wars\"\n};\n\nwriteDump( user.count() );",
 		"result": "4"
 	    }
