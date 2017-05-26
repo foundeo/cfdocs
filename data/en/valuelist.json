@@ -23,8 +23,9 @@
 		{
 			"title": "Simple Example",
 			"description": "Retrieve column results",
-			"code": "ValueList(myQuery.myColumn)",
-			"result": "Each record's myColumn result"
+			"code": "news = queryNew(\"id,title\",\r\n    \"integer,varchar\",\r\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\r\nwriteOutput( valueList(news.id) );",
+			"result":"1,2",
+			"runnable":true
 		}
 	]
 }
