@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"valueList(column [, delimiter])",
 	"returns":"String",
-	"related":[],
+	"related":["valueArray"],
 	"description":"Returns each value from a column of an executed query.\n CFML does not evaluate the arguments.\n A delimited list of the values of each record returned from an\n executed query column",
 	"params": [
 		{"name":"column","description":"Name of an executed query and column. Separate query name\n and column name with a period.","required":true,"default":"","type":"QueryColumn","values":[]},
