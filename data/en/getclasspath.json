@@ -4,7 +4,7 @@
 	"syntax": "getClassPath()",
 	"returns": "array",
 	"related": [],
-	"description": "",
+	"description": "Returns an array containing the Java classpath of the current enviroment.",
 	"params": [],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getclasspath.html"}
