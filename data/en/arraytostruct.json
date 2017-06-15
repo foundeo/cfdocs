@@ -12,6 +12,13 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraytostruct.html"}
 	},
-	"examples": [],
-	"links": []
+	"examples": [
+		{
+		"title": "Retrieve an array as a struct",
+            	"description": "Uses the arrayToStruct function to retrieve an array as a ColdFusion struct. Cannot use writeOuyPut() to directly print out",
+            	"code": "someArray = ['a','b','c','d','e','f','g'];\nsomeStruct = arrayToStruct(someArray);\nwriteOutput(serializeJSON(someStruct));",
+            	"result": "\""3":"c","7":"g","4":"d","6":"f","2":"b","5":"e","1":"a"\""
+		}
+	],
+	"links": [http://docs.lucee.org/reference/functions/arraytostruct.html]
 }
