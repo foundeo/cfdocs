@@ -5,7 +5,7 @@
 	"member": "array.toStruct()",
 	"returns": "struct",
 	"related": [],
-	"description": "",
+	"description": "Transform the array to a struct, the index of the array is the key of the struct",
 	"params": [
 		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []}
 	],
