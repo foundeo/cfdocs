@@ -4,7 +4,7 @@
 	"syntax":"encodeForHTMLAttribute(inputString [, canonicalize])",
 	"returns":"String",
 	"related":["htmleditformat", "encodeforhtml"],
-	"description":"Encodes the inputString for safe output in the attribute value of a HTML tag. The encoding in meant to mitigate Cross Site Scripting (XSS) attacks.",
+	"description":"Encodes the inputString for safe output in the attribute value of an HTML attribute, such as table width or image height. The encoding is meant to mitigate Cross Site Scripting (XSS) attacks.",
 	"params": [
 		{"name":"inputString","description":"A string to encode","required":true,"default":"","type":"String","values":[]},
 		{"name":"canonicalize","description":"When true runs the canonicalize function against the input before encoding. This argument is not supported on Lucee.","required":false,"default":"","type":"Boolean","values":[]}
