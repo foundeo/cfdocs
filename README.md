@@ -22,7 +22,7 @@ This makes the documentation super easy to edit and allows developers to run a l
 The cfdocs.org site can run locally very easily thanks to CommandBox.
 
 1. Go download [CommandBox](https://www.ortussolutions.com/products/commandbox) if you do not have it already.
-2. Download this repository and extract it to a folder, or clone it from this repository. If you are going to be making changes to the docs I would suggest you fork it, see Adam Tuttle's guide: [GitHub tip for your first pull request](http://fusiongrokker.com/post/github-tip-for-your-first-pull-request)
+2. Download this repository and extract it to a folder, or clone it from this repository. If you are going to be making changes to the docs I would suggest you fork it, see Adam Tuttle's guide: [GitHub tip for your first pull request](https://adamtuttle.codes/your-first-github-pull-request/)
 3. Run `box server start` from Command Prompt or Terminal in the root directory.
 
 CommandBox will start an embedded CFML server on port 8411, and you can browse to [http://localhost:8411/](http://localhost:8411/) to view the docs.
