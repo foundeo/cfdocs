@@ -7,7 +7,7 @@
 	"related":["hour","minute","second","month","quarter","week"],
 	"description":" From a date/time object, gets the year value.",
 	"params": [
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
+		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/year.html"},
