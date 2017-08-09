@@ -144,7 +144,7 @@
       "result": ""
     },
     {
-      "title": "cfscript exuivalent of cfqueryparam",
+      "title": "cfscript equivalent of cfqueryparam",
       "description": "CF11+ script syntax using queryExecute and full array notation",
       "code": "exampleData = queryNew(\"id,title\",\"integer,varchar\",[{\"id\":1,\"title\":\"Dewey defeats Truman\"},{\"id\":2,\"title\":\"Man walks on Moon\"}]);\r\n\r\nresult = queryExecute(\r\n  \"SELECT title FROM exampleData WHERE id = ?\", \r\n  [\r\n    { value=2, cfsqltype=\"cf_sql_varchar\" }\r\n  ],\r\n  { dbtype=\"query\" }\r\n);\r\n\r\nwriteOutput( result.title[1] );",
       "result": "Man walks on Moon"
@@ -156,7 +156,7 @@
       "result": "Man walks on Moon"
     },
     {
-      "title": "cfscript exuivalent of cfqueryparam",
+      "title": "cfscript equivalent of cfqueryparam",
       "description": "CF11+ script syntax using queryExecute and struct notation",
       "code": "exampleData = queryNew(\"id,title\",\"integer,varchar\",[{\"id\":1,\"title\":\"Dewey defeats Truman\"},{\"id\":2,\"title\":\"Man walks on Moon\"}]);\r\n\r\nresult = queryExecute(\r\n  \"SELECT title FROM exampleData WHERE id = :id\", \r\n  { id = 2 },\r\n  { dbtype=\"query\" }\r\n);\r\n\r\nwriteOutput( result.title[1] );",
       "result": "Man walks on Moon"
