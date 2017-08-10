@@ -1,7 +1,7 @@
 {
 	"name":"queryAddRow",
 	"type":"function",
-	"syntax":"queryAddRow(query [, number/row(2)])",
+	"syntax":"queryAddRow(query [, number/row(s)])",
 	"returns":"Numeric",
 	"related":[],
 	"description":" Adds a specified number of empty rows to a query.",
