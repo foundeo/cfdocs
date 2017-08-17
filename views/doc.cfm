@@ -144,6 +144,7 @@
 				<div class="param" id="p-#XmlFormat(p.name)#">
 					<h4>
 						#encodeForHTML(p.name)#
+						<cfif structKeyExists(p, "type") and len( p.type )><em><span class="text-muted">#p.type</span></em></cfif>
 						<cfif IsBoolean(p.required) AND p.required><div class="pull-right"><span class="label label-danger">Required</span></div></cfif>
 						<cfif structKeyExists(p, "default") and len( trim( p.default ) )>
 								<div class="p-default pull-right"><span class="text-muted">Default:</span> <code>#encodeForHTML(p.default)#</code></div>
