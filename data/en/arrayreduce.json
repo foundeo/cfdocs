@@ -29,7 +29,7 @@
         {
 			"title": "Script Syntax",
 			"description": "",
-			"code": "complexData = [ {a: 4}, {a: 18}, {a: 51} ]; \r\n sum = arrayReduce( complexData, function(prev, element) \r\n { \r\n return prev + element.a; \r\n }, 0 ); \r\n ",
+			"code": "complexData = [ {a: 4}, {a: 18}, {a: 51} ]; \r\n sum = arrayReduce( complexData, function(prev, element) \r\n { \r\n return prev + element.a; \r\n }, 0 ); \r\nwriteDump(sum); ",
 			"result": "Answer: [73]"
 		}
     ]

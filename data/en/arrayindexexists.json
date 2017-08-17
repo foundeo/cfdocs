@@ -5,7 +5,7 @@
 	"member": "array.indexExists(index)",
 	"returns": "boolean",
 	"related": [],
-	"description": "",
+	"description": "Returns whether there exists an item in the array at the selected index.",
 	"params": [
 		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []},
 		{"name": "index", "description": "", "required": true, "default": "", "type": "number", "values": []}
