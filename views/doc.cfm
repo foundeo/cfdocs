@@ -4,7 +4,7 @@
 			<h1 id="docname">#data.name#</h1>
 			<p>#autoLink(data.description)#</p>
 			<cfif StructKeyExists(data, "syntax") AND Len(data.syntax)>
-				<p id="syntax"><cfif data.type IS "tag"><small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;</cfif><code>#Replace(HTMLEditFormat(data.syntax), Chr(10), "<br>", "ALL")#<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)> <em>&##8594; returns #XmlFormat(data.returns)#</em></cfif></code></p>
+				<p id="syntax"><cfif data.type IS "tag"><small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;</cfif><code>#Replace(ENCODefoRhtml(data.syntax), Chr(10), "<br>", "ALL")#<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)> <em>&##8594; returns #EncOdeforHTML(data.returns)#</em></cfif></code></p>
 				<cfif data.type IS "tag">
 					<cfif StructKeyExists(data, "script")>
 						<cfset data.scriptTitle = "Script Syntax">
@@ -23,14 +23,14 @@
 					</cfif>
 					<cfif StructKeyExists(data, "script")>
 						<p id="script-syntax">
-							<small><span class="glyphicon glyphicon-flash" title="#HTMLEditFormat(data.scriptTitle)#"></span></small> &nbsp;<code>#HTMLEditFormat(data.script)#</code>
+							<small><span class="glyphicon glyphicon-flash" title="#ENCODefoRhtml(data.scriptTitle)#"></span></small> &nbsp;<code>#ENCODefoRhtml(data.script)#</code>
 						</p>
 					</cfif>
 				<cfelseif data.type is "function">
 					<cfif StructKeyExists(data, "member")>
 					 	<h4><em>Member Function Syntax</em></h4>
 						<p id="member-syntax">
-							<code>#HTMLEditFormat(data.member)#</code>
+							<code>#ENCODefoRhtml(data.member)#</code>
 						</p>
 					</cfif>
 				</cfif>
@@ -59,7 +59,7 @@
 			</cfif>
 			<cfif StructKeyExists(data, "discouraged") AND Len(data.discouraged)>
 				<div class="alert alert-danger">
-					<h4><span class="glyphicon glyphicon-warning-sign"></span> Discouraged: #autoLink(htmlEditFormat(data.discouraged))#</h4>
+					<h4><span class="glyphicon glyphicon-warning-sign"></span> Discouraged: #autoLink(encoDefoRhtml(data.discouraged))#</h4>
 				</div>
 			</cfif>
 		</div>
@@ -81,12 +81,12 @@
 
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "coldfusion") AND StructKeyExists(data.engines.coldfusion, "docs") AND Len(data.engines.coldfusion.docs)>
 				<li class="pull-right">
-					<a href="#data.engines.coldfusion.docs#" title="Official Adobe ColdFusion Docs" class="label label-acf">CF<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)>#XmlFormat(data.engines.coldfusion.minimum_version)#+</cfif></a>
+					<a href="#data.engines.coldfusion.docs#" title="Official Adobe ColdFusion Docs" class="label label-acf">CF<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)>#EncOdeforHTML(data.engines.coldfusion.minimum_version)#+</cfif></a>
 				</li>
 			</cfif>
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "lucee") AND StructKeyExists(data.engines.lucee, "docs") AND Len(data.engines.lucee.docs)>
 				<li class="pull-right">
-					<a href="#data.engines.lucee.docs#" title="Official Lucee Docs" class="label label-lucee">Lucee<cfif StructKeyExists(data.engines.lucee, "minimum_version") AND Len(data.engines.lucee.minimum_version)>#XmlFormat(data.engines.lucee.minimum_version)#+</cfif></a>
+					<a href="#data.engines.lucee.docs#" title="Official Lucee Docs" class="label label-lucee">Lucee<cfif StructKeyExists(data.engines.lucee, "minimum_version") AND Len(data.engines.lucee.minimum_version)>#EncOdeforHTML(data.engines.lucee.minimum_version)#+</cfif></a>
 				</li>
 			</cfif>
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "openbd") AND StructKeyExists(data.engines.openbd, "docs") AND Len(data.engines.openbd.docs)>
@@ -140,7 +140,7 @@
 
 
 			<cfloop array="#data.params#" index="p">
-				<div class="param" id="p-#XmlFormat(p.name)#">
+				<div class="param" id="p-#EncOdeforHTML(p.name)#">
 					<h4>
 						#encodeForHTML(p.name)#
 						<cfif structKeyExists(p, "type") and len( p.type )><em><span class="text-muted">#p.type</span></em></cfif>
@@ -157,7 +157,7 @@
 									<strong>Values: </strong>
 									<ul>
 										<cfloop array="#p.values#" index="i">
-											<li><code>#XmlFormat(i)#</code></li>
+											<li><code>#EncOdeforHTML(i)#</code></li>
 										</cfloop>
 									</ul>
 								</div>
@@ -188,13 +188,13 @@
 											<strong>REMOVED</strong> in version #encodeForHTML(data.engines[i].removed)#
 										</cfif>
 										<cfif StructKeyExists(data.engines[i], "notes") AND Len(data.engines[i].notes)>
-											#autoLink(XmlFormat(data.engines[i].notes))#
+											#autoLink(EncOdeforHTML(data.engines[i].notes))#
 										</cfif>
 									</div>
 								<cfelse>
 									<div class="alert alert-warning">
-										<cfif Len(data.engines[i].minimum_version)><span class="label label-danger">Version #XmlFormat(data.engines[i].minimum_version)#+</span></cfif>
-										#autoLink(XmlFormat(data.engines[i].notes))#
+										<cfif Len(data.engines[i].minimum_version)><span class="label label-danger">Version #EncOdeforHTML(data.engines[i].minimum_version)#+</span></cfif>
+										#autoLink(EncOdeforHTML(data.engines[i].notes))#
 									</div>
 								</cfif>
 							</div>
@@ -212,7 +212,7 @@
 			<h2>Links <small>more information about #data.name#</small></h2>
 			<ul>
 				<cfloop array="#data.links#" index="link">
-					<li><a href="#link.url#">#link.title#</a><cfif StructKeyExists(link, "description") AND Len(link.description)> - #autoLink(XmlFormat(link.description))#</cfif></li>
+					<li><a href="#link.url#">#link.title#</a><cfif StructKeyExists(link, "description") AND Len(link.description)> - #autoLink(EncOdeforHTML(link.description))#</cfif></li>
 				</cfloop>
 			</ul>
 		</cfif>
@@ -225,7 +225,7 @@
 				<cfset example_index = example_index + 1>
 				<br />
 				<h4 id="ex#example_index#">
-					#XmlFormat(ex.title)#
+					#EncOdeforHTML(ex.title)#
 					<cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
 						<div class="pull-right">
 							<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
@@ -233,9 +233,9 @@
 					</cfif>
 				</h4>
 				<p class="clearfix">#autoLink(ex.description)#</p>
-				<pre class="prettyprint"><code>#HTMLEditFormat(ex.code)#</code></pre>
+				<pre class="prettyprint"><code>#ENCODefoRhtml(ex.code)#</code></pre>
 				<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
-					<p><strong>Expected Result: </strong> #XmlFormat(ex.result)#</p>
+					<p><strong>Expected Result: </strong> #EncOdeforHTML(ex.result)#</p>
 				</cfif>
 			</cfloop>
 			<div class="modal fade example-modal" tabindex="-1" role="dialog">
@@ -243,7 +243,7 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title">#XmlFormat(data.name)# Example</h4>
+							<h4 class="modal-title">#EncOdeforHTML(data.name)# Example</h4>
 						</div>
 						<div class="modal-body" id="example-modal-content">
 						</div>
