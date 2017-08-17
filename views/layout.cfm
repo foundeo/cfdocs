@@ -74,6 +74,7 @@
 						<li><a href="/reports/missing-descriptions.cfm">Missing Descriptions</a></li>
 						<li><a href="/reports/missing-examples.cfm">Missing Examples</a></li>
 						<li><a href="/reports/missing-related.cfm">Missing Related Links</a></li>
+						<li><a href="https://github.com/foundeo/cfdocs/issuesm">More...</a></li>
 					</ul>
 				</li>
 			</cfoutput>
