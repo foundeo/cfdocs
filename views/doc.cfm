@@ -136,7 +136,6 @@
 					<span class="item-name">#encodeForHTML(data.name)#</span>
 				</cfif>
 			</h2>
-
 			
 
 
@@ -150,24 +149,22 @@
 								<div class="p-default pull-right"><span class="text-muted">Default:</span> <code>#encodeForHTML(p.default)#</code></div>
 						</cfif>
 					</h4>
-					<div class="p-desc">
-						
+					<div class="p-desc">						
 						#autoLink( p.description )# 
 						<cfif StructKeyExists(p, "values") AND IsArray(p.values) AND ArrayLen(p.values)>
 							<cfif uCase(arrayToList(p.values)) IS NOT "YES,NO">
-								<strong>Values: </strong>
-								<ul>
-									<cfloop array="#p.values#" index="i">
-										<li><code>#encodeForHTML(i)#</code></li>
-									</cfloop>
-								</ul>
+								<div>
+									<strong>Values: </strong>
+									<ul>
+										<cfloop array="#p.values#" index="i">
+											<li><code>#encodeForHTML(i)#</code></li>
+										</cfloop>
+									</ul>
+								</div>
 							</cfif>
-						</cfif>
-						
+						</cfif>						
 					</div>
-				</div> 
-				
-				
+				</div>			
 			</cfloop>
 		</cfif>
 
