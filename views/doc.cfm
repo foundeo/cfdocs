@@ -23,7 +23,7 @@
 					</cfif>
 					<cfif StructKeyExists(data, "script")>
 						<p id="script-syntax">
-							<small><span class="glyphicon glyphicon-flash" title="#encodeForHTML(data.scriptTitle)#"></span></small> &nbsp;<code>#encodeForHTML(data.script)#</code>
+							<small><span class="glyphicon glyphicon-flash" title="#encodeForHTMLAttribute(data.scriptTitle)#"></span></small> &nbsp;<code>#encodeForHTML(data.script)#</code>
 						</p>
 					</cfif>
 				<cfelseif data.type is "function">
@@ -133,17 +133,17 @@
 				<cfelseif data.type IS "function">
 					#encodeForHTML(data.name)# Argument Reference
 				<cfelse>
-					<span class="item-name">#data.name#</span>
+					<span class="item-name">#encodeForHTML(data.name)#</span>
 				</cfif>
 			</h2>
 			
 
 
 			<cfloop array="#data.params#" index="p">
-				<div class="param" id="p-#encodeForHTML(p.name)#">
+				<div class="param" id="p-#encodeForHTMLAttribute(p.name)#">
 					<h4>
 						#encodeForHTML(p.name)#
-						<cfif structKeyExists(p, "type") and len( p.type )><em><span class="text-muted">#p.type</span></em></cfif>
+						<cfif structKeyExists(p, "type") and len( p.type )><em><span class="text-muted">#encodeForHTML(p.type)#</span></em></cfif>
 						<cfif IsBoolean(p.required) AND p.required><div class="pull-right"><span class="label label-danger">Required</span></div></cfif>
 						<cfif structKeyExists(p, "default") and len( trim( p.default ) )>
 								<div class="p-default pull-right"><span class="text-muted">Default:</span> <code>#encodeForHTML(p.default)#</code></div>
@@ -225,7 +225,7 @@
 				<cfset example_index = example_index + 1>
 				<br />
 				<h4 id="ex#example_index#">
-					#encodeForHTML(ex.title)#
+					#XmlFormat(ex.title)#
 					<cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
 						<div class="pull-right">
 							<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
