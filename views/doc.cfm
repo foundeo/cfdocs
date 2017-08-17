@@ -4,7 +4,7 @@
 			<h1 id="docname">#data.name#</h1>
 			<p>#autoLink(data.description)#</p>
 			<cfif StructKeyExists(data, "syntax") AND Len(data.syntax)>
-				<p id="syntax"><cfif data.type IS "tag"><small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;</cfif><code>#Replace(EncodeForHTML(data.syntax), Chr(10), "<br>", "ALL")#<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)> <em>&##8594; returns #EncodeForHTML(data.returns)#</em></cfif></code></p>
+				<p id="syntax"><cfif data.type IS "tag"><small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;</cfif><code>#Replace(encodeForHTML(data.syntax), Chr(10), "<br>", "ALL")#<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)> <em>&##8594; returns #encodeForHTML(data.returns)#</em></cfif></code></p>
 				<cfif data.type IS "tag">
 					<cfif StructKeyExists(data, "script")>
 						<cfset data.scriptTitle = "Script Syntax">
@@ -23,14 +23,14 @@
 					</cfif>
 					<cfif StructKeyExists(data, "script")>
 						<p id="script-syntax">
-							<small><span class="glyphicon glyphicon-flash" title="#EncodeForHTML(data.scriptTitle)#"></span></small> &nbsp;<code>#EncodeForHTML(data.script)#</code>
+							<small><span class="glyphicon glyphicon-flash" title="#encodeForHTML(data.scriptTitle)#"></span></small> &nbsp;<code>#encodeForHTML(data.script)#</code>
 						</p>
 					</cfif>
 				<cfelseif data.type is "function">
 					<cfif StructKeyExists(data, "member")>
 					 	<h4><em>Member Function Syntax</em></h4>
 						<p id="member-syntax">
-							<code>#EncodeForHTML(data.member)#</code>
+							<code>#encodeForHTML(data.member)#</code>
 						</p>
 					</cfif>
 				</cfif>
@@ -40,9 +40,9 @@
 					<h4>
 						<span class="glyphicon glyphicon-warning-sign"></span>
 						<cfif structKeyExists(data.engines.coldfusion, "removed") AND len(data.engines.coldfusion.removed)>
-							The #data.name# <cfif data.type IS "tag">tag<cfelseif data.type IS "function">function</cfif> was <strong>REMOVED</strong> from ColdFusion #EncodeForHTML(data.engines.coldfusion.removed)# <cfif data.engines.coldfusion.removed IS NOT data.engines.coldfusion.deprecated> and has been <strong>DEPRECATED</strong> since ColdFusion #EncodeForHTML(data.engines.coldfusion.deprecated)#</cfif>
+							The #data.name# <cfif data.type IS "tag">tag<cfelseif data.type IS "function">function</cfif> was <strong>REMOVED</strong> from ColdFusion #encodeForHTML(data.engines.coldfusion.removed)# <cfif data.engines.coldfusion.removed IS NOT data.engines.coldfusion.deprecated> and has been <strong>DEPRECATED</strong> since ColdFusion #encodeForHTML(data.engines.coldfusion.deprecated)#</cfif>
 						<cfelse>
-							The #data.name# <cfif data.type IS "tag">tag<cfelseif data.type IS "function">function</cfif> is <strong>DEPRECATED</strong> as of ColdFusion #EncodeForHTML(data.engines.coldfusion.deprecated)#
+							The #data.name# <cfif data.type IS "tag">tag<cfelseif data.type IS "function">function</cfif> is <strong>DEPRECATED</strong> as of ColdFusion #encodeForHTML(data.engines.coldfusion.deprecated)#
 						</cfif>
 					</h4>
 				</div>
@@ -59,7 +59,7 @@
 			</cfif>
 			<cfif StructKeyExists(data, "discouraged") AND Len(data.discouraged)>
 				<div class="alert alert-danger">
-					<h4><span class="glyphicon glyphicon-warning-sign"></span> Discouraged: #autoLink(EncodeForHTML(data.discouraged))#</h4>
+					<h4><span class="glyphicon glyphicon-warning-sign"></span> Discouraged: #autoLink(encodeForHTML(data.discouraged))#</h4>
 				</div>
 			</cfif>
 		</div>
@@ -81,12 +81,12 @@
 
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "coldfusion") AND StructKeyExists(data.engines.coldfusion, "docs") AND Len(data.engines.coldfusion.docs)>
 				<li class="pull-right">
-					<a href="#data.engines.coldfusion.docs#" title="Official Adobe ColdFusion Docs" class="label label-acf">CF<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)>#EncodeForHTML(data.engines.coldfusion.minimum_version)#+</cfif></a>
+					<a href="#data.engines.coldfusion.docs#" title="Official Adobe ColdFusion Docs" class="label label-acf">CF<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)>#encodeForHTML(data.engines.coldfusion.minimum_version)#+</cfif></a>
 				</li>
 			</cfif>
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "lucee") AND StructKeyExists(data.engines.lucee, "docs") AND Len(data.engines.lucee.docs)>
 				<li class="pull-right">
-					<a href="#data.engines.lucee.docs#" title="Official Lucee Docs" class="label label-lucee">Lucee<cfif StructKeyExists(data.engines.lucee, "minimum_version") AND Len(data.engines.lucee.minimum_version)>#EncodeForHTML(data.engines.lucee.minimum_version)#+</cfif></a>
+					<a href="#data.engines.lucee.docs#" title="Official Lucee Docs" class="label label-lucee">Lucee<cfif StructKeyExists(data.engines.lucee, "minimum_version") AND Len(data.engines.lucee.minimum_version)>#encodeForHTML(data.engines.lucee.minimum_version)#+</cfif></a>
 				</li>
 			</cfif>
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "openbd") AND StructKeyExists(data.engines.openbd, "docs") AND Len(data.engines.openbd.docs)>
@@ -129,9 +129,9 @@
 		<cfif StructKeyExists(data, "params") AND ArrayLen(data.params)>
 			<h2>
 				<cfif data.type IS "tag">
-					#EncodeForHTML(data.name)# Attribute Reference
+					#encodeForHTML(data.name)# Attribute Reference
 				<cfelseif data.type IS "function">
-					#EncodeForHTML(data.name)# Argument Reference
+					#encodeForHTML(data.name)# Argument Reference
 				<cfelse>
 					<span class="item-name">#data.name#</span>
 				</cfif>
@@ -140,13 +140,13 @@
 
 
 			<cfloop array="#data.params#" index="p">
-				<div class="param" id="p-#EncodeForHTML(p.name)#">
+				<div class="param" id="p-#encodeForHTML(p.name)#">
 					<h4>
-						#EncodeForHTML(p.name)#
+						#encodeForHTML(p.name)#
 						<cfif structKeyExists(p, "type") and len( p.type )><em><span class="text-muted">#p.type</span></em></cfif>
 						<cfif IsBoolean(p.required) AND p.required><div class="pull-right"><span class="label label-danger">Required</span></div></cfif>
 						<cfif structKeyExists(p, "default") and len( trim( p.default ) )>
-								<div class="p-default pull-right"><span class="text-muted">Default:</span> <code>#EncodeForHTML(p.default)#</code></div>
+								<div class="p-default pull-right"><span class="text-muted">Default:</span> <code>#encodeForHTML(p.default)#</code></div>
 						</cfif>
 					</h4>
 					<div class="p-desc">						
@@ -157,7 +157,7 @@
 									<strong>Values: </strong>
 									<ul>
 										<cfloop array="#p.values#" index="i">
-											<li><code>#EncodeForHTML(i)#</code></li>
+											<li><code>#encodeForHTML(i)#</code></li>
 										</cfloop>
 									</ul>
 								</div>
@@ -183,18 +183,18 @@
 							<div class="col-sm-8">
 								<cfif StructKeyExists(data.engines[i], "deprecated") AND Len(data.engines[i].deprecated)>
 									<div class="alert alert-danger">
-										<strong>DEPRECATED</strong> since version #EncodeForHTML(data.engines[i].deprecated)#
+										<strong>DEPRECATED</strong> since version #encodeForHTML(data.engines[i].deprecated)#
 										<cfif StructKeyExists(data.engines[i], "removed") AND Len(data.engines[i].removed)>
-											<strong>REMOVED</strong> in version #EncodeForHTML(data.engines[i].removed)#
+											<strong>REMOVED</strong> in version #encodeForHTML(data.engines[i].removed)#
 										</cfif>
 										<cfif StructKeyExists(data.engines[i], "notes") AND Len(data.engines[i].notes)>
-											#autoLink(EncodeForHTML(data.engines[i].notes))#
+											#autoLink(encodeForHTML(data.engines[i].notes))#
 										</cfif>
 									</div>
 								<cfelse>
 									<div class="alert alert-warning">
-										<cfif Len(data.engines[i].minimum_version)><span class="label label-danger">Version #EncodeForHTML(data.engines[i].minimum_version)#+</span></cfif>
-										#autoLink(EncodeForHTML(data.engines[i].notes))#
+										<cfif Len(data.engines[i].minimum_version)><span class="label label-danger">Version #encodeForHTML(data.engines[i].minimum_version)#+</span></cfif>
+										#autoLink(encodeForHTML(data.engines[i].notes))#
 									</div>
 								</cfif>
 							</div>
@@ -212,7 +212,7 @@
 			<h2>Links <small>more information about #data.name#</small></h2>
 			<ul>
 				<cfloop array="#data.links#" index="link">
-					<li><a href="#link.url#">#link.title#</a><cfif StructKeyExists(link, "description") AND Len(link.description)> - #autoLink(EncodeForHTML(link.description))#</cfif></li>
+					<li><a href="#link.url#">#link.title#</a><cfif StructKeyExists(link, "description") AND Len(link.description)> - #autoLink(encodeForHTML(link.description))#</cfif></li>
 				</cfloop>
 			</ul>
 		</cfif>
@@ -225,17 +225,17 @@
 				<cfset example_index = example_index + 1>
 				<br />
 				<h4 id="ex#example_index#">
-					#EncodeForHTML(ex.title)#
+					#encodeForHTML(ex.title)#
 					<cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
 						<div class="pull-right">
-							<button class="example-btn btn btn-default" data-name="#EncodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
+							<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
 						</div>
 					</cfif>
 				</h4>
 				<p class="clearfix">#autoLink(ex.description)#</p>
-				<pre class="prettyprint"><code>#EncodeForHTML(ex.code)#</code></pre>
+				<pre class="prettyprint"><code>#encodeForHTML(ex.code)#</code></pre>
 				<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
-					<p><strong>Expected Result: </strong> #EncodeForHTML(ex.result)#</p>
+					<p><strong>Expected Result: </strong> #encodeForHTML(ex.result)#</p>
 				</cfif>
 			</cfloop>
 			<div class="modal fade example-modal" tabindex="-1" role="dialog">
@@ -243,7 +243,7 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title">#EncodeForHTML(data.name)# Example</h4>
+							<h4 class="modal-title">#encodeForHTML(data.name)# Example</h4>
 						</div>
 						<div class="modal-body" id="example-modal-content">
 						</div>
