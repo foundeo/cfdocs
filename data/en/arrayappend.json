@@ -32,6 +32,12 @@
 			"description": "CF11+ Lucee4.5+ Invoking the append function on an array is the same as running arrayAppend.",
 			"code": "someArray = [1,2,3];\nsomeArray.append(4);\nwriteOutput(serializeJSON(someArray));",
 			"result": "[1,2,3,4]"
+		},
+		{
+			"title": "Append more than one item",
+			"description": "CF10+ You can merge two arrays when third parameter is set to true.",
+			"code": "someArray = [1,2,3];\nArrayAppend(someArray,[4,5,6],true);\nwriteDump(serializeJSON(someArray));",
+			"result": "[1,2,3,4,5,6]"
 		}
 	]
 
