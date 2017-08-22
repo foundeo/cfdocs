@@ -19,6 +19,13 @@
 	},
 	"links": [
 
+	],
+	examples: [
+		{		
+			"title": "Updates a structure value at specific key",
+			"description": "Change value of structure item",
+			"code": "myStruct = {a: 1, b: 2, c: 3, d: 4};\nstructUpdate(myStruct,'c',15);\nwriteDump(serializeJSON(myStruct));",
+			"result": "{"A":1,"B":2,"C":15,"D":4}"
+		}
 	]
-
 }
