@@ -13,9 +13,23 @@
 		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "number", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryfilter.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryfilter.html"},
+		"coldfusion": {"minimum_version": "CF2016+", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryfilter.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Filter a query",
+		"description":"",
+		"code":"<cfscript>\r\n    news = queryNew(\"id,type,title\", \"integer,varchar,varchar\");\r\n    queryAddRow(news,[{\r\n        id: 1,\r\n        type: \"book\",\r\n        title: \"Cloud Atlas\"\r\n    },{\r\n        id: 2,\r\n        type: \"book\",\r\n        title: \"Lord of The Rings\"\r\n    },{\r\n        id: 3,\r\n        type: \"film\",\r\n        title: \"Men in Black\"\r\n    }]);\r\n    books = QueryFilter(news,function(_news) {\r\n        return _news.type is 'book';\r\n    });\r\n    writeDump(ValueList(books.title,', '));\r\n</cfscript>",
+		"result":"Cloud Atlas, Lord of The Rings",
+		"runnable":true
+	},
+	{
+		"title":"Filter a query as member function",
+		"description":"",
+		"code":"<cfscript>\r\n    news = queryNew(\"id,type,title\", \"integer,varchar,varchar\");\r\n    queryAddRow(news,[{\r\n        id: 1,\r\n        type: \"book\",\r\n        title: \"Cloud Atlas\"\r\n    },{\r\n        id: 2,\r\n        type: \"book\",\r\n        title: \"Lord of The Rings\"\r\n    },{\r\n        id: 3,\r\n        type: \"film\",\r\n        title: \"Men in Black\"\r\n    }]);\r\n    books = news.filter(function(_news) {\r\n        return _news.type is 'book';\r\n    });\r\n    writeDump(ValueList(books.title,', '));\r\n</cfscript>",
+		"result":"Cloud Atlas, Lord of The Rings",
+		"runnable":true
+	}],
 	"links":[{
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
