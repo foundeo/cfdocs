@@ -7,7 +7,7 @@
 	"related":[],
 	"description":" Formats the date part of a date/time value in a locale-specific\n format.\n [mask - quicky]\n d,dd,ddd,dddd: Day of month / week\n m,mm,mmm,mmmm: Month; y,yy,yyyy: Year; gg: Period/era string\n short / medium / long / full",
 	"params": [
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]},
+		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":[]},
 		{"name":"mask","description":"","required":false,"default":"","type":"String","values":["short","medium","long","full"]}
 
 	],

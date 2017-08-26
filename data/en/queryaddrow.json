@@ -1,7 +1,7 @@
 {
 	"name":"queryAddRow",
 	"type":"function",
-	"syntax":"queryAddRow(query [, number])",
+	"syntax":"queryAddRow(query [, number/row(s)])",
 	"returns":"Numeric",
 	"related":[],
 	"description":" Adds a specified number of empty rows to a query.",
@@ -31,6 +31,13 @@
 			"title":"Builds a simple query using queryNew queryAddRow and querySetCell",
 			"description":"Using Script with the queryAddRow querySetCell functions to populate the query.",
 			"code":"news = queryNew(\"id,title\", \"integer,varchar\");\nqueryAddRow(news);\nquerySetCell(news, \"id\", \"1\");\nquerySetCell(news, \"title\", \"Dewey defeats Truman\");\nqueryAddRow(news);\nquerySetCell(news, \"id\", \"2\");\nquerySetCell(news, \"title\", \"Men walk on Moon\");\nwriteDump(news);",
+			"result":""
+
+		},
+		{
+			"title":"Builds a simple query using queryNew queryAddRow and querySetCell wit rows number",
+			"description":"The example above could be simplified this way:",
+			"code":"news = queryNew(\"id,title\", \"integer,varchar\");\nqueryAddRow(news,2);\nquerySetCell(news, \"id\", \"1\",1);\nquerySetCell(news, \"title\", \"Dewey defeats Truman\",1);\nquerySetCell(news, \"id\", \"2\",2);\nquerySetCell(news, \"title\", \"Men walk on Moon\",2);\nwriteDump(news);",
 			"result":""
 
 		}

@@ -2,6 +2,9 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
+
+div.listing > h2 > a.btn { text-transform: none; }
+
 nav.navbar { background-color:#eee; }
 #docname,h4 { font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
 .param h4 { background-color: #f1f1f1; padding: 8px 8px; margin-bottom: 2px; }
