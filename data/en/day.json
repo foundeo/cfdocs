@@ -7,7 +7,7 @@
 	"related":["datePart", "dayOfWeek", "dayOfWeekAsString", "dayOfYear", "daysInMonth", "daysInYear", "firstDayOfMonth"],
 	"description":" Determines the day of the month, in a date.\n The ordinal for the day of the month, ranging from 1 to 31.",
 	"params": [
-		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"DateTime","values":[]}
+		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"Date","values":[]}
 
 	],
 	"engines": {
