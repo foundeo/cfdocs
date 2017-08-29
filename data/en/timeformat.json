@@ -7,7 +7,7 @@
 	"related":["lsTimeFormat", "dateFormat"],
 	"description":" Formats a time value using US English time formatting\n conventions. If no mask is specified, returns a time value\n using the hh:mm tt format. For international time formatting,\n see LSTimeFormat.\n [mask]\n h,hh,H,HH: Hours; m,mm: Minutes; s,ss: Seconds;\n l: Milliseconds; t: A or P; tt: AM or PM\n \"short\" = h:mm tt; \"medium\" = h:mm:ss tt",
 	"params": [
-		{"name":"time","description":"A date\/time value or string to convert","required":true,"default":"","type":"DateTime","values":[]},
+		{"name":"time","description":"A date\/time value or string to convert","required":true,"default":"","type":"Date","values":[]},
 		{"name":"mask","description":"Masking characters that determine the format","required":false,"default":"","type":"String","values":["short","medium","long","full"]}
 
 	],

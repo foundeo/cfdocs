@@ -15,7 +15,7 @@
 			"type":"String",
 			"values":["yyyy","q","m","y","d","w","ww","h","n","s","l"]
 		},
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":[]}
+		{"name":"date","description":"","required":true,"default":"","type":"Date","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"Member function is available is CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DatePart.html"},
