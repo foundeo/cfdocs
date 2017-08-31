@@ -52,6 +52,10 @@ component extends="testbox.system.BaseSpec" {
 											if (isNumeric(e.result) && len(e.result) > 10) {
 												//there are some rounding differences to account for between ACF and Lucee, see results of acos(0.3) for example
 												expect(numberFormat(actualResult, "_.________")).toBe(numberFormat(e.result, "_.________"), "#fileName# example result is:#e.result# but evaluated to:#actualResult#");
+											} else if (isJSON(e.result)) {
+												//ACF and Lucee may serialize numbers or booleans differently so try to normalize it
+												expect(serializeJSON(actualResult)).toBe(serializeJSON(e.result), "#fileName# example result is:#e.result# but evaluated to:#actualResult#");
+
 											} else {
 												expect(actualResult).toBe(e.result, "#fileName# example result is:#e.result# but evaluated to:#actualResult#");	
 											}
