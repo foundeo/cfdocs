@@ -49,7 +49,13 @@ component extends="testbox.system.BaseSpec" {
 												expect(actualResult).toBeFalse("#fileName# example result is:#e.result# but evaluated to:#actualResult#");
 											}
 										} else {
-											expect(actualResult).toBe(e.result, "#fileName# example result is:#e.result# but evaluated to:#actualResult#");
+											if (isNumeric(e.result) && len(e.result) > 10) {
+												//there are some rounding differences to account for between ACF and Lucee, see results of acos(0.3) for example
+												expect(numberFormat(actualResult, "_.________")).toBe(numberFormat(e.result, "_.________"), "#fileName# example result is:#e.result# but evaluated to:#actualResult#");
+											} else {
+												expect(actualResult).toBe(e.result, "#fileName# example result is:#e.result# but evaluated to:#actualResult#");	
+											}
+											
 										}
 
 									}
