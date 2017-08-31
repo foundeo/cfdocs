@@ -2,6 +2,9 @@
 	function exitCode( required numeric code ) {
 		var exitcodeFile = GetDirectoryFromPath( GetCurrentTemplatePath() ) & "/.exitcode";
 		FileWrite( exitcodeFile, code );
+		if (code == 1) {
+			cfheader(statuscode="500",statustext="Tests Failed");
+		}
 	}
 	try {
 		reporter = cgi.server_protocol == "CLI/1.0" ? "text" : "simple";
