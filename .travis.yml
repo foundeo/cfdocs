@@ -4,7 +4,7 @@ jdk:
 - oraclejdk8
 env:
   global:
-    - TEST_RUNNER_URI=/tests/run.cfm
+    - TEST_RUNNER_URI=/tests/run.cfm?reporter=text
   matrix:
     - CFENGINE=lucee@5
     - CFENGINE=adobe@2016
