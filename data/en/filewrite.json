@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" If you specify a file path, writes the entire content to the specified on-disk or in-memory file. If you specify a file object, writes text or binary data to the file object.",
 	"params": [
-		{"name":"filePath","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
+		{"name":"filePath or fileObject","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
 		{"name":"data","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
 		{"name":"charset","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
 
