@@ -42,10 +42,6 @@ component extends="testbox.system.BaseSpec" {
 												e.result = e.result & ",";
 											}
 										}
-										if (json.name == "xmlValidate" && !server.keyExists("lucee")) {
-											//skip this for now, need better example
-											continue;
-										}
 										if (isBoolean(e.result) && !isNumeric(e.result)) {
 											if (e.result == true) {
 												expect(actualResult).toBeTrue("#fileName# example result is:#e.result# but evaluated to:#actualResult#");
