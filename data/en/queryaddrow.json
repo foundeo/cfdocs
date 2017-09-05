@@ -35,7 +35,7 @@
 
 		},
 		{
-			"title":"Builds a simple query using queryNew queryAddRow and querySetCell wit rows number",
+			"title":"Builds a simple query using queryNew queryAddRow and querySetCell with rows number",
 			"description":"The example above could be simplified this way:",
 			"code":"news = queryNew(\"id,title\", \"integer,varchar\");\nqueryAddRow(news,2);\nquerySetCell(news, \"id\", \"1\",1);\nquerySetCell(news, \"title\", \"Dewey defeats Truman\",1);\nquerySetCell(news, \"id\", \"2\",2);\nquerySetCell(news, \"title\", \"Men walk on Moon\",2);\nwriteDump(news);",
 			"result":""
