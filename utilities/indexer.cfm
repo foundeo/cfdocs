@@ -107,7 +107,7 @@
 	<cfargument name="file" type="string">
 	
 	<cfset var JSON = fileRead(dataDir & "/" & file & ".json", "utf-8")>
-	<cfset var var data = deserializeJSON(JSON)>
+	<cfset var data = deserializeJSON(JSON)>
 	<cfset data.related = tags>
 	<cfset fileWrite(dataDir & "/" & file & ".json", prettyJSON(serializeJSON(data), "utf-8"))>
 </cffunction>
