@@ -1,10 +1,9 @@
 <cfset dataDir = ExpandPath("../data/en")>
 <cfset guideDir = ExpandPath("../guides/en")>
-<cfset tags = []>
-<cfset functions = []>
-<cfset guides = []>
-<cfset all = []>
-<cfset categories = []>
+<cfset indexVars = ['tags','functions','guides','all','categories']>
+<cfloop array="#indexVars#" index="variable">
+	<cfset Variables[indexVars[variable]] = []>
+</cfloop>
 <cfset versions = {4=[], "4.5"=[],5=[],6=[],7=[],8=[],9=[],10=[],11=[],2016=[]}>
 <cfset lucee_versions = {5=[]}>
 <cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
@@ -57,37 +56,26 @@
 		</cftry>
 	</cfif>	
 </cfloop>
-<cfset arraySort(tags, "text")>
-<cfset arraySort(functions, "text")>
-<cfset arraySort(guides, "text")>
-<cfset arraySort(categories, "text")>
-<cfset arraySort(all, "text")>
+<cfloop array="#indexVars#" index="variable">
+	<cfset arraySort(Variables[indexVars[variable]], "text")>
+</cfloop>
 <cfset index = {"tags"=tags, "functions"=functions,"categories"=categories, "guides"=guides}>
 <cfset fileWrite(dataDir & "/index.json", prettyJSON(serializeJSON(index)), "utf-8")>
 <p>Wrote index.json</p>
 
-<cfset tagJSON = fileRead(dataDir & "/tags.json", "utf-8")>
-<cfset tagData = deserializeJSON(tagJSON)>
-<cfset tagData.related = tags>
-<cfset fileWrite(dataDir & "/tags.json", prettyJSON(serializeJSON(tagData), "utf-8"))>
+<cfset writeRelated('tags')>
 <p>Wrote tags.json</p>
 
-<cfset fJSON = fileRead(dataDir & "/functions.json", "utf-8")>
-<cfset fData = deserializeJSON(fJSON)>
-<cfset fData.related = functions>
-<cfset fileWrite(dataDir & "/functions.json", prettyJSON(serializeJSON(fData), "utf-8"))>
+<cfset writeRelated('functions')>
 <p>Wrote functions.json</p>
 
 <cfset aJSON = fileRead(dataDir & "/all.json", "utf-8")>
 <cfset aData = deserializeJSON(aJSON)>
-<cfset aData.related = functions>
+<cfset aData.related = all>
 <cfset fileWrite(dataDir & "/all.json", prettyJSON(serializeJSON(aData), "utf-8"))>
 <p>Wrote all.json</p>
 
-<cfset gJSON = fileRead(dataDir & "/guides.json", "utf-8")>
-<cfset gData = deserializeJSON(gJSON)>
-<cfset gData.related = guides>
-<cfset fileWrite(dataDir & "/guides.json", prettyJSON(serializeJSON(gData), "utf-8"))>
+<cfset writeRelated('guides')>
 <p>Wrote guides.json</p>
 
 <cfloop array="#structKeyArray(versions)#" index="v">
@@ -105,10 +93,21 @@
 <cfset applicationStop()>
 <p>Stopped application so it can reinit</p>
 
-<cffunction name="prettyJSON" returntype="string" output="false">
+<cffunction name="prettyJSON" returnType="string" output="false">
 	<cfargument name="json" type="string">
+	
 	<cfset arguments.json = replace(arguments.json, "],", "],#chr(10)##chr(9)#", "all")>
 	<cfset arguments.json = replace(arguments.json, "{", "{#chr(10)##chr(9)#", "all")>
 	<cfset arguments.json = replace(arguments.json, "}", "#chr(10)#}", "all")>
+	
 	<cfreturn arguments.json>
+</cffunction>
+
+<cffunction name="writeRelated" returnType="boolean" output="false">
+	<cfargument name="file" type="string">
+	
+	<cfset var JSON = fileRead(dataDir & "/" & file & ".json", "utf-8")>
+	<cfset var var data = deserializeJSON(JSON)>
+	<cfset data.related = tags>
+	<cfset fileWrite(dataDir & "/" & file & ".json", prettyJSON(serializeJSON(data), "utf-8"))>
 </cffunction>
