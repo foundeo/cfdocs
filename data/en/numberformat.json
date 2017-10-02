@@ -21,16 +21,21 @@
 	],
 	"examples": [
 		{
-			"title":"Two decimal places, decimal input ",
+			"title":"Two decimal places, decimal input",
 			"description":"",
 			"code":"numberFormat(1.23,'__.00')",
 			"result":"1.23"
-		},
-		{
-			"title":"Two decimal places, integer input ",
+		},{
+			"title":"Two decimal places, integer input",
 			"description":"",
 			"code":"numberFormat(123,'__.00')",
 			"result":"123.00"
+		},{
+			"title":"Zero will pad zeros; nine doesn’t",
+			"description":"",
+			"code":"num1 = NumberFormat(123,'00000');\r\nnum2 = NumberFormat(123,'99999');\r\n    \r\nwriteOutput(num1&'/'&num2);",
+			"result":"00123/ 123",
+			"runnable":true
 		}
 	]
 
