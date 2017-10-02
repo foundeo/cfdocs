@@ -16,14 +16,14 @@
 		{
 			"title":"StringLen() example",
 			"description":"Output the length of the string \"Hello World\".",
-			"code":"WriteOutput(StringLen(\"Hello World\"))",
+			"code":"StringLen(\"Hello World\")",
 			"result":"11",
 			"runnable":true
 		},
 		{
 			"title":"StringLen() using as a member function",
 			"description":"Output the length of the string \"Hello World\".",
-			"code":"WriteOutput(\"Hello World\".len())",
+			"code":"\"Hello World\".len()",
 			"result":"11",
 			"runnable":true
 		}
