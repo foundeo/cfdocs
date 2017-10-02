@@ -33,7 +33,7 @@ component extends="testbox.system.BaseSpec" {
 											actualResult = evaluate(e.code);
 										} catch(any ex) {
 											if (ex.message == "Syntax Error, invalid Expression [" & e.code & "]") {
-												if (reFindNoCase("[""'][a-z0-9 ]+\.[a-z]+\(", e.code) {
+												if (reFindNoCase("[""'][a-z0-9 ]+[""']\.[a-z]+\(", e.code)) {
 													//Lucee does not like "String".memberFunction()
 													//in evaluate but it is valid otherwise
 													continue;
