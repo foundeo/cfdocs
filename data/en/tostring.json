@@ -2,9 +2,10 @@
 	"name":"toString",
 	"type":"function",
 	"syntax":"toString(any_value [, encoding])",
+	"member":"any_value.toString()",
 	"returns":"String",
-	"related":[],
-	"description":" Converts a value to a string.",
+	"related":["Val","NumberFormat"],
+	"description":" Converts a value to a string.\nLucee parses numbers with one decimal place.\ncomplex object types can only be used in combination with the member syntax.",
 	"params": [
 		{"name":"any_value","description":"Value to convert to a string","required":true,"default":"","type":"Object","values":[]},
 		{"name":"encoding","description":"The character encoding (character set) of the string.","required":false,"default":"The default value is the encoding of the page on which the function is called.","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
@@ -25,7 +26,19 @@
 			"description": "",
 			"code": "base64Value = toBase64( \"stringValue\" ); \r\n binaryValue = toBinary( base64Value ); \r\n stringValue = toString( binaryValue ); \r\n writeDump(stringValue);",
 			"result": "Expected Result: stringValue"
-		}
+		},{
+			"title": "Structure to String",
+			"description": "",
+			"code": "s = {\r\n    \"a\": \"1\",\r\n    \"b\":\"2\"\r\n};\r\nwriteOutput(toString(s));",
+			"result": "{a={1},b={2}}",
+			"runnable":true
+        	},{
+			"title": "Member syntax",
+			"description": "toString as a method",
+			"code": "num = 42;\nwriteOutput(num.toString());",
+			"result": "{a={1},b={2}}",
+			"runnable":true
+        	}
 	]
 
 }
