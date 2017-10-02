@@ -20,14 +20,14 @@
 		{
 			"title":"String Example",
 			"description":"Converts a String to a Base64-String.",
-			"code":"base64String = ToBase64(\"Test String\");\nWriteOutput(base64String);",
+			"code":"ToBase64(\"Test String\")",
 			"result":"VGVzdCBTdHJpbmc=",
 			"runnable":true
 		},
 		{
 			"title":"Binary Object Example",
 			"description":"Converts a Image Binary to a Base64-String.",
-			"code":"base64ImgString = ToBase64(ToBinary(ImageRead(\"example.jpg\")));\nWriteOutput(base64ImgString);",
+			"code":"ToBase64(ToBinary(ImageRead(\"example.jpg\")))",
 			"runnable":false
 		}
 	],
