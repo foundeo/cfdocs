@@ -36,6 +36,12 @@
 			"code":"num1 = NumberFormat(123,'00000');\r\nnum2 = NumberFormat(123,'99999');\r\n    \r\nwriteOutput(num1&'/'&num2);",
 			"result":"00123/ 123",
 			"runnable":true
+		},{
+			"title":"show positive/negative sign",
+			"description":"",
+			"code":"num1 = NumberFormat( 5, \"+\" );\r\nnum2 = NumberFormat( -5, \"+\" );\r\n    \r\nwriteOutput(num1&'/'&num2);",
+			"result":"+5/-5",
+			"runnable":true
 		}
 	]
 
