@@ -16,21 +16,34 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/numberformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/numberformat"}
 	},
-	"links": [
-
-	],
+	"links": [{
+			"title":"ColdFusion NumberFormat() Exploration",
+			"description":"By Ben Nadel on August 13, 2007",
+			"url":"https://www.bennadel.com/blog/908-coldfusion-numberformat-exploration.htm"
+	}],
 	"examples": [
 		{
-			"title":"Two decimal places, decimal input ",
+			"title":"Two decimal places, decimal input",
 			"description":"",
 			"code":"numberFormat(1.23,'__.00')",
 			"result":"1.23"
-		},
-		{
-			"title":"Two decimal places, integer input ",
+		},{
+			"title":"Two decimal places, integer input",
 			"description":"",
 			"code":"numberFormat(123,'__.00')",
 			"result":"123.00"
+		},{
+			"title":"Zero will pad zeros; nine doesn’t",
+			"description":"",
+			"code":"num1 = NumberFormat(123,'00000');\r\nnum2 = NumberFormat(123,'99999');\r\n    \r\nwriteOutput(num1&'/'&num2);",
+			"result":"00123/ 123",
+			"runnable":true
+		},{
+			"title":"show positive/negative sign",
+			"description":"",
+			"code":"num1 = NumberFormat( 5, \"+\" );\r\nnum2 = NumberFormat( -5, \"+\" );\r\n    \r\nwriteOutput(num1&'/'&num2);",
+			"result":"+5/-5",
+			"runnable":true
 		}
 	]
 
