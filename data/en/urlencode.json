@@ -2,6 +2,7 @@
 	"name": "URLEncode",
 	"type": "function",
 	"syntax": "URLEncode(string [, charset] [, force])",
+	"member": "string.URLEncode([charset] [, force])",
 	"returns": "String",
 	"related": [],
 	"description": "URL-Encode a String.",
