@@ -15,6 +15,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsparsenumber"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsparsenumber"}
 	},
+	"examples": [{
+		"title":"Simple example usage",
+		"description":"Converts number to string and back\"",
+		"code":"str = NumberFormat(42,'000.00');\r\nnum = LSParseNumber(str);\r\nwriteOutput(str&'--->'&num);",
+		"result":"042.00--->42",
+		"runnable":true
+	}],
 	"links": [
 
 	]
