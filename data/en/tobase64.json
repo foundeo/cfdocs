@@ -16,6 +16,21 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/tobase64"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/tobase64"}
 	},
+	"examples": [
+		{
+			"title":"String Example",
+			"description":"Converts a String to a Base64-String.",
+			"code":"base64String = ToBase64(\"Test String\");\nWriteOutput(base64String);",
+			"result":"VGVzdCBTdHJpbmc=",
+			"runnable":true
+		},
+		{
+			"title":"Binary Object Example",
+			"description":"Converts a Image Binary to a Base64-String.",
+			"code":"base64ImgString = ToBase64(ToBinary(ImageRead(\"example.jpg\")));\nWriteOutput(base64ImgString);",
+			"runnable":false
+		}
+	],
 	"links": [
 
 	]
