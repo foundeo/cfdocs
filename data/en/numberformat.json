@@ -16,9 +16,11 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/numberformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/numberformat"}
 	},
-	"links": [
-
-	],
+	"links": [{
+			"title":"ColdFusion NumberFormat() Exploration",
+			"description":"By Ben Nadel on August 13, 2007",
+			"url":"https://www.bennadel.com/blog/908-coldfusion-numberformat-exploration.htm"
+	}],
 	"examples": [
 		{
 			"title":"Two decimal places, decimal input",
