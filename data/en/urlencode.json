@@ -18,15 +18,15 @@
 		{
 			"title":"URLEncode() example",
 			"description":"Shows how it url-encode a string.",
-			"code":"URLEncode(\"URL-Encode this string, see also chars like: %&/().\")",
-			"result":"URL-Encode+this+string%2C+see+also+chars+like%3A+%25%26%2F%28%29.",
+			"code":"URLEncode(\"URL-Encode this string\")",
+			"result":"URL-Encode+this+string",
 			"runnable":true
 		},
 		{
 			"title":"URLEncode() usage as a member function",
 			"description":"Same Example like above, but this time we use it as a member-function.",
-			"code":"\"URL-Encode this string, see also chars like: %&/().\".URLEncode()",
-			"result":"URL-Encode+this+string%2C+see+also+chars+like%3A+%25%26%2F%28%29.",
+			"code":"\"URL-Encode this string\".URLEncode()",
+			"result":"URL-Encode+this+string",
 			"runnable":true
 		}
 	],
