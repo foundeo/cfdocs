@@ -1,18 +1,34 @@
 {
-	"name": "urlEncode",
+	"name": "URLEncode",
 	"type": "function",
-	"syntax": "urlEncode(string [, charset] [, force])",
-	"returns": "string",
+	"syntax": "URLEncode(string [, charset] [, force])",
+	"member": "string.URLEncode([charset] [, force])",
+	"returns": "String",
 	"related": [],
-	"description": "",
+	"description": "URL-Encode a String.",
 	"params": [
 		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "charset", "description": "", "required": false, "default": "utf-8", "type": "string", "values": []},
-		{"name": "force", "description": "", "required": false, "default": "true", "type": "boolean", "values": []}
+		{"name": "charset", "description": "The character encoding in which the string will be encoded. ", "required": false, "default": "utf-8", "type": "string", "values": ["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]},
+		{"name": "force", "description": "When true the URLEncoder.encode(str, encoding)-function will be always called.", "required": false, "default": "true", "type": "boolean", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/urlencode.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"URLEncode() example",
+			"description":"Shows how it url-encode a string.",
+			"code":"URLEncode(\"URL-Encode this string\")",
+			"result":"URL-Encode+this+string",
+			"runnable":true
+		},
+		{
+			"title":"URLEncode() usage as a member function",
+			"description":"Same Example like above, but this time we use it as a member-function.",
+			"code":"\"URL-Encode this string\".URLEncode()",
+			"result":"URL-Encode+this+string",
+			"runnable":true
+		}
+	],
 	"links": []
 }
