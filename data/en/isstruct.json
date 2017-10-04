@@ -17,6 +17,22 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+		"title":"isStruct Example",
+		"description":"Returns true if variable is a ColdFusion structure or is a Java object that implements the java.lang.Map interface. ",
+		"code":"someStruct=StructNew(\"Ordered\");\r\nisStruct(someStruct)",
+		"result":true,
+		"runnable":false
+		},
+		{
+		"title":"isStruct Example for False",
+		"description":"Returns false is the object in the variable parameter is a user-defined function UDF).  In the example below exponent is a function created by the user",
+		"code":"<cfargument name=\"exponent\">\r\nIsStruct(exponent)",
+		"result":false,
+		"runnable":false
+		}
 	]
 
 }
