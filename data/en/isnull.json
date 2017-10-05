@@ -22,7 +22,7 @@
 	{
 		"title":"isNull Example",
 		"description":"Returns true if the given object is null or the given expressions evaluates to null; Returns false is otherwise. ",
-		"code":"someObj = CreateObject(\"null\")\r\nisNull(someObj)",
+		"code":"isNull( javaCast("null", "") )",
 		"result":true,
 		"runnable":false
 	}
