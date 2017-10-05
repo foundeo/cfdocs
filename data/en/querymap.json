@@ -5,7 +5,7 @@
 	"member": "query.map(closure [, parallel] [, maxThreads])",
 	"returns": "query",
 	"related": [],
-	"description": "",
+	"description": "Maps each query row using a function to manipulate the rows fields",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
