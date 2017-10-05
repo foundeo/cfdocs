@@ -5,7 +5,7 @@
 	"member": "query.filter(filter [, parallel] [, maxThreads])",
 	"returns": "query",
 	"related": [],
-	"description": "",
+	"description": "Filters query rows specified in filter criteria",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "filter", "description": "", "required": true, "default": "", "type": "function", "values": []},
