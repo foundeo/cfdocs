@@ -24,7 +24,7 @@
 		"description":"Returns true if the given object is null or the given expressions evaluates to null; Returns false is otherwise. ",
 		"code":"isNull( javaCast("null", "") )",
 		"result":true,
-		"runnable":false
+		"runnable":true
 	}
 	]
 }
