@@ -29,7 +29,7 @@
 		{
 		"title":"isStruct Example for False",
 		"description":"Returns false is the object in the variable parameter is a user-defined function UDF).  In the example below exponent is a function created by the user",
-		"code":"<cfargument name=\"exponent\">\r\nIsStruct(exponent)",
+		"code":"isStruct( arrayNew(1) )",
 		"result":false,
 		"runnable":false
 		}
