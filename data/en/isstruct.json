@@ -24,14 +24,14 @@
 		"description":"Returns true if variable is a ColdFusion structure or is a Java object that implements the java.lang.Map interface. ",
 		"code":"isStruct( structNew() )",
 		"result":true,
-		"runnable":false
+		"runnable":true
 		},
 		{
 		"title":"isStruct Example for False",
 		"description":"Returns false is the object in the variable parameter is a user-defined function UDF).  In the example below exponent is a function created by the user",
 		"code":"isStruct( arrayNew(1) )",
 		"result":false,
-		"runnable":false
+		"runnable":true
 		}
 	]
 
