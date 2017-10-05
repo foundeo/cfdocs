@@ -5,7 +5,7 @@
 	"member": "query.reduce(closure [, initalValue])",
 	"returns": "any",
 	"related": ["querymap", "queryfilter"],
-	"description": "",
+	"description": "Reduces query columns just like in array or collection",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
