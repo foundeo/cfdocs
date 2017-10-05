@@ -27,7 +27,7 @@
 		},{
 			"title": "URL Encode a value with escaped HTML entities",
 			"description": "",
-			"code": "encodeForURL("&lt;tag&gt;",true)",
+			"code": "encodeForURL(\"&lt;tag&gt;\",true)",
 			"result": "%3Ctag%3E"
 		},
 		{
