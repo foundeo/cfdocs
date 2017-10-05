@@ -20,9 +20,14 @@
 	],
 	"examples": [
 		{
-			"title": "URL Encode a Value",
+			"title": "URL Encode a value",
 			"description": "",
 			"code": "encodeForURL(\"<tag>\")",
+			"result": "%3Ctag%3E"
+		},{
+			"title": "URL Encode a value with escaped HTML entities",
+			"description": "",
+			"code": "encodeForURL("&lt;tag&gt;",true)",
 			"result": "%3Ctag%3E"
 		},
 		{
