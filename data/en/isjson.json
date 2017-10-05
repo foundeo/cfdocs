@@ -22,7 +22,7 @@
 	{
 		"title":"isJSON Example",
 		"description":"Returns true if the parameter is a valid JSON value. Returns False if the parameter is not a valid JSON data representation.",
-		"code":"myStruct = {\r\n    items: {\r\n        item1:  {name: 'something', price: 1000},\r\n    },\r\n    users: {\r\n        user1:  {id: 1, email: 'none@none.net'},\r\n    }\r\n\r\nisJSON(myStruct)",
+		"code":"isJSON("[1,2,3]")",
 		"result":true,
 		"runnable":false
 	}
