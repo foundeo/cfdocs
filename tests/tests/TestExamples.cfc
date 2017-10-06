@@ -32,6 +32,13 @@ component extends="testbox.system.BaseSpec" {
 										try {
 											actualResult = evaluate(e.code);
 										} catch(any ex) {
+											if (ex.message == "Syntax Error, invalid Expression [" & e.code & "]") {
+												if (reFindNoCase("[""'][a-z0-9 ]+[""']\.[a-z]+\(", e.code)) {
+													//Lucee does not like "String".memberFunction()
+													//in evaluate but it is valid otherwise
+													continue;
+												}
+											}
 											actualResult = "EXCEPTION in example #idx#: #ex.message#";
 										}
 
@@ -49,7 +56,17 @@ component extends="testbox.system.BaseSpec" {
 												expect(actualResult).toBeFalse("#fileName# example result is:#e.result# but evaluated to:#actualResult#");
 											}
 										} else {
-											expect(actualResult).toBe(e.result, "#fileName# example result is:#e.result# but evaluated to:#actualResult#");
+											if (isNumeric(e.result) && len(e.result) > 10) {
+												//there are some rounding differences to account for between ACF and Lucee, see results of acos(0.3) for example
+												expect(numberFormat(actualResult, "_.________")).toBe(numberFormat(e.result, "_.________"), "#fileName# example result is:#e.result# but evaluated to:#actualResult#");
+											} else if (isJSON(e.result)) {
+												//ACF and Lucee may serialize numbers or booleans differently so try to normalize it
+												expect(deserializeJSON(actualResult)).toBe(deserializeJSON(e.result), "#fileName# example result is:#e.result# but evaluated to:#actualResult#");
+
+											} else {
+												expect(actualResult).toBe(e.result, "#fileName# example result is:#e.result# but evaluated to:#actualResult#");	
+											}
+											
 										}
 
 									}

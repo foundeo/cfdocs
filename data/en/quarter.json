@@ -7,7 +7,7 @@
 	"related":["hour","minute","second","month","week","year"],
 	"description":" Calculates the quarter of the year in which a date falls.",
 	"params": [
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":[]}
+		{"name":"date","description":"","required":true,"default":"","type":"Date","values":[]}
 
 	],
 	"engines": {

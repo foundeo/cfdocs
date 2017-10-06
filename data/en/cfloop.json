@@ -23,8 +23,8 @@
 		{"name":"item","description":"The item attribute is used with the collection attribute.\n often to loop over a structure","required":false,"default":"","type":"String","values":[]},
 		{"name":"array","description":"CF8+ An array.","required":false,"default":"","type":"AnyValue","values":[]},
 		{"name":"characters","description":"CF8+ The number of characters to read during each iteration of the loop from the file specified in the file attribute. \nIf the value of the characters attribute is more than the number of characters in the file, \nColdFusion uses the number of characters in the file.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"file","description":"CF8+ The absolute path and filename of the text file to read, one line at a time. \nThis is helpful when reading large text files, because you can reuse the value of the index variable, \nwhich contains the current line of the file. \nWhen the loop completes, ColdFusion closes the file.","required":false,"default":"","type":"String","values":[]}
-
+		{"name":"file","description":"CF8+ The absolute path and filename of the text file to read, one line at a time. \nThis is helpful when reading large text files, because you can reuse the value of the index variable, \nwhich contains the current line of the file. \nWhen the loop completes, ColdFusion closes the file.","required":false,"default":"","type":"String","values":[]},
+		{"name":"times","description":"Lucee5+ If you want to have a specific iterations you can simply use `times` param instead of `from` and `to`","required":false,"default":"","type":"Numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cfloop.html"},

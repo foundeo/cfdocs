@@ -7,7 +7,7 @@
 	"related":["day", "dayOfWeek", "dayOfWeekAsString", "daysInMonth", "daysInYear", "firstDayOfMonth"],
 	"description":" Determines the day of the year, in a date.",
 	"params": [
-		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"DateTime","values":[]}
+		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"Date","values":[]}
 
 	],
 	"engines": {

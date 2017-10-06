@@ -8,8 +8,8 @@
 	"params": [
 		{"name":"id","description":"Unique identifier for the cached value","required":true,"default":"","type":"String","values":[]},
 		{"name":"value","description":"The value to cache","required":true,"default":"","type":"String","values":[]},
-		{"name":"timespan","description":"The interval until the object is flushed from the cache, as a decimal number of days. One way to set the value is to use the return value from the CreateTimeSpan function. The default is to not time out the object.","required":false,"default":"","type":"DateTime","values":[]},
-		{"name":"idleTime","description":"A decimal number of days after which the object is flushed from the cache if it is not accessed during that time. One way to set the value is to use the return value from the CreateTimeSpan function.","required":false,"default":"","type":"DateTime","values":[]},
+		{"name":"timespan","description":"The interval until the object is flushed from the cache, as a decimal number of days. One way to set the value is to use the return value from the CreateTimeSpan function. The default is to not time out the object.","required":false,"default":"","type":"Date","values":[]},
+		{"name":"idleTime","description":"A decimal number of days after which the object is flushed from the cache if it is not accessed during that time. One way to set the value is to use the return value from the CreateTimeSpan function.","required":false,"default":"","type":"Date","values":[]},
 		{"name":"region","description":"CF10+ Specifies the cache region where you can place the cache object. Applies only to ACF.","required":false,"default":"","type":"String","values":[]},
 		{"name":"cacheName","description":"Lucee4.5+ Definition of the cache used by name. Applies only to Lucee.","required":false,"default":"","type":"String","values":[]}
 

@@ -100,7 +100,7 @@
 			<li class="pull-right">
 				<a href="https://github.com/foundeo/cfdocs/issues/new?title=#encodeForURL(data.name)#" rel="nofollow" class="label label-warning" title="Report an Issue">Issue</a>
 			</li>
-			<cfif StructKeyExists(request,"gitFilePath") AND Len(request.gitFilePath)>
+			<cfif StructKeyExists(request,"gitFilePath") AND Len(request.gitFilePath) AND not (REFind("(cf|lucee)[0-9]{1,3}",data.name) OR ArrayContains(['tags','functions','guides','all','categories'],data.name) )>
 				<li class="pull-right">
 					<a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="label label-danger">Edit</a>
 				</li>
@@ -136,7 +136,6 @@
 					<span class="item-name">#encodeForHTML(data.name)#</span>
 				</cfif>
 			</h2>
-
 			
 
 
@@ -150,24 +149,22 @@
 								<div class="p-default pull-right"><span class="text-muted">Default:</span> <code>#encodeForHTML(p.default)#</code></div>
 						</cfif>
 					</h4>
-					<div class="p-desc">
-						
+					<div class="p-desc">						
 						#autoLink( p.description )# 
 						<cfif StructKeyExists(p, "values") AND IsArray(p.values) AND ArrayLen(p.values)>
 							<cfif uCase(arrayToList(p.values)) IS NOT "YES,NO">
-								<strong>Values: </strong>
-								<ul>
-									<cfloop array="#p.values#" index="i">
-										<li><code>#encodeForHTML(i)#</code></li>
-									</cfloop>
-								</ul>
+								<div>
+									<strong>Values: </strong>
+									<ul>
+										<cfloop array="#p.values#" index="i">
+											<li><code>#encodeForHTML(i)#</code></li>
+										</cfloop>
+									</ul>
+								</div>
 							</cfif>
-						</cfif>
-						
+						</cfif>						
 					</div>
-				</div> 
-				
-				
+				</div>			
 			</cfloop>
 		</cfif>
 

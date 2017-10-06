@@ -7,7 +7,7 @@
 	"related":["minute","second","month","quarter","week","year"],
 	"description":" Extracts the hour of the day from a date/time object.\n Ordinal value of the hour, in the range 0 - 23.",
 	"params": [
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":[]}
+		{"name":"date","description":"","required":true,"default":"","type":"Date","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/hour.html"},

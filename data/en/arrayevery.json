@@ -8,7 +8,7 @@
 	"description":"returns true if every closure returns true, otherwise false",
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
-		{"name":"closure","description":"A function / closure with the signature: `boolean function (any item, [numeric index], [array array])`","required":true,"default":"","type":"Closure","values":[]},
+		{"name":"closure","description":"A function / closure with the signature: `boolean function (any item, [numeric index], [array array])`","required":true,"default":"","type":"function","values":[]},
 		{"name":"parallel","description":"When `true` the items can be executed in parallel","required":false,"default":"false","type":"Boolean","values":[true, false]},
 		{"name":"maxThreads","description":"The number of threads to use when `parallel=true`","required":false,"default":"20","type":"Boolean","values":[]}
 	],

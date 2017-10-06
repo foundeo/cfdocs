@@ -1,11 +1,11 @@
 {
 	"name":"imageRotate",
 	"type":"function",
-	"syntax":"imageRotate(name, angle [, x] [, y] [, interpolation])",
-	"member":"someImage.rotate(angle [, x] [, y] [, interpolation])",
+	"syntax":"imageRotate(name [, x] [, y] , angle [, interpolation])",
+	"member":"someImage.rotate([, x] [, y] , angle [, interpolation])",
 	"returns":"void",
 	"related":[],
-	"description":" Rotates a ColdFusion image at a specified point by a specified angle.",
+	"description":"Rotates a ColdFusion image at a specified point by a specified angle.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
 		{"name":"angle","description":"The rotation angle in degrees.","required":true,"default":"","type":"Numeric","values":[]},
@@ -27,9 +27,9 @@
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to rotate an image by 10 degrees. ",
-			"code": "<!--- Create a ColdFusion image from an existing JPEG file. ---> \r\n <cfset myImage=imageNew(\"../cfdocs/images/artgallery/jeff05.jpg\")> \r\n <cfset imageSetAntialiasing(myImage,\"on\")> \r\n <!--- Rotate the image by 10 degrees. ---> \r\n <cfset imageRotate(myImage,10)> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"code": "<cfset myImage=imageRead(\"http://cfdocs.org/apple-touch-icon.png\")><!--- Rotate the image by 10 degrees. ---> \r\n <cfset imageRotate(myImage,10)> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
 			"result": "",
-			"runnable":false
+			"runnable":true
 		},
 		{
 			"title":"Using rotate member function",
