@@ -5,12 +5,12 @@
 	"member": "array.some(closure [, parallel] [, maxThreads])",
 	"returns": "boolean",
 	"related": [],
-	"description": "",
+	"description": "Calls a given closure/function with every element in a given array and returns true if one of the closure calls returns true",
 	"params": [
-		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []},
-		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "parallel", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "number", "values": []}
+		{"name": "array", "description": "Array to iterate", "required": true, "default": "", "type": "array", "values": []},
+		{"name": "closure", "description": "Function/closure that implements the following constructor [function(any value[,numeric index,array array]):boolean].", "required": true, "default": "", "type": "function", "values": []},
+		{"name": "parallel", "description": "Execute closures parallel", "required": false, "default": "", "type": "boolean", "values": []},
+		{"name": "maxThreads", "description": "Maximum number of threads executed, ignored when argument \"parallel\" is set to false", "required": false, "default": "20", "type": "number", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraysome.html"}
