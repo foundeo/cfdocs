@@ -17,5 +17,13 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "Obtaining files within an archive folder and then removing them if they are older than one hour.",
+			"code": "var existingFiles = directoryList(expandPath(\"/archive/\"), false, \"query\");\nfor (file in existingFiles) {\n\tif (dateDiff(\"h\", file.datelastmodified, now()) GT 1) {\n\t\tfileDelete(file.directory & \"\\\" & file.name);\n\t}\n}",
+			"result": "All files within the archive directory older than one hour will be deleted."
+		}
 	]
 }
