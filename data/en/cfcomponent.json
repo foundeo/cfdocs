@@ -43,8 +43,16 @@
 		{"name":"accessors","description":"CF9+ If set to false, ColdFusion ORM does not generate the implicit getters and setters.","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"serializable","description":"CF9+ Specifies whether this component can be serialized. If you set this value to false, the component and the data in the component‚ This and Variables scopes cannot be serialized, so they are not retained on session replication, and the component is in its default state.","required":false,"default":"","type":"Boolean","values":[true,false]},
 		{"name":"attribute","description":"CF9+ If the attribute is set to false at the component level, then the implicit getters and setters for the individual properties are ignored.","required":false,"default":true,"type":"Boolean","values":[true,false]},
-		{"name":"mappedSuperClass","description":"CF9.0.1+ When true on a non persistant CFC, CFCs that extend this component can inherit properties.","required":false,"default":"false","type":"Boolean","values":[true,false]}
-
+		{"name":"mappedSuperClass","description":"CF9.0.1+ When true on a non persistant CFC, CFCs that extend this component can inherit properties.","required":false,"default":"false","type":"Boolean","values":[true,false]},
+		{"name":"rest","description":"CF10+ Enables/disables REST.\nrestPath must be specified to enable REST","required":false,"default":"false","type":"boolean","values":["true","false"]},
+		{"name":"restPath","description":"CF10+ Path to access the REST-API","required":false,"default":"","type":"string","values":["true","false"]},
+		{"name":"httpMethod","description":"CF10+","required":false,"default":"","type":"string","values":["GET","POST","PUT","DELETE","HEAD","OPTIONS"]},
+		{"name":"produces","description":"CF10+ Comma-separated list of acceptable MIME types for output","required":false,"default":"/","type":"string","values":["text/plain,text/html","..."]},
+		{"name":"consumes","description":"CF10+ Comma-separated list of acceptable MIME types for input","required":false,"default":"/","type":"string","values":["text/plain,text/html","..."]},
+		{"name":"indexable","description":"CF10+ Enables/disables indexing for the component","required":false,"default":"false","type":"boolean","values":["true","false"]},
+		{"name":"indexLanguage","description":"CF10+ Set the language to be used to index and search","required":false,"default":"english","type":"string","values":[]},
+		{"name":"autoIndex","description":"CF10+ Enables/disables auto-indexing","required":false,"default":"true","type":"boolean","values":["true","false"]},
+		{"name":"wsVersion","description":"CF10+ Set the wsVersion of Axis engine","required":false,"default":"","type":"numeric","values":[1,2]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"6", "notes":"CFCs Introduced including support for SOAP web services.\nCF9+ Hibernate ORM support and script based CFCs.\nCF10+ REST Services", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcomponent.html"},
@@ -77,13 +85,13 @@
 			"result": "",
 			"runnable":false
 		},
-        {
-            "title": "Tag Syntax",
-            "description": "",
-            "code": "<cfcomponent displayname=\"Tag Widget\" output=\"false\"> \r\n    <!--- functions and other values here ---> \r\n</cfcomponent>",
-            "result": "",
-            "runnable":false
-        }
+		{
+		    "title": "Tag Syntax",
+		    "description": "",
+		    "code": "<cfcomponent displayname=\"Tag Widget\" output=\"false\"> \r\n    <!--- functions and other values here ---> \r\n</cfcomponent>",
+		    "result": "",
+		    "runnable":false
+		}
 	]
 
 }
