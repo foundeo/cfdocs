@@ -8,18 +8,21 @@
         "minimum_version": {
           "title": "Minimum version",
           "description": "The version of the engine in which this was introduced",
-          "type": "string"
+          "type": "string",
+          "pattern": "^((0|[1-9]\\d*)(\\.(0|[1-9]\\d*)(\\.(0|[1-9]\\d*))?)?)?$"
         },
         "deprecated": {
           "title": "Deprecated version",
           "description": "The version of the engine in which this was deprecated",
           "type": "string",
+          "pattern": "^((0|[1-9]\\d*)(\\.(0|[1-9]\\d*)(\\.(0|[1-9]\\d*))?)?)?$",
           "default": ""
         },
         "removed": {
           "title": "Removed version",
           "description": "The version of the engine in which this was removed",
           "type": "string",
+          "pattern": "^((0|[1-9]\\d*)(\\.(0|[1-9]\\d*)(\\.(0|[1-9]\\d*))?)?)?$",
           "default": ""
         },
         "notes": {
