@@ -18,4 +18,4 @@ script:
 - "./cfmatrix/run.sh"
 after_script:
 - npm install -g ajv-cli
-- ajv validate -s data/cfdocs.schema.json -d "data/en/*.json" --use-defaults
+- ajv validate -s data/cfdocs.schema.json -d "data/en/*.json" --use-defaults --errors=text
