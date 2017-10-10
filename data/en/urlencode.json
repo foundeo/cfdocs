@@ -17,13 +17,13 @@
 		"title":"String encoding",
 		"description":"Encode string with special chars for use in url",
 		"code":"urlEncode('Apples → Äpfel','utf-8')",
-		"result":"Apples+%3F+%3Fpfel",
+		"result":"Apples+%E2%86%92+%C3%84pfel",
 		"runnable":true
 	},{
 		"title":"String charset",
 		"description":"Same string, different charset",
 		"code":"urlEncode('Apples → Äpfel','ASCII')",
-		"result":"Apples+%E2%86%92+%C3%84pfel",
+		"result":"Apples+%3F+%3Fpfel",
 		"runnable":true
 	},{
 		"title":"Convert collection to be able to be passed as url param value",
