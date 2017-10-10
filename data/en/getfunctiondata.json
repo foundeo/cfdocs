@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "getFunctionData(functionName)",
 	"returns": "struct",
-	"related": ["getMetadata","getTagData"]
+	"related": ["getMetadata","getTagData"],
 	"description": "Return information to a function as struct",
 	"params": [
 		{"name": "functionName", "description": "The function you want information for", "required": true, "default": "", "type": "string", "values": []},
