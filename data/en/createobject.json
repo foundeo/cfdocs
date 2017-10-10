@@ -4,7 +4,7 @@
 	"syntax":"createObject(type, class)",
 	"returns":"any",
 	"related":["cfobject","cfinvoke"],
-	"description":"The createObject function takes different arguments depending on the value of the type argument:\n\n createObject('component', cfcName)\n createObject('java', class)\n createObject('webservice', urltowsdl, [, portname])\n createObject('.NET', class, assembly [, server, port, protocol, secure])\n createObject('com', class, context, serverName)",
+	"description":"The createObject function takes different arguments depending on the value of the type argument:\n\n createObject('component', cfcName)\n createObject('java', class)\n createObject('java', class, bundle, version) <small><em>(Lucee only)</em></small>\n createObject('webservice', urltowsdl, [, portname])\n createObject('.NET', class, assembly [, server, port, protocol, secure])\n createObject('com', class, context, serverName)",
 	"params": [
 		{"name":"type","description":"The type of object","required":true,"default":"","type":"String","values":["component","corba","com","java","webservice",".NET","dotnet"]},
 		{"name":"context","description":"","required":true,"default":"","type":"String","values":[]},
@@ -13,12 +13,13 @@
 		{"name":"servername","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"component_name","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"urltowsdl","description":"WSDL file URL; location of web service","required":true,"default":"","type":"String","values":[]},
-		{"name":"portname","description":"The port name for the web service. This value is case-sensitive\n and corresponds to the port element's name attribute under the\n service element.\n Specify this parameter if the web service contains multiple ports.\n If no port name is specified, ColdFusion uses the first port found\n in the WSDL.","required":false,"default":"","type":"String","values":[]}
-
+		{"name":"portname","description":"The port name for the web service. This value is case-sensitive\n and corresponds to the port element's name attribute under the\n service element.\n Specify this parameter if the web service contains multiple ports.\n If no port name is specified, ColdFusion uses the first port found\n in the WSDL.","required":false,"default":"","type":"String","values":[]},
+		{"name":"OSGi bundle","description":"Bundle where the object has to be located","required":false,"default":"","type":"string","values":[]},
+		{"name":"OSGi version","description":"Specific version to","required":false,"":"false","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"CORBA support DEPRECATED in CF11+", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateObject.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/createobject.html"},
+		"lucee": {"minimum_version":"", "notes":"OSGi bundle and version ADDED in Lucee5+", "docs":"http://docs.lucee.org/reference/functions/createobject.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createobject"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createobject"}
 	},
@@ -29,14 +30,23 @@
 		{
 			"title": "Create a CFC / Component Instance",
 			"description": "createObject Component",
-			"code": "<cfscript> \r\n tellTimeCFC=createObject(\"component\",\"appResources.components.tellTime\"); \r\n tellTimeCFC.getLocalTime();\r\n </cfscript>       ",
-			"result": ""
+			"code": "<cfscript>\r\n tellTimeCFC=createObject(\"component\",\"appResources.components.tellTime\"); \r\n tellTimeCFC.getLocalTime();\r\n </cfscript>",
+			"result": "",
+			"runnable":false
 		},
-        {
+        	{
 			"title": "Create a SOAP WebService Instance",
 			"description": "createObject WebService",
 			"code": "<cfscript> \r\n ws = createObject(\"webservice\", \"http://www.xmethods.net/sd/2001/TemperatureService.wsdl\"); \r\n xlatstring = ws.getTemp(zipcode = \"55987\"); \r\n writeOutput(\"The temperature at 55987 is \" & xlatstring); \r\n </cfscript>      ",
-			"result": ""
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title": "Create a java class with specified bundle and version",
+			"description": "createObject filesystem",
+			"code": "POIFSFileSystem=createObject(\"java\",\"org.apache.poi.poifs.filesystem.POIFSFileSystem\",\"apache.poi\",\"3.11.0\");",
+			"result": "",
+			"runnable":false
 		}
 	]
 
