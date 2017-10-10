@@ -2,7 +2,7 @@
 	"name":"getClientVariablesList",
 	"type":"function",
 	"syntax":"getClientVariablesList()",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Finds the client variables to which a page has write access.\n Comma-delimited list of non-read-only client variables",
 	"params": [

@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"dateFormat(date [, mask])",
 	"member":"date.dateFormat([mask])",
-	"returns":"String",
+	"returns":"string",
 	"related":["timeFormat","dateTimeFormat","lsDateFormat"],
 	"description":"Formats a date value using U.S. date formats. When formatting both date and time, use dateTimeFormat. For international date support, use lsDateFormat.",
 	"params": [

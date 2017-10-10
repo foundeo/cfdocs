@@ -2,7 +2,7 @@
 	"name":"decryptBinary",
 	"type":"function",
 	"syntax":"decryptBinary(bytes, key [, algorithm] [, ivorsalt] [, iterations])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Decrypts encrypted binary data with the specified key, value, algorithm, salt, and iterations.",
 	"params": [

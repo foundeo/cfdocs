@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"imageGetExifMetaData(name)",
 	"member":"someImage.getExifMetaData()",
-	"returns":"Struct",
+	"returns":"struct",
 	"related":[],
 	"description":" Retrieves the Exchangeable Image File Format (EXIF) headers in an image as a CFML structure.",
 	"params": [

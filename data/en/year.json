@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"year(date)",
 	"member":"date.year()",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["hour","minute","second","month","quarter","week"],
 	"description":" From a date/time object, gets the year value.",
 	"params": [

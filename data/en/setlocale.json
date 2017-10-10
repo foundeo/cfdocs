@@ -2,7 +2,7 @@
 	"name":"setLocale",
 	"type":"function",
 	"syntax":"setLocale(new_locale)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Sets the country/language locale for CFML processing\n and the page returned to the client. The locale value\n determines the default format of date, time, number, and\n currency values, according to language and regional\n conventions.",
 	"params": [

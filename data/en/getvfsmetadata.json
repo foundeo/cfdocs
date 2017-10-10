@@ -2,7 +2,7 @@
 	"name":"getVFSMetadata",
 	"type":"function",
 	"syntax":"getVFSMetadata(fileSystemType)",
-	"returns":"Struct",
+	"returns":"struct",
 	"related":[],
 	"description":" Returns metadata for VFS",
 	"params": [

@@ -2,7 +2,7 @@
 	"name":"repeatString",
 	"type":"function",
 	"syntax":"repeatString(String, count)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Creates a string that contains a specified number of\n repetitions of the specified string.",
 	"params": [

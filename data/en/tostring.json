@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"toString(any_value [, encoding])",
 	"member":"any_value.toString()",
-	"returns":"String",
+	"returns":"string",
 	"related":["Val","NumberFormat"],
 	"description":" Converts a value to a string.\nLucee parses numbers with one decimal place.\ncomplex object types can only be used in combination with the member syntax.",
 	"params": [

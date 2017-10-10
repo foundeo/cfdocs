@@ -2,7 +2,7 @@
 	"name":"getLocaleDisplayName",
 	"type":"function",
 	"syntax":"getLocaleDisplayName()",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets a locale value and displays the name in a manner\n that is appropriate to a specific locale. By default,\n gets the current locale in the current locale's language.",
 	"params": [

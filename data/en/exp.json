@@ -2,7 +2,7 @@
 	"name":"exp",
 	"type":"function",
 	"syntax":"exp(number)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["acos","asin","atn","cos","log","log10","sin","tan"],
 	"description":" Calculates the exponent whose base is e that represents number.\n The constant e equals 2.71828182845904, the base of the natural\n logarithm. This function is the inverse of Log, the natural\n logarithm of number.",
 	"params": [

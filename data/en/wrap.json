@@ -2,7 +2,7 @@
 	"name":"wrap",
 	"type":"function",
 	"syntax":"wrap(String, limit [, strip])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Wraps text so that each line has a specified maximum number\n of characters.",
 	"params": [

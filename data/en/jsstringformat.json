@@ -2,7 +2,7 @@
 	"name":"jsStringFormat",
 	"type":"function",
 	"syntax":"jsStringFormat(String)",
-	"returns":"String",
+	"returns":"string",
 	"related":["encodeForJavaScript"],
 	"description":" Escapes special JavaScript characters, such as single quotation\n mark, double quotation mark, and newline",
 	"params": [

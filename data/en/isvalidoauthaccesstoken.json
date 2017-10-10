@@ -2,7 +2,7 @@
 	"name":"isValidOauthAccesstoken",
 	"type":"function",
 	"syntax":"isValidOauthAccesstoken(token,type);",
-	"returns":"Boolean",
+	"returns":"boolean",
 	"related":[],
 	"description":" Checks if the OAUTH access token is still valid.",
 	"params": [

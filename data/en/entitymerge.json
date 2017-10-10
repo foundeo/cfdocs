@@ -2,7 +2,7 @@
 	"name":"entityMerge",
 	"type":"function",
 	"syntax":"entityMerge(entity)",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Attaches given enity to current ORM session",
 	"params": [

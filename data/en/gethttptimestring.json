@@ -2,7 +2,7 @@
 	"name":"getHTTPTimeString",
 	"type":"function",
 	"syntax":"getHTTPTimeString(DateTime)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets the current time, in the Universal Time code (UTC).",
 	"params": [

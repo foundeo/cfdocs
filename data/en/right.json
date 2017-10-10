@@ -2,7 +2,7 @@
 	"name":"right",
 	"type":"function",
 	"syntax":"right(String, count)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets a specified number of characters from a string,\n beginning at the right.",
 	"params": [

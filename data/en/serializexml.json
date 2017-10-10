@@ -2,7 +2,7 @@
 	"name":"serializeXML",
 	"type":"function",
 	"syntax":"serializeXML( Object objToBeSerialized, boolean useCustomSerializer );",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Serializes a ColdFusion object to XML.",
 	"params": [

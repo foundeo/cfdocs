@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"dateDiff(datepart, date1, date2)",
 	"member":"date1.diff(datepart, date2)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["dateadd","dateformat"],
 	"description":"Determines the integer number of datepart units by which date1 is less than date2.",
 	"params": [

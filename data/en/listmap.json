@@ -22,7 +22,7 @@
 	{"values":[],"default":"comma","description":"The list delimiter.","name":"delimiter","type":"String","required":"0"},
 	{"values":[],"default":"false","description":"Include empty values","name":"includeEmptyFields","type":"Boolean","required":"0"}
 ],
-"returns":"String",
+"returns":"string",
  "examples":[{
 	"title": "Script Syntax",
 	"description": "",

@@ -2,7 +2,7 @@
 	"name":"insert",
 	"type":"function",
 	"syntax":"insert(substring, String, position)",
-	"returns":"String",
+	"returns":"string",
 	"related":["RemoveChars", "Len"],
 	"description":" Inserts a substring in a string after a specified character\n position. If position = 0, prefixes the substring to the\n string.",
 	"params": [

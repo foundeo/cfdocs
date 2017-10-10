@@ -1,7 +1,7 @@
 {
     "name":"isSafeHTML",
     "syntax":"isSafeHTML(inputString [, PolicyFile])",
-    "returns":"Boolean",
+    "returns":"boolean",
     "type":"function",
     "related":["getSafeHTML"],
     "description":"Checks a HTML string against antisamy policy file to determine if it may be vulnerable to XSS / Cross Site Scripting.",

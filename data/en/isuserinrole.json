@@ -2,7 +2,7 @@
 	"name":"isUserInRole",
 	"type":"function",
 	"syntax":"isUserInRole(role_name)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Determines whether an authenticated user belongs to the\n specified Role.",
 	"params": [

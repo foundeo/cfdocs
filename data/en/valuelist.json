@@ -2,7 +2,7 @@
 	"name":"valueList",
 	"type":"function",
 	"syntax":"valueList(column [, delimiter])",
-	"returns":"String",
+	"returns":"string",
 	"related":["valueArray"],
 	"description":"Returns each value from a column of an executed query.\n CFML does not evaluate the arguments.\n A delimited list of the values of each record returned from an\n executed query column",
 	"params": [

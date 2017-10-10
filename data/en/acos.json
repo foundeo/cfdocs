@@ -2,7 +2,7 @@
 	"name":"acos",
 	"type":"function",
 	"syntax":"acos(number)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["asin","atn","cos","exp","log","log10","sin","tan"],
 	"description":" Returns the angle whose cosine is the value passed as the argument.",
 	"params": [

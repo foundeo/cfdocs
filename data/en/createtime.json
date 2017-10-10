@@ -2,7 +2,7 @@
 	"name":"createTime",
 	"type":"function",
 	"syntax":"createTime(hour, minute, second)",
-	"returns":"DateTime",
+	"returns":"date",
 	"related":["createODBCTime", "createDateTime"],
 	"description":" Creates a time variable.",
 	"params": [

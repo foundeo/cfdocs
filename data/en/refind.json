@@ -2,7 +2,7 @@
 	"name":"REFind",
 	"type":"function",
 	"syntax":"REFind(reg_expression, String [, start] [, returnsubexpressions])",
-	"returns":"Object",
+	"returns":"any",
 	"related":["find","refindnocase","findnocase","rereplace"],
 	"description":" Uses a regular expression (RE) to search a string for a pattern,\n starting from a specified position. The search is case sensitive.",
 	"params": [

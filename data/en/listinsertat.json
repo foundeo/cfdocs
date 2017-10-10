@@ -2,7 +2,7 @@
 	"name":"listInsertAt",
 	"type":"function",
 	"syntax":"listInsertAt(list, position, value [, delimiters])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Inserts an element in a list.",
 	"params": [

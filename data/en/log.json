@@ -2,7 +2,7 @@
 	"name":"log",
 	"type":"function",
 	"syntax":"log(number)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["acos","asin","atn","cos","exp","log10","sin","tan"],
 	"description":" Calculates the natural logarithm of a number. Natural\n logarithms are based on the constant e (2.71828182845904).",
 	"params": [

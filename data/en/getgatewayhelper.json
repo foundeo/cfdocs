@@ -2,7 +2,7 @@
 	"name":"getGatewayHelper",
 	"type":"function",
 	"syntax":"getGatewayHelper(gatewayID)",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Gets a Java GatewayHelper object that provides methods\n and properties for use with a ColdFusion event gateway.",
 	"params": [

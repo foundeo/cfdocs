@@ -2,7 +2,7 @@
 	"name":"charsetEncode",
 	"type":"function",
 	"syntax":"charsetEncode(binaryobject, encoding)",
-	"returns":"Binary",
+	"returns":"binary",
 	"related":[],
 	"description":" Uses the specified encoding to convert binary data to a string.",
 	"params": [

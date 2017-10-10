@@ -2,7 +2,7 @@
 	"name": "collectionMap",
 	"type": "function",
 	"syntax": "collectionMap(collection, closure [, parallel] [, maxThreads])",
-	"returns": "object",
+	"returns": "any",
 	"related": [],
 	"description": "",
 	"params": [

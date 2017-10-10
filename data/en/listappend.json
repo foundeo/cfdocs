@@ -2,7 +2,7 @@
 	"name":"listAppend",
 	"type":"function",
 	"syntax":"listAppend(list, value [, delimiters])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Concatenates a list or element to a list.",
 	"params": [

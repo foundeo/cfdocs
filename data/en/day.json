@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"day(date)",
 	"member":"date.day()",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["datePart", "dayOfWeek", "dayOfWeekAsString", "dayOfYear", "daysInMonth", "daysInYear", "firstDayOfMonth"],
 	"description":" Determines the day of the month, in a date.\n The ordinal for the day of the month, ranging from 1 to 31.",
 	"params": [

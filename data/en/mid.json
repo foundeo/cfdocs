@@ -2,7 +2,7 @@
 	"name":"mid",
 	"type":"function",
 	"syntax":"mid(String, start, count)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Extracts a substring from a string.",
 	"params": [

@@ -2,7 +2,7 @@
 	"name":"REMatchNoCase",
 	"type":"function",
 	"syntax":"REMatchNoCase(reg_expression, string)",
-	"returns":"Array",
+	"returns":"array",
 	"related":[],
 	"description":" Uses a regular expression (RE) to search a string for a pattern, starting from a specified position.",
 	"params": [

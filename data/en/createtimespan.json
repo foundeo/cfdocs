@@ -2,7 +2,7 @@
 	"name":"createTimespan",
 	"type":"function",
 	"syntax":"createTimespan(days, hours, minutes, seconds)",
-	"returns":"DateTime",
+	"returns":"date",
 	"related":[],
 	"description":" Creates a date/time object that defines a time period. You\n can add or subtract it from other date/time objects and use\n it with the cachedWithin attribute of cfquery.",
 	"params": [

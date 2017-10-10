@@ -2,7 +2,7 @@
 	"name":"spreadsheetGetCellValue",
 	"type":"function",
 	"syntax":"spreadsheetGetCellValue(spreadsheetObj, row, column)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets the Value for a for an Excel spreadsheet object cell.",
 	"params": [

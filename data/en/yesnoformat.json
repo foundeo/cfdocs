@@ -2,7 +2,7 @@
 	"name":"yesNoFormat",
 	"type":"function",
 	"syntax":"yesNoFormat(value)",
-	"returns":"String",
+	"returns":"string",
 	"related":["booleanFormat","isBoolean"],
 	"description":" Yes, for a true value; No for a false value, empty string or null. Throws an exception for other values.",
 	"params": [

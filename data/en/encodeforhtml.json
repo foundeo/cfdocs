@@ -2,7 +2,7 @@
 	"name":"encodeForHTML",
 	"type":"function",
 	"syntax":"encodeForHTML(inputString [, canonicalize])",
-	"returns":"String",
+	"returns":"string",
 	"related":["htmleditformat", "encodeforhtmlattribute"],
 	"description":"Encodes the inputString for safe output in the body of a HTML tag. The encoding in meant to mitigate Cross Site Scripting (XSS) attacks. This function can provide more protection from XSS than the HTMLEditFormat or XMLFormat functions do.",
 	"params": [

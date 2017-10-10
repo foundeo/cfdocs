@@ -2,7 +2,7 @@
 	"name":"getSOAPResponseHeader",
 	"type":"function",
 	"syntax":"getSOAPResponseHeader(webservice, namespace, name [, asXML])",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Returns a SOAP response header. Call this function\n from within code that is invoking a web service after\n making a web service request.",
 	"params": [

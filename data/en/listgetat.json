@@ -2,7 +2,7 @@
 	"name":"listGetAt",
 	"type":"function",
 	"syntax":"listGetAt(list, position [, delimiters [, includeEmptyValues]])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets a list element at a specified position.",
 	"params": [

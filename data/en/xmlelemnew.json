@@ -2,7 +2,7 @@
 	"name":"XMLElemNew",
 	"type":"function",
 	"syntax":"XMLElemNew(xmlobj [, namespace], childname)",
-	"returns":"Object",
+	"returns":"xml",
 	"related":[],
 	"description":" Creates an XML document object element",
 	"params": [

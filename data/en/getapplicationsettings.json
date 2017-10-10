@@ -2,7 +2,7 @@
 	"name":"getApplicationSettings",
 	"type":"function",
 	"syntax":"getApplicationSettings()",
-	"returns":"Struct",
+	"returns":"struct",
 	"related":["getApplicationMetadata"],
 	"description":"return all data from this scope, when using a application.cfc or all setting defined in tag cfapplication",
 	"params": [

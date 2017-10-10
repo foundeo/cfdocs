@@ -2,7 +2,7 @@
 	"name":"fileRead",
 	"type":"function",
 	"syntax":"fileRead(filepath [, charset])",
-	"returns":"String",
+	"returns":"string",
 	"related":["filewrite","filereadline"],
 	"description":" Reads an on-disk or in-memory text file or a file object created with the FileOpen function.",
 	"params": [

@@ -2,7 +2,7 @@
 	"name":"binaryDecode",
 	"type":"function",
 	"syntax":"binaryDecode(String, binaryencoding)",
-	"returns":"Binary",
+	"returns":"binary",
 	"related":["binaryEncode"],
 	"description":" Converts a string to a binary object. Used to convert\n binary data that has been encoded into string format\n back into binary data.",
 	"params": [

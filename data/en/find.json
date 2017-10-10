@@ -2,7 +2,7 @@
 	"name":"find",
 	"type":"function",
 	"syntax":"find(substring, String [, start])",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Finds the first occurrence of a substring in a string, from a\n specified start position. The search is case-sensitive.",
 	"params": [

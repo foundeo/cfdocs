@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"hour(date)",
 	"member": "date.hour()",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["minute","second","month","quarter","week","year"],
 	"description":" Extracts the hour of the day from a date/time object.\n Ordinal value of the hour, in the range 0 - 23.",
 	"params": [

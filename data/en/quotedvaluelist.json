@@ -2,7 +2,7 @@
 	"name":"quotedValueList",
 	"type":"function",
 	"syntax":"quotedValueList(column [, delimiter])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets the values of each record returned from an executed query.\n CFML does not evaluate the arguments",
 	"params": [

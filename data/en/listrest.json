@@ -2,7 +2,7 @@
 	"name":"listRest",
 	"type":"function",
 	"syntax":"listRest(list [, delimiters])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets a list, without its first element.",
 	"params": [

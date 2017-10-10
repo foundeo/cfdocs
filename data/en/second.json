@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"second(date)",
 	"member":"date.second()",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["hour","minute","month","quarter","week","year"],
 	"description":" Extracts the ordinal for the second from a date/time object.",
 	"params": [

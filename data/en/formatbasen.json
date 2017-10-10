@@ -2,7 +2,7 @@
 	"name":"formatBaseN",
 	"type":"function",
 	"syntax":"formatBaseN(number, radix)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" String Converts number to a string, in the base specified by\n radix. For example: #formatBaseN(1024,16)#",
 	"params": [
@@ -18,7 +18,7 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Script Syntax",

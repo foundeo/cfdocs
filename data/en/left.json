@@ -2,7 +2,7 @@
 	"name":"left",
 	"type":"function",
 	"syntax":"left(String, count)",
-	"returns":"String",
+	"returns":"string",
 	"related":["right","mid"],
 	"member":"string.left(count)",
 	"description":" Returns the leftmost count characters in a string.",

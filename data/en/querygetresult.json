@@ -2,7 +2,7 @@
 	"name":"queryGetResult",
 	"type":"function",
 	"syntax":"queryGetResult(query)",
-	"returns":"Struct",
+	"returns":"struct",
 	"related":[],
 	"description":" Returns the metadata of a query.",
 	"params": [
@@ -30,7 +30,7 @@
 			"result":""
 
 		}
-		
+
 	]
 
 }

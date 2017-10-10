@@ -2,7 +2,7 @@
 	"name":"toBase64",
 	"type":"function",
 	"syntax":"toBase64(string_or_object [, encoding])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Calculates the Base64 representation of a string or binary\n object. The Base64 format uses printable characters, allowing\n binary data to be sent in forms and e-mail, and stored in a\n database or file.",
 	"params": [

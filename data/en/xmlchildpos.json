@@ -2,7 +2,7 @@
 	"name":"XMLChildPos",
 	"type":"function",
 	"syntax":"XMLChildPos(elem, childname, n)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Gets the position of a child element within an XML document\n object.\n The position, in an XmlChildren array, of the Nth child that\n has the specified name.",
 	"params": [

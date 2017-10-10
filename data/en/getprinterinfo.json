@@ -2,7 +2,7 @@
 	"name":"getPrinterInfo",
 	"type":"function",
 	"syntax":"getPrinterInfo(printer)",
-	"returns":"Struct",
+	"returns":"struct",
 	"related":[],
 	"description":" Determines which print attributes are supported by a selected printer.",
 	"params": [

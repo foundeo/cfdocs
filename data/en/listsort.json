@@ -2,7 +2,7 @@
 	"name":"listSort",
 	"type":"function",
 	"syntax":"listSort(list, sort_type [, sort_order] [, delimiters])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Sorts list elements according to a sort type and sort order.\n Returns a sorted copy of the list.\n [sort_type - quicky]\n numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n - aabzABZ, if sort_order = \"asc\"\n - ZBAzbaa, if sort_order = \"desc\"\n textnocase: sorts text alphabetically, without regard to case\n - aAaBbBzzZ, in an asc sort;\n - ZzzBbBaAa, in a desc sort;",
 	"params": [

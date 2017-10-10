@@ -2,7 +2,7 @@
 	"name":"encodeForHTMLAttribute",
 	"type":"function",
 	"syntax":"encodeForHTMLAttribute(inputString [, canonicalize])",
-	"returns":"String",
+	"returns":"string",
 	"related":["htmleditformat", "encodeforhtml"],
 	"description":"Encodes the inputString for safe output in the attribute value of an HTML attribute, such as table width or image height. The encoding is meant to mitigate Cross Site Scripting (XSS) attacks.",
 	"params": [

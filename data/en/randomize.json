@@ -2,7 +2,7 @@
 	"name":"randomize",
 	"type":"function",
 	"syntax":"randomize(number [, algorithm])",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Seeds the pseudo-random number generator with an\n integer number, ensuring repeatable number patterns.",
 	"params": [

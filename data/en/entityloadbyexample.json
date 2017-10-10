@@ -2,7 +2,7 @@
 	"name":"entityLoadByExample",
 	"type":"function",
 	"syntax":"entityLoadByExample(sampleEntity [, unique])",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Loads and returns an array of objects that match the sampleentity.\nentityLoadByExample(sampleEntity,[unique])",
 	"params": [

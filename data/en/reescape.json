@@ -2,7 +2,7 @@
 	"name":"REEscape",
 	"type":"function",
 	"syntax":"REEscape(string);",
-	"returns":"String",
+	"returns":"string",
 	"related":["REFind","REReplace","REMatch"],
 	"description":"Escapes regular expression control characters within a string.",
 	"params": [
