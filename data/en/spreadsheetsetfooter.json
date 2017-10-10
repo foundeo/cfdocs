@@ -6,10 +6,10 @@
 	"related":[],
 	"description":" Adds a footer to the specified worksheet.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The Excel spreadsheet object to which to add the footer.","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"leftFooter","description":"Adds the footer in the left side of the worksheet.","required":true,"default":"","type":"String","values":[]},
-		{"name":"centerFooter","description":"Adds the footer in the center of the worksheet.","required":true,"default":"","type":"String","values":[]},
-		{"name":"rightFooter","description":"Adds the footer in the right side of the worksheet.","required":true,"default":"","type":"String","values":[]}
+		{"name":"spreadsheetObj","description":"The Excel spreadsheet object to which to add the footer.","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"leftFooter","description":"Adds the footer in the left side of the worksheet.","required":true,"default":"","type":"string","values":[]},
+		{"name":"centerFooter","description":"Adds the footer in the center of the worksheet.","required":true,"default":"","type":"string","values":[]},
+		{"name":"rightFooter","description":"Adds the footer in the right side of the worksheet.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

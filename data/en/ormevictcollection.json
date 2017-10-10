@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" This will remove all the entries with the specified relation/collection name in the specified component. \normEvictCollection(componentName,relationName,[id])",
 	"params": [
-		{"name":"componentName","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"relationName","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"id","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
+		{"name":"componentName","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"relationName","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"id","description":"No Help Available","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

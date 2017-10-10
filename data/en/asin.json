@@ -6,7 +6,7 @@
 	"related":["acos","atn","cos","exp","log","log10","sin","tan"],
 	"description":" Determines the arcsine of a number. The arcsine is the angle\n whose sine is number.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

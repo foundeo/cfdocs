@@ -6,8 +6,8 @@
 	"related":["CSRFGenerateToken"],
 	"description":"Validates the passed in token against the token stored in the session for a specific key. Used to help prevent Cross-Site Request Forgery (CSRF) attacks.",
 	"params": [
-		{"name":"token","description":"The passed in token that is to be validated against the token stored in the session.","required":true,"default":"","type":"String","values":[]},
-		{"name":"key","description":"The key against which the token was originally generated.","required":false,"default":"","type":"String","values":[]}
+		{"name":"token","description":"The passed in token that is to be validated against the token stored in the session.","required":true,"default":"","type":"string","values":[]},
+		{"name":"key","description":"The key against which the token was originally generated.","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

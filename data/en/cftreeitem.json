@@ -11,7 +11,7 @@
 			"description": "A bind expression specifying a CFC of JavaScript\n function that dynamically gets all tree nodes. You can use\n this attribute only at the top level of the tree, and in this\n case, the tree can have only cftreeitem tag.\n If you use the bind attribute, the only other allowed\n attribute is onBindError. For details creating trees that\n using binding, see \"Using HTML format trees\" in Chapter\n 33, \"Using AJAX UI Components and Features\" in\n ColdFusion Developer's Guide",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "Value passed when cfform is submitted. When populating a\n tree with data from a cfquery, specify columns in a\n delimited list. Example: value = \"dept_id,emp_id\"",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "Tree item label. When populating a tree with data from a\n query, specify names in a delimited list. Example:\n display = \"dept_name,emp_name\"",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -35,7 +35,7 @@
 			"description": "Value for tree item parent.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -43,7 +43,7 @@
 			"description": "Image name, filename, or file URL for tree item icon.\n\n You can specify a custom image. To do so, include path and\n file extension; for example:\n\n img = \"../images/page1.gif\"\n\n To specify more than one image in a tree, or an image at\n the second or subsequent level, use commas to separate\n names, corresponding to level; for example:\n\n\n img = \"folder,document\"\n img = \",document\" (example of second level)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["cd", "computer", "document", "element", "folder", "floppy", "fixed", "remote"]
 		},
 		{
@@ -51,7 +51,7 @@
 			"description": "Icon displayed with open tree item. You can specify icon\n filename with a relative path. You can use a CFML\n image.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -59,7 +59,7 @@
 			"description": "URL to associate with tree item or query column for a tree\n that is populated from a query. If href is a query column,\n its value is the value populated by query. If href is not\n recognized as a query column, it is assumed that its text\n is an HTML href.\n\n When populating a tree with data from a query, HREFs can be\n specified in delimited list; for example:\n\n href = \"http://dept_svr,http://emp_svr\"",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -67,7 +67,7 @@
 			"description": "Target attribute of href URL. When populating a tree with\n data from a query, specify target in delimited list:\n\n target = \"FRAME_BODY,_blank\"",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -75,7 +75,7 @@
 			"description": "Query name to generate data for the treeitem.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -83,7 +83,7 @@
 			"description": "Defines query as the root level. This avoids having to\n create another parent cftreeitem.\n\n * Yes\n * No\n * String to use as the root name\n If you do not specify a root name, CFML returns the\n query name as the root.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -99,7 +99,7 @@
 			"description": "The name of a JavaScript function to execute if evaluating a bind expression results in an error. The function must take two attributes: an HTTP status code and a message.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

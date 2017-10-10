@@ -11,7 +11,7 @@
 			"description": "Action to perform",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["getAll", "get", "set", "delete"]
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "Name of a registry branch.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "Registry value to access.\n Note: For key deletion this attribute is required.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -35,7 +35,7 @@
 			"description": "Variable into which to put value.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -43,7 +43,7 @@
 			"description": "* string: returns string values.\n * dWord: returns DWord values.\n * key: returns keys.\n * any: returns keys and values.",
 			"required": false,
 			"default": "String",
-			"type": "String",
+			"type": "string",
 			"values": ["String", "dWord", "key", "Any"]
 		},
 		{
@@ -51,7 +51,7 @@
 			"description": "Sorts query column data (case-insensitive). Sorts on Entry, Type,\n and Value columns as text. Specify a combination of columns from\n query output, in a comma-delimited list.\n For example: sort = \"value desc, entry asc\"\n * asc: ascending (a to z) sort order.\n * desc: descending (z to a) sort order.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["entry asc", "entry desc", "type asc", "type desc", "value asc", "value desc"]
 		},
 		{
@@ -59,7 +59,7 @@
 			"description": "Absolute pathname of directory against which to perform\n action.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -67,7 +67,7 @@
 			"description": "Name for output record set.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -75,7 +75,7 @@
 			"description": "Applies only to UNIX and Linux. Permissions. Octal values\n of Unix chmod command. Assigned to owner, group, and\n other, respectively.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -83,7 +83,7 @@
 			"description": "New name for directory.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -91,7 +91,7 @@
 			"description": "Value data to set. If you omit this attribute, the cfregistry tag creates default value, as follows:\n * string: creates an empty string: \"\".\n * dWord: creates a value of 0 (zero).",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -107,7 +107,7 @@
 			"description": "No Help Available",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

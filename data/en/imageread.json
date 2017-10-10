@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Reads the source pathname or URL and creates a ColdFusion image.",
 	"params": [
-		{"name":"path","description":"On-disk or in-memory pathname or URL of the source image.","required":true,"default":"","type":"String","values":[]}
+		{"name":"path","description":"On-disk or in-memory pathname or URL of the source image.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

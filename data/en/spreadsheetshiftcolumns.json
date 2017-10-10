@@ -6,10 +6,10 @@
 	"related":[],
 	"description":" shifts one or more columns in Excel spreadsheet object left or right.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"start","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"end","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"start","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]}
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"start","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"end","description":"No Help Available","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"start","description":"No Help Available","required":false,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether ColdFusion has reached the end of the file while reading it.",
 	"params": [
-		{"name":"fileObject","description":"The file object.","required":true,"default":"","type":"Object","values":[]}
+		{"name":"fileObject","description":"The file object.","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

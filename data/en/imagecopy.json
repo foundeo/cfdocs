@@ -7,13 +7,13 @@
 	"related":[],
 	"description":" Copies a rectangular area of an image.",
 	"params": [
-		{"name":"name","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"x","description":"The x coordinate of the source rectangle.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"y","description":"The y coordinate of the source rectangle.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"width","description":"The width of the source rectangle.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"height","description":"The height of the source rectangle.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"dx","description":"The x coordinate of the destination rectangle.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"dy","description":"The y coordinate of the destination rectangle.","required":false,"default":"","type":"Numeric","values":[]}
+		{"name":"name","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"x","description":"The x coordinate of the source rectangle.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"y","description":"The y coordinate of the source rectangle.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"width","description":"The width of the source rectangle.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"height","description":"The height of the source rectangle.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"dx","description":"The x coordinate of the destination rectangle.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"dy","description":"The y coordinate of the destination rectangle.","required":false,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

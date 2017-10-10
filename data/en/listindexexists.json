@@ -8,7 +8,7 @@
 	"description": "",
 	"params": [
 		{"name": "list", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "index", "description": "", "required": true, "default": "", "type": "number", "values": []},
+		{"name": "index", "description": "", "required": true, "default": "", "type": "numeric", "values": []},
 		{"name": "delimiter", "description": "", "required": false, "default": ",", "type": "string", "values": []},
 		{"name": "includeEmptyFields", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
 	],

@@ -8,8 +8,8 @@
 	"discouraged":"Use the ternary operator CF9+ instead because it does not evaluate.\nExample ternary operator: `( (condition) ? valueIfTrue : valueIfFalse )`",
 	"params": [
 		{"name":"condition","description":"A boolean value or an expression that evaluates to a boolean.","required":true,"default":"","type":"boolean","values":[]},
-		{"name":"expression1","description":"A CFML expression that is evaluated dynamically using Evaluate if the condition is `true`.","required":true,"default":"","type":"String","values":[]},
-		{"name":"expression2","description":"A CFML expression that is evaluated dynamically using Evaluate if the condition is `false`.","required":true,"default":"","type":"String","values":[]}
+		{"name":"expression1","description":"A CFML expression that is evaluated dynamically using Evaluate if the condition is `true`.","required":true,"default":"","type":"string","values":[]},
+		{"name":"expression2","description":"A CFML expression that is evaluated dynamically using Evaluate if the condition is `false`.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

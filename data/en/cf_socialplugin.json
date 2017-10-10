@@ -25,7 +25,7 @@
       "default": "",
       "description": "",
       "name": "type",
-      "type": "String",
+      "type": "string",
       "required": "1"
     },
     {
@@ -36,7 +36,7 @@
       "default": "",
       "description": "",
       "name": "colorscheme",
-      "type": "String",
+      "type": "string",
       "required": "0"
     },
     {
@@ -44,7 +44,7 @@
       "default": "",
       "description": "",
       "name": "",
-      "type": "Any",
+      "type": "any",
       "required": "0"
     }
   ],

@@ -7,8 +7,8 @@
 	"related":[],
 	"description":" Converts a one-dimensional array to a list.",
 	"params": [
-		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
-		{"name":"delimiter","description":"","required":false,"default":",","type":"String","values":[",","|","_",";",":"]}
+		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
+		{"name":"delimiter","description":"","required":false,"default":",","type":"string","values":[",","|","_",";",":"]}
 
 	],
 	"engines": {

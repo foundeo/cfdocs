@@ -9,7 +9,7 @@
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "initalValue", "description": "", "required": false, "default": "", "type": "object", "values": []}
+		{"name": "initalValue", "description": "", "required": false, "default": "", "type": "any", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryreduce.html"},

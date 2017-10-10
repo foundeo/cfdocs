@@ -6,10 +6,10 @@
 	"related":[],
 	"description":" Inserts an element in a list.",
 	"params": [
-		{"name":"list","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"position","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"value","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
+		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"position","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"value","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
 
 	],
 	"engines": {

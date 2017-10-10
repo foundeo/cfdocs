@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Sets active sheet in given spreadsheet",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"name","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"name","description":"No Help Available","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

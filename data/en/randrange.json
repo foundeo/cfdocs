@@ -6,9 +6,9 @@
 	"related":[],
 	"description":"Generates a random integer between two specified numbers.\n Requests for random integers that are greater than 100,000,000\n result in non-random numbers, to prevent overflow during\n internal computations.",
 	"params": [
-		{"name":"number1","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"number2","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"algorithm","description":"CF7+ The algorithm to use to generated the random number.","required":false,"default":"CFMX_COMPAT","type":"String","values":["CFMX_COMPAT","SHA1PRNG","IBMSecureRandom","NativePRNG","NativePRNGBlocking","NativePRNGNonBlocking"]}
+		{"name":"number1","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"number2","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"algorithm","description":"CF7+ The algorithm to use to generated the random number.","required":false,"default":"CFMX_COMPAT","type":"string","values":["CFMX_COMPAT","SHA1PRNG","IBMSecureRandom","NativePRNG","NativePRNGBlocking","NativePRNGNonBlocking"]}
 
 	],
 	"engines": {

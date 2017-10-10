@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Used with the cftry and cfcatch tags. Retrieves a Java\n exception object from a Java object.",
 	"params": [
-		{"name":"javaobject","description":"","required":true,"default":"","type":"Object","values":[]}
+		{"name":"javaobject","description":"","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

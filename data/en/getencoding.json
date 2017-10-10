@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Returns the encoding (character set) of the Form or URL scope.",
 	"params": [
-		{"name":"scope_name","description":"","required":true,"default":"","type":"String","values":["form","url"]}
+		{"name":"scope_name","description":"","required":true,"default":"","type":"string","values":["form","url"]}
 
 	],
 	"engines": {

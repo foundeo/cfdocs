@@ -7,10 +7,10 @@
 	"description":" Defines table column header, width, alignment, and text. Used\n within a cftable tag.",
 	"discouraged":"The use of tags that generate client side UI code is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cftable/index.html",
 	"params": [
-		{"name":"header","description":"Column header text. To use this attribute, you must also\n use the cftable colHeaders attribute.","required":true,"default":"","type":"String","values":[]},
-		{"name":"width","description":"Column width. If the length of data displayed exceeds this\n value, data is truncated to fit. To avoid this, use an\n HTML table tag.","required":false,"default":20,"type":"Numeric","values":[]},
-		{"name":"align","description":"Column alignment","required":false,"default":"left","type":"String","values":["left","center","right"]},
-		{"name":"text","description":"Double-quotation mark-delimited text; determines what to\n display. Rules: same as for cfoutput sections. You can\n embed hyperlinks, image references, and input controls","required":true,"default":"","type":"String","values":[]}
+		{"name":"header","description":"Column header text. To use this attribute, you must also\n use the cftable colHeaders attribute.","required":true,"default":"","type":"string","values":[]},
+		{"name":"width","description":"Column width. If the length of data displayed exceeds this\n value, data is truncated to fit. To avoid this, use an\n HTML table tag.","required":false,"default":20,"type":"numeric","values":[]},
+		{"name":"align","description":"Column alignment","required":false,"default":"left","type":"string","values":["left","center","right"]},
+		{"name":"text","description":"Double-quotation mark-delimited text; determines what to\n display. Rules: same as for cfoutput sections. You can\n embed hyperlinks, image references, and input controls","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

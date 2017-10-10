@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Replaces characters in a string:\n * Single newline characters (CR/LF sequences) with spaces\n * Double newline characters with HTML paragraph tags (<code>&lt;p&gt;</code>)",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

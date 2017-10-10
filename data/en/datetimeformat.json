@@ -7,9 +7,9 @@
 	"related":["dateFormat","timeFormat"],
 	"description":" Formats a datetime value using U.S. date and time formats. For international date support, use LSDateTimeFormat.\n[mask - quicky]\nd: Day of the month as digits; no leading zero for single-digit days.\ndd: Day of the month as digits; leading zero for single-digit days.\nEEE: Day of the week as a three-letter abbreviation.\nEEEE: Day of the week as its full name.\nm: Month as digits; no leading zero for single-digit months.\nmm: Month as digits; leading zero for single-digit months.\nmmm: Month as a three-letter abbreviation.\nmmmm: Month as its full name.\nyy: Year as last two digits; leading zero for years less than 10.\nyyyy: Year represented by four digits.\n Y YY: Week Year\nG: Period/era string.\nh: hours; no leading zero for single-digit hours (12-hour clock)\nhh: hours; leading zero for single-digit hours (12-hour clock)\nH: hours; no leading zero for single-digit hours (24-hour clock)\nHH: hours; leading zero for single-digit hours (24-hour clock)\nn: minutes; no leading zero for single-digit minutes\nnn: minutes; a leading zero for single-digit minutes\ns: seconds; no leading zero for single-digit seconds\nss: seconds; leading zero for single-digit seconds\nl or L: milliseconds, with no leading zeros\nt: one-character time marker string, such as A or P\ntt: multiple-character time marker string, such as AM or PM",
 	"params": [
-		{"name":"dateTime","description":"A datetime value.","required":true,"default":"","type":"Date","values":[]},
-		{"name":"mask","description":"The mask used to format the datetime.","required":false,"default":"","type":"String","values":[]},
-		{"name":"timezone","description":"The timezone to use. Can be 3 letter code (UTC) or full America/New_York","required":false,"default":"","type":"String","values":["UTC","GMT","America/Chicago"]}
+		{"name":"dateTime","description":"A datetime value.","required":true,"default":"","type":"date","values":[]},
+		{"name":"mask","description":"The mask used to format the datetime.","required":false,"default":"","type":"string","values":[]},
+		{"name":"timezone","description":"The timezone to use. Can be 3 letter code (UTC) or full America/New_York","required":false,"default":"","type":"string","values":["UTC","GMT","America/Chicago"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"ColdFusion 10 added this function. Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateTimeFormat.html"},

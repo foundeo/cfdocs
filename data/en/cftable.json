@@ -8,13 +8,13 @@
 	"discouraged":"The use of tags that generate client side UI code is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cftable/index.html ",
 	"params": [
 		{"name":"query","description":"Name of cfquery from which to draw data.","required":true,"default":"","type":"query","values":[]},
-		{"name":"maxrows","description":"Maximum number of rows to display in the table.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"colSpacing","description":"Number of spaces between columns","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"headerLines","description":"Number of lines to use for table header (the default leaves\n one line between header and first row of table).","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"htmltable","description":"Renders data in an HTML 3.0 table.\n\n If you use this attribute (regardless of its value),\n CFML renders data in an HTML table.","required":false,"default":"","type":"Any","values":[]},
-		{"name":"border","description":"Displays border around table.\n\n If you use this attribute (regardless of its value),\n CFML displays a border around the table.\n\n Use this only if you use the HTMLTable attribute.","required":false,"default":"","type":"Any","values":[]},
-		{"name":"colheaders","description":"Displays column heads. If you use this attribute, you must\n also use the cfcol tag header attribute to define them.\n\n If you use this attribute (regardless of its value),\n CFML displays column heads.","required":false,"default":"","type":"Any","values":[]},
-		{"name":"startrow","description":"The query result row to put in the first table row.","required":false,"default":"","type":"Numeric","values":[]}
+		{"name":"maxrows","description":"Maximum number of rows to display in the table.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"colSpacing","description":"Number of spaces between columns","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"headerLines","description":"Number of lines to use for table header (the default leaves\n one line between header and first row of table).","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"htmltable","description":"Renders data in an HTML 3.0 table.\n\n If you use this attribute (regardless of its value),\n CFML renders data in an HTML table.","required":false,"default":"","type":"any","values":[]},
+		{"name":"border","description":"Displays border around table.\n\n If you use this attribute (regardless of its value),\n CFML displays a border around the table.\n\n Use this only if you use the HTMLTable attribute.","required":false,"default":"","type":"any","values":[]},
+		{"name":"colheaders","description":"Displays column heads. If you use this attribute, you must\n also use the cfcol tag header attribute to define them.\n\n If you use this attribute (regardless of its value),\n CFML displays column heads.","required":false,"default":"","type":"any","values":[]},
+		{"name":"startrow","description":"The query result row to put in the first table row.","required":false,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

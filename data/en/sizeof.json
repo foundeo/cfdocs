@@ -6,7 +6,7 @@
 	"related": [],
 	"description": "",
 	"params": [
-		{"name": "obj", "description": "", "required": true, "default": "", "type": "object", "values": []},
+		{"name": "obj", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "complex", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
 	],
 	"engines": {

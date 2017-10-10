@@ -6,10 +6,10 @@
 	"related":[],
 	"description":" Gets the comment for an Excel spreadsheet object cell as a structure with formatting information, or all comments for the object.",
 	"params": [
-		{"name":"author","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"column","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"comment","description":"No Help Available","required":false,"default":"","type":"String","values":[]},
-		{"name":"row","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
+		{"name":"author","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"column","description":"No Help Available","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"comment","description":"No Help Available","required":false,"default":"","type":"string","values":[]},
+		{"name":"row","description":"No Help Available","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

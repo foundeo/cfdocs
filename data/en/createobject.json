@@ -6,14 +6,14 @@
 	"related":["cfobject","cfinvoke"],
 	"description":"The createObject function takes different arguments depending on the value of the type argument:\n\n createObject('component', cfcName)\n createObject('java', class)\n createObject('webservice', urltowsdl, [, portname])\n createObject('.NET', class, assembly [, server, port, protocol, secure])\n createObject('com', class, context, serverName)",
 	"params": [
-		{"name":"type","description":"The type of object","required":true,"default":"","type":"String","values":["component","corba","com","java","webservice",".NET","dotnet"]},
-		{"name":"context","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"class","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"locale","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"servername","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"component_name","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"urltowsdl","description":"WSDL file URL; location of web service","required":true,"default":"","type":"String","values":[]},
-		{"name":"portname","description":"The port name for the web service. This value is case-sensitive\n and corresponds to the port element's name attribute under the\n service element.\n Specify this parameter if the web service contains multiple ports.\n If no port name is specified, ColdFusion uses the first port found\n in the WSDL.","required":false,"default":"","type":"String","values":[]}
+		{"name":"type","description":"The type of object","required":true,"default":"","type":"string","values":["component","corba","com","java","webservice",".NET","dotnet"]},
+		{"name":"context","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"class","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"locale","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"servername","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"component_name","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"urltowsdl","description":"WSDL file URL; location of web service","required":true,"default":"","type":"string","values":[]},
+		{"name":"portname","description":"The port name for the web service. This value is case-sensitive\n and corresponds to the port element's name attribute under the\n service element.\n Specify this parameter if the web service contains multiple ports.\n If no port name is specified, ColdFusion uses the first port found\n in the WSDL.","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

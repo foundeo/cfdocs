@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Gets characters from a string, from the beginning to a\n character that is not in a specified set of characters. The\n search is case-sensitive.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"set","description":"A string or a variable that contains a set of characters.\n Must contain one or more characters","required":true,"default":"","type":"String","values":[]}
+		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"set","description":"A string or a variable that contains a set of characters.\n Must contain one or more characters","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

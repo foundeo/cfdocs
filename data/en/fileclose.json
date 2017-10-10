@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Closes an on-disk or in-memory file that is open.",
 	"params": [
-		{"name":"fileObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]}
+		{"name":"fileObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]}
 
 	],
 	"engines": {

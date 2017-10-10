@@ -6,7 +6,7 @@
 	"related":["acos","asin","atn","cos","exp","log","sin","tan"],
 	"description":" Calculates the logarithm of number, to base 10.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

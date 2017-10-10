@@ -7,7 +7,7 @@
 	"related": [],
 	"description":"Returns an array with all of the elements reversed. The value in [0] within the input array will then exist in [n] in the output array, where n is the amount of elements in the array minus one.",
         "params": [
-                {"name":"array","description":"The array to reverse","required":true,"default":"","type":"Array","values":[]}
+                {"name":"array","description":"The array to reverse","required":true,"default":"","type":"array","values":[]}
         ],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arrayreverse.html"}

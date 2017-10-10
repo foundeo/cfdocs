@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" Adds an image to an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"imagefilepath","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"anchor","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"imagefilepath","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"anchor","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

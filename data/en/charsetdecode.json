@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Converts as string to a binary representation.",
 	"params": [
-		{"name":"String","description":"A string containing data to encode in binary format.","required":true,"default":"","type":"String","values":[]},
-		{"name":"encoding","description":"A string specifying encoding of the input data.","required":true,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
+		{"name":"String","description":"A string containing data to encode in binary format.","required":true,"default":"","type":"string","values":[]},
+		{"name":"encoding","description":"A string specifying encoding of the input data.","required":true,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 
 	],
 	"engines": {

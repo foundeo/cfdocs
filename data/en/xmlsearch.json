@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" ",
 	"params": [
-		{"name":"xmldoc","description":"XML document object","required":true,"default":"","type":"Object","values":[]},
-		{"name":"xpathstring","description":"XPath expression","required":true,"default":"","type":"String","values":[]}
+		{"name":"xmldoc","description":"XML document object","required":true,"default":"","type":"xml","values":[]},
+		{"name":"xpathstring","description":"XPath expression","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

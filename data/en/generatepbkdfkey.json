@@ -14,11 +14,11 @@
 		{"title":"CFPASSPhrase","description":"Related project to help other engines utilize PBKDF2 key generation","url":"https:\/\/github.com\/boughtonp\/cfpassphrase"}
 	],
 	"params":[
-		{"values":["PBKDF2WithHmacSHA1","PBKDF2WithSHA1","PBKDF2WithSHA224","PBKDF2WithSHA256","PBKDF2WithSHA384","PBKDF2WithSHA512"],"default":"","description":"Hashing algorithm used for generating key","name":"algorithm","type":"String","required":"1"},
-		{"values":[],"default":"","description":"Passphrase used for the key. KEEP THIS SECRET.","name":"passphrase","type":"String","required":"1"},
-		{"values":[],"default":"","description":"A random salt","name":"salt","type":"String","required":"1"},
-		{"values":["1000"],"default":"","description":"The number of PBKDEF iterations to perform. A minimum recommended value is 1000","name":"iterations","type":"Numeric","required":"1"},
-		{"values":[],"default":"Length of hashing algorithm output","description":"The length in bytes of the key to generate","name":"keysize","type":"Numeric","required":"0"}
+		{"values":["PBKDF2WithHmacSHA1","PBKDF2WithSHA1","PBKDF2WithSHA224","PBKDF2WithSHA256","PBKDF2WithSHA384","PBKDF2WithSHA512"],"default":"","description":"Hashing algorithm used for generating key","name":"algorithm","type":"string","required":"1"},
+		{"values":[],"default":"","description":"Passphrase used for the key. KEEP THIS SECRET.","name":"passphrase","type":"string","required":"1"},
+		{"values":[],"default":"","description":"A random salt","name":"salt","type":"string","required":"1"},
+		{"values":["1000"],"default":"","description":"The number of PBKDEF iterations to perform. A minimum recommended value is 1000","name":"iterations","type":"numeric","required":"1"},
+		{"values":[],"default":"Length of hashing algorithm output","description":"The length in bytes of the key to generate","name":"keysize","type":"numeric","required":"0"}
 	],
 	"examples":[
 		{
