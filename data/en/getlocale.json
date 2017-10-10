@@ -13,7 +13,7 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getlocale"}
 	},
 	"links": [],
-	examples: [{
+	"examples": [{
 		"title":"Output current Locale than set it to swiss locale",
 		"description":"",
 		"code":"writeOutput(getlocale());\r\nwriteOutput(' → ');\r\nsetLocale('de_ch');\r\nwriteOutput(getlocale());",
