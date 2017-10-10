@@ -2,7 +2,7 @@
 	"name":"listQualify",
 	"type":"function",
 	"syntax":"listQualify(list, qualifier [, delimiters] [, elements] [, includeEmptyValues])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Inserts a string at the beginning and end of list elements.",
 	"params": [

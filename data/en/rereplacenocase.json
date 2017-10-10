@@ -2,7 +2,7 @@
 	"name":"REReplaceNoCase",
 	"type":"function",
 	"syntax":"REReplaceNoCase(String, reg_expression, substring [, scope])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Uses a regular expression to search a string for a string\n pattern and replace it with another. The search is\n case-insensitive.",
 	"params": [

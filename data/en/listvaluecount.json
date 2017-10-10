@@ -2,7 +2,7 @@
 	"name":"listValueCount",
 	"type":"function",
 	"syntax":"listValueCount(list, value [, delimiters])",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Counts instances of a specified value in a list. The search is\n case-sensitive.",
 	"params": [

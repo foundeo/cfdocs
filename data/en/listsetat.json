@@ -2,7 +2,7 @@
 	"name":"listSetAt",
 	"type":"function",
 	"syntax":"listSetAt(list, position, value [, delimiters])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Replaces the contents of a list element.",
 	"params": [

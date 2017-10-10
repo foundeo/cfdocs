@@ -2,7 +2,7 @@
 	"name":"getException",
 	"type":"function",
 	"syntax":"getException(javaobject)",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Used with the cftry and cfcatch tags. Retrieves a Java\n exception object from a Java object.",
 	"params": [

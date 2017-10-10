@@ -2,7 +2,7 @@
 	"name":"setProfileString",
 	"type":"function",
 	"syntax":"setProfileString(inipath, section, entry, value)",
-	"returns":"String",
+	"returns":"string",
 	"related":["getProfileString"],
 	"description":"Sets the value of a profile entry in an initialization file.",
 	"params": [

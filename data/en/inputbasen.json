@@ -2,7 +2,7 @@
 	"name":"inputBaseN",
 	"type":"function",
 	"syntax":"inputBaseN(String, radix)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Converts string, using the base specified by radix, to an\n integer. For example: #inputBaseN(\"3ff\",16)#",
 	"params": [

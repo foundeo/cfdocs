@@ -2,7 +2,7 @@
 	"name":"parseDateTime",
 	"type":"function",
 	"syntax":"parseDateTime(dt_string [, pop_conversion])",
-	"returns":"DateTime",
+	"returns":"date",
 	"related":[],
 	"description":" Parses a date/time string according to the English (U.S.)\n locale conventions. (To format a date/time string for other\n locales, use the LSParseDateTime function.)",
 	"params": [

@@ -2,7 +2,7 @@
 	"name":"getSOAPRequestHeader",
 	"type":"function",
 	"syntax":"getSOAPRequestHeader(namespace, name [, asXML])",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Obtains a SOAP request header. Call only from within\n a CFC web service function that is processing a request\n as a SOAP web service.",
 	"params": [

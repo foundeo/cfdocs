@@ -19,7 +19,7 @@
     {"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nresult: the result of the reduce operation after the previous iteration\r\nkey: key for the current iteration\r\nvalue: the value for the current iteration\r\nstruct: a reference of the original struct","name":"function","type":"Any","required":"1"},
     {"values":[],"default":"","description":"Initial value which will be used for the reduce operation. The type is any.","name":"initialVal","type":"Any","required":"0"}
 ],
-"returns":"Any",
+"returns":"any",
 "examples":[
     {
         "title": "Script Syntax",

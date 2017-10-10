@@ -2,7 +2,7 @@
 	"name":"numberFormat",
 	"type":"function",
 	"syntax":"numberFormat(number [, mask])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Creates a custom-formatted number value. For international\n number formatting use LSNumberFormat.\n The mask is made up of:\n _,9 Digit placeholder; . decimal point; 0 Pads with zeros;\n ( ) less than zero, puts parentheses around the mask\n + plus sign before positive number minus before negative\n - a space before positive minus sign before negative\n , Separates every third decimal place with a comma.\n L,C Left-justifies or center-justifies number\n $ dollar sign before formatted number.\n ^ Separates left and right formatting.",
 	"params": [

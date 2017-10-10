@@ -2,7 +2,7 @@
 	"name":"getBaseTagData",
 	"type":"function",
 	"syntax":"getBaseTagData(tagname [, instancenumber])",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Used within a custom tag. Finds calling (ancestor) tag by\n name and accesses its data.",
 	"params": [
@@ -18,7 +18,7 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",

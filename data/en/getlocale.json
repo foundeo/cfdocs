@@ -2,7 +2,7 @@
 	"name":"getLocale",
 	"type":"function",
 	"syntax":"getLocale()",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets the current geographic/language locale value.\n To set the default display format of date, time, number, and\n currency values in a CFML application session, you use\n the SetLocale function.",
 	"params": [

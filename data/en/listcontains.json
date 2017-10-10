@@ -2,7 +2,7 @@
 	"name":"listContains",
 	"type":"function",
 	"syntax":"listContains(list, substring [, delimiters])",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Determines the index of the first list element that contains a\n specified substring.\n Returns the index of the first list element that contains\n substring. If not found, returns zero. The search for the substring is case-sensitive.",
 	"params": [

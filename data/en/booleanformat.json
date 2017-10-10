@@ -2,7 +2,7 @@
 	"name":"booleanFormat",
 	"type":"function",
 	"syntax":"booleanFormat(number)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["yesNoFormat", "isBoolean"],
 	"description":"Evaluates the input as a boolean, and outputs either true or false. If not a boolean throws an exception.",
 	"params": [

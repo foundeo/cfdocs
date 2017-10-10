@@ -2,7 +2,7 @@
 	"name":"spreadsheetGetCellFormula",
 	"type":"function",
 	"syntax":"spreadsheetGetCellFormula(spreadsheetObj, row, column)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets the formula for a for an Excel spreadsheet object cell, or all formulas for the object.",
 	"params": [

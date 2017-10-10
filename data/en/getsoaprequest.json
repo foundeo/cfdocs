@@ -2,7 +2,7 @@
 	"name":"getSOAPRequest",
 	"type":"function",
 	"syntax":"getSOAPRequest()",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Returns an XML object that contains the entire SOAP\n request. Usually called from within a web service CFC.",
 	"params": [

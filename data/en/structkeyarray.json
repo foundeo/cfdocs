@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"structKeyArray(structure)",
     "member":"someStruct.keyArray()",
-	"returns":"Array",
+	"returns":"array",
 	"related":[],
 	"description":"Returns the keys in a CFML structure as an array. If structure does not exist throws an exception.",
 	"params": [

@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"imageGetIPTCtag(name, tagName)",
 	"member":"someImage.getIPTCtag(tagName)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Retrieves the value of the IPTC tag for a ColdFusion image.",
 	"params": [
@@ -18,7 +18,7 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",

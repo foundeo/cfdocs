@@ -2,7 +2,7 @@
 	"name":"REFindNoCase",
 	"type":"function",
 	"syntax":"REFindNoCase(reg_expression, String [, start] [, returnsubexpressions])",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Uses a regular expression (RE) to search a string for a pattern,\n starting from a specified position. The search is\n case-insensitive.",
 	"params": [

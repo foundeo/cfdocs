@@ -2,11 +2,11 @@
 	"name":"createObject",
 	"type":"function",
 	"syntax":"createObject(type, class)",
-	"returns":"Object",
+	"returns":"any",
 	"related":["cfobject","cfinvoke"],
 	"description":"The createObject function takes different arguments depending on the value of the type argument:\n\n createObject('component', cfcName)\n createObject('java', class)\n createObject('webservice', urltowsdl, [, portname])\n createObject('.NET', class, assembly [, server, port, protocol, secure])\n createObject('com', class, context, serverName)",
 	"params": [
-		{"name":"type","description":"The type of ","required":true,"default":"","type":"String","values":["component","corba","com","java","webservice",".NET","dotnet"]},
+		{"name":"type","description":"The type of object","required":true,"default":"","type":"String","values":["component","corba","com","java","webservice",".NET","dotnet"]},
 		{"name":"context","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"class","description":"","required":true,"default":"","type":"String","values":[]},
 		{"name":"locale","description":"","required":true,"default":"","type":"String","values":[]},

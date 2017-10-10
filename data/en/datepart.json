@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"datePart(datepart, date)",
 	"member":"date.datePart(datepart)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["year", "quarter", "month", "dayOfYear", "day", "dayOfWeek", "week", "hour", "minute", "second"],
 	"description":"Extracts a part from a datetime value as a numeric.",
 	"params": [

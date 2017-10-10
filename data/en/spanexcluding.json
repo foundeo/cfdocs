@@ -2,7 +2,7 @@
 	"name":"spanExcluding",
 	"type":"function",
 	"syntax":"spanExcluding(String, set)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets characters from a string, from the beginning to a\n character that is in a specified set of characters. The\n search is case-sensitive.",
 	"params": [

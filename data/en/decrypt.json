@@ -2,7 +2,7 @@
 	"name":"decrypt",
 	"type":"function",
 	"syntax":"decrypt(encrypted_string, key [, algorithm] [, encoding] [, ivorsalt] [, iterations])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Decrypts a string that is encrypted with the Encrypt function.",
 	"params": [

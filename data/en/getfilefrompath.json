@@ -2,7 +2,7 @@
 	"name":"getFileFromPath",
 	"type":"function",
 	"syntax":"getFileFromPath(path)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Extracts a filename from an absolute path.",
 	"params": [

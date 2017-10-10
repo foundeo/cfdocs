@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"arrayMap(array, function(item [,index, array]))",
 	"member":"someArray.map(function(item [,index, array]))",
-	"returns":"Array",
+	"returns":"array",
 	"related":["arrayReduce"],
 	"description":"Iterates over every entry of the array and calls the closure function to work on the element of the array. The returned value will be set at the same index in a new array and the new array will be returned",
 	"engines": {
@@ -37,5 +37,5 @@
 			"result": "[4, 18, 51]"
 		}
     ]
-	
+
 }

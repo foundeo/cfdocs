@@ -2,7 +2,7 @@
 	"name":"binaryEncode",
 	"type":"function",
 	"syntax":"binaryEncode(binarydata, encoding)",
-	"returns":"String",
+	"returns":"string",
 	"related":["binaryDecode"],
 	"description":" Converts binary data to a string.",
 	"params": [

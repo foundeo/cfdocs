@@ -2,7 +2,7 @@
 	"name":"listToArray",
 	"type":"function",
 	"syntax":"listToArray(list [, delimiters] [, includeEmptyFields] [, multiCharacterDelimiter])",
-	"returns":"Array",
+	"returns":"array",
 	"related":["ArrayToList"],
 	"description":" Copies the elements of a list to an array.",
 	"params": [

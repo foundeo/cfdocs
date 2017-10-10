@@ -2,7 +2,7 @@
 	"name":"getSOAPResponse",
 	"type":"function",
 	"syntax":"getSOAPResponse(webservice)",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Returns an XML object that contains the entire\n SOAP response after invoking a web service.",
 	"params": [

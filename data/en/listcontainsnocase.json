@@ -2,7 +2,7 @@
 	"name":"listContainsNoCase",
 	"type":"function",
 	"syntax":"listContainsNoCase(list, substring [, delimiters])",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Determines the index of the first list element that contains a\n specified substring.",
 	"params": [

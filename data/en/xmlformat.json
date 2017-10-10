@@ -2,7 +2,7 @@
 	"name":"XMLFormat",
 	"type":"function",
 	"syntax":"XMLFormat(String [, escapeChars])",
-	"returns":"String",
+	"returns":"string",
 	"related":["encodeForXML"],
 	"description":"Escapes XML special characters in a string, so that the string is safe to use with XML.",
 	"discouraged":"Adobe recommends using encodeForXML instead of XMLFormat.",
@@ -28,7 +28,7 @@
 			"result":"&lt;node&gt;Good &amp;amp; Juicy&lt;/node&gt;",
 			"runnable":true
 		}
-		
+
 	]
 
 }

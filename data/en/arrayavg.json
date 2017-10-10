@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"arrayAvg(array)",
 	"member":"someArray.avg()",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["Arraylen"],
 	"description":" Calculates the average of the values in an array.\n All elements in the array must contain values that can be\n automatically converted to numeric.",
 	"params": [

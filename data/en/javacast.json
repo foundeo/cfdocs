@@ -2,7 +2,7 @@
 	"name":"javacast",
 	"type":"function",
 	"syntax":"javacast(type, variable)",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":"Converts the data type of a CFML variable to pass as an argument to an overloaded method of a Java object.",
 	"params": [

@@ -2,7 +2,7 @@
 	"name":"getPrinterList",
 	"type":"function",
 	"syntax":"getPrinterList(printer)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Returns list of printers accessible by the ColdFusion server",
 	"params": [

@@ -2,7 +2,7 @@
 	"name": "beat",
 	"type": "function",
 	"syntax": "beat([time])",
-	"returns": "number",
+	"returns": "numeric",
 	"related": [],
 	"description": "Outputs the swatch internet time (or beat time) of the passed local time.",
 	"params": [

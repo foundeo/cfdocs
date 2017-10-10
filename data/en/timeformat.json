@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"timeFormat(time [, mask])",
 	"member":"time.timeFormat([mask])",
-	"returns":"String",
+	"returns":"string",
 	"related":["lsTimeFormat", "dateFormat"],
 	"description":"Formats a time value using US English time formatting conventions. If no mask is specified, returns a time value using the hh:mm tt format. For international time formatting, see LSTimeFormat.",
 	"params": [

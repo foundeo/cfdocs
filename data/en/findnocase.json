@@ -2,7 +2,7 @@
 	"name":"findNoCase",
 	"type":"function",
 	"syntax":"findNoCase(substring, String [, start])",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Finds the first occurrence of a substring in a string, from a\n specified start position. If substring is not in string,\n returns zero. The search is case-insensitive.",
 	"params": [

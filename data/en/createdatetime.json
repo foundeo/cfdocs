@@ -2,7 +2,7 @@
 	"name":"createDateTime",
 	"type":"function",
 	"syntax":"createDateTime(year, month, day, hour, minute, second)",
-	"returns":"DateTime",
+	"returns":"date",
 	"related":["createDate", "createTime", "createODBCDateTime"],
 	"description":" Creates a date-time object.",
 	"params": [

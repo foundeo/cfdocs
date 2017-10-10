@@ -2,7 +2,7 @@
 	"name":"listLen",
 	"type":"function",
 	"syntax":"listLen(list [, delimiters, [includeEmptyValues]])",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Determines the number of elements in a list.",
 	"params": [

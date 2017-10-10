@@ -2,7 +2,7 @@
 	"name":"URLDecode",
 	"type":"function",
 	"syntax":"URLDecode(urlencodedstring [, charset])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":"Decodes a URL-encoded string.",
 	"params": [

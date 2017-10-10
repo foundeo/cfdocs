@@ -2,7 +2,7 @@
 	"name":"spreadsheetGetCellComment",
 	"type":"function",
 	"syntax":"spreadsheetGetCellComment(author [, column] [, comment] [, row])",
-	"returns":"Array",
+	"returns":"array",
 	"related":[],
 	"description":" Gets the comment for an Excel spreadsheet object cell as a structure with formatting information, or all comments for the object.",
 	"params": [

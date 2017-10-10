@@ -2,7 +2,7 @@
 	"name":"throw",
 	"type":"function",
 	"syntax":"throw([message] [, type] [, detail] [, errorcode] [, extendedinfo] [, object])",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":"Throws a developer-specified exception, which can be caught\n with a catch block.",
 	"params": [

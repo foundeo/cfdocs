@@ -2,7 +2,7 @@
 	"name": "collectionFilter",
 	"type": "function",
 	"syntax": "collectionFilter(collection, filter [, parallel] [, maxThreads])",
-	"returns": "object",
+	"returns": "any",
 	"related": [],
 	"description": "",
 	"params": [

@@ -2,7 +2,7 @@
 	"name":"writeOutput",
 	"type":"function",
 	"syntax":"writeOutput(string)",
-	"returns":"String",
+	"returns":"string",
 	"related":["cfoutput","encodeForHTML"],
 	"description":" Appends text to the page-output stream.\n This function writes to the page-output stream regardless of\n conditions established by the cfsetting tag.",
 	"params": [

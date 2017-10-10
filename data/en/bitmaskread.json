@@ -2,7 +2,7 @@
 	"name":"bitMaskRead",
 	"type":"function",
 	"syntax":"bitMaskRead(number, start, length)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Performs a bitwise mask read operation.\n Returns an integer representation of the corresponding bits specified in the mask.",
 	"params": [

@@ -2,7 +2,7 @@
 	"name":"structFind",
 	"type":"function",
 	"syntax":"structFind(structure, key)",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Determines the value associated with a key in a structure.",
 	"params": [

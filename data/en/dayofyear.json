@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"dayOfYear(date)",
 	"member":"date.dayOfYear()",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["day", "dayOfWeek", "dayOfWeekAsString", "daysInMonth", "daysInYear", "firstDayOfMonth"],
 	"description":" Determines the day of the year, in a date.",
 	"params": [

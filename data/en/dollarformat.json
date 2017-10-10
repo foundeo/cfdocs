@@ -2,7 +2,7 @@
 	"name":"dollarFormat",
 	"type":"function",
 	"syntax":"dollarFormat(number)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Formats a string in U.S. currency format. (For other currencies, use\n LSCurrencyFormat or LSEuroCurrencyFormat.).",
 	"params": [

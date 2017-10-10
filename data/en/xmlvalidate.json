@@ -2,7 +2,7 @@
 	"name":"XMLValidate",
 	"type":"function",
 	"syntax":"XMLValidate(xmlDoc [, validator])",
-	"returns":"Struct",
+	"returns":"struct",
 	"related":["isxml"],
 	"description":"Uses a Document Type Definition (DTD) or XML Schema to validate an XML text document or an XML document object. Returns keys `status` (boolean), `errors` (array), `fatalerrors` (array) and `warnings` (array)",
 	"params": [
