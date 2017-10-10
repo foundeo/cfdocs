@@ -1,1 +1,104 @@
-{"syntax":"<cf_socialplugin .. \/>","description":"Dynamically generate social elements for Facebook, Google +, Twitter.\r\n\r\nThe supported widgets are:\r\n\r\nLike button\r\nTweet button\r\nFacebook comment box\r\nGoogle Plus button\r\nFacebook subscribe button\r\nLike box\r\nActivity feed\r\nFollow","engines":{"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/developing-applications/developing-cfml-applications/social-enhancements.html","notes":""}},"name":"cf_socialplugin","links":[],"params":[{"values":["like","likebox","activityfeed","follow","plusone","commentbox","subscribe","tweet"],"default":"","description":"","name":"type","type":"String","required":"1"},{"values":["light","dark"],"default":"","description":"","name":"colorscheme","type":"String","required":"0"},{"values":[],"default":"","description":"","name":"","type":"Any","required":"0"}],"returns":"any","examples":[{"result":"","title":"Like Button","description":"","code":"\r\n<cf_socialplugin type = \"like\"\r\n url = \"\"\r\n layout = \"standard|box_count|button_count\"\r\n showfaces = \"true|false\"\r\n verb = \"like|recommend\"\r\n colorscheme = \"light|dark\"\r\n style = \"\"\r\n width = \"\"\r\n extraoptions = \"\"\r\n>"},{"result":"","title":"LikeBox Button","description":"","code":"\r\n<cf_socialplugin type = \"likebox\"\r\n url = \"\"\r\n showfaces = \"true|false\"\r\n showstream = \"true|false\"\r\n showheader = \"true|false\"\r\n colorscheme = \"light|dark\"\r\n style = \"\"\r\n height = \"\"\r\n width = \"\"\r\n extraoptions = \"\"\r\n>"},{"result":"","title":"ActivityFeed","description":"","code":"<cf_socialplugin type = \"activityfeed\" \r\n appid= \"facebook_app_id\"\r\n width = \"\"\r\n height = \"\"\r\n colorscheme = \"light|dark\"\r\n showheader = \"true|false\"\r\n action = \"\"\r\n linktarget = \"\"\r\n recommendations = \"\"\r\n style = \"\"\r\n extraoptions = \"\"\r\n>"},{"result":"","title":"Follow Button","description":"","code":"\r\n<cf_socialplugin type = \"follow\"\r\n showcount= \"true|false\"\r\n buttonsize= \"medium|large\"\r\n language = \"en|fr|..........\"\r\n showusername = \"true|false\"\r\n username = \"\"\r\n style = \"\"\r\n extraoptions = \"\"\r\n>"},{"result":"","title":"PlusOne Button","description":"","code":"<cf_socialplugin type = \"plusone\"\r\n url = \"url to plus one\"\r\n buttonsize= \"small|medium|large|tall\"\r\n language = \"en|fr|..........\"\r\n width = \"\"\r\n annotation = \"none|inline|bubble\"\r\n style = \"\"\r\n extraoptions = \"\"\r\n>"},{"result":"","title":"Comment Box","description":"","code":"<cf_socialplugin type = \"commentbox\"\r\n url = \"url\"\r\n width= \"\"\r\n colorscheme = \"dark|light\"\r\n numberofposts = \"\"\r\n style = \"\"\r\n extraoptions = \"\"\r\n>"},{"result":"","title":"Subscribe Button","description":"","code":"<cf_socialplugin type = \"subscribe\"\r\n url = \"profile to subscribe\"\r\n width= \"\"\r\n colorscheme = \"dark|light\"\r\n showfaces = \"true|false\"\r\n layout = \"standard|button_count|box_count\"\r\n style = \"\"\r\n extraoptions\r\n>"},{"result":"","title":"Tweet Button","description":"","code":"<cf_socialplugin type = \"tweet\"\r\n url = \"url to share\"\r\n tweettext = \"default tweet text\"\r\n language = \"en|fr|..........\"\r\n count = \"none|vertical|horizontal\"\r\n hashtag = \"comma separated hash tags appended to \r\n tweet text\"\r\n buttonsize = \"small|large\"\r\n via = \"\"\r\n recommend = \"\"\r\n style = \"\"\r\n extraoptions = \"\"\r\n>"}],"type":"tag","related":[]}
+{
+  "syntax": "<cf_socialplugin .. \/>",
+  "description": "Dynamically generate social elements for Facebook, Google +, Twitter.\r\n\r\nThe supported widgets are:\r\n\r\nLike button\r\nTweet button\r\nFacebook comment box\r\nGoogle Plus button\r\nFacebook subscribe button\r\nLike box\r\nActivity feed\r\nFollow",
+  "engines": {
+    "coldfusion": {
+      "minimum_version": "11",
+      "docs": "https://helpx.adobe.com/coldfusion/developing-applications/developing-cfml-applications/social-enhancements.html",
+      "notes": ""
+    }
+  },
+  "name": "cf_socialplugin",
+  "links": [],
+  "params": [
+    {
+      "values": [
+        "like",
+        "likebox",
+        "activityfeed",
+        "follow",
+        "plusone",
+        "commentbox",
+        "subscribe",
+        "tweet"
+      ],
+      "default": "",
+      "description": "",
+      "name": "type",
+      "type": "String",
+      "required": "1"
+    },
+    {
+      "values": [
+        "light",
+        "dark"
+      ],
+      "default": "",
+      "description": "",
+      "name": "colorscheme",
+      "type": "String",
+      "required": "0"
+    },
+    {
+      "values": [],
+      "default": "",
+      "description": "",
+      "name": "",
+      "type": "Any",
+      "required": "0"
+    }
+  ],
+  "returns": "any",
+  "examples": [
+    {
+      "result": "",
+      "title": "Like Button",
+      "description": "",
+      "code": "\r\n<cf_socialplugin type = \"like\"\r\n url = \"\"\r\n layout = \"standard|box_count|button_count\"\r\n showfaces = \"true|false\"\r\n verb = \"like|recommend\"\r\n colorscheme = \"light|dark\"\r\n style = \"\"\r\n width = \"\"\r\n extraoptions = \"\"\r\n>"
+    },
+    {
+      "result": "",
+      "title": "LikeBox Button",
+      "description": "",
+      "code": "\r\n<cf_socialplugin type = \"likebox\"\r\n url = \"\"\r\n showfaces = \"true|false\"\r\n showstream = \"true|false\"\r\n showheader = \"true|false\"\r\n colorscheme = \"light|dark\"\r\n style = \"\"\r\n height = \"\"\r\n width = \"\"\r\n extraoptions = \"\"\r\n>"
+    },
+    {
+      "result": "",
+      "title": "ActivityFeed",
+      "description": "",
+      "code": "<cf_socialplugin type = \"activityfeed\" \r\n appid= \"facebook_app_id\"\r\n width = \"\"\r\n height = \"\"\r\n colorscheme = \"light|dark\"\r\n showheader = \"true|false\"\r\n action = \"\"\r\n linktarget = \"\"\r\n recommendations = \"\"\r\n style = \"\"\r\n extraoptions = \"\"\r\n>"
+    },
+    {
+      "result": "",
+      "title": "Follow Button",
+      "description": "",
+      "code": "\r\n<cf_socialplugin type = \"follow\"\r\n showcount= \"true|false\"\r\n buttonsize= \"medium|large\"\r\n language = \"en|fr|..........\"\r\n showusername = \"true|false\"\r\n username = \"\"\r\n style = \"\"\r\n extraoptions = \"\"\r\n>"
+    },
+    {
+      "result": "",
+      "title": "PlusOne Button",
+      "description": "",
+      "code": "<cf_socialplugin type = \"plusone\"\r\n url = \"url to plus one\"\r\n buttonsize= \"small|medium|large|tall\"\r\n language = \"en|fr|..........\"\r\n width = \"\"\r\n annotation = \"none|inline|bubble\"\r\n style = \"\"\r\n extraoptions = \"\"\r\n>"
+    },
+    {
+      "result": "",
+      "title": "Comment Box",
+      "description": "",
+      "code": "<cf_socialplugin type = \"commentbox\"\r\n url = \"url\"\r\n width= \"\"\r\n colorscheme = \"dark|light\"\r\n numberofposts = \"\"\r\n style = \"\"\r\n extraoptions = \"\"\r\n>"
+    },
+    {
+      "result": "",
+      "title": "Subscribe Button",
+      "description": "",
+      "code": "<cf_socialplugin type = \"subscribe\"\r\n url = \"profile to subscribe\"\r\n width= \"\"\r\n colorscheme = \"dark|light\"\r\n showfaces = \"true|false\"\r\n layout = \"standard|button_count|box_count\"\r\n style = \"\"\r\n extraoptions\r\n>"
+    },
+    {
+      "result": "",
+      "title": "Tweet Button",
+      "description": "",
+      "code": "<cf_socialplugin type = \"tweet\"\r\n url = \"url to share\"\r\n tweettext = \"default tweet text\"\r\n language = \"en|fr|..........\"\r\n count = \"none|vertical|horizontal\"\r\n hashtag = \"comma separated hash tags appended to \r\n tweet text\"\r\n buttonsize = \"small|large\"\r\n via = \"\"\r\n recommend = \"\"\r\n style = \"\"\r\n extraoptions = \"\"\r\n>"
+    }
+  ],
+  "type": "tag",
+  "related": []
+}
