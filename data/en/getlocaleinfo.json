@@ -8,7 +8,7 @@
 	"discouraged":"Only add this key if this tag/function is discouraged by the community.",
 	"params": [
 	    {"name":"locale","description":"Geographic/language locale value","required":true,"default":"getLocale()","type":"string","values":["en","de_DE","de_ch","..."]},
-	    {"name":"displayLocale","description":"Locale's display name/Output language","required":false,"default":"getLocaleDisplayName()","type":"string","values":["English","German","French","..."]},
+	    {"name":"displayLocale","description":"Locale's display name/Output language","required":false,"default":"getLocaleDisplayName()","type":"string","values":["English","German","French","..."]}
 	],
 	"engines": {
         "lucee": {"minimum_version":"5", "notes":"Combines the locale functions <code>getLocaleCountry</code>, <code>getLocaleDisplayName</code>, <code>getLocaleInfo</code>, <code>getLocaleLanguage</code> to a single function", "docs":""}
