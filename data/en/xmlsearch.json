@@ -15,7 +15,11 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/xmlsearch"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/xmlsearch"}
 	},
-	"links": [],
+	"links": [{
+			"title":"Title of a blog entry that has good info about this.",
+			"description":"Description of the link",
+			"url":"http://www.example.com/a/b.cfm"
+	}],
 	"examples": [{
 		"title":"Read specific properties from XML collection",
 		"description":"XPath extracts 'name' property from every user given in the XML collection",
