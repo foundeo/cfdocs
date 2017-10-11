@@ -20,7 +20,7 @@
 		{"values":[],"default":"","description":"Initial value which will be used for the reduce operation. The type is any.","name":"intialValue","type":"Any","required":"0"},
 		{"values":[],"default":"comma","description":"The list delimiter.","name":"delimiter","type":"String","required":"0"},{"values":[],"default":"false","description":"Include empty values.","name":"includeEmptyFields","type":"Boolean","required":"0"}
 	],
-	"returns":"Any",
+	"returns":"any",
 	"examples":[{
 			"title": "Script Syntax",
 			"description": "",

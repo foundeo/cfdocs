@@ -29,7 +29,15 @@
 			"code":"<cfset q = queryNew(\"name,beers\",\r\n    \"varchar,integer\",\r\n    [ {\"name\":\"John\",\"beers\":2}, {\"name\":\"Pete\",\"beers\":1} ])> \r\n\r\n<!--- Make a spreadsheet object ---> \r\n<cfset s = spreadsheetNew()> \r\n<!--- Add header row ---> \r\n<cfset spreadsheetAddRow(s, \"Name,Beers\")> \r\n<!--- Add query ---> \r\n<cfset spreadsheetAddRows(s, q)> \r\n<cfdump var=\"#s#\" />",
 			"result":"",
 			"runnable":true
+		},
+		{
+			"title":"CF2016: Adding rows to a spreadsheet from a Query using column names as headers",
+			"description":"You need to state the row, column, insert and datatype arguments before you can change includeColumnNames to true as ACF internal functions don't allow named arguments. ",
+			"code":"<cfset q = queryNew(\"name,beers\",\r\n    \"varchar,integer\",\r\n    [ {\"name\":\"John\",\"beers\":2}, {\"name\":\"Pete\",\"beers\":1} ])> \r\n\r\n<!--- Make a spreadsheet object ---> \r\n<cfset s = spreadsheetNew()> \r\n<!--- Add query and preserve column names ---> \r\n<cfset spreadsheetAddrows(s,q,1,1,true,[\"\"],true)> \r\n<cfdump var=\"#s#\" />",
+			"result":"",
+			"runnable":true
 		}
+      
 	]
 
 }

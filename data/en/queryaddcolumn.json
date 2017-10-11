@@ -2,7 +2,7 @@
 	"name":"queryAddColumn",
 	"type":"function",
 	"syntax":"queryAddColumn(query, column_name [, datatype], array_name)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Adds a column to a query and populates its rows with the\n contents of a one-dimensional array. Pads query columns,\n if necessary, to ensure that all columns have the same number\n of rows.",
 	"params": [

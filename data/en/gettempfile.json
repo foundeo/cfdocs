@@ -2,7 +2,7 @@
 	"name":"getTempFile",
 	"type":"function",
 	"syntax":"getTempFile(dir, prefix)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Creates a temporary file in a directory whose name starts with\n (at most) the first three characters of prefix.",
 	"params": [

@@ -2,7 +2,7 @@
 	"name":"entityLoadByPK",
 	"type":"function",
 	"syntax":"entityLoadByPK(entityName, id)",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Loads and returns an array of objects for given primary key.",
 	"params": [

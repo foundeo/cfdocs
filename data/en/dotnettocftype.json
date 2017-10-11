@@ -2,7 +2,7 @@
 	"name":"dotnetToCFType",
 	"type":"function",
 	"syntax":"dotnetToCFType(variable_name)",
-	"returns":"Any",
+	"returns":"any",
 	"related":[],
 	"description":" Explicitly converts a value returned by a .NET method to the corresponding ColdFusion data type.",
 	"params": [

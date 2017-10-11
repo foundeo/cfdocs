@@ -4,7 +4,7 @@
 	"syntax": "empty(variable)",
 	"returns": "boolean",
 	"related": [],
-	"description": "",
+	"description": "This function is deprecated. Use IsEmpty() instead.",
 	"params": [
 		{"name": "variable", "description": "", "required": true, "default": "", "type": "variablestring", "values": []}
 	],

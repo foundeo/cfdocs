@@ -40,13 +40,23 @@ $(document).ready(function() {
       var index = $(this).attr('data-index');
       $('#example-modal-content').html('<iframe width="100%" height="450" border="0" src="/try/' + name + '/' + index + '">');
       $('.example-modal').modal();
-      if (document.location.protocol == "https:") {
-        alert("FYI Running Examples over HTTPS may not work on some browsers because trycf.com does not also run over HTTPS. Browsers with strong mixed content controls will block the cross domain execution.")
-      }
+      
   });
 
   if ($('.prettyprint').length != 0 && typeof(prettyPrint) == "function") {
       prettyPrint();
+  }
+  if (window.innerWidth > 780) {
+    $( window ).scroll(function(e) {
+      var top  = window.pageYOffset || document.documentElement.scrollTop;
+      if (top > 100) {
+        //show
+        $('#foundeo').addClass('foundeoAppear');
+      } else {
+        //hide
+        $('#foundeo').removeClass('foundeoAppear'); 
+      }
+    });
   }
 
 });

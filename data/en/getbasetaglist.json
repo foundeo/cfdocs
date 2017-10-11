@@ -2,7 +2,7 @@
 	"name":"getBaseTagList",
 	"type":"function",
 	"syntax":"getBaseTagList()",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets ancestor tag names, starting with the parent tag.",
 	"params": [

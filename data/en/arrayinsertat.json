@@ -19,6 +19,16 @@
 	},
 	"links": [
 
+	], 
+	"examples": [
+		
+		{
+			"title":"Insert an Item in an Array at Position 2",
+			"description":"Inserts the number 4 at position 2",
+			"code":"someArray = [1,2,3];\r\narrayInsertAt(someArray, 2, 4);\r\nwriteOutput(serializeJSON(someArray));",
+			"result":"[1,4,2,3]",
+			"runnable":true
+		}
 	]
 
 }

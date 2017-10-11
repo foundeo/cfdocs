@@ -18,6 +18,21 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag version",
+			"description": "",
+			"code": "<cftimer label=\"Nap time\" type=\"inline\">\nBegin some long running process ...\n<cfset sleep(2000)>\ndone.\n</cftimer>",
+			"result": "The time elapsed while executing the code inside the <cftimer> block should be displayed inline.",
+			"runnable": false
+		},
+		{
+			"title": "Script version",
+			"description": "",
+			"code": "cftimer(label = \"Nap time\", type=\"outline\"){\nwriteoutput(\"Begin some long running process ... \");\nsleep(2000);\nwriteoutput(\"done.\");\n}",
+			"result": "The time elapsed while executing the code inside the cftimer block should be displayed in the output with an outline around any output generated within the cftimer call..",
+			"runnable": false
+		}
 	]
-
 }

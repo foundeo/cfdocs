@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"arrayToList(array [, delimiter])",
 	"member":"someArray.toList([delimiter])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Converts a one-dimensional array to a list.",
 	"params": [

@@ -4,7 +4,7 @@
 			<h1 id="docname">#data.name#</h1>
 			<p>#autoLink(data.description)#</p>
 			<cfif StructKeyExists(data, "syntax") AND Len(data.syntax)>
-				<p id="syntax"><cfif data.type IS "tag"><small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;</cfif><code>#Replace(HTMLEditFormat(data.syntax), Chr(10), "<br>", "ALL")#<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)> <em>&##8594; returns #XmlFormat(data.returns)#</em></cfif></code></p>
+				<p id="syntax"><cfif data.type IS "tag"><small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;</cfif><code>#Replace(encodeForHTML(data.syntax), Chr(10), "<br>", "ALL")#<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)> <em>&##8594; returns #encodeForHTML(data.returns)#</em></cfif></code></p>
 				<cfif data.type IS "tag">
 					<cfif StructKeyExists(data, "script")>
 						<cfset data.scriptTitle = "Script Syntax">
@@ -23,14 +23,14 @@
 					</cfif>
 					<cfif StructKeyExists(data, "script")>
 						<p id="script-syntax">
-							<small><span class="glyphicon glyphicon-flash" title="#HTMLEditFormat(data.scriptTitle)#"></span></small> &nbsp;<code>#HTMLEditFormat(data.script)#</code>
+							<small><span class="glyphicon glyphicon-flash" title="#encodeForHTMLAttribute(data.scriptTitle)#"></span></small> &nbsp;<code>#encodeForHTML(data.script)#</code>
 						</p>
 					</cfif>
 				<cfelseif data.type is "function">
 					<cfif StructKeyExists(data, "member")>
 					 	<h4><em>Member Function Syntax</em></h4>
 						<p id="member-syntax">
-							<code>#HTMLEditFormat(data.member)#</code>
+							<code>#encodeForHTML(data.member)#</code>
 						</p>
 					</cfif>
 				</cfif>
@@ -59,7 +59,7 @@
 			</cfif>
 			<cfif StructKeyExists(data, "discouraged") AND Len(data.discouraged)>
 				<div class="alert alert-danger">
-					<h4><span class="glyphicon glyphicon-warning-sign"></span> Discouraged: #autoLink(htmlEditFormat(data.discouraged))#</h4>
+					<h4><span class="glyphicon glyphicon-warning-sign"></span> Discouraged: #autoLink(encodeForHTML(data.discouraged))#</h4>
 				</div>
 			</cfif>
 		</div>
@@ -77,16 +77,16 @@
 			<cfif Len(cat)><li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li></cfif>
 			<li class="active">#data.name#</li>
 
-			<hr class="visible-xs-block" />
+			
 
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "coldfusion") AND StructKeyExists(data.engines.coldfusion, "docs") AND Len(data.engines.coldfusion.docs)>
 				<li class="pull-right">
-					<a href="#data.engines.coldfusion.docs#" title="Official Adobe ColdFusion Docs" class="label label-acf">CF<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)>#XmlFormat(data.engines.coldfusion.minimum_version)#+</cfif></a>
+					<a href="#data.engines.coldfusion.docs#" title="Official Adobe ColdFusion Docs" class="label label-acf">CF<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)>#encodeForHTML(data.engines.coldfusion.minimum_version)#+</cfif></a>
 				</li>
 			</cfif>
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "lucee") AND StructKeyExists(data.engines.lucee, "docs") AND Len(data.engines.lucee.docs)>
 				<li class="pull-right">
-					<a href="#data.engines.lucee.docs#" title="Official Lucee Docs" class="label label-lucee">Lucee<cfif StructKeyExists(data.engines.lucee, "minimum_version") AND Len(data.engines.lucee.minimum_version)>#XmlFormat(data.engines.lucee.minimum_version)#+</cfif></a>
+					<a href="#data.engines.lucee.docs#" title="Official Lucee Docs" class="label label-lucee">Lucee<cfif StructKeyExists(data.engines.lucee, "minimum_version") AND Len(data.engines.lucee.minimum_version)>#encodeForHTML(data.engines.lucee.minimum_version)#+</cfif></a>
 				</li>
 			</cfif>
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "openbd") AND StructKeyExists(data.engines.openbd, "docs") AND Len(data.engines.openbd.docs)>
@@ -100,7 +100,7 @@
 			<li class="pull-right">
 				<a href="https://github.com/foundeo/cfdocs/issues/new?title=#encodeForURL(data.name)#" rel="nofollow" class="label label-warning" title="Report an Issue">Issue</a>
 			</li>
-			<cfif StructKeyExists(request,"gitFilePath") AND Len(request.gitFilePath)>
+			<cfif StructKeyExists(request,"gitFilePath") AND Len(request.gitFilePath) AND not (REFind("(cf|lucee)[0-9]{1,3}",data.name) OR ArrayContains(['tags','functions','guides','all','categories'],data.name) )>
 				<li class="pull-right">
 					<a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="label label-danger">Edit</a>
 				</li>
@@ -129,50 +129,42 @@
 		<cfif StructKeyExists(data, "params") AND ArrayLen(data.params)>
 			<h2>
 				<cfif data.type IS "tag">
-					Attribute Reference <small>for the <span class="item-name">#data.name#</span> tag</small>
+					#encodeForHTML(data.name)# Attribute Reference
 				<cfelseif data.type IS "function">
-					Argument Reference <small>for the <span class="item-name">#data.name#</span> function</small>
+					#encodeForHTML(data.name)# Argument Reference
 				<cfelse>
-					<span class="item-name">#data.name#</span>
+					<span class="item-name">#encodeForHTML(data.name)#</span>
 				</cfif>
 			</h2>
+			
 
-			<div class="row hidden-xs">
-				<div class="col-sm-3"><strong>Name</strong></div>
-				<div class="col-sm-1"><strong>Required</strong></div>
-				<div class="col-sm-2"><strong>Default</strong></div>
-				<div class="col-sm-6"><strong>Description</strong></div>
-			</div>
-
-			<hr class="hidden-xs" />
 
 			<cfloop array="#data.params#" index="p">
-				<div class="row" id="p-#XmlFormat(p.name)#">
-					<div class="col-sm-3"><h4>#XmlFormat(p.name)#</h4></div>
-					<div class="col-sm-1"><strong class="visible-xs-inline">Required: </strong><cfif IsBoolean(p.required)>#YesNoFormat(p.required)#<cfelse>#p.required#</cfif></div>
-					<cfif structKeyExists(p, "default") and len( trim( p.default ) )>
-						<div class="col-sm-2">
-							<strong class="visible-xs-inline">Default: </strong>
-							#XmlFormat(p.default)#
-						</div>
-					<cfelse>
-						<div class="col-sm-2 hidden-xs"></div>
-					</cfif>
-					<div class="col-sm-6">
-						#autoLink( p.description )#
+				<div class="param" id="p-#encodeForHTMLAttribute(p.name)#">
+					<h4>
+						#encodeForHTML(p.name)#
+						<cfif structKeyExists(p, "type") and len( p.type )><em><span class="text-muted">#encodeForHTML(p.type)#</span></em></cfif>
+						<cfif IsBoolean(p.required) AND p.required><div class="pull-right"><span class="label label-danger">Required</span></div></cfif>
+						<cfif structKeyExists(p, "default") and len( trim( p.default ) )>
+								<div class="p-default pull-right"><span class="text-muted">Default:</span> <code>#encodeForHTML(p.default)#</code></div>
+						</cfif>
+					</h4>
+					<div class="p-desc">						
+						#autoLink( p.description )# 
 						<cfif StructKeyExists(p, "values") AND IsArray(p.values) AND ArrayLen(p.values)>
 							<cfif uCase(arrayToList(p.values)) IS NOT "YES,NO">
-								<strong class="visible-xs-block">Values: </strong>
-								<ul>
-									<cfloop array="#p.values#" index="i">
-										<li><code>#XmlFormat(i)#</code></li>
-									</cfloop>
-								</ul>
+								<div>
+									<strong>Values: </strong>
+									<ul>
+										<cfloop array="#p.values#" index="i">
+											<li><code>#encodeForHTML(i)#</code></li>
+										</cfloop>
+									</ul>
+								</div>
 							</cfif>
-						</cfif>
+						</cfif>						
 					</div>
-				</div>
-				<hr class="visible-xs-block" />
+				</div>			
 			</cfloop>
 		</cfif>
 
@@ -196,13 +188,13 @@
 											<strong>REMOVED</strong> in version #encodeForHTML(data.engines[i].removed)#
 										</cfif>
 										<cfif StructKeyExists(data.engines[i], "notes") AND Len(data.engines[i].notes)>
-											#autoLink(XmlFormat(data.engines[i].notes))#
+											#autoLink(encodeForHTML(data.engines[i].notes))#
 										</cfif>
 									</div>
 								<cfelse>
 									<div class="alert alert-warning">
-										<cfif Len(data.engines[i].minimum_version)><span class="label label-danger">Version #XmlFormat(data.engines[i].minimum_version)#+</span></cfif>
-										#autoLink(XmlFormat(data.engines[i].notes))#
+										<cfif Len(data.engines[i].minimum_version)><span class="label label-danger">Version #encodeForHTML(data.engines[i].minimum_version)#+</span></cfif>
+										#autoLink(encodeForHTML(data.engines[i].notes))#
 									</div>
 								</cfif>
 							</div>
@@ -220,7 +212,7 @@
 			<h2>Links <small>more information about #data.name#</small></h2>
 			<ul>
 				<cfloop array="#data.links#" index="link">
-					<li><a href="#link.url#">#link.title#</a><cfif StructKeyExists(link, "description") AND Len(link.description)> - #autoLink(XmlFormat(link.description))#</cfif></li>
+					<li><a href="#link.url#">#link.title#</a><cfif StructKeyExists(link, "description") AND Len(link.description)> - #autoLink(encodeForHTML(link.description))#</cfif></li>
 				</cfloop>
 			</ul>
 		</cfif>
@@ -241,9 +233,9 @@
 					</cfif>
 				</h4>
 				<p class="clearfix">#autoLink(ex.description)#</p>
-				<pre class="prettyprint"><code>#HTMLEditFormat(ex.code)#</code></pre>
+				<pre class="prettyprint"><code>#encodeForHTML(ex.code)#</code></pre>
 				<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
-					<p><strong>Expected Result: </strong> #XmlFormat(ex.result)#</p>
+					<p><strong>Expected Result: </strong> #encodeForHTML(ex.result)#</p>
 				</cfif>
 			</cfloop>
 			<div class="modal fade example-modal" tabindex="-1" role="dialog">
@@ -251,7 +243,7 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title">#XmlFormat(data.name)# Example</h4>
+							<h4 class="modal-title">#encodeForHTML(data.name)# Example</h4>
 						</div>
 						<div class="modal-body" id="example-modal-content">
 						</div>

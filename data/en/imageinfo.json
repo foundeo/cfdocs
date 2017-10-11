@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"imageInfo(name)",
 	"member":"someImage.info()",
-	"returns":"Struct",
+	"returns":"struct",
 	"related":[],
 	"description":" Returns a structure that contains information about the image, such as height, width, color model, size, and filename.",
 	"params": [

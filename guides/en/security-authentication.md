@@ -49,7 +49,7 @@ We'll start exploring how to build a secure authentication mechanism by examinin
 Let's start by looking at our login() controller. One of the first things we do is to set a zero-value session cookie when requesting the login form. This will be checked during authentication to ensure that our form is being posted from our own server:
 
     // set a zero-value session cookie when hitting the login page (federate the login)
-    getPageContext().getResponse().addHeader("Set-Cookie", "#application.cookieName#=0;path=/;domain=.#CGI.HTTP_HOST#;HTTPOnly");
+    getPageContext().getResponse().addHeader("Set-Cookie", "#application.cookieName#=0;path=/;domain=#listFirst( CGI.HTTP_HOST, ':' )#;HTTPOnly");
 
 In the above code, we are simply setting a cookie on the request, utilizing our application scoped cookie name, with a zero value.
 
@@ -206,7 +206,7 @@ The above is one example of storing useful information in the session object, bu
 We then set a cookie for the user with an encrypted value, which we will then use during [session management](/security-session-management) to manage the users session after they have successfully authenticated:
 
     // set the session cookie with the new encrypted session id
-    getPageContext().getResponse().addHeader("Set-Cookie", "#application.cookieName#=#application.securityService.setSessionIdForCookie( session.sessionObj.getSessionId() )#;path=/;domain=.#CGI.HTTP_HOST#;HTTPOnly");
+    getPageContext().getResponse().addHeader("Set-Cookie", "#application.cookieName#=#application.securityService.setSessionIdForCookie( session.sessionObj.getSessionId() )#;path=/;domain=#listFirst( CGI.HTTP_HOST, ':' )#;HTTPOnly");
 
 And then we redirect the user to whichever page within our system we consider the 'landing' page for authenticated users:
 

@@ -2,12 +2,12 @@
 	"name":"dateCompare",
 	"type":"function",
 	"syntax":"dateCompare(date1, date2 [, datePart])",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":"Performs a full date/time comparison of two dates.\n `-1` if date1 is less than date2\n `0` if date1 is equal to date2\n `1` if date1 is greater than date2\n [DatePart] `yyyy`: Year; `m`: Month; `d`: Day; `h`: Hour; `n`: Minute; `s`: Second",
 	"params": [
-		{"name":"date1","description":"A date to compare","required":true,"default":"","type":"DateTime","values":[]},
-		{"name":"date2","description":"Another date to compare","required":true,"default":"","type":"DateTime","values":[]},
+		{"name":"date1","description":"A date to compare","required":true,"default":"","type":"Date","values":[]},
+		{"name":"date2","description":"Another date to compare","required":true,"default":"","type":"Date","values":[]},
 		{"name":"datePart","description":"","required":false,"default":"s","type":"String","values":["yyyy","m","y","d","h","n","s"]}
 
 	],

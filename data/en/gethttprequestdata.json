@@ -2,7 +2,7 @@
 	"name":"getHTTPRequestData",
 	"type":"function",
 	"syntax":"getHTTPRequestData()",
-	"returns":"Struct",
+	"returns":"struct",
 	"related":["getpagecontext"],
 	"description":"Returns HTTP request headers and request body. The resulting structure contains the following keys:\n\t content (the request body),\n\t headers (a structure of request headers),\n\t method (same as cgi.request_method),\n\t protocol (same as cgi.server_protocol).",
 	"params": [

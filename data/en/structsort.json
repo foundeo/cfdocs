@@ -2,7 +2,7 @@
 	"name":"structSort",
 	"type":"function",
 	"syntax":"structSort(base, sorttype, sortorder, pathtosubelement)",
-	"returns":"Array",
+	"returns":"array",
 	"related":[],
 	"description":" Returns a sorted array of the top level keys in a structure.\n Sorts using alphabetic or numeric sorting, and can sort based\n on the values of any structure element.",
 	"params": [

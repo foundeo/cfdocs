@@ -2,7 +2,7 @@
 	"name":"entityNew",
 	"type":"function",
 	"syntax":"entityNew(entityName)",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Creates a new instance of the persistent CFC with the entity name that you provide.",
 	"params": [

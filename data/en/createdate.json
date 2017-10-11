@@ -2,14 +2,13 @@
 	"name":"createDate",
 	"type":"function",
 	"syntax":"createDate(year, month, day)",
-	"returns":"DateTime",
-	"related":[],
+	"returns":"date",
+	"related":["createDateTime", "createODBCDate"],
 	"description":" Creates a date/time object",
 	"params": [
-		{"name":"year","description":"","required":true,"default":"","type":"Numeric","values":["year(now())"]},
-		{"name":"month","description":"","required":true,"default":"","type":"Numeric","values":["month(now())"]},
-		{"name":"day","description":"","required":true,"default":"","type":"Numeric","values":["day(now())"]}
-
+		{"name":"year","description":"","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"month","description":"Numeric month of the year (1-12)","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"day","description":"Day of the month","required":true,"default":"","type":"Numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateDate.html"},

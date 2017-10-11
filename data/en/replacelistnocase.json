@@ -2,7 +2,7 @@
 	"name":"replaceListNoCase",
 	"type":"function",
 	"syntax":"replaceListNoCase(String, list1, list2, includeEmptyFields)\nreplaceListNoCase(String, list1, list2, delimiter, includeEmptyFields)\nreplaceListNoCase(String, list1, list2, delimiterList1, delimiterList2, includeEmptyFields)",
-	"returns":"String",
+	"returns":"string",
 	"related":["replaceList"],
 	"description":"Replaces occurrences of the elements from a delimited list\n in a string with corresponding elements from another delimited\n list. The search is case-insensitive.",
 	"params": [

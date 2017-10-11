@@ -2,7 +2,7 @@
 	"name":"iIf",
 	"type":"function",
 	"syntax":"iIf(condition, expression1, expression2)",
-	"returns":"String",
+	"returns":"string",
 	"related":["evaluate", "de"],
 	"description":"A boolean condition or value is passed into the first argument. If the condition is `true` the second argument is evaluated and returned, if `false` the third argument is evaluated and returned.",
 	"discouraged":"Use the ternary operator CF9+ instead because it does not evaluate.\nExample ternary operator: `( (condition) ? valueIfTrue : valueIfFalse )`",

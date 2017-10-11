@@ -2,10 +2,10 @@
 	"name":"hmac",
 	"type":"function",
 	"syntax":"hmac(message, key, [, algorithm] [, encoding] )",
-	"returns":"String",
+	"returns":"string",
 	"related":["hash"],
 	"description":"Creates a keyed-hash message authentication code (HMAC), which can be used to verify authenticity and integrity of a message by two parties that share the key.",
-	"params": [ 
+	"params": [
 		{"name":"message","description":"The message or data to autenticate","required":true,"default":"","type":"String","values":[]},
 		{"name":"key","description":"The secret key.","required":true,"default":"","type":"String","values":[]},
 		{"name":"algorithm","description":"An algorithm supported by the java crypto provider, for example HMACSHA256", "required":false,"default":"HMACMD5","type":"String","values":["HMACMD5","HMACSHA1","HMACSHA256","HMACSHA384","HMACSHA512"]},
@@ -31,5 +31,5 @@
 			"result":"FE4F9C418F683F034F6AF90D1DD5B86AC0355DD96332C59CC74598D0736107F6"
 		}
 	]
-	
+
 }

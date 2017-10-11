@@ -2,9 +2,9 @@
 	"name":"onRequestEnd",
 	"type":"function",
 	"syntax":"function onRequestEnd(string targetPage) {  }",
-	"returns":"boolean",
+	"returns":"void",
 	"related":["application-cfc", "onrequeststart"],
-	"description":"Defined in Application.cfc, invoked at the end of the request before the request is terminated. It can genereate output.",
+	"description":"Defined in Application.cfc, invoked at the end of the request before the request is terminated. It can generate output.",
 	"params": [
 		{"name":"targetPage","description":"Requested template path relative to the webroot","required":true,"default":"","type":"String","values":[]}
 	],

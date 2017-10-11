@@ -2,7 +2,7 @@
 	"name":"structCount",
 	"type":"function",
 	"syntax":"structCount(structure)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Counts the keys in a structure.",
 	"params": [
@@ -17,6 +17,19 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+	    {
+		"title": "Using structCount as a function",
+		"description": "Pass a structure as an argument to the function.",
+		"code": "user = {\n    id = 1,\n    firstname = \"Han\",\n    lastname = \"Solo\",\n    movie = \"Star Wars\"\n};\n\nwriteDump( structCount( user ) );",
+		"result": "4"
+	    },
+	    {
+		"title": "Using structCount as a Member Function",
+		"description": "CF11+ Lucee4.5+ Having a reference of a structure as a variable, use the dot notation to get a key count on it using a member function.",
+		"code": "user = {\n    id = 1,\n    firstname = \"Han\",\n    lastname = \"Solo\",\n    movie = \"Star Wars\"\n};\n\nwriteDump( user.count() );",
+		"result": "4"
+	    }
 	]
-
 }

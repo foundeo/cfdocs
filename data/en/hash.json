@@ -2,7 +2,7 @@
 	"name":"hash",
 	"type":"function",
 	"syntax":"hash(String [, algorithm] [, encoding] [, iterations])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":"Converts a string into a fixed length hexadecimal string.",
 	"params": [

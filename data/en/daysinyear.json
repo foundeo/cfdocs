@@ -3,11 +3,11 @@
 	"type":"function",
 	"syntax":"daysInYear(date)",
 	"member":"date.daysInYear()",
-	"returns":"Numeric",
-	"related":["Day", "DayOfWeek", "DayOfWeekAsString", "DayOfYear", "DaysInMonth", "FirstDayOfMonth", "IsLeapYear"],
+	"returns":"numeric",
+	"related":["day", "dayOfWeek", "dayOfWeekAsString", "dayOfYear", "daysInMonth", "firstDayOfMonth", "isLeapYear"],
 	"description":" Determines the number of days in a year.",
 	"params": [
-		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"DateTime","values":["now()"]}
+		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"Date","values":[]}
 
 	],
 	"engines": {

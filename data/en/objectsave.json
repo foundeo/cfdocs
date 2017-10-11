@@ -2,7 +2,7 @@
 	"name":"objectSave",
 	"type":"function",
 	"syntax":"objectSave(object [, file])",
-	"returns":"Binary",
+	"returns":"binary",
 	"related":[],
 	"description":" Serialize object to file or convert it to binary format",
 	"params": [

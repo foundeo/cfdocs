@@ -1,0 +1,29 @@
+{
+	"name":"spreadsheetGetColumnCount",
+	"type":"function",
+	"syntax":"spreadsheetAddRow(spreadsheetObj, [sheet])",
+	"returns":"numeric",
+	"related":[],
+	"description":"Returns the number of columns in a given spreadsheet.",
+	"params": [
+		{"name":"spreadsheetObj","description":"The speadsheet object","required":true,"default":"","type":"any","values":[]},
+		{"name":"sheet","description":"The sheet name or sheet number","required":false,"default":"","type":"String","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetgetcolumncount.html"}
+		
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Get Column Count",
+			"description":" ",
+			"code":"s = spreadsheetNew();\nspreadsheetAddRow(s,\"Name,Beers,Vegetables,Fruits,Meats\");\nwriteOutput( spreadsheetGetColumnCount( s ) ); ",
+			"result":"5",
+			"runnable":true
+		}
+	]
+
+}

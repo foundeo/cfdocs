@@ -2,9 +2,9 @@
 	"name":"XMLParse",
 	"type":"function",
 	"syntax":"XMLParse(xmlString [, caseSensitive] [, validator])",
-	"returns":"Object",
+	"returns":"xml",
 	"related":[],
-	"description":" Converts an XML document that is represented as a string\n variable into an XML document object.",
+	"description":"Converts an XML document that is represented as a string\n variable into an XML document object.",
 	"params": [
 		{"name":"xmlString","description":"Any of the following:\n - A string containing XML text.\n - The name of an XML file.\n - The URL of an XML file; valid protocol identifiers\n include http, https, ftp, and file.","required":true,"default":"","type":"String","values":[]},
 		{"name":"caseSensitive","description":"Maintains the case of document elements and attributes.\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]},

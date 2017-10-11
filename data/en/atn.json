@@ -2,7 +2,7 @@
 	"name":"atn",
 	"type":"function",
 	"syntax":"atn(number)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["acos","asin","cos","exp","log","log10","sin","tan"],
 	"description":" Arctangent function. The arctangent is the angle whose tangent\n is number.",
 	"params": [

@@ -1,13 +1,14 @@
 {
 	"name":"XMLFormat",
 	"type":"function",
-	"syntax":"XMLFormat(String [, escapeNewSet])",
-	"returns":"String",
-	"related":[],
-	"description":" Escapes special XML characters in a string, so that the\n string is safe to use with XML.",
+	"syntax":"XMLFormat(String [, escapeChars])",
+	"returns":"string",
+	"related":["encodeForXML"],
+	"description":"Escapes XML special characters in a string, so that the string is safe to use with XML.",
+	"discouraged":"Adobe recommends using encodeForXML instead of XMLFormat.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"escapeNewSet","description":"","required":false,"default":"","type":"boolean","values":[]}
+		{"name":"String","description":"The string to escape","required":true,"default":"","type":"String","values":[]},
+		{"name":"escapeChars","description":"When true escapes restricted characters according to the W3C XML standard.","required":false,"default":"","type":"boolean","values":[]}
 
 	],
 	"engines": {
@@ -26,14 +27,8 @@
 			"code":"writeOutput( XMLFormat( '<node>Good &amp; Juicy</node>') );",
 			"result":"&lt;node&gt;Good &amp;amp; Juicy&lt;/node&gt;",
 			"runnable":true
-		},
-		{
-			"title":"Advanced XMLFormat() usage",
-			"description":"In this example we demonstrate parsing the cfdocs.org index page into XMLFormat() to make it safe for XML storage.",
-			"code":"httpService = new http();\r\nhttpService.setMethod( 'get' );\r\nhttpService.setCharset( 'utf-8' );\r\nhttpService.setUrl( 'http://cfdocs.org/' );\r\n\r\nxmlDoc = '<node>' & XMLFormat( httpService.send().getPrefix().fileContent ) & '</node>';\r\n\r\nwriteOutput( xmlDoc );\r\n// NOTE: View results frame source in TryCF to see actual encoding",
-			"result":"<node> [parsed HTML document] </node>",
-			"runnable":true
 		}
+
 	]
 
 }

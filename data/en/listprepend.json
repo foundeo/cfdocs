@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"listPrepend(someList, value [, delimiters])",
     "member":"someList.listPrepend( value [, delimeters])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Inserts an element at the beginning of a list.",
 	"params": [

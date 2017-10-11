@@ -2,7 +2,7 @@
 	"name":"callStackGet",
 	"type":"function",
 	"syntax":"callStackGet();",
-	"returns":"void",
+	"returns":"array",
 	"related":[],
 	"description":" Returns an array of structs. Each struct contains template name, line number, and function name (if applicable). This is a snapshot of all function calls or invocations.",
 	"params": [

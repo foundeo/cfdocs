@@ -13,9 +13,16 @@
 		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "number", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "When called as a member function query.each() is chainable.", "docs": "http://docs.lucee.org/reference/functions/queryeach.html"}
+		"lucee": {"minimum_version": "", "notes": "When called as a member function query.each() is chainable.", "docs": "http://docs.lucee.org/reference/functions/queryeach.html"},		
+		"coldfusion": {"minimum_version": "2016", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryeach.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Iterate over query rows instead of cfloop()",
+		"description":"",
+		"code":"<cfscript>\r\n    news = queryNew(\"id,title\",\r\n    \t\"integer,varchar\", [{\r\n    \t\t\"id\": 1,\r\n    \t\t\"title\": \"Dewey defeats Truman\"\r\n    \t}, {\r\n    \t\t\"id\": 2,\r\n    \t\t\"title\": \"Man walks on Moon\"\r\n    \t}]\r\n    );\r\n    \r\n    function newsRow(row) {\r\n        writeOutput('<tr>');\r\n            writeOutput('<td>#row.id#</td>')\r\n            writeOutput('<td>#row.title#</td>');\r\n        writeOutput('<tr>');\r\n    }\r\n</cfscript>\r\n<cfoutput>\r\n    <table>\r\n        #queryEach(news,newsRow)#\r\n    </table>\r\n</cfoutput>",
+		"result":"1&emsp;Dewey defeats Truman\n2&emsp;Man walks on Moon",
+		"runnable":false
+	}],
 	"links":[{
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",

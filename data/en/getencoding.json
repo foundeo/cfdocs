@@ -2,7 +2,7 @@
 	"name":"getEncoding",
 	"type":"function",
 	"syntax":"getEncoding(scope_name)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Returns the encoding (character set) of the Form or URL scope.",
 	"params": [

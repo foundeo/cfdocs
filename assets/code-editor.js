@@ -106,8 +106,8 @@ angular.module('code.editor', [])
 	'				<label class="control-label">Change CFML Engine</label>'+
 	'		        <div>'+
 	'		         <select id="engine" class="form-control">'+
-	'		             <option value="lucee5">Lucee 5.0.0.* (beta)</option>'+
-	'		             <option value="lucee">Lucee 4.5</option>'+
+	'		             <option value="lucee5">Lucee 5.LATEST</option>'+
+	'		             <option value="lucee">Lucee 4.5.LATEST</option>'+
 	'		             <option value="railo">Railo 4.2</option>'+
 	'				     <option value="acf2016">Adobe ColdFusion 2016</option>'+
 	'				     <option value="acf11">Adobe ColdFusion 11</option>'+
@@ -205,15 +205,13 @@ angular.module('code.editor', [])
 					showOptions = typeof attrs.showOptions !== 'undefined' ? attrs.showOptions === "true" || attrs.showOptions === "1" : true,
 					showResults = typeof attrs.showResults !== 'undefined' ? attrs.showResults === "true" || attrs.showResults === "1" : true,
                     urlPool = {
-                    	"railo" : [ "http://sbx-railo.aws.af.cm/getremote.cfm" ],
-        			    // "lucee" : [ "http://sbx-lucee.aws.af.cm/getremote.cfm" ],
-        			    "lucee" : [ "http://lucee4-sbx.trycf.com/lucee4/getremote.cfm" ],
-        			    // "lucee5.0.0.45" : [ "http://lucee5-0-0-45-sbx.trycf.com/lucee5.0.0.45/getremote.cfm" ],
-        			    "lucee5" : [ "http://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
-        			    "lucee5.0.0.45" : [ "http://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
-                    	"acf" 	: [ "http://acf10-sbx.trycf.com/cfusion/getremote.cfm" ],
-						"acf11" : [ "http://acf11-sbx.trycf.com/cfusion/getremote.cfm" ],
-						"acf2016" : [ "http://acf12-sbx.trycf.com/getremote.cfm" ]
+                    	"railo" : [ "https://railo-sbx.trycf.com/getremote.cfm" ],
+        			    "lucee" : [ "https://lucee4-sbx.trycf.com/lucee4/getremote.cfm" ],
+        			    "lucee5" : [ "https://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
+        			    "lucee5.0.0.45" : [ "https://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
+                    	"acf" 	: [ "https://acf10-sbx.trycf.com/cfusion/getremote.cfm" ],
+						"acf11" : [ "https://acf11-sbx.trycf.com/cfusion/getremote.cfm" ],
+						"acf2016" : [ "https://acf12-sbx.trycf.com/getremote.cfm" ]
                     },
                     url = attrs.url || urlPool[scope.engine][Math.floor(Math.random()*urlPool[scope.engine].length)];
 

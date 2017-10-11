@@ -31,7 +31,7 @@
 			<cfset ArrayAppend(possible, i)>
 		</cfif>
 	</cfloop>
-	<cfset data = {name = url.name, description="Sorry we don't have any docs matching that name. If we should have a doc for this, please send us a pull request on github.", type="404", related=possible}>
+	<cfset data = {name = url.name, description="Sorry we don't have any docs matching that name. If we should have a doc for this, please send us a pull request.", type="404", related=possible}>
 	<cfheader statuscode="404" statustext="Not Found">
 </cfif>
 <cfif isStruct(data)>

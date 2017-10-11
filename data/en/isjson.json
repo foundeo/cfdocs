@@ -17,6 +17,15 @@
 	},
 	"links": [
 
+	],
+	"examples":[
+	{
+		"title":"isJSON Example",
+		"description":"Returns true if the parameter is a valid JSON value. Returns False if the parameter is not a valid JSON data representation.",
+		"code":"isJSON(\"[1,2,3]\")",
+		"result":true,
+		"runnable":true
+	}
 	]
 
 }

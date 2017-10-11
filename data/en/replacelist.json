@@ -1,8 +1,8 @@
 {
 	"name":"replaceList",
 	"type":"function",
-	"syntax":"replaceList(String, list1, list2, includeEmptyFields)\nreplaceList(String, list1, list2, delimiter, includeEmptyFields)\nreplaceList(String, list1, list2, delimiterList1, delimiterList2, includeEmptyFields)",
-	"returns":"String",
+	"syntax":"replaceList(String, list1, list2 [, includeEmptyFields])\nreplaceList(String, list1, list2, delimiter [, includeEmptyFields])\nreplaceList(String, list1, list2, delimiterList1, delimiterList2 [, includeEmptyFields])",
+	"returns":"string",
 	"related":["replaceListNoCase"],
 	"description":"Replaces occurrences of the elements from a delimited list\n in a string with corresponding elements from another delimited\n list. The search is case-sensitive.",
 	"params": [
@@ -28,8 +28,8 @@
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<cfset local.myString = \"My Test String\" /> \r\n <cfset local.MySubstring1 = \"Test, String\" /> \r\n <cfset local.mySubString2 = \"Replaced, Sentence\" /> \r\n <p>The result: <cfoutput>#replaceList(local.myString, local.MySubstring1, local.mySubString2)#</cfoutput> ",
-			"result":"",
+			"code":"<cfoutput>#replaceList(\"My Test String\", \"Test, String\", \"Replaced, Sentence\")#</cfoutput>",
+			"result":"My Replaced Sentence",
 			"runnable":true
 		}
 	]

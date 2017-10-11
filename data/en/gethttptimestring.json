@@ -2,11 +2,11 @@
 	"name":"getHTTPTimeString",
 	"type":"function",
 	"syntax":"getHTTPTimeString(DateTime)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets the current time, in the Universal Time code (UTC).",
 	"params": [
-		{"name":"DateTime","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
+		{"name":"DateTime","description":"","required":true,"default":"","type":"Date","values":[]}
 
 	],
 	"engines": {

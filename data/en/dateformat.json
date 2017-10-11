@@ -3,13 +3,19 @@
 	"type":"function",
 	"syntax":"dateFormat(date [, mask])",
 	"member":"date.dateFormat([mask])",
-	"returns":"String",
-	"related":["timeFormat","dateTimeFormat"],
-	"description":"Formats a date value using U.S. date formats. When formatting both date and time, use DateTimeFormat. For international date support, use LSDateFormat.\n [mask - quicky]\n d,dd,ddd,dddd: Day of month / week\n m,mm,mmm,mmmm: Month\n y,yy,yyyy: Year\n gg: Period/era string\n short / medium / long / full",
+	"returns":"string",
+	"related":["timeFormat","dateTimeFormat","lsDateFormat"],
+	"description":"Formats a date value using U.S. date formats. When formatting both date and time, use dateTimeFormat. For international date support, use lsDateFormat.",
 	"params": [
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]},
-		{"name":"mask","description":"","required":false,"default":"","type":"String","values":["short","medium","long","full"]}
-
+		{
+			"name":"date",
+			"description":"The date object",
+			"required":true,
+			"default":"",
+			"type":"Date",
+			"values":[]
+		},
+		{"name":"mask","description":"Each keyword below will be replaced in the string by its respective datepart \n`d`: Day of the month as digits; no leading zero for single-digit days.\n`dd`: Day of the month as digits; leading zero for single-digit days.\n`ddd`: Day of the week as a three-letter abbreviation.\n`dddd`: Day of the week as its full name.\n`e`: Day in a week (CF2016u3+).\n`f`: Day of a week in a month (CF2016u3+).\n`m`: Month as digits; no leading zero for single-digit months.\n`mm`: Month as digits; leading zero for single-digit months.\n`mmm`: Month as a three-letter abbreviation.\n`mmmm`: Month as its full name.\n`k`: Hour in a day (CF2016u3+).\n`w`: Week in a month (CF2016u3+).\n`W`: Week in a year (CF2016u3+).\n`yy`: Year as last two digits; leading zero for years less than 10.\n`yyyy`,`YYYY`: Year represented by four digits.\n`gg`: Period/era string.\n`z`: Time zone in unstandardized abbreviated format, for example, EST (CF2016u3+).\n`Z`: Time zone in hours of offset (RFC 822 TimeZone), for example, +0530 (CF2016u3+).\n`X`: Time zone in hours of offset in ISO 8601 format. (CF2016u3+).\n\n The following keywords are shorthand for specific full formats and cannot be combined with other masks:\n`short`: equivalent to `m/d/y`\n`medium`: equivalent to `mmm d, yyyy`\n`long`: equivalent to `mmmm d, yyyy`\n`full`: equivalent to `dddd, mmmm d, yyyy`","required":false,"default":"dd-mmm-yy","type":"String","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"CF6+ Added support for the `short`, `medium`, `long` and `full` mask formats. Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateFormat.html"},

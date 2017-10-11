@@ -22,7 +22,7 @@ This makes the documentation super easy to edit and allows developers to run a l
 The cfdocs.org site can run locally very easily thanks to CommandBox.
 
 1. Go download [CommandBox](https://www.ortussolutions.com/products/commandbox) if you do not have it already.
-2. Download this repository and extract it to a folder, or clone it from this repository. If you are going to be making changes to the docs I would suggest you fork it, see Adam Tuttle's guide: [GitHub tip for your first pull request](http://fusiongrokker.com/post/github-tip-for-your-first-pull-request)
+2. Download this repository and extract it to a folder, or clone it from this repository. If you are going to be making changes to the docs I would suggest you fork it, see Adam Tuttle's guide: [GitHub tip for your first pull request](https://adamtuttle.codes/your-first-github-pull-request/)
 3. Run `box server start` from Command Prompt or Terminal in the root directory.
 
 CommandBox will start an embedded CFML server on port 8411, and you can browse to [http://localhost:8411/](http://localhost:8411/) to view the docs.
@@ -64,14 +64,14 @@ We need help expanding existing tag and function documentation. Look through the
     	"name":"NameOfTagOrFunction",
     	"type":"function|tag",
     	"syntax":"Tag(arg)|<cftag attr=1>",
-        "member":"item.memberFunction([args])",
-        "script":"cftag(attr=1);",
+    	"member":"item.memberFunction([args])",
+    	"script":"cftag(attr=1);",
     	"returns":"void",
     	"related":["tag","function"],
     	"description":"A short description that describes what the tag or function does.",
-        "discouraged":"Only add this key if this tag/function is discouraged by the community.",
+    	"discouraged":"Only add this key if this tag/function is discouraged by the community.",
     	"params": [
-            {"name":"funcArgNameOrTagAttributeName","description":"What it does","required":true,"default":"false","type":"boolean","values":["true","false"]}
+    	    {"name":"funcArgNameOrTagAttributeName","description":"What it does","required":true,"default":"false","type":"boolean","values":["true","false"]}
     	],
     	"engines": {
     		"coldfusion": {"minimum_version":"10", "notes":"CF Specific Info Here", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/function"},
@@ -85,13 +85,13 @@ We need help expanding existing tag and function documentation. Look through the
     			"url":"http://www.example.com/a/b.cfm"
     		}
     	],
-        "examples": [
+    	"examples": [
             {
     			"title": "Name of the code example",
     			"description": "Description of the code example",
     			"code": "<cf_examplecodehere>",
     			"result": "The expected output of the code example",
-                "runnable":true
+    			"runnable":true
             }
         ]
 

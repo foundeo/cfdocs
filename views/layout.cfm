@@ -7,7 +7,7 @@
 	<cfparam name="request.title" default="">
 	<cfparam name="request.assetBaseURL" default="/assets/">
 	<title><cfoutput>#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation</cfoutput></title>
-	<link href="https://netdna.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css" rel="stylesheet">
+	<link href="https://netdna.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet">
 	<cfparam name="request.hasExamples" default="false">
 	<cfif request.hasExamples><link rel="stylesheet" href="https://cdn.rawgit.com/foundeo/cfdocs/3da43f03663c57f499cf2de82ef82d4f74fe04cd/assets/vendor/google/code-prettify/theme-monokai.css" /></cfif>
 	<cfoutput><link href="#request.assetBaseURL#style.css" rel="stylesheet"></cfoutput>
@@ -18,7 +18,7 @@
 	<![endif]-->
 </head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
 	<cfset listCategories = listSort(StructKeyList(application.categories),"text")>
 	<cfset listGuides = listSort(StructKeyList(application.guides),"text")>
 	<div class="container">
@@ -28,7 +28,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/">CFDocs</a>
+			<a class="navbar-brand" href="/"><span class="text-primary">CFDocs</span></a>
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
@@ -74,19 +74,24 @@
 						<li><a href="/reports/missing-descriptions.cfm">Missing Descriptions</a></li>
 						<li><a href="/reports/missing-examples.cfm">Missing Examples</a></li>
 						<li><a href="/reports/missing-related.cfm">Missing Related Links</a></li>
+						<li><a href="https://github.com/foundeo/cfdocs/issues">More...</a></li>
 					</ul>
 				</li>
 			</cfoutput>
 			</ul>
-			<form class="navbar-form navbar-right" id="search">
+			<form class="navbar-form navbar-left hidden-sm" id="search">
 				<div class="form-group">
 					<input type="text" placeholder="Tag or Function..." id="lookup-box" class="form-control">
 				</div>
 				<button type="submit" class="btn btn-primary">Go</button>
+				
 			</form>
-			</div><!--/.navbar-collapse -->
-		</div>
+			<ul class="nav navbar-nav navbar-right hidden-sm">
+				<li><a href="https://foundeo.com/" id="foundeo"><img src="/assets/img/foundeo.png"></a></li>
+			</ul>
+		</div><!--/.navbar-collapse -->
 	</div>
+</nav>
 
 	<cfoutput>#request.content#</cfoutput>
 
@@ -106,6 +111,7 @@
 <cfparam name="request.gitFilePath" default="/">
 <cfoutput><a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="visible-lg visible-md"><img id="forkme" src="https://cdn.rawgit.com/foundeo/cfdocs/88847869f4bf61a96185fe01290165b00a2bf4e1/assets/img/fork.png" alt="Fork me on GitHub"></a></cfoutput>
 <cfif request.hasExamples><script src="https://cdn.rawgit.com/foundeo/cfdocs/3da43f03663c57f499cf2de82ef82d4f74fe04cd/assets/vendor/google/code-prettify/prettify.js"></script></cfif>
+
 </body>
 </html>
 </cfif>

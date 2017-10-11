@@ -2,7 +2,7 @@
 	"name":"rTrim",
 	"type":"function",
 	"syntax":"rTrim(String)",
-	"returns":"String",
+	"returns":"string",
 	"related":["ltrim","trim","rtrim"],
 	"description":" Removes spaces from the end of a string.",
 	"params": [

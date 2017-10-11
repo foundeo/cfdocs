@@ -2,7 +2,7 @@
 	"name":"listFindNoCase",
 	"type":"function",
 	"syntax":"listFindNoCase(list, value [, delimiters, includeEmptyValues])",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":"Determines the index of the first list element in which a specified value occurs. Returns 0 if not found. Case-insensitive.",
 	"params": [

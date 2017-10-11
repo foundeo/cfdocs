@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"structKeyList(structure [, delimiter])",
     "member":"someStruct.keyList([delimiter])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Extracts keys from a CFML structure.",
 	"params": [

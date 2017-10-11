@@ -2,7 +2,7 @@
 	"name":"trim",
 	"type":"function",
 	"syntax":"trim(String)",
-	"returns":"String",
+	"returns":"string",
 	"related":["ltrim","trim","rtrim"],
 	"description":" Removes leading and trailing spaces from a string.",
 	"params": [

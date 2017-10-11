@@ -55,7 +55,7 @@
         {
             "title": "Script Syntax",
             "description": "CF9+ using the CFIDE script components",
-            "code": "// Create FTP service and set attributes for connection \r\n ftpService = new ftp(); \r\n ftpService.setConnection(\"myConn\"); \r\n ftpService.setUsername(\"myUName\"); \r\n ftpService.setPassword(\"myPW\"); \r\n ftpService.setServer(\"ftp.server.com\"); \r\n ftpService.setStopOnError(true); \r\n // Open connection \r\n ftpService.open(); \r\n // Get list of dir \r\n fileList = ftpService.listdir(directory = \"/ \", stopOnError = true).getResult(); \r\n // Close connection \r\n ftpService.close();",
+            "code": "// Create FTP service and set attributes for connection \r\n ftpService = new ftp(); \r\n ftpService.setConnection(\"myConn\"); \r\n ftpService.setUsername(\"myUName\"); \r\n ftpService.setPassword(\"myPW\"); \r\n ftpService.setServer(\"ftp.server.com\"); \r\n ftpService.setStopOnError(true); \r\n // Open connection \r\n ftpService.open(); \r\n // Get list of dir \r\n fileList = ftpService.listdir(directory = \"/ \", name=\"fileList\", stopOnError = true).getResult(); \r\n // Close connection \r\n ftpService.close();",
             "result": ""
         },
 	    {
