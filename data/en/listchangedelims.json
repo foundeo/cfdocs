@@ -6,10 +6,10 @@
 	"related":[],
 	"description":" Changes a list delimiter.\n Returns a copy of the list, with each delimiter character\n replaced by new_delimiter.",
 	"params": [
-		{"name":"list","description":"A list or a variable that contains one.","required":true,"default":"","type":"String","values":[]},
-		{"name":"new_delimiter","description":"Delimiter string or a variable that contains one. Can be an empty string. ColdFusion processes the string as one delimiter.","required":true,"default":"","type":"String","values":[]},
-		{"name":"delimiters","description":"A string or a variable that contains one. Characters that separate list elements. The default value is comma. If this parameter contains more than one character, ColdFusion processes each occurrence of each character as a delimiter.","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]},
-		{"name":"includeEmptyValues","description":"CF10+ Set to yes to include empty values.","required":false,"default":"NO","type":"String","values":["Yes","No"]}
+		{"name":"list","description":"A list or a variable that contains one.","required":true,"default":"","type":"string","values":[]},
+		{"name":"new_delimiter","description":"Delimiter string or a variable that contains one. Can be an empty string. ColdFusion processes the string as one delimiter.","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiters","description":"A string or a variable that contains one. Characters that separate list elements. The default value is comma. If this parameter contains more than one character, ColdFusion processes each occurrence of each character as a delimiter.","required":false,"default":",","type":"string","values":[",","|",";","chr(9)","chr(10)","chr(13)"]},
+		{"name":"includeEmptyValues","description":"CF10+ Set to yes to include empty values.","required":false,"default":"NO","type":"string","values":["Yes","No"]}
 
 	],
 	"engines": {

@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" Gets the Value for a for an Excel spreadsheet object cell.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"row","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"column","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"row","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"column","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

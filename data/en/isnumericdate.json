@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Evaluates whether a real number is a valid representation of a\n date (date/time object).",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

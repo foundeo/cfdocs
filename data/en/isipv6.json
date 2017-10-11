@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" checks if given IP is of IPV6 format",
 	"params": [
-		{"name":"IP","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"IP","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

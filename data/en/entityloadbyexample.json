@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Loads and returns an array of objects that match the sampleentity.\nentityLoadByExample(sampleEntity,[unique])",
 	"params": [
-		{"name":"sampleEntity","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"unique","description":"No Help Available","required":false,"default":"","type":"Boolean","values":[]}
+		{"name":"sampleEntity","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"unique","description":"No Help Available","required":false,"default":"","type":"boolean","values":[]}
 
 	],
 	"engines": {

@@ -6,7 +6,7 @@
 	"related":["spreadsheetAddRow","spreadsheetRead","spreadsheetformatCell","spreadsheetWrite"],
 	"description":" Creates a ColdFusion spreadsheet object, which represents a single sheet of an Excel document.",
 	"params": [
-		{"name":"sheetname","description":"String value to be used as the sheet name.","required":false,"default":"","type":"String","values":[]},
+		{"name":"sheetname","description":"String value to be used as the sheet name.","required":false,"default":"","type":"string","values":[]},
 		{"name":"xmlFormat","description":"Boolean value to indicate the use of Excels xlsx format.","required":false,"default":"false","type":"boolean","values":[true,false]}
 
 	],

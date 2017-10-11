@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Prevents CFML from automatically escaping single\n quotation mark characters that are contained in a variable.\n CFML does not evaluate the argument.\n\n Note: ColdFusion automatically escapes simple-variable,\n array-variable, and structure-variable references within a\n cfquery tag body or block.",
 	"params": [
-		{"name":"variable","description":"Variable that contains a string in which to preserve\n single quotation marks.","required":true,"default":"","type":"String","values":[]}
+		{"name":"variable","description":"Variable that contains a string in which to preserve\n single quotation marks.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

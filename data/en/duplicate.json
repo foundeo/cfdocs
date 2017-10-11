@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Returns a clone, also known as a deep copy, of a variable\n or XML object. There is no reference to the original variable.",
 	"params": [
-		{"name":"variable","description":"","required":true,"default":"","type":"Object","values":[]}
+		{"name":"variable","description":"","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

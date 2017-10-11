@@ -6,7 +6,7 @@
 	"related":["int"],
 	"description":"Returns the integer less than or equal to the input. This function is equivilant to the int function.",
 	"params": [
-		{"name":"number","description":"A numeric value","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"A numeric value","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/floor.html"}

@@ -28,7 +28,7 @@
 			"description": "Integer; number of seconds. Time limit, after which\n CFML processes the page as an unresponsive thread.\n Overrides the timeout set in the CFML Administrator.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		}
 	],

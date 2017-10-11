@@ -6,7 +6,7 @@
 	"related":["isValid"],
 	"description":"Determines whether a string can be converted to a numeric value. Supports numbers in U.S. number format. For other number support use LSIsNumeric.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

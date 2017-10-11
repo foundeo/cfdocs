@@ -16,8 +16,8 @@
     "url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
 }],
 "params":[
-    {"values":[],"default":"","description":"The input struct.","name":"struct","type":"Struct","required":"1"},
-    {"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nkey: key for the current iteration\r\nvalue: the value for the current iteration\r\nstruct: a reference of the original struct","name":"function","type":"Any","required":"1"}
+    {"values":[],"default":"","description":"The input struct.","name":"struct","type":"struct","required":"1"},
+    {"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nkey: key for the current iteration\r\nvalue: the value for the current iteration\r\nstruct: a reference of the original struct","name":"function","type":"any","required":"1"}
 ],
 "returns":"struct",
 "examples":[

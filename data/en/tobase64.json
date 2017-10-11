@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Calculates the Base64 representation of a string or binary\n object. The Base64 format uses printable characters, allowing\n binary data to be sent in forms and e-mail, and stored in a\n database or file.",
 	"params": [
-		{"name":"string_or_object","description":"A string, the name of a string, or a binary object.","required":true,"default":"","type":"Object","values":[]},
-		{"name":"encoding","description":"For a string, defines how characters are represented in a\n byte array.","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
+		{"name":"string_or_object","description":"A string, the name of a string, or a binary object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"encoding","description":"For a string, defines how characters are represented in a\n byte array.","required":false,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 
 	],
 	"engines": {

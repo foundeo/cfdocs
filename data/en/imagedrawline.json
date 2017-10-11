@@ -7,11 +7,11 @@
 	"related":[],
 	"description":" Draws a single line defined by two sets of x and y coordinates on a ColdFusion image.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"x1","description":"The x coordinate for the start point of the line.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"y1","description":"The y coordinate for the start point of the line.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"x2","description":"The x coordinate for the end point of the line.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"y2","description":"The y coordinate for the end point of the line.","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"x1","description":"The x coordinate for the start point of the line.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"y1","description":"The y coordinate for the start point of the line.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"x2","description":"The x coordinate for the end point of the line.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"y2","description":"The y coordinate for the end point of the line.","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

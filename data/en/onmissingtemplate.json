@@ -6,7 +6,7 @@
  	"related":["application-cfc"],
  	"description":"Defined in Application.cfc, invoked when a request is made for a cfml template that does not exist.",
  	"params": [
- 		{"name":"targetPage","description":"Requested template path relative to the webroot","required":true,"default":"","type":"String","values":[]}
+ 		{"name":"targetPage","description":"Requested template path relative to the webroot","required":true,"default":"","type":"string","values":[]}
  	],
  	"engines": {
  		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/application-cfc-reference/onmissingtemplate.html"},

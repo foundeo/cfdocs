@@ -7,8 +7,8 @@
 	"related":[],
 	"description":" Retrieves the specified EXIF tag in an image.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"tagName","description":"The EXIF tag name to be returned.","required":true,"default":"","type":"String","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"tagName","description":"The EXIF tag name to be returned.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

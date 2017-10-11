@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Rollback current transaction",
 	"params": [
-		{"name":"savepoint","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
+		{"name":"savepoint","description":"No Help Available","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

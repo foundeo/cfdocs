@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" Updates a key with a value.",
 	"params": [
-		{"name":"structure","description":"Structure to update","required":true,"default":"","type":"Struct","values":[]},
-		{"name":"key","description":"Key, the value of which to update","required":true,"default":"","type":"String","values":[]},
-		{"name":"value","description":"New value","required":true,"default":"","type":"Object","values":[]}
+		{"name":"structure","description":"Structure to update","required":true,"default":"","type":"struct","values":[]},
+		{"name":"key","description":"Key, the value of which to update","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"New value","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {
@@ -20,7 +20,7 @@
 	"links": [
 
 	],
-	"examples": [		
+	"examples": [
 		{
 			"title":"Updates a structure value at specific key",
 			"description":"Change value of structure item",

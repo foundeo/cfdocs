@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether the function parameter is\n an XML document object node.",
 	"params": [
-		{"name":"value","description":"Name of an XML document object node.","required":true,"default":"","type":"Object","values":[]}
+		{"name":"value","description":"Name of an XML document object node.","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

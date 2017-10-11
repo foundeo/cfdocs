@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Evaluates whether a string is in valid JSON (JavaScript Object Notation) data interchange format.",
 	"params": [
-		{"name":"var","description":"A string or variable that represents one.","required":true,"default":"","type":"String","values":[]}
+		{"name":"var","description":"A string or variable that represents one.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

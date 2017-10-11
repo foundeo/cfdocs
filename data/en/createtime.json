@@ -6,9 +6,9 @@
 	"related":["createODBCTime", "createDateTime"],
 	"description":" Creates a time variable.",
 	"params": [
-		{"name":"hour","description":"Hour of the day in 24-hour notation (0-23)","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"minute","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"second","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"hour","description":"Hour of the day in 24-hour notation (0-23)","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"minute","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"second","description":"","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateTime.html"},

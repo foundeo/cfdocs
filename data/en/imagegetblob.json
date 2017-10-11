@@ -7,7 +7,7 @@
 	"related":[],
 	"description":" Retrieves the bytes of the underlying image. The bytes are in the same image format as the source image.",
 	"params": [
-		{"name":"source","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"String","values":[]}
+		{"name":"source","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

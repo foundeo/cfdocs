@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines the closest integer that is greater than a\n specified number.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

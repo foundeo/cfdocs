@@ -11,7 +11,7 @@
 			"description": "Specifies the path of the audio file relative to the CFM page.\n The audio file must be an MP3 file.\n A slide cannot have both audio and video specified (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "Specifies the bottom margin of the slide. (optional, default=0)",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "Specifies the duration in seconds that the slide is played. (required)",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -35,7 +35,7 @@
 			"description": "Specifies the notes used for the slide. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -43,7 +43,7 @@
 			"description": "Specifies the presenter of the slide.\n A slide can have only one presenter.\n This name must match one of the presenter names in the cfpresenter tag.\n If no presenter is specified, it will take the first presenter\n specified in the presenter list. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -51,7 +51,7 @@
 			"description": "Specifies the right margin of the slide. (optional, default=0)",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -59,7 +59,7 @@
 			"description": "Specifies the scale used for the HTML content on the slide\n presentation. If the scale attribute is not specified and\n the content cannot fit in one slide, it will automatically\n be scaled down to fit on the slide. (optional, default=1.0)",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -67,7 +67,7 @@
 			"description": "HTML or SWF source files used as a slide. You can specify\n the following as the slide source:\n an absolute path\n a path relative to the CFM page\n a URL: you can specify the URL only if the source is an HTML file\n SWF files must be present on the system running ColdFusion and the path\n must either be an absolute path or path relative to the CFM page.\n If the src value is not specified, you must specify HTML/CFML code\n as the body. If you specify a source file and HTML /CFML, ColdFusion\n ignores the source file and displays the HTML/CFML in the slide. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -75,7 +75,7 @@
 			"description": "Specifies the title of the slide. (required)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -83,7 +83,7 @@
 			"description": "Specifies the top margin of the slide. (optional, default=0)",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -91,7 +91,7 @@
 			"description": "Specifies the video file used for the presenter of the slide.\n If you specify video for the slide and an image for the presenter,\n the video is used instead of the image for the slide. You cannot specify\n both audio and video for a slide. The video must be an FLV file. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -99,7 +99,7 @@
 			"description": "Overrides the cfpresentation tag autoPlay attribute for the slide:\n * auto: after the slide plays, the presentation advances to the next slide automatically. This is the default value if cfpresentation autoPlay=\"yes\".\n * never: after the slide plays, the presentation does not advance to the next slide until the user clicks the Next button. This is the default value if cfpresentation autoPlay=\"no\".\n * click: after the slide plays, the presentation advances to the next slide if the user clicks anywhere in the main presentation area.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["auto", "never", "click"]
 		},
 		{
@@ -107,7 +107,7 @@
 			"description": "Use to pass a password to the target URL for Basic Authentication. Combined with username to form a base64 encoded string that is passed in the Authenticate header.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -115,7 +115,7 @@
 			"description": "Use to pass a user name to the target URL for Basic Authentication. Combined with password to form a base64 encoded string that is passed in the Authenticate header.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -123,7 +123,7 @@
 			"description": "Bottom margin of the slide.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -131,7 +131,7 @@
 			"description": "Left margin of the slide.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -139,7 +139,7 @@
 			"description": "Right margin of the slide.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -147,7 +147,7 @@
 			"description": "Top margin of the slide.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -155,7 +155,7 @@
 			"description": "Text to put in the HTTP User-Agent request header field. Identifies the request client software.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -163,7 +163,7 @@
 			"description": "Used to specify the slide numbers required to export from ppt file",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

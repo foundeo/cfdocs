@@ -6,11 +6,11 @@
 	"related":[],
 	"description":" Adds freeze pane to spreadsheet",
 	"params": [
-		{"name":"spreadsheetObj","description":"Spreadsheet variable","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"column","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"row","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"endColumn","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"endRow","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]}
+		{"name":"spreadsheetObj","description":"Spreadsheet variable","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"column","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"row","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"endColumn","description":"No Help Available","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"endRow","description":"No Help Available","required":false,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Extracts a filename from an absolute path.",
 	"params": [
-		{"name":"path","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

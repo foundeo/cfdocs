@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Calculates the closest integer that is smaller than number.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

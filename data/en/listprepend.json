@@ -7,9 +7,9 @@
 	"related":[],
 	"description":" Inserts an element at the beginning of a list.",
 	"params": [
-		{"name":"list","description":"A string list.","required":true,"default":"","type":"String","values":[]},
-		{"name":"value","description":"An element or list of elements.","required":true,"default":"","type":"String","values":[]},
-		{"name":"delimiters","description":"Characters that separate list elements.","required":false,"default":",","type":"String","values":[",","|",";","-","chr(9)","chr(10)","chr(13)"]}
+		{"name":"list","description":"A string list.","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"An element or list of elements.","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiters","description":"Characters that separate list elements.","required":false,"default":",","type":"string","values":[",","|",";","-","chr(9)","chr(10)","chr(13)"]}
 
 	],
 	"engines": {

@@ -10,10 +10,10 @@
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
 		{"name": "parallel", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "number", "values": []}
+		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "When called as a member function query.each() is chainable.", "docs": "http://docs.lucee.org/reference/functions/queryeach.html"},		
+		"lucee": {"minimum_version": "", "notes": "When called as a member function query.each() is chainable.", "docs": "http://docs.lucee.org/reference/functions/queryeach.html"},
 		"coldfusion": {"minimum_version": "2016", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryeach.html"}
 	},
 	"examples": [{

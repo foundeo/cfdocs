@@ -6,7 +6,7 @@
 	"related":["deserializeJSON"],
 	"description":"Converts a ColdFusion variable into a JSON (JavaScript Object Notation) string.",
 	"params": [
-		{"name":"var","description":"A ColdFusion variable.","required":true,"default":"","type":"Variablename","values":[]},
+		{"name":"var","description":"A ColdFusion variable.","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"serializeQueryByColumns","description":"A Boolean value that specifies how to serialize ColdFusion queries.","required":false,"default":"false","type":"boolean","values":[]},
 		{"name":"useCustomSerializer","description":"CF11+ Use custom serializer if defined. See: https://helpx.adobe.com/coldfusion/developing-applications/changes-in-coldfusion/restful-web-services-in-coldfusion.html","required":false,"default":"true","type":"boolean","values":[]}
 	],
