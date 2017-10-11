@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"getLocale()",
 	"returns":"string",
-	"related":[],
+	"related":["getLocaleDisplayName","GetLocaleInfo"],
 	"description":" Gets the current geographic/language locale value.\n To set the default display format of date, time, number, and\n currency values in a CFML application session, you use\n the SetLocale function.",
 	"params": [],
 	"engines": {
@@ -12,6 +12,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getlocale"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getlocale"}
 	},
-	"links": []
-
+	"links": [],
+	"examples": [{
+		"title":"Output current Locale than set it to swiss locale",
+		"description":"",
+		"code":"writeOutput(getlocale());\r\nwriteOutput(' → ');\r\nsetLocale('de_ch');\r\nwriteOutput(getlocale());",
+		"result":"english (us) → german (swiss)",
+		"runnable":true
+	}]
 }
