@@ -42,6 +42,22 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Lookup a User in Active Directory Example",
+			"description":"This example gets the user's data from active directory and displays a thumbnail image stored in active directory.",
+			"code":"<cfldap\r\n\tserver=\"ServerName\"\r\n\tport=636\r\n\taction=\"QUERY\"\r\n\tname=\"qLDAP\"\r\n\tsecure=\"CFSSL_BASIC\"\r\n\tusername=\"mydomain\\#ldapUsername#\"\r\n\tpassword=\"#ldapPassword#\"\r\n\tstart=\"dc=MYDOMAIN,dc=MYTLD\"\r\n\tattributes=\"cn,userPrincipalName,title,mail,thumbnailPhoto\"\r\n\tfilter=\"(sAMAccountName=#username#)\"> \r\n\r\n<cfoutput><img src=\"data:image/jpeg;base64,#binaryEncode(qLDAP.thumbnailPhoto,\"Base64\")#\" /></cfoutput>",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Script Syntax to Authenticate a User via Active Directory",
+			"description":"This is an example of using `cfldap` to authenticate a user against an Active Directory server.  The server or domain CA certificate must be imported into the cacerts java keystore for `security=\"CFSSL_BASIC\"` to work. ",
+			"code":"cfldap(\r\n\tserver = \"ServerName\",\r\n\tport = 636,\r\n\taction = \"QUERY\",\r\n\tname = \"qLDAPLookup\",\r\n\tsecure = \"CFSSL_BASIC\",\r\n\tusername = \"MYDOMAIN\\#arguments.username#\",\r\n\tpassword = arguments.password,\r\n\tstart = \"dc=MYDOMAIN,dc=MYTLD\",\r\n\tattributes = \"cn,userPrincipalName,title,mail\",\r\n\ttimeout = \"10\",\r\n\tfilter = \"(sAMAccountName=#arguments.username#)\"\r\n);\r\n\r\nif (qLDAPLookup.recordCount) {\r\n\tuserAuthenticated = true;\r\n}",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }
