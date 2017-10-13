@@ -24,6 +24,22 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Syntax",
+			"description":"Basic example of calling a stored procedure, passing a parameter, and getting a result set.",
+			"code":"<cfstoredproc procedure=\"spu_my_storedproc\" datasource=\"myDSN\">\r\n\t<cfprocparam cfsqltype=\"cf_sql_integer\" value=\"#myParameterValue#\">\r\n\t<cfprocresult name=\"qResults\">\r\n</cfstoredproc>",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Script Syntax",
+			"description":"Call stored procedure and get back multiple result sets.",
+			"code":"cfstoredproc( procedure=\"spu_my_storedproc\",datasource=\"myDSN\" ) {\r\n\tcfprocparam( cfsqltype=\"cf_sql_date\", value=myDateParam );\r\n\tcfprocresult( name=\"qSummary\", resultset=1 );\r\n\tcfprocresult( name=\"qDetails\", resultset=2 );\r\n}",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }
