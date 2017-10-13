@@ -2,7 +2,7 @@
 	"name":"cacheIdExists",
 	"type":"function",
 	"syntax":"cacheIdExists(id [,_ region___]);",
-	"returns":"True, if the cached object exists in the specified cache region.",
+	"returns":"boolean",
 	"related":[],
 	"description":" Used to find if a cached object exists in the cache region. The region can be the default cache region (either at server or application level) or the custom region you specify.",
 	"params": [

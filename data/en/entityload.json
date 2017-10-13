@@ -2,7 +2,7 @@
 	"name":"entityLoad",
 	"type":"function",
 	"syntax":"entityLoad(entityName [, filterCriteria] [, unique])\n entityLoad(entityName [, filterCriteria] [, sortOrder] [, options])",
-	"returns":"array|object",
+	"returns":"any",
 	"related":["entitynew","entityget", "entityloadbypk","entityloadbyexample", "entityreload", "ormexecutequery"],
 	"description":"Loads and returns an array of entities of the specified entityname or an entity if unique=true or if a primary key id is passed in to filterCriteria.",
 	"params": [

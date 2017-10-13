@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"createODBCDateTime(date)",
 	"member":"date.createODBCDateTime()",
-	"returns":"ODBCDateTime",
+	"returns":"date",
 	"related":["createDateTime", "createODBCDate", "createODBCTime"],
 	"description":" Creates an ODBC date-time object.",
 	"params": [

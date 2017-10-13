@@ -1,10 +1,10 @@
 {
-	"name":"ORMEvictQueries",
+	"name":"ormEvictQueries",
 	"type":"function",
-	"syntax":"ORMEvictQueries([cacheName])",
-	"returns":"",
+	"syntax":"ormEvictQueries([cacheName])",
+	"returns":"void",
 	"related":[],
-	"description":" This will remove all the queries from the named query cache. \nIf name is not specified, all quiries from default cache will be removed.\normEvictQueries([cacheName])",
+	"description":"This will remove all the queries from the named query cache. \nIf name is not specified, all quiries from default cache will be removed.\normEvictQueries([cacheName])",
 	"params": [
 		{"name":"cacheName","description":"No Help Available","required":false,"default":"","type":"string","values":[]}
 

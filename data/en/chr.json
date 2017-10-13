@@ -2,7 +2,7 @@
 	"name":"chr",
 	"type":"function",
 	"syntax":"chr(number)",
-	"returns":"char",
+	"returns":"string",
 	"related":["asc"],
 	"description":" Converts a numeric value to a UCS-2 character.",
 	"params": [

@@ -1,8 +1,8 @@
 {
-	"name":"ORMEvictEntity",
+	"name":"ormEvictEntity",
 	"type":"function",
-	"syntax":"ORMEvictEntity(componentName [, id])",
-	"returns":"",
+	"syntax":"ormEvictEntity(componentName [, id])",
+	"returns":"void",
 	"related":[],
 	"description":" This will remove all the entries for the specified component name from the entity cache.\normEvictEntity(componentName,[id])",
 	"params": [
@@ -22,14 +22,14 @@
 		{
 			"title":"Tag Example",
 			"description":"To evict all the cache data of CArtist entity:",
-			"code":"<cfset ORMEvictEntity(\"CArtists\")> ",
+			"code":"<cfset ormEvictEntity(\"CArtists\")> ",
 			"result":"",
 			"runnable":false
 		},
         {
 			"title":"Tag Example",
 			"description":"To evict the cache data of CArtists entity whose primary key is 1:",
-			"code":"<cfset ORMEvictEntity(\"CArtists\", 1)> ",
+			"code":"<cfset ormEvictEntity(\"CArtists\", 1)> ",
 			"result":"",
 			"runnable":false
 		}

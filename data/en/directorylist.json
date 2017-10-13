@@ -2,7 +2,7 @@
 	"name": "directoryList",
 	"type": "function",
 	"syntax": "directoryList(path [, recurse] [, listInfo] [, filter] [, sort] [, type])",
-	"returns": "query|array",
+	"returns": "any",
 	"related": [
 		"cfdirectory"
 	],

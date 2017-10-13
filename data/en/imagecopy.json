@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"imageCopy(name, x, y, width, height [, dx] [, dy])",
 	"member":"someImage.copy(x, y, width, height [, dx] [, dy])",
-	"returns":"Image",
+	"returns":"any",
 	"related":[],
 	"description":" Copies a rectangular area of an image.",
 	"params": [

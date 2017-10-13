@@ -2,7 +2,7 @@
 	"name":"listEach",
 	"type":"function",
 	"syntax":"listEach(String str, UDFMethod function [, String delim, boolean includeEmptyFields]);",
-	"returns":"",
+	"returns":"void",
 	"related":[],
 	"description":" Iterates over every element of a List object and can call a UDF function, passed as the second argument.",
 	"params": [
@@ -45,7 +45,7 @@
 			"code": "empArray = [\"john\", \"pete\", \"bob\"]; \r\n listS = \"'john', 'pete', 'bob'\"; \r\n arrayEach(empArray, xclosure); \r\n listEach(listS, xclosure); \r\n function xclosure(empname, index) {  \r\n    writeOutput(empName & \" at index: \" & index); \r\n }",
 			"result": "john at index: 1pete at index: 2bob at index: 3'john' at index: 1 'pete' at index: 2 'bob' at index: 3"
 		},
-        
+
         {
 			"title": "Another Closure Example",
 			"description": "Example 2",

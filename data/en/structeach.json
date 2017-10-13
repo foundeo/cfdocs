@@ -2,7 +2,8 @@
 	"name":"structEach",
 	"type":"function",
 	"syntax":"structEach(struct,function(key, value [, struct]) {})",
-    "member":"someStruct.each(function(key, value [, struct]) {})",
+	"member":"someStruct.each(function(key, value [, struct]) {})",
+	"returns": "void",
 	"related":[],
 	"description":"Used to loop over elements in a structure by accessing key-value pairs.",
 	"params": [
