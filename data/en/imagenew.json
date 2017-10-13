@@ -2,7 +2,7 @@
 	"name":"imageNew",
 	"type":"function",
 	"syntax":"imageNew([source] [, width] [, height] [, imagetype] [, canvascolor])",
-	"returns":"Image",
+	"returns":"any",
 	"related":[],
 	"description":" Creates a ColdFusion image.",
 	"params": [

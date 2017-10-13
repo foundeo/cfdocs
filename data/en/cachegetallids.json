@@ -2,7 +2,7 @@
 	"name":"cacheGetAllIds",
 	"type":"function",
 	"syntax":"cacheGetAllIds()",
-	"returns":"",
+	"returns":"array",
 	"related":[],
 	"description":" Gets the IDs of all objects stored in the cache.",
 	"params": [

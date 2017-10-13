@@ -1,10 +1,10 @@
 {
-	"name":"ORMExecuteQuery",
+	"name":"ormExecuteQuery",
 	"type":"function",
-	"syntax":"ORMExecuteQuery(hql, params [,unique]);\nORMExecuteQuery(hql, [,unique] [, queryoptions]);\nORMExecuteQuery(hql, params [,unique] [,queryOptions])",
-	"returns":"",
+	"syntax":"ormExecuteQuery(hql, params [,unique]);\normExecuteQuery(hql, [,unique] [, queryoptions]);\normExecuteQuery(hql, params [,unique] [,queryOptions])",
+	"returns":"any",
 	"related":[],
-	"description":" Runs the HQL on the default data source specified for the application.",
+	"description":"Runs the HQL on the default data source specified for the application.",
 	"params": [
 		{"name":"hql","description":"A HQL query statement","required":true,"default":"","type":"string","values":[]},
 		{"name":"params","description":"A struct or array of query params.","required":false,"default":"","type":"any","values":[]},
