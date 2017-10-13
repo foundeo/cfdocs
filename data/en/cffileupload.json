@@ -11,7 +11,7 @@
 			"description": "The URL to the server where the files are uploaded.",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "Width of the file upload control, in pixels.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "Title for the upload dialog.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -35,7 +35,7 @@
 			"description": "Use this attribute to specify the type of file that you will allow to be uploaded. \nFor example, to let only image files to be uploaded, you can specify file extensions like .jpg, .jpeg, or .png",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -43,7 +43,7 @@
 			"description": "Label of the Upload button.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -51,7 +51,7 @@
 			"description": "Whether to display Progress Bar or not. Default true",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -59,7 +59,7 @@
 			"description": "Height of the file upload control, in pixels.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -67,7 +67,7 @@
 			"description": "The maximum file size, in mega bytes, allowed for the upload. Default 10MB.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -75,7 +75,7 @@
 			"description": "The maximum number of files allowed for the upload.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -83,7 +83,7 @@
 			"description": "A CSS style specification that defines layout styles",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -91,7 +91,7 @@
 			"description": "The background color for the file upload control. A hexadecimal value without &quot;#&quot; prefixed.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -99,7 +99,7 @@
 			"description": "Label of the Add button",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -107,7 +107,7 @@
 			"description": "Name of the file upload component.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -115,7 +115,7 @@
 			"description": "The JavaScript function to run after the file upload completes",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -123,7 +123,7 @@
 			"description": "The JavaScript function to run on an error condition. The error can be a network error or server-side error",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -131,7 +131,7 @@
 			"description": "Label of the Clear button",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -139,7 +139,7 @@
 			"description": "Label of the Delete button",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -147,7 +147,7 @@
 			"description": "Specifies the default alignment",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["left", "right", "center", "justify"]
 		},
 		{
@@ -155,7 +155,7 @@
 			"description": "Specifies the absolute positioning and layering capabilities in your browser:",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["opaque", "transparent", "window"]
 		},
 		{
@@ -179,7 +179,7 @@
 			"description": "The JavaScript function to run after the all uploads have completed",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

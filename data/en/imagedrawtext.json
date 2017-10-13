@@ -7,11 +7,11 @@
 	"related":[],
 	"description":" Draws a text string on a ColdFusion image with the baseline of the first character positioned at (x,y) in the image.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"str","description":"The text to draw.","required":true,"default":"","type":"String","values":[]},
-		{"name":"x","description":"The x coordinate for the start point of the string.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"y","description":"The y coordinate for the start point of the string.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"attributecollection","description":"A structure used to specify the text characteristics. the following keys are supported: \r\nfont: The name of the font used to draw the text string. If you do not specify the font attribute, the text is drawn in the default system font. \r\nsize: The font size for the text string. The default value is 10 points. \r\nstyle: The style to apply to the font ( bold,italic,boldItalic,plain (default) ). \r\nstrikethrough: a boolean that specify whether strikethrough is applied to the text image, default is false. \r\nunderline: a boolean that specify whether underline is applied to the text image, default is false.","required":false,"default":"","type":"Struct","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"str","description":"The text to draw.","required":true,"default":"","type":"string","values":[]},
+		{"name":"x","description":"The x coordinate for the start point of the string.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"y","description":"The y coordinate for the start point of the string.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"attributecollection","description":"A structure used to specify the text characteristics. the following keys are supported: \r\nfont: The name of the font used to draw the text string. If you do not specify the font attribute, the text is drawn in the default system font. \r\nsize: The font size for the text string. The default value is 10 points. \r\nstyle: The style to apply to the font ( bold,italic,boldItalic,plain (default) ). \r\nstrikethrough: a boolean that specify whether strikethrough is applied to the text image, default is false. \r\nunderline: a boolean that specify whether underline is applied to the text image, default is false.","required":false,"default":"","type":"struct","values":[]}
 
 	],
 	"engines": {

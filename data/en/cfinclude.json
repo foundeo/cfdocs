@@ -7,8 +7,8 @@
 	"related":["cfmodule"],
 	"description":"Includes the content from the referenced file (template). The content may be executed as CFML, see compatibility info below. You can embed cfinclude tags recursively. For another way to encapsulate CFML, see cfmodule. (A CFML page was formerly sometimes called a CFML template or a template.)",
 	"params": [
-		{"name":"template","description":"A logical path to a CFML page.","required":true,"default":"","type":"String","values":[]}
-		, {"name":"runonce","description":"If set to true, the given template (if already processed) is not processed again for a given request. CF10+","required":false,"default":"false","type":"Boolean","values":[]}
+		{"name":"template","description":"A logical path to a CFML page.","required":true,"default":"","type":"string","values":[]}
+		, {"name":"runonce","description":"If set to true, the given template (if already processed) is not processed again for a given request. CF10+","required":false,"default":"false","type":"boolean","values":[]}
 
 	],
 	"engines": {

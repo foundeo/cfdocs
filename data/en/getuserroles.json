@@ -2,7 +2,7 @@
 	"name":"getUserRoles",
 	"type":"function",
 	"syntax":"getUserRoles()",
-	"returns":"List",
+	"returns":"string",
 	"related":[],
 	"description":" Retrieves the list of roles for the current user.",
 	"params": [

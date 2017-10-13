@@ -5,12 +5,12 @@
 	"member": "query.map(closure [, parallel] [, maxThreads])",
 	"returns": "query",
 	"related": [],
-	"description": "",
+	"description": "Maps each query row using a function to manipulate the rows fields",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
 		{"name": "parallel", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "number", "values": []}
+		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "numeric", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querymap.html"},

@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Converts the input entity object or the input array of entity objects to a query object.\nentityToQuery (orm_object, [entity_name]) \nentityToQuery (orm_object_array, [entity_name])",
 	"params": [
-		{"name":"orm_object","description":"Entity object that needs to be converted to a query object.","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"entity_name","description":"Name of the entity. Use this optional parameter to return the query of the given entity in the case of inheritance mapping.","required":false,"default":"","type":"String","values":[]}
+		{"name":"orm_object","description":"Entity object that needs to be converted to a query object.","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"entity_name","description":"Name of the entity. Use this optional parameter to return the query of the given entity in the case of inheritance mapping.","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

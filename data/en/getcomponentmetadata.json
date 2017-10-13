@@ -2,11 +2,11 @@
 	"name":"getComponentMetadata",
 	"type":"function",
 	"syntax":"getComponentMetadata(path)",
-	"returns":"Struct",
+	"returns":"struct",
 	"related":[],
 	"description":" Gets metadata (such as the functions and implemented interfaces of a component) for a CFC or ColdFusion interface.",
 	"params": [
-		{"name":"path","description":"The dot-delimited path of the interface or CFC definition.","required":true,"default":"","type":"String","values":[]}
+		{"name":"path","description":"The dot-delimited path of the interface or CFC definition.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

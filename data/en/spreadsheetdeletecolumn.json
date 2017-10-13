@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Deletes the data from a column of an Excel spreadsheet object. It does not delete the column.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"column","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"column","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

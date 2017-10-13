@@ -2,14 +2,20 @@ language: java
 sudo: false
 jdk:
 - oraclejdk8
+env:
+  global:
+    - TEST_RUNNER_URI=/tests/run.cfm?reporter=text
+  matrix:
+    - CFENGINE=lucee@5
+    - CFENGINE=adobe@2016
 before_install:
-- mkdir /tmp/bin
-- export PATH=$PATH:/tmp/bin
+- git clone https://github.com/foundeo/cfmatrix.git cfmatrix
 install:
-- curl --location 'https://www.ortussolutions.com/parent/download/commandbox/type/bin' -o /tmp/box.zip
-- unzip /tmp/box.zip -d /tmp/bin
-- /tmp/bin/box install
+- cfmatrix/bin/box recipe recipeFile=cfmatrix/ci.boxr CFENGINE=$CFENGINE
 before_script:
-- chmod +x test.sh
+- chmod +x cfmatrix/run.sh
 script:
-- "./test.sh"
+- "./cfmatrix/run.sh"
+after_script:
+- npm install -g ajv-cli
+- ajv validate -s data/cfdocs.schema.json -d "data/en/*.json" --use-defaults --errors=text

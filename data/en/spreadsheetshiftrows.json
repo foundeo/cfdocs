@@ -6,10 +6,10 @@
 	"related":[],
 	"description":" shifts one or more rows in Excel spreadsheet object up or down. . The contents of the shifted row, including empty cells, overwrites data in the column to which it is shfted.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"start","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"end","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"rows","description":"No Help Available","required":false,"default":"","type":"Numeric","values":[]}
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"start","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"end","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"rows","description":"No Help Available","required":false,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

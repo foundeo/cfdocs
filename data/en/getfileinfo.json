@@ -2,11 +2,11 @@
 	"name":"getFileInfo",
 	"type":"function",
 	"syntax":"getFileInfo(path)",
-	"returns":"Struct",
+	"returns":"struct",
 	"related":[],
 	"description":"Returns information about on-disk or in-memory file. Return struct contains keys such as: lastModified, size, path, name, type, canWrite, canRead, isHidden and more.",
 	"params": [
-		{"name":"path","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"path","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

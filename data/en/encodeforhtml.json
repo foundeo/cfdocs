@@ -2,12 +2,12 @@
 	"name":"encodeForHTML",
 	"type":"function",
 	"syntax":"encodeForHTML(inputString [, canonicalize])",
-	"returns":"String",
+	"returns":"string",
 	"related":["htmleditformat", "encodeforhtmlattribute"],
 	"description":"Encodes the inputString for safe output in the body of a HTML tag. The encoding in meant to mitigate Cross Site Scripting (XSS) attacks. This function can provide more protection from XSS than the HTMLEditFormat or XMLFormat functions do.",
 	"params": [
-		{"name":"inputString","description":"A string to encode","required":true,"default":"","type":"String","values":[]},
-		{"name":"canonicalize","description":"When true runs the canonicalize function against the input before encoding. This argument is not supported on Lucee.","required":false,"default":"","type":"Boolean","values":[]}
+		{"name":"inputString","description":"A string to encode","required":true,"default":"","type":"string","values":[]},
+		{"name":"canonicalize","description":"When true runs the canonicalize function against the input before encoding. This argument is not supported on Lucee.","required":false,"default":"","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/encodeforhtml.html"},

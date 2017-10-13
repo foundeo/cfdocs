@@ -7,11 +7,11 @@
 	"related":[],
 	"description":" Creates a resized image with the aspect ratio maintained.",
 	"params": [
-		{"name":"name","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"fitWidth","description":"The width of the bounding box in pixels. You can specify an integer, or an empty string ('') if the fitHeight is specified.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"fitHeight","description":"The height of the bounding box in pixels. You can specify an integer, or an empty string ('') if the fitWidth is specified.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"interpolation","description":"The interpolation method for resampling. You can specify a specific interpolation algorithm by name (for example, hamming), by image quality (for example, mediumQuality), or by performance (for example, highestPerformance). ","required":false,"default":"","type":"String","values":["highestQuality (default)","highQuality","mediumQuality","highestPerformance","highPerformance","mediumPerformance","nearest","bilinear","bicubic","bessel","blackman","hamming","hanning","hermite","lanczos","mitchell","quadratic"]},
-		{"name":"blurfactor","description":"The blur factor used for resampling. The higher the blur factor, the more blurred the image (also, the longer it takes to resize the image).","required":false,"default":"","type":"Boolean","values":["1-10"]}
+		{"name":"name","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"fitWidth","description":"The width of the bounding box in pixels. You can specify an integer, or an empty string ('') if the fitHeight is specified.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"fitHeight","description":"The height of the bounding box in pixels. You can specify an integer, or an empty string ('') if the fitWidth is specified.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"interpolation","description":"The interpolation method for resampling. You can specify a specific interpolation algorithm by name (for example, hamming), by image quality (for example, mediumQuality), or by performance (for example, highestPerformance). ","required":false,"default":"","type":"string","values":["highestQuality (default)","highQuality","mediumQuality","highestPerformance","highPerformance","mediumPerformance","nearest","bilinear","bicubic","bessel","blackman","hamming","hanning","hermite","lanczos","mitchell","quadratic"]},
+		{"name":"blurfactor","description":"The blur factor used for resampling. The higher the blur factor, the more blurred the image (also, the longer it takes to resize the image).","required":false,"default":"","type":"boolean","values":["1-10"]}
 
 	],
 	"engines": {

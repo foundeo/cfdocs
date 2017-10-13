@@ -23,7 +23,7 @@
       "default": "",
       "description": "type of imap filter to use. TimeReceived and TimeSent must be used with the from\/to attributes ",
       "name": "name",
-      "type": "String",
+      "type": "string",
       "required": "1"
     },
     {
@@ -31,7 +31,7 @@
       "default": "",
       "description": "The start date or date\/time combination of the range to use for filtering. Cannot be used with the value attribute. If you specify a from attribute without a to attribute, the filter selects for all entries on or after the specified date or time.\r\nThe value can be in any date\/time format recognized by ColdFusion, but must correspond to a value that is appropriate for the filter type.",
       "name": "from",
-      "type": "Date",
+      "type": "date",
       "required": "0"
     },
     {
@@ -39,7 +39,7 @@
       "default": "",
       "description": "The end date or date\/time combination for the range used for filtering. Cannot be used with the value attribute. If you specify a to attribute without a from attribute, the filter selects for all entries on or before the specified date or time.\r\nThe value can be in any date\/time format recognized by ColdFusion, but must correspond to a value that is appropriate for the filter type.",
       "name": "to",
-      "type": "Date",
+      "type": "date",
       "required": "0"
     },
     {
@@ -47,7 +47,7 @@
       "default": "",
       "description": "Filter Value",
       "name": "value",
-      "type": "String",
+      "type": "string",
       "required": "0"
     }
   ],

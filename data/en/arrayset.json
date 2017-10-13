@@ -7,10 +7,10 @@
 	"related":[],
 	"description":" In a one-dimensional array, sets the elements in a specified\n index range to a value. Useful for initializing an array after\n a call to ArrayNew.",
 	"params": [
-		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
-		{"name":"start_pos","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"end_pos","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"value","description":"","required":true,"default":"","type":"Object","values":[]}
+		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
+		{"name":"start_pos","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"end_pos","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

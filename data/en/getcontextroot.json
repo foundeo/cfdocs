@@ -2,7 +2,7 @@
 	"name":"getContextRoot",
 	"type":"function",
 	"syntax":"getContextRoot()",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Returns path to the J2EE server context root for the current request.",
 	"params": [

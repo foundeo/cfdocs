@@ -6,8 +6,8 @@
 	"related":[],
 	"description":"Appends one structure to another.",
 	"params": [
-		{"name":"destStruct","description":"Structure to append.","required":true,"default":"","type":"Struct","values":[]},
-		{"name":"sourceStruct","description":"Structure that contains the data to append to destStruct","required":true,"default":"","type":"Struct","values":[]},
+		{"name":"destStruct","description":"Structure to append.","required":true,"default":"","type":"struct","values":[]},
+		{"name":"sourceStruct","description":"Structure that contains the data to append to destStruct","required":true,"default":"","type":"struct","values":[]},
 		{"name":"overwriteFlag","description":"Yes: values in sourceStruct overwrite corresponding values in\n destStruct. Default.","required":false,"default":true,"type":"boolean","values":[true,false]}
 
 	],

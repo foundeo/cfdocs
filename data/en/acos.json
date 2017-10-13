@@ -2,11 +2,11 @@
 	"name":"acos",
 	"type":"function",
 	"syntax":"acos(number)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["asin","atn","cos","exp","log","log10","sin","tan"],
 	"description":" Returns the angle whose cosine is the value passed as the argument.",
 	"params": [
-		{"name":"number","description":"The value to be converted into an angle. Must be between -1 and 1.","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"The value to be converted into an angle. Must be between -1 and 1.","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

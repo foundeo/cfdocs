@@ -2,14 +2,15 @@
 	"name":"floor",
 	"type":"function",
 	"syntax":"floor(number)",
-	"returns":"Integer",
+	"returns":"numeric",
 	"related":["int"],
-	"description":"Returns the integer less than or equal to the input. This function is equivilant to the int function.",
+	"description":"Returns the integer less than or equal to the input. This function is equivalent to the int function.",
 	"params": [
-		{"name":"number","description":"A numeric value","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"A numeric value","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/floor.html"}
+		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/floor.html"},
+		"lucee": {"minimum_version":"5.1", "notes":"", "docs":"http://docs.lucee.org/reference/functions/floor.html"}
 	},
 	"links": [
 
@@ -40,7 +41,7 @@
 			"title":"Floor Value of -4.3",
 			"description":"Requires CF2016+",
 			"code":"floor(-4.3)",
-			"result":"-4",
+			"result":"-5",
 			"runnable":true
 		}
 	]

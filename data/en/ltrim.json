@@ -2,11 +2,11 @@
 	"name":"lTrim",
 	"type":"function",
 	"syntax":"lTrim(String)",
-	"returns":"String",
+	"returns":"string",
 	"related":["ltrim","trim","rtrim"],
 	"description":" Removes leading spaces from a string.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

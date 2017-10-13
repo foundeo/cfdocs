@@ -3,12 +3,12 @@
 	"type":"function",
 	"syntax":"listFilter(list, function(listElement, [list]) )",
 	"member":"someList.filter(function(listElement, [list]) )",
-	"returns":"list",
+	"returns":"string",
 	"related":["listGetAt"],
 	"description":"Used to filter an list to items for which the closure function returns true.",
 	"params": [
 		{"name":"list","description":"","required":true,"default":"","type":"List","values":[]},
-		{"name":"function","description":"Inline closure function executed for each element in the list. Returns true if the list element should be included in the filtered list. Support for passing the original list to the closure function added in CF11 Update 5.","required":true,"default":"","type":"Closure","values":[]}
+		{"name":"function","description":"Inline closure function executed for each element in the list. Returns true if the list element should be included in the filtered list. Support for passing the original list to the closure function added in CF11 Update 5.","required":true,"default":"","type":"function","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listfilter.html"},

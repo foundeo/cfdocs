@@ -11,7 +11,7 @@
 			"description": "The text to show as the menu item label.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "A CSS style specification that applies to all child \n menu items, including the children of submenus.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "This attribute specifies that the item is a divider. If \n you specify this attribute, you cannot specify any \n other attributes.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": [true, false]
 		},
 		{
@@ -35,7 +35,7 @@
 			"description": "A URL link to activate or JavaScript function to \n call when the user clicks the menu item.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -43,7 +43,7 @@
 			"description": "URL of an image to display at the left side of the \n menu item. The file type can be any format the \n browser can display. \n For most displays, you should use 15x15 pixel \n images, because larger images conflict with the \n menu item text",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -51,7 +51,7 @@
 			"description": "A CSS style specification that controls the overall \n style of any submenu of this menu item. This \n attribute controls the submenu of the current menu \n item, but not to any child submenus of the submenu.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -59,7 +59,7 @@
 			"description": "The name of the menu item.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -67,7 +67,7 @@
 			"description": "A CSS style specification that applies to the current \n menu item only. It is not overridden by the \n childStyle attribute.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -75,7 +75,7 @@
 			"description": "The target in which to display the contents \n returned by the href attribute. The attribute can be \n a browser window or frame name, an HTML target \n value, such as _self.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

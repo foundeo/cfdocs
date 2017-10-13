@@ -5,7 +5,7 @@
 	"member": "string.ucFirst([doAll] [, doLowerIfAllUppercase])",
 	"returns": "string",
 	"related": [],
-	"description": "",
+	"description": "Transforms the first letter of a string to uppercase",
 	"params": [
 		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "doAll", "description": "", "required": false, "default": "", "type": "boolean", "values": []},

@@ -2,11 +2,11 @@
 	"name":"cos",
 	"type":"function",
 	"syntax":"cos(number)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["acos","asin","atn","exp","log","log10","sin","tan"],
 	"description":" Calculates the cosine of an angle that is entered\n in radians.\n A number; the cosine of the angle.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

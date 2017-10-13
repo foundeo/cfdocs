@@ -2,7 +2,7 @@
 	"name":"getCurrentTemplatePath",
 	"type":"function",
 	"syntax":"getCurrentTemplatePath()",
-	"returns":"String",
+	"returns":"string",
 	"related":["getBaseTemplatePath"],
 	"description":"Gets the absolute server file system path of the file that calls this function.",
 	"params": [

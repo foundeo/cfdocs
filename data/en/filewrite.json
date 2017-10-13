@@ -1,15 +1,14 @@
 {
 	"name":"fileWrite",
 	"type":"function",
-	"syntax":"fileWrite(filePath, data [, charset])",
+	"syntax":"fileWrite(file, data [, charset])",
 	"returns":"void",
-	"related":[],
-	"description":" If you specify a file path, writes the entire content to the specified on-disk or in-memory file. If you specify a file object, writes text or binary data to the file object.",
+	"related":["cffile"],
+	"description":"Writes the data to the file object or file path speficied using the charset specified or the java default character set if unspecified.",
 	"params": [
-		{"name":"filePath or fileObject","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"data","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"charset","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
-
+		{"name":"file","description":"A file object or a file system path string.","required":true,"default":"","type":"any","values":[]},
+		{"name":"data","description":"The variable to  write to the file.","required":true,"default":"","type":"String","values":[]},
+		{"name":"charset","description":"An optional character set that the data is encoded with. Defaults to the Java default character set (which is usually UTF-8).","required":false,"default":"","type":"String","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filewrite.html"},
@@ -22,9 +21,9 @@
 	],
     "examples": [
 		{
-			"title": "Script Syntax",
+			"title": "Write a Temporary File",
 			"description": "",
-			"code": "<cfscript> \r\n fileWrite(\"mail_list\", \"#companymail#\"); \r\n mlist = fileRead(\"mail_list\"); \r\n </cfscript>  ",
+			"code": "fileWrite( getTempFile( getTempDirectory(), \"tempFile\"), \"My Data\" );",
 			"result": "",
 			"runnable":false
 		}

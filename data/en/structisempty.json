@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether a structure contains data.",
 	"params": [
-		{"name":"structure","description":"Structure to test","required":true,"default":"","type":"Struct","values":[]}
+		{"name":"structure","description":"Structure to test","required":true,"default":"","type":"struct","values":[]}
 
 	],
 	"engines": {

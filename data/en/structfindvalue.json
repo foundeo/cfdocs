@@ -2,13 +2,13 @@
 	"name":"structFindValue",
 	"type":"function",
 	"syntax":"structFindValue(top, value [, scope])",
-	"returns":"Array",
+	"returns":"array",
 	"related":[],
 	"description":" Searches recursively through a substructure of nested arrays,\n structures, and other elements for structures with values that\n match the search key in the value parameter.",
 	"params": [
-		{"name":"top","description":"CFML object (a structure or an array) from which to\n start search. This attribute requires an object, not a\n name of an object.","required":true,"default":"","type":"Object","values":[]},
-		{"name":"value","description":"String or a variable that contains one for which to search.\n The type must be a simple object. Arrays and structures\n are not supported.","required":true,"default":"","type":"String","values":[]},
-		{"name":"scope","description":"one: function returns one matching key (default)\n all: function returns all matching keys","required":false,"default":"","type":"String","values":["one","all"]}
+		{"name":"top","description":"CFML object (a structure or an array) from which to\n start search. This attribute requires an object, not a\n name of an object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"value","description":"String or a variable that contains one for which to search.\n The type must be a simple object. Arrays and structures\n are not supported.","required":true,"default":"","type":"string","values":[]},
+		{"name":"scope","description":"one: function returns one matching key (default)\n all: function returns all matching keys","required":false,"default":"","type":"string","values":["one","all"]}
 
 	],
 	"engines": {

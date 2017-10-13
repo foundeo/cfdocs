@@ -2,14 +2,14 @@
 	"name":"getSystemFreeMemory",
 	"type":"function",
 	"syntax":"getSystemFreeMemory();",
-	"returns":"Memory, in bytes, that is currently free.",
+	"returns":"numeric",
 	"related":[],
 	"description":" Gets details of free memory.",
 	"params": [
-		
+
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getsystemfreememory.html"},
+		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getsystemfreememory.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/getsystemfreememory.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/GetSystemFreeMemory"}
 	},
@@ -17,7 +17,7 @@
 
 	],
 	"examples": [
-		
+
 	]
 
 }

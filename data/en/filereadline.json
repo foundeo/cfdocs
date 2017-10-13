@@ -2,7 +2,7 @@
 	"name":"fileReadLine",
 	"type":"function",
 	"syntax":"fileReadLine(fileObj)",
-	"returns":"String",
+	"returns":"string",
 	"related":["fileOpen","fileClose","fileIsEOF","fileRead","fileWrite"],
 	"description":"Returns the next line from the file",
 	"params": [

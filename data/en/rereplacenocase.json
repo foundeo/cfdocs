@@ -2,14 +2,14 @@
 	"name":"REReplaceNoCase",
 	"type":"function",
 	"syntax":"REReplaceNoCase(String, reg_expression, substring [, scope])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Uses a regular expression to search a string for a string\n pattern and replace it with another. The search is\n case-insensitive.",
 	"params": [
-		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]},
+		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"string","values":[]},
 		{"name":"reg_expression","description":"Regular expression to replace.","required":true,"default":"","type":"Regex","values":[]},
-		{"name":"substring","description":"A string or a variable that contains one. Replaces\n reg_expression","required":true,"default":"","type":"String","values":[]},
-		{"name":"scope","description":"* one: Replace the first occurrence of the regular\n expression. Default.\n * all: Replace all occurrences of the regular expression.","required":false,"default":"","type":"String","values":["one","all"]}
+		{"name":"substring","description":"A string or a variable that contains one. Replaces\n reg_expression","required":true,"default":"","type":"string","values":[]},
+		{"name":"scope","description":"* one: Replace the first occurrence of the regular\n expression. Default.\n * all: Replace all occurrences of the regular expression.","required":false,"default":"","type":"string","values":["one","all"]}
 
 	],
 	"engines": {

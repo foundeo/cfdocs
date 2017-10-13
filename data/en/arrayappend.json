@@ -7,9 +7,9 @@
 	"related":["arrayprepend"],
 	"description":"Appends an element to the end of an array.",
 	"params": [
-		{"name":"array","description":"The array to which the element should be appended.","required":true,"default":"","type":"Array","values":[]},
-		{"name":"value","description":"The element to append. Can be any type.","required":true,"default":"","type":"Any","values":[]},
-		{"name":"merge","description":"CF10+ When true appends array elements individually to the specified array. When false (default), the new array is appended as a single element.","required":false,"default":false,"type":"Boolean","values":[true,false]}
+		{"name":"array","description":"The array to which the element should be appended.","required":true,"default":"","type":"array","values":[]},
+		{"name":"value","description":"The element to append. Can be any type.","required":true,"default":"","type":"any","values":[]},
+		{"name":"merge","description":"CF10+ When true appends array elements individually to the specified array. When false (default), the new array is appended as a single element.","required":false,"default":false,"type":"boolean","values":[true,false]}
 
 	],
 	"engines": {

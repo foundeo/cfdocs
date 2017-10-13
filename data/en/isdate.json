@@ -6,7 +6,7 @@
 	"related":["CreateDateTime", "IsNumericDate", "IsValid", "LSDateFormat", "LSIsDate", "ParseDateTime"],
 	"description":" Determines whether a string or Java object can be converted\n to a date/time value.",
 	"params": [
-		{"name":"Object","description":"A string or variable name","required":true,"default":"","type":"Object","values":[]}
+		{"name":"Object","description":"A string or variable name","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

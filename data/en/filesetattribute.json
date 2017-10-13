@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Sets the attributes of an on-disk file in Windows. This function does not work with in-memory files.",
 	"params": [
-		{"name":"filePath","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"attribute","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"filePath","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"attribute","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -18,7 +18,7 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Script Syntax",

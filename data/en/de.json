@@ -2,11 +2,11 @@
 	"name":"de",
 	"type":"function",
 	"syntax":"de(String)",
-	"returns":"Object",
+	"returns":"string",
 	"related":[],
 	"description":"Delay evaluation of a string as an expression, when it is passed as a parameter to the IIf or Evaluate functions. Escapes any double quotation marks in the parameter and wraps the result in double quotation marks. It does not escape `#` so the string could still be evaluated in some cases.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

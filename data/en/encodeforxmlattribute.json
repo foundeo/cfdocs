@@ -2,10 +2,10 @@
 	"name":"encodeForXMLAttribute",
 	"type":"function",
 	"syntax":"encodeForXMLAttribute(string inputString, boolean canonicalize);",
-	"returns":"string.",
+	"returns":"string",
 	"related":["encodeForXML", "canonicalize"],
 	"description":"Encodes a string for safe output within an XML attribute. Use encodeForXML when outputting a variable inside a XML tag body.",
-	"params": [ 
+	"params": [
 		{"name":"inputString","description":"The string to encode.","required":true,"default":"","type":"","values":[]},
         {"name":"canonicalize","description":"When `true` the canonicalize function is called before encoding the input. If set to false, the given input string will just be encoded, both mixed and multiple encodings will be allowed.","required":false,"default":"false","type":"boolean","values":["true","false"]}
 	],

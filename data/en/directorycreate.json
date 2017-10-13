@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Creates new directory for specified path",
 	"params": [
-		{"name":"path","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "Checking if a directory called 'icons' exists and then creating the directory if it does not exist.",
+			"code": "if (!directoryExists(expandPath('/assets/img/icons'))) {\n\tdirectoryCreate('assets/img/icons');\n}",
+			"result": "The directory 'icons' will be created under the img folder."
+		}
 	]
 
 }

@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Shifts the file pointer to the given position. The file must be opened with seekable option",
 	"params": [
-		{"name":"file","description":"No Help Available","required":true,"default":"","type":"variablename","values":[]},
+		{"name":"file","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"position","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
 
 	],

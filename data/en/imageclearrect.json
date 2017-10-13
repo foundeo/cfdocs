@@ -7,11 +7,11 @@
 	"related":[],
 	"description":" Clears the specified rectangle by filling it with the background color of the current drawing surface.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed","required":true,"default":"","type":"String","values":[]},
-		{"name":"x","description":"The X coordinate of the rectangle to clear.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"y","description":"The Y coordinate of the rectangle to clear.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"width","description":"The width of the rectangle to clear.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"height","description":"The height of the rectangle to clear.","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"name","description":"The image on which this operation is performed","required":true,"default":"","type":"string","values":[]},
+		{"name":"x","description":"The X coordinate of the rectangle to clear.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"y","description":"The Y coordinate of the rectangle to clear.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"width","description":"The width of the rectangle to clear.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"height","description":"The height of the rectangle to clear.","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

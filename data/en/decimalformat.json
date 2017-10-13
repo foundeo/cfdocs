@@ -2,11 +2,11 @@
 	"name":"decimalFormat",
 	"type":"function",
 	"syntax":"decimalFormat(number)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Converts a number to a decimal-formatted string.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

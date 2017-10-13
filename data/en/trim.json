@@ -2,11 +2,11 @@
 	"name":"trim",
 	"type":"function",
 	"syntax":"trim(String)",
-	"returns":"String",
+	"returns":"string",
 	"related":["ltrim","trim","rtrim"],
 	"description":" Removes leading and trailing spaces from a string.",
 	"params": [
-		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]}
+		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

@@ -2,7 +2,7 @@
 	"name":"queryGetRow",
 	"type":"function",
 	"syntax":"queryGetRow( query, rowNumber );",
-	"returns":"Struct",
+	"returns":"struct",
 	"related":["queryColumnData"],
 	"description":"Returns a struct having all the columns as keys and their corresponding values.",
 	"params": [
