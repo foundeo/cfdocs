@@ -2,14 +2,14 @@
 	"name":"iIf",
 	"type":"function",
 	"syntax":"iIf(condition, expression1, expression2)",
-	"returns":"String",
+	"returns":"string",
 	"related":["evaluate", "de"],
 	"description":"A boolean condition or value is passed into the first argument. If the condition is `true` the second argument is evaluated and returned, if `false` the third argument is evaluated and returned.",
 	"discouraged":"Use the ternary operator CF9+ instead because it does not evaluate.\nExample ternary operator: `( (condition) ? valueIfTrue : valueIfFalse )`",
 	"params": [
 		{"name":"condition","description":"A boolean value or an expression that evaluates to a boolean.","required":true,"default":"","type":"boolean","values":[]},
-		{"name":"expression1","description":"A CFML expression that is evaluated dynamically using Evaluate if the condition is `true`.","required":true,"default":"","type":"String","values":[]},
-		{"name":"expression2","description":"A CFML expression that is evaluated dynamically using Evaluate if the condition is `false`.","required":true,"default":"","type":"String","values":[]}
+		{"name":"expression1","description":"A CFML expression that is evaluated dynamically using Evaluate if the condition is `true`.","required":true,"default":"","type":"string","values":[]},
+		{"name":"expression2","description":"A CFML expression that is evaluated dynamically using Evaluate if the condition is `false`.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

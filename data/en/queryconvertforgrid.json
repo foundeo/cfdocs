@@ -2,13 +2,13 @@
 	"name":"queryConvertForGrid",
 	"type":"function",
 	"syntax":"queryConvertForGrid(query, page, pageSize)",
-	"returns":"Struct",
+	"returns":"struct",
 	"related":[],
 	"description":" Converts query data to a structure that contains a paged subset of the query.",
 	"params": [
-		{"name":"query","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"page","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"pageSize","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"query","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"page","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"pageSize","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
@@ -23,7 +23,7 @@
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<!--- cfm page ---> \r\n <cfform> \r\n <cfgrid format=\"html\" name=\"grid01\" pagesize=5 sort=true bind=\"cfc:places.getData({cfgridpage},{cfgridpagesize}, {cfgridsortcolumn},{cfgridsortdirection})\" selectMode=\"row\"> \r\n <cfgridcolumn name=\"Emp_ID\" display=true header=\"Employee ID\"/> \r\n <cfgridcolumn name=\"FirstName\" display=true header=\"Name\"/> \r\n <cfgridcolumn name=\"Email\" display=true header=\"Email\"/> \r\n </cfgrid> \r\n </cfform> \r\n \r\n <!--- cfc page ---> \r\n <cffunction name=\"getData\" access=\"remote\" output=\"false\"> \r\n <cfargument name=\"page\"> \r\n <cfargument name=\"pageSize\"> \r\n <cfargument name=\"gridsortcolumn\"> \r\n <cfargument name=\"gridstartdirection\"> \r\n <cfset query = \"SELECT Emp_ID, FirstName, EMail \r\n FROM Employees\" > \r\n <cfif gridsortcolumn neq \"\" or gridstartdirection neq \"\"> \r\n <cfset query=query & \" order by #gridsortcolumn# #gridstartdirection#\"> \r\n </cfif> \r\n <cfquery name=\"team\" datasource=\"cfdocexamples\"> \r\n <cfoutput>#query#</cfoutput> \r\n </cfquery> \r\n <cfreturn queryConvertForGrid(team, page, pageSize)> \r\n </cffunction>", 
+			"code":"<!--- cfm page ---> \r\n <cfform> \r\n <cfgrid format=\"html\" name=\"grid01\" pagesize=5 sort=true bind=\"cfc:places.getData({cfgridpage},{cfgridpagesize}, {cfgridsortcolumn},{cfgridsortdirection})\" selectMode=\"row\"> \r\n <cfgridcolumn name=\"Emp_ID\" display=true header=\"Employee ID\"/> \r\n <cfgridcolumn name=\"FirstName\" display=true header=\"Name\"/> \r\n <cfgridcolumn name=\"Email\" display=true header=\"Email\"/> \r\n </cfgrid> \r\n </cfform> \r\n \r\n <!--- cfc page ---> \r\n <cffunction name=\"getData\" access=\"remote\" output=\"false\"> \r\n <cfargument name=\"page\"> \r\n <cfargument name=\"pageSize\"> \r\n <cfargument name=\"gridsortcolumn\"> \r\n <cfargument name=\"gridstartdirection\"> \r\n <cfset query = \"SELECT Emp_ID, FirstName, EMail \r\n FROM Employees\" > \r\n <cfif gridsortcolumn neq \"\" or gridstartdirection neq \"\"> \r\n <cfset query=query & \" order by #gridsortcolumn# #gridstartdirection#\"> \r\n </cfif> \r\n <cfquery name=\"team\" datasource=\"cfdocexamples\"> \r\n <cfoutput>#query#</cfoutput> \r\n </cfquery> \r\n <cfreturn queryConvertForGrid(team, page, pageSize)> \r\n </cffunction>",
 			"result":"",
 			"runnable":false
 		}

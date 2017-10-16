@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Copies the specified on-disk or in-memory source file to the specified destination file.",
 	"params": [
-		{"name":"source","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"destination","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"source","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"destination","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

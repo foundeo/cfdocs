@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether a DDX file exists and is valid, or if a string contains valid DDX instructions.",
 	"params": [
-		{"name":"path","description":"Pathname to the DDX file or a string of DDX instructions.","required":true,"default":"","type":"String","values":[]}
+		{"name":"path","description":"Pathname to the DDX file or a string of DDX instructions.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

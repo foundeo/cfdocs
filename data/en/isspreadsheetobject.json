@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Checks if given object is spreadsheet object or not",
 	"params": [
-		{"name":"object","description":"Any Object","required":true,"default":"","type":"Variablename","values":[]}
+		{"name":"object","description":"Any Object","required":true,"default":"","type":"variableName","values":[]}
 
 	],
 	"engines": {

@@ -7,10 +7,10 @@
 	"related":[],
 	"description":" Adds a rectangular border around the outside edge of a ColdFusion image.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"thickness","description":"Thickness of the border in pixels. The default value is 1. The border is added to the outside edge of the image; the image area is increased accordingly.","required":true,"default":"","type":"String","values":[]},
-		{"name":"color","description":"Only valid if the borderType is not specified or if borderType = 'constant'.","required":false,"default":"black","type":"String","values":[]},
-		{"name":"bordertype","description":"The type of border.","required":false,"default":"constant","type":"String","values":["zero","constant","copy","reflect","wrap"]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"thickness","description":"Thickness of the border in pixels. The default value is 1. The border is added to the outside edge of the image; the image area is increased accordingly.","required":true,"default":"","type":"string","values":[]},
+		{"name":"color","description":"Only valid if the borderType is not specified or if borderType = 'constant'.","required":false,"default":"black","type":"string","values":[]},
+		{"name":"bordertype","description":"The type of border.","required":false,"default":"constant","type":"string","values":["zero","constant","copy","reflect","wrap"]}
 
 	],
 	"engines": {
@@ -21,7 +21,7 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",

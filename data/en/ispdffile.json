@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Verifies whether a PDF file is valid.",
 	"params": [
-		{"name":"path","description":"Pathname to a PDF file.","required":true,"default":"","type":"String","values":[]}
+		{"name":"path","description":"Pathname to a PDF file.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

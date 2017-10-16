@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Saves or updates data of the entity and all related entities to the database.\nentitySave(entity, [forceinsert])",
 	"params": [
-		{"name":"entity","description":"Name of the entity that must be saved in the database.","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"forceInsert","description":"If true, then ColdFusion always tries to insert the entity as a new record.","required":false,"default":"","type":"Boolean","values":[true,false]}
+		{"name":"entity","description":"Name of the entity that must be saved in the database.","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"forceInsert","description":"If true, then ColdFusion always tries to insert the entity as a new record.","required":false,"default":"","type":"boolean","values":[true,false]}
 
 	],
 	"engines": {

@@ -2,7 +2,7 @@
 	"name":"spreadsheetFormatCellRange",
 	"type":"function",
 	"syntax":"spreadsheetFormatCellRange (spreadsheetObj, format, startRow, startColumn, endRow, endColumn);",
-	"returns":"",
+	"returns":"void",
 	"related":[],
 	"description":" Formats the cells within the given range.",
 	"params": [
@@ -14,7 +14,7 @@
         {"name":"endColumn","description":"The number of the last column to format.","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetformatcellrange.html"}
+		"coldfusion": {"minimum_version":"9.0.1", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetformatcellrange.html"}
 	},
 	"links": [
 

@@ -2,11 +2,11 @@
 	"name":"directorySize",
 	"type":"function",
 	"syntax":"directorySize(path)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Returns size of given directory",
 	"params": [
-		{"name":"path","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

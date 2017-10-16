@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether the function parameter is an\n XML Document Object Model (DOM) attribute node.",
 	"params": [
-		{"name":"value","description":"Name of an XML attribute.","required":true,"default":"","type":"Object","values":[]}
+		{"name":"value","description":"Name of an XML attribute.","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

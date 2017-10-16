@@ -11,7 +11,7 @@
 			"description": "Delimited list of column values. If a value contains a\n comma, it must be escaped with another comma",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "Delimiter to be used for data",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

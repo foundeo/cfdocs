@@ -1,10 +1,10 @@
 {
-	"name":"ORMGetSession",
+	"name":"ormGetSession",
 	"type":"function",
-	"syntax":"ORMGetSession()",
-	"returns":"",
+	"syntax":"ormGetSession()",
+	"returns":"any",
 	"related":[],
-	"description":" No Help Available",
+	"description":"Get the current ORM session object",
 	"params": [
 	],
 	"engines": {

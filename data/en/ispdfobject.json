@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether a value is a PDF object.",
 	"params": [
-		{"name":"value","description":"A value, typically the PDF object stored as a variable name.","required":true,"default":"","type":"Variablename","values":[]}
+		{"name":"value","description":"A value, typically the PDF object stored as a variable name.","required":true,"default":"","type":"variableName","values":[]}
 
 	],
 	"engines": {

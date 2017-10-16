@@ -2,12 +2,12 @@
 	"name":"listLast",
 	"type":"function",
 	"syntax":"listLast(list [, delimiters])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets the last element of a list.",
 	"params": [
-		{"name":"list","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
+		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
 
 	],
 	"engines": {

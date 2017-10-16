@@ -2,12 +2,12 @@
 	"name":"bitXor",
 	"type":"function",
 	"syntax":"bitXor(number1, number2)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Performs a bitwise logical XOR operation.",
 	"params": [
-		{"name":"number1","description":"Integer","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"number2","description":"Integer","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number1","description":"Integer","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"number2","description":"Integer","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

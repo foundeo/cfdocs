@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines the type of a value.",
 	"params": [
-		{"name":"value","description":"","required":true,"default":"","type":"Object","values":[]}
+		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

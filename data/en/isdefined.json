@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Evaluates a string value to determine whether the variable\n named in it exists.",
 	"params": [
-		{"name":"variable_name","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"variable_name","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

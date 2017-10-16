@@ -2,11 +2,11 @@
 	"name":"expandPath",
 	"type":"function",
 	"syntax":"expandPath(relative_path)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Creates an absolute, platform-appropriate path that is\n equivalent to the value of relative_path, appended to the base\n path. This function (despite its name) can accept an absolute\n or relative path in the relative_path attribute",
 	"params": [
-		{"name":"relative_path","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"relative_path","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

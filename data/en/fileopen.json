@@ -2,8 +2,8 @@
 	"name":"fileOpen",
 	"type":"function",
 	"syntax":"fileOpen(filePath [, mode [, charset]])",
-	"returns":"",
-	"related":["FileClose", "FileCopy", "FileReadBinary", "FileRead", "FileReadLine", "FileWrite"],
+	"returns":"any",
+	"related":["fileClose", "fileCopy", "fileReadBinary", "fileRead", "fileReadLine", "fileWrite"],
 	"description":"Opens a file",
 	"params": [
 		{"name":"filePath","description":"An absolute path of an on-disk or in-memory file on the server","required":true,"default":"","type":"","values":[]},

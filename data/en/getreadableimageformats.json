@@ -2,7 +2,7 @@
 	"name":"getReadableImageFormats",
 	"type":"function",
 	"syntax":"getReadableImageFormats()",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Returns a list of image formats that ColdFusion can read on the operating system where ColdFusion is deployed.",
 	"params": [

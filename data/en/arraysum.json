@@ -3,11 +3,11 @@
 	"type":"function",
 	"syntax":"arraySum(array)",
 	"member":"someArray.sum()",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" The sum of values in an array. If the array parameter value is\n an empty array, returns zero.",
 	"params": [
-		{"name":"array","description":"An array name or variable name","required":true,"default":"","type":"Array","values":[]}
+		{"name":"array","description":"An array name or variable name","required":true,"default":"","type":"array","values":[]}
 
 	],
 	"engines": {

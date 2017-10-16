@@ -8,7 +8,7 @@
 	"description": "",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
-		{"name": "column", "description": "", "required": true, "default": "", "type": "String", "values": []}
+		{"name": "column", "description": "", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querydeletecolumn.html"}

@@ -2,11 +2,11 @@
 	"name":"entityMerge",
 	"type":"function",
 	"syntax":"entityMerge(entity)",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Attaches given enity to current ORM session",
 	"params": [
-		{"name":"entity","description":"The entity that must be attached to the ORM session.","required":true,"default":"","type":"Variablename","values":[]}
+		{"name":"entity","description":"The entity that must be attached to the ORM session.","required":true,"default":"","type":"variableName","values":[]}
 
 	],
 	"engines": {

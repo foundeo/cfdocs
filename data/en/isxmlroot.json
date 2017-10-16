@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether a function parameter is the root element of\n an Extended Markup language (XML) document object.",
 	"params": [
-		{"name":"value","description":"","required":true,"default":"","type":"Object","values":[]}
+		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

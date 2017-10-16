@@ -2,11 +2,11 @@
 	"name":"decrementValue",
 	"type":"function",
 	"syntax":"decrementValue(number)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["incrementValue"],
 	"description":"Decrements the integer part of a number. Same as x=x-1 or x--",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

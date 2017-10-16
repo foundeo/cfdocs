@@ -2,12 +2,12 @@
 	"name":"bitShln",
 	"type":"function",
 	"syntax":"bitShln(number, count)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Performs a bitwise shift-left, no-rotation operation.",
 	"params": [
-		{"name":"number","description":"Integer","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"count","description":"Number of bits to shift to the left (Integer in the range 0-31, inclusive)","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"Integer","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"count","description":"Number of bits to shift to the left (Integer in the range 0-31, inclusive)","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
