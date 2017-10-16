@@ -2,12 +2,12 @@
 	"name":"LSCurrencyFormat",
 	"type":"function",
 	"syntax":"LSCurrencyFormat(number [, type])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Formats a number in a locale-specific currency format. For\n countries that use the euro, the result depends on the JVM.\n [type - quicky]\n local: the currency format and currency symbol used locally.\n - With JDK 1.3, the default for Euro Zone: local currency.\n - With JDK 1.4, the default for Euro Zone: euro.\n international: the international standard currency format\n none: the local currency format; no currency symbol",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"type","description":"","required":false,"default":"","type":"String","values":["local","international","none"]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"type","description":"","required":false,"default":"","type":"string","values":["local","international","none"]}
 
 	],
 	"engines": {

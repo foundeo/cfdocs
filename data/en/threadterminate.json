@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Terminates the thread specified by the threadName parameter.",
 	"params": [
-		{"name":"threadname","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"threadname","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

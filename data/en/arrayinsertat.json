@@ -7,9 +7,9 @@
 	"related":["arrayappend","arrayprepend","arraydelete","arraydeleteat","arrayset"],
 	"description":" Inserts a value at the specified position in the array. If\n the element is inserted before the end of the array, ColdFusion\n shifts the positions of all elements with a higher index to make room.",
 	"params": [
-		{"name":"array","description":"The array which will have the new element inserted.","required":true,"default":"","type":"Array","values":[]},
-		{"name":"position","description":"The numerical index in the array where the new element will be inserted.\n Must be less than or equal to the length of the array.\n Remember ColdFusion arrays start at 1 not 0.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"value","description":"The new element to insert.","required":true,"default":"","type":"Any","values":[]}
+		{"name":"array","description":"The array which will have the new element inserted.","required":true,"default":"","type":"array","values":[]},
+		{"name":"position","description":"The numerical index in the array where the new element will be inserted.\n Must be less than or equal to the length of the array.\n Remember ColdFusion arrays start at 1 not 0.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"value","description":"The new element to insert.","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {
@@ -19,9 +19,9 @@
 	},
 	"links": [
 
-	], 
+	],
 	"examples": [
-		
+
 		{
 			"title":"Insert an Item in an Array at Position 2",
 			"description":"Inserts the number 4 at position 2",

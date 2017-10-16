@@ -11,7 +11,7 @@
 			"description": "The password required to connect to the SharePoint server. Required if you do not specify a\nlogin attribute.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "The name of a web service action. See Usage for the list of service actions you can specify.",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["cancreatedwsurl", "createdws", "createdwsfolder", "deletedws", "deletedwsfolder", "finddwsdoc", "getdwsdata", "removedwsuser", "renamedws", "updatedwsdata", "delete", "download", "getimaginglistitems", "getitemsbyids", "listpicturelibrary", "rename", "upload", "addattachment", "addlist", "deleteattachment", "deletelist", "getattachmentcollection", "getlist", "getlistcollection", "getlistitems", "updatelist", "updatelistitems", "query", "queryex", "registration", "status", "addgrouptorole", "addrole", "addusercollectiontogroup", "addusercollectiontorole", "addusertogroup", "getgroupcollection", "getrolecollection", "getusercollectionfromrole", "getusercollectionfromrole", "getuserinfo", "removerole", "removeusercollectionfromgroup", "removeuserfromgroup", "addview", "deleteview", "getview", "getviewcollection", "updateview"]
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "A structure containing user, password, and domain login credentials to pass to the service. If you do not specify\ndomain ,password, and userNameattributes you must specify a login structure with domain, password, and userName entries.",
 			"required": false,
 			"default": "",
-			"type": "Struct",
+			"type": "struct",
 			"values": []
 		},
 		{
@@ -35,7 +35,7 @@
 			"description": "A structure containing names and values of the parameters to pass to the service.",
 			"required": false,
 			"default": "",
-			"type": "Struct",
+			"type": "struct",
 			"values": []
 		},
 		{
@@ -43,7 +43,7 @@
 			"description": "The domain name required to connect to the SharePoint server. Required if you do not specify a login attribute.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -51,7 +51,7 @@
 			"description": "The user name required to connect to the SharePoint server. Required if you do not specify a\nlogin attribute.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -59,7 +59,7 @@
 			"description": "Name of the result variable in which to put the data returned by the SharePoint service.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -67,7 +67,7 @@
 			"description": "Path to the service wsdl file. Required to invoke an action that is not in the list of supported actions. See Usage for details.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

@@ -2,7 +2,7 @@
 	"name":"encodeForDN",
 	"type":"function",
 	"syntax":"encodeForDN( string );",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":"Encodes the given string for safe output in LDAP Distinguished Names. Lucee only, not supported on Adobe CF.",
 	"params": [

@@ -2,12 +2,11 @@
 	"name":"round",
 	"type":"function",
 	"syntax":"round(number)",
-	"returns":"Numeric",
-	"related":[],
+	"returns":"numeric",
+	"related":["ceiling","floor"],
 	"description":" Rounds a number to the closest integer.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
-
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/round.html"},
@@ -15,9 +14,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/round"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/round"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Round 1.56",
@@ -25,7 +22,20 @@
 			"code":"round(1.56)",
 			"result":"2",
 			"runnable":true
+		},
+		{
+			"title":"Round 1.49",
+			"description":"",
+			"code":"round(1.49)",
+			"result":"1",
+			"runnable":true
+		},
+		{
+			"title":"Round -0.9",
+			"description":"",
+			"code":"round(-0.9)",
+			"result":"-1",
+			"runnable":true
 		}
 	]
-
 }

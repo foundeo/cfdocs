@@ -2,7 +2,7 @@
 	"name":"encodeForURL",
 	"type":"function",
 	"syntax":"encodeForURL(inputString [,canonicalize]);",
-	"returns":"Encoded String",
+	"returns":"string",
 	"related":[],
 	"description":"Encodes the input string for use in URLs.",
 	"params": [

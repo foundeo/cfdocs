@@ -2,7 +2,7 @@
 	"name":"createUUID",
 	"type":"function",
 	"syntax":"createUUID()",
-	"returns":"UUID",
+	"returns":"uuid",
 	"related":[],
 	"description":" Creates a Universally Unique Identifier (UUID). A UUID is a\n 35-character string representation of a unique 128-bit integer\n xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxxxxxx : x is a hexadecimal digit (8-4-4-16).\n SQL Server UUIDs are similar but have a format of 8-4-4-4-12.",
 	"params": [

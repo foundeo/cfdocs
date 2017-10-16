@@ -2,7 +2,7 @@
 	"name":"serialize",
 	"type":"function",
 	"syntax":"serialize( Object objToBeSerialized, String type, boolean useCustomSerializer );",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Serializes the object to a specified type",
 	"params": [

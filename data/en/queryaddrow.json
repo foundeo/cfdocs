@@ -2,11 +2,11 @@
 	"name":"queryAddRow",
 	"type":"function",
 	"syntax":"queryAddRow(query [, number/row(s)])",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Adds a specified number of empty rows to a query.",
 	"params": [
-		{"name":"query","description":"","required":true,"default":"","type":"Query","values":[]},
+		{"name":"query","description":"","required":true,"default":"","type":"query","values":[]},
 		{"name":"number/row(s)","description":"As of CF10+ you can pass a Structure whose keys map to the query column names to insert a row of data; or an Array of those Structures to insert multiple rows at once.","required":false,"default":"","type":"Numeric / Array / Struct","values":[]}
 
 	],
@@ -48,7 +48,7 @@
 			"result":"",
 			"runnable":true
 		}
-		
+
 	]
 
 }

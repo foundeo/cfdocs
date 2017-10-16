@@ -3,13 +3,13 @@
 	"type":"function",
 	"syntax":"dateDiff(datepart, date1, date2)",
 	"member":"date1.diff(datepart, date2)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["dateadd","dateformat"],
 	"description":"Determines the integer number of datepart units by which date1 is less than date2.",
 	"params": [
-		{"name":"datepart","description":"yyyy: Year\n q: Quarter\n m: Month\n y: Day of year\n d: Day\n w: Weekday\n ww: Week\n h: Hour\n n: Minute\n s: Second\n","required":true,"default":"","type":"String","values":["yyyy","q","m","y","d","w","ww","h","n","s"]},
-		{"name":"date1","description":"","required":true,"default":"","type":"Date","values":[]},
-		{"name":"date2","description":"","required":true,"default":"","type":"Date","values":[]}
+		{"name":"datepart","description":"yyyy: Year\n q: Quarter\n m: Month\n y: Day of year\n d: Day\n w: Weekday\n ww: Week\n h: Hour\n n: Minute\n s: Second\n","required":true,"default":"","type":"string","values":["yyyy","q","m","y","d","w","ww","h","n","s"]},
+		{"name":"date1","description":"","required":true,"default":"","type":"date","values":[]},
+		{"name":"date2","description":"","required":true,"default":"","type":"date","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateDiff.html"},

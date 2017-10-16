@@ -2,11 +2,11 @@
 	"name":"imageReadBase64",
 	"type":"function",
 	"syntax":"imageReadBase64(string)",
-	"returns":"Image",
+	"returns":"any",
 	"related":[],
 	"description":" Creates a ColdFusion image from a Base64 string.",
 	"params": [
-		{"name":"string","description":"a variable or Base64 string","required":true,"default":"","type":"String","values":[]}
+		{"name":"string","description":"a variable or Base64 string","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

@@ -2,12 +2,12 @@
 	"name":"fileRead",
 	"type":"function",
 	"syntax":"fileRead(filepath [, charset])",
-	"returns":"String",
+	"returns":"string",
 	"related":["filewrite","filereadline"],
 	"description":" Reads an on-disk or in-memory text file or a file object created with the FileOpen function.",
 	"params": [
-		{"name":"filepath","description":"An absolute file path, or file object.","required":true,"default":"","type":"String","values":[]},
-		{"name":"charset","description":"Character encoding used to read the file","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1", "windows-1252", "us-ascii"]}
+		{"name":"filepath","description":"An absolute file path, or file object.","required":true,"default":"","type":"string","values":[]},
+		{"name":"charset","description":"Character encoding used to read the file","required":false,"default":"","type":"string","values":["utf-8","iso-8859-1", "windows-1252", "us-ascii"]}
 
 	],
 	"engines": {

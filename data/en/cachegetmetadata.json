@@ -2,11 +2,11 @@
 	"name":"cacheGetMetadata",
 	"type":"function",
 	"syntax":"cacheGetMetadata(id)",
-	"returns":"Map",
+	"returns":"struct",
 	"related":[],
 	"description":" Gets the metadata values for a cached object.",
 	"params": [
-		{"name":"id","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"id","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

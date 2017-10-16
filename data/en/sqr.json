@@ -2,11 +2,11 @@
 	"name":"sqr",
 	"type":"function",
 	"syntax":"sqr(number)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Calculates the square root of a number.",
 	"params": [
-		{"name":"number","description":"A positive integer or a variable that contains one.\n Number whose square root to get.","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"A positive integer or a variable that contains one.\n Number whose square root to get.","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

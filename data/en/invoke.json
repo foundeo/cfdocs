@@ -6,9 +6,9 @@
 	"related":["cfinvoke"],
 	"description":"Invokes a component method and returns the result of the invoked method.",
 	"params": [
-		{"name":"cfcinstance","description":"Name or instance of a CFC.","required":true,"default":"","type":"String","values":[]},
-		{"name":"methodname","description":"The name of the method to invoke.","required":true,"default":"","type":"String","values":[]},
-		{"name":"arguments","description":"A struct of arguments to pass into the method.","required":false,"default":"","type":"Struct","values":[]}
+		{"name":"cfcinstance","description":"Name or instance of a CFC.","required":true,"default":"","type":"string","values":[]},
+		{"name":"methodname","description":"The name of the method to invoke.","required":true,"default":"","type":"string","values":[]},
+		{"name":"arguments","description":"A struct of arguments to pass into the method.","required":false,"default":"","type":"struct","values":[]}
 
 	],
 	"engines": {

@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether a string is well-formed XML text.",
 	"params": [
-		{"name":"value","description":"A string containing the XML document text.","required":true,"default":"","type":"String","values":[]}
+		{"name":"value","description":"A string containing the XML document text.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,22 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"isXML Example",
+			"description":"Returns true if the string is well-formed XML.",
+			"code":"example = '<coldfusionengines>\r\n <engine>\r\n  <name>Adobe ColdFusion</name>\r\n </engine>\r\n <engine>\r\n  <name>Lucee</name>\r\n </engine>\r\n <engine>\r\n  <name>Railo</name>\r\n </engine>\r\n <engine>\r\n  <name>Open BlueDragon</name>\r\n </engine>\r\n</coldfusionengines>';\r\nwriteOutput( isXml( example ) );",
+			"result":true,
+			"runnable":true
+		},
+		{
+			"title":"isXML Example for Invalid XML",
+			"description":"Returns false if the string is not well-formed XML.",
+			"code":"example1 = '<coldfusionengines>\r\n <engine>\r\n  <name>Adobe ColdFusion</name>\r\n </engine>\r\n <engine>\r\n  <name>Lucee</name>';\r\nwriteOutput( isXml( example1 ) );",
+			"result":false,
+			"runnable":true
+		}
 	]
 
 }

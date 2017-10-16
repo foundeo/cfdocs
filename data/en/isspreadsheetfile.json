@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Checks if given file is spreadsheet file or not",
 	"params": [
-		{"name":"file","description":"Any file","required":true,"default":"","type":"String","values":[]}
+		{"name":"file","description":"Any file","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

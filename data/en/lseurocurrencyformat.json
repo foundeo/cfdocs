@@ -2,12 +2,12 @@
 	"name":"LSEuroCurrencyFormat",
 	"type":"function",
 	"syntax":"LSEuroCurrencyFormat(currency, type)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Formats a number in a locale-specific currency format.\n [type - quicky]\n local: the currency format used in the locale. (Default.)\n international: the international standard currency format\n none: the currency format used; no currency symbol",
 	"params": [
-		{"name":"currency","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"type","description":"","required":true,"default":"","type":"String","values":["local","international","none"]}
+		{"name":"currency","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"type","description":"","required":true,"default":"","type":"string","values":["local","international","none"]}
 
 	],
 	"engines": {

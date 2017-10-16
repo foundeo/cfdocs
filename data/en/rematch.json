@@ -2,12 +2,12 @@
 	"name":"REmatch",
 	"type":"function",
 	"syntax":"REmatch(reg_expression, string)",
-	"returns":"Array",
+	"returns":"array",
 	"related":[],
 	"description":"Uses a regular expression (RE) to search a string for a pattern, starting from a specified position.",
 	"params": [
-		{"name":"reg_expression","description":"Regular expression for which to search. Case sensitive.","required":true,"default":"","type":"String","values":[]},
-		{"name":"string","description":"A string or a variable that contains one. String in which to search.","required":true,"default":"","type":"String","values":[]}
+		{"name":"reg_expression","description":"Regular expression for which to search. Case sensitive.","required":true,"default":"","type":"string","values":[]},
+		{"name":"string","description":"A string or a variable that contains one. String in which to search.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

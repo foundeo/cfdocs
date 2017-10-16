@@ -2,11 +2,11 @@
 	"name":"LSParseNumber",
 	"type":"function",
 	"syntax":"LSParseNumber(String)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Converts a string that is a valid numeric representation in\n the current locale into a formatted number.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

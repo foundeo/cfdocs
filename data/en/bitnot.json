@@ -2,11 +2,11 @@
 	"name":"bitNot",
 	"type":"function",
 	"syntax":"bitNot(number)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Performs a bitwise logical NOT operation.",
 	"params": [
-		{"name":"number","description":"Integer","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"Integer","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

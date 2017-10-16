@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Adds information to an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"info","description":"No Help Available","required":true,"default":"","type":"Struct","values":[]}
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"info","description":"No Help Available","required":true,"default":"","type":"struct","values":[]}
 
 	],
 	"engines": {

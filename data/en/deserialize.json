@@ -2,9 +2,9 @@
 	"name":"deserialize",
 	"type":"function",
 	"syntax":"deserialize( String StringToBeDeserialized, String type, boolean useCustomSerializer );",
-	"returns":"A string",
+	"returns":"string",
 	"related":[],
-	"description":" Deserializes a String.",
+	"description":"Deserializes a String.",
 	"params": [
 		{"name":"StringToBeDeserialized","description":"A string that needs to be deserialized.","required":true,"default":"","type":"","values":[]},
         {"name":"type","description":"String. The type of the data to be deserialized. ColdFusion by default supports XML and JSON formats. You can also implement support for other types in the CustomSerializer CFC.","required":true,"default":"","type":"","values":[]},
