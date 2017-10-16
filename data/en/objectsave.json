@@ -2,12 +2,12 @@
 	"name":"objectSave",
 	"type":"function",
 	"syntax":"objectSave(object [, file])",
-	"returns":"Binary",
+	"returns":"binary",
 	"related":[],
 	"description":" Serialize object to file or convert it to binary format",
 	"params": [
-		{"name":"object","description":"Object to be serialized","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"file","description":"File in which serialized object will be stored","required":false,"default":"","type":"String","values":[]}
+		{"name":"object","description":"Object to be serialized","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"file","description":"File in which serialized object will be stored","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

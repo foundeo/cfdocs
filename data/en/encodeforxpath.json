@@ -2,7 +2,7 @@
 	"name":"encodeForXPath",
 	"type":"function",
 	"syntax":"encodeForXPath(String inputString, boolean canonicalize);",
-	"returns":"Encoded XML string.",
+	"returns":"string",
 	"related":[],
 	"description":" Returns an encoded string for using with XPATH.",
 	"params": [

@@ -7,11 +7,11 @@
 	"related":[],
 	"description":" Draws a sequence of connected lines defined by arrays of x and y coordinates.",
 	"params": [
-		{"name":"name","description":"NThe image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"xcords","description":"A array of x coordinates.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"ycords","description":"A array of y coordinates.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"isPolygon","description":"Specify whether the lines form a polygon","required":false,"default":"false","type":"Boolean","values":[]},
-		{"name":"filled","description":"Specify whether the polygon is filled","required":false,"default":"false","type":"Boolean","values":[]}
+		{"name":"name","description":"NThe image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"xcords","description":"A array of x coordinates.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"ycords","description":"A array of y coordinates.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"isPolygon","description":"Specify whether the lines form a polygon","required":false,"default":"false","type":"boolean","values":[]},
+		{"name":"filled","description":"Specify whether the polygon is filled","required":false,"default":"false","type":"boolean","values":[]}
 
 	],
 	"engines": {

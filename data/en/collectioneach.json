@@ -6,7 +6,7 @@
 	"related": [],
 	"description": "",
 	"params": [
-		{"name": "collection", "description": "", "required": true, "default": "", "type": "object", "values": []},
+		{"name": "collection", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []}
 	],
 	"engines": {

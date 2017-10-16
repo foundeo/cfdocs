@@ -16,17 +16,17 @@
 	"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
 }],
 "params":[
-	{"values":[],"default":"","description":"The input list.","name":"list","type":"String","required":"1"},
-	{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: value\r\nindex : current index for the iteration\r\nlist : reference of the original list","name":"function","type":"Any","required":"1"},
-	{"values":[],"default":"","description":"Initial value which will be used for the reduce operation.","name":"intialValue","type":"Any","required":"0"},
-	{"values":[],"default":"comma","description":"The list delimiter.","name":"delimiter","type":"String","required":"0"},
-	{"values":[],"default":"false","description":"Include empty values","name":"includeEmptyFields","type":"Boolean","required":"0"}
+	{"values":[],"default":"","description":"The input list.","name":"list","type":"string","required":"1"},
+	{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: value\r\nindex : current index for the iteration\r\nlist : reference of the original list","name":"function","type":"any","required":"1"},
+	{"values":[],"default":"","description":"Initial value which will be used for the reduce operation.","name":"intialValue","type":"any","required":"0"},
+	{"values":[],"default":"comma","description":"The list delimiter.","name":"delimiter","type":"string","required":"0"},
+	{"values":[],"default":"false","description":"Include empty values","name":"includeEmptyFields","type":"boolean","required":"0"}
 ],
-"returns":"String",
+"returns":"string",
  "examples":[{
 	"title": "Script Syntax",
 	"description": "",
-	"code": "Rainbow = \"Whero, Karaka, Kowhai, Kakariki, Kikorangi, Tawatawa, Mawhero\"; \r\n externalList = \"\"; \r\n reverseRainbow = listMap( rainbow, function(v,i,l) \r\n { \r\n var newValue = \"#i#:#v.reverse()#\";  \r\n externalList = externalList.append(newValue); \r\n return newValue; \r\n }); \r\n riteDump([{rainbow=rainbow},{reverseRainbow=reverseRainbow},{externalList=externalList}]);  \r\n"
+	"code": "Rainbow = \"Whero, Karaka, Kowhai, Kakariki, Kikorangi, Tawatawa, Mawhero\"; \r\n externalList = \"\"; \r\n reverseRainbow = listMap( rainbow, function(v,i,l) \r\n { \r\n var newValue = \"#i#:#v.reverse()#\";  \r\n externalList = externalList.append(newValue); \r\n return newValue; \r\n }); \r\nwriteDump([{rainbow=rainbow},{reverseRainbow=reverseRainbow},{externalList=externalList}]);  \r\n"
 }],
 "type":"function",
 "related":["ListReduce"]}

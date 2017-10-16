@@ -2,7 +2,7 @@
 	"name":"parameterExists",
 	"type":"function",
 	"syntax":"parameterExists(name)",
-	"returns":"",
+	"returns":"boolean",
 	"related":[],
 	"description":"This function is deprecated. Use the IsDefined or StructKeyExists functions. Determines whether a parameter exists. ColdFusion does not evaluate the argument.",
 	"params": [

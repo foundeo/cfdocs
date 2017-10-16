@@ -1,13 +1,13 @@
 {
-	"name":"CSRFGenerateToken",
+	"name":"csrfGenerateToken",
 	"type":"function",
-	"syntax":"CSRFGenerateToken( [key] [,forceNew] )",
-	"returns":"Token",
-	"related":["CSRFVerifyToken"],
+	"syntax":"csrfGenerateToken( [key] [,forceNew] )",
+	"returns":"string",
+	"related":["csrfVerifyToken"],
 	"description":" Generates a random token and stores it in the session to protect against Cross-Site Request Forgery (CSRF) attacks. You can optionally provide a specific key to store in the session, and optionally force the generation of a new token.",
 	"params": [
-		{"name":"key","description":"A random token is generated based on the key provided. This key is stored in the session.","required":false,"default":"","type":"String","values":[]},
-		{"name":"forceNew","description":"If set to true, a new token is generated every time the method is called. If false, and in the case where a token already exists [for the key], the same key is returned.","required":false,"default":"false","type":"Boolean","values":["true","false"]}
+		{"name":"key","description":"A random token is generated based on the key provided. This key is stored in the session.","required":false,"default":"","type":"string","values":[]},
+		{"name":"forceNew","description":"If set to true, a new token is generated every time the method is called. If false, and in the case where a token already exists [for the key], the same key is returned.","required":false,"default":"false","type":"boolean","values":["true","false"]}
 
 	],
 	"engines": {
@@ -18,22 +18,22 @@
 	"examples": [
 		{
 			"title":"CSRF Form Protection",
-			"description":"Use CSRFGenerateToken() to generate a unique token for each form submission.",
-			"code":"<form action=\"#CGI.SCRIPT_NAME#\" method=\"post\">\r\n\t<input type=\"hidden\" name=\"f#hash( 'userId', 'SHA-384', 'UTF-8', 1000 )#\" value=\"#encrypt( userObj.getUserId(), rc.key, rc.alg, rc.enc )#\">\r\n\t<input type=\"hidden\" name=\"f#hash( 'formToken', 'SHA-512', 'UTF-8', 500 )#\" value=\"#CSRFGenerateToken( forceNew = true )#\">\r\n\t<input type=\"text\" name=\"emailAddress\" value=\"#userObj.getEmailAddress()#\">\r\n\t<input type=\"text\" name=\"phoneNumber\" value=\"#userObj.getPhoneNumber()#\">\r\n\t<input type=\"submit\" name=\"btnSubmit\" value=\"Change Profile Info\">\r\n</form>",
+			"description":"Use csrfGenerateToken() to generate a unique token for each form submission.",
+			"code":"<form action=\"#CGI.SCRIPT_NAME#\" method=\"post\">\r\n\t<input type=\"hidden\" name=\"f#hash( 'userId', 'SHA-384', 'UTF-8', 1000 )#\" value=\"#encrypt( userObj.getUserId(), rc.key, rc.alg, rc.enc )#\">\r\n\t<input type=\"hidden\" name=\"f#hash( 'formToken', 'SHA-512', 'UTF-8', 500 )#\" value=\"#csrfGenerateToken( forceNew = true )#\">\r\n\t<input type=\"text\" name=\"emailAddress\" value=\"#userObj.getEmailAddress()#\">\r\n\t<input type=\"text\" name=\"phoneNumber\" value=\"#userObj.getPhoneNumber()#\">\r\n\t<input type=\"submit\" name=\"btnSubmit\" value=\"Change Profile Info\">\r\n</form>",
 			"result":"",
 			"runnable":false
 		},
 		{
 			"title":"CSRF Form Protection w/ specified key",
-			"description":"Use CSRFGenerateToken() to generate a unique token for each form submission. This example specifies a key to store the token into the session with.",
-			"code":"<form action=\"#CGI.SCRIPT_NAME#\" method=\"post\">\r\n\t<input type=\"hidden\" name=\"f#hash( 'userId', 'SHA-384', 'UTF-8', 1000 )#\" value=\"#encrypt( userObj.getUserId(), rc.key, rc.alg, rc.enc )#\">\r\n\t<input type=\"hidden\" name=\"f#hash( 'formToken', 'SHA-512', 'UTF-8', 500 )#\" value=\"#CSRFGenerateToken( key = 'profile', forceNew = true )#\">\r\n\t<input type=\"text\" name=\"emailAddress\" value=\"#userObj.getEmailAddress()#\">\r\n\t<input type=\"text\" name=\"phoneNumber\" value=\"#userObj.getPhoneNumber()#\">\r\n\t<input type=\"submit\" name=\"btnSubmit\" value=\"Change Profile Info\">\r\n</form>",
+			"description":"Use csrfGenerateToken() to generate a unique token for each form submission. This example specifies a key to store the token into the session with.",
+			"code":"<form action=\"#CGI.SCRIPT_NAME#\" method=\"post\">\r\n\t<input type=\"hidden\" name=\"f#hash( 'userId', 'SHA-384', 'UTF-8', 1000 )#\" value=\"#encrypt( userObj.getUserId(), rc.key, rc.alg, rc.enc )#\">\r\n\t<input type=\"hidden\" name=\"f#hash( 'formToken', 'SHA-512', 'UTF-8', 500 )#\" value=\"#csrfGenerateToken( key = 'profile', forceNew = true )#\">\r\n\t<input type=\"text\" name=\"emailAddress\" value=\"#userObj.getEmailAddress()#\">\r\n\t<input type=\"text\" name=\"phoneNumber\" value=\"#userObj.getPhoneNumber()#\">\r\n\t<input type=\"submit\" name=\"btnSubmit\" value=\"Change Profile Info\">\r\n</form>",
 			"result":"",
 			"runnable":false
 		},
 		{
 			"title":"CSRF Form Protection w/ automated key generation",
-			"description":"Use CSRFGenerateToken() to generate a unique token for each form submission. This example specifies a key automatically to store the token into the session with (for multiple open browser tabs).",
-			"code":"<cfset tokenVar = 't' & lCase( hash( createUUID() & randRange( 1000, 100000 ), 'MD5', 'UTF-8', 250 ) )>\r\n<form action=\"#CGI.SCRIPT_NAME#\" method=\"post\">\r\n\t<input type=\"hidden\" name=\"f#hash( 'userId', 'SHA-384', 'UTF-8', 1000 )#\" value=\"#encrypt( userObj.getUserId(), rc.key, rc.alg, rc.enc )#\">\r\n\t<input type=\"hidden\" name=\"f#hash( 'tokenVar', 'SHA-512', 'UTF-8', 500 )#\" value=\"#tokenVar#\">\r\n\t<input type=\"hidden\" name=\"f#hash( 'formToken', 'SHA-512', 'UTF-8', 500 )#\" value=\"#CSRFGenerateToken( key = tokenVar, forceNew = true )#\">\r\n\t<input type=\"text\" name=\"emailAddress\" value=\"#userObj.getEmailAddress()#\">\r\n\t<input type=\"text\" name=\"phoneNumber\" value=\"#userObj.getPhoneNumber()#\">\r\n\t<input type=\"submit\" name=\"btnSubmit\" value=\"Change Profile Info\">\r\n</form>",
+			"description":"Use csrfGenerateToken() to generate a unique token for each form submission. This example specifies a key automatically to store the token into the session with (for multiple open browser tabs).",
+			"code":"<cfset tokenVar = 't' & lCase( hash( createUUID() & randRange( 1000, 100000 ), 'MD5', 'UTF-8', 250 ) )>\r\n<form action=\"#CGI.SCRIPT_NAME#\" method=\"post\">\r\n\t<input type=\"hidden\" name=\"f#hash( 'userId', 'SHA-384', 'UTF-8', 1000 )#\" value=\"#encrypt( userObj.getUserId(), rc.key, rc.alg, rc.enc )#\">\r\n\t<input type=\"hidden\" name=\"f#hash( 'tokenVar', 'SHA-512', 'UTF-8', 500 )#\" value=\"#tokenVar#\">\r\n\t<input type=\"hidden\" name=\"f#hash( 'formToken', 'SHA-512', 'UTF-8', 500 )#\" value=\"#csrfGenerateToken( key = tokenVar, forceNew = true )#\">\r\n\t<input type=\"text\" name=\"emailAddress\" value=\"#userObj.getEmailAddress()#\">\r\n\t<input type=\"text\" name=\"phoneNumber\" value=\"#userObj.getPhoneNumber()#\">\r\n\t<input type=\"submit\" name=\"btnSubmit\" value=\"Change Profile Info\">\r\n</form>",
 			"result":"",
 			"runnable":false
 		}

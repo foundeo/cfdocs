@@ -7,9 +7,9 @@
 	"related":[],
 	"description":" Writes Base64 images to the specified filename and destination.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"destination","description":"The path for the destination file.","required":true,"default":"","type":"String","values":[]},
-		{"name":"format","description":"the image format","required":true,"default":"","type":"String","values":[]},
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"destination","description":"The path for the destination file.","required":true,"default":"","type":"string","values":[]},
+		{"name":"format","description":"the image format","required":true,"default":"","type":"string","values":[]},
 		{"name":"inHTMLFormat","description":"Specify whether Base64 output includes the headers used by the Base64 images in the HTML 'img' tag ('data:image/{format};base64,...')","required":false,"default":false,"type":"boolean","values":[false,true]},
 		{"name":"overwrite","description":"If set to true, overwrites the destination file.","required":false,"default":true,"type":"boolean","values":[false,true]}
 

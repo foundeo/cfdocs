@@ -2,12 +2,12 @@
 	"name":"XMLFormat",
 	"type":"function",
 	"syntax":"XMLFormat(String [, escapeChars])",
-	"returns":"String",
+	"returns":"string",
 	"related":["encodeForXML"],
 	"description":"Escapes XML special characters in a string, so that the string is safe to use with XML.",
 	"discouraged":"Adobe recommends using encodeForXML instead of XMLFormat.",
 	"params": [
-		{"name":"String","description":"The string to escape","required":true,"default":"","type":"String","values":[]},
+		{"name":"String","description":"The string to escape","required":true,"default":"","type":"string","values":[]},
 		{"name":"escapeChars","description":"When true escapes restricted characters according to the W3C XML standard.","required":false,"default":"","type":"boolean","values":[]}
 
 	],
@@ -28,7 +28,7 @@
 			"result":"&lt;node&gt;Good &amp;amp; Juicy&lt;/node&gt;",
 			"runnable":true
 		}
-		
+
 	]
 
 }

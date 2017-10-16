@@ -2,7 +2,7 @@
 	"name":"deserializeXML",
 	"type":"function",
 	"syntax":"deserializeXML( String strToDeserialize, boolean useCustomSerializer );",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Deserializes a string in XML format to a ColdFusion object.",
 	"params": [

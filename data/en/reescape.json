@@ -1,9 +1,9 @@
 {
-	"name":"REEscape",
+	"name":"reEscape",
 	"type":"function",
-	"syntax":"REEscape(string);",
-	"returns":"String",
-	"related":["REFind","REReplace","REMatch"],
+	"syntax":"reEscape(string);",
+	"returns":"string",
+	"related":["reFind","reReplace","reMatch"],
 	"description":"Escapes regular expression control characters within a string.",
 	"params": [
 		{"name":"string","description":"The string you that to escape.","required":true,"default":"","type":"","values":[]}
@@ -17,9 +17,9 @@
 	],
 	"examples": [
 		{
-			"title": "Example of REEscape",
+			"title": "Example of reEscape",
 			"description": "",
-			"code": "REEscape('*.{}[]exam?ple')",
+			"code": "reEscape('*.{}[]exam?ple')",
 			"result": "\\*\\.\\{\\}\\[\\]exam\\?ple"
 		}
 	]

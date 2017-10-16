@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether a value is a well-formed WDDX packet.",
 	"params": [
-		{"name":"value","description":"","required":true,"default":"","type":"Object","values":[]}
+		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

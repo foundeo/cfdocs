@@ -6,10 +6,10 @@
 	"related": [],
 	"description": "",
 	"params": [
-		{"name": "rows", "description": "", "required": true, "default": "", "type": "number", "values": []},
-		{"name": "cols", "description": "", "required": true, "default": "", "type": "number", "values": []},
-		{"name": "width", "description": "", "required": true, "default": "", "type": "number", "values": []},
-		{"name": "height", "description": "", "required": true, "default": "", "type": "number", "values": []}
+		{"name": "rows", "description": "", "required": true, "default": "", "type": "numeric", "values": []},
+		{"name": "cols", "description": "", "required": true, "default": "", "type": "numeric", "values": []},
+		{"name": "width", "description": "", "required": true, "default": "", "type": "numeric", "values": []},
+		{"name": "height", "description": "", "required": true, "default": "", "type": "numeric", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/imagefilterwarpgrid.html"}

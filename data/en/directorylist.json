@@ -2,7 +2,7 @@
 	"name": "directoryList",
 	"type": "function",
 	"syntax": "directoryList(path [, recurse] [, listInfo] [, filter] [, sort] [, type])",
-	"returns": "query|array",
+	"returns": "any",
 	"related": [
 		"cfdirectory"
 	],
@@ -57,7 +57,7 @@
 		},
 		{
 			"name": "type",
-			"description": "CF11+ Filter the result to only include files, directories, or both.",
+			"description": "CF11+ Lucee5+ Filter the result to only include files, directories, or both.",
 			"required": false,
 			"default": "all",
 			"type": "string",

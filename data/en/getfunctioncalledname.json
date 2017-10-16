@@ -2,7 +2,7 @@
 	"name":"getFunctionCalledName",
 	"type":"function",
 	"syntax":"getFunctionCalledName()",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Returns the name of the variable used to call a defined function. This function can be used to return data from CFCs by simulating getters and setters.",
 	"params": [],

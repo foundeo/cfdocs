@@ -2,7 +2,7 @@
 	"name":"now",
 	"type":"function",
 	"syntax":"now()",
-	"returns":"DateTime",
+	"returns":"date",
 	"related":["DateAdd","DateConvert","DatePart","Month","Day","Year"],
 	"description":" Gets the current date and time of the computer running\n the CFML server.",
 	"params": [

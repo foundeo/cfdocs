@@ -3,11 +3,11 @@
 	"type":"function",
 	"syntax":"imageGetWidth(name)",
 	"member":"someImage.getWidth()",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Retrieves the width of the specified ColdFusion image.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

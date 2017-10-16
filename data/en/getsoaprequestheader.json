@@ -2,12 +2,12 @@
 	"name":"getSOAPRequestHeader",
 	"type":"function",
 	"syntax":"getSOAPRequestHeader(namespace, name [, asXML])",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Obtains a SOAP request header. Call only from within\n a CFC web service function that is processing a request\n as a SOAP web service.",
 	"params": [
-		{"name":"namespace","description":"A String that is the namespace for the header","required":true,"default":"","type":"String","values":[]},
-		{"name":"name","description":"A String that is the name of the header","required":true,"default":"","type":"String","values":[]},
+		{"name":"namespace","description":"A String that is the namespace for the header","required":true,"default":"","type":"string","values":[]},
+		{"name":"name","description":"A String that is the name of the header","required":true,"default":"","type":"string","values":[]},
 		{"name":"asXML","description":"If True, the header is returned as a CFML XML object;\n if false (default), the header is returned as a Java object.","required":false,"default":"","type":"boolean","values":[true,false]}
 
 	],

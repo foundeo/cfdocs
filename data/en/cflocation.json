@@ -7,9 +7,9 @@
 	"related":[],
 	"description":" Stops execution of the current page and redirects to the specified URI.",
 	"params": [
-		{"name":"url","description":"URI or URL to redirect to.","required":true,"default":"","type":"String","values":[]},
+		{"name":"url","description":"URI or URL to redirect to.","required":true,"default":"","type":"string","values":[]},
 		{"name":"addtoken","description":"Appends the CFID, CFTOKEN, JSESSIONID and possibly other session/client identifiers to the URL. Security best practices recommend setting this to false.","required":false,"default":"true","type":"boolean","values":[true,false]},
-		{"name":"statuscode","description":"The 30X HTTP status code. CF8+","required":false,"default":"302","type":"Numeric","values":[]}
+		{"name":"statuscode","description":"The 30X HTTP status code. CF8+","required":false,"default":"302","type":"numeric","values":[]}
 
 	],
 	"engines": {

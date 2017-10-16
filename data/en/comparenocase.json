@@ -2,12 +2,12 @@
 	"name":"compareNoCase",
 	"type":"function",
 	"syntax":"compareNoCase(string1, string2)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Performs a case-insensitive comparison of two strings.\n An indicator of the difference:\n A negative number, if string1 is less than string2\n 0, if string1 is equal to string2\n A positive number, if string1 is greater than string2",
 	"params": [
-		{"name":"string1","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"string2","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"string1","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"string2","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

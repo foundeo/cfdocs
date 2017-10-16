@@ -6,7 +6,7 @@
 	"related": [],
 	"description": "",
 	"params": [
-		{"name": "day_of_week", "description": "", "required": true, "default": "", "type": "number", "values": []},
+		{"name": "day_of_week", "description": "", "required": true, "default": "", "type": "numeric", "values": []},
 		{"name": "locale", "description": "", "required": false, "default": "", "type": "string", "values": []}
 	],
 	"engines": {

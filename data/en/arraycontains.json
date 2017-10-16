@@ -7,9 +7,9 @@
 	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
 	"description":"Used to determine if an object is in the given array, case sensitive. Adobe CF and OpenBD return boolean. Lucee / Railo returns the numeric index if the object is found, 0 if not.",
 	"params": [
-		{"name":"array","description":"The array in which to search.","required":true,"default":"","type":"Array","values":[]},
-		{"name":"object","description":"The object to search for in the array.","required":true,"default":"","type":"Any","values":[]},
-		{"name":"substringMatch","description":" Lucee4.5+ If set to true then a substring match will also return an array position. This will only work with simple values. Passing true with complex objects will throw an exception.","required":false,"default":"false","type":"Any","values":[]}
+		{"name":"array","description":"The array in which to search.","required":true,"default":"","type":"array","values":[]},
+		{"name":"object","description":"The object to search for in the array.","required":true,"default":"","type":"any","values":[]},
+		{"name":"substringMatch","description":" Lucee4.5+ If set to true then a substring match will also return an array position. This will only work with simple values. Passing true with complex objects will throw an exception.","required":false,"default":"false","type":"any","values":[]}
 
 	],
 	"engines": {

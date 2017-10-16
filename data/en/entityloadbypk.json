@@ -2,12 +2,12 @@
 	"name":"entityLoadByPK",
 	"type":"function",
 	"syntax":"entityLoadByPK(entityName, id)",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Loads and returns an array of objects for given primary key.",
 	"params": [
-		{"name":"entityName","description":"Name of the entity to be loaded.","required":true,"default":"","type":"String","values":[]},
-		{"name":"id","description":"No Help Available","required":true,"default":"","type":"Object","values":[]}
+		{"name":"entityName","description":"Name of the entity to be loaded.","required":true,"default":"","type":"string","values":[]},
+		{"name":"id","description":"No Help Available","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

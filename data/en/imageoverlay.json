@@ -7,10 +7,10 @@
 	"related":[],
 	"description":" Reads two source ColdFusion images and overlays the second source image on the first source image.",
 	"params": [
-		{"name":"source1","description":"The image that is the bottom layer in the image.","required":true,"default":"","type":"String","values":[]},
-		{"name":"source2","description":"The image that is the top layer (overlaid on the source1 image) in the image.","required":true,"default":"","type":"String","values":[]},
-		{"name":"rule","description":"CF10+ Compositing Rule","required":false,"default":"","type":"String","values":["SRC","DST_IN","DST_OUT","DST_OVER","SRC_IN","SRC_OVER","SRC_OUT"]},
-		{"name":"alpha","description":"CF10+ The percentage value of transparency","required":false,"default":"","type":"String","values":[]}
+		{"name":"source1","description":"The image that is the bottom layer in the image.","required":true,"default":"","type":"string","values":[]},
+		{"name":"source2","description":"The image that is the top layer (overlaid on the source1 image) in the image.","required":true,"default":"","type":"string","values":[]},
+		{"name":"rule","description":"CF10+ Compositing Rule","required":false,"default":"","type":"string","values":["SRC","DST_IN","DST_OUT","DST_OVER","SRC_IN","SRC_OVER","SRC_OUT"]},
+		{"name":"alpha","description":"CF10+ The percentage value of transparency","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

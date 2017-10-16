@@ -11,7 +11,7 @@
 			"description": "Specify the user or owner password, if the source PDF file is passwordprotected. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "Specify the source PDF file to merge. (optional)",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "Page or pages of the PDF source file to merge. You can specify a range of pages, for example, \"1-5 \", or a comma-separated list of pages, for example, \"1-5,9-10,18\".",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

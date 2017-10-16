@@ -2,11 +2,11 @@
 	"name":"toBinary",
 	"type":"function",
 	"syntax":"toBinary(base64_or_object)",
-	"returns":"Binary",
+	"returns":"binary",
 	"related":[],
 	"description":" Calculates the binary representation of Base64-encoded data.",
 	"params": [
-		{"name":"base64_or_object","description":"A string or a variable that contains one:\n * In Base64 format to convert to binary\n * In binary format to test whether it is valid","required":true,"default":"","type":"Object","values":[]}
+		{"name":"base64_or_object","description":"A string or a variable that contains one:\n * In Base64 format to convert to binary\n * In binary format to test whether it is valid","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

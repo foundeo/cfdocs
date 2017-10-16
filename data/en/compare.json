@@ -2,12 +2,12 @@
 	"name":"compare",
 	"type":"function",
 	"syntax":"compare(string1, string2)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Performs a case-sensitive comparison of two strings.\n -1, if string1 is less than string2\n 0, if string1 is equal to string2\n 1, if string1 is greater than string2",
 	"params": [
-		{"name":"string1","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"string2","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"string1","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"string2","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

@@ -2,12 +2,12 @@
 	"name":"URLDecode",
 	"type":"function",
 	"syntax":"URLDecode(urlencodedstring [, charset])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":"Decodes a URL-encoded string.",
 	"params": [
-		{"name":"urlencodedstring","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"charset","description":"The character encoding in which the string is encoded.","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
+		{"name":"urlencodedstring","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"charset","description":"The character encoding in which the string is encoded.","required":false,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 
 	],
 	"engines": {

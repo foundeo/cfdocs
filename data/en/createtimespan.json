@@ -2,14 +2,14 @@
 	"name":"createTimespan",
 	"type":"function",
 	"syntax":"createTimespan(days, hours, minutes, seconds)",
-	"returns":"DateTime",
+	"returns":"date",
 	"related":[],
 	"description":" Creates a date/time object that defines a time period. You\n can add or subtract it from other date/time objects and use\n it with the cachedWithin attribute of cfquery.",
 	"params": [
-		{"name":"days","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"hours","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"minutes","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"seconds","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"days","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"hours","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"minutes","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"seconds","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

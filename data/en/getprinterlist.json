@@ -2,11 +2,11 @@
 	"name":"getPrinterList",
 	"type":"function",
 	"syntax":"getPrinterList(printer)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Returns list of printers accessible by the ColdFusion server",
 	"params": [
-		{"name":"printer","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"printer","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"listFilter(list, function(listElement, [list]) )",
 	"member":"someList.filter(function(listElement, [list]) )",
-	"returns":"list",
+	"returns":"string",
 	"related":["listGetAt"],
 	"description":"Used to filter an list to items for which the closure function returns true.",
 	"params": [

@@ -7,10 +7,10 @@
 	"related":["arrayEach", "arrayReduce"],
 	"description":"Used to filter an array to items for which the closure function returns true.",
 	"params": [
-		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
+		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
 		{"name":"function","description":"Inline closure function executed for each element in the array. Returns true if the array element should be included in the filtered array. Support for passing the original array to the closure function added in CF11 Update 5.","required":true,"default":"","type":"function","values":[]},
-		{"name":"parallel","description":"Lucee only option, true or false if the items can be executed in parallel","required":false,"default":"false","type":"Boolean","values":[true, false]},
-		{"name":"maxThreads","description":"Lucee only option, the number of threads to use when parallel = true","required":false,"default":"20","type":"Boolean","values":[]}
+		{"name":"parallel","description":"Lucee only option, true or false if the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[true, false]},
+		{"name":"maxThreads","description":"Lucee only option, the number of threads to use when parallel = true","required":false,"default":"20","type":"boolean","values":[]}
 
 	],
 	"engines": {

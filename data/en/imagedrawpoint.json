@@ -7,9 +7,9 @@
 	"related":[],
 	"description":" Draws a point at the specified (x,y) coordinate.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"x","description":"The x coordinate of the point.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"y","description":"The y coordinate of the point.","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"x","description":"The x coordinate of the point.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"y","description":"The y coordinate of the point.","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

@@ -2,11 +2,11 @@
 	"name":"getDirectoryFromPath",
 	"type":"function",
 	"syntax":"getDirectoryFromPath(path)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":"Extracts a directory from an absolute path. Returns the absolute path with a trailing slash and omits the filename.",
 	"params": [
-		{"name":"path","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
