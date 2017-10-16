@@ -9,7 +9,6 @@
 		{"name":"destStruct","description":"Structure to append.","required":true,"default":"","type":"struct","values":[]},
 		{"name":"sourceStruct","description":"Structure that contains the data to append to destStruct","required":true,"default":"","type":"struct","values":[]},
 		{"name":"overwriteFlag","description":"Yes: values in sourceStruct overwrite corresponding values in\n destStruct. Default.","required":false,"default":true,"type":"boolean","values":[true,false]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"CF6+ can be used on XML objects as well as structures.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structappend.html"},
@@ -17,16 +16,21 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structappend"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structappend"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title":"Append options to config struct",
+			"title":"Append options to config struct (without overwrite flag)",
 			"description":"",
-			"code":"config = {a:0, b:0};\noptions= {b:1, c:1};\nstructAppend(config, options, true);\nwriteOutput( serializeJSON( config ) );",
-			"result":"{\"A\":0,\"B\":1,\"C\":1}"
+			"code":"config = {a:0, b:0};\noptions= {b:1, c:1};\nstructAppend(config, options, false);\nwriteOutput( serializeJSON( config ) );",
+			"result":"{\"A\":0,\"B\":0,\"C\":1}",
+			"runnable": true
+		},
+		{
+			"title":"Append options to config struct (with overwrite flag)",
+			"description":"",
+			"code":"config = {a:0, b:0};\noptions= {b:1, c:1};\nstructAppend(config, options);\nwriteOutput( serializeJSON( config ) );",
+			"result":"{\"A\":0,\"B\":1,\"C\":1}",
+			"runnable": true
 		}
 	]
-
 }
