@@ -1,5 +1,5 @@
 <cfoutput>
-    <cfset indexVars = [ 'tags','functions', 'guides','categories']>
+    <cfset indexVars = ['tags','functions', 'guides','categories']>
     <cfloop array="#indexVars#" index="variable">
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="todo row">
@@ -11,7 +11,8 @@
                 </a>
             </div>
             <div class="col-xs-7">
-                Add missing #variable#
+                Add missing #variable#<br />
+                <a href="/reports/missing-#variable#.cfm">See all...</a>
             </div>
           </div>
         </div>
