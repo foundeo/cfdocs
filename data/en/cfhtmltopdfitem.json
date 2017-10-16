@@ -1,1 +1,128 @@
-{"syntax":"<cfhtmltopdfitem>","description":"Header Footer PageBreak subdefinition for cfhtmltopdf.\r\n\r\nYou can access the following scope variables in <cfhtmltopdfitem> content:\r\n\r\n_PAGENUMBER \u2013 Add current page number.\r\n_LASTPAGENUMBER \u2013 Add last page number.","engines":{"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfhtmltopdfitem.html","notes":""}},"name":"cfhtmltopdfitem","links":[],"params":[{"values":["header","footer","pagebreak"],"default":"","description":"Specifies the action:\r\n\r\nheader: uses the text\/image specified between the <cfhtmltopdfitem> and <\/cfhtmltopdfitem> tags as the running header.\r\nfooter: uses the text\/image between the <cfhtmltopdfitem> and <\/cfhtmltopdfitem> tags as the the running footer.\r\npagebreak: can be used to insert a pagebreak in the generated PDF. When <cfhtmltopdf> is used as a service, pagebreak will not work. ","name":"type","type":"string","required":"1"},{"values":[],"default":"","description":"Use this only when the image attribute is given a base64 image string","name":"isBase64","type":"boolean","required":"0"},{"values":[],"default":"","description":"The image file name or object to be used as header or footer.\r\n\r\nThe following parameters are supported:\r\n\r\nA path to the image file\r\nA Base-64 string\r\nA byte array\r\nA <cfimage> object","name":"image","type":"string","required":"0"},{"values":[],"default":"10","description":"Opacity of the header\/footer. Specify a valid number. A number between 1 and 10.","name":"opacity","type":"numeric","required":"0"},{"values":["LOWERCASEROMAN","NUMERIC","UPPERCASEROMAN"],"default":"Numeric","description":"The page number format to be used. ","name":"numberformat","type":"string","required":"0"},{"values":[],"default":"","description":"Show or hide header\/footer when the document is printed.","name":"showonprint","type":"boolean","required":"0"},{"values":["Left","Right","Center"],"default":"Center","description":"Alignment of the text. Left, Right, or Center.","name":"align","type":"string","required":"0"},{"values":[],"default":"1.0","description":"Left margin in inches (default) or centimeters. To specify the left margin in centimeters, include the unit=cm attribute.","name":"leftmargin","type":"numeric","required":"0"},{"values":[],"default":"1.0","description":"Right margin in inches (default) or centimeters. To specify the left margin in centimeters, include the unit=cm attribute.","name":"rightmargin","type":"numeric","required":"0"},{"values":[],"default":"0.5","description":"Top margin in inches (default) or centimeters. To specify the left margin in centimeters, include the unit=cm attribute.","name":"topmargin","type":"numeric","required":"0"},{"values":[],"default":"0.5","description":"Bottom margin in inches (default) or centimeters. To specify the bottom margin in centimeters, include the unit=cm attribute.","name":"bottommargin","type":"numeric","required":"0"}],"returns":"void","examples":[{"result":"","title":"Adobe Example","description":"","code":"<cfhtmltopdf destination=\"myPDF.pdf\" source=\"http:\/\/somesite.com\" overwrite=\"true\">\r\n <cfhtmltopdfitem type=\"header\">\r\n Page: _PAGENUMBER of _LASTPAGENUMBER \r\n <\/cfhtmltopdfitem>\r\n <cfhtmltopdfitem type=\"pagebreak\" \/>\r\n <cfhtmltopdfitem type=\"footer\" image=\"test.jpg\">\r\n <\/cfhtmltopdfitem>\r\n<\/cfhtmltopdf>"}],"type":"tag","related":["cfhtmltopdf"]}
+{
+  "name": "cfhtmltopdfitem",
+  "type": "tag",
+  "syntax": "<cfhtmltopdfitem>",
+  "description": "Header Footer PageBreak subdefinition for cfhtmltopdf.\r\n\r\nYou can access the following scope variables in <cfhtmltopdfitem> content:\r\n\r\n_PAGENUMBER \u2013 Add current page number.\r\n_LASTPAGENUMBER \u2013 Add last page number.",
+  "engines": {
+    "coldfusion": {
+      "minimum_version": "11",
+      "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfhtmltopdfitem.html",
+      "notes": ""
+    }
+  },
+  "params": [
+    {
+      "values": [
+        "header",
+        "footer",
+        "pagebreak"
+      ],
+      "default": "",
+      "description": "Specifies the action:\r\n\r\nheader: uses the text\/image specified between the <cfhtmltopdfitem> and <\/cfhtmltopdfitem> tags as the running header.\r\nfooter: uses the text\/image between the <cfhtmltopdfitem> and <\/cfhtmltopdfitem> tags as the the running footer.\r\npagebreak: can be used to insert a pagebreak in the generated PDF. When <cfhtmltopdf> is used as a service, pagebreak will not work. ",
+      "name": "type",
+      "type": "string",
+      "required": "1"
+    },
+    {
+      "values": [],
+      "default": "",
+      "description": "Use this only when the image attribute is given a base64 image string",
+      "name": "isBase64",
+      "type": "boolean",
+      "required": "0"
+    },
+    {
+      "values": [],
+      "default": "",
+      "description": "The image file name or object to be used as header or footer.\r\n\r\nThe following parameters are supported:\r\n\r\nA path to the image file\r\nA Base-64 string\r\nA byte array\r\nA <cfimage> object",
+      "name": "image",
+      "type": "string",
+      "required": "0"
+    },
+    {
+      "values": [],
+      "default": "10",
+      "description": "Opacity of the header\/footer. Specify a valid number. A number between 1 and 10.",
+      "name": "opacity",
+      "type": "numeric",
+      "required": "0"
+    },
+    {
+      "values": [
+        "LOWERCASEROMAN",
+        "NUMERIC",
+        "UPPERCASEROMAN"
+      ],
+      "default": "Numeric",
+      "description": "The page number format to be used. ",
+      "name": "numberformat",
+      "type": "string",
+      "required": "0"
+    },
+    {
+      "values": [],
+      "default": "",
+      "description": "Show or hide header\/footer when the document is printed.",
+      "name": "showonprint",
+      "type": "boolean",
+      "required": "0"
+    },
+    {
+      "values": [
+        "Left",
+        "Right",
+        "Center"
+      ],
+      "default": "Center",
+      "description": "Alignment of the text. Left, Right, or Center.",
+      "name": "align",
+      "type": "string",
+      "required": "0"
+    },
+    {
+      "values": [],
+      "default": "1.0",
+      "description": "Left margin in inches (default) or centimeters. To specify the left margin in centimeters, include the unit=cm attribute.",
+      "name": "leftmargin",
+      "type": "numeric",
+      "required": "0"
+    },
+    {
+      "values": [],
+      "default": "1.0",
+      "description": "Right margin in inches (default) or centimeters. To specify the left margin in centimeters, include the unit=cm attribute.",
+      "name": "rightmargin",
+      "type": "numeric",
+      "required": "0"
+    },
+    {
+      "values": [],
+      "default": "0.5",
+      "description": "Top margin in inches (default) or centimeters. To specify the left margin in centimeters, include the unit=cm attribute.",
+      "name": "topmargin",
+      "type": "numeric",
+      "required": "0"
+    },
+    {
+      "values": [],
+      "default": "0.5",
+      "description": "Bottom margin in inches (default) or centimeters. To specify the bottom margin in centimeters, include the unit=cm attribute.",
+      "name": "bottommargin",
+      "type": "numeric",
+      "required": "0"
+    }
+  ],
+  "returns": "void",
+  "examples": [
+    {
+      "result": "",
+      "title": "Adobe Example",
+      "description": "",
+      "code": "<cfhtmltopdf destination=\"myPDF.pdf\" source=\"http:\/\/somesite.com\" overwrite=\"true\">\r\n <cfhtmltopdfitem type=\"header\">\r\n Page: _PAGENUMBER of _LASTPAGENUMBER \r\n <\/cfhtmltopdfitem>\r\n <cfhtmltopdfitem type=\"pagebreak\" \/>\r\n <cfhtmltopdfitem type=\"footer\" image=\"test.jpg\">\r\n <\/cfhtmltopdfitem>\r\n<\/cfhtmltopdf>"
+    }
+  ],
+  "links": [],
+  "related": [
+    "cfhtmltopdf"
+  ]
+}

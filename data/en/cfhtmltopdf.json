@@ -1,5 +1,6 @@
 {
 	"name":"cfhtmltopdf",
+	"type":"tag",
 	"syntax":"<cfhtmltopdf>html</cfhtmltopdf>",
 	"script":"cfhtmltopdf() { writeOutput(html); };",
 	"description":"Creates PDFs from HTML using a WebKit based rendering engine.",
@@ -42,6 +43,5 @@
 		{"result":"","title":"Set Margins","description":"Uses the margintop, marginbottom, marginleft, marginright to set the page margins","code":"\r\n<cfhtmltopdf destination=\"usage_example2.pdf\"\r\n source=\"http:\/\/www.google.com\" overwrite=\"true\" \r\n orientation=\"portrait\" pagetype=\"A4\" margintop=\"1\" marginbottom=\"1\" \r\n marginleft=\"1\" marginright=\"1\">\r\n<\/cfhtmltopdf>"},
 		{"result":"","title":"Protect PDF","description":"Uses the ownerpassword, encryption, and permissions attributes to produce a password encrypted pdf.","code":"\r\n<cfhtmltopdf \r\n source=\"http:\/\/www.google.com\"\r\n ownerpassword=\"owner\" userpassword=\"user\"\r\n encryption=\"RC4_128\" permissions=\"AllowPrinting,AllowCopy\">\r\n<\/cfhtmltopdf>"}
 	],
-	"type":"tag",
 	"related":["cfhtmltopdfitem","cfdocument"]
 }

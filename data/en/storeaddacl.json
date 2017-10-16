@@ -2,9 +2,9 @@
 	"name":"storeAddACL",
 	"type":"function",
 	"syntax":"storeAddACL(url, ACLObject);",
-	"returns":"",
+	"returns":"void",
 	"related":[],
-	"description":" Adds ACL to existing ACL for object or bucket.",
+	"description":"Adds ACL to existing ACL for object or bucket.",
 	"params": [
 		{"name":"url","description":"Amazon S3 URLs (content or object).","required":true,"default":"","type":"","values":[]},
         {"name":"ACLObject","description":"An array of struct where each struct represents a permission or grant as discussed in ACLObject.","required":true,"default":"","type":"","values":[]}

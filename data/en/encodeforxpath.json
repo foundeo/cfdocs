@@ -4,13 +4,13 @@
 	"syntax":"encodeForXPath(String inputString, boolean canonicalize);",
 	"returns":"string",
 	"related":[],
-	"description":" Returns an encoded string for using with XPATH.",
+	"description":"Returns an encoded string for using with XPATH.",
 	"params": [
 		{"name":"inputString","description":"The string to encode.","required":true,"default":"","type":"","values":[]},
-        {"name":"canonicalize","description":"If set to true, canonicalization happens before encoding. If set to false, the given input string will just be encoded. The default value for canonicalize is false. When this parameter is not specified, canonicalization will not happen. By default, when canonicalization is performed, both mixed and multiple encodings will be allowed. To use any other combinations you should canonicalize using canonicalize method and then do encoding.","required":false,"default":"","type":"","values":[]}
+		{"name":"canonicalize","description":"If set to true, canonicalization happens before encoding. If set to false, the given input string will just be encoded. The default value for canonicalize is false. When this parameter is not specified, canonicalization will not happen. By default, when canonicalization is performed, both mixed and multiple encodings will be allowed. To use any other combinations you should canonicalize using canonicalize method and then do encoding.","required":false,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/encodeforxpath.html"},
+		"coldfusion": {"minimum_version":"11", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/encodeforxpath.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/encodeforxpath.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/EncodeForXPath"}
 	},

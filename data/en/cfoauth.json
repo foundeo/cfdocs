@@ -1,4 +1,6 @@
 {
+  "name": "cfoauth",
+  "type": "tag",
   "syntax": "<cfoauth>",
   "description": "The <oauth> tag allows you to easily integrate third-party Oauth 2 authentication provider in your application. This tag currently supports Facebook and Google authentication. Also, this tag supports Oauth providers that support the Oauth 2 protocols. For instance, Microsoft and Github. \r\n\r\nIf type is not Facebook or Google then use access token endpoint and other attributes.",
   "engines": {
@@ -8,7 +10,6 @@
       "notes": ""
     }
   },
-  "name": "cfoauth",
   "links": [
     {
       "title": "OAuth Site",
@@ -120,6 +121,5 @@
       "code": "\r\n<cflogin>\r\n <cfoauth\r\n type = \"Facebook\"\r\n clientid = \"YOUR_CLIENT_ID\"\r\n secretkey = \"YOUR_SECRET_KEY\"\r\n result = \"res\"\r\n redirecturi = \"http:\/\/localhost:8500\/doc\/login.cfm\" >\r\n <cfloginuser name = \"#res.other.username#\" password = \"#res.access_token#\" roles = \"user\"\/>\r\n<\/cflogin>\r\n<cflocation url=\"http:\/\/localhost:8500\/doc\/index.cfm\" >"
     }
   ],
-  "type": "tag",
   "related": []
 }
