@@ -1,4 +1,6 @@
 {
+  "name": "cfimapfilter",
+  "type": "tag",
   "syntax": "<cfimapfilter name=\"filter type\" ... >",
   "description": "Specifies filter parameters that control the actions of cfimap, get operations.\r\n\r\nTwo ways to use this tag: [name, value pair attributes] or [name, from, to ].\r\n\r\n\r\n name = \"filter type\"\r\n value = \"filter value\"\r\n\r\nOR \r\n \r\n\r\n name = \"filter type\"\r\n from = \"date\/time\"\r\n to = \"date\/time\"",
   "engines": {
@@ -8,7 +10,6 @@
       "notes": "You can specify this tag's attributes in an attributeCollection attribute whose value is a structure. Specify the structure name in the attributeCollection attribute and use the tag's attribute names as structure keys."
     }
   },
-  "name": "cfimapfilter",
   "links": [],
   "params": [
     {
@@ -60,7 +61,6 @@
       "code": "<cfimap action=\"getall\" \r\n connection = \"#REQUEST.connectionname#\" \r\n name = \"queryname\" \r\n stoponerror = \"#REQUEST.stoponerror#\" >\r\n \r\n <cfimapfilter name=\"subject\" value=\"filter\">\r\n \r\n<\/cfimap>"
     }
   ],
-  "type": "tag",
   "related": [
     "cfimap"
   ]

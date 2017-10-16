@@ -9,8 +9,8 @@
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "filter", "description": "", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "parallel", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "numeric", "values": []}
+		{"name": "parallel", "description": "Lucee-only", "required": false, "default": "", "type": "boolean", "values": []},
+		{"name": "maxThreads", "description": "Lucee-only", "required": false, "default": "20", "type": "numeric", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryfilter.html"},

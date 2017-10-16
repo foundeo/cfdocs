@@ -1,15 +1,15 @@
 {
 	"name": "queryReduce",
 	"type": "function",
-	"syntax": "queryReduce(query, closure [, initalValue])",
-	"member": "query.reduce(closure [, initalValue])",
+	"syntax": "queryReduce(query, closure [, initialValue])",
+	"member": "query.reduce(closure [, initialValue])",
 	"returns": "any",
 	"related": ["querymap", "queryfilter"],
 	"description": "Reduces query columns just like in array or collection",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "initalValue", "description": "", "required": false, "default": "", "type": "any", "values": []}
+		{"name": "initialValue", "description": "", "required": false, "default": "", "type": "any", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryreduce.html"},
