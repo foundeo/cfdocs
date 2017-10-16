@@ -25,8 +25,9 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset MyNewArray = arrayNew(1)> \r\n <!--- ArrayToList does not function properly if the Array has not been initialized with arraySet. ---> \r\n <cfset temp = arraySet(MyNewArray, 1,6, \"Initial Value\")> \r\n  <cfdump var=\"#myNewArray#\" />   ",
-			"result": ""
+			"code": "<cfset MyNewArray = arrayNew(1)> \r\n<!--- ArrayToList does not function properly if the Array has not been initialized with arraySet. ---> \r\n<cfset temp = arraySet(MyNewArray, 1,6, \"Initial Value\")> \r\n<cfoutput>#ArrayToList(myNewArray,', ')#</cfoutput>",
+			"result": "Initial Value, Initial Value, Initial Value, Initial Value, Initial Value, Initial Value",
+			"runnable": true
 		}
 	]
 
