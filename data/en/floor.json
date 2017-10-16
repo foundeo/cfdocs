@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"floor(number)",
 	"returns":"numeric",
-	"related":["int"],
+	"related":["int","ceiling","round"],
 	"description":"Returns the integer less than or equal to the input. This function is equivalent to the int function.",
 	"params": [
 		{"name":"number","description":"A numeric value","required":true,"default":"","type":"numeric","values":[]}
@@ -12,9 +12,7 @@
 		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/floor.html"},
 		"lucee": {"minimum_version":"5.1", "notes":"", "docs":"http://docs.lucee.org/reference/functions/floor.html"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Floor Value of 4.0",
@@ -45,5 +43,4 @@
 			"runnable":true
 		}
 	]
-
 }
