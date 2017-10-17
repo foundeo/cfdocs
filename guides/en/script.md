@@ -106,7 +106,7 @@ OR for CF11+
     
 
 <strong>Resources:</strong>
-CFChef GitHub: https://github.com/cfchef/cfml-tag-to-script-conversions/blob/master/README.md#general
+Tony Junkes GitHub: https://github.com/tonyjunkes/cfml-tags-to-cfscript/blob/master/README.md#general
 Adam Cameron GitHub: https://github.com/adamcameron/cfscript/blob/master/cfscript.md#database
 Pete Freitag Cheat sheet: http://www.petefreitag.com/cheatsheets/coldfusion/cfscript/
 Steve Walker CF Tag and Script Equivilents: http://www.cfuser.com/cf-tag-and-script-equivalents/
