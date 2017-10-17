@@ -4,7 +4,7 @@
 	"syntax": "urlEncode(string [, charset] [, force])",
 	"member": "string.urlEncode([charset] [, force])",
 	"returns": "string",
-	"related": ["encodeForURL", "URLDecode"],
+	"related": ["encodeForURL", "urlDecode"],
 	"description": "Returns an url-encoded string with respect to charset.",
 	"params": [
 		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []},
