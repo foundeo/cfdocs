@@ -1,6 +1,5 @@
-
-Formatting
-==========
+# Date Time Cheatsheet
+## Formatting
 
 | Format | Notes                                                              |
 |--------|--------------------------------------------------------------------|
@@ -28,8 +27,7 @@ Formatting
 | t      | one-character time marker string, such as A or P                   |
 | tt     | multiple-character time marker string, such as AM or PM            |
 
-Shortcuts
----------
+### Shortcuts
 
 | Shortcut | Format                              |
 |----------|-------------------------------------|
@@ -38,8 +36,8 @@ Shortcuts
 | long     | mmmm dd, yyyy h:nn:ss tt UTC        |
 | full     | EEEE, mmmm dd, yyyy h:nn:ss tt UTC  |
 
-Date functions
-==============
+## Date functions
+
 * dateTimeFormat
 * lsDateTimeFormat
 * date-and-time-functions
