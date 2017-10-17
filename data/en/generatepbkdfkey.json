@@ -8,13 +8,13 @@
 	"params":[
         {"name":"algorithm", "description":"Hashing algorithm used for generating key", "required":true, "default":"", "type":"string", "values":["PBKDF2WithHmacSHA1","PBKDF2WithSHA1","PBKDF2WithSHA224","PBKDF2WithSHA256","PBKDF2WithSHA384","PBKDF2WithSHA512"]},
         {"name":"passphrase", "description":"Passphrase used for the key. KEEP THIS SECRET.", "required":true, "default":"", "type":"string", "values":[]},
-        {"name":"salt", "description":"A string which will be added to the passphrase before encryption", "required":true, "default":"", "type":"string", "values":[]},
+        {"name":"salt", "description":"A string which will be added to the passphrase before encryption.\n The standard recommends a salt length of at least 64 bits (8 characters). The salt needs to be generated using a pseudo-random number generator (e.g SHA1PRNG)", "required":true, "default":"", "type":"string", "values":[]},
         {"name":"iterations", "description":"The number of PBKDEF iterations to perform. A minimum recommended value is 1000", "required":false, "default":"", "type":"numeric", "values":[]},
         {"name":"keysize", "description":"The length in bytes of the key to generate", "required":false, "default":"", "type":"numeric", "values":["true", "false"]}
     ],
 	"engines":{
 		"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/generatepbkdfkey.html","notes":"These algorithms are available only in enterprise versions:\n\nPBKDF2WithSHA1\nPBKDF2WithSHA224\nPBKDF2WithSHA256\nPBKDF2WithSHA384\nPBKDF2WithSHA512\nPBKDF2WithSHA512-224\nPBKDF2WithSHA512-256"},
-		"lucee":{"minimum_version":"5","docs":"http://docs.lucee.org/reference/functions/generatepbkdfkey.html","notes":"Lucee seems to support only \"PBKDF2WithHmacSHA1\" and \"PBKDF2WithHmacSHA512\" are allowed values for algorithm argument"}
+		"lucee":{"minimum_version":"5","docs":"http://docs.lucee.org/reference/functions/generatepbkdfkey.html","notes":"Lucee seems to support only \"PBKDF2WithHmacSHA*\" (1 - 512), but not \"PBKDF2WithSHA*\" (1 - 512) are allowed values for algorithm argument"}
 	},
 	"links":[
 		{"title":"PBKDF2 Wikipedia","description":"Information on what PBKDF2 is all about","url":"http:\/\/en.wikipedia.org\/wiki\/PBKDF2"},
@@ -26,6 +26,12 @@
 			"description":"",
 			"code":"generatePBKDFKey(\"PBKDF2WithHmacSHA1\", \"secret\", \"salty\", 5000, 128)",
 			"result":"Y0MCpCe3zb0CNJvyXNUWEQ=="
+		},{
+			"title":"More complex encryption example",
+			"description":"",
+			"code":"// some variables\r\npassword = \"top_secret\";\r\ndataToEncrypt= \"the most closely guarded secret\";\r\nencryptionAlgorithm = \"AES\";\r\nkeysize = 128;\r\nalgorithmVersion = 512;\r\nPBKDFalgorithm = 'PBKDF2WithHmacSHA' & algorithmVersion;\r\n    \r\n// Generate key as recommended in docs\r\nlength = keysize / 8;\r\nmultiplicator = 10 ^ length;\r\nsalt = Round(Randomize(5,'SHA1PRNG') * multiplicator);\r\n    \r\n// The magic happens here\r\nPBKDFKey = GeneratePBKDFKey(PBKDFalgorithm, password, salt, algorithmVersion, keysize);\r\nencryptedData = encrypt(dataToEncrypt, PBKDFKey, encryptionAlgorithm, \"BASE64\"); \r\ndecryptedData = decrypt(encryptedData, PBKDFKey, encryptionAlgorithm, \"BASE64\");\r\n    \r\n//Output\r\nwriteOutput(\"<b>Generated PBKDFKey (Base 64)</b>: \" & PBKDFKey);\r\nwriteOutput(\"<br /><b>Data After Encryption</b>: \" & encryptedData);\r\nwriteOutput(\"<br /><b>Data After Decryption</b>: \" & decryptedData); ",
+			"result":"",
+			"runnable":false
 		}
 	]
 }
