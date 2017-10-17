@@ -1,8 +1,8 @@
 {
-	"name": "URLEncode",
+	"name": "urlEncode",
 	"type": "function",
-	"syntax": "URLEncode(string [, charset] [, force])",
-	"member": "string.URLEncode([charset] [, force])",
+	"syntax": "urlEncode(string [, charset] [, force])",
+	"member": "string.urlEncode([charset] [, force])",
 	"returns": "string",
 	"related": ["encodeForURL", "URLDecode"],
 	"description": "Returns an url-encoded string with respect to charset.",
