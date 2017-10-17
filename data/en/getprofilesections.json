@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Gets all the sections of an initialization file.\n An initialization file, as a struct whose format is as follows:\n - Each initialization file section name is a key in the\n struct\n - Each list of entries in a section of an initialization\n file is a value in the struct",
 	"params": [
-		{"name":"inifile","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"inifile","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

@@ -6,10 +6,10 @@
 	"related":[],
 	"description":" Returns a sorted array of the top level keys in a structure.\n Sorts using alphabetic or numeric sorting, and can sort based\n on the values of any structure element.",
 	"params": [
-		{"name":"base","description":"","required":true,"default":"","type":"Struct","values":[]},
-		{"name":"sorttype","description":"* numeric\n * text: case sensitive Default.\n * textnocase","required":true,"default":"","type":"String","values":["numeric","text","textnocase"]},
-		{"name":"sortorder","description":"* asc: ascending (a to z) sort order. Default.\n * desc: descending (z to a) sort order","required":true,"default":"","type":"String","values":[]},
-		{"name":"pathtosubelement","description":"String or a variable that contains one","required":true,"default":"","type":"String","values":[]}
+		{"name":"base","description":"","required":true,"default":"","type":"struct","values":[]},
+		{"name":"sorttype","description":"* numeric\n * text: case sensitive Default.\n * textnocase","required":true,"default":"","type":"string","values":["numeric","text","textnocase"]},
+		{"name":"sortorder","description":"* asc: ascending (a to z) sort order. Default.\n * desc: descending (z to a) sort order","required":true,"default":"","type":"string","values":[]},
+		{"name":"pathtosubelement","description":"String or a variable that contains one","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

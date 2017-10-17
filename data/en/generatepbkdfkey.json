@@ -1,8 +1,8 @@
 {
 	"name":"generatePBKDFKey",
-   	"syntax":"generatePBKDFKey(algorithm,passphrase,salt);",
+  "syntax":"generatePBKDFKey(algorithm,passphrase,salt);",
 	"returns":"string",
-	"description":"CFML implementation of Password-Based Key-Derivation Function (PBKDF).",
+	"description":"CFML implementation of Password-Based Key-Derivation Function (PBKDF)",
 	"type":"function",
 	"related":["hash", "encrypt","decrypt","generateSecretKey"],
 	"params":[

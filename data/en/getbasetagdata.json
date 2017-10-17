@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Used within a custom tag. Finds calling (ancestor) tag by\n name and accesses its data.",
 	"params": [
-		{"name":"tagname","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"instancenumber","description":"","required":false,"default":"","type":"Numeric","values":[]}
+		{"name":"tagname","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"instancenumber","description":"","required":false,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

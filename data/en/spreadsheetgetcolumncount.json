@@ -6,12 +6,12 @@
 	"related":[],
 	"description":"Returns the number of columns in a given spreadsheet.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The speadsheet object","required":true,"default":"","type":"any","values":[]},
-		{"name":"sheet","description":"The sheet name or sheet number","required":false,"default":"","type":"String","values":[]}
+		{"name":"spreadsheetObj","description":"The spreadsheet object","required":true,"default":"","type":"any","values":[]},
+		{"name":"sheet","description":"The sheet name or sheet number","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetgetcolumncount.html"}
-		
+
 	},
 	"links": [
 

@@ -26,8 +26,8 @@
 		"url": "http://blog.adamcameron.me/2014/06/arraymap-reverse-cfml-history.html"
 	}],
 	"params":[
-		{"values":[],"default":"","description":"The input array","name":"array","type":"Array","required":true},
-		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: item in the array\r\nindex: index of the array\r\narray: a reference of the original arrray","name":"function","type":"Any","required":true}
+		{"values":[],"default":"","description":"The input array","name":"array","type":"array","required":true},
+		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: item in the array\r\nindex: index of the array\r\narray: a reference of the original arrray","name":"function","type":"any","required":true}
 	],
 	"examples":[
         {

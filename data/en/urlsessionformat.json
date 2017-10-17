@@ -2,7 +2,7 @@
 	"name":"URLSessionFormat",
 	"type":"function",
 	"syntax":"URLSessionFormat(requesturl)",
-	"returns":"URL",
+	"returns":"string",
 	"related":[],
 	"discouraged":"Putting session identifiers in the URL may lead to session hijacking.",
 	"description":"If the client does not accept cookies appends session identifiers `CFID`, `CFTOKEN` and / or `JSESSIONID` to the URL.",

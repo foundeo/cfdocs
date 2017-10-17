@@ -13,7 +13,7 @@
       "description": "Value that CFML passes to the right of the comparison\n operator in a where clause.\n\n If CFSQLType is a date or time option, ensure that the date\n value uses your DBMS-specific date format. Use the\n CreateODBCDateTime or DateFormat and TimeFormat functions\n to format the date value.",
       "required": false,
       "default": "",
-      "type": "String",
+      "type": "string",
       "values": []
     },
     {
@@ -21,7 +21,7 @@
       "description": "SQL type that parameter (any type) is bound to. As of CF11+ or Lucee 4.5+ you can omit the `cf_sql_` prefix.",
       "required": false,
       "default": "",
-      "type": "String",
+      "type": "string",
       "values": [
         "cf_sql_bigint",
         "cf_sql_bit",
@@ -58,7 +58,7 @@
       "description": "Maximum length of parameter.",
       "required": false,
       "default": "",
-      "type": "Numeric",
+      "type": "numeric",
       "values": []
     },
     {
@@ -66,7 +66,7 @@
       "description": "Number of decimal places in parameter. Applies to `CF_SQL_NUMERIC` and `CF_SQL_DECIMAL`.",
       "required": false,
       "default": "",
-      "type": "Numeric",
+      "type": "numeric",
       "values": []
     },
     {

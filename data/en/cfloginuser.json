@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" Identifies an authenticated user to CFML. Specifies the\n user ID and roles. Used within a cflogin tag.",
 	"params": [
-		{"name":"name","description":"A username.","required":true,"default":"","type":"String","values":[]},
-		{"name":"password","description":"A user password.","required":true,"default":"","type":"String","values":[]},
-		{"name":"roles","description":"A comma-delimited list of role identifiers.\n\n CFML processes spaces in a list element as part of\n the element.","required":true,"default":"","type":"String","values":[]}
+		{"name":"name","description":"A username.","required":true,"default":"","type":"string","values":[]},
+		{"name":"password","description":"A user password.","required":true,"default":"","type":"string","values":[]},
+		{"name":"roles","description":"A comma-delimited list of role identifiers.\n\n CFML processes spaces in a list element as part of\n the element.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

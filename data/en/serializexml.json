@@ -4,13 +4,13 @@
 	"syntax":"serializeXML( Object objToBeSerialized, boolean useCustomSerializer );",
 	"returns":"string",
 	"related":[],
-	"description":" Serializes a ColdFusion object to XML.",
+	"description":"Serializes a ColdFusion object to XML.",
 	"params": [
 		{"name":"objToBeSerialized","description":"An object to be serialized.","required":true,"default":"","type":"","values":[]},
         {"name":"useCustomSerializer","description":"Boolean. Whether to use the custom serializer or not. The default value is true. The custom serializer will be always used for XML deserialization. If false, the XML/JSON deserialization will be done using the default ColdFusion behavior. If any other type is passed with useCustomSerializer as false, then TypeNotSupportedException will be thrown..","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/serializexml.html"}
+		"coldfusion": {"minimum_version":"11", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/serializexml.html"}
 	},
 	"links": [
 

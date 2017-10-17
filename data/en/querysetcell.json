@@ -6,10 +6,10 @@
 	"related":[],
 	"description":" Sets a cell to a value. If no row number is specified,\n the cell on the last row is set.",
 	"params": [
-		{"name":"query","description":"","required":true,"default":"","type":"Query","values":[]},
-		{"name":"column","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"value","description":"","required":true,"default":"","type":"Object","values":[]},
-		{"name":"row","description":"","required":false,"default":"","type":"Numeric","values":[]}
+		{"name":"query","description":"","required":true,"default":"","type":"query","values":[]},
+		{"name":"column","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]},
+		{"name":"row","description":"","required":false,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

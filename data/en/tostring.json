@@ -7,8 +7,8 @@
 	"related":["Val","NumberFormat"],
 	"description":" Converts a value to a string.\nLucee parses numbers with one decimal place.\ncomplex object types can only be used in combination with the member syntax.",
 	"params": [
-		{"name":"any_value","description":"Value to convert to a string","required":true,"default":"","type":"Object","values":[]},
-		{"name":"encoding","description":"The character encoding (character set) of the string.","required":false,"default":"The default value is the encoding of the page on which the function is called.","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
+		{"name":"any_value","description":"Value to convert to a string","required":true,"default":"","type":"any","values":[]},
+		{"name":"encoding","description":"The character encoding (character set) of the string.","required":false,"default":"The default value is the encoding of the page on which the function is called.","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 
 	],
 	"engines": {

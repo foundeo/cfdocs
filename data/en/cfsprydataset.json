@@ -11,7 +11,7 @@
 			"description": "A bind expression that returns XML data to populate \n the Spry data set. The bind expression can specify a \n CFC function or URL and can include bind parameters \n that represent the values of ColdFusion controls. For \n detailed information on specifying bind expressions, \n see HTML form data binding in cfinput.",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "The name of the Spry data set.",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "The name of a JavaScript function to execute if \n evaluating the bind expression results in an error. The \n function must take two attributes: an HTTP status \n code and a message. \n If you omit this attribute, and have specified a global \n error handler (by using the \n ColdFusion.setGlobalErrorHandler function), the \n handler displays the error message; otherwise a \n default error pop-up displays.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -35,7 +35,7 @@
 			"description": "A JavaScript object containing options to pass to the \n data set.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -43,7 +43,7 @@
 			"description": "Specifies data set type, corresponding to the format of \n the data that is returned by the bind expression.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["xml", "json"]
 		},
 		{
@@ -51,7 +51,7 @@
 			"description": "Valid for XML type data sets only. An XPath \n expression that extracts data from the XML returned \n by the bind expression. The data set contains only the \n data that matches the xpath expression.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

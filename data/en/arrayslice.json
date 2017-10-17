@@ -7,9 +7,9 @@
 	"related":["ArrayFind","ArrayFindNoCase","ArrayMap","ArrayReduce","ArrayResize","ArraySort","ArraySwap","ArrayToList"],
 	"description":"Returns a new array, from the start position up to the count of elements.",
 	"params": [
-		{"name":"array","description":"Name of the array that you want to slice","required":true,"default":"","type":"Array","values":[]},
-		{"name":"offset","description":"Specifies the position from which to slice the array. Negative value indicates that the array is sliced, with sequence starting from array's end.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"length","description":"Maximum elements to slice","required":false,"default":"Length of Array","type":"Numeric","values":[]}
+		{"name":"array","description":"Name of the array that you want to slice","required":true,"default":"","type":"array","values":[]},
+		{"name":"offset","description":"Specifies the position from which to slice the array. Negative value indicates that the array is sliced, with sequence starting from array's end.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"length","description":"Maximum elements to slice","required":false,"default":"Length of Array","type":"numeric","values":[]}
 
 	],
 	"engines": {

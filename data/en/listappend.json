@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" Concatenates a list or element to a list.",
 	"params": [
-		{"name":"list","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"value","description":"An element or a list of elements.","required":true,"default":"","type":"String","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"String","values":[",","|","_",";",":"]}
+		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"An element or a list of elements.","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[",","|","_",";",":"]}
 
 	],
 	"engines": {

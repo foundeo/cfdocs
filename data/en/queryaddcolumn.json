@@ -6,10 +6,10 @@
 	"related":[],
 	"description":" Adds a column to a query and populates its rows with the\n contents of a one-dimensional array. Pads query columns,\n if necessary, to ensure that all columns have the same number\n of rows.",
 	"params": [
-		{"name":"query","description":"","required":true,"default":"","type":"Query","values":[]},
-		{"name":"column_name","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"datatype","description":"Column data type.","required":false,"default":"","type":"String","values":["Integer","Bigint","Double","Decimal","Varchar","Binary","Bit","Time","Date"]},
-		{"name":"array_name","description":"","required":true,"default":"","type":"Array","values":[]}
+		{"name":"query","description":"","required":true,"default":"","type":"query","values":[]},
+		{"name":"column_name","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"datatype","description":"Column data type.","required":false,"default":"","type":"string","values":["Integer","Bigint","Double","Decimal","Varchar","Binary","Bit","Time","Date"]},
+		{"name":"array_name","description":"","required":true,"default":"","type":"array","values":[]}
 
 	],
 	"engines": {

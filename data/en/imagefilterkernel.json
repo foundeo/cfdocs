@@ -6,8 +6,8 @@
 	"related": [],
 	"description": "",
 	"params": [
-		{"name": "width", "description": "", "required": true, "default": "", "type": "number", "values": []},
-		{"name": "height", "description": "", "required": true, "default": "", "type": "number", "values": []},
+		{"name": "width", "description": "", "required": true, "default": "", "type": "numeric", "values": []},
+		{"name": "height", "description": "", "required": true, "default": "", "type": "numeric", "values": []},
 		{"name": "data", "description": "", "required": true, "default": "", "type": "any", "values": []}
 	],
 	"engines": {

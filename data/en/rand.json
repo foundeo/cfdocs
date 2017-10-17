@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Generates a pseudo-random number in the range 0 - 1.",
 	"params": [
-		{"name":"algorithm","description":"The algorithm to use to generated the random number.","required":false,"default":"CFMX_COMPAT","type":"String","values":["CFMX_COMPAT","SHA1PRNG","IBMSecureRandom"]}
+		{"name":"algorithm","description":"The algorithm to use to generated the random number.","required":false,"default":"CFMX_COMPAT","type":"string","values":["CFMX_COMPAT","SHA1PRNG","IBMSecureRandom"]}
 
 	],
 	"engines": {

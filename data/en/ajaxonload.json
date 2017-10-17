@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Causes the specified JavaScript function to run when the page loads.",
 	"params": [
-		{"name":"functionname","description":"The name of the function to run when the page loads.","required":true,"default":"","type":"String","values":[]}
+		{"name":"functionname","description":"The name of the function to run when the page loads.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

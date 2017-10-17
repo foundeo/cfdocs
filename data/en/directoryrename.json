@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Renames given directory",
 	"params": [
-		{"name":"path","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"newPath","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"newPath","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "urlEncode(string [, charset] [, force])",
 	"returns": "string",
-	"related": [],
+	"related": ["encodeForURL"],
 	"description": "Returns an url-encoded string with respect to charset",
 	"params": [
 		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []},
@@ -13,6 +13,24 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/urlencode.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"String encoding",
+		"description":"Encode string with special chars for use in url",
+		"code":"urlEncode('Apples → Äpfel','utf-8')",
+		"result":"Apples+%E2%86%92+%C3%84pfel",
+		"runnable":true
+	},{
+		"title":"String charset",
+		"description":"Same string, different charset",
+		"code":"urlEncode('Apples → Äpfel','ASCII')",
+		"result":"Apples+%3F+%3Fpfel",
+		"runnable":true
+	},{
+		"title":"Convert collection to be able to be passed as url param value",
+		"description":"",
+		"code":"vocab = [{\r\n        apples: {\r\n            en: 'apples',\r\n            de: 'Äpfel',\r\n            da: 'æble',\r\n            el: 'μήλο'\r\n        }\r\n    }];\r\n    writeOutput(urlEncode(vocab.toString(),'utf-8'));",
+		"result":"%5B%7BAPPLES%3D%7B%7BEL%3D%7B%CE%BC%CE%AE%CE%BB%CE%BF%7D%2C+EN%3D%7Bapples%7D%2C+DA%3D%7B%C3%A6ble%7D%2C+DE%3D%7B%C3%84pfel%7D%7D%7D%7D%5D",
+		"runnable":true
+	}],
 	"links": []
 }

@@ -7,7 +7,7 @@
 	"related": [],
 	"description": "",
 	"params": [
-		{"name": "date", "description": "", "required": true, "default": "", "type": "datetime", "values": []},
+		{"name": "date", "description": "", "required": true, "default": "", "type": "date", "values": []},
 		{"name": "locale", "description": "", "required": false, "default": "", "type": "string", "values": []},
 		{"name": "timezone", "description": "", "required": false, "default": "", "type": "string", "values": []}
 	],

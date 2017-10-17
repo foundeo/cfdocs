@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" String Converts number to a string, in the base specified by\n radix. For example: #formatBaseN(1024,16)#",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"radix","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"radix","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

@@ -7,11 +7,11 @@
 	"related":[],
 	"description":" Crops a ColdFusion image to a specified rectangular area.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"x","description":"The X origin of the crop area.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"y","description":"The Y origin of the crop area.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"width","description":"The width of the crop area.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"height","description":"The height of the crop area.","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"x","description":"The X origin of the crop area.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"y","description":"The Y origin of the crop area.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"width","description":"The width of the crop area.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"height","description":"The height of the crop area.","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
@@ -22,7 +22,7 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",

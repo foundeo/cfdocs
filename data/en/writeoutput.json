@@ -6,7 +6,7 @@
 	"related":["cfoutput","encodeForHTML"],
 	"description":" Appends text to the page-output stream.\n This function writes to the page-output stream regardless of\n conditions established by the cfsetting tag.",
 	"params": [
-		{"name":"string","description":"A string, or a variable that contains one","required":true,"default":"","type":"String","values":[]},
+		{"name":"string","description":"A string, or a variable that contains one","required":true,"default":"","type":"string","values":[]},
 		{"name":"encodeFor","description":"CF2016+ Wraps the result with an encodeFor function.","required":false,"default":"","type":"string","values":["html","htmlattribute","javascript","css","xml","xmlattribute","url","xpath","ldap","dn"]}
 	],
 	"engines": {

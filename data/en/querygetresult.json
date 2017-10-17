@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Returns the metadata of a query.",
 	"params": [
-		{"name":"query","description":"The query whose metadata is to be returned.","required":true,"default":"","type":"Query","values":[]}
+		{"name":"query","description":"The query whose metadata is to be returned.","required":true,"default":"","type":"query","values":[]}
 
 	],
 	"engines": {

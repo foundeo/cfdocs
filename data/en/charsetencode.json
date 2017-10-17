@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Uses the specified encoding to convert binary data to a string.",
 	"params": [
-		{"name":"binaryobject","description":"A variable containing binary data to decode into text.","required":true,"default":"","type":"Binary","values":[]},
-		{"name":"encoding","description":"The character encoding that was used to encode the string into binary format.","required":true,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
+		{"name":"binaryobject","description":"A variable containing binary data to decode into text.","required":true,"default":"","type":"binary","values":[]},
+		{"name":"encoding","description":"The character encoding that was used to encode the string into binary format.","required":true,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 
 	],
 	"engines": {

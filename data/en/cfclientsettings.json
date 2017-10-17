@@ -11,7 +11,7 @@
 			"description": "Enable/disable the device API",
 			"required": "0",
 			"default": "false",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": []
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "Enable/disable the device detection plugin.",
 			"required": "0",
 			"default": "false",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "The timeout for loading the plugins (in seconds).",
 			"required": "0",
 			"default": "10",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		}
 	],

@@ -11,7 +11,7 @@
 			"description": "Specify the index associated with the field name.\n If multiple fields have the same name, the index\n value is used to locate one of them. (optional, default=1)",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "The field name on the PDF form. (requiredl)",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "The value associated with the field name.\n For interactive fields, specify a ColdFusion variable. (optional)",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

@@ -2,7 +2,7 @@
   "name": "cacheRemoveAll",
   "type": "function",
   "syntax": "cacheRemoveAll( region );",
-  "returns": "",
+  "returns": "void",
   "related": [],
   "description": " Removes all stored objects in a cache region. If no cache region is specified, objects in the default region are removed.",
   "params": [

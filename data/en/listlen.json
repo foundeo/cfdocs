@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" Determines the number of elements in a list.",
 	"params": [
-		{"name":"list","description":"A list or a variable that contains one","required":true,"default":"","type":"String","values":[]},
-		{"name":"delimiters","description":"A string or a variable that contains one. Characters that separate list elements. The default value is comma. If this parameter contains more than one character, ColdFusion processes each occurrence of each character as a delimiter.","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]},
-		{"name":"includeEmptyValues","description":"CF10+ If includeEmptyValues is set to true, all empty values in the list will be considered when computing length. If set to false, the empty list elements are ignored.","required":false,"default":"NO","type":"String","values":["Yes","No"]}
+		{"name":"list","description":"A list or a variable that contains one","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiters","description":"A string or a variable that contains one. Characters that separate list elements. The default value is comma. If this parameter contains more than one character, ColdFusion processes each occurrence of each character as a delimiter.","required":false,"default":",","type":"string","values":[",","|",";","chr(9)","chr(10)","chr(13)"]},
+		{"name":"includeEmptyValues","description":"CF10+ If includeEmptyValues is set to true, all empty values in the list will be considered when computing length. If set to false, the empty list elements are ignored.","required":false,"default":"NO","type":"string","values":["Yes","No"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listlen.html"},

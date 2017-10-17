@@ -6,17 +6,17 @@
 	"related":[],
 	"description":" Divides a PDF or FlashPaper document into sections.\n By using this tag in conjunction with a cfdocumentitem\n tag, each section can have unique headers, footers,\n and page numbers.",
 	"params": [
-		{"name":"margintop","description":"Specifies the top margin in inches (default) or\n centimeters. To specify the top margin in centimeters,\n include the unit=\"cm\" attribute in the parent cfdocument\n tag.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"marginbottom","description":"Specifies the bottom margin in inches (default) or\n centimeters. To specify the bottom margin in\n centimeters, include the unit=\"cm\" attribute in the\n parent cfdocument tag.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"marginleft","description":"Specifies the left margin in inches (default) or\n centimeters. To specify the left margin in centimeters,\n include the unit=\"cm\" attribute in the parent cfdocument\n tag.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"marginright","description":"Specifies the right margin in inches (default) or\n centimeters. To specify the right margin in centimeters,\n include the unit=\"cm\" attribute in the parent cfdocument\n tag.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"authpassword","description":"Password sent to the target URL for Basic Authentication. \nCombined with username to form a base64 encoded string that is passed in the Authenticate header. \nDoes not provide support for Integrated Windows, NTLM, or Kerebos authentication.","required":false,"default":"","type":"String","values":[]},
-		{"name":"authuser","description":"User name sent to the target URL for Basic Authentication. \nCombined with password to form a base64 encoded string that is passed in the Authenticate header. \nDoes not provide support for Integrated Windows, NTLM, or Kerebos authentication.","required":false,"default":"","type":"String","values":[]},
-		{"name":"mimetype","description":"MIME type of the source document","required":false,"default":"text\/html","type":"String","values":["text\/html","text\/plain","application\/xml","image\/bmp","image\/jpeg","image\/png","image\/gif"]},
-		{"name":"name","description":"Bookmark name for the section.","required":false,"default":"","type":"String","values":[]},
-		{"name":"src","description":"URL or the relative path to the web root. You cannot specify both the src and srcfile attributes.","required":false,"default":"","type":"String","values":[]},
-		{"name":"srcfile","description":"Absolute path of a file that is on the server. \nYou cannot specify both the src and srcfile attributes.","required":false,"default":"","type":"String","values":[]},
-		{"name":"useragent","description":"Text to put in the HTTP User-Agent request header field. Used to identify the request client software.","required":false,"default":"","type":"String","values":[]}
+		{"name":"margintop","description":"Specifies the top margin in inches (default) or\n centimeters. To specify the top margin in centimeters,\n include the unit=\"cm\" attribute in the parent cfdocument\n tag.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"marginbottom","description":"Specifies the bottom margin in inches (default) or\n centimeters. To specify the bottom margin in\n centimeters, include the unit=\"cm\" attribute in the\n parent cfdocument tag.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"marginleft","description":"Specifies the left margin in inches (default) or\n centimeters. To specify the left margin in centimeters,\n include the unit=\"cm\" attribute in the parent cfdocument\n tag.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"marginright","description":"Specifies the right margin in inches (default) or\n centimeters. To specify the right margin in centimeters,\n include the unit=\"cm\" attribute in the parent cfdocument\n tag.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"authpassword","description":"Password sent to the target URL for Basic Authentication. \nCombined with username to form a base64 encoded string that is passed in the Authenticate header. \nDoes not provide support for Integrated Windows, NTLM, or Kerebos authentication.","required":false,"default":"","type":"string","values":[]},
+		{"name":"authuser","description":"User name sent to the target URL for Basic Authentication. \nCombined with password to form a base64 encoded string that is passed in the Authenticate header. \nDoes not provide support for Integrated Windows, NTLM, or Kerebos authentication.","required":false,"default":"","type":"string","values":[]},
+		{"name":"mimetype","description":"MIME type of the source document","required":false,"default":"text\/html","type":"string","values":["text\/html","text\/plain","application\/xml","image\/bmp","image\/jpeg","image\/png","image\/gif"]},
+		{"name":"name","description":"Bookmark name for the section.","required":false,"default":"","type":"string","values":[]},
+		{"name":"src","description":"URL or the relative path to the web root. You cannot specify both the src and srcfile attributes.","required":false,"default":"","type":"string","values":[]},
+		{"name":"srcfile","description":"Absolute path of a file that is on the server. \nYou cannot specify both the src and srcfile attributes.","required":false,"default":"","type":"string","values":[]},
+		{"name":"useragent","description":"Text to put in the HTTP User-Agent request header field. Used to identify the request client software.","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

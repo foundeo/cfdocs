@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Copies a structure. Copies top-level keys, values, and arrays\n in the structure by value; copies nested structures by\n reference.",
 	"params": [
-		{"name":"structure","description":"Structure to copy","required":true,"default":"","type":"Struct","values":[]}
+		{"name":"structure","description":"Structure to copy","required":true,"default":"","type":"struct","values":[]}
 
 	],
 	"engines": {

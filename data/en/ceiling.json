@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"ceiling(number)",
 	"returns":"numeric",
-	"related":[],
-	"description":" Determines the closest integer that is greater than a\n specified number.",
+	"related":["floor","round"],
+	"description":"Determines the closest integer that is greater than a\n specified floating point number.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
-
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/Ceiling.html"},
@@ -15,9 +14,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ceiling"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ceiling"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Ceiling of 1.1",
@@ -25,7 +22,12 @@
 			"code":"ceiling(1.1)",
 			"result":"2",
 			"runnable":true
+		},{
+			"title":"Ceiling of 1",
+			"description":"When ceiling an integer the result is equal to the value passed",
+			"code":"ceiling(1)",
+			"result":"1",
+			"runnable":true
 		}
 	]
-
 }

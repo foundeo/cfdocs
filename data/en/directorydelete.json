@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Deltes directory for given path",
 	"params": [
-		{"name":"path","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"recurse","description":"","required":true,"default":false,"type":"Boolean","values":[true,false]}
+		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"recurse","description":"","required":true,"default":false,"type":"boolean","values":[true,false]}
 
 	],
 	"engines": {

@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" Determines the index of the first list element that contains a\n specified substring.\n Returns the index of the first list element that contains\n substring. If not found, returns zero. The search for the substring is case-sensitive.",
 	"params": [
-		{"name":"list","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"substring","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
+		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"substring","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
 
 	],
 	"engines": {

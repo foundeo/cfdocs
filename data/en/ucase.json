@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Converts the alphabetic characters in a string to uppercase.",
 	"params": [
-		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]}
+		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

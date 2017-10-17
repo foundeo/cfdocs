@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Verifies whether an image file is valid.",
 	"params": [
-		{"name":"path","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"path","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
