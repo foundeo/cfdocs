@@ -24,6 +24,12 @@
 		"code":"toNumeric(\"FF0011\", \"hex\")",
 		"result":"16711697",
 		"runnable":true
+	},{
+		"title":"Cast a binary-value to a number.",
+		"description":"",
+		"code":"toNumeric(\"1010\", \"bin\")",
+		"result":"10",
+		"runnable":true
 	}],
 	"links": []
 }
