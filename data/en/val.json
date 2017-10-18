@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"val(String)",
 	"returns":"numeric",
-	"related":["IsNumeric","isNull"],
+	"related":["isNumeric","isNull"],
 	"description":" Converts numeric characters that occur at the beginning of a\n string to a number. If conversion fails, returns zero.",
 	"params": [
 		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"string","values":[]}
@@ -30,6 +30,5 @@
             		"result": "0",
 			"runnable": true
 		}
-
 	]
 }
