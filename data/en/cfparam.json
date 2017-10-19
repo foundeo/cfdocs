@@ -2,7 +2,7 @@
 	"name":"cfparam",
 	"type":"tag",
 	"syntax":"<cfparam name=\"\">",
-	"script":"cfparam(name=\"\", default=\"\", pattern=\"\");"
+	"script":"cfparam(name=\"\", default=\"\", pattern=\"\");",
 	"returns":"",
 	"related":[],
 	"description":" Tests for a parameter's existence, tests its data type, and, if\n a default value is not assigned, optionally provides one.",
