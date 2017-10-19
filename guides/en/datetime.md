@@ -7,7 +7,7 @@
 | dd     | Day of the month as digits; leading zero for single-digit days.    |
 | EEE    | Day of the week as a three-letter abbreviation.                    |
 | EEEE   | Day of the week as its full name.                                  |
-| m      | Month as digits; no leading zero for single-digit months.          |
+| m      | Month as digits; no leading zero for single-digit months.<br />**CAUTION:** In `timeFormat()` "m" means "minutes"  |
 | mm     | Month as digits; leading zero for single-digit months.             |
 | mmm    | Month as a three-letter abbreviation.                              |
 | mmmm   | Month as its full name.                                            |
