@@ -59,7 +59,7 @@
 			</cfif>
 			<cfif StructKeyExists(data, "discouraged") AND Len(data.discouraged)>
 				<div class="alert alert-danger">
-					<h4><span class="glyphicon glyphicon-warning-sign"></span> Discouraged: #autoLink(encodeForHTML(data.discouraged))#</h4>
+					<h4><span class="glyphicon glyphicon-warning-sign"></span> Discouraged: #autoLink(encodeForHTML(udf.parseMarkdown(data.discouraged)))#</h4>
 				</div>
 			</cfif>
 		</div>
@@ -188,13 +188,13 @@
 											<strong>REMOVED</strong> in version #encodeForHTML(data.engines[i].removed)#
 										</cfif>
 										<cfif StructKeyExists(data.engines[i], "notes") AND Len(data.engines[i].notes)>
-											#autoLink(encodeForHTML(data.engines[i].notes))#
+											#autoLink(encodeForHTML(udf.parseMarkdown(data.engines[i].notes)))#
 										</cfif>
 									</div>
 								<cfelse>
 									<div class="alert alert-warning">
 										<cfif Len(data.engines[i].minimum_version)><span class="label label-danger">Version #encodeForHTML(data.engines[i].minimum_version)#+</span></cfif>
-										#autoLink(encodeForHTML(data.engines[i].notes))#
+										#autoLink(encodeForHTML(udf.parseMarkdown(data.engines[i].notes)))#
 									</div>
 								</cfif>
 							</div>
