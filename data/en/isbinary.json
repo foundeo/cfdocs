@@ -17,6 +17,16 @@
 	},
 	"links": [
 
+	],
+	
+	"examples": [
+		{
+			"title":"isBinary example",
+			"description":"returns true if given value is binary data, returns false if otherwise",
+			"code":"isBinary( toBase64(1) )",
+			"result":true,
+			"runnable":true
+		}
 	]
 
 }
