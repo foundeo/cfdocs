@@ -2,5 +2,5 @@
 	"name":"UI Tags",
 	"type":"listing",
 	"related":["cfdiv","cfgrid","cfgridcolumn","cfgridrow","cfgridupdate","cfmap","cfmapitem","cfmenu","cfmenuitem","cfpod","cfprogressbar","cftable","cftooltip","cftree","cftreeitem","cfwindow"],
-	"description":"A listing of CFML UI Tags."
+	"description":"A listing of CFML UI Tags.\n\nDiscouraged: The use of tags generating UI is generally discouraged by the CFML community.\nSee: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html"
 }
