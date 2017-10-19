@@ -1,12 +1,12 @@
 <cfparam name="url.name" default="cfquery">
 <cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL")>
+<cfset udf = new lib.udf()>
 <cfif url.name IS "index">
 	<cfset data = {name="CFDocs", description="Ultra Fast CFML Documentation", type="index"}>
 <cfelseif FileExists(ExpandPath("./guides/en/#url.name#.md"))>
 	<cftry>
 		<!--- convert md to HTML --->
-		<cfset txtmark = createObject("java", "com.github.rjeschke.txtmark.Processor")>
-		<cfset data = txtmark.process(createObject("java", "java.io.File").init(ExpandPath("./guides/en/#url.name#.md")), "utf-8")>
+		<cfset data = udf.parseMarkdown(path = "./guides/en/#url.name#.md")>
 		<cfset request.gitFilePath = "/tree/master/guides/en/" & url.name & ".md">
 		<cfcatch>
 			<cfset data = "Error processing markdown: #encodeForHTML(cfcatch.message)# #encodeForHTML(cfcatch.detail)#">
