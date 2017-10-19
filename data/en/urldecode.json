@@ -1,9 +1,9 @@
 {
-	"name":"URLDecode",
+	"name":"urlDecode",
 	"type":"function",
-	"syntax":"URLDecode(urlencodedstring [, charset])",
+	"syntax":"urlDecode(urlencodedstring [, charset])",
 	"returns":"string",
-	"related":[],
+	"related":["urlEncode"],
 	"description":"Decodes a URL-encoded string.",
 	"params": [
 		{"name":"urlencodedstring","description":"","required":true,"default":"","type":"string","values":[]},
@@ -21,29 +21,29 @@
 	],
 	"examples": [
 		{
-			"title":"Simple URLDecode() example",
+			"title":"Simple urlDecode() example",
 			"description":"Shows how it takes an input of: %21 and returns: !",
-			"code":"URLDecode( \"%21\")",
+			"code":"urlDecode(\"%21\")",
 			"result":"!",
 			"runnable":true
 		},
 		{
-			"title":"Basic URLDecode() usage",
+			"title":"Basic urlDecode() usage",
 			"description":"In this example we demonstrate taking a URL encoded message passed on the request context and displaying it decoded.",
-			"code":"if( len( rc.msg ) ) {\r\n\twriteOutput( encodeForHTML( URLDecode( rc.msg ) ) );\r\n}",
+			"code":"if( len( rc.msg ) ) {\r\n\twriteOutput( encodeForHTML( urlDecode( rc.msg ) ) );\r\n}",
 			"result":"",
 			"runnable":false
 		},
 		{
-			"title":"URLDecode() in obfuscation",
+			"title":"urlDecode() in obfuscation",
 			"description":"In this example we demonstrate url encoding a password before it is encrypted, and then decoding it after it is decrypted.",
-			"code":"pwd = URLEncodedFormat( '$18$f^$XlTe41' );\r\nwriteOutput( pwd & ' : ' );\r\npwd = encrypt( pwd, '7Z8of/gKWpqsx/v6O5yHRKanrXsp93B4xIHV97zf88Q=', 'BLOWFISH/CBC/PKCS5Padding', 'HEX' );\r\nwriteOutput( pwd & ' : ' );\r\ndecpwd = decrypt( pwd, '7Z8of/gKWpqsx/v6O5yHRKanrXsp93B4xIHV97zf88Q=', 'BLOWFISH/CBC/PKCS5Padding', 'HEX' );\r\nwriteOutput( decpwd & ' : ' );\r\ndecpwd = URLDecode( decpwd );\r\nwriteOutput( decpwd );",
+			"code":"pwd = urlEncodedFormat( '$18$f^$XlTe41' );\r\nwriteOutput( pwd & ' : ' );\r\npwd = encrypt( pwd, '7Z8of/gKWpqsx/v6O5yHRKanrXsp93B4xIHV97zf88Q=', 'BLOWFISH/CBC/PKCS5Padding', 'HEX' );\r\nwriteOutput( pwd & ' : ' );\r\ndecpwd = decrypt( pwd, '7Z8of/gKWpqsx/v6O5yHRKanrXsp93B4xIHV97zf88Q=', 'BLOWFISH/CBC/PKCS5Padding', 'HEX' );\r\nwriteOutput( decpwd & ' : ' );\r\ndecpwd = urlDecode( decpwd );\r\nwriteOutput( decpwd );",
 			"result":"%2418%24f%5E%24XlTe41 : <some encrypted value> : %2418%24f%5E%24XlTe41 : $18$f^$XlTe41",
 			"runnable":true
 		},
 		{
-			"title":"URLDecode() usage as a member function",
-			"description":"In this example we demonstrate taking a URL encoded message passed on the request context and displaying it decoded using the URLDecode() member function.",
+			"title":"urlDecode() usage as a member function",
+			"description":"In this example we demonstrate taking a URL encoded message passed on the request context and displaying it decoded using the urlDecode() member function.",
 			"code":"if( len( rc.msg ) ) {\r\n\twriteOutput( encodeForHTML( rc.msg.urlDecode() ) );\r\n}",
 			"result":"",
 			"runnable":false
