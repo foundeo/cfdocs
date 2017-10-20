@@ -1,7 +1,7 @@
 {
 	"name":"lsDateTimeFormat",
 	"type":"function",
-	"syntax":"lsDateTimeFormat (date , mask); lsDateTimeFormat (date [, mask, locale]); lsDateTimeFormat (date [, mask, locale, timeZone]);",
+	"syntax":"lsDateTimeFormat(date [, mask, locale, [timeZone]]);",
 	"returns":"string",
 	"related":["dateTimeFormat"],
 	"description":" Formats date and time values using locale-specific date and time formatting conventions.",
@@ -30,5 +30,4 @@
 			"code":"lsDateTimeFormat(\"2015-04-11 19:02\", \"short\")"
 		}
 	]
-
 }

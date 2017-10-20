@@ -1,5 +1,7 @@
 {
-  "syntax": "<cf_socialplugin .. \/>",
+  "name": "cf_socialplugin",
+  "type": "tag",
+  "syntax": "<cf_socialplugin .. />",
   "description": "Dynamically generate social elements for Facebook, Google +, Twitter.\r\n\r\nThe supported widgets are:\r\n\r\nLike button\r\nTweet button\r\nFacebook comment box\r\nGoogle Plus button\r\nFacebook subscribe button\r\nLike box\r\nActivity feed\r\nFollow",
   "engines": {
     "coldfusion": {
@@ -8,10 +10,10 @@
       "notes": ""
     }
   },
-  "name": "cf_socialplugin",
   "links": [],
   "params": [
     {
+      "name": "type",
       "values": [
         "like",
         "likebox",
@@ -24,28 +26,19 @@
       ],
       "default": "",
       "description": "",
-      "name": "type",
       "type": "string",
-      "required": "1"
+      "required": true
     },
     {
+      "name": "colorscheme",
       "values": [
         "light",
         "dark"
       ],
       "default": "",
       "description": "",
-      "name": "colorscheme",
       "type": "string",
-      "required": "0"
-    },
-    {
-      "values": [],
-      "default": "",
-      "description": "",
-      "name": "",
-      "type": "any",
-      "required": "0"
+      "required": false
     }
   ],
   "returns": "any",
@@ -99,6 +92,5 @@
       "code": "<cf_socialplugin type = \"tweet\"\r\n url = \"url to share\"\r\n tweettext = \"default tweet text\"\r\n language = \"en|fr|..........\"\r\n count = \"none|vertical|horizontal\"\r\n hashtag = \"comma separated hash tags appended to \r\n tweet text\"\r\n buttonsize = \"small|large\"\r\n via = \"\"\r\n recommend = \"\"\r\n style = \"\"\r\n extraoptions = \"\"\r\n>"
     }
   ],
-  "type": "tag",
   "related": []
 }

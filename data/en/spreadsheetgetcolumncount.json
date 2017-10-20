@@ -6,7 +6,7 @@
 	"related":[],
 	"description":"Returns the number of columns in a given spreadsheet.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The speadsheet object","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheetObj","description":"The spreadsheet object","required":true,"default":"","type":"any","values":[]},
 		{"name":"sheet","description":"The sheet name or sheet number","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {

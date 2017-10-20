@@ -21,9 +21,9 @@
 		"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
 	}],
 	"params":[
-		{"values":[],"default":"","description":"the input array","name":"array","type":"array","required":"1"},
-		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nresult: result of the reduce operation after the previous iteration\r\nitem: item in the array\r\nindex : current index for the iteration\r\narray : reference of the original array","name":"function","type":"any","required":"1"},
-		{"values":[],"default":"","description":"Initial value which will be used for the reduce operation. The type is any.","name":"initialValue","type":"any","required":"0"}
+		{"values":[],"default":"","description":"the input array","name":"array","type":"array","required":true},
+		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nresult: result of the reduce operation after the previous iteration\r\nitem: item in the array\r\nindex : current index for the iteration\r\narray : reference of the original array","name":"function","type":"function","required":true},
+		{"values":[],"default":"","description":"Initial value which will be used for the reduce operation. The type is any.","name":"initialValue","type":"any","required":false}
 	],
 	"examples":[
         {

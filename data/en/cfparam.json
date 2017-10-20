@@ -2,6 +2,7 @@
 	"name":"cfparam",
 	"type":"tag",
 	"syntax":"<cfparam name=\"\">",
+	"script":"cfparam(name=\"\", default=\"\", pattern=\"\");",
 	"returns":"",
 	"related":[],
 	"description":" Tests for a parameter's existence, tests its data type, and, if\n a default value is not assigned, optionally provides one.",
@@ -12,7 +13,6 @@
 		{"name":"max","description":"The maximum valid value; used only for range validation.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"min","description":"The minimum valid value; used only for range validation.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"pattern","description":"A regular experession that the parameter must match;\n used only for regex or regular_expression validation.","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfparam.html"},
@@ -20,9 +20,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfparam"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 				"title":"cfparam in CFML",

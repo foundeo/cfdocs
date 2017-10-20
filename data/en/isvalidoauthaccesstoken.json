@@ -4,13 +4,13 @@
 	"syntax":"isValidOauthAccesstoken(token,type);",
 	"returns":"boolean",
 	"related":[],
-	"description":" Checks if the OAUTH access token is still valid.",
+	"description":"Checks if the OAuth access token is still valid.",
 	"params": [
 		{"name":"token","description":"The access token to check.","required":true,"default":"","type":"","values":[]},
-        {"name":"type","description":"The type of the OAUTH server (facebook/google).","required":true,"default":"","type":"","values":[]}
+		{"name":"type","description":"The type of the OAuth server (facebook/google).","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isvalidoauthaccesstoken.html"}
+		"coldfusion": {"minimum_version":"11", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isvalidoauthaccesstoken.html"}
 	},
 	"links": [
 

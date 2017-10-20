@@ -65,7 +65,7 @@
 		},
 		{
 			"name": "title",
-			"description": "Text to display in the pod\u00c3\u201d\u00c3\u00b8\u00ce\u00a9s title bar. You can use \n HTML mark up to control the title appearance, of \n example to show the text in red italic font. \n If you omit this attribute, the pod does not \n have a title bar.",
+			"description": "Text to display in the pod's title bar. You can use \n HTML mark up to control the title appearance, of \n example to show the text in red italic font. \n If you omit this attribute, the pod does not \n have a title bar.",
 			"required": false,
 			"default": "",
 			"type": "string",
