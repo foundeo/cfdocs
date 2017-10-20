@@ -2,37 +2,35 @@
 	"name":"cfinclude",
 	"type":"tag",
 	"syntax":"<cfinclude template=\"\" runonce=\"true|false\">",
-	"script":"include \"template.cfm\" runonce=true;",
+	"script":"include \"template.cfm\" runonce=true|false;",
 	"returns":"",
 	"related":["cfmodule"],
 	"description":"Includes the content from the referenced file (template). The content may be executed as CFML, see compatibility info below. You can embed cfinclude tags recursively. For another way to encapsulate CFML, see cfmodule. (A CFML page was formerly sometimes called a CFML template or a template.)",
 	"params": [
-		{"name":"template","description":"A logical path to a CFML page.","required":true,"default":"","type":"string","values":[]}
-		, {"name":"runonce","description":"If set to true, the given template (if already processed) is not processed again for a given request. CF10+","required":false,"default":"false","type":"boolean","values":[]}
-
+		{"name":"template","description":"A logical path to a CFML page.","required":true,"default":"","type":"string","values":[]},
+		{"name":"runonce","description":" CF10+ If set to true, the given template is not processed again for a given request if it has already been processed.","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"CF9: Added the script syntax: include.\nCF10: Added runonce attribute.\nCF11: Changed behaviour such that only files with the extension cfm or cfml are compiled and executed by cfinclude (configurable in Application.cfc via this.compileextforinclude), all other files will be statically included.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfinclude.html"},
+		"coldfusion": {"minimum_version":"", "notes":"CF9: Added the script syntax: include.\nCF11: Changed behaviour such that only files with the extension cfm or cfml are compiled and executed by cfinclude (configurable in Application.cfc via this.compileextforinclude), all other files will be statically included.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfinclude.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/include.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfinclude"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfinclude"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Script Syntax",
-			"description": "",
-			"code": "\r\ninclude \"mypage.cfm\";",
-			"result": ""
+			"description": "CF9+",
+			"code": "include \"mypage.cfm\";",
+			"result": "",
+			"runnable": false
 		},
-	        {
-	            "title": "Tag Syntax",
-	            "description": "",
-	            "code": "<cfinclude template=\"mypage.cfm\">",
-	            "result": ""
-	        }
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfinclude template=\"mypage.cfm\">",
+			"result": "",
+			"runnable": false
+		}
 	]
-
 }
