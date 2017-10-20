@@ -15,55 +15,49 @@
 		{"name":"this.sessionTimeout","description":"Lifespan of session variables. CreateTimeSpan function and\n values in days, hours, minutes, and seconds, separated by\n commas","required":false,"default":"","type":"Timespan","values":[]},
 		{"name":"this.applicationTimeout","description":"Lifespan of application variables. CreateTimeSpan function\n and values in days, hours, minutes, and seconds, separated\n by commas.","required":false,"default":"","type":"Timespan","values":[]},
 		{"name":"this.setDomainCookies","description":"Yes: Sets CFID and CFTOKEN cookies for a domain (not a host)\n Required, for applications running on clusters.","required":false,"default":false,"type":"boolean","values":[true,false]},
-        {"name":"this.scriptProtect","description":"Specifies whether to attempt to protect variables from cross-site scripting attacks.\n - none: do not protect variables\n - all: protect Form, URL, CGI, and Cookie variables\n - comma-delimited list of ColdFusion scopes: protect variables in the specified scopes","required":false,"default":"","type":"string","values":["none","all","form","url","cookie","cgi","form,url","form,url,cookie","form,url,cookie,cgi"]},
-
-        {"name":"this.secureJSONPrefix","description":"CF8+ The security prefix to put in front of the value that a ColdFusion function returns in JSON-format \n\t\t\t\tin response to a remote call if the secureJSON setting is true.","required":false,"default":"","type":"string","values":[true,false]},
+        	{"name":"this.scriptProtect","description":"Specifies whether to attempt to protect variables from cross-site scripting attacks.\n - none: do not protect variables\n - all: protect Form, URL, CGI, and Cookie variables\n - comma-delimited list of ColdFusion scopes: protect variables in the specified scopes","required":false,"default":"","type":"string","values":["none","all","form","url","cookie","cgi","form,url","form,url,cookie","form,url,cookie,cgi"]},
+        	{"name":"this.secureJSONPrefix","description":"CF8+ The security prefix to put in front of the value that a ColdFusion function returns in JSON-format \n\t\t\t\tin response to a remote call if the secureJSON setting is true.","required":false,"default":"","type":"string","values":[true,false]},
 		{"name":"this.secureJSON","description":"CF8+ A Boolean value that specifies whether to add a security prefix in front of any value that a ColdFusion function returns in JSON-format\n\t\t\t\t in response to a remote call.","required":false,"default":"","type":"boolean","values":[true,false]},
-        {"name":"this.customTagPaths","description":"CF8+ A file path to a directory containing custom tags.","required":false,"default":"","type":"string","values":[]},
-        {"name":"this.mappings","description":"CF8+ A structure of application mappings where they key is the mapping and the value is the directory path.","required":false,"default":"","type":"struct","values":[]},
+        	{"name":"this.customTagPaths","description":"CF8+ A file path to a directory containing custom tags.","required":false,"default":"","type":"string","values":[]},
+        	{"name":"this.mappings","description":"CF8+ A structure of application mappings where they key is the mapping and the value is the directory path.","required":false,"default":"","type":"struct","values":[]},
 		{"name":"this.welcomeFileList","description":"CF8+ A comma seperated list of file names that will skip onMissingTemplate invocation - typically only necessary if you are using a builtin web server like Tomcat or JRun.","required":false,"default":"","type":"string","values":[]},
-
-        {"name":"this.serverSideFormValidation","description":"CF9+ Enable\/Disable ColdFusion‚ server side validation on CFFORM.","required":false,"default":"","type":"boolean","values":[true,false]},
-        {"name":"this.googleMapKey","description":"CF9+ the google maps api when cfmap is used.","required":false,"default":"","type":"string","values":[]},
-        {"name":"this.datasource","description":"CF9+ Defines the default datasource for the application. As of CF9.0.1+ it can also accept a struct with keys: name, username, password.","required":false,"default":"","type":"string","values":[]},
-        {"name":"this.s3","description":"CF9+ A struct with keys accessKeyId, awsSecretKey and defaultLocation.","required":false,"default":"","type":"struct","values":[]},
-        {"name":"this.ormEnabled","description":"CF9+ Set to true if you want to use ORM.","required":false,"default":"false","type":"boolean","values":[]},
-        {"name":"this.ormSettings","description":"CF9+ A struct with various Hibernate / ORM configuration options. For details see: https://helpx.adobe.com/coldfusion/developing-applications/coldfusion-orm/configure-orm/orm-settings.html","required":false,"default":"","type":"struct","values":[]},
+        	{"name":"this.serverSideFormValidation","description":"CF9+ Enable\/Disable ColdFusion‚ server side validation on CFFORM.","required":false,"default":"","type":"boolean","values":[true,false]},
+        	{"name":"this.googleMapKey","description":"CF9+ the google maps api when cfmap is used.","required":false,"default":"","type":"string","values":[]},
+        	{"name":"this.datasource","description":"CF9+ Defines the default datasource for the application. As of CF9.0.1+ it can also accept a struct with keys: name, username, password.","required":false,"default":"","type":"string","values":[]},
+        	{"name":"this.s3","description":"CF9+ A struct with keys accessKeyId, awsSecretKey and defaultLocation.","required":false,"default":"","type":"struct","values":[]},
+        	{"name":"this.ormEnabled","description":"CF9+ Set to true if you want to use ORM.","required":false,"default":"false","type":"boolean","values":[]},
+        	{"name":"this.ormSettings","description":"CF9+ A struct with various Hibernate / ORM configuration options. For details see: https://helpx.adobe.com/coldfusion/developing-applications/coldfusion-orm/configure-orm/orm-settings.html","required":false,"default":"","type":"struct","values":[]},
 		{"name":"this.smtpServerSettings","description":"CF9+ A struct with possible keys: server, username and password.","required":false,"default":"","type":"struct","values":[]},
 		{"name":"this.timeout","description":"CF9+ The default request timeout in seconds for requests within the application. Can be overridden by the cfsetting tag.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"this.debuggingIPAddresses","description":"CF9+ A list of IP addresses which show debugging output when debugging is enabled in the Administrator.","required":false,"default":"","type":"string","values":[]},
 		{"name":"this.enableRobustException","description":"CF9+ Overrides the value of the ColdFusion Administrator checkbox \"Enable Robust Exception Information\" for the application.","required":false,"default":"","type":"boolean","values":[]},
-
-        {"name":"this.sessioncookie.httpOnly","description":"CF10+ Specifies if the session cookies (CFID/CFTOKEN) should have the HTTPOnly cookie flag set. This prevents the cookie value from being read from JavaScript.","required":false,"default":"true","type":"boolean","values":[]},
-        {"name":"this.sessioncookie.secure","description":"CF10+ Specifies if the session cookies (CFID/CFTOKEN) should have the secure cookie flag set. When true the cookies are only sent over a secure transport (eg HTTPS).","required":false,"default":"false","type":"boolean","values":[]},
-        {"name":"this.sessioncookie.domain","description":"CF10+ Specifies the cookie domain the session cookies (CFID/CFTOKEN).","required":false,"default":"false","type":"string","values":[]},
-        {"name":"this.sessioncookie.timeout","description":"CF10+ Specifies the expires value of the session cookies (CFID/CFTOKEN), in days. Set to -1 for browser session cookies.","required":false,"default":"30 years","type":"string","values":[]},
-        {"name":"this.sessioncookie.disableUpdate","description":"CF10+ Prevents the session cookies (CFID/CFTOKEN), from being updated by cfcookie or cfheader tags.","required":false,"default":"false","type":"boolean","values":[]},
-        {"name":"this.javaSettings.loadPaths","description":"CF10+ An array of paths containing jar files or java classes.","required":false,"default":"","type":"array","values":[]},
-        {"name":"this.javaSettings.loadColdFusionClassPath","description":"CF10+ Loads the classes using ColdFusions classloader.","required":false,"default":"false","type":"boolean","values":[]},
-        {"name":"this.javaSettings.reloadOnChange","description":"CF10+ Watches the files specified in loadPaths and reloads classes on change.","required":false,"default":"false","type":"boolean","values":[]},
-        {"name":"this.wschannels","description":"<a name=\"wschannels\" class=\"page-anchor\"><\/a>CF10+ An array of structs used to define WebSocket communication channels. <a href=\"#websockets\">Example available below<\/a>.","required":false,"default":"false","type":"array","values":[]},
-
-        {"name":"this.compileExtForInclude","description":"CF11+ When cfinclude is invoked only file extensions in this list are compiled and executed as CFML, otherwise they are statically included as a string for improved performance and security. You can use * as a wildcard for all.","required":false,"default":"cfm,cfml","type":"boolean","values":[]},
-        {"name":"this.security.antiSamyPolicy","description":"CF11+ Path to an AntiSamy XML policy file for use with isSafeHTML and getSafeHTML functions.","required":false,"default":"","type":"string","values":[]},
-        {"name":"this.strictNumberValidation","description":"CF11+ Makes isValid, cfargument, cfparam, and cfform more strict with reguard to how the treat integer or numeric validation when the string contains a currency.","required":false,"default":"true","type":"boolean","values":[]},
-        {"name":"this.inMemoryFileSystem.enabled","description":"CF11+ Enables or disables in memory file system.","required":false,"default":"","type":"boolean","values":[]},
-        {"name":"this.inMemoryFileSystem.size","description":"CF11+ Memory limit in MB for the in memory file system.","required":false,"default":"","type":"numeric","values":[]},
-        {"name":"this.datasources","description":"CF11+ Create multiple an application specific datasources. This value is a structure whos keys are the name of the datasource to be created, and the values are another structure with keys such as: database, driver, host, username, password, url. Lucee / Railo also support this setting, but are configured with keys class, connectionString, username, password","required":false,"default":"","type":"struct","values":[]},
-        {"name":"this.serialization.preserveCaseForStructKey","description":"CF11+ Preserves the case of your variable names when generating json using the serializeJSON function.","required":false,"default":"true","type":"boolean","values":[]},
-        {"name":"this.customSerializer","description":"CF11+ The name of a CFC pointing to a custom serializer. See https://helpx.adobe.com/coldfusion/developing-applications/changes-in-coldfusion/restful-web-services-in-coldfusion.html","required":false,"default":"","type":"numeric","values":[]},
-
-        {"name":"this.locale","description":"Lucee4+ The default locale used for formatting dates, numbers.","required":false,"default":"en_US","type":"string","values":[]},
-        {"name":"this.timezone","description":"Lucee4+ The default timezone used for date handling.","required":false,"default":"","type":"string","values":["America/Chicago","America/New_York","UTC"]},
-        {"name":"this.sessionType","description":"Lucee4+ Use cfml or jee based sessions.","required":false,"default":"","type":"string","values":["cfml","jee"]},
-        {"name":"this.sessionStorage","description":"Lucee4+ The name of the storage provider for session variables.","required":false,"default":"memory","type":"string","values":[]},
-        {"name":"this.localeMode","description":"Lucee4+ Defines how the local scope of a function is invoked when a variable with no scope definition is used. When classic the local scope is only invoked when the key already exists in it, with modern the local scope is always assumed on unscoped variables.","required":false,"default":"classic","type":"string","values":["classic", "modern"]},
-        {"name":"this.scopeCascading","description":"Lucee4+ Depending on this setting Lucee scans certain scopes to find a variable when the variable is called without a scope (For Example: #myVar# instead of #variables.myVar#). When strict, only scans the variables scope, small only scans variables, url, and form scopes. When standard (the ColdFusion standard way) scans all scopes: variables,cgi,url,form,cookie","required":false,"default":"standard","type":"string","values":["standard","strict","small"]},
-        {"name":"this.typeChecking","description":"Lucee4+ If set to false Lucee ignores type defintions with function arguments and return values","required":false,"default":"","type":"boolean","values":[]},
-        {"name":"this.compression","description":"Lucee4+ Enables Gzip compression on the HTTP response when true","required":false,"default":"false","type":"boolean","values":[]},
-
-        {"name":"this.passArrayByReference","description":"CF2016+ `true`: Arrays will be passed by reference instead of by value for this application.","required":false,"default":"false","type":"boolean","values":[true,false]},
-        {"name":"this.searchImplicitScopes","description":"CF2016+ Defines the way non-scoped variables are found.\n`false`: Only the variables, local and arguments scopes are searched.\n`true`: Default and &lt; CF2016 behaviour. All scopes are searched in the following order: local, arguments, thread local, query, thread, variables, cgi, cffile, url, form, cookie, client.","required":false,"default":"true","type":"boolean","values":[true,false]}
+        	{"name":"this.sessioncookie.httpOnly","description":"CF10+ Specifies if the session cookies (CFID/CFTOKEN) should have the HTTPOnly cookie flag set. This prevents the cookie value from being read from JavaScript.","required":false,"default":"true","type":"boolean","values":[]},
+        	{"name":"this.sessioncookie.secure","description":"CF10+ Specifies if the session cookies (CFID/CFTOKEN) should have the secure cookie flag set. When true the cookies are only sent over a secure transport (eg HTTPS).","required":false,"default":"false","type":"boolean","values":[]},
+        	{"name":"this.sessioncookie.domain","description":"CF10+ Specifies the cookie domain the session cookies (CFID/CFTOKEN).","required":false,"default":"false","type":"string","values":[]},
+        	{"name":"this.sessioncookie.timeout","description":"CF10+ Specifies the expires value of the session cookies (CFID/CFTOKEN), in days. Set to -1 for browser session cookies.","required":false,"default":"30 years","type":"string","values":[]},
+        	{"name":"this.sessioncookie.disableUpdate","description":"CF10+ Prevents the session cookies (CFID/CFTOKEN), from being updated by cfcookie or cfheader tags.","required":false,"default":"false","type":"boolean","values":[]},
+        	{"name":"this.javaSettings.loadPaths","description":"CF10+ An array of paths containing jar files or java classes.","required":false,"default":"","type":"array","values":[]},
+        	{"name":"this.javaSettings.loadColdFusionClassPath","description":"CF10+ Loads the classes using ColdFusions classloader.","required":false,"default":"false","type":"boolean","values":[]},
+        	{"name":"this.javaSettings.reloadOnChange","description":"CF10+ Watches the files specified in loadPaths and reloads classes on change.","required":false,"default":"false","type":"boolean","values":[]},
+        	{"name":"this.wschannels","description":"<a name=\"wschannels\" class=\"page-anchor\"><\/a>CF10+ An array of structs used to define WebSocket communication channels. <a href=\"#websockets\">Example available below<\/a>.","required":false,"default":"false","type":"array","values":[]},
+        	{"name":"this.compileExtForInclude","description":"CF11+ When cfinclude is invoked only file extensions in this list are compiled and executed as CFML, otherwise they are statically included as a string for improved performance and security. You can use * as a wildcard for all.","required":false,"default":"cfm,cfml","type":"boolean","values":[]},
+        	{"name":"this.security.antiSamyPolicy","description":"CF11+ Path to an AntiSamy XML policy file for use with isSafeHTML and getSafeHTML functions.","required":false,"default":"","type":"string","values":[]},
+        	{"name":"this.strictNumberValidation","description":"CF11+ Makes isValid, cfargument, cfparam, and cfform more strict with reguard to how the treat integer or numeric validation when the string contains a currency.","required":false,"default":"true","type":"boolean","values":[]},
+        	{"name":"this.inMemoryFileSystem.enabled","description":"CF11+ Enables or disables in memory file system.","required":false,"default":"","type":"boolean","values":[]},
+        	{"name":"this.inMemoryFileSystem.size","description":"CF11+ Memory limit in MB for the in memory file system.","required":false,"default":"","type":"numeric","values":[]},
+        	{"name":"this.datasources","description":"CF11+ Create multiple an application specific datasources. This value is a structure whos keys are the name of the datasource to be created, and the values are another structure with keys such as: database, driver, host, username, password, url. Lucee / Railo also support this setting, but are configured with keys class, connectionString, username, password","required":false,"default":"","type":"struct","values":[]},
+        	{"name":"this.serialization.preserveCaseForStructKey","description":"CF11+ Preserves the case of your variable names when generating json using the serializeJSON function.","required":false,"default":"true","type":"boolean","values":[]},
+        	{"name":"this.customSerializer","description":"CF11+ The name of a CFC pointing to a custom serializer. See https://helpx.adobe.com/coldfusion/developing-applications/changes-in-coldfusion/restful-web-services-in-coldfusion.html","required":false,"default":"","type":"numeric","values":[]},
+        	{"name":"this.locale","description":"Lucee4+ The default locale used for formatting dates, numbers.","required":false,"default":"en_US","type":"string","values":[]},
+        	{"name":"this.timezone","description":"Lucee4+ The default timezone used for date handling.","required":false,"default":"","type":"string","values":["America/Chicago","America/New_York","UTC"]},
+        	{"name":"this.sessionType","description":"Lucee4+ Use cfml or jee based sessions.","required":false,"default":"","type":"string","values":["cfml","jee"]},
+        	{"name":"this.sessionStorage","description":"Lucee4+ The name of the storage provider for session variables.","required":false,"default":"memory","type":"string","values":[]},
+        	{"name":"this.localeMode","description":"Lucee4+ Defines how the local scope of a function is invoked when a variable with no scope definition is used. When classic the local scope is only invoked when the key already exists in it, with modern the local scope is always assumed on unscoped variables.","required":false,"default":"classic","type":"string","values":["classic", "modern"]},
+        	{"name":"this.scopeCascading","description":"Lucee4+ Depending on this setting Lucee scans certain scopes to find a variable when the variable is called without a scope (For Example: #myVar# instead of #variables.myVar#). When strict, only scans the variables scope, small only scans variables, url, and form scopes. When standard (the ColdFusion standard way) scans all scopes: variables,cgi,url,form,cookie","required":false,"default":"standard","type":"string","values":["standard","strict","small"]},
+        	{"name":"this.typeChecking","description":"Lucee4+ If set to false Lucee ignores type defintions with function arguments and return values","required":false,"default":"","type":"boolean","values":[]},
+        	{"name":"this.compression","description":"Lucee4+ Enables Gzip compression on the HTTP response when true","required":false,"default":"false","type":"boolean","values":[]},
+        	{"name":"this.passArrayByReference","description":"CF2016+ `true`: Arrays will be passed by reference instead of by value for this application.","required":false,"default":"false","type":"boolean","values":[true,false]},
+        	{"name":"this.searchImplicitScopes","description":"CF2016+ Defines the way non-scoped variables are found.\n`false`: Only the variables, local and arguments scopes are searched.\n`true`: Default and &lt; CF2016 behaviour. All scopes are searched in the following order: local, arguments, thread local, query, thread, variables, cgi, cffile, url, form, cookie, client.","required":false,"default":"true","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/application-cfc-reference.html"},
@@ -71,48 +65,42 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfapplication"}
 	},
 	"links": [
-        {
-            "title":"Learn CF in a Week: Application.cfc",
-            "description":"Tutorial showing how to use Application.cfc",
-            "url":"http://www.learncfinaweek.com/week1/Application_cfc/"
-        },
-	{
-            "title":"onServerStart function",
-            "description":"Explanation of how onServerStart is implemented",
-            "url":"https://helpx.adobe.com/coldfusion/cfml-reference/application-cfc-reference/onserverstart.html"
-	}
-	],
-    "examples": [
-        {
-            "title":"Simple Application.cfc Example",
-            "description":"A very basic script example",
-            "code" : "component {\n    this.name = \"AppName\";\n    this.datasource = \"AppDataSource\";\n    this.sessionManagement = true;\n\n    function onApplicationStart() {\n        application.config=\"xyz\";\n    }\n\n }",
-            "result":""
-        },
-        {
-            "title":"Adding relative mappings in Application.cfc",
-            "description":"This example uses getCurrentTemplatePath and getDirectoryFromPath to dynamically get the directory that the current Application.cfc resieds in and then defines some mappings relative to that. You want to avoid using expandPath in Application.cfc because the path will be relative to the current template path not the Application.cfc path.",
-            "code": "component {\n    this.name = \"AppName\";\n    this.appBasePath = getDirectoryFromPath(getCurrentTemplatePath());\n    this.mappings[\"/components\"] = this.appBasePath & \"components\";\n    this.mappings[\"/frameworks\"] = this.appBasePath & \"frameworks\";\n\n}",
-            "result":""
-        },
-        {
-            "title":"Defining WebSocket Channels",
-            "description":"<a name=\"websockets\" class=\"page-anchor\"><\/a>The minimum required to create a WebSocket channel is the name attribute. A channel can also specify a custom channel listener CFC, if not specified the ChannelListener.cfc, available in wwwroot\/CFIDE\/websocket directory is called (<a href=\"http:\/\/help.adobe.com\/en_US\/ColdFusion\/10.0\/Developing\/WSe61e35da8d318518767eb3aa135858633ee-7ff9.html\" target=\"blank\">Using Channel Listeners<\/a>).\n\n<b>Note<\/b>: Though you can use any number of sub-channels, you do not specify them as they are dynamically created (dot notation). To subscribe to channels you create a WebSocket object using the cfwebsocket tag in your CFM template.",
-            "code": "component {\n    this.name = \"AppName\";\n    this.wschannels = [{name=channelName, cfclistener=channel_listener_CFC}];\n}",
-            "result":"",
-            "runnable" : false
-        },
-        {
-            "title":"Relative mappings - Advanced Example",
-            "description":"This example shows how to map to directories that are a level up from the Application.cfc (web root) as well as how to handle an application that will need to be deployed on multiple operating systems (Mac, Unix, Windows) due to differing developer environments. It uses Find to determine if we need to use forward or back slashes in our paths and ListDeleteAt to drop the current directory from the path. We can then build the path for our mappings and custom tags using this information.",
-            "code": "component {\n    this.name = \"AppName\";\n    this.currentPath = getDirectoryFromPath( getCurrentTemplatePath() );\n    this.delim = find(\"/\", this.currentPath) ? \"/\" : \"\\\";\n    this.basePath = listDeleteAt(this.currentPath, listLen(this.currentPath, this.delim), this.delim);\n    this.mappings[\"/components\"] = this.basePath & this.delim & \"components\";\n    this.mappings[\"/frameworks\"] = this.basePath & this.delim & \"frameworks\";\n    this.customtagpaths = this.basePath & this.delim & \"customtags\";\n\n}",
-            "result":""
-        },
 		{
-            "title":"Full Application/Request Lifecycle Methods",
-            "description":"This shows all of the built-in Application.cfc methods.",
-            "code": "component { \n    /* \n        Application variables \n        https://wikidocs.adobe.com/wiki/display/coldfusionen/Application+variables \n    */ \n    this.name = \"YourAppName\" & hash(getCurrentTemplatePath()); \n    this.applicationTimeout = createTimeSpan(1,0,0,0); \n    this.sessionTimeout = createTimeSpan(1,0,0,0); \n    this.sessionManagement = true; \n    this.setClientCookies = false; \n \n    /* \n        onApplicationStart \n        https://wikidocs.adobe.com/wiki/display/coldfusionen/onApplicationStart \n        First function run when ColdFusion receives the first request for a page in the application. \n    */ \n    public boolean function onApplicationStart() { \n        return true; \n    } \n \n    /* \n        onApplicationEnd \n        https://wikidocs.adobe.com/wiki/display/coldfusionen/onApplicationEnd \n        Last function run when Application times out or server is shut down. \n    */ \n    public void function onApplicationEnd(struct applicationScope={}) { \n        return; \n    } \n \n    /* \n        onSessionStart \n        https://wikidocs.adobe.com/wiki/display/coldfusionen/onSessionStart \n        Run when first setting up a session. \n    */ \n    public void function onSessionStart() { \n        return; \n    } \n \n    /* \n        onSessionEnd \n        https://wikidocs.adobe.com/wiki/display/coldfusionen/onSessionEnd \n        Run when a session ends. \n    */ \n    public void function onSessionEnd(required struct sessionScope, struct applicationScope={}) { \n        return; \n    } \n \n    /* \n        onRequestStart \n        https://wikidocs.adobe.com/wiki/display/coldfusionen/onRequestStart \n        First page-processing function run when a page request starts. \n        Return False to prevent ColdFusion from processing the request. \n    */ \n    public boolean function onRequestStart(required string targetPage) { \n        return true; \n    } \n \n    /* \n        onRequest \n        https://wikidocs.adobe.com/wiki/display/coldfusionen/onRequest \n        Runs when a request starts, after the onRequestStart event handler. \n        This method is optional. If you implement this method, it must explicitly call the requested page to process it. \n    */ \n    public void function onRequest(required string targetPage) { \n        include arguments.targetPage; \n        return; \n    } \n \n    /* \n        onCFCRequest \n        https://wikidocs.adobe.com/wiki/display/coldfusionen/onCFCRequest \n        Intercepts any HTTP or AMF calls to an application based on CFC request. \n        Whereas onRequest handles only requests made to ColdFusion templates, this function controls Ajax, Web Service, and Flash Remoting requests. \n    */ \n    public void function onCFCRequest(string cfcname, string method, struct args) { \n        return; \n    } \n \n    /* \n        onRequestEnd \n        https://wikidocs.adobe.com/wiki/display/coldfusionen/onRequestEnd \n        Runs at the end of a request, after all other CFML code. \n    */ \n    public void function onRequestEnd() { \n        return; \n    } \n \n    /* \n        onAbort \n        https://wikidocs.adobe.com/wiki/display/coldfusionen/onAbort \n        Runs when you execute the CFML tag cfabort or cfscript \"abort\". \n        If showError attribute is specified in cfabort, onError method is executed instead of onAbort. \n        When using cfabort, cflocation, or cfcontent tags, the onAbort method is invoked instead on onRequestEnd. \n    */ \n    public void function onAbort(required string targetPage) { \n        return; \n    } \n \n    /* \n        onError \n        https://wikidocs.adobe.com/wiki/display/coldfusionen/onError \n        Runs when an uncaught exception occurs in the application. \n        This method overrides any error handlers that you set in the ColdFusion Administrator or in cferror tags. It does not override try/catch blocks. \n    */ \n    public void function onError(required any exception, required string eventName) { \n        return; \n    } \n \n    /* \n        onMissingTemplate \n        https://wikidocs.adobe.com/wiki/display/coldfusionen/onMissingTemplate \n        Runs when a request specifies a non-existent CFML page. \n        True, or no return value, specifies that the event has been processed. If the function returns false, ColdFusion invokes the standard error handler. \n    */ \n    public boolean function onMissingTemplate(required string targetPage) { \n        return true; \n    } \n}",
-            "result":""
-        }
-    ]
+		    "title":"Learn CF in a Week: Application.cfc",
+		    "description":"Tutorial showing how to use Application.cfc",
+		    "url":"http://www.learncfinaweek.com/week1/Application_cfc/"
+		},
+		{
+		    "title":"onServerStart function",
+		    "description":"Explanation of how onServerStart is implemented",
+		    "url":"https://helpx.adobe.com/coldfusion/cfml-reference/application-cfc-reference/onserverstart.html"
+		}
+	],
+	"examples": [
+		{
+		    "title":"Simple Application.cfc Example",
+		    "description":"A very basic script example",
+		    "code" : "component {\n    this.name = \"AppName\";\n    this.datasource = \"AppDataSource\";\n    this.sessionManagement = true;\n\n    function onApplicationStart() {\n        application.config=\"xyz\";\n    }\n\n }",
+		    "result":""
+		},
+		{
+		    "title":"Adding relative mappings in Application.cfc",
+		    "description":"This example uses getCurrentTemplatePath and getDirectoryFromPath to dynamically get the directory that the current Application.cfc resieds in and then defines some mappings relative to that. You want to avoid using expandPath in Application.cfc because the path will be relative to the current template path not the Application.cfc path.",
+		    "code": "component {\n    this.name = \"AppName\";\n    this.appBasePath = getDirectoryFromPath(getCurrentTemplatePath());\n    this.mappings[\"/components\"] = this.appBasePath & \"components\";\n    this.mappings[\"/frameworks\"] = this.appBasePath & \"frameworks\";\n\n}",
+		    "result":""
+		},
+		{
+		    "title":"Defining WebSocket Channels",
+		    "description":"<a name=\"websockets\" class=\"page-anchor\"><\/a>The minimum required to create a WebSocket channel is the name attribute. A channel can also specify a custom channel listener CFC, if not specified the ChannelListener.cfc, available in wwwroot\/CFIDE\/websocket directory is called (<a href=\"http:\/\/help.adobe.com\/en_US\/ColdFusion\/10.0\/Developing\/WSe61e35da8d318518767eb3aa135858633ee-7ff9.html\" target=\"blank\">Using Channel Listeners<\/a>).\n\n<b>Note<\/b>: Though you can use any number of sub-channels, you do not specify them as they are dynamically created (dot notation). To subscribe to channels you create a WebSocket object using the cfwebsocket tag in your CFM template.",
+		    "code": "component {\n    this.name = \"AppName\";\n    this.wschannels = [{name=channelName, cfclistener=channel_listener_CFC}];\n}",
+		    "result":"",
+		    "runnable" : false
+		},
+		{
+		    "title":"Relative mappings - Advanced Example",
+		    "description":"This example shows how to map to directories that are a level up from the Application.cfc (web root) as well as how to handle an application that will need to be deployed on multiple operating systems (Mac, Unix, Windows) due to differing developer environments. It uses Find to determine if we need to use forward or back slashes in our paths and ListDeleteAt to drop the current directory from the path. We can then build the path for our mappings and custom tags using this information.",
+		    "code": "component {\n    this.name = \"AppName\";\n    this.currentPath = getDirectoryFromPath( getCurrentTemplatePath() );\n    this.delim = find(\"/\", this.currentPath) ? \"/\" : \"\\\";\n    this.basePath = listDeleteAt(this.currentPath, listLen(this.currentPath, this.delim), this.delim);\n    this.mappings[\"/components\"] = this.basePath & this.delim & \"components\";\n    this.mappings[\"/frameworks\"] = this.basePath & this.delim & \"frameworks\";\n    this.customtagpaths = this.basePath & this.delim & \"customtags\";\n\n}",
+		    "result":""
+		}
+	]
 }
