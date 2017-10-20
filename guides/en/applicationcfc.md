@@ -2,63 +2,62 @@
 
 ## Example: Full Application/Request Lifecycle Methods
 This shows all of the built-in Application.cfc methods.
+[Application variables](https://wikidocs.adobe.com/wiki/display/coldfusionen/Application+variables) are explained in Application.cfc doc.
 
-	component { 
-		/* 
-			Application variables 
-			https://wikidocs.adobe.com/wiki/display/coldfusionen/Application+variables 
-		*/ 
-		this.name = "YourAppName" & hash(getCurrentTemplatePath()); 
-		this.applicationTimeout = createTimeSpan(1,0,0,0); 
-		this.sessionTimeout = createTimeSpan(1,0,0,0); 
-		this.sessionManagement = true; 
-		this.setClientCookies = false; 
+```ColdFusion
+component {
+	this.name = "YourAppName" & hash(getCurrentTemplatePath()); 
+	this.applicationTimeout = createTimeSpan(1,0,0,0); 
+	this.sessionTimeout = createTimeSpan(1,0,0,0); 
+	this.sessionManagement = true; 
+	this.setClientCookies = false; 
 
-		public boolean function onApplicationStart() { 
-			return true; 
-		} 
+	public boolean function onApplicationStart() { 
+		return true; 
+	} 
 
-		public void function onApplicationEnd(struct applicationScope={}) { 
-			return; 
-		} 
+	public void function onApplicationEnd(struct applicationScope={}) { 
+		return; 
+	} 
 
-		public void function onSessionStart() { 
-			return; 
-		} 
+	public void function onSessionStart() { 
+		return; 
+	} 
 
-		public void function onSessionEnd(required struct sessionScope, struct applicationScope={}) { 
-			return; 
-		} 
+	public void function onSessionEnd(required struct sessionScope, struct applicationScope={}) { 
+		return; 
+	} 
 
-		public boolean function onRequestStart(required string targetPage) { 
-			return true; 
-		} 
+	public boolean function onRequestStart(required string targetPage) { 
+		return true; 
+	} 
 
-		public void function onRequest(required string targetPage) { 
-			include arguments.targetPage; 
-			return; 
-		} 
+	public void function onRequest(required string targetPage) { 
+		include arguments.targetPage; 
+		return; 
+	} 
 
-		public void function onCFCRequest(string cfcname, string method, struct args) { 
-			return; 
-		} 
+	public void function onCFCRequest(string cfcname, string method, struct args) { 
+		return; 
+	} 
 
-		public void function onRequestEnd() { 
-			return; 
-		} 
+	public void function onRequestEnd() { 
+		return; 
+	} 
 
-		public void function onAbort(required string targetPage) { 
-			return; 
-		} 
+	public void function onAbort(required string targetPage) { 
+		return; 
+	} 
 
-		public void function onError(required any exception, required string eventName) { 
-			return; 
-		} 
+	public void function onError(required any exception, required string eventName) { 
+		return; 
+	} 
 
-		public boolean function onMissingTemplate(required string targetPage) { 
-			return true; 
-		} 
-	}
+	public boolean function onMissingTemplate(required string targetPage) { 
+		return true; 
+	} 
+}
+```
 	
 ## Lifecycle Methods explained
 | Method                  | Description                                                                                                                                                                                                                                                              |
