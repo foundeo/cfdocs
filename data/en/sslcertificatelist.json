@@ -4,7 +4,7 @@
 	"syntax": "SSLCertificateList(host [, port])",
 	"returns": "query",
 	"related": [],
-	"description": "",
+	"description": "List all Certificates availble on a specific host",
 	"params": [
 		{"name": "host", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "port", "description": "", "required": false, "default": "443", "type": "numeric", "values": []}

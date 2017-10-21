@@ -5,7 +5,7 @@
 	"member": "struct.some(closure [, parallel] [, maxThreads])",
 	"returns": "boolean",
 	"related": [],
-	"description": "",
+	"description": "This function calls a given closure/function with every element in a given struct and returns true, if one of the closure calls returns true",
 	"params": [
 		{"name": "struct", "description": "", "required": true, "default": "", "type": "struct", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},

@@ -4,7 +4,7 @@
 	"syntax": "sizeOf(obj [, complex])",
 	"returns": "any",
 	"related": [],
-	"description": "",
+	"description": "this function is experimentell, to not use in productive enviroment. this function returns the size in bytes of a given object",
 	"params": [
 		{"name": "obj", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "complex", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
