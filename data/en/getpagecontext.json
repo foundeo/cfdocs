@@ -2,7 +2,7 @@
 	"name":"getPageContext",
 	"type":"function",
 	"syntax":"getPageContext()",
-	"returns":"javax.servlet.jsp.PageContext",
+	"returns":"any",
 	"related":["gethttprequestdata"],
 	"description":" Gets the current java PageContext object that provides access to page attributes and configuration, request and response objects.",
 	"params": [

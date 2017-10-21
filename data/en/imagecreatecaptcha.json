@@ -2,7 +2,7 @@
 	"name":"imageCreateCaptcha",
 	"type":"function",
 	"syntax":"imageCreateCaptcha (height, width, text [, difficulty, fonts, fontsize)",
-	"returns":"Image object",
+	"returns":"any",
 	"related":[],
 	"description":" Create a Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) image, a distorted text image that is human-readable, but not machine-readable, used in a challenge-response test for preventing spam.",
 	"params": [

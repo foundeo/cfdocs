@@ -4,14 +4,32 @@
 	"syntax": "toNumeric(value [, radix])",
 	"returns": "numeric",
 	"related": [],
-	"description": "",
+	"description": "Cast a value to a number.",
 	"params": [
 		{"name": "value", "description": "", "required": true, "default": "", "type": "any", "values": []},
-		{"name": "radix", "description": "", "required": false, "default": "", "type": "any", "values": []}
+		{"name": "radix", "description": "The base of the value.", "required": false, "default": "10", "type": "any", "values": ["2", "...", "36", "bin", "oct", "dec", "hex"]}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/tonumeric.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Cast a string to a number.",
+		"description":"",
+		"code":"toNumeric(\"29.5\")",
+		"result":"29.5",
+		"runnable":true
+	},{
+		"title":"Cast a hex-value to a number.",
+		"description":"",
+		"code":"toNumeric(\"FF0011\", \"hex\")",
+		"result":"16711697",
+		"runnable":true
+	},{
+		"title":"Cast a binary-value to a number.",
+		"description":"",
+		"code":"toNumeric(\"1010\", \"bin\")",
+		"result":"10",
+		"runnable":true
+	}],
 	"links": []
 }

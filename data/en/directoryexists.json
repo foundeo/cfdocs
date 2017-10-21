@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether a directory exists.",
 	"params": [
-		{"name":"absolute_path","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"absolute_path","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

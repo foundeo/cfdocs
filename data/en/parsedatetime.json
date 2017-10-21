@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Parses a date/time string according to the English (U.S.)\n locale conventions. (To format a date/time string for other\n locales, use the LSParseDateTime function.)",
 	"params": [
-		{"name":"dt_string","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"pop_conversion","description":"- standard: (the default) function does no conversion.\n - pop: specifies that the date\/time string is in POP format,\n which includes the local time of the sender and a time-zone\n offset from UTC. ColdFusion applies the offset and returns\n a value with the UTC time.","required":false,"default":"standard","type":"String","values":["standard","pop"]}
+		{"name":"dt_string","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"pop_conversion","description":"- standard: (the default) function does no conversion.\n - pop: specifies that the date\/time string is in POP format,\n which includes the local time of the sender and a time-zone\n offset from UTC. ColdFusion applies the offset and returns\n a value with the UTC time.","required":false,"default":"standard","type":"string","values":["standard","pop"]}
 
 	],
 	"engines": {

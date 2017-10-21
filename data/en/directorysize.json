@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Returns size of given directory",
 	"params": [
-		{"name":"path","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

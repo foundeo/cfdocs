@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" Formats the contents of a single row of an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"format","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"row","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"format","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"row","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

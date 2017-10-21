@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Removes all data from a structure.",
 	"params": [
-		{"name":"structure","description":"Structure to clear","required":true,"default":"","type":"Struct","values":[]}
+		{"name":"structure","description":"Structure to clear","required":true,"default":"","type":"struct","values":[]}
 
 	],
 	"engines": {

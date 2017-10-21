@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Deletes the record from the database for the specified entity.\nentityDelete(entity)",
 	"params": [
-		{"name":"entity","description":"Name of the entity being deleted.","required":true,"default":"","type":"Variablename","values":[]}
+		{"name":"entity","description":"Name of the entity being deleted.","required":true,"default":"","type":"variableName","values":[]}
 
 	],
 	"engines": {

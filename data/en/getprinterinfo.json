@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines which print attributes are supported by a selected printer.",
 	"params": [
-		{"name":"printer","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"printer","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

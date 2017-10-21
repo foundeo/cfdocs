@@ -6,7 +6,7 @@
 	"related":["decrementValue"],
 	"description":"Increment the integer part of a number.\n same as x=x+1 or x++",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

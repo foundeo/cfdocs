@@ -6,8 +6,8 @@
 	"related":["queryaddrow","querysetcell","queryaddcolumn"],
 	"description":"Creates a new query object. The query can be populated with data using functions queryAddRow, querySetCell, or by passing it in to the rowData argument.",
 	"params": [
-		{"name":"columnList","description":"A string or a variable that contains one. Delimited list\n of column names, or an empty string.","required":true,"default":"","type":"String","values":[]},
-		{"name":"columnTypeList","description":"CF7+ Comma-delimited list specifying column data types.","required":false,"default":"","type":"String","values":["Integer","BigInt","Double","Decimal","VarChar","Binary","Bit","Time","Data"]},
+		{"name":"columnList","description":"A string or a variable that contains one. Delimited list\n of column names, or an empty string.","required":true,"default":"","type":"string","values":[]},
+		{"name":"columnTypeList","description":"CF7+ Comma-delimited list specifying column data types.","required":false,"default":"","type":"string","values":["Integer","BigInt","Double","Decimal","VarChar","Binary","Bit","Time","Data"]},
 		{"name":"rowData","description":"CF10+ Data to populate the query. Can be a struct (with keys matching column names), an array of structs, or an array of arrays (in same order as columnList)","required":false,"default":"","type":"any","values":[]}
 	],
 	"engines": {

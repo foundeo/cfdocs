@@ -6,7 +6,7 @@
 	"related":["encodeForJavaScript"],
 	"description":" Escapes special JavaScript characters, such as single quotation\n mark, double quotation mark, and newline",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

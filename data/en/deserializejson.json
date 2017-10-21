@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Converts a JSON (JavaScript Object Notation) string data representation into CFML data, such as a CFML structure or array.",
 	"params": [
-		{"name":"jsonvar","description":"A string that contains a valid JSON construct, or variable that represents one.","required":true,"default":"","type":"String","values":[]},
+		{"name":"jsonvar","description":"A string that contains a valid JSON construct, or variable that represents one.","required":true,"default":"","type":"string","values":[]},
 		{"name":"strictMapping","description":"A Boolean value that specifies whether to convert the JSON strictly. If true everything becomes structures.","required":false,"default":"true","type":"boolean","values":[]},
 		{"name":"useCustomSerializer","description":"CF11+ Use custom serializer if defined. See: https://helpx.adobe.com/coldfusion/developing-applications/changes-in-coldfusion/restful-web-services-in-coldfusion.html","required":true,"default":"true","type":"boolean","values":[]}
 

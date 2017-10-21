@@ -1,4 +1,6 @@
 {
+  "name": "cfoauth",
+  "type": "tag",
   "syntax": "<cfoauth>",
   "description": "The <oauth> tag allows you to easily integrate third-party Oauth 2 authentication provider in your application. This tag currently supports Facebook and Google authentication. Also, this tag supports Oauth providers that support the Oauth 2 protocols. For instance, Microsoft and Github. \r\n\r\nIf type is not Facebook or Google then use access token endpoint and other attributes.",
   "engines": {
@@ -8,7 +10,6 @@
       "notes": ""
     }
   },
-  "name": "cfoauth",
   "links": [
     {
       "title": "OAuth Site",
@@ -35,7 +36,7 @@
       "default": "",
       "description": "Currently supported values are Facebook and Google. Implicitly supports the authentication workflow of Facebook and Google.",
       "name": "Type",
-      "type": "String",
+      "type": "string",
       "required": "1"
     },
     {
@@ -43,7 +44,7 @@
       "default": "",
       "description": "Unique ID generated while registering your application with the Oauth provider.",
       "name": "clientid",
-      "type": "String",
+      "type": "string",
       "required": "1"
     },
     {
@@ -51,7 +52,7 @@
       "default": "",
       "description": "Scopes are the permissions that a developer seeks from the users. These are usually comma separated values of permissions.\r\n\r\n \r\n\r\nRefer to the Oauth provider's documentations for more information.\r\n\r\n \r\n\r\nFor example, after Facebook authentication, if a developer wants to access an email address and then the friend lists of a user, the developer will use:\r\n\r\n scope=email,read_friendlists.\r\n\r\n \r\n\r\nNote: The scope name varies for different Oauth providers. ",
       "name": "scope",
-      "type": "String",
+      "type": "string",
       "required": "0"
     },
     {
@@ -59,7 +60,7 @@
       "default": "",
       "description": "The state variable is used to pass back any information to your web application after the authentication and redirection are completed. Any value passed to this attribute is returned to the web application after authentication. This is useful for CSRF (Cross-site request forgery) protection. You can use ColdFusion\u2019s security-related CSRF functions for this attribute.",
       "name": "state",
-      "type": "String",
+      "type": "string",
       "required": "0"
     },
     {
@@ -67,7 +68,7 @@
       "default": "Either type can be specified or endpoints combination but not both",
       "description": "If type is not specified, this will be used as end point URL to be invoked for user authentication.",
       "name": "authendpoint",
-      "type": "String",
+      "type": "string",
       "required": "0"
     },
     {
@@ -75,7 +76,7 @@
       "default": "Either type can be specified or endpoints combination but not both",
       "description": " If type is not specified this will be used as end point URL to be invoked for app authentication.",
       "name": "accesstokenendpoint",
-      "type": "String",
+      "type": "string",
       "required": "0"
     },
     {
@@ -83,7 +84,7 @@
       "default": "",
       "description": "Parameter is the App Secret as displayed in your social media app's settings.",
       "name": "secretkey",
-      "type": "String",
+      "type": "string",
       "required": "0"
     },
     {
@@ -99,7 +100,7 @@
       "default": "This will default to the URL which is executing the code. So if in oauth settings user has given app URL as : http:\/\/domainname\/appname And the file executing the code is : http:\/\/domainname\/appname\/login.cfm The redirect URI will be : http:\/\/domainname\/appname\/login.cfm",
       "description": "To redirect once user authentication is done.",
       "name": "redirecturi",
-      "type": "String",
+      "type": "string",
       "required": "0"
     },
     {
@@ -107,7 +108,7 @@
       "default": "",
       "description": "Extra options which will be passed as URL query string to authendpoint.",
       "name": "urlparams",
-      "type": "String",
+      "type": "string",
       "required": "0"
     }
   ],
@@ -120,6 +121,5 @@
       "code": "\r\n<cflogin>\r\n <cfoauth\r\n type = \"Facebook\"\r\n clientid = \"YOUR_CLIENT_ID\"\r\n secretkey = \"YOUR_SECRET_KEY\"\r\n result = \"res\"\r\n redirecturi = \"http:\/\/localhost:8500\/doc\/login.cfm\" >\r\n <cfloginuser name = \"#res.other.username#\" password = \"#res.access_token#\" roles = \"user\"\/>\r\n<\/cflogin>\r\n<cflocation url=\"http:\/\/localhost:8500\/doc\/index.cfm\" >"
     }
   ],
-  "type": "tag",
   "related": []
 }

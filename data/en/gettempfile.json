@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Creates a temporary file in a directory whose name starts with\n (at most) the first three characters of prefix.",
 	"params": [
-		{"name":"dir","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"prefix","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"dir","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"prefix","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

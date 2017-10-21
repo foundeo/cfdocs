@@ -3,10 +3,10 @@
 	"type":"function",
 	"syntax":"getMetadata(Object)",
 	"returns":"any",
-	"related":[],
+	"related":["getFunctionData","getTagData"],
 	"description":" Gets metadata (the methods, properties, and parameters of a\n component) associated with an object that is deployed on the\n CFML server.",
 	"params": [
-		{"name":"Object","description":"","required":true,"default":"","type":"Object","values":[]}
+		{"name":"Object","description":"","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

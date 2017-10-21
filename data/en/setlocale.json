@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Sets the country/language locale for CFML processing\n and the page returned to the client. The locale value\n determines the default format of date, time, number, and\n currency values, according to language and regional\n conventions.",
 	"params": [
-		{"name":"new_locale","description":"The name of a locale; for example, \"English (US)\"","required":true,"default":"","type":"String","values":["Chinese (China)","Chinese (Hong Kong)","Chinese (Taiwan)","Dutch (Belgian)","Dutch (Standard)","English (Australian)","English (Canadian)","English (New Zealand)","English (US)","English (UK)","French (Belgian)","French (Canadian)","French (Standard)","French (Swiss)","German (Austrian)","German (Standard)","German (Swiss)","Italian (Standard)","Italian (Swiss)","Japanese","Korean","Norwegian (Bokmal)","Norwegian (Nynorsk)","Portuguese (Brazilian)","Portuguese (Standard)","Spanish (Modern)","Spanish (Standard)","Swedish"]}
+		{"name":"new_locale","description":"The name of a locale; for example, \"English (US)\"","required":true,"default":"","type":"string","values":["Chinese (China)","Chinese (Hong Kong)","Chinese (Taiwan)","Dutch (Belgian)","Dutch (Standard)","English (Australian)","English (Canadian)","English (New Zealand)","English (US)","English (UK)","French (Belgian)","French (Canadian)","French (Standard)","French (Swiss)","German (Austrian)","German (Standard)","German (Swiss)","Italian (Standard)","Italian (Swiss)","Japanese","Korean","Norwegian (Bokmal)","Norwegian (Nynorsk)","Portuguese (Brazilian)","Portuguese (Standard)","Spanish (Modern)","Spanish (Standard)","Swedish"]}
 
 	],
 	"engines": {

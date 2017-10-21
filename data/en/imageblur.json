@@ -7,8 +7,8 @@
 	"related":[],
 	"description":" Smooths (blurs) the ColdFusion image.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"blurradius","description":"The size of the blur radius.Value must be greater than or equal to 3 and less than or equal to 10.","required":false,"default":"3","type":"Numeric","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"blurradius","description":"The size of the blur radius.Value must be greater than or equal to 3 and less than or equal to 10.","required":false,"default":"3","type":"numeric","values":[]}
 
 	],
 	"engines": {
@@ -19,7 +19,7 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",

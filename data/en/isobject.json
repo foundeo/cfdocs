@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether a value is an object.\n True, if the value represents a CFML object. False if\n the value is any other type of data, such as an integer, string,\n date, or struct.",
 	"params": [
-		{"name":"value","description":"","required":true,"default":"","type":"Object","values":[]}
+		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,21 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"isObject Example",
+			"description":"Returns true if the parameter is a CFML object. The CFML object here is a Java object.",
+			"code":"random = createObject( \"java\", \"java.security.SecureRandom\" ).getInstance( \"SHA1PRNG\" );\r\nwriteOutput( isObject( random ) );",
+			"result":true,
+			"runnable":true
+		},
+		{
+			"title":"isObject Example for Other Data Types",
+			"description":"Returns false if the parameter is any data type other than a CFML object",
+			"code":"example = { 'name' = 'I am a struct' };\r\nwriteOutput( isObject( example ) );",
+			"result":false,
+			"runnable":true
+		}
 	]
-
 }

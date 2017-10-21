@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" This function is no longer required in well-formed CFML\n pages. Sets a variable in the name parameter to the value of the\n value parameter.",
 	"params": [
-		{"name":"name","description":"Variable name","required":true,"default":"","type":"String","values":[]},
-		{"name":"value","description":"A string, the name of a string, or a number","required":true,"default":"","type":"String","values":[]}
+		{"name":"name","description":"Variable name","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"A string, the name of a string, or a number","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

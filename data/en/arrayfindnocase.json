@@ -7,7 +7,7 @@
 	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
 	"description":" These functions performs a case-insensitive search in the array for the specified object. Returns the array index of the first match; 0 if not found.",
 	"params": [
-		{"name":"array","description":"The array to search","required":true,"default":"","type":"Array","values":[]},
+		{"name":"array","description":"The array to search","required":true,"default":"","type":"array","values":[]},
 		{"name":"object","description":"The value you are looking for in the array.","required":true,"default":"","type":"any","values":[]}
 
 	],

@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" Converts query data to a structure that contains a paged subset of the query.",
 	"params": [
-		{"name":"query","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"page","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"pageSize","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"query","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"page","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"pageSize","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

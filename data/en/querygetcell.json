@@ -9,7 +9,7 @@
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "column_name", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "row_number", "description": "", "required": false, "default": "-9999", "type": "number", "values": []}
+		{"name": "row_number", "description": "", "required": false, "default": "-9999", "type": "numeric", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querygetcell.html"}

@@ -1,8 +1,8 @@
 {
-	"name":"LSDateTimeFormat",
+	"name":"lsDateTimeFormat",
 	"type":"function",
-	"syntax":"LSDateTimeFormat (date , mask); LSDateTimeFormat (date [, mask, locale]); LSDateTimeFormat (date [, mask, locale, timeZone]);",
-	"returns":"A formatted date and time value.",
+	"syntax":"lsDateTimeFormat(date [, mask, locale, [timeZone]]);",
+	"returns":"string",
 	"related":["dateTimeFormat"],
 	"description":" Formats date and time values using locale-specific date and time formatting conventions.",
 	"params": [
@@ -27,8 +27,7 @@
 		{
 			"title": "Mask = Short Example",
 			"description":"",
-			"code":"LSDateTimeFormat(\"2015-04-11 19:02\", \"short\")"
+			"code":"lsDateTimeFormat(\"2015-04-11 19:02\", \"short\")"
 		}
 	]
-
 }

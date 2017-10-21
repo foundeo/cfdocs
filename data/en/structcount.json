@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Counts the keys in a structure.",
 	"params": [
-		{"name":"structure","description":"Structure to access","required":true,"default":"","type":"Struct","values":[]}
+		{"name":"structure","description":"Structure to access","required":true,"default":"","type":"struct","values":[]}
 
 	],
 	"engines": {

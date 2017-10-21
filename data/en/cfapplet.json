@@ -11,7 +11,7 @@
 			"description": "Name of registered applet",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "Form variable name for applet",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "Control's height, in pixels.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -35,7 +35,7 @@
 			"description": "Control's width, in pixels.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -43,7 +43,7 @@
 			"description": "Vertical margin above and below control, in pixels.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -51,7 +51,7 @@
 			"description": "Horizontal spacing to left and right of control, in pixels.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -59,7 +59,7 @@
 			"description": "Alignment",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["top", "left", "bottom", "baseline", "texttop", "absbottom", "middle", "absmiddle", "right"]
 		},
 		{
@@ -67,7 +67,7 @@
 			"description": "Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.\n Default:\n \"<b>Browser must support Java to <br>view ColdFusion Java\n Applets!</b>\"",
 			"required": false,
 			"default": "<b>Browser must support Java to <br>view ColdFusion Java Applets!</b>",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

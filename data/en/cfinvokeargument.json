@@ -6,8 +6,8 @@
 	"related":["cfinvoke"],
 	"description":"Passes the name and value of an argument to a component method or a web service method. This tag is used inside of the cfinvoke tag.",
 	"params": [
-		{"name":"name","description":"The argument name","required":true,"default":"","type":"String","values":[]},
-		{"name":"value","description":"The argument value","required":true,"default":"","type":"String","values":[]},
+		{"name":"name","description":"The argument name","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"The argument value","required":true,"default":"","type":"string","values":[]},
 		{"name":"omit","description":"Enables you to omit a parameter when invoking a web service.\n It is an error to specify omit=\"true\" if the cfinvoke\n webservice attribute is not specified.\n - true: omit this parameter when invoking a web service.\n - false: do not omit this parameter when invoking a web service.","required":false,"default":false,"type":"boolean","values":[true,false]}
 	],
 	"engines": {

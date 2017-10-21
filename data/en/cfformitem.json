@@ -11,7 +11,7 @@
 			"description": "Form item type. See docs for more details.",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["html", "text", "script", "spacer", "hrule", "vrule"]
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "Flash: Must be a style specification in CSS format.\n Ignored if the type attribute is html or text.\n XML: ColdFusion passes the style attribute to the XML.\n ColdFusion skins include the style attribute to the\n generated HTML.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "Width of the item, in pixels. If you omit this attribute, Flash\n automatically sizes the width. In ColdFusion XSL skins,\n use the style attribute, instead.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -35,7 +35,7 @@
 			"description": "Height of the item, in pixels. If you omit this attribute,\n Flash automatically sizes the width. In ColdFusion XSL\n skins, use the style attribute, instead.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -59,7 +59,7 @@
 			"description": "Text to display when the mouse pointer hovers over the\n control. Has no effect on spacers.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -67,7 +67,7 @@
 			"description": "A Flash bind expression that populates the field with\n information from other form fields. If you use this\n attribute, ColdFusion MX ignores any text that you\n specify in the body of the cftextitem tag. This attribute\n can be useful if the cfformitem tag is in a cfformgroup\n type=\"repeater\" tag.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

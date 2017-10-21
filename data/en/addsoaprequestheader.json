@@ -6,11 +6,11 @@
 	"related":[],
 	"description":" Adds a SOAP header to a web service request before making the request.",
 	"params": [
-		{"name":"webservice","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"namespace","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"value","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"mustunderstand","description":"No Help Available","required":true,"default":"","type":"Boolean","values":[]}
+		{"name":"webservice","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"namespace","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"name","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"mustunderstand","description":"No Help Available","required":true,"default":"","type":"boolean","values":[]}
 
 	],
 	"engines": {

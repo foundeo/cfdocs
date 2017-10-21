@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Flushes the query cache.",
 	"params": [
-		{"name":"action","description":"clear: Clears queries from the cache in the Application\n scope","required":true,"default":"clear","type":"String","values":["clear"]}
+		{"name":"action","description":"clear: Clears queries from the cache in the Application\n scope","required":true,"default":"clear","type":"string","values":["clear"]}
 
 	],
 	"engines": {

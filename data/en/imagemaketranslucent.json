@@ -2,7 +2,7 @@
 	"name":"imageMakeTranslucent",
 	"type":"function",
 	"syntax":"imageMakeTranslucent (img, percent__);",
-	"returns":"Image object",
+	"returns":"any",
 	"related":[],
 	"description":" Create a new translucent image with given percentage of translucence.",
 	"params": [

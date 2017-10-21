@@ -2,7 +2,7 @@
 	"name":"cacheGetSession",
 	"type":"function",
 	"syntax":"cacheGetSession()",
-	"returns":"cache object",
+	"returns":"any",
 	"related":["cfcache", "cachePut", "cacheGet", "cacheGetAllIds", "cacheGetMetadata", "cacheGetProperties", "cacheSetProperties"],
 	"description":"Lets you retrieve the underlying cache object to access additional cache functionality that is not implemented in the tag cfcache.\n\nNote: Caution! Using the cacheGetSession function might pose security vulnerabilities. If you wish to disable the usage of this function, add it to Sandbox Security. ",
 	"params": [
@@ -10,7 +10,7 @@
 		{"name":"isKey","description":"Set to true if objectType is user-defined cache.","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"9.01", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/cacheGetSession.html"}
+		"coldfusion": {"minimum_version":"9.0.1", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/cacheGetSession.html"}
 	},
 	"links": [
 

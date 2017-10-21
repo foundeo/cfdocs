@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether a name represents a custom function",
 	"params": [
-		{"name":"Object","description":"","required":true,"default":"","type":"Object","values":[]}
+		{"name":"Object","description":"","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

@@ -7,7 +7,7 @@
 	"related":[],
 	"description":" Retrieves the height of the ColdFusion image in pixels.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

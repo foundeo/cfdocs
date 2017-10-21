@@ -6,9 +6,9 @@
 	"related":["createDateTime", "createODBCDate"],
 	"description":" Creates a date/time object",
 	"params": [
-		{"name":"year","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"month","description":"Numeric month of the year (1-12)","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"day","description":"Day of the month","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"year","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"month","description":"Numeric month of the year (1-12)","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"day","description":"Day of the month","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateDate.html"},

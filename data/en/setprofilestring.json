@@ -6,10 +6,10 @@
 	"related":["getProfileString"],
 	"description":"Sets the value of a profile entry in an initialization file.",
 	"params": [
-		{"name":"inipath","description":"Absolute path of initialization file","required":true,"default":"","type":"String","values":[]},
-		{"name":"section","description":"Section of the initialization file in which the entry is\n to be set","required":true,"default":"","type":"String","values":[]},
-		{"name":"entry","description":"Name of the entry to set","required":true,"default":"","type":"String","values":[]},
-		{"name":"value","description":"Value to which to set the entry","required":true,"default":"","type":"String","values":[]}
+		{"name":"inipath","description":"Absolute path of initialization file","required":true,"default":"","type":"string","values":[]},
+		{"name":"section","description":"Section of the initialization file in which the entry is\n to be set","required":true,"default":"","type":"string","values":[]},
+		{"name":"entry","description":"Name of the entry to set","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"Value to which to set the entry","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

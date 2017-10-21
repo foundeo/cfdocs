@@ -7,8 +7,8 @@
 	"related":[],
 	"description":" Extracts keys from a CFML structure.",
 	"params": [
-		{"name":"structure","description":"Structure from which to extract a list of keys","required":true,"default":"","type":"Struct","values":[]},
-		{"name":"delimiter","description":"Character that separates keys in list. Default: comma.","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
+		{"name":"structure","description":"Structure from which to extract a list of keys","required":true,"default":"","type":"struct","values":[]},
+		{"name":"delimiter","description":"Character that separates keys in list. Default: comma.","required":false,"default":",","type":"string","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
 
 	],
 	"engines": {

@@ -7,10 +7,10 @@
 	"related":[],
 	"description":" Copies an image to a new location on the plane.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"xTrans","description":"Displacement in the x direction.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"yTrans","description":"Displacement in the y direction.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"interpolation","description":"Type of interpolation","required":false,"default":"nearest","type":"String","values":["nearest : Applies the nearest neighbor method of interpolation. Image quality is lower than the other interpolation methods, but processing is fastest.","bilinear: Applies the bilinear method of interpolation. The quality of the image is less pixelated than the default, but processing is slower.","bicubic: Applies the bicubic method of interpolation. Generally, the quality of image is highest with this method and processing is slowest."]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"xTrans","description":"Displacement in the x direction.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"yTrans","description":"Displacement in the y direction.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"interpolation","description":"Type of interpolation","required":false,"default":"nearest","type":"string","values":["nearest : Applies the nearest neighbor method of interpolation. Image quality is lower than the other interpolation methods, but processing is fastest.","bilinear: Applies the bilinear method of interpolation. The quality of the image is less pixelated than the default, but processing is slower.","bicubic: Applies the bicubic method of interpolation. Generally, the quality of image is highest with this method and processing is slowest."]}
 
 	],
 	"engines": {

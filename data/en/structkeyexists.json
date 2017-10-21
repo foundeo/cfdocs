@@ -7,8 +7,8 @@
 	"description":"Determines whether a specific key is present in a structure.",
 	"member":"struct.keyExists(key)",
 	"params": [
-		{"name":"structure","description":"Name of structure to test","required":true,"default":"","type":"Struct","values":[]},
-		{"name":"key","description":"Key to test","required":true,"default":"","type":"String","values":[]}
+		{"name":"structure","description":"Name of structure to test","required":true,"default":"","type":"struct","values":[]},
+		{"name":"key","description":"Key to test","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

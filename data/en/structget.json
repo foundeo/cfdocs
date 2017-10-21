@@ -6,7 +6,7 @@
 	"related":[],
 	"description":"Returns a value in a structure or a structure in the specified path.",
 	"params": [
-		{"name":"path","description":"Pathname of variable that contains structure or array from which CFML retrieves the value. If there is no structure or array present in the path, this function creates structures or arrays to make it a valid variable path.","required":true,"default":"","type":"String","values":[]}
+		{"name":"path","description":"Pathname of variable that contains structure or array from which CFML retrieves the value. If there is no structure or array present in the path, this function creates structures or arrays to make it a valid variable path.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

@@ -7,7 +7,7 @@
 	"description":" Gets the values of each record returned from an executed query.\n CFML does not evaluate the arguments",
 	"params": [
 		{"name":"column","description":"","required":true,"default":"","type":"QueryColumn","values":[]},
-		{"name":"delimiter","description":"","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
+		{"name":"delimiter","description":"","required":false,"default":",","type":"string","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
 
 	],
 	"engines": {
