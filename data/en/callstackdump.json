@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"callStackDump(destination);",
 	"returns":"void",
-	"related":["callStackGet"],
+	"related":["callStackGet","cfdump"],
 	"description":" Similar to the function callStackGet except that it returns a string representation of the call stack.",
 	"params": [
 		{"name":"destination","description":"If you chose \"file\" and do not provide the complete path to the file, the file is written to the temp directory as determined by the function `getTempDirectory()`.","required":false,"default":"browser","type":"string","values":["console","browser","file"]}
