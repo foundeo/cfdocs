@@ -1,7 +1,7 @@
 {
 	"name":"callStackDump",
 	"type":"function",
-	"syntax":"callStackDump(destination__);",
+	"syntax":"callStackDump(destination);",
 	"returns":"void",
 	"related":["callStackGet"],
 	"description":" Similar to the function callStackGet except that it returns a string representation of the call stack.",
@@ -28,5 +28,4 @@
 			"result": ""
 		}
 	]
-
 }
