@@ -3,8 +3,8 @@
 	"type": "function",
 	"syntax": "collectionReduce(collection, closure [, initalValue])",
 	"returns": "any",
-	"related": [],
-	"description": "",
+	"related": ["collectionEvery","collectionEach","collectionFilter","collectionMap","collectionSome"],
+	"description": "Sum amount of an item value for every item",
 	"params": [
 		{"name": "collection", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
@@ -13,6 +13,12 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/collectionreduce.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Sum amount of an item value for every item",
+		"description":"",
+		"code":"coll = [{\r\n    id: 0,\r\n    type: 'apples',\r\n    amount: 25\r\n},{\r\n    id: 1,\r\n    type: 'pinapples',\r\n    amount: 2\r\n},{\r\n    id: 2,\r\n    type: 'peaches',\r\n    amount: 13\r\n}];\r\nfruits = collectionReduce(coll,function(a,b) {\r\n    return a + b.amount;\r\n},0);\r\nwriteOutput(fruits&' fruits');",
+		"result":"40 fruits",
+		"runnable":true
+	}],
 	"links": []
 }
