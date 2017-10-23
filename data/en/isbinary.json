@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+		"title":"isBinary example",
+		"description":"Return a boolean that determines if the given value is binary.",
+		"code":"isBinary(10300111)",
+		"result":false,
+		"runnable":true
+		}
 	]
-
 }
