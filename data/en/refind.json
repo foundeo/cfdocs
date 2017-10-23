@@ -8,7 +8,7 @@
 	"params": [
 		{"name":"reg_expression","description":"","required":true,"default":"","type":"Regex","values":[]},
 		{"name":"String","description":"A string or a variable that contains one. String in which\n to search.","required":true,"default":"","type":"string","values":[]},
-		{"name":"start","description":"","required":false,"default":1,"type":"numeric","values":[1]},
+		{"name":"start","description":"","required":false,"default":1,"type":"numeric","values":[]},
 		{"name":"returnsubexpressions","description":"True: if the regular expression is found, the first array\n element contains the length and position, respectively,\n of the first match.\n If the regular expression contains parentheses that\n group subexpressions, each subsequent array element\n contains the length and position, respectively, of\n the first occurrence of each group.\n If the regular expression is not found, the arrays each\n contain one element with the value 0.\n False: the function returns the position in the string\n where the match begins. Default.","required":false,"default":false,"type":"boolean","values":[true,false]}
 
 	],

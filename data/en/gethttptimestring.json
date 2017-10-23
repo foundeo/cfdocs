@@ -6,8 +6,7 @@
 	"related":[],
 	"description":" Gets the current time, in the Universal Time code (UTC).",
 	"params": [
-		{"name":"DateTime","description":"","required":true,"default":"","type":"date","values":[]}
-
+		{"name":"DateTime","description":"","required":false,"default":"now()","type":"date","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/gethttptimestring.html"},
@@ -15,8 +14,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/gethttptimestring"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/gethttptimestring"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": [{
+            "title": "Output UTC Date of 2017/8/8",
+            "description": "",
+            "code": "getHTTPTimeString(\"2017/8/8\")",
+            "result": "Tue, 08 Aug 2017 00:00:00 GMT",
+            "runnable": true
+	}]
 }

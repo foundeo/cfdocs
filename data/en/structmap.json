@@ -1,37 +1,40 @@
-{"syntax":"structMap(struct, function(key, value [,struct]))",
-"description":"Iterates over every entry of the Struct and calls the closure function to work on the key value pair of the struct. The returned value will be set for the same key in a new struct and the new struct will be returned.",
-"engines":{
-    "coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structmap.html","notes":""},
-    "lucee":{"minimum_version":"4.5", "docs":"http://docs.lucee.org/reference/functions/structmap.html","notes":""}
-},
-"name":"structMap",
-"links":[{
-    "title":"Map, Reduce and other Higher Order Functions",
-    "description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
-    "url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
-},
 {
-    "title": "ColdFusion 11: .map() and .reduce()",
-    "description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
-    "url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
-}],
-"params":[
-    {"values":[],"default":"","description":"The input struct.","name":"struct","type":"struct","required":"1"},
-    {"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nkey: key for the current iteration\r\nvalue: the value for the current iteration\r\nstruct: a reference of the original struct","name":"function","type":"any","required":"1"}
-],
-"returns":"struct",
-"examples":[
-    {
-        "title": "Script Syntax",
-        "description": "",
-        "code": "original = {\"one\"={1=\"tahi\"},\"two\"={2=\"rua\"},\"three\"={3=\"toru\"},\"four\"={4=\"wha\"}}; \r\n fixed = structMap(original, function(k,v) \r\n { \r\n return v[v.keyList().first()]; \r\n }); \r\n writeDump([ original, fixed]); \r\n"
-    },
-    {
-        "title": "Using Member Function",
-        "description": "CF11+ Lucee4.5+ ",
-        "code": "original = {\"one\"={1=\"tahi\"},\"two\"={2=\"rua\"},\"three\"={3=\"toru\"},\"four\"={4=\"wha\"}}; \r\n fixed = original.map(function(k,v) \r\n { \r\n return v[v.keyList().first()]; \r\n }); \r\n writeDump([ original, fixed]); \r\n"
-    }
-],
-"type":"function",
-"related":["StructReduce"]
+	"syntax":"structMap(struct, function(key, value [,struct]))",
+	"description":"Iterates over every entry of the Struct and calls the closure function to work on the key value pair of the struct. The returned value will be set for the same key in a new struct and the new struct will be returned.",
+	"type":"function",
+	"related":["StructReduce"],
+	"returns":"struct",
+	"engines":{
+		"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structmap.html","notes":""},
+		"lucee":{"minimum_version":"4.5", "docs":"http://docs.lucee.org/reference/functions/structmap.html","notes":""}
+    	},
+	"name":"structMap",
+	"links":[{
+		"title":"Map, Reduce and other Higher Order Functions",
+		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
+		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+	},
+	{
+		"title": "ColdFusion 11: .map() and .reduce()",
+		"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
+		"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
+	}],
+	"params":[
+		{"values":[],"default":"","description":"The input struct.","name":"struct","type":"struct","required":"1"},
+		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nkey: key for the current iteration\r\nvalue: the value for the current iteration\r\nstruct: a reference of the original struct","name":"function","type":"any","required":"1"}
+	],
+	"examples":[
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "original = {\r\n    \"one\": {\r\n        1: \"tahi\"\r\n    },\r\n    \"two\": {\r\n        2: \"rua\"\r\n    },\r\n    \"three\": {\r\n        3: \"toru\"\r\n    },\r\n    \"four\": { \r\n        4: \"wha\"\r\n    }\r\n};\r\nfunction mapOriginal(k,v) {\r\n    return v[ListFirst(v.keyList())];\r\n}\r\nfixed = structMap(original,mapOriginal);\r\nwriteDump([original, fixed]);",
+			"runnable": false
+		},
+		{
+			"title": "Using Member Function",
+			"description": "CF11+ Lucee4.5+ ",
+			"code": "original = {\r\n    \"one\": {\r\n        1: \"tahi\"\r\n    },\r\n    \"two\": {\r\n        2: \"rua\"\r\n    },\r\n    \"three\": {\r\n        3: \"toru\"\r\n    },\r\n    \"four\": {\r\n        4: \"wha\"\r\n    }\r\n};\r\nfixed = original.map(function(k,v) {\r\n    return v[ListFirst(v.keyList())];\r\n});\r\nwriteDump([original, fixed]);",
+			"runnable": false
+		}
+	]
 }
