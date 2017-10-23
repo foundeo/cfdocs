@@ -8,17 +8,16 @@
 	"params": [
 		{"name":"id","description":"The ID value assigned to the cache object when it was created","required":true,"default":"","type":"string","values":[]},
 		{"name":"region","description":"CF10+ The name of the cache region where the object was stored. Applies only to ACF.","required":false,"default":"","type":"string","values":[]},
-		{"name":"cacheName","description":"Lucee4.5+ The name of the cache where the object was stored. Applies only to Lucee.","required":false,"default":"","type":"string","values":[]}
+		{"name":"cacheName","description":"Lucee4.5+ The name of the cache where the object was stored. Applies only to Lucee.","required":false,"default":"","type":"string","values":[]},
+		{"name":"throwWhenNotExist","description":"Lucee4.5+ Enable/Disable throwing an error if element not exists","required":false,"default":"false","type":"boolean","values":["true","false"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheGet.html"},
-		"lucee": {"minimum_version":"", "notes":"For Lucee the method signature is: `cacheGet( id [, throwWhenNotExist [, cacheName ] ] )` however it does support passing a cacheName in as the second argument for compatibility with ACF.", "docs":"http://docs.lucee.org/reference/functions/cacheget.html"},
+		"lucee": {"minimum_version":"", "notes":"For Lucee the method signature is:\n`cacheGet( id [, throwWhenNotExist [, cacheName ] ] )`\nhowever it does support passing a cacheName in as the second argument for compatibility with ACF.", "docs":"http://docs.lucee.org/reference/functions/cacheget.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cacheget"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cacheget"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Simple Example",
@@ -29,11 +28,10 @@
 		},
 		{
 			"title":"Script Syntax - Named Cache",
-			"description":"Puts an element in a named cache and then retrieves it. CF10+ Lucee4.5+",
-			"result":"The cow says moo",
-			"code":"cowSays = cacheGet( \"cow\", \"region_cacheName\" );\nif ( isNull( cowSays ) ) {\n    cowSays = \"moo\";\n    cachePut( \"cow\", cowSays, createTimeSpan( 0, 0, 30, 0 ), createTimeSpan( 0, 0, 15, 0 ), \"region_cacheName\" );\n}\nwriteOutput( \"The cow says \" & cowSays );",
-			"runnable":false
+			"description":"CF10+ Puts an element in a named cache and then retrieves it.",
+			"code":"cacheID = \"cow\";\r\ntimespan = createTimeSpan(0, 0, 30, 0);\r\nidleTime = createTimeSpan(0, 0, 15, 0);\r\nregionName = \"region_cacheName\";\r\ncowSays = cacheGet(cacheID, regionName);\r\nif (isNull(cowSays)) {\r\n    cowSays = \"moo\";\r\n     cachePut(cacheID, cowSays, timespan, idleTime, regionName);\r\n}\r\nwriteOutput(\"The cow says #cowSays#.\");",
+			"result":"The cow says moo.",
+			"runnable":true
 		}
 	]
-
 }
