@@ -4,13 +4,13 @@
 	"syntax": "cacheKeyExists(key [, cacheName])",
 	"returns": "boolean",
 	"related": [],
-	"description": "",
+	"description": "Returns true/false whether the cache contains an element with the specified keyname.",
 	"params": [
-		{"name": "key", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "cacheName", "description": "", "required": false, "default": "", "type": "string", "values": []}
+		{"name": "key", "description": "Key to check", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "cacheName", "description": "Definition of the cache used by name, when not set the \"default Object Cache\" defined in Lucee Administrator is used instead.", "required": false, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/cachekeyexists.html"}
+		"lucee": {"minimum_version": "", "deprecated": "4.5", "notes": "", "docs": "http://docs.lucee.org/reference/functions/cachekeyexists.html"}
 	},
 	"examples": [],
 	"links": []
