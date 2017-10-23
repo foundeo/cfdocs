@@ -58,7 +58,7 @@
 					</ul>
 				</li>
 				<li class="dropdown">
-					<a href="##" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a>
+					<a href="##" class="dropdown-toggle" data-toggle="dropdown">Guides <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="#linkTo("application-cfc")#">Application.cfc</a></li>
 					<cfloop list="#listGuides#" index="guide">
@@ -69,7 +69,7 @@
 				<li class="dropdown">
 					<a href="##" class="dropdown-toggle" data-toggle="dropdown">Contribute <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="https://github.com/foundeo/cfdocs/blob/master/CONTRIBUTING.md">How to</a></li>
+						<li><a href="/how-to-contribute">How to</a></li>
 						<!---<li><a href="/reports/todo.cfm">Missing Functions</a></li>
 						<li><a href="/reports/missing-descriptions.cfm">Missing Descriptions</a></li>
 						<li><a href="/reports/missing-examples.cfm">Missing Examples</a></li>
