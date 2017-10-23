@@ -4,7 +4,7 @@
 	"syntax": "arrayToStruct(array)",
 	"member": "array.toStruct()",
 	"returns": "struct",
-	"related": [],
+	"related": ["arrayToList"],
 	"description": "Transform the array to a struct, the index of the array is the key of the struct",
 	"params": [
 		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []}
@@ -12,7 +12,12 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraytostruct.html"}
 	},
-	"examples": [
-	],
+	"examples": [{
+		"title":"Convert an array to a struct using arrayToStruct()",
+		"description":"",
+		"code":"arrayToStruct([\"a\",\"b\"]);",
+		"result":"",
+		"runnable":false
+	}],
 	"links": []
 }

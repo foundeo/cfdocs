@@ -1,17 +1,29 @@
 {
 	"name": "parseNumber",
 	"type": "function",
-	"syntax": "parseNumber(nummber [, radix])",
+	"syntax": "parseNumber(number [, radix])",
 	"returns": "numeric",
 	"related": [],
-	"description": "",
+	"description": "Converts string to number in numeral system",
 	"params": [
-		{"name": "nummber", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "radix", "description": "", "required": false, "default": "", "type": "string", "values": []}
+		{"name": "number", "description": "", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "radix", "description": "", "required": false, "default": "", "type": "string", "values": ["bin","oct","dec","hex"]}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/parsenumber.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Convert decimal number to binary",
+		"description":"",
+		"code":"parseNumber(1010,\"bin\")",
+		"result":10,
+		"runnable":true
+	},{
+		"title":"Convert decimal number to hex",
+		"description":"",
+		"code":"parseNumber(1010,\"hex\")",
+		"result":4112,
+		"runnable":true
+	}],
 	"links": []
 }

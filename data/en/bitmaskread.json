@@ -3,13 +3,12 @@
 	"type":"function",
 	"syntax":"bitMaskRead(number, start, length)",
 	"returns":"numeric",
-	"related":[],
+	"related":["bitMaskClear","bitMaskSet"],
 	"description":" Performs a bitwise mask read operation.\n Returns an integer representation of the corresponding bits specified in the mask.",
 	"params": [
 		{"name":"number","description":"Integer","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"start","description":"Start bit for the read mask (Integer in the range 0-31, inclusive)","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"length","description":"Length of bits in the read mask (Integer in the range 0-31, inclusive)","required":true,"default":"","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/bitmaskread.html"},
@@ -17,9 +16,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/bitmaskread"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/bitmaskread"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Bitwise Mask Read",
@@ -43,5 +40,4 @@
 			"runnable":true
 		}
 	]
-
 }
