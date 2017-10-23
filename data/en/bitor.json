@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"bitOr(number1, number2)",
 	"returns":"numeric",
-	"related":[],
+	"related":["bitAnd","bitXor"],
 	"description":" Performs a bitwise logical OR operation.",
 	"params": [
 		{"name":"number1","description":"Integer","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"number2","description":"Integer","required":true,"default":"","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/bitor.html"},
@@ -16,9 +15,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/bitor"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/bitor"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Calculate bitwise logical OR",
