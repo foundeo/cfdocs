@@ -3,18 +3,32 @@
 	"type": "function",
 	"syntax": "compress(format, source, target [, includeBaseFolder] [, mode])",
 	"returns": "boolean",
-	"related": [],
-	"description": "",
+	"related": ["extract"],
+	"description": "Compress a file or a directory with files.",
 	"params": [
-		{"name": "format", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "source", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "target", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "includeBaseFolder", "description": "", "required": false, "default": "true", "type": "boolean", "values": []},
+		{"name": "format", "description": "The format in which you want to compress the files.", "required": true, "default": "", "type": "string", "values": ["bzip", "bzip2", "tbz", "tbz2", "tar", "tar.bz", "tar.gz", "gzip", "tgz", "zip"]},
+		{"name": "source", "description": "Path (relative or absolute) to the file or directory you want to compress.", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "target", "description": "Path (relative or absolute) including the name, where you want to save the compressed output-file.", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "includeBaseFolder", "description": "Compress the directory or just the content of the directory.", "required": false, "default": "true", "type": "boolean", "values": []},
 		{"name": "mode", "description": "", "required": false, "default": "777", "type": "string", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/compress.html"}
 	},
-	"examples": [],
+	"examples": [{
+			"title":"Compress a file",
+			"description":"Compress the file \"example.txt\" to a zip-file.",
+			"code":"compress(\"zip\", \"example.txt\", \"output.zip\")",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Compress a directory",
+			"description":"Compress the \"example-directory\" to a zip-file.",
+			"code":"compress(\"zip\", \"example-directory\", \"output.zip\")",
+			"result":"",
+			"runnable":false
+		}
+	],
 	"links": []
 }
