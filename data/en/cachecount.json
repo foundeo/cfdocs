@@ -4,9 +4,9 @@
 	"syntax": "cacheCount([cacheName])",
 	"returns": "numeric",
 	"related": [],
-	"description": "",
+	"description": "Returns the amount (integer) of keys stored in the cache.",
 	"params": [
-		{"name": "cacheName", "description": "", "required": false, "default": "", "type": "string", "values": []}
+		{"name": "cacheName", "description": "Definition of the cache used by name, when not set the \"default Object Cache\" defined in Lucee Administrator is used instead", "required": false, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/cachecount.html"}
