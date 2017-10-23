@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"getLocaleDisplayName()",
 	"returns":"string",
-	"related":["getLocale","GetLocaleInfo"],
+	"related":["getLocale","getLocaleInfo","getLocaleCountry","getLocaleLanguage"],
 	"description":" Gets a locale value and displays the name in a manner\n that is appropriate to a specific locale. By default,\n gets the current locale in the current locale's language.",
 	"params": [],
 	"engines": {
