@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"bitAnd(number1, number2)",
 	"returns":"numeric",
-	"related":[],
+	"related":["bitOr","bitXor"],
 	"description":" Performs a bitwise logical AND operation.",
 	"params": [
 		{"name":"number1","description":"Integer","required":true,"default":"","type":"numeric","values":[]},
