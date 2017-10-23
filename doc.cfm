@@ -32,7 +32,7 @@
 		</cfif>
 	</cfloop>
 	<cfset data = {
-		name = url.name,
+		name = encodeForURL(url.name),
 		description = "Sorry we don't have any docs matching that name. If we should have a doc for this, please send us a <a href=""https://github.com/foundeo/cfdocs/new/master/data/en?filename=" & url.name & ".json"">pull request</a> on github.\n\nYou can easily access functions and tags using an url like <a href=""http://cfdocs.org/hash"">cfdocs.org/hash</a>. Just hit <code>/tag-name</code> or <code>/function-name</code> or use the search box above.\n\nMaybe it's just a spelling mistake. Please make sure you did not misspell it before you open a pull request or issue!",
 		type = "404",
 		related = possible
