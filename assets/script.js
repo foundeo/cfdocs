@@ -74,3 +74,11 @@ _gaq.push(['_trackPageview']);
   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
+
+//github api requests
+if(!!$('.issuecount').length) {
+	docname = $('ol.container').data('doc');
+	$.getJSON('https://api.github.com/search/issues?q=is:open+repo:foundeo/cfdocs+' + docname,function(res) {
+		$('.issuecount').html(res.total_count);
+	});
+}
