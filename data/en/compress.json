@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "compress(format, source, target [, includeBaseFolder] [, mode])",
 	"returns": "boolean",
-	"related": ["extract"],
+	"related": ["extract","cfzip"],
 	"description": "Compress a file or a directory with files.",
 	"params": [
 		{"name": "format", "description": "The format in which you want to compress the files.", "required": true, "default": "", "type": "string", "values": ["bzip", "bzip2", "tbz", "tbz2", "tar", "tar.bz", "tar.gz", "gzip", "tgz", "zip"]},
