@@ -3,19 +3,15 @@
 	"type":"function",
 	"syntax":"directorySize(path)",
 	"returns":"numeric",
-	"related":[],
+	"related":["cfdirectory"],
 	"description":" Returns size of given directory",
 	"params": [
 		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/directorysize.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/directorysize.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/directorysize"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }
