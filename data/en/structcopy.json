@@ -16,7 +16,7 @@
 	},
 	"links": [],
 	"examples": [{
-		"title":"",
+		"title":"Copy a structure and change it. Original structure stays unchanged",
 		"description":"",
 		"code":"myStruct = {\r\n    'a': 1,\r\n    'b': 2,\r\n    'c': 3\r\n};\r\nmyNewStruct = structCopy(myStruct);\r\nmyNewStruct.b = 5;\r\nmyNewStruct['d'] = 4;\r\nstructDelete(myNewStruct,'c');\r\nwriteOutput(structKeyList(myStruct)&' → '&structKeyList(myNewStruct));",
 		"result":"b,a,c → b,a,d",
