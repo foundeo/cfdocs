@@ -4,13 +4,14 @@
 	"syntax": "sizeOf(obj [, complex])",
 	"returns": "any",
 	"related": [],
-	"description": "this function is experimentell, to not use in productive enviroment. this function returns the size in bytes of a given object",
+	"description": "Returns the size in bytes of a given object",
+	"discouraged":"This function is in an early state. Do not use in production!",
 	"params": [
 		{"name": "obj", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "complex", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/sizeof.html"}
+		"lucee": {"minimum_version": "", "notes": "","docs": "http://docs.lucee.org/reference/functions/sizeof.html"}
 	},
 	"examples": [],
 	"links": []
