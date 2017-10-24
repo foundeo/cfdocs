@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"bitShln(number, count)",
 	"returns":"numeric",
-	"related":[],
+	"related":["bitShrn"],
 	"description":" Performs a bitwise shift-left, no-rotation operation.",
 	"params": [
 		{"name":"number","description":"Integer","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"count","description":"Number of bits to shift to the left (Integer in the range 0-31, inclusive)","required":true,"default":"","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/bitshln.html"},
@@ -16,9 +15,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/bitshln"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/bitshln"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Shift left by 1 bit",
