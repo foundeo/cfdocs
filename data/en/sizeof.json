@@ -10,7 +10,7 @@
 		{"name": "complex", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "This function is experimentell. Do not use in productive enviroment!", "docs": "http://docs.lucee.org/reference/functions/sizeof.html"}
+		"lucee": {"minimum_version": "", "notes": "", "discouraged":"This function is in an early state. Do not use in production!","docs": "http://docs.lucee.org/reference/functions/sizeof.html"}
 	},
 	"examples": [],
 	"links": []
