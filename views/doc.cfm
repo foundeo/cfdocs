@@ -1,6 +1,6 @@
 <cfoutput>
 	<div class="jumbotron">
-		<div class="container">
+		<div class="container" data-doc="#encodeForHTMLAttribute(data.name)#">
 			<h1 id="docname">#data.name#</h1>
 			<p>#autoLink(data.description)#</p>
 			<cfif StructKeyExists(data, "syntax") AND Len(data.syntax)>
