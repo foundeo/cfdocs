@@ -26,10 +26,10 @@ component extends="testbox.system.BaseSpec" {
 				}
 			});
 
-			tagFiles = arrayFilter(files,function(item) {
+			tagFiles = arrayMap(arrayFilter(files,function(item) {
 				var json = fileRead(item);
 				return isJSON(json) ? structKeyExists(deserializeJSON(json), "type") && deserializeJSON(json).type is 'tag' : false;
-			}).map(files(function(item) {
+			}),function(item) {
 				return deserializeJSON(fileRead(item));
 			});
 			it("should be in tags.json if it is a tag", function() {
@@ -38,10 +38,10 @@ component extends="testbox.system.BaseSpec" {
 				}
 			});
 
-			tagFiles = arrayFilter(files,function(item) {
+			tagFiles = arrayMap(arrayFilter(files,function(item) {
 				var json = fileRead(item);
 				return isJSON(json) ? structKeyExists(deserializeJSON(json), "type") && deserializeJSON(json).type is 'function' : false;
-			}).map(files(function(item) {
+			}),files,function(item) {
 				return deserializeJSON(fileRead(item));
 			});
 			it("should be in functions.json if it is a function", function() {
