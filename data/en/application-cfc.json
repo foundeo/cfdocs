@@ -85,7 +85,7 @@
 		},
 		{
 		    "title":"Adding relative mappings in Application.cfc",
-		    "description":"This example uses getCurrentTemplatePath and getDirectoryFromPath to dynamically get the directory that the current Application.cfc resieds in and then defines some mappings relative to that. You want to avoid using expandPath in Application.cfc because the path will be relative to the current template path not the Application.cfc path.",
+		    "description":"This example uses getCurrentTemplatePath and getDirectoryFromPath to dynamically get the directory that the current Application.cfc resides in and then defines some mappings relative to that. You want to avoid using expandPath in Application.cfc because the path will be relative to the current template path not the Application.cfc path.",
 		    "code": "component {\n    this.name = \"AppName\";\n    this.appBasePath = getDirectoryFromPath(getCurrentTemplatePath());\n    this.mappings[\"/components\"] = this.appBasePath & \"components\";\n    this.mappings[\"/frameworks\"] = this.appBasePath & \"frameworks\";\n\n}",
 		    "result":""
 		},
