@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"fileWrite(file, data [, charset])",
 	"returns":"void",
-	"related":["cffile"],
+	"related":["cffile","fileAppend","fileWriteLine"],
 	"description":"Writes the data to the file object or file path speficied using the charset specified or the java default character set if unspecified.",
 	"params": [
 		{"name":"file","description":"A file object or a file system path string.","required":true,"default":"","type":"any","values":[]},
@@ -16,10 +16,8 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filewrite"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filewrite"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+    	"examples": [
 		{
 			"title": "Write a Temporary File",
 			"description": "",
@@ -28,5 +26,4 @@
 			"runnable":false
 		}
 	]
-
 }
