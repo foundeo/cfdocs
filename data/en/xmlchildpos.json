@@ -1,15 +1,14 @@
 {
-	"name":"XMLChildPos",
+	"name":"xmlChildPos",
 	"type":"function",
-	"syntax":"XMLChildPos(elem, childname, n)",
+	"syntax":"xmlChildPos(elem, childname, n)",
 	"returns":"numeric",
 	"related":[],
-	"description":" Gets the position of a child element within an XML document\n object.\n The position, in an XmlChildren array, of the Nth child that\n has the specified name.",
+	"description":"Gets the position of a child element within an XML document\n object.\n The position, in an XmlChildren array, of the Nth child that\n has the specified name.",
 	"params": [
 		{"name":"elem","description":"XML element within which to search","required":true,"default":"","type":"xml","values":[]},
 		{"name":"childname","description":"XML child element for which to search","required":true,"default":"","type":"string","values":[]},
-		{"name":"n","description":"Index of XMLchild element for which to search","required":true,"default":"","type":"numeric","values":[]}
-
+		{"name":"n","description":"Index of XML child element for which to search","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlchildpos.html"},

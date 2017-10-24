@@ -1,10 +1,10 @@
 {
-	"name":"LSEuroCurrencyFormat",
+	"name":"lsEuroCurrencyFormat",
 	"type":"function",
-	"syntax":"LSEuroCurrencyFormat(currency, type)",
+	"syntax":"lsEuroCurrencyFormat(currency, type)",
 	"returns":"string",
 	"related":[],
-	"description":" Formats a number in a locale-specific currency format.\n [type - quicky]\n local: the currency format used in the locale. (Default.)\n international: the international standard currency format\n none: the currency format used; no currency symbol",
+	"description":"Formats a number in a locale-specific currency format.\n [type - quicky]\n local: the currency format used in the locale. (Default.)\n international: the international standard currency format\n none: the currency format used; no currency symbol",
 	"params": [
 		{"name":"currency","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"type","description":"","required":true,"default":"","type":"string","values":["local","international","none"]}
@@ -23,7 +23,7 @@
 		{
 			"title":"Tag Example",
 			"description":"returns a currency value using the locale convention. Default value is local. ",
-			"code":"<!--- Loop through list of locales, show currency values for 100,000 units ---> \r\n <cfloop list = \"#Server.Coldfusion.SupportedLocales#\" \r\n index = \"locale\" delimiters = \",\"> \r\n <cfset oldlocale = setLocale(locale)> \r\n <cfoutput><p><B><I>#locale#</I></B> \r\n Local: #LSEuroCurrencyFormat(100000, \"local\")# \r\n International: #LSEuroCurrencyFormat(100000, \"international\")# \r\n None: #LSEuroCurrencyFormat(100000, \"none\")# \r\n <Hr noshade> \r\n </cfoutput> \r\n </cfloop> ",
+			"code":"<!--- Loop through list of locales, show currency values for 100,000 units ---> \r\n <cfloop list = \"#Server.Coldfusion.SupportedLocales#\" \r\n index = \"locale\" delimiters = \",\"> \r\n <cfset oldlocale = setLocale(locale)> \r\n <cfoutput><p><B><I>#locale#</I></B> \r\n Local: #lsEuroCurrencyFormat(100000, \"local\")# \r\n International: #lsEuroCurrencyFormat(100000, \"international\")# \r\n None: #lsEuroCurrencyFormat(100000, \"none\")# \r\n <Hr noshade> \r\n </cfoutput> \r\n </cfloop> ",
 			"result":"",
 			"runnable":true
 		}

@@ -1,9 +1,9 @@
 {
-    "name":"ESAPIEncode",
+    "name":"esapiEncode",
     "type":"function",
-    "syntax":"ESAPIEncode(encodeFor,string)",
+    "syntax":"esapiEncode(encodeFor,string)",
     "returns":"string",
-    "description":"Warning: ESAPIEncode() is deprecated, use encodeForHTML() instead! A Railo/Lucee specific function for calling the various encodeFor functions: encodeForHTML, etc. Not supported in ACF.",
+    "description":"Warning: esapiEncode() is deprecated, use encodeForHTML() instead! A Railo/Lucee specific function for calling the various encodeFor functions: encodeForHTML, etc. Not supported in ACF.",
     "params": [
         {"name":"encodeFor","description":"Required. Encode for what, valid values are: - css: for output inside Cascading Style Sheets (CSS) - dn: for output in LDAP Distinguished Names - html: for output inside HTML - html_attr: for output inside HTML Attributes - javascript: for output inside Javascript - ldap: for output in LDAP queries - url: for output in URL - vbscript: for output inside vbscript - xml: for output inside XML - xml_attr: for output inside XML Attributes - xpath: for output in XPath.","required":true,"type":"string"},
         {"name":"string","description":"Required. String to encode.","required":true,"type":"string"}

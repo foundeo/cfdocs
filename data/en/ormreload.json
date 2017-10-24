@@ -1,10 +1,10 @@
 {
-	"name":"ORMReload",
+	"name":"ormReload",
 	"type":"function",
-	"syntax":"ORMReload()",
+	"syntax":"ormReload()",
 	"returns":"void",
 	"related":[],
-	"description":" Returns ORM session factory instance",
+	"description":"Returns ORM session factory instance",
 	"params": [
 	],
 	"engines": {

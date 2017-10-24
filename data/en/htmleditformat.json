@@ -1,8 +1,8 @@
 {
-  "name": "HTMLEditFormat",
+  "name": "htmlEditFormat",
   "type": "function",
   "returns": "string",
-  "syntax": "HTMLEditFormat( string [, version] )",
+  "syntax": "htmlEditFormat( string [, version] )",
   "description": "Replaces special characters in a string with their HTML-escaped equivalents.",
   "params": [
     {
@@ -25,7 +25,7 @@
 
   "engines": {
     "coldfusion": { "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/htmleditformat.html",
-      "minimum_version": "", "notes": "\nUse encodeForHTML, which can provide more protection from XSS.", "deprecated" : 11 },
+      "minimum_version": "", "notes": "Use encodeForHTML, which can provide more protection from XSS.", "deprecated" : "11" },
     "lucee":      { "docs": "http://docs.lucee.org/reference/functions/htmleditformat.html",
       "minimum_version": "", "notes": "" },
     "openbd":     { "docs": "http://openbd.org/manual/?/function/htmleditformat",
@@ -38,7 +38,7 @@
     {
       "title": "Escapes the HTML characters",
       "description": "",
-      "code": "HTMLEditFormat( \"This is a test & this is another <This text is in angle brackets> Previous line was blank!!!\" )",
+      "code": "htmlEditFormat( \"This is a test & this is another <This text is in angle brackets> Previous line was blank!!!\" )",
       "result": "This is a test &amp; this is another &lt;This text is in angle brackets&gt; Previous line was blank!!!",
       "runnable": true
     }
