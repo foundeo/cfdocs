@@ -18,8 +18,7 @@
 	"links": [
 
 	],
-<<<<<<< HEAD
-	
+
 	"examples": [
 		{
 			"title":"isBinary example",
@@ -27,15 +26,6 @@
 			"code":"isBinary( toBase64(1) )",
 			"result":true,
 			"runnable":true
-=======
-	"examples": [
-		{
-		"title":"isBinary example",
-		"description":"Return a boolean that determines if the given value is binary.",
-		"code":"isBinary(10300111)",
-		"result":false,
-		"runnable":true
->>>>>>> patch-7
 		}
 	]
 }
