@@ -24,39 +24,37 @@ component extends="testbox.system.BaseSpec" {
 						}
 					}
 				}
-			});			
-
-			it("should be in tags.json if it is a tag", function() {
-				for (filePath in files) {
-					var json = fileRead(filePath);
-					var isItJson = isJSON(json);
-					var fileName = getFileFromPath(filePath);
-					if (isItJson) {
-						json = deserializeJSON(json);
-						if (structKeyExists(json, "type") && json.type IS "tag") {
-							expect(ArrayFind(tags.related, listFirst(fileName, ".")) NEQ 0).toBeTrue("#json.name# was not in tags.json index");
+			});
+			
+			types = {tags=[], functions=[], listings=[]};
+			for (filePath in files) {
+				json = fileRead(filePath);
+				isItJson = isJSON(json);
+				fileName = getFileFromPath(filePath);
+				if (isItJson) {
+					json = deserializeJSON(json);
+					if (structKeyExists(json, "type")) {
+						if (json.type IS "tag") {
+							arrayAppend(fileTypes.tags, json.name);
+						} else if (json.type IS "function") {
+							arrayAppend(fileTypes.functions, json.name);
+						} else if (json.type IS "listing") {
+							arrayAppend(fileTypes.listings, json.name);
 						}
 					}
-					
 				}
-				
+			}
+
+			it("should be in tags.json if it is a tag", function() {
+				for (tag in types.tags) {
+					expect(ArrayFind(tags.related, tag) NEQ 0).toBeTrue("#json.name# was not in tags.json index");
+				}
 			});
 
 			it("should be in functions.json if it is a function", function() {
-				for (filePath in files) {
-					var json = fileRead(filePath);
-					var isItJson = isJSON(json);
-					var fileName = getFileFromPath(filePath);
-					if (isItJson) {
-						json = deserializeJSON(json);
-						if (structKeyExists(json, "type") && json.type IS "function") {
-							expect(ArrayFind(funcs.related, listFirst(fileName, ".")) NEQ 0).toBeTrue("#json.name# was not in functions.json index");
-						}
-					}
-					
+				for (function in types.functions) {
+					expect(ArrayFind(funcs.related, function) NEQ 0).toBeTrue("#json.name# was not in functions.json index");
 				}
-				
 			});
-		});
-	}
+		});	}
 }
