@@ -3,8 +3,8 @@
 	"type": "function",
 	"syntax": "each(collection, closure [, parallel] [, maxThreads])",
 	"returns": "void",
-	"related": [],
-	"description": "",
+	"related": ["collectionEach"],
+	"description": "Same as collectionEach expect it has the two additional optinal params `parallel` and `maxThreads`",
 	"params": [
 		{"name": "collection", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
@@ -14,6 +14,12 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/each.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": [{
+		"title":"Iterate over collection and output a key from each item",
+		"description":"",
+		"code":"coll = [{\r\n    id: 0,\r\n    name: 'me'\r\n},{\r\n    id: 1,\r\n    name: 'you'\r\n}];\r\nfunction outputCollection(item) {\r\n    writeOutput(item.name);\r\n    writeOutput(' - ');\r\n}\r\neach(coll,outputCollection,true);",
+		"result":"me - you -",
+		"runnable":true
+	}]
 }

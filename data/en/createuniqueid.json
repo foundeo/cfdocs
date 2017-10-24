@@ -4,11 +4,17 @@
 	"syntax": "createUniqueID()",
 	"returns": "string",
 	"related": [],
-	"description": "",
+	"description": "Creates a Unique Identifier for the current instance. If you want it to be Universal Unique use createUUID instead.",
 	"params": [],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/createuniqueid.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Creates a Unique Identifier. Each identifier will be unique",
+		"description":"",
+		"code":"createUniqueID()",
+		"result":"",
+		"runnable":true
+	}],
 	"links": []
 }

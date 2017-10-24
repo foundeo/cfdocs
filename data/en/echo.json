@@ -3,10 +3,10 @@
 	"type": "function",
 	"syntax": "echo(string)",
 	"returns": "boolean",
-	"related": [],
-	"description": "",
+	"related": ["writeOutput"],
+	"description": "While writeOutput writes to the page-output stream, this function writes to the main response buffer",
 	"params": [
-		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []}
+		{"name": "string", "description": "String to be written to the output buffer", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/echo.html"}
