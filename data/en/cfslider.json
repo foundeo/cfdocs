@@ -2,9 +2,8 @@
 	"name":"cfslider",
 	"type":"tag",
 	"syntax":"<cfslider name=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Puts a slider control, for selecting a numeric value from a\n range, in a ColdFusion form. The slider moves over the slider\n groove. As the user moves the slider, the current value\n displays. Used within a cfform tag.\n Not supported with Flash forms.",
+	"description":"Puts a slider control, for selecting a numeric value from a\n range, in a ColdFusion form. The slider moves over the slider\n groove. As the user moves the slider, the current value\n displays. Used within a cfform tag.\n Not supported with Flash forms.",
 	"params": [
 		{"name":"name","description":"Name for cfslider control.","required":true,"default":"","type":"string","values":[]},
 		{"name":"label","description":"Label to display with control.\n For example, \"Volume\" This displays: \"Volume %value%\"\n To reference the value, use \"%value%\". If %% is omitted,\n slider value displays directly after label.","required":false,"default":"","type":"string","values":[]},

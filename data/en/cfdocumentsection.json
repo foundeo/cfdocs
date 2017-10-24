@@ -2,9 +2,8 @@
 	"name":"cfdocumentsection",
 	"type":"tag",
 	"syntax":"<cfdocumentsection>",
-	"returns":"",
 	"related":[],
-	"description":" Divides a PDF or FlashPaper document into sections.\n By using this tag in conjunction with a cfdocumentitem\n tag, each section can have unique headers, footers,\n and page numbers.",
+	"description":"Divides a PDF or FlashPaper document into sections.\n By using this tag in conjunction with a cfdocumentitem\n tag, each section can have unique headers, footers,\n and page numbers.",
 	"params": [
 		{"name":"margintop","description":"Specifies the top margin in inches (default) or\n centimeters. To specify the top margin in centimeters,\n include the unit=\"cm\" attribute in the parent cfdocument\n tag.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"marginbottom","description":"Specifies the bottom margin in inches (default) or\n centimeters. To specify the bottom margin in\n centimeters, include the unit=\"cm\" attribute in the\n parent cfdocument tag.","required":false,"default":"","type":"numeric","values":[]},

@@ -2,7 +2,6 @@
 	"name": "cfformitem",
 	"type": "tag",
 	"syntax": "<cfformitem type=\"html\">",
-	"returns": "",
 	"related": [],
 	"description": "Inserts a horizontal line, a vertical line, a spacer,\n or text in a Flash form. Used in the cfform or cfformgroup\n tag body for Flash and XML forms. Ignored in HTML forms.",
 	"params": [

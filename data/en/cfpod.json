@@ -2,7 +2,6 @@
 	"name": "cfpod",
 	"type": "tag",
 	"syntax": "<cfpod>",
-	"returns": "",
 	"related": [],
 	"description": "Creates a pod, an area of the browser window or layout \n area with an optional title bar and body that contains \n display elements.",
 	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html",

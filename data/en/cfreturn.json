@@ -2,9 +2,8 @@
 	"name":"cfreturn",
 	"type":"tag",
 	"syntax":"<cfreturn>",
-	"returns":"",
 	"related":[],
-	"description":" Returns result values from a component method. Contains an\n expression returned as result of the function.\n An expression; the result of the function from which this tag\n is called.",
+	"description":"Returns result values from a component method. Contains an\n expression returned as result of the function.\n An expression; the result of the function from which this tag\n is called.",
 	"params": [
 	],
 	"engines": {

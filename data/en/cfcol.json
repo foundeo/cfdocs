@@ -2,9 +2,8 @@
 	"name":"cfcol",
 	"type":"tag",
 	"syntax":"<cfcol header=\"\" text=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Defines table column header, width, alignment, and text. Used\n within a cftable tag.",
+	"description":"Defines table column header, width, alignment, and text. Used\n within a cftable tag.",
 	"discouraged":"The use of tags that generate client side UI code is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cftable/index.html",
 	"params": [
 		{"name":"header","description":"Column header text. To use this attribute, you must also\n use the cftable colHeaders attribute.","required":true,"default":"","type":"string","values":[]},

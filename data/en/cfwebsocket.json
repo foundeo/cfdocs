@@ -2,7 +2,6 @@
 	"name":"cfwebsocket",
 	"type":"tag",
 	"syntax":"<cfwebsocket name=\"\" onMessage=\"\">",
-	"returns":"",
 	"related":["WSGetAllChannels","WSPublish","WSgetSubscribers"],
 	"description":"Includes the required JavaScript files in your CFM template and creates a global JavaScript reference to the WebSocket Object on the client-side.",
 	"params": [

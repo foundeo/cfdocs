@@ -2,7 +2,6 @@
 	"name": "cfpresentation",
 	"type": "tag",
 	"syntax": "<cfpresentation title=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Defines the look and feel of a dynamic slide presentation.\n Use the cfpresentation tag as the parent tag for one or more cfpresentationslide tags,\n where you define the content for the presentation.",
 	"params": [

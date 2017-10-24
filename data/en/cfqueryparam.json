@@ -2,11 +2,10 @@
   "name": "cfqueryparam",
   "type": "tag",
   "syntax": "<cfqueryparam>",
-  "returns": "",
   "related": [
     "cfquery","queryExecute"
   ],
-  "description": " Verifies the data type of a query parameter and, for DBMSs that\n support bind variables, enables CFML to use bind variables\n in the SQL statement. Bind variable usage enhances performance\n when executing a cfquery statement multiple times.\n\n This tag is nested within a cfquery tag, embedded in a query SQL\n statement. If you specify optional parameters, this tag performs\n data validation.",
+  "description": "Verifies the data type of a query parameter and, for DBMSs that\n support bind variables, enables CFML to use bind variables\n in the SQL statement. Bind variable usage enhances performance\n when executing a cfquery statement multiple times.\n\n This tag is nested within a cfquery tag, embedded in a query SQL\n statement. If you specify optional parameters, this tag performs\n data validation.",
   "params": [
     {
       "name": "value",

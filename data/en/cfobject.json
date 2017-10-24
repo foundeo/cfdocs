@@ -2,9 +2,8 @@
 	"name":"cfobject",
 	"type":"tag",
 	"syntax":"<cfobject name=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Creates a CFML object, of a specified type.\n\n The tag syntax depends on the object type. Some types use the\n type attribute; others do not.",
+	"description":"Creates a CFML object, of a specified type.\n\n The tag syntax depends on the object type. Some types use the\n type attribute; others do not.",
 	"params": [
 		{"name":"type","description":"The object type. You can omit this attribute or specify component. ColdFusion automatically sets the type to component.","required":false,"default":"","type":"string","values":["com","component","corba","java","dotnet","webservice"]},
 		{"name":"action","description":"* create: instantiates a COM object (typically, a DLL) before invoking methods or properties.\n * connect: ionnects to a COM object (typically, an EXE) running on server.","required":false,"default":"","type":"string","values":["create","connect"]},

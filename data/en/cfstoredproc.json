@@ -2,9 +2,8 @@
 	"name":"cfstoredproc",
 	"type":"tag",
 	"syntax":"<cfstoredproc procedure=\"\">",
-	"returns":"",
 	"related":["cfprocparam","cfprocresult"],
-	"description":" Executes a stored procedure in a server database. It\n specifies database connection information and identifies\n the stored procedure.",
+	"description":"Executes a stored procedure in a server database. It\n specifies database connection information and identifies\n the stored procedure.",
 	"params": [
 		{"name":"procedure","description":"Name of stored procedure on database server.","required":true,"default":"","type":"string","values":[]},
 		{"name":"datasource","description":"Name of data source that points to database that contains\n stored procedure.","required":false,"default":"","type":"string","values":[]},

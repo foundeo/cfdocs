@@ -3,7 +3,6 @@
 	"type":"tag",
 	"syntax":"<cfdocument format=\"PDF\">html</cfdocument>",
 	"script":"cfDocument(format=\"PDF\") { writeOutput(html); };",
-	"returns":"",
 	"related":["cfhtmltopdf","cfdocumentitem","cfdocumentsection"],
 	"description":"Creates PDF or FlashPaper output from a text block containing CFML and HTML.",
 	"params": [

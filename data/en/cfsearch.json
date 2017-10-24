@@ -2,9 +2,8 @@
 	"name":"cfsearch",
 	"type":"tag",
 	"syntax":"<cfsearch name=\"\" collection=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Searches Verity collections using CFML or K2Server,\n whichever search engine a collection is registered by.\n (CFML can also search collections that have not been\n registered, with the cfcollection tag.)\n\n A collection must be created and indexed before this tag can\n return search results.",
+	"description":"Searches Verity collections using CFML or K2Server,\n whichever search engine a collection is registered by.\n (CFML can also search collections that have not been\n registered, with the cfcollection tag.)\n\n A collection must be created and indexed before this tag can\n return search results.",
 	"params": [
 		{"name":"name","description":"Name of the search query.","required":true,"default":"","type":"string","values":[]},
 		{"name":"collection","description":"One or more collection names. You can specify more\n than one collection unless you are performing a\n category search (that is, specifying category or\n categoryTree).\n\n One or more collection names. You can specify more\n than one collection unless you are performing a\n category search (that is, specifying category or\n categoryTree).","required":true,"default":"","type":"string","values":[]},

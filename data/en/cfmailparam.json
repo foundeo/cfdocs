@@ -2,9 +2,8 @@
 	"name":"cfmailparam",
 	"type":"tag",
 	"syntax":"<cfmailparam>",
-	"returns":"",
 	"related":[],
-	"description":" Attaches a file or adds a header to an e-mail message. Can only\n be used in the cfmail tag. You can use more than one\n cfmailparam tag within a cfmail tag.",
+	"description":"Attaches a file or adds a header to an e-mail message. Can only\n be used in the cfmail tag. You can use more than one\n cfmailparam tag within a cfmail tag.",
 	"params": [
 		{"name":"file","description":"Attaches file to a message. Mutually exclusive with name\n attribute. The file is MIME encoded before sending.","required":false,"default":"","type":"string","values":[]},
 		{"name":"type","description":"The MIME media type of the part. Can be a can be valid MIME\n media type","required":false,"default":"","type":"string","values":["text\/plain","text\/html","html","plain","text"]},

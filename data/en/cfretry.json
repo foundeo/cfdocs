@@ -3,12 +3,11 @@
 	"type":"tag",
 	"syntax":"<cfretry>",
 	"script":"retry",
-	"returns":"",
 	"related":["cfcatch","cftry"],
 	"description":"Used within a catch block to jump back to the beginning of the try statement.",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/sleep.html"}		
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/sleep.html"}
 	},
 	"links": [],
 	"examples": []

@@ -2,9 +2,8 @@
 	"name":"cferror",
 	"type":"tag",
 	"syntax":"<cferror type=\"exception\" template=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Displays a custom HTML page when an error occurs. This lets\n you maintain a consistent look and feel among an application's\n functional and error pages",
+	"description":"Displays a custom HTML page when an error occurs. This lets\n you maintain a consistent look and feel among an application's\n functional and error pages",
 	"params": [
 		{"name":"type","description":"Type of error that the custom error page handles. The type\n also determines how CFML handles the error page. For\n more information, see Specifying a custom error page in\n Developing CFML MX Applications.\n\n exception: a exception of the type specified by the\n exception attribute.\n validation: errors recognized by sever-side type\n validation.\n request: any encountered error.\n monitor: deprecated.","required":true,"default":"","type":"string","values":["exception","validation","request","monitor"]},
 		{"name":"template","description":"Relative path to the custom error page.\n (A CFML page was formerly called a template.)","required":true,"default":"","type":"string","values":[]},

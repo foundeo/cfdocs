@@ -2,9 +2,8 @@
 	"name":"cfexchangemail",
 	"type":"tag",
 	"syntax":"<cfexchangemail meetinguid=\"\" message=\"\" name=\"\" uid=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Gets mail messages and attachments, deletes messages, and sets properties for messages on a Microsoft Exchange server.\n The cfexchangemail tag performs mail actions on an Exchange server that you cannot do using the cfmail tag.",
+	"description":"Gets mail messages and attachments, deletes messages, and sets properties for messages on a Microsoft Exchange server.\n The cfexchangemail tag performs mail actions on an Exchange server that you cannot do using the cfmail tag.",
 	"params": [
 		{"name":"action","description":"The name to use for the JavaScript proxy class. (required)","required":false,"default":"","type":"string","values":["get","getAttachments","getMeetingInfo","delete","deleteAttachments","move","set"]},
 		{"name":"attachmentPath","description":"The file path of the directory in which to put the attachments.\n If the directory does not exist, ColdFusion creates it.\n If you omit this attribute, ColdFusion does not save any attachments.\n If you specify a relative path, the path root is the ColdFusion temporary directory, which is returned by the GetTempDirectory function. (optional)","required":false,"default":"","type":"string","values":[]},

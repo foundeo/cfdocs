@@ -2,9 +2,8 @@
 	"name":"cfobjectcache",
 	"type":"tag",
 	"syntax":"<cfobjectcache action=\"clear\">",
-	"returns":"",
 	"related":[],
-	"description":" Flushes the query cache.",
+	"description":"Flushes the query cache.",
 	"params": [
 		{"name":"action","description":"clear: Clears queries from the cache in the Application\n scope","required":true,"default":"clear","type":"string","values":["clear"]}
 

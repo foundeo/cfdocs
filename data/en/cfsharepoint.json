@@ -2,7 +2,6 @@
 	"name": "cfsharepoint",
 	"type": "tag",
 	"syntax": "<cfsharepoint action=\"cancreatedwsurl\">",
-	"returns": "",
 	"related": [],
 	"description": "Invokes a feature that SharePoint exposes as a web service action, such as the Document Workspace\ngetdwsdata action.",
 	"params": [

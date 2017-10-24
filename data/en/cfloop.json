@@ -3,9 +3,8 @@
 	"type":"tag",
 	"syntax":"<cfloop>",
 	"script": "for (i = 1; i <= 10; i++) { }",
-	"returns":"",
 	"related":["arrayEach","structEach", "listEach"],
-	"description":" Different items are required based on loop type. Items listed\n as required may not be depending on your loop type.\n Loop forms:\n [query] [condition] [index + from + to ] [index + list]\n [collection + item ]",
+	"description":"Different items are required based on loop type. Items listed\n as required may not be depending on your loop type.\n Loop forms:\n [query] [condition] [index + from + to ] [index + list]\n [collection + item ]",
 	"params": [
 		{"name":"index","description":"Index value. CFML sets it to from value and\n increments or decrements by step value, until it equals to\n value.","required":false,"default":"","type":"string","values":[]},
 		{"name":"to","description":"Beginning value of index.","required":false,"default":"","type":"numeric","values":[]},

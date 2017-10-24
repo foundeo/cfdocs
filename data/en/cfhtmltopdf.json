@@ -4,7 +4,6 @@
 	"syntax":"<cfhtmltopdf>html</cfhtmltopdf>",
 	"script":"cfhtmltopdf() { writeOutput(html); };",
 	"description":"Creates PDFs from HTML using a WebKit based rendering engine.",
-	"returns":"void",
 	"engines":{"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfhtmltopdf.html","notes":"The rendering engine only runs on Windows or Linux. You can still run this tag on a Mac, but it must connect to a remote rendering engine running on Windows or Linux. Rendering engines are configured in the ColdFusion adminstrator."}},
 	"params":[
 		{"values":["AES_128","RC4_40","RC4_128","RC4_128M","none"],"default":"none","description":"","name":"encryption","type":"string","required":"0"},

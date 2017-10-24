@@ -2,9 +2,8 @@
 	"name":"cfscript",
 	"type":"tag",
 	"syntax":"<cfscript>",
-	"returns":"",
 	"related":[],
-	"description":" Encloses a code block that contains cfscript statements.\n\n You cannot use some CFML reserved words in this tag. You\n cannot put a user-defined function whose name begins with any\n of these strings within this tag:\n cf,cf_,_cf,CFML,CFML_,_CFML",
+	"description":"Encloses a code block that contains cfscript statements.\n\n You cannot use some CFML reserved words in this tag. You\n cannot put a user-defined function whose name begins with any\n of these strings within this tag:\n cf,cf_,_cf,CFML,CFML_,_CFML",
 	"params": [
 	],
 	"engines": {

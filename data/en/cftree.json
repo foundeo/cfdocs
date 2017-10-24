@@ -2,7 +2,6 @@
 	"name": "cftree",
 	"type": "tag",
 	"syntax": "<cftree name=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Inserts a tree control in a form. Validates user selections.\n Used within a cftree tag block. You can use a CFML query\n to supply data to the tree.",
 	"params": [

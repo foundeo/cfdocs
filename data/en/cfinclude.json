@@ -3,7 +3,6 @@
 	"type":"tag",
 	"syntax":"<cfinclude template=\"\" runonce=\"true|false\">",
 	"script":"include \"template.cfm\" runonce=true|false;",
-	"returns":"",
 	"related":["cfmodule"],
 	"description":"Includes the content from the referenced file (template). The content may be executed as CFML, see compatibility info below. You can embed cfinclude tags recursively. For another way to encapsulate CFML, see cfmodule. (A CFML page was formerly sometimes called a CFML template or a template.)",
 	"params": [
