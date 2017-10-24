@@ -29,36 +29,24 @@ component extends="testbox.system.BaseSpec" {
 			tagFiles = arrayFilter(files,function(item) {
 				var json = fileRead(item);
 				return isJSON(json) ? structKeyExists(deserializeJSON(json), "type") && deserializeJSON(json).type is 'tag' : false;
+			}).map(files(function(item) {
+				return deserializeJSON(fileRead(item));
 			});
 			it("should be in tags.json if it is a tag", function() {
-				for (filePath in tagFiles) {
-					var json = fileRead(filePath);
-					var isItJson = isJSON(json);
-					var fileName = getFileFromPath(filePath);
-					if (isItJson) {
-						json = deserializeJSON(json);
-						if (structKeyExists(json, "type") && json.type IS "tag") {
-							expect(ArrayFind(tags.related, listFirst(fileName, ".")) NEQ 0).toBeTrue("#json.name# was not in tags.json index");
-						}
-					}
+				for (json in tagFiles) {
+					expect(ArrayFind(tags.related, lCase(json.name)) NEQ 0).toBeTrue("#json.name# was not in tags.json index");
 				}
 			});
 
-			functionFiles = arrayFilter(files,function(item) {
+			tagFiles = arrayFilter(files,function(item) {
 				var json = fileRead(item);
 				return isJSON(json) ? structKeyExists(deserializeJSON(json), "type") && deserializeJSON(json).type is 'function' : false;
+			}).map(files(function(item) {
+				return deserializeJSON(fileRead(item));
 			});
 			it("should be in functions.json if it is a function", function() {
-				for (filePath in functionFiles) {
-					var json = fileRead(filePath);
-					var isItJson = isJSON(json);
-					var fileName = getFileFromPath(filePath);
-					if (isItJson) {
-						json = deserializeJSON(json);
-						if (structKeyExists(json, "type") && json.type IS "function") {
-							expect(ArrayFind(funcs.related, listFirst(fileName, ".")) NEQ 0).toBeTrue("#json.name# was not in functions.json index");
-						}
-					}
+				for (json in tagFiles) {
+					expect(ArrayFind(funcs.related, lCase(json.name)) NEQ 0).toBeTrue("#json.name# was not in functions.json index");
 				}
 			});
 		});
