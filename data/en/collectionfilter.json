@@ -3,8 +3,8 @@
 	"type": "function",
 	"syntax": "collectionFilter(collection, filter [, parallel] [, maxThreads])",
 	"returns": "any",
-	"related": [],
-	"description": "",
+	"related": ["collectionEvery","collectionEach","collectionMap","collectionReduce","collectionSome"],
+	"description": "Filters items from a collection passing the filter condition",
 	"params": [
 		{"name": "collection", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "filter", "description": "", "required": true, "default": "", "type": "function", "values": []},
@@ -14,6 +14,12 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/collectionfilter.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Return only items of type mail",
+		"description":"",
+		"code":"coll = [{\r\n    id: 0,\r\n    type: 'mail'\r\n},{\r\n    id: 1,\r\n    type: 'mail'\r\n},{\r\n    id: 2,\r\n    type: 'comment'\r\n}];\r\nonlyMails = collectionFilter(coll,function(item) {\r\n    return item.type is 'mail';\r\n});\r\nfor(mail in onlyMails) {\r\n    writeOutput(mail.id&', ');\r\n}",
+		"result":"0, 1, ",
+		"runnable":true
+	}],
 	"links": []
 }

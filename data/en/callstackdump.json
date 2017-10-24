@@ -1,34 +1,31 @@
 {
 	"name":"callStackDump",
 	"type":"function",
-	"syntax":"callStackDump(destination__);",
+	"syntax":"callStackDump(destination);",
 	"returns":"void",
-	"related":[],
+	"related":["callStackGet","cfdump"],
 	"description":" Similar to the function callStackGet except that it returns a string representation of the call stack.",
 	"params": [
-		{"name":"destination","description":"Parameter that takes either console, browser, or file.","required":false,"default":"","type":"","values":[]}
+		{"name":"destination","description":"If you chose \"file\" and do not provide the complete path to the file, the file is written to the temp directory as determined by the function `getTempDirectory()`.","required":false,"default":"browser","type":"string","values":["console","browser","file"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CallStackDump.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/callstackdump.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/CallStackDump"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "In this example, the factorial of a number is computed. The example is similar to the example for CallStackGet except that the function used here is callStackDump.callfact.cfm",
-			"code": "<cftry> \r\n <cfinclude template='fact.cfm'> \r\n <cfcatch type='any'> \r\n <cfoutput> \r\n #cfcatch.message# \r\n <br>#cfcatch.detail# \r\n <br> \r\n </cfoutput> \r\n </cfcatch> \r\n </cftry> \r\n",
+			"code": "<cftry>\r\n<cfinclude template=\"fact.cfm\">\r\n<cfcatch type=\"any\">\r\n<cfoutput>\r\n#cfcatch.message#\r\n<br>#cfcatch.detail#\r\n<br>\r\n</cfoutput>\r\n</cfcatch>\r\n</cftry>\r\n",
 			"result": ""
 		},
-        {
+        	{
 			"title": "Tag Syntax",
 			"description": "fact.cfm",
-			"code": "<cffunction name='factorial' hint='returns the factorial of a number' output='true'> \r\n <cfargument name='n' required='yes' type='numeric' hint='The number for which the factorial is returned'/> \r\n <cfif n eq 1> \r\n <Cfset callStackDump()> \r\n <cfreturn 1> \r\n <cfelse> \r\n <Cfset callStackDump()> \r\n <cfreturn n * factorial(n - 1)> \r\n </cfif> \r\n </cffunction> \r\n <cfoutput> Factorial of 5 - #factorial(5)#</cfoutput> \r\n",
+			"code": "<cffunction name=\"factorial\" hint=\"returns the factorial of a number\" output=\"true\">\r\n       <cfargument name=\"n\" required=\"yes\" type=\"numeric\" hint=\"The number for which the factorial is returned\" />\r\n       <cfif n eq 1>\r\n              <cfset callStackDump()>\r\n              <cfreturn 1>\r\n       <cfelse>\r\n              <cfset callStackDump()>\r\n              <cfreturn n * factorial(n - 1)>\r\n       </cfif>\r\n</cffunction>\r\n<cfoutput>Factorial of 5 - #factorial(5)#</cfoutput>\r\n",
 			"result": ""
 		}
 	]
-
 }

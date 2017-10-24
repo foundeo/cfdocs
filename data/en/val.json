@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"val(String)",
 	"returns":"numeric",
-	"related":["IsNumeric"],
+	"related":["isNumeric","isNull"],
 	"description":" Converts numeric characters that occur at the beginning of a\n string to a number. If conversion fails, returns zero.",
 	"params": [
 		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/val.html"},
@@ -15,23 +14,21 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/val"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/val"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title": "simple example Using val()",
-			"description": "To converts numeric characters from string",
-			"code": "SomeString = \"120test12sstring\";\nwriteOutput( val(SomeString) );",
-            "result": "120"
+			"title": "Numeric characters at beginning and middle of a string",
+			"description": "",
+			"code": "val(\"120test12sstring\");",
+			"result": "120",
+			"runnable": true
 		},
 		{
-			"title": "simple example Using val()",
-			"description": "To converts numeric characters from string",
-			"code": "SomeString = \"string98\";\nwriteOutput( val(SomeString) );",
-            "result": "0"
+			"title": "Numeric characters only at the end of a string",
+			"description": "",
+			"code": "val(\"string98\");",
+            		"result": "0",
+			"runnable": true
 		}
-
 	]
-
 }

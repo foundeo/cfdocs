@@ -2,12 +2,13 @@
 	"name": "urlEncode",
 	"type": "function",
 	"syntax": "urlEncode(string [, charset] [, force])",
+	"member": "string.urlEncode([charset] [, force])",
 	"returns": "string",
-	"related": ["encodeForURL"],
-	"description": "Returns an url-encoded string with respect to charset",
+	"related": ["encodeForURL", "urlDecode"],
+	"description": "Returns an url-encoded string with respect to charset.",
 	"params": [
 		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "charset", "description": "", "required": false, "default": "utf-8", "type": "string", "values": []},
+		{"name": "charset", "description": "The character encoding in which the string will be encoded.", "required": false, "default": "utf-8", "type": "string", "values": ["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]},
 		{"name": "force", "description": "", "required": false, "default": "true", "type": "boolean", "values": []}
 	],
 	"engines": {

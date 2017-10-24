@@ -4,9 +4,9 @@
 	"syntax": "cacheGetDefaultCacheName(type)",
 	"returns": "string",
 	"related": [],
-	"description": "",
+	"description": "Returns the default cache name for the specified type.",
 	"params": [
-		{"name": "type", "description": "", "required": true, "default": "", "type": "string", "values": []}
+		{"name": "type", "description": "Cache type", "required": true, "default": "", "type": "string", "values": ["object","resource","template","query"]}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/cachegetdefaultcachename.html"}

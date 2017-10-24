@@ -4,23 +4,20 @@
 	"syntax":"arraySet(array, start_pos, end_pos, value)",
 	"member":"someArray.set(start_pos, end_pos, value)",
 	"returns":"boolean",
-	"related":[],
+	"related":["arrayInsertAt"],
 	"description":" In a one-dimensional array, sets the elements in a specified\n index range to a value. Useful for initializing an array after\n a call to ArrayNew.",
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
 		{"name":"start_pos","description":"","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"end_pos","description":"","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayset.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayset.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayset"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Tag Syntax",
@@ -30,5 +27,4 @@
 			"runnable": true
 		}
 	]
-
 }

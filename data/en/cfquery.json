@@ -26,8 +26,9 @@
 		{"name":"clientInfo","description":"CF10+ A structure containing properties to be set on the database connection.","required":false,"default":"","type":"struct","values":[]},
 		{"name":"fetchClientInfo","description":"CF10+ When true returns a struct with the clientInfo argument value passed by the last query","required":false,"default":"false","type":"boolean","values":[]},
 		{"name":"lazy","description":"Lucee4+ If \"lazy\" is set to true (default \"false\") Lucee does not initially load all the data from the datasource.\n\nWhen \"true\" the data is only loaded when requested,this means the data is dependant on the datasource connection. If the datasource connection has been lost for some reason and the data has not yet been requested,Lucee throws an error if you try to access the data.\n\nThe \"lazy\" attribute only works if the following attributes are not used:cachewithin,cacheafter and result.","required":false,"default":"false","type": "boolean","values":[]},
-		{"name":"psq","description":"Lucee4+ When true preserve single quotes within the sql statement","required":false,"default":"false","type": "boolean","values":[]}
-
+		{"name":"psq","description":"Lucee4+ When true preserve single quotes within the sql statement","required":false,"default":"false","type": "boolean","values":[]},
+		{"name":"returntype","description":"Lucee5+ The return type of the query result. One of the following values is accepted: \"query\" - returns a query object, \"array_of_entity\" - returns an array of ORM entities (requires dbtype to be \"hql\"), \"array\" - returns an array of structs, \"struct\" - returns a struct of structs (requires columnkey to be defined).","required":false,"default":"query","type": "string","values":[]},
+		{"name":"columnkey","description":"Lucee5+ The struct key used for each result when returntype is \"struct\".","required":false,"default":"","type": "string","values":[]}	
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfquery.html"},
@@ -51,8 +52,8 @@
 		},
 		{
 			"title": "Script Syntax using QueryExecute",
-			"description": "Also see the Tags Implemented as Components section for another method of using <cfquery> in script.",
-			"code": "myQuery = queryExecute(\r\n \"SELECT myCol1, myCol2 FROM myTable \r\n  WHERE myCol1 = :myid \r\n  ORDER BY myCol1 ASC \", \r\n  {myid: 5}, \r\n  {datasource = \"myDSN\"} \r\n );",
+			"description": "CF11+ Also see the Tags Implemented as Components section for another method of using <cfquery> in script.",
+			"code": "myQuery = queryExecute(\r\n \"SELECT myCol1, myCol2 FROM myTable \r\n  WHERE myCol1 = :myid \r\n  ORDER BY myCol1 ASC \", \r\n  {myid: 5}, \r\n  {datasource = \"myDSN\"} \r\n);\r\nwriteDump(myQuery);",
 			"result": ""
 		},
 		{
@@ -66,10 +67,20 @@
 			"description": "This syntax was implemented by script-based components in CF 9 & 10. It is superceeded by queryExecute() in CF11.",
 			"code": "queryObj = new Query(\r\n name=\"qryDemo\",\r\n datasource=\"mydatasourcename\",\r\n sql = \"SELECT col1, col2\r\n FROM myTable\r\n WHERE id=:id\"\r\n); \r\nqueryObj.addParam(name=\"id\",value=arguments.id, cfsqltype=\"cf_sql_integer\");\r\nresultset=queryObj.execute().getResult();",
 			"result": ""
+		},
+		{
+			"title":"Return Query as an Array of Structs",
+			"description":"Lucee5+ Return a query object converted into an array of structs.",
+			"code":"<!--- create a dummy query using queryNew --->\n<cfset users = queryNew(\"firstname\", \"varchar\", [{\"firstname\":\"Han\"}])>\n<cfset writeDump(users)>\n\n<!--- run QofQ (query of query) --->\n<cfquery name=\"subUsers\" dbtype=\"query\" returntype=\"array\">\n    SELECT * FROM users\n</cfquery>\n<cfset writeDump(subUsers)>",
+			"result":"[ { firstname: \"Han\" } ]"
+		},
+		{
+			"title":"Return Query as a Struct of Structs",
+			"description":"Lucee5+ Return a query object converted into a struct of structs. (Struct key is based on the \"columnkey\" parameter)",
+			"code":"<!--- create a dummy query using queryNew --->\n<cfset users = queryNew(\"id, firstname\", \"integer, varchar\", [{\"id\":1, \"firstname\":\"Han\"}])>\n<cfset writeDump(users)>\n\n<!--- run QofQ (query of query) --->\n<cfquery name=\"subUsers\" dbtype=\"query\" returntype=\"struct\" columnkey=\"id\">\n    SELECT * FROM users\n</cfquery>\n<cfset writeDump(subUsers)>",
+			"result":"{ 1: { id: 1, firstname: \"Han\" } }"
 		}
 
-
 	]
-
 
 }
