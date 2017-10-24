@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"fileExists(path)",
 	"returns":"boolean",
-	"related":[],
+	"related":["fileWrite","fileDelete","directoryExists"],
 	"description":" Determines whether a file exists",
 	"params": [
 		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileexists.html"},
@@ -15,8 +14,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/fileexists"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/fileexists"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }
