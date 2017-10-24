@@ -21,10 +21,10 @@
 
 	"examples": [
 		{
-			"title":"isBinary example",
+			"title":"Checks if toBase64() function returns binary data ",
 			"description":"returns true if given value is binary data, returns false if otherwise",
 			"code":"isBinary( toBase64(1) )",
-			"result":true,
+			"result":false,
 			"runnable":true
 		}
 	]
