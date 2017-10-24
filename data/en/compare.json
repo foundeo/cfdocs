@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"compare(string1, string2)",
 	"returns":"numeric",
-	"related":[],
+	"related":["compareNoCase"],
 	"description":" Performs a case-sensitive comparison of two strings.\n -1, if string1 is less than string2\n 0, if string1 is equal to string2\n 1, if string1 is greater than string2",
 	"params": [
 		{"name":"string1","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"string2","description":"","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/Compare.html"},
@@ -16,16 +15,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/compare"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/compare"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset comparison = compare('ColdFusion', 'coldfusion')> \r\n <cfdump var=\"#comparison#\" />     ",
+			"code": "<cfset comparison = compare(\"ColdFusion\", \"coldfusion\")>\r\n<cfdump var=\"#comparison#\" />     ",
 			"result": "-1"
 		}
 	]
-
 }
