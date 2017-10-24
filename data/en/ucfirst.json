@@ -1,7 +1,7 @@
 {
-	"name": "UCFirst",
+	"name": "ucFirst",
 	"type": "function",
-	"syntax": "UCFirst(string [, doAll] [, doLowerIfAllUppercase])",
+	"syntax": "ucFirst(string [, doAll] [, doLowerIfAllUppercase])",
 	"member": "string.ucFirst([doAll] [, doLowerIfAllUppercase])",
 	"returns": "string",
 	"related": [],

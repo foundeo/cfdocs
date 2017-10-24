@@ -1,16 +1,15 @@
 {
-	"name":"REReplace",
+	"name":"reReplace",
 	"type":"function",
-	"syntax":"REReplace(string, regex, substring [, scope])",
+	"syntax":"reReplace(string, regex, substring [, scope])",
 	"returns":"string",
 	"related":["rereplacenocase","refind","refindnocase","replace","rematch","rematchnocase"],
-	"description":" Uses a regular expression (regex) to search a string for a string\n pattern and replace it with another. The search is\n case-sensitive.",
+	"description":"Uses a regular expression (regex) to search a string for a string pattern and replace it with another. The search is case-sensitive.",
 	"params": [
 		{"name":"string","description":"A string or a variable that contains one","required":true,"default":"","type":"string","values":[]},
 		{"name":"regex","description":"Regular expression to replace.","required":true,"default":"","type":"Regex","values":[]},
 		{"name":"substring","description":"A string or a variable that contains one. Replaces substring with the regex match","required":true,"default":"","type":"string","values":[]},
 		{"name":"scope","description":"* one: Replace the first occurrence of the regular\n expression. Default.\n * all: Replace all occurrences of the regular expression.","required":false,"default":"one","type":"string","values":["one","all"]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/rereplace.html"},
@@ -34,13 +33,13 @@
 		{
 			"title": "Strip Characters Using reReplace",
 			"description": "This example strips out all characters except a-z and 0-9.",
-			"code": "REReplace(\"test 123!\", \"[^a-z0-9]\", \"\", \"ALL\")",
+			"code": "reReplace(\"test 123!\", \"[^a-z0-9]\", \"\", \"ALL\")",
 			"result": "test123"
 		},
 		{
 			"title": "Extract Characters Using Back Reference",
 			"description": "Uses a back reference: \\1 to extract the pattern contained within the parenthesis.",
-			"code": "REReplace(\"123abc456\", \"[0-9]+([a-z]+)[0-9]+\", \"\\1\")",
+			"code": "reReplace(\"123abc456\", \"[0-9]+([a-z]+)[0-9]+\", \"\\1\")",
 			"result": "abc"
 		}
 	]

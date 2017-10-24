@@ -1,10 +1,10 @@
 {
-	"name":"LSParseCurrency",
+	"name":"lsParseCurrency",
 	"type":"function",
-	"syntax":"LSParseCurrency(String)",
+	"syntax":"lsParseCurrency(String)",
 	"returns":"string",
 	"related":[],
-	"description":" Converts a locale-specific currency string into a formatted\n number. Attempts conversion by comparing the string with each\n the three supported currency formats (none, local,\n international) and using the first that matches.",
+	"description":"Converts a locale-specific currency string into a formatted number. Attempts conversion by comparing the string with each the three supported currency formats (none, local, international) and using the first that matches.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]}
 

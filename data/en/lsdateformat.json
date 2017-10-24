@@ -1,11 +1,11 @@
 {
-	"name":"LSDateFormat",
+	"name":"lsDateFormat",
 	"type":"function",
-	"syntax":"LSDateFormat(date [, mask])",
+	"syntax":"lsDateFormat(date [, mask])",
 	"member":"date.lsDateFormat([mask])",
 	"returns":"string",
 	"related":[],
-	"description":" Formats the date part of a date/time value in a locale-specific\n format.\n [mask - quicky]\n d,dd,ddd,dddd: Day of month / week\n m,mm,mmm,mmmm: Month; y,yy,yyyy: Year; gg: Period/era string\n short / medium / long / full",
+	"description":"Formats the date part of a date/time value in a locale-specific format.\n [mask - quicky]\n d,dd,ddd,dddd: Day of month / week\n m,mm,mmm,mmmm: Month\n y,yy,yyyy: Year\n gg: Period/era string\n short / medium / long / full",
 	"params": [
 		{"name":"date","description":"","required":true,"default":"","type":"date","values":[]},
 		{"name":"mask","description":"","required":false,"default":"","type":"string","values":["short","medium","long","full"]}
@@ -23,8 +23,8 @@
 	"examples": [
 		{
 			"title":"Tag Example",
-			"description":"LSDateFormat formats the date part of a date/time value using the locale convention. ",
-			"code":"<!--- loop through a list of locales; show date values for now()---> \r\n <cfloop list = \"#Server.Coldfusion.SupportedLocales#\" \r\n index = \"locale\" delimiters = \",\"> \r\n <cfset oldlocale = setLocale(locale)> \r\n  <cfoutput><p><B><I>#locale#</I></B> \r\n #LSDateFormat(now(), \"mmm-dd-yyyy\")# \r\n #LSDateFormat(now(), \"mmmm d, yyyy\")# \r\n #LSDateFormat(now(), \"mm/dd/yyyy\")# \r\n #LSDateFormat(now(), \"d-mmm-yyyy\")# \r\n #LSDateFormat(now(), \"ddd, mmmm dd, yyyy\")# \r\n #LSDateFormat(now(), \"d/m/yy\")# \r\n #LSDateFormat(now())# \r\n <hr noshade> \r\n </cfoutput> \r\n </cfloop> ",
+			"description":"lsDateFormat formats the date part of a date/time value using the locale convention. ",
+			"code":"<!--- loop through a list of locales; show date values for now()---> \r\n <cfloop list = \"#Server.Coldfusion.SupportedLocales#\" \r\n index = \"locale\" delimiters = \",\"> \r\n <cfset oldlocale = setLocale(locale)> \r\n  <cfoutput><p><B><I>#locale#</I></B> \r\n #lsDateFormat(now(), \"mmm-dd-yyyy\")# \r\n #lsDateFormat(now(), \"mmmm d, yyyy\")# \r\n #lsDateFormat(now(), \"mm/dd/yyyy\")# \r\n #lsDateFormat(now(), \"d-mmm-yyyy\")# \r\n #lsDateFormat(now(), \"ddd, mmmm dd, yyyy\")# \r\n #lsDateFormat(now(), \"d/m/yy\")# \r\n #lsDateFormat(now())# \r\n <hr noshade> \r\n </cfoutput> \r\n </cfloop> ",
 			"result":"",
 			"runnable":true
 		}

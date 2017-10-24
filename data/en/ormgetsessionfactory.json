@@ -1,7 +1,7 @@
 {
-	"name":"ORMGetSessionFactory",
+	"name":"ormGetSessionFactory",
 	"type":"function",
-	"syntax":"ORMGetSessionFactory()",
+	"syntax":"ormGetSessionFactory()",
 	"returns":"any",
 	"related":[],
 	"description":" Returns ORM session factory instance",

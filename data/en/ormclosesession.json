@@ -1,7 +1,7 @@
 {
-	"name":"ORMCloseSession",
+	"name":"ormCloseSession",
 	"type":"function",
-	"syntax":"ORMCloseSession([datasource])",
+	"syntax":"ormCloseSession([datasource])",
 	"returns":"void",
 	"related":[],
 	"description":"Closes the current ORM session for the given datasource. When the datasource argument is not passed then it uses the default datasource defined in Application.cfc.",

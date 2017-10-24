@@ -1,10 +1,10 @@
 {
-	"name":"LSNumberFormat",
+	"name":"lsNumberFormat",
 	"type":"function",
-	"syntax":"LSNumberFormat(number [, mask])",
+	"syntax":"lsNumberFormat(number [, mask])",
 	"returns":"string",
 	"related":[],
-	"description":" Formats a number in a locale-specific format.\n [mask - quicky]\n _,9 Digit placeholder; . decimal point; 0 Pads with zeros;\n ( ) less than zero, puts parentheses around the mask\n + plus sign before positive number minus before negative\n - a space before positive minus sign before negative\n , Separates every third decimal place with a comma.\n L,C Left-justifies or center-justifies number\n $ dollar sign before formatted number.\n ^ Separates left and right formatting.",
+	"description":"Formats a number in a locale-specific format.\n [mask - quicky]\n _,9 Digit placeholder; . decimal point; 0 Pads with zeros;\n ( ) less than zero, puts parentheses around the mask\n + plus sign before positive number minus before negative\n - a space before positive minus sign before negative\n , Separates every third decimal place with a comma.\n L,C Left-justifies or center-justifies number\n $ dollar sign before formatted number.\n ^ Separates left and right formatting.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"mask","description":"","required":false,"default":"","type":"string","values":[]}
@@ -22,8 +22,8 @@
 	"examples": [
 		{
 			"title":"Tag Example",
-			"description":"LSNumberFormat returns a number value using the locale convention. ",
-			"code":"<!--- loop through a list of locales and show number values ---> \r\n <cfloop LIST = \"#Server.Coldfusion.SupportedLocales#\" \r\n index = \"locale\" delimiters = \",\"> \r\n <cfset oldlocale = setLocale(locale)> \r\n <cfoutput><p><b><i>#locale#</i></b> \r\n #LSNumberFormat(-1234.5678, \"_________\")# \r\n #LSNumberFormat(-1234.5678, \"_________.___\")# \r\n #LSNumberFormat(1234.5678, \"_________\")# \r\n #LSNumberFormat(1234.5678, \"_________.___\")# \r\n #LSNumberFormat(1234.5678, \"$_(_________.___)\")# \r\n #LSNumberFormat(-1234.5678, \"$_(_________.___)\")# \r\n #LSNumberFormat(1234.5678, \"+_________.___\")# \r\n #LSNumberFormat(1234.5678, \"-_________.___\")# \r\n </cfoutput> \r\n </cfloop> ",
+			"description":"lsNumberFormat returns a number value using the locale convention. ",
+			"code":"<!--- loop through a list of locales and show number values ---> \r\n <cfloop LIST = \"#Server.Coldfusion.SupportedLocales#\" \r\n index = \"locale\" delimiters = \",\"> \r\n <cfset oldlocale = setLocale(locale)> \r\n <cfoutput><p><b><i>#locale#</i></b> \r\n #lsNumberFormat(-1234.5678, \"_________\")# \r\n #lsNumberFormat(-1234.5678, \"_________.___\")# \r\n #lsNumberFormat(1234.5678, \"_________\")# \r\n #lsNumberFormat(1234.5678, \"_________.___\")# \r\n #lsNumberFormat(1234.5678, \"$_(_________.___)\")# \r\n #lsNumberFormat(-1234.5678, \"$_(_________.___)\")# \r\n #lsNumberFormat(1234.5678, \"+_________.___\")# \r\n #lsNumberFormat(1234.5678, \"-_________.___\")# \r\n </cfoutput> \r\n </cfloop> ",
 			"result":"",
 			"runnable":true
 		}
