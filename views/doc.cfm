@@ -217,23 +217,35 @@
 			<cfset request.hasExamples = true>
 			<h2 id="examples">Examples <small>sample code <cfif data.type IS "function">invoking<cfelse>using</cfif> the #data.name# <cfif data.type IS "tag">tag<cfelse>function</cfif></small></h2>
 			<cfset example_index = 0>
-			<cfloop array="#data.examples#" index="ex">
-				<cfset example_index = example_index + 1>
-				<br />
-				<h4 id="ex#example_index#">
-					#XmlFormat(ex.title)#
-					<cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
-						<div class="pull-right">
-							<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				<cfloop array="#data.examples#" index="ex">
+					<cfset example_index = example_index + 1>
+					<br />
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">						
+							<h4 class="panel-title" id="ex#example_index#">
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="##collapseEx#example_index#" aria-expanded="true" aria-controls="collapseEx#example_index#">
+								  #XmlFormat(ex.title)#
+								</a>
+								<cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
+									<div class="pull-right">
+										<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
+									</div>
+								</cfif>
+							</h4>
 						</div>
-					</cfif>
-				</h4>
-				<p class="clearfix">#autoLink(ex.description)#</p>
-				<pre class="prettyprint"><code>#encodeForHTML(ex.code)#</code></pre>
-				<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
-					<p><strong>Expected Result: </strong> #encodeForHTML(ex.result)#</p>
-				</cfif>
-			</cfloop>
+						<div id="collapseEx#example_index#" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+							<div class="panel-body">
+								<p class="clearfix">#autoLink(ex.description)#</p>
+								<pre class="prettyprint"><code>#encodeForHTML(ex.code)#</code></pre>
+								<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
+									<p><strong>Expected Result: </strong> #encodeForHTML(ex.result)#</p>
+								</cfif>
+							</div>
+						</div>
+					</div>
+				</cfloop>				
+			</div>
 			<div class="modal fade example-modal" tabindex="-1" role="dialog">
 				<div class="modal-dialog modal-lg">
 					<div class="modal-content">
