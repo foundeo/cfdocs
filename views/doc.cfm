@@ -97,7 +97,7 @@
 			</cfif>
 			<li class="pull-right">
 		    		<span class="label label-warning">
-					<a href="https://github.com/foundeo/cfdocs/issues?q=is:issue%20is:open%20#encodeForURL(data.name)#" class="issuecount badge">4</a>
+					<a href="https://github.com/foundeo/cfdocs/issues?q=is:issue%20is:open%20#encodeForURL(data.name)#" class="issuecount badge">0</a>
 					<a href="https://github.com/foundeo/cfdocs/issues/new?title=#encodeForURL(data.name)#" rel="nofollow" title="Report an Issue" style="color:white; padding-left:2px;">Issue</a>
 				</span>
 			</li>
