@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "extract(format, source, target)",
 	"returns": "boolean",
-	"related": ["compress"],
+	"related": ["compress","cfzip"],
 	"description": "Extract the data of a compressed file.",
 	"params": [
 		{"name": "format", "description": "The format of the compressed file.", "required": true, "default": "", "type": "string", "values": ["bzip", "bzip2", "tbz", "tbz2", "tar", "tar.bz", "tar.gz", "gzip", "tgz", "zip"]},
