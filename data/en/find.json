@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"find(substring, String [, start])",
 	"returns":"numeric",
-	"related":["findNoCase"],
+	"related":["findNoCase","REFind"],
 	"description":" Finds the first occurrence of a substring in a string, from a\n specified start position. The search is case-sensitive.",
 	"params": [
 		{"name":"substring","description":"The string you are looking for.","required":true,"default":"","type":"string","values":[]},
