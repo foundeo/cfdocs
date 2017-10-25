@@ -2,9 +2,8 @@
 	"name":"cfswitch",
 	"type":"tag",
 	"syntax":"<cfswitch expression=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Evaluates a passed expression and passes control to the cfcase tag that matches the expression result. You can, optionally, code a cfdefaultcase tag, which receives control if there is no matching cfcase tag value. Note the difference in the tag and script syntax when providing multiple values for a case.",
+	"description":"Evaluates a passed expression and passes control to the cfcase tag that matches the expression result. You can, optionally, code a cfdefaultcase tag, which receives control if there is no matching cfcase tag value. Note the difference in the tag and script syntax when providing multiple values for a case.",
 	"params": [
 		{"name":"expression","description":"CFML expression that yields a scalar value. CFML converts integers, real numbers, Booleans, and dates to numeric values. For example, True, 1, and 1.0 are all equal.","required":true,"default":"","type":"string","values":[]}
 

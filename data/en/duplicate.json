@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"duplicate(variable)",
 	"returns":"any",
-	"related":[],
+	"related":["structCopy"],
 	"description":" Returns a clone, also known as a deep copy, of a variable\n or XML object. There is no reference to the original variable.",
 	"params": [
 		{"name":"variable","description":"","required":true,"default":"","type":"any","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/duplicate.html"},
@@ -15,8 +14,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/duplicate"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/duplicate"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": [{
+		"title":"Copy a string and change it. Original string stays unchanged.",
+		"description":"",
+		"code":"myString = 'Hello world!';\r\nmyNewString = duplicate(myString);\r\nmyNewString = Replace(myNewString,'world','universe');\r\nwriteOutput(myString&' → '&myNewString);",
+		"result":"Hello world! → Hello universe!",
+		"runnable":true
+	}]
 }

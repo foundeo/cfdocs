@@ -3,8 +3,8 @@
 	"type": "function",
 	"syntax": "collectionEach(collection, closure)",
 	"returns": "void",
-	"related": [],
-	"description": "",
+	"related": ["collectionEvery","collectionFilter","collectionMap","collectionReduce","collectionSome"],
+	"description": "Iterate over each item contained in the collection given",
 	"params": [
 		{"name": "collection", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []}
@@ -12,6 +12,12 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/collectioneach.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": [{
+		"title":"Iterate over collection and output a key from each item",
+		"description":"",
+		"code":"coll = [{\r\n    id: 0,\r\n    name: 'me'\r\n},{\r\n    id: 1,\r\n    name: 'you'\r\n}];\r\ncollectionEach(coll,function(item) {\r\n    writeOutput(item.name);\r\n    writeOutput(' - ');\r\n});",
+		"result":"me - you -",
+		"runnable":true
+	}]
 }

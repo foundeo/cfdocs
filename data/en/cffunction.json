@@ -3,9 +3,8 @@
 	"type":"tag",
 	"syntax":"<cffunction name=\"\">",
 	"script": "public boolean function myFunction(required any myArgument) { }",
-	"returns":"",
 	"related":["cfargument","cfcomponent"],
-	"description":" Defines a function that you can call in CFML. Required to\n defined CFML component methods.",
+	"description":"Defines a function that you can call in CFML. Required to\n defined CFML component methods.",
 	"params": [
 		{"name":"name","description":"A string; a component method that is used within the\n cfcomponent tag.","required":true,"default":"","type":"string","values":[]},
 		{"name":"returntype","description":"String; a type name; data type of the function return value\n Required for a web service; Optional, otherwise.","required":false,"default":"any","type":"string","values":["any","array","binary","boolean","date","guid","numeric","query","string","struct","UUID","variablename","void","xml","(component name)"]},

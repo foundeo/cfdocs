@@ -1,10 +1,10 @@
 {
-	"name":"LSParseNumber",
+	"name":"lsParseNumber",
 	"type":"function",
-	"syntax":"LSParseNumber(String)",
+	"syntax":"lsParseNumber(String)",
 	"returns":"numeric",
 	"related":[],
-	"description":" Converts a string that is a valid numeric representation in\n the current locale into a formatted number.",
+	"description":"Converts a string that is a valid numeric representation in the current locale into a formatted number.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]}
 
@@ -18,7 +18,7 @@
 	"examples": [{
 		"title":"Simple example usage",
 		"description":"Converts number to string and back\"",
-		"code":"str = NumberFormat(42,'000.00');\r\nnum = LSParseNumber(str);\r\nwriteOutput(str&'--->'&num);",
+		"code":"str = numberFormat(42,'000.00');\r\nnum = lsParseNumber(str);\r\nwriteOutput(str&'--->'&num);",
 		"result":"042.00--->42",
 		"runnable":true
 	}],

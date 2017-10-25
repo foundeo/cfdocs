@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"directoryDelete(path, recurse)",
 	"returns":"void",
-	"related":[],
+	"related":["directoryCreate","directoryRename","fileDelete"],
 	"description":" Deltes directory for given path",
 	"params": [
 		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"recurse","description":"","required":true,"default":false,"type":"boolean","values":[true,false]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DirectoryDelete.html"},
@@ -16,17 +15,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/directorydelete"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/directorydelete"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset delDirectory = \"someDirPath\" /> \r\n <cfset recurse = true /> \r\n <cfset directoryDelete(delDirectory,recurse)>   ",
+			"code": "<cfset delDirectory = \"someDirPath\" />\r\n<cfset recurse = true />\r\n<cfset directoryDelete(delDirectory,recurse)>",
 			"result": "",
-            "runnable":false
+            		"runnable":false
 		}
 	]
-
 }

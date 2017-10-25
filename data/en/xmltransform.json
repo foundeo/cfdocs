@@ -1,10 +1,10 @@
 {
-	"name":"XMLTransform",
+	"name":"xmlTransform",
 	"type":"function",
-	"syntax":"XMLTransform(xml, xsl [, parameters])",
+	"syntax":"xmlTransform(xml, xsl [, parameters])",
 	"returns":"string",
 	"related":[],
-	"description":" Applies an Extensible Stylesheet Language Transformation (XSLT)\n to an XML document object that is represented as a string\n variable. An XSLT converts an XML document to another format\n or representation by applying an Extensible Stylesheet\n Language (XSL) stylesheet to it.",
+	"description":"Applies an Extensible Stylesheet Language Transformation (XSLT)\n to an XML document object that is represented as a string\n variable. An XSLT converts an XML document to another format\n or representation by applying an Extensible Stylesheet\n Language (XSL) stylesheet to it.",
 	"params": [
 		{"name":"xml","description":"An XML document in string format, or an XML document object.","required":true,"default":"","type":"xml","values":[]},
 		{"name":"xsl","description":"XSLT transformation to apply; can be any of the following:\n - A string containing XSL text.\n - The name of an XSTLT file. Relative paths start at\n the directory containing the current CFML page.\n - The URL of an XSLT file; valid protocol identifiers\n include http, https, ftp, and file. Relative paths start\n at the directory containing the current CFML page.","required":true,"default":"","type":"string","values":[]},

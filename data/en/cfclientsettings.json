@@ -2,7 +2,6 @@
 	"name": "cfclientsettings",
 	"type": "tag",
 	"syntax": " <cfclientsettings enableDeviceAPI = \"true|false\" detectDevice = \"true|false\" deviceTimeout = Number > ",
-	"returns": "void",
 	"related": ["cfclient"],
 	"description": "Part of the new CF11 mobile development features. This tag is similar to cfprocessingdirective and acts as a compiler directive to include plugins for various features (device detection and device API). You can use this tag to load all the required device detection plugins.\r\n\r\nPlease read the full scope of this new directive at <a href=\"https://wikidocs.adobe.com/wiki/display/coldfusionen/cfclientsettings\" target=\"_blank\">Adobe WikiDoc CFClientSettings</a>",
 	"params": [

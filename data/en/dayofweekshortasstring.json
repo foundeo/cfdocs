@@ -3,15 +3,25 @@
 	"type": "function",
 	"syntax": "dayOfWeekShortAsString(day_of_week [, locale])",
 	"returns": "string",
-	"related": [],
+	"related": ["dayOfWeekAsString"],
 	"description": "",
 	"params": [
-		{"name": "day_of_week", "description": "", "required": true, "default": "", "type": "numeric", "values": []},
+		{"name": "day_of_week", "description": "Only values from 1 to 7 are valid.\nWeek starting with 1 for Sunday and ends with 7 for Saturday.", "required": true, "default": "", "type": "numeric", "values": [1,2,3,4,5,6,7]},
 		{"name": "locale", "description": "", "required": false, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/dayofweekshortasstring.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": [{
+		"title":"Get Sunday",
+		"description":"",
+		"code":"dayOfWeekShortAsString(1)",
+		"result":"Sun"
+	},{
+		"title":"Get Sunday with french locale",
+		"description":"",
+		"code":"dayOfWeekShortAsString(1,\"fr\")",
+		"result":"dim."
+	}]
 }

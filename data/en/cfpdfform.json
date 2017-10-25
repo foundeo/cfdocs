@@ -2,7 +2,6 @@
 	"name": "cfpdfform",
 	"type": "tag",
 	"syntax": "<cfpdfform action=\"populate\" source=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Manipulates existing Adobe Acrobat forms and Adobe LiveCycle forms.\n The following list describes some of the tasks you can perform with the cfpdfform tag:\n Embed an interactive Acrobat form or LiveCycle form within a PDF document.\n You use the cfpdfform tag to embed the PDF form within a cfdocument tag.\n Render an existing Acrobat form or LiveCycle form. This includes prefilling\n fields from a database or an XML data file and processing form data submitted\n via HTTP post or PDF format.\n Extract or prefill values in stored PDF forms and save the output to a file\n or use it to update a data source.",
 	"params": [

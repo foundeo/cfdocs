@@ -2,9 +2,8 @@
 	"name":"cfform",
 	"type":"tag",
 	"syntax":"<cfform>",
-	"returns":"",
 	"related":[],
-	"description":" Builds a form with CFML custom control tags; these provide\n more functionality than standard HTML form input elements.",
+	"description":"Builds a form with CFML custom control tags; these provide\n more functionality than standard HTML form input elements.",
 	"params": [
 		{"name":"name","description":"In HTML format, if you omit this attribute and specify\n an id attribute, ColdFusion does not include a name\n attribute in the HTML sent to the browser; this\n behavior lets you use the cfform tag to create\n XHTML-compliant forms. If you omit the name\n attribute and the id attribute, ColdFusion generates\n a name of the form CFForm_n where n is a number\n that assigned serially to the forms on a page.","required":false,"default":"","type":"string","values":[]},
 		{"name":"action","description":"Name of CFML page to execute when the form is\n submitted for processing.","required":false,"default":"","type":"string","values":[]},

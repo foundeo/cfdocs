@@ -1,14 +1,13 @@
 {
-	"name":"REmatch",
+	"name":"reMatch",
 	"type":"function",
-	"syntax":"REmatch(reg_expression, string)",
+	"syntax":"reMatch(reg_expression, string)",
 	"returns":"array",
 	"related":[],
 	"description":"Uses a regular expression (RE) to search a string for a pattern, starting from a specified position.",
 	"params": [
 		{"name":"reg_expression","description":"Regular expression for which to search. Case sensitive.","required":true,"default":"","type":"string","values":[]},
 		{"name":"string","description":"A string or a variable that contains one. String in which to search.","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/rematch.html"},
@@ -20,12 +19,12 @@
 		{
 			"title":"Learning ReMatch by Ben Nadel",
 			"url":"http://www.bennadel.com/blog/769-learning-coldfusion-8-rematch-for-regular-expression-matching.htm",
-			"description":"Tutorial style article on using the REMatch function in CFML."
+			"description":"Tutorial style article on using the reMatch function in CFML."
 		}
 	],
 	"examples": [
 		{
-			"title":"Simple REMatch Example",
+			"title":"Simple reMatch Example",
 			"description":"Extracts numbers from a string and returns them as an array",
 			"code":"serializeJSON( reMatch(\"[0-9]+\", \"1 way to extract any number like 45, 38\") )",
 			"result":"[\"1\",\"45\",\"38\"]",

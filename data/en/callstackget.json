@@ -3,31 +3,27 @@
 	"type":"function",
 	"syntax":"callStackGet();",
 	"returns":"array",
-	"related":[],
+	"related":["callStackDump"],
 	"description":" Returns an array of structs. Each struct contains template name, line number, and function name (if applicable). This is a snapshot of all function calls or invocations.",
-	"params": [
-	],
+	"params": [],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CallStackGet.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/callstackget.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/CallStackGet"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example the factorial of a number is computed.",
-			"code": "<!--- callfact.cfm ---> \r\n <cftry> \r\n <cfinclude template='fact.cfm'> \r\n <cfcatch type='any'> \r\n <cfoutput> \r\n #cfcatch.message# \b\n <br> #cfcatch.detail# <br> \r\n </cfoutput> \r\n </cfcatch> \r\n </cftry \r\n \r\n ",
+			"code": "<!--- callfact.cfm --->\r\n<cftry>\r\n<cfinclude template=\"fact.cfm\">\r\n<cfcatch type=\"any\">\r\n<cfoutput>\r\n#cfcatch.message#\b\n<br>#cfcatch.detail#<br>\r\n</cfoutput>\r\n</cfcatch>\r\n</cftry>",
 			"result": ""
 		},
-        {
+        	{
 			"title": "Script Syntax",
 			"description": "This example the factorial of a number is computed.",
-			"code": "<!--- fact.cfm ---> \r\n <cfscript> \r\n numeric function factorial(n) \r\n { \r\n if(n == 1) { \r\n writeDump(callStackGet()); \r\n writeOutput('<br>'); \r\n return 1; \r\n } \r\n else { \r\n writeDump(callStackGet()); \r\n writeOutput('<br>'); \r\n return n * factorial(n-1); \r\n } \r\n } \r\n factorial(5); \r\n </cfscript> \r\n ",
+			"code": "<!--- fact.cfm ---> \r\n <cfscript> \r\n numeric function factorial(n) {\r\n    if(n == 1) {\r\n        writeDump(callStackGet());\r\n        writeOutput('<br>');\r\n        return 1;\r\n    } \r\n    else {\r\n        writeDump(callStackGet());\r\n        writeOutput('<br>');\r\n        return n * factorial(n-1);\r\n    }\r\n }\r\n factorial(5);\r\n </cfscript>",
 			"result": ""
 		}
 	]
-
 }

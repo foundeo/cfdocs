@@ -2,9 +2,8 @@
 	"name":"cfexit",
 	"type":"tag",
 	"syntax":"<cfexit>",
-	"returns":"",
 	"related":[],
-	"description":" This tag aborts processing of the currently executing CFML\n custom tag, exits the page within the currently executing CFML\n custom tag, or re-executes a section of code within the\n currently executing CFML custom tag.",
+	"description":"This tag aborts processing of the currently executing CFML\n custom tag, exits the page within the currently executing CFML\n custom tag, or re-executes a section of code within the\n currently executing CFML custom tag.",
 	"params": [
 		{"name":"method","description":"exittag: aborts processing of currently executing tag\n exittemplate: exits page of currently executing tag\n loop: reexecutes body of currently executing tag","required":false,"default":"","type":"string","values":["exittag","exittemplate","loop"]}
 

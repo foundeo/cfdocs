@@ -2,9 +2,8 @@
 	"name":"cfflush",
 	"type":"tag",
 	"syntax":"<cfflush>",
-	"returns":"",
 	"related":[],
-	"description":" Flushes currently available data to the client.",
+	"description":"Flushes currently available data to the client.",
 	"params": [
 		{"name":"interval","description":"Flushes output each time this number of bytes becomes\n available. HTML headers, and data that is already\n available when the tag is executed, are omitted from the\n count.","required":false,"default":"","type":"numeric","values":[]}
 

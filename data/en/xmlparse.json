@@ -1,7 +1,7 @@
 {
-	"name":"XMLParse",
+	"name":"xmlParse",
 	"type":"function",
-	"syntax":"XMLParse(xmlString [, caseSensitive] [, validator])",
+	"syntax":"xmlParse(xmlString [, caseSensitive] [, validator])",
 	"returns":"xml",
 	"related":[],
 	"description":"Converts an XML document that is represented as a string\n variable into an XML document object.",

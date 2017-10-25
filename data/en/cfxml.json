@@ -2,9 +2,8 @@
 	"name":"cfxml",
 	"type":"tag",
 	"syntax":"<cfxml variable=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Creates a CFML XML document object that contains the\n markup in the tag body. This tag can include XML and CFML tags.\n CFML processes the CFML code in the tag body, then assigns\n the resulting text to an XML document object variable.",
+	"description":"Creates a CFML XML document object that contains the\n markup in the tag body. This tag can include XML and CFML tags.\n CFML processes the CFML code in the tag body, then assigns\n the resulting text to an XML document object variable.",
 	"params": [
 		{"name":"variable","description":"Name of an xml variable","required":true,"default":"","type":"string","values":[]},
 		{"name":"casesensitive","description":"Maintains the case of document elements and attributes","required":false,"default":false,"type":"boolean","values":[true,false]}

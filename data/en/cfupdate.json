@@ -2,9 +2,8 @@
 	"name":"cfupdate",
 	"type":"tag",
 	"syntax":"<cfupdate datasource=\"\" tablename=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Updates records in a data source from data in a CFML form\n or form Scope.",
+	"description":"Updates records in a data source from data in a CFML form\n or form Scope.",
 	"params": [
 		{"name":"datasource","description":"Name of the data source that contains the table","required":true,"default":"","type":"string","values":[]},
 		{"name":"tablename","description":"Name of table to update.\n For ORACLE drivers, must be uppercase.\n For Sybase driver: case-sensitive; must be in same case\n as used when the table was created","required":true,"default":"","type":"string","values":[]},

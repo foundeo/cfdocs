@@ -1,7 +1,7 @@
 {
-	"name": "SSLCertificateInstall",
+	"name": "sslCertificateInstall",
 	"type": "function",
-	"syntax": "SSLCertificateInstall(host [, port])",
+	"syntax": "sslCertificateInstall(host [, port])",
 	"returns": "void",
 	"related": [],
 	"description": "Installs certificates of a specific host into the JVM certificate store",

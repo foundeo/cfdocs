@@ -1,9 +1,9 @@
 {
 	"name":"cfcookie",
 	"type":"tag",
-	"syntax":"<cfcookie name = \"cookie name\" domain = \".domain\" expires = \"period\" httponly = \"yes|no\" path = \"URL\" secure = \"yes|no\" value = \"text\" encodevalue = \"yes|no\" preserveCase = \"yes|no\">", "returns":"",
+	"syntax":"<cfcookie name = \"cookie name\" domain = \".domain\" expires = \"period\" httponly = \"yes|no\" path = \"URL\" secure = \"yes|no\" value = \"text\" encodevalue = \"yes|no\" preserveCase = \"yes|no\">",
 	"related":[],
-	"description":" Defines web browser cookie variables, including expiration and\n security options.",
+	"description":"Defines web browser cookie variables, including expiration and\n security options.",
 	"params": [
 		{"name":"name","description":"Name of cookie variable. CFML converts cookie names\n to all-uppercase. Cookie names set using this tag can\n include any printable ASCII characters except commas,\n semicolons or white space characters.","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"Value to assign to cookie variable. Must be a string or\n variable that can be stored as a string.","required":false,"default":"","type":"string","values":[]},

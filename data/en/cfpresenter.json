@@ -2,7 +2,6 @@
 	"name": "cfpresenter",
 	"type": "tag",
 	"syntax": "<cfpresenter name=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Describes a presenter in a slide presentation. A slide presentation can have multiple presenters.\n The presenters must be referenced from the slides defined by the cfpresentationslide tag.",
 	"params": [

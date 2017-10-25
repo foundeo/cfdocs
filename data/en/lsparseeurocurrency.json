@@ -1,10 +1,10 @@
 {
-	"name":"LSParseEuroCurrency",
+	"name":"lsParseEuroCurrency",
 	"type":"function",
-	"syntax":"LSParseEuroCurrency(currency_string)",
+	"syntax":"lsParseEuroCurrency(currency_string)",
 	"returns":"numeric",
 	"related":[],
-	"description":" Formats a locale-specific currency string as a number.\n Attempts conversion through each of the default currency\n formats (none, local, international). Ensures correct\n handling of euro currency for Euro zone countries.",
+	"description":"Formats a locale-specific currency string as a number. Attempts conversion through each of the default currency formats (none, local, international). Ensures correct handling of euro currency for Euro zone countries.",
 	"params": [
 		{"name":"currency_string","description":"","required":true,"default":"","type":"string","values":[]}
 

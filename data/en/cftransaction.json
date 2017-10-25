@@ -3,9 +3,8 @@
 	"type":"tag",
 	"syntax":"<cftransaction>",
 	"script": "transaction { }",
-	"returns":"",
 	"related":["cftry", "cfcatch"],
-	"description":" Instructs the database management system to treat multiple\n database operations as a single transaction. Provides database\n commit and rollback processing.",
+	"description":"Instructs the database management system to treat multiple\n database operations as a single transaction. Provides database\n commit and rollback processing.",
 	"params": [
 		{"name":"action","description":"`begin`: the start of the block of code to execute\n`commit`: commits a pending transaction\n`rollback`: rolls back a pending transaction\n`setsavepoint`: Marks a place within the transaction as a savepoint.","required":false,"default":"begin","type":"string","values":["begin","commit","rollback","setsavepoint"]},
 		{"name":"isolation","description":"ODBC lock type.","required":false,"default":"","type":"string","values":["read_uncommitted","read_committed","repeatable_read","serializable"]},

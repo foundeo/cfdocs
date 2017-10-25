@@ -1,9 +1,9 @@
 {
-	"name":"URLEncodedFormat",
+	"name":"urlEncodedFormat",
 	"type":"function",
-	"syntax":"URLEncodedFormat(String [, charset])",
+	"syntax":"urlEncodedFormat(String [, charset])",
 	"returns":"string",
-	"related":["EncodeForURL"],
+	"related":["encodeForURL"],
 	"description":"Generates a URL-encoded string. For example, it replaces spaces\n with %20, and non-alphanumeric characters with equivalent\n hexadecimal escape sequences. Passes arbitrary strings within a\n URL.",
 	"discouraged":"The continued use of this function is discouraged. It is recommended that you use EncodeForURL for all new applications.",
 	"params": [

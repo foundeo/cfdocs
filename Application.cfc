@@ -90,6 +90,7 @@
 			<cfset arguments.content = Replace(arguments.content, "#Chr(10)#", "<br />", "ALL")>
 		</cfif>
 		<!--- replace backticks with code tag block --->
+		<cfset arguments.content = replace(arguments.content, "&##x60;", "`", "ALL")>
 		<cfset arguments.content = ReReplace(arguments.content, "`([^`]+)`", "<code>\1</code>", "ALL")>
 		<cfreturn arguments.content>
 	</cffunction>

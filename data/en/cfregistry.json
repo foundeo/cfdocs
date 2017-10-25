@@ -2,7 +2,6 @@
 	"name": "cfregistry",
 	"type": "tag",
 	"syntax": "<cfregistry action=\"getAll\">",
-	"returns": "",
 	"related": [],
 	"description": "Reads, writes, and deletes keys and values in the system registry.\n Provides persistent storage of client variables.\n This tag is deprecated for the UNIX platform.\n Note: For this tag to execute, it must be enabled in the ColdFusion MX\n Administrator.",
 	"params": [

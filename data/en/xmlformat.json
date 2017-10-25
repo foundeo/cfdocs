@@ -1,15 +1,14 @@
 {
-	"name":"XMLFormat",
+	"name":"xmlFormat",
 	"type":"function",
-	"syntax":"XMLFormat(String [, escapeChars])",
+	"syntax":"xmlFormat(String [, escapeChars])",
 	"returns":"string",
 	"related":["encodeForXML"],
 	"description":"Escapes XML special characters in a string, so that the string is safe to use with XML.",
-	"discouraged":"Adobe recommends using encodeForXML instead of XMLFormat.",
+	"discouraged":"Adobe recommends using encodeForXML instead of xmlFormat.",
 	"params": [
 		{"name":"String","description":"The string to escape","required":true,"default":"","type":"string","values":[]},
 		{"name":"escapeChars","description":"When true escapes restricted characters according to the W3C XML standard.","required":false,"default":"","type":"boolean","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlformat.html"},
@@ -22,9 +21,9 @@
 	],
 	"examples": [
 		{
-			"title":"Basic XMLFormat() usage",
-			"description":"In this example we demonstrate passing the invalid characters < and & into the XMLFormat() function to make them XML safe.",
-			"code":"writeOutput( XMLFormat( '<node>Good &amp; Juicy</node>') );",
+			"title":"Basic xmlFormat() usage",
+			"description":"In this example we demonstrate passing the invalid characters < and & into the xmlFormat() function to make them XML safe.",
+			"code":"writeOutput( xmlFormat( '<node>Good &amp; Juicy</node>') );",
 			"result":"&lt;node&gt;Good &amp;amp; Juicy&lt;/node&gt;",
 			"runnable":true
 		}

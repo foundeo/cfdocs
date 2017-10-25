@@ -2,9 +2,8 @@
 	"name":"cfinvoke",
 	"type":"tag",
 	"syntax":"<cfinvoke method=\"\">",
-	"returns":"",
 	"related":["cfinvokeargument","createObject","cfobject"],
-	"description":" Does either of the following:\n\n * Invokes a component method from within a CFML page or\n component.\n * Invokes a web service.\n Different attribute combonations make some attributes required\n at sometimes and not at others.",
+	"description":"Does either of the following:\n\n * Invokes a component method from within a CFML page or\n component.\n * Invokes a web service.\n Different attribute combonations make some attributes required\n at sometimes and not at others.",
 	"params": [
 		{"name":"component","description":"String or component object; a reference to a component, or\n component to instantiate.","required":false,"default":"","type":"string","values":[]},
 		{"name":"method","description":"Name of a method. For a web service, the name of an\n operation.","required":true,"default":"","type":"string","values":[]},

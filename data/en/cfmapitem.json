@@ -2,9 +2,9 @@
 	"name": "cfmapitem",
 	"type": "tag",
 	"syntax": "<cfmapitem>",
-	"returns": "",
 	"related": [],
 	"description": "This tag creates markers on the map.",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfmap/index.html",
 	"params": [
 		{
 			"name": "longitude",

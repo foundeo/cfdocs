@@ -2,7 +2,6 @@
 	"name": "cfsprydataset",
 	"type": "tag",
 	"syntax": "<cfsprydataset bind=\"\" name=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Creates a Spry data set; can use bind parameters to get data from ColdFusion AJAX controls \n to populate the data set.",
 	"params": [

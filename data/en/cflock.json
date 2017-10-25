@@ -3,9 +3,8 @@
 	"type":"tag",
 	"syntax":"<cflock name=\"lockName\" timeout=\"3\">",
 	"script":"lock name=\"lockName\" timeout=\"3\" { }",
-	"returns":"",
 	"related":[],
-	"description":" Ensures the integrity of shared data. Instantiates the\n following kinds of locks:\n\n * Exclusive allows single-thread access to the CFML constructs\n * Read-only allows multiple requests to access CFML constructs",
+	"description":"Ensures the integrity of shared data. Instantiates the\n following kinds of locks:\n\n * Exclusive allows single-thread access to the CFML constructs\n * Read-only allows multiple requests to access CFML constructs",
 	"params": [
 		{"name":"timeout","description":"Maximum length of time, in seconds, to wait to obtain a\n lock. If lock is obtained, tag execution continues.\n Otherwise, behavior depends on throwOnTimeout attribute\n value.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"scope","description":"Lock scope. Mutually exclusive with the name attribute.\n Lock name. Only one request in the specified scope can\n execute the code within this tag (or within any other\n cflock tag with the same lock scope scope) at a time.","required":false,"default":"","type":"string","values":["Application","request","Server","Session"]},

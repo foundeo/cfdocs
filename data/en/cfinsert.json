@@ -2,9 +2,8 @@
 	"name":"cfinsert",
 	"type":"tag",
 	"syntax":"<cfinsert datasource=\"\" tablename=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Inserts records in data sources from data in a CFML form\n or form Scope.",
+	"description":"Inserts records in data sources from data in a CFML form\n or form Scope.",
 	"params": [
 		{"name":"datasource","description":"Data source; contains table.","required":true,"default":"","type":"string","values":[]},
 		{"name":"tablename","description":"Table in which to insert form fields.\n\n ORACLE drivers: must be uppercase.\n Sybase driver: case-sensitive. Must be the same case used\n when table was created","required":true,"default":"","type":"string","values":[]},

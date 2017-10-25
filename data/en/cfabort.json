@@ -2,9 +2,8 @@
 	"name":"cfabort",
 	"type":"tag",
 	"syntax":"<cfabort>",
-	"returns":"",
 	"related":[],
-	"description":" Stops the processing of a CFML page at the tag location.\n CFML returns everything that was processed before the\n tag. The tag is often used with conditional logic to stop\n processing a page when a condition occurs.",
+	"description":"Stops the processing of a CFML page at the tag location.\n CFML returns everything that was processed before the\n tag. The tag is often used with conditional logic to stop\n processing a page when a condition occurs.",
 	"params": [
 		{"name":"showerror","description":"Error to display, in a standard CFML error page,\n when tag executes","required":false,"default":"","type":"string","values":[]},
 		{"name":"attributecollection","description":"You can specify this tag's attributes in an attributeCollection whose value is a \n structure. Specify the structure name in the attributeCollection and use the tag‚ \n attribute names as structure keys.","required":false,"default":"","type":"string","values":[]}

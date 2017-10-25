@@ -3,29 +3,25 @@
 	"type":"function",
 	"syntax":"directoryRename(path, newPath)",
 	"returns":"void",
-	"related":[],
+	"related":["fileMove","directoryCreate","directoryDelete"],
 	"description":" Renames given directory",
 	"params": [
 		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"newPath","description":"","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DirectoryRename.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/directoryrename.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/directoryrename"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset renameDirectory = \"someDirPath\" /> \r\n <cfset rename = \"newName\" /> \r\n <cfset directoryRename(renameDirectory,newName)>  ",
+			"code": "<cfset renameDirectory = \"someDirPath\" />\r\n<cfset rename = \"newName\" />\r\n<cfset directoryRename(renameDirectory,newName)>",
 			"result": "",
-            "runnable":false
+           		"runnable":false
 		}
 	]
-
 }

@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"dayOfWeekAsString(day_of_week)",
 	"returns":"string",
-	"related":[],
+	"related":["dayOfWeekShortAsString"],
 	"description":" Determines the day of the week as a string from 1-7",
 	"params": [
-		{"name":"day_of_week","description":"","required":true,"default":"","type":"numeric","values":[]}
-
+		{"name":"day_of_week","description":"Only values from 1 to 7 are valid.\nWeek starting with 1 for Sunday and ends with 7 for Saturday.","required":true,"default":"","type":"numeric","values":[1,2,3,4,5,6,7]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DayOfWeekAsString.html"},
@@ -15,9 +14,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/dayofweekasstring"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dayofweekasstring"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Get Sunday",
@@ -26,5 +23,4 @@
 			"result":"Sunday"
 		}
 	]
-
 }

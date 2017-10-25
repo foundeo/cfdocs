@@ -2,9 +2,9 @@
 	"name": "cfmenu",
 	"type": "tag",
 	"syntax": "<cfmenu>",
-	"returns": "",
 	"related": [],
 	"description": "Creates a menu or tool bar (a horizontally arranged menu). Any menu item can be the top \n level of a submenu.",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfmenu/index.html",
 	"params": [
 		{
 			"name": "bgcolor",

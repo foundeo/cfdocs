@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"structCopy(structure)",
 	"returns":"struct",
-	"related":[],
+	"related":["duplicate"],
 	"description":" Copies a structure. Copies top-level keys, values, and arrays\n in the structure by value; copies nested structures by\n reference.",
 	"params": [
 		{"name":"structure","description":"Structure to copy","required":true,"default":"","type":"struct","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structcopy.html"},
@@ -15,8 +14,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structcopy"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structcopy"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": [{
+		"title":"Copy a structure and change it. Original structure stays unchanged",
+		"description":"",
+		"code":"myStruct = {\r\n    'a': 1,\r\n    'b': 2,\r\n    'c': 3\r\n};\r\nmyNewStruct = structCopy(myStruct);\r\nmyNewStruct.b = 5;\r\nmyNewStruct['d'] = 4;\r\nstructDelete(myNewStruct,'c');\r\nwriteOutput(structKeyList(myStruct)&' → '&structKeyList(myNewStruct));",
+		"result":"b,a,c → b,a,d",
+		"runnable":true
+	}]
 }

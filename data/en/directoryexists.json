@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"directoryExists(absolute_path)",
 	"returns":"boolean",
-	"related":[],
+	"related":["directoryCreate","fileExists"],
 	"description":" Determines whether a directory exists.",
 	"params": [
 		{"name":"absolute_path","description":"","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DirectoryExists.html"},
@@ -15,8 +14,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/directoryexists"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/directoryexists"}
 	},
-	"links": [
-
+	"links": [],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "Checking if a directory called 'icons' exists and then creating the directory if it does not exist.",
+			"code": "if (!directoryExists(expandPath('/assets/img/icons'))) {\n\tdirectoryCreate('assets/img/icons');\n}",
+			"result": "The directory 'icons' will be created under the img folder."
+		}
 	]
-
 }

@@ -2,9 +2,8 @@
 	"name":"cfmodule",
 	"type":"tag",
 	"syntax":"<cfmodule>",
-	"returns":"",
 	"related":[],
-	"description":" Invokes a custom tag for use in CFML application pages.\n This tag processes custom tag name conflicts.",
+	"description":"Invokes a custom tag for use in CFML application pages.\n This tag processes custom tag name conflicts.",
 	"params": [
 		{"name":"template","description":"Mutually exclusive with the name attribute. A path to the\n page that implements the tag.\n\n Relative path: expanded from the current page\n Absolute path: expanded using CFML mapping\n A physical path is not valid.","required":false,"default":"","type":"string","values":[]},
 		{"name":"name","description":"Mutually exclusive with the template attribute. A custom\n tag name, in the form \"Name.Name.Name...\" Identifies\n subdirectory, under the CFML tag root directory,\n that contains custom tag page. For example (Windows format):\n\n &lt;cfmodule name = \"superduper.Forums40.GetUserOptions\"&gt;\n\n This identifies the page GetUserOptions.cfm in the\n directory CustomTags\\superduper\\Forums40 under the\n CFML root directory.","required":false,"default":"","type":"string","values":[]},

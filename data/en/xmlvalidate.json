@@ -1,7 +1,7 @@
 {
-	"name":"XMLValidate",
+	"name":"xmlValidate",
 	"type":"function",
-	"syntax":"XMLValidate(xmlDoc [, validator])",
+	"syntax":"xmlValidate(xmlDoc [, validator])",
 	"returns":"struct",
 	"related":["isxml"],
 	"description":"Uses a Document Type Definition (DTD) or XML Schema to validate an XML text document or an XML document object. Returns keys `status` (boolean), `errors` (array), `fatalerrors` (array) and `warnings` (array)",
@@ -22,8 +22,8 @@
 	"examples": [
 		{
 			"title":"Validate against an XML Schema",
-			"description": "Validates that note.xml is valid according to the scheama note.xsd",
-			"code": "XMLValidate(\"https://www.w3schools.com/xml/note.xml\", \"https://www.w3schools.com/xml/note.xsd\").status",
+			"description": "Validates that note.xml is valid according to the schema note.xsd",
+			"code": "xmlValidate(\"https://www.w3schools.com/xml/note.xml\", \"https://www.w3schools.com/xml/note.xsd\").status",
 			"result":"true"
 		}
 

@@ -2,9 +2,8 @@
 	"name":"cfldap",
 	"type":"tag",
 	"syntax":"<cfldap server=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Provides an interface to a Lightweight Directory Access Protocol\n (LDAP) directory server, such as the Netscape Directory Server.",
+	"description":"Provides an interface to a Lightweight Directory Access Protocol\n (LDAP) directory server, such as the Netscape Directory Server.",
 	"params": [
 		{"name":"server","description":"Host name or IP address of LDAP server.","required":true,"default":"","type":"string","values":[]},
 		{"name":"port","description":"Port of the LDAP server (default 389).","required":false,"default":389,"type":"numeric","values":[]},

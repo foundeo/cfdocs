@@ -3,9 +3,8 @@
 	"type":"tag",
 	"syntax":"<cfset x = 1>",
 	"script":"x = 1;",
-	"returns":"",
 	"related":[],
-	"description":" Sets a value in CFML. Used to create a variable, if it\n does not exist, and assign it a value. Also used to call\n functions.",
+	"description":"Sets a value in CFML. Used to create a variable, if it\n does not exist, and assign it a value. Also used to call\n functions.",
 	"params": [
 	],
 	"engines": {

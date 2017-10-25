@@ -2,9 +2,8 @@
 	"name":"cfchartseries",
 	"type":"tag",
 	"syntax":"<cfchartseries type=\"bar\">",
-	"returns":"",
 	"related":[],
-	"description":" Used with the cfchart tag. This tag defines the style in which\n chart data displays: bar, line, pie, and so on.",
+	"description":"Used with the cfchart tag. This tag defines the style in which\n chart data displays: bar, line, pie, and so on.",
 	"params": [
 		{"name":"type","description":"Sets the chart display style","required":true,"default":"","type":"string","values":["bar","line","pyramid","area","horizontalbar","cone","curve","cylinder","step","scatter","pie"]},
 		{"name":"query","description":"Name of CFML query from which to get data.","required":false,"default":"","type":"query","values":[]},

@@ -2,9 +2,8 @@
 	"name":"cftable",
 	"type":"tag",
 	"syntax":"<cftable query=\"\">",
-	"returns":"",
 	"related":["cfcol"],
-	"description":" Builds a table in a CFML page. This tag renders data as preformatted text, or, with the HTMLTable attribute, in an HTML table. If you do not want to write HTML table tag code, or if your data can be presented as preformatted text, use this tag. Preformatted text (defined in HTML with the &lt;pre&gt; and &lt;/pre&gt; tags) displays text in a fixed-width font. It displays white space and line breaks exactly as they are written within the pre tags. For more information, see an HTML reference guide.\n\n To define table column and row characteristics, use the cfcol tag within this tag.",
+	"description":"Builds a table in a CFML page. This tag renders data as preformatted text, or, with the HTMLTable attribute, in an HTML table. If you do not want to write HTML table tag code, or if your data can be presented as preformatted text, use this tag. Preformatted text (defined in HTML with the &lt;pre&gt; and &lt;/pre&gt; tags) displays text in a fixed-width font. It displays white space and line breaks exactly as they are written within the pre tags. For more information, see an HTML reference guide.\n\n To define table column and row characteristics, use the cfcol tag within this tag.",
 	"discouraged":"The use of tags that generate client side UI code is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cftable/index.html ",
 	"params": [
 		{"name":"query","description":"Name of cfquery from which to draw data.","required":true,"default":"","type":"query","values":[]},

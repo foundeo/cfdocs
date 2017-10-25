@@ -2,9 +2,9 @@
 	"name": "cfgridupdate",
 	"type": "tag",
 	"syntax": "<cfgridupdate grid=\"\" datasource=\"\" tablename=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Used within a cfgrid tag. Updates data sources directly from\n edited grid data. This tag provides a direct interface with\n your data source.\n\n This tag applies delete row actions first, then insert row\n actions, then update row actions. If it encounters an error,\n it stops processing rows.",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfgrid/index.html",
 	"params": [
 		{
 			"name": "grid",

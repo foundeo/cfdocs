@@ -3,8 +3,8 @@
 	"type": "function",
 	"syntax": "collectionEvery(collection, closure [, parallel] [, maxThreads])",
 	"returns": "boolean",
-	"related": [],
-	"description": "",
+	"related": ["collectionEach","collectionFilter","collectionMap","collectionReduce","collectionSome"],
+	"description": "Checks if every item passes the truth test of an expression given in the closure",
 	"params": [
 		{"name": "collection", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
@@ -14,6 +14,18 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/collectionevery.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Check if every item is of type mail",
+		"description":"When only mail items are provided",
+		"code":"coll = [{\r\n    id: 0,\r\n    type: 'mail'\r\n},{\r\n    id: 1,\r\n    type: 'mail'\r\n}];\r\nonlyMails = collectionEvery(coll,function(item) {\r\n    return item.type is 'mail';\r\n});\r\nwriteOutput(onlyMails);",
+		"result":true,
+		"runnable":true
+	},{
+		"title":"Check if every item is of type mail",
+		"description":"When comment items are provided besides mail items as well",
+		"code":"coll = [{\r\n    id: 0,\r\n    type: 'mail'\r\n},{\r\n    id: 1,\r\n    type: 'mail'\r\n},{\r\n    id: 2,\r\n    type: 'comment'\r\n}];\r\nonlyMails = collectionEvery(coll,function(item) {\r\n    return item.type is 'mail';\r\n});\r\nwriteOutput(onlyMails);",
+		"result":false,
+		"runnable":true
+	}],
 	"links": []
 }

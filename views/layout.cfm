@@ -18,80 +18,79 @@
 	<![endif]-->
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
-	<cfset listCategories = listSort(StructKeyList(application.categories),"text")>
-	<cfset listGuides = listSort(StructKeyList(application.guides),"text")>
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="/"><span class="text-primary">CFDocs</span></a>
-		</div>
-		<div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
-				<cfoutput>
-				<li class="dropdown">
-					<a href="#linkTo('tags')#" class="dropdown-toggle" data-toggle="dropdown">Tags <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#linkTo('tags')#">All Tags</a></li>
-						<li class="divider"></li>
-				<cfloop list="#listCategories#" index="cat">
-					<cfif cat contains "-tags">
-						<li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li>
-					</cfif>
-				</cfloop>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#linkTo('functions')#" class="dropdown-toggle" data-toggle="dropdown">Functions <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#linkTo('functions')#">All Functions</a></li>
-						<li class="divider"></li>
-				<cfloop list="#listCategories#" index="cat">
-					<cfif cat contains "-functions">
-						<li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li>
-					</cfif>
-				</cfloop>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="##" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#linkTo("application-cfc")#">Application.cfc</a></li>
-					<cfloop list="#listGuides#" index="guide">
-						<li><a href="#linkTo(guide)#">#application.guides[guide]#</a></li>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<cfset listCategories = listSort(StructKeyList(application.categories),"text")>
+		<cfset listGuides = listSort(StructKeyList(application.guides),"text")>
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/"><span class="text-primary">CFDocs</span></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<cfoutput>
+					<li class="dropdown">
+						<a href="#linkTo('tags')#" class="dropdown-toggle" data-toggle="dropdown">Tags <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#linkTo('tags')#">All Tags</a></li>
+							<li class="divider"></li>
+					<cfloop list="#listCategories#" index="cat">
+						<cfif cat contains "-tags">
+							<li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li>
+						</cfif>
 					</cfloop>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="##" class="dropdown-toggle" data-toggle="dropdown">Contribute <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="https://github.com/foundeo/cfdocs/blob/master/CONTRIBUTING.md">How to</a></li>
-						<!---<li><a href="/reports/todo.cfm">Missing Functions</a></li>
-						<li><a href="/reports/missing-descriptions.cfm">Missing Descriptions</a></li>
-						<li><a href="/reports/missing-examples.cfm">Missing Examples</a></li>
-						<li><a href="/reports/missing-related.cfm">Missing Related Links</a></li>--->
-						<li><a href="https://github.com/foundeo/cfdocs/issues">More...</a></li>
-					</ul>
-				</li>
-			</cfoutput>
-			</ul>
-			<form class="navbar-form navbar-left hidden-sm" id="search">
-				<div class="form-group">
-					<input type="text" placeholder="Tag or Function..." id="lookup-box" class="form-control">
-				</div>
-				<button type="submit" class="btn btn-primary">Go</button>
-				
-			</form>
-			<ul class="nav navbar-nav navbar-right hidden-sm">
-				<li><a href="https://foundeo.com/" id="foundeo"><img src="/assets/img/foundeo.png"></a></li>
-			</ul>
-		</div><!--/.navbar-collapse -->
-	</div>
-</nav>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#linkTo('functions')#" class="dropdown-toggle" data-toggle="dropdown">Functions <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#linkTo('functions')#">All Functions</a></li>
+							<li class="divider"></li>
+					<cfloop list="#listCategories#" index="cat">
+						<cfif cat contains "-functions">
+							<li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li>
+						</cfif>
+					</cfloop>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="##" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#linkTo("application-cfc")#">Application.cfc</a></li>
+						<cfloop list="#listGuides#" index="guide">
+							<li><a href="#linkTo(guide)#">#application.guides[guide]#</a></li>
+						</cfloop>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="##" class="dropdown-toggle" data-toggle="dropdown">Contribute <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="https://github.com/foundeo/cfdocs/blob/master/CONTRIBUTING.md">How to</a></li>
+							<!---<li><a href="/reports/todo.cfm">Missing Functions</a></li>
+							<li><a href="/reports/missing-descriptions.cfm">Missing Descriptions</a></li>
+							<li><a href="/reports/missing-examples.cfm">Missing Examples</a></li>
+							<li><a href="/reports/missing-related.cfm">Missing Related Links</a></li>--->
+							<li><a href="https://github.com/foundeo/cfdocs/issues">More...</a></li>
+						</ul>
+					</li>
+				</cfoutput>
+				</ul>
+				<form class="navbar-form navbar-left hidden-sm" id="search">
+					<div class="form-group">
+						<input type="text" placeholder="Tag or Function..." id="lookup-box" class="form-control">
+					</div>
+					<button type="submit" class="btn btn-primary">Go</button>
+				</form>
+				<ul class="nav navbar-nav navbar-right hidden-sm">
+					<li><a href="https://foundeo.com/" id="foundeo"><img src="/assets/img/foundeo.png"></a></li>
+				</ul>
+			</div><!--/.navbar-collapse -->
+		</div>
+	</nav>
 
 	<cfoutput>#request.content#</cfoutput>
 
