@@ -1,7 +1,7 @@
 {
 	"name":"cacheGetMetadata",
 	"type":"function",
-	"syntax":"cacheGetMetadata(id)",
+	"syntax":"cacheGetMetadata(id [, template, region])",
 	"returns":"struct",
 	"related":[],
 	"description":" Gets the metadata values for a cached object.",
