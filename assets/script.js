@@ -1,4 +1,11 @@
 $(document).ready(function() {
+	//github api requests
+	if(!!$('.issuecount').length) {
+		docname = $('ol.container').data('doc');
+		$.getJSON('https://api.github.com/search/issues?q=is:open+repo:foundeo/cfdocs+' + docname,function(res) {
+			$('.issuecount').html(res.total_count);
+		});
+	}
 
  var tags_fns = new Bloodhound({
     datumTokenizer: function(d) {
@@ -21,14 +28,13 @@ $(document).ready(function() {
         }
   });
   $('#lookup-box').typeahead({
-      hint: true,
-      highlight: true,
-      minLength: 1
-  },
-  {
-  		name: 'tags-fns',
-  		source: tags_fns,
-      limit: 10
+      	hint: true,
+      	highlight: true,
+      	minLength: 1
+  },{
+	name: 'tags-fns',
+  	source: tags_fns,
+      	limit: 10
   });
   $('.tt-hint').addClass('form-control');
   $('#search').submit(submitSearch);
@@ -39,8 +45,7 @@ $(document).ready(function() {
       var name = $(this).attr('data-name');
       var index = $(this).attr('data-index');
       $('#example-modal-content').html('<iframe width="100%" height="450" border="0" src="/try/' + name + '/' + index + '">');
-      $('.example-modal').modal();
-      
+      $('.example-modal').modal();      
   });
 
   if ($('.prettyprint').length != 0 && typeof(prettyPrint) == "function") {
@@ -74,13 +79,3 @@ _gaq.push(['_trackPageview']);
   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
-
-//github api requests
-$(document).ready( function() {
-	if(!!$('.issuecount').length) {
-		docname = $('ol.container').data('doc');
-		$.getJSON('https://api.github.com/search/issues?q=is:open+repo:foundeo/cfdocs+' + docname,function(res) {
-			$('.issuecount').html(res.total_count);
-		});
-	}
-});
