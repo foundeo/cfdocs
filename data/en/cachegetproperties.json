@@ -6,7 +6,7 @@
 	"related":["cacheSetProperties"],
 	"description":" Gets the cache properties for the object cache, the page cache, or both. The information is application-specific.",
 	"params": [
-		{"name":"type","description":"Properties to get information for\n\n"" or not set - information to all default caches\nobject - information to \"Default Object\" Cache\ntemplate - information to \"Default Template\" Cache\nquery - information to \"Default Query\" Cache\nresource - information to \"Default Resource\" Cache\n{cache name} - information to a specific cache","required":true,"default":"","type":"string","values":["object","template","resource","query"]}
+		{"name":"type","description":"Properties to get information for\n\n\"\" or not set - information to all default caches\nobject - information to \"Default Object\" Cache\ntemplate - information to \"Default Template\" Cache\nquery - information to \"Default Query\" Cache\nresource - information to \"Default Resource\" Cache\n{cache name} - information to a specific cache","required":true,"default":"","type":"string","values":["object","template","resource","query"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheGetProperties.html"},
