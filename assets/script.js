@@ -53,22 +53,17 @@ $(document).ready(function() {
   }
   if (window.innerWidth > 780) {
     $( window ).scroll(function(e) {
-      var top  = window.pageYOffset || document.documentElement.scrollTop;
-      if (top > 100) {
-        //show
-        $('#foundeo').addClass('foundeoAppear');
-      } else {
-        //hide
-        $('#foundeo').removeClass('foundeoAppear'); 
-      }
+      	var top  = window.pageYOffset || document.documentElement.scrollTop;
+	//show/hide
+	$('#foundeo')[(top > 100) ? 'addClass' : 'removeClass']('foundeoAppear');
     });
   }
 
 });
 //search submit
-function submitSearch() {
-  document.location = '/' + $('#lookup-box').val().toLowerCase();
-  return false;
+function submitSearch(e) {
+	e.preventDefault();
+  	document.location = '/' + $('#lookup-box').val().toLowerCase();
 }
 //google analytics
 var _gaq = _gaq || [];
