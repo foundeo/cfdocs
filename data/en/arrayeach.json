@@ -1,16 +1,16 @@
 {
 	"name":"arrayEach",
 	"type":"function",
-	"syntax":"arrayEach(array array, function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
-	"member":"someArray.each(function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
+	"syntax":"arrayEach(array, function(item, [index, [array]]), [parallel], [maxThreads])",
+	"member":"someArray.each(function(item, [index, [array]]), [parallel], [maxThreads])",
 	"returns":"void",
 	"related":["arrayMap", "arrayReduce"],
 	"description":"Used to iterate over an array and run the function closure for each item in the array.",
-	"params": [ 
-		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
-		{"name":"closure","description":"function / closure with the signature: any function (any item, [numeric index], [array array]) - will be executed once per item in the array","required":true,"default":"","type":"Closure","values":[]},
-		{"name":"parallel","description":"Railo only option, true or false if the items can be executed in parallel","required":false,"default":"false","type":"Boolean","values":[true, false]},
-		{"name":"maxThreads","description":"Railo only option, the number of threads to use when parallel = true","required":false,"default":"20","type":"Boolean","values":[]}
+	"params": [
+		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
+		{"name":"closure","description":"function / closure with the signature: any function (any item, [numeric index], [array array]) - will be executed once per item in the array","required":true,"default":"","type":"function","values":[]},
+		{"name":"parallel","description":"Railo only option, true or false if the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[true, false]},
+		{"name":"maxThreads","description":"Railo only option, the number of threads to use when parallel = true","required":false,"default":"20","type":"boolean","values":[]}
 
 	],
 	"engines": {
@@ -42,5 +42,5 @@
 			"result": "1:a;2:b;3:c;"
 		}
 	]
-	
+
 }

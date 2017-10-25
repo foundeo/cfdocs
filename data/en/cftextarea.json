@@ -2,7 +2,6 @@
 	"name": "cftextarea",
 	"type": "tag",
 	"syntax": "<cftextarea name=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Puts a multiline text entry box in a cfform tag and\n controls its display characteristics.",
 	"params": [
@@ -11,7 +10,7 @@
 			"description": "Name of the cftextinput control.",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +18,7 @@
 			"description": "Label to put beside the control on a form.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +26,7 @@
 			"description": "In HTML or XML format forms, ColdFusion passes the\n style attribute to the browser or XML.\n In Flash format forms, must be a style specification in\n CSS format, with the same syntax and contents as used\n in Macromedia Flex for the corresponding Flash element.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -51,7 +50,7 @@
 			"description": "The type or types of validation to do. Available validation\n types and algorithms depend on the format. For details,\n see the Usage section of the cfinput tag reference.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -59,7 +58,7 @@
 			"description": "How to do the validation. For Flash format forms, onSubmit\n and onBlur are identical; validation is done on submit.\n For multiple values, use a comma-delimited list.\n For details, see the Usage section of the cfinput tag\n reference.\n Default: onSubmit",
 			"required": false,
 			"default": "onSubmit",
-			"type": "String",
+			"type": "string",
 			"values": ["onSubmit", "onServer", "onBlur"]
 		},
 		{
@@ -67,7 +66,7 @@
 			"description": "Message text to display if validation fails.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -75,7 +74,7 @@
 			"description": "Minimum and maximum numeric allowed values. ColdFusion\n uses this attribute only if you specify range in the\n validate attribute.\n If you specify a single number or a single number a\n followed by a comma, it is treated as a minimum, with no\n maximum. If you specify a comma followed by a number,\n the maximum is set to the specified number, with no\n minimum.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -83,7 +82,7 @@
 			"description": "The maximum length of text that can be entered.\n ColdFusion uses this attribute only if you specify\n maxlength in the validate attribute.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -91,7 +90,7 @@
 			"description": "JavaScript regular expression pattern to validate input.\n Omit leading and trailing slashes. ColdFusion uses this\n attribute only if you specify regex in the validate attribute.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -99,7 +98,7 @@
 			"description": "Custom JavaScript function to validate user input. The\n JavaScript DOM form object, input object, and input\n object value are passed to routine, which should return\n True if validation succeeds, False otherwise. If you specify\n this attribute, ColdFusion ignores the validate attribute.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -107,7 +106,7 @@
 			"description": "Custom JavaScript function to execute if validation fails.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -123,7 +122,7 @@
 			"description": "Initial value to display in text control. You can specify an\n initial value as an attribute or in the tag body, but not in\n both places. If you specify the value as an attribute, you\n must put the closing cftextarea tag immediately after the\n opening cftextarea tag, with no spaces or line feeds between,\n or place a closing slash at the end of the opening cftextarea\n tag. For example:\n <cftextarea name=\"description\" value=\"Enter a description.\" />",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -131,7 +130,7 @@
 			"description": "Flash only: A Flex bind expression that populates the field with\n information from other form fields.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -139,7 +138,7 @@
 			"description": "JavaScript (HTML/XML) or ActionScript (Flash) to run\n when the user releases a keyboard key in the control.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -147,7 +146,7 @@
 			"description": "JavaScript (HTML/XML) or ActionScript (Flash)\n ActionScript to run when the user presses a keyboard\n key in the control.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -155,7 +154,7 @@
 			"description": "JavaScript (HTML/XML) or ActionScript (Flash) to run\n when the user presses a mouse button in the control.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -163,7 +162,7 @@
 			"description": "JavaScript (HTML/XML) or ActionScript (Flash) to run\n when the user releases a mouse button in the control.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -171,7 +170,7 @@
 			"description": "JavaScript (HTML/XML) or ActionScript (Flash) to run\n when the control changes due to user action.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -179,7 +178,7 @@
 			"description": "JavaScript (HTML/XML) to run when the user clicks the\n control. Not supported for Flash forms.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -203,7 +202,7 @@
 			"description": "Flash only: Text to display when the mouse pointer hovers\n over the control.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -211,7 +210,7 @@
 			"description": "Flash only: The height of the control, in pixels.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -219,7 +218,7 @@
 			"description": "Flash only: The width of the control, in pixels.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -227,7 +226,7 @@
 			"description": "Path to the directory that contains the rich text editor. The editor configuration files are at the top level of this directory.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -235,7 +234,7 @@
 			"description": "Specifies the HTML tag attribute whose value is set by the bind attribute. You can only specify attributes in the browser's HTML DOM tree, not ColdFusion-specific attributes.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -243,7 +242,7 @@
 			"description": "A Boolean value that specifies whether to execute the bind attribute expression when first loading the form.",
 			"required": false,
 			"default": false,
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -251,7 +250,7 @@
 			"description": "A comma separated list of the font names to display in the rich text editor Formats selector. The formats specify the HTML tags to apply to typed or selected text.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -259,7 +258,7 @@
 			"description": "A comma separated list of the font names to display in the rich text editor Font selector.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -267,7 +266,7 @@
 			"description": "A comma separated list of the font sizes to display in the rich text editor Size selector. List entries must have the format of numeric font size/descriptive text.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -275,7 +274,7 @@
 			"description": "The name of a JavaScript function to execute if evaluating a bind expression results in an error. The function must take two attributes: an HTTP status code and a message.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -283,7 +282,7 @@
 			"description": "A Boolean value specifying whether this control is a rich text editor with tool bars to control the text formatting.",
 			"required": false,
 			"default": false,
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -291,7 +290,7 @@
 			"description": "Specifies the skin to be used for the rich text editor. By default, the valid values are Default, silver, and office2003. \nYou can also create custom skins that you can then specify in this attribute.",
 			"required": false,
 			"default": "default",
-			"type": "String",
+			"type": "string",
 			"values": ["default", "silver", "office2003"]
 		},
 		{
@@ -299,7 +298,7 @@
 			"description": "* hard: wraps long lines, and sends the carriage return to the server.\n * off: does not wrap long lines.\n * physical: wraps long lines, and transmits the text at all wrap points.\n * soft: wraps long lines, but does not send the carriage return to the server.\n * virtual: wraps long lines, but does not send the carriage return to the server.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["hard", "off", "physical", "virtual", "soft"]
 		},
 		{
@@ -307,7 +306,7 @@
 			"description": "The URL of a page to display as a tool tip. \nThe page can include CFML and HTML to control the contents and format, and the tip can include images.\nIf you specify this attribute, an animated icon appears with the text \"Loading...\" while the tip is being loaded.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -315,7 +314,7 @@
 			"description": "The path of the file that defines the styles in the rich text editor Styles selector. \nRelative paths start at the directory that contains the fckeditor.html file, normally cf_webRoot/CFIDE/scripts/ajax/FCKeditor/editor.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -323,7 +322,7 @@
 			"description": "The pathof the file that defines the templates that are displayed when you click the rich text editor Templates icon.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -331,7 +330,7 @@
 			"description": "Specifies the rich text editor toolbar. By default, the valid values for this attribute are: Default, a complete set of controls, and Basic, a minimal configuration.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -339,7 +338,7 @@
 			"description": "A Boolean value that specifies whether the rich text editor toolbar expands and displays its controls only when the rich text editor has the focus.",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": []
 		},
 		{

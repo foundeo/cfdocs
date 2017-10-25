@@ -2,13 +2,13 @@
 	"name":"getToken",
 	"type":"function",
 	"syntax":"getToken(String, index [, delimiters])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Determines whether a token of the list in the delimiters\n parameter is present in a string.\n Returns the token found at position index of the string, as a\n string. If index is greater than the number of tokens in the\n string, returns an empty string.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"index","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":"","type":"String","values":[",","|","_",";",":"]}
+		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"index","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"delimiters","description":"","required":false,"default":"space, tab, or newline character; or their codes: 'chr(32)', 'chr(9)', 'chr(10)'","type":"string","values":[",","|","_",";",":"]}
 
 	],
 	"engines": {
@@ -19,7 +19,7 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",

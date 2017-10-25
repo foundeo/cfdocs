@@ -6,11 +6,11 @@
 	"related":[],
 	"description":" Adds a column or column data to an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"data","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"startrow","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"startcolumn","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"insert","description":"No Help Available","required":true,"default":"","type":"Boolean","values":[]},
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"data","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"startrow","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"startcolumn","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"insert","description":"No Help Available","required":true,"default":"","type":"boolean","values":[]},
 		{"name":"insert","description":"No Help Available","required":false,"default":"","type":"boolean","values":[true,false]}
 
 	],
@@ -25,8 +25,7 @@
 		{
 			"title":"Tag Example",
 			"description":"",
-			"code":"<cfscript>mySheet =   SpreadsheetNew( \"Test\" ); \r\n  writedump (\"#mySheet#\");   SpreadsheetAddColumn( mySheet,\"MySingleColumn\" ); // Add a row of data: a single value for the single column
-    mySingleColumnValue=\"As you can see, this sentence contains commas, which force the value to be split over 3 columns instead of one.\"; \r\n     SpreadsheetAddRow( mySheet,mySingleColumnValue ); \r\n writedump (\"#mySheet#\"); </cfscript>", 
+			"code":"<cfscript>\nmySheet = SpreadsheetNew( \"Test\" );\nwriteDump( mySheet );\nSpreadsheetAddColumn( mySheet, \"MySingleColumn\" ); // Add a row of data: a single value for the single column\nmySingleColumnValue = \"As you can see, this sentence contains commas, which force the value to be split over 3 columns instead of one.\";\nSpreadsheetAddRow( mySheet, mySingleColumnValue );\nwriteDump( mySheet );\n</cfscript>",
 			"result":"",
 			"runnable":true
 		}

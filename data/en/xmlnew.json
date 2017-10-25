@@ -1,10 +1,10 @@
 {
-	"name":"XMLNew",
+	"name":"xmlNew",
 	"type":"function",
-	"syntax":"XMLNew([casesensitive])",
-	"returns":"Object",
+	"syntax":"xmlNew([casesensitive])",
+	"returns":"xml",
 	"related":[],
-	"description":" Creates an XML document object.",
+	"description":"Creates an XML document object.",
 	"params": [
 		{"name":"casesensitive","description":"Maintains the case of document elements and attributes.\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]}
 

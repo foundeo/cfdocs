@@ -2,13 +2,12 @@
 	"name":"cfadmin",
 	"type":"tag",
 	"syntax":"<cfadmin>",
-	"returns":"",
 	"related":[],
 	"description":"Used internally by Lucee (and Railo) in the administrator to apply settings. This tag is considered undocumented / subject to change.",
 	"params": [
-		{"name":"action","description":"The administrative action to perform.","required":true,"default":"","type":"String","values":[]},
-		{"name":"type","description":"The admin context: `web` or `server`","required":true,"default":"","type":"String","values":["web","server"]},
-		{"name":"password","description":"The admin password.","required":true,"default":"","type":"String","values":[]}
+		{"name":"action","description":"The administrative action to perform.","required":true,"default":"","type":"string","values":[]},
+		{"name":"type","description":"The admin context: `web` or `server`","required":true,"default":"","type":"string","values":["web","server"]},
+		{"name":"password","description":"The admin password.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/"}
@@ -21,7 +20,7 @@
 		}
 	],
 	"examples": [
-		
+
 	]
 
 }

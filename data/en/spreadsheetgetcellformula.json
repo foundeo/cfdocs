@@ -2,13 +2,13 @@
 	"name":"spreadsheetGetCellFormula",
 	"type":"function",
 	"syntax":"spreadsheetGetCellFormula(spreadsheetObj, row, column)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets the formula for a for an Excel spreadsheet object cell, or all formulas for the object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"row","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"column","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"row","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"column","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

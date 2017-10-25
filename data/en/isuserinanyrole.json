@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether an authenticated user belongs to any role in a list of roles.",
 	"params": [
-		{"name":"roleList","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"roleList","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

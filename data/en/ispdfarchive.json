@@ -6,8 +6,8 @@
 	"related":["isPDFFile"],
 	"description":"Returns `true` if the pdf file at the specified `path` meets the specified `standard`.",
 	"params": [
-		{"name":"path","description":"Path to a PDF file.","required":true,"default":"","type":"String","values":[]},
-		{"name":"standard","description":"PDF Archiving Standard","required":true,"default":"","type":"String","values":["1b","2b","3b"]}
+		{"name":"path","description":"Path to a PDF file.","required":true,"default":"","type":"string","values":[]},
+		{"name":"standard","description":"PDF Archiving Standard","required":true,"default":"","type":"string","values":["1b","2b","3b"]}
 
 	],
 	"engines": {

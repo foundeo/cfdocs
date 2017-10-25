@@ -1,12 +1,12 @@
 {
 	"name":"queryAddRow",
 	"type":"function",
-	"syntax":"queryAddRow(query [, number])",
-	"returns":"Numeric",
+	"syntax":"queryAddRow(query [, number/row(s)])",
+	"returns":"numeric",
 	"related":[],
 	"description":" Adds a specified number of empty rows to a query.",
 	"params": [
-		{"name":"query","description":"","required":true,"default":"","type":"Query","values":[]},
+		{"name":"query","description":"","required":true,"default":"","type":"query","values":[]},
 		{"name":"number/row(s)","description":"As of CF10+ you can pass a Structure whose keys map to the query column names to insert a row of data; or an Array of those Structures to insert multiple rows at once.","required":false,"default":"","type":"Numeric / Array / Struct","values":[]}
 
 	],
@@ -33,8 +33,22 @@
 			"code":"news = queryNew(\"id,title\", \"integer,varchar\");\nqueryAddRow(news);\nquerySetCell(news, \"id\", \"1\");\nquerySetCell(news, \"title\", \"Dewey defeats Truman\");\nqueryAddRow(news);\nquerySetCell(news, \"id\", \"2\");\nquerySetCell(news, \"title\", \"Men walk on Moon\");\nwriteDump(news);",
 			"result":""
 
+		},
+		{
+			"title":"Builds a simple query using queryNew queryAddRow and querySetCell with rows number",
+			"description":"The example above could be simplified this way:",
+			"code":"news = queryNew(\"id,title\", \"integer,varchar\");\nqueryAddRow(news,2);\nquerySetCell(news, \"id\", \"1\",1);\nquerySetCell(news, \"title\", \"Dewey defeats Truman\",1);\nquerySetCell(news, \"id\", \"2\",2);\nquerySetCell(news, \"title\", \"Men walk on Moon\",2);\nwriteDump(news);",
+			"result":""
+
+		},
+		{
+			"title":"Builds a simple query using queryNew queryAddRow with multiple rows as an array",
+			"description":"The example above could be simplified even more this way:",
+			"code":"<cfscript>\r\nnews = queryNew(\"id,title\", \"integer,varchar\");\r\nqueryAddRow(news, [{\"id\"=1,\"title\"=\"Dewey defeats Truman\"},{\"id\"=2,\"title\"= \"Men walk on Moon\"}]);\r\nwriteDump(news);\r\n</cfscript>",
+			"result":"",
+			"runnable":true
 		}
-		
+
 	]
 
 }

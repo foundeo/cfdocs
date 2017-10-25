@@ -2,11 +2,11 @@
 	"name":"stripCR",
 	"type":"function",
 	"syntax":"stripCR(String)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Deletes return characters from a string.",
 	"params": [
-		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]}
+		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Removing carriage returns (cr) from a string",
+			"description": "",
+			"code": "x = 'A' & chr(13) & 'B' & chr(13); \r\n y = stripcr( x ); \r\n writeoutput( 'Original: ' & x & ' Length: #len(x)#<br>' ); \r\n writeoutput( 'Stripped: ' & y & ' Length: #len(y)#' );",
+			"result": ""
+		}
 	]
 
 }

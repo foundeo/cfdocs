@@ -1,4 +1,4 @@
-# CFDocs 
+# CFDocs
 
 CFDocs is a community maintained CFML reference tool available at [cfdocs.org](http://cfdocs.org). It features:
 * Hosting on Amazon CloudFront CDN for fast responses around the globe. Sponsored by [Foundeo Inc.](http://foundeo.com).
@@ -16,17 +16,18 @@ This makes the documentation super easy to edit and allows developers to run a l
 
 ## Running CFDocs locally for dev or pleasure
 
-The cfdocs.org site can run locally pretty easily, it doesn't need anything except CF 10+ or Lucee to run (no database or anything), it utilizes a .htaccess file for url rewriting, but you could still test things by hitting /doc.cfm?name=getsafehtml if you just want to drop it in a directory somewhere.
 
-### Running locally with CommandBox (EASIEST WAY)!
+### Running CFDocs Locally
 
-1. Go download [CommandBox](https://www.ortussolutions.com/products/commandbox) if you have not already.
-2. Download this repository and extract it to a folder, or clone it from this repository. If you are going to be making changes to the docs I would suggest you fork it, see Adam Tuttle's guide: [GitHub tip for your first pull request](http://fusiongrokker.com/post/github-tip-for-your-first-pull-request)
-3. Run `box recipe server-start.boxr` from Command Prompt or Terminal in the root directory.
+The cfdocs.org site can run locally very easily thanks to CommandBox.
+
+1. Go download [CommandBox](https://www.ortussolutions.com/products/commandbox) if you do not have it already.
+2. Download this repository and extract it to a folder, or clone it from this repository. If you are going to be making changes to the docs I would suggest you fork it, see Adam Tuttle's guide: [GitHub tip for your first pull request](https://adamtuttle.codes/your-first-github-pull-request/)
+3. Run `box server start` from Command Prompt or Terminal in the root directory.
 
 CommandBox will start an embedded CFML server on port 8411, and you can browse to [http://localhost:8411/](http://localhost:8411/) to view the docs.
 
-Note: To restart the server, don't use `server restart`, instead use `server stop` and then `recipe server-start.boxr` due to a [bug](https://ortussolutions.atlassian.net/browse/COMMANDBOX-245) in CommandBox the rewrite rules will not be added when the server restarts.
+If you don't want to go the commandbox route you can simply download it and unzip it to a web root and try it out (requires CF10+ or Lucee 4.5+), but you will probably spend more time trying to get it working than the 1-2 minutes it will take to download and learn how to use commandbox.
 
 ## How to contribute
 
@@ -52,46 +53,50 @@ CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. att
 
 We need help expanding existing tag and function documentation. Look through the reference pages till you find one needing more definitions or examples. Also see:
 
-* [List of Tags and Functions that do not have examples](http://cfdocs.org/reports/missing-examples.cfm)
+* [Missing Descriptions](http://cfdocs.org/reports/missing-descriptions.cfm)
+* [Missing Examples](http://cfdocs.org/reports/missing-examples.cfm)
+* [Missing Related Links](http://cfdocs.org/reports/missing-related.cfm)
 * [Missing Functions](http://cfdocs.org/reports/todo.cfm)
 
 ### JSON File Documentation
 
     {
-    	"name":"NameOfTagOrFunction",
-    	"type":"function|tag",
-    	"syntax":"Tag(arg)|<cftag attr=1>",
+        "name":"NameOfTagOrFunction",
+        "type":"function|tag",
+        "syntax":"Tag(arg)|<cftag attr=1>",
         "member":"item.memberFunction([args])",
         "script":"cftag(attr=1);",
-    	"returns":"void",
-    	"related":["tag","function"],
-    	"description":"A short description that describes what the tag or function does.",
+        "returns":"void",
+        "related":[
+            "tag",
+            "function"
+        ],
+        "description":"A short description that describes what the tag or function does.",
         "discouraged":"Only add this key if this tag/function is discouraged by the community.",
-    	"params": [
-            {"name":"funcArgNameOrTagAttributeName","description":"What it does","required":true,"default":"false","type":"boolean","values":["true","false"]}
-    	],
-    	"engines": {
-    		"coldfusion": {"minimum_version":"10", "notes":"CF Specific Info Here", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/function"},
-    		"railo": {"minimum_version":"4.1", "notes":"Railo Specific Here", "docs":"http://railodocs.org/index.cfm/function/sessionrotate"},
-            "lucee": {"minimum_version":"4.5", "notes":"Lucee Specific Info Here", "docs":"http://docs.lucee.org/reference/functions/name.html"}
-    	},
-    	"links": [
-    		{
-    			"title":"Title of a blog entry that has good info about this.",
-    			"description":"Description of the link",
-    			"url":"http://www.example.com/a/b.cfm"
-    		}
-    	],
-        "examples": [
+        "params":[
+            {"name":"funcArgNameOrTagAttributeName", "description":"What it does", "required":true, "default":"false", "type":"boolean", "values":["true", "false"]}
+        ],
+        "engines":{
+            "coldfusion":{"minimum_version":"10", "notes":"CF Specific Info Here", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/function"},
+            "railo":{"minimum_version":"4.1", "notes":"Railo Specific Here", "docs":"http://railodocs.org/index.cfm/function/sessionrotate"},
+            "lucee":{"minimum_version":"4.5", "notes":"Lucee Specific Info Here", "docs":"http://docs.lucee.org/reference/functions/name.html"}
+        },
+        "links":[
             {
-    			"title": "Name of the code example",
-    			"description": "Description of the code example",
-    			"code": "<cf_examplecodehere>",
-    			"result": "The expected output of the code example",
+                "title":"Title of a blog entry that has good info about this.",
+                "description":"Description of the link",
+                "url":"http://www.example.com/a/b.cfm"
+            }
+        ],
+        "examples":[
+            {
+                "title":"Name of the code example",
+                "description":"Description of the code example",
+                "code":"<cf_examplecodehere>",
+                "result":"The expected output of the code example",
                 "runnable":true
             }
         ]
-
     }
 
 
@@ -147,6 +152,6 @@ Use this to link to blog entries or other useful related content.
 
 Show example code. It is very helpful to readers to use the `result` to show the expected result of the code sample when applicable. This has to be JSON, so  you can to do `\n` for newline, double quotes must be escaped `\"`. The `runnable` is a boolean that determines if the _Run Code_ button shows up next to the example.
 
-We have an [example JSON utility](http://cfdocs.org/utilities/json/) that can be used to create the JSON by filling out a form. 
+We have an [example JSON utility](http://cfdocs.org/utilities/json/) that can be used to create the JSON by filling out a form.
 
-Please see the [cfdocs contributor guide](CONTRIB.md) for frequently asked questions.
+Please see the [cfdocs contributor guide](CONTRIBUTING.md) for frequently asked questions.

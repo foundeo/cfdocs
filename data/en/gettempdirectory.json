@@ -2,7 +2,7 @@
 	"name":"getTempDirectory",
 	"type":"function",
 	"syntax":"getTempDirectory()",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Gets the path of the directory that CFML uses for\n temporary files. Before using this function in an application,\n test to determine the directory it returns under your account.\n Returns the absolute pathname of a directory, including a\n trailing slash.",
 	"params": [

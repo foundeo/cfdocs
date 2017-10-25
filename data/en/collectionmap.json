@@ -2,18 +2,24 @@
 	"name": "collectionMap",
 	"type": "function",
 	"syntax": "collectionMap(collection, closure [, parallel] [, maxThreads])",
-	"returns": "object",
-	"related": [],
-	"description": "",
+	"returns": "any",
+	"related": ["collectionEvery","collectionEach","collectionFilter","collectionReduce","collectionSome"],
+	"description": "Maps values in a collection",
 	"params": [
-		{"name": "collection", "description": "", "required": true, "default": "", "type": "object", "values": []},
+		{"name": "collection", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
 		{"name": "parallel", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "number", "values": []}
+		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "numeric", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/collectionmap.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": [{
+		"title":"Return users which names are mapped to one value only",
+		"description":"",
+		"code":"coll = [{\r\n    id: 0,\r\n    firstname: 'Arthur',\r\n    name: 'Dent'\r\n},{\r\n    id: 1,\r\n    firstname: 'Harry',\r\n    name: 'Potter'\r\n},{\r\n    id: 2,\r\n    firstname: 'Peter',\r\n    name: 'Jackson'\r\n}];\r\nusers = collectionMap(coll,function(item) {\r\n    return {\r\n        id: item.id,\r\n        fullname: item.firstname&' '&item.name\r\n    };\r\n});\r\nfor(user in users) {\r\n    writeOutput(user.fullname&', ');\r\n}",
+		"result":"Arthur Dent, Harry Potter, Peter Jackson,",
+		"runnable":true
+	}]
 }

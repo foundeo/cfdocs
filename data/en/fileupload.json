@@ -13,7 +13,7 @@
       "description": "Path of directory in which to upload the file. If not an absolute path (starting with a drive letter and a colon, or a forward or backward slash), it is relative to the ColdFusion temporary directory returned by the function getTempDirectory. If the destination you specify does not exist, ColdFusion creates a file with the specified destination name.",
       "required": true,
       "default": "",
-      "type": "String",
+      "type": "string",
       "values": []
     },
     {
@@ -21,7 +21,7 @@
       "description": "Name of form field used to select the file. Do not use number signs (#) to specify the field name.",
       "required": false,
       "default": "",
-      "type": "String",
+      "type": "string",
       "values": []
     },
     {
@@ -29,7 +29,7 @@
       "description": "Action to take if file has the same name of a file in the directory.",
       "required": false,
       "default": "",
-      "type": "String",
+      "type": "string",
       "values": [
         "error",
         "skip",
@@ -42,7 +42,7 @@
       "description": "Specify a comma-delimited list of MIME types and/or file extensions to test the uploaded file agains. If the file is not of any of the types in this list, an error of type `coldfusion.tagext.io.FileUtils$InvalidUploadTypeException`is thrown.\nIf you specify file extensions, use this format: `.txt,.jpg`, not `txt`, `*.txt`, or `*.*`. You can use `*` as a wildcard to accept all files.",
       "required": false,
       "default": "",
-      "type": "String",
+      "type": "string",
       "values": []
     },
     {
@@ -79,7 +79,7 @@
     {
       "title": "Upload form with strict check on MIME type",
       "description": "",
-      "code": "<form method=\"post\" enctype=\"multipart\/form-data\">\r\n  <input type=\"file\" name=\"fileInput\">\r\n  <button type=\"submit\">Upload<\/button>\r\n<\/form>\r\n\r\n<cfscript>\r\n  if( structKeyExists( form, \"fileInput\" )) {\r\n    try {\r\n      uploadedFile = fileUpload( \".\/\", \"fileInput\", \"image\/jpeg,image\/pjpeg\", \"MakeUnique\" );\r\n\r\n      \/\/ do stuff with uploadedFile...\r\n    } catch ( coldfusion.tagext.io.FileUtils$InvalidUploadTypeException e ) {\r\n      writeOutput( \"This upload form only accepts JPEG files.\" );\r\n    }\r\n  }\r\n<\/cfscript>",
+      "code": "<form method=\"post\" enctype=\"multipart/form-data\">\r\n  <input type=\"file\" name=\"fileInput\">\r\n  <button type=\"submit\">Upload</button>\r\n</form>\r\n\r\n<cfscript>\r\n  if( structKeyExists( form, \"fileInput\" )) {\r\n    try {\r\n      uploadedFile = fileUpload( getTempDirectory(), \"fileInput\", \"image/jpeg,image/pjpeg\", \"MakeUnique\" );\r\n      // check the file extension of the uploaded file; mime types can be spoofed\r\n      if (not listFindNoCase(\"jpg,jpeg\", cffile.serverFileExt)) {\r\n      throw(\"The uploaded file is not of type JPG.\");\r\n      }\r\n      // do stuff with uploadedFile...\r\n    } catch ( coldfusion.tagext.io.FileUtils$InvalidUploadTypeException e ) {\r\n      writeOutput( \"This upload form only accepts JPEG files.\" );\r\n    }\r\n    catch (any e) {\r\n    writeOutput( \"An error occurred while uploading your file: #e.message#\" );\r\n    }\r\n  }\r\n</cfscript>",
       "result": "",
       "runnable": false
     }

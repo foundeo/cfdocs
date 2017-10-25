@@ -2,16 +2,16 @@
 	"name": "cfmapitem",
 	"type": "tag",
 	"syntax": "<cfmapitem>",
-	"returns": "",
 	"related": [],
 	"description": "This tag creates markers on the map.",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfmap/index.html",
 	"params": [
 		{
 			"name": "longitude",
 			"description": "The longitude value for the marker, in degrees.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "The address of the location to set the map marker.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "A short description of the marker location that appears as a tool tip.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -35,7 +35,7 @@
 			"description": "The latitude value for the marker, in degrees.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -43,7 +43,7 @@
 			"description": "The name of the map.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -51,7 +51,7 @@
 			"description": "When true, the marker infowindow is shown. By default, this is false. This is inherited by all cfmapitem tags.",
 			"required": false,
 			"default": true,
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -59,7 +59,7 @@
 			"description": "Static inner html markup to be displayed in the infowindow opened when the marker is clicked. This is mutually exclusive with the markerbind attribute",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -67,7 +67,7 @@
 			"description": "Location of an image file to use as the marker icon. The attributes markericon and markercolor are mutually exclusive.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -75,7 +75,7 @@
 			"description": "Indicates the color of the marker.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

@@ -2,7 +2,7 @@
 	"name": "directoryList",
 	"type": "function",
 	"syntax": "directoryList(path [, recurse] [, listInfo] [, filter] [, sort] [, type])",
-	"returns": "query|array",
+	"returns": "any",
 	"related": [
 		"cfdirectory"
 	],
@@ -57,7 +57,7 @@
 		},
 		{
 			"name": "type",
-			"description": "Filter the result to only include files, directories, or both.",
+			"description": "CF11+ Lucee5+ Filter the result to only include files, directories, or both.",
 			"required": false,
 			"default": "all",
 			"type": "string",
@@ -71,7 +71,7 @@
 	"engines": {
 		"coldfusion": {
 			"minimum_version": "9",
-			"notes": "Only ColdFusion supports the type argument.",
+			"notes": "Only CF11+ supports the type argument.",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DirectoryList.html"
 		},
 		"lucee": {

@@ -20,5 +20,9 @@
         <from>^/f$</from>
         <to type="redirect">/functions</to>
     </rule>
+    <rule>
+        <from>^/application.cfc$</from>
+        <to type="redirect">/application-cfc</to>
+    </rule>
 
 </urlrewrite>

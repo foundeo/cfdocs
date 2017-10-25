@@ -2,11 +2,11 @@
 	"name":"getMetadata",
 	"type":"function",
 	"syntax":"getMetadata(Object)",
-	"returns":"Object",
-	"related":[],
+	"returns":"any",
+	"related":["getFunctionData","getTagData"],
 	"description":" Gets metadata (the methods, properties, and parameters of a\n component) associated with an object that is deployed on the\n CFML server.",
 	"params": [
-		{"name":"Object","description":"","required":true,"default":"","type":"Object","values":[]}
+		{"name":"Object","description":"","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Dump MetaData of CFC Instance",
+			"description":"CF9+",
+			"code":"writeDump(getMetaData(new Query()));",
+			"result":""
+		}
 	]
 
 }

@@ -2,7 +2,6 @@
 	"name": "cfpdfsubform",
 	"type": "tag",
 	"syntax": "<cfpdfsubform name=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Populates a subform within the cfpdfform tag.\n The cfpdfsubform tag can be a child tag of the cfpdfform tag\n or nested in another cfpdfsubform tag.",
 	"params": [
@@ -11,7 +10,7 @@
 			"description": "Index associated with the field name.\n If multiple fields have the same name, ColdFusion\n uses the index value is to locate one of them. (optional, default=1)",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -19,7 +18,7 @@
 			"description": "Name of the subform corresponding to subform name in the PDF form. (required)",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

@@ -2,7 +2,7 @@
 	"name":"encodeForCSS",
 	"type":"function",
 	"syntax":"encodeForCSS(inputString [,canonicalize]);",
-	"returns":"Encoded string",
+	"returns":"string",
 	"related":[],
 	"description":" Encodes the input string for use in CSS.",
 	"params": [

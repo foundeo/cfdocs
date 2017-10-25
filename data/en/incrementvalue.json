@@ -2,11 +2,11 @@
 	"name":"incrementValue",
 	"type":"function",
 	"syntax":"incrementValue(number)",
-	"returns":"Numeric",
-	"related":[],
-	"description":" Adds one to an integer. same as x=x+1\n Why bother?",
+	"returns":"numeric",
+	"related":["decrementValue"],
+	"description":"Increment the integer part of a number.\n same as x=x+1 or x++",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
@@ -16,7 +16,21 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/incrementvalue"}
 	},
 	"links": [
-
+	],
+	"examples": [
+		{
+			"title":"Increment 7",
+			"description":"",
+			"code":"incrementValue(7)",
+			"result":"8",
+			"runnable":true
+		},
+		{
+			"title":"Increment 7.5",
+			"description":"There is a difference between CFML engines.  ACF will return the integer incremented removing the decimal part.  Lucee will increment the integer part but return both.",
+			"code":"incrementValue(7.5)",
+			"result":"",
+			"runnable":true
+		}
 	]
-
 }

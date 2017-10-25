@@ -2,7 +2,6 @@
 	"name": "cfpresenter",
 	"type": "tag",
 	"syntax": "<cfpresenter name=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Describes a presenter in a slide presentation. A slide presentation can have multiple presenters.\n The presenters must be referenced from the slides defined by the cfpresentationslide tag.",
 	"params": [
@@ -11,7 +10,7 @@
 			"description": "Specifies the biography of the presenter. (required)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +18,7 @@
 			"description": "The name to use for the JavaScript proxy class. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +26,7 @@
 			"description": "Specifies the path for the presenter's image in JPEG format.\n The JPG file must be relative to theCFM page. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -35,7 +34,7 @@
 			"description": "Specifies the name of the presenter. (required)",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -43,7 +42,7 @@
 			"description": "Specifies the path for the presenter's logo or the logo of\n the presenters organization. The logo must be in JPEG format.\n The file must be relative to the CFM page. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -51,7 +50,7 @@
 			"description": "Specifies the title of the presenter. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

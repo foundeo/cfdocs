@@ -2,7 +2,6 @@
 	"name": "cfpdf",
 	"type": "tag",
 	"syntax": "<cfpdf>",
-	"returns": "",
 	"related": [],
 	"description": "Manipulates existing PDF documents. The following list describes some of the\n tasks you can perform with the cfpdf tag:\n Merge several PDF documents into one PDF document.\n Extract pages from multiple PDF documents and generate a new PDF document.\n Linearize multipage PDF documents for faster display.\n Encrypt or decrypt PDF files for security.",
 	"params": [
@@ -11,7 +10,7 @@
 			"description": "The action to take. Must be one of the following:\n addwatermark\n deletepages\n getinfo\n merge\n protect\n read\n removewatermark\n setinfo\n write\n (required)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["addwatermark", "deletepages", "getinfo", "merge", "protect", "processddx", "read", "removewatermark", "setinfo", "thumbnail", "write", "extracttext", "extractimage", "addheader", "addfooter", "removeheaderfooter", "optimize", "transform"]
 		},
 		{
@@ -19,7 +18,7 @@
 			"description": "Order in which the PDF files are sorted:\n yes: files are sorted in ascending order\n no: files are sorted in descending order (optional, default=no)",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -27,7 +26,7 @@
 			"description": "The filename of the PDF document from which to copy the watermark (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -35,7 +34,7 @@
 			"description": "The pathname of the modified PDF document.\n If the destination file exists, you must set the overwrite attribute to yes.\n If the destination file does not exist, ColdFusion creates it as long as\n the parent directory exists. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -43,7 +42,7 @@
 			"description": "Specify the directory of the PDF documents to merge.\n You must specify either the directory or the source.\n If you specify the directory, you must also specify the order. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -51,7 +50,7 @@
 			"description": "Specify the type of encryption used on the source PDF document:\n RC4_40, RC4_128M, AES_128, none (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["RC4_40", "RC4_128", "RC4_128M", "AES_128", "none"]
 		},
 		{
@@ -59,7 +58,7 @@
 			"description": "Specify whether the output file is flattened:\n yes: the formatting is removed and the file is flattened\n no: the format of the source PDF is maintained in the output file. (optional,default=no)",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -67,7 +66,7 @@
 			"description": "Specify whether the watermark is placed in the foreground of the PDF document:\n yes: the watermark appears in the foreground\n no: the watermark appears in the background (optional, default=no)",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -75,7 +74,7 @@
 			"description": "Specify the image used as a watermark.\n You can specify a filename or a ColdFusion image variable. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -83,7 +82,7 @@
 			"description": "Specify the structure variable for relevant information, for example, #infoStruct#.\n ColdFusion ignores read only information, such as the creation date, application used to create\n the PDF document, and encryption parameters. (required)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -91,7 +90,7 @@
 			"description": "Specify whether the image used a watermark is in Base64 format:\n yes: the image is in Base64 format\n no: the image is not in Base64 format (optional, default=no)",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -99,7 +98,7 @@
 			"description": "Specify whether bookmarks from the source PDF\n documents are retained in the merged document:\n yes: the bookmarks are retained\n no: the bookmarks are removed (optional, default=no)",
 			"required": false,
 			"default": true,
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -107,7 +106,7 @@
 			"description": "Specify the PDF document variable name, for example, myPDFdoc.\n If the source is a PDF document variable, you cannot specify the\n name attribute again; you can write the modified PDF document\n to the destination. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -115,7 +114,7 @@
 			"description": "Specify the password for the owner of the PDF document. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -123,7 +122,7 @@
 			"description": "Specify the password for the user of the PDF document. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -131,7 +130,7 @@
 			"description": "Specify the opacity of the watermark.\n Valid values are integers in the range 0 (transparent)\n through 10 (opaque). (optional, default=3)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -139,7 +138,7 @@
 			"description": "Specify the order in which the PDF documents\n in the directory are merged:\n name: orders the documents alphabetically\n time: orders the documents by timestamp (required)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["name", "time"]
 		},
 		{
@@ -147,7 +146,7 @@
 			"description": "Specify whether to overwrite the destination file:\n yes: overwrites the destination file\n no: does not overwrite the destination file (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": [true, false]
 		},
 		{
@@ -155,7 +154,7 @@
 			"description": "Specify the owner or user password of the source PDF document, if it exists. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -163,7 +162,7 @@
 			"description": "Specify the type of permissions on the PDF document:\n AllowPrintHigh\n AllowPrintLow\n AllowModify\n AllowCopy\n AllowAdd\n AllowSecure\n AllowModifyAnnotations\n AllowExtract\n AllowFillIn\n all\n none\n Except for all or none, you can specify a\n commaseparated list of permissions. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["all", "allowassembly", "allowcopy", "AllowDegradedPrinting", "AllowFillIn", "AllowModifyAnnotations", "AllowModifyContents", "AllowPrinting", "AllowScreenReaders", "AllowSecure", "none"]
 		},
 		{
@@ -171,7 +170,7 @@
 			"description": "Specify the position on the page where\n the watermark is placed. The position represents the\n top-left corner of the watermark.\n Specify the x and y coordinates; for example 50,30. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -179,7 +178,7 @@
 			"description": "Specify the degree of rotation of\n the watermark image on the page; for example, 30. (optional)",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": [0, 90, 180, 270]
 		},
 		{
@@ -187,7 +186,7 @@
 			"description": "Specify whether the watermark is printed with\n the PDF document:\n yes: the watermark is printed with the PDF document\n no: the watermark is not printed with the PDF document (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": [true, false]
 		},
 		{
@@ -195,7 +194,7 @@
 			"description": "Specify the source. The source can be:\n The pathname to a PDF document; for example, c:\\work\\myPDF.pdf\n A PDF document variable in memory that is generated by the\n cfdocument tag or the cfpdf tag; for example, #myPDFdoc#\n The binary content of PDF document variable. (required)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -203,7 +202,7 @@
 			"description": "Specify the type to remove from the source PDF document:\n attachment\n bookmark\n watermark (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["string", "xml"]
 		},
 		{
@@ -211,7 +210,7 @@
 			"description": "(write) Specify the version of the PDF document to write.\n Valid values are:\n 1.1\n 1.2\n\n 1.3\n 1.4\n 1.5\n 1.6 (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": [1.1, 1.2, 1.3, 1.4, 1.5, 1.6]
 		},
 		{
@@ -219,7 +218,7 @@
 			"description": "Specifies whether the image background is transparent or opaque: foormat=png only\n * yes: the background is transparent.\n * no: the background is opaque.",
 			"required": false,
 			"default": false,
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -227,7 +226,7 @@
 			"description": "Image quality used to generate thumbnail images:\n * high: use high resolution (uses more memory).\n * low: use low resolution.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -235,7 +234,7 @@
 			"description": "Valid only if the directory attribute is specified. If the specified directory contains files other then ColdFusion-readable PDF files, ColdFusion either stops merge process or continues.\n * yes: stops the merge process if invalid PDF files exist in the specified directory.\n * no: continues the merge process even if invalid files exist in the specified directory.",
 			"required": false,
 			"default": false,
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -243,7 +242,7 @@
 			"description": "Structure that maps the PDF source files to the input variables in the DDX file, or a string of elements and their pathname.",
 			"required": false,
 			"default": "",
-			"type": "Struct",
+			"type": "struct",
 			"values": []
 		},
 		{
@@ -251,7 +250,7 @@
 			"description": "Size of the thumbnail relative to the source page. The value represents a percentage from 1 through 100.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -259,7 +258,7 @@
 			"description": "Prefix used for each image thumbnail file generated. The image filenames use the format: imagePrefix_page_n.format.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -267,7 +266,7 @@
 			"description": "Structure that contains the output files in the DDX file or string as keys and the pathname to the result file as the value.",
 			"required": false,
 			"default": "",
-			"type": "Struct",
+			"type": "struct",
 			"values": []
 		},
 		{
@@ -275,7 +274,7 @@
 			"description": "Page or pages in the source PDF document on which to perform the action. You can specify multiple pages and page ranges as follows: \"1,6-9,56-89,100, 110-120\".",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -283,7 +282,7 @@
 			"description": "Owner or user password of the source PDF document, if the document is password-protected.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -291,7 +290,7 @@
 			"description": "Save options for the PDF output:\n * full: normal save (default)\n * incremental: required to save modifications to a signed PDF document.\n * linear: for faster display.",
 			"required": false,
 			"default": "full",
-			"type": "String",
+			"type": "string",
 			"values": ["full", "incremental", "linear"]
 		},
 		{
@@ -299,7 +298,7 @@
 			"description": "File type of thumbnail image output:\n * jpg\n * tiff\n * png",
 			"required": false,
 			"default": "jpg",
-			"type": "String",
+			"type": "string",
 			"values": ["jpg", "tiff", "png"]
 		},
 		{
@@ -307,7 +306,7 @@
 			"description": "Sets a high resolution for the thumbnail if set to yes.",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -315,7 +314,7 @@
 			"description": "Specifies the maximum scale of the thumbnail",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -323,7 +322,7 @@
 			"description": "Specifies maximum width of the thumbnail",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -331,7 +330,7 @@
 			"description": "Specifies the maximum length of the thumbnail",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -339,7 +338,7 @@
 			"description": "Compress thumbnail which are in TIFF format.",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -347,7 +346,7 @@
 			"description": "Specify whether to override page or not",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -355,7 +354,7 @@
 			"description": "Create PDF packages",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -363,7 +362,7 @@
 			"description": "Horizontal scale of the image to be modified. Valid values are hscale<1.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -371,7 +370,7 @@
 			"description": "Vertical scale of the image to be modified. Valid values are vsacle<1.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -379,7 +378,7 @@
 			"description": "Remove bookmarks from PDF document",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -387,7 +386,7 @@
 			"description": "Removes all attachments from PDF documents.",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -395,7 +394,7 @@
 			"description": "Remove comments from PDF document",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -403,7 +402,7 @@
 			"description": "Remove all document level JavaScript actions",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -411,7 +410,7 @@
 			"description": "Remove external cross-references",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -419,7 +418,7 @@
 			"description": "Remove document information and metadata",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -427,7 +426,7 @@
 			"description": "Remove embedded page thumbnails",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -435,7 +434,7 @@
 			"description": "Remove font styling",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -443,7 +442,7 @@
 			"description": "Specifies the algorithm for image downsampling.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["Bicubic", "Bilinear", "Nearest_Neighbour"]
 		},
 		{
@@ -451,7 +450,7 @@
 			"description": "No Help Available",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -459,7 +458,7 @@
 			"description": "Specifies the value of the leftMargin",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -467,7 +466,7 @@
 			"description": "Specifies the value of the rightMargin",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -475,7 +474,7 @@
 			"description": "Specifies the value of the bottomMargin",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -483,7 +482,7 @@
 			"description": "Specify the numbering format for PDF pages in the footer.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["NUMERIC", "LOWERCASEROMAN", "UPPERCASEROMAN"]
 		},
 		{
@@ -491,7 +490,7 @@
 			"description": "Aligns the header and footer in PDF.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["right", "left", "center"]
 		},
 		{
@@ -499,7 +498,7 @@
 			"description": "Set this option to \"true\" if you need characters to be converted to spaces.",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -507,7 +506,7 @@
 			"description": "Add the position or quadrants of the thumbnail",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -515,7 +514,7 @@
 			"description": "Specify Text Value",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["_PAGELABEL", "_LASTPAGELABEL", "_PAGENUMBER", "_LASTPAGENUMBER"]
 		},
 		{
@@ -523,7 +522,7 @@
 			"description": "Specify whether to use structure or not",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -531,7 +530,7 @@
 			"description": "",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -539,7 +538,7 @@
 			"description": "Encode streams that are not encoded to optimize page content",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		}
 	],

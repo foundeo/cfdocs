@@ -2,11 +2,11 @@
 	"name":"exp",
 	"type":"function",
 	"syntax":"exp(number)",
-	"returns":"Numeric",
-	"related":[],
+	"returns":"numeric",
+	"related":["acos","asin","atn","cos","log","log10","sin","tan"],
 	"description":" Calculates the exponent whose base is e that represents number.\n The constant e equals 2.71828182845904, the base of the natural\n logarithm. This function is the inverse of Log, the natural\n logarithm of number.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"exponent of 1.13140211149",
+			"description":"The result could very depending on if the server is running windows or linux.  On a windows box the result will be round to 3.1",
+			"code":"exp(1.13140211149)",
+			"result":"3.099999999997",
+			"runnable":true
+		}
 	]
 
 }

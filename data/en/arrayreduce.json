@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"arrayReduce(array, function(result, item [,index, array])[, initialValue])",
 	"member":"someArray.reduce(function(result, item [,index, array])[, initialValue])",
-	"returns":"Any",
+	"returns":"any",
 	"related": ["ArrayMap"],
 	"description":"Iterates over every entry of the array and calls the closure to work on the elements of the array. This function will reduce the array to a single value and will return the value.",
 	"engines":{
@@ -21,15 +21,15 @@
 		"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
 	}],
 	"params":[
-		{"values":[],"default":"","description":"the input array","name":"array","type":"Array","required":"1"},
-		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nresult: result of the reduce operation after the previous iteration\r\nitem: item in the array\r\nindex : current index for the iteration\r\narray : reference of the original array","name":"function","type":"Any","required":"1"},
-		{"values":[],"default":"","description":"Initial value which will be used for the reduce operation. The type is any.","name":"initialValue","type":"Any","required":"0"}
+		{"values":[],"default":"","description":"the input array","name":"array","type":"array","required":true},
+		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nresult: result of the reduce operation after the previous iteration\r\nitem: item in the array\r\nindex : current index for the iteration\r\narray : reference of the original array","name":"function","type":"function","required":true},
+		{"values":[],"default":"","description":"Initial value which will be used for the reduce operation. The type is any.","name":"initialValue","type":"any","required":false}
 	],
 	"examples":[
         {
 			"title": "Script Syntax",
 			"description": "",
-			"code": "complexData = [ {a: 4}, {a: 18}, {a: 51} ]; \r\n sum = arrayReduce( complexData, function(prev, element) \r\n { \r\n return prev + element.a; \r\n }, 0 ); \r\n ",
+			"code": "complexData = [ {a: 4}, {a: 18}, {a: 51} ]; \r\n sum = arrayReduce( complexData, function(prev, element) \r\n { \r\n return prev + element.a; \r\n }, 0 ); \r\nwriteDump(sum); ",
 			"result": "Answer: [73]"
 		}
     ]

@@ -6,10 +6,10 @@
 	"related":[],
 	"description":" Adds a SOAP response header to a web service response. Call only from within a CFC web service function that is processing a request as a SOAP web service.",
 	"params": [
-		{"name":"namespace","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"value","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"mustunderstand","description":"No Help Available","required":false,"default":"","type":"Boolean","values":[]}
+		{"name":"namespace","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"name","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"mustunderstand","description":"No Help Available","required":false,"default":"","type":"boolean","values":[]}
 
 	],
 	"engines": {

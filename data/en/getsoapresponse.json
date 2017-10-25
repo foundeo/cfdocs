@@ -2,11 +2,11 @@
 	"name":"getSOAPResponse",
 	"type":"function",
 	"syntax":"getSOAPResponse(webservice)",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Returns an XML object that contains the entire\n SOAP response after invoking a web service.",
 	"params": [
-		{"name":"webservice","description":"A webservice object as returned from the cfobject\n tag or the CreateObject function.","required":true,"default":"","type":"String","values":[]}
+		{"name":"webservice","description":"A webservice object as returned from the cfobject\n tag or the CreateObject function.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

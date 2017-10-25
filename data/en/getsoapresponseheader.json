@@ -2,13 +2,13 @@
 	"name":"getSOAPResponseHeader",
 	"type":"function",
 	"syntax":"getSOAPResponseHeader(webservice, namespace, name [, asXML])",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Returns a SOAP response header. Call this function\n from within code that is invoking a web service after\n making a web service request.",
 	"params": [
-		{"name":"webservice","description":"A webservice object as returned from the cfobject tag\n or the Createobject function.","required":true,"default":"","type":"Object","values":[]},
-		{"name":"namespace","description":"A String that is the namespace for the header.","required":true,"default":"","type":"String","values":[]},
-		{"name":"name","description":"A String that is the name of the SOAP header.","required":true,"default":"","type":"String","values":[]},
+		{"name":"webservice","description":"A webservice object as returned from the cfobject tag\n or the Createobject function.","required":true,"default":"","type":"any","values":[]},
+		{"name":"namespace","description":"A String that is the namespace for the header.","required":true,"default":"","type":"string","values":[]},
+		{"name":"name","description":"A String that is the name of the SOAP header.","required":true,"default":"","type":"string","values":[]},
 		{"name":"asXML","description":"If True, the header is returned as a CFML XML object;\n if false (default), the header is returned as a Java object.","required":false,"default":"","type":"boolean","values":[true,false]}
 
 	],

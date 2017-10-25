@@ -3,20 +3,19 @@
 	"type":"tag",
 	"syntax":"<cfdirectory directory=\".\" action=\"list|create|delete|rename\">",
 	"script": "directoryList(\".\", false, \" \");",
-	"returns":"",
 	"related":["directorylist","directorycreate","directoryread","directorydelete","directoryexists"],
 	"description":"Allows you to list, create, delete or rename a directory in the server file system.",
 	"params": [
-		{"name":"action","description":"Action to perform","required":false,"default":"list","type":"String","values":["list","create","delete","rename"]},
-		{"name":"directory","description":"Absolute pathname of directory against which to perform\n action.","required":true,"default":"","type":"String","values":[]},
-		{"name":"name","description":"Name for output record set.","required":false,"default":"","type":"String","values":[]},
-		{"name":"filter","description":"File extension filter applied to returned names. For\n example: *.cfm. One filter can be applied.","required":false,"default":"","type":"String","values":[]},
-		{"name":"mode","description":"Applies only to UNIX and Linux. Permissions. Octal values\n of Unix chmod command. Assigned to owner, group, and\n other, respectively.","required":false,"default":"","type":"String","values":[]},
-		{"name":"sort","description":"Query column(s) by which to sort directory listing.\n Delimited list of columns from query output.","required":false,"default":"asc","type":"String","values":["asc","desc"]},
-		{"name":"newdirectory","description":"New name for directory.","required":false,"default":"","type":"String","values":[]},
+		{"name":"action","description":"Action to perform","required":false,"default":"list","type":"string","values":["list","create","delete","rename"]},
+		{"name":"directory","description":"Absolute pathname of directory against which to perform\n action.","required":true,"default":"","type":"string","values":[]},
+		{"name":"name","description":"Name for output record set.","required":false,"default":"","type":"string","values":[]},
+		{"name":"filter","description":"File extension filter applied to returned names. For\n example: *.cfm. One filter can be applied.","required":false,"default":"","type":"string","values":[]},
+		{"name":"mode","description":"Applies only to UNIX and Linux. Permissions. Octal values\n of Unix chmod command. Assigned to owner, group, and\n other, respectively.","required":false,"default":"","type":"string","values":[]},
+		{"name":"sort","description":"Query column(s) by which to sort directory listing.\n Delimited list of columns from query output.","required":false,"default":"asc","type":"string","values":["asc","desc"]},
+		{"name":"newdirectory","description":"New name for directory.","required":false,"default":"","type":"string","values":[]},
 		{"name":"recurse","description":"Whether ColdFusion performs the action on subdirectories.","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"type","description":"* file: includes only filenames.\n * dir: includes only directory names.\n * all: includes both filenames and directory names.","required":false,"default":"all","type":"String","values":["dir","file","all"]},
-		{"name":"listinfo","description":"* all: includes all information in the result set.\n * name: includes only filenames in the result set.","required":false,"default":"all","type":"String","values":["name","all"]}
+		{"name":"type","description":"* file: includes only filenames.\n * dir: includes only directory names.\n * all: includes both filenames and directory names.","required":false,"default":"all","type":"string","values":["dir","file","all"]},
+		{"name":"listinfo","description":"* all: includes all information in the result set.\n * name: includes only filenames in the result set.","required":false,"default":"all","type":"string","values":["name","all"]}
 
 	],
 	"engines": {

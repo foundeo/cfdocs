@@ -2,7 +2,6 @@
 	"name": "cfmessagebox",
 	"type": "tag",
 	"syntax": "<cfmessagebox type=\"alert\" message=\"\" name=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Creates MessageBox",
 	"params": [
@@ -11,7 +10,7 @@
 			"description": "The text to put on the cancel button of a prompt message box.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +18,7 @@
 			"description": "callback function which will be called when any ok|no|cancel button is clicked",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +26,7 @@
 			"description": "The text to put on a alert button and prompt messge box OK button.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -35,7 +34,7 @@
 			"description": "The title for the message box.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -43,7 +42,7 @@
 			"description": "Type of action to be performed",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["alert", "confirm", "prompt"]
 		},
 		{
@@ -51,7 +50,7 @@
 			"description": "Message text which will be displayed",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -59,7 +58,7 @@
 			"description": "The text to put on the button used for a negative response in a confirm message box.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -67,7 +66,7 @@
 			"description": "The text to put on the button used for a positive responsein a confirm message box.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -75,7 +74,7 @@
 			"description": "Applies for prompt action only. Signify whether prompt is textarea(multiliner) or oneliner(textField)Default=false",
 			"required": false,
 			"default": false,
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -83,7 +82,7 @@
 			"description": "Name of the messageBox",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -91,7 +90,7 @@
 			"description": "A CSS style specification for the body of the message box. As a general rule, use this attribute to set color and font styles",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -99,7 +98,7 @@
 			"description": "Applies to the control type - confirm\nThe buttons to display on the message box",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["yesno", "yesnocancel"]
 		},
 		{
@@ -107,7 +106,7 @@
 			"description": "Specifies the following CSS classes\nerror: Provides the error icon. You can use this icon when displaying error messages.\ninfo: Provides the info icon. You can use this icon when displaying any information.\nquestion: Provides the question icon. You can use this icon in a confirmation message box that prompts a user response.\nwarning: Provides the warning icon. You can use this icon when displaying a warning message",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -123,7 +122,7 @@
 			"description": "Width of the message box in pixels.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -131,7 +130,7 @@
 			"description": "The X (horizontal) coordinate of the upper-left corner of the message box .\nColdFusion ignores this attribute if you do not set the y attribute.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -139,7 +138,7 @@
 			"description": "The Y (vertical) coordinate of the upper-left corner of the message box.\nColdFusion ignores this attribute if you do not set the x attribute.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		}
 	],

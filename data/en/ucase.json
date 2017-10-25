@@ -2,11 +2,11 @@
 	"name":"uCase",
 	"type":"function",
 	"syntax":"uCase(String)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Converts the alphabetic characters in a string to uppercase.",
 	"params": [
-		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]}
+		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -16,7 +16,15 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ucase"}
 	},
 	"links": [
-
+	],
+	"examples": [
+		{
+			"title":"uppercase CFDocs Rock",
+			"description":"",
+			"code":"uCase('CFDocs Rock')",
+			"result":"CFDOCS ROCK",
+			"runnable":true
+		}
 	]
 
 }

@@ -2,9 +2,8 @@
 	"name":"cfdefaultcase",
 	"type":"tag",
 	"syntax":"<cfdefaultcase>",
-	"returns":"",
 	"related":[],
-	"description":" Used only inside the cfswitch tag body. Contains code to\n execute when the expression specified in the cfswitch tag does\n not match any of the values specified by preceeding cfcase tags.",
+	"description":"Used only inside the cfswitch tag body. Contains code to\n execute when the expression specified in the cfswitch tag does\n not match any of the values specified by preceeding cfcase tags.",
 	"params": [
 	],
 	"engines": {

@@ -2,15 +2,14 @@
 	"name":"cfheader",
 	"type":"tag",
 	"syntax":"<cfheader>",
-	"returns":"",
 	"related":["cfflush"],
 	"description":"Generates custom HTTP response headers to return to the client.",
 	"params": [
-		{"name":"name","description":"Header name\n Required if statusCode not specified","required":false,"default":"","type":"String","values":[]},
-		{"name":"value","description":"HTTP header value","required":false,"default":"","type":"String","values":[]},
-		{"name":"charset","description":"The character encoding in which to encode the header value.\n\n For more information on character encodings, see:\n www.w3.org\/International\/O-charset.html.","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]},
-		{"name":"statuscode","description":"HTTP status code\n Required if name not specified","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"statustext","description":"Explains status code","required":false,"default":"","type":"String","values":[]}
+		{"name":"name","description":"Header name\n Required if statusCode not specified","required":false,"default":"","type":"string","values":[]},
+		{"name":"value","description":"HTTP header value","required":false,"default":"","type":"string","values":[]},
+		{"name":"charset","description":"The character encoding in which to encode the header value.\n\n For more information on character encodings, see:\n www.w3.org\/International\/O-charset.html.","required":false,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]},
+		{"name":"statuscode","description":"HTTP status code\n Required if name not specified","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"statustext","description":"Explains status code","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

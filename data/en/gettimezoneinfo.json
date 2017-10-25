@@ -2,11 +2,11 @@
 	"name":"getTimezoneInfo",
 	"type":"function",
 	"syntax":"getTimezoneInfo(text)",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Gets local time zone information for the computer on which it\n is called, relative to Universal Time Coordinated (UTC). UTC is\n the mean solar time of the meridian of Greenwich, England.",
 	"params": [
-		{"name":"text","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"text","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

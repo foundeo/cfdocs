@@ -2,7 +2,7 @@
 	"name": "findOneOf",
 	"type": "function",
 	"syntax": "findOneOf(set, string [, start])",
-	"returns": "Numeric",
+	"returns": "numeric",
 	"related": [],
 	"description": " Finds the first occurrence of any one of a set of characters in a string,\n from a specified start position. The search is case-sensitive.\n\n Returns the position of the first member of set found in string; or 0, if no member of set is found in string.",
 	"params": [
@@ -11,7 +11,7 @@
 			"description": "String which contains one or more characters to search for. ",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "String in which to search. ",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "Start position of search. Can be 1 through the length of the string to search.\n Choosing a start index greater than the length of the string to search will return a 0.",
 			"required": false,
 			"default": 1,
-			"type": "Numeric",
+			"type": "numeric",
 			"values": [
 				"1 through string length."
 			]

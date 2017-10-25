@@ -4,11 +4,11 @@
 	"syntax": "cacheDelete(id [, throwOnError] [, cacheName])",
 	"returns": "void",
 	"related": [],
-	"description": "",
+	"description": "Deletes a single element from the cache.",
 	"params": [
-		{"name": "id", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "throwOnError", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "cacheName", "description": "", "required": false, "default": "", "type": "string", "values": []}
+		{"name": "id", "description": "The id of the element to delete, can also contain a \",\" (not used as separator)", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "throwOnError", "description": "Define if the functions throws an exception when the element does not exist (default is false)", "required": false, "default": "", "type": "boolean", "values": []},
+		{"name": "cacheName", "description": "Definition of the cache used by name, when not set the \"default Object Cache\" defined in Lucee Administrator is used instead", "required": false, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/cachedelete.html"}

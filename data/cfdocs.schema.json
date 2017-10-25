@@ -1,0 +1,347 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "engineDetail": {
+      "title": "Engine Detail",
+      "type": "object",
+      "properties": {
+        "minimum_version": {
+          "title": "Minimum version",
+          "description": "The version of the engine in which this was introduced",
+          "type": "string",
+          "pattern": "^((0|[1-9]\\d*)(\\.(0|[1-9]\\d*)(\\.(0|[1-9]\\d*))?)?)?$"
+        },
+        "deprecated": {
+          "title": "Deprecated version",
+          "description": "The version of the engine in which this was deprecated",
+          "type": "string",
+          "pattern": "^((0|[1-9]\\d*)(\\.(0|[1-9]\\d*)(\\.(0|[1-9]\\d*))?)?)?$",
+          "default": ""
+        },
+        "removed": {
+          "title": "Removed version",
+          "description": "The version of the engine in which this was removed",
+          "type": "string",
+          "pattern": "^((0|[1-9]\\d*)(\\.(0|[1-9]\\d*)(\\.(0|[1-9]\\d*))?)?)?$",
+          "default": ""
+        },
+        "notes": {
+          "title": "Notes",
+          "description": "Additional notes about engine compatibility",
+          "type": "string",
+          "default": ""
+        },
+        "docs": {
+          "title": "Docs",
+          "description": "Link to engine-specific documentation",
+          "type": "string",
+          "default": ""
+        }
+      },
+      "required": [
+        "minimum_version"
+      ]
+    },
+    "engines": {
+      "title": "Engines",
+      "type": "object",
+      "properties": {
+        "coldfusion": {
+          "title": "ColdFusion",
+          "description": "Engine details for ColdFusion",
+          "type": "object",
+          "$ref": "#/definitions/engineDetail"
+        },
+        "railo": {
+          "title": "Railo",
+          "description": "Engine details for Railo",
+          "type": "object",
+          "$ref": "#/definitions/engineDetail"
+        },
+        "lucee": {
+          "title": "Lucee",
+          "description": "Engine details for Lucee",
+          "type": "object",
+          "$ref": "#/definitions/engineDetail"
+        },
+        "openbd": {
+          "title": "OpenBD",
+          "description": "Engine details for OpenBD",
+          "type": "object",
+          "$ref": "#/definitions/engineDetail"
+        }
+      }
+    },
+    "params": {
+      "title": "Parameters",
+      "description": "List of parameters",
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "title": "Parameter",
+        "description": "Argument or attribute",
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "Name",
+            "description": "Parameter name",
+            "type": "string"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Description of the parameter",
+            "type": "string"
+          },
+          "type": {
+            "title": "Type",
+            "description": "The data type of the parameter",
+            "type": "string",
+            "enum": [
+              "any",
+              "array",
+              "binary",
+              "boolean",
+              "component",
+              "date",
+              "function",
+              "guid",
+              "numeric",
+              "query",
+              "string",
+              "struct",
+              "uuid",
+              "variableName",
+              "xml"
+            ]
+          },
+          "required": {
+            "title": "Required",
+            "description": "Whether this parameter is required",
+            "type": "boolean"
+          },
+          "default": {
+            "title": "Default",
+            "description": "The default value of the parameter when not provided",
+            "type": "string",
+            "default": ""
+          },
+          "values": {
+            "title": "Values",
+            "description": "List of enumerated values for the parameter",
+            "type": "array",
+            "minItems": 0,
+            "items": {
+              "title": "Value",
+              "description": "One of the enumerated values for the parameter",
+              "type": "string"
+            },
+            "default": []
+          },
+          "engines": {
+            "title": "Engines",
+            "description": "Engine compatibility information",
+            "type": "object",
+            "$ref": "#/definitions/engines"
+          },
+          "callback_params": {
+            "title": "Callback Parameters",
+            "description": "When type is function, this ",
+            "type": "array",
+            "$ref": "#/definitions/params",
+            "minItems": 0,
+            "default": []
+          }
+        },
+        "required": [
+          "name",
+          "description",
+          "type",
+          "required"
+        ]
+      },
+      "default": []
+    }
+  },
+  "title": "CFDocs",
+  "description": "CFDocs data file",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "description": "The name of the tag or function. Use lowercase.",
+      "type": "string",
+      "pattern": "^[a-z]\\w+$"
+    },
+    "description": {
+      "title": "Description",
+      "description": "A short description of the item",
+      "type": "string"
+    },
+    "type": {
+      "title": "Type",
+      "description": "Whether this refers to a function, tag, or listing",
+      "type": "string",
+      "enum": [
+        "function",
+        "tag",
+        "listing"
+      ]
+    },
+    "syntax": {
+      "title": "Syntax",
+      "description": "The basic syntax of the tag or function",
+      "type": "string",
+      "default": ""
+    },
+    "script": {
+      "title": "Syntax",
+      "description": "For tags, shows how the tag would be invoked from cfscript.",
+      "type": "string",
+      "default": ""
+    },
+    "member": {
+      "title": "Member",
+      "description": "For functions, shows the available member function syntax.",
+      "type": "string",
+      "default": ""
+    },
+    "returns": {
+      "title": "Return Type",
+      "description": "The return type of a function.",
+      "type": "string",
+      "enum": [
+        "any",
+        "array",
+        "binary",
+        "boolean",
+        "date",
+        "function",
+        "guid",
+        "numeric",
+        "query",
+        "string",
+        "struct",
+        "uuid",
+        "variableName",
+        "void",
+        "xml"
+      ],
+      "default": "void"
+    },
+    "related": {
+      "title": "Related",
+      "description": "A list of tag or function names that are related to this item",
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "title": "Entity name",
+        "description": "The name of a function or tag that is already documented",
+        "type": "string"
+      },
+      "default": []
+    },
+    "discouraged": {
+      "title": "Discouraged",
+      "description": "If this key exists and has content a warning is displayed stating that the tag or function is discouraged by the CFML community.",
+      "type": "string",
+      "default": ""
+    },
+    "params": {
+      "title": "Parameters",
+      "description": "List of parameters",
+      "type": "array",
+      "$ref": "#/definitions/params",
+      "minItems": 0,
+      "default": []
+    },
+    "engines": {
+      "title": "Engines",
+      "description": "Engine compatibility information",
+      "type": "object",
+      "$ref": "#/definitions/engines"
+    },
+    "links": {
+      "title": "Links",
+      "description": "A list of external references",
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "title": "Link",
+        "description": "Information about the reference",
+        "type": "object",
+        "properties": {
+          "title": {
+            "title": "Title",
+            "description": "A title for the link",
+            "type": "string"
+          },
+          "description": {
+            "title": "Description",
+            "description": "A description for the link",
+            "type": "string"
+          },
+          "url": {
+            "title": "URL",
+            "description": "The link URL",
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "description",
+          "url"
+        ]
+      },
+      "default": []
+    },
+    "examples": {
+      "title": "Examples",
+      "description": "A list of examples",
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "title": "Example",
+        "description": "Information about the example",
+        "type": "object",
+        "properties": {
+          "title": {
+            "title": "Title",
+            "description": "Name of the code example",
+            "type": "string"
+          },
+          "description": {
+            "title": "Description",
+            "description": "Description of the code example",
+            "type": "string"
+          },
+          "code": {
+            "title": "Code",
+            "description": "The example code",
+            "type": "string"
+          },
+          "result": {
+            "title": "Result",
+            "description": "The expected output of the code example",
+            "type": "string"
+          },
+          "runnable": {
+            "title": "Runnable",
+            "description": "Whether the code is runnable",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "title",
+          "description",
+          "code"
+        ]
+      },
+      "default": []
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "type"
+  ]
+}

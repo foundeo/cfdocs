@@ -157,7 +157,7 @@ We split this into two parts because session rotation can be tricky in some appl
 Finally, we re-set the users cookie value with the new (rotated) and encrypted session id, as follows:
 
         // send a new cookie with the new encrypted session id
-        getPageContext().getResponse().addHeader("Set-Cookie", "#application.cookieName#=#application.securityService.setSessionIdForCookie( session.sessionObj.getSessionId() )#;path=/;domain=.#CGI.HTTP_HOST#;HTTPOnly");
+        getPageContext().getResponse().addHeader("Set-Cookie", "#application.cookieName#=#application.securityService.setSessionIdForCookie( session.sessionObj.getSessionId() )#;path=/;domain=#listFirst( CGI.HTTP_HOST, ':' )#;HTTPOnly");
 
 The above code uses the *setSessionIdForCookie()* function of the SecurityService CFC, which has the following code:
 
@@ -211,7 +211,7 @@ In the above code we encrypt the cookie's value (the session id) using the key a
         }
 
         // send a new cookie with the new encrypted session id
-        getPageContext().getResponse().addHeader("Set-Cookie", "#application.cookieName#=#application.securityService.setSessionIdForCookie( session.sessionObj.getSessionId() )#;path=/;domain=.#CGI.HTTP_HOST#;HTTPOnly");
+        getPageContext().getResponse().addHeader("Set-Cookie", "#application.cookieName#=#application.securityService.setSessionIdForCookie( session.sessionObj.getSessionId() )#;path=/;domain=#listFirst( CGI.HTTP_HOST, ':' )#;HTTPOnly");
 
     }
 

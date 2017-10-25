@@ -3,7 +3,6 @@
 	"type":"tag",
 	"syntax":"<cfwhile [condition=boolean] [label=string]>",
 	"script":"while(condition) { }",
-	"returns":"",
 	"related":["cfloop"],
 	"description":"Loops while the condition is true or until break.",
 	"params": [
@@ -11,7 +10,7 @@
 		{"name":"label","description":"Used to address loop from `break` or `continue` statement instead of innermost loop.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/while.html"}		
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/while.html"}
 	},
 	"links": [],
 	"examples": []

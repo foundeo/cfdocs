@@ -2,7 +2,6 @@
 	"name": "cfimage",
 	"type": "tag",
 	"syntax": "<cfimage>",
-	"returns": "",
 	"related": ["imageRead", "imageWrite", "imageResize","imageScaleToFit"],
 	"description": "Creates a ColdFusion image that can be manipulated by using image functions.\nYou can use the cfimage tag to perform common image manipulation operations as a shortcut to Image functions.\nYou can use the cfimage tag independently or in conjunction with image functions.",
 	"params": [
@@ -11,7 +10,7 @@
 			"description": "The action to take. Must be one of the following:\nborder\ncaptcha\nconvert\ninfo\nread\nresize\nrotate\nwrite\nwriteToBrowser\nYou do not need to specify the default action, read, explicitly.",
 			"required": false,
 			"default": "read",
-			"type": "String",
+			"type": "string",
 			"values": [ "border", "captcha", "convert", "info", "read", "resize", "rotate", "write", "writeToBrowser" ]
 		},
 		{
@@ -19,7 +18,7 @@
 			"description": "Angle in degrees to rotate the image.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -27,7 +26,7 @@
 			"description": "(border) Border color.\nHexadecimal value or supported named color.\nFor a hexadecimal value, use the form \"##xxxxxx\" or \"xxxxxx\". (required)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -35,7 +34,7 @@
 			"description": "Absolute or relative pathname where the image output is written.\nThe image format is determined by the file extension.\nThe convert and write actions require a destination.\nThe border, captcha, resize, and rotate actions require either a name attribute or a destination attribute.\nYou can specify both.\nScorpio supports only CAPTCHA images in PNG format.\nIf you do not enter a destination, the CAPTCHA image is placed inline in the HTML output and displayed in the web browser.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -43,7 +42,7 @@
 			"description": "Level of complexity of the CAPTCHA text.\nSpecify one of the following levels of text distortion:\nhigh\nmedium\nlow",
 			"required": false,
 			"default": "low",
-			"type": "String",
+			"type": "string",
 			"values": [ "high", "medium", "low" ]
 		},
 		{
@@ -51,7 +50,7 @@
 			"description": "Font size of the text in the CAPTCHA image.\nThe value must be an integer.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -59,7 +58,7 @@
 			"description": "Format of the image displayed in the browser.\nIf you do not specify a format, the image is displayed in PNG format.\nYou cannot display a GIF image in a browser.\nGIF images are displayed in PNG format.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": [ "png", "jpg", "jpeg" ]
 		},
 		{
@@ -67,7 +66,7 @@
 			"description": "Height in pixels of the image.\nFor the resize attribute, you also can specify the height as a percentage (an integer followed by the \"%\" symbol).\nThe value must be an integer.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -75,7 +74,7 @@
 			"description": "Specifies whether the source is a Base64 string.\nThe isBase64 values are:\nyes: the source is a Base64 string.\nno: the source is not a Base64 string.",
 			"required": false,
 			"default": "false",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [ true, false ]
 		},
 		{
@@ -83,7 +82,7 @@
 			"description": "Name of the ColdFusion image variable to create.\nThe read action requires name attribute.\nThe border, resize, and rotate options require a name attribute or a destination attribute.\nYou can specify both.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -91,7 +90,7 @@
 			"description": "Valid only if the destination attribute is specified. The overwrite values are:\nyes: overwrites the destination file.\nno: does not overwrite the destination file.\nIf the destination file already exists, ColdFusion generates an error if the overwrite option is not set to yes.",
 			"required": false,
 			"default": "false",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [ true, false ]
 		},
 		{
@@ -99,7 +98,7 @@
 			"description": "Quality of the JPEG destination file.\nApplies only to files with an extension of JPG or JPEG.\nValid values are fractions that range from 0 through 1\n(the lower the number, the lower the quality).",
 			"required": false,
 			"default": "0.75",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -107,7 +106,7 @@
 			"description": "URL of the source image; for example, \"http://www.google.com/ images/logo.gif\"\nAbsolute or relative pathname of the source image; for example, \"c:\\wwwroot\\images\\logo.jpg\"\nColdFusion image variable containing another image, BLOB, or byte array; for example, \"#myImage#\" \nBase64 string; for example, \"data:image/jpg;base64,/9j/ 4AAQSkZJRgABAQA..............\"",
 			"required": false,
 			"default": "",
-			"type": "Any",
+			"type": "any",
 			"values": []
 		},
 		{
@@ -115,7 +114,7 @@
 			"description": "Name of the ColdFusion structure to be created.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -123,7 +122,7 @@
 			"description": "Text string displayed in the CAPTCHA image.\nUse capital letters for better readability.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -131,7 +130,7 @@
 			"description": "Border thickness in pixels.\nThe border is added to the outside edge of the source image,\nincreasing the image area accordingly.\nThe value must be an integer.",
 			"required": false,
 			"default": "1",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -139,7 +138,7 @@
 			"description": "Width in pixels of the image.\nFor resize, you also can specify the width as a percentage\n(an integer followed by the \"%\" symbol).\nThe value must be an integer.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -147,7 +146,7 @@
 			"description": "One or more valid fonts to use for the CAPTCHA text. Separate multiple fonts with commas. ColdFusion supports only the system fonts that the JDK can recognize.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{

@@ -2,11 +2,11 @@
 	"name":"serializeJSON",
 	"type":"function",
 	"syntax":"serializeJSON(var [, serializeQueryByColumns, useCustomSerializer])",
-	"returns":"String",
+	"returns":"string",
 	"related":["deserializeJSON"],
 	"description":"Converts a ColdFusion variable into a JSON (JavaScript Object Notation) string.",
 	"params": [
-		{"name":"var","description":"A ColdFusion variable.","required":true,"default":"","type":"Variablename","values":[]},
+		{"name":"var","description":"A ColdFusion variable.","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"serializeQueryByColumns","description":"A Boolean value that specifies how to serialize ColdFusion queries.","required":false,"default":"false","type":"boolean","values":[]},
 		{"name":"useCustomSerializer","description":"CF11+ Use custom serializer if defined. See: https://helpx.adobe.com/coldfusion/developing-applications/changes-in-coldfusion/restful-web-services-in-coldfusion.html","required":false,"default":"true","type":"boolean","values":[]}
 	],
@@ -46,6 +46,12 @@
 			"description": "Adobe ColdFusion may incorrectly serializes some strings if they can be automatically converted into other types, like numbers or booleans. One workaround is to use a CFC with cfproperty to specify types. Another workaround is to prepend Chr(2) to the value and it will be forced to a string, however that is an unofficial / undocumented workaround.",
 			"code":"person = { \"phone\"=\"123456789\", \"firstname\"=\"no\",\"lastname\"=\"yes\" };\nwriteOutput( serializeJson(person) );",
 			"result": "{\"phone\":123456789,\"firstname\":false,\"lastname\":true}"
+		},
+		{
+			"title":"Using setMetadata to force types",
+			"description":"As of CF2016.0.2+ (update 2) you can call `setMetadata()` as a member function on a struct to force a type",
+			"code":"myStruct = {\"zip\"=\"00123\"};\nmyStruct.setMetadata( { \"zip\": \"String\" } );\nwriteOutput(serializeJSON(myStruct));",
+			"result": "{\"zip\":\"00123\"}"
 		}
 	]
 

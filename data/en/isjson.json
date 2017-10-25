@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Evaluates whether a string is in valid JSON (JavaScript Object Notation) data interchange format.",
 	"params": [
-		{"name":"var","description":"A string or variable that represents one.","required":true,"default":"","type":"String","values":[]}
+		{"name":"var","description":"A string or variable that represents one.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,15 @@
 	},
 	"links": [
 
+	],
+	"examples":[
+	{
+		"title":"isJSON Example",
+		"description":"Returns true if the parameter is a valid JSON value. Returns False if the parameter is not a valid JSON data representation.",
+		"code":"isJSON(\"[1,2,3]\")",
+		"result":true,
+		"runnable":true
+	}
 	]
 
 }

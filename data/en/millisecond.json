@@ -3,11 +3,11 @@
 	"type": "function",
 	"syntax": "millisecond(date [, timezone])",
 	"member": "date.millisecond([timezone])",
-	"returns": "number",
+	"returns": "numeric",
 	"related": [],
 	"description": "",
 	"params": [
-		{"name": "date", "description": "", "required": true, "default": "", "type": "datetime", "values": []},
+		{"name": "date", "description": "", "required": true, "default": "", "type": "date", "values": []},
 		{"name": "timezone", "description": "", "required": false, "default": "", "type": "string", "values": []}
 	],
 	"engines": {

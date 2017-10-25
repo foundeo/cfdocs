@@ -4,7 +4,7 @@
 	"syntax": "sessionstartTime()",
 	"returns": "date",
 	"related": [],
-	"description": "",
+	"description": "Provides information about the time when the current users session scope was created",
 	"params": [],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/sessionstarttime.html"}

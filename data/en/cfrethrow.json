@@ -2,9 +2,8 @@
 	"name":"cfrethrow",
 	"type":"tag",
 	"syntax":"<cfrethrow>",
-	"returns":"",
 	"related":[],
-	"description":" Rethrows the currently active exception. Preserves the\n exception's cfcatch.type and cfcatch.tagContext variable\n values.",
+	"description":"Rethrows the currently active exception. Preserves the\n exception's cfcatch.type and cfcatch.tagContext variable\n values.",
 	"params": [
 	],
 	"engines": {

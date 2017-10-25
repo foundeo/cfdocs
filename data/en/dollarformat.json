@@ -2,11 +2,11 @@
 	"name":"dollarFormat",
 	"type":"function",
 	"syntax":"dollarFormat(number)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
-	"description":" Formats a string in U.S. format. (For other currencies, use\n LSCurrencyFormat or LSEuroCurrencyFormat.)",
+	"description":" Formats a string in U.S. currency format. (For other currencies, use\n LSCurrencyFormat or LSEuroCurrencyFormat.).",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,22 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Format Positive Numbers",
+			"description":"Dollar Format is about $, commas, and 2 decimal places",
+			"code":"dollarFormat(1236598.2)",
+			"result":"$1,236,598.20",
+			"runnable":true
+		},
+		{
+			"title":"Format Negative Numbers",
+			"description":"Negative numbers appear with parentheses.",
+			"code":"dollarFormat(-11.34)",
+			"result":"($11.34)",
+			"runnable":true
+		}
 	]
 
 }

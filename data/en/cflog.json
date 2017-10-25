@@ -2,14 +2,13 @@
 	"name":"cflog",
 	"type":"tag",
 	"syntax":"<cflog text=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Writes a message to a log file.",
+	"description":"Writes a message to a log file.",
 	"params": [
-		{"name":"text","description":"Message text to log.","required":true,"default":"","type":"String","values":[]},
-		{"name":"log","description":"If you omit the file attribute, writes messages to standard\n log file. Ignored, if you specify file attribute.\n\n Application: writes to Application.log, normally used for\n application-specific messages.\n Scheduler: writes to Scheduler.log, normally used to log\n the execution of scheduled tasks.","required":false,"default":"","type":"String","values":["Application","Scheduler"]},
-		{"name":"file","description":"Message file. Specify only the main part of the filename.\n For example, to log to the Testing.log file, specify\n \"Testing\".\n\n The file must be located in the default log directory. You\n cannot specify a directory path. If the file does not\n exist, it is created automatically, with the suffix .log.","required":false,"default":"","type":"String","values":[]},
-		{"name":"type","description":"Type (severity) of the message","required":false,"default":"","type":"String","values":["information","warning","error","fatal"]},
+		{"name":"text","description":"Message text to log.","required":true,"default":"","type":"string","values":[]},
+		{"name":"log","description":"If you omit the file attribute, writes messages to standard\n log file. Ignored, if you specify file attribute.\n\n Application: writes to Application.log, normally used for\n application-specific messages.\n Scheduler: writes to Scheduler.log, normally used to log\n the execution of scheduled tasks.","required":false,"default":"","type":"string","values":["Application","Scheduler"]},
+		{"name":"file","description":"Message file. Specify only the main part of the filename.\n For example, to log to the Testing.log file, specify\n \"Testing\".\n\n The file must be located in the default log directory. You\n cannot specify a directory path. If the file does not\n exist, it is created automatically, with the suffix .log.","required":false,"default":"","type":"string","values":[]},
+		{"name":"type","description":"Type (severity) of the message","required":false,"default":"","type":"string","values":["information","warning","error","fatal"]},
 		{"name":"application","description":"log application name, if it is specified in a cfapplication\n tag.","required":false,"default":"","type":"boolean","values":[true,false]}
 
 	],
@@ -24,7 +23,7 @@
 	],
 	"examples":[
 		{"result":"","title":"Log to a file you specify","description":"CFLog will create a file or append to a file named myAppLog.log in the servers logs directory.","code":"<cflog file=\"myAppLog\" text=\"Whatever you want to log.\" type=\"information\" >"},
-		
+
 		{"result":"",
 		"title":"Script Syntax",
 		"description":"",

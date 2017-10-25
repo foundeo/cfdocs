@@ -3,14 +3,20 @@
 	"type": "function",
 	"syntax": "entityNameList([delimiter])",
 	"returns": "string",
-	"related": [],
-	"description": "",
+	"related": ["entityNameArray"],
+	"description": "Returns a list of all loaded entities",
 	"params": [
 		{"name": "delimiter", "description": "", "required": false, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/entitynamelist.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Outputs a list of entities currently loaded",
+		"description":"",
+		"code":"entityNameList()",
+		"result":"",
+		"runnable":true
+	}],
 	"links": []
 }

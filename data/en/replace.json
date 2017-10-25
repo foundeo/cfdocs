@@ -2,15 +2,14 @@
 	"name":"replace",
 	"type":"function",
 	"syntax":"replace(String, substring1, substring2 [, scope])",
-	"returns":"String",
-	"related":[],
+	"returns":"string",
+	"related":["replaceNoCase","replaceList","REReplace"],
 	"description":"Replaces occurrences of substring1 in a string with substring2,\n in a specified scope. The search is case-sensitive. Function returns original string with replacements made.",
 	"params": [
-		{"name":"String","description":"String to search","required":true,"default":"","type":"String","values":[]},
-                {"name":"substring1","description":"Substring to find within string","required":true,"default":"","type":"String","values":[]},
-                {"name":"substring2","description":"Substring to replace substring1 with","required":true,"default":"","type":"String","values":[]},
-		{"name":"scope","description":"* one: replace the first occurrence\n * all: replace all occurrences","required":false,"default":"one","type":"String","values":["one","all"]}
-
+		{"name":"String","description":"String to search","required":true,"default":"","type":"string","values":[]},
+        	{"name":"substring1","description":"Substring to find within string","required":true,"default":"","type":"string","values":[]},
+        	{"name":"substring2","description":"Substring to replace substring1 with. As of CF2016+ you can also pass a callback function in this argument `function(pattern, position, originalString)`.","required":true,"default":"","type":"string","values":[]},
+		{"name":"scope","description":"* one: replace the first occurrence\n * all: replace all occurrences","required":false,"default":"one","type":"string","values":["one","all"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/replace.html"},
@@ -18,22 +17,26 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/replace"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/replace"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title": "Script Syntax",
-			"description": "",
+			"title": "Replace uppercase 'U' with lowercase 'u'",
+			"description": "Replace in Script Syntax",
 			"code": "getVal = replace(\"ColdFUsion\", \"U\", \"u\"); \r\n writeDump(getVal);",
 			"result": "Expected Result: ColdFusion"
 		},
-	        {
-	            "title": "Tag Syntax",
-	            "description": "",
-	            "code": "getVal1 = replace(\"COldFusiOn\", \"O\", \"o\", \"ONE\"); \r\n writeDump(getVal1);",
-	            "result": "Expected Result: ColdFusiOn"
-	        }
+		{
+			"title": "Replace uppercase 'O' with lowercase 'o', but only once",
+			"description": "Something similar in Tag Syntax",
+			"code": "getVal1 = replace(\"COldFusiOn\", \"O\", \"o\", \"ONE\"); \r\n writeDump(getVal1);",
+			"result": "Expected Result: ColdFusiOn"
+		},
+		{
+			"title":"Example using Callback Function",
+			"description":"In CF2016+ you can pass in a callback function to the third argument of the `replace` function",
+			"code":"public function upCase(pattern, position, orig) {\r\n    return uCase(pattern);\r\n}\r\nresult = replace(\"A man a plan a canal.\",\"an\", upCase , \"ALL\");\r\nwriteOutput(result);",
+			"result":"A mAN a plAN a cANal.",
+			"runnable":true
+		}
 	]
-
 }

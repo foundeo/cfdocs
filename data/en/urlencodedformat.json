@@ -1,13 +1,14 @@
 {
-	"name":"URLEncodedFormat",
+	"name":"urlEncodedFormat",
 	"type":"function",
-	"syntax":"URLEncodedFormat(String [, charset])",
-	"returns":"String",
-	"related":[],
-	"description":" Generates a URL-encoded string. For example, it replaces spaces\n with %20, and non-alphanumeric characters with equivalent\n hexadecimal escape sequences. Passes arbitrary strings within a\n URL.",
+	"syntax":"urlEncodedFormat(String [, charset])",
+	"returns":"string",
+	"related":["encodeForURL"],
+	"description":"Generates a URL-encoded string. For example, it replaces spaces\n with %20, and non-alphanumeric characters with equivalent\n hexadecimal escape sequences. Passes arbitrary strings within a\n URL.",
+	"discouraged":"The continued use of this function is discouraged. It is recommended that you use EncodeForURL for all new applications.",
 	"params": [
-		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"String","values":[]},
-		{"name":"charset","description":"The character encoding in which the string is encoded.","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
+		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"string","values":[]},
+		{"name":"charset","description":"The character encoding in which the string is encoded.","required":false,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 
 	],
 	"engines": {

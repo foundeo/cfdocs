@@ -2,35 +2,34 @@
 	"name":"cfldap",
 	"type":"tag",
 	"syntax":"<cfldap server=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Provides an interface to a Lightweight Directory Access Protocol\n (LDAP) directory server, such as the Netscape Directory Server.",
+	"description":"Provides an interface to a Lightweight Directory Access Protocol\n (LDAP) directory server, such as the Netscape Directory Server.",
 	"params": [
-		{"name":"server","description":"Host name or IP address of LDAP server.","required":true,"default":"","type":"String","values":[]},
-		{"name":"port","description":"Port of the LDAP server (default 389).","required":false,"default":389,"type":"Numeric","values":[]},
-		{"name":"username","description":"The User ID. Required if secure = \"CFSSL_BASIC\"","required":false,"default":"","type":"String","values":[]},
-		{"name":"password","description":"Password that corresponds to user name.\n If secure = \"CFSSL_BASIC\", V2 encrypts the password before\n transmission.","required":false,"default":"","type":"String","values":[]},
-		{"name":"action","description":"* query: returns LDAP entry information only. Requires name,\n start, and attributes attributes.\n * add: adds LDAP entries to LDAP server. Requires attributes\n attribute.\n * modify: modifies LDAP entries, except distinguished name dn\n attribute, on LDAP server. Requires dn. See modifyType attribute.\n * modifyDN: modifies distinguished name attribute for LDAP\n entries on LDAP server. Requires dn.\n * delete: deletes LDAP entries on an LDAP server. Requires dn.","required":false,"default":"query","type":"String","values":["query","add","modify","modifyDN","delete"]},
-		{"name":"name","description":"Required if action = \"Query\"\n Name of LDAP query. The tag validates the value.","required":false,"default":"","type":"String","values":[]},
-		{"name":"timeout","description":"Maximum length of time, in seconds, to wait for LDAP processing.\n Default 60000","required":false,"default":60000,"type":"Numeric","values":[]},
-		{"name":"maxrows","description":"Maximum number of entries for LDAP queries.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"start","description":"Required if action = \"Query\"\n Distinguished name of entry to be used to start a search.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"scope","description":"Scope of search, from entry specified in start attribute for\n action = \"Query\".\n * oneLevel: entries one level below entry.\n * base: only the entry.\n * subtree: entry and all levels below it.","required":false,"default":"onelevel","type":"String","values":["onelevel","base","subtree"]},
-		{"name":"attributes","description":"Required if action = \"Query\", \"Add\", \"ModifyDN\", or \"Modify\"\n For queries: comma-delimited list of attributes to return. For\n queries, to get all attributes, specify \"*\".\n \n If action = \"add\" or \"modify\", you can specify a list of update\n columns. Separate attributes with a semicolon.\n \n If action = \"ModifyDN\", CFML passes attributes to the\n LDAP server without syntax checking.","required":false,"default":"","type":"String","values":[]},
-		{"name":"returnasbinary","description":"CF7+ A comma-delimited list of columns that are to\n be returned as binary values.","required":false,"default":"","type":"String","values":[]},
-		{"name":"filter","description":"Search criteria for action = \"Query\".\n List attributes in the form:\n \"(attribute operator value)\" Example: \"(sn = Smith)\"","required":false,"default":"","type":"String","values":[]},
-		{"name":"sort","description":"Attribute(s) by which to sort query results. Use a comma\n delimiter.","required":false,"default":"","type":"String","values":[]},
-		{"name":"sortcontrol","description":"Default asc\n * nocase: case-insensitive sort\n * asc: ascending (a to z) case-sensitive sort\n * desc: descending (z to a) case-sensitive sort\n\n You can enter a combination of sort types; for example,\n sortControl = \"nocase, asc\".","required":false,"default":"asc","type":"String","values":["nocase","asc","desc","nocase, desc","nocase, asc"]},
-		{"name":"dn","description":"Distinguished name, for update action. Example:\n \"cn = Bob Jensen, o = Ace Industry, c = US\"","required":false,"default":"","type":"String","values":[]},
-		{"name":"startrow","description":"Used with action = \"query\". First row of LDAP query to insert\n into a CFML query.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"modifytype","description":"Default replace\n\n How to process an attribute in a multi-value list.\n * add: appends it to any attributes\n * delete: deletes it from the set of attributes\n * replace: replaces it with specified attributes\n\n You cannot add an attribute that is already present or that is\n empty.","required":false,"default":"replace","type":"String","values":["add","delete","replace"]},
+		{"name":"server","description":"Host name or IP address of LDAP server.","required":true,"default":"","type":"string","values":[]},
+		{"name":"port","description":"Port of the LDAP server (default 389).","required":false,"default":389,"type":"numeric","values":[]},
+		{"name":"username","description":"The User ID. Required if secure = \"CFSSL_BASIC\"","required":false,"default":"","type":"string","values":[]},
+		{"name":"password","description":"Password that corresponds to user name.\n If secure = \"CFSSL_BASIC\", V2 encrypts the password before\n transmission.","required":false,"default":"","type":"string","values":[]},
+		{"name":"action","description":"* query: returns LDAP entry information only. Requires name,\n start, and attributes attributes.\n * add: adds LDAP entries to LDAP server. Requires attributes\n attribute.\n * modify: modifies LDAP entries, except distinguished name dn\n attribute, on LDAP server. Requires dn. See modifyType attribute.\n * modifyDN: modifies distinguished name attribute for LDAP\n entries on LDAP server. Requires dn.\n * delete: deletes LDAP entries on an LDAP server. Requires dn.","required":false,"default":"query","type":"string","values":["query","add","modify","modifyDN","delete"]},
+		{"name":"name","description":"Required if action = \"Query\"\n Name of LDAP query. The tag validates the value.","required":false,"default":"","type":"string","values":[]},
+		{"name":"timeout","description":"Maximum length of time, in seconds, to wait for LDAP processing.\n Default 60000","required":false,"default":60000,"type":"numeric","values":[]},
+		{"name":"maxrows","description":"Maximum number of entries for LDAP queries.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"start","description":"Required if action = \"Query\"\n Distinguished name of entry to be used to start a search.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"scope","description":"Scope of search, from entry specified in start attribute for\n action = \"Query\".\n * oneLevel: entries one level below entry.\n * base: only the entry.\n * subtree: entry and all levels below it.","required":false,"default":"onelevel","type":"string","values":["onelevel","base","subtree"]},
+		{"name":"attributes","description":"Required if action = \"Query\", \"Add\", \"ModifyDN\", or \"Modify\"\n For queries: comma-delimited list of attributes to return. For\n queries, to get all attributes, specify \"*\".\n \n If action = \"add\" or \"modify\", you can specify a list of update\n columns. Separate attributes with a semicolon.\n \n If action = \"ModifyDN\", CFML passes attributes to the\n LDAP server without syntax checking.","required":false,"default":"","type":"string","values":[]},
+		{"name":"returnasbinary","description":"CF7+ A comma-delimited list of columns that are to\n be returned as binary values.","required":false,"default":"","type":"string","values":[]},
+		{"name":"filter","description":"Search criteria for action = \"Query\".\n List attributes in the form:\n \"(attribute operator value)\" Example: \"(sn = Smith)\"","required":false,"default":"","type":"string","values":[]},
+		{"name":"sort","description":"Attribute(s) by which to sort query results. Use a comma\n delimiter.","required":false,"default":"","type":"string","values":[]},
+		{"name":"sortcontrol","description":"Default asc\n * nocase: case-insensitive sort\n * asc: ascending (a to z) case-sensitive sort\n * desc: descending (z to a) case-sensitive sort\n\n You can enter a combination of sort types; for example,\n sortControl = \"nocase, asc\".","required":false,"default":"asc","type":"string","values":["nocase","asc","desc","nocase, desc","nocase, asc"]},
+		{"name":"dn","description":"Distinguished name, for update action. Example:\n \"cn = Bob Jensen, o = Ace Industry, c = US\"","required":false,"default":"","type":"string","values":[]},
+		{"name":"startrow","description":"Used with action = \"query\". First row of LDAP query to insert\n into a CFML query.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"modifytype","description":"Default replace\n\n How to process an attribute in a multi-value list.\n * add: appends it to any attributes\n * delete: deletes it from the set of attributes\n * replace: replaces it with specified attributes\n\n You cannot add an attribute that is already present or that is\n empty.","required":false,"default":"replace","type":"string","values":["add","delete","replace"]},
 		{"name":"rebind","description":"* Yes: attempt to rebind referral callback and reissue query by\n referred address using original credentials.\n * No: referred connections are anonymous","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"referral","description":"Number of hops allowed in a referral. A value of 0 disables\n referred addresses for LDAP; no data is returned.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"secure","description":"Security to employ, and required information. One option:\n * CFSSL_BASIC\n\n \"CFSSL_BASIC\" provides V2 SSL encryption\n and server authentication.","required":false,"default":"","type":"String","values":["CFSSL_BASIC"]},
-		{"name":"separator","description":"Default , (a comma)\n Delimiter to separate attribute values of multi-value\n attributes. Used by query, add, and modify actions, and by\n cfldap to output multi-value attributes.\n\n For example, if $ (dollar sign), the attributes attribute could\n be \"objectclass = top$person\", where the first value of\n objectclass is top, and the second value is person. This avoids\n confusion if values include commas.","required":false,"default":",","type":"String","values":[",",";","|",":"]},
-		{"name":"delimiter","description":"Separator between attribute name-value pairs. Use this\n attribute if:\n\n * the attributes attribute specifies more than one item, or\n * an attribute contains the default delimiter (semicolon). For\n example: mgrpmsgrejecttext;lang-en\n\n Used by query, add, and modify actions, and by cfldap to output\n multi-value attributes.\n\n For example, if $ (dollar sign), you could specify\n \"cn = Double Tree Inn$street = 1111 Elm; Suite 100 where the\n semicolon is part of the street value.","required":false,"default":";","type":"String","values":[",",";","|",":"]},
-		{"name":"clientcert","description":"CF11+ A file path to a client certificate.","required":false,"default":"","type":"String","values":[]},
-		{"name":"clientcertpassword","description":"CF11+ The password for the client certificate file.","required":false,"default":"","type":"String","values":[]},
+		{"name":"referral","description":"Number of hops allowed in a referral. A value of 0 disables\n referred addresses for LDAP; no data is returned.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"secure","description":"Security to employ, and required information. One option:\n * CFSSL_BASIC\n\n \"CFSSL_BASIC\" provides V2 SSL encryption\n and server authentication.","required":false,"default":"","type":"string","values":["CFSSL_BASIC"]},
+		{"name":"separator","description":"Default , (a comma)\n Delimiter to separate attribute values of multi-value\n attributes. Used by query, add, and modify actions, and by\n cfldap to output multi-value attributes.\n\n For example, if $ (dollar sign), the attributes attribute could\n be \"objectclass = top$person\", where the first value of\n objectclass is top, and the second value is person. This avoids\n confusion if values include commas.","required":false,"default":",","type":"string","values":[",",";","|",":"]},
+		{"name":"delimiter","description":"Separator between attribute name-value pairs. Use this\n attribute if:\n\n * the attributes attribute specifies more than one item, or\n * an attribute contains the default delimiter (semicolon). For\n example: mgrpmsgrejecttext;lang-en\n\n Used by query, add, and modify actions, and by cfldap to output\n multi-value attributes.\n\n For example, if $ (dollar sign), you could specify\n \"cn = Double Tree Inn$street = 1111 Elm; Suite 100 where the\n semicolon is part of the street value.","required":false,"default":";","type":"string","values":[",",";","|",":"]},
+		{"name":"clientcert","description":"CF11+ A file path to a client certificate.","required":false,"default":"","type":"string","values":[]},
+		{"name":"clientcertpassword","description":"CF11+ The password for the client certificate file.","required":false,"default":"","type":"string","values":[]},
 		{"name":"usetls","description":"CF11+ Indicates that the connection should be made using transport layer security.","required":false,"default":"false","type":"boolean","values":[]}
 
 	],
@@ -42,6 +41,22 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Lookup a User in Active Directory Example",
+			"description":"This example gets the user's data from active directory and displays a thumbnail image stored in active directory.",
+			"code":"<cfldap\r\n\tserver=\"ServerName\"\r\n\tport=636\r\n\taction=\"QUERY\"\r\n\tname=\"qLDAP\"\r\n\tsecure=\"CFSSL_BASIC\"\r\n\tusername=\"mydomain\\#ldapUsername#\"\r\n\tpassword=\"#ldapPassword#\"\r\n\tstart=\"dc=MYDOMAIN,dc=MYTLD\"\r\n\tattributes=\"cn,userPrincipalName,title,mail,thumbnailPhoto\"\r\n\tfilter=\"(sAMAccountName=#username#)\"> \r\n\r\n<cfoutput><img src=\"data:image/jpeg;base64,#binaryEncode(qLDAP.thumbnailPhoto,\"Base64\")#\" /></cfoutput>",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Script Syntax to Authenticate a User via Active Directory",
+			"description":"This is an example of using `cfldap` to authenticate a user against an Active Directory server.  The server or domain CA certificate must be imported into the cacerts java keystore for `security=\"CFSSL_BASIC\"` to work. ",
+			"code":"cfldap(\r\n\tserver = \"ServerName\",\r\n\tport = 636,\r\n\taction = \"QUERY\",\r\n\tname = \"qLDAPLookup\",\r\n\tsecure = \"CFSSL_BASIC\",\r\n\tusername = \"MYDOMAIN\\#arguments.username#\",\r\n\tpassword = arguments.password,\r\n\tstart = \"dc=MYDOMAIN,dc=MYTLD\",\r\n\tattributes = \"cn,userPrincipalName,title,mail\",\r\n\ttimeout = \"10\",\r\n\tfilter = \"(sAMAccountName=#arguments.username#)\"\r\n);\r\n\r\nif (qLDAPLookup.recordCount) {\r\n\tuserAuthenticated = true;\r\n}",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }

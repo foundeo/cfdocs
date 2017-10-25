@@ -7,14 +7,14 @@
 	"related":[],
 	"description":" Draws a rectangle with rounded corners.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"x","description":"The x coordinate of the rectangle.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"y","description":"The y coordinate of the rectangle.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"width","description":"The width of the rectangle.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"height","description":"The height of the rectangle.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"arcwidth","description":"The horizontal diameter of the arc at the four corners.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"archeight","description":"The vertical diameter of the arc at the four corners.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"filled","description":"Specify whether the rectangle is filled","required":false,"default":"false","type":"Boolean","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"x","description":"The x coordinate of the rectangle.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"y","description":"The y coordinate of the rectangle.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"width","description":"The width of the rectangle.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"height","description":"The height of the rectangle.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"arcwidth","description":"The horizontal diameter of the arc at the four corners.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"archeight","description":"The vertical diameter of the arc at the four corners.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"filled","description":"Specify whether the rectangle is filled","required":false,"default":"false","type":"boolean","values":[]}
 
 	],
 	"engines": {

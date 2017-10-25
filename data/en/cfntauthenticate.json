@@ -2,7 +2,6 @@
 	"name": "cfntauthenticate",
 	"type": "tag",
 	"syntax": "<cfntauthenticate username=\"\" password=\"\" domain=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Authenticates a user name and password against the\n NT domain on which ColdFusion server is running,\n and optionally retrieves the user's groups.",
 	"params": [
@@ -11,7 +10,7 @@
 			"description": "User's login name.",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +18,7 @@
 			"description": "User's login name.",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +26,7 @@
 			"description": "Domain against which to authenticate the user. The\n ColdFusion J2EE server must be running on this domain.",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{

@@ -2,14 +2,14 @@
 	"name":"listSort",
 	"type":"function",
 	"syntax":"listSort(list, sort_type [, sort_order] [, delimiters])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Sorts list elements according to a sort type and sort order.\n Returns a sorted copy of the list.\n [sort_type - quicky]\n numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n - aabzABZ, if sort_order = \"asc\"\n - ZBAzbaa, if sort_order = \"desc\"\n textnocase: sorts text alphabetically, without regard to case\n - aAaBbBzzZ, in an asc sort;\n - ZzzBbBaAa, in a desc sort;",
 	"params": [
-		{"name":"list","description":"A list or variable name","required":true,"default":"","type":"String","values":[]},
-		{"name":"sort_type","description":"numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n (also known as case sensitive).\n - aabzABZ for ascending sort(sort_order = \"asc\")\n - ZBAzbaa for descending sort(sort_order = \"desc\")\n\n textnocase: sorts text alphabetically, without regard to\n case (also known as case-insensitive).\n - aAaBbBzzZ for ascending sort(sort_order = \"asc\")\n - ZzzBbBaAa for descending sort(sort_order = \"desc\")","required":true,"default":"","type":"String","values":[]},
-		{"name":"sort_order","description":"","required":false,"default":"asc","type":"String","values":["asc: ascending (a to z) sort order.","desc: descending (z to a) sort order" ]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
+		{"name":"list","description":"A list or variable name","required":true,"default":"","type":"string","values":[]},
+		{"name":"sort_type","description":"numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n (also known as case sensitive).\n - aabzABZ for ascending sort(sort_order = \"asc\")\n - ZBAzbaa for descending sort(sort_order = \"desc\")\n\n textnocase: sorts text alphabetically, without regard to\n case (also known as case-insensitive).\n - aAaBbBzzZ for ascending sort(sort_order = \"asc\")\n - ZzzBbBaAa for descending sort(sort_order = \"desc\")","required":true,"default":"","type":"string","values":[]},
+		{"name":"sort_order","description":"","required":false,"default":"asc","type":"string","values":["asc: ascending (a to z) sort order.","desc: descending (z to a) sort order" ]},
+		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
 
 	],
 	"engines": {

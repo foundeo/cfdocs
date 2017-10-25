@@ -3,16 +3,15 @@
 	"type":"tag",
 	"syntax":"<cfoutput>",
 	"script":"writeOutput()",
-	"returns":"",
-	"related":["writeOutput","encodeForHTML","encodeForHTMLAttribute"],
+	"related":["cfloop","writeOutput","encodeForHTML","encodeForHTMLAttribute"],
 	"description":"Displays output that can contain the results of processing CFML variables and functions. You can use the `query` attribute to loop over the result set of a database query.",
 	"params": [
 		{"name":"query","description":"Name of cfquery from which to draw data for output section.","required":false,"default":"","type":"query","values":[]},
-		{"name":"group","description":"Query column to use to group sets of records. Eliminates\n adjacent duplicate rows when data is sorted. Use if you\n retrieved a record set ordered on one or more a query\n columns. For example, if a record set is ordered on\n \"Customer_ID\" in the cfquery tag, you can group the output\n on \"Customer_ID.\"","required":false,"default":"","type":"String","values":[]},
+		{"name":"group","description":"Query column to use to group sets of records. Eliminates\n adjacent duplicate rows when data is sorted. Use if you\n retrieved a record set ordered on one or more a query\n columns. For example, if a record set is ordered on\n \"Customer_ID\" in the cfquery tag, you can group the output\n on \"Customer_ID.\"","required":false,"default":"","type":"string","values":[]},
 		{"name":"groupcasesensitive","description":"Whether to consider the case in grouping rows.","required":false,"default":"","type":"boolean","values":[true,false]},
-		{"name":"startrow","description":"Row from which to start output.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"maxrows","description":"Maximum number of rows to display.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"encodefor","description":"CF2016+ When set applies an encoder to all variables to prevent XSS. For example if you specify `html` each variable will be wrapped by a call to the `encodeForHTML` function.","required":false,"default":"","type":"string","values":["html","htmlattribute","javascript","css","xml","xmlattribute","url","xpath","ldap","dn"]}
+		{"name":"startrow","description":"Row from which to start output. Only considered when the query attribute is set.\nThis attribute in combination with maxrows can be used to create some paging.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"maxrows","description":"Maximum number of rows to display. Only considered when the query attribute is set.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"encodefor","description":"CF2016+ Lucee5.1+ When set applies an encoder to all variables to prevent XSS. For example if you specify `html` each variable will be wrapped by a call to the `encodeForHTML` function.","required":false,"default":"","type":"string","values":["html","htmlattribute","javascript","css","xml","xmlattribute","url","xpath","ldap","dn"]}
 
 	],
 	"engines": {
@@ -38,8 +37,14 @@
 	            "result": ""
 	    },
 	    {
+	            "title": "Loop over a range of rows of a query",
+	            "description": "Loops over 10 rows of the query specified starting from row 5 and outputs the result.",
+	            "code": "<cfoutput query=\"news\" startrow=\"5\" maxrows=\"10\">\n    <h2>#encodeForHTML(news.headline)#</h2>\n    <p>#encodeForHTML(news.byline)#</p>\n</cfoutput>",
+	            "result": ""
+	    },
+	    {
 	            "title": "Using the encodeFor attribute",
-	            "description": "CF2016+ By specifying `encodefor=\"html\"` each varaible is encoded using the `encodeForHTML` function before it is output.",
+	            "description": "CF2016+ Lucee5.1+ By specifying `encodefor=\"html\"` each varaible is encoded using the `encodeForHTML` function before it is output.",
 	            "code": "<cfoutput query=\"news\" encodefor=\"html\">\n    <h2>#news.headline#</h2>\n    <p>#news.byline#</p>\n</cfoutput>",
 	            "result": ""
 	    },

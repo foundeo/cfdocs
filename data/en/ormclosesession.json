@@ -1,12 +1,12 @@
 {
-	"name":"ORMCloseSession",
+	"name":"ormCloseSession",
 	"type":"function",
-	"syntax":"ORMCloseSession([datasource])",
+	"syntax":"ormCloseSession([datasource])",
 	"returns":"void",
 	"related":[],
 	"description":"Closes the current ORM session for the given datasource. When the datasource argument is not passed then it uses the default datasource defined in Application.cfc.",
 	"params": [
-		{"name":"datasource","description":"Name of the datasource for the ORM session","required":false,"default":"","type":"String","values":[]}
+		{"name":"datasource","description":"Name of the datasource for the ORM session","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormclosesession.html"},

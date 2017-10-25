@@ -2,7 +2,6 @@
 	"name": "cfreportparam",
 	"type": "tag",
 	"syntax": "<cfreportparam>",
-	"returns": "",
 	"related": [],
 	"description": "Passes input parameters to a ColdFusion Report Builder\n report definition. Allowed inside cfreport tag bodies only.",
 	"params": [
@@ -11,7 +10,7 @@
 			"description": "Variable name for data that is passed. The ColdFusion\n Report Builder report definition must include an input\n parameter that matches this name.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +18,7 @@
 			"description": "Value of the data that is sent.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +26,7 @@
 			"description": "Name of the chart contained in a report or subreport. The value of this attribute must match Name property of a chart defined in the Report Builder report.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -43,7 +42,7 @@
 			"description": "Ordinal number of a chart series to use for the query. This attribute is valid only when the chart attribute is specified.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -51,7 +50,7 @@
 			"description": "Style in CSS format for a subreport.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -59,7 +58,7 @@
 			"description": "Name of the subreport.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

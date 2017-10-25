@@ -4,10 +4,10 @@
 	"syntax": "cacheGetAll([filter] [, cacheName])",
 	"returns": "struct",
 	"related": [],
-	"description": "",
+	"description": "Returns a structure containing all elements inside the cache.",
 	"params": [
-		{"name": "filter", "description": "", "required": false, "default": "", "type": "string", "values": []},
-		{"name": "cacheName", "description": "", "required": false, "default": "", "type": "string", "values": []}
+		{"name": "filter", "description": "Key filter for the elements, the filter follows the same rules as the cfdirectory-filter", "required": false, "default": "", "type": "string", "values": []},
+		{"name": "cacheName", "description": "Definition of the cache used by name, when not set the \"default Object Cache\" defined in Lucee Administrator is used instead", "required": false, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/cachegetall.html"}
