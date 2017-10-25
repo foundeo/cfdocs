@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"listFind(list, value [, delimiters, includeEmptyValues])",
 	"returns":"numeric",
-	"related":[],
+	"related":["listFindNoCase","arrayFind"],
 	"description":"Determines the index of the first list element in which a specified value occurs. Returns 0 if not found. Case-sensitive",
 	"params": [
 		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
