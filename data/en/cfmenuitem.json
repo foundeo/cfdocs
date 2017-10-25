@@ -5,6 +5,7 @@
 	"returns": "",
 	"related": [],
 	"description": "Defines an entry in a menu, including an item that is the head of a submenu.",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfmenu/index.html",
 	"params": [
 		{
 			"name": "display",
