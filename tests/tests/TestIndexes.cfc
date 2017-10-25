@@ -56,5 +56,6 @@ component extends="testbox.system.BaseSpec" {
 					expect(ArrayFind(funcs.related, function) NEQ 0).toBeTrue("#json.name# was not in functions.json index");
 				}
 			});
-		});	}
+		});
+	}
 }
