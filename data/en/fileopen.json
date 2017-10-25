@@ -7,8 +7,8 @@
 	"description":"Opens a file",
 	"params": [
 		{"name":"filePath","description":"An absolute path of an on-disk or in-memory file on the server","required":true,"default":"","type":"","values":[]},
-		{"name":"mode","description":"<ul><li>read</li><li>readBinary</li><li>write</li><li>append</li></ul>","required":false,"default":"read","type":"","values":[]},
-		{"name":"charset","description":"<ul><li>utf-8</li><li>iso-8859-1</li><li>windows-1252</li><li>us-ascii</li><li>shift_jis</li><li>iso-2022-jp</li><li>euc-jp</li><li>euc-kr</li><li>big5</li><li>euc-cn</li><li>utf-16</li></ul>","required":false,"default":"Character encoding identified by the file's byte order mark, if any; otherwise, JVM default file character set.","type":"","values":[]}
+		{"name":"mode","description":"Type of access you require to the file stream","required":false,"default":"read","type":"","values":["read","readBinary","write","append"]},
+		{"name":"charset","description":"Character encoding identified by the file's byte order mark, if any; otherwise, JVM default file character set","required":false,"default":"","type":"","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileopen.html"},
@@ -16,8 +16,6 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/fileopen"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/fileopen"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": []
 }
