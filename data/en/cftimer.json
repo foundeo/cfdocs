@@ -2,9 +2,8 @@
 	"name":"cftimer",
 	"type":"tag",
 	"syntax":"<cftimer>",
-	"returns":"",
 	"related":[],
-	"description":" Displays execution time for a specified section of\n CFML code. ColdFusion MX displays the timing information\n along with any output produced by the timed code.",
+	"description":"Displays execution time for a specified section of\n CFML code. ColdFusion MX displays the timing information\n along with any output produced by the timed code.",
 	"params": [
 		{"name":"label","description":"Label to display with timing information.\n Default: \" \"","required":false,"default":" ","type":"string","values":[]},
 		{"name":"type","description":"- inline: displays timing information inline, following the\n resulting HTML.\n - outline: displays timing information and also displays a line\n around the output produced by the timed code. The browser\n must support the FIELDSET tag to display the outline.\n - comment: displays timing information in an HTML comment\n in the format <!-- label: elapsed-time ms -->. The default label\n is cftimer.\n - debug: displays timing information in the debug output\n under the heading CFTimer Times.\n Default: debug","required":false,"default":"debug","type":"string","values":["inline","outline","comment","debug"]}

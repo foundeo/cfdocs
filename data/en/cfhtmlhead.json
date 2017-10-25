@@ -2,9 +2,8 @@
 	"name":"cfhtmlhead",
 	"type":"tag",
 	"syntax":"<cfhtmlhead text=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Writes text to the head section of a generated HTML page. It is\n useful for embedding JavaScript code, or putting other HTML\n tags, such as meta, link, title, or base in an HTML page\n header.",
+	"description":"Writes text to the head section of a generated HTML page. It is\n useful for embedding JavaScript code, or putting other HTML\n tags, such as meta, link, title, or base in an HTML page\n header.",
 	"params": [
 		{"name":"text","description":"Text to add to the head area of an HTML page.","required":true,"default":"","type":"string","values":[]}
 

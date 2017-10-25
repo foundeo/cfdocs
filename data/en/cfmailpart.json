@@ -2,9 +2,8 @@
 	"name":"cfmailpart",
 	"type":"tag",
 	"syntax":"<cfmailpart type=\"text/plain\">",
-	"returns":"",
 	"related":[],
-	"description":" Specifies one part of a multipart e-mail message. Can only be\n used in the cfmail tag. You can use more than one cfmailpart\n tag within a cfmail tag.",
+	"description":"Specifies one part of a multipart e-mail message. Can only be\n used in the cfmail tag. You can use more than one cfmailpart\n tag within a cfmail tag.",
 	"params": [
 		{"name":"type","description":"The MIME media type of the part. Can be a can be valid MIME\n media type","required":true,"default":"","type":"string","values":["text\/plain","text\/html"]},
 		{"name":"wraptext","description":"Specifies the maximum line length, in characters of the\n mail text. If a line has more than the specified number of\n characters, replaces the last white space character, such\n as a tab or space, preceding the specified position with a\n line break. If there are no white space characters,\n inserts a line break at the specified position. A common\n value for this attribute is 72.","required":false,"default":"","type":"numeric","values":[]},

@@ -3,7 +3,6 @@
 	"type":"tag",
 	"syntax":"<cfapplication>",
 	"script":"component { /* Application.cfc */ this.name=\"myAppName\"; }",
-	"returns":"",
 	"related":["application-cfc"],
 	"description":"Defines the scope of a CFML application and allows you to set various application specific settings. Consider using Application.cfc instead of Application.cfm files.",
 	"params": [

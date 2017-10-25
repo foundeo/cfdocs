@@ -2,9 +2,8 @@
 	"name":"cfprocresult",
 	"type":"tag",
 	"syntax":"<cfprocresult name=\"\">",
-	"returns":"",
 	"related":["cfstoredproc","cfprocparam"],
-	"description":" Associates a query object with a result set returned by a\n stored procedure. Other CFML tags, such as cfoutput and\n cftable, use this query object to access the result set. This\n tag is nested within a cfstoredproc tag.",
+	"description":"Associates a query object with a result set returned by a\n stored procedure. Other CFML tags, such as cfoutput and\n cftable, use this query object to access the result set. This\n tag is nested within a cfstoredproc tag.",
 	"params": [
 		{"name":"name","description":"Name for the query result set.","required":true,"default":"","type":"string","values":[]},
 		{"name":"resultset","description":"Names one result set, if stored procedure returns more than\n one.","required":false,"default":"","type":"numeric","values":[]},

@@ -2,9 +2,8 @@
 	"name":"cfexchangefilter",
 	"type":"tag",
 	"syntax":"<cfexchangefilter name=\"allDayEvent\">",
-	"returns":"",
 	"related":[],
-	"description":" Specifies the filter parameter for cfexchangemail, cfexchangecalendar, cfexchangetask, and cfexchangecontact, get operations.",
+	"description":"Specifies the filter parameter for cfexchangemail, cfexchangecalendar, cfexchangetask, and cfexchangecontact, get operations.",
 	"params": [
 		{"name":"name","description":"The type of filter to use. (required)","required":true,"default":"","type":"any","values":["allDayEvent","assistant","attributes","attributes","bcc","billingInfo","businesAddress","businessFax","businessPhoneNumber","cc","companies","company","dateCompleted","displayAs","dueDate","duration","email1","email2","email3","endTime","firstName","folder","fromID","hasAttachment","homeAddress","homePhoneNumber","importance","isRead","isRecurring","jobTitle","lastName","location","mail_ID","mailingAddressType","manager","meeting UIDs","meeting_response","meetingUID","message","messageType","middleName","mileage","mobilePhoneNumber","name","nickName","office","optionalAttendees","organizer","otherAddress","otherPhoneNumber","profession","requiredAttendees","sensitivity","spouseName","startDate","startTime","status","subject","timeReceived","timeSent","toID","totalWork","UID","Valid","webPage","lastModified","recurrenceID","maxRows"]},
 		{"name":"from","description":"The start date or or date\/time combination of the range to use for filtering.\n Cannot be used with the value attribute.\n If you specify a from attribute without a to attribute, the filter selects for\n all entries on or after the specified date or time.\n The value can be in any date\/time format recognized by ColdFusion, but must\n correspond to a value that is appropriate for the filter type. (optional)","required":false,"default":"","type":"any","values":[]},

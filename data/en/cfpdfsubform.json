@@ -2,7 +2,6 @@
 	"name": "cfpdfsubform",
 	"type": "tag",
 	"syntax": "<cfpdfsubform name=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Populates a subform within the cfpdfform tag.\n The cfpdfsubform tag can be a child tag of the cfpdfform tag\n or nested in another cfpdfsubform tag.",
 	"params": [

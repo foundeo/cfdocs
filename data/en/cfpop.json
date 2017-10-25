@@ -2,9 +2,8 @@
 	"name":"cfpop",
 	"type":"tag",
 	"syntax":"<cfpop server=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Retrieves or deletes e-mail messages from a POP mail server.",
+	"description":"Retrieves or deletes e-mail messages from a POP mail server.",
 	"params": [
 		{"name":"server","description":"POP server identifier:\n A host name; for example, \"biff.upperlip.com\"\n An IP address; for example, \"192.1.2.225\"","required":true,"default":"","type":"string","values":[]},
 		{"name":"port","description":"POP port","required":false,"default":"","type":"numeric","values":[]},

@@ -2,9 +2,8 @@
 	"name":"cfhttpparam",
 	"type":"tag",
 	"syntax":"<cfhttpparam type=\"header\">",
-	"returns":"",
 	"related":[],
-	"description":" Allowed inside cfhttp tag bodies only. Required for cfhttp POST\n operations. Optional for all others. Specifies parameters to\n build an HTTP request.",
+	"description":"Allowed inside cfhttp tag bodies only. Required for cfhttp POST\n operations. Optional for all others. Specifies parameters to\n build an HTTP request.",
 	"params": [
 		{"name":"type","description":"The type of data to send\n\n `header`: Specifies an HTTP header. Does not URL encode the value\n\n`body`: Specifies that the `value` is the body of the HTTP request.\n\n`xml`: Identifies the request as having a content-type of\n `text\/xml` and specifies that the `value` attribute contains the body of the HTTP request.\n\n`cgi`: Same as `header` but URL encodes the `value` by default.\n\n`file`: Tells CFML to send the contents of the specified file.\n\n`url`: Specifies a URL query string name-value pair to append to the cfhttp url attribute. URL encodes the value.\n\n`formfield`: Specifies a form field to send. URL encodes the value by default.\n\n`cookie`: Specifies a cookie to send as an HTTP header. URL encodes the value.","required":true,"default":"","type":"string","values":["header","body","xml","cgi","file","url","formfield","cookie"]},
 		{"name":"name","description":"Variable name for data that is passed. Ignored for `body` and `xml` type. For `file` type, specifies the filename.","required":false,"default":"","type":"string","values":[]},

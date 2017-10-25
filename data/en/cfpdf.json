@@ -2,7 +2,6 @@
 	"name": "cfpdf",
 	"type": "tag",
 	"syntax": "<cfpdf>",
-	"returns": "",
 	"related": [],
 	"description": "Manipulates existing PDF documents. The following list describes some of the\n tasks you can perform with the cfpdf tag:\n Merge several PDF documents into one PDF document.\n Extract pages from multiple PDF documents and generate a new PDF document.\n Linearize multipage PDF documents for faster display.\n Encrypt or decrypt PDF files for security.",
 	"params": [

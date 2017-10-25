@@ -2,7 +2,6 @@
 	"name": "cfimage",
 	"type": "tag",
 	"syntax": "<cfimage>",
-	"returns": "",
 	"related": ["imageRead", "imageWrite", "imageResize","imageScaleToFit"],
 	"description": "Creates a ColdFusion image that can be manipulated by using image functions.\nYou can use the cfimage tag to perform common image manipulation operations as a shortcut to Image functions.\nYou can use the cfimage tag independently or in conjunction with image functions.",
 	"params": [

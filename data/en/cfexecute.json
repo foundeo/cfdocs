@@ -2,9 +2,8 @@
 	"name":"cfexecute",
 	"type":"tag",
 	"syntax":"<cfexecute name=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Executes a CFML developer-specified process on a server\n computer.",
+	"description":"Executes a CFML developer-specified process on a server\n computer.",
 	"params": [
 		{"name":"name","description":"Absolute path of the application to execute.\n\n On Windows, you must specify an extension; for example,\n C:\\myapp.exe.","required":true,"default":"","type":"string","values":[]},
 		{"name":"arguments","description":"Command-line variables passed to application. If specified\n as string, it is processed as follows:\n * Windows: passed to process control subsystem for parsing.\n * UNIX: tokenized into an array of arguments. The default\n token separator is a space; you can delimit arguments\n that have embedded spaces with double quotation marks.\n If passed as array, it is processed as follows:\n * Windows: elements are concatenated into a string of\n tokens, separated by spaces. Passed to process control\n subsystem for parsing.\n * UNIX: elements are copied into an array of exec()\n arguments","required":false,"default":"","type":"any","values":[]},

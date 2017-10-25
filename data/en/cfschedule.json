@@ -2,9 +2,8 @@
 	"name":"cfschedule",
 	"type":"tag",
 	"syntax":"<cfschedule action=\"delete\" task=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Provides a programmatic interface to the CFML scheduling\n engine. Can run a CFML page at scheduled intervals, with the\n option to write the page output to a static HTML page. This\n feature enables you to schedule pages that publish data, such\n as reports, without waiting while a database transaction is\n performed to populate the page.",
+	"description":"Provides a programmatic interface to the CFML scheduling\n engine. Can run a CFML page at scheduled intervals, with the\n option to write the page output to a static HTML page. This\n feature enables you to schedule pages that publish data, such\n as reports, without waiting while a database transaction is\n performed to populate the page.",
 	"params": [
 		{"name":"action","description":"delete: deletes the specified task\n update: updates an existing task or creates a new task,\n if one with the name specified by the task attribute\n does not exist\n run: executes the specified task\n pause: Pauses the specified task.\n resume: Continues executing the specified task.\n list: Lists all the scheduled tasks.","required":true,"default":"","type":"string","values":["delete","update","run","pause","resume","list"]},
 		{"name":"task","description":"Name of the task.","required":true,"default":"","type":"string","values":[]},

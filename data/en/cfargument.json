@@ -3,9 +3,8 @@
 	"type":"tag",
 	"syntax":"<cfargument name=\"\">",
 	"script": "myFunction(required any myArgument){}",
-	"returns":"",
 	"related":["cffunction"],
-	"description":" Creates a parameter definition within a component definition.\n Defines a function argument. Used within a cffunction tag.",
+	"description":"Creates a parameter definition within a component definition.\n Defines a function argument. Used within a cffunction tag.",
 	"params": [
 		{"name":"name","description":"An argument name.","required":true,"default":"","type":"string","values":[]},
 		{"name":"type","description":"a type name; data type of the argument.","required":false,"default":"","type":"string","values":["any","array","binary","boolean","date","guid","numeric","query","string","struct","uuid","xml","variablename","(component name)"]},

@@ -2,9 +2,8 @@
 	"name":"cfzipparam",
 	"type":"tag",
 	"syntax":"<cfzipparam>",
-	"returns":"",
 	"related":[],
-	"description":" Provides additional information to the cfzip tag.\n The cfzipparam tag is always a child tag of the cfzip tag.",
+	"description":"Provides additional information to the cfzip tag.\n The cfzipparam tag is always a child tag of the cfzip tag.",
 	"params": [
 		{"name":"charset","description":"Converts string content into binary data before putting\n it into a ZIP or JAR file. Used only when cfzip\n action=\"zip\" and the cfzipparam content is a string.\n Examples of character sets are:\n JIS\n RFC1345\n UTF-16 (optional, default=encoding of the host machine)","required":false,"default":"","type":"string","values":["JIS","RFC1345","UTF-16"]},
 		{"name":"content","description":"Content written to the ZIP or JAR entry. Used only when cfzip action=\"zip\".\n Valid content data types are binary and string. If you specify the content\n attribute, you must specify the entrypath attribute. (optional)","required":false,"default":"","type":"string","values":[]},

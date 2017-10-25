@@ -2,9 +2,8 @@
 	"name":"cfexchangecalendar",
 	"type":"tag",
 	"syntax":"<cfexchangecalendar action=\"create\" event=\"\" name=\"\" responsetype=\"accept\" uid=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Creates, deletes, modifies, gets, and responds to Microsoft Exchange calendar events, and gets calendar event attachments.",
+	"description":"Creates, deletes, modifies, gets, and responds to Microsoft Exchange calendar events, and gets calendar event attachments.",
 	"params": [
 		{"name":"action","description":"The action to take. Must be one of the following: create, delete, get, getAttachments, modify, respond (required)","required":true,"default":"","type":"string","values":["create","delete","deleteAttachments","get","getAttachments","modify","respond"]},
 		{"name":"attachmentpath","description":"The file path of the destination directory.\n If the directory does not exist, ColdFusion creates it.\n If you omit this attribute, ColdFusion does not save any attachments.\n If you specify a relative path, the path root is the ColdFusion temporary directory, which is returned by the GetTempDirectory function. (optional)","required":false,"default":"","type":"string","values":[]},

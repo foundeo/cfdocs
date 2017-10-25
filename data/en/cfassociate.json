@@ -2,9 +2,8 @@
 	"name":"cfassociate",
 	"type":"tag",
 	"syntax":"<cfassociate basetag=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Allows subtag data to be saved with a base tag. Applies only\n to custom tags.",
+	"description":"Allows subtag data to be saved with a base tag. Applies only\n to custom tags.",
 	"params": [
 		{"name":"basetag","description":"Base tag name","required":true,"default":"","type":"string","values":[]},
 		{"name":"datacollection","description":"Structure in which base tag stores subtag data","required":false,"default":"","type":"string","values":[]}

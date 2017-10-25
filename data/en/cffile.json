@@ -3,9 +3,8 @@
 	"type":"tag",
 	"syntax":"<cffile action=\"read\">",
 	"script":"fileRead(path);",
-	"returns":"",
 	"related":["fileread","filewrite","fileopen","filereadline"],
-	"description":" Manages interactions with server files.\n Different combinations cause different attributes to be\n required.",
+	"description":"Manages interactions with server files.\n Different combinations cause different attributes to be\n required.",
 	"params": [
 		{"name":"action","description":"Type of file manipulation that the tag performs.","required":true,"default":"","type":"string","values":["append","copy","delete","move","read","readbinary","rename","upload","uploadall","write"]},
 		{"name":"file","description":"Pathname of the file.","required":false,"default":"","type":"string","values":[]},

@@ -2,9 +2,8 @@
 	"name":"cfzip",
 	"type":"tag",
 	"syntax":"<cfzip>",
-	"returns":"",
 	"related":["compress"],
-	"description":" Manipulates ZIP and JavaTM Archive (JAR) files.\n In addition to the basic zip and unzip functions, use the cfzip tag to delete\n entries from an archive, filter files, read files in binary format, list the\n contents of an archive, and specify an entrypath used in an executable JAR file.",
+	"description":"Manipulates ZIP and JavaTM Archive (JAR) files.\n In addition to the basic zip and unzip functions, use the cfzip tag to delete\n entries from an archive, filter files, read files in binary format, list the\n contents of an archive, and specify an entrypath used in an executable JAR file.",
 	"params": [
 		{"name":"action","description":"The action to take. Must be one of the following:\n delete\n list\n read\n readBinary\n unzip\n zip\n If you do not specify an action, ColdFusion\n applies the default action, zip. (optional)","required":false,"default":"zip","type":"string","values":["delete","list","read","readBinary","unzip","zip"]},
 		{"name":"charset","description":"The character set used to translate the ZIP or JAR\n entry into a text string. Examples of character sets are:\n JIS\n RFC1345\n UTF-16 (optional, default=encoding of the host machine)","required":false,"default":"","type":"string","values":["JIS","RFC1345","UTF-16"]},

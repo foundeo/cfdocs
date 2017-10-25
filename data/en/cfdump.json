@@ -3,7 +3,6 @@
 	"type":"tag",
 	"syntax":"<cfdump var=\"\">",
 	"script": "writeDump(var = cgi, label = \"CGI Scope\");",
-	"returns":"",
 	"related":["writeDump"],
 	"description":"Outputs the contents of a variable of any type for debugging purposes. The variable can be as simple as a string or as complex as a cfc component instance.",
 	"params": [
