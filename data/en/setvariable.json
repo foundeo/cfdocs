@@ -3,12 +3,12 @@
 	"type":"function",
 	"syntax":"setVariable(name, value)",
 	"returns":"void",
-	"related":[],
-	"description":" This function is no longer required in well-formed CFML\n pages. Sets a variable in the name parameter to the value of the\n value parameter.",
+	"related":["getVariable"],
+	"description":"Sets a variable in the name parameter to the value of the value parameter.",
+	"discouraged":"This function is no longer required in well-formed CFML pages",
 	"params": [
 		{"name":"name","description":"Variable name","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"A string, the name of a string, or a number","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/setvariable.html"},
@@ -16,8 +16,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/setvariable"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/setvariable"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples":[{
+		"title":"Set the value of a from 1 to 2",
+		"description":"",
+		"code":"a=1;\nsetVariable('a',2);\nwriteOutput(a);",
+		"result":"2",
+		"runnable":true
+	}]
 }
