@@ -26,7 +26,7 @@ component extends="testbox.system.BaseSpec" {
 				}
 			});
 			
-			types = {tags=[], functions=[], listings=[]};
+			fileTypes = {tags=[], functions=[], listings=[]};
 			for (filePath in files) {
 				json = fileRead(filePath);
 				isItJson = isJSON(json);
@@ -46,13 +46,13 @@ component extends="testbox.system.BaseSpec" {
 			}
 
 			it("should be in tags.json if it is a tag", function() {
-				for (tag in types.tags) {
+				for (tag in fileTypes.tags) {
 					expect(ArrayFind(tags.related, tag) NEQ 0).toBeTrue("#json.name# was not in tags.json index");
 				}
 			});
 
 			it("should be in functions.json if it is a function", function() {
-				for (func in types.functions) {
+				for (func in fileTypes.functions) {
 					expect(ArrayFind(funcs.related, function) NEQ 0).toBeTrue("#json.name# was not in functions.json index");
 				}
 			});
