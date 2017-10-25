@@ -20,7 +20,7 @@
 			"title": "Tag Syntax",
 			"description": "",
 			"code": "encodeForXPath(\"'or 1=1\",false)",
-			"result": "'or 1=1",
+			"result": "&#x27;or 1&#x3d;1",
 			"runnable": true
 		}
 	]
