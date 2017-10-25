@@ -3,19 +3,16 @@
 	"type":"function",
 	"syntax":"createUUID()",
 	"returns":"uuid",
-	"related":[],
+	"related":["createGUID"],
 	"description":" Creates a Universally Unique Identifier (UUID). A UUID is a\n 35-character string representation of a unique 128-bit integer\n xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxxxxxx : x is a hexadecimal digit (8-4-4-16).\n SQL Server UUIDs are similar but have a format of 8-4-4-4-12.",
-	"params": [
-	],
+	"params": [],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateUUID.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/createuuid.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createuuid"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createuuid"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Creates a Universally Unique Identifier (UUID).  Each UUID will be unique",
@@ -25,5 +22,4 @@
 			"runnable":true
 		}
 	]
-
 }
