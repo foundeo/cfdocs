@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":" listMap(list, function(item [,index, list]) [,delimiter, includeEmptyFields)",
 	"returns":"string",
-	"related":["ListReduce"]
+	"related":["ListReduce"],
 	"description":"Iterates over every entry of the List and calls the closure function to work on the item of the list. The returned value will be set at the same index in a new list and the new list will be returned.",
 	"params":[
 		{"values":[],"default":"","description":"The input list.","name":"list","type":"string","required":"1"},
@@ -30,5 +30,5 @@
 		"title": "Script Syntax",
 		"description": "",
 		"code": "Rainbow = \"Whero, Karaka, Kowhai, Kakariki, Kikorangi, Tawatawa, Mawhero\";\r\nexternalList = \"\";\r\nreverseRainbow = listMap( rainbow, function(v,i,l) {\r\n\tvar newValue = \"#i#:#v.reverse()#\";\r\n\texternalList = externalList.append(newValue);\r\n\treturn newValue;\r\n});\r\nwriteDump([{rainbow=rainbow},{reverseRainbow=reverseRainbow},{externalList=externalList}]);\r\n"
-	}],
+	}]
 }
