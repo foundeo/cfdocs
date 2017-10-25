@@ -3,12 +3,12 @@
 	"type": "function",
 	"syntax": "getClassPath()",
 	"returns": "array",
-	"related": [],
+	"related": ["createObject"],
 	"description": "Returns an array containing the Java classpath of the current enviroment.",
 	"params": [],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getclasspath.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": []
 }
