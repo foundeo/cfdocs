@@ -52,7 +52,7 @@ component extends="testbox.system.BaseSpec" {
 			});
 
 			it("should be in functions.json if it is a function", function() {
-				for (function in types.functions) {
+				for (func in types.functions) {
 					expect(ArrayFind(funcs.related, function) NEQ 0).toBeTrue("#json.name# was not in functions.json index");
 				}
 			});
