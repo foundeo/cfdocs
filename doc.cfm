@@ -21,13 +21,11 @@
 	<cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9._-]", "", "ALL")>
 	<cfset possible = []>
 	<cfloop array="#application.index.functions#" index="i">
-		<cfif Len(url.name) LTE 3>
-			<cfif FindNoCase(url.name, i)>
-				<cfset ArrayAppend(possible, i)>
-			</cfif>
-		<cfelseif FindNoCase(url.name, i) OR FindNoCase(i, url.name)>
-			<cfset ArrayAppend(possible, i)>
-		<cfelseif LCase(Left(url.name, 3)) IS LCase(Left(i, 3)) OR LCase(Right(url.name, 3)) IS LCase(Right(i, 3))>
+		<cfif
+			(Len(url.name) LTE 3 AND FindNoCase(url.name, i)) OR
+			(FindNoCase(url.name, i) OR FindNoCase(i, url.name)) OR
+			(LCase(Left(url.name, 3)) is LCase(Left(i, 3)) OR LCase(Right(url.name, 3)) is LCase(Right(i, 3)))
+		>
 			<cfset ArrayAppend(possible, i)>
 		</cfif>
 	</cfloop>
