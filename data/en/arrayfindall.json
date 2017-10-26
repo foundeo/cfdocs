@@ -16,8 +16,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arrayfindall"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayfindall"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": [{
+		"title":"List all courses with participants",
+		"description":"",
+		"code":"courses = [{\r\n    name: \"Getting started with ColdFusion\",\r\n    participants: []\r\n},{\r\n    name: \"Caching in ColdFusion\",\r\n    participants: [{\r\n        name: \"John Doe\",\r\n        age: 45\r\n    },{\r\n        name: \"Jane Doe\",\r\n        age: 46\r\n    }]\r\n},{\r\n    name: \"Changeover to Lucee\",\r\n    participants: []\r\n},{\r\n    name: \"Update ColdFusion\",\r\n    participants: [{\r\n        name: \"Arthur Dent\",\r\n        age: 42\r\n    }]\r\n}];\r\n\r\nchoosenCourses = arrayFindAll(courses,function(course) {\r\n    return arrayLen(course.participants);\r\n});\r\n\r\nwriteOutput(ArrayToList(choosenCourses));",
+		"result":"2,4",
+		"runnable":true
+	}]
 }
