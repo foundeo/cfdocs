@@ -4,11 +4,10 @@
 	"syntax":"formatBaseN(number, radix)",
 	"returns":"string",
 	"related":[],
-	"description":" String Converts number to a string, in the base specified by\n radix. For example: #formatBaseN(1024,16)#",
+	"description":" String Converts number to a string, in the base specified by radix.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"radix","description":"","required":true,"default":"","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/formatbasen.html"},
@@ -16,16 +15,31 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/formatbasen"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/formatbasen"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+   	"examples": [
 		{
-			"title": "Script Syntax",
+			"title": "Format 10 as dual number",
 			"description": "",
-			"code": "<cfoutput> \r\n <br>formatBaseN(10,2): #formatBaseN(10,2)# \r\n <br>formatBaseN(1024,16): #formatBaseN(1024,16)# \r\n <br>formatBaseN(125,10): #formatBaseN(125,10)#  \r\n <br>formatBaseN(10.75,2): #formatBaseN(10.75,2)# \r\n </cfoutput>   ",
-			"result": ""
+			"code": "formatBaseN(10,2)",
+			"result": "1010"
+		},
+		{
+			"title": "Format 1024 as hexadecimal number",
+			"description": "",
+			"code": "formatBaseN(1024,16)",
+			"result": "400"
+		},
+		{
+			"title": "Format 125 as decimal number",
+			"description": "",
+			"code": "formatBaseN(125,10)",
+			"result": "125"
+		},
+		{
+			"title": "Format a float",
+			"description": "Floors float to integer then formats with radix given",
+			"code": "formatBaseN(10.75,2)",
+			"result": "1010"
 		}
 	]
-
 }
