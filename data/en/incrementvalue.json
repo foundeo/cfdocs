@@ -4,19 +4,17 @@
 	"syntax":"incrementValue(number)",
 	"returns":"numeric",
 	"related":["decrementValue"],
-	"description":"Increment the integer part of a number.\n same as x=x+1 or x++",
+	"description":"Increment the integer part of a number.\nSame as x=x+1 or x++",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
-
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/incrementvalue.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/incrementvalue.html"},
+		"coldfusion": {"minimum_version":"", "notes":"For floats ACF will return the integer incremented removing the decimal part", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/incrementvalue.html"},
+		"lucee": {"minimum_version":"", "notes":"For floats Lucee will keep the decimal part while incrementing", "docs":"http://docs.lucee.org/reference/functions/incrementvalue.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/incrementvalue"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/incrementvalue"}
 	},
-	"links": [
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Increment 7",
@@ -27,7 +25,7 @@
 		},
 		{
 			"title":"Increment 7.5",
-			"description":"There is a difference between CFML engines.  ACF will return the integer incremented removing the decimal part.  Lucee will increment the integer part but return both.",
+			"description":"There is a difference between CFML engines. ACF will return the integer incremented removing the decimal part. Lucee will increment the integer part but return both.",
 			"code":"incrementValue(7.5)",
 			"result":"",
 			"runnable":true
