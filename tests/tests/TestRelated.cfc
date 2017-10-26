@@ -31,13 +31,13 @@ component extends="testbox.system.BaseSpec" {
 					unexisting = arrayFilter(tag.related,function(related) {
 						return arrayFind(index.tags,related) OR arrayFind(index.functions,related);
 					});
-					expect(ArrayLen(unexisting)).toBeTrue("#arrayToList(unexisting,', ')# are non-existing functions/tags");
+					expect(arrayLen(unexisting) neq 0).toBeTrue("#arrayToList(unexisting,', ')# are non-existing functions/tags");
 				}
 			});			
 			
 			it("shouldn't relate to itself", function() {
 				for(tag in fileTypes.tags) {
-					expect(arrayFind(tag.related,tag.name)).toBeTrue("#tag.name# currently relates to itsef");
+					expect(arrayFind(tag.related,tag.name) neq 0).toBeTrue("#tag.name# currently relates to itsef");
 				}
 			});
 		});
