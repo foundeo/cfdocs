@@ -29,7 +29,7 @@ component extends="testbox.system.BaseSpec" {
 					unexisting = arrayFilter(tag.related,function(related) {
 						return booleanFormat(not arrayFind(index.tags,related) OR not arrayFind(index.functions,related));
 					});
-					expect(arrayLen(unexisting) is 0).toBeTrue("#arrayToList(unexisting,', ')# are non-existing functions/tags");
+					expect(arrayLen(unexisting) is 0).toBeTrue("#arrayToList(unexisting,', ')# is/are non-existing function(s)/tag(s)");
 				}
 			});			
 			
