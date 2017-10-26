@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"yesNoFormat(value)",
 	"returns":"string",
-	"related":["booleanFormat","isBoolean"],
+	"related":["booleanFormat","isBoolean","trueFalseFormat"],
 	"description":" Yes, for a true value; No for a false value, empty string or null. Throws an exception for other values.",
 	"params": [
 		{"name":"value","description":"A Boolean value or empty string","required":true,"default":"","type":"any","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/yesnoformat.html"},
@@ -15,9 +14,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/yesnoformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/yesnoformat"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Example of Yes",
@@ -38,5 +35,4 @@
 			"result":"No"
 		}
 	]
-
 }
