@@ -2,9 +2,7 @@ component extends="testbox.system.BaseSpec" {
 	function run(testResults, testBox) {
 		dataDir = ExpandPath("../data/en");
 		files = directoryList(dataDir, false, "array");
-		tags = deserializeJSON(fileRead(dataDir & "/tags.json"));
 		index = deserializeJSON(fileRead(dataDir & "/index.json"));
-		funcs = deserializeJSON(fileRead(dataDir & "/functions.json"));
 
 		fileTypes = {tags=[], functions=[], listings=[]};
 		for (filePath in files) {
@@ -29,15 +27,15 @@ component extends="testbox.system.BaseSpec" {
 			it("should relate to an existing function or tag", function() {
 				for(tag in fileTypes.tags) {
 					unexisting = arrayFilter(tag.related,function(related) {
-						return booleanFormat(arrayFind(index.tags,related) OR arrayFind(index.functions,related));
+						return booleanFormat(not arrayFind(index.tags,related) OR not arrayFind(index.functions,related));
 					});
-					expect(arrayLen(unexisting) neq 0).toBeTrue("#arrayToList(unexisting,', ')# are non-existing functions/tags");
+					expect(arrayLen(unexisting) is 0).toBeTrue("#arrayToList(unexisting,', ')# are non-existing functions/tags");
 				}
 			});			
 			
 			it("shouldn't relate to itself", function() {
 				for(tag in fileTypes.tags) {
-					expect(arrayFind(tag.related,tag.name) neq 0).toBeTrue("#tag.name# currently relates to itsef");
+					expect(arrayFind(tag.related,tag.name) is 0).toBeTrue("#tag.name# currently relates to itsef");
 				}
 			});
 		});
