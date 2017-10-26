@@ -9,15 +9,15 @@ $(document).ready(function() {
 
  var tags_fns = new Bloodhound({
     datumTokenizer: function(d) {
-      var test = Bloodhound.tokenizers.whitespace(d);
-          $.each(test,function(k,v){
-              var i = 0;
-              while( (i+1) < v.length ){
-                  test.push(v.substr(i,v.length));
-                  i++;
-              }
-          })
-          return test;
+	var test = Bloodhound.tokenizers.whitespace(d);
+	$.each(test,function(k,v){
+		var i = 0;
+		while( (i+1) < v.length ){
+		  test.push(v.substr(i,v.length));
+		  i++;
+		}
+	})
+	return test;
     },
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     prefetch: {
