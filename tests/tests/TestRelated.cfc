@@ -25,13 +25,13 @@ component extends="testbox.system.BaseSpec" {
 			}
 		}
 
-		describe("JSON Index Tests", function() {
+		describe("JSON Related Tests", function() {
 			it("should relate to an existing function or tag", function() {
 				for(tag in fileTypes.tags) {
 					unexisting = arrayFilter(tag.related,function(related) {
 						return arrayFind(index.tags,related) OR arrayFind(index.functions,related);
 					});
-					expect(unexisting).toBeTrue("#arrayToList(unexisting,', ')# are non-existing functions/tags");
+					expect(ArrayLen(unexisting)).toBeTrue("#arrayToList(unexisting,', ')# are non-existing functions/tags");
 				}
 			});			
 			
