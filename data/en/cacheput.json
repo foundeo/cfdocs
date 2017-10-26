@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"cachePut(id, value [, timespan] [, idleTime])",
 	"returns":"void",
-	"related":[],
+	"related":["cacheGet"],
 	"description":" Stores an object in the cache.",
 	"params": [
 		{"name":"id","description":"Unique identifier for the cached value","required":true,"default":"","type":"string","values":[]},
@@ -12,7 +12,6 @@
 		{"name":"idleTime","description":"A decimal number of days after which the object is flushed from the cache if it is not accessed during that time. One way to set the value is to use the return value from the CreateTimeSpan function.","required":false,"default":"","type":"date","values":[]},
 		{"name":"region","description":"CF10+ Specifies the cache region where you can place the cache object. Applies only to ACF.","required":false,"default":"","type":"string","values":[]},
 		{"name":"cacheName","description":"Lucee4.5+ Definition of the cache used by name. Applies only to Lucee.","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CachePut.html"},
@@ -20,16 +19,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cacheput"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cacheput"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset cachedData = cacheGet(\"wt-6-cache\")> \r\n <!--- If the data is not cached, create it and do a cache put. ---> \r\n <cfif isNull(cachedData)> \r\n     Cache doesn't exist, so create it.<br /> \r\n     <cfset sleep(1000)> \r\n     <cfset cachedData = \"This date/time IS cached: #now()#<br />\"> \r\n     <cfoutput>#cachedData#</cfoutput> \r\n     <cfset cachePut(\"wt-6-cache\", cachedData, createTimespan(0,0,0,10))> \r\n </cfif>  ",
+			"code": "<cfset cachedData = cacheGet(\"wt-6-cache\")>\r\n<!--- If the data is not cached, create it and do a cache put. --->\r\n<cfif isNull(cachedData)>\r\n\tCache doesn't exist, so create it.<br />\r\n\t<cfset sleep(1000)>\r\n\t<cfset cachedData = \"This date/time IS cached: #now()#<br />\">\r\n\t<cfoutput>#cachedData#</cfoutput> \r\n\t<cfset cachePut(\"wt-6-cache\", cachedData, createTimespan(0,0,0,10))>\r\n</cfif>",
 			"result": "",
-            "runnable":false
+            		"runnable":false
 		},
 		{
 			"title":"Script Syntax",
@@ -46,5 +43,4 @@
 			"runnable":false
 		}
 	]
-
 }

@@ -3,7 +3,7 @@
   "type": "function",
   "syntax": "cacheRemoveAll( region );",
   "returns": "void",
-  "related": [],
+  "related": ["cacheDelete","cacheClear"],
   "description": " Removes all stored objects in a cache region. If no cache region is specified, objects in the default region are removed.",
   "params": [
     { "name": "region", "description": "Indicates the cache region from which to remove the stored objects. If no value is specified, default cache region is considered by default.", "required": false, "default": "", "type": "", "values": [] }
@@ -19,7 +19,7 @@
     {
       "title": "Demonstrates the behavior using test data",
       "description": "",
-      "code": "// generate some data to cache\r\nfor ( i = 1; i <= 10; i++ ) {\r\n  cachePut( 'cache_#i#', \"Test data #i#\" );\r\n}\r\n\r\nwriteOutput( 'Before cacheRemove() :: Number of objects in the cache: #arrayLen( cacheGetAllIds( ) )#<br />' );\r\n\r\n// clear all objects from the cache\r\ncacheRemoveAll( );\r\n\r\nwriteOutput( 'After cacheRemove() :: Number of objects in the cache: #arrayLen( cacheGetAllIds( ) )#<br /><br />' );",
+      "code": "// generate some data to cache\r\nfor ( i = 1; i <= 10; i++ ) {\r\n  cachePut( 'cache_#i#', \"Test data #i#\" );\r\n}\r\n\r\nfunction cacheObjCount() {\r\n    return arrayLen(cacheGetAllIds());\r\n}\r\n\r\n_numCacheObj = \"Number of objects in the cache: \";\r\n\r\nwriteOutput('Before cacheRemove() :: #_numCacheObj# #cacheObjCount()#<br />');\r\n\r\n// clear all objects from the cache\r\ncacheRemoveAll();\r\n\r\nwriteOutput('After cacheRemove() :: #_numCacheObj# #cacheObjCount()#<br /><br />');",
       "result": "",
       "runnable": false
     }

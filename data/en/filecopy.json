@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"fileCopy(source, destination)",
 	"returns":"void",
-	"related":[],
+	"related":["fileMove"],
 	"description":" Copies the specified on-disk or in-memory source file to the specified destination file.",
 	"params": [
-		{"name":"source","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
-		{"name":"destination","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
-
+		{"name":"source","description":"Path where the file is located currently","required":true,"default":"","type":"string","values":[]},
+		{"name":"destination","description":"Path where a copy of the file should be placed","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filecopy.html"},
@@ -16,17 +15,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filecopy"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filecopy"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title": "Script Syntax",
+			"title": "Copy file from here to there",
 			"description": "",
-			"code": "<cfscript> \r\n fileCopy(#sourcefile#, #destinationfile#); \r\n </cfscript>  ",
+			"code": "fileCopy(sourceFile, destinationFile);",
 			"result": "",
 			"runnable":false
 		}
 	]
-
 }

@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "cacheGetAll([filter] [, cacheName])",
 	"returns": "struct",
-	"related": [],
+	"related": ["cacheGet","cacheGetAllIds"],
 	"description": "Returns a structure containing all elements inside the cache.",
 	"params": [
 		{"name": "filter", "description": "Key filter for the elements, the filter follows the same rules as the cfdirectory-filter", "required": false, "default": "", "type": "string", "values": []},
@@ -12,6 +12,6 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/cachegetall.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": []
 }
