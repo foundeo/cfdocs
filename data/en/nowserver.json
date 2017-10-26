@@ -4,7 +4,7 @@
 	"syntax": "nowServer()",
 	"returns": "date",
 	"related": [],
-	"description": "",
+	"description": "This function is deprecated. Returns the current time on the server independent of Lucee timezone definition",
 	"params": [],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/nowserver.html"}

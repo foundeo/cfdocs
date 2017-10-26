@@ -4,7 +4,7 @@
 	"syntax": "trueFalseFormat(value)",
 	"returns": "string",
 	"related": [],
-	"description": "",
+	"description": "True, for a non-zero value; False, otherwise",
 	"params": [
 		{"name": "value", "description": "", "required": true, "default": "", "type": "any", "values": []}
 	],
