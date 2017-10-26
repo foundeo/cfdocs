@@ -4,10 +4,10 @@
 	"syntax": "cacheClear([filter] [, cacheName])",
 	"returns": "numeric",
 	"related": [],
-	"description": "",
+	"description": "Flushes the cache",
 	"params": [
-		{"name": "filter", "description": "", "required": false, "default": "", "type": "string", "values": []},
-		{"name": "cacheName", "description": "", "required": false, "default": "", "type": "string", "values": []}
+		{"name": "filterOrTags", "description": "A String containing a key filter for the elements in the cache to flush, the filter follow the same rules as for cfdirectory-filter OR an Array containing tags defined when put into the cache", "required": false, "default": "", "type": "any", "values": []},
+		{"name": "cacheName", "description": "definition of the cache used by name, when not set the \"default Object Cache\" defined in Lucee Administrator is used instead", "required": false, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/cacheclear.html"}

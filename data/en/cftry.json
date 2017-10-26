@@ -3,9 +3,8 @@
 	"type":"tag",
 	"syntax":"<cftry>",
 	"script":"try { } catch (any e) {}",
-	"returns":"",
 	"related":["cfcatch","cffinally"],
-	"description":" Used with one or more cfcatch tags. Together, they catch and\n process exceptions in CFML pages. Exceptions are events\n that disrupt the normal flow of instructions in a CFML\n page, such as failed database operations, missing include\n files, and developer-specified events.",
+	"description":"Used with one or more cfcatch tags. Together, they catch and\n process exceptions in CFML pages. Exceptions are events\n that disrupt the normal flow of instructions in a CFML\n page, such as failed database operations, missing include\n files, and developer-specified events.",
 	"params": [
 	],
 	"engines": {

@@ -5,7 +5,7 @@
 	"member": "structure.keyTranslate([deepTranslation] [, leaveOriginalKey])",
 	"returns": "numeric",
 	"related": [],
-	"description": "",
+	"description": "Converts structure key/value pairs where the key contains a period (.) into nested structures key / value pairs",
 	"params": [
 		{"name": "structure", "description": "", "required": true, "default": "", "type": "struct", "values": []},
 		{"name": "deepTranslation", "description": "", "required": false, "default": "", "type": "boolean", "values": []},

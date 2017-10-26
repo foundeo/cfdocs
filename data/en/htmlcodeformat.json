@@ -1,7 +1,7 @@
 {
-	"name":"HTMLCodeFormat",
+	"name":"htmlCodeFormat",
 	"type":"function",
-	"syntax":"HTMLCodeFormat(String [, version])",
+	"syntax":"htmlCodeFormat(String [, version])",
 	"returns":"string",
 	"related":[],
 	"description":" Replaces special characters in a string with their HTML-escaped\n equivalents and inserts &ltpre&gt; and &lt/pre&gt tags at the beginning\n and end of the string.\n [version]\n HTML version to use. currently ignored.\n -1: The latest implementation of HTML\n 2.0: HTML 2.0 (Default)\n 3.2: HTML 3.2",
@@ -23,7 +23,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset testString=\"This is a test & this is another <This text is in angle brackets> Previous line was blank!!!\">   <cfoutput>#HTMLCodeFormat(testString)#</cfoutput>   ",
+			"code": "<cfset testString=\"This is a test & this is another <This text is in angle brackets> Previous line was blank!!!\">   <cfoutput>#htmlCodeFormat(testString)#</cfoutput>   ",
 			"result": "",
 			"runnable":true
 		}

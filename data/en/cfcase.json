@@ -3,7 +3,6 @@
 	"type":"tag",
 	"syntax":"<cfcase value=\"\">",
 	"script":"case \"apple\":",
-	"returns":"",
 	"related":["cfswitch","cfdefaultcase"],
 	"description":"Used only inside the cfswitch tag body. Contains code to execute when the expression specified in the cfswitch tag has one or more specific values.  Note the difference in the tag and script syntax when providing multiple values for a case.",
 	"params": [

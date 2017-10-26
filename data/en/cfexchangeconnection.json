@@ -2,9 +2,8 @@
 	"name":"cfexchangeconnection",
 	"type":"tag",
 	"syntax":"<cfexchangeconnection action=\"open\" connection=\"\" server=\"\" username=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Opens or closes a persistent connection to an Microsoft Exchange server.\n You must have a persistent or temporary connection to use the cfexchangecalendar,\n cfexchangecontact, cfexchangemail, and cfexchangetask tags to get or change\n information on the Exchange server.",
+	"description":"Opens or closes a persistent connection to an Microsoft Exchange server.\n You must have a persistent or temporary connection to use the cfexchangecalendar,\n cfexchangecontact, cfexchangemail, and cfexchangetask tags to get or change\n information on the Exchange server.",
 	"params": [
 		{"name":"action","description":"The action to take. Must be open or close. (required)","required":true,"default":"","type":"string","values":["open","close","getsubfolders"]},
 		{"name":"connection","description":"The name of the connection. You specify this ID when you close the connection\n and in tags such as cfexchangemail. (required)","required":true,"default":"","type":"string","values":[]},

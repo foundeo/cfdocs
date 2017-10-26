@@ -75,9 +75,7 @@
 			<cfif data.type IS "tag" OR url.name contains "-tags"><li><a href="#linkTo("tags")#">Tags</a></li></cfif>
 			<cfset cat = findCategory(url.name)>
 			<cfif Len(cat)><li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li></cfif>
-			<li class="active">#data.name#</li>
-
-			
+			<li class="active">#data.name#</li>			
 
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "coldfusion") AND StructKeyExists(data.engines.coldfusion, "docs") AND Len(data.engines.coldfusion.docs)>
 				<li class="pull-right">
@@ -107,7 +105,7 @@
 			</cfif>
 		</ol>
 	</cfif>
-
+	
 	<div class="container">
 		<cfif StructKeyExists(data, "related") AND ArrayLen(data.related)>
 			<cfif data.type IS "listing" OR data.type IS "404">
@@ -137,8 +135,6 @@
 				</cfif>
 			</h2>
 			
-
-
 			<cfloop array="#data.params#" index="p">
 				<div class="param" id="p-#encodeForHTMLAttribute(p.name)#">
 					<h4>
@@ -154,7 +150,7 @@
 						<cfif StructKeyExists(p, "values") AND IsArray(p.values) AND ArrayLen(p.values)>
 							<cfif uCase(arrayToList(p.values)) IS NOT "YES,NO">
 								<div>
-									<strong>Values: </strong>
+									<strong>Values:</strong>
 									<ul>
 										<cfloop array="#p.values#" index="i">
 											<li><code>#encodeForHTML(i)#</code></li>

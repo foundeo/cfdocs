@@ -2,9 +2,9 @@
 	"name": "cftreeitem",
 	"type": "tag",
 	"syntax": "<cftreeitem>",
-	"returns": "",
 	"related": [],
 	"description": "Populates a form tree control, created with the cftree tag,\n with elements. To display icons, you can use the img values\n that CFML provides, or reference your own icons.",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cftree/index.html",
 	"params": [
 		{
 			"name": "bind",

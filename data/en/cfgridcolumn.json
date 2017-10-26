@@ -2,9 +2,9 @@
 	"name": "cfgridcolumn",
 	"type": "tag",
 	"syntax": "<cfgridcolumn name=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Used with the cfgrid tag in a cfform. Use this tag to specify\n column data in a cfgrid control. The font and alignment\n attributes used in cfgridcolumn override global font or\n alignment settings defined in cfgrid.",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfgrid/index.html",
 	"params": [
 		{
 			"name": "name",

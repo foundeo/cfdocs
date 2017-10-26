@@ -2,9 +2,8 @@
 	"name":"cfftp",
 	"type":"tag",
 	"syntax":"<cfftp action=\"open\">",
-	"returns":"",
 	"related":[],
-	"description":" Lets users implement File Transfer Protocol (FTP) operations.",
+	"description":"Lets users implement File Transfer Protocol (FTP) operations.",
 	"params": [
 		{"name":"action","description":"FTP operation to perform.\n open: create an FTP connection\n close: terminate an FTP connection","required":true,"default":"","type":"string","values":["open","close","changedir","createdir","listdir","removedir","getfile","putfile","rename","remove","getcurrentdir","getcurrenturl","existsdir","existsfile","exists","quote","site","allo","acct"]},
 		{"name":"username","description":"Overrides username specified in ODBC setup.","required":false,"default":"","type":"string","values":[]},

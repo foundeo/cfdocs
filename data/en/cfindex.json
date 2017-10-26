@@ -2,9 +2,8 @@
 	"name":"cfindex",
 	"type":"tag",
 	"syntax":"<cfindex collection=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Populates a Verity search engine collection with an index of\n documents on a file system or of CFML query result sets.\n\n A collection must exist before it can be populated.",
+	"description":"Populates a Verity search engine collection with an index of\n documents on a file system or of CFML query result sets.\n\n A collection must exist before it can be populated.",
 	"params": [
 		{"name":"collection","description":"Name of a collection that is registered by CFML; for\n example, \"personnel\"\n Name and absolute path of a collection that is not\n registered by CFML; for example:\n \"e:\\collections\\personnel\"","required":true,"default":"","type":"string","values":[]},
 		{"name":"action","description":"- update: updates a collection and adds key to the index.\n - delete: removes collection documents as specified by\n the key attribute.\n - purge: deletes all of the documents in a collection.\n Causes the collection to be taken offline, preventing\n searches.\n - refresh: deletes all of the documents in a collection,\n and then performs an update.","required":false,"default":"","type":"string","values":["update","delete","purge","refresh"]},

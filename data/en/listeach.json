@@ -4,7 +4,7 @@
 	"syntax":"listEach(String str, UDFMethod function [, String delim, boolean includeEmptyFields]);",
 	"returns":"void",
 	"related":[],
-	"description":" Iterates over every element of a List object and can call a UDF function, passed as the second argument.",
+	"description":"Iterates over every element of a List object and can call a UDF function, passed as the second argument.",
 	"params": [
 		{"name":"str","description":"An input list object.","required":true,"default":"","type":"","values":[]},
         {"name":"function","description":"UDF or closure object.","required":true,"default":"","type":"","values":[]},

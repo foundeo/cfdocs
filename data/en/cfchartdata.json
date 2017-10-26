@@ -2,9 +2,8 @@
 	"name":"cfchartdata",
 	"type":"tag",
 	"syntax":"<cfchartdata item=\"\" value=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Used with the cfchart and cfchartseries tags. This tag defines\n chart data points. Its data is submitted to the cfchartseries\n tag.",
+	"description":"Used with the cfchart and cfchartseries tags. This tag defines\n chart data points. Its data is submitted to the cfchartseries\n tag.",
 	"params": [
 		{"name":"item","description":"string; data point name","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"number or expression; data point value","required":true,"default":"","type":"string","values":[]}

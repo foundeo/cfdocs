@@ -2,9 +2,8 @@
 	"name":"cfexchangetask",
 	"type":"tag",
 	"syntax":"<cfexchangetask task=\"\" name=\"\" uid=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Creates, deletes, modifies, and gets Microsoft Exchange tasks, and gets task attachments.",
+	"description":"Creates, deletes, modifies, and gets Microsoft Exchange tasks, and gets task attachments.",
 	"params": [
 		{"name":"action","description":"The action to take. Must be one of the following: create, delete, get, getAttachments, modify (optional)","required":false,"default":"","type":"string","values":["create","delete","deleteAttachments","get","getAttachments","modify"]},
 		{"name":"attachmentPath","description":"The file path of the directory in which to put the attachments.\n If the directory does not exist, ColdFusion creates it.\n If you omit this attribute, ColdFusion does not save any attachments.\n If you specify a relative path, the path root is the ColdFusion temporary directory, which is returned\n by the GetTempDirectory function. (optional)","required":false,"default":"","type":"string","values":[]},

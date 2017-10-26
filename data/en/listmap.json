@@ -1,32 +1,34 @@
-{"syntax":" listMap(list, function(item [,index, list]) [,delimiter, includeEmptyFields)",
-"description":"Iterates over every entry of the List and calls the closure function to work on the item of the list. The returned value will be set at the same index in a new list and the new list will be returned.",
-"engines":{
-	"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listmap.html","notes":""},
-	"lucee":{"minimum_version":"4.5", "docs":"http://docs.lucee.org/reference/functions/listmap.html","notes":""}
-},
-"name":"listMap",
-"links":[{
-	"title":"Map, Reduce and other Higher Order Functions",
-	"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
-	"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
-},
 {
-	"title": "ColdFusion 11: .map() and .reduce()",
-	"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
-	"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
-}],
-"params":[
-	{"values":[],"default":"","description":"The input list.","name":"list","type":"string","required":"1"},
-	{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: value\r\nindex : current index for the iteration\r\nlist : reference of the original list","name":"function","type":"any","required":"1"},
-	{"values":[],"default":"","description":"Initial value which will be used for the reduce operation.","name":"intialValue","type":"any","required":"0"},
-	{"values":[],"default":"comma","description":"The list delimiter.","name":"delimiter","type":"string","required":"0"},
-	{"values":[],"default":"false","description":"Include empty values","name":"includeEmptyFields","type":"boolean","required":"0"}
-],
-"returns":"string",
- "examples":[{
-	"title": "Script Syntax",
-	"description": "",
-	"code": "Rainbow = \"Whero, Karaka, Kowhai, Kakariki, Kikorangi, Tawatawa, Mawhero\"; \r\n externalList = \"\"; \r\n reverseRainbow = listMap( rainbow, function(v,i,l) \r\n { \r\n var newValue = \"#i#:#v.reverse()#\";  \r\n externalList = externalList.append(newValue); \r\n return newValue; \r\n }); \r\nwriteDump([{rainbow=rainbow},{reverseRainbow=reverseRainbow},{externalList=externalList}]);  \r\n"
-}],
-"type":"function",
-"related":["ListReduce"]}
+	"name":"listMap",
+	"type":"function",
+	"syntax":" listMap(list, function(item [,index, list]) [,delimiter, includeEmptyFields)",
+	"returns":"string",
+	"related":["ListReduce"],
+	"description":"Iterates over every entry of the List and calls the closure function to work on the item of the list. The returned value will be set at the same index in a new list and the new list will be returned.",
+	"params":[
+		{"values":[],"default":"","description":"The input list.","name":"list","type":"string","required":"1"},
+		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: value\r\nindex : current index for the iteration\r\nlist : reference of the original list","name":"function","type":"any","required":"1"},
+		{"values":[],"default":"","description":"Initial value which will be used for the reduce operation.","name":"intialValue","type":"any","required":"0"},
+		{"values":[],"default":",","description":"The list delimiter.","name":"delimiter","type":"string","required":"0"},
+		{"values":[],"default":"false","description":"Include empty values","name":"includeEmptyFields","type":"boolean","required":"0"}
+	],
+	"engines":{
+		"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listmap.html","notes":""},
+		"lucee":{"minimum_version":"4.5", "docs":"http://docs.lucee.org/reference/functions/listmap.html","notes":""}
+	},
+	"links":[{
+		"title":"Map, Reduce and other Higher Order Functions",
+		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
+		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+	},
+	{
+		"title": "ColdFusion 11: .map() and .reduce()",
+		"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
+		"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
+	}],
+	 "examples":[{
+		"title": "Script Syntax",
+		"description": "",
+		"code": "Rainbow = \"Whero, Karaka, Kowhai, Kakariki, Kikorangi, Tawatawa, Mawhero\";\r\nexternalList = \"\";\r\nreverseRainbow = listMap( rainbow, function(v,i,l) {\r\n\tvar newValue = \"#i#:#v.reverse()#\";\r\n\texternalList = externalList.append(newValue);\r\n\treturn newValue;\r\n});\r\nwriteDump([{rainbow=rainbow},{reverseRainbow=reverseRainbow},{externalList=externalList}]);\r\n"
+	}]
+}

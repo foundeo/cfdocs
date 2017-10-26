@@ -2,12 +2,11 @@
 	"name":"cfservlet",
 	"type":"tag",
 	"syntax":"<cfservlet>",
-	"returns":"",
 	"related":["cfservletparam"],
 	"description":"Deprecated, invokes a servlet. Use `getPageContext().include(servletPath)` or `getPageContext().forward(servletPath)` instead.",
 	"params": [],
 	"engines": {
-		"coldfusion": {"minimum_version":"4.5","deprecated":"6", "removed":"11", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfservlet.html"}		
+		"coldfusion": {"minimum_version":"4.5","deprecated":"6", "removed":"11", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfservlet.html"}
 	},
 	"links": [],
 	"examples": []

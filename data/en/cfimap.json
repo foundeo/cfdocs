@@ -2,9 +2,8 @@
 	"name":"cfimap",
 	"type":"tag",
 	"syntax":"<cfimap>",
-	"returns":"",
 	"related":[],
-	"description":" Queries an IMAP server to retrieve and manage mails within multiple folders.",
+	"description":"Queries an IMAP server to retrieve and manage mails within multiple folders.",
 	"params": [
 		{"name":"password","description":"Specifies the password for assessing the users e-mail account.","required":false,"default":"","type":"string","values":[]},
 		{"name":"secure","description":"Specifies whether the IMAP server uses a Secure Sockets Layer.","required":false,"default":"","type":"boolean","values":[true,false]},

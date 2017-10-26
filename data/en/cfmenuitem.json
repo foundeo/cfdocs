@@ -2,9 +2,9 @@
 	"name": "cfmenuitem",
 	"type": "tag",
 	"syntax": "<cfmenuitem>",
-	"returns": "",
 	"related": [],
 	"description": "Defines an entry in a menu, including an item that is the head of a submenu.",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfmenu/index.html",
 	"params": [
 		{
 			"name": "display",
@@ -83,7 +83,8 @@
 		"coldfusion": {
 			"minimum_version": "",
 			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmenuitem.html"
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmenuitem.html",
+			"deprecated":"2016"
 		}
 	},
 	"links": []

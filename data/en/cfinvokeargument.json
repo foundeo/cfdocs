@@ -2,7 +2,6 @@
 	"name":"cfinvokeargument",
 	"type":"tag",
 	"syntax":"<cfinvokeargument name=\"\" value=\"\">",
-	"returns":"",
 	"related":["cfinvoke"],
 	"description":"Passes the name and value of an argument to a component method or a web service method. This tag is used inside of the cfinvoke tag.",
 	"params": [

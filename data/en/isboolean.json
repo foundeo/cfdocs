@@ -7,7 +7,6 @@
 	"description":"Returns true when a value can be converted to Boolean",
 	"params": [
 		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isboolean.html"},
@@ -15,25 +14,23 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isboolean"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isboolean"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples":[
 		{
 			"title":"Yes",
-			"description":"Yes is considered a boolean",
+			"description":"`Yes` is considered a boolean that is `true`",
 			"code":"isBoolean(\"yes\")",
 			"result":"YES"
 		},
 		{
 			"title":"No",
-			"description":"No is considered a boolean",
+			"description":"`No` is considered a boolean that is `false`",
 			"code":"isBoolean(\"no\")",
 			"result":"YES"
 		},
 		{
 			"title":"Maybe",
-			"description":"Maybe is not considered a boolean",
+			"description":"`Maybe` is not considered a boolean",
 			"code":"isBoolean(\"maybe\")",
 			"result":"NO"
 		},
@@ -62,5 +59,4 @@
 			"result":"YES"
 		}
 	]
-
 }

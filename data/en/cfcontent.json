@@ -2,9 +2,8 @@
 	"name":"cfcontent",
 	"type":"tag",
 	"syntax":"<cfcontent>",
-	"returns":"",
 	"related":[],
-	"description":" Does either or both of the following:\n * Sets the MIME content encoding header for the current page\n * Sends the contents of a file from the server as the page\n output",
+	"description":"Does either or both of the following:\n * Sets the MIME content encoding header for the current page\n * Sends the contents of a file from the server as the page\n output",
 	"params": [
 		{"name":"type","description":"The MIME content type of the page, optionally followed by\n a semicolon and the character encoding. By default,\n CFML sends pages as text\/html content type in\n the UTF-8 character encoding.","required":false,"default":"","type":"string","values":["text\/html","text\/plain","application\/msword","application\/msexcel","application\/poscript","application\/x-zip-compressed","application\/pdf","application\/rtf","video\/x-msvideo","video\/quicktime","video\/x-mpeg2","audio\/x-pn\/realaudio","audio\/x-mpeg","audio\/x-waw","audio\/x-aiff","audio\/basic","image\/tiff","image\/jpeg","image\/gif","image\/x-png","image\/x-photo-cd","image\/x-MS-bmp","image\/x-rgb","image\/x-portable-pixmap","image\/x-portable-greymap","image\/x-portablebitmap"]},
 		{"name":"deletefile","description":"Applies only if you specify a file with the file attribute.\n \n Yes: deletes the file on the server after sending its\n contents to the client.\n No: leaves the file on the server.","required":false,"default":false,"type":"boolean","values":[true,false]},

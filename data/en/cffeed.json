@@ -2,9 +2,8 @@
 	"name":"cffeed",
 	"type":"tag",
 	"syntax":"<cffeed>",
-	"returns":"",
 	"related":[],
-	"description":" Reads or creates an RSS or Atom syndication feed.\n This tag can read RSS versions 0.90, 0.91, 0.92, 0.93, 0.94, 1.0, and 2.0, and Atom 0.3 or 1.0.\n It can create RSS 2.0 or Atom 1.0 feeds.",
+	"description":"Reads or creates an RSS or Atom syndication feed.\n This tag can read RSS versions 0.90, 0.91, 0.92, 0.93, 0.94, 1.0, and 2.0, and Atom 0.3 or 1.0.\n It can create RSS 2.0 or Atom 1.0 feeds.",
 	"params": [
 		{"name":"action","description":"The name to use for the JavaScript proxy class.\n The action to take, one of the following values:\n \"create\" Creates an RSS 2.0 or Atom 1.0 feed XML document and saves it in a variable, writes it to a file, or both.\n \"read\" Parses an RSS or Atom feed from a URL or an XML file and saves it in a structure or query.\n You can also get query metadata in a separate structure. (optional, default= read)","required":false,"default":"","type":"any","values":["create","read"]},
 		{"name":"columnMap","description":"Used only for the create action with a query attribute.\n A structure specifying a mapping between the names of the columns in the object specified by the query attribute\n and the columns of the ColdFusion feed format, as described in the Query attribute section.\n The key for each field must be a column name listed in the Query columns section. The value of the field must be\n the name of the corresponding column in the query object used as input to the create action. (optional)","required":false,"default":"","type":"any","values":[]},

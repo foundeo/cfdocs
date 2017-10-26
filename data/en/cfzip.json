@@ -2,9 +2,8 @@
 	"name":"cfzip",
 	"type":"tag",
 	"syntax":"<cfzip>",
-	"returns":"",
-	"related":[],
-	"description":" Manipulates ZIP and JavaTM Archive (JAR) files.\n In addition to the basic zip and unzip functions, use the cfzip tag to delete\n entries from an archive, filter files, read files in binary format, list the\n contents of an archive, and specify an entrypath used in an executable JAR file.",
+	"related":["compress"],
+	"description":"Manipulates ZIP and JavaTM Archive (JAR) files.\n In addition to the basic zip and unzip functions, use the cfzip tag to delete\n entries from an archive, filter files, read files in binary format, list the\n contents of an archive, and specify an entrypath used in an executable JAR file.",
 	"params": [
 		{"name":"action","description":"The action to take. Must be one of the following:\n delete\n list\n read\n readBinary\n unzip\n zip\n If you do not specify an action, ColdFusion\n applies the default action, zip. (optional)","required":false,"default":"zip","type":"string","values":["delete","list","read","readBinary","unzip","zip"]},
 		{"name":"charset","description":"The character set used to translate the ZIP or JAR\n entry into a text string. Examples of character sets are:\n JIS\n RFC1345\n UTF-16 (optional, default=encoding of the host machine)","required":false,"default":"","type":"string","values":["JIS","RFC1345","UTF-16"]},
@@ -20,7 +19,6 @@
 		{"name":"source","description":"Source directory to be zipped. Not required\n if cfzipparam is specified. (required)","required":false,"default":"","type":"string","values":[]},
 		{"name":"storePath","description":"zip: Specifies whether pathnames are stored in the ZIP or JAR file:\n yes: pathnames of entries are stored in the ZIP or JAR file.\n no: pathnames of the entries are not stored in the ZIP or JAR file.\n All the files are placed at the root level. In case of a name conflict,\n the last file in the iteration is added.\n unzip: Specifies whether files are stored at the entrypath:\n yes: the files are extracted to the entrypath.\n no: the entrypath is ignored and all the files are extracted\n at the root level. (optional, default= yes)","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"variable","description":"Variable in which the read content is stored. (required)","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfzip.html"},
@@ -28,9 +26,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfzip"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfzip"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Extract / Unzip a zip file into a folder",
@@ -39,5 +35,4 @@
 			"runnable":false
 		}
 	]
-
 }

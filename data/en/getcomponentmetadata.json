@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"getComponentMetadata(path)",
 	"returns":"struct",
-	"related":[],
+	"related":["componentCacheList","componentCacheClear","cfcomponent","cfcache"],
 	"description":" Gets metadata (such as the functions and implemented interfaces of a component) for a CFC or ColdFusion interface.",
 	"params": [
 		{"name":"path","description":"The dot-delimited path of the interface or CFC definition.","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getcomponentmetadata.html"},
@@ -15,8 +14,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getcomponentmetadata"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getcomponentmetadata"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

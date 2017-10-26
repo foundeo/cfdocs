@@ -2,9 +2,8 @@
 	"name":"cfexchangecontact",
 	"type":"tag",
 	"syntax":"<cfexchangecontact action=\"create\" contact=\"\" name=\"\" uid=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Creates, deletes, modifies, and gets Microsoft Exchange contact records, and gets contact record attachments.",
+	"description":"Creates, deletes, modifies, and gets Microsoft Exchange contact records, and gets contact record attachments.",
 	"params": [
 		{"name":"action","description":"The action to take. Must be one of the following: create, delete, get, getAttachments, modify (required)","required":true,"default":"","type":"string","values":["create","delete","deleteAttachments","get","getAttachments","modify"]},
 		{"name":"attachmentPath","description":"The absolute file path of the directory in which to put the attachments.\n If the directory does not exist, ColdFusion creates it.\n If you omit this attribute, ColdFusion does not save any attachments. (optional)","required":false,"default":"","type":"string","values":[]},

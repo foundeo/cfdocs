@@ -2,7 +2,6 @@
 	"name": "cfapplet",
 	"type": "tag",
 	"syntax": "<cfapplet appletsource=\"\" name=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "This tag references a registered custom Java applet. To\n register a Java applet, in the CFML Administrator, click\n Extensions/Java Applets.\n Using this tag within a cfform tag is optional. If you use it\n within cfform, and the method attribute is defined in the\n Administrator, the return value is incorporated into the\n form.",
 	"params": [

@@ -1,14 +1,13 @@
 {
-	"name":"REMatchNoCase",
+	"name":"reMatchNoCase",
 	"type":"function",
-	"syntax":"REMatchNoCase(reg_expression, string)",
+	"syntax":"reMatchNoCase(reg_expression, string)",
 	"returns":"array",
 	"related":[],
-	"description":" Uses a regular expression (RE) to search a string for a pattern, starting from a specified position.",
+	"description":"Uses a regular expression (RE) to search a string for a pattern, starting from a specified position.",
 	"params": [
 		{"name":"reg_expression","description":"Regular expression for which to search. Case insensitive.","required":true,"default":"","type":"string","values":[]},
 		{"name":"string","description":"A string or a variable that contains one. String in which to search.","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/rematchnocase.html"},

@@ -2,9 +2,9 @@
 	"name": "cfprogressbar",
 	"type": "tag",
 	"syntax": "<cfprogressbar name=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Creates progressbar",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfprogressbar/index.html",
 	"params": [
 		{
 			"name": "width",

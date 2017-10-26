@@ -1,7 +1,7 @@
 {
-	"name":"URLSessionFormat",
+	"name":"urlSessionFormat",
 	"type":"function",
-	"syntax":"URLSessionFormat(requesturl)",
+	"syntax":"urlSessionFormat(requesturl)",
 	"returns":"string",
 	"related":[],
 	"discouraged":"Putting session identifiers in the URL may lead to session hijacking.",

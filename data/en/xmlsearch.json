@@ -1,7 +1,7 @@
 {
-	"name":"XMLSearch",
+	"name":"xmlSearch",
 	"type":"function",
-	"syntax":"XMLSearch(xmldoc, xpathstring)",
+	"syntax":"xmlSearch(xmldoc, xpathstring)",
 	"returns":"array",
 	"related":[],
 	"description":"Get XML values according to given XPath",
@@ -23,7 +23,7 @@
 	"examples": [{
 		"title":"Read specific properties from XML collection",
 		"description":"XPath extracts 'name' property from every user given in the XML collection",
-		"code":"<cfsavecontent variable=\"xmlstring\">\r\n    <?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n    <users>\r\n        <user id=\"1\">\r\n            <name>Me</name>\r\n        </user>\r\n        <user id=\"2\">\r\n            <name>You</name>\r\n            <address>\r\n                <street>Long Road</street>\r\n            </address>\r\n        </user>\r\n    </users>\r\n</cfsavecontent>\r\n<cfscript>\r\n    xml = XMLParse(xmlstring);\r\n    result = XMLSearch(xml,'users//name');\r\n    userlist = '';\r\n    for(i = 1; i <= ArrayLen(result); i++) {\r\n        userlist = ListAppend(userlist,result[i].XmlText);\r\n    }\r\n    writeOutput(userlist);\r\n</cfscript>",
+		"code":"<cfsavecontent variable=\"xmlstring\">\r\n    <?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n    <users>\r\n        <user id=\"1\">\r\n            <name>Me</name>\r\n        </user>\r\n        <user id=\"2\">\r\n            <name>You</name>\r\n            <address>\r\n                <street>Long Road</street>\r\n            </address>\r\n        </user>\r\n    </users>\r\n</cfsavecontent>\r\n<cfscript>\r\n    xml = XMLParse(xmlstring);\r\n    result = xmlSearch(xml,'users//name');\r\n    userlist = '';\r\n    for(i = 1; i <= ArrayLen(result); i++) {\r\n        userlist = ListAppend(userlist,result[i].XmlText);\r\n    }\r\n    writeOutput(userlist);\r\n</cfscript>",
 		"result":"Me,You",
 		"runnable":true
 	}]

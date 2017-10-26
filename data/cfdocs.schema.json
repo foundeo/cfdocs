@@ -169,7 +169,8 @@
     "name": {
       "title": "Name",
       "description": "The name of the tag or function. Use lowercase.",
-      "type": "string"
+      "type": "string",
+      "pattern": "^[a-z]\\w+$"
     },
     "description": {
       "title": "Description",

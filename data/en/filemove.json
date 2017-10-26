@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"fileMove(source, destination)",
 	"returns":"void",
-	"related":[],
+	"related":["fileWrite","fileDelete","directoryRename"],
 	"description":" Moves file from source to destination",
 	"params": [
 		{"name":"source","description":"No Help Available","required":true,"default":"","type":"","values":[]},
 		{"name":"destination","description":"No Help Available","required":true,"default":"","type":"","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filemove.html"},
@@ -16,17 +15,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filemove"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filemove"}
 	},
-	"links": [
-
-	], 
-    "examples": [
+	"links": [], 
+    	"examples": [
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n fileMove(#sourcefile#, #destinationfile#); \r\n </cfscript>   ",
+			"code": "<cfscript>\r\nfileMove(#sourcefile#, #destinationfile#);\r\n</cfscript>",
 			"result": "",
 			"runnable":false
 		}
 	]
-
 }

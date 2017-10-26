@@ -2,9 +2,8 @@
 	"name":"cfloginuser",
 	"type":"tag",
 	"syntax":"<cfloginuser name=\"\" password=\"\" roles=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Identifies an authenticated user to CFML. Specifies the\n user ID and roles. Used within a cflogin tag.",
+	"description":"Identifies an authenticated user to CFML. Specifies the\n user ID and roles. Used within a cflogin tag.",
 	"params": [
 		{"name":"name","description":"A username.","required":true,"default":"","type":"string","values":[]},
 		{"name":"password","description":"A user password.","required":true,"default":"","type":"string","values":[]},

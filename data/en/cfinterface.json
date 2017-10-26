@@ -3,9 +3,8 @@
 	"type":"tag",
 	"syntax":"<cfinterface>",
 	"script": "interface displayname=\"My Interface\" { \r\n numeric function myFunction(required string myArgument); \r\n }",
-	"returns":"",
 	"related":["cffunction","cfargument"],
-	"description":" Defines an interface that consists of a set of signatures for functions.\n The interface does not include the full function definitions;\n instead, you implement the functions in a CFC.\n The interfaces that you define by using this tag can make up\n the structure of a reusable application framework.",
+	"description":"Defines an interface that consists of a set of signatures for functions.\n The interface does not include the full function definitions;\n instead, you implement the functions in a CFC.\n The interfaces that you define by using this tag can make up\n the structure of a reusable application framework.",
 	"params": [
 		{"name":"displayName","description":"A value to be displayed when using introspection to\n show a descriptive name for the interface. (optional)","required":false,"default":"","type":"string","values":[]},
 		{"name":"extends","description":"A comma delimited list of one or more interfaces that this interface extends.\n Any CFC that implements an interface must also implement all the functions\n in the interfaces specified by this property.\n If an interface extends another interface, and the child interface specifies\n a function with the same name as one in the parent interface, both functions\n must have the same attribues; otherwise ColdFusion generates an error. (optional)","required":false,"default":"","type":"string","values":[]},

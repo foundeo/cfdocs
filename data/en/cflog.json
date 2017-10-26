@@ -2,9 +2,8 @@
 	"name":"cflog",
 	"type":"tag",
 	"syntax":"<cflog text=\"\">",
-	"returns":"",
 	"related":[],
-	"description":" Writes a message to a log file.",
+	"description":"Writes a message to a log file.",
 	"params": [
 		{"name":"text","description":"Message text to log.","required":true,"default":"","type":"string","values":[]},
 		{"name":"log","description":"If you omit the file attribute, writes messages to standard\n log file. Ignored, if you specify file attribute.\n\n Application: writes to Application.log, normally used for\n application-specific messages.\n Scheduler: writes to Scheduler.log, normally used to log\n the execution of scheduled tasks.","required":false,"default":"","type":"string","values":["Application","Scheduler"]},

@@ -4,34 +4,30 @@
 	"syntax":"arrayToList(array [, delimiter])",
 	"member":"someArray.toList([delimiter])",
 	"returns":"string",
-	"related":[],
+	"related":["listToArray","arrayToStruct"],
 	"description":" Converts a one-dimensional array to a list.",
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
 		{"name":"delimiter","description":"","required":false,"default":",","type":"string","values":[",","|","_",";",":"]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraytolist.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arraytolist.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraytolist"}
 	},
-	"links": [
-
-	],
-    "examples": [
-        {
-            "title": "Retrieve an array as a list",
-            "description": "Uses the arrayToList function with a pipe dilimeter to retrieve an array as a list",
-            "code": "someArray = [1,2,3,4];\nsomeList = arrayToList(someArray,\"|\");\nwriteOutput(someList);",
-            "result": "\"1|2|3|4\""
-        },
-        {
-            "title": "Retrieve an array as a list using the Array member function",
-            "description": "CF11+ Lucee4.5+ Uses the Array member function to retrieve an array as a list",
-            "code": "seinfeldArray = [\"Jerry\",\"Elaine\",\"Kramer\",\"George\"];\nseinfeldList = seinfeldArray.toList();\nwriteOutput(seinfeldList);",
-            "result": "\"Jerry,Elaine,Kramer,George\""
-        }
-    ]
-
+	"links": [],
+	"examples": [
+		{
+		    "title": "Retrieve an array as a list",
+		    "description": "Uses the arrayToList function with a pipe dilimeter to retrieve an array as a list",
+		    "code": "someArray = [1,2,3,4];\nsomeList = arrayToList(someArray,\"|\");\nwriteOutput(someList);",
+		    "result": "\"1|2|3|4\""
+		},
+		{
+		    "title": "Retrieve an array as a list using the Array member function",
+		    "description": "CF11+ Lucee4.5+ Uses the Array member function to retrieve an array as a list",
+		    "code": "seinfeldArray = [\"Jerry\",\"Elaine\",\"Kramer\",\"George\"];\nseinfeldList = seinfeldArray.toList();\nwriteOutput(seinfeldList);",
+		    "result": "\"Jerry,Elaine,Kramer,George\""
+		}
+	]
 }

@@ -4,7 +4,7 @@
 	"syntax": "setTimezone(timezone)",
 	"returns": "string",
 	"related": [],
-	"description": "",
+	"description": "Change the timezone defintion for the current request",
 	"params": [
 		{"name": "timezone", "description": "", "required": true, "default": "", "type": "string", "values": []}
 	],

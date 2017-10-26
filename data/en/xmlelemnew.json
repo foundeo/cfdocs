@@ -1,10 +1,10 @@
 {
-	"name":"XMLElemNew",
+	"name":"xmlElemNew",
 	"type":"function",
-	"syntax":"XMLElemNew(xmlobj [, namespace], childname)",
+	"syntax":"xmlElemNew(xmlobj [, namespace], childname)",
 	"returns":"xml",
 	"related":[],
-	"description":" Creates an XML document object element",
+	"description":"Creates an XML document object element",
 	"params": [
 		{"name":"xmlobj","description":"The name of an XML object. An XML document or an element.","required":true,"default":"","type":"xml","values":[]},
 		{"name":"namespace","description":"URI of the namespace to which this element belongs.","required":false,"default":"","type":"string","values":[]},

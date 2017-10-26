@@ -3,29 +3,25 @@
 	"type":"function",
 	"syntax":"entityLoadByExample(sampleEntity [, unique])",
 	"returns":"any",
-	"related":[],
+	"related":["entityLoadByPK"],
 	"description":" Loads and returns an array of objects that match the sampleentity.\nentityLoadByExample(sampleEntity,[unique])",
 	"params": [
 		{"name":"sampleEntity","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
 		{"name":"unique","description":"No Help Available","required":false,"default":"","type":"boolean","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entityloadbyexample.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/entityloadbyexample.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entityloadbyexample"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset employee= createObject(\"component\", \"employee\")> \r\n <cfset employee.setDepartment(\"ColdFusion\")> \r\n <cfset employee.setCountry(\"USA\")> \r\n <cfset employee=entityLoadByExample(employee)> ",
+			"code": "<cfset employee= createObject(\"component\", \"employee\")>\r\n<cfset employee.setDepartment(\"ColdFusion\")>\r\n<cfset employee.setCountry(\"USA\")>\r\n<cfset employee=entityLoadByExample(employee)>",
 			"result": "",
-            "runnable":false
+            		"runnable":false
 		}
 	]
-
 }

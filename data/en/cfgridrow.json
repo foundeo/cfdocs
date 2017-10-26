@@ -2,9 +2,9 @@
 	"name": "cfgridrow",
 	"type": "tag",
 	"syntax": "<cfgridrow data=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Lets you define a cfgrid that does not use a query as source\n for row data. If a query attribute is specified in cfgrid, the\n cfgridrow tags are ignored.",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfgrid/index.html",
 	"params": [
 		{
 			"name": "data",

@@ -2,9 +2,8 @@
 	"name":"cftrace",
 	"type":"tag",
 	"syntax":"<cftrace>",
-	"returns":"",
 	"related":[],
-	"description":" Displays and logs debugging data about the state of an\n application at the time the cftrace tag executes. Tracks\n runtime logic flow, variable values, and execution time.\n Displays output at the end of the request or in the debugging\n section at the end of the request;\n\n CFML logs cftrace output to the file logs\\cftrace.log, in\n the CFML installation directory.\n\n Note: To permit this tag to execute, you must enable debugging\n in the CFML Administrator. Optionally, to report trace\n summaries, enable the Trace section.",
+	"description":"Displays and logs debugging data about the state of an\n application at the time the cftrace tag executes. Tracks\n runtime logic flow, variable values, and execution time.\n Displays output at the end of the request or in the debugging\n section at the end of the request;\n\n CFML logs cftrace output to the file logs\\cftrace.log, in\n the CFML installation directory.\n\n Note: To permit this tag to execute, you must enable debugging\n in the CFML Administrator. Optionally, to report trace\n summaries, enable the Trace section.",
 	"params": [
 		{"name":"abort","description":"Calls cfabort tag when the tag is executed","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"category","description":"User-defined string for identifying trace groups","required":false,"default":"","type":"string","values":[]},

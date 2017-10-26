@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"replace(String, substring1, substring2 [, scope])",
 	"returns":"string",
-	"related":[],
+	"related":["replaceNoCase","replaceList","REReplace"],
 	"description":"Replaces occurrences of substring1 in a string with substring2,\n in a specified scope. The search is case-sensitive. Function returns original string with replacements made.",
 	"params": [
 		{"name":"String","description":"String to search","required":true,"default":"","type":"string","values":[]},
@@ -17,9 +17,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/replace"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/replace"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Replace uppercase 'U' with lowercase 'u'",
@@ -28,10 +26,10 @@
 			"result": "Expected Result: ColdFusion"
 		},
 		{
-		    "title": "Replace uppercase 'O' with lowercase 'o', but only once",
-		    "description": "Something similar in Tag Syntax",
-		    "code": "getVal1 = replace(\"COldFusiOn\", \"O\", \"o\", \"ONE\"); \r\n writeDump(getVal1);",
-		    "result": "Expected Result: ColdFusiOn"
+			"title": "Replace uppercase 'O' with lowercase 'o', but only once",
+			"description": "Something similar in Tag Syntax",
+			"code": "getVal1 = replace(\"COldFusiOn\", \"O\", \"o\", \"ONE\"); \r\n writeDump(getVal1);",
+			"result": "Expected Result: ColdFusiOn"
 		},
 		{
 			"title":"Example using Callback Function",
@@ -41,5 +39,4 @@
 			"runnable":true
 		}
 	]
-
 }

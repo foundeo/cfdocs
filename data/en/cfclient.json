@@ -2,7 +2,6 @@
 	"name": "cfclient",
 	"type": "tag",
 	"syntax": "<cfclient> ...output... </cfclient>",
-	"returns": "void",
 	"related": ["cfclientsettings"],
 	"description": "Part of the CF11 mobile features for client side (JS) development. Enables output of CFcode to JS. Must read the wikidoc for full understanding of this new cf tag. \r\n<a href=\"https://wikidocs.adobe.com/wiki/pages/viewpage.action?pageId=138577945\" target=\"_blank\">Please click here to read the Adobe WikiDoc for CFClient</a>",
 	"params": [

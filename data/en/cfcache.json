@@ -2,9 +2,8 @@
 	"name":"cfcache",
 	"type":"tag",
 	"syntax":"<cfcache>",
-	"returns":"",
 	"related":[],
-	"description":" Stores a copy of a page on the server and/or client computer,\n to improve page rendering performance. To do this, the tag\n creates temporary files that contain the static HTML returned\n from a CFML page.\n\n Use this tag if it is not necessary to get dynamic content each\n time a user accesses a page.\n You can use this tag for simple URLs and for URLs that contain\n URL parameters.",
+	"description":"Stores a copy of a page on the server and/or client computer,\n to improve page rendering performance. To do this, the tag\n creates temporary files that contain the static HTML returned\n from a CFML page.\n\n Use this tag if it is not necessary to get dynamic content each\n time a user accesses a page.\n You can use this tag for simple URLs and for URLs that contain\n URL parameters.",
 	"params": [
 		{"name":"action","description":"* cache: server-side and client-side caching.\n * flush: refresh cached page(s).\n * clientcache: browser-side caching only. To cache a personalized page, use this option.\n * servercache: server-side caching only. Not recommended.\n * optimal: same as \"cache\".","required":false,"default":"","type":"string","values":["cache","flush","clientcache","servercache","optimal","get","put"]},
 		{"name":"directory","description":"Absolute path of cache directory.","required":false,"default":"","type":"string","values":[]},

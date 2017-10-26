@@ -1,14 +1,13 @@
 {
 	"name":"fileWriteLine",
 	"type":"function",
-	"syntax":"fileWriteLine(file, content)",
+	"syntax":"fileWriteLine(fileobj, content)",
 	"returns":"void",
-	"related":[],
-	"description":" No Help Available",
+	"related":["fileWrite","fileAppend"],
+	"description":"Appends content to an existing file",
 	"params": [
-		{"name":"file","description":"No Help Available","required":true,"default":"","type":"","values":[]},
-		{"name":"content","description":"No Help Available","required":true,"default":"","type":"","values":[]}
-
+		{"name":"fileobj","description":"The file where you want to add your content","required":true,"default":"","type":"any","values":[]},
+		{"name":"content","description":"","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filewriteline.html"},
@@ -16,10 +15,8 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filewriteline"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filewriteline"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+    	"examples": [
 		{
 			"title": "Script Syntax",
 			"description": "",
@@ -28,5 +25,4 @@
 			"runnable":false
 		}
 	]
-
 }

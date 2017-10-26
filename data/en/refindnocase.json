@@ -1,16 +1,16 @@
 {
-	"name":"REFindNoCase",
+	"name":"reFindNoCase",
 	"type":"function",
-	"syntax":"REFindNoCase(reg_expression, String [, start] [, returnsubexpressions])",
+	"syntax":"reFindNoCase(reg_expression, String [, start] [, returnsubexpressions])",
 	"returns":"any",
 	"related":[],
-	"description":" Uses a regular expression (RE) to search a string for a pattern,\n starting from a specified position. The search is\n case-insensitive.",
+	"description":"Uses a regular expression (RE) to search a string for a pattern, starting from a specified position. The search is case-insensitive.",
 	"params": [
 		{"name":"reg_expression","description":"","required":true,"default":"","type":"Regex","values":[]},
 		{"name":"string","description":"A string or a variable that contains one. String in which\n to search.","required":true,"default":"","type":"string","values":[]},
 		{"name":"start","description":"","required":false,"default":1,"type":"numeric","values":[]},
-		{"name":"returnsubexpressions","description":"True: if the regular expression is found, the first array\n element contains the length and position, respectively,\n of the first match.\n If the regular expression contains parentheses that\n group subexpressions, each subsequent array element\n contains the length and position, respectively, of\n the first occurrence of each group.\n If the regular expression is not found, the arrays each\n contain one element with the value 0.\n False: the function returns the position in the string\n where the match begins. Default.","required":false,"default":false,"type":"boolean","values":[true,false]}
-
+		{"name":"returnsubexpressions","description":"True: if the regular expression is found, the first array\n element contains the length and position, respectively,\n of the first match.\n If the regular expression contains parentheses that\n group subexpressions, each subsequent array element\n contains the length and position, respectively, of\n the first occurrence of each group.\n If the regular expression is not found, the arrays each\n contain one element with the value 0.\n False: the function returns the position in the string\n where the match begins. Default.","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"scope","description":"CF2016+ * one: returns the first value that matches the regex.\n * all: returns all values that match the regex.","required":false,"default":"one","type":"string","values":["one", "all"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/refindnocase.html"},
@@ -25,7 +25,7 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "REFindNoCase(\"E\", \"test 123!\")",
+			"code": "reFindNoCase(\"E\", \"test 123!\")",
 			"result": "2"
 		}
 	]

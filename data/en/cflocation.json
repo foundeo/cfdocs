@@ -3,9 +3,8 @@
 	"type":"tag",
 	"syntax":"<cflocation url=\"page.cfm\" addtoken=\"false\" statusCode=\"301\">",
 	"script":"location(\"mypage.cfm\", \"false\", \"301\");",
-	"returns":"",
 	"related":[],
-	"description":" Stops execution of the current page and redirects to the specified URI.",
+	"description":"Stops execution of the current page and redirects to the specified URI.",
 	"params": [
 		{"name":"url","description":"URI or URL to redirect to.","required":true,"default":"","type":"string","values":[]},
 		{"name":"addtoken","description":"Appends the CFID, CFTOKEN, JSESSIONID and possibly other session/client identifiers to the URL. Security best practices recommend setting this to false.","required":false,"default":"true","type":"boolean","values":[true,false]},

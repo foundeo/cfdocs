@@ -2,7 +2,6 @@
 	"name":"cfhttp",
 	"type":"tag",
 	"syntax":"<cfhttp url=\"\">",
-	"returns":"",
 	"related":["cfhttpparam"],
 	"description":"Generates an HTTP request and parses the response from the server into a structure. The result structure has the following keys:\n`statusCode` : The HTTP response code and reason string.\n`fileContent` : The body of the HTTP response. Usually a string, but could also be a Byte Array.\n`responseHeader` : A structure of response headers, the keys are header names and the values are either the header value or an array of values if multiple headers with the same name exist.\n`errorDetail` : An error message if applicable.\n`mimeType` : The mime type returned in the Content-Type response header.\n`text` : a boolean indicateing if the response body is text or binary.\n`charset` : The character set returned in the Content-Type header.\n`header` : All the http response headers as a single string.",
 	"params": [

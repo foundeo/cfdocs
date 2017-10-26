@@ -3,9 +3,8 @@
 	"type":"tag",
 	"syntax":"<cfcatch>",
 	"script":"catch (any e) { }",
-	"returns":"",
 	"related":["cftry","cffinally"],
-	"description":" Used inside a cftry tag. Together, they catch and process\n exceptions in CFML pages. Exceptions are events that\n disrupt the normal flow of instructions in a CFML page,\n such as failed database operations, missing include files, and\n developer-specified events.",
+	"description":"Used inside a cftry tag. Together, they catch and process\n exceptions in CFML pages. Exceptions are events that\n disrupt the normal flow of instructions in a CFML page,\n such as failed database operations, missing include files, and\n developer-specified events.",
 	"params": [
 		{"name":"type","description":"`application`: catches application exceptions\n`database`: catches database exceptions\n`template`: catches ColdFusion page exceptions\n`security`: catches security exceptions\n`object`: catches object exceptions\n`missingInclude`: catches missing include file exceptions\n`expression`: catches expression exceptions\n`lock`: catches lock exceptions\n`custom_type`: catches the specified custom exception type that is defined in a cfthrow tag\n `java.lang.Exception`: catches Java object exceptions\n *`searchengine`: catches Verity search engine exceptions\n *`any`: catches all exception types","required":false,"default":"any","type":"string","values":["application","database","template","security","object","missinginclude","expression","lock","custom_type","searchengine","any"]}
 

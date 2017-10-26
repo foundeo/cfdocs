@@ -2,9 +2,9 @@
 	"name": "cfgrid",
 	"type": "tag",
 	"syntax": "<cfgrid name=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Used within the cfform tag. Puts a grid control (a table of\n data) in a CFML form. To specify grid columns and row\n data, use the cfgridcolumn and cfgridrow tags, or use the\n query attribute, with or without cfgridcolumn tags.",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfgrid/index.html",
 	"params": [
 		{
 			"name": "name",

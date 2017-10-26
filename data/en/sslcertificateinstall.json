@@ -1,10 +1,10 @@
 {
-	"name": "SSLCertificateInstall",
+	"name": "sslCertificateInstall",
 	"type": "function",
-	"syntax": "SSLCertificateInstall(host [, port])",
+	"syntax": "sslCertificateInstall(host [, port])",
 	"returns": "void",
 	"related": [],
-	"description": "",
+	"description": "Installs certificates of a specific host into the JVM certificate store",
 	"params": [
 		{"name": "host", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "port", "description": "", "required": false, "default": "443", "type": "numeric", "values": []}

@@ -4,11 +4,18 @@
 	"syntax": "getLuceeID()",
 	"returns": "struct",
 	"related": [],
-	"description": "",
+	"description": "Get ID, ApiKey and SecurityKey for the Server and the current Web-Context.",
 	"params": [],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getluceeid.html"}
 	},
-	"examples": [],
+	"examples": [{
+			"title":"Dump getLuceeID",
+			"description":"Display ID, ApiKey and SecurityKey for the Server and Web-Context.",
+			"code":"dump( getLuceeID() )",
+			"result":"",
+			"runnable":true
+		}
+	],
 	"links": []
 }
