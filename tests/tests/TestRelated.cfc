@@ -13,7 +13,7 @@ component extends="testbox.system.BaseSpec" {
 			fileName = getFileFromPath(filePath);
 			if (isItJson) {
 				json = deserializeJSON(json);
-				if (structKeyExists(json, "type")) {
+				if (structKeyExists(json, "type") AND structKeyExists(json,"related")) {
 					if (json.type IS "tag") {
 						arrayAppend(fileTypes.tags, json.name);
 					} else if (json.type IS "function") {
@@ -29,7 +29,7 @@ component extends="testbox.system.BaseSpec" {
 			it("should relate to an existing function or tag", function() {
 				for(tag in fileTypes.tags) {
 					unexisting = arrayFilter(tag.related,function(related) {
-						return arrayFind(index.tags,related) OR arrayFind(index.functions,related);
+						return booleanFormat(arrayFind(index.tags,related) OR arrayFind(index.functions,related));
 					});
 					expect(arrayLen(unexisting) neq 0).toBeTrue("#arrayToList(unexisting,', ')# are non-existing functions/tags");
 				}
