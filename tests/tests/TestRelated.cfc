@@ -13,11 +13,11 @@ component extends="testbox.system.BaseSpec" {
 				json = deserializeJSON(json);
 				if (structKeyExists(json, "type") AND structKeyExists(json,"related")) {
 					if (json.type IS "tag") {
-						arrayAppend(fileTypes.tags, json.name);
+						arrayAppend(fileTypes.tags, json);
 					} else if (json.type IS "function") {
-						arrayAppend(fileTypes.functions, json.name);
+						arrayAppend(fileTypes.functions, json);
 					} else if (json.type IS "listing") {
-						arrayAppend(fileTypes.listings, json.name);
+						arrayAppend(fileTypes.listings, json);
 					}
 				}
 			}
