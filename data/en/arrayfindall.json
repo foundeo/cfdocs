@@ -18,6 +18,13 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "Find the positions of a given string within a provided array.",
+			"code": "var fruitArray = ['apple','banana','apple','orange','kiwi'];\nvar applePositions = arrayFindAll(fruitArray, 'apple');\nwriteDump(applePositions);",
+			"result": "[1,3]."
+		}
 	]
-
 }
