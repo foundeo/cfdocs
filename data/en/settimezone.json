@@ -12,5 +12,11 @@
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/settimezone.html"}
 	},
 	"links": [],
-	"examples": []
+	"examples": [{
+		"title": "Change Timezone from UTC to CET",
+		"description": "",
+		"code": "writeOutput(getTimezone());\nsetTimezone(\"CET\");\nwriteOutput(\"→ \"&getTimezone());"
+		"result:" "Etc/UTC→ CET",
+		"runnable": true
+	}]
 }
