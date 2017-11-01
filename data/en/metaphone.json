@@ -11,6 +11,24 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/metaphone.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": [{
+		"title": "Metaphone long words",
+		"description": "This compound word is the longest word published with 79 letters according to the 1996 Guinness Book of World Records",
+		"code": "Metaphone(\"Donaudampfschiffahrtsgesellschaftskapitän\")",
+		"result": "TNTM",
+		"runnable": true
+	},{
+		"title": "Different words with the same metaphone",
+		"description": "",
+		"code": "Metaphone(\"Truck\")&\"/\"&Metaphone(\"Trek\")",
+		"result": "TRK/TRK",
+		"runnable": true
+	},{
+		"title": "Metaphone of a word and then same word with prefix",
+		"description": "Adding a word changes the whole metaphone",
+		"code": "Metaphone(\"Trek\")&\"/\"&Metaphone(\"Star Trek\")",
+		"result": "TRK/STRT",
+		"runnable": true
+	}]
 }
