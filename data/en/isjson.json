@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"isJSON(var)",
 	"returns":"boolean",
-	"related":[],
+	"related":["isXML","serializeJSON","deserializeJSON"],
 	"description":" Evaluates whether a string is in valid JSON (JavaScript Object Notation) data interchange format.",
 	"params": [
 		{"name":"var","description":"A string or variable that represents one.","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isjson.html"},
@@ -15,17 +14,18 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isjson"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isjson"}
 	},
-	"links": [
-
-	],
+	"links": [{
+		"title": "json.org — Introducing JSON",
+		"description": "An overview about the JavaScript Object Notation",
+		"url": "http://json.org/"
+	}],
 	"examples":[
-	{
-		"title":"isJSON Example",
-		"description":"Returns true if the parameter is a valid JSON value. Returns False if the parameter is not a valid JSON data representation.",
-		"code":"isJSON(\"[1,2,3]\")",
-		"result":true,
-		"runnable":true
-	}
+		{
+			"title":"isJSON Example",
+			"description":"Returns true if the parameter is a valid JSON value. Returns False if the parameter is not a valid JSON data representation.",
+			"code":"isJSON(\"[1,2,3]\")",
+			"result":true,
+			"runnable":true
+		}
 	]
-
 }
