@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"isPDFFile(path)",
 	"returns":"boolean",
-	"related":["isVideoFile","isImageFile"],
+	"related":["isPDFObject"],
 	"description":" Verifies whether a PDF file is valid.",
 	"params": [
 		{"name":"path","description":"Pathname to a PDF file.","required":true,"default":"","type":"string","values":[]}
