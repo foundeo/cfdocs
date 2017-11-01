@@ -18,7 +18,7 @@
 		{
 			"title": "The in-memory file system memory set in cfadmin",
 			"description": "",
-			"code": "#NumberFormat(getSystemTotalMemory() / 1000 / 1000,"0.00")# MB",
+			"code": "#NumberFormat(getSystemTotalMemory() / 1000 / 1000,\"0.00\")# MB",
 			"result": ""
 		}
 	]
