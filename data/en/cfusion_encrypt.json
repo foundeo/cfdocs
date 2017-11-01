@@ -4,7 +4,7 @@
 	"syntax": "cfusion_Encrypt(string, key)",
 	"returns": "string",
 	"related": [],
-	"description": "",
+	"description": "Encrypts the given string, alias for function call encrypt(string,key,\"cfmx_compat\",\"hex\").",
 	"params": [
 		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "key", "description": "", "required": true, "default": "", "type": "string", "values": []}
