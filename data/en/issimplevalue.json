@@ -19,25 +19,25 @@
 		"title": "",
 		"description": "",
 		"code": "isSimpleValue(42)",
-		"result": "true",
+		"result": true,
 		"runnable": true
 	},{
 		"title": "",
 		"description": "",
 		"code": "isSimpleValue(\"Hello world\")",
-		"result": "true",
+		"result": true,
 		"runnable": true
 	},{
 		"title": "",
 		"description": "",
 		"code": "isSimpleValue({})",
-		"result": "false",
+		"result": false,
 		"runnable": true
 	},{
 		"title": "",
 		"description": "",
 		"code": "isSimpleValue([])",
-		"result": "false",
+		"result": false,
 		"runnable": true
 	}]
 }
