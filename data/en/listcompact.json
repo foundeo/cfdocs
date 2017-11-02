@@ -18,8 +18,8 @@
 	"examples": [{
 		"title":"Trims first and last comma from list string",
 		"description":"",
-		"code":"",
-		"result":"listCompact(\",eggs,milk,bread,flour,\")",
+		"code":"listCompact(\",eggs,milk,bread,flour,\")",
+		"result":"eggs,milk,bread,flour",
 		"runnable":true
 	}]
 }
