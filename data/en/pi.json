@@ -4,7 +4,7 @@
 	"syntax":"pi()",
 	"returns":"numeric",
 	"related":[],
-	"description":" Gets the mathematical constant p, accurate to 11 digits.\n The number 3.14159265358979.",
+	"description":"Gets the mathematical constant p, accurate to 15 digits\n, but only shows 11 when simply outputted.",
 	"params": [],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/pi.html"},
