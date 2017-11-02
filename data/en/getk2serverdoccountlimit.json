@@ -4,7 +4,7 @@
 	"syntax":"getK2ServerDocCountLimit()",
 	"returns":"numeric",
 	"related":["getK2ServerDocCount"],
-	"description":"This function is deprecated.\n\nGets the maximum number of documents that the CFML\n registered K2 Server is permitted to return from a search.\n This function is used primarily by the CFML Verity and\n K2Server Administrator pages. This function uses Verity\n K2Server Release K2.2.0.",
+	"description":"Gets the maximum number of documents that the CFML\n registered K2 Server is permitted to return from a search.\n This function is used primarily by the CFML Verity and\n K2Server Administrator pages. This function uses Verity\n K2Server Release K2.2.0.",
 	"params": [],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getk2serverdoccountlimit.html", "deprecated":"6.1"},
