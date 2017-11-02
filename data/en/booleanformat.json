@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"booleanFormat(number)",
 	"returns":"numeric",
-	"related":["yesNoFormat", "isBoolean"],
+	"related":["yesNoFormat", "isBoolean","trueFalseFormat"],
 	"description":"Evaluates the input as a boolean, and outputs either true or false. If not a boolean throws an exception.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
@@ -12,17 +12,35 @@
 		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/booleanformat.html"},
 		"lucee": {"minimum_version":"5.1.0", "notes":"", "docs": "http://docs.lucee.org/reference/functions/booleanformat.html"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title":"BooleanFormat Example",
+			"title":"1 is definitely true",
 			"description":"",
 			"code":"booleanFormat(1)",
 			"result":"true",
 			"runnable":true
+		},
+		{
+			"title":"0 is definitely false",
+			"description":"",
+			"code":"booleanFormat(0)",
+			"result":"false",
+			"runnable":true
+		},
+		{
+			"title":"Negative -1 is true as well",
+			"description":"",
+			"code":"booleanFormat(-1)",
+			"result":"true",
+			"runnable":true
+		},
+		{
+			"title":"And even a number larger then 1 is true",
+			"description":"",
+			"code":"booleanFormat(5)",
+			"result":"true",
+			"runnable":true
 		}
 	]
-
 }

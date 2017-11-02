@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "trueFalseFormat(value)",
 	"returns": "string",
-	"related": [],
+	"related": ["yesNoFormat", "isBoolean","booleanFormat"],
 	"description": "",
 	"params": [
 		{"name": "value", "description": "", "required": true, "default": "", "type": "any", "values": []}
@@ -11,6 +11,48 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/truefalseformat.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": [{
+		"title":"Numeric 1 is interpreted as true",
+		"description":"",
+		"code":"trueFalseFormat(1)",
+		"result":"true",
+		"runnable":true
+	},{
+		"title":"Numeric 0 is interpreted as false",
+		"description":"",
+		"code":"trueFalseFormat(0)",
+		"result":"false",
+		"runnable":true
+	},{
+		"title":"String representation of 1 is interpreted as true",
+		"description":"",
+		"code":"trueFalseFormat('1')",
+		"result":"true",
+		"runnable":true
+	},{
+		"title":"String representation of 0 is interpreted as false",
+		"description":"",
+		"code":"trueFalseFormat('0')",
+		"result":"false",
+		"runnable":true
+	},{
+		"title":"YES is recognized as synonym for true as well",
+		"description":"",
+		"code":"trueFalseFormat('YES')",
+		"result":"true",
+		"runnable":true
+	},{
+		"title":"And NO as synonym for false",
+		"description":"",
+		"code":"trueFalseFormat('NO')",
+		"result":"false",
+		"runnable":true
+	},{
+		"title":"An empty string results in false again",
+		"description":"",
+		"code":"trueFalseFormat('')",
+		"result":"false",
+		"runnable":true
+	}]
 }
