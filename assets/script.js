@@ -1,16 +1,23 @@
 $(document).ready(function() {
+	//github api requests
+	if(!!$('.issuecount').length) {
+		docname = $('ol.container').data('doc');
+		$.getJSON('https://api.github.com/search/issues?q=is:open+repo:foundeo/cfdocs+' + docname,function(res) {
+			$('.issuecount').html(res.total_count);
+		});
+	}
 
  var tags_fns = new Bloodhound({
     datumTokenizer: function(d) {
-      var test = Bloodhound.tokenizers.whitespace(d);
-          $.each(test,function(k,v){
-              var i = 0;
-              while( (i+1) < v.length ){
-                  test.push(v.substr(i,v.length));
-                  i++;
-              }
-          })
-          return test;
+	var test = Bloodhound.tokenizers.whitespace(d);
+	$.each(test,function(k,v){
+		var i = 0;
+		while( (i+1) < v.length ){
+		  test.push(v.substr(i,v.length));
+		  i++;
+		}
+	})
+	return test;
     },
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     prefetch: {
@@ -21,14 +28,13 @@ $(document).ready(function() {
         }
   });
   $('#lookup-box').typeahead({
-      hint: true,
-      highlight: true,
-      minLength: 1
-  },
-  {
-  		name: 'tags-fns',
-  		source: tags_fns,
-      limit: 10
+      	hint: true,
+      	highlight: true,
+      	minLength: 1
+  },{
+	name: 'tags-fns',
+  	source: tags_fns,
+      	limit: 10
   });
   $('.tt-hint').addClass('form-control');
   $('#search').submit(submitSearch);
@@ -39,8 +45,7 @@ $(document).ready(function() {
       var name = $(this).attr('data-name');
       var index = $(this).attr('data-index');
       $('#example-modal-content').html('<iframe width="100%" height="450" border="0" src="/try/' + name + '/' + index + '">');
-      $('.example-modal').modal();
-      
+      $('.example-modal').modal();      
   });
 
   if ($('.prettyprint').length != 0 && typeof(prettyPrint) == "function") {
@@ -48,22 +53,17 @@ $(document).ready(function() {
   }
   if (window.innerWidth > 780) {
     $( window ).scroll(function(e) {
-      var top  = window.pageYOffset || document.documentElement.scrollTop;
-      if (top > 100) {
-        //show
-        $('#foundeo').addClass('foundeoAppear');
-      } else {
-        //hide
-        $('#foundeo').removeClass('foundeoAppear'); 
-      }
+      	var top  = window.pageYOffset || document.documentElement.scrollTop;
+	//show/hide
+	$('#foundeo')[(top > 100) ? 'addClass' : 'removeClass']('foundeoAppear');
     });
   }
 
 });
 //search submit
-function submitSearch() {
-  document.location = '/' + $('#lookup-box').val().toLowerCase();
-  return false;
+function submitSearch(e) {
+	e.preventDefault();
+  	document.location = '/' + $('#lookup-box').val().toLowerCase();
 }
 //google analytics
 var _gaq = _gaq || [];
