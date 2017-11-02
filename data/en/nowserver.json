@@ -4,11 +4,17 @@
 	"syntax": "nowServer()",
 	"returns": "date",
 	"related": [],
-	"description": "",
+	"description": "Returns the current time on the server independent of Lucee timezone definition.",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/nowserver.html"}
+		"lucee": {"minimum_version": "", "deprecated":"4.5", "notes": "", "docs": "http://docs.lucee.org/reference/functions/nowserver.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Get current server time",
+		"description":"",
+		"code":"nowServer()",
+		"result":"",
+		"runnable":true
+	}],
 	"links": []
 }
