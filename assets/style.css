@@ -144,3 +144,13 @@ pre.prettyprint {
 @media (max-width:991px) {
   #search { margin-right:10px; }
 }
+
+.issuecount {
+	padding: 2px 5px;	
+}
+
+.issuebutton {
+	color: white;
+	padding-left: 2px;
+	padding-right: 5px;
+}
