@@ -13,7 +13,7 @@
 	},
 	"links": [],
 	"examples": [{
-		"title":"",
+		"title":"Get Soundexes of \"Robert\", \"Rupert\" and \"Rubin\"",
 		"description":"Both \"Robert\" and \"Rupert\" return the same string \"R163\" while \"Rubin\" yields \"R150\"",
 		"code":"soundEx(\"Robert\")&\"/\"&soundEx(\"Rupert\")&\"/\"&soundEx(\"Rubin\")",
 		"result":"R163/R163/R150",
