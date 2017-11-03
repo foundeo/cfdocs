@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"getSOAPRequestHeader(namespace, name [, asXML])",
 	"returns":"any",
-	"related":["getSOAPRequest","getSOAPResponse","getSOAPResponseHeader"],
+	"related":["getSOAPRequest","addSOAPRequestHeader","getSOAPResponse","getSOAPResponseHeader"],
 	"description":" Obtains a SOAP request header. Call only from within\n a CFC web service function that is processing a request\n as a SOAP web service.",
 	"params": [
 		{"name":"namespace","description":"A String that is the namespace for the header","required":true,"default":"","type":"string","values":[]},
