@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"isXMLAttribute(value)",
 	"returns":"boolean",
-	"related":[],
+	"related":["isXMLNode","isXMLElement","isXML"],
 	"description":" Determines whether the function parameter is an\n XML Document Object Model (DOM) attribute node.",
 	"params": [
 		{"name":"value","description":"Name of an XML attribute.","required":true,"default":"","type":"any","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isxmlattribute.html"},
@@ -15,8 +14,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isxmlattribute"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isxmlattribute"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }
