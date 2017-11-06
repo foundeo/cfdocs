@@ -1,24 +1,24 @@
 {
 	"name":"generatePBKDFKey",
-	"syntax":"generatePBKDFKey(Algorithm, Passphrase, Salt, Iterations, KeySize)",
+	"syntax":"generatePBKDFKey(algorithm, passphrase, salt, iterations, keySize);",
 	"returns":"string",
-	"description":"CFML implementation of Password-Based Key-Derivation Function (PBKDF).",
+	"description":"CFML implementation of Password-Based Key-Derivation Function (PBKDF)",
 	"type":"function",
-	"related":["hash", "encrypt","decrypt"],
+	"related":["hash", "encrypt","decrypt","generateSecretKey"],
+	"params":[
+		{"name":"algorithm", "description":"Hashing algorithm used for generating key", "required":true, "default":"", "type":"string", "values":["PBKDF2WithHmacSHA1","PBKDF2WithSHA1","PBKDF2WithSHA224","PBKDF2WithSHA256","PBKDF2WithSHA384","PBKDF2WithSHA512"]},
+		{"name":"passphrase", "description":"Passphrase used for the key. KEEP THIS SECRET.", "required":true, "default":"", "type":"string", "values":[]},
+		{"name":"salt", "description":"A string which will be added to the passphrase before encryption.\n The standard recommends a salt length of at least 64 bits (8 characters). The salt needs to be generated using a pseudo-random number generator (e.g SHA1PRNG)", "required":true, "default":"", "type":"string", "values":[]},
+		{"name":"iterations", "description":"The number of PBKDEF iterations to perform. A minimum recommended value is 1000", "required":true, "default":"", "type":"numeric", "values":[]},
+		{"name":"keySize", "description":"The length in bytes of the key to generate", "required":true, "default":"", "type":"numeric", "values":["true", "false"]}
+	    ],
 	"engines":{
-		"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/generatepbkdfkey.html","notes":""},
-		"lucee":{"minimum_version":"5","docs":"http://docs.lucee.org/reference/functions/generatepbkdfkey.html","notes":""}
+		"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/generatepbkdfkey.html","notes":"Adobe ColdFusion Enterprise includes a java crypto provider that implements these algorithms. These algorithms are available only in enterprise versions:\n\nPBKDF2WithSHA1\nPBKDF2WithSHA224\nPBKDF2WithSHA256\nPBKDF2WithSHA384\nPBKDF2WithSHA512\nPBKDF2WithSHA512-224\nPBKDF2WithSHA512-256"},
+		"lucee":{"minimum_version":"5","docs":"http://docs.lucee.org/reference/functions/generatepbkdfkey.html","notes":"For Lucee it is up to the provider that you have installed, if using the default java crypto provider it only supports \"PBKDF2WithHmacSHA1\" on Java 1.7 for example. If you are using Java 8 it supports more algorithms.\n\n`iterations` and `keySize` parameters are optional in Lucee."}
 	},
 	"links":[
 		{"title":"PBKDF2 Wikipedia","description":"Information on what PBKDF2 is all about","url":"http:\/\/en.wikipedia.org\/wiki\/PBKDF2"},
 		{"title":"CFPASSPhrase","description":"Related project to help other engines utilize PBKDF2 key generation","url":"https:\/\/github.com\/boughtonp\/cfpassphrase"}
-	],
-	"params":[
-		{"values":["PBKDF2WithHmacSHA1","PBKDF2WithSHA1","PBKDF2WithSHA224","PBKDF2WithSHA256","PBKDF2WithSHA384","PBKDF2WithSHA512"],"default":"","description":"Hashing algorithm used for generating key","name":"algorithm","type":"string","required":"1"},
-		{"values":[],"default":"","description":"Passphrase used for the key. KEEP THIS SECRET.","name":"passphrase","type":"string","required":"1"},
-		{"values":[],"default":"","description":"A random salt","name":"salt","type":"string","required":"1"},
-		{"values":["1000"],"default":"","description":"The number of PBKDEF iterations to perform. A minimum recommended value is 1000","name":"iterations","type":"numeric","required":"1"},
-		{"values":[],"default":"Length of hashing algorithm output","description":"The length in bytes of the key to generate","name":"keysize","type":"numeric","required":"0"}
 	],
 	"examples":[
 		{
@@ -26,6 +26,12 @@
 			"description":"",
 			"code":"generatePBKDFKey(\"PBKDF2WithHmacSHA1\", \"secret\", \"salty\", 5000, 128)",
 			"result":"Y0MCpCe3zb0CNJvyXNUWEQ=="
+		},{
+			"title":"More complex encryption example",
+			"description":"",
+			"code":"// some variables\r\npassword = \"top_secret\";\r\ndataToEncrypt= \"the most closely guarded secret\";\r\nencryptionAlgorithm = \"AES\";\r\nkeysize = 128;\r\nalgorithmVersion = 512;\r\nPBKDFalgorithm = 'PBKDF2WithHmacSHA' & algorithmVersion;\r\n    \r\n// Generate key as recommended in docs\r\nlength = keysize / 8;\r\nmultiplicator = 10 ^ length;\r\nsalt = Round(Randomize(5,'SHA1PRNG') * multiplicator);\r\n    \r\n// The magic happens here\r\nPBKDFKey = GeneratePBKDFKey(PBKDFalgorithm, password, salt, algorithmVersion, keysize);\r\nencryptedData = encrypt(dataToEncrypt, PBKDFKey, encryptionAlgorithm, \"BASE64\"); \r\ndecryptedData = decrypt(encryptedData, PBKDFKey, encryptionAlgorithm, \"BASE64\");\r\n    \r\n//Output\r\nwriteOutput(\"<b>Generated PBKDFKey (Base 64)</b>: \" & PBKDFKey);\r\nwriteOutput(\"<br /><b>Data After Encryption</b>: \" & encryptedData);\r\nwriteOutput(\"<br /><b>Data After Decryption</b>: \" & decryptedData); ",
+			"result":"",
+			"runnable":false
 		}
 	]
 }
