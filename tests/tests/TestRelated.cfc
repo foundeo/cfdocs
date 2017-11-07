@@ -3,6 +3,8 @@ component extends="testbox.system.BaseSpec" {
 		dataDir = ExpandPath("../data/en");
 		files = directoryList(dataDir, false, "array");
 		index = deserializeJSON(fileRead(dataDir & "/index.json"));
+		// temporary: should be removed later
+		index.components = ["application-cfc"];
 
 		fileTypes = {tags=[], functions=[], listings=[], components=[]};
 		for (filePath in files) {
