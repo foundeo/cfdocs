@@ -30,7 +30,7 @@ component extends="testbox.system.BaseSpec" {
 				for(tag in fileTypes.tags) {
 					unexisting = arrayFilter(tag.related,function(related) {
 						// Added "component" to related types
-						return booleanFormat(not arrayFind(index.tags,related) OR not arrayFind(index.functions,related) OR not arrayFind(index.components,related));
+						return not booleanFormat(arrayFind(index.tags,related) OR arrayFind(index.functions,related) OR arrayFind(index.components,related));
 					});
 					expect(arrayLen(unexisting) is 0).toBeTrue("#arrayToList(unexisting,', ')# is/are non-existing function(s)/tag(s)");
 				}
