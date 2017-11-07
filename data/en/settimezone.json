@@ -15,7 +15,7 @@
 	"examples": [{
 		"title": "Change Timezone from UTC to CET",
 		"description": "",
-		"code": "writeOutput(getTimezoneInfo().id);\nsetTimezone(\"CET\");\nwriteOutput(\"→ \"&getTimezoneInfo().id);",
+		"code": "writeOutput(toString(getTimezoneInfo().id));\nsetTimezone(\"CET\");\nwriteOutput(\"→ \"&toString(getTimezoneInfo().id));",
 		"result": "Etc/UTC→ CET",
 		"runnable": true
 	}]
