@@ -10,11 +10,11 @@
 		<cfset var content = "">
 		<cfset var showError = "">
 		<cfif NOT StructKeyExists(application, "index") OR StructKeyExists(url, "reinit")>
-			<cfset application.index = DeserializeJSON( FileRead(ExpandPath("./data/en/index.json")))>
+			<cfset application.index = DeserializeJSON(FileRead(ExpandPath("./data/en/index.json")))>
 			<cfset application.categories = {}>
 			<cfloop array="#application.index.categories#" index="local.cat">
 				<cfset application.categories[local.cat] = {name="", items=[]}>
-				<cfset local.catData = DeserializeJSON( FileRead(ExpandPath("./data/en/#local.cat#.json")))>
+				<cfset local.catData = DeserializeJSON(FileRead(ExpandPath("./data/en/#local.cat#.json")))>
 				<cfset application.categories[local.cat].name = local.catData.name>
 				<cfset application.categories[local.cat].items = local.catData.related>
 			</cfloop>
@@ -30,7 +30,7 @@
 				</cfif>
 				<cfset application.guides[local.guide] = local.title>
 			</cfloop>
-
+			<cfset application.engines = "coldfusion,lucee,openbd,railo">
 		</cfif>
 		<cfset request.content = "">
 		<!--- cache for one day --->
