@@ -34,7 +34,7 @@ component extends="testbox.system.BaseSpec" {
 						// Added "component" to related types
 						return not booleanFormat(arrayFind(index.tags,related) OR arrayFind(index.functions,related) OR arrayFind(index.components,related));
 					});
-					expect(arrayLen(unexisting) is 0).toBeTrue("#arrayToList(unexisting,', ')# is/are non-existing function(s)/tag(s)");
+					expect(arrayLen(unexisting) is 0).toBeTrue("#arrayToList(unexisting,', ')# is/are non-existing function(s)/tag(s) in #tag.name#");
 				}
 			});			
 			
