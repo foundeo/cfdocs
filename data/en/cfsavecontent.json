@@ -2,7 +2,7 @@
 	"name":"cfsavecontent",
 	"type":"tag",
 	"syntax":"<cfsavecontent variable=\"\">",
-	"script":"savecontent variable=\"\" {};"
+	"script":"savecontent variable=\"\" {};",
 	"related":[],
 	"description":"Saves the generated content of the cfsavecontent tag, including\n the results of evaluating expressions and executing custom tags,\n in the specified variable.",
 	"params": [
