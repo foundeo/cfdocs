@@ -6,6 +6,7 @@
 <cfset all = []>
 <cfset categories = []>
 <cfset versions = {4=[], "4.5"=[],5=[],6=[],7=[],8=[],9=[],10=[],11=[],2016=[]}>
+<cfset engines = []>
 <cfset lucee_versions = {5=[]}>
 <cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
 	<cfset json = fileRead(filePath,"utf-8")>
@@ -24,18 +25,21 @@
 				<cfset arrayAppend(categories, nameKey)>
 			</cfif>
 			<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "coldfusion") AND structKeyExists(data.engines.coldfusion, "minimum_version") AND isNumeric(data.engines.coldfusion.minimum_version)>
-
+				<cfif structKeyExists(versions, val(data.engines.coldfusion.minimum_version))>
+					<cfset arrayAppend(engines.coldfusion, data.name)>
+				</cfif>
 				<cfif structKeyExists(versions, val(data.engines.coldfusion.minimum_version))>
 					<cfset arrayAppend(versions[val(data.engines.coldfusion.minimum_version)], data.name)>
 				</cfif>
 			</cfif>
 
 			<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "lucee") AND structKeyExists(data.engines.lucee, "minimum_version") AND isNumeric(data.engines.lucee.minimum_version)>
-
+				<cfif structKeyExists(versions, val(data.engines.lucee.minimum_version))>
+					<cfset arrayAppend(engines.lucee, data.name)>
+				</cfif>
 				<cfif structKeyExists(lucee_versions, val(data.engines.lucee.minimum_version))>
 					<cfset arrayAppend(lucee_versions[val(data.engines.lucee.minimum_version)], data.name)>
 				</cfif>
-
 			</cfif>
 		</cfif>
 		<cfcatch>
@@ -89,6 +93,12 @@
 <cfset gData.related = guides>
 <cfset fileWrite(dataDir & "/guides.json", prettyJSON(serializeJSON(gData), "utf-8"))>
 <p>Wrote guides.json</p>
+
+<cfloop array="#structKeyArray(engines)#" index="e">
+	<cfset eData = {"name"="#e# Functions and Tags","type"="listing","description"="List of tags and functions available in  #e#", "related"=engines[e]}>
+	<cfset fileWrite(dataDir & "/#e#.json", prettyJSON(serializeJSON(eData), "utf-8"))>
+	<p>Wrote cf<cfoutput>#e#</cfoutput>.json</p>
+</cfloop>
 
 <cfloop array="#structKeyArray(versions)#" index="v">
 	<cfset vData = {"name"="ColdFusion #v# New Functions and Tags","type"="listing","description"="List of tags and functions added in ColdFusion #v#", "related"=versions[v]}>
