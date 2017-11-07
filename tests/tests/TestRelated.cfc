@@ -4,7 +4,7 @@ component extends="testbox.system.BaseSpec" {
 		files = directoryList(dataDir, false, "array");
 		index = deserializeJSON(fileRead(dataDir & "/index.json"));
 
-		fileTypes = {tags=[], functions=[], listings=[]};
+		fileTypes = {tags=[], functions=[], listings=[], components=[]};
 		for (filePath in files) {
 			json = fileRead(filePath);
 			isItJson = isJSON(json);
@@ -12,12 +12,14 @@ component extends="testbox.system.BaseSpec" {
 			if (isItJson) {
 				json = deserializeJSON(json);
 				if (structKeyExists(json, "type") AND structKeyExists(json,"related")) {
-					if (json.type IS "tag") {
+					if (json.type is "tag") {
 						arrayAppend(fileTypes.tags, json);
-					} else if (json.type IS "function") {
+					} else if (json.type is "function") {
 						arrayAppend(fileTypes.functions, json);
-					} else if (json.type IS "listing") {
+					} else if (json.type is "listing") {
 						arrayAppend(fileTypes.listings, json);
+					} else if (json.type is "component") {
+						arrayAppend(fileTypes.components, json);
 					}
 				}
 			}
@@ -27,7 +29,8 @@ component extends="testbox.system.BaseSpec" {
 			it("should relate to an existing function or tag", function() {
 				for(tag in fileTypes.tags) {
 					unexisting = arrayFilter(tag.related,function(related) {
-						return booleanFormat(not arrayFind(index.tags,related) OR not arrayFind(index.functions,related));
+						// Added "component" to related types
+						return booleanFormat(not arrayFind(index.tags,related) OR not arrayFind(index.functions,related) OR not arrayFind(index.components,related));
 					});
 					expect(arrayLen(unexisting) is 0).toBeTrue("#arrayToList(unexisting,', ')# is/are non-existing function(s)/tag(s)");
 				}
