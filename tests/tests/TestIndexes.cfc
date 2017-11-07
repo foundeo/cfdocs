@@ -47,13 +47,13 @@ component extends="testbox.system.BaseSpec" {
 
 			it("should be in tags.json if it is a tag", function() {
 				for (tag in fileTypes.tags) {
-					expect(ArrayFind(tags.related, tag) NEQ 0).toBeTrue("#json.name# was not in tags.json index");
+					expect(ArrayFind(tags.related, tag) NEQ 0).toBeTrue("#tag# was not in tags.json index");
 				}
 			});
 
 			it("should be in functions.json if it is a function", function() {
 				for (func in fileTypes.functions) {
-					expect(ArrayFind(funcs.related, func) NEQ 0).toBeTrue("#json.name# (#func#) was not in functions.json index");
+					expect(ArrayFind(funcs.related, func) NEQ 0).toBeTrue("#func# was not in functions.json index");
 				}
 			});
 		});
