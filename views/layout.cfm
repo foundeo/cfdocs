@@ -20,6 +20,7 @@
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<cfset listCategories = listSort(StructKeyList(application.categories),"text")>
+		<cfset listEngines = listSort(StructKeyList(application.engines),"text")>
 		<cfset listGuides = listSort(StructKeyList(application.guides),"text")>
 		<div class="container">
 			<div class="navbar-header">
@@ -55,6 +56,16 @@
 							<li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li>
 						</cfif>
 					</cfloop>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="##" class="dropdown-toggle" data-toggle="dropdown">Engines <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#linkTo('functions')#">All Engines</a></li>
+							<li class="divider"></li>
+						<cfloop list="#listEngines#" index="engine">
+							<li><a href="#linkTo(guide)#">#application.engines[engine]#</a></li>
+						</cfloop>
 						</ul>
 					</li>
 					<li class="dropdown">
