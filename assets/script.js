@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	//github api requests
 	if(!!$('.issuecount').length) {
-		docname = $('ol.container').data('doc');
+		docname = $('#docname').text();
 		$.getJSON('https://api.github.com/search/issues?q=is:open+repo:foundeo/cfdocs+' + docname,function(res) {
 			$('.issuecount').html(res.total_count);
 		});
