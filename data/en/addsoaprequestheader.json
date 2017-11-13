@@ -23,7 +23,7 @@
 		{
 			"title": "Set the username header as a string",
 			"description": "",
-			"code": "/*ws = createObject(\"webservice\", \"http://localhost/soapheaders/headerservice.cfc?WSDL\");\r\naddSOAPRequestHeader(ws, \"http://mynamespace/\", \"username\", \"tom\", false);*/",
+			"code": "/ws = createObject(\"webservice\", \"http://localhost/soapheaders/headerservice.cfc?WSDL\");\r\naddSOAPRequestHeader(ws, \"http://mynamespace/\", \"username\", \"tom\", false);",
 			"result": "",
            		"runnable":false
 		}
