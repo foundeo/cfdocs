@@ -4,7 +4,7 @@
 	"syntax": "querySome(query, closure [, parallel] [, maxThreads])",
 	"member": "query.some(closure [, parallel] [, maxThreads])",
 	"returns": "boolean",
-	"related": [],
+	"related": ["queryFilter","queryReduce","queryMap"],
 	"description": "",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
