@@ -2,7 +2,7 @@
 	"name":"cfexchangecalendar",
 	"type":"tag",
 	"syntax":"<cfexchangecalendar action=\"create\" event=\"\" name=\"\" responsetype=\"accept\" uid=\"\">",
-	"related":[],
+	"related":["cfexchangeconnection","cfexchangecontact","cfexchangemail","cfexchangetask","cfexchangefilter"],
 	"description":"Creates, deletes, modifies, gets, and responds to Microsoft Exchange calendar events, and gets calendar event attachments.",
 	"params": [
 		{"name":"action","description":"The action to take. Must be one of the following: create, delete, get, getAttachments, modify, respond (required)","required":true,"default":"","type":"string","values":["create","delete","deleteAttachments","get","getAttachments","modify","respond"]},
@@ -16,13 +16,10 @@
 		{"name":"responseType","description":"(respond) Must be one of the following: accept, decline, tentative (required)","required":true,"default":"","type":"string","values":["accept","decline","tentative"]},
 		{"name":"result","description":"The name of a variable that will contain the UID of the event that is created.\n You use the UID value in the uid attribute other actions to identify the event to be acted on. (optional)","required":false,"default":"","type":"string","values":[]},
 		{"name":"uid","description":"Case-sensitive Exchange UID value or values that uniquely identify the event or events\n on which to perform the action.\n For the delete action, this attribute can be a comma delimited list of UID values.\n The getAttachments, modify, and respond actions allow only a single UID value. (required)","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexchangecalendar.html"}
 	},
-	"links": [
-
-	]
+	"links": []
 
 }
