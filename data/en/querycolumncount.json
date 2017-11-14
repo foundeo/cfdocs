@@ -16,7 +16,7 @@
 	"examples": [{
 		"title": "Output number of query columns",
 		"description": "",
-		"code": "myQuery = queryNew(\"ID,name,age\");\nwriteOutput( queryColumnCount( myQuery ) );"
+		"code": "myQuery = queryNew(\"ID,name,age\");\nwriteOutput( queryColumnCount( myQuery ) );",
 		"result": 3,
 		"runnable": true
 	}]
