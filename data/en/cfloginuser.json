@@ -2,13 +2,12 @@
 	"name":"cfloginuser",
 	"type":"tag",
 	"syntax":"<cfloginuser name=\"\" password=\"\" roles=\"\">",
-	"related":[],
+	"related":["cflogin","cflogout"],
 	"description":"Identifies an authenticated user to CFML. Specifies the\n user ID and roles. Used within a cflogin tag.",
 	"params": [
 		{"name":"name","description":"A username.","required":true,"default":"","type":"string","values":[]},
 		{"name":"password","description":"A user password.","required":true,"default":"","type":"string","values":[]},
 		{"name":"roles","description":"A comma-delimited list of role identifiers.\n\n CFML processes spaces in a list element as part of\n the element.","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cfloginuser.html"},
@@ -16,8 +15,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfloginuser"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfloginuser"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }
