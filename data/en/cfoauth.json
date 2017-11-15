@@ -3,36 +3,10 @@
   "type": "tag",
   "syntax": "<cfoauth>",
   "description": "The <oauth> tag allows you to easily integrate third-party Oauth 2 authentication provider in your application. This tag currently supports Facebook and Google authentication. Also, this tag supports Oauth providers that support the Oauth 2 protocols. For instance, Microsoft and Github. \r\n\r\nIf type is not Facebook or Google then use access token endpoint and other attributes.",
-  "engines": {
-    "coldfusion": {
-      "minimum_version": "11",
-      "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfoauth.html",
-      "notes": ""
-    }
-  },
-  "links": [
-    {
-      "title": "OAuth Site",
-      "description": "",
-      "url": "http:\/\/oauth.net\/"
-    },
-    {
-      "title": "OAuth2 CF",
-      "description": "Oauth2 implementation for CF9, CF10",
-      "url": "https:\/\/github.com\/coldfumonkeh\/oauth2"
-    },
-    {
-      "title": "Coldfusion Jedi Introduction to OAuth",
-      "description": "",
-      "url": "http:\/\/www.raymondcamden.com\/index.cfm\/2013\/4\/1\/ColdFusion-and-OAuth-Part-1--Facebook"
-    }
-  ],
+  "related": ["cflogin","cfntauthenticate"],
   "params": [
     {
-      "values": [
-        "Facebook",
-        "Google"
-      ],
+      "values": [ "Facebook", "Google" ],
       "default": "",
       "description": "Currently supported values are Facebook and Google. Implicitly supports the authentication workflow of Facebook and Google.",
       "name": "Type",
@@ -112,6 +86,26 @@
       "required": "0"
     }
   ],
+  "engines": {
+    "coldfusion": { "minimum_version": "11", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfoauth.html" }
+  },
+  "links": [
+    {
+      "title": "OAuth Site",
+      "description": "",
+      "url": "http:\/\/oauth.net\/"
+    },
+    {
+      "title": "OAuth2 CF",
+      "description": "Oauth2 implementation for CF9, CF10",
+      "url": "https:\/\/github.com\/coldfumonkeh\/oauth2"
+    },
+    {
+      "title": "Coldfusion Jedi Introduction to OAuth",
+      "description": "",
+      "url": "http:\/\/www.raymondcamden.com\/index.cfm\/2013\/4\/1\/ColdFusion-and-OAuth-Part-1--Facebook"
+    }
+  ],
   "examples": [
     {
       "result": "",
@@ -119,6 +113,5 @@
       "description": "The following example shows a simple authentication:",
       "code": "\r\n<cflogin>\r\n <cfoauth\r\n type = \"Facebook\"\r\n clientid = \"YOUR_CLIENT_ID\"\r\n secretkey = \"YOUR_SECRET_KEY\"\r\n result = \"res\"\r\n redirecturi = \"http:\/\/localhost:8500\/doc\/login.cfm\" >\r\n <cfloginuser name = \"#res.other.username#\" password = \"#res.access_token#\" roles = \"user\"\/>\r\n<\/cflogin>\r\n<cflocation url=\"http:\/\/localhost:8500\/doc\/index.cfm\" >"
     }
-  ],
-  "related": []
+  ]
 }
