@@ -2,7 +2,7 @@
 	"name": "cftreeitem",
 	"type": "tag",
 	"syntax": "<cftreeitem>",
-	"related": [],
+	"related": ["cftree"],
 	"description": "Populates a form tree control, created with the cftree tag,\n with elements. To display icons, you can use the img values\n that CFML provides, or reference your own icons.",
 	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cftree/index.html",
 	"params": [
@@ -104,16 +104,8 @@
 		}
 	],
 	"engines": {
-		"coldfusion": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cftreeitem.html"
-		},
-		"openbd": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "http://openbd.org/manual/?/tag/cftreeitem"
-		}
+		"coldfusion": { "minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cftreeitem.html" },
+		"openbd": { "minimum_version": "", "notes": "", "docs": "http://openbd.org/manual/?/tag/cftreeitem" }
 	},
 	"links": []
 }
