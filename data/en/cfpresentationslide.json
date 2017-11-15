@@ -2,7 +2,7 @@
 	"name": "cfpresentationslide",
 	"type": "tag",
 	"syntax": "<cfpresentationslide>",
-	"related": [],
+	"related": ["cfpresentation","cfpresenter"],
 	"description": "Creates a slide dynamically from an HTML source file,\n HTML and CFML code, or an SWF source file.\n If you do not specify a source file, you must include the HMTL or CFML code for\n the body of the slide within the cfpresentationslide tag. The cfpresentationslide\n is the child tag of the cfpresentation tag.",
 	"params": [
 		{
@@ -167,11 +167,14 @@
 		}
 	],
 	"engines": {
-		"coldfusion": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpresentationslide.html"
-		}
+		"coldfusion": { "minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpresentationslide.html" }
 	},
-	"links": []
+	"links": [],
+	"example": [{
+		"title": "A presentation with two slides",
+		"description": "",
+		"code": "<cfpresentation\n\ttitle = \"text string\"\n\tauthPassword = \"authentication password\"\n\tauthUser = \"authentication user name\"\n\tautoPlay = \"yes\"\n\tbackgroundColor = \"##cccccc\"\n\tcontrol = \"normal\"\n\tcontrolLocation = \"right\"\n\tformat = \"ppt\"\n\tglowColor = \"green\"\n\tinitialTab = \"notes\"\n\tdestination = \"ram:///filepath\"\n\tdirectory = \"praesi.ppt\"\n\tlightColor = \"yellow\"\n\tloop = \"no\"\n\toverwrite = \"yes\"\n\tprimaryColor = \"blue\"\n\tshadowColor = \"##333333\"\n\tshowNotes = \"yes\"\n\tshowOutline = \"yes\"\n\tshowSearch = \"yes\"\n\ttextColor = \"black\"\n\tuserAgent = \"Firefox\"\n>\n<cfpresentationslide notes="Test" title="myText" duration="20">Slide 1</cfpresentationslide>\n<cfpresentationslide notes=\"Test2\" title=\"myText\">Slide 2</cfpresentationslide>\n<cfpresenter name=\"xyz\"></cfpresenter>\n</cfpresentation>",
+		"result": "",
+		"runnable": ""
+	}]
 }
