@@ -28,7 +28,7 @@
 		{"name": "proxyuser", "description": "User name to provide to the proxy server.", "required": false, "default": "", "type": "string", "values": []},
 		{"name": "proxyhost", "description": "Host name or IP address of a proxy server to which to send the request.", "required": false, "default": "", "type": "string", "values": []},
 		{"name": "proxyport", "description": "The port to connect to on the proxy server.", "required": false, "default": "", "type": "string", "values": []},
-		{"name": "useragent", "description": "Text to put in the HTTP User-Agent request header field. Used to identify the request client software.", "required": false, "default": "", "type": [{"name": "backgroundColor", "description": "Specifies the background color of the presentation.\n The value is hexadecimal: use the form \"##xxxxxx\" or \"##xxxxxxxx\",\n where x = 0-9 or A-F; use two number signs or none.", "required": false, "default": "0x727971", "type": "string", "values": []},
+		{"name":"useragent","description":"Text to put in the HTTP User-Agent request header field. Used to identify the request client software.","required":false,"default":"","type":"string","values":[]},
 		{"name": "destination", "description": "Destination directory", "required": false, "default": "", "type": "string", "values": []},
 		{"name": "format", "description": "Specifies file format for conversion. The `flashpaper` format has been deprecated since CF11+", "required": false, "default": "", "type": "string", "values": ["html", "ppt"]}
 	],
