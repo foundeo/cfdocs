@@ -2,12 +2,11 @@
 	"name":"cfdocumentitem",
 	"type":"tag",
 	"syntax":"<cfdocumentitem type=\"pagebreak\">",
-	"related":[],
+	"related":["cfdocument","cfdocumentsection"],
 	"description":"Specifies action items for a PDF or FlashPaper document\n created by the cfdocument tag.",
 	"params": [
 		{"name":"type","description":"Specifies the action:\n - pagebreak: start a new page at the location of the tag.\n - header: use the text between the <cfdocumentitem>\n and <\/cfdocumentitem> tags as the running header.\n - footer: use the text between the <cfdocumentitem>\n and <\/cfdocumentitem> tags as the running footer.","required":true,"default":"","type":"string","values":["pagebreak","header","footer"]},
 		{"name":"evalAtPrint","description":"Specifies whether to evaluate expressions inside cfdocumentitem tag at runtime.","required":false,"default":"","type":"boolean","values":[true,false]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfdocumentitem.html"},
@@ -15,8 +14,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdocumentitem"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdocumentitem"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }
