@@ -267,13 +267,12 @@
 		<cfset result = ReplaceNoCase(name, "cf", "") & ";">
 	<cfelseif mode is "other">
 		<!--- add cfscript syntax --->
-		<cfset data.script = ReReplace(syntax, "[<\r\n]", "", "ALL")>
-		<cfset data.script = ReplaceNoCase(script, name, name & "(")>
-		<cfset data.script = Replace(script, "( ", "(")>
+		<cfset result = ReReplace(syntax, "[<\r\n]", "", "ALL")>
+		<cfset result = ReplaceNoCase(script, name, name & "(")>
+		<cfset result = Replace(script, "( ", "(")>
 		<!--- replace double quote followed by a space with a ,[space] --->
-		<cfset data.script = ReReplace(script, """ ", """, ", "ALL")>
-		<cfset data.script = ReReplace(script, ",? ?>", ");")>
-		<cfset data.scriptTitle = "Script Syntax ACF11+, Lucee, Railo 4.2+">
+		<cfset result = ReReplace(script, """ ", """, ", "ALL")>
+		<cfset result = ReReplace(script, ",? ?>", ");")>
 	</cfif>
 	<cfreturn result>
 </cffunction>
