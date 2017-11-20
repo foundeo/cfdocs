@@ -4,21 +4,25 @@
 			<h1 id="docname">#data.name#</h1>
 			<p>#autoLink(data.description)#</p>
 			<cfif StructKeyExists(data, "syntax") AND Len(data.syntax)>
-				<p id="syntax"><cfif data.type IS "tag"><small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;</cfif><code>#Replace(encodeForHTML(data.syntax), Chr(10), "<br>", "ALL")#<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)> <em>&##8594; returns #encodeForHTML(data.returns)#</em></cfif></code></p>
+				<p id="syntax">
+					<cfif data.type IS "tag">
+						<small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;
+					</cfif>
+					<code>#Replace(encodeForHTML(data.syntax), Chr(10), "<br>", "ALL")#
+						<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)>
+							<em>&##8594; returns #encodeForHTML(data.returns)#</em>
+						</cfif>
+					</code>
+				</p>
 				<cfif data.type IS "tag">
 					<cfif StructKeyExists(data, "script")>
 						<cfset data.scriptTitle = "Script Syntax">
 					<cfelseif ListFindNoCase("cfabort,cfbreak,cfcontinue,cfreturn,cfexit", data.name)>
 						<cfset data.scriptTitle = "Script Syntax">
-						<cfset data.script = ReplaceNoCase(data.name, "cf", "") & ";">
+						<cfset data.script = replaceScript(name = data.name, mode = "cf") & ";">
 					<cfelseif NOT ListFindNoCase("cfif,cfset,cfelse,cfelseif,cfloop,cfinclude,cfparam,cfswitch,cfcase,cftry,cfthrow,cfrethrow,cfcatch,cffinally,cfmodule,cfcomponent,cfinterface,cfproperty,cffunction,cfimport,cftransaction,cftrace,cflock,cfthread,cfsavecontent,cflocation,cfargument,cfapplication,cfscript", data.name)>
 						<!--- add cfscript syntax --->
-						<cfset data.script = ReReplace(data.syntax, "[<\r\n]", "", "ALL")>
-						<cfset data.script = ReplaceNoCase(data.script, data.name, data.name & "(")>
-						<cfset data.script = Replace(data.script, "( ", "(")>
-						<!--- replace double quote followed by a space with a ,[space] --->
-						<cfset data.script = ReReplace(data.script, """ ", """, ", "ALL")>
-						<cfset data.script = ReReplace(data.script, ",? ?>", ");")>
+						<cfset data.script = replaceScript(script = data.script, name = data.name, sytax = data.syntax, mode = "other">
 						<cfset data.scriptTitle = "Script Syntax ACF11+, Lucee, Railo 4.2+">
 					</cfif>
 					<cfif StructKeyExists(data, "script")>
@@ -143,14 +147,14 @@
 					<h4>
 						#encodeForHTML(p.name)#
 						<cfif structKeyExists(p, "type") and len( p.type )><em><span class="text-muted">#encodeForHTML(p.type)#</span></em></cfif>
-						<cfif IsBoolean(p.required) AND p.required><div class="pull-right"><span class="label label-danger">Required</span></div></cfif>
+						<cfif isBoolean(p.required) AND p.required><div class="pull-right"><span class="label label-danger">Required</span></div></cfif>
 						<cfif structKeyExists(p, "default") and len( trim( p.default ) )>
 								<div class="p-default pull-right"><span class="text-muted">Default:</span> <code>#encodeForHTML(p.default)#</code></div>
 						</cfif>
 					</h4>
 					<div class="p-desc">						
 						#autoLink( p.description )# 
-						<cfif StructKeyExists(p, "values") AND IsArray(p.values) AND ArrayLen(p.values)>
+						<cfif structKeyExists(p, "values") AND isArray(p.values) AND arrayLen(p.values)>
 							<cfif uCase(arrayToList(p.values)) IS NOT "YES,NO">
 								<div>
 									<strong>Values:</strong>
@@ -252,3 +256,24 @@
 		</cfif>
 	</div>
 </cfoutput>
+<cffunction name="replaceScript">
+	<cfargument name="name" type="string" required="true" />
+	<cfargument name="mode" type="string" required="true">
+	<cfargument name="syntax" type="string" />
+	<cfargument name="script" type="string" />
+	<cfset result = "">
+	
+	<cfif mode is "cf">
+		<cfset result = ReplaceNoCase(name, "cf", "") & ";">
+	<cfelseif mode is "other">
+		<!--- add cfscript syntax --->
+		<cfset data.script = ReReplace(syntax, "[<\r\n]", "", "ALL")>
+		<cfset data.script = ReplaceNoCase(script, name, name & "(")>
+		<cfset data.script = Replace(script, "( ", "(")>
+		<!--- replace double quote followed by a space with a ,[space] --->
+		<cfset data.script = ReReplace(script, """ ", """, ", "ALL")>
+		<cfset data.script = ReReplace(script, ",? ?>", ");")>
+		<cfset data.scriptTitle = "Script Syntax ACF11+, Lucee, Railo 4.2+">
+	</cfif>
+	<cfreturn result>
+</cffunction>
