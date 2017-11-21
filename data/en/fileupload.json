@@ -1,7 +1,7 @@
 {
   "name": "fileUpload",
   "type": "function",
-  "syntax": "fileUpload(string destination,[string fileField,[string accept,[string nameConflict]]])",
+  "syntax": "fileUpload(string destination,[string fileField,[string accept,[string nameConflict[string strict]]]])",
   "returns": "struct",
   "related": [
     "fileUploadAll"
