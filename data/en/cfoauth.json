@@ -6,7 +6,7 @@
   "related": ["cflogin","cfntauthenticate"],
   "params": [
     {
-      "values": [ "Facebook", "Google" ],
+      "values": ["Facebook", "Google"],
       "default": "",
       "description": "Currently supported values are Facebook and Google. Implicitly supports the authentication workflow of Facebook and Google.",
       "name": "Type",
@@ -39,15 +39,15 @@
     },
     {
       "values": [],
-      "default": "Either type can be specified or endpoints combination but not both",
-      "description": "If type is not specified, this will be used as end point URL to be invoked for user authentication.",
+      "default": "",
+      "description": "If type is not specified, this will be used as endpoint URL to be invoked for user authentication.",
       "name": "authendpoint",
       "type": "string",
       "required": "0"
     },
     {
       "values": [],
-      "default": "Either type can be specified or endpoints combination but not both",
+      "default": "",
       "description": " If type is not specified this will be used as end point URL to be invoked for app authentication.",
       "name": "accesstokenendpoint",
       "type": "string",
@@ -71,8 +71,8 @@
     },
     {
       "values": [],
-      "default": "This will default to the URL which is executing the code. So if in oauth settings user has given app URL as : http:\/\/domainname\/appname And the file executing the code is : http:\/\/domainname\/appname\/login.cfm The redirect URI will be : http:\/\/domainname\/appname\/login.cfm",
-      "description": "To redirect once user authentication is done.",
+      "default": "",
+      "description": "This will default to the URL which is executing the code. So if in oauth settings user has given app URL as : http:\/\/domainname\/appname And the file executing the code is : http:\/\/domainname\/appname\/login.cfm The redirect URI will be : http:\/\/domainname\/appname\/login.cfm",
       "name": "redirecturi",
       "type": "string",
       "required": "0"
@@ -107,11 +107,11 @@
     }
   ],
   "examples": [
-    {
-      "result": "",
-      "title": "Adobe Example",
-      "description": "The following example shows a simple authentication:",
-      "code": "\r\n<cflogin>\r\n <cfoauth\r\n type = \"Facebook\"\r\n clientid = \"YOUR_CLIENT_ID\"\r\n secretkey = \"YOUR_SECRET_KEY\"\r\n result = \"res\"\r\n redirecturi = \"http:\/\/localhost:8500\/doc\/login.cfm\" >\r\n <cfloginuser name = \"#res.other.username#\" password = \"#res.access_token#\" roles = \"user\"\/>\r\n<\/cflogin>\r\n<cflocation url=\"http:\/\/localhost:8500\/doc\/index.cfm\" >"
-    }
+	{
+	  "result": "",
+	  "title": "Adobe Example",
+	  "description": "The following example shows a simple authentication:",
+	  "code": "<cflogin>\r\n<cfoauth\r\n\ttype=\"Facebook\"\r\n\tclientid=\"YOUR_CLIENT_ID\"\r\n\tsecretkey=\"YOUR_SECRET_KEY\"\r\n\tresult=\"res\"\r\n\tredirecturi=\"http:\/\/localhost:8500\/doc\/login.cfm\"\r\n>\r\n<cfloginuser name=\"#res.other.username#\" password=\"#res.access_token#\" roles=\"user\"\/>\r\n<\/cflogin>\r\n<cflocation url=\"http:\/\/localhost:8500\/doc\/index.cfm\">"
+	}
   ]
 }
