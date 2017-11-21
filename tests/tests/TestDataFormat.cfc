@@ -9,10 +9,8 @@ component extends="testbox.system.BaseSpec" {
 					var json = fileRead(filePath);
 					var isItJson = isJSON(json);
 					var fileName = getFileFromPath(filePath);
-					expect(isItJSON).toBeTrue("#fileName# was NOT valid JSON");
-					
-				}
-				
+					expect(isItJSON).toBeTrue("#fileName# was NOT valid JSON");					
+				}				
 			});
 
 			it("should have key: name, type", function() {
@@ -24,8 +22,7 @@ component extends="testbox.system.BaseSpec" {
 						json = deserializeJSON(json);
 						expect(json).toHaveKey("name", "#fileName# did not have key: name");
 						expect(json).toHaveKey("type", "#fileName# did not have key: type");
-					}
-					
+					}					
 				}
 			});
 
@@ -36,18 +33,15 @@ component extends="testbox.system.BaseSpec" {
 					var fileName = getFileFromPath(filePath);
 					if (isItJSON) {
 						json = deserializeJSON(json);
-						if (json.keyExists("related")) {
-							expect(json.related).toBeArray("#fileName# related key must be an array");	
-						}
-						if (json.keyExists("params")) {
-							expect(json.params).toBeArray("#fileName# params key must be an array");	
-						}
-						if (json.keyExists("engines")) {
-							expect(json.engines).toBeStruct("#fileName# engines key must be an struct");	
-						}
-						if (json.keyExists("links")) {
-							expect(json.links).toBeArray("#fileName# links key must be an array");	
-						}
+						if (json.keyExists("related"))
+							expect(json.related).toBeArray("#fileName# related key must be an array");
+						if (json.keyExists("params"))
+							expect(json.params).toBeArray("#fileName# params key must be an array");
+						if (json.keyExists("engines"))
+							expect(json.engines).toBeStruct("#fileName# engines key must be an struct");
+						if (json.keyExists("links"))
+							expect(json.links).toBeArray("#fileName# links key must be an array");
+
 						if (json.keyExists("examples")) {
 							expect(json.examples).toBeArray("#fileName# examples key must be an array");
 							if (isArray(json.examples)) {
@@ -56,15 +50,14 @@ component extends="testbox.system.BaseSpec" {
 									if (isStruct(e)) {
 										//example should have title and code at a minimum
 										expect(e).toHaveKey("title", "#fileName# example element missing title.");
-										expect(e).toHaveKey("code", "#fileName# example missing title.");
+										expect(e).toHaveKey("code", "#fileName# example missing code.");
 										expect(e.title).notToBeEmpty("#fileName# example has empty title.");
-										expect(e.code).notToBeEmpty("#fileName# example has empty title.");
+										expect(e.code).notToBeEmpty("#fileName# example has empty code.");
 									}
 								}
 							}	
 						}
-					}
-					
+					}					
 				}
 			});	
 
@@ -74,10 +67,6 @@ component extends="testbox.system.BaseSpec" {
 					expect(fileName).toBeWithCase(lCase(fileName), "#fileName# was not all lower case");
 				}
 			});
-
 		});
-
-		
-
 	}
 }
