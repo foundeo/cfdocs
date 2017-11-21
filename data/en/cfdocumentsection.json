@@ -2,7 +2,7 @@
 	"name":"cfdocumentsection",
 	"type":"tag",
 	"syntax":"<cfdocumentsection>",
-	"related":[],
+	"related":["cfdocument","cfdocumentitem"],
 	"description":"Divides a PDF or FlashPaper document into sections.\n By using this tag in conjunction with a cfdocumentitem\n tag, each section can have unique headers, footers,\n and page numbers.",
 	"params": [
 		{"name":"margintop","description":"Specifies the top margin in inches (default) or\n centimeters. To specify the top margin in centimeters,\n include the unit=\"cm\" attribute in the parent cfdocument\n tag.","required":false,"default":"","type":"numeric","values":[]},
@@ -16,7 +16,6 @@
 		{"name":"src","description":"URL or the relative path to the web root. You cannot specify both the src and srcfile attributes.","required":false,"default":"","type":"string","values":[]},
 		{"name":"srcfile","description":"Absolute path of a file that is on the server. \nYou cannot specify both the src and srcfile attributes.","required":false,"default":"","type":"string","values":[]},
 		{"name":"useragent","description":"Text to put in the HTTP User-Agent request header field. Used to identify the request client software.","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfdocumentsection.html"},
@@ -24,8 +23,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdocumentsection"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdocumentsection"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

@@ -2,7 +2,7 @@
 	"name": "cfntauthenticate",
 	"type": "tag",
 	"syntax": "<cfntauthenticate username=\"\" password=\"\" domain=\"\">",
-	"related": [],
+	"related": ["cflogin","cfoauth"],
 	"description": "Authenticates a user name and password against the\n NT domain on which ColdFusion server is running,\n and optionally retrieves the user's groups.",
 	"params": [
 		{
@@ -55,11 +55,7 @@
 		}
 	],
 	"engines": {
-		"coldfusion": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfntauthenticate.html"
-		}
+		"coldfusion": { "minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfntauthenticate.html" }
 	},
 	"links": []
 }

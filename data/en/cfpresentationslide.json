@@ -2,7 +2,7 @@
 	"name": "cfpresentationslide",
 	"type": "tag",
 	"syntax": "<cfpresentationslide>",
-	"related": [],
+	"related": ["cfpresentation","cfpresenter"],
 	"description": "Creates a slide dynamically from an HTML source file,\n HTML and CFML code, or an SWF source file.\n If you do not specify a source file, you must include the HMTL or CFML code for\n the body of the slide within the cfpresentationslide tag. The cfpresentationslide\n is the child tag of the cfpresentation tag.",
 	"params": [
 		{"name": "title", "description": "Specifies the title of the slide.", "required": true, "default": "", "type": "string", "values": []},

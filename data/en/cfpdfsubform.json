@@ -2,7 +2,7 @@
 	"name": "cfpdfsubform",
 	"type": "tag",
 	"syntax": "<cfpdfsubform name=\"\">",
-	"related": [],
+	"related": ["cfpdf","cfpdfform","cfpdfformparam"],
 	"description": "Populates a subform within the cfpdfform tag.\n The cfpdfsubform tag can be a child tag of the cfpdfform tag\n or nested in another cfpdfsubform tag.",
 	"params": [
 		{
@@ -23,11 +23,7 @@
 		}
 	],
 	"engines": {
-		"coldfusion": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpdfsubform.html"
-		}
+		"coldfusion": { "minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpdfsubform.html" }
 	},
 	"links": []
 }

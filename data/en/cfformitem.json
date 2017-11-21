@@ -2,7 +2,7 @@
 	"name": "cfformitem",
 	"type": "tag",
 	"syntax": "<cfformitem type=\"html\">",
-	"related": [],
+	"related": ["cfform","cfformgroup"],
 	"description": "Inserts a horizontal line, a vertical line, a spacer,\n or text in a Flash form. Used in the cfform or cfformgroup\n tag body for Flash and XML forms. Ignored in HTML forms.",
 	"params": [
 		{
@@ -71,11 +71,7 @@
 		}
 	],
 	"engines": {
-		"coldfusion": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-f/cfformitem.html"
-		}
+		"coldfusion": { "minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-f/cfformitem.html" }
 	},
 	"links": []
 }
