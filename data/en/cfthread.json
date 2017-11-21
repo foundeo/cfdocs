@@ -11,17 +11,14 @@
 		{"name":"duration","description":"(sleep) The number of milliseconds for which to suspend thread processing. (required)","required":false,"default":"","type":"string","values":[]},
 		{"name":"priority","description":"The priority level at which to run the thread.\n The following values are valid:\n HIGH, LOW, NORMAL\n Higher priority threads get more processing time than lower priority\n threads. Page-level code, the code that is outside of cfthread tags,\n always has NORMAL priority. (optional, default=NORMAL)","required":false,"default":"","type":"string","values":["HIGH","LOW","NORMAL"]},
 		{"name":"timeout","description":"The number of milliseconds that the current thread waits for\n the thread or threads being joined to finish. If any thread does not\n finish by the specified time, the current thread proceeds.\n If the attribute value is 0, the default, the current thread continues\n waiting until all joining threads finish. If the current thread is the\n page thread, the page continues waiting until the threads are joined,\n even if you specify a page timeout. (optional, default=0)","required":false,"default":"","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cfthread.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/thread.html"},
+		"lucee": {"minimum_version":"", "notes":"In Lucee `name` attribute is optional.", "docs":"http://docs.lucee.org/reference/tags/thread.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfthread"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfthread"}
+		"openbd": {"minimum_version":"", "notes":"In OpenBD `name` attribute is optional.", "docs":"http://openbd.org/manual/?/tag/cfthread"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Script Syntax",
@@ -30,11 +27,10 @@
 			"result": ""
 		},
 	        {
-	            "title": "Tag Syntax",
-	            "description": "",
-	            "code": "<cfthread action=\"run\" name=\"myThread\">\r\n <!--- Do single thread stuff ---> \r\n </cfthread> \r\n <cfthread action=\"join\" name=\"myThread,myOtherThread\" />",
-	            "result": ""
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfthread action=\"run\" name=\"myThread\">\r\n <!--- Do single thread stuff ---> \r\n </cfthread> \r\n <cfthread action=\"join\" name=\"myThread,myOtherThread\" />",
+			"result": ""
 	        }
 	]
-
 }
