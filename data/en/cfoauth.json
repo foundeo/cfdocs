@@ -24,7 +24,7 @@
     {
       "values": [],
       "default": "",
-      "description": "Scopes are the permissions that a developer seeks from the users. These are usually comma separated values of permissions.\r\n\r\n \r\n\r\nRefer to the Oauth provider's documentations for more information.\r\n\r\n \r\n\r\nFor example, after Facebook authentication, if a developer wants to access an email address and then the friend lists of a user, the developer will use:\r\n\r\n scope=email,read_friendlists.\r\n\r\n \r\n\r\nNote: The scope name varies for different Oauth providers. ",
+      "description": "Scopes are the permissions that a developer seeks from the users. These are usually comma separated values of permissions.\r\nRefer to the Oauth provider's documentations for more information.\r\nFor example, after Facebook authentication, if a developer wants to access an email address and then the friend lists of a user, the developer will use:\r\nscope=email,read_friendlists.\r\nNote: The scope name varies for different Oauth providers.",
       "name": "scope",
       "type": "string",
       "required": "0"
