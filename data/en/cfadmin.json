@@ -64,8 +64,8 @@
       "code": "<cfadmin\n action=\"collection\"\n type=\"web|server\"\n password=\"password\"\n collectionAction=\"delete\"\n collection=\"#form.name[key]#\"\n remoteClients=\"arrayOfClients\">"
     },
     {
-      "title": "",
-      "description": "Optimize an admin collection",
+      "title": "Optimize an admin collection",
+      "description": "",
       "code": "<cfadmin\n action=\"collection\"\n type=\"web|server\"\n password=\"password\"\n collectionAction=\"optimize\"\n collection=\"#form.name[key]#\"\n remoteClients=\"arrayOfClients\">"
     },
     {
@@ -419,23 +419,23 @@
       "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"access\"\n secType=\"datasource\">"
     },
     {
-      "title": "",
-      "description": "Security Manager setting",
+      "title": "Security Manager setting",
+      "description": "",
       "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"has.cfx_setting\"\n secType=\"cfx_setting\"\n secValue=\"yes\">"
     },
     {
-      "title": "",
-      "description": "Security Manager usage",
+      "title": "Security Manager usage",
+      "description": "",
       "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"has.cfx_usage\"\n secType=\"cfx_usage\"\n secValue=\"yes\">"
     },
     {
-      "title": "",
-      "description": "Security Manager has access to custom tag",
+      "title": "Security Manager has access to custom tag",
+      "description": "",
       "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"hasAccess\"\n secType=\"custom_tag\"\n secValue=\"yes\">"
     },
     {
-      "title": "",
-      "description": "Security Manager has access to debugging",
+      "title": "Security Manager has access to debugging",
+      "description": "",
       "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"hasAccess\"\n secType=\"debugging\"\n secValue=\"yes\">"
     },
     {
