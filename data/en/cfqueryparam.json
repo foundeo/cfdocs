@@ -52,8 +52,8 @@
         "date"
       ],
       "engines":{
-        "railo":{"minimum_version":"3.2", "notes":"Supports `int` and `cf_sql_int` for integer", "docs":"http://railodocs.org/index.cfm/function/sessionrotate"},
-        "lucee":{"minimum_version":"4.5", "notes":"Supports `int` and `cf_sql_int` for integer", "docs":"http://docs.lucee.org/reference/functions/name.html"}
+        "railo":{"minimum_version":"3.2", "notes":"Supports `int` and `cf_sql_int` for integer"},
+        "lucee":{"minimum_version":"4.5", "notes":"Supports `int` and `cf_sql_int` for integer"}
       }
     },
     {
