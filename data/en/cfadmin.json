@@ -14,12 +14,952 @@
 	},
 	"links": [
 		{
+			"title":"Lucee Documentation",
+			"url":"http://docs.lucee.org/guides/Various/cfadmin.html",
+			"description":"Lucee documentation for cfadmin tag."
+		},
+		{
 			"title":"Old Railo CFAdmin Reference",
 			"url":"http://web.archive.org/web/20160430035417/http://www.getrailo.org/index.cfm/documentation/cfadmin-doc/",
 			"description":"Railo documentation for cfadmin tag."
 		}
 	],
 	"examples": [
+		{
+			"title":"Below you will find all the actions sorted alphabetically embedded in examples for them:",
+			"description":"These are examples provided by Lucee for the cfadmin actions in alphabetical order",
+			"code":"<cfadmin\n
+			    action=\"collection\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    collectionAction=\"create\"\n
+			    collection=\"#form.collName#\"\n
+			    path=\"#form.collPath#\"\n
+			    language=\"#form.collLanguage#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"collection\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    collectionAction=\"delete\"\n
+			    collection=\"#form.name[key]#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"collection\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    collectionAction=\"optimize\"\n
+			    collection=\"#form.name[key]#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"collection\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    collectionAction=\"repair\"\n
+			    collection=\"#form.name[key]#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"compileMapping\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    virtual=\"#data.virtuals[idx]#\"\n
+			    stoponerror=\"#data.stoponerrors[idx]#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"connect\"\n
+			    type=\"web|server\"\n
+			    password=\"password\">\n
+
+			\n<cfadmin\n
+			    action=\"createArchive\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    file=\"#target#\"\n
+			    virtual=\"#data.virtuals[idx]#\"\n
+			    secure=\"#data.secure[idx]#\"\n
+			    append=\"#notdoDownload#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"createSecurityManager\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    id=\"#form.id#\">\n
+
+			\n<cfadmin\n
+			    action=\"defaultSecurityManager\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"access\">\n
+
+			\n<cfadmin\n
+			    action=\"executeSpoolerTask\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    id=\"#data.ids[idx]#\">\n
+
+			\n<cfadmin\n
+			    action=\"getApplicationListener\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"listener\">\n
+
+			\n<cfadmin\n
+			    action=\"getApplicationSetting\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"appSettings\">\n
+
+			\n<cfadmin\n
+			    action=\"getCharset\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"charset\">\n
+
+			\n<cfadmin\n
+			    action=\"getComponent\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"component\">\n
+
+			\n<cfadmin\n
+			    action=\"getContextes\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"contextes\">\n
+
+			\n<cfadmin\n
+			    action=\"getCustomTagMappings\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"mappings\">\n
+
+			\n<cfadmin\n
+			    action=\"getCustomtagSetting\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"setting\">\n
+
+			\n<cfadmin\n
+			    action=\"getDatasource\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    name=\"#form.name#\"\n
+			    returnVariable=\"existing\">\n
+
+			\n<cfadmin\n
+			    action=\"getDatasourceDriverList\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"dbdriver\">\n
+
+			\n<cfadmin\n
+			    action=\"getDatasourceSetting\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"dbSetting\">\n
+
+			\n<cfadmin\n
+			    action=\"getDebug\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"debug\">\n
+
+			\n<cfadmin\n
+			    action=\"getDebugData\"\n
+			    returnVariable=\"debugging\">\n
+
+			\n<cfadmin\n
+			    action=\"getDebuggingList\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"debug_templates\">\n
+
+			\n<cfadmin\n
+			    action=\"getDefaultPassword\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"defaultPassword\">\n
+
+			\n<cfadmin\n
+			    action=\"getDefaultSecurityManager\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"access\">\n
+
+			\n<cfadmin\n
+			    action=\"getError\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"err\">\n
+
+			\n<cfadmin\n
+			    action=\"getErrorList\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"err_templates\">\n
+
+			\n<cfadmin\n
+			    action=\"getExtensionInfo\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"info\">\n
+
+			\n<cfadmin\n
+			    action=\"getExtensionProviders\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"providers\">\n
+
+			\n<cfadmin\n
+			    action=\"getExtensions\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"extensions\">\n
+
+			\n<cfadmin\n
+			    action=\"getFLDs\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"flds\">\n
+
+			\n<cfadmin\n
+			    action=\"getJavaCFXTags\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"jtags\">\n
+
+			\n<cfadmin\n
+			    action=\"getLocales\"\n
+			    locale=\"#stText.locale#\"\n
+			    returnVariable=\"locales\">\n
+
+			\n<cfadmin\n
+			    action=\"getMailServers\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"ms\">\n
+
+			\n<cfadmin\n
+			    action=\"getMailSetting\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"mail\">\n
+
+			\n<cfadmin\n
+			    action=\"getMappings\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"mappings\">\n
+
+			\n<cfadmin\n
+			    action=\"getOutputSetting\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"setting\">\n
+
+			\n<cfadmin\n
+			    action=\"getPluginDirectory\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"pluginDir\">\n
+
+			\n<cfadmin\n
+			    action=\"getProxy\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"proxy\">\n
+
+			\n<cfadmin\n
+			    action=\"getRegional\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"regional\">\n
+
+			\n<cfadmin\n
+			    action=\"getRemoteClient\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    url=\"#data.urls[idx]#\"\n
+			    returnVariable=\"rclient\">\n
+
+			\n<cfadmin\n
+			    action=\"getRemoteClients\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"clients\">\n
+
+			\n<cfadmin\n
+			    action=\"getRemoteClientUsage\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"usage\">\n
+
+			\n<cfadmin\n
+			    action=\"getScope\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"scope\">\n
+
+			\n<cfadmin\n
+			    action=\"getSecurityManager\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    id=\"#url.id#\"\n
+			    returnVariable=\"access\">\n
+
+			\n<cfadmin\n
+			    action=\"getSpoolerTasks\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"tasks\">\n
+
+			\n<cfadmin\n
+			    action=\"getTimeZones\"\n
+			    locale=\"#stText.locale#\"\n
+			    returnVariable=\"timezones\">\n
+
+			\n<cfadmin\n
+			    action=\"getTLDs\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"tlds\">\n
+
+			\n<cfadmin\n
+			    action=\"getUpdate\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnvariable=\"update\">\n
+
+			\n<cfadmin\n
+			    action=\"getUpdate\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnvariable=\"update\">\n
+
+			\n<cfadmin\n
+			    action=\"hasPassword\"\n
+			    type=\"web|server\"\n
+			    returnVariable=\"hasPassword\">\n
+
+			\n<cfadmin\n
+			    action=\"index\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    indexAction=\"purge\"\n
+			    collection=\"#form.name[key]#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"index\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    indexAction=\"update\"\n
+			    indexType=\"path\"\n
+			    collection=\"#url.collection#\"\n
+			    key=\"#form.path#\"\n
+			    urlpath=\"#form.url#\"\n
+			    extensions=\"#form.extensions#\"\n
+			    recurse=\"#structKeyExists(form,\"recurse\")andform.recurse#\"\n
+			    language=\"#form.language#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"removeCFX\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    name=\"#data.names[idx]#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"removeCustomTag\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    virtual=\"#data.virtuals[idx]#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"removeDatasource\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    name=\"#data.names[idx]#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"removeDefaultPassword\"\n
+			    type=\"web|server\"\n
+			    password=\"password\">\n
+
+			\n<cfadmin\n
+			    action=\"removeExtension\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    provider=\"#detail.installed.provider#\"\n
+			    id=\"#detail.installed.id#\">\n
+
+			\n<cfadmin\n
+			    action=\"removeMapping\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    virtual=\"#data.virtuals[idx]#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"removeProxy\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    >\n
+
+			\n<cfadmin\n
+			    action=\"removeRemoteClient\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    url=\"#data.urls[idx]#\">\n
+
+			\n<cfadmin\n
+			    action=\"removeSecurityManager\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    id=\"#data.ids[idx]#\">\n
+
+			\n<cfadmin\n
+			    action=\"removeSpoolerTask\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    id=\"#data.ids[idx]#\">\n
+
+			\n<cfadmin\n
+			    action=\"removeUpdate\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"resetId\"\n
+			    type=\"web|server\"\n
+			    password=\"password\">\n
+
+			\n<cfadmin\n
+			    action=\"resetPassword\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    contextPath=\"#form.contextPath#\">\n
+
+			\n<cfadmin\n
+			    action=\"restart\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"runUpdate\"\n
+			    type=\"web|server\"\n
+			    password=\"password\">\n
+
+			\n<cfadmin\n
+			    action=\"schedule\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    scheduleAction=\"delete\"\n
+			    task=\"#data.names[idx]#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"schedule\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    scheduleAction=\"pause\"\n
+			    task=\"#data.names[idx]#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"schedule\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    scheduleAction=\"resume\"\n
+			    task=\"#data.names[idx]#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"schedule\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    scheduleAction=\"run\"\n
+			    task=\"#data.names[idx]#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"schedule\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    scheduleAction=\"update\"\n
+			    task=\"#form.name#\"\n
+			    url=\"#form.url#\"\n
+			    port=\"#form.port#\"\n
+			    requesttimeout=\"#form.timeout#\"\n
+			    username=\"#nullIfEmpty(form.username)#\"\n
+			    schedulePassword=\"#nullIfEmpty(form.password)#\"\n
+			    proxyserver=\"#nullIfEmpty(form.proxyserver)#\"\n
+			    proxyport=\"#form.proxyport#\"\n
+			    proxyuser=\"#nullIfEmpty(form.proxyuser)#\"\n
+			    proxypassword=\"#nullIfEmpty(form.proxypassword)#\"\n
+			    publish=\"#formBool('publish')#\"\n
+			    resolveurl=\"#formBool('resolveurl')#\"\n
+			    startdate=\"#nullIfNoDate('start')#\"\n
+			    starttime=\"#nullIfNoTime('start')#\"\n
+			    enddate=\"#nullIfNoDate('end')#\"\n
+			    endtime=\"#nullIfNoTime('end')#\"\n
+			    interval=\"#nullIfEmpty(form.interval)#\"\n
+			    file=\"#nullIfEmpty(form.file)#\"\n
+			    serverpassword=\"#variables.passwordserver#\"\n
+			    remoteClients=\"arrayOfClients\">\n
+
+			\n<cfadmin\n
+			    action=\"securityManager\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"access\"\n
+			    secType=\"datasource\">\n
+
+			\n<cfadmin\n
+			    action=\"securityManager\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"has.cfx_setting\"\n
+			    secType=\"cfx_setting\"\n
+			    secValue=\"yes\">\n
+
+			\n<cfadmin\n
+			    action=\"securityManager\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"has.cfx_usage\"\n
+			    secType=\"cfx_usage\"\n
+			    secValue=\"yes\">\n
+
+			\n<cfadmin\n
+			    action=\"securityManager\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"hasAccess\"\n
+			    secType=\"custom_tag\"\n
+			    secValue=\"yes\">\n
+
+			\n<cfadmin\n
+			    action=\"securityManager\"\n
+			    type=\"web|server\"\n
+			    password=\"password\"\n
+			    returnVariable=\"hasAccess\"\n
+			    secType=\"debugging\"\n
+			    secValue=\"yes\">\n
+
+			<cfadmin
+			    action=\"securityManager\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    returnVariable=\"hasAccess\"
+			    secType=\"mail\"
+			    secValue=\"yes\">
+
+			<cfadmin
+			    action=\"securityManager\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    returnVariable=\"hasAccess\"
+			    secType=\"mapping\"
+			    secValue=\"yes\">
+
+			<cfadmin
+			    action=\"securityManager\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    returnVariable=\"hasAccess\"
+			    secType=\"remote\"
+			    secValue=\"yes\">
+
+			<cfadmin
+			    action=\"securityManager\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    returnVariable=\"hasAccess\"
+			    secType=\"search\"
+			    secValue=\"yes\">
+
+			<cfadmin
+			    action=\"securityManager\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    returnVariable=\"hasAccess\"
+			    secType=\"setting\"
+			    secValue=\"yes\">
+
+			<cfadmin
+			    action=\"storageGet\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    key=\"#url.plugin#\"
+			    returnVariable=\"data\">
+
+			<cfadmin
+			    action=\"storageSet\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    key=\"#url.plugin#\"
+			    value=\"#data#\">
+
+			<cfadmin
+			    action=\"updateApplicationListener\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    listenerType=\"#form.type#\"
+			    listenerMode=\"#form.mode#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateApplicationSetting\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    scriptProtect=\"#form.scriptProtect#\"
+			    AllowURLRequestTimeout=\"#structKeyExists(form,'AllowURLRequestTimeout')andform.AllowURLRequestTimeout#\"
+			    requestTimeout=\"#CreateTimeSpan(form.request_days,form.request_hours,form.request_minutes,form.request_seconds)#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateCharset\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    templateCharset=\"#form.templateCharset#\"
+			    webCharset=\"#form.webCharset#\"
+			    resourceCharset=\"#form.resourceCharset#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateComponent\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    baseComponentTemplate=\"#form.baseComponentTemplate#\"
+			    componentDumpTemplate=\"#form.componentDumpTemplate#\"
+			    componentDataMemberDefaultAccess=\"#form.componentDataMemberDefaultAccess#\"
+			    triggerDataMember=\"#isDefined('form.triggerDataMember')#\"
+			    useShadow=\"#isDefined('form.useShadow')#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateCustomTag\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    virtual=\"#data.virtuals[idx]#\"
+			    physical=\"#data.physicals[idx]#\"
+			    archive=\"#data.archives[idx]#\"
+			    primary=\"#data.primaries[idx]#\"
+			    trusted=\"#data.trusteds[idx]#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateCustomTagSetting\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    deepSearch=\"#isDefined('form.customTagDeepSearchDesc')andform.customTagDeepSearchDescEQtrue#\"
+			    localSearch=\"#isDefined('form.customTagLocalSearchDesc')andform.customTagLocalSearchDescEQtrue#\"
+			    extensions=\"#form.extensions#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateDatasource\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    classname=\"#driver.getClass()#\"
+			    dsn=\"#driver.getDSN()#\"
+			    name=\"#form.name#\"
+			    host=\"#form.host#\"
+			    database=\"#form.database#\"
+			    port=\"#form.port#\"
+			    dbusername=\"#form.username#\"
+			    dbpassword=\"#form.password#\"
+			    connectionLimit=\"#form.connectionLimit#\"
+			    connectionTimeout=\"#form.connectionTimeout#\"
+			    blob=\"#getForm('blob',false)#\"
+			    clob=\"#getForm('clob',false)#\"
+			    allowed_select=\"#getForm('allowed_select',false)#\"
+			    allowed_insert=\"#getForm('allowed_insert',false)#\"
+			    allowed_update=\"#getForm('allowed_update',false)#\"
+			    allowed_delete=\"#getForm('allowed_delete',false)#\"
+			    allowed_alter=\"#getForm('allowed_alter',false)#\"
+			    allowed_drop=\"#getForm('allowed_drop',false)#\"
+			    allowed_revoke=\"#getForm('allowed_revoke',false)#\"
+			    allowed_create=\"#getForm('allowed_create',false)#\"
+			    allowed_grant=\"#getForm('allowed_grant',false)#\"
+			    custom=\"#custom#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateDebug\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    debug=\"#form.debug#\"
+			    debugTemplate=\"#form[\"debugTemplate_\"&amp;form.debugtype]#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateDefaultPassword\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    newPassword=\"#form._new_password#\">
+
+			<cfadmin
+			    action=\"updateDefaultSecurity\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    setting=\"#fb('defaultSetting')#\"
+			    file=\"#form.defaultFile#\"
+			    direct_java_access=\"#fb('defaultDirectJavaAccess')#\"
+			    mail=\"#fb('defaultMail')#\"
+			    datasource=\"#fb('defaultDatasource')#\"
+			    mapping=\"#fb('defaultMapping')#\"
+			    custom_tag=\"#fb('defaultCustomTag')#\"
+			    cfx_setting=\"#fb('defaultCfxSetting')#\"
+			    cfx_usage=\"#fb('defaultCfxUsage')#\"
+			    debugging=\"#fb('defaultDebugging')#\"
+			    tag_execute=\"#fb('defaultTagExecute')#\"
+			    tag_import=\"#fb('defaultTagImport')#\"
+			    tag_object=\"#fb('defaultTagObject')#\"
+			    tag_registry=\"#fb('defaultTagRegistry')#\">
+
+			<cfadmin
+			    action=\"updateDefaultSecurityManager\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    setting=\"#fb('defaultSetting')#\"
+			    file=\"#form.defaultFile#\"
+			    direct_java_access=\"#fb('defaultDirectJavaAccess')#\"
+			    mail=\"#fb('defaultMail')#\"
+			    datasource=\"#form.defaultDatasource#\"
+			    mapping=\"#fb('defaultMapping')#\"
+			    remote=\"#fb('defaultRemote')#\"
+			    custom_tag=\"#fb('defaultCustomTag')#\"
+			    cfx_setting=\"#fb('defaultCfxSetting')#\"
+			    cfx_usage=\"#fb('defaultCfxUsage')#\"
+			    debugging=\"#fb('defaultDebugging')#\"
+			    search=\"#fb('defaultSearch')#\"
+			    scheduled_task=\"#fb('defaultScheduledTask')#\"
+			    tag_execute=\"#fb('defaultTagExecute')#\"
+			    tag_import=\"#fb('defaultTagImport')#\"
+			    tag_object=\"#fb('defaultTagObject')#\"
+			    tag_registry=\"#fb('defaultTagRegistry')#\"
+			    access_read=\"#form.defaultaccess_read#\"
+			    access_write=\"#form.defaultaccess_write#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateError\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    template500=\"#form[\"errorTemplate_\"&amp;form.errtype500&amp;500]#\"
+			    template404=\"#form[\"errorTemplate_\"&amp;form.errtype404&amp;404]#\"
+			    statuscode=\"#isDefined('form.doStatusCode')#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateExtension\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    config=\"#config#\"
+			    provider=\"#detail.url#\"
+			    id=\"#detail.app.id#\"
+			    version=\"#detail.app.version#\"
+			    name=\"#detail.app.name#\"
+			    label=\"#detail.app.label#\"
+			    description=\"#detail.app.description#\"
+			    category=\"#detail.app.category#\"
+			    image=\"#detail.app.image#\"
+			    author=\"#detail.app.author#\"
+			    codename=\"#detail.app.codename#\"
+			    video=\"#detail.app.video#\"
+			    support=\"#detail.app.support#\"
+			    documentation=\"#detail.app.documentation#\"
+			    forum=\"#detail.app.forum#\"
+			    mailinglist=\"#detail.app.mailinglist#\"
+			    network=\"#detail.app.network#\"
+			    created=\"#detail.app.created#\">
+
+			<cfadmin
+			    action=\"updateJavaCFX\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    name=\"#data.names[idx]#\"
+			    class=\"#data.classes[idx]#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateMailServer\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    hostname=\"#data.hosts[idx]#\"
+			    dbusername=\"#data.usernames[idx]#\"
+			    dbpassword=\"#data.passwords[idx]#\"
+			    port=\"#data.ports[idx]#\"
+			    tls=\"#isDefined(\"data.tlss[#idx#]\")anddata.tlss[idx]#\"
+			    ssl=\"#isDefined(\"data.ssls[#idx#]\")anddata.ssls[idx]#\"
+			    remoteClients=\"arrayOfClients\">
+			    action=\"removeMailServer\"
+			    type=\"web|server\"
+
+			<cfadmin
+			    action=\"updateMailSetting\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    logfile=\"#form.logFile#\"
+			    loglevel=\"#form.loglevel#\"
+			    spoolEnable=\"#isDefined(\"form.spoolenable\")andform.spoolenable#\"
+			    spoolInterval=\"#form.spoolInterval#\"
+			    timeout=\"#form.timeout#\"
+			    defaultEncoding=\"#form.defaultEncoding#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateMapping\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    virtual=\"#data.virtuals[idx]#\"
+			    physical=\"#data.physicals[idx]#\"
+			    archive=\"#data.archives[idx]#\"
+			    primary=\"#data.primaries[idx]#\"
+			    trusted=\"#data.trusteds[idx]#\"
+			    toplevel=\"#data.toplevels[idx]#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateOutputSetting\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    supressWhiteSpace=\"#isDefined('form.supressWhitespace')andform.supressWhitespace#\"
+			    showVersion=\"#isDefined('form.showVersion')andform.showVersion#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updatePassword\"
+			    type=\"web|server\"
+			    newPassword=\"#form.new_password#\">
+
+			<cfadmin
+			    action=\"updateProxy\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    proxyEnabled=\"true\"
+			    proxyServer=\"#proxy.server#\"
+			    proxyPort=\"#proxy.port#\"
+			    proxyUsername=\"#proxy.username#\"
+			    proxyPassword=\"#proxy.password#\">
+
+			<cfadmin
+			    action=\"updatePSQ\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    psq=\"#structKeyExists(form,\"psq\")andform.psq#\">
+
+			<cfadmin
+			    action=\"updateRegional\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    timezone=\"#form.timezone#\"
+			    locale=\"#form.locale#\"
+			    timeserver=\"#form.timeserver#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateRemoteClient\"
+			    type=\"web|server\"
+			    remotetype=\"web|server\"
+			    password=\"password\"
+			    attributeCollection=\"#attrColl#\">
+
+			<cfadmin
+			    action=\"updateScope\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    sessionType=\"#form.sessionType#\"
+			    localMode=\"#form.localMode#\"
+			    scopeCascadingType=\"#form.scopeCascadingType#\"
+			    allowImplicidQueryCall=\"#isDefined(\"form.allowImplicidQueryCall\")andform.allowImplicidQueryCall#\"
+			    mergeFormAndUrl=\"#isDefined(\"form.mergeFormAndUrl\")andform.mergeFormAndUrl#\"
+			    sessionTimeout=\"#CreateTimeSpan(form.session_days,form.session_hours,form.session_minutes,form.session_seconds)#\"
+			    applicationTimeout=\"#CreateTimeSpan(form.application_days,form.application_hours,form.application_minutes,form.application_seconds)#\"
+			    sessionManagement=\"#isDefined(\"form.sessionManagement\")andform.sessionManagement#\"
+			    clientManagement=\"#isDefined(\"form.clientManagement\")andform.clientManagement#\"
+			    clientCookies=\"#isDefined(\"form.clientCookies\")andform.clientCookies#\"
+			    domaincookies=\"#isDefined(\"form.domaincookies\")andform.domaincookies#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"updateSecurityManager\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    id=\"#url.id#\"
+			    setting=\"#fb('defaultSetting')#\"
+			    file=\"#form.defaultFile#\"
+			    direct_java_access=\"#fb('defaultDirectJavaAccess')#\"
+			    mail=\"#fb('defaultMail')#\"
+			    datasource=\"#form.defaultDatasource#\"
+			    mapping=\"#fb('defaultMapping')#\"
+			    remote=\"#fb('defaultRemote')#\"
+			    custom_tag=\"#fb('defaultCustomTag')#\"
+			    cfx_setting=\"#fb('defaultCfxSetting')#\"
+			    cfx_usage=\"#fb('defaultCfxUsage')#\"
+			    debugging=\"#fb('defaultDebugging')#\"
+			    search=\"#fb('defaultSearch')#\"
+			    scheduled_task=\"#fb('defaultScheduledTask')#\"
+			    tag_execute=\"#fb('defaultTagExecute')#\"
+			    tag_import=\"#fb('defaultTagImport')#\"
+			    tag_object=\"#fb('defaultTagObject')#\"
+			    tag_registry=\"#fb('defaultTagRegistry')#\"
+			    access_read=\"#form.defaultaccess_read#\"
+			    access_write=\"#form.defaultaccess_write#\">
+
+			<cfadmin
+			    action=\"UpdateUpdate\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    updateType=\"#form.type#\"
+			    updateLocation=\"#form.location#\"
+			    remoteClients=\"arrayOfClients\">
+
+			<cfadmin
+			    action=\"verifyDatasource\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    name=\"#data.names[idx]#\"
+			    dbusername=\"#data.usernames[idx]#\"
+			    dbpassword=\"#data.passwords[idx]#\">
+
+			<cfadmin
+			    action=\"verifyJavaCFX\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    name=\"#data.names[idx]#\"
+			    class=\"#data.classes[idx]#\">
+
+			<cfadmin
+			    action=\"verifyMailServer\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    hostname=\"#data.hosts[idx]#\"
+			    port=\"#data.ports[idx]#\"
+			    mailusername=\"#data.usernames[idx]#\"
+			    mailpassword=\"#data.passwords[idx]#\">
+
+			<cfadmin
+			    action=\"verifyRemoteClient\"
+			    type=\"web|server\"
+			    password=\"password\"
+			    attributeCollection=\"#rclient#\">",
+			"result":"",
+			"runnable":false
+		}
 
 	]
 
