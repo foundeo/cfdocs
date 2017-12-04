@@ -17,6 +17,26 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Encode a binary string back to a string using hex",
+			"description": "use binaryEncode to Encode with hex",
+			"code": "s = binaryDecode('s = binaryDecode('737472696E67','hex');\n binaryEncode(s,'hex');",
+			"result": "737472696E67"
+		},
+		{
+			"title": "Encode a binary using UNIX UUencode (UU) back into string",
+			"description": "use binaryEncode to Encode with UNIX UUencode (UU)",
+			"code": "s = binaryDecode('&<W1R:6YG','UU');\n binaryEncode(s,'UU');",
+			"result": "string"
+		},
+		{
+			"title": "Encode a binary using base64 back into a string",
+			"description": "use binaryEncode to Encode with base64",
+			"code": "s = binaryDecode('s = binaryDecode('&<W1R:6YG','base64');\n binaryEncode(s,'base64');",
+			"result": "string"
+		}
 	]
 
 }
