@@ -22,7 +22,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfscript>  \r\n       mydate = #now()#; \r\n       hello = structNew(); \r\n       hello.color = 'grey'; \r\n /cfscript>  \r\n <cfset dir = 's3://mycfbucket'> \r\n       <cffile action='write' file='#dir#/hello5.txt' output='Sample s3 text'> \r\n       <cfset storeSetMetadata('#dir#/hello5.txt','#hello#')> \r\n       <cfset test = storeGetMetadata('#dir#/hello5.txt')> \r\n <cfdump var='#test#'> \r\n",
+			"code": "<cfscript>\r\n\tmydate = #now()#;\r\n\thello = structNew();\r\n\thello.color = 'grey';\r\n</cfscript>\r\n<cfset dir = 's3://mycfbucket'>\r\n<cffile action='write' file='#dir#/hello5.txt' output='Sample s3 text'>\r\n<cfset storeSetMetadata('#dir#/hello5.txt','#hello#')>\r\n<cfset test = storeGetMetadata('#dir#/hello5.txt')>\r\n<cfdump var='#test#'>",
 			"result": ""
 		}
 	]
