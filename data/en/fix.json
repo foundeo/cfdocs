@@ -4,7 +4,7 @@
 	"syntax":"fix(number)",
 	"returns":"numeric",
 	"related":["int","floor"],
-	"description":"Converts a real number to an integer.\n**Tip:** If you want to `fix()` to outcome of a division, simply use the integer division operator (\).",
+	"description":"Converts a real number to an integer.\n**Tip:** If you want to `fix()` to outcome of a division, simply use the integer division operator (\\).",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 	],
