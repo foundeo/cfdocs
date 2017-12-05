@@ -18,6 +18,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Encode a string using utf-8 back into binary encoding of the string",
+			"description": "use charsetEncode to Encode with utf-8",
+			"code": "s=charsetDecode('string','utf-8');\n charsetEncode(s,'utf-8');",
+			"result": "string"
+		},
+		{
+			"title": "Encode a string using us-ascii back into binary encoding of the string",
+			"description": "use charsetEncode to Encode with us-ascii",
+			"code": "s=charsetDecode('string','us-ascii');\n charsetEncode(s,'us-ascii');",
+			"result": "string"
+		}
 	]
 
 }
