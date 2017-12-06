@@ -2,7 +2,7 @@
 <cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL")>
 <cfif url.name IS "index">
 	<cfset data = {name="CFDocs", description="Ultra Fast CFML Documentation", type="index"}>
-<cfelseif FileExists(ExpandPath("./guides/en/#url.name#.md")) && url.name is "how-to-contribute">
+<cfelseif FileExists(ExpandPath("./guides/en/#url.name#.md")) OR url.name is "how-to-contribute">
 	<cftry>
 		<!--- convert md to HTML --->
 		<cfset txtmark = createObject("java", "com.github.rjeschke.txtmark.Processor")>
