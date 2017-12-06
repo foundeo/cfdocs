@@ -1,0 +1,28 @@
+{
+	"name":"webserviceNew",
+	"type":"function",
+	"syntax":"webserviceNew(url)",
+	"member":"",
+	"script":"",
+	"returns":"webserviceProxy",
+	"related":[],
+	"description":"Creates a web service proxy object, a reference to a remote webservice. This function is a replacement for <code>createObject(\"webservice\",...)</code>.",
+	"params": [
+	    {"name":"url","description":"URL of the Webservice","required":true,"default":"","type":"string","values":[]},
+	    {"name":"arguments","description":"Additional arguments\n(URL params are not allowed in url itself and must be set here)","required":false,"default":"","type":"struct","values":[]}
+	],
+	"engines": {
+        "lucee": {"minimum_version":"5", "notes":"", "docs":""}
+	},
+	"links": [],
+	"examples": [
+        {
+			"title": "Get country data from a webspace",
+			"description": "Get country by country code and output country name",
+			"code": "ws = webserviceNew('http://www.webservicex.net/country.asmx?wsdl');\r\ncountry = ws.GetCountryByCountryCode('us');\r\nwriteOutput(XMLParse(country).NewDataSet.Table.name.XmlText);",
+			"result": "United States",
+			"runnable":true
+        }
+    ]
+
+}

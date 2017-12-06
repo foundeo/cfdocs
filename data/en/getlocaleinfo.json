@@ -1,0 +1,32 @@
+{
+	"name":"getLocaleInfo",
+	"type":"function",
+	"syntax":"getLocaleInfo()",
+	"returns":"struct",
+	"related":["getLocaleDisplayName","getLocale","getLocaleCountry","getLocaleLanguage"],
+	"description":"A short description that describes what the tag or function does.",
+	"discouraged":"Only add this key if this tag/function is discouraged by the community.",
+	"params": [
+		{"name":"locale","description":"Geographic/language locale value","required":true,"default":"getLocale()","type":"string","values":["en","de_DE","de_ch","..."]},
+		{"name":"displayLocale","description":"Locale's display name/Output language","required":false,"default":"getLocaleDisplayName()","type":"string","values":["English","German","French","..."]}
+	],
+	"engines": {
+		"lucee": {"minimum_version":"5", "notes":"Combines the locale functions <code>getLocaleCountry</code>, <code>getLocaleDisplayName</code>, <code>getLocaleInfo</code>, <code>getLocaleLanguage</code> to a single function", "docs":""}
+	},
+	"links": [],
+	"examples": [
+		{
+				"title": "Get information about locale",
+				"description": "",
+				"code": "getLocaleInfo()",
+				"result": "",
+				"runnable":false
+		},{
+				"title": "Output locale in a divergent language",
+				"description": "Same as above but different country display name output",
+				"code": "getLocaleInfo(getLocale(),'French').display.country",
+				"result": "Etats-Unis",
+				"runnable":true
+		}
+	]
+}

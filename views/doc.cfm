@@ -1,6 +1,6 @@
 <cfoutput>
 	<div class="jumbotron">
-		<div class="container">
+		<div class="container" data-doc="#encodeForHTMLAttribute(data.name)#">
 			<h1 id="docname">#data.name#</h1>
 			<p>#autoLink(data.description)#</p>
 			<cfif StructKeyExists(data, "syntax") AND Len(data.syntax)>
@@ -96,7 +96,10 @@
 				<li role="separator" class="pull-right divider"></li>
 			</cfif>
 			<li class="pull-right">
-				<a href="https://github.com/foundeo/cfdocs/issues/new?title=#encodeForURL(data.name)#" rel="nofollow" class="label label-warning" title="Report an Issue">Issue</a>
+		    		<span class="label label-warning">
+					<a href="https://github.com/foundeo/cfdocs/issues?q=is:issue%20is:open%20#encodeForURL(data.name)#" class="issuecount badge">0</a>
+					<a href="https://github.com/foundeo/cfdocs/issues/new?title=#encodeForURL(data.name)#" rel="nofollow" class="issuebutton" title="Report an Issue">Issue</a>
+				</span>
 			</li>
 			<cfif StructKeyExists(request,"gitFilePath") AND Len(request.gitFilePath) AND not (REFind("(cf|lucee)[0-9]{1,3}",data.name) OR ArrayContains(['tags','functions','guides','all','categories'],data.name) )>
 				<li class="pull-right">

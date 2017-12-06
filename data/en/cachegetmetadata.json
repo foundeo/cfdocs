@@ -1,13 +1,14 @@
 {
 	"name":"cacheGetMetadata",
 	"type":"function",
-	"syntax":"cacheGetMetadata(id)",
+	"syntax":"cacheGetMetadata(id [, template] [, region])",
 	"returns":"struct",
 	"related":[],
 	"description":" Gets the metadata values for a cached object.",
 	"params": [
-		{"name":"id","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
-
+		{"name":"id","description":"The ID of the cached object.","required":true,"default":"","type":"string","values":[]},
+		{"name":"template","description":"Gets metadata for template caches.","required":false,"default":"","type":"string","values":[]},
+		{"name":"region","description":"The name of the cache region","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheGetMetadata.html"},

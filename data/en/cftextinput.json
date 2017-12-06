@@ -2,7 +2,7 @@
 	"name":"cftextinput",
 	"type":"tag",
 	"syntax":"<cftextinput name=\"\">",
-	"related":[],
+	"related":["cftextarea"],
 	"description":"Puts a single-line text entry box in a cfform tag and controls its display characteristics.",
 	"params": [
 		{"name":"name","description":"Name for the cftextinput control.","required":true,"default":"","type":"string","values":[]},
@@ -29,7 +29,6 @@
 		{"name":"maxlength","description":"The maximum length of text entered.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"notsupported","description":"Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.\n Default:\n \"<b>Browser must support Java to <br>view ColdFusion Java\n Applets!<\/b>\"","required":false,"default":"<b>Browser must support Java to <br>view ColdFusion Java Applets!<\/b>","type":"string","values":[]},
 		{"name":"label","description":"Label for text input","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cftextinput.html", "deprecated":"7", "removed":"11"},
@@ -37,8 +36,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cftextinput"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cftextinput"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

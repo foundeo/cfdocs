@@ -1,26 +1,619 @@
 {
-	"name":"cfadmin",
-	"type":"tag",
-	"syntax":"<cfadmin>",
-	"related":[],
-	"description":"Used internally by Lucee (and Railo) in the administrator to apply settings. This tag is considered undocumented / subject to change.",
-	"params": [
-		{"name":"action","description":"The administrative action to perform.","required":true,"default":"","type":"string","values":[]},
-		{"name":"type","description":"The admin context: `web` or `server`","required":true,"default":"","type":"string","values":["web","server"]},
-		{"name":"password","description":"The admin password.","required":true,"default":"","type":"string","values":[]}
-	],
-	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/"}
-	},
-	"links": [
-		{
-			"title":"Old Railo CFAdmin Reference",
-			"url":"http://web.archive.org/web/20160430035417/http://www.getrailo.org/index.cfm/documentation/cfadmin-doc/",
-			"description":"Railo documentation for cfadmin tag."
-		}
-	],
-	"examples": [
-
-	]
-
+  "name": "cfadmin",
+  "type": "tag",
+  "syntax": "<cfadmin>",
+  "related": [],
+  "description": "Used internally by Lucee (and Railo) in the administrator to apply settings. This tag is considered undocumented / subject to change.",
+  "params": [
+    {
+      "name": "action",
+      "description": "The administrative action to perform.",
+      "required": true,
+      "default": "",
+      "type": "string",
+      "values": []
+    },
+    {
+      "name": "type",
+      "description": "The admin context: `web` or `server`",
+      "required": true,
+      "default": "",
+      "type": "string",
+      "values": [
+        "web",
+        "server"
+      ]
+    },
+    {
+      "name": "password",
+      "description": "The admin password.",
+      "required": true,
+      "default": "",
+      "type": "string",
+      "values": []
+    }
+  ],
+  "engines": {
+    "lucee": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://docs.lucee.org/guides/Various/cfadmin.html"
+    }
+  },
+  "links": [
+    {
+      "title": "Lucee Documentation",
+      "url": "http://docs.lucee.org/guides/Various/cfadmin.html",
+      "description": "Lucee documentation for cfadmin tag."
+    },
+    {
+      "title": "Old Railo CFAdmin Reference",
+      "url": "http://web.archive.org/web/20160430035417/http://www.getrailo.org/index.cfm/documentation/cfadmin-doc/",
+      "description": "Railo documentation for cfadmin tag."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Create an admin collection",
+      "description": "",
+      "code": "<cfadmin\n action=\"collection\"\n type=\"web|server\"\n password=\"password\"\n collectionAction=\"create\"\n collection=\"#form.collName#\"\n path=\"#form.collPath#\"\n language=\"#form.collLanguage#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Delete an admin collection",
+      "description": "",
+      "code": "<cfadmin\n action=\"collection\"\n type=\"web|server\"\n password=\"password\"\n collectionAction=\"delete\"\n collection=\"#form.name[key]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Optimize an admin collection",
+      "description": "",
+      "code": "<cfadmin\n action=\"collection\"\n type=\"web|server\"\n password=\"password\"\n collectionAction=\"optimize\"\n collection=\"#form.name[key]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Repair an admin collection",
+      "description": "",
+      "code": "<cfadmin\n action=\"collection\"\n type=\"web|server\"\n password=\"password\"\n collectionAction=\"repair\"\n collection=\"#form.name[key]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Compile an admin collection",
+      "description": "",
+      "code": "<cfadmin\n action=\"compileMapping\"\n type=\"web|server\"\n password=\"password\"\n virtual=\"#data.virtuals[idx]#\"\n stoponerror=\"#data.stoponerrors[idx]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Connect to admin",
+      "description": "",
+      "code": "<cfadmin\n action=\"connect\"\n type=\"web|server\"\n password=\"password\">"
+    },
+    {
+      "title": "Create an archive",
+      "description": "",
+      "code": "<cfadmin\n action=\"createArchive\"\n type=\"web|server\"\n password=\"password\"\n file=\"#target#\"\n virtual=\"#data.virtuals[idx]#\"\n secure=\"#data.secure[idx]#\"\n append=\"#notdoDownload#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Create a security manager connection",
+      "description": "",
+      "code": "<cfadmin\n action=\"createSecurityManager\"\n type=\"web|server\"\n password=\"password\"\n id=\"#form.id#\">"
+    },
+    {
+      "title": "Set the default Security Manager",
+      "description": "",
+      "code": "<cfadmin\n action=\"defaultSecurityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"access\">"
+    },
+    {
+      "title": "Execute the spooler task",
+      "description": "",
+      "code": "<cfadmin\n action=\"executeSpoolerTask\"\n type=\"web|server\"\n password=\"password\"\n id=\"#data.ids[idx]#\">"
+    },
+    {
+      "title": "Get the application listener",
+      "description": "",
+      "code": "<cfadmin\n action=\"getApplicationListener\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"listener\">"
+    },
+    {
+      "title": "Get the application settings",
+      "description": "",
+      "code": "<cfadmin\n action=\"getApplicationSetting\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"appSettings\">"
+    },
+    {
+      "title": "Get the admin char set",
+      "description": "",
+      "code": "<cfadmin\n action=\"getCharset\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"charset\">"
+    },
+    {
+      "title": "Get the Component admin",
+      "description": "",
+      "code": "<cfadmin\n action=\"getComponent\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"component\">"
+    },
+    {
+      "title": "Get an admin contextes",
+      "description": "",
+      "code": "<cfadmin\n action=\"getContextes\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"contextes\">"
+    },
+    {
+      "title": "Get the custom tag mappings",
+      "description": "",
+      "code": "<cfadmin\n action=\"getCustomTagMappings\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"mappings\">"
+    },
+    {
+      "title": "Get the custom tag setting",
+      "description": "",
+      "code": "<cfadmin\n action=\"getCustomtagSetting\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"setting\">"
+    },
+    {
+      "title": "Get the datasource",
+      "description": "",
+      "code": "<cfadmin\n action=\"getDatasource\"\n type=\"web|server\"\n password=\"password\"\n name=\"#form.name#\"\n returnVariable=\"existing\">"
+    },
+    {
+      "title": "Get the datasource drivers available",
+      "description": "",
+      "code": "<cfadmin\n action=\"getDatasourceDriverList\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"dbdriver\">"
+    },
+    {
+      "title": "Get the datasource settings",
+      "description": "",
+      "code": "<cfadmin\n action=\"getDatasourceSetting\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"dbSetting\">"
+    },
+    {
+      "title": "Get Debug",
+      "description": "",
+      "code": "<cfadmin\n action=\"getDebug\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"debug\">"
+    },
+    {
+      "title": "Get Debug Data",
+      "description": "",
+      "code": "<cfadmin\n action=\"getDebugData\"\n returnVariable=\"debugging\">"
+    },
+    {
+      "title": "Get Debugging List",
+      "description": "",
+      "code": "<cfadmin\n action=\"getDebuggingList\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"debug_templates\">"
+    },
+    {
+      "title": "Get the admin Default Password",
+      "description": "",
+      "code": "<cfadmin\n action=\"getDefaultPassword\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"defaultPassword\">"
+    },
+    {
+      "title": "Get the admin default security manager",
+      "description": "",
+      "code": "<cfadmin\n action=\"getDefaultSecurityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"access\">"
+    },
+    {
+      "title": "Get Error",
+      "description": "",
+      "code": "<cfadmin\n action=\"getError\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"err\">"
+    },
+    {
+      "title": "Get list of errors",
+      "description": "",
+      "code": "<cfadmin\n action=\"getErrorList\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"err_templates\">"
+    },
+    {
+      "title": "Get the extension information",
+      "description": "",
+      "code": "<cfadmin\n action=\"getExtensionInfo\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"info\">"
+    },
+    {
+      "title": "Get the exention providers",
+      "description": "",
+      "code": "<cfadmin\n action=\"getExtensionProviders\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"providers\">"
+    },
+    {
+      "title": "Get extensions",
+      "description": "",
+      "code": "<cfadmin\n action=\"getExtensions\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"extensions\">"
+    },
+    {
+      "title": "Get FLDs",
+      "description": "",
+      "code": "<cfadmin\n action=\"getFLDs\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"flds\">"
+    },
+    {
+      "title": "Get JavaCFXTags",
+      "description": "",
+      "code": "<cfadmin\n action=\"getJavaCFXTags\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"jtags\">"
+    },
+    {
+      "title": "Get the admin locales",
+      "description": "",
+      "code": "<cfadmin\n action=\"getLocales\"\n locale=\"#stText.locale#\"\n returnVariable=\"locales\">"
+    },
+    {
+      "title": "Get mail Servers",
+      "description": "",
+      "code": "<cfadmin\n action=\"getMailServers\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"ms\">"
+    },
+    {
+      "title": "Get mail settings",
+      "description": "",
+      "code": "<cfadmin\n action=\"getMailSetting\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"mail\">"
+    },
+    {
+      "title": "Get the mappings",
+      "description": "",
+      "code": "<cfadmin\n action=\"getMappings\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"mappings\">"
+    },
+    {
+      "title": "Get the output settings",
+      "description": "",
+      "code": "<cfadmin\n action=\"getOutputSetting\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"setting\">"
+    },
+    {
+      "title": "Get the plugin directory",
+      "description": "",
+      "code": "<cfadmin\n action=\"getPluginDirectory\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"pluginDir\">"
+    },
+    {
+      "title": "Get the proxy",
+      "description": "",
+      "code": "<cfadmin\n action=\"getProxy\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"proxy\">"
+    },
+    {
+      "title": "Get regional ",
+      "description": "",
+      "code": "<cfadmin\n action=\"getRegional\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"regional\">"
+    },
+    {
+      "title": "Get remote crunlient",
+      "description": "",
+      "code": "<cfadmin\n action=\"getRemoteClient\"\n type=\"web|server\"\n password=\"password\"\n url=\"#data.urls[idx]#\"\n returnVariable=\"rclient\">"
+    },
+    {
+      "title": "Get remote clients",
+      "description": "",
+      "code": "<cfadmin\n action=\"getRemoteClients\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"clients\">"
+    },
+    {
+      "title": "Get remote client usage",
+      "description": "",
+      "code": "<cfadmin\n action=\"getRemoteClientUsage\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"usage\">"
+    },
+    {
+      "title": "Get scope information",
+      "description": "",
+      "code": "<cfadmin\n action=\"getScope\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"scope\">"
+    },
+    {
+      "title": "Get the security manager",
+      "description": "",
+      "code": "<cfadmin\n action=\"getSecurityManager\"\n type=\"web|server\"\n password=\"password\"\n id=\"#url.id#\"\n returnVariable=\"access\">"
+    },
+    {
+      "title": "Get the current spooler tasks",
+      "description": "",
+      "code": "<cfadmin\n action=\"getSpoolerTasks\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"tasks\">"
+    },
+    {
+      "title": "Get the server time zones",
+      "description": "",
+      "code": "<cfadmin\n action=\"getTimeZones\"\n locale=\"#stText.locale#\"\n returnVariable=\"timezones\">"
+    },
+    {
+      "title": "Get the TLDs",
+      "description": "",
+      "code": "<cfadmin\n action=\"getTLDs\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"tlds\">"
+    },
+    {
+      "title": "Get any current updates",
+      "description": "",
+      "code": "<cfadmin\n action=\"getUpdate\"\n type=\"web|server\"\n password=\"password\"\n returnvariable=\"update\">"
+    },
+    {
+      "title": "Return if the context has a password",
+      "description": "",
+      "code": "<cfadmin\n action=\"hasPassword\"\n type=\"web|server\"\n returnVariable=\"hasPassword\">"
+    },
+    {
+      "title": "Purge the index",
+      "description": "",
+      "code": "<cfadmin\n action=\"index\"\n type=\"web|server\"\n password=\"password\"\n indexAction=\"purge\"\n collection=\"#form.name[key]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update the index",
+      "description": "",
+      "code": "<cfadmin\n action=\"index\"\n type=\"web|server\"\n password=\"password\"\n indexAction=\"update\"\n indexType=\"path\"\n collection=\"#url.collection#\"\n key=\"#form.path#\"\n urlpath=\"#form.url#\"\n extensions=\"#form.extensions#\"\n recurse=\"#structKeyExists(form,\"recurse\")andform.recurse#\"\n language=\"#form.language#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Remove CFX extension",
+      "description": "",
+      "code": "<cfadmin\n action=\"removeCFX\"\n type=\"web|server\"\n password=\"password\"\n name=\"#data.names[idx]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Remove a custom tag",
+      "description": "",
+      "code": "<cfadmin\n action=\"removeCustomTag\"\n type=\"web|server\"\n password=\"password\"\n virtual=\"#data.virtuals[idx]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Remove a datasource",
+      "description": "",
+      "code": "<cfadmin\n action=\"removeDatasource\"\n type=\"web|server\"\n password=\"password\"\n name=\"#data.names[idx]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Remove a default password",
+      "description": "",
+      "code": "<cfadmin\n action=\"removeDefaultPassword\"\n type=\"web|server\"\n password=\"password\">"
+    },
+    {
+      "title": "Remove an extension",
+      "description": "",
+      "code": "<cfadmin\n action=\"removeExtension\"\n type=\"web|server\"\n password=\"password\"\n provider=\"#detail.installed.provider#\"\n id=\"#detail.installed.id#\">"
+    },
+    {
+      "title": "Remove a mapping",
+      "description": "",
+      "code": "<cfadmin\n action=\"removeMapping\"\n type=\"web|server\"\n password=\"password\"\n virtual=\"#data.virtuals[idx]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Remove a proxy",
+      "description": "",
+      "code": "<cfadmin\n action=\"removeProxy\"\n type=\"web|server\"\n password=\"password\"\n >"
+    },
+    {
+      "title": "Remove a remote client",
+      "description": "",
+      "code": "<cfadmin\n action=\"removeRemoteClient\"\n type=\"web|server\"\n password=\"password\"\n url=\"#data.urls[idx]#\">"
+    },
+    {
+      "title": "Remove a security manager",
+      "description": "",
+      "code": "<cfadmin\n action=\"removeSecurityManager\"\n type=\"web|server\"\n password=\"password\"\n id=\"#data.ids[idx]#\">"
+    },
+    {
+      "title": "Remove a spooler task",
+      "description": "",
+      "code": "<cfadmin\n action=\"removeSpoolerTask\"\n type=\"web|server\"\n password=\"password\"\n id=\"#data.ids[idx]#\">"
+    },
+    {
+      "title": "Remove an update",
+      "description": "",
+      "code": "<cfadmin\n action=\"removeUpdate\"\n type=\"web|server\"\n password=\"password\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Reset an ID",
+      "description": "",
+      "code": "<cfadmin\n action=\"resetId\"\n type=\"web|server\"\n password=\"password\">"
+    },
+    {
+      "title": "Reset a password",
+      "description": "",
+      "code": "<cfadmin\n action=\"resetPassword\"\n type=\"web|server\"\n password=\"password\"\n contextPath=\"#form.contextPath#\">"
+    },
+    {
+      "title": "Restart the server",
+      "description": "",
+      "code": "<cfadmin\n action=\"restart\"\n type=\"web|server\"\n password=\"password\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Run an update",
+      "description": "",
+      "code": "<cfadmin\n action=\"runUpdate\"\n type=\"web|server\"\n password=\"password\">"
+    },
+    {
+      "title": "Delete a scheduled task",
+      "description": "",
+      "code": "<cfadmin\n action=\"schedule\"\n type=\"web|server\"\n password=\"password\"\n scheduleAction=\"delete\"\n task=\"#data.names[idx]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Pause a scheduled task",
+      "description": "",
+      "code": "<cfadmin\n action=\"schedule\"\n type=\"web|server\"\n password=\"password\"\n scheduleAction=\"pause\"\n task=\"#data.names[idx]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Resume a scheduled task",
+      "description": "",
+      "code": "<cfadmin\n action=\"schedule\"\n type=\"web|server\"\n password=\"password\"\n scheduleAction=\"resume\"\n task=\"#data.names[idx]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Run a scheduled task",
+      "description": "",
+      "code": "<cfadmin\n action=\"schedule\"\n type=\"web|server\"\n password=\"password\"\n scheduleAction=\"run\"\n task=\"#data.names[idx]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update a scheduled task",
+      "description": "",
+      "code": "<cfadmin\n action=\"schedule\"\n type=\"web|server\"\n password=\"password\"\n scheduleAction=\"update\"\n task=\"#form.name#\"\n url=\"#form.url#\"\n port=\"#form.port#\"\n requesttimeout=\"#form.timeout#\"\n username=\"#nullIfEmpty(form.username)#\"\n schedulePassword=\"#nullIfEmpty(form.password)#\"\n proxyserver=\"#nullIfEmpty(form.proxyserver)#\"\n proxyport=\"#form.proxyport#\"\n proxyuser=\"#nullIfEmpty(form.proxyuser)#\"\n proxypassword=\"#nullIfEmpty(form.proxypassword)#\"\n publish=\"#formBool('publish')#\"\n resolveurl=\"#formBool('resolveurl')#\"\n startdate=\"#nullIfNoDate('start')#\"\n starttime=\"#nullIfNoTime('start')#\"\n enddate=\"#nullIfNoDate('end')#\"\n endtime=\"#nullIfNoTime('end')#\"\n interval=\"#nullIfEmpty(form.interval)#\"\n file=\"#nullIfEmpty(form.file)#\"\n serverpassword=\"#variables.passwordserver#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Security Manager access",
+      "description": "",
+      "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"access\"\n secType=\"datasource\">"
+    },
+    {
+      "title": "Security Manager setting",
+      "description": "",
+      "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"has.cfx_setting\"\n secType=\"cfx_setting\"\n secValue=\"yes\">"
+    },
+    {
+      "title": "Security Manager usage",
+      "description": "",
+      "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"has.cfx_usage\"\n secType=\"cfx_usage\"\n secValue=\"yes\">"
+    },
+    {
+      "title": "Security Manager has access to custom tag",
+      "description": "",
+      "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"hasAccess\"\n secType=\"custom_tag\"\n secValue=\"yes\">"
+    },
+    {
+      "title": "Security Manager has access to debugging",
+      "description": "",
+      "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"hasAccess\"\n secType=\"debugging\"\n secValue=\"yes\">"
+    },
+    {
+      "title": "Security Manager has access to mail",
+      "description": "",
+      "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"hasAccess\"\n secType=\"mail\"\n secValue=\"yes\">"
+    },
+    {
+      "title": "Security Manager has access to mapping",
+      "description": "",
+      "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"hasAccess\"\n secType=\"mapping\"\n secValue=\"yes\">"
+    },
+    {
+      "title": "Security Manager has access to remote",
+      "description": "",
+      "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"hasAccess\"\n secType=\"remote\"\n secValue=\"yes\">"
+    },
+    {
+      "title": "Security Manager has access to search",
+      "description": "",
+      "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"hasAccess\"\n secType=\"search\"\n secValue=\"yes\">"
+    },
+    {
+      "title": "Security Manager has access to settings",
+      "description": "",
+      "code": "<cfadmin\n action=\"securityManager\"\n type=\"web|server\"\n password=\"password\"\n returnVariable=\"hasAccess\"\n secType=\"setting\"\n secValue=\"yes\">"
+    },
+    {
+      "title": "Get storage",
+      "description": "",
+      "code": "<cfadmin\n action=\"storageGet\"\n type=\"web|server\"\n password=\"password\"\n key=\"#url.plugin#\"\n returnVariable=\"data\">"
+    },
+    {
+      "title": "Set storage",
+      "description": "",
+      "code": "<cfadmin\n action=\"storageSet\"\n type=\"web|server\"\n password=\"password\"\n key=\"#url.plugin#\"\n value=\"#data#\">"
+    },
+    {
+      "title": "Update the application listener",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateApplicationListener\"\n type=\"web|server\"\n password=\"password\"\n listenerType=\"#form.type#\"\n listenerMode=\"#form.mode#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update an application setting",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateApplicationSetting\"\n type=\"web|server\"\n password=\"password\"\n scriptProtect=\"#form.scriptProtect#\"\n AllowURLRequestTimeout=\"#structKeyExists(form,'AllowURLRequestTimeout')andform.AllowURLRequestTimeout#\"\n requestTimeout=\"#CreateTimeSpan(form.request_days,form.request_hours,form.request_minutes,form.request_seconds)#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update a char set",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateCharset\"\n type=\"web|server\"\n password=\"password\"\n templateCharset=\"#form.templateCharset#\"\n webCharset=\"#form.webCharset#\"\n resourceCharset=\"#form.resourceCharset#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update a component",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateComponent\"\n type=\"web|server\"\n password=\"password\"\n baseComponentTemplate=\"#form.baseComponentTemplate#\"\n componentDumpTemplate=\"#form.componentDumpTemplate#\"\n componentDataMemberDefaultAccess=\"#form.componentDataMemberDefaultAccess#\"\n triggerDataMember=\"#isDefined('form.triggerDataMember')#\"\n useShadow=\"#isDefined('form.useShadow')#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update the custom tag info",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateCustomTag\"\n type=\"web|server\"\n password=\"password\"\n virtual=\"#data.virtuals[idx]#\"\n physical=\"#data.physicals[idx]#\"\n archive=\"#data.archives[idx]#\"\n primary=\"#data.primaries[idx]#\"\n trusted=\"#data.trusteds[idx]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update the custom tag settings",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateCustomTagSetting\"\n type=\"web|server\"\n password=\"password\"\n deepSearch=\"#isDefined('form.customTagDeepSearchDesc')andform.customTagDeepSearchDescEQtrue#\"\n localSearch=\"#isDefined('form.customTagLocalSearchDesc')andform.customTagLocalSearchDescEQtrue#\"\n extensions=\"#form.extensions#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update the datasource",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateDatasource\"\n type=\"web|server\"\n password=\"password\"\n classname=\"#driver.getClass()#\"\n dsn=\"#driver.getDSN()#\"\n name=\"#form.name#\"\n host=\"#form.host#\"\n database=\"#form.database#\"\n port=\"#form.port#\"\n dbusername=\"#form.username#\"\n dbpassword=\"#form.password#\"\n connectionLimit=\"#form.connectionLimit#\"\n connectionTimeout=\"#form.connectionTimeout#\"\n blob=\"#getForm('blob',false)#\"\n clob=\"#getForm('clob',false)#\"\n allowed_select=\"#getForm('allowed_select',false)#\"\n allowed_insert=\"#getForm('allowed_insert',false)#\"\n allowed_update=\"#getForm('allowed_update',false)#\"\n allowed_delete=\"#getForm('allowed_delete',false)#\"\n allowed_alter=\"#getForm('allowed_alter',false)#\"\n allowed_drop=\"#getForm('allowed_drop',false)#\"\n allowed_revoke=\"#getForm('allowed_revoke',false)#\"\n allowed_create=\"#getForm('allowed_create',false)#\"\n allowed_grant=\"#getForm('allowed_grant',false)#\"\n custom=\"#custom#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update the debug settings",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateDebug\"\n type=\"web|server\"\n password=\"password\"\n debug=\"#form.debug#\"\n debugTemplate=\"#form[\"debugTemplate_\"&amp;form.debugtype]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update the default password",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateDefaultPassword\"\n type=\"web|server\"\n password=\"password\"\n newPassword=\"#form._new_password#\">"
+    },
+    {
+      "title": "Update default security",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateDefaultSecurity\"\n type=\"web|server\"\n password=\"password\"\n setting=\"#fb('defaultSetting')#\"\n file=\"#form.defaultFile#\"\n direct_java_access=\"#fb('defaultDirectJavaAccess')#\"\n mail=\"#fb('defaultMail')#\"\n datasource=\"#fb('defaultDatasource')#\"\n mapping=\"#fb('defaultMapping')#\"\n custom_tag=\"#fb('defaultCustomTag')#\"\n cfx_setting=\"#fb('defaultCfxSetting')#\"\n cfx_usage=\"#fb('defaultCfxUsage')#\"\n debugging=\"#fb('defaultDebugging')#\"\n tag_execute=\"#fb('defaultTagExecute')#\"\n tag_import=\"#fb('defaultTagImport')#\"\n tag_object=\"#fb('defaultTagObject')#\"\n tag_registry=\"#fb('defaultTagRegistry')#\">"
+    },
+    {
+      "title": "Update default security manager",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateDefaultSecurityManager\"\n type=\"web|server\"\n password=\"password\"\n setting=\"#fb('defaultSetting')#\"\n file=\"#form.defaultFile#\"\n direct_java_access=\"#fb('defaultDirectJavaAccess')#\"\n mail=\"#fb('defaultMail')#\"\n datasource=\"#form.defaultDatasource#\"\n mapping=\"#fb('defaultMapping')#\"\n remote=\"#fb('defaultRemote')#\"\n custom_tag=\"#fb('defaultCustomTag')#\"\n cfx_setting=\"#fb('defaultCfxSetting')#\"\n cfx_usage=\"#fb('defaultCfxUsage')#\"\n debugging=\"#fb('defaultDebugging')#\"\n search=\"#fb('defaultSearch')#\"\n scheduled_task=\"#fb('defaultScheduledTask')#\"\n tag_execute=\"#fb('defaultTagExecute')#\"\n tag_import=\"#fb('defaultTagImport')#\"\n tag_object=\"#fb('defaultTagObject')#\"\n tag_registry=\"#fb('defaultTagRegistry')#\"\n access_read=\"#form.defaultaccess_read#\"\n access_write=\"#form.defaultaccess_write#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update an error",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateError\"\n type=\"web|server\"\n password=\"password\"\n template500=\"#form[\"errorTemplate_\"&amp;form.errtype500&amp;500]#\"\n template404=\"#form[\"errorTemplate_\"&amp;form.errtype404&amp;404]#\"\n statuscode=\"#isDefined('form.doStatusCode')#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update an extension",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateExtension\"\n type=\"web|server\"\n password=\"password\"\n config=\"#config#\"\n provider=\"#detail.url#\"\n id=\"#detail.app.id#\"\n version=\"#detail.app.version#\"\n name=\"#detail.app.name#\"\n label=\"#detail.app.label#\"\n description=\"#detail.app.description#\"\n category=\"#detail.app.category#\"\n image=\"#detail.app.image#\"\n author=\"#detail.app.author#\"\n codename=\"#detail.app.codename#\"\n video=\"#detail.app.video#\"\n support=\"#detail.app.support#\"\n documentation=\"#detail.app.documentation#\"\n forum=\"#detail.app.forum#\"\n mailinglist=\"#detail.app.mailinglist#\"\n network=\"#detail.app.network#\"\n created=\"#detail.app.created#\">"
+    },
+    {
+      "title": "Update JavaCFX",
+      "description": "",
+      "code": "<cfadmin action=\"updateJavaCFX\"\n type=\"web|server\"\n password=\"password\"\n name=\"#data.names[idx]#\"\n class=\"#data.classes[idx]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update mail settings",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateMailSetting\"\n type=\"web|server\"\n password=\"password\"\n logfile=\"#form.logFile#\"\n loglevel=\"#form.loglevel#\"\n spoolEnable=\"#isDefined(\"form.spoolenable\")andform.spoolenable#\"\n spoolInterval=\"#form.spoolInterval#\"\n timeout=\"#form.timeout#\"\n defaultEncoding=\"#form.defaultEncoding#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update a mapping",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateMapping\"\n type=\"web|server\"\n password=\"password\"\n virtual=\"#data.virtuals[idx]#\"\n physical=\"#data.physicals[idx]#\"\n archive=\"#data.archives[idx]#\"\n primary=\"#data.primaries[idx]#\"\n trusted=\"#data.trusteds[idx]#\"\n toplevel=\"#data.toplevels[idx]#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update output settings",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateOutputSetting\"\n type=\"web|server\"\n password=\"password\"\n supressWhiteSpace=\"#isDefined('form.supressWhitespace')andform.supressWhitespace#\"\n showVersion=\"#isDefined('form.showVersion')andform.showVersion#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update Password",
+      "description": "",
+      "code": "<cfadmin\n action=\"updatePassword\"\n type=\"web|server\"\n newPassword=\"#form.new_password#\">"
+    },
+    {
+      "title": "Update Proxy",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateProxy\"\n type=\"web|server\"\n password=\"password\"\n proxyEnabled=\"true\"\n proxyServer=\"#proxy.server#\"\n proxyPort=\"#proxy.port#\"\n proxyUsername=\"#proxy.username#\"\n proxyPassword=\"#proxy.password#\">"
+    },
+    {
+      "title": "Update PSQ",
+      "description": "",
+      "code": "<cfadmin\n action=\"updatePSQ\"\n type=\"web|server\"\n password=\"password\"\n psq=\"#structKeyExists(form,\"psq\")andform.psq#\">"
+    },
+    {
+      "title": "Update regional settings",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateRegional\"\n type=\"web|server\"\n password=\"password\"\n timezone=\"#form.timezone#\"\n locale=\"#form.locale#\"\n timeserver=\"#form.timeserver#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update remote client",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateRemoteClient\"\n type=\"web|server\"\n remotetype=\"web|server\"\n password=\"password\"\n attributeCollection=\"#attrColl#\">"
+    },
+    {
+      "title": "Update scope settings",
+      "description": "",
+      "code": "<cfadmin\n action=\"updateScope\"\n type=\"web|server\"\n password=\"password\"\n sessionType=\"#form.sessionType#\"\n localMode=\"#form.localMode#\"\n scopeCascadingType=\"#form.scopeCascadingType#\"\n allowImplicidQueryCall=\"#isDefined(\"form.allowImplicidQueryCall\")andform.allowImplicidQueryCall#\"\n mergeFormAndUrl=\"#isDefined(\"form.mergeFormAndUrl\")andform.mergeFormAndUrl#\"\n sessionTimeout=\"#CreateTimeSpan(form.session_days,form.session_hours,form.session_minutes,form.session_seconds)#\"\n applicationTimeout=\"#CreateTimeSpan(form.application_days,form.application_hours,form.application_minutes,form.application_seconds)#\"\n sessionManagement=\"#isDefined(\"form.sessionManagement\")andform.sessionManagement#\"\n clientManagement=\"#isDefined(\"form.clientManagement\")andform.clientManagement#\"\n clientCookies=\"#isDefined(\"form.clientCookies\")andform.clientCookies#\"\n domaincookies=\"#isDefined(\"form.domaincookies\")andform.domaincookies#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Update updater settings",
+      "description": "",
+      "code": "<cfadmin\n action=\"UpdateUpdate\"\n type=\"web|server\"\n password=\"password\"\n updateType=\"#form.type#\"\n updateLocation=\"#form.location#\"\n remoteClients=\"arrayOfClients\">"
+    },
+    {
+      "title": "Verfiy a datasource",
+      "description": "",
+      "code": "<cfadmin\n action=\"verifyDatasource\"\n type=\"web|server\"\n password=\"password\"\n name=\"#data.names[idx]#\"\n dbusername=\"#data.usernames[idx]#\"\n dbpassword=\"#data.passwords[idx]#\">"
+    },
+    {
+      "title": "Verify a JavaCFX",
+      "description": "",
+      "code": "<cfadmin\n action=\"verifyJavaCFX\"\n type=\"web|server\"\n password=\"password\"\n name=\"#data.names[idx]#\"\n class=\"#data.classes[idx]#\">"
+    },
+    {
+      "title": "Verify a mail server",
+      "description": "",
+      "code": "<cfadmin\n action=\"verifyMailServer\"\n type=\"web|server\"\n password=\"password\"\n hostname=\"#data.hosts[idx]#\"\n port=\"#data.ports[idx]#\"\n mailusername=\"#data.usernames[idx]#\"\n mailpassword=\"#data.passwords[idx]#\">"
+    },
+    {
+      "title": "Verify a remote client",
+      "description": "",
+      "code": "<cfadmin\n action=\"verifyRemoteClient\"\n type=\"web|server\"\n password=\"password\"\n attributeCollection=\"#rclient#\">",
+      "result": "",
+      "runnable": false
+    }
+  ]
 }

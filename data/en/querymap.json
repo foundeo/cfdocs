@@ -4,7 +4,7 @@
 	"syntax": "queryMap(query, closure [, parallel] [, maxThreads])",
 	"member": "query.map(closure [, parallel] [, maxThreads])",
 	"returns": "query",
-	"related": [],
+	"related": ["queryFilter","queryReduce","querySome"],
 	"description": "Maps each query row using a function to manipulate the rows fields",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
@@ -16,20 +16,17 @@
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querymap.html"},
 		"coldfusion": {"minimum_version": "2016", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querymap.html"}
 	},
-	"examples": [
-		{
-			"title":"Maps query results",
-			"description":"Manipulates query column",
-			"code":"news = queryNew(\"id,title\",\n\t\"integer,varchar\", [{\n\t\t\"id\": 1,\n\t\t\"title\": \"Dewey defeats Truman\"\n\t}, {\n\t\t\"id\": 2,\n\t\t\"title\": \"Man walks on Moon\"\n\t}]\n);\n\nwriteDump(news);\n\nfunction mapQuery(any Obj) {\n\tif (Obj.id == 1)\n\t\tObj.title = \"NEW: \" & Obj.title;\n\treturn Obj;\n}\n\nnewQuery = QueryMap(news, mapQuery);\nwriteDump(newQuery);",
-			"result":""
-
-		}],
+	"examples": [{
+		"title":"Maps query results",
+		"description":"Manipulates query column",
+		"code":"news = queryNew(\"id,title\",\n\t\"integer,varchar\", [{\n\t\t\"id\": 1,\n\t\t\"title\": \"Dewey defeats Truman\"\n\t}, {\n\t\t\"id\": 2,\n\t\t\"title\": \"Man walks on Moon\"\n\t}]\n);\n\nwriteDump(news);\n\nfunction mapQuery(any Obj) {\n\tif (Obj.id == 1)\n\t\tObj.title = \"NEW: \" & Obj.title;\n\treturn Obj;\n}\n\nnewQuery = QueryMap(news, mapQuery);\nwriteDump(newQuery);",
+		"result":""
+	}],
 	"links":[{
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
 		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
-	},
-	{
+	},{
 		"title": "ColdFusion 11: .map() and .reduce()",
 		"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
 		"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"

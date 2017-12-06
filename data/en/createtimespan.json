@@ -2,14 +2,14 @@
 	"name":"createTimespan",
 	"type":"function",
 	"syntax":"createTimespan(days, hours, minutes, seconds)",
-	"returns":"date",
+	"returns":"numeric",
 	"related":[],
-	"description":" Creates a date/time object that defines a time period. You\n can add or subtract it from other date/time objects and use\n it with the cachedWithin attribute of cfquery.",
+	"description":"Returns a value that defines a time period, represented by a numeric (double) where 1 equals 1 day. You can add or subtract it from other date/time objects and use it with the cachedWithin attribute of cfquery.",
 	"params": [
-		{"name":"days","description":"","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"hours","description":"","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"minutes","description":"","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"seconds","description":"","required":true,"default":"","type":"numeric","values":[]}
+		{"name":"days","description":"The number of days ranging from 0 to 32768","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"hours","description":"The number of hours","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"minutes","description":"The number of minutes","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"seconds","description":"The number of seconds","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
@@ -23,17 +23,23 @@
 	],
 	"examples": [
 		{
-			"title": "Tag Syntax",
-			"description": "",
-			"code": "<!--- This example shows the use of createTimespan with cfquery ---> \r\n <cfquery name = \"GetParks\" datasource = \"cfdocexamples\" cachedWithin = \"#createTimespan(0, 6, 0, 0)#\"> \r\n SELECT PARKNAME, REGION, STATE \r\n FROM Parks \r\n ORDER by ParkName, State \r\n </cfquery>    ",
+			"title": "Use of createTimespan in a cfquery",
+			"description": "The createTimespan function is useful in the cachedwithin attribute of cfquery.",
+			"code": "<cfquery name = \"GetParks\" datasource = \"cfdocexamples\" cachedWithin = \"#createTimespan(0, 6, 0, 0)#\"> \r\n SELECT PARKNAME, REGION, STATE \r\n FROM Parks \r\n ORDER by ParkName, State \r\n </cfquery>",
 			"result": "",
             "runnable":false
 		},
         {
-			"title": "Tag Syntax",
-			"description": "",
-			"code": "<cfoutput>#createTimespan(0, 6, 0, 0)#</cfoutput> \r\n    ",
+			"title": "The createTimespan function returns a numeric value",
+			"description": "Passing 6 hours, or a quarter of a day returns a double representing 1/4",
+			"code": "createTimespan(0, 6, 0, 0)",
 			"result": "0.25"
+		},
+		{
+			"title":"Adding a date and a timestamp",
+			"description":"Instead of using dateAdd you could add a timestamp to a date object",
+			"code":"dateFormat( createDate(2017,1,1) + createTimespan(2,0,0,0) )",
+			"result":"03-Jan-17"
 		}
 	]
 

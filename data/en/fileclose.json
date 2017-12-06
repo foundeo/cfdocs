@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"fileClose(fileObj)",
 	"returns":"void",
-	"related":[],
-	"description":" Closes an on-disk or in-memory file that is open.",
+	"related":["fileOpen"],
+	"description":"Closes an on-disk or in-memory file that is open.",
 	"params": [
-		{"name":"fileObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]}
-
+		{"name":"fileObj","description":"A file object","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileclose.html"},
@@ -15,8 +14,6 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/fileclose"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/fileclose"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": []
 }

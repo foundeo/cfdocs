@@ -17,6 +17,25 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Decode a string using hex back into binary encoding of the string",
+			"description": "use binaryDecode to decode with hex",
+			"code": "binaryDecode('F62B','hex');",
+			"result": "[BINARY]"
+		},
+		{
+			"title": "Decode a string using UNIX UUencode (UU) back into binary encoding of the string",
+			"description": "use binaryDecode to decode with UNIX UUencode (UU)",
+			"code": "binaryDecode('&<W1R:6YG','UU');",
+			"result": "[BINARY]"
+		},
+		{
+			"title": "Decode a string using base64 back into binary encoding of the string",
+			"description": "use binaryDecode to decode with base64",
+			"code": "binaryDecode('U3RyaW5n','base64');",
+			"result": "[BINARY]"
+		}
 	]
-
 }

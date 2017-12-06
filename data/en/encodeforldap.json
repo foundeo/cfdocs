@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"encodeForLDAP(string);",
 	"returns":"string",
-	"related":[],
+	"related":["encodeForDN"],
 	"description":"Encodes the given string for safe output in LDAP queries.",
 	"params": [
 		{"name":"string","description":"String to encode.","required":true,"default":"","type":"","values":[]}
@@ -13,16 +13,13 @@
 		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/encodeforldap.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/EncodeForLDAP"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
-        {
+       	 	{
 			"title": "Script Syntax",
 			"description": "",
 			"code": "encodeForLDAP(\"pete) (| (password = * ) )\")",
 			"result": "pete\\29 \\28| \\28password = \\2a \\29 \\29"
 		}
 	]
-
 }

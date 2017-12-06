@@ -2,7 +2,7 @@
 	"name": "cfmail",
 	"type": "tag",
 	"syntax": "<cfmail to=\"\" from=\"\" subject=\"\">",
-	"related": [ "cfmailpart", "cfmailparam", "savecontent"	],
+	"related": ["cfmailpart", "cfmailparam", "cfpop","cfimap"],
 	"description": "Sends an email message that optionally contains query output, using an SMTP server.",
 	"params": [
 		{

@@ -4,7 +4,8 @@
 	"syntax": "cfusion_Decrypt(string, key)",
 	"returns": "string",
 	"related": [],
-	"description": "",
+	"description": "Decrypts the given string, alias for function call decrypt(string,key,\"cfmx_compat\",\"hex\").",
+	"discouraged": "The use of this function is discouraged. It is an internal function, call decrypt(string,key,\"cfmx_compat\",\"hex\") instead.",
 	"params": [
 		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "key", "description": "", "required": true, "default": "", "type": "string", "values": []}

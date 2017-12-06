@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"getBaseTagData(tagname [, instancenumber])",
 	"returns":"any",
-	"related":[],
+	"related":["getBaseTagList"],
 	"description":" Used within a custom tag. Finds calling (ancestor) tag by\n name and accesses its data.",
 	"params": [
 		{"name":"tagname","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"instancenumber","description":"","required":false,"default":"","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getbasetagdata.html"},
@@ -16,17 +15,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getbasetagdata"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getbasetagdata"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+    	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows the use of getBaseTagData function. Typically used in custom tags.",
-			"code": "<cfif trim(inCustomTag) neq \"\"> \r\n <cfoutput> \r\n Running in the context of a custom tag named #inCustomTag#.<p> \r\n </cfoutput> \r\n <!--- Get the tag instance data ---> \r\n <cfset tagData = getBaseTagData(inCustomTag)> \r\n <!--- Find the tag's execution mode Located inside the  ---> \r\n <cfif tagData.thisTag.executionMode neq ’inactive’> \r\n template \r\n <cfelse> \r\n BODY \r\n </cfif>   ",
+			"code": "<cfif trim(inCustomTag) neq \"\">\r\n<cfoutput>\r\nRunning in the context of a custom tag named #inCustomTag#.<p>\r\n</cfoutput>\r\n<!--- Get the tag instance data --->\r\n<cfset tagData = getBaseTagData(inCustomTag)>\r\n<!--- Find the tag's execution mode Located inside the --->\r\n<cfif tagData.thisTag.executionMode neq 'inactive'>\r\ntemplate\r\n<cfelse>\r\nBODY\r\n</cfif>",
 			"result": "",
 			"runnable":false
 		}
 	]
-
 }

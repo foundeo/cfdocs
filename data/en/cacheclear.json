@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "cacheClear([filter] [, cacheName])",
 	"returns": "numeric",
-	"related": [],
+	"related": ["cacheDelete","cacheRemoveAll"],
 	"description": "Flushes the cache",
 	"params": [
 		{"name": "filterOrTags", "description": "A String containing a key filter for the elements in the cache to flush, the filter follow the same rules as for cfdirectory-filter OR an Array containing tags defined when put into the cache", "required": false, "default": "", "type": "any", "values": []},
@@ -12,6 +12,6 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/cacheclear.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": []
 }

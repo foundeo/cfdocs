@@ -2,7 +2,7 @@
 	"name": "cfmap",
 	"type": "tag",
 	"syntax": "<cfmap>",
-	"related": [],
+	"related": ["cfmapitem"],
 	"description": "Embeds a Google map within a ColdFusion web page",
 	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfmap/index.html",
 	"params": [
@@ -240,11 +240,7 @@
 		}
 	],
 	"engines": {
-		"coldfusion": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmap.html"
-		}
+		"coldfusion": {"minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmap.html"}
 	},
 	"links": []
 }

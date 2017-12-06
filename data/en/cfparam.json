@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cfparam name=\"\">",
 	"script":"cfparam(name=\"\", default=\"\", pattern=\"\");",
-	"related":[],
+	"related":["cfset","isDefined"],
 	"description":"Tests for a parameter's existence, tests its data type, and, if\n a default value is not assigned, optionally provides one.",
 	"params": [
 		{"name":"name","description":"Name of parameter to test (such as \"client.email\" or\n \"cookie.backgroundColor\"). If omitted, and if the\n parameter does not exist, an error is thrown.","required":true,"default":"","type":"string","values":[]},

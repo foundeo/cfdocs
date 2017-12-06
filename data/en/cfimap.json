@@ -2,7 +2,7 @@
 	"name":"cfimap",
 	"type":"tag",
 	"syntax":"<cfimap>",
-	"related":[],
+	"related":["cfpop","cfmail"],
 	"description":"Queries an IMAP server to retrieve and manage mails within multiple folders.",
 	"params": [
 		{"name":"password","description":"Specifies the password for assessing the users e-mail account.","required":false,"default":"","type":"string","values":[]},
@@ -24,7 +24,6 @@
 		{"name":"server","description":"Specifies the IMAP server identifier. You can assign a host name or an IP address as the IMAP server identifier. For example, imap.gmail.com.","required":false,"default":"","type":"string","values":[]},
 		{"name":"name","description":"Specifies the name for the query object that contains the retrieved message information.","required":false,"default":"","type":"string","values":[]},
 		{"name":"recurse","description":"Specifies whether ColdFusion runs the CFIMAP command in subfolders.","required":false,"default":"","type":"boolean","values":[true,false]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfimap.html"},
@@ -32,8 +31,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfimap"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfimap"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

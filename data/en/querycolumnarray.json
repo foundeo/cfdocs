@@ -4,7 +4,7 @@
 	"syntax": "queryColumnArray(query)",
 	"member": "query.columnArray()",
 	"returns": "array",
-	"related": [],
+	"related": ["queryColumnList","queryColumnCount","queryColumnExists","valueArray"],
 	"description": "return the column names as array, in the orders of the column in the database",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []}
@@ -12,6 +12,12 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querycolumnarray.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": [{
+		"title": "Dump array of query columns",
+		"description": "",
+		"code": "news = queryNew(\"id,title\",\n\t\"integer,varchar\", [{\n\t\t\"id\": 1,\n\t\t\"title\": \"Dewey defeats Truman\"\n\t}, {\n\t\t\"id\": 2,\n\t\t\"title\": \"Man walks on Moon\"\n\t}]\n);\ndump(queryColumnArray(news));",
+		"result": "",
+		"runnable": "true"
+	}]
 }

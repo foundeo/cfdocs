@@ -3,12 +3,12 @@
 	"type": "function",
 	"syntax": "createGUID()",
 	"returns": "guid",
-	"related": [],
-	"description": "",
+	"related": ["createUUID"],
+	"description": "Creates a globally unique identifier (32 character hexadecimal string)",
 	"params": [],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/createguid.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": []
 }
