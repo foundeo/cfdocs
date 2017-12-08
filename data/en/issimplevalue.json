@@ -30,13 +30,13 @@
 	},{
 		"title": "A structure is a complex value",
 		"description": "So it can't a be simple value",
-		"code": "isSimpleValue({})",
+		"code": "isSimpleValue(structNew())",
 		"result": false,
 		"runnable": true
 	},{
 		"title": "An array is a complex value",
 		"description": "",
-		"code": "isSimpleValue([])",
+		"code": "isSimpleValue(arrayNew(1))",
 		"result": false,
 		"runnable": true
 	}]
