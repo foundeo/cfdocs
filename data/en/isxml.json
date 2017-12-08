@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"isXML(value)",
 	"returns":"boolean",
-	"related":[],
+	"related":["isJSON"],
 	"description":" Determines whether a string is well-formed XML text.",
 	"params": [
 		{"name":"value","description":"A string containing the XML document text.","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isxml.html"},
@@ -15,9 +14,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isxml"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isxml"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"isXML Example",
@@ -34,5 +31,4 @@
 			"runnable":true
 		}
 	]
-
 }

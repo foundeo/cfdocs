@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"fileReadBinary(filePath)",
 	"returns":"binary",
-	"related":[],
+	"related":["fileRead","fileReadLine"],
 	"description":"Reads an on-disk or in-memory binary file (such as an executable or image file) on the server, into a binary object",
 	"params": [
 		{"name":"filePath","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
@@ -14,8 +14,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filereadbinary"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filereadbinary"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

@@ -3,15 +3,14 @@
 	"type":"function",
 	"syntax":"addSOAPRequestHeader(webservice, namespace, name, value, mustunderstand)",
 	"returns":"boolean",
-	"related":[],
-	"description":" Adds a SOAP header to a web service request before making the request.",
+	"related":["getSOAPRequestHeader","getSOAPRequest"],
+	"description":"Adds a SOAP header to a web service request before making the request.",
 	"params": [
-		{"name":"webservice","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
-		{"name":"namespace","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
-		{"name":"value","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
-		{"name":"mustunderstand","description":"No Help Available","required":true,"default":"","type":"boolean","values":[]}
-
+		{"name":"webservice","description":"A webservice object as returned from the cfobject tag\n or the createobject function","required":true,"default":"","type":"string","values":[]},
+		{"name":"namespace","description":"Namespace for the SOAP header","required":true,"default":"","type":"string","values":[]},
+		{"name":"name","description":"Name of SOAP header","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"the value for the SOAP header; this can be a CFML XML value.","required":true,"default":"","type":"string","values":[]},
+		{"name":"mustunderstand","description":"The mustUnderstand attribute indicates whether processing of the header is optional or mandatory.\nThis basically translates to the node trying to find an appropriate handler that matches the header\nand proceed with processing the message in a manner consistent with its specification. If it can't find an appropriate handler\nit must return an error and stop further processing. If mustUnderstand is set to `true`\nthe node is not allowed to ignore it.","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/addsoaprequestheader.html"},
@@ -19,18 +18,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/addsoaprequestheader"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/addsoaprequestheader"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title": "Tag Syntax",
+			"title": "Set the username header as a string",
 			"description": "",
-			"code": "<h3>addSOAPRequestHeader Example</h3> \r\n <cfscript> \r\n     // Create the web service object. \r\n     ws = createObject(\"webservice\", \"http://localhost/soapheaders/headerservice.cfc?WSDL\"); \r\n     // Set the username header as a string. \r\n addSOAPRequestHeader(ws, \"http://mynamespace/\", \"username\", \"tom\", false); \r\n </cfscript>",
+			"code": "/ws = createObject(\"webservice\", \"http://localhost/soapheaders/headerservice.cfc?WSDL\");\r\naddSOAPRequestHeader(ws, \"http://mynamespace/\", \"username\", \"tom\", false);",
 			"result": "",
-            "runnable":false
+           		"runnable":false
 		}
 	]
-
-
 }

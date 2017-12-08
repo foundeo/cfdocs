@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"getFileInfo(path)",
 	"returns":"struct",
-	"related":[],
+	"related":["fileRead","cffile","fileGetMimeType","getFileFromPath"],
 	"description":"Returns information about on-disk or in-memory file. Return struct contains keys such as: lastModified, size, path, name, type, canWrite, canRead, isHidden and more.",
 	"params": [
-		{"name":"path","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
-
+		{"name":"path","description":"Path to the on-disk or in-memory file","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getfileinfo.html"},
@@ -15,8 +14,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getfileinfo"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getfileinfo"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": [{
+		"title": "Output some information about a temporary file",
+		"description": "",
+		"code": "myFile = getTempFile(getTempDirectory(),\"testFile\");\nfileInfo = getFileInfo(myFile);\nisReadable = (not fileInfo.canRead ? 'un' : '')&'readable';\nisWritable = (not fileInfo.canWrite ? 'un' : '')&'writable';\nisHidden = (not fileInfo.isHidden ? 'not ' : '')&'hidden';\ndate = DateTimeFormat(fileInfo.lastModified,'full');\nfileSize = NumberFormat(fileInfo.size / 1000 / 1000,'0.00');\nwriteOutput('\"'&fileInfo.name&'\" is '&isReadable&', '&isWritable&' and '&isHidden&'. ');\nwriteOutput('It was at last modified at '&date&' and has a size of '&fileSize&' MB');",
+		"result": "\"testFile9217639658547923751.tmp\" is readable, writable and not hidden. It was at last modified at Friday, November 3, 2017 3:58:08 PM UTC and has a size of 0.00 MB",
+		"runnable": true
+	}]
 }
