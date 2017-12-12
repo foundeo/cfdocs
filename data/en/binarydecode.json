@@ -36,6 +36,12 @@
 			"description": "use binaryDecode to decode with base64",
 			"code": "binaryDecode('U3RyaW5n','base64');",
 			"result": "[BINARY]"
+		},
+		{
+			"title": "Create a byte array with 16 bytes",
+			"description": "Each byte in the array is set to 0",
+			"code":"arrayLen(binaryDecode('00000000000000000000000000000000','hex'))",
+			"result":"16"
 		}
 	]
 }
