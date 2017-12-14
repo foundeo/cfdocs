@@ -2,7 +2,7 @@
 	"name": "cflayoutarea",
 	"type": "tag",
 	"syntax": "<cflayoutarea>",
-	"related": [],
+	"related": ["cflayout"],
 	"description": "Defines a region within a cflayout tag body, such as an \n individual tab of a tabbed layout. This tag is not used in \n Flash forms.",
 	"params": [
 		{
