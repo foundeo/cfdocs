@@ -2,7 +2,7 @@
 	"name": "cfpdfparam",
 	"type": "tag",
 	"syntax": "<cfpdfparam source=\"\">",
-	"related": [],
+	"related": ["cfpdf","cfpdfform"],
 	"description": "Provides additional information for the cfpdf tag.\n The cfpdfparam tag applies only to the merge action of the cfpdf tag.\n The cfpdfparam tag is always a child tag of the cfpdf tag.",
 	"params": [
 		{
