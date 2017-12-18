@@ -2,7 +2,7 @@
 	"name": "cfreportparam",
 	"type": "tag",
 	"syntax": "<cfreportparam>",
-	"related": [],
+	"related": ["cfreport"],
 	"description": "Passes input parameters to a ColdFusion Report Builder\n report definition. Allowed inside cfreport tag bodies only.",
 	"params": [
 		{

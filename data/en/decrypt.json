@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"decrypt(encrypted_string, key [, algorithm] [, encoding] [, ivorsalt] [, iterations])",
 	"returns":"string",
-	"related":[],
+	"related":["encrypt","cfusion_Decrypt"],
 	"description":" Decrypts a string that is encrypted with the Encrypt function.",
 	"params": [
 		{"name":"encrypted_string","description":"String to decrypt.","required":true,"default":"","type":"string","values":[]},
