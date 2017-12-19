@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "imageFilterKernel(width, height, data)",
 	"returns": "any",
-	"related": [],
+	"related": ["imageFilterColorMap","imageFilterCurves","imageFilter","imageFilterWarpGrid"],
 	"description": "",
 	"params": [
 		{"name": "width", "description": "", "required": true, "default": "", "type": "numeric", "values": []},
