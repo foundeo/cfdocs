@@ -15,6 +15,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Closes the Hibernate session associated with the datasource from the application.",
+			"description": "",
+			"code": "ormCloseSession();",
+			"result": "",
+			"runnable": false
+		}
 	]
 
 }
