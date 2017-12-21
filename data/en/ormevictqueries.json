@@ -16,6 +16,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Evicts all the Hibernate cached queries for the default cache.",
+			"description": "This will remove any cached queries from the default cache and cause the query to run again",
+			"code": "ormEvictQueries();",
+			"result": "",
+			"runnable": false
+		}
 	]
 
 }
