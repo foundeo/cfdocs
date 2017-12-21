@@ -28,7 +28,7 @@
 			"runnable":false
 		},
         	{
-			"title": "Scri Syntax",
+			"title": "Script Syntax",
 			"description": "This example shows how to create a ColdFusion image from a URL. ",
 			"code": "<cfset myImage = imageNew(\"http://www.google.com/images/logo_sm.gif\")> \r\n<cfset imageWrite(myImage,\"google_via_imagenew.png\")> \r\n<img src=\"google_via_imagenew.png\">",
 			"result": "",
