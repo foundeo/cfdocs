@@ -15,7 +15,13 @@
 
 	],
 	"examples": [
-
+		{
+			"title": "Flush all pending CRUD operations for ALL Hibernate sessions for the default datasource.",
+			"description": "Please note this will flush all operations for all users, use with care.",
+			"code": "ormFlushAll();",
+			"result": "",
+			"runnable": false
+		}
 	]
 
 }
