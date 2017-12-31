@@ -22,7 +22,7 @@
 	<cfset possible = []>
 	<cfloop array="#application.index.functions#" index="i">
 		<cfif
-			(Len(url.name) LTE 3 AND FindNoCase(url.name, i)) OR
+			Len(url.name) LTE 3 OR
 			(FindNoCase(url.name, i) OR FindNoCase(i, url.name)) OR
 			(LCase(Left(url.name, 3)) is LCase(Left(i, 3)) OR LCase(Right(url.name, 3)) is LCase(Right(i, 3)))
 		>
