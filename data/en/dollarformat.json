@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"dollarFormat(number)",
 	"returns":"string",
-	"related":[],
-	"description":" Formats a string in U.S. currency format. (For other currencies, use\n LSCurrencyFormat or LSEuroCurrencyFormat.).",
+	"related":["LSCurrencyFormat","LSEuroCurrencyFormat"],
+	"description":"Formats a money string in U.S. currency format.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/dollarformat.html"},
@@ -15,9 +14,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/dollarformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dollarformat"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Format Positive Numbers",
@@ -34,5 +31,4 @@
 			"runnable":true
 		}
 	]
-
 }

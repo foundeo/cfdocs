@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"isXMLElem(value)",
 	"returns":"boolean",
-	"related":[],
-	"description":" Determines whether a function parameter is an Extended Markup\n language (XML) document object element.",
+	"related":["isXMLDoc","isXML"],
+	"description":"Determines whether a function parameter is an Extended Markup\n language (XML) document object element.",
 	"params": [
-		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
-
+		{"name":"value","description":"XML Element","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isxmlelem.html"},
@@ -15,8 +14,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isxmlelem"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isxmlelem"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": [{
+		"title": "Check if given path is an xml element",
+		"description": "",
+		"code": "<cfxml variable=\"example\">\n\t<coldfusionengines>\n\t\t<engine>\n\t\t\t<name>Adobe ColdFusion</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Lucee</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Railo</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Open BlueDragon</name>\n\t\t</engine>\n\t</coldfusionengines>\n</cfxml>\n<cfscript>\n\twriteOutput(isXMLElem(example.coldfusionengines));\n</cfscript>",
+		"result": "YES",
+		"runnable": true
+	}]
 }

@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "beat([time])",
 	"returns": "numeric",
-	"related": [],
+	"related": ["now","lsTimeFormat","timeFormat","CreateODBCTime"],
 	"description": "Outputs the swatch internet time (or beat time) of the passed local time.",
 	"params": [
 		{"name": "time", "description": "The local time to get beat time from", "required": false, "default": "", "type": "any", "values": []}
@@ -11,6 +11,18 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/beat.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": [{
+		"title": "Now in swatch internet time",
+		"description": "",
+		"code": "beat()",
+		"result": "",
+		"runnable": true
+	},{
+		"title": "14:02 in swatch internet time",
+		"description": "",
+		"code": "beat(\"14:02\")",
+		"result": "626.388",
+		"runnable": true
+	}]
 }

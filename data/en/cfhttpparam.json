@@ -2,7 +2,7 @@
 	"name":"cfhttpparam",
 	"type":"tag",
 	"syntax":"<cfhttpparam type=\"header\">",
-	"related":[],
+	"related":["cfhttp"],
 	"description":"Allowed inside cfhttp tag bodies only. Required for cfhttp POST\n operations. Optional for all others. Specifies parameters to\n build an HTTP request.",
 	"params": [
 		{"name":"type","description":"The type of data to send\n\n `header`: Specifies an HTTP header. Does not URL encode the value\n\n`body`: Specifies that the `value` is the body of the HTTP request.\n\n`xml`: Identifies the request as having a content-type of\n `text\/xml` and specifies that the `value` attribute contains the body of the HTTP request.\n\n`cgi`: Same as `header` but URL encodes the `value` by default.\n\n`file`: Tells CFML to send the contents of the specified file.\n\n`url`: Specifies a URL query string name-value pair to append to the cfhttp url attribute. URL encodes the value.\n\n`formfield`: Specifies a form field to send. URL encodes the value by default.\n\n`cookie`: Specifies a cookie to send as an HTTP header. URL encodes the value.","required":true,"default":"","type":"string","values":["header","body","xml","cgi","file","url","formfield","cookie"]},
@@ -11,7 +11,6 @@
 		{"name":"file","description":"Applies to `file` type; ignored for all other types. The absolute path to the file that is sent with the request.","required":false,"default":"","type":"string","values":[]},
 		{"name":"encoded","description":"Applies to `formfield` and `cgi` types; ignored for all other\n types. Specifies whether to URLEncode the form field or\n header.","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"mimetype","description":"Applies to `file` type; invalid for all other types.\n Specifies the MIME media type of the file contents.\n The content type can include an identifier for the\n character encoding of the file; for example, text\/html;\n charset=ISO-8859-1 indicates that the file is HTML text in\n the ISO Latin-1 character encoding.","required":false,"default":"","type":"string","values":["text\/plain","text\/html"]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfhttpparam.html"},
@@ -19,8 +18,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfhttpparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfhttpparam"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"max(number1, number2)",
 	"returns":"numeric",
-	"related":[],
+	"related":["min","arrayMin","arrayMax"],
 	"description":" Determines the greater of two numbers.",
 	"params": [
 		{"name":"number1","description":"","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"number2","description":"","required":true,"default":"","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/max.html"},
@@ -16,17 +15,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/max"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/max"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<cfset local.myNum1 = 4 /> \r\n <cfset local.myNum2 = 9 /> \r\n The maximum of the two numbers is <cfoutput>#max(local.myNum1, local.myNum2)#</cfoutput> \r\n  ",
-			"result":"",
+			"code":"<cfset myNum1 = 4 /> \r\n<cfset myNum2 = 9 /> \r\n<cfoutput>The maximum of #myNum1# and #myNum2# numbers is #max(myNum1, myNum2)#.</cfoutput>",
+			"result":"The maximum of 4 and 9 is 9.",
 			"runnable":true
 		}
 	]
-
 }

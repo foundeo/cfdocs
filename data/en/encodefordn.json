@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"encodeForDN( string );",
 	"returns":"string",
-	"related":[],
+	"related":["encodeForLDAP"],
 	"description":"Encodes the given string for safe output in LDAP Distinguished Names. Lucee only, not supported on Adobe CF.",
 	"params": [
 		{"name":"string","description":"string to encode.","required":true,"default":"","type":"","values":[]}
@@ -13,14 +13,12 @@
 		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/encodefordn.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/EncodeForDN"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
-        {
+        	{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n enc=encodeForDN('<script>'); \r\n writeDump(enc); \r\n </cfscript> \r\n",
+			"code": "enc = encodeForDN('<script>');\r\nwriteDump(enc);",
 			"result": ""
 		}
 	]

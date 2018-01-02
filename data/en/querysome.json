@@ -4,8 +4,8 @@
 	"syntax": "querySome(query, closure [, parallel] [, maxThreads])",
 	"member": "query.some(closure [, parallel] [, maxThreads])",
 	"returns": "boolean",
-	"related": [],
-	"description": "",
+	"description": "This function calls a given closure/function with every element in a given query and returns true, if one of the closure calls returns true",
+	"related": ["queryFilter","queryReduce","queryMap"],
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},

@@ -2,7 +2,7 @@
 	"name":"cfexchangemail",
 	"type":"tag",
 	"syntax":"<cfexchangemail meetinguid=\"\" message=\"\" name=\"\" uid=\"\">",
-	"related":[],
+	"related":["cfexchangeconnection","cfexchangecontact","cfexchangecalendar","cfexchangetask","cfexchangefilter"],
 	"description":"Gets mail messages and attachments, deletes messages, and sets properties for messages on a Microsoft Exchange server.\n The cfexchangemail tag performs mail actions on an Exchange server that you cannot do using the cfmail tag.",
 	"params": [
 		{"name":"action","description":"The name to use for the JavaScript proxy class. (required)","required":false,"default":"","type":"string","values":["get","getAttachments","getMeetingInfo","delete","deleteAttachments","move","set"]},
@@ -16,13 +16,9 @@
 		{"name":"name","description":"The name of the ColdFusion query variable that will contain the returned mail messages or information\n about the attachments that were retrieved. (required)","required":true,"default":"","type":"string","values":[]},
 		{"name":"UID","description":"The case-sensitive UIDs of the messages on which to perform the action.\n For the delete action, this attribute can be a comma delimited list of UID values.\n The getAttachments and set actions allow only a single UID value. (required)","required":true,"default":"","type":"string","values":[]},
 		{"name":"destinationfolder","description":"The forward slash (\/) delimited path, relative to the root of the mailbox, of the folder to which to move the message or messages.","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexchangemail.html"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

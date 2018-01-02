@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"getTempFile(dir, prefix)",
 	"returns":"string",
-	"related":[],
+	"related":["getTempDirectory","fileWrite"],
 	"description":" Creates a temporary file in a directory whose name starts with\n (at most) the first three characters of prefix.",
 	"params": [
 		{"name":"dir","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"prefix","description":"","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/gettempfile.html"},
@@ -16,17 +15,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/gettempfile"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/gettempfile"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+    	"examples": [
 		{
-			"title": "Tag Syntax",
-			"description": "",
-			"code": "<cfoutput>#getTempFile(getTempDirectory(),\"testFile\")#</cfoutput></p>    ",
+			"title": "Create temp file in temp dir",
+			"description": "Returns path of file created",
+			"code": "getTempFile(getTempDirectory(),\"testFile\")",
 			"result": "",
 			"runnable":true
 		}
 	]
-
 }

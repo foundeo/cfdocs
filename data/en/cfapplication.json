@@ -5,6 +5,7 @@
 	"script":"component { /* Application.cfc */ this.name=\"myAppName\"; }",
 	"related":["application-cfc"],
 	"description":"Defines the scope of a CFML application and allows you to set various application specific settings. Consider using Application.cfc instead of Application.cfm files.",
+	"discouraged":"Use Application.cfc instead of Application.cfm files. The Application component provides better organization and additional features. Note that if you are using Application.cfm it should contain a cfapplication tag.",
 	"params": [
 		{"name":"name","description":"Name of application. Up to 64 characters","required":false,"default":"","type":"string","values":[]},
 		{"name":"loginstorage","description":"cookie: store login information in the Cookie scope.\n session: store login information in the Session scope.","required":false,"default":"cookie","type":"string","values":["cookie","session"]},

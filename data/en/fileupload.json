@@ -1,7 +1,7 @@
 {
   "name": "fileUpload",
   "type": "function",
-  "syntax": "fileUpload(string destination,[string fileField,[string accept,[string nameConflict]]])",
+  "syntax": "fileUpload(destination [, fileField] [, accept] [, nameConflict] [, strict])",
   "returns": "struct",
   "related": [
     "fileUploadAll"
@@ -39,7 +39,7 @@
     },
     {
       "name": "accept",
-      "description": "Specify a comma-delimited list of MIME types and/or file extensions to test the uploaded file agains. If the file is not of any of the types in this list, an error of type `coldfusion.tagext.io.FileUtils$InvalidUploadTypeException`is thrown.\nIf you specify file extensions, use this format: `.txt,.jpg`, not `txt`, `*.txt`, or `*.*`. You can use `*` as a wildcard to accept all files.",
+      "description": "Specify a comma-delimited list of MIME types and/or file extensions to test the uploaded file against. If the file is not of any of the types in this list, an error of type `coldfusion.tagext.io.FileUtils$InvalidUploadTypeException`is thrown.\nIf you specify file extensions, use this format: `.txt,.jpg`, not `txt`, `*.txt`, or `*.*`. You can use `*` as a wildcard to accept all files.",
       "required": false,
       "default": "",
       "type": "string",
@@ -47,7 +47,7 @@
     },
     {
       "name": "strict",
-      "description": "CF10+ Defines which method is used to determine the file type to check agains the value of the `accept` attribute.\n`true:` The first few bytes of the uploaded file are used to determine the MIME type.\n`false:` The MIME type provided by the browser in the request payload is used.",
+      "description": "CF10+ Defines which method is used to determine the file type to check against the value of the `accept` attribute.\n`true:` The first few bytes of the uploaded file are used to determine the MIME type.\n`false:` The MIME type provided by the browser in the request payload is used.",
 
       "required": false,
       "default": "true",

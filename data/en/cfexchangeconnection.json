@@ -2,7 +2,7 @@
 	"name":"cfexchangeconnection",
 	"type":"tag",
 	"syntax":"<cfexchangeconnection action=\"open\" connection=\"\" server=\"\" username=\"\">",
-	"related":[],
+	"related":["cfexchangecalendar","cfexchangecontact","cfexchangemail","cfexchangetask","cfexchangefilter"],
 	"description":"Opens or closes a persistent connection to an Microsoft Exchange server.\n You must have a persistent or temporary connection to use the cfexchangecalendar,\n cfexchangecontact, cfexchangemail, and cfexchangetask tags to get or change\n information on the Exchange server.",
 	"params": [
 		{"name":"action","description":"The action to take. Must be open or close. (required)","required":true,"default":"","type":"string","values":["open","close","getsubfolders"]},
@@ -20,13 +20,9 @@
 		{"name":"name","description":"The name of the ColdFusion query variable that contains information about the subfolders.","required":false,"default":"","type":"string","values":[]},
 		{"name":"exchangeServerLanguage","description":"The language of the Exchange server. Default is English.","required":false,"default":"","type":"string","values":[]},
 		{"name":"formBasedAuthentication","description":"A Boolean value that specifies whether to display a login form and use form based authentication when making the connection.","required":false,"default":"","type":"boolean","values":[true,false]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexchangeconnection.html"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

@@ -7,17 +7,15 @@
 	"description":"Creates a new custom cache region (if no cache region exists).",
 	"params": [
 		{"name":"region","description":"Name of the new cache region to be created.","required":true,"default":"","type":"","values":[]},
-        {"name":"properties","description":"Struct that contains the cache region properties.","required":false,"default":"","type":"","values":[]},
-        {"name":"throwOnError","description":"A Boolean value specifying if to throw an exception if the cache region name you specify already exists. The default value is true.","required":false,"default":"","type":"","values":[]}
+		{"name":"properties","description":"Struct that contains the cache region properties.","required":false,"default":"","type":"","values":[]},
+		{"name":"throwOnError","description":"A Boolean value specifying if to throw an exception if the cache region name you specify already exists. The default value is true.","required":false,"default":"","type":"","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheRegionNew.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cacheregionnew"},
-		"lucee":{"minimum_version":"5", "notes":"", "docs":"http://docs.lucee.org/guides/lucee-5/functions-tags.html","deprecated":"5"}
+		"lucee":{"minimum_version":"5", "notes":"Only been added for compatibility to other CFML Engines. These functions are already marked as \"deprecated\" and it's strongly suggested not to use them in new code.", "docs":"http://docs.lucee.org/guides/lucee-5/functions-tags.html","deprecated":"5"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Tag Syntax",
@@ -26,5 +24,4 @@
 			"result": ""
 		}
 	]
-
 }

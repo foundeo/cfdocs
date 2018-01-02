@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "findOneOf(set, string [, start])",
 	"returns": "numeric",
-	"related": [],
+	"related": ["listFind","find","findNoCase"],
 	"description": " Finds the first occurrence of any one of a set of characters in a string,\n from a specified start position. The search is case-sensitive.\n\n Returns the position of the first member of set found in string; or 0, if no member of set is found in string.",
 	"params": [
 		{
@@ -51,6 +51,7 @@
 			"docs": "http://openbd.org/manual/?/function/findoneof"
 		}
 	},
+	"links": [],
 	"examples": [
 		{
 			"result": "7",
@@ -70,6 +71,5 @@
 			"description": "This function is case-sensitive so 't' does NOT match the first 'T'. It's the same for 'H' NOT matching the first 'h'. But 'e' matches the 'e' at the third position.\nSince this is the first match, this is the index that is returned.",
 			"code": "string_to_search = 'The rain in Spain falls mainly in the plains.';\nwriteOutput( findOneOf('tHe', string_to_search, 1) );"
 		}
-	],
-	"links": []
+	]
 }

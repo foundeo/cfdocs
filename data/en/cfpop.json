@@ -2,7 +2,7 @@
 	"name":"cfpop",
 	"type":"tag",
 	"syntax":"<cfpop server=\"\">",
-	"related":[],
+	"related":["cfimap","cfmail"],
 	"description":"Retrieves or deletes e-mail messages from a POP mail server.",
 	"params": [
 		{"name":"server","description":"POP server identifier:\n A host name; for example, \"biff.upperlip.com\"\n An IP address; for example, \"192.1.2.225\"","required":true,"default":"","type":"string","values":[]},
@@ -18,7 +18,6 @@
 		{"name":"maxrows","description":"Number of messages to return or delete, starting with the\n number in startRow. Ignored if messageNumber or uid is\n specified.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"startrow","description":"First row number to get or delete. Ignored if messageNumber\n or uid is specified.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"generateUniqueFileNames","description":"Yes: Generate unique filenames for files attached to an\n e-mail message, to avoid naming conflicts when files are\n saved","required":false,"default":"","type":"boolean","values":[true,false]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpop.html"},
@@ -26,8 +25,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfpop"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfpop"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

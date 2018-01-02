@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"fileSetAttribute(filePath, attribute)",
 	"returns":"void",
-	"related":[],
-	"description":" Sets the attributes of an on-disk file in Windows. This function does not work with in-memory files.",
+	"related":["getFileInfo","fileWrite"],
+	"description":"Sets the attributes of an on-disk file in Windows. This function does not work with in-memory files.",
 	"params": [
-		{"name":"filePath","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
-		{"name":"attribute","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
-
+		{"name":"filePath","description":"Path to on-disk file","required":true,"default":"","type":"string","values":[]},
+		{"name":"attribute","description":"Attribute to enable/disable\n\nreadonly/hidden sets the given attribute to `true` and the other one to `false`\nnormal sets both to false","required":true,"default":"","type":"string","values":["readOnly","hidden","normal"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filesetattribute.html"},
@@ -16,17 +15,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filesetattribute"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filesetattribute"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+    	"examples": [
 		{
-			"title": "Script Syntax",
+			"title": "Create a temporary file and then change read-only mode",
 			"description": "",
-			"code": "<cfscript> \r\n fileSetAttribute(\"c:\temp\test1.txt\", \"readOnly\"); \r\n </cfscript>  ",
-			"result": "",
-			"runnable":false
+			"code": "myFile = getTempFile(getTempDirectory(),\"testFile\");\nwriteOutput('is writable: '&getFileInfo(myFile).canWrite);\nfileSetAttribute(myFile,'readOnly');\nwriteOutput(' → '&getFileInfo(myFile).canWrite);",
+			"result": "is writable: YES → NO",
+			"runnable":true
 		}
 	]
-
 }

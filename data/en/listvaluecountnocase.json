@@ -3,13 +3,12 @@
 	"type":"function",
 	"syntax":"listValueCountNoCase(list, value [, delimiters])",
 	"returns":"numeric",
-	"related":[],
-	"description":" Counts instances of a specified value in a list. The search is\n case-insensitive.",
+	"related":["listLen","structCount"],
+	"description":"Counts instances of a specified value in a list.\nThe search is case-insensitive. For case-sensitive search use listValue.",
 	"params": [
 		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listvaluecountnocase.html"},
@@ -17,9 +16,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listvaluecountnocase"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listvaluecountnocase"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
         {
             "title": "Simple Example",
@@ -36,5 +33,4 @@
             "runnable":true
         }
     ]
-
 }

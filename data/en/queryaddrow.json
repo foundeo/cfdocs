@@ -8,7 +8,6 @@
 	"params": [
 		{"name":"query","description":"","required":true,"default":"","type":"query","values":[]},
 		{"name":"number/row(s)","description":"As of CF10+ you can pass a Structure whose keys map to the query column names to insert a row of data; or an Array of those Structures to insert multiple rows at once.","required":false,"default":"","type":"Numeric / Array / Struct","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryaddrow.html"},
@@ -16,9 +15,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/queryaddrow"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/queryaddrow"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Builds a simple query using queryNew and queryAddRow",
@@ -43,12 +40,11 @@
 		},
 		{
 			"title":"Builds a simple query using queryNew queryAddRow with multiple rows as an array",
-			"description":"The example above could be simplified even more this way:",
-			"code":"<cfscript>\r\nnews = queryNew(\"id,title\", \"integer,varchar\");\r\nqueryAddRow(news, [{\"id\"=1,\"title\"=\"Dewey defeats Truman\"},{\"id\"=2,\"title\"= \"Men walk on Moon\"}]);\r\nwriteDump(news);\r\n</cfscript>",
+			"description":"CF10+ The example above could be simplified even more this way:",
+			"code":"news = queryNew(\"id,title\", \"integer,varchar\");\r\nqueryAddRow(news, [{\"id\"=1,\"title\"=\"Dewey defeats Truman\"},{\"id\"=2,\"title\"= \"Men walk on Moon\"}]);\r\nwriteDump(news);",
 			"result":"",
 			"runnable":true
 		}
 
 	]
-
 }

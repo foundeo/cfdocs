@@ -14,5 +14,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/fileexists"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/fileexists"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Checks if file at the give path exists.",
+			"description": "",
+			"code": "var myFile = \"/path/to/the/file.jpg\";\r\nif(fileExists(myFile)) {\r\n\twriteOutput(myFile & 'exists!');\r\n}",
+			"result": ""
+		}
+	]
 }

@@ -4,7 +4,7 @@
 	"syntax": "queryColumnExists(query, column)",
 	"member": "query.columnExists(column)",
 	"returns": "boolean",
-	"related": [],
+	"related": ["queryColumnList","queryColumnCount","queryColumnArray","valueArray"],
 	"description": "",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
@@ -13,6 +13,18 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querycolumnexists.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": [{
+		"title": "ID column is in given query",
+		"description": "",
+		"code": "myQuery = queryNew(\"ID,name,age\");\nwriteOutput(queryColumnExists(myQuery,\"ID\"));",
+		"result": true,
+		"runnable": true
+	},{
+		"title": "Whereas \"gender\" is not",
+		"description": "",
+		"code": "myQuery = queryNew(\"ID,name,age\");\nwriteOutput(queryColumnExists(myQuery,\"gender\"));",
+		"result": false,
+		"runnable": true
+	}]
 }

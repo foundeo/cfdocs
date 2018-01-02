@@ -3,17 +3,13 @@
 	"type":"function",
 	"syntax":"isSpreadsheetFile(file)",
 	"returns":"boolean",
-	"related":[],
-	"description":" Checks if given file is spreadsheet file or not",
+	"related":["isPDFFile","isPDFObject","isSpreadsheetObject"],
+	"description":"Checks if given file is spreadsheet file or not",
 	"params": [
 		{"name":"file","description":"Any file","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isspreadsheetfile.html"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

@@ -2,7 +2,7 @@
 	"name":"cfzipparam",
 	"type":"tag",
 	"syntax":"<cfzipparam>",
-	"related":[],
+	"related":["cfzip"],
 	"description":"Provides additional information to the cfzip tag.\n The cfzipparam tag is always a child tag of the cfzip tag.",
 	"params": [
 		{"name":"charset","description":"Converts string content into binary data before putting\n it into a ZIP or JAR file. Used only when cfzip\n action=\"zip\" and the cfzipparam content is a string.\n Examples of character sets are:\n JIS\n RFC1345\n UTF-16 (optional, default=encoding of the host machine)","required":false,"default":"","type":"string","values":["JIS","RFC1345","UTF-16"]},
@@ -12,7 +12,6 @@
 		{"name":"prefix","description":"String added as a prefix to the ZIP or JAR entry. Used only\n when cfzip action=\"zip\". (optional)","required":false,"default":"","type":"string","values":[]},
 		{"name":"recurse","description":"Recurse the directory to be zipped, unzipped, or deleted,\n as specified by the cfzip parent tag. (optional, default=yes)","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"source","description":"Source directory or file. Used only when cfzip action=\"zip\".\n Specified file(s) are added to the ZIP or JAR file:\n If you specify source attribute for the cfzip tag, the\n cfzipparam source is relative to it.\n If you do not specify a source attribute for the cfzip\n tag, the cfzipparam source must be an absolute path. (optional)","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfzipparam.html"},
@@ -20,8 +19,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfzipparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfzipparam"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

@@ -2,7 +2,7 @@
 	"name":"cfwddx",
 	"type":"tag",
 	"syntax":"<cfwddx action=\"cfml2wddx\" input=\"\">",
-	"related":[],
+	"related":["getSOAPRequest"],
 	"description":"Serializes and deserializes CFML data structures to the\n XML-based WDDX format. The WDDX is an XML vocabulary for\n describing complex data structures in a standard, generic way.\n Implementing it lets you use the HTTP protocol to such\n information among application server platforms, application\n servers, and browsers.\n\n This tag generates JavaScript statements to instantiate\n JavaScript objects equivalent to the contents of a WDDX packet\n or CFML data structure. Interoperates with Unicode.",
 	"params": [
 		{"name":"action","description":"cfml2wddx: serialize CFML to WDDX\n wddx2cfml: deserialize WDDX to CFML\n cfml2js: serialize CFML to JavaScript\n wddx2js: deserialize WDDX to JavaScript","required":true,"default":"","type":"string","values":["cfml2wddx","wddx2cfml","cfml2js","wddx2js"]},

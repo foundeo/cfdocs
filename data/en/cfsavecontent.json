@@ -2,11 +2,11 @@
 	"name":"cfsavecontent",
 	"type":"tag",
 	"syntax":"<cfsavecontent variable=\"\">",
+	"script":"savecontent variable=\"\" {};",
 	"related":[],
 	"description":"Saves the generated content of the cfsavecontent tag, including\n the results of evaluating expressions and executing custom tags,\n in the specified variable.",
 	"params": [
 		{"name":"variable","description":"Name of the variable in which to save the generated content\n of the tag.","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfsavecontent.html"},
@@ -14,9 +14,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfsavecontent"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfsavecontent"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Script Syntax",
@@ -25,11 +23,10 @@
 			"result": ""
 		},
 	        {
-	            "title": "Tag Syntax",
-	            "description": "",
-	            "code": "<cfsavecontent variable=\"myContent\">\r\n<cfoutput>Some content.</cfoutput>\r\n</cfsavecontent>",
-	            "result": ""
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfsavecontent variable=\"myContent\">\r\n<cfoutput>Some content.</cfoutput>\r\n</cfsavecontent>",
+			"result": ""
 	        }
 	]
-
 }

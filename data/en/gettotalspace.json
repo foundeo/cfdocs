@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"getTotalSpace(path);",
 	"returns":"numeric",
-	"related":[],
+	"related":["getSystemTotalMemory"],
 	"description":" Returns the total disk space or in-memory space avaialbe for an appliation.",
 	"params": [
 		{"name":"path","description":"path to the hard drive or for in memory file system.","required":true,"default":"","type":"","values":[]}
@@ -13,16 +13,13 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/gettotalspace.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getTotalSpace"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "the in-memory file system memory set in cfadmin and should return that.",
-			"code": "<cfset totalRMSSpace = getTotalSpace('ram')> \r\n <cfoutput>total app ram memory: #decimalFormat(totalRamSpace)/(1024 * 1024)# mb </cfoutput> \r\n",
+			"code": "<cfset totalRMSSpace = getTotalSpace('ram')>\r\n<cfoutput>total app ram memory: #decimalFormat(totalRamSpace)/(1024 * 1024)# mb</cfoutput>",
 			"result": ""
 		}
 	]
-
 }

@@ -3,12 +3,12 @@
 	"type":"function",
 	"syntax":"getLocale()",
 	"returns":"string",
-	"related":["getLocaleDisplayName","GetLocaleInfo"],
+	"related":["getLocaleDisplayName","GetLocaleInfo","getLocaleCountry","getLocaleLanguage"],
 	"description":" Gets the current geographic/language locale value.\n To set the default display format of date, time, number, and\n currency values in a CFML application session, you use\n the SetLocale function.",
 	"params": [],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getlocale.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/getlocale.html"},
+		"lucee": {"minimum_version":"", "deprecated":"5", "notes":"Lucee5+ Deprecated in favor of getLocaleInfo()", "docs":"http://docs.lucee.org/reference/functions/getlocale.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getlocale"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getlocale"}
 	},
