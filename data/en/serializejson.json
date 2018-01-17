@@ -1,7 +1,7 @@
 {
 	"name":"serializeJSON",
 	"type":"function",
-	"syntax":"SerializeJSON(var[, serializeQueryByColumns[, useSecureJSONPrefix[, useCustomSerializer]]])",
+	"syntax":"serializeJSON(var[, serializeQueryByColumns[, useSecureJSONPrefix[, useCustomSerializer]]])",
 	"returns":"string",
 	"related":["deserializeJSON"],
 	"description":"Converts a ColdFusion variable into a JSON (JavaScript Object Notation) string.",
