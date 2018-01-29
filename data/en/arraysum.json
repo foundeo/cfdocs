@@ -36,6 +36,12 @@
 			"description": "CF11+ Lucee4.5+ Uses the sum member function is the same as running arraySum.",
 			"code": "numberArray = [10,99,27,72];\nwriteOutput( numberArray.sum() );",
 			"result": "208"
+		},
+		{
+			"title": "Sum the values in a numeric Query column (first transformed into an array)",
+			"description": "Get the total of a query column by using valueArray() and then using the sum() member function",
+			"code": "qryProducts = queryNew('id,title,price', 'integer,varchar,integer');\n\nqueryAddRow(qryProducts, {'id'=1,'title'='widget','price'=20});\nqueryAddRow(qryProducts, {'id'=2,'title'='something','price'=9});\nqueryAddRow(qryProducts, {'id'=3,'title'='some product','price'=4});\n\n\nwriteOutput( valueArray(qryProducts, 'price').sum() );",
+			"result": "33"
 		}
 	]
 
