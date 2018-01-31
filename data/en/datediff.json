@@ -7,7 +7,7 @@
 	"related":["dateadd","dateformat"],
 	"description":"Determines the integer number of datepart units by which date1 is less than date2.",
 	"params": [
-		{"name":"datepart","description":"yyyy: Year\n q: Quarter\n m: Month\n y: Day of year\n d: Day\n w: Weekday\n ww: Week\n h: Hour\n n: Minute\n s: Second\n","required":true,"default":"","type":"string","values":["yyyy","q","m","y","d","w","ww","h","n","s"]},
+		{"name":"datepart","description":"yyyy: Year\n q: Quarter\n m: Month\n y: Day of year\n d: Day\n w: Week\n ww: Week\n h: Hour\n n: Minute\n s: Second\n","required":true,"default":"","type":"string","values":["yyyy","q","m","y","d","w","ww","h","n","s"]},
 		{"name":"date1","description":"","required":true,"default":"","type":"date","values":[]},
 		{"name":"date2","description":"","required":true,"default":"","type":"date","values":[]}
 	],

@@ -2,7 +2,7 @@
 	"name":"cfcol",
 	"type":"tag",
 	"syntax":"<cfcol header=\"\" text=\"\">",
-	"related":[],
+	"related":["cftable"],
 	"description":"Defines table column header, width, alignment, and text. Used\n within a cftable tag.",
 	"discouraged":"The use of tags that generate client side UI code is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cftable/index.html",
 	"params": [
@@ -10,7 +10,6 @@
 		{"name":"width","description":"Column width. If the length of data displayed exceeds this\n value, data is truncated to fit. To avoid this, use an\n HTML table tag.","required":false,"default":20,"type":"numeric","values":[]},
 		{"name":"align","description":"Column alignment","required":false,"default":"left","type":"string","values":["left","center","right"]},
 		{"name":"text","description":"Double-quotation mark-delimited text; determines what to\n display. Rules: same as for cfoutput sections. You can\n embed hyperlinks, image references, and input controls","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcol.html"},
@@ -25,5 +24,4 @@
 			"url":"http://static.raymondcamden.com/cfuitherightway/cftable/index.html"
 		}
 	]
-
 }

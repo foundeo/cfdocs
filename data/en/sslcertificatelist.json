@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "sslCertificateList(host [, port])",
 	"returns": "query",
-	"related": [],
+	"related": ["sslCertificateInstall"],
 	"description": "List all Certificates available on a specific host",
 	"params": [
 		{"name": "host", "description": "", "required": true, "default": "", "type": "string", "values": []},
@@ -12,6 +12,6 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/sslcertificatelist.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": []
 }

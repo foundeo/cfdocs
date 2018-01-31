@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"isXMLDoc(value)",
 	"returns":"boolean",
-	"related":[],
-	"description":" Determines whether a function parameter is an Extended Markup\n language (XML) document object.",
+	"related":["isXML"],
+	"description":"Determines whether a function parameter is an Extended Markup\n language (XML) document object.",
 	"params": [
-		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
-
+		{"name":"value","description":"XML document","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isxmldoc.html"},
@@ -15,8 +14,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isxmldoc"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isxmldoc"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": [{
+		"title": "Checks if a given xml is valid",
+		"description": "",
+		"code": "<cfxml variable=\"example\">\n\t<coldfusionengines>\n\t\t<engine>\n\t\t\t<name>Adobe ColdFusion</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Lucee</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Railo</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Open BlueDragon</name>\n\t\t</engine>\n\t</coldfusionengines>\n</cfxml>\n<cfscript>\n\twriteOutput(isXMLDoc(example));\n</cfscript>",
+		"result": "YES",
+		"runnable": true
+	}]
 }

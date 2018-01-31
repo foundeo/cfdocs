@@ -41,7 +41,7 @@
 		},
 		{
 			"title":"Using arrayFind with a closure / callback function",
-			"description":"CF10+ Lucee4.5+ The arrayFind function passes each array value into the supplied function. The function returns a boolean, `true` if you found what you are looking for. The result of the arrayFind function is the index of the array element that was found, or `0` if not found.",
+			"description":"CF10+ Lucee4.5+ The arrayFind function passes each array value into the supplied function. The function returns a boolean, `true` if you found what you are looking for. The result of the arrayFind function is the index of the first matching array element found, or `0` if not found. Use arrayFindAll to return an array of all found item indexes.",
 			"code":"a = [5,4,3,2,1];\npos = arrayFind(a, function(item) {\n\treturn item == 2;\n});\nwriteOutput(pos);",
 			"result":"4",
 			"runnable":true

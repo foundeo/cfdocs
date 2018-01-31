@@ -2,7 +2,7 @@
 	"name": "cfmapitem",
 	"type": "tag",
 	"syntax": "<cfmapitem>",
-	"related": [],
+	"related": ["cfmap"],
 	"description": "This tag creates markers on the map.",
 	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfmap/index.html",
 	"params": [
@@ -80,11 +80,7 @@
 		}
 	],
 	"engines": {
-		"coldfusion": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmapitem.html"
-		}
+		"coldfusion": {"minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmapitem.html"}
 	},
 	"links": []
 }

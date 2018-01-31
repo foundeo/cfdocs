@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"lsCurrencyFormat(number [, type])",
 	"returns":"string",
-	"related":[],
+	"related":["dollarFormat","LSEuroCurrencyFormat"],
 	"description":"Formats a number in a locale-specific currency format. For countries that use the euro, the result depends on the JVM.\n [type - quicky]\n local: the currency format and currency symbol used locally.\n - With JDK 1.3, the default for Euro Zone: local currency.\n - With JDK 1.4, the default for Euro Zone: euro.\n international: the international standard currency format\n none: the local currency format; no currency symbol",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"type","description":"","required":false,"default":"","type":"string","values":["local","international","none"]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/lscurrencyformat.html"},
@@ -16,17 +15,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lscurrencyformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lscurrencyformat"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Tag Example",
 			"description":"lsCurrencyFormat returns a currency value using the locale convention. Default value is local. ",
-			"code":"<!--- loop through list of locales; show currency values for 100,000 units ---> \r\n <cfloop LIST = \"#Server.Coldfusion.SupportedLocales#\" \r\n index = \"locale\" delimiters = \",\"> \r\n <cfset oldlocale = setLocale(locale)> \r\n <cfoutput><p><b><I>#locale#</I></b> \r\n Local: #lsCurrencyFormat(100000, \"local\")# \r\n International: #lsCurrencyFormat(100000, \"international\")# \r\n None: #lsCurrencyFormat(100000, \"none\")# \r\n <hr noshade> \r\n </cfoutput> \r\n </cfloop> ",
+			"code":"<!--- loop through list of locales; show currency values for 100,000 units --->\r\n<cfloop LIST = \"#Server.Coldfusion.SupportedLocales#\"\r\nindex = \"locale\" delimiters = \",\">\r\n<cfset oldlocale = setLocale(locale)>\r\n<cfoutput><p><b><I>#locale#</I></b>\r\nLocal: #lsCurrencyFormat(100000, \"local\")#\r\nInternational: #lsCurrencyFormat(100000, \"international\")#\r\nNone: #lsCurrencyFormat(100000, \"none\")#\r\n<hr noshade>\r\n</cfoutput>\r\n</cfloop>",
 			"result":"",
 			"runnable":true
 		}
 	]
-
 }

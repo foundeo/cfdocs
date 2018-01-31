@@ -50,6 +50,7 @@ component extends="testbox.system.BaseSpec" {
 											}
 										}
 										if (isBoolean(e.result) && !isNumeric(e.result)) {
+											expect(isBoolean(actualResult)).toBeTrue("#fileName# example result is:#e.result# but evaluated to:#actualResult#");
 											if (e.result == true) {
 												expect(actualResult).toBeTrue("#fileName# example result is:#e.result# but evaluated to:#actualResult#");
 											} else {

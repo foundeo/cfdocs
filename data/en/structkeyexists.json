@@ -3,13 +3,12 @@
 	"type":"function",
 	"syntax":"structKeyExists(structure, key)",
 	"returns":"boolean",
-	"related":[],
+	"related":["isDefined","isEmpty"],
 	"description":"Determines whether a specific key is present in a structure.",
 	"member":"struct.keyExists(key)",
 	"params": [
 		{"name":"structure","description":"Name of structure to test","required":true,"default":"","type":"struct","values":[]},
 		{"name":"key","description":"Key to test","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structkeyexists.html"},
@@ -17,9 +16,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structkeyexists"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structkeyexists"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Check if server struct has OS key",
@@ -34,5 +31,4 @@
 			"result": "YES"
 		}
 	]
-
 }

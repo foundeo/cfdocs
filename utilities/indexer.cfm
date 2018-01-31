@@ -66,7 +66,7 @@
 <cfset arraySort(guides, "text")>
 <cfset arraySort(categories, "text")>
 <cfset arraySort(all, "text")>
-<cfset index = {"tags"=tags, "functions"=functions,"categories"=categories, "guides"=guides}>
+<cfset index = {"tags"=tags, "functions"=functions,"categories"=categories, "guides"=guides, "components"=["application-cfc"]}>
 <cfset fileWrite(dataDir & "/index.json", prettyJSON(serializeJSON(index)), "utf-8")>
 <p>Wrote index.json</p>
 

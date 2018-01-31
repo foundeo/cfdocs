@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "cfusion_Decrypt(string, key)",
 	"returns": "string",
-	"related": [],
+	"related": ["cfusion_Encrypt","decrypt","encrypt"],
 	"description": "Decrypts the given string, alias for function call decrypt(string,key,\"cfmx_compat\",\"hex\").",
 	"discouraged": "The use of this function is discouraged. It is an internal function, call decrypt(string,key,\"cfmx_compat\",\"hex\") instead.",
 	"params": [

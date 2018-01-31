@@ -4,7 +4,7 @@
 	"syntax": "queryColumnList(query [, delimiter])",
 	"member": "query.columnList([delimiter])",
 	"returns": "string",
-	"related": [],
+	"related": ["queryColumnList","queryColumnCount","queryColumnExists","valueArray"],
 	"description": "Returns the column names of a query as a list.",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},

@@ -10,7 +10,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfhtmlhead.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/htmlhead.html"},
+		"lucee": {"minimum_version":"", "notes":"Lucee supports ommitting the parenthesis in script syntax", "docs":"http://docs.lucee.org/reference/tags/htmlhead.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfhtmlhead"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfhtmlhead"}
 	},
@@ -25,14 +25,14 @@
 			"runnable": "false"
 		},
 		{
-			"title": "Using script",
+			"title": "Using cfhtmlhead in cfscript",
 			"description": "",
 			"code": "cfhtmlhead( text='<link href=\"/news.xml\" rel=\"alternate\" type=\"application/rss+xml\" title=\"Latest News\" />');",
 			"runnable": "false"
 		},
 		{
-			"title": "Lucee only: script alternative",
-			"description": "",
+			"title": "Script syntax alternative",
+			"description": "Lucee4.2+",
 			"code": "htmlhead text='<link href=\"/news.xml\" rel=\"alternate\" type=\"application/rss+xml\" title=\"Latest News\" />';",
 			"runnable": "false"
 		}

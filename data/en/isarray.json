@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"isArray(value [, number])",
 	"returns":"boolean",
-	"related":[],
+	"related":["isStruct","arrayIsEmpty"],
 	"description":" Determines whether a value is an array.\n True, if value is an array, a query column object, or xml.\n also number = Dimension; function tests whether the array has\n exactly this dimension",
 	"params": [
 		{"name":"value","description":"The array in which to check.","required":true,"default":"","type":"any","values":[]},
 		{"name":"number","description":"Dimension of the array.","required":false,"default":"","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isarray.html"},
@@ -16,9 +15,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isarray"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isarray"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "simple isArray example",
@@ -45,5 +42,4 @@
 			"result": "true"
 		}
 	]
-
 }

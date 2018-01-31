@@ -1,13 +1,14 @@
 {
 	"name":"serializeJSON",
 	"type":"function",
-	"syntax":"serializeJSON(var [, serializeQueryByColumns, useCustomSerializer])",
+	"syntax":"serializeJSON(var[, serializeQueryByColumns[, useSecureJSONPrefix[, useCustomSerializer]]])",
 	"returns":"string",
 	"related":["deserializeJSON"],
 	"description":"Converts a ColdFusion variable into a JSON (JavaScript Object Notation) string.",
 	"params": [
 		{"name":"var","description":"A ColdFusion variable.","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"serializeQueryByColumns","description":"A Boolean value that specifies how to serialize ColdFusion queries.","required":false,"default":"false","type":"boolean","values":[]},
+		{"name":"useSecureJSONPrefix","description":"CF11+ When Prefix Serialized JSON is enabled in the ColdFusion Administrator, then by default this function inserts the secure json prefix at the beginning of the json.","required":false,"default":"false","type":"boolean","values":[]},
 		{"name":"useCustomSerializer","description":"CF11+ Use custom serializer if defined. See: https://helpx.adobe.com/coldfusion/developing-applications/changes-in-coldfusion/restful-web-services-in-coldfusion.html","required":false,"default":"true","type":"boolean","values":[]}
 	],
 	"engines": {

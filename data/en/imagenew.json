@@ -10,8 +10,7 @@
 		{"name":"width","description":"The width of the new image. Valid when the height is specified and the source is not.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"height","description":"The height of the new image. Valid when the width is specified and the source is not.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"imagetype","description":"The type of the image to create (Valid only when width and height are specified),","required":false,"default":"","type":"string","values":["rgb","argb","grayscale"]},
-		{"name":"canvascolor","description":"Color of the image canvas","required":false,"default":"black","type":"string","values":["Hexadecimal value of RGB color. For example, specify the color white as ##FFFFFF or FFFFFF.","String value of color (for example, 'black', 'red', 'green').","List of three numbers for (R,G,B) values. Each value must be in the range 0-255."]}
-
+		{"name":"canvascolor","description":"Color of the image canvas. Possible values are:\n\nHexadecimal value of RGB color. For example, specify the color white as ##FFFFFF or FFFFFF.\nString value of color (for example, 'black', 'red', 'green').\nList of three numbers for (R,G,B) values. Each value must be in the range 0-255.","required":false,"default":"black","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagenew.html"},
@@ -19,10 +18,8 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagenew"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagenew"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+    	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "Use the imageNew function to create a 200x200-pixel image in ARGB format. ",
@@ -30,13 +27,12 @@
 			"result": "",
 			"runnable":false
 		},
-        {
-			"title": "Tag Syntax",
+        	{
+			"title": "Script Syntax",
 			"description": "This example shows how to create a ColdFusion image from a URL. ",
 			"code": "<cfset myImage = imageNew(\"http://www.google.com/images/logo_sm.gif\")> \r\n<cfset imageWrite(myImage,\"google_via_imagenew.png\")> \r\n<img src=\"google_via_imagenew.png\">",
 			"result": "",
 			"runnable":false
 		}
 	]
-
 }

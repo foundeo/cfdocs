@@ -146,11 +146,19 @@ pre.prettyprint {
 }
 
 .issuecount {
-	padding: 2px 5px;	
+	padding: 2px 5px;
 }
 
 .issuebutton {
 	color: white;
 	padding-left: 2px;
 	padding-right: 5px;
+}
+
+:target::before {
+	content: "";
+	display: block;
+	margin-top: -55px;
+	height: 55px;
+	width: 1px
 }

@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"isXMLRoot(value)",
 	"returns":"boolean",
-	"related":[],
+	"related":["isXML","isXMLDoc","isXMLElem","isXMLNode"],
 	"description":" Determines whether a function parameter is the root element of\n an Extended Markup language (XML) document object.",
 	"params": [
-		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
-
+		{"name":"value","description":"XML Element","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isxmlroot.html"},
@@ -15,8 +14,18 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isxmlroot"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isxmlroot"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": [{
+		"title": "\"coldfusionengines\" is root element",
+		"description": "",
+		"code": "<cfxml variable=\"example\">\n\t<coldfusionengines>\n\t\t<engine>\n\t\t\t<name>Adobe ColdFusion</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Lucee</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Railo</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Open BlueDragon</name>\n\t\t</engine>\n\t</coldfusionengines>\n</cfxml>\n<cfscript>\n\twriteOutput(isXMLRoot(example.coldfusionengines));\n</cfscript>",
+		"result": "YES",
+		"runnable": true
+	},{
+		"title": "\"engine\" is child of \"coldfusionengines\"",
+		"description": "",
+		"code": "<cfxml variable=\"example\">\n\t<coldfusionengines>\n\t\t<engine>\n\t\t\t<name>Adobe ColdFusion</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Lucee</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Railo</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Open BlueDragon</name>\n\t\t</engine>\n\t</coldfusionengines>\n</cfxml>\n<cfscript>\n\twriteOutput(isXMLRoot(example.coldfusionengines.engine));\n</cfscript>",
+		"result": "NO",
+		"runnable": true
+	}]
 }

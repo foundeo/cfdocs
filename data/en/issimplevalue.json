@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"isSimpleValue(value)",
 	"returns":"boolean",
-	"related":[],
+	"related":["isArray","isStruct"],
 	"description":" Determines the type of a value.",
 	"params": [
 		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/issimplevalue.html"},
@@ -15,8 +14,30 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/issimplevalue"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/issimplevalue"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": [{
+		"title": "A number is a simple value",
+		"description": "",
+		"code": "isSimpleValue(42)",
+		"result": true,
+		"runnable": true
+	},{
+		"title": "A string is a simple value as well",
+		"description": "",
+		"code": "isSimpleValue(\"Hello world\")",
+		"result": true,
+		"runnable": true
+	},{
+		"title": "A structure is a complex value",
+		"description": "So it can't a be simple value",
+		"code": "isSimpleValue(structNew())",
+		"result": false,
+		"runnable": true
+	},{
+		"title": "An array is a complex value",
+		"description": "",
+		"code": "isSimpleValue(arrayNew(1))",
+		"result": false,
+		"runnable": true
+	}]
 }

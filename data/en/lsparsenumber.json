@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"lsParseNumber(String)",
 	"returns":"numeric",
-	"related":[],
+	"related":["parseNumber","toNumeric","inputBaseN"],
 	"description":"Converts a string that is a valid numeric representation in the current locale into a formatted number.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/lsparsenumber.html"},
@@ -15,15 +14,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsparsenumber"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsparsenumber"}
 	},
+	"links": [],
 	"examples": [{
 		"title":"Simple example usage",
 		"description":"Converts number to string and back\"",
-		"code":"str = numberFormat(42,'000.00');\r\nnum = lsParseNumber(str);\r\nwriteOutput(str&'--->'&num);",
-		"result":"042.00--->42",
+		"code":"str = numberFormat(42,'000.00');\r\nnum = lsParseNumber(str);\r\nwriteOutput(str&' → '&num);",
+		"result":"042.00 → 42",
 		"runnable":true
-	}],
-	"links": [
-
-	]
-
+	}]
 }

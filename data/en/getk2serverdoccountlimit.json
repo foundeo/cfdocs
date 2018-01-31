@@ -1,9 +1,9 @@
 {
-	"name":"getK2ServerDoccountLimit",
+	"name":"getK2ServerDocCountLimit",
 	"type":"function",
-	"syntax":"getK2ServerDoccountLimit()",
+	"syntax":"getK2ServerDocCountLimit()",
 	"returns":"numeric",
-	"related":[],
+	"related":["getK2ServerDocCount"],
 	"description":"Gets the maximum number of documents that the CFML\n registered K2 Server is permitted to return from a search.\n This function is used primarily by the CFML Verity and\n K2Server Administrator pages. This function uses Verity\n K2Server Release K2.2.0.",
 	"params": [],
 	"engines": {

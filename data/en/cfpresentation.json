@@ -2,224 +2,45 @@
 	"name": "cfpresentation",
 	"type": "tag",
 	"syntax": "<cfpresentation title=\"\">",
-	"related": [],
+	"related": ["cfpresentationslide","cfpresenter"],
 	"description": "Defines the look and feel of a dynamic slide presentation.\n Use the cfpresentation tag as the parent tag for one or more cfpresentationslide tags,\n where you define the content for the presentation.",
 	"params": [
-		{
-			"name": "backgroundColor",
-			"description": "Specifies the background color of the presentation.\n The value is hexadecimal: use the form \"##xxxxxx\" or \"##xxxxxxxx\",\n where x = 0-9 or A-F; use two number signs or none. (optional, default=0x727971)",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "control",
-			"description": "Specifies the presentation control:\n normal\n brief (optional, default=normal)",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": ["normal", "brief"]
-		},
-		{
-			"name": "controlLocation",
-			"description": "Specifies the location of the presentation control:\n right\n left (optional, default= right)",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": ["right", "left"]
-		},
-		{
-			"name": "directory",
-			"description": "Specifies the directory where the presentation is saved.\n This can be absolute path or a path relative to the CFM page.\n ColdFusion automatically generates the files necessary to\n run the presentation, including:\n index.htm\n components.swf\n loadflash.js\n viewer.swf\n ColdFusion stores any data files in the presentation,\n including images, video clips, and SWF files referenced by the\n cfpresentationslide tags in a subdirectory called data.\n To run the presentation, open the index.htm file.\n If you do not specify a directory, the presentation\n runs in the client browser. (optional)",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "glowColor",
-			"description": "Specifies the color used for glow effects on the buttons.\n The value is hexadecimal: use the form \"##xxxxxx\" or \"##xxxxxxxx\",\n where x = 0-9 or AF; use two number signs or none. (optional, default=0x35D334)",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "initialTab",
-			"description": "Specifies which tab will be on top when the presentation is displayed.\n This applies only when the control value is normal:\n outline\n search\n notes (optional, default=outline)",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": ["outline", "search", "notes"]
-		},
-		{
-			"name": "lightColor",
-			"description": "Specifies the light color used for light-and shadow effects.\n The value is hexadecimal: use the form \"##xxxxxx\" or \"##xxxxxxxx\",\n where x = 0-9 or A-F; use two number signs or none. (optional, default=0x4E5D60)",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "overwrite",
-			"description": "Specifies whether files in the directory are overwritten.\n Specify this attribute only when the you specify the directory.\n yes: overwrites files if they are already present\n no: create new files (optional, default=yes)",
-			"required": false,
-			"default": "",
-			"type": "boolean",
-			"values": [true, false]
-		},
-		{
-			"name": "primaryColor",
-			"description": "Specifies the primary color of the presentation.\n The value is hexadecimal: use the form \"##xxxxxx\" or \"##xxxxxxxx\",\n where x = 0-9 or AF; use two number signs or none. (optional, default=0x6F8488)",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "shadowColor",
-			"description": "Specifies the shadow color used for light-and shadow effects.\n The value is hexadecimal: use the form \"##xxxxxx\" or \"##xxxxxxxx\",\n where x = 0-9 or A-F; use two number signs or none. (optional, default=0x000000)",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "showNotes",
-			"description": "Specifies whether the notes tab is present:\n yes\n no (optional, default=no)",
-			"required": false,
-			"default": "",
-			"type": "boolean",
-			"values": [true, false]
-		},
-		{
-			"name": "showOutline",
-			"description": "Specifies whether the outline is present:\n yes\n no (optional, default=yes)",
-			"required": false,
-			"default": "",
-			"type": "boolean",
-			"values": [true, false]
-		},
-		{
-			"name": "showSearch",
-			"description": "Specifies whether the search tab is present:\n yes\n no (optional, default=yes)",
-			"required": false,
-			"default": "",
-			"type": "boolean",
-			"values": [true, false]
-		},
-		{
-			"name": "textColor",
-			"description": "Specifies the color for all the text in the presentation user interface. (optional, default=0xFFFFFF)",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "title",
-			"description": "Specifies the title of the presentation. (optional)",
-			"required": true,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "authpassword",
-			"description": "Sends a password to the target URL for Basic Authentication. Combined with username to form a base64 encoded string that is passed in the Authenticate header.",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "authuser",
-			"description": "Sends a user name to the target URL for Basic Authentication. Combined with password to form a base64 encoded string that is passed in the Authenticate header.",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "autoplay",
-			"description": "Specifies whether to play the presentation automatically:\n * true: the presentation automatically runs through the entire presentation at startup.\n * false: the user must click the Play button to start the presentation and click the Next button to advance to the next slide in the presentation.",
-			"required": false,
-			"default": true,
-			"type": "boolean",
-			"values": [false, true]
-		},
-		{
-			"name": "loop",
-			"description": "Specifies whether the presentation runs in a loop:\n * true: the presentation restarts automatically after it ends.\n * false: the user must click the Play button to restart the presentation.",
-			"required": false,
-			"default": false,
-			"type": "boolean",
-			"values": [false, true]
-		},
-		{
-			"name": "proxypassword",
-			"description": "Password required by the proxy server.",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "proxyuser",
-			"description": "User name to provide to the proxy server.",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "proxyhost",
-			"description": "Host name or IP address of a proxy server to which to send the request.",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "proxyport",
-			"description": "The port to connect to on the proxy server.",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "useragent",
-			"description": "Text to put in the HTTP User-Agent request header field. Used to identify the request client software.",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "destination",
-			"description": "Destination directory",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": []
-		},
-		{
-			"name": "format",
-			"description": "Specifies file format for conversion. The `flashpaper` format has been deprecated since CF11+",
-			"required": false,
-			"default": "",
-			"type": "string",
-			"values": ["html", "ppt"]
-		}
+		{"name": "title", "description": "Specifies the title of the presentation.", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "backgroundColor", "description": "Specifies the background color of the presentation.\n The value is hexadecimal: use the form \"##xxxxxx\" or \"##xxxxxxxx\",\n where x = 0-9 or A-F; use two number signs or none.", "required": false, "default": "0x727971", "type": "string", "values": []},
+		{"name": "control", "description": "Specifies the presentation control:", "required": false, "default": "normal", "type": "string", "values": ["normal", "brief"]},
+		{"name": "controlLocation", "description": "Specifies the location of the presentation control:", "required": false, "default": "right", "type": "string", "values": ["right", "left"]},
+		{"name": "directory", "description": "Specifies the directory where the presentation is saved.\n This can be absolute path or a path relative to the CFM page.\n ColdFusion automatically generates the files necessary to\n run the presentation, including:\n index.htm\n components.swf\n loadflash.js\n viewer.swf\n ColdFusion stores any data files in the presentation,\n including images, video clips, and SWF files referenced by the\n cfpresentationslide tags in a subdirectory called data.\n To run the presentation, open the index.htm file.\n If you do not specify a directory, the presentation\n runs in the client browser.", "required": false, "default": "", "type": "string", "values": []},
+		{"name": "glowColor", "description": "Specifies the color used for glow effects on the buttons.\n The value is hexadecimal: use the form \"##xxxxxx\" or \"##xxxxxxxx\",\n where x = 0-9 or AF; use two number signs or none.", "required": false, "default": "0x35D334", "type": "string", "values": []},
+		{"name": "initialTab", "description": "Specifies which tab will be on top when the presentation is displayed.\n This applies only when the control value is normal:", "required": false, "default": "outline", "type": "string", "values": ["outline", "search", "notes"]},
+		{"name": "lightColor", "description": "Specifies the light color used for light-and shadow effects.\n The value is hexadecimal: use the form \"##xxxxxx\" or \"##xxxxxxxx\",\n where x = 0-9 or A-F; use two number signs or none.", "required": false, "default": "0x4E5D60", "type": "string", "values": []},
+		{"name": "overwrite", "description": "Specifies whether files in the directory are overwritten.\n Specify this attribute only when the you specify the directory.\n yes: overwrites files if they are already present\n no: create new files", "required": false, "default": "yes", "type": "boolean", "values": [true, false]},
+		{"name": "primaryColor", "description": "Specifies the primary color of the presentation.\n The value is hexadecimal: use the form \"##xxxxxx\" or \"##xxxxxxxx\",\n where x = 0-9 or AF; use two number signs or none.", "required": false, "default": "0x6F8488", "type": "string", "values": []},
+		{"name": "shadowColor", "description": "Specifies the shadow color used for light-and shadow effects.\n The value is hexadecimal: use the form \"##xxxxxx\" or \"##xxxxxxxx\",\n where x = 0-9 or A-F; use two number signs or none.", "required": false, "default": "0x000000", "type": "string", "values": []},
+		{"name": "showNotes", "description": "Specifies whether the notes tab is present:", "required": false, "default": "no", "type": "boolean", "values": [true, false]},
+		{"name": "showOutline", "description": "Specifies whether the outline is present:", "required": false, "default": "yes", "type": "boolean", "values": [true, false]},
+		{"name": "showSearch", "description": "Specifies whether the search tab is present:", "required": false, "default": "yes", "type": "boolean", "values": [true, false]},
+		{"name": "textColor", "description": "Specifies the color for all the text in the presentation user interface.", "required": false, "default": "0xFFFFFF", "type": "string", "values": []},
+		{"name": "authpassword", "description": "Sends a password to the target URL for Basic Authentication. Combined with username to form a base64 encoded string that is passed in the Authenticate header.", "required": false, "default": "", "type": "string", "values": []},
+		{"name": "authuser", "description": "Sends a user name to the target URL for Basic Authentication. Combined with password to form a base64 encoded string that is passed in the Authenticate header.", "required": false, "default": "", "type": "string", "values": []},
+		{"name": "autoplay", "description": "Specifies whether to play the presentation automatically:\n * true: the presentation automatically runs through the entire presentation at startup.\n * false: the user must click the Play button to start the presentation and click the Next button to advance to the next slide in the presentation.", "required": false, "default": true, "type": "boolean", "values": [false, true]},
+		{"name": "loop", "description": "Specifies whether the presentation runs in a loop:\n * true: the presentation restarts automatically after it ends.\n * false: the user must click the Play button to restart the presentation.", "required": false, "default": false, "type": "boolean", "values": [false, true]},
+		{"name": "proxypassword", "description": "Password required by the proxy server.", "required": false, "default": "", "type": "string", "values": []},
+		{"name": "proxyuser", "description": "User name to provide to the proxy server.", "required": false, "default": "", "type": "string", "values": []},
+		{"name": "proxyhost", "description": "Host name or IP address of a proxy server to which to send the request.", "required": false, "default": "", "type": "string", "values": []},
+		{"name": "proxyport", "description": "The port to connect to on the proxy server.", "required": false, "default": "", "type": "string", "values": []},
+		{"name":"useragent","description":"Text to put in the HTTP User-Agent request header field. Used to identify the request client software.","required":false,"default":"","type":"string","values":[]},
+		{"name": "destination", "description": "Destination directory", "required": false, "default": "", "type": "string", "values": []},
+		{"name": "format", "description": "Specifies file format for conversion. The `flashpaper` format has been deprecated since CF11+", "required": false, "default": "", "type": "string", "values": ["html", "ppt"]}
 	],
 	"engines": {
-		"coldfusion": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpresentation.html"
-		}
+		"coldfusion": { "minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpresentation.html" }
 	},
-	"links": []
+	"links": [],
+	"example": [{
+		"title": "A presentation with two slides",
+		"description": "",
+		"code": "<cfpresentation\n\ttitle = \"text string\"\n\tauthPassword = \"authentication password\"\n\tauthUser = \"authentication user name\"\n\tautoPlay = \"yes\"\n\tbackgroundColor = \"##cccccc\"\n\tcontrol = \"normal\"\n\tcontrolLocation = \"right\"\n\tformat = \"ppt\"\n\tglowColor = \"green\"\n\tinitialTab = \"notes\"\n\tdestination = \"ram:///filepath\"\n\tdirectory = \"praesi.ppt\"\n\tlightColor = \"yellow\"\n\tloop = \"no\"\n\toverwrite = \"yes\"\n\tprimaryColor = \"blue\"\n\tshadowColor = \"##333333\"\n\tshowNotes = \"yes\"\n\tshowOutline = \"yes\"\n\tshowSearch = \"yes\"\n\ttextColor = \"black\"\n\tuserAgent = \"Firefox\"\n>\n<cfpresentationslide notes=\"Test\" title=\"myText\" duration=\"20\">Slide 1</cfpresentationslide>\n<cfpresentationslide notes=\"Test2\" title=\"myText\">Slide 2</cfpresentationslide>\n<cfpresenter name=\"xyz\"></cfpresenter>\n</cfpresentation>",
+		"result": "",
+		"runnable": ""
+	}]
 }

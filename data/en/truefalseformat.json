@@ -3,8 +3,8 @@
 	"type": "function",
 	"syntax": "trueFalseFormat(value)",
 	"returns": "string",
+	"description": "True, for a non-zero value; False, otherwise",
 	"related": ["yesNoFormat", "isBoolean","booleanFormat"],
-	"description": "",
 	"params": [
 		{"name": "value", "description": "", "required": true, "default": "", "type": "any", "values": []}
 	],

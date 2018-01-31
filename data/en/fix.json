@@ -4,7 +4,7 @@
 	"syntax":"fix(number)",
 	"returns":"numeric",
 	"related":["int","floor"],
-	"description":" Converts a real number to an integer.",
+	"description":"Converts a real number to an integer.\n**Tip:** If you want to `fix()` to outcome of a division, simply use the integer division operator (\\).",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 	],
@@ -14,7 +14,11 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/fix"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/fix"}
 	},
-	"links": [],
+	"links": [{
+            "title":"Ben Nadel",
+            "description":"The Integer Division Operator In ColdFusion",
+            "url":"https://www.bennadel.com/blog/2031-the-integer-division-operator-in-coldfusion.htm"
+        }],
 	"examples": [
 		{
 			"title":"Fix 1.8 to an integer",

@@ -2,7 +2,7 @@
 	"name": "cfpdfformparam",
 	"type": "tag",
 	"syntax": "<cfpdfformparam name=\"\" value=\"\">",
-	"related": [],
+	"related": ["cfpdf","cfpdfform","cfpdfsubform"],
 	"description": "Provides additional information to the cfpdfform tag.\n The cfpdfformparam tag is always a child tag of the cfpdfform or cfpdfsubform tag.\n Use the cfpdfformparam tag to populate fields in a PDF form.",
 	"params": [
 		{
@@ -31,11 +31,7 @@
 		}
 	],
 	"engines": {
-		"coldfusion": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpdfformparam.html"
-		}
+		"coldfusion": { "minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpdfformparam.html" }
 	},
 	"links": [
 		{
