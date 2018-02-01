@@ -22,7 +22,7 @@
 			"title": "Output timestamp from date/time object",
 			"description": "",
 			"code": "<cfscript>\n\tyourDate = createDate(\"2015\",\"12\","\09\");\n\twriteOutput(yourDate);\n</cfscript>",
-			"runnable":true
+			"runnable":true,
 			"result": "{ts '2015-12-09 00:00:00'}"
 		}
 	]
