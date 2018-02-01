@@ -224,7 +224,7 @@
 					<div class="panel panel-default">
 						<div class="panel-heading" role="tab" id="headingOne">						
 							<h4 class="panel-title" id="ex#example_index#">
-								<a role="button" data-toggle="collapse" data-parent="#accordion" href="##collapseEx#example_index#" aria-expanded="true" aria-controls="collapseEx#example_index#">
+								<a role="button" data-toggle="collapse" data-parent="##accordion" href="##collapseEx#example_index#" aria-expanded="true" aria-controls="collapseEx#example_index#">
 								  #XmlFormat(ex.title)#
 								</a>
 								<cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
