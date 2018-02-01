@@ -227,15 +227,15 @@
 								<a role="button" data-toggle="collapse" data-parent="##accordion" href="##collapseEx#example_index#" aria-expanded="true" aria-controls="collapseEx#example_index#">
 								  #XmlFormat(ex.title)#
 								</a>
+							</h4>
+						</div>
+						<div id="collapseEx#example_index#" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+							<div class="panel-body">
 								<cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
 									<div class="pull-right">
 										<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
 									</div>
 								</cfif>
-							</h4>
-						</div>
-						<div id="collapseEx#example_index#" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-							<div class="panel-body">
 								<p class="clearfix">#autoLink(ex.description)#</p>
 								<pre class="prettyprint"><code>#encodeForHTML(ex.code)#</code></pre>
 								<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
