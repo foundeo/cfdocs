@@ -2,12 +2,13 @@
 <cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL")>
 <cfif url.name IS "index">
 	<cfset data = {name="CFDocs", description="Ultra Fast CFML Documentation", type="index"}>
-<cfelseif FileExists(ExpandPath("./guides/en/#url.name#.md"))>
+<cfelseif FileExists(ExpandPath("./guides/en/#url.name#.md")) OR url.name is "how-to-contribute">
 	<cftry>
 		<!--- convert md to HTML --->
 		<cfset txtmark = createObject("java", "com.github.rjeschke.txtmark.Processor")>
-		<cfset data = txtmark.process(createObject("java", "java.io.File").init(ExpandPath("./guides/en/#url.name#.md")), "utf-8")>
-		<cfset request.gitFilePath = "/tree/master/guides/en/" & url.name & ".md">
+		<cfset path = (url.name is "how-to-contribute" ? 'CONTRIBUTING' : './guides/en/#url.name#')>
+		<cfset data = txtmark.process(createObject("java", "java.io.File").init(ExpandPath("#path#.md")), "utf-8")>
+		<cfset request.gitFilePath = "/tree/master/"&(url.name is "how-to-contribute" ? 'CONTRIBUTING' : url.name)&".md">
 		<cfcatch>
 			<cfset data = "Error processing markdown: #encodeForHTML(cfcatch.message)# #encodeForHTML(cfcatch.detail)#">
 			<cfset data &= "Make sure you have installed the textMark jar file in the lib directory used to process the markup files.">
