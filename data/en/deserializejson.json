@@ -1,24 +1,21 @@
 {
 	"name":"deserializeJSON",
 	"type":"function",
-	"syntax":"deserializeJSON(jsonvar [, strictMapping, useCustomSerializer])",
+	"syntax":"deserializeJSON(jsonvar [, strictMapping, useCustomSerializer])\ndeserializeJSON(jsonstring [, strictMapping, file])",
 	"returns":"any",
 	"related":[],
 	"description":" Converts a JSON (JavaScript Object Notation) string data representation into CFML data, such as a CFML structure or array.",
 	"params": [
 		{"name":"jsonvar","description":"A string that contains a valid JSON construct, or variable that represents one.","required":true,"default":"","type":"string","values":[]},
 		{"name":"strictMapping","description":"A Boolean value that specifies whether to convert the JSON strictly. If true everything becomes structures.","required":false,"default":"true","type":"boolean","values":[]},
-		{"name":"useCustomSerializer","description":"CF11+ Use custom serializer if defined. See: https://helpx.adobe.com/coldfusion/developing-applications/changes-in-coldfusion/restful-web-services-in-coldfusion.html","required":true,"default":"true","type":"boolean","values":[]}
-
+		{"name":"useCustomSerializer","description":"CF11+ Use custom serializer if defined. See: https://helpx.adobe.com/coldfusion/developing-applications/changes-in-coldfusion/restful-web-services-in-coldfusion.html","required":false,"default":"true","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DeserializeJSON.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/deserializejson.html"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/deserializejson"}
+		"lucee": {"minimum_version":"", "notes":"Lucee has only support for the first two parameters", "docs":"http://docs.lucee.org/reference/functions/deserializejson.html"},
+		"openbd": {"minimum_version":"", "notes":"In OpenBD it's possible to pass in a file path as third parameter instead of `useCustomSerializer` which will be used in place of the json passed with the first parameter\nYou can pass the parameters as a structure (\"ArgumentCollection\") as well", "docs":"http://openbd.org/manual/?/function/deserializejson"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Convert JSON into CF Structure",
