@@ -2,7 +2,7 @@
 	"name":"cfftp",
 	"type":"tag",
 	"syntax":"<cfftp action=\"open\">",
-	"related":[],
+	"related":["cfhttp","cffile","cfdirectory"],
 	"description":"Lets users implement File Transfer Protocol (FTP) operations.",
 	"params": [
 		{"name":"action","description":"FTP operation to perform.\n open: create an FTP connection\n close: terminate an FTP connection","required":true,"default":"","type":"string","values":["open","close","changedir","createdir","listdir","removedir","getfile","putfile","rename","remove","getcurrentdir","getcurrenturl","existsdir","existsfile","exists","quote","site","allo","acct"]},
@@ -35,7 +35,6 @@
 		{"name":"actionparam","description":"Used only when action is quote, site, or acct. Specifies the command when action is quote or site; specifies account information when action is acct.","required":false,"default":"","type":"string","values":[]},
 		{"name":"fingerprint","description":"CF8+ Fingerprint of the host key in the form ssh-dss.ssh-rsa, which is a 16-byte unique identifier for the server attribute that you specify.","required":false,"default":"","type":"string","values":[]},
 		{"name":"systemtype","description":"CF11.0.3+ Specifies how to parse file list response, specify `WINDOWS` or `UNIX` or a class which implements `org.apache.commons.net.ftp.FTPFileEntryParser`","required":false,"default":"","type":"string","values":["WINDOWS","UNIX"]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-f/cfftp.html"},
@@ -51,13 +50,13 @@
 		}
 	],
 	"examples": [
-        {
-            "title": "Script Syntax",
-            "description": "CF9+ using the CFIDE script components",
-            "code": "// Create FTP service and set attributes for connection \r\n ftpService = new ftp(); \r\n ftpService.setConnection(\"myConn\"); \r\n ftpService.setUsername(\"myUName\"); \r\n ftpService.setPassword(\"myPW\"); \r\n ftpService.setServer(\"ftp.server.com\"); \r\n ftpService.setStopOnError(true); \r\n // Open connection \r\n ftpService.open(); \r\n // Get list of dir \r\n fileList = ftpService.listdir(directory = \"/ \", name=\"fileList\", stopOnError = true).getResult(); \r\n // Close connection \r\n ftpService.close();",
-            "result": ""
-        },
-	    {
+		{
+		    "title": "Script Syntax",
+		    "description": "CF9+ using the CFIDE script components",
+		    "code": "// Create FTP service and set attributes for connection \r\n ftpService = new ftp(); \r\n ftpService.setConnection(\"myConn\"); \r\n ftpService.setUsername(\"myUName\"); \r\n ftpService.setPassword(\"myPW\"); \r\n ftpService.setServer(\"ftp.server.com\"); \r\n ftpService.setStopOnError(true); \r\n // Open connection \r\n ftpService.open(); \r\n // Get list of dir \r\n fileList = ftpService.listdir(directory = \"/ \", name=\"fileList\", stopOnError = true).getResult(); \r\n // Close connection \r\n ftpService.close();",
+		    "result": ""
+		},
+		{
 			"title": "Open Connection",
 			"description": "",
 			"code": "<cfftp action=\"open\" connection=\"myConn\" username=\"myUName\" password=\"myPW\" server=\"ftp.server.com\" stopOnError=\"true\">",
@@ -76,5 +75,4 @@
 			"result": ""
 		}
 	]
-
 }
