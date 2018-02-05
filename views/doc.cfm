@@ -33,15 +33,10 @@
 						<cfset data.scriptTitle = "Script Syntax">
 					<cfelseif ListFindNoCase("cfabort,cfbreak,cfcontinue,cfreturn,cfexit", data.name)>
 						<cfset data.scriptTitle = "Script Syntax">
-						<cfset data.script = ReplaceNoCase(data.name, "cf", "") & ";">
+						<cfset data.script = replaceScript(name = data.name, mode = "cf") & ";">
 					<cfelseif NOT ListFindNoCase("cfif,cfset,cfelse,cfelseif,cfloop,cfinclude,cfparam,cfswitch,cfcase,cftry,cfthrow,cfrethrow,cfcatch,cffinally,cfmodule,cfcomponent,cfinterface,cfproperty,cffunction,cfimport,cftransaction,cftrace,cflock,cfthread,cfsavecontent,cflocation,cfargument,cfapplication,cfscript", data.name)>
 						<!--- add cfscript syntax --->
-						<cfset data.script = ReReplace(data.syntax, "[<\r\n]", "", "ALL")>
-						<cfset data.script = ReplaceNoCase(data.script, data.name, data.name & "(")>
-						<cfset data.script = Replace(data.script, "( ", "(")>
-						<!--- replace double quote followed by a space with a ,[space] --->
-						<cfset data.script = ReReplace(data.script, """ ", """, ", "ALL")>
-						<cfset data.script = ReReplace(data.script, ",? ?>", ");")>
+						<cfset data.script = replaceScript(script = data.script, name = data.name, sytax = data.syntax, mode = "other")>
 						<cfset data.scriptTitle = "Script Syntax ACF11+, Lucee, Railo 4.2+">
 					</cfif>
 					<cfif StructKeyExists(data, "script")>
@@ -275,3 +270,24 @@
 		</cfif>
 	</div>
 </cfoutput>
+<cffunction name="replaceScript">
+	<cfargument name="name" type="string" required="true" />
+	<cfargument name="mode" type="string" required="true" />
+	<cfargument name="syntax" type="string" />
+	<cfargument name="script" type="string" />
+	<cfscript>
+	    result = "";
+	    if(mode is "cf")
+	        result = ReplaceNoCase(name, "cf", "") & ";";
+	    else if(mode is "other") {
+			// add cfscript syntax
+			result = ReReplace(syntax, "[<\r\n]", "", "ALL");
+			result = ReplaceNoCase(script, name, name & "(");
+			result = Replace(script, "( ", "(");
+			// replace double quote followed by a space with a ,[space]
+			result = ReReplace(script, """ ", """, ", "ALL");
+			result = ReReplace(script, ",? ?>", ");");
+	    }
+	    return result;
+	</cfscript>
+</cffunction>
