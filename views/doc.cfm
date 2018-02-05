@@ -4,8 +4,8 @@
 		guides = [];
 		if (structKeyExists(data, "related") AND arrayLen(data.related)) {
 			for(i = 1; i lte arrayLen(data.related); i++) {
-				jsonPath = expandPath("../data/en/#LCase(data.related[i])#.json");
-				guidePath = expandPath("../guides/en/#LCase(data.related[i])#.md");
+				jsonPath = expandPath("./data/en/#LCase(data.related[i])#.json");
+				guidePath = expandPath("./guides/en/#LCase(data.related[i])#.md");
 				if (fileExists(jsonPath)) {
 					arrayAppend(related,data.related[i]);
 				}
@@ -19,10 +19,12 @@
 		<div class="container" data-doc="#encodeForHTMLAttribute(data.name)#">
 			<h1 id="docname">
 				#data.name#
-				<cfif arrayLen(guides)>
-					<span class="label label-success"><span class="glyphicon glyphicon-book" title="Guide"></span> <a href="#linkTo(guides[1])#">#guides[1]#</a></span>
-				</cfif>
 			</h1>
+			<cfif arrayLen(guides)>
+				<span class="label label-success">
+					<span class="glyphicon glyphicon-book" title="Guide"></span> <a href="#linkTo(guides[1])#" style="color:white;">#guides[1]#</a>
+				</span>
+			</cfif>
 			<p>#autoLink(data.description)#</p>
 			<cfif StructKeyExists(data, "syntax") AND Len(data.syntax)>
 				<p id="syntax"><cfif data.type IS "tag"><small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;</cfif><code>#Replace(encodeForHTML(data.syntax), Chr(10), "<br>", "ALL")#<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)> <em>&##8594; returns #encodeForHTML(data.returns)#</em></cfif></code></p>
