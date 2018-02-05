@@ -59,3 +59,5 @@ request.gitFilePath = "/edit/master/reports/missing-#page.node#.cfm";
 		</div>
 	</div>
 </cfoutput>
+<!--- only cache reports for 1h --->
+<cfset request.cacheControlMaxAge = 3600>

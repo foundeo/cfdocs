@@ -16,16 +16,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createdate"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createdate"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title": "Tag Syntax",
+			"title": "Output timestamp from date/time object",
 			"description": "",
-			"code": "<cfset yourDate = createDate(\"2015\", \"12\", \"09\")> \r\n <cfdump var=\"#yourDate#\" />      ",
-			"result": ""
+			"code": "<cfscript>\n\tyourDate = createDate(\"2015\",\"12\",\"09\");\n\twriteOutput(yourDate);\n</cfscript>",
+			"runnable":true,
+			"result": "{ts '2015-12-09 00:00:00'}"
 		}
 	]
-
 }

@@ -4,7 +4,7 @@
 	"syntax":"ormEvictQueries([cacheName])",
 	"returns":"void",
 	"related":[],
-	"description":"This will remove all the queries from the named query cache. \nIf name is not specified, all quiries from default cache will be removed.\normEvictQueries([cacheName])",
+	"description":"This will remove all the queries from the named query cache. \nIf name is not specified, all queries from default cache will be removed.\normEvictQueries([cacheName])",
 	"params": [
 		{"name":"cacheName","description":"No Help Available","required":false,"default":"","type":"string","values":[]}
 
@@ -16,6 +16,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Evicts all the Hibernate cached queries for the default cache.",
+			"description": "This will remove any cached queries from the default cache and cause the query to run again",
+			"code": "ormEvictQueries();",
+			"result": "",
+			"runnable": false
+		}
 	]
 
 }

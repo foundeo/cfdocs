@@ -1,11 +1,12 @@
 {
 	"name":"ormFlush",
 	"type":"function",
-	"syntax":"ormFlush()",
+	"syntax":"ormFlush([datasource])",
 	"returns":"void",
 	"related":[],
-	"description":"No Help Available",
+	"description":"Flushes the current ORM session. ORMFlush flushes all the pending CRUD operations in that request. Any changes made in the objects, in the current ORM session, are saved to the database.",
 	"params": [
+		{"name":"datasource","description":"datasource used for the session, if nor defined the datasource defined in application.cfc/cfapplication is used.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormflush.html"},
@@ -14,6 +15,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Flush all pending CRUD operations for datasource defined in the application.cfc",
+			"description": "",
+			"code": "ormFlush();",
+			"result": "",
+			"runnable": false
+		}
 	]
-
 }

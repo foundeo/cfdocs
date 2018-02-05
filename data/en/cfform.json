@@ -2,7 +2,7 @@
 	"name":"cfform",
 	"type":"tag",
 	"syntax":"<cfform>",
-	"related":[],
+	"related":["cfformgroup","cfformitem"],
 	"description":"Builds a form with CFML custom control tags; these provide\n more functionality than standard HTML form input elements.",
 	"params": [
 		{"name":"name","description":"In HTML format, if you omit this attribute and specify\n an id attribute, ColdFusion does not include a name\n attribute in the HTML sent to the browser; this\n behavior lets you use the cfform tag to create\n XHTML-compliant forms. If you omit the name\n attribute and the id attribute, ColdFusion generates\n a name of the form CFForm_n where n is a number\n that assigned serially to the forms on a page.","required":false,"default":"","type":"string","values":[]},
@@ -29,7 +29,6 @@
 		{"name":"target","description":"Target window or frame passed through to <FORM>.","required":false,"default":"","type":"string","values":[]},
 		{"name":"passthrough","description":"DEPRECATED in CF7+ REMOVED in CF11+ Passes arbitrary attribute-value pairs to the HTML code\n that is generated for the tag. You can use either of the\n following formats:\n \n passthrough=\"title=\"\"myTitle\"\"\"\n passthrough='title=\"mytitle\"'","required":false,"default":"","type":"string","values":[]},
 		{"name":"onsuccess","description":"Applies only to forms inside cfdiv, cflayout, cfpod, or cfwindow controls. The name of a JavaScript function that will run when an asynchronous form submission succeeds.","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"ColdFusion 11 DEPRECATED format=flash, format=xml and format=applet", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-f/cfform.html"},
@@ -37,8 +36,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfform"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfform"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

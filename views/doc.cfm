@@ -27,7 +27,16 @@
 			</cfif>
 			<p>#autoLink(data.description)#</p>
 			<cfif StructKeyExists(data, "syntax") AND Len(data.syntax)>
-				<p id="syntax"><cfif data.type IS "tag"><small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;</cfif><code>#Replace(encodeForHTML(data.syntax), Chr(10), "<br>", "ALL")#<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)> <em>&##8594; returns #encodeForHTML(data.returns)#</em></cfif></code></p>
+				<p id="syntax">
+					<cfif data.type IS "tag">
+						<small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;
+					</cfif>
+					<code>#Replace(encodeForHTML(data.syntax), Chr(10), "<br>", "ALL")#
+						<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)>
+							<em>&##8594; returns #encodeForHTML(data.returns)#</em>
+						</cfif>
+					</code>
+				</p>
 				<cfif data.type IS "tag">
 					<cfif StructKeyExists(data, "script")>
 						<cfset data.scriptTitle = "Script Syntax">
@@ -161,14 +170,14 @@
 					<h4>
 						#encodeForHTML(p.name)#
 						<cfif structKeyExists(p, "type") and len( p.type )><em><span class="text-muted">#encodeForHTML(p.type)#</span></em></cfif>
-						<cfif IsBoolean(p.required) AND p.required><div class="pull-right"><span class="label label-danger">Required</span></div></cfif>
+						<cfif isBoolean(p.required) AND p.required><div class="pull-right"><span class="label label-danger">Required</span></div></cfif>
 						<cfif structKeyExists(p, "default") and len( trim( p.default ) )>
 								<div class="p-default pull-right"><span class="text-muted">Default:</span> <code>#encodeForHTML(p.default)#</code></div>
 						</cfif>
 					</h4>
 					<div class="p-desc">						
 						#autoLink( p.description )# 
-						<cfif StructKeyExists(p, "values") AND IsArray(p.values) AND ArrayLen(p.values)>
+						<cfif structKeyExists(p, "values") AND isArray(p.values) AND arrayLen(p.values)>
 							<cfif uCase(arrayToList(p.values)) IS NOT "YES,NO">
 								<div>
 									<strong>Values:</strong>
@@ -238,23 +247,35 @@
 			<cfset request.hasExamples = true>
 			<h2 id="examples">Examples <small>sample code <cfif data.type IS "function">invoking<cfelse>using</cfif> the #data.name# <cfif data.type IS "tag">tag<cfelse>function</cfif></small></h2>
 			<cfset example_index = 0>
-			<cfloop array="#data.examples#" index="ex">
-				<cfset example_index = example_index + 1>
-				<br />
-				<h4 id="ex#example_index#">
-					#XmlFormat(ex.title)#
-					<cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
-						<div class="pull-right">
-							<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				<cfloop array="#data.examples#" index="ex">
+					<cfset example_index = example_index + 1>
+					<br />
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">						
+							<h4 class="panel-title" id="ex#example_index#">
+								<a role="button" data-toggle="collapse" data-parent="##accordion" href="##collapseEx#example_index#" aria-expanded="true" aria-controls="collapseEx#example_index#">
+								  #XmlFormat(ex.title)#
+								</a>
+							</h4>
 						</div>
-					</cfif>
-				</h4>
-				<p class="clearfix">#autoLink(ex.description)#</p>
-				<pre class="prettyprint"><code>#encodeForHTML(ex.code)#</code></pre>
-				<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
-					<p><strong>Expected Result: </strong> #encodeForHTML(ex.result)#</p>
-				</cfif>
-			</cfloop>
+						<div id="collapseEx#example_index#" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+							<div class="panel-body">
+								<cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
+									<div class="pull-right">
+										<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
+									</div>
+								</cfif>
+								<p class="clearfix">#autoLink(ex.description)#</p>
+								<pre class="prettyprint"><code>#encodeForHTML(ex.code)#</code></pre>
+								<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
+									<p><strong>Expected Result: </strong> #encodeForHTML(ex.result)#</p>
+								</cfif>
+							</div>
+						</div>
+					</div>
+				</cfloop>				
+			</div>
 			<div class="modal fade example-modal" tabindex="-1" role="dialog">
 				<div class="modal-dialog modal-lg">
 					<div class="modal-content">

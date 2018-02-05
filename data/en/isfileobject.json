@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"isFileObject(filePath);",
 	"returns":"boolean",
-	"related":[],
+	"related":["isPDFObject","isSpreadsheetObject"],
 	"description":"",
 	"params": [
 		{"name":"filePath","description":"The path to the file you are checking.","required":true,"default":"","type":"","values":[]}
@@ -11,16 +11,13 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"11", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/IsFileObject.html"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
-        {
+        	{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n filePath = expandPath(\"./myfile.txt\"); \r\n a = fileOpen(filePath); \r\n b = fileRead(filePath); \r\n writeOutput(isFileObject(a)); \r\n writeOutput(isFileObject(b)); \r\n writeOutput(getFileInfo(filePath).type); \r\n writeOutput(structKeyExists(getFunctionList(), \"isFileObject\")); \r\n </cfscript> \r\n",
+			"code": "<cfscript>\r\nfilePath = expandPath(\"./myfile.txt\");\r\na = fileOpen(filePath);\r\nb = fileRead(filePath);\r\nwriteOutput(isFileObject(a));\r\nwriteOutput(isFileObject(b));\r\nwriteOutput(getFileInfo(filePath).type);\r\nwriteOutput(structKeyExists(getFunctionList(), \"isFileObject\"));\r\n</cfscript>",
 			"result": ""
 		}
 	]
-
 }

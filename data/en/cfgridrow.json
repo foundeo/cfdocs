@@ -2,7 +2,7 @@
 	"name": "cfgridrow",
 	"type": "tag",
 	"syntax": "<cfgridrow data=\"\">",
-	"related": [],
+	"related": ["cfgrid","cfgridcolumn","cfgridupdate"],
 	"description": "Lets you define a cfgrid that does not use a query as source\n for row data. If a query attribute is specified in cfgrid, the\n cfgridrow tags are ignored.",
 	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfgrid/index.html",
 	"params": [
@@ -24,11 +24,7 @@
 		}
 	],
 	"engines": {
-		"coldfusion": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfgridrow.html"
-		}
+		"coldfusion": { "minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfgridrow.html" }
 	},
 	"links": []
 }

@@ -4,7 +4,7 @@
 	"syntax": "stringLen(string)",
 	"member": "string.len()",
 	"returns": "numeric",
-	"related": [],
+	"related": ["len","arrayLen"],
 	"description": "Get the length of a string.",
 	"params": [
 		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []}
@@ -12,6 +12,7 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/stringlen.html"}
 	},
+	"links": [],
 	"examples": [
 		{
 			"title":"StringLen() example",
@@ -27,6 +28,5 @@
 			"result":"11",
 			"runnable":true
 		}
-	],
-	"links": []
+	]
 }

@@ -50,7 +50,7 @@
         {
 			"title": "Loop Over an Array (Script Syntax)",
 			"description": "Array Loop",
-			"code": "myArray = [\"a\", \"b\", \"c\"];\n// For Loop By index for CF9.0.0 and lower \nfor (i = 1; i <= arrayLen(myArray); i++) {\n    writeOutput(myArray[i]);\n}\n// By For In CF9.0.1+ \nfor (currentIndex in myArray) {\n    writeOutput(currentIndex);\n}\n// By arrayEach() member function CF11+\nmyArray.each(function(element, index) {\n    writeOuput(element & \" : \" & index);\n});",
+			"code": "myArray = [\"a\", \"b\", \"c\"];\n// For Loop By index for CF9.0.0 and lower \nfor (i = 1; i <= arrayLen(myArray); i++) {\n    writeOutput(myArray[i]);\n}\n// By For In CF9.0.1+ \nfor (currentIndex in myArray) {\n    writeOutput(currentIndex);\n}\n// By arrayEach() member function CF11+\nmyArray.each(function(element, index) {\n    writeOutput(element & \" : \" & index);\n});",
 			"result": ""
 		},
 
@@ -77,7 +77,7 @@
 	    {
 			"title": "Loop over a List (Script Syntax)",
 			"description": "List Loop",
-			"code": "// Define our list \r\n myList = \"a, b, c\"; \r\n // By array \r\n for (item in listToArray(myList, \",\")) { \r\n writeOutput(item); \r\n } \r\n // By listEach() \r\n myList.each(function(element, index) { \r\n writeOuput(element & \" : \" & index); \r\n }, \",\");",
+			"code": "// Define our list \r\n myList = \"a, b, c\"; \r\n // By array \r\n for (item in listToArray(myList, \",\")) { \r\n writeOutput(item); \r\n } \r\n // By listEach() \r\n myList.each(function(element, index) { \r\n writeOutput(element & \" : \" & index); \r\n }, \",\");",
 			"result": ""
 		},
 

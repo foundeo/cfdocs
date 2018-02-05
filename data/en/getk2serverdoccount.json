@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"getK2ServerDocCount()",
 	"returns":"numeric",
-	"related":[],
+	"related":["getK2ServerDoccountLimit"],
 	"description":"Determines the number of documents that can be searched by the\n CFML registered K2 Server. This function is used\n primarily by the CFML Verity and K2Server Administrator\n pages, and requires significant processing time. Avoid using\n it in production applications. This function uses Verity\n K2Server Release K2.2.0.",
 	"params": [],
 	"engines": {

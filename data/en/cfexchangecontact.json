@@ -2,7 +2,7 @@
 	"name":"cfexchangecontact",
 	"type":"tag",
 	"syntax":"<cfexchangecontact action=\"create\" contact=\"\" name=\"\" uid=\"\">",
-	"related":[],
+	"related":["cfexchangeconnection","cfexchangecalendar","cfexchangemail","cfexchangetask","cfexchangefilter"],
 	"description":"Creates, deletes, modifies, and gets Microsoft Exchange contact records, and gets contact record attachments.",
 	"params": [
 		{"name":"action","description":"The action to take. Must be one of the following: create, delete, get, getAttachments, modify (required)","required":true,"default":"","type":"string","values":["create","delete","deleteAttachments","get","getAttachments","modify"]},
@@ -13,13 +13,9 @@
 		{"name":"name","description":"The name of the ColdFusion query variable that will contain the retrieved events or\n information about the attachments that were retrieved. (required)","required":true,"default":"","type":"string","values":[]},
 		{"name":"result","description":"The name of a variable that will contain the UID of the contact that is created.\n You use this value in the uid attribute other actions to identify the contact to be acted on. (optional)","required":false,"default":"","type":"string","values":[]},
 		{"name":"uid","description":"A case-sensitive Exchange UID value that uniquely identifies the contacts on which to perform the action.\n For the delete action, this attribute can be a comma delimited list of UID values.\n The getAttachments and modify action allow only a single UID value. (required)","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexchangecontact.html"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

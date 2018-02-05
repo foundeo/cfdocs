@@ -2,12 +2,11 @@
 	"name":"cfabort",
 	"type":"tag",
 	"syntax":"<cfabort>",
-	"related":[],
+	"related":["cferror","cfthrow"],
 	"description":"Stops the processing of a CFML page at the tag location.\n CFML returns everything that was processed before the\n tag. The tag is often used with conditional logic to stop\n processing a page when a condition occurs.",
 	"params": [
 		{"name":"showerror","description":"Error to display, in a standard CFML error page,\n when tag executes","required":false,"default":"","type":"string","values":[]},
 		{"name":"attributecollection","description":"You can specify this tag's attributes in an attributeCollection whose value is a \n structure. Specify the structure name in the attributeCollection and use the tag‚ \n attribute names as structure keys.","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-a-b/cfabort.html"},
@@ -15,9 +14,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfabort"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfabort"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Example of using abort() to stop processing after an error occurs",
@@ -34,5 +31,4 @@
 			"runnable":true
 		}
 	]
-
 }

@@ -3,14 +3,13 @@
 	"type":"function",
 	"syntax":"getSOAPResponseHeader(webservice, namespace, name [, asXML])",
 	"returns":"any",
-	"related":[],
+	"related":["getSOAPRequest","getSOAPRequestHeader","getSOAPResponse"],
 	"description":" Returns a SOAP response header. Call this function\n from within code that is invoking a web service after\n making a web service request.",
 	"params": [
 		{"name":"webservice","description":"A webservice object as returned from the cfobject tag\n or the Createobject function.","required":true,"default":"","type":"any","values":[]},
 		{"name":"namespace","description":"A String that is the namespace for the header.","required":true,"default":"","type":"string","values":[]},
 		{"name":"name","description":"A String that is the name of the SOAP header.","required":true,"default":"","type":"string","values":[]},
 		{"name":"asXML","description":"If True, the header is returned as a CFML XML object;\n if false (default), the header is returned as a Java object.","required":false,"default":"","type":"boolean","values":[true,false]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getsoapresponseheader.html"},
@@ -18,8 +17,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getsoapresponseheader"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getsoapresponseheader"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

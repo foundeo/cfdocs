@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"getSystemTotalMemory();",
 	"returns":"numeric",
-	"related":[],
+	"related":["getSystemFreeMemory","getMemoryUsage","getCpuUsage"],
 	"description":" Gets details of the memory that is available for the operating system, in bytes.",
 	"params": [
 		{"name":"region","description":"Indicates the cache region from which to remove the stored objects. If no value is specified, default cache region is considered by default.","required":false,"default":"","type":"","values":[]}
@@ -13,16 +13,13 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/getsystemtotalmemory.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getSystemTotalMemory"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title": "Tag Syntax",
-			"description": "the in-memory file system memory set in cfadmin and should return that.",
-			"code": " \r\n",
+			"title": "The in-memory file system memory set in cfadmin",
+			"description": "",
+			"code": "#NumberFormat(getSystemTotalMemory() / 1000 / 1000,\"0.00\")# MB",
 			"result": ""
 		}
 	]
-
 }

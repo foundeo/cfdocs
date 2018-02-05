@@ -2,7 +2,7 @@
 	"name": "cfgridupdate",
 	"type": "tag",
 	"syntax": "<cfgridupdate grid=\"\" datasource=\"\" tablename=\"\">",
-	"related": [],
+	"related": ["cfgrid","cfgridrow","cfgridcolumn"],
 	"description": "Used within a cfgrid tag. Updates data sources directly from\n edited grid data. This tag provides a direct interface with\n your data source.\n\n This tag applies delete row actions first, then insert row\n actions, then update row actions. If it encounters an error,\n it stops processing rows.",
 	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfgrid/index.html",
 	"params": [
@@ -72,11 +72,7 @@
 		}
 	],
 	"engines": {
-		"coldfusion": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfgridupdate.html"
-		}
+		"coldfusion": { "minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfgridupdate.html" }
 	},
 	"links": []
 }

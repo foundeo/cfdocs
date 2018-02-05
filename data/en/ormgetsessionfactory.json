@@ -14,6 +14,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Gets the Hibernate session factory object associated with the datasource from the application.",
+			"description": "Returns the Factory object for the Hibernate session so you can preform operations on it.",
+			"code": "ormGetSessionFactory();",
+			"result": "",
+			"runnable": false
+		}
 	]
 
 }

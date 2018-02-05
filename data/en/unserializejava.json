@@ -4,7 +4,7 @@
 	"syntax": "unserializeJava(string)",
 	"returns": "any",
 	"related": [],
-	"description": "",
+	"description": "literal defintion of a serialized Java Object by function serialize",
 	"params": [
 		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []}
 	],

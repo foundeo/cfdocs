@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "imageFilterWarpGrid(rows, cols, width, height)",
 	"returns": "any",
-	"related": [],
+	"related": ["imageFilterColorMap","imageFilterCurves","imageFilterKernel","imageFilter"],
 	"description": "",
 	"params": [
 		{"name": "rows", "description": "", "required": true, "default": "", "type": "numeric", "values": []},

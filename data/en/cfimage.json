@@ -7,7 +7,7 @@
 	"params": [
 		{
 			"name": "action",
-			"description": "The action to take. Must be one of the following:\nborder\ncaptcha\nconvert\ninfo\nread\nresize\nrotate\nwrite\nwriteToBrowser\nYou do not need to specify the default action, read, explicitly.",
+			"description": "The action to take.",
 			"required": false,
 			"default": "read",
 			"type": "string",
@@ -39,7 +39,7 @@
 		},
 		{
 			"name": "difficulty",
-			"description": "Level of complexity of the CAPTCHA text.\nSpecify one of the following levels of text distortion:\nhigh\nmedium\nlow",
+			"description": "Level of complexity of the CAPTCHA text.",
 			"required": false,
 			"default": "low",
 			"type": "string",
@@ -71,7 +71,7 @@
 		},
 		{
 			"name": "isBase64",
-			"description": "Specifies whether the source is a Base64 string.\nThe isBase64 values are:\nyes: the source is a Base64 string.\nno: the source is not a Base64 string.",
+			"description": "Specifies whether the source is a Base64 string or not.",
 			"required": false,
 			"default": "false",
 			"type": "boolean",
@@ -87,7 +87,7 @@
 		},
 		{
 			"name": "overwrite",
-			"description": "Valid only if the destination attribute is specified. The overwrite values are:\nyes: overwrites the destination file.\nno: does not overwrite the destination file.\nIf the destination file already exists, ColdFusion generates an error if the overwrite option is not set to yes.",
+			"description": "Valid only if the destination attribute is specified.\nIf the destination file already exists, ColdFusion generates an error if the overwrite option is not set to yes.",
 			"required": false,
 			"default": "false",
 			"type": "boolean",

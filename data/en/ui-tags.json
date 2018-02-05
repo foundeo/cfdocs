@@ -1,6 +1,6 @@
 {
 	"name":"UI Tags",
 	"type":"listing",
-	"related":["cfdiv","cfgrid","cfgridcolumn","cfgridrow","cfgridupdate","cfmap","cfmapitem","cfmenu","cfmenuitem","cfpod","cfprogressbar","cftable","cftooltip","cftree","cftreeitem","cfwindow"],
+	"related":["cfdiv","cfform","cfformgroup","cfformitem","cfgrid","cfgridcolumn","cfgridrow","cfgridupdate","cfinput","cflayout","cflayoutarea","cfmap","cfmapitem","cfmenu","cfmenuitem","cfpod","cfprogressbar","cfselect","cftable","cftextarea","cftextinput","cftooltip","cftree","cftreeitem","cfwindow"],
 	"description":"A listing of CFML UI Tags.\n\nDiscouraged: The use of tags generating UI is generally discouraged by the CFML community.\nSee: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html"
 }
