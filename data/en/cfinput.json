@@ -2,7 +2,7 @@
   "name": "cfinput",
   "type": "tag",
   "syntax": "<cfinput name=\"\">",
-  "related": [],
+  "related": ["cfform"],
   "description": "Used within the cfform tag, to place radio buttons, check boxes, or text boxes on a form. Provides input validation for the specified control type.",
   "params": [
     {
