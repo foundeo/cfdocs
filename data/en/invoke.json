@@ -19,6 +19,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Invoke a Java Method",
+			"description":"Invokes the size method on a new HashMap object, which should return 0",
+			"code":"invoke(createObject(\"java\", \"java.util.HashMap\"), \"size\")",
+			"result":"0"
+		}
 	]
 
 }
