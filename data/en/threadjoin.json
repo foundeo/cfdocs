@@ -1,13 +1,13 @@
 {
 	"name":"threadJoin",
 	"type":"function",
-	"syntax":"threadJoin(Param1)",
+	"syntax":"threadJoin()",
 	"returns":"void",
-	"related":[],
-	"description":" No Help Available",
+	"related":["cfthread","threadTerminate"],
+	"description":"Waits for the given thread object to finish running",
 	"params": [
-		{"name":"Param1","description":"No Help Available","required":true,"default":"","type":"","values":[]}
-
+		{"name":"threadName","description":"Thread to join\n\nIf no `threadName` is specified, all running threads will be affected.\nYou can pass a threadname as string or multiple threads as comma-separated list","required":false,"default":"","type":"string","values":[]},
+		{"name":"timeout","description":"The number of milliseconds for which to suspend thread processing","required":false,"default":0,"type":"numeric",values:[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/threadjoin.html"},
@@ -15,8 +15,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/threadjoin"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/threadjoin"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }
