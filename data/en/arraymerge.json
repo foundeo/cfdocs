@@ -4,7 +4,7 @@
 	"syntax": "arrayMerge(array1, array2 [, leaveIndex])",
 	"member": "array1.merge(array2 [, leaveIndex])",
 	"returns": "array",
-	"related": [],
+	"related": ["arrayAppend"],
 	"description": "This function creates a new array with data from the two passed arrays. To add all the data from one array into another without creating a new array see the built in function ArrayAppend(arr1, arr2, true).",
 	"params": [
 		{"name": "array1", "description": "", "required": true, "default": "", "type": "array", "values": []},
@@ -14,28 +14,28 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraymerge.html"}
 	},
-  "examples": [
-	 {
-		"title": "Standard function syntax",
-		"description": "Lucee4.5+ Merge two arrays resulting in a single re-indexed array. All elements of both arrays are preserved.",
-		"code": "fruit = ['apple','banana','orange'];\nveggies = ['tomato','carrot','corn','peas','peppers'];\nhealthyFoods = arrayMerge(fruit, veggies);\nwriteOutput(arrayToList(healthyFoods));",
-		"result": "apple,banana,orange,tomato,carrot,corn,peas,peppers",
-		"runnable":true
-	 },
-	 {
-		"title": "Member function syntax",
-		"description": "Lucee4.5+ Merge two arrays resulting in a single re-indexed array. All elements of both arrays are preserved.",
-		"code": "fruit = ['apple','banana','orange'];\nveggies = ['tomato','carrot','corn','peas','peppers'];\nhealthyFoods = fruit.merge(veggies);\nwriteOutput(arrayToList(healthyFoods));",
-		"result": "apple,banana,orange,tomato,carrot,corn,peas,peppers",
-		"runnable":true
-	 },
-	 {
-		"title": "Example where leaveIndex parameter is true",
-		"description": "Lucee4.5+ Merge two arrays resulting in a single re-indexed array. Where the both arrays have elements in the same position, only values from the first array are included in the result. Valid using standard or member function syntax.\n\nNote how the first three elements of the veggies array are not merged because the fruit array already has values for elements 1-3.",
-		"code": "fruit = ['apple','banana','orange'];\nveggies = ['tomato','carrot','corn','peas','peppers'];\nhealthyFoods = arrayMerge(fruit, veggies, true);\nwriteOutput(arrayToList(healthyFoods));",
-		"result": "apple,banana,orange,peas,peppers",
-		"runnable":true
-	 }
+  	"examples": [
+		 {
+			"title": "Standard function syntax",
+			"description": "Lucee4.5+ Merge two arrays resulting in a single re-indexed array. All elements of both arrays are preserved.",
+			"code": "fruit = ['apple','banana','orange'];\nveggies = ['tomato','carrot','corn','peas','peppers'];\nhealthyFoods = arrayMerge(fruit, veggies);\nwriteOutput(arrayToList(healthyFoods));",
+			"result": "apple,banana,orange,tomato,carrot,corn,peas,peppers",
+			"runnable":true
+		 },
+		 {
+			"title": "Member function syntax",
+			"description": "Lucee4.5+ Merge two arrays resulting in a single re-indexed array. All elements of both arrays are preserved.",
+			"code": "fruit = ['apple','banana','orange'];\nveggies = ['tomato','carrot','corn','peas','peppers'];\nhealthyFoods = fruit.merge(veggies);\nwriteOutput(arrayToList(healthyFoods));",
+			"result": "apple,banana,orange,tomato,carrot,corn,peas,peppers",
+			"runnable":true
+		 },
+		 {
+			"title": "Example where leaveIndex parameter is true",
+			"description": "Lucee4.5+ Merge two arrays resulting in a single re-indexed array. Where the both arrays have elements in the same position, only values from the first array are included in the result. Valid using standard or member function syntax.\n\nNote how the first three elements of the veggies array are not merged because the fruit array already has values for elements 1-3.",
+			"code": "fruit = ['apple','banana','orange'];\nveggies = ['tomato','carrot','corn','peas','peppers'];\nhealthyFoods = arrayMerge(fruit, veggies, true);\nwriteOutput(arrayToList(healthyFoods));",
+			"result": "apple,banana,orange,peas,peppers",
+			"runnable":true
+		 }
 	],
 	"links": []
 }
