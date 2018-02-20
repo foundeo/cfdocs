@@ -41,53 +41,50 @@
 			"code": "for (i = 1; i <= 10; i++) {\r\n    writeOutput(i); \r\n}",
 			"result": "12345678910"
 		},
-        {
-            "title": "For Loop using CFLoop Tag",
-            "description": "General Purpose Loop",
-            "code": "<cfloop index=\"i\" from=\"1\" to=\"10\">\r\n    <cfoutput>#i#</cfoutput>\r\n</cfloop>",
-            "result": "1 2 3 4 5 6 7 8 9 10"
-        },
-        {
-			"title": "Loop Over an Array (Script Syntax)",
-			"description": "Array Loop",
-			"code": "myArray = [\"a\", \"b\", \"c\"];\n// For Loop By index for CF9.0.0 and lower \nfor (i = 1; i <= arrayLen(myArray); i++) {\n    writeOutput(myArray[i]);\n}\n// By For In CF9.0.1+ \nfor (currentIndex in myArray) {\n    writeOutput(currentIndex);\n}\n// By arrayEach() member function CF11+\nmyArray.each(function(element, index) {\n    writeOutput(element & \" : \" & index);\n});",
-			"result": ""
+		{
+		    "title": "For Loop using CFLoop Tag",
+		    "description": "General Purpose Loop",
+		    "code": "<cfloop index=\"i\" from=\"1\" to=\"10\">\r\n    <cfoutput>#i#</cfoutput>\r\n</cfloop>",
+		    "result": "1 2 3 4 5 6 7 8 9 10"
 		},
+		{
+				"title": "Loop Over an Array (Script Syntax)",
+				"description": "Array Loop",
+				"code": "myArray = [\"a\", \"b\", \"c\"];\n// For Loop By index for CF9.0.0 and lower \nfor (i = 1; i <= arrayLen(myArray); i++) {\n    writeOutput(myArray[i]);\n}\n// By For In CF9.0.1+ \nfor (currentIndex in myArray) {\n    writeOutput(currentIndex);\n}\n// By arrayEach() member function CF11+\nmyArray.each(function(element, index) {\n    writeOutput(element & \" : \" & index);\n});",
+				"result": ""
+			},
 
-        {
-            "title": "CFLoop over an Array",
-            "description": "Array Loop",
-            "code": "<cfset myArray = [\"a\", \"b\", \"c\"]> \r\n <!--- By index ---> \r\n <cfloop index=\"i\" from=\"1\" to=\"#arrayLen(myArray)#\"> \r\n <cfoutput>#myArray[i]#</cfoutput> \r\n </cfloop> \r\n <!--- By array ---> \r\n <cfloop index=\"currentIndex\" array=\"#myArray#\"> \r\n <cfoutput>#currentIndex#</cfoutput> \r\n </cfloop>",
-            "result": ""
-        },
-	    {
+		{
+		    "title": "CFLoop over an Array",
+		    "description": "Array Loop",
+		    "code": "<cfset myArray = [\"a\", \"b\", \"c\"]> \r\n <!--- By index ---> \r\n <cfloop index=\"i\" from=\"1\" to=\"#arrayLen(myArray)#\"> \r\n <cfoutput>#myArray[i]#</cfoutput> \r\n </cfloop> \r\n <!--- By array ---> \r\n <cfloop index=\"currentIndex\" array=\"#myArray#\"> \r\n <cfoutput>#currentIndex#</cfoutput> \r\n </cfloop>",
+		    "result": ""
+		},
+	    	{
 			"title": "Loop over a Struct (Script Syntax)",
 			"description": "Struct Loop",
 			"code": "myStruct = {name: \"Tony\", state: \"Florida\"}; \r\n // By struct \r\n for (currentKey in myStruct) { \r\n writeOutput(\"<li>#currentKey# : #myStruct[currentKey]#</li>\"); \r\n } \r\n // By structEach() \r\n myStruct.each(function(key, value) { \r\n writeOutput(\"<li>#key# : #value#</li>\"); \r\n }); \r\n ",
 			"result": ""
 		},
-
-
-        {
-            "title": "CFLoop over a Struct",
-            "description": "Loop over a Struct using the collection and item arguments of cfloop.",
-            "code": "<!--- Define our struct ---> \r\n <cfset myStruct = {name: \"Tony\", state: \"Florida\"}> \r\n <!--- By struct ---> \r\n <cfloop item=\"currentKey\" collection=\"#myStruct#\"> \r\n <cfoutput><li>#currentKey# : #myStruct[currentKey]#</li></cfoutput> \r\n </cfloop>",
-            "result": ""
-        },
-	    {
+		{
+		    "title": "CFLoop over a Struct",
+		    "description": "Loop over a Struct using the collection and item arguments of cfloop.",
+		    "code": "<!--- Define our struct ---> \r\n <cfset myStruct = {name: \"Tony\", state: \"Florida\"}> \r\n <!--- By struct ---> \r\n <cfloop item=\"currentKey\" collection=\"#myStruct#\"> \r\n <cfoutput><li>#currentKey# : #myStruct[currentKey]#</li></cfoutput> \r\n </cfloop>",
+		    "result": ""
+		},
+	    	{
 			"title": "Loop over a List (Script Syntax)",
 			"description": "List Loop",
 			"code": "// Define our list \r\n myList = \"a, b, c\"; \r\n // By array \r\n for (item in listToArray(myList, \",\")) { \r\n writeOutput(item); \r\n } \r\n // By listEach() \r\n myList.each(function(element, index) { \r\n writeOutput(element & \" : \" & index); \r\n }, \",\");",
 			"result": ""
 		},
-
-        {
-            "title": "CFLoop over a List",
-            "description": "List Loop",
-            "code": "<!--- Define our list ---> \r\n <cfset myList = \"a, b, c\"> \r\n <!--- By list ---> \r\n <cfloop index=\"item\" list=\"#myList#\"> \r\n <cfoutput>#item#</cfoutput> \r\n </cfloop> \r\n <!--- By array ---> \r\n <cfloop index=\"currentIndex\" array=\"#listToArray(myList, \",\")#\"> \r\n <cfoutput>#currentIndex#</cfoutput> \r\n </cfloop>",
-            "result": ""
-        },
-	    {
+		{
+		    "title": "CFLoop over a List",
+		    "description": "List Loop",
+		    "code": "<!--- Define our list ---> \r\n <cfset myList = \"a, b, c\"> \r\n <!--- By list ---> \r\n <cfloop index=\"item\" list=\"#myList#\"> \r\n <cfoutput>#item#</cfoutput> \r\n </cfloop> \r\n <!--- By array ---> \r\n <cfloop index=\"currentIndex\" array=\"#listToArray(myList, \",\")#\"> \r\n <cfoutput>#currentIndex#</cfoutput> \r\n </cfloop>",
+		    "result": ""
+		},
+	   	{
 			"title": "Loop over a Query (Script Syntax)",
 			"description": "Query Loop",
 			"code": "// Define our query \r\n platform = [\"Adobe ColdFusion\", \"Railo\", \"Lucee\"]; \r\n myQuery = queryNew(\" \"); \r\n queryAddColumn(myQuery, \"platform\", \"CF_SQL_VARCHAR\", platform); \r\n // By row index \r\n for (i = 1; i <= myQuery.recordCount; i++) { \r\n writeOutput(\"<li>#myQuery[\"platform\"][i]#</li>\"); \r\n } \r\n // By query \r\n for (row in myQuery) { \r\n writeOutput(\"<li>#row.platform#</li>\"); \r\n }",
@@ -96,15 +93,15 @@
 		{
 			"title": "Query Loop with Grouping (Script Syntax)",
 			"description": "Query Loop use grouping",
-			"code": "q = queryNew(\"pk,fk,data\", \"integer,integer,varchar\",[ \r\n [1, 10, \"aa\"], \r\n [2, 20, \"bb\"], \r\n [3, 20, \"cc\"], \r\n [4, 30, \"dd\"], \r\n [5, 30, \"ee\"], \r\n [6, 30, \"ff\"] \r\n]); \r\ncfloop(query=q, group=\"fk\"){ \r\n    writeOutput(\"<strong>#fk#</strong>\"); \r\n    cfloop(){ \r\n        writeOutput(\"#pk#:#data#<br>\"); \r\n    } \r\n    writeOutput(\"<hr>\"); \r\n}",
+			"code": "q = queryNew(\"pk,fk,data\", \"integer,integer,varchar\",[ \r\n [1, 10, \"aa\"], \r\n [2, 20, \"bb\"], \r\n [3, 20, \"cc\"], \r\n [4, 30, \"dd\"], \r\n [5, 30, \"ee\"], \r\n [6, 30, \"ff\"] \r\n]); \r\ncfloop(query=q, group=\"fk\"){ \r\n    writeOutput(\"<strong>#fk#</strong><br />\"); \r\n    cfloop(){ \r\n        writeOutput(\"&emsp;#pk#:#data#<br />\"); \r\n    } \r\n    writeOutput(\"<hr>\"); \r\n}",
 			"result": ""
 		},
-        {
-            "title": "Query Loop using CFLoop",
-            "description": "Query Loop",
-            "code": "<!--- Define our query ---> \r\n <cfset platform = [\"Adobe ColdFusion\", \"Railo\", \"Lucee\"]> \r\n <cfset myQuery = queryNew(\" \")> \r\n <cfset queryAddColumn(myQuery, \"platform\", \"CF_SQL_VARCHAR\", platform)> \r\n <!--- By row index ---> \r\n <cfloop index=\"i\" from=\"1\" to=\"#myQuery.recordCount#\"> \r\n <cfoutput><li>#myQuery[\"platform\"][i]#</li></cfoutput> \r\n </cfloop> \r\n <!--- By group ---> \r\n <cfloop query=\"myQuery\" group=\"platform\"> \r\n <cfoutput><li>#platform#</li></cfoutput> \r\n </cfloop>",
-            "result": ""
-        },
+		{
+		    "title": "Query Loop using CFLoop",
+		    "description": "Query Loop",
+		    "code": "<!--- Define our query ---> \r\n <cfset platform = [\"Adobe ColdFusion\", \"Railo\", \"Lucee\"]> \r\n <cfset myQuery = queryNew(\" \")> \r\n <cfset queryAddColumn(myQuery, \"platform\", \"CF_SQL_VARCHAR\", platform)> \r\n <!--- By row index ---> \r\n <cfloop index=\"i\" from=\"1\" to=\"#myQuery.recordCount#\"> \r\n <cfoutput><li>#myQuery[\"platform\"][i]#</li></cfoutput> \r\n </cfloop> \r\n <!--- By group ---> \r\n <cfloop query=\"myQuery\" group=\"platform\"> \r\n <cfoutput><li>#platform#</li></cfoutput> \r\n </cfloop>",
+		    "result": ""
+		},
 		{
 			"title": "While Loop (Script Syntax)",
 			"description": "Pre-Condition Loop This form of loop evaluates a single condition at the beginning of each iteration, and continues to loop whilst the condition is true",
@@ -131,5 +128,4 @@
 			"result": ""
 		}
 	]
-
 }
