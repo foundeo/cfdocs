@@ -81,7 +81,7 @@
 		},
 		"railo": {
 			"minimum_version": "",
-			"notes": "",
+			"notes": "In Lucee the filter param can be a closure as well where the path is passed in.\n\nIt seems that there is no way to access the file query.\nIf a directory returns false in recursive mode the contained files are processed anyways",
 			"docs": "http://railodocs.org/index.cfm/function/directorylist"
 		},
 		"openbd": {
@@ -90,7 +90,13 @@
 			"docs": "http://openbd.org/manual/?/function/directorylist"
 		}
 	},
-	"links": [],
+	"links": [
+		{
+		    "title":"Enhance closure filter on directory copy (Lucee Development / LDEV-1542)",
+		    "description":"Support ticket by Brad Wood describing the filter misbehavior in recursive mode",
+		    "url":"https://luceeserver.atlassian.net/browse/LDEV-1542"
+		}
+	],
 	"examples": [
 		{
 			"title": "An array of files in this directory",
