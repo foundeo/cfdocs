@@ -81,7 +81,7 @@
 		},
 		"railo": {
 			"minimum_version": "",
-			"notes": "In Lucee the filter param can be a closure as well where the path is passed in.\n\nIt seems that there is no way to access the file query.\nIf a directory returns false in recursive mode the contained files are processed anyways",
+			"notes": "If a directory returns false in recursive mode the contained files are processed anyways",
 			"docs": "http://railodocs.org/index.cfm/function/directorylist"
 		},
 		"openbd": {
