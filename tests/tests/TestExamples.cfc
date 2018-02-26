@@ -29,13 +29,13 @@ component extends="testbox.system.BaseSpec" {
 									}
 									if (!find("<cf", e.code) && !find(";", e.code) && !find("{", e.code)) {
 										var actualResult = "";
-										local.examplePath = "/temp/cfdoc-example-#createUUID()#.cfm";
+										local.examplePath = "#getTempDirectory()#cfdoc-example-#createUUID()#.cfm";
 										try {
 											
 											fileWrite(local.examplePath, "<c" & "fscript>writeOutput( " & e.code & ");</c" & "fscript>");
 
 											cfsavecontent( variable="actualResult" ) {
-												include template="#local.examplePath#";
+												include "/temp/#getFileFromPath(local.examplePath)#";
 											}
 											
 											actualResult = trim(actualResult);
