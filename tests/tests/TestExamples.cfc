@@ -29,26 +29,25 @@ component extends="testbox.system.BaseSpec" {
 									}
 									if (!find("<cf", e.code) && !find(";", e.code) && !find("{", e.code)) {
 										var actualResult = "";
+										local.examplePath = "/temp/cfdoc-example-#createUUID()#.cfm";
 										try {
-											actualResult = evaluate(e.code);
-										} catch(any ex) {
-											if (ex.message == "Syntax Error, invalid Expression [" & e.code & "]") {
-												if (reFindNoCase("[""'][a-z0-9 ]+[""']\.[a-z]+\(", e.code)) {
-													//Lucee does not like "String".memberFunction()
-													//in evaluate but it is valid otherwise
-													continue;
-												}
+											
+											fileWrite(local.examplePath, "<c" & "fscript>writeOutput( " & e.code & ");</c" & "fscript>");
+
+											cfsavecontent( variable="actualResult" ) {
+												include template="#local.examplePath#";
 											}
-											actualResult = "EXCEPTION in example #idx#: #ex.message#";
+											
+											actualResult = trim(actualResult);
+										} catch(any ex) {
+											actualResult = "EXCEPTION in example #idx# in #fileName#: #ex.message#";
+										} finally {
+											if (fileExists(local.examplePath)) {
+												fileDelete(local.examplePath);
+											}
 										}
 
-										//workaround bug: listRemoveDuplicates adds trailing comma in lucee
-										//https://luceeserver.atlassian.net/browse/LDEV-387
-										if (json.name == "listRemoveDuplicates" && server.keyExists("lucee")) {
-											if (right(actualResult, 1) == ",") {
-												e.result = e.result & ",";
-											}
-										}
+										
 										if (isBoolean(e.result) && !isNumeric(e.result)) {
 											expect(isBoolean(actualResult)).toBeTrue("#fileName# example result is:#e.result# but evaluated to:#actualResult#");
 											if (e.result == true) {
