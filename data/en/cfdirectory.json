@@ -19,12 +19,17 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfdirectory.html"},
-		"lucee": {"minimum_version":"", "notes":"If a directory returns false in recursive mode the contained files are processed anyways", "docs":"http://docs.lucee.org/reference/tags/directory.html"},
+		"lucee": {"minimum_version":"", "notes":"In Lucee the filter param can be a closure as well where the path is passed in.\n\nIt seems that there is no way to access the file query. If a directory returns false in recursive mode the contained files are processed anyways", "docs":"http://docs.lucee.org/reference/tags/directory.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdirectory"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdirectory"}
 	},
 	"links": [
 		{
+		    "title":"Railo tip: use a custom function for the cfdirectory \"filter\" attribute",
+		    "description":"Paul Klinkenberg shows an example usage of filter parameter as a closure",
+		    "url":"http://www.lucee.nl/post.cfm/railo-tip-use-a-custom-function-for-the-cfdirectory-filter-attribute"
+    },
+    {
 		    "title":"Enhance closure filter on directory copy (Lucee Development / LDEV-1542)",
 		    "description":"Support ticket by Brad Wood describing the filter misbehavior in recursive mode",
 		    "url":"https://luceeserver.atlassian.net/browse/LDEV-1542"
@@ -80,5 +85,4 @@
 			"result": ""
 		}
 	]
-
 }
