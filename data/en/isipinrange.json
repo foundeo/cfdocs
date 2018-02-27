@@ -3,11 +3,11 @@
 	"type": "function",
 	"syntax": "isIPInRange(ips, ip)",
 	"returns": "boolean",
-	"related": [],
+	"related": ["isIPV6"],
 	"description": "",
 	"params": [
-		{"name": "ips", "description": "", "required": true, "default": "", "type": "any", "values": []},
-		{"name": "ip", "description": "", "required": true, "default": "", "type": "string", "values": []}
+		{"name": "ips", "description": "comma-delimited list or array as ip range", "required": true, "default": "", "type": "any", "values": []},
+		{"name": "ip", "description": "ip to test", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/isipinrange.html"}
