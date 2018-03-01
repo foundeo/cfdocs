@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "componentInfo(component)",
 	"returns": "struct",
-	"related": [],
+	"related": ["cfcomponent"],
 	"description": "",
 	"params": [
 		{"name": "component", "description": "", "required": true, "default": "", "type": "component", "values": []}
