@@ -18,6 +18,7 @@
 		{"name":"maxrows","description":"Number of messages to return or delete, starting with the\n number in startRow. Ignored if messageNumber or uid is\n specified.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"startrow","description":"First row number to get or delete. Ignored if messageNumber\n or uid is specified.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"generateUniqueFileNames","description":"Yes: Generate unique filenames for files attached to an\n e-mail message, to avoid naming conflicts when files are\n saved","required":false,"default":"","type":"boolean","values":[true,false]}
+		{"name":"secure","description":"Yes: enables SSL for pop requests.","required":false,"default":"no","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpop.html"},
