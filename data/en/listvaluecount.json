@@ -4,7 +4,7 @@
 	"syntax":"listValueCount(list, value [, delimiters])",
 	"returns":"numeric",
 	"related":["listLen","structCount"],
-	"description":"Counts instances of a specified value in a list.\nThe search is case-sensitive. For case-insensitive search use listValueNoCase.",
+	"description":"Counts instances of a specified value in a list.\nThe search is case-sensitive. For case-insensitive search use listValueCountNoCase.",
 	"params": [
 		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"","required":true,"default":"","type":"string","values":[]},
