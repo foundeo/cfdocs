@@ -20,7 +20,7 @@
 		{
 			"title": "Move file from here to there",
 			"description": "",
-			"code": "fileMove(#sourcefile#, #destinationfile#);",
+			"code": "fileMove(sourcefile, destinationfile);",
 			"result": "",
 			"runnable":false
 		}
