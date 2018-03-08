@@ -7,9 +7,9 @@
 	"description":" Returns a sorted array of the top level keys in a structure.\n Sorts using alphabetic or numeric sorting, and can sort based\n on the values of any structure element.",
 	"params": [
 		{"name":"base","description":"","required":true,"default":"","type":"struct","values":[]},
-		{"name":"sorttype","description":"* numeric\n * text: case sensitive Default.\n * textnocase","required":true,"default":"","type":"string","values":["numeric","text","textnocase"]},
-		{"name":"sortorder","description":"* asc: ascending (a to z) sort order. Default.\n * desc: descending (z to a) sort order","required":true,"default":"","type":"string","values":[]},
-		{"name":"pathtosubelement","description":"String or a variable that contains one","required":true,"default":"","type":"string","values":[]}
+		{"name":"sorttype","description":"* numeric\n * text: case sensitive\n* textnocase","required":false,"default":"text","type":"string","values":["numeric","text","textnocase"]},
+		{"name":"sortorder","description":"* asc: ascending (a to z) sort order.\n* desc: descending (z to a) sort order","required":false,"default":"ASC","type":"string","values":["asc","desc"]},
+		{"name":"pathtosubelement","description":"String or a variable that contains one","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structsort.html"},
@@ -20,14 +20,14 @@
 	"links": [],
 	"examples": [
         {
-            "title": "Simple example for structSort function",
-            "description": "Uses the structSort() function to get the sorted structure",
+            "title": "Numeric sorting",
+            "description": "",
             "code": "SomeStruct = {red=93,yellow=90,green=94};\nresult = structSort(SomeStruct, \"numeric\", \"desc\");\nwriteOutput( lcase(serializeJSON(result)) );",
             "result": "[\"green\", \"red\", \"yellow\"]"
         },
         {
-            "title": "Simple example for structSort function with pathtosubelement",
-            "description": "Uses the structSort() function to get the sorted structure",
+            "title": "Sort by subelement",
+            "description": "",
             "code": "somestruct = {};\nsomeStruct.scott = {age=26, department=\"General\"};\nsomeStruct.glan = {age=29, department=\"computer\"};\nsomeStruct.george = {age=31, department=\"Physical\"};\nresult = structSort(somestruct, \"textnocase\", \"asc\", \"department\");\nwriteOutput( lcase(serializeJSON(result)) );",
             "result": "[\"glan\",\"scott\",\"george\"]"
         }
