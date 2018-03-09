@@ -5,10 +5,10 @@
 	"member": "query.deleteRow([row])",
 	"returns": "boolean",
 	"related": [],
-	"description": "Deletes the row within a query object, modifying the original query.",
+	"description": "Deletes a row within a query object.",
 	"params": [
 		{"name": "query", "description": "The query to modify", "required": true, "default": "", "type": "query", "values": []},
-		{"name": "row", "description": "The index of the row to delete, row index starts at one (1).  If a row is not specified, the last row is removed.", "required": false, "default": "-9999", "type": "numeric", "values": []}
+		{"name": "row", "description": "Index of the row to delete, row index starts at 1.  If a row is not specified, the last row is removed.", "required": false, "default": "-9999", "type": "numeric", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querydeleterow.html"}
