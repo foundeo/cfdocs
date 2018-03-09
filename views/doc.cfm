@@ -8,7 +8,7 @@
 					<cfif data.type IS "tag">
 						<small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;
 					</cfif>
-					<code>#Replace(encodeForHTML(data.syntax), Chr(10), "<br>", "ALL")#
+					<code>#trim(Replace(encodeForHTML(data.syntax), Chr(10), "<br>", "ALL"))#
 						<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)>
 							<em>&##8594; returns #encodeForHTML(data.returns)#</em>
 						</cfif>
