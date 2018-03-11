@@ -7,8 +7,8 @@
 	"related": [],
 	"description": "Deletes a row within a query object.",
 	"params": [
-		{"name": "query", "description": "The query to modify", "required": true, "default": "", "type": "query", "values": []},
-		{"name": "row", "description": "Index of the row to delete, row index starts at 1.  If a row is not specified, the last row is removed.", "required": false, "default": "-9999", "type": "numeric", "values": []}
+		{"name": "query", "description": "Query to modify", "required": true, "default": "", "type": "query", "values": []},
+		{"name": "row", "description": "Index of the row to delete, starts at 1.  If a row is not specified, the last row is removed.", "required": false, "default": "-9999", "type": "numeric", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querydeleterow.html"}
