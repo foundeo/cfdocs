@@ -7,8 +7,8 @@
 	"related": [],
 	"description": "Deletes a column within a query object.",
 	"params": [
-		{"name": "query", "description": "The query to modify.", "required": true, "default": "", "type": "query", "values": []},
-		{"name": "column", "description": "The name of the column to delete.", "required": true, "default": "", "type": "string", "values": []}
+		{"name": "query", "description": "Query to modify", "required": true, "default": "", "type": "query", "values": []},
+		{"name": "column", "description": "Name of the column to delete", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querydeletecolumn.html"}
