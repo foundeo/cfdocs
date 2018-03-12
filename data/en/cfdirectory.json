@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cfdirectory directory=\".\" action=\"list|create|delete|rename\">",
 	"script": "directoryList(\".\", false, \" \");",
-	"related":["directorylist","directorycreate","directoryread","directorydelete","directoryexists"],
+	"related":["directorylist","directorycreate","directorydelete","directoryexists"],
 	"description":"Allows you to list, create, delete or rename a directory in the server file system.",
 	"params": [
 		{"name":"action","description":"Action to perform","required":false,"default":"list","type":"string","values":["list","create","delete","rename"]},
