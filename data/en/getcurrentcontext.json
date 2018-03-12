@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "getCurrentContext()",
 	"returns": "array",
-	"related": [],
+	"related": ["getContextRoot"],
 	"description": "",
 	"params": [],
 	"engines": {
