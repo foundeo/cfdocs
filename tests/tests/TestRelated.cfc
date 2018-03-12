@@ -32,7 +32,7 @@ component extends="testbox.system.BaseSpec" {
 				for(tag in fileTypes.tags) {
 					unexisting = arrayFilter(tag.related,function(related) {
 						// Added "component" to related types
-						return not booleanFormat((arrayFindNoCase(index.tags,related) OR arrayFindNoCase(index.functions,related) OR arrayFindNoCase(index.components,related)) AND not booleanFormat(arrayFindNoCase(index.listing,related)));
+						return not booleanFormat((arrayFindNoCase(index.tags,related) OR arrayFindNoCase(index.functions,related) OR arrayFindNoCase(index.components,related)) AND not booleanFormat(arrayFindNoCase(index.categories,related)));
 					});
 					isListing = arrayFilter(tag.related,function(related) {
 						return booleanFormat(arrayFindNoCase(index.categories,related));
