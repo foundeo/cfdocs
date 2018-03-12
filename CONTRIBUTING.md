@@ -2,10 +2,10 @@
 
 ### I want to help but I'm not sure what needs to be done
 
-1) Look at our [list of Tags / Functions Missing Descriptions](https://cfdocs.org/reports/missing-descriptions.cfm) and add a description.
-2) Look at our [list of Tags / Functions without Examples](https://cfdocs.org/reports/missing-examples.cfm) and add some examples. You can use [this utility](https://cfdocs.org/utilities/json/) to format the examples into the correct JSON format.
-3) Look at our [list of Tags / Functions without Related Links](https://cfdocs.org/reports/missing-related.cfm) and add a link to a related blog entry or article.
-4) Look at our [GitHub Open Issues](https://github.com/foundeo/cfdocs/issues) and fix something.
+1. Look at our [list of Tags / Functions Missing Descriptions](https://cfdocs.org/reports/missing-descriptions.cfm) and add a description.
+2. Look at our [list of Tags / Functions without Examples](https://cfdocs.org/reports/missing-examples.cfm) and add some examples. You can use [this utility](https://cfdocs.org/utilities/json/) to format the examples into the correct JSON format.
+3. Look at our [list of Tags / Functions without Related Links](https://cfdocs.org/reports/missing-related.cfm) and add a link to a related blog entry or article.
+4. Look at our [GitHub Open Issues](https://github.com/foundeo/cfdocs/issues) and fix something.
 
 ### Where can I find documentation about the JSON file format used?
 
