@@ -35,7 +35,7 @@ component extends="testbox.system.BaseSpec" {
 						return not booleanFormat((arrayFindNoCase(index.tags,related) OR arrayFindNoCase(index.functions,related) OR arrayFindNoCase(index.components,related)) AND not booleanFormat(arrayFindNoCase(index.listing,related)));
 					});
 					isListing = arrayFilter(tag.related,function(related) {
-						return booleanFormat(arrayFindNoCase(index.listing,related));
+						return booleanFormat(arrayFindNoCase(index.categories,related));
 					});
 					expect(arrayLen(isListing) is 0).toBeTrue("#arrayToList(isListing,', ')# is/are is are listing(s) in #tag.name# which are not supported for related. Add the #tag.name# to listing instead!");
 					expect(arrayLen(unexisting) is 0).toBeTrue("#arrayToList(unexisting,', ')# is/are non-existing function(s)/tag(s) in #tag.name#");
