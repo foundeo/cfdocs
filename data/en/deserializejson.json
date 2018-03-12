@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"deserializeJSON(jsonvar [, strictMapping, useCustomSerializer])\ndeserializeJSON(jsonstring [, strictMapping, file])",
 	"returns":"any",
-	"related":[],
+	"related":["serializeJSON"],
 	"description":" Converts a JSON (JavaScript Object Notation) string data representation into CFML data, such as a CFML structure or array.",
 	"params": [
 		{"name":"jsonvar","description":"A string that contains a valid JSON construct, or variable that represents one.","required":true,"default":"","type":"string","values":[]},
