@@ -50,7 +50,11 @@
         "varchar",
         "timestamp",
         "date"
-      ]
+      ],
+      "engines":{
+        "railo":{"minimum_version":"3.2", "notes":"Supports `int` and `cf_sql_int` for integer"},
+        "lucee":{"minimum_version":"4.5", "notes":"Supports `int` and `cf_sql_int` for integer"}
+      }
     },
     {
       "name": "maxlength",
