@@ -17,7 +17,7 @@
     },
     {
       "name": "cfsqltype",
-      "description": "SQL type that parameter (any type) is bound to. As of CF11+ or Lucee 4.5+ you can omit the `cf_sql_` prefix.",
+      "description": "SQL type that parameter (any type) is bound to. As of CF11+ or Lucee4.5+ you can omit the `cf_sql_` prefix.",
       "required": false,
       "default": "",
       "type": "string",
@@ -45,11 +45,7 @@
         "cf_sql_timestamp",
         "cf_sql_tinyint",
         "cf_sql_varchar",
-        "cf_sql_nvarchar",
-        "integer",
-        "varchar",
-        "timestamp",
-        "date"
+        "cf_sql_nvarchar"
       ]
     },
     {
