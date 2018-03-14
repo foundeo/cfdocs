@@ -3,36 +3,10 @@
   "type": "tag",
   "syntax": "<cfoauth>",
   "description": "The <oauth> tag allows you to easily integrate third-party Oauth 2 authentication provider in your application. This tag currently supports Facebook and Google authentication. Also, this tag supports Oauth providers that support the Oauth 2 protocols. For instance, Microsoft and Github. \r\n\r\nIf type is not Facebook or Google then use access token endpoint and other attributes.",
-  "engines": {
-    "coldfusion": {
-      "minimum_version": "11",
-      "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfoauth.html",
-      "notes": ""
-    }
-  },
-  "links": [
-    {
-      "title": "OAuth Site",
-      "description": "",
-      "url": "http:\/\/oauth.net\/"
-    },
-    {
-      "title": "OAuth2 CF",
-      "description": "Oauth2 implementation for CF9, CF10",
-      "url": "https:\/\/github.com\/coldfumonkeh\/oauth2"
-    },
-    {
-      "title": "Coldfusion Jedi Introduction to OAuth",
-      "description": "",
-      "url": "http:\/\/www.raymondcamden.com\/index.cfm\/2013\/4\/1\/ColdFusion-and-OAuth-Part-1--Facebook"
-    }
-  ],
+  "related": ["cflogin","cfntauthenticate"],
   "params": [
     {
-      "values": [
-        "Facebook",
-        "Google"
-      ],
+      "values": ["Facebook", "Google"],
       "default": "",
       "description": "Currently supported values are Facebook and Google. Implicitly supports the authentication workflow of Facebook and Google.",
       "name": "Type",
@@ -50,7 +24,7 @@
     {
       "values": [],
       "default": "",
-      "description": "Scopes are the permissions that a developer seeks from the users. These are usually comma separated values of permissions.\r\n\r\n \r\n\r\nRefer to the Oauth provider's documentations for more information.\r\n\r\n \r\n\r\nFor example, after Facebook authentication, if a developer wants to access an email address and then the friend lists of a user, the developer will use:\r\n\r\n scope=email,read_friendlists.\r\n\r\n \r\n\r\nNote: The scope name varies for different Oauth providers. ",
+      "description": "Scopes are the permissions that a developer seeks from the users. These are usually comma separated values of permissions.\r\nRefer to the Oauth provider's documentations for more information.\r\nFor example, after Facebook authentication, if a developer wants to access an email address and then the friend lists of a user, the developer will use:\r\nscope=email,read_friendlists.\r\nNote: The scope name varies for different Oauth providers.",
       "name": "scope",
       "type": "string",
       "required": "0"
@@ -65,15 +39,15 @@
     },
     {
       "values": [],
-      "default": "Either type can be specified or endpoints combination but not both",
-      "description": "If type is not specified, this will be used as end point URL to be invoked for user authentication.",
+      "default": "",
+      "description": "If type is not specified, this will be used as endpoint URL to be invoked for user authentication.",
       "name": "authendpoint",
       "type": "string",
       "required": "0"
     },
     {
       "values": [],
-      "default": "Either type can be specified or endpoints combination but not both",
+      "default": "",
       "description": " If type is not specified this will be used as end point URL to be invoked for app authentication.",
       "name": "accesstokenendpoint",
       "type": "string",
@@ -97,8 +71,8 @@
     },
     {
       "values": [],
-      "default": "This will default to the URL which is executing the code. So if in oauth settings user has given app URL as : http:\/\/domainname\/appname And the file executing the code is : http:\/\/domainname\/appname\/login.cfm The redirect URI will be : http:\/\/domainname\/appname\/login.cfm",
-      "description": "To redirect once user authentication is done.",
+      "default": "",
+      "description": "This will default to the URL which is executing the code. So if in oauth settings user has given app URL as : http:\/\/domainname\/appname And the file executing the code is : http:\/\/domainname\/appname\/login.cfm The redirect URI will be : http:\/\/domainname\/appname\/login.cfm",
       "name": "redirecturi",
       "type": "string",
       "required": "0"
@@ -112,13 +86,32 @@
       "required": "0"
     }
   ],
-  "examples": [
+  "engines": {
+    "coldfusion": { "minimum_version": "11", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfoauth.html" }
+  },
+  "links": [
     {
-      "result": "",
-      "title": "Adobe Example",
-      "description": "The following example shows a simple authentication:",
-      "code": "\r\n<cflogin>\r\n <cfoauth\r\n type = \"Facebook\"\r\n clientid = \"YOUR_CLIENT_ID\"\r\n secretkey = \"YOUR_SECRET_KEY\"\r\n result = \"res\"\r\n redirecturi = \"http:\/\/localhost:8500\/doc\/login.cfm\" >\r\n <cfloginuser name = \"#res.other.username#\" password = \"#res.access_token#\" roles = \"user\"\/>\r\n<\/cflogin>\r\n<cflocation url=\"http:\/\/localhost:8500\/doc\/index.cfm\" >"
+      "title": "OAuth Site",
+      "description": "",
+      "url": "http:\/\/oauth.net\/"
+    },
+    {
+      "title": "OAuth2 CF",
+      "description": "Oauth2 implementation for CF9, CF10",
+      "url": "https:\/\/github.com\/coldfumonkeh\/oauth2"
+    },
+    {
+      "title": "Coldfusion Jedi Introduction to OAuth",
+      "description": "",
+      "url": "http:\/\/www.raymondcamden.com\/index.cfm\/2013\/4\/1\/ColdFusion-and-OAuth-Part-1--Facebook"
     }
   ],
-  "related": []
+  "examples": [
+	{
+	  "result": "",
+	  "title": "Adobe Example",
+	  "description": "The following example shows a simple authentication:",
+	  "code": "<cflogin>\r\n<cfoauth\r\n\ttype=\"Facebook\"\r\n\tclientid=\"YOUR_CLIENT_ID\"\r\n\tsecretkey=\"YOUR_SECRET_KEY\"\r\n\tresult=\"res\"\r\n\tredirecturi=\"http:\/\/localhost:8500\/doc\/login.cfm\"\r\n>\r\n<cfloginuser name=\"#res.other.username#\" password=\"#res.access_token#\" roles=\"user\"\/>\r\n<\/cflogin>\r\n<cflocation url=\"http:\/\/localhost:8500\/doc\/index.cfm\">"
+	}
+  ]
 }

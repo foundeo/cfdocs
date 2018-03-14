@@ -2,7 +2,7 @@
 	"name":"cflogin",
 	"type":"tag",
 	"syntax":"<cflogin>",
-	"related":[],
+	"related":["cfloginuser","cflogout"],
 	"description":"A container for user login and authentication code. CFML\n runs the code in this tag if a user is not already logged in.\n You put code in the tag that authenticates the user and\n identifies the user with a set of roles. Used with cfloginuser\n tag.",
 	"params": [
 		{"name":"idletimeout","description":"Time interval with no keyboard activity after which\n CFML logs the user off. Seconds.","required":false,"default":"","type":"numeric","values":[]},
@@ -16,8 +16,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflogin"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflogin"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

@@ -2,12 +2,11 @@
 	"name":"cfchartdata",
 	"type":"tag",
 	"syntax":"<cfchartdata item=\"\" value=\"\">",
-	"related":[],
+	"related":["cfchart","cfchartseries"],
 	"description":"Used with the cfchart and cfchartseries tags. This tag defines\n chart data points. Its data is submitted to the cfchartseries\n tag.",
 	"params": [
 		{"name":"item","description":"string; data point name","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"number or expression; data point value","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfchartdata.html"},
@@ -15,8 +14,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfchartdata"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfchartdata"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

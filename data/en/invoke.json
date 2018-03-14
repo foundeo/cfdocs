@@ -1,15 +1,14 @@
 {
 	"name":"invoke",
 	"type":"function",
-	"syntax":"invoke(cfcInstance, methodName [, arguments])",
+	"syntax":"invoke(instance, methodName [, arguments])",
 	"returns":"any",
 	"related":["cfinvoke"],
-	"description":"Invokes a component method and returns the result of the invoked method.",
+	"description":"Invokes an object method and returns the result of the invoked method.",
 	"params": [
-		{"name":"cfcinstance","description":"Name or instance of a CFC.","required":true,"default":"","type":"string","values":[]},
+		{"name":"instance","description":"Name or instance of a CFC or an instance of a Java, .NET, COM or CORBA object","required":true,"default":"","type":"string","values":[]},
 		{"name":"methodname","description":"The name of the method to invoke.","required":true,"default":"","type":"string","values":[]},
-		{"name":"arguments","description":"A struct of arguments to pass into the method.","required":false,"default":"","type":"struct","values":[]}
-
+		{"name":"arguments","description":"An array of positional arguments or a struct of named arguments to pass into the method.","required":false,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/invoke.html"},
@@ -19,6 +18,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Invoke a Java Method",
+			"description":"Invokes the size method on a new HashMap object, which should return 0",
+			"code":"invoke(createObject(\"java\", \"java.util.HashMap\"), \"size\")",
+			"result":"0"
+		}
 	]
 
 }

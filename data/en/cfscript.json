@@ -2,19 +2,16 @@
 	"name":"cfscript",
 	"type":"tag",
 	"syntax":"<cfscript>",
-	"related":[],
+	"related":["cfoutput"],
 	"description":"Encloses a code block that contains cfscript statements.\n\n You cannot use some CFML reserved words in this tag. You\n cannot put a user-defined function whose name begins with any\n of these strings within this tag:\n cf,cf_,_cf,CFML,CFML_,_CFML",
-	"params": [
-	],
+	"params": [],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfscript.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/script.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfscript"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfscript"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Script Syntax",
@@ -22,7 +19,5 @@
 			"code": "<cfscript> \r\n x = y = 1; \r\n writeDump(x); \r\n </cfscript>",
 			"result": ""
 		}
-
 	]
-
 }

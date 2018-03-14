@@ -2,11 +2,10 @@
 	"name":"cfswitch",
 	"type":"tag",
 	"syntax":"<cfswitch expression=\"\">",
-	"related":[],
+	"related":["cfcase","cfdefaultcase"],
 	"description":"Evaluates a passed expression and passes control to the cfcase tag that matches the expression result. You can, optionally, code a cfdefaultcase tag, which receives control if there is no matching cfcase tag value. Note the difference in the tag and script syntax when providing multiple values for a case.",
 	"params": [
 		{"name":"expression","description":"CFML expression that yields a scalar value. CFML converts integers, real numbers, Booleans, and dates to numeric values. For example, True, 1, and 1.0 are all equal.","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfswitch.html"},
@@ -14,9 +13,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfswitch"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfswitch"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Script Syntax",
@@ -24,12 +21,11 @@
 			"code": "fruit = \"Orange\";\r\nswitch(fruit) {\r\n    case \"Apple\":\r\n        writeOutput(\"I like apples!\");\r\n        break; \r\n    case \"Orange\": case \"Citrus\":\r\n         writeOutput(\"I like oranges!\");\r\n        break; \r\n    case \"Kiwi\":\r\n        writeOutput(\"I like kiwi!\"); \r\n        break; \r\n    default: \r\n        writeOutput(\"Fruit, what fruit?\"); \r\n        break; \r\n }",
 			"result": "I like oranges!"
 		},
-        {
-            "title": "Tag Syntax",
-            "description": "",
-            "code": "<cfset fruit = \"\"> \r\n<cfswitch expression=\"#fruit#\"> \r\n    <cfcase value=\"Apple\">I like apples!</cfcase>\r\n    <cfcase value=\"Orange,Citrus\">I like oranges!</cfcase> \r\n    <cfcase value=\"Kiwi\">I like kiwi!</cfcase>\r\n    <cfdefaultcase>Fruit, what fruit?</cfdefaultcase> \r\n</cfswitch>",
-            "result": "Fruit, what fruit?"
-        }
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset fruit = \"\"> \r\n<cfswitch expression=\"#fruit#\"> \r\n    <cfcase value=\"Apple\">I like apples!</cfcase>\r\n    <cfcase value=\"Orange,Citrus\">I like oranges!</cfcase> \r\n    <cfcase value=\"Kiwi\">I like kiwi!</cfcase>\r\n    <cfdefaultcase>Fruit, what fruit?</cfdefaultcase> \r\n</cfswitch>",
+			"result": "Fruit, what fruit?"
+		}
 	]
-
 }

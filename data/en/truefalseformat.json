@@ -4,9 +4,9 @@
 	"syntax": "trueFalseFormat(value)",
 	"returns": "string",
 	"related": ["yesNoFormat", "isBoolean","booleanFormat"],
-	"description": "Returns a boolean value of true or false for the argument passed in.",
+	"description": "Returns the string true or false when a boolean value is passed in. Throws an exception if the value passed in cannot be converted to a boolean.",
 	"params": [
-		{"name": "value", "description": "", "required": true, "default": "", "type": "any", "values": []}
+		{"name": "value", "description": "", "required": true, "default": "", "type": "boolean", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/truefalseformat.html"}

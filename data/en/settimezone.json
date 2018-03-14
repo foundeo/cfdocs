@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "setTimezone(timezone)",
 	"returns": "string",
-	"related": [],
+	"related": ["getTimezone","getTimezoneInfo","setLocale"],
 	"description": "Change the timezone defintion for the current request",
 	"params": [
 		{"name": "timezone", "description": "", "required": true, "default": "", "type": "string", "values": []}
@@ -11,6 +11,12 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/settimezone.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": [{
+		"title": "Change Timezone from UTC to CET",
+		"description": "",
+		"code": "writeOutput(toString(getTimezoneInfo().id));\nsetTimezone(\"CET\");\nwriteOutput(\"→ \"&toString(getTimezoneInfo().id));",
+		"result": "Etc/UTC→ CET",
+		"runnable": true
+	}]
 }

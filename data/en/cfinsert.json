@@ -2,8 +2,8 @@
 	"name":"cfinsert",
 	"type":"tag",
 	"syntax":"<cfinsert datasource=\"\" tablename=\"\">",
-	"related":[],
-	"description":"Inserts records in data sources from data in a CFML form\n or form Scope.",
+	"related":["cfquery"],
+	"description":"Inserts records in data sources from data in a CFML form\n or form Scope.\n\nIt can be used instead of cfquery with insert sql command.",
 	"params": [
 		{"name":"datasource","description":"Data source; contains table.","required":true,"default":"","type":"string","values":[]},
 		{"name":"tablename","description":"Table in which to insert form fields.\n\n ORACLE drivers: must be uppercase.\n Sybase driver: case-sensitive. Must be the same case used\n when table was created","required":true,"default":"","type":"string","values":[]},
@@ -12,21 +12,17 @@
 		{"name":"username","description":"Overrides username specified in ODBC setup.","required":false,"default":"","type":"string","values":[]},
 		{"name":"password","description":"Overrides password specified in ODBC setup.","required":false,"default":"","type":"string","values":[]},
 		{"name":"formfields","description":"Comma-delimited list of form fields to insert. If not\n specified, all fields in the form are included.\n\n If a form field is not matched by a column name in the\n database, CFML throws an error.\n\n The database table key field must be present in the form.\n It may be hidden.","required":false,"default":"","type":"string","values":[]},
-		{"name":"providerdsn","description":"Deprecated","required":false,"default":"","type":"string","values":[]},
-		{"name":"dbtype","description":"Deprecated","required":false,"default":"","type":"string","values":[]},
-		{"name":"dbname","description":"Deprecated","required":false,"default":"","type":"string","values":[]},
-		{"name":"dbserver","description":"Deprecated","required":false,"default":"","type":"string","values":[]},
-		{"name":"provider","description":"Deprecated","required":false,"default":"","type":"string","values":[]}
-
+		{"name":"providerdsn","description":"","required":false,"default":"","type":"string","values":[]},
+		{"name":"dbtype","description":"","required":false,"default":"","type":"string","values":[]},
+		{"name":"dbname","description":"","required":false,"default":"","type":"string","values":[]},
+		{"name":"dbserver","description":"","required":false,"default":"","type":"string","values":[]},
+		{"name":"provider","description":"","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfinsert.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/insert.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfinsert"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfinsert"}
+		"coldfusion": {"minimum_version":"", "notes":"CF6+ `providerdsn`, `dbtype`, `dbname`, `dbserver` and `provider` are deprecated in all engines", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfinsert.html"},
+		"lucee": {"minimum_version":"", "notes":"`providerdsn`, `dbtype`, `dbname`, `dbserver` and `provider` are deprecated in all engines", "docs":"http://docs.lucee.org/reference/tags/insert.html"},
+		"railo": {"minimum_version":"", "notes":"`providerdsn`, `dbtype`, `dbname`, `dbserver` and `provider` are deprecated in all engines", "docs":"http://railodocs.org/index.cfm/tag/cfinsert"},
+		"openbd": {"minimum_version":"", "notes":"`providerdsn`, `dbtype`, `dbname`, `dbserver` and `provider` are deprecated in all engines", "docs":"http://openbd.org/manual/?/tag/cfinsert"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

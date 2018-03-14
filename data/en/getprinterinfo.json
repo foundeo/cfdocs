@@ -1,19 +1,22 @@
 {
 	"name":"getPrinterInfo",
 	"type":"function",
-	"syntax":"getPrinterInfo(printer)",
+	"syntax":"getPrinterInfo([printer])",
 	"returns":"struct",
-	"related":[],
-	"description":" Determines which print attributes are supported by a selected printer.",
+	"related":["getPrinterList","cfprint"],
+	"description":"Determines which print attributes are supported by a selected printer.",
 	"params": [
-		{"name":"printer","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
-
+		{"name":"printer","description":"Name of the printer","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getprinterinfo.html"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": [{
+		"title": "Output printer info if exists",
+		"description": "",
+		"code": "try {\r\n    writeDump(getPrinterInfo());\r\n}\r\ncatch (Application e) {\r\n    writeOutput(e.message&\"<br />\"&e.detail);\r\n}\r\ncatch (any e) {\r\n    rethrow;\r\n}",
+		"result": "",
+		"runnable": true
+	}]
 }

@@ -3,19 +3,15 @@
 	"type":"function",
 	"syntax":"isPDFObject(value)",
 	"returns":"boolean",
-	"related":[],
+	"related":["isPDFFile","isSpreadsheetFile","isSpreadsheetObject"],
 	"description":" Determines whether a value is a PDF object.",
 	"params": [
 		{"name":"value","description":"A value, typically the PDF object stored as a variable name.","required":true,"default":"","type":"variableName","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/ispdfobject.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/ispdfobject.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ispdfobject"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

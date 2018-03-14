@@ -3,13 +3,12 @@
 	"type":"function",
 	"syntax":"getSOAPRequestHeader(namespace, name [, asXML])",
 	"returns":"any",
-	"related":[],
+	"related":["getSOAPRequest","addSOAPRequestHeader","getSOAPResponse","getSOAPResponseHeader"],
 	"description":" Obtains a SOAP request header. Call only from within\n a CFC web service function that is processing a request\n as a SOAP web service.",
 	"params": [
 		{"name":"namespace","description":"A String that is the namespace for the header","required":true,"default":"","type":"string","values":[]},
 		{"name":"name","description":"A String that is the name of the header","required":true,"default":"","type":"string","values":[]},
 		{"name":"asXML","description":"If True, the header is returned as a CFML XML object;\n if false (default), the header is returned as a Java object.","required":false,"default":"","type":"boolean","values":[true,false]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getsoaprequestheader.html"},
@@ -17,8 +16,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getsoaprequestheader"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getsoaprequestheader"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

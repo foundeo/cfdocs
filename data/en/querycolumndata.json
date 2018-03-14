@@ -5,7 +5,7 @@
 	"member": "query.columnData(columnName [, closure])",
 	"returns": "array",
 	"related": ["valueArray"],
-	"description": "Returns the data in a query column.  See also valueArray which is supported on ACF2016+ and Lucee.",
+	"description": "Returns the data in a query column. See also valueArray for use in ACF.",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "columnName", "description": "", "required": true, "default": "", "type": "string", "values": []},

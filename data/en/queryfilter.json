@@ -4,17 +4,17 @@
 	"syntax": "queryFilter(query, filter [, parallel] [, maxThreads])",
 	"member": "query.filter(filter [, parallel] [, maxThreads])",
 	"returns": "query",
-	"related": [],
+	"related": ["querySome","queryReduce","queryMap"],
 	"description": "Filters query rows specified in filter criteria",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "filter", "description": "", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "parallel", "description": "Lucee-only", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "Lucee-only", "required": false, "default": "20", "type": "numeric", "values": []}
+		{"name": "parallel", "description": "Lucee4.5+", "required": false, "default": "", "type": "boolean", "values": []},
+		{"name": "maxThreads", "description": "Lucee4.5+", "required": false, "default": "20", "type": "numeric", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryfilter.html"},
-		"coldfusion": {"minimum_version": "2016", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryfilter.html"}
+		"coldfusion": {"minimum_version": "2016", "notes": "ColdFusion only supports `query` and `filter` param", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryfilter.html"}
 	},
 	"examples": [{
 		"title":"Filter a query",
@@ -22,8 +22,7 @@
 		"code":"<cfscript>\r\n    news = queryNew(\"id,type,title\", \"integer,varchar,varchar\");\r\n    queryAddRow(news,[{\r\n        id: 1,\r\n        type: \"book\",\r\n        title: \"Cloud Atlas\"\r\n    },{\r\n        id: 2,\r\n        type: \"book\",\r\n        title: \"Lord of The Rings\"\r\n    },{\r\n        id: 3,\r\n        type: \"film\",\r\n        title: \"Men in Black\"\r\n    }]);\r\n    books = QueryFilter(news,function(_news) {\r\n        return _news.type is 'book';\r\n    });\r\n    writeDump(ValueList(books.title,', '));\r\n</cfscript>",
 		"result":"Cloud Atlas, Lord of The Rings",
 		"runnable":true
-	},
-	{
+	},{
 		"title":"Filter a query as member function",
 		"description":"",
 		"code":"<cfscript>\r\n    news = queryNew(\"id,type,title\", \"integer,varchar,varchar\");\r\n    queryAddRow(news,[{\r\n        id: 1,\r\n        type: \"book\",\r\n        title: \"Cloud Atlas\"\r\n    },{\r\n        id: 2,\r\n        type: \"book\",\r\n        title: \"Lord of The Rings\"\r\n    },{\r\n        id: 3,\r\n        type: \"film\",\r\n        title: \"Men in Black\"\r\n    }]);\r\n    books = news.filter(function(_news) {\r\n        return _news.type is 'book';\r\n    });\r\n    writeDump(ValueList(books.title,', '));\r\n</cfscript>",
@@ -34,8 +33,7 @@
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
 		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
-	},
-	{
+	},{
 		"title": "ColdFusion 11: .map() and .reduce()",
 		"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
 		"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"

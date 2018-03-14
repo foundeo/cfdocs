@@ -3,18 +3,14 @@
 	"type":"function",
 	"syntax":"getSOAPRequest()",
 	"returns":"any",
-	"related":[],
+	"related":["getSOAPRequestHeader","getSOAPResponse","getSOAPResponseHeader"],
 	"description":" Returns an XML object that contains the entire SOAP\n request. Usually called from within a web service CFC.",
-	"params": [
-	],
+	"params": [],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getsoaprequest.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/getsoaprequest.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getsoaprequest"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getsoaprequest"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

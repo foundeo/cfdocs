@@ -2,7 +2,7 @@
 	"name":"cfchartseries",
 	"type":"tag",
 	"syntax":"<cfchartseries type=\"bar\">",
-	"related":[],
+	"related":["cfchart","cfchartdata"],
 	"description":"Used with the cfchart tag. This tag defines the style in which\n chart data displays: bar, line, pie, and so on.",
 	"params": [
 		{"name":"type","description":"Sets the chart display style","required":true,"default":"","type":"string","values":["bar","line","pyramid","area","horizontalbar","cone","curve","cylinder","step","scatter","pie"]},
@@ -15,7 +15,6 @@
 		{"name":"markerstyle","description":"Applies to chartseries type attribute values line, curve\n and scatter, and show3D attribute value no.","required":false,"default":"rectangle","type":"string","values":["rectangle","triangle","diamond","circle","letter","mcross","snow","rcross"]},
 		{"name":"colorlist","description":"Applies if chartseries type attribute = \"pie\". Sets pie\n slice colors.\n\n Comma-delimited list of hex values or supported, named web\n colors; see name list in the cfchart Usage section.\n\n For a hex value, use the form \"##xxxxxx\", where x = 0-9 or\n A-F; use two pound signs or none.","required":false,"default":"","type":"string","values":[]},
 		{"name":"datalabelstyle","description":"Specifies the way in which the color is applied to the\n item in the series:\n - None = nothing is printed (default)\n - Value = the value of the datapoint\n - Rowlabel = the row's label\n - Columnlabel = the column's label\n - Pattern","required":false,"default":"","type":"string","values":["none","value","rowlabel","columnlabel","pattern"]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfchartseries.html"},
@@ -23,8 +22,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfchartseries"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfchartseries"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

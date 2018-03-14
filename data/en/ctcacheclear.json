@@ -3,8 +3,8 @@
 	"type": "function",
 	"syntax": "ctCacheClear()",
 	"returns": "void",
-	"related": [],
-	"description": "",
+	"related": ["ctCacheList"],
+	"description": "Flushes the customtag path cache",
 	"params": [],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/ctcacheclear.html"}

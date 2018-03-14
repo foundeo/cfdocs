@@ -11,6 +11,18 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/isnotmap.html"}
 	},
-	"examples": [],
+	"examples": [{
+            "title":"Check if Map is of type Map",
+            "description":"",
+            "code":"myMap = createObject('java','java.util.HashMap');\nmyMap.put('a','1');\nwriteOutput(isNotMap(myMap));",
+            "result":"true",
+            "runnable":true
+        },{
+            "title":"Check if something else is of type Map",
+            "description":"",
+            "code":"myStruct = {'a': 1};\nwriteOutput(isNotMap(myStruct));",
+            "result":"false",
+            "runnable":true
+        }],
 	"links": []
 }

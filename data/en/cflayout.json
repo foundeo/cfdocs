@@ -2,8 +2,9 @@
 	"name": "cflayout",
 	"type": "tag",
 	"syntax": "<cflayout type=\"accordion\">",
-	"related": [],
+	"related": ["cflayoutarea"],
 	"description": "Creates a region of its container (such as the browser \n window or a cflayoutarea tag) with a specific layout \n behavior: a bordered area, a horizontal or vertically \n arranged box, or a tabbed navigator.",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html",
 	"params": [
 		{
 			"name": "type",

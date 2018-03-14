@@ -2,20 +2,16 @@
 	"name":"cfexchangefilter",
 	"type":"tag",
 	"syntax":"<cfexchangefilter name=\"allDayEvent\">",
-	"related":[],
+	"related":["cfexchangeconnection","cfexchangecontact","cfexchangemail","cfexchangetask","cfexchangecalendar"],
 	"description":"Specifies the filter parameter for cfexchangemail, cfexchangecalendar, cfexchangetask, and cfexchangecontact, get operations.",
 	"params": [
 		{"name":"name","description":"The type of filter to use. (required)","required":true,"default":"","type":"any","values":["allDayEvent","assistant","attributes","attributes","bcc","billingInfo","businesAddress","businessFax","businessPhoneNumber","cc","companies","company","dateCompleted","displayAs","dueDate","duration","email1","email2","email3","endTime","firstName","folder","fromID","hasAttachment","homeAddress","homePhoneNumber","importance","isRead","isRecurring","jobTitle","lastName","location","mail_ID","mailingAddressType","manager","meeting UIDs","meeting_response","meetingUID","message","messageType","middleName","mileage","mobilePhoneNumber","name","nickName","office","optionalAttendees","organizer","otherAddress","otherPhoneNumber","profession","requiredAttendees","sensitivity","spouseName","startDate","startTime","status","subject","timeReceived","timeSent","toID","totalWork","UID","Valid","webPage","lastModified","recurrenceID","maxRows"]},
 		{"name":"from","description":"The start date or or date\/time combination of the range to use for filtering.\n Cannot be used with the value attribute.\n If you specify a from attribute without a to attribute, the filter selects for\n all entries on or after the specified date or time.\n The value can be in any date\/time format recognized by ColdFusion, but must\n correspond to a value that is appropriate for the filter type. (optional)","required":false,"default":"","type":"any","values":[]},
 		{"name":"to","description":"The end date or date\/time combination for the range used for filtering.\n Cannot be used with the value attribute.\n If you specify a to attribute without a from attribute, the filter selects for\n all entries on or before the specified date or time.\n The value can be in any date\/time format recognized by ColdFusion, but must\n correspond to a value that is appropriate for the filter type. (optional)","required":false,"default":"","type":"any","values":[]},
 		{"name":"value","description":"The filter value for all filters that do not take a date or time range.\n Cannot be used with the from and to attributes.\n If the name attribute requires this attribute, ColdFusion generates an error\n if it has an empty or null value. (optional)","required":false,"default":"","type":"any","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexchangefilter.html"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

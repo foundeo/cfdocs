@@ -2,7 +2,7 @@
   "name": "cfinput",
   "type": "tag",
   "syntax": "<cfinput name=\"\">",
-  "related": [],
+  "related": ["cfform"],
   "description": "Used within the cfform tag, to place radio buttons, check boxes, or text boxes on a form. Provides input validation for the specified control type.",
   "params": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "name": "autosuggest",
-      "description": "Specifies entry completion suggestions to display as the user types into a text input. The user can select a suggestion to complete the text entry. The valid value can be either of the following: ‚Ä¢ A string consisting of the suggestion values separated by the delimiter specified by the delimiter attribute. ‚Ä¢ A bind expression that gets the suggestion values based on the current input text. Valid only for cfinput type=\"text\".",
+      "description": "Specifies entry completion suggestions to display as the user types into a text input. The user can select a suggestion to complete the text entry. The valid value can be either of the following:\n- A string consisting of the suggestion values separated by the delimiter specified by the delimiter attribute.\n- A bind expression that gets the suggestion values based on the current input text.\n\nValid only for cfinput type=\"text\".",
       "required": false,
       "default": "",
       "type": "string",
@@ -23,7 +23,7 @@
     },
     {
       "name": "autoSuggestBindDelay",
-      "description": "The minimum time between autosuggest bind expression invocations, in seconds. Use this attribute to limit the number of requests that are sent to the server when a user types. Valid only for cfinput type=\"text\"",
+      "description": "The minimum time between autosuggest bind expression invocations, in seconds. Use this attribute to limit the number of requests that are sent to the server when a user types.\n\nValid only for cfinput type=\"text\"",
       "required": false,
       "default": "",
       "type": "numeric",
@@ -31,7 +31,7 @@
     },
     {
       "name": "autoSuggestMinLength",
-      "description": "The minimum number of characters required in the text box before invoking a bind expression to return items for suggestion. Valid only for cfinput type=\"text\".",
+      "description": "The minimum number of characters required in the text box before invoking a bind expression to return items for suggestion.\n\nValid only for cfinput type=\"text\".",
       "required": false,
       "default": "",
       "type": "numeric",
@@ -39,7 +39,7 @@
     },
     {
       "name": "bindAttribute",
-      "description": "Specifies the HTML tag attribute whose value is set by the bind attribute. You can only specify attributes in the browser‚ HTML DOM tree, not ColdFusion-specific attributes. Ignored if there is no bind attribute. Valid only for cfinput type=\"text\".",
+      "description": "Specifies the HTML tag attribute whose value is set by the bind attribute. You can only specify attributes in the browser‚ HTML DOM tree, not ColdFusion-specific attributes. Ignored if there is no bind attribute.\n\nValid only for cfinput type=\"text\".",
       "required": false,
       "default": "",
       "type": "string",
@@ -47,7 +47,7 @@
     },
     {
       "name": "bindonload",
-      "description": "A Boolean value that specifies whether to execute the bind attribute expression when first loading the form. Ignored if there is no bind attribute. Valid only for cfinput type=\"text\".",
+      "description": "A Boolean value that specifies whether to execute the bind attribute expression when first loading the form. Ignored if there is no bind attribute.\n\nValid only for cfinput type=\"text\".",
       "required": false,
       "default": false,
       "type": "boolean",
@@ -66,7 +66,7 @@
     },
     {
       "name": "type",
-      "description": "The input control type to create: - button: push button. - checkbox: check box. - file: file selector; not supported in Flash. - hidden: invisible control. - image: clickable button with an image. - password: password entry control; hides input values. - radio: radio button. - reset: form reset button. - submit: form submission button. - text: text entry box. - datefield: Flash only; date entry field with an expanding calendar for selecting dates.",
+      "description": "The input control type to create.\n\nNotes:\n- file is not supported in Flash.\n- image: clickable button with an image.\n- datefield: Flash only; date entry field with an expanding calendar for selecting dates.",
       "required": false,
       "default": "text",
       "type": "string",
@@ -111,7 +111,7 @@
     },
     {
       "name": "required",
-      "description": "* yes: the field must contain data. * no: allows an empty field.",
+      "description": "",
       "required": false,
       "default": false,
       "type": "boolean",
@@ -122,7 +122,7 @@
     },
     {
       "name": "mask",
-      "description": "A mask pattern that controls the character pattern that users can enter, or that the form sends to ColdFusion. In HTML and Flash for type=text use: - A = [A-Za-z] - X = [A-Za-z0-9] - 9 = [0-9] - ? = Any character - all other = the literal character In Flash for type=datefield use: - D = day; can use 0-2 mask characters. - M = month; can use 0-4 mask characters. - Y = year; can use 0, 2, or 4 characters. - E = day in week; can use 0-4 characters.",
+      "description": "A mask pattern that controls the character pattern that users can enter, or that the form sends to ColdFusion. In HTML and Flash for type=text use:\n- A = [A-Za-z]\n- X = [A-Za-z0-9]\n- 9 = [0-9]\n- ? = Any character\n- all other = the literal character\n\nIn Flash for type=datefield use:\n- D = day; can use 0-2 mask characters.\n- M = month; can use 0-4 mask characters.\n- Y = year; can use 0, 2, or 4 characters.\n- E = day in week; can use 0-4 characters.",
       "required": false,
       "default": "",
       "type": "string",
@@ -217,7 +217,7 @@
     },
     {
       "name": "value",
-      "description": "HTML: corresponds to the HTML value attribute. Its use depends on control type. Flash: optional; specifies text for button type inputs: button, submit, and image.",
+      "description": "HTML: corresponds to the HTML value attribute. Its use depends on control type.\nFlash: optional; specifies text for button type inputs: button, submit, and image.",
       "required": false,
       "default": "",
       "type": "string",
@@ -233,7 +233,7 @@
     },
     {
       "name": "checked",
-      "description": "Selects a control. No value is required. Applies if type=radio or checkbox. Default: false",
+      "description": "Selects a control. No value is required. Applies if type=radio or checkbox.",
       "required": false,
       "default": false,
       "type": "boolean",
@@ -244,7 +244,7 @@
     },
     {
       "name": "disabled",
-      "description": "Disables user input, making the control read-only. To disable input, specify disabled without an attribute or disabled=\"true\". To enable input, omit the attribute or specify disabled=\"false\".",
+      "description": "Disables user input, making the control read-only.",
       "required": false,
       "default": false,
       "type": "boolean",
@@ -311,9 +311,9 @@
     },
     {
       "name": "daynames",
-      "description": "A comma-delimited list that sets the names of the weekdays displayed in the calendar. Sunday is the first day and the rest of the weekday names follow in the normal order. Default is: S,M,T,W,Th,F,S",
+      "description": "A comma-delimited list that sets the names of the weekdays displayed in the calendar. Sunday is the first day and the rest of the weekday names follow in the normal order. You can use one-/two-letter, three-letter abreviation or the full name.",
       "required": false,
-      "default": "",
+      "default": "S,M,T,W,Th,F,S",
       "type": "string",
       "values": [
         "S",
@@ -341,7 +341,7 @@
     },
     {
       "name": "firstdayofweek",
-      "description": "Integer in the range 0-6 specifying the first day of the week in the calendar, 0 indicates Sunday, 6 indicates Saturday. Default is: 0",
+      "description": "Integer in the range 0-6 specifying the first day of the week in the calendar, 0 indicates Sunday, 6 indicates Saturday.",
       "required": false,
       "default": 0,
       "type": "numeric",
@@ -357,7 +357,7 @@
     },
     {
       "name": "monthnames",
-      "description": "A comma-delimited list of the month names that are displayed at the top of the calendar.",
+      "description": "A comma-delimited list of the month names that are displayed at the top of the calendar. You can use three-letter-abbreviation or full month name",
       "required": false,
       "default": "",
       "type": "string",
@@ -390,7 +390,7 @@
     },
     {
       "name": "enabled",
-      "description": "Flash only: Boolean value specifying whether the control is enabled. A disabled control appears in light gray. The inverse of the disabled attribute. Flash only. Default: true",
+      "description": "Flash only: Boolean value specifying whether the control is enabled. A disabled control appears in light gray. The inverse of the disabled attribute.",
       "required": false,
       "default": true,
       "type": "boolean",
@@ -401,7 +401,7 @@
     },
     {
       "name": "visible",
-      "description": "Flash only: Boolean value specifying whether to show the control. Space that would be occupied by an invisible control is blank. Default: true",
+      "description": "Flash only: Boolean value specifying whether to show the control. Space that would be occupied by an invisible control is blank.",
       "required": false,
       "default": true,
       "type": "boolean",
@@ -436,7 +436,7 @@
     },
     {
       "name": "passthrough",
-      "description": "This attribute is deprecated. Passes arbitrary attribute-value pairs to the HTML code that is generated for the tag. You can use either of the following formats: passthrough=\"title=\"\"myTitle\"\"\" passthrough='title=\"mytitle\"'",
+      "description": "This attribute is deprecated. Passes arbitrary attribute-value pairs to the HTML code that is generated for the tag. You can use either of the following formats:\n- passthrough=\"title=\"\"myTitle\"\"\"\n- passthrough='title=\"mytitle\"'",
       "required": false,
       "default": "",
       "type": "string",

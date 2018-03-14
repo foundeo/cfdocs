@@ -4,15 +4,15 @@
 	"syntax": "hash40(input [, algorithm] [, encoding] [, numIterations])",
 	"returns": "string",
 	"related": [],
-	"description": "",
+	"description": "Converts a variable-length string to a 32-byte, hexadecimal string, using the MD5 algorithm.\nNote: It is not possible to convert the hash result back to the source string.",
 	"params": [
-		{"name": "input", "description": "", "required": true, "default": "", "type": "any", "values": []},
-		{"name": "algorithm", "description": "", "required": false, "default": "", "type": "string", "values": []},
-		{"name": "encoding", "description": "", "required": false, "default": "", "type": "string", "values": []},
-		{"name": "numIterations", "description": "", "required": false, "default": "1", "type": "numeric", "values": []}
+		{"name": "input", "description": "String for hashing", "required": true, "default": "", "type": "any", "values": []},
+		{"name": "algorithm", "description": "The algorithm to use to hash the string. Supported are the following algorithms:\n- CFMX_COMPAT: generating a hash string using classic CFML algorithm.\n- MD5: (default) Generates a 32-character, hexadecimal string, using the MD5 algorithm.\n- SHA: Generates a 28-character string using the Secure Hash Standard SHA-1 algorithm specified by Nation Institute of Standards and Technology (NIST) FIPS-180-2.\n- SHA-256: Generates a 44-character string using the SHA-256 algorithm specified by FIPS-180-2.\n- SHA-384: Generates a 64-character string using the SHA-384 algorithm specified by FIPS-180-2.\n- SHA-512: Generates an 88-character string using the SHA-1 algorithm specified by FIPS-180-2.", "required": false, "default": "", "type": "string", "values": ["CFMX_COMPAT","MD5","SHA","SHA-1","SHA-256","SHA-384","SHA-512"]},
+		{"name": "encoding", "description": "Encoding which will be used by the hash algorithm", "required": false, "default": "", "type": "string", "values": []},
+		{"name": "numIterations", "description": "number of iterations", "required": false, "default": "1", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/hash40.html"}
+		"lucee": {"minimum_version": "", "notes": "This function only exists for backward compstibility to Lucee 4.0 or older version that has produced a incorrect result for non us-ascii caharacters, Only use this function for backward compatibility.", "docs": "http://docs.lucee.org/reference/functions/hash40.html"}
 	},
 	"examples": [],
 	"links": []

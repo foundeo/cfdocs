@@ -7,7 +7,7 @@
 	"related":["createDateTime", "createODBCDate", "createODBCTime"],
 	"description":" Creates an ODBC date-time object.",
 	"params": [
-		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"date","values":[]}
+		{"name":"date","description":"Date or date/time object or string.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateODBCDateTime.html"},
@@ -15,9 +15,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createodbcdatetime"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createodbcdatetime"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Creates an ODBC date-time object",
@@ -26,5 +24,4 @@
 			"result": "{ts '2012-12-12 12:12:12'}"
 		}
 	]
-
 }

@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"inputBaseN(String, radix)",
 	"returns":"numeric",
-	"related":[],
-	"description":" Converts string, using the base specified by radix, to an\n integer. For example: #inputBaseN(\"3ff\",16)#",
+	"related":["int","parseNumber","toNumeric"],
+	"description":"Converts string, using the base specified by radix, to an integer.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"radix","description":"","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/inputbasen.html"},
@@ -16,17 +15,35 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/inputbasen"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/inputbasen"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title":"Tag Example",
-			"description":"InputBaseN returns the number obtained by converting a string, using the base specified by Radix,. ",
-			"code":"<cfoutput> \r\n <br>inputBaseN(\"1010\",2): #inputBaseN(\"1010\",2)# \r\n <br>inputBaseN(\"3ff\",16): #inputBaseN(\"3ff\",16)# \r\n <br>inputBaseN(\"125\",10): #inputBaseN(\"125\",10)# \r\n <br>inputBaseN(1010,2): #inputBaseN(1010,2)# \r\n </cfoutput>",
-			"result":"",
+			"title":"Binary string to decimal",
+			"description":"",
+			"code":"inputBaseN(\"1010\",2)",
+			"result":"10",
+			"runnable":true
+		},
+		{
+			"title":"Hexadecimal string to decimal",
+			"description":"",
+			"code":"inputBaseN(\"3FF\",16)",
+			"result":"1023",
+			"runnable":true
+		},
+		{
+			"title":"Decimal string to decimal",
+			"description":"",
+			"code":"inputBaseN(\"125\",10)",
+			"result":"125",
+			"runnable":true
+		},
+		{
+			"title":"Binary number to decimal",
+			"description":"",
+			"code":"inputBaseN(1010,2)",
+			"result":"10",
 			"runnable":true
 		}
 	]
-
 }

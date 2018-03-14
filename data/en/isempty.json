@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "isEmpty(value)",
 	"returns": "boolean",
-	"related": [],
+	"related": ["isDefined","structKeyExists"],
 	"description": "Returns whether or not a given value is \"empty\". ",
 	"params": [
 		{"name": "value", "description": "", "required": true, "default": "", "type": "any", "values": []}
@@ -11,14 +11,14 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/isempty.html"}
 	},
+	"links": [],
 	"examples": [
 		{
 			"title":"isEmpty Example",
 			"description":"Returns a boolean based on the given value. Strings, Arrays, Structs and queries are accepted data types.",
-			"code":"IsEmpty( {} )",
+			"code":"isEmpty( {} )",
 			"result":true,
 			"runnable":true
 		}
-	],
-	"links": []
+	]
 }

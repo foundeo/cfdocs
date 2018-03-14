@@ -3,18 +3,21 @@
 	"type":"function",
 	"syntax":"getTempDirectory()",
 	"returns":"string",
-	"related":[],
+	"related":["getTempFile"],
 	"description":" Gets the path of the directory that CFML uses for\n temporary files. Before using this function in an application,\n test to determine the directory it returns under your account.\n Returns the absolute pathname of a directory, including a\n trailing slash.",
-	"params": [
-	],
+	"params": [],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/gettempdirectory.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/gettempdirectory.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/gettempdirectory"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/gettempdirectory"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": [{
+		"title": "Show temp directory path",
+		"description": "File system path where temporary files are stored",
+		"code": "getTempDirectory()",
+		"result": "",
+		"runnable": true
+	}]
 }

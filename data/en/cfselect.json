@@ -4,6 +4,7 @@
 	"syntax":"<cfselect name=\"\">",
 	"related":[],
 	"description":"Constructs a drop-down list box form control. Used within a\n cfform tag.\n\n You can populate the list from a query, or by using the HTML\n option tag.",
+ 	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html",
 	"params": [
 		{"name":"name","description":"Name of the select form element","required":true,"default":"","type":"string","values":[]},
 		{"name":"id","description":"ID for form input element.","required":false,"default":"","type":"string","values":[]},

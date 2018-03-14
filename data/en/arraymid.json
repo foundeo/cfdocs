@@ -4,7 +4,7 @@
 	"syntax": "arrayMid(array, start [, count])",
 	"member": "array.mid(start [, count])",
 	"returns": "array",
-	"related": [],
+	"related": ["arraySlice"],
 	"description": "Extracts a sub array from an existing array.",
 	"params": [
 		{"name": "array", "description": "Array to extract data from", "required": true, "default": "", "type": "array", "values": []},
