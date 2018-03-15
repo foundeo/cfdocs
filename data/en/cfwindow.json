@@ -2,7 +2,7 @@
 	"name": "cfwindow",
 	"type": "tag",
 	"syntax": "<cfwindow>",
-	"related": [],
+	"related": ["cfpod","cflayout"],
 	"description": "Creates a pop-up window in the browser. Does not create a \n separate browser pop-up instance.",
 	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfwindow/index.html",
 	"params": [
