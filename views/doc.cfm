@@ -31,11 +31,11 @@
 					<cfif data.type IS "tag">
 						<small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;
 					</cfif>
-					<code>#Replace(encodeForHTML(data.syntax), Chr(10), "<br>", "ALL")#
-						<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)>
-							<em>&##8594; returns #encodeForHTML(data.returns)#</em>
-						</cfif>
-					</code>
+					<code>#trim(Replace(encodeForHTML(data.syntax), Chr(10), "<br>", "ALL"))#</code>
+					<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)>
+						<code><em>&##8594; returns #encodeForHTML(data.returns)#</em></code>
+					</cfif>
+					
 				</p>
 				<cfif data.type IS "tag">
 					<cfif StructKeyExists(data, "script")>
@@ -45,7 +45,7 @@
 						<cfset data.script = replaceScript(name = data.name, mode = "cf") & ";">
 					<cfelseif NOT ListFindNoCase("cfif,cfset,cfelse,cfelseif,cfloop,cfinclude,cfparam,cfswitch,cfcase,cftry,cfthrow,cfrethrow,cfcatch,cffinally,cfmodule,cfcomponent,cfinterface,cfproperty,cffunction,cfimport,cftransaction,cftrace,cflock,cfthread,cfsavecontent,cflocation,cfargument,cfapplication,cfscript", data.name)>
 						<!--- add cfscript syntax --->
-						<cfset data.script = replaceScript(script = data.script, name = data.name, sytax = data.syntax, mode = "other")>
+						<cfset data.script = replaceScript(name = data.name, syntax = data.syntax, mode = "other")>
 						<cfset data.scriptTitle = "Script Syntax ACF11+, Lucee, Railo 4.2+">
 					</cfif>
 					<cfif StructKeyExists(data, "script")>
@@ -292,23 +292,21 @@
 	</div>
 </cfoutput>
 <cffunction name="replaceScript">
-	<cfargument name="name" type="string" required="true" />
-	<cfargument name="mode" type="string" required="true" />
-	<cfargument name="syntax" type="string" />
-	<cfargument name="script" type="string" />
-	<cfscript>
-	    result = "";
-	    if(mode is "cf")
-	        result = ReplaceNoCase(name, "cf", "") & ";";
-	    else if(mode is "other") {
-			// add cfscript syntax
-			result = ReReplace(syntax, "[<\r\n]", "", "ALL");
-			result = ReplaceNoCase(script, name, name & "(");
-			result = Replace(script, "( ", "(");
-			// replace double quote followed by a space with a ,[space]
-			result = ReReplace(script, """ ", """, ", "ALL");
-			result = ReReplace(script, ",? ?>", ");");
-	    }
-	    return result;
-	</cfscript>
+	<cfargument name="name" type="string" required="true">
+	<cfargument name="mode" type="string" required="true">
+	<cfargument name="syntax" type="string">
+	<cfset result = "">
+	
+	<cfif mode is "cf">
+		<cfset result = ReplaceNoCase(name, "cf", "") & ";">
+	<cfelseif mode is "other">
+		<!--- add cfscript syntax --->
+		<cfset result = ReReplace(syntax, "[<\r\n]", "", "ALL")>
+		<cfset result = ReplaceNoCase(result, name, name & "(")>
+		<cfset result = Replace(result, "( ", "(")>
+		<!--- replace double quote followed by a space with a ,[space] --->
+		<cfset result = ReReplace(result, """ ", """, ", "ALL")>
+		<cfset result = ReReplace(result, ",? ?>", ");")>
+	</cfif>
+	<cfreturn result>
 </cffunction>

@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cfthread>",
 	"script": "thread action=\"\" name=\"\";",
-	"related":[],
+	"related":["threadJoin","threadTerminate"],
 	"description":"The cfthread tag enables multithreaded programming in ColdFusion.\n Threads are independent streams of execution, and multiple threads\n on a page can execute simultaneously and asynchronously, letting you\n perform asynchronous processing in CFML. CFML code within the cfthread\n tag body executes on a separate thread while the page request thread\n continues processing without waiting for the cfthread body to finish.\n You use this tag to run or end a thread, temporarily stop thread execution,\n or join together multiple threads.",
 	"params": [
 		{"name":"name","description":"The name of the thread to which the action applies:\n terminate The name of the thread to stop.\n join The name of the thread or threads to join to the current thread.\n To specify multiple threads, use a comma-delimited list.\n run The name to use to identify the thread being created. (required)","required":true,"default":"","type":"string","values":[]},

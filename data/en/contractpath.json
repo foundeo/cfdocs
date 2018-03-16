@@ -3,11 +3,11 @@
 	"type": "function",
 	"syntax": "contractPath(path [, placeholder])",
 	"returns": "string",
-	"related": [],
-	"description": "",
+	"related": ["expandPath"],
+	"description": "Opposite of expandpath.\n\nTries to match a given absolute path to mappings in the environment and will return a path that is contracted by the shortest matched mapping. If there are no matches, Lucee returns the absolute path it was given.",
 	"params": [
-		{"name": "path", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "placeholder", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
+		{"name": "path_absolute", "description": "The absolute path", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "placeholder", "description": "A boolean indicating whether Lucee placeholder names should be prefixed to the path.", "required": false, "default": "false", "type": "boolean", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/contractpath.html"}

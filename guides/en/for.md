@@ -30,7 +30,9 @@ The above outputs `AB`
 		writeOutput(car);
 	}
 	
-The above example would output `FordDodge` 
+The above example would output `FordDodge`
+
+Lists are not supported by default. If you have a list instead of an array, you have to use a basic for loop or you can simply convert the list to an array using `listToArray()`.
 
 For in support for native java arrays was added in CF10+
 
@@ -39,3 +41,37 @@ For in support for native java arrays was added in CF10+
 	for (row in query) {
 		writeOutput(row.currentrow);
 	}
+
+### Query Loop (with grouping) CF10+
+
+	q = queryNew("pk,fk,data", "integer,integer,varchar",[ 
+		[1, 10, "aa"], 
+		[2, 20, "bb"], 
+		[3, 20, "cc"], 
+		[4, 30, "dd"], 
+		[5, 30, "ee"], 
+		[6, 30, "ff"] 
+	]); 
+	cfloop(query=q, group="fk"){ 
+	    writeOutput("<strong>#fk#</strong><br />"); 
+	    cfloop(){ 
+		writeOutput("&emsp;#pk#:#data#<br />"); 
+	    } 
+	    writeOutput("<hr>"); 
+	}
+	
+### File Loop
+
+	filePath = getCurrentTemplatePath(); 
+	cfloop(file=filePath, index="chars", characters=16, charset="UTF-8"){ 
+		writeOutput(chars); // outputs the contents of this file 
+ 	}
+	
+### Date Time Loop
+	
+	from = now(); 
+	to   = dateAdd("d", 7, from); 
+	for(date=from; dateCompare(date, to, "d") <= 0; date = dateAdd("d", 1, date)){ 
+		writeOutput(dateTimeFormat(date, "yyyy-mm-dd HH:nn:sstt") & "<br>"); 
+	}
+	
