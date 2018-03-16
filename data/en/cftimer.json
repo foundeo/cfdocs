@@ -2,7 +2,7 @@
 	"name":"cftimer",
 	"type":"tag",
 	"syntax":"<cftimer>",
-	"related":["cfsleep","sleep"],
+	"related":["getTickCount"],
 	"description":"Displays execution time for a specified section of\n CFML code. ColdFusion MX displays the timing information\n along with any output produced by the timed code.",
 	"params": [
 		{"name":"label","description":"Label to display with timing information.\n Default: \" \"","required":false,"default":" ","type":"string","values":[]},
