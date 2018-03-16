@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"isIPV6(IP)",
 	"returns":"boolean",
-	"related":["isIPInRange"],
+	"related":["isIPInRange","getLocalhostIP"],
 	"description":" checks if given IP is of IPV6 format",
 	"params": [
 		{"name":"IP","description":"ip address to check","required":true,"default":"","type":"string","values":[]}
