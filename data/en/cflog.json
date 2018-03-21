@@ -10,7 +10,6 @@
 		{"name":"file","description":"Message file. Specify only the main part of the filename.\n For example, to log to the Testing.log file, specify\n \"Testing\".\n\n The file must be located in the default log directory. You\n cannot specify a directory path. If the file does not\n exist, it is created automatically, with the suffix .log.","required":false,"default":"","type":"string","values":[]},
 		{"name":"type","description":"Type (severity) of the message","required":false,"default":"","type":"string","values":["information","warning","error","fatal"]},
 		{"name":"application","description":"log application name, if it is specified in a cfapplication\n tag.","required":false,"default":"","type":"boolean","values":[true,false]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cflog.html"},
@@ -18,17 +17,19 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflog"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflog"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples":[
-		{"result":"","title":"Log to a file you specify","description":"CFLog will create a file or append to a file named myAppLog.log in the servers logs directory.","code":"<cflog file=\"myAppLog\" text=\"Whatever you want to log.\" type=\"information\" >"},
-
-		{"result":"",
-		"title":"Script Syntax",
-		"description":"",
-		"code":"writeLog(text = \"Logging some info.\", type = \"information\", application = \"no\", file = \"myLogFile\");"
+		{
+			"result":"",
+			"title":"Log to a file you specify",
+			"description":"CFLog will create a file or append to a file named myAppLog.log in the servers logs directory.",
+			"code":"<cflog file=\"myAppLog\" text=\"Whatever you want to log.\" type=\"information\" >"
+		},
+		{
+			"title":"Script Syntax",
+			"description":"",
+			"code":"writeLog(text = \"Logging some info.\", type = \"information\", application = \"no\", file = \"myLogFile\");",
+			"result":""
 		}
 	]
-
 }
