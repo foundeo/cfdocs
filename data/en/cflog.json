@@ -19,12 +19,17 @@
 	},
 	"links": [],
 	"examples":[
-		{"result":"","title":"Log to a file you specify","description":"CFLog will create a file or append to a file named myAppLog.log in the servers logs directory.","code":"<cflog file=\"myAppLog\" text=\"Whatever you want to log.\" type=\"information\" >"},
-
-		{"result":"",
-		"title":"Script Syntax",
-		"description":"",
-		"code":"writeLog(text = \"Logging some info.\", type = \"information\", application = \"no\", file = \"myLogFile\");"
+		{
+			"result":"",
+			"title":"Log to a file you specify",
+			"description":"CFLog will create a file or append to a file named myAppLog.log in the servers logs directory.",
+			"code":"<cflog file=\"myAppLog\" text=\"Whatever you want to log.\" type=\"information\" >"
+		},
+		{
+			"title":"Script Syntax",
+			"description":"",
+			"code":"writeLog(text = \"Logging some info.\", type = \"information\", application = \"no\", file = \"myLogFile\");",
+			"result":""
 		}
 	]
 }
