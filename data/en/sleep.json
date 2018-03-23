@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"sleep(duration)",
 	"returns":"void",
-	"related":[],
+	"related":["cftimer"],
 	"description":"Causes the current thread to stop processing for a specified period of time.",
 	"params": [
 		{"name":"duration","description":"Time, in milliseconds, to stop processing the current thread","required":true,"default":"","type":"","values":[]}
@@ -14,8 +14,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/sleep"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/sleep"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

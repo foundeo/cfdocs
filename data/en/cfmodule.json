@@ -2,7 +2,7 @@
 	"name":"cfmodule",
 	"type":"tag",
 	"syntax":"<cfmodule>",
-	"related":[],
+	"related":["cfassociate"],
 	"description":"Invokes a custom tag for use in CFML application pages.\n This tag processes custom tag name conflicts.",
 	"params": [
 		{"name":"template","description":"Mutually exclusive with the name attribute. A path to the\n page that implements the tag.\n\n Relative path: expanded from the current page\n Absolute path: expanded using CFML mapping\n A physical path is not valid.","required":false,"default":"","type":"string","values":[]},

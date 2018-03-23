@@ -2,7 +2,7 @@
 	"name":"cflog",
 	"type":"tag",
 	"syntax":"<cflog text=\"\">",
-	"related":[],
+	"related":["writeLog"],
 	"description":"Writes a message to a log file.",
 	"params": [
 		{"name":"text","description":"Message text to log.","required":true,"default":"","type":"string","values":[]},

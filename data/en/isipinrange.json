@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "isIPInRange(ips, ip)",
 	"returns": "boolean",
-	"related": ["isIPV6"],
+	"related": ["isIPV6", "getLocalhostIP"],
 	"description": "",
 	"params": [
 		{"name": "ips", "description": "comma-delimited list or array as ip range", "required": true, "default": "", "type": "any", "values": []},
