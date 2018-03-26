@@ -5,7 +5,7 @@
 	<br><br>
 	<div class="container">
 		<cfoutput>
-			<a href="https://github.com/foundeo/cfdocs/#request.gitFilePath#" rel="nofollow" class="label label-danger">Edit</a>
+			<a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="label label-danger">Edit</a>
 			#autoLink(variables.data,"",true)#
 		</cfoutput>
 	</div>
