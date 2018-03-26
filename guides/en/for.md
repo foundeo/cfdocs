@@ -2,6 +2,7 @@
 
 There are several different types of for loops. For more info please see the docs for cfloop.
 
+## Types of loops
 ### Basic for loop
 
 The following for loop has been supported since the initial version of cfscript.
@@ -75,3 +76,23 @@ For in support for native java arrays was added in CF10+
 		writeOutput(dateTimeFormat(date, "yyyy-mm-dd HH:nn:sstt") & "<br>"); 
 	}
 	
+## Additional statements
+### `continue`
+
+	cars = ["Ford","Dodge"];
+	for (car in cars) {
+		if(car is "Ford") {
+			continue;
+		}
+		writeOutput(car);
+	}
+	
+### `break`
+
+	cars = ["Ford","Dodge"];
+	for (car in cars) {
+		if(car is "Ford") {
+			break;
+		}
+		writeOutput(car);
+	}
