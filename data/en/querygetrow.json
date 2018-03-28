@@ -19,10 +19,11 @@
 	],
 	"examples": [
 		{
-			"title": "Tag Syntax",
-			"description": "",
-			"code": "<cfquery name=\"myQuery\" result=\"myresult\" datasource=\"artGallery\" fetchclientinfo=\"yes\" > \r\n select * from art where ARTID ><cfqueryparam value=\"2\" cfsqltype=\"CF_SQL_INTEGER\"> \r\n </cfquery> \r\n <cfdump var='#myQuery#' > \r\n <cfset data = queryGetRow(myQuery, 1) > \r\n <cfdump var='#data#' > \r\n",
-			"result": ""
+			"title":"Use queryGetRow to return a struct",
+			"description":"",
+			"code":"news = queryNew(\"id,title\",\r\n    \"integer,varchar\",\r\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\r\nwriteOutput( serializeJSON( queryGetRow(news, 1) ) );",
+			"result":"{\"title\":\"Dewey defeats Truman\",\"id\":1}",
+			"runnable":true
 		}
 	]
 
