@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"lsNumberFormat(number [, mask])",
 	"returns":"string",
-	"related":[],
-	"description":"Formats a number in a locale-specific format.\n [mask - quicky]\n _,9 Digit placeholder; . decimal point; 0 Pads with zeros;\n ( ) less than zero, puts parentheses around the mask\n + plus sign before positive number minus before negative\n - a space before positive minus sign before negative\n , Separates every third decimal place with a comma.\n L,C Left-justifies or center-justifies number\n $ dollar sign before formatted number.\n ^ Separates left and right formatting.",
+	"related":["numberFormat","decimalFormat"],
+	"description":"Formats a number in a locale-specific format.\n[mask - quicky]\n _,9 Digit placeholder; . decimal point; 0 Pads with zeros;\n ( ) less than zero, puts parentheses around the mask\n+ plus sign before positive number minus before negative\n- a space before positive minus sign before negative\n, Separates every third decimal place with a comma.\nL,C Left-justifies or center-justifies number\n$ dollar sign before formatted number.\n^ Separates left and right formatting.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"mask","description":"","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/lsnumberformat.html"},
@@ -16,17 +15,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsnumberformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsnumberformat"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Tag Example",
 			"description":"lsNumberFormat returns a number value using the locale convention. ",
-			"code":"<!--- loop through a list of locales and show number values ---> \r\n <cfloop LIST = \"#Server.Coldfusion.SupportedLocales#\" \r\n index = \"locale\" delimiters = \",\"> \r\n <cfset oldlocale = setLocale(locale)> \r\n <cfoutput><p><b><i>#locale#</i></b> \r\n #lsNumberFormat(-1234.5678, \"_________\")# \r\n #lsNumberFormat(-1234.5678, \"_________.___\")# \r\n #lsNumberFormat(1234.5678, \"_________\")# \r\n #lsNumberFormat(1234.5678, \"_________.___\")# \r\n #lsNumberFormat(1234.5678, \"$_(_________.___)\")# \r\n #lsNumberFormat(-1234.5678, \"$_(_________.___)\")# \r\n #lsNumberFormat(1234.5678, \"+_________.___\")# \r\n #lsNumberFormat(1234.5678, \"-_________.___\")# \r\n </cfoutput> \r\n </cfloop> ",
+			"code":"<!--- loop through a list of locales and show number values --->\r\n<cfloop LIST = \"#Server.Coldfusion.SupportedLocales#\"\r\nindex = \"locale\" delimiters = \",\">\r\n<cfset oldlocale = setLocale(locale)> \r\n<cfoutput><p><b><i>#locale#</i></b>\r\n #lsNumberFormat(-1234.5678, \"_________\")# \r\n #lsNumberFormat(-1234.5678, \"_________.___\")#\r\n#lsNumberFormat(1234.5678, \"_________\")#\r\n#lsNumberFormat(1234.5678, \"_________.___\")#\r\n#lsNumberFormat(1234.5678, \"$_(_________.___)\")#\r\n#lsNumberFormat(-1234.5678, \"$_(_________.___)\")#\r\n#lsNumberFormat(1234.5678, \"+_________.___\")#\r\n#lsNumberFormat(1234.5678, \"-_________.___\")#\r\n</cfoutput>\r\n</cfloop>",
 			"result":"",
 			"runnable":true
 		}
 	]
-
 }
