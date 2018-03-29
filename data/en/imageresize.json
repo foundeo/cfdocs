@@ -4,7 +4,7 @@
 	"syntax":"imageResize(name, width, height, interpolation, blurfactor)",
 	"member":"someImage.resize(width, height, interpolation, blurfactor)",
 	"returns":"void",
-	"related":["imageCrop"],
+	"related":["imageCrop","imageScaleTofit"],
 	"description":" Resizes a ColdFusion image.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
