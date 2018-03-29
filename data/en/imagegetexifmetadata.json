@@ -4,11 +4,10 @@
 	"syntax":"imageGetExifMetaData(name)",
 	"member":"someImage.getExifMetaData()",
 	"returns":"struct",
-	"related":[],
-	"description":" Retrieves the Exchangeable Image File Format (EXIF) headers in an image as a CFML structure.",
+	"related":["imageGetEXIFTag"],
+	"description":"Retrieves the Exchangeable Image File Format (EXIF) headers in an image as a CFML structure.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagegetexifmetadata.html"},
@@ -16,9 +15,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagegetexifmetadata"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagegetexifmetadata"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Using getExifMetaData member function",
@@ -28,5 +25,4 @@
 			"runnable":true
 		}
 	]
-
 }
