@@ -4,12 +4,11 @@
 	"syntax":"imageFlip(name, transpose)",
 	"member":"someImage.flip(transpose)",
 	"returns":"void",
-	"related":[],
+	"related":["imageRotate"],
 	"description":" Flips an image across an axis.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
 		{"name":"transpose","description":"Transpose the image.","required":true,"default":"vertical","type":"string","values":["vertical (default): Flip an image across an imaginary horizontal line that runs through the center of the image.","horizontal: Flip an image across an imaginary vertical line that runs through the center of the image.","diagonal: Flip an image across its main diagonal that runs from the upper-left to the lower-right corner.","antidiagonal: Flip an image across its main diagonal that runs from the upper-right to the lower-left corner.","90|180|270: Rotate an image clockwise by 90, 180, or 270 degrees."]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imageflip.html"},
@@ -17,10 +16,8 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imageflip"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imageflip"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+    	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to rotate an image by 270 degrees.",
@@ -36,5 +33,4 @@
 			"runnable":true
 		}
 	]
-
 }
