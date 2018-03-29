@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "esapiDecode(decodeFrom, string)",
 	"returns": "string",
-	"related": [],
+	"related": ["esapiEncode"],
 	"description": "",
 	"params": [
 		{"name": "decodeFrom", "description": "", "required": true, "default": "", "type": "string", "values": []},

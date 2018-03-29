@@ -3,6 +3,7 @@
     "type":"function",
     "syntax":"esapiEncode(encodeFor,string)",
     "returns":"string",
+    "related":["esapiDecode"],
     "description":"Calling the various encodeFor functions: encodeForHTML, etc.",
     "params": [
         {"name":"encodeFor","description":"Encode for what, valid values are:\n- css: for output inside Cascading Style Sheets (CSS)\n- dn: for output in LDAP Distinguished Names\n- html: for output inside HTML\n- html_attr: for output inside HTML Attributes\n- javascript: for output inside Javascript\n- ldap: for output in LDAP queries\n- url: for output in URL\n- vbscript: for output inside vbscript\n- xml: for output inside XML\n- xml_attr: for output inside XML Attributes\n- xpath: for output in XPath.","required":true,"type":"string"},

@@ -4,7 +4,7 @@
 	"syntax":"imageRotate(name [, x] [, y] , angle [, interpolation])",
 	"member":"someImage.rotate([, x] [, y] , angle [, interpolation])",
 	"returns":"void",
-	"related":[],
+	"related":["imageFlip"],
 	"description":"Rotates a ColdFusion image at a specified point by a specified angle.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},

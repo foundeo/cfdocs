@@ -4,7 +4,7 @@
 	"syntax":"imageClearRect(name, x, y, width, height)",
 	"member":"someImage.clearRect(x, y, width, height)",
 	"returns":"void",
-	"related":[],
+	"related":["imageDrawBeveledRect","imageDrawRect","imageDrawRoundRect"],
 	"description":" Clears the specified rectangle by filling it with the background color of the current drawing surface.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed","required":true,"default":"","type":"string","values":[]},
@@ -12,7 +12,6 @@
 		{"name":"y","description":"The Y coordinate of the rectangle to clear.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"width","description":"The width of the rectangle to clear.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"height","description":"The height of the rectangle to clear.","required":true,"default":"","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imageclearrect.html"},
@@ -20,10 +19,8 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imageclearrect"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imageclearrect"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+    	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to set the background color to green and draws four rectangles in that color on the image.",
@@ -39,5 +36,4 @@
 			"runnable":true
 		}
 	]
-
 }

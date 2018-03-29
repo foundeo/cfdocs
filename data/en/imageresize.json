@@ -4,7 +4,7 @@
 	"syntax":"imageResize(name, width, height, interpolation, blurfactor)",
 	"member":"someImage.resize(width, height, interpolation, blurfactor)",
 	"returns":"void",
-	"related":[],
+	"related":["imageCrop","imageScaleTofit"],
 	"description":" Resizes a ColdFusion image.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
@@ -12,7 +12,6 @@
 		{"name":"height","description":"New height of the image. If this value is blank, the height is calculated proportionately to the width.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"interpolation","description":"The interpolation method for resampling. You can specify a specific interpolation algorithm by name (for example, hamming), by image quality (for example, mediumQuality), or by performance (for example, highestPerformance). ","required":false,"default":"","type":"string","values":["highestQuality (default)","highQuality","mediumQuality","highestPerformance","highPerformance","mediumPerformance","nearest","bilinear","bicubic","bessel","blackman","hamming","hanning","hermite","lanczos","mitchell","quadratic"]},
 		{"name":"blurfactor","description":"The blur factor used for resampling. The higher the blur factor, the more blurred the image (also, the longer it takes to resize the image).","required":false,"default":"","type":"boolean","values":["1-10"]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imageresize.html"},
@@ -20,10 +19,8 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imageresize"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imageresize"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+    	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to resize an image to 50% of original size and resize it proportionately to the new width. Notice that the height is blank. ",
@@ -39,5 +36,4 @@
 			"runnable":true
 		}
 	]
-
 }

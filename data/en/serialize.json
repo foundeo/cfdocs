@@ -3,10 +3,10 @@
 	"type":"function",
 	"syntax":"serialize( objToBeSerialized, type, useCustomSerializer );",
 	"returns":"string",
-	"related":[],
+	"related":["deserialize"],
 	"description":"Serializes the object to a specified type",
 	"params": [
-		{"name":"objToBeSerialized","description":"An object to be serialized.","required":true,"default":"","type":"any","values":[]},
+		    {"name":"objToBeSerialized","description":"An object to be serialized.","required":true,"default":"","type":"any","values":[]},
         {"name":"type","description":"A type to which the object will be serialized. ColdFusion, by default supports XML and JSON formats. You can also implement support for other types in the CustomSerializer CFC.","required":true,"default":"","type":"string","values":[]},
         {"name":"useCustomSerializer","description":"Whether to use the custom serializer or not. The custom serializer will be always used for XML deserialization.\nIf false, the XML/JSON deserialization will be done using the default ColdFusion behavior.\nIf any other type is passed with useCustomSerializer as false, then TypeNotSupportedException will be thrown.","required":true,"default":"true","type":"boolean","values":[]}
 	],
@@ -15,16 +15,13 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/serialize.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/Serialize"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
-        {
+        	{
 			"title": "Tag Syntax",
 			"description": "serialize is a new function added in ColdFusion 11. This function will serialize the object to a specified type using ColdFusion's default serialization mechanism.",
 			"code": "... <cfreturn serialize(arguments.arg, arguments.type)> \r\n",
 			"result": ""
 		}
 	]
-
 }
