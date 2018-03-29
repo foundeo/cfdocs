@@ -2,7 +2,7 @@
 	"name":"cfinsert",
 	"type":"tag",
 	"syntax":"<cfinsert datasource=\"\" tablename=\"\">",
-	"related":["cfquery"],
+	"related":["cfquery","cfupdate"],
 	"description":"Inserts records in data sources from data in a CFML form\n or form Scope.\n\nIt can be used instead of cfquery with insert sql command.",
 	"params": [
 		{"name":"datasource","description":"Data source; contains table.","required":true,"default":"","type":"string","values":[]},
