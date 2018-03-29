@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"isCustomFunction(Object)",
 	"returns":"boolean",
-	"related":[],
-	"description":" Determines whether a name represents a custom function",
+	"related":["isClosure"],
+	"description":"Determines whether a name represents a custom function",
 	"params": [
 		{"name":"Object","description":"","required":true,"default":"","type":"any","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/iscustomfunction.html"},
@@ -15,8 +14,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/iscustomfunction"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/iscustomfunction"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }
