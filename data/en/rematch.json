@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"reMatch(reg_expression, string)",
 	"returns":"array",
-	"related":[],
+	"related":["reMatchNoCase"],
 	"description":"Uses a regular expression (RE) to search a string for a pattern, starting from a specified position.",
 	"params": [
 		{"name":"reg_expression","description":"Regular expression for which to search. Case sensitive.","required":true,"default":"","type":"string","values":[]},
@@ -31,5 +31,4 @@
 			"runnable":true
 		}
 	]
-
 }
