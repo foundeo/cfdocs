@@ -2,25 +2,23 @@
 	"name":"cfzip",
 	"type":"tag",
 	"syntax":"<cfzip>",
-	"returns":"",
-	"related":[],
-	"description":" Manipulates ZIP and JavaTM Archive (JAR) files.\n In addition to the basic zip and unzip functions, use the cfzip tag to delete\n entries from an archive, filter files, read files in binary format, list the\n contents of an archive, and specify an entrypath used in an executable JAR file.",
+	"related":["compress"],
+	"description":"Manipulates ZIP and JavaTM Archive (JAR) files.\n In addition to the basic zip and unzip functions, use the cfzip tag to delete\n entries from an archive, filter files, read files in binary format, list the\n contents of an archive, and specify an entrypath used in an executable JAR file.",
 	"params": [
-		{"name":"action","description":"The action to take. Must be one of the following:\n delete\n list\n read\n readBinary\n unzip\n zip\n If you do not specify an action, ColdFusion\n applies the default action, zip. (optional)","required":false,"default":"zip","type":"String","values":["delete","list","read","readBinary","unzip","zip"]},
-		{"name":"charset","description":"The character set used to translate the ZIP or JAR\n entry into a text string. Examples of character sets are:\n JIS\n RFC1345\n UTF-16 (optional, default=encoding of the host machine)","required":false,"default":"","type":"String","values":["JIS","RFC1345","UTF-16"]},
-		{"name":"destination","description":"Destination directory where the ZIP or JAR file is extracted. (optional)","required":false,"default":"","type":"String","values":[]},
-		{"name":"entrypath","description":"Pathname on which the action is performed. (optional)","required":false,"default":"","type":"String","values":[]},
-		{"name":"file","description":"Absolute pathname of the file on which the action is performed.\n For example, the full pathname of the ZIP file: c:\\temp\\log.zip.\n If you do not specify the full pathname (for example, file=\"log.zip\"),\n ColdFusion creates the file in a temporary directory. You can use the\n GetTempDirectory function to access the ZIP or JAR file. (required)","required":false,"default":"","type":"String","values":[]},
-		{"name":"filter","description":"File filter applied to the action. The action\n applies to all files in the pathname specified that match the filter. (optional)","required":false,"default":"","type":"String","values":[]},
-		{"name":"name","description":"Record set name in which the result of the list action is stored.\n The record set columns are:\n name: filename of the entry in the JAR file. For example, if the entry is\n help\/docs\/index.htm, the name is index.htm.\n directory: directory containing the entry. For the example above, the\n directory is help\/docs. You can obtain the full entry name by concatenating\n directory and name. If an entry is at the root level, the directory is empty ('').\n size: uncompressed size of the entry, in bytes.\n compressedSize: compressed size of the entry, in bytes.\n type: type of entry (directory or file).\n dateLastModified: last modified date of the entry, cfdate object.\n comment: any comment, if present, for the entry.\n crc: crc-32 checksum of the uncompressed entry data. (required)","required":false,"default":"","type":"String","values":[]},
-		{"name":"overwrite","description":"unzip: Specifies whether to overwrite the extracted files:\n yes: if the extracted file already exists at the destination specified,\n the file is overwritten.\n no: if the extracted file already exists at the destination specified,\n the file is not overwritten and that entry is not extracted. The remaining\n entries are extracted.\n zip: Specifies whether to overwrite the contents of a ZIP or JAR file:\n yes: overwrites all of the content in the ZIP or JAR file if it exists.\n no: updates existing entries and adds new entries to the ZIP or JAR file\n if it exists. (optional, default=no)","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"prefix","description":"String added as a prefix to the ZIP or JAR entry.\n The string is the name of a subdirectory in which the\n entries are added. (optional)","required":false,"default":"","type":"String","values":[]},
-		{"name":"recurse","description":"Specifies whether the action\n applies to subdirectories:\n yes: includes subdirectories.\n no: does not include subdirectories. (optional, default=yes)","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"showDirectory","description":"yes: lists the directories.\n no: does not list directories. (optional, default= no)","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"source","description":"Source directory to be zipped. Not required\n if cfzipparam is specified. (required)","required":false,"default":"","type":"String","values":[]},
-		{"name":"storePath","description":"zip: Specifies whether pathnames are stored in the ZIP or JAR file:\n yes: pathnames of entries are stored in the ZIP or JAR file.\n no: pathnames of the entries are not stored in the ZIP or JAR file.\n All the files are placed at the root level. In case of a name conflict,\n the last file in the iteration is added.\n unzip: Specifies whether files are stored at the entrypath:\n yes: the files are extracted to the entrypath.\n no: the entrypath is ignored and all the files are extracted\n at the root level. (optional, default= yes)","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"variable","description":"Variable in which the read content is stored. (required)","required":false,"default":"","type":"String","values":[]}
-
+		{"name":"action","description":"The action to take. Must be one of the following:\n delete\n list\n read\n readBinary\n unzip\n zip\n If you do not specify an action, ColdFusion\n applies the default action, zip. (optional)","required":false,"default":"zip","type":"string","values":["delete","list","read","readBinary","unzip","zip"]},
+		{"name":"charset","description":"The character set used to translate the ZIP or JAR\n entry into a text string. Examples of character sets are:\n JIS\n RFC1345\n UTF-16 (optional, default=encoding of the host machine)","required":false,"default":"","type":"string","values":["JIS","RFC1345","UTF-16"]},
+		{"name":"destination","description":"Destination directory where the ZIP or JAR file is extracted. (optional)","required":false,"default":"","type":"string","values":[]},
+		{"name":"entrypath","description":"Pathname on which the action is performed. (optional)","required":false,"default":"","type":"string","values":[]},
+		{"name":"file","description":"Absolute pathname of the file on which the action is performed.\n For example, the full pathname of the ZIP file: c:\\temp\\log.zip.\n If you do not specify the full pathname (for example, file=\"log.zip\"),\n ColdFusion creates the file in a temporary directory. You can use the\n GetTempDirectory function to access the ZIP or JAR file. (required)","required":false,"default":"","type":"string","values":[]},
+		{"name":"filter","description":"File filter applied to the action. The action\n applies to all files in the pathname specified that match the filter. (optional)","required":false,"default":"","type":"string","values":[]},
+		{"name":"name","description":"Record set name in which the result of the list action is stored.\n The record set columns are:\n name: filename of the entry in the JAR file. For example, if the entry is\n help\/docs\/index.htm, the name is index.htm.\n directory: directory containing the entry. For the example above, the\n directory is help\/docs. You can obtain the full entry name by concatenating\n directory and name. If an entry is at the root level, the directory is empty ('').\n size: uncompressed size of the entry, in bytes.\n compressedSize: compressed size of the entry, in bytes.\n type: type of entry (directory or file).\n dateLastModified: last modified date of the entry, cfdate object.\n comment: any comment, if present, for the entry.\n crc: crc-32 checksum of the uncompressed entry data. (required)","required":false,"default":"","type":"string","values":[]},
+		{"name":"overwrite","description":"unzip: Specifies whether to overwrite the extracted files:\n yes: if the extracted file already exists at the destination specified,\n the file is overwritten.\n no: if the extracted file already exists at the destination specified,\n the file is not overwritten and that entry is not extracted. The remaining\n entries are extracted.\n zip: Specifies whether to overwrite the contents of a ZIP or JAR file:\n yes: overwrites all of the content in the ZIP or JAR file if it exists.\n no: updates existing entries and adds new entries to the ZIP or JAR file\n if it exists. (optional, default=no)","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"prefix","description":"String added as a prefix to the ZIP or JAR entry.\n The string is the name of a subdirectory in which the\n entries are added. (optional)","required":false,"default":"","type":"string","values":[]},
+		{"name":"recurse","description":"Specifies whether the action\n applies to subdirectories:\n yes: includes subdirectories.\n no: does not include subdirectories. (optional, default=yes)","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"showDirectory","description":"yes: lists the directories.\n no: does not list directories. (optional, default= no)","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"source","description":"Source directory to be zipped. Not required\n if cfzipparam is specified. (required)","required":false,"default":"","type":"string","values":[]},
+		{"name":"storePath","description":"zip: Specifies whether pathnames are stored in the ZIP or JAR file:\n yes: pathnames of entries are stored in the ZIP or JAR file.\n no: pathnames of the entries are not stored in the ZIP or JAR file.\n All the files are placed at the root level. In case of a name conflict,\n the last file in the iteration is added.\n unzip: Specifies whether files are stored at the entrypath:\n yes: the files are extracted to the entrypath.\n no: the entrypath is ignored and all the files are extracted\n at the root level. (optional, default= yes)","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"variable","description":"Variable in which the read content is stored. (required)","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfzip.html"},
@@ -28,9 +26,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfzip"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfzip"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Extract / Unzip a zip file into a folder",
@@ -39,5 +35,4 @@
 			"runnable":false
 		}
 	]
-
 }

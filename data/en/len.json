@@ -2,11 +2,11 @@
 	"name":"len",
 	"type":"function",
 	"syntax":"len(Object)",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["Left","Right","Mid"],
 	"description":" Determines the length of a string or binary object",
 	"params": [
-		{"name":"Object","description":"A string or variable name","required":true,"default":"","type":"Object","values":[]}
+		{"name":"Object","description":"A string or variable name","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

@@ -1,0 +1,27 @@
+{
+	"name":"render",
+	"type":"function",
+	"syntax":"render(CFML[, dialect ])",
+	"member":"",
+	"script":"",
+	"returns":"void",
+	"related":["evaluate"],
+	"description":"Executes CFML/Lucee code that you provide as a string.",
+	"params": [
+	    {"name":"CFML","description":"String to evaluate including some CFML/Lucee code","required":true,"default":"","type":"string","values":[""]},
+ 		{"name": "dialect", "description": "The dialect you want details for", "required": false, "default": "current template's dialect", "type": "string", "values": ["CFML","Lucee"]}
+	],
+	"engines": {
+        "lucee": {"minimum_version":"5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/render.html"}
+	},
+	"links": [],
+	"examples": [
+        {
+		"title": "Execute replace using render",
+		"description": "Description of the code example",
+		"code": "str = 'hello world';\r\nrendVar = render(\"#replace(str,'world','universe')#!\");\r\nwriteOutput(str);",
+		"result": "hello universe!",
+		"runnable":true
+        }
+    ]
+}

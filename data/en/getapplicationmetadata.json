@@ -2,7 +2,7 @@
 	"name":"getApplicationMetadata",
 	"type":"function",
 	"syntax":"getApplicationMetadata()",
-	"returns":"Struct",
+	"returns":"struct",
 	"related":["getApplicationSettings"],
 	"description":"Returns the application settings that you have specified in the application, either in the Application.cfc or Application.cfm. Contains application settings such as name, sessionManagement, or invokeImplicitAccessor.",
 	"params": [

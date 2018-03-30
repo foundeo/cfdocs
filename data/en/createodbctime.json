@@ -3,11 +3,11 @@
 	"type":"function",
 	"syntax":"createODBCTime(date)",
 	"member":"date.createODBCTime()",
-	"returns":"ODBCTime",
+	"returns":"date",
 	"related":["createODBCDateTime", "createTime"],
 	"description":" Creates an ODBC time object.",
 	"params": [
-		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"DateTime","values":[]}
+		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"date","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateODBCTime.html"},

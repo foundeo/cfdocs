@@ -1,0 +1,26 @@
+{
+    "name":"bundleInfo",
+    "type":"function",
+    "syntax":"bundleInfo(obj)",
+    "member":"",
+    "script":"",
+    "returns":"structure",
+    "related":["manifestRead"],
+    "description":"Returns information from the class of the given bundle object comes from",
+    "params":[
+        {"name":"obj", "description":"Object from bundle", "required":true, "default":"", "type":"any", "values":[]}
+    ],
+    "engines":{
+        "lucee":{"minimum_version":"5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/bundleinfo.html"}
+    },
+    "links":[],
+    "examples":[
+        {
+            "title":"Dump info to a bundle",
+            "description":"",
+            "code":"dump(bundleInfo(obj));",
+            "result":"",
+            "runnable":false
+        }
+    ]
+}

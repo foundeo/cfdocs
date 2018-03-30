@@ -11,11 +11,9 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheRegionExists.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cacheregionexists"},
-		"lucee":{"minimum_version":"5", "notes":"", "docs":"http://docs.lucee.org/guides/lucee-5/functions-tags.html","deprecated":"5"}
+		"lucee":{"minimum_version":"5", "notes":"Only been added for compatibility to other CFML Engines. These functions are already marked as \"deprecated\" and it's strongly suggested not to use them in new code.", "docs":"http://docs.lucee.org/guides/lucee-5/functions-tags.html","deprecated":"5"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Tag Syntax",
@@ -24,5 +22,4 @@
 			"result": ""
 		}
 	]
-
 }

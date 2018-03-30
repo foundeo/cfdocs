@@ -3,8 +3,8 @@
 	"type": "function",
 	"syntax": "ctCacheList()",
 	"returns": "struct",
-	"related": [],
-	"description": "",
+	"related": ["ctCacheClear"],
+	"description": "Get elements in the customtag path cache",
 	"params": [],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/ctcachelist.html"}

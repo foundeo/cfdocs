@@ -2,11 +2,11 @@
 	"name":"chr",
 	"type":"function",
 	"syntax":"chr(number)",
-	"returns":"char",
+	"returns":"string",
 	"related":["asc"],
 	"description":" Converts a numeric value to a UCS-2 character.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":["9: \\t tab", "10: \\n New Line", "13: \\r Carriage Return"]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":["9: \\t tab", "10: \\n New Line", "13: \\r Carriage Return"]}
 
 	],
 	"engines": {

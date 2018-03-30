@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Sets the date when an on-disk or in-memory file was most recently modified.",
 	"params": [
-		{"name":"filePath","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"date","description":"No Help Available","required":true,"default":"","type":"DateTime","values":[]}
+		{"name":"filePath","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"date","description":"No Help Available","required":true,"default":"","type":"date","values":[]}
 
 	],
 	"engines": {

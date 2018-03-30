@@ -2,12 +2,12 @@
 	"name":"structFind",
 	"type":"function",
 	"syntax":"structFind(structure, key)",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":" Determines the value associated with a key in a structure.",
 	"params": [
-		{"name":"structure","description":"Structure that contains the value to return","required":true,"default":"","type":"Struct","values":[]},
-		{"name":"key","description":"Key whose value to return","required":true,"default":"","type":"String","values":[]}
+		{"name":"structure","description":"Structure that contains the value to return","required":true,"default":"","type":"struct","values":[]},
+		{"name":"key","description":"Key whose value to return","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

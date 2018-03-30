@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" Sets the width of a column in a worksheet.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The Excel spreadsheet object to which to set the column width.","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"columnNumber","description":"Specifies the column to set the width.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"width","description":"Specifies the width in points.","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"spreadsheetObj","description":"The Excel spreadsheet object to which to set the column width.","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"columnNumber","description":"Specifies the column to set the width.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"width","description":"Specifies the width in points.","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

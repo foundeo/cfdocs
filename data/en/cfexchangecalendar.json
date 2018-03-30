@@ -2,28 +2,24 @@
 	"name":"cfexchangecalendar",
 	"type":"tag",
 	"syntax":"<cfexchangecalendar action=\"create\" event=\"\" name=\"\" responsetype=\"accept\" uid=\"\">",
-	"returns":"",
-	"related":[],
-	"description":" Creates, deletes, modifies, gets, and responds to Microsoft Exchange calendar events, and gets calendar event attachments.",
+	"related":["cfexchangeconnection","cfexchangecontact","cfexchangemail","cfexchangetask","cfexchangefilter"],
+	"description":"Creates, deletes, modifies, gets, and responds to Microsoft Exchange calendar events, and gets calendar event attachments.",
 	"params": [
-		{"name":"action","description":"The action to take. Must be one of the following: create, delete, get, getAttachments, modify, respond (required)","required":true,"default":"","type":"String","values":["create","delete","deleteAttachments","get","getAttachments","modify","respond"]},
-		{"name":"attachmentpath","description":"The file path of the destination directory.\n If the directory does not exist, ColdFusion creates it.\n If you omit this attribute, ColdFusion does not save any attachments.\n If you specify a relative path, the path root is the ColdFusion temporary directory, which is returned by the GetTempDirectory function. (optional)","required":false,"default":"","type":"String","values":[]},
-		{"name":"connection","description":"The name of the connection to the Exchange server, as specified in the cfexchangeconnection tag.\n If you omit this attribute, you must create a temporary connection by specifying cfexchangeconnection tag connection attributes in the cfexchangecalendar tag. (optional)","required":false,"default":"","type":"variablename","values":[]},
+		{"name":"action","description":"The action to take. Must be one of the following: create, delete, get, getAttachments, modify, respond (required)","required":true,"default":"","type":"string","values":["create","delete","deleteAttachments","get","getAttachments","modify","respond"]},
+		{"name":"attachmentpath","description":"The file path of the destination directory.\n If the directory does not exist, ColdFusion creates it.\n If you omit this attribute, ColdFusion does not save any attachments.\n If you specify a relative path, the path root is the ColdFusion temporary directory, which is returned by the GetTempDirectory function. (optional)","required":false,"default":"","type":"string","values":[]},
+		{"name":"connection","description":"The name of the connection to the Exchange server, as specified in the cfexchangeconnection tag.\n If you omit this attribute, you must create a temporary connection by specifying cfexchangeconnection tag connection attributes in the cfexchangecalendar tag. (optional)","required":false,"default":"","type":"variableName","values":[]},
 		{"name":"event","description":"A reference to the structure that contains the event properties to be set or changed and their values.\n You must specify this attribute in number signs (#). (required)","required":true,"default":"","type":"any","values":[]},
-		{"name":"generateUniquefilenames","description":"A Boolean value specifying whether to generate unique file names if multiple attachments have the same file names.\n Case \"yes\": 3x myfile.txt -> myfile.txt, myfile1.txt, and myfile2.txt. (optional, default=no)","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"message","description":"The text of an optional message to send in the response or deletion notification. (optional)","required":false,"default":"","type":"String","values":[]},
-		{"name":"name","description":"The name of the ColdFusion query variable that will contain the retrieved events or information about the attachments that were retrieved. (required)","required":true,"default":"","type":"String","values":[]},
-		{"name":"notify","description":"Boolean value specifying whether to notify others of the changes made to the event (optional)","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"responseType","description":"(respond) Must be one of the following: accept, decline, tentative (required)","required":true,"default":"","type":"String","values":["accept","decline","tentative"]},
-		{"name":"result","description":"The name of a variable that will contain the UID of the event that is created.\n You use the UID value in the uid attribute other actions to identify the event to be acted on. (optional)","required":false,"default":"","type":"String","values":[]},
-		{"name":"uid","description":"Case-sensitive Exchange UID value or values that uniquely identify the event or events\n on which to perform the action.\n For the delete action, this attribute can be a comma delimited list of UID values.\n The getAttachments, modify, and respond actions allow only a single UID value. (required)","required":true,"default":"","type":"String","values":[]}
-
+		{"name":"generateUniquefilenames","description":"A Boolean value specifying whether to generate unique file names if multiple attachments have the same file names.\n Case \"yes\": 3x myfile.txt -> myfile.txt, myfile1.txt, and myfile2.txt. (optional, default=no)","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"message","description":"The text of an optional message to send in the response or deletion notification. (optional)","required":false,"default":"","type":"string","values":[]},
+		{"name":"name","description":"The name of the ColdFusion query variable that will contain the retrieved events or information about the attachments that were retrieved. (required)","required":true,"default":"","type":"string","values":[]},
+		{"name":"notify","description":"Boolean value specifying whether to notify others of the changes made to the event (optional)","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"responseType","description":"(respond) Must be one of the following: accept, decline, tentative (required)","required":true,"default":"","type":"string","values":["accept","decline","tentative"]},
+		{"name":"result","description":"The name of a variable that will contain the UID of the event that is created.\n You use the UID value in the uid attribute other actions to identify the event to be acted on. (optional)","required":false,"default":"","type":"string","values":[]},
+		{"name":"uid","description":"Case-sensitive Exchange UID value or values that uniquely identify the event or events\n on which to perform the action.\n For the delete action, this attribute can be a comma delimited list of UID values.\n The getAttachments, modify, and respond actions allow only a single UID value. (required)","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexchangecalendar.html"}
 	},
-	"links": [
-
-	]
+	"links": []
 
 }

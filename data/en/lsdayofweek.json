@@ -1,13 +1,13 @@
 {
-	"name": "LSDayOfWeek",
+	"name": "lsDayOfWeek",
 	"type": "function",
-	"syntax": "LSDayOfWeek(date [, locale] [, timezone])",
+	"syntax": "lsDayOfWeek(date [, locale] [, timezone])",
 	"member": "date.lsDayOfWeek([locale] [, timezone])",
-	"returns": "number",
+	"returns": "numeric",
 	"related": [],
 	"description": "",
 	"params": [
-		{"name": "date", "description": "", "required": true, "default": "", "type": "datetime", "values": []},
+		{"name": "date", "description": "", "required": true, "default": "", "type": "date", "values": []},
 		{"name": "locale", "description": "", "required": false, "default": "", "type": "string", "values": []},
 		{"name": "timezone", "description": "", "required": false, "default": "", "type": "string", "values": []}
 	],

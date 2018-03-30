@@ -1,36 +1,40 @@
 <cfoutput>
 	<div class="jumbotron">
-		<div class="container">
+		<div class="container" data-doc="#encodeForHTMLAttribute(data.name)#">
 			<h1 id="docname">#data.name#</h1>
 			<p>#autoLink(data.description)#</p>
 			<cfif StructKeyExists(data, "syntax") AND Len(data.syntax)>
-				<p id="syntax"><cfif data.type IS "tag"><small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;</cfif><code>#Replace(HTMLEditFormat(data.syntax), Chr(10), "<br>", "ALL")#<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)> <em>&##8594; returns #XmlFormat(data.returns)#</em></cfif></code></p>
+				<p id="syntax">
+					<cfif data.type IS "tag">
+						<small><span class="glyphicon glyphicon-tags" title="Tag Syntax"></span></small> &nbsp;
+					</cfif>
+					<code>#trim(Replace(encodeForHTML(data.syntax), Chr(10), "<br>", "ALL"))#</code>
+					<cfif data.type IS "function" AND StructKeyExists(data, "returns") AND Len(data.returns)>
+						<code><em>&##8594; returns #encodeForHTML(data.returns)#</em></code>
+					</cfif>
+					
+				</p>
 				<cfif data.type IS "tag">
 					<cfif StructKeyExists(data, "script")>
 						<cfset data.scriptTitle = "Script Syntax">
 					<cfelseif ListFindNoCase("cfabort,cfbreak,cfcontinue,cfreturn,cfexit", data.name)>
 						<cfset data.scriptTitle = "Script Syntax">
-						<cfset data.script = ReplaceNoCase(data.name, "cf", "") & ";">
+						<cfset data.script = replaceScript(name = data.name, mode = "cf") & ";">
 					<cfelseif NOT ListFindNoCase("cfif,cfset,cfelse,cfelseif,cfloop,cfinclude,cfparam,cfswitch,cfcase,cftry,cfthrow,cfrethrow,cfcatch,cffinally,cfmodule,cfcomponent,cfinterface,cfproperty,cffunction,cfimport,cftransaction,cftrace,cflock,cfthread,cfsavecontent,cflocation,cfargument,cfapplication,cfscript", data.name)>
 						<!--- add cfscript syntax --->
-						<cfset data.script = ReReplace(data.syntax, "[<\r\n]", "", "ALL")>
-						<cfset data.script = ReplaceNoCase(data.script, data.name, data.name & "(")>
-						<cfset data.script = Replace(data.script, "( ", "(")>
-						<!--- replace double quote followed by a space with a ,[space] --->
-						<cfset data.script = ReReplace(data.script, """ ", """, ", "ALL")>
-						<cfset data.script = ReReplace(data.script, ",? ?>", ");")>
+						<cfset data.script = replaceScript(name = data.name, syntax = data.syntax, mode = "other")>
 						<cfset data.scriptTitle = "Script Syntax ACF11+, Lucee, Railo 4.2+">
 					</cfif>
 					<cfif StructKeyExists(data, "script")>
 						<p id="script-syntax">
-							<small><span class="glyphicon glyphicon-flash" title="#HTMLEditFormat(data.scriptTitle)#"></span></small> &nbsp;<code>#HTMLEditFormat(data.script)#</code>
+							<small><span class="glyphicon glyphicon-flash" title="#encodeForHTMLAttribute(data.scriptTitle)#"></span></small> &nbsp;<code>#encodeForHTML(data.script)#</code>
 						</p>
 					</cfif>
 				<cfelseif data.type is "function">
 					<cfif StructKeyExists(data, "member")>
 					 	<h4><em>Member Function Syntax</em></h4>
 						<p id="member-syntax">
-							<code>#HTMLEditFormat(data.member)#</code>
+							<code>#encodeForHTML(data.member)#</code>
 						</p>
 					</cfif>
 				</cfif>
@@ -59,7 +63,7 @@
 			</cfif>
 			<cfif StructKeyExists(data, "discouraged") AND Len(data.discouraged)>
 				<div class="alert alert-danger">
-					<h4><span class="glyphicon glyphicon-warning-sign"></span> Discouraged: #autoLink(htmlEditFormat(data.discouraged))#</h4>
+					<h4><span class="glyphicon glyphicon-warning-sign"></span> Discouraged: #autoLink(encodeForHTML(data.discouraged))#</h4>
 				</div>
 			</cfif>
 		</div>
@@ -75,18 +79,16 @@
 			<cfif data.type IS "tag" OR url.name contains "-tags"><li><a href="#linkTo("tags")#">Tags</a></li></cfif>
 			<cfset cat = findCategory(url.name)>
 			<cfif Len(cat)><li><a href="#linkTo(cat)#">#application.categories[cat].name#</a></li></cfif>
-			<li class="active">#data.name#</li>
-
-			
+			<li class="active">#data.name#</li>			
 
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "coldfusion") AND StructKeyExists(data.engines.coldfusion, "docs") AND Len(data.engines.coldfusion.docs)>
 				<li class="pull-right">
-					<a href="#data.engines.coldfusion.docs#" title="Official Adobe ColdFusion Docs" class="label label-acf">CF<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)>#XmlFormat(data.engines.coldfusion.minimum_version)#+</cfif></a>
+					<a href="#data.engines.coldfusion.docs#" title="Official Adobe ColdFusion Docs" class="label label-acf">CF<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)>#encodeForHTML(data.engines.coldfusion.minimum_version)#+</cfif></a>
 				</li>
 			</cfif>
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "lucee") AND StructKeyExists(data.engines.lucee, "docs") AND Len(data.engines.lucee.docs)>
 				<li class="pull-right">
-					<a href="#data.engines.lucee.docs#" title="Official Lucee Docs" class="label label-lucee">Lucee<cfif StructKeyExists(data.engines.lucee, "minimum_version") AND Len(data.engines.lucee.minimum_version)>#XmlFormat(data.engines.lucee.minimum_version)#+</cfif></a>
+					<a href="#data.engines.lucee.docs#" title="Official Lucee Docs" class="label label-lucee">Lucee<cfif StructKeyExists(data.engines.lucee, "minimum_version") AND Len(data.engines.lucee.minimum_version)>#encodeForHTML(data.engines.lucee.minimum_version)#+</cfif></a>
 				</li>
 			</cfif>
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "openbd") AND StructKeyExists(data.engines.openbd, "docs") AND Len(data.engines.openbd.docs)>
@@ -98,16 +100,19 @@
 				<li role="separator" class="pull-right divider"></li>
 			</cfif>
 			<li class="pull-right">
-				<a href="https://github.com/foundeo/cfdocs/issues/new?title=#encodeForURL(data.name)#" rel="nofollow" class="label label-warning" title="Report an Issue">Issue</a>
+		    		<span class="label label-warning">
+					<a href="https://github.com/foundeo/cfdocs/issues?q=is:issue%20is:open%20#encodeForURL(data.name)#" class="issuecount badge">0</a>
+					<a href="https://github.com/foundeo/cfdocs/issues/new?title=#encodeForURL(data.name)#" rel="nofollow" class="issuebutton" title="Report an Issue">Issue</a>
+				</span>
 			</li>
-			<cfif StructKeyExists(request,"gitFilePath") AND Len(request.gitFilePath)>
+			<cfif StructKeyExists(request,"gitFilePath") AND Len(request.gitFilePath) AND not (REFind("(cf|lucee)[0-9]{1,3}",data.name) OR ArrayContains(['tags','functions','guides','all','categories'],data.name) )>
 				<li class="pull-right">
 					<a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="label label-danger">Edit</a>
 				</li>
 			</cfif>
 		</ol>
 	</cfif>
-
+	
 	<div class="container">
 		<cfif StructKeyExists(data, "related") AND ArrayLen(data.related)>
 			<cfif data.type IS "listing" OR data.type IS "404">
@@ -133,40 +138,36 @@
 				<cfelseif data.type IS "function">
 					#encodeForHTML(data.name)# Argument Reference
 				<cfelse>
-					<span class="item-name">#data.name#</span>
+					<span class="item-name">#encodeForHTML(data.name)#</span>
 				</cfif>
 			</h2>
-
 			
-
-
 			<cfloop array="#data.params#" index="p">
-				<div class="param" id="p-#XmlFormat(p.name)#">
+				<div class="param" id="p-#encodeForHTMLAttribute(p.name)#">
 					<h4>
 						#encodeForHTML(p.name)#
-						<cfif IsBoolean(p.required) AND p.required><div class="pull-right"><span class="label label-danger">Required</span></div></cfif>
+						<cfif structKeyExists(p, "type") and len( p.type )><em><span class="text-muted">#encodeForHTML(p.type)#</span></em></cfif>
+						<cfif isBoolean(p.required) AND p.required><div class="pull-right"><span class="label label-danger">Required</span></div></cfif>
 						<cfif structKeyExists(p, "default") and len( trim( p.default ) )>
 								<div class="p-default pull-right"><span class="text-muted">Default:</span> <code>#encodeForHTML(p.default)#</code></div>
 						</cfif>
 					</h4>
-					<div class="p-desc">
-						
+					<div class="p-desc">						
 						#autoLink( p.description )# 
-						<cfif StructKeyExists(p, "values") AND IsArray(p.values) AND ArrayLen(p.values)>
+						<cfif structKeyExists(p, "values") AND isArray(p.values) AND arrayLen(p.values)>
 							<cfif uCase(arrayToList(p.values)) IS NOT "YES,NO">
-								<strong>Values: </strong>
-								<ul>
-									<cfloop array="#p.values#" index="i">
-										<li><code>#XmlFormat(i)#</code></li>
-									</cfloop>
-								</ul>
+								<div>
+									<strong>Values:</strong>
+									<ul>
+										<cfloop array="#p.values#" index="i">
+											<li><code>#encodeForHTML(i)#</code></li>
+										</cfloop>
+									</ul>
+								</div>
 							</cfif>
-						</cfif>
-						
+						</cfif>						
 					</div>
-				</div> 
-				
-				
+				</div>			
 			</cfloop>
 		</cfif>
 
@@ -190,13 +191,13 @@
 											<strong>REMOVED</strong> in version #encodeForHTML(data.engines[i].removed)#
 										</cfif>
 										<cfif StructKeyExists(data.engines[i], "notes") AND Len(data.engines[i].notes)>
-											#autoLink(XmlFormat(data.engines[i].notes))#
+											#autoLink(encodeForHTML(data.engines[i].notes))#
 										</cfif>
 									</div>
 								<cfelse>
 									<div class="alert alert-warning">
-										<cfif Len(data.engines[i].minimum_version)><span class="label label-danger">Version #XmlFormat(data.engines[i].minimum_version)#+</span></cfif>
-										#autoLink(XmlFormat(data.engines[i].notes))#
+										<cfif Len(data.engines[i].minimum_version)><span class="label label-danger">Version #encodeForHTML(data.engines[i].minimum_version)#+</span></cfif>
+										#autoLink(encodeForHTML(data.engines[i].notes))#
 									</div>
 								</cfif>
 							</div>
@@ -214,7 +215,7 @@
 			<h2>Links <small>more information about #data.name#</small></h2>
 			<ul>
 				<cfloop array="#data.links#" index="link">
-					<li><a href="#link.url#">#link.title#</a><cfif StructKeyExists(link, "description") AND Len(link.description)> - #autoLink(XmlFormat(link.description))#</cfif></li>
+					<li><a href="#link.url#">#link.title#</a><cfif StructKeyExists(link, "description") AND Len(link.description)> - #autoLink(encodeForHTML(link.description))#</cfif></li>
 				</cfloop>
 			</ul>
 		</cfif>
@@ -223,29 +224,41 @@
 			<cfset request.hasExamples = true>
 			<h2 id="examples">Examples <small>sample code <cfif data.type IS "function">invoking<cfelse>using</cfif> the #data.name# <cfif data.type IS "tag">tag<cfelse>function</cfif></small></h2>
 			<cfset example_index = 0>
-			<cfloop array="#data.examples#" index="ex">
-				<cfset example_index = example_index + 1>
-				<br />
-				<h4 id="ex#example_index#">
-					#XmlFormat(ex.title)#
-					<cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
-						<div class="pull-right">
-							<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				<cfloop array="#data.examples#" index="ex">
+					<cfset example_index = example_index + 1>
+					<br />
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">						
+							<h4 class="panel-title" id="ex#example_index#">
+								<a role="button" data-toggle="collapse" data-parent="##accordion" href="##collapseEx#example_index#" aria-expanded="true" aria-controls="collapseEx#example_index#">
+								  #XmlFormat(ex.title)#
+								</a>
+							</h4>
 						</div>
-					</cfif>
-				</h4>
-				<p class="clearfix">#autoLink(ex.description)#</p>
-				<pre class="prettyprint"><code>#HTMLEditFormat(ex.code)#</code></pre>
-				<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
-					<p><strong>Expected Result: </strong> #XmlFormat(ex.result)#</p>
-				</cfif>
-			</cfloop>
+						<div id="collapseEx#example_index#" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+							<div class="panel-body">
+								<cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
+									<div class="pull-right">
+										<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
+									</div>
+								</cfif>
+								<p class="clearfix">#autoLink(ex.description)#</p>
+								<pre class="prettyprint"><code>#encodeForHTML(ex.code)#</code></pre>
+								<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
+									<p><strong>Expected Result: </strong> #encodeForHTML(ex.result)#</p>
+								</cfif>
+							</div>
+						</div>
+					</div>
+				</cfloop>				
+			</div>
 			<div class="modal fade example-modal" tabindex="-1" role="dialog">
 				<div class="modal-dialog modal-lg">
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title">#XmlFormat(data.name)# Example</h4>
+							<h4 class="modal-title">#encodeForHTML(data.name)# Example</h4>
 						</div>
 						<div class="modal-body" id="example-modal-content">
 						</div>
@@ -255,3 +268,22 @@
 		</cfif>
 	</div>
 </cfoutput>
+<cffunction name="replaceScript">
+	<cfargument name="name" type="string" required="true">
+	<cfargument name="mode" type="string" required="true">
+	<cfargument name="syntax" type="string">
+	<cfset result = "">
+	
+	<cfif mode is "cf">
+		<cfset result = ReplaceNoCase(name, "cf", "") & ";">
+	<cfelseif mode is "other">
+		<!--- add cfscript syntax --->
+		<cfset result = ReReplace(syntax, "[<\r\n]", "", "ALL")>
+		<cfset result = ReplaceNoCase(result, name, name & "(")>
+		<cfset result = Replace(result, "( ", "(")>
+		<!--- replace double quote followed by a space with a ,[space] --->
+		<cfset result = ReReplace(result, """ ", """, ", "ALL")>
+		<cfset result = ReReplace(result, ",? ?>", ");")>
+	</cfif>
+	<cfreturn result>
+</cffunction>

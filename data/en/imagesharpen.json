@@ -7,8 +7,8 @@
 	"related":[],
 	"description":" Sharpens a ColdFusion image by using the unsharp mask filter.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"gain","description":"Gain values can be integers or real numbers.","required":false,"default":"1.0","type":"Numeric","values":["> 0: the image is sharpened.","= 0: no effect","< 0: the image is blurred."]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"gain","description":"Gain values can be integers or real numbers.","required":false,"default":"1.0","type":"numeric","values":["> 0: the image is sharpened.","= 0: no effect","< 0: the image is blurred."]}
 
 	],
 	"engines": {

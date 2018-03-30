@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "componentCacheList()",
 	"returns": "struct",
-	"related": [],
+	"related": ["componentCacheClear","getComponentMetadata","cfcomponent","cfcache"],
 	"description": "",
 	"params": [],
 	"engines": {

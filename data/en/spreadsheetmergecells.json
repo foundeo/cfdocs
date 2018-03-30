@@ -6,11 +6,11 @@
 	"related":[],
 	"description":" Merges a rectangular block of two or more Excel spreadsheet object cells.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"startrow","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"endrow","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"startcolumn","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"endcolumn","description":"No Help Available","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"startrow","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"endrow","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"startcolumn","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"endcolumn","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

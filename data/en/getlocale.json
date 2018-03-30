@@ -2,19 +2,22 @@
 	"name":"getLocale",
 	"type":"function",
 	"syntax":"getLocale()",
-	"returns":"String",
-	"related":[],
+	"returns":"string",
+	"related":["getLocaleDisplayName","GetLocaleInfo","getLocaleCountry","getLocaleLanguage"],
 	"description":" Gets the current geographic/language locale value.\n To set the default display format of date, time, number, and\n currency values in a CFML application session, you use\n the SetLocale function.",
-	"params": [
-	],
+	"params": [],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getlocale.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/getlocale.html"},
+		"lucee": {"minimum_version":"", "deprecated":"5", "notes":"Lucee5+ Deprecated in favor of getLocaleInfo()", "docs":"http://docs.lucee.org/reference/functions/getlocale.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getlocale"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getlocale"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": [{
+		"title":"Output current Locale than set it to swiss locale",
+		"description":"",
+		"code":"writeOutput(getlocale());\r\nwriteOutput(' → ');\r\nsetLocale('de_ch');\r\nwriteOutput(getlocale());",
+		"result":"english (us) → german (swiss)",
+		"runnable":true
+	}]
 }

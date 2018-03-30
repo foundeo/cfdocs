@@ -1,0 +1,23 @@
+{
+	"name":"getLocaleCountry",
+	"type":"function",
+	"syntax":"getLocaleCountry()",
+	"returns":"string",
+	"related":["getLocale","GetLocaleInfo","getLocaleDisplayName","getLocaleLanguage"],
+	"description":"Gets the country where the locale belongs to.",
+	"params": [],
+	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getlocaledisplayname.html"},
+		"lucee": {"minimum_version":"", "deprecated":"5", "notes":"Lucee5+ Deprecated in favor of getLocaleInfo()", "docs":"http://docs.lucee.org/reference/functions/getlocaledisplayname.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getlocaledisplayname"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getlocaledisplayname"}
+	},
+	"links": [],
+	"examples": [{
+		"title":"Output current Locale's diplay name than set it to swiss locale",
+		"description":"",
+		"code":"writeOutput(getLocaleCountry());\r\nwriteOutput(' → ');\r\nsetLocale('de_ch');\r\nwriteOutput(getLocaleCountry());",
+		"result":"",
+		"runnable":false
+	}]
+}

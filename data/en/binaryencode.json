@@ -2,12 +2,12 @@
 	"name":"binaryEncode",
 	"type":"function",
 	"syntax":"binaryEncode(binarydata, encoding)",
-	"returns":"String",
+	"returns":"string",
 	"related":["binaryDecode"],
 	"description":" Converts binary data to a string.",
 	"params": [
-		{"name":"binarydata","description":"A string containing encoded binary data.","required":true,"default":"","type":"Binary","values":[]},
-		{"name":"encoding","description":"A string specifying the encoding method to use to represent\n the data; one of the following:\n - hex: use characters 0-9 and A-F represent the hexadecimal value\n of each byte; for example, 3A.\n - UU: use the UNIX UUencode algorithm to convert the data.\n - base64: use the Base64 algorithm to convert the data.","required":true,"default":"","type":"String","values":["hex","uu","base64"]}
+		{"name":"binarydata","description":"A string containing encoded binary data.","required":true,"default":"","type":"binary","values":[]},
+		{"name":"encoding","description":"A string specifying the encoding method to use to represent\n the data; one of the following:\n - hex: use characters 0-9 and A-F represent the hexadecimal value\n of each byte; for example, 3A.\n - UU: use the UNIX UUencode algorithm to convert the data.\n - base64: use the Base64 algorithm to convert the data.","required":true,"default":"","type":"string","values":["hex","uu","base64"]}
 
 	],
 	"engines": {
@@ -17,6 +17,26 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Encode a binary string back to a string using hex",
+			"description": "use binaryEncode to Encode with hex",
+			"code": "s = binaryDecode('s = binaryDecode('737472696E67','hex');\n binaryEncode(s,'hex');",
+			"result": "737472696E67"
+		},
+		{
+			"title": "Encode a binary using UNIX UUencode (UU) back into string",
+			"description": "use binaryEncode to Encode with UNIX UUencode (UU)",
+			"code": "s = binaryDecode('&<W1R:6YG','UU');\n binaryEncode(s,'UU');",
+			"result": "string"
+		},
+		{
+			"title": "Encode a binary using base64 back into a string",
+			"description": "use binaryEncode to Encode with base64",
+			"code": "s = binaryDecode('s = binaryDecode('&<W1R:6YG','base64');\n binaryEncode(s,'base64');",
+			"result": "string"
+		}
 	]
 
 }

@@ -1,13 +1,13 @@
 {
-	"name":"CSRFVerifyToken",
+	"name":"csrfVerifyToken",
 	"type":"function",
-	"syntax":"CSRFVerifyToken( token [,key] )",
-	"returns":"Boolean",
-	"related":["CSRFGenerateToken"],
+	"syntax":"csrfVerifyToken( token [,key] )",
+	"returns":"boolean",
+	"related":["csrfGenerateToken"],
 	"description":"Validates the passed in token against the token stored in the session for a specific key. Used to help prevent Cross-Site Request Forgery (CSRF) attacks.",
 	"params": [
-		{"name":"token","description":"The passed in token that is to be validated against the token stored in the session.","required":true,"default":"","type":"String","values":[]},
-		{"name":"key","description":"The key against which the token was originally generated.","required":false,"default":"","type":"String","values":[]}
+		{"name":"token","description":"The passed in token that is to be validated against the token stored in the session.","required":true,"default":"","type":"string","values":[]},
+		{"name":"key","description":"The key against which the token was originally generated.","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -18,22 +18,22 @@
 	"examples": [
 		{
 			"title":"CSRF Form Validation",
-			"description":"Use CSRFVerifyToken() to Verify a unique token for each form submission.",
-			"code":"<cfscript>\r\n\tparam name=\"FORM[ 'f' & hash( 'userId', 'SHA-384', 'UTF-8', 1000 )]\" default=\"0\";\r\n\tparam name=\"FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )]\" default=\"0\";\r\n\tparam name=\"FORM.emailAddress\" default=\"\";\r\n\tparam name=\"FORM.phoneNumber\" default=\"\";\r\n\r\n\tif( !CSRFVerifyToken( FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )] )\r\n\t) {\r\n\t\t// formToken is not a valid token\r\n\t\t// redirect user to login form (etc.)\r\n\t}\r\n</cfscript>",
+			"description":"Use csrfVerifyToken() to Verify a unique token for each form submission.",
+			"code":"<cfscript>\r\n\tparam name=\"FORM[ 'f' & hash( 'userId', 'SHA-384', 'UTF-8', 1000 )]\" default=\"0\";\r\n\tparam name=\"FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )]\" default=\"0\";\r\n\tparam name=\"FORM.emailAddress\" default=\"\";\r\n\tparam name=\"FORM.phoneNumber\" default=\"\";\r\n\r\n\tif( !csrfVerifyToken( FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )] )\r\n\t) {\r\n\t\t// formToken is not a valid token\r\n\t\t// redirect user to login form (etc.)\r\n\t}\r\n</cfscript>",
 			"result":"",
 			"runnable":false
 		},
 		{
 			"title":"CSRF Form Validation w/ specified key",
-			"description":"Use CSRFVerifyToken() to Verify a unique token for each form submission.",
-			"code":"<cfscript>\r\n\tparam name=\"FORM[ 'f' & hash( 'userId', 'SHA-384', 'UTF-8', 1000 )]\" default=\"0\";\r\n\tparam name=\"FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )]\" default=\"0\";\r\n\tparam name=\"FORM.emailAddress\" default=\"\";\r\n\tparam name=\"FORM.phoneNumber\" default=\"\";\r\n\r\n\tif( !CSRFVerifyToken( FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )], 'profile' )\r\n\t) {\r\n\t\t// formToken is not a valid token\r\n\t\t// redirect user to login form (etc.)\r\n\t}\r\n</cfscript>",
+			"description":"Use csrfVerifyToken() to Verify a unique token for each form submission.",
+			"code":"<cfscript>\r\n\tparam name=\"FORM[ 'f' & hash( 'userId', 'SHA-384', 'UTF-8', 1000 )]\" default=\"0\";\r\n\tparam name=\"FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )]\" default=\"0\";\r\n\tparam name=\"FORM.emailAddress\" default=\"\";\r\n\tparam name=\"FORM.phoneNumber\" default=\"\";\r\n\r\n\tif( !csrfVerifyToken( FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )], 'profile' )\r\n\t) {\r\n\t\t// formToken is not a valid token\r\n\t\t// redirect user to login form (etc.)\r\n\t}\r\n</cfscript>",
 			"result":"",
 			"runnable":false
 		},
 		{
 			"title":"CSRF Form Validation w/ automated key validation",
-			"description":"Use CSRFVerifyToken() to Verify a unique token with a unique session variable for each form submission (for multiple open browser tabs).",
-			"code":"<cfscript>\r\n\tparam name=\"FORM[ 'f' & hash( 'userId', 'SHA-384', 'UTF-8', 1000 )]\" default=\"0\";\r\n\tparam name=\"FORM[ 'f' & hash( 'tokenVar', 'SHA-512', 'UTF-8', 500 )]\" default=\"0\";\r\n\tparam name=\"FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )]\" default=\"0\";\r\n\tparam name=\"FORM.emailAddress\" default=\"\";\r\n\tparam name=\"FORM.phoneNumber\" default=\"\";\r\n\r\n\tif( !CSRFVerifyToken( FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )], FORM[ 'f' & hash( 'tokenVar', 'SHA-512', 'UTF-8', 500 )] )\r\n\t) {\r\n\t\t// formToken is not a valid token\r\n\t\t// redirect user to login form (etc.)\r\n\t}\r\n</cfscript>",
+			"description":"Use csrfVerifyToken() to Verify a unique token with a unique session variable for each form submission (for multiple open browser tabs).",
+			"code":"<cfscript>\r\n\tparam name=\"FORM[ 'f' & hash( 'userId', 'SHA-384', 'UTF-8', 1000 )]\" default=\"0\";\r\n\tparam name=\"FORM[ 'f' & hash( 'tokenVar', 'SHA-512', 'UTF-8', 500 )]\" default=\"0\";\r\n\tparam name=\"FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )]\" default=\"0\";\r\n\tparam name=\"FORM.emailAddress\" default=\"\";\r\n\tparam name=\"FORM.phoneNumber\" default=\"\";\r\n\r\n\tif( !csrfVerifyToken( FORM[ 'f' & hash( 'formToken', 'SHA-512', 'UTF-8', 500 )], FORM[ 'f' & hash( 'tokenVar', 'SHA-512', 'UTF-8', 500 )] )\r\n\t) {\r\n\t\t// formToken is not a valid token\r\n\t\t// redirect user to login form (etc.)\r\n\t}\r\n</cfscript>",
 			"result":"",
 			"runnable":false
 		}

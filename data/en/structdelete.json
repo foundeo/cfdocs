@@ -6,8 +6,8 @@
 	"related":["structclear"],
 	"description":"Removes an element from a structure.",
 	"params": [
-		{"name":"structure","description":"Structure or a variable that contains one. Contains element\n to remove","required":true,"default":"","type":"String","values":[]},
-		{"name":"key","description":"Element to remove","required":true,"default":"","type":"String","values":[]},
+		{"name":"structure","description":"Structure or a variable that contains one. Contains element\n to remove","required":true,"default":"","type":"string","values":[]},
+		{"name":"key","description":"Element to remove","required":true,"default":"","type":"string","values":[]},
 		{"name":"indicateNotExisting","description":"When true this function will return true only if they key that will be deleted existed. When false (default) this function will return true if the key is successfully removed.","required":false,"default":false,"type":"boolean","values":[true,false]}
 
 	],
