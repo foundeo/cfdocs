@@ -2,15 +2,15 @@
 	"name":"entityLoad",
 	"type":"function",
 	"syntax":"entityLoad(entityName [, filterCriteria] [, unique])\n entityLoad(entityName [, filterCriteria] [, sortOrder] [, options])",
-	"returns":"array|object",
+	"returns":"any",
 	"related":["entitynew","entityget", "entityloadbypk","entityloadbyexample", "entityreload", "ormexecutequery"],
 	"description":"Loads and returns an array of entities of the specified entityname or an entity if unique=true or if a primary key id is passed in to filterCriteria.",
 	"params": [
-		{"name":"entityName","description":"Name of CFC / Entity","required":true,"default":"","type":"String","values":[]},
-		{"name":"filterCriteria","description":"A struct of key value pairs, or a primary key value","required":false,"default":"","type":"Any","values":[]},
+		{"name":"entityName","description":"Name of CFC / Entity","required":true,"default":"","type":"string","values":[]},
+		{"name":"filterCriteria","description":"A struct of key value pairs, or a primary key value","required":false,"default":"","type":"any","values":[]},
 		{"name":"unique","description":"When true a single entity is returned, otherwise an array","required":false,"default":"","type":"boolean","values":[]},
-		{"name":"sortOrder","description":"Column name and direction list, eg: LastName ASC, FirstName ASC","required":false,"default":"","type":"String","values":[]},
-		{"name":"options","description":"A struct with possible keys: ignorecase, sortorder, offset, maxresults, cacheable, cachename, timeout","required":false,"default":"","type":"Struct","values":[]}
+		{"name":"sortOrder","description":"Column name and direction list, eg: LastName ASC, FirstName ASC","required":false,"default":"","type":"string","values":[]},
+		{"name":"options","description":"A struct with possible keys: ignorecase, sortorder, offset, maxresults, cacheable, cachename, timeout","required":false,"default":"","type":"struct","values":[]}
 
 	],
 	"engines": {

@@ -2,7 +2,7 @@
 	"name":"getBaseTemplatePath",
 	"type":"function",
 	"syntax":"getBaseTemplatePath()",
-	"returns":"String",
+	"returns":"string",
 	"related":["getCurrentTemplatePath"],
 	"description":"Gets the absolute server file system path of the requested CFML file.",
 	"params": [

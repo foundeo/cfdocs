@@ -2,7 +2,7 @@
 	"name":"removeCachedQuery",
 	"type":"function",
 	"syntax":"removeCachedQuery(SQL_, datasource, params, region___);",
-	"returns":"",
+	"returns":"void",
 	"related":[],
 	"description":" Removes the query with the details you provide from query cache.",
 	"params": [
@@ -12,7 +12,7 @@
         {"name":"region","description":"Specifies the cache region where you can place the cache object.","required":false,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/removecachedquery.html"}
+		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/removecachedquery.html"}
 	},
 	"links": [
 

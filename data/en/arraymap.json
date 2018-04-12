@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"arrayMap(array, function(item [,index, array]))",
 	"member":"someArray.map(function(item [,index, array]))",
-	"returns":"Array",
+	"returns":"array",
 	"related":["arrayReduce"],
 	"description":"Iterates over every entry of the array and calls the closure function to work on the element of the array. The returned value will be set at the same index in a new array and the new array will be returned",
 	"engines": {
@@ -26,8 +26,8 @@
 		"url": "http://blog.adamcameron.me/2014/06/arraymap-reverse-cfml-history.html"
 	}],
 	"params":[
-		{"values":[],"default":"","description":"The input array","name":"array","type":"Array","required":true},
-		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: item in the array\r\nindex: index of the array\r\narray: a reference of the original arrray","name":"function","type":"Any","required":true}
+		{"values":[],"default":"","description":"The input array","name":"array","type":"array","required":true},
+		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: item in the array\r\nindex: index of the array\r\narray: a reference of the original arrray","name":"function","type":"any","required":true}
 	],
 	"examples":[
         {
@@ -37,5 +37,5 @@
 			"result": "[4, 18, 51]"
 		}
     ]
-	
+
 }

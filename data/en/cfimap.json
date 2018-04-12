@@ -2,30 +2,28 @@
 	"name":"cfimap",
 	"type":"tag",
 	"syntax":"<cfimap>",
-	"returns":"",
-	"related":[],
-	"description":" Queries an IMAP server to retrieve and manage mails within multiple folders.",
+	"related":["cfpop","cfmail"],
+	"description":"Queries an IMAP server to retrieve and manage mails within multiple folders.",
 	"params": [
-		{"name":"password","description":"Specifies the password for assessing the users e-mail account.","required":false,"default":"","type":"String","values":[]},
-		{"name":"secure","description":"Specifies whether the IMAP server uses a Secure Sockets Layer.","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"action","description":"* GetHeaderOnly - Returns the message header information for all retrieved mail.\n* GetAll - Returns mail. The information includes the message header information, message text, and any attachments. Set the AttachmentPath attribute to retrieve attachments.\n* Delete - Deletes messages from a folder.\n* Open - Initiates an open session or connection with the IMAP server.\n* Close - Terminates the open session or connection with the IMAP server.\n* MarkRead - Marks all messages read from a folder.\n* DeleteFolder - Deletes the identified folder.\n* CreateFolder - Creates a folder in Inbox.\n* RenameFolder - Renames an existing user-defined folder.\n* ListAllFolders - Displays a list of all existing folders in the mailbox or under the folder name defined by the Folder attribute.\n* MoveMail - Moves mail from one folder to another","required":false,"default":"getheaderonly","type":"String","values":["createfolder","open","close","getall","markread","listallfolders","getheaderonly","deletefolder","delete","renamefolder","movemail"]},
-		{"name":"timeout","description":"Specifies the number of seconds to wait before timing out connection to IMAP server. An error message is displayed when timeout occurs.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"messageNumber","description":"Specifies the message number or a comma delimited list of message numbers for retrieval, deletion, marking mail as read, or moving mails.\nIf you set an invalid message number or range, then it is ignored. If you have specified the UID attribute, then MessageNumber attribute is ignored.","required":false,"default":"","type":"String","values":[]},
-		{"name":"connection","description":"Required for the following actions: Open and Close - Specifies the variable name for the connection\/session. For example, the e-mail login to an IMAP server can be used as the value for the connection. If the server attribute has an invalid IP address or invalid domain name, \nthen the connection fails and ColdFusion returns an error message.","required":false,"default":"","type":"String","values":[]},
-		{"name":"newFolder","description":"Specifies the name of the destination folder where all mail move.","required":false,"default":"","type":"String","values":[]},
-		{"name":"uid","description":"Specifies the unique ID or a comma-delimited list of Uids to retrieve or delete. If you set invalid Uids, then they are ignored.","required":false,"default":"","type":"String","values":[]},
-		{"name":"folder","description":"For mail actions: Specifies the folder name where messages are searched, retrieved, moved, or deleted. If folder name is invalid, ColdFusion defaults to INBOX.\nFor folder actions: Specifies the folder name that is deleted (DeleteFolder) or created (CreateFolder) or renamed (RenameFolder).","required":false,"default":"","type":"String","values":[]},
-		{"name":"port","description":"Specifies the IMAP port number. Use 993 for secured connections.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"stoponerror","description":"Specifies whether or not to ignore the exceptions for this operation. When the value is true, it stops processing, displays an appropriate error.","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"generateUniqueFileNames","description":"Ensures that unique file names are generated for each attachment file. \nThe goal is to avoid name conflicts for attachments that have the same filename.","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"maxrows","description":"Specifies the number of rows to be marked as read, deleted, or moved across folders. When the value is 1, it signals the row determined by StartRow. Any incremental value marks rows starting from the StartRow.\nIf you have specified the UID or MessageNumber attribute, then MaxRows is ignored.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"username","description":"Specifies the user name. Typically, the user name is same the e-mail login.","required":false,"default":"","type":"String","values":[]},
-		{"name":"startRow","description":"Defines the first row number for reading or deleting. If you have specified the UID or MessageNumber attribute, then StartRow is ignored. You can also specify StartRow for moving mails.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"attachmentpath","description":"Required for GetAll action - Specifies the name of the folder where ColdFusion retrieves attachments. If this folder does not exist, ColdFusion creates it.","required":false,"default":"","type":"String","values":[]},
-		{"name":"server","description":"Specifies the IMAP server identifier. You can assign a host name or an IP address as the IMAP server identifier. For example, imap.gmail.com.","required":false,"default":"","type":"String","values":[]},
-		{"name":"name","description":"Specifies the name for the query object that contains the retrieved message information.","required":false,"default":"","type":"String","values":[]},
-		{"name":"recurse","description":"Specifies whether ColdFusion runs the CFIMAP command in subfolders.","required":false,"default":"","type":"Boolean","values":[true,false]}
-
+		{"name":"password","description":"Specifies the password for assessing the users e-mail account.","required":false,"default":"","type":"string","values":[]},
+		{"name":"secure","description":"Specifies whether the IMAP server uses a Secure Sockets Layer.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"action","description":"* GetHeaderOnly - Returns the message header information for all retrieved mail.\n* GetAll - Returns mail. The information includes the message header information, message text, and any attachments. Set the AttachmentPath attribute to retrieve attachments.\n* Delete - Deletes messages from a folder.\n* Open - Initiates an open session or connection with the IMAP server.\n* Close - Terminates the open session or connection with the IMAP server.\n* MarkRead - Marks all messages read from a folder.\n* DeleteFolder - Deletes the identified folder.\n* CreateFolder - Creates a folder in Inbox.\n* RenameFolder - Renames an existing user-defined folder.\n* ListAllFolders - Displays a list of all existing folders in the mailbox or under the folder name defined by the Folder attribute.\n* MoveMail - Moves mail from one folder to another","required":false,"default":"getheaderonly","type":"string","values":["createfolder","open","close","getall","markread","listallfolders","getheaderonly","deletefolder","delete","renamefolder","movemail"]},
+		{"name":"timeout","description":"Specifies the number of seconds to wait before timing out connection to IMAP server. An error message is displayed when timeout occurs.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"messageNumber","description":"Specifies the message number or a comma delimited list of message numbers for retrieval, deletion, marking mail as read, or moving mails.\nIf you set an invalid message number or range, then it is ignored. If you have specified the UID attribute, then MessageNumber attribute is ignored.","required":false,"default":"","type":"string","values":[]},
+		{"name":"connection","description":"Required for the following actions: Open and Close - Specifies the variable name for the connection\/session. For example, the e-mail login to an IMAP server can be used as the value for the connection. If the server attribute has an invalid IP address or invalid domain name, \nthen the connection fails and ColdFusion returns an error message.","required":false,"default":"","type":"string","values":[]},
+		{"name":"newFolder","description":"Specifies the name of the destination folder where all mail move.","required":false,"default":"","type":"string","values":[]},
+		{"name":"uid","description":"Specifies the unique ID or a comma-delimited list of Uids to retrieve or delete. If you set invalid Uids, then they are ignored.","required":false,"default":"","type":"string","values":[]},
+		{"name":"folder","description":"For mail actions: Specifies the folder name where messages are searched, retrieved, moved, or deleted. If folder name is invalid, ColdFusion defaults to INBOX.\nFor folder actions: Specifies the folder name that is deleted (DeleteFolder) or created (CreateFolder) or renamed (RenameFolder).","required":false,"default":"","type":"string","values":[]},
+		{"name":"port","description":"Specifies the IMAP port number. Use 993 for secured connections.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"stoponerror","description":"Specifies whether or not to ignore the exceptions for this operation. When the value is true, it stops processing, displays an appropriate error.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"generateUniqueFileNames","description":"Ensures that unique file names are generated for each attachment file. \nThe goal is to avoid name conflicts for attachments that have the same filename.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"maxrows","description":"Specifies the number of rows to be marked as read, deleted, or moved across folders. When the value is 1, it signals the row determined by StartRow. Any incremental value marks rows starting from the StartRow.\nIf you have specified the UID or MessageNumber attribute, then MaxRows is ignored.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"username","description":"Specifies the user name. Typically, the user name is same the e-mail login.","required":false,"default":"","type":"string","values":[]},
+		{"name":"startRow","description":"Defines the first row number for reading or deleting. If you have specified the UID or MessageNumber attribute, then StartRow is ignored. You can also specify StartRow for moving mails.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"attachmentpath","description":"Required for GetAll action - Specifies the name of the folder where ColdFusion retrieves attachments. If this folder does not exist, ColdFusion creates it.","required":false,"default":"","type":"string","values":[]},
+		{"name":"server","description":"Specifies the IMAP server identifier. You can assign a host name or an IP address as the IMAP server identifier. For example, imap.gmail.com.","required":false,"default":"","type":"string","values":[]},
+		{"name":"name","description":"Specifies the name for the query object that contains the retrieved message information.","required":false,"default":"","type":"string","values":[]},
+		{"name":"recurse","description":"Specifies whether ColdFusion runs the CFIMAP command in subfolders.","required":false,"default":"","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfimap.html"},
@@ -33,8 +31,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfimap"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfimap"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

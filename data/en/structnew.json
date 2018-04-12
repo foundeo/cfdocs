@@ -2,13 +2,13 @@
   "name": "structNew",
   "type": "function",
   "syntax": "structNew([structType])",
-  "returns": "Struct",
+  "returns": "struct",
   "related": ["struct-functions"],
   "description": "Creates a structure.",
   "params": [
     {
       "name": "structType",
-      "description": "CF2016+ If set to `ordered` the order in which elements are added to the structure will be maintained.",
+      "description": "CF2016+ Lucee4.5+ If set to `ordered` the order in which elements are added to the structure will be maintained. In Lucee `linked` can be used in place of `ordered`.",
       "required": false,
       "default": "",
       "type": "string",
@@ -61,7 +61,7 @@
     },
     {
       "title": "New ordered struct using function",
-      "description": "CF2016+ Creates an ordered struct.",
+      "description": "CF2016+ Lucee4.5+ Creates an ordered struct.",
       "code": "ordered = structNew( \"ordered\" );\r\nordered.a = 1;\r\nordered.b = 2;\r\nordered.c = 3;\r\nwriteDump( ordered );",
       "result": ""
     }

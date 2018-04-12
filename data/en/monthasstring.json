@@ -2,11 +2,11 @@
 	"name":"monthAsString",
 	"type":"function",
 	"syntax":"monthAsString(month_number)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" ",
 	"params": [
-		{"name":"month_number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"month_number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

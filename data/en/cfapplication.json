@@ -3,23 +3,23 @@
 	"type":"tag",
 	"syntax":"<cfapplication>",
 	"script":"component { /* Application.cfc */ this.name=\"myAppName\"; }",
-	"returns":"",
 	"related":["application-cfc"],
 	"description":"Defines the scope of a CFML application and allows you to set various application specific settings. Consider using Application.cfc instead of Application.cfm files.",
+	"discouraged":"Use Application.cfc instead of Application.cfm files. The Application component provides better organization and additional features. Note that if you are using Application.cfm it should contain a cfapplication tag.",
 	"params": [
-		{"name":"name","description":"Name of application. Up to 64 characters","required":false,"default":"","type":"String","values":[]},
-		{"name":"loginstorage","description":"cookie: store login information in the Cookie scope.\n session: store login information in the Session scope.","required":false,"default":"cookie","type":"String","values":["cookie","session"]},
+		{"name":"name","description":"Name of application. Up to 64 characters","required":false,"default":"","type":"string","values":[]},
+		{"name":"loginstorage","description":"cookie: store login information in the Cookie scope.\n session: store login information in the Session scope.","required":false,"default":"cookie","type":"string","values":["cookie","session"]},
 		{"name":"clientmanagement","description":"enables client variables","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"clientstorage","description":"How client variables are stored\n * datasource_name: in ODBC or native data source.\n You must create storage repository in the\n Administrator.\n * registry: in the system registry.\n * cookie: on client computer in a cookie. Scalable.\n If client disables cookies in the browser, client\n variables do not work","required":false,"default":"registry","type":"String","values":["cookie","registry","datasource_name"]},
+		{"name":"clientstorage","description":"How client variables are stored\n * datasource_name: in ODBC or native data source.\n You must create storage repository in the\n Administrator.\n * registry: in the system registry.\n * cookie: on client computer in a cookie. Scalable.\n If client disables cookies in the browser, client\n variables do not work","required":false,"default":"registry","type":"string","values":["cookie","registry","datasource_name"]},
 		{"name":"setclientcookies","description":"No: CFML does not automatically send CFID and CFTOKEN\n cookies to client browser; you must manually code CFID and\n CFTOKEN on the URL for every page that uses Session or\n Client variables","required":false,"default":true,"type":"boolean","values":[true,false]},
 		{"name":"sessionmanagement","description":"enables session variables","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"sessiontimeout","description":"Lifespan of session variables. CreateTimeSpan function and\n values in days, hours, minutes, and seconds, separated by\n commas","required":false,"default":"","type":"Timespan","values":[]},
 		{"name":"applicationtimeout","description":"Lifespan of application variables. CreateTimeSpan function\n and values in days, hours, minutes, and seconds, separated\n by commas.","required":false,"default":"","type":"Timespan","values":[]},
 		{"name":"setdomaincookies","description":"Yes: Sets CFID and CFTOKEN cookies for a domain (not a host)\n Required, for applications running on clusters.","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"scriptprotect","description":"Specifies whether to protect variables from cross-site scripting attacks.\n - none: do not protect variables\n - all: protect Form, URL, CGI, and Cookie variables\n - comma-delimited list of ColdFusion scopes: protect variables in the specified scopes","required":false,"default":"","type":"String","values":["none","all","form","url","cookie","cgi","form,url","form,url,cookie","form,url,cookie,cgi"]},
-		{"name":"securejsonprefix","description":"The security prefix to put in front of the value that a ColdFusion function returns in JSON-format \n\t\t\t\tin response to a remote call if the secureJSON setting is true.","required":false,"default":"","type":"String","values":[true,false]},
-		{"name":"securejson","description":"A Boolean value that specifies whether to add a security prefix in front of any value that a ColdFusion function returns in JSON-format\n\t\t\t\t in response to a remote call.","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"serverSideFormValidation","description":"Enable\/Disable ColdFusion‚ server side validation on CFFORM.","required":false,"default":"","type":"Boolean","values":[true,false]}
+		{"name":"scriptprotect","description":"Specifies whether to protect variables from cross-site scripting attacks.\n - none: do not protect variables\n - all: protect Form, URL, CGI, and Cookie variables\n - comma-delimited list of ColdFusion scopes: protect variables in the specified scopes","required":false,"default":"","type":"string","values":["none","all","form","url","cookie","cgi","form,url","form,url,cookie","form,url,cookie,cgi"]},
+		{"name":"securejsonprefix","description":"The security prefix to put in front of the value that a ColdFusion function returns in JSON-format \n\t\t\t\tin response to a remote call if the secureJSON setting is true.","required":false,"default":"","type":"string","values":[true,false]},
+		{"name":"securejson","description":"A Boolean value that specifies whether to add a security prefix in front of any value that a ColdFusion function returns in JSON-format\n\t\t\t\t in response to a remote call.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"serverSideFormValidation","description":"Enable\/Disable ColdFusion‚ server side validation on CFFORM.","required":false,"default":"","type":"boolean","values":[true,false]}
 
 	],
 	"engines": {

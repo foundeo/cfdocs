@@ -3,9 +3,8 @@
 	"type":"tag",
 	"syntax":"<cffinally>",
 	"script":"finally { }",
-	"returns":"",
 	"related":["cftry","cfcatch"],
-	"description":" Used inside a cftry tag. Code in the cffinally block is processed after the main cftry code and, if an exception\noccurs, the cfcatch code. The cffinally block code always executes, whether or not there is an exception.",
+	"description":"Used inside a cftry tag. Code in the cffinally block is processed after the main cftry code and, if an exception\noccurs, the cfcatch code. The cffinally block code always executes, whether or not there is an exception.",
 	"params": [
 	],
 	"engines": {

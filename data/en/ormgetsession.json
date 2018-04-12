@@ -1,10 +1,10 @@
 {
-	"name":"ORMGetSession",
+	"name":"ormGetSession",
 	"type":"function",
-	"syntax":"ORMGetSession()",
-	"returns":"",
+	"syntax":"ormGetSession()",
+	"returns":"any",
 	"related":[],
-	"description":" No Help Available",
+	"description":"Get the current ORM session object",
 	"params": [
 	],
 	"engines": {
@@ -14,6 +14,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Gets the Hibernate session object associated with the datasource from the application.",
+			"description": "Returns the object representing the current Hibernate session so you can preform functions on it.",
+			"code": "ormGetSession();",
+			"result": "",
+			"runnable": false
+		}
 	]
 
 }

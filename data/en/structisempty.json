@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether a structure contains data.",
 	"params": [
-		{"name":"structure","description":"Structure to test","required":true,"default":"","type":"Struct","values":[]}
+		{"name":"structure","description":"Structure to test","required":true,"default":"","type":"struct","values":[]}
 
 	],
 	"engines": {
@@ -15,6 +15,22 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structisempty"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structisempty"}
 	},
+	"examples": [ 
+		{
+			"title":"Test to see if a struct is empty",
+			"description":"",
+			"code":"myStruct={};\r\nwriteOutput( structIsEmpty(myStruct) );",
+			"result":"true",
+			"runnable":true
+		}, 
+		{
+			"title":"Test to see if a struct contains something",
+			"description":"",
+			"code":"myStructWithThings={ \"one\": \"foo\", \"two\": \"bar\"};\r\nwriteOutput( structIsEmpty(myStructWithThings) );",
+			"result":"false",
+			"runnable":true
+		}
+	],
 	"links": [
 
 	]

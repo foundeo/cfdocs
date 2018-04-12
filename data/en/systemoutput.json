@@ -4,9 +4,9 @@
 	"syntax": "systemOutput(obj [, addNewLine] [, doErrorStream])",
 	"returns": "boolean",
 	"related": [],
-	"description": "",
+	"description": "Writes the given string to the output stream",
 	"params": [
-		{"name": "obj", "description": "", "required": true, "default": "", "type": "Object", "values": []},
+		{"name": "obj", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "addNewLine", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
 		{"name": "doErrorStream", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
 	],

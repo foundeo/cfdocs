@@ -3,11 +3,11 @@
 	"type": "function",
 	"syntax": "getCurrentContext()",
 	"returns": "array",
-	"related": [],
+	"related": ["getContextRoot"],
 	"description": "",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getcurrentcontext.html"}
+		"lucee": {"minimum_version": "", "deprecated": "5", "notes": "Lucee5+ this function is deprecated, use function CallStackGet instead.", "docs": "http://docs.lucee.org/reference/functions/getcurrentcontext.html"}
 	},
 	"examples": [],
 	"links": []

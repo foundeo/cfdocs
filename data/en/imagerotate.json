@@ -1,18 +1,17 @@
 {
 	"name":"imageRotate",
 	"type":"function",
-	"syntax":"imageRotate(name, angle [, x] [, y] [, interpolation])",
-	"member":"someImage.rotate(angle [, x] [, y] [, interpolation])",
+	"syntax":"imageRotate(name [, x] [, y] , angle [, interpolation])",
+	"member":"someImage.rotate([, x] [, y] , angle [, interpolation])",
 	"returns":"void",
-	"related":[],
-	"description":" Rotates a ColdFusion image at a specified point by a specified angle.",
+	"related":["imageFlip"],
+	"description":"Rotates a ColdFusion image at a specified point by a specified angle.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"angle","description":"The rotation angle in degrees.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"x","description":"The x coordinate for the point of rotation","required":false,"default":"2","type":"Numeric","values":[]},
-		{"name":"y","description":"The y coordinate for the point of rotation","required":false,"default":"2","type":"Numeric","values":[]},
-		{"name":"interpolation","description":"Type of interpolation","required":false,"default":"","type":"String","values":["nearest: Applies the nearest neighbor method of interpolation. Image quality is lower than the other interpolation methods, but processing is fastest (default).","bilinear: Applies the bilinear method of interpolation. The quality of the image is less pixelated than the default, but processing is slower.","bicubic: Applies the bicubic method of interpolation. Generally, the quality of image is highest with this method and processing is slowest."]}
-
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"angle","description":"The rotation angle in degrees.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"x","description":"The x coordinate for the point of rotation","required":false,"default":"2","type":"numeric","values":[]},
+		{"name":"y","description":"The y coordinate for the point of rotation","required":false,"default":"2","type":"numeric","values":[]},
+		{"name":"interpolation","description":"Type of interpolation\n\nnearest: Applies the nearest neighbor method of interpolation. Image quality is lower than the other interpolation methods, but processing is fastest.\nbilinear: Applies the bilinear method of interpolation. The quality of the image is less pixelated than the default, but processing is slower.\nbicubic: Applies the bicubic method of interpolation. Generally, the quality of image is highest with this method and processing is slowest.","required":false,"default":"nearest","type":"string","values":["nearest","bilinear","bicubic"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagerotate.html"},
@@ -20,16 +19,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagerotate"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagerotate"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+    	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to rotate an image by 10 degrees. ",
-			"code": "<!--- Create a ColdFusion image from an existing JPEG file. ---> \r\n <cfset myImage=imageNew(\"../cfdocs/images/artgallery/jeff05.jpg\")> \r\n <cfset imageSetAntialiasing(myImage,\"on\")> \r\n <!--- Rotate the image by 10 degrees. ---> \r\n <cfset imageRotate(myImage,10)> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
+			"code": "<cfset myImage=imageRead(\"http://cfdocs.org/apple-touch-icon.png\")><!--- Rotate the image by 10 degrees. ---> \r\n <cfset imageRotate(myImage,10)> \r\n <cfimage source=\"#myImage#\" action=\"writeToBrowser\"> ",
 			"result": "",
-			"runnable":false
+			"runnable":true
 		},
 		{
 			"title":"Using rotate member function",
@@ -39,5 +36,4 @@
 			"runnable":true
 		}
 	]
-
 }

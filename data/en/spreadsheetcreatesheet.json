@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Create spreadsheet from given spreadsheet object",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"name","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

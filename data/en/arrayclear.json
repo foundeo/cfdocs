@@ -7,7 +7,7 @@
 	"related":["ArrayDelete","ArrayDeleteAt"],
 	"description":" Removes all elements from an array.",
 	"params": [
-		{"name":"array","description":"An array name or variable name","required":true,"default":"","type":"Array","values":[]}
+		{"name":"array","description":"An array name or variable name","required":true,"default":"","type":"array","values":[]}
 
 	],
 	"engines": {

@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Create a new spreadsheet variable from specified file",
 	"params": [
-		{"name":"fileName","description":"No Help Available","required":true,"default":"","type":"String","values":[]},
-		{"name":"spreadsheetObj","description":"Spreadsheet name or number","required":true,"default":"","type":"Variablename","values":[]}
+		{"name":"fileName","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"spreadsheetObj","description":"Spreadsheet name or number","required":true,"default":"","type":"variableName","values":[]}
 
 	],
 	"engines": {

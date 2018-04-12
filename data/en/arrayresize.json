@@ -7,8 +7,8 @@
 	"related":[],
 	"description":" Resets an array to a specified minimum number of elements.\n This can improve performance, if used to size an array to its\n expected maximum. For more than 500 elements, use arrayResize\n immediately after using the ArrayNew tag.",
 	"params": [
-		{"name":"array","description":"","required":true,"default":"","type":"Array","values":[]},
-		{"name":"size","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
+		{"name":"size","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

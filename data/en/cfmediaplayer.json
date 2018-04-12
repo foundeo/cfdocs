@@ -2,7 +2,6 @@
 	"name": "cfmediaplayer",
 	"type": "tag",
 	"syntax": "<cfmediaplayer source=\"\">",
-	"returns": "",
 	"related": [],
 	"description": "Creates an in-built media player that lets you play FLV files",
 	"params": [
@@ -11,7 +10,7 @@
 			"description": "Width of the media player, in pixels.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +18,7 @@
 			"description": "Height of the media player, in pixels.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +26,7 @@
 			"description": "Whether full screen is enabled",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [false, true]
 		},
 		{
@@ -35,7 +34,7 @@
 			"description": "A Boolean value that specifies if you want to hide border for the media player panel",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [false, true]
 		},
 		{
@@ -43,7 +42,7 @@
 			"description": "A Boolean value that specifies if you want to display the control panel for the media player",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [false, true]
 		},
 		{
@@ -51,7 +50,7 @@
 			"description": "Specifies the vertical alignment of the media player.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["left", "right", "center"]
 		},
 		{
@@ -59,7 +58,7 @@
 			"description": "Custom JavaScript function to run on loading th player component.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -67,7 +66,7 @@
 			"description": "The background color of the media player specified as a Hexadecimal value without a \"#\"",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -75,7 +74,7 @@
 			"description": "The URL to the FLV file.",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -83,7 +82,7 @@
 			"description": "Name of the media player.\nThe name attribute is required when you invoke JavaScript functions.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -91,7 +90,7 @@
 			"description": "The quality of the media playback",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["high", "medium", "low"]
 		},
 		{
@@ -99,7 +98,7 @@
 			"description": "A Boolean value that specifies if you want to hide title for the media player panel",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [false, true]
 		},
 		{
@@ -107,7 +106,7 @@
 			"description": "Custom JavaScript function to run when the FLV file has finished playing.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -115,7 +114,7 @@
 			"description": "Custom JavaScript function to run when the FLV file starts playing.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -123,7 +122,7 @@
 			"description": "Specifies the absolute positioning and layering capabilities in your browser",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["opaque", "transparent", "window"]
 		},
 		{
@@ -131,7 +130,7 @@
 			"description": "A Boolean value that specifies if the media player should automatically play the FLV file on loading the CFM page.",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [false, true]
 		},
 		{
@@ -139,7 +138,7 @@
 			"description": "Specify style for mediaplayer",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

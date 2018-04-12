@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "imageFilterColorMap(type [, lineColor1] [, lineColor2])",
 	"returns": "any",
-	"related": [],
+	"related": ["imageFilter","imageFilterCurves","imageFilterKernel","imageFilterWarpGrid"],
 	"description": "",
 	"params": [
 		{"name": "type", "description": "", "required": true, "default": "", "type": "string", "values": []},

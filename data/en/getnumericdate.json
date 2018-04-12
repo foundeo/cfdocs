@@ -1,12 +1,12 @@
 {
 	"name": "getNumericDate",
 	"type": "function",
-	"syntax": "getNumericDate(arg1)",
-	"returns": "number",
-	"related": [],
+	"syntax": "getNumericDate(date)",
+	"returns": "numeric",
+	"related": ["isNumericDate","createODBCDate","createDate"],
 	"description": "",
 	"params": [
-		{"name": "arg1", "description": "", "required": true, "default": "", "type": "any", "values": []}
+		{"name": "date", "description": "", "required": true, "default": "", "type": "any", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getnumericdate.html"}

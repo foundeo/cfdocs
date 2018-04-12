@@ -3,9 +3,8 @@
 	"type":"tag",
 	"syntax":"<cfelse>",
 	"script":"else { }",
-	"returns":"",
 	"related":["cfif","cfelseif"],
-	"description":" Used as the last control block in a cfif tag block to handle\n any case not identified by the cfif tag or a cfelseif tag.",
+	"description":"Used as the last control block in a cfif tag block to handle\n any case not identified by the cfif tag or a cfelseif tag.",
 	"params": [
 	],
 	"engines": {

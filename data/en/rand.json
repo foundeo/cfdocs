@@ -2,11 +2,11 @@
 	"name":"rand",
 	"type":"function",
 	"syntax":"rand([algorithm])",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":[],
 	"description":" Generates a pseudo-random number in the range 0 - 1.",
 	"params": [
-		{"name":"algorithm","description":"The algorithm to use to generated the random number.","required":false,"default":"CFMX_COMPAT","type":"String","values":["CFMX_COMPAT","SHA1PRNG","IBMSecureRandom"]}
+		{"name":"algorithm","description":"The algorithm to use to generated the random number.","required":false,"default":"CFMX_COMPAT","type":"string","values":["CFMX_COMPAT","SHA1PRNG","IBMSecureRandom"]}
 
 	],
 	"engines": {
@@ -29,7 +29,7 @@
 			"description": "To generate a random number between 0 to 1 by using CFMX_COMPAT algorithm",
 			"code": "writeOutput( rand('CFMX_COMPAT') );"
 		}
-		
+
 	]
 
 }

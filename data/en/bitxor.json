@@ -2,12 +2,12 @@
 	"name":"bitXor",
 	"type":"function",
 	"syntax":"bitXor(number1, number2)",
-	"returns":"Numeric",
-	"related":[],
+	"returns":"numeric",
+	"related":["bitAnd","bitOr"],
 	"description":" Performs a bitwise logical XOR operation.",
 	"params": [
-		{"name":"number1","description":"Integer","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"number2","description":"Integer","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number1","description":"Integer","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"number2","description":"Integer","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
@@ -16,9 +16,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/bitxor"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/bitxor"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Calculate bitwise logical XOR",

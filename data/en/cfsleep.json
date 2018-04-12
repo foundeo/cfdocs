@@ -3,14 +3,13 @@
 	"type":"tag",
 	"syntax":"<cfsleep time=ms>",
 	"script":"sleep(duration)",
-	"returns":"",
 	"related":["sleep"],
 	"description":"Causes the current thread to sleep for the given number of miliseconds.",
 	"params": [
 		{"name":"time","description":"The number of miliseconds to sleep for.","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/sleep.html"}		
+		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/sleep.html"}
 	},
 	"links": [],
 	"examples": []

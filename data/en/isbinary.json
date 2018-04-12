@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Determines whether a value is stored as binary data.",
 	"params": [
-		{"name":"value","description":"","required":true,"default":"","type":"Object","values":[]}
+		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,15 @@
 	},
 	"links": [
 
-	]
+	],
 
+	"examples": [
+		{
+			"title":"Checks if toBase64() function returns binary data ",
+			"description":"returns true if given value is binary data, returns false if otherwise",
+			"code":"isBinary( toBase64(1) )",
+			"result":false,
+			"runnable":true
+		}
+	]
 }

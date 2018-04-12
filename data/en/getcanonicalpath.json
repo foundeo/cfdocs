@@ -4,7 +4,7 @@
 	"syntax": "getCanonicalPath(path)",
 	"returns": "string",
 	"related": [],
-	"description": "",
+	"description": "Returns the canonical path of the input path. If a directory a trailing slash is always used.",
 	"params": [
 		{"name": "path", "description": "", "required": true, "default": "", "type": "string", "values": []}
 	],

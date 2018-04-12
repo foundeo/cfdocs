@@ -2,7 +2,6 @@
 	"name": "cfajaximport",
 	"type": "tag",
 	"syntax": "<cfajaximport>",
-	"returns": "",
 	"related": [],
 	"description": "Controls the JavaScript files that are imported for use on pages that use ColdFusion AJAX \n tags and features.",
 	"params": [
@@ -11,7 +10,7 @@
 			"description": "Specifies the URL, relative to the web root, of the \n directory that contains the JavaScript files used \n used by ColdFusion. When you use this attribute, \n the specified directory must have the same \n structure as the /CFIDE/scripts directory.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +18,7 @@
 			"description": "Specifies the URL, relative to the web root, of the \n directory that contains the CSS files used by \n ColdFusion AJAX features, with the exception of \n the rich text editor. This directory must have the \n same directory structure, and contain the same \n CSS files, and image files required by the CSS \n files, as the \n web_root/CFIDE/scripts/ajax/resources \n directory. \n This attribute lets you create different custom \n styles for ColdFusion AJAX controls in different \n applications.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +26,7 @@
 			"description": "A comma-delimited list of tags or tag-attribute \n combinations for which to import the supporting \n JavaScript files on this page.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -35,7 +34,7 @@
 			"description": "You can specify this tag's attributes in an attributeCollection whose value is a \n structure. Specify the structure name in the attributeCollection and use the tag\u00e2\u20ac\u0161 \n attribute names as structure keys.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

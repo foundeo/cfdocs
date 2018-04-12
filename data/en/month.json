@@ -3,11 +3,11 @@
 	"type":"function",
 	"syntax":"month(date)",
 	"member":"date.month()",
-	"returns":"Numeric",
+	"returns":"numeric",
 	"related":["hour","minute","second","quarter","week","year"],
 	"description":" Extracts the month value from a date/time object.",
 	"params": [
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()"]}
+		{"name":"date","description":"","required":true,"default":"","type":"date","values":[]}
 
 	],
 	"engines": {

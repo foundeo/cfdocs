@@ -2,26 +2,25 @@
   "name": "cfqueryparam",
   "type": "tag",
   "syntax": "<cfqueryparam>",
-  "returns": "",
   "related": [
     "cfquery","queryExecute"
   ],
-  "description": " Verifies the data type of a query parameter and, for DBMSs that\n support bind variables, enables CFML to use bind variables\n in the SQL statement. Bind variable usage enhances performance\n when executing a cfquery statement multiple times.\n\n This tag is nested within a cfquery tag, embedded in a query SQL\n statement. If you specify optional parameters, this tag performs\n data validation.",
+  "description": "Verifies the data type of a query parameter and, for DBMSs that\n support bind variables, enables CFML to use bind variables\n in the SQL statement. Bind variable usage enhances performance\n when executing a cfquery statement multiple times.\n\n This tag is nested within a cfquery tag, embedded in a query SQL\n statement. If you specify optional parameters, this tag performs\n data validation.",
   "params": [
     {
       "name": "value",
       "description": "Value that CFML passes to the right of the comparison\n operator in a where clause.\n\n If CFSQLType is a date or time option, ensure that the date\n value uses your DBMS-specific date format. Use the\n CreateODBCDateTime or DateFormat and TimeFormat functions\n to format the date value.",
       "required": false,
       "default": "",
-      "type": "String",
+      "type": "string",
       "values": []
     },
     {
       "name": "cfsqltype",
-      "description": "SQL type that parameter (any type) is bound to. As of CF11+ or Lucee 4.5+ you can omit the `cf_sql_` prefix.",
+      "description": "SQL type that parameter (any type) is bound to. As of CF11+ or Lucee4.5+ you can omit the `cf_sql_` prefix.",
       "required": false,
       "default": "",
-      "type": "String",
+      "type": "string",
       "values": [
         "cf_sql_bigint",
         "cf_sql_bit",
@@ -47,10 +46,30 @@
         "cf_sql_tinyint",
         "cf_sql_varchar",
         "cf_sql_nvarchar",
+        "bigint",
+        "bit",
+        "char",
+        "blob",
+        "clob",
+        "date",
+        "decimal",
+        "double",
+        "float",
+        "idstamp",
         "integer",
-        "varchar",
+        "longvarchar",
+        "longnvarchar",
+        "money",
+        "money4",
+        "numeric",
+        "real",
+        "refcursor",
+        "smallint",
+        "time",
         "timestamp",
-        "date"
+        "tinyint",
+        "varchar",
+        "nvarchar"
       ]
     },
     {
@@ -58,7 +77,7 @@
       "description": "Maximum length of parameter.",
       "required": false,
       "default": "",
-      "type": "Numeric",
+      "type": "numeric",
       "values": []
     },
     {
@@ -66,7 +85,7 @@
       "description": "Number of decimal places in parameter. Applies to `CF_SQL_NUMERIC` and `CF_SQL_DECIMAL`.",
       "required": false,
       "default": "",
-      "type": "Numeric",
+      "type": "numeric",
       "values": []
     },
     {
@@ -113,12 +132,12 @@
     },
     "lucee": {
       "minimum_version": "",
-      "notes": "",
+      "notes": "Supports `int` and `cf_sql_int` for integer",
       "docs": "http://docs.lucee.org/reference/tags/queryparam.html"
     },
     "railo": {
       "minimum_version": "",
-      "notes": "",
+      "notes": "Supports `int` and `cf_sql_int` for integer",
       "docs": "http://railodocs.org/index.cfm/tag/cfqueryparam"
     },
     "openbd": {
@@ -144,7 +163,7 @@
       "result": ""
     },
     {
-      "title": "cfscript exuivalent of cfqueryparam",
+      "title": "cfscript equivalent of cfqueryparam",
       "description": "CF11+ script syntax using queryExecute and full array notation",
       "code": "exampleData = queryNew(\"id,title\",\"integer,varchar\",[{\"id\":1,\"title\":\"Dewey defeats Truman\"},{\"id\":2,\"title\":\"Man walks on Moon\"}]);\r\n\r\nresult = queryExecute(\r\n  \"SELECT title FROM exampleData WHERE id = ?\", \r\n  [\r\n    { value=2, cfsqltype=\"cf_sql_varchar\" }\r\n  ],\r\n  { dbtype=\"query\" }\r\n);\r\n\r\nwriteOutput( result.title[1] );",
       "result": "Man walks on Moon"
@@ -156,7 +175,7 @@
       "result": "Man walks on Moon"
     },
     {
-      "title": "cfscript exuivalent of cfqueryparam",
+      "title": "cfscript equivalent of cfqueryparam",
       "description": "CF11+ script syntax using queryExecute and struct notation",
       "code": "exampleData = queryNew(\"id,title\",\"integer,varchar\",[{\"id\":1,\"title\":\"Dewey defeats Truman\"},{\"id\":2,\"title\":\"Man walks on Moon\"}]);\r\n\r\nresult = queryExecute(\r\n  \"SELECT title FROM exampleData WHERE id = :id\", \r\n  { id = 2 },\r\n  { dbtype=\"query\" }\r\n);\r\n\r\nwriteOutput( result.title[1] );",
       "result": "Man walks on Moon"

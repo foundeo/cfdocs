@@ -1,16 +1,16 @@
 {
 	"name": "isVideoFile",
 	"type": "function",
-	"syntax": "isVideoFile(value)",
+	"syntax": "isVideoFile(path)",
 	"returns": "boolean",
-	"related": [],
-	"description": "",
+	"related": ["isPDFFile","isImageFile"],
+	"description": "Checks if given string is a video file",
 	"params": [
-		{"name": "value", "description": "", "required": true, "default": "", "type": "string", "values": []}
+		{"name":"path","description":"Pathname to a video file.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/isvideofile.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": []
 }

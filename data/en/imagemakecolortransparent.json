@@ -2,7 +2,7 @@
 	"name":"imageMakeColorTransparent",
 	"type":"function",
 	"syntax":"imageMakeColorTransparent(img, color__);",
-	"returns":"image object",
+	"returns":"any",
 	"related":[],
 	"description":" Creates an image and sets a transparent color..",
 	"params": [
