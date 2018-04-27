@@ -4,7 +4,7 @@
 	"syntax":"fileWrite(file, data [, charset])",
 	"returns":"void",
 	"related":["cffile","fileAppend","fileWriteLine"],
-	"description":"Writes the data to the file object or file path speficied using the charset specified or the java default character set if unspecified.",
+	"description":"Writes the data to the file object or file path specified using the charset specified or the java default character set if unspecified.",
 	"params": [
 		{"name":"file","description":"A file object or a file system path string.","required":true,"default":"","type":"any","values":[]},
 		{"name":"data","description":"The variable to  write to the file.","required":true,"default":"","type":"String","values":[]},
