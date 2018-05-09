@@ -5,7 +5,7 @@
 	"member": "query.each(closure [, parallel] [, maxThreads])",
 	"returns": "void",
 	"related": [],
-	"description": "",
+	"description": "Interates over query rows and passes each row per interation to a callback function",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
