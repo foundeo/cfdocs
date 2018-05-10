@@ -5,7 +5,7 @@
 	"member": "query.columnCount()",
 	"returns": "numeric",
 	"related": ["queryColumnArray","queryColumnList","queryColumnExists","valueArray"],
-	"description": "",
+	"description": "Returns the amount of all columns in the given query object",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []}
 	],
