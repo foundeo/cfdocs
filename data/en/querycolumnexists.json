@@ -5,7 +5,7 @@
 	"member": "query.columnExists(column)",
 	"returns": "boolean",
 	"related": ["queryColumnList","queryColumnCount","queryColumnArray","valueArray"],
-	"description": "",
+	"description": "Checks whether a column exists in the given query object",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "column", "description": "", "required": true, "default": "", "type": "string", "values": []}

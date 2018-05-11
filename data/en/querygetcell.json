@@ -5,7 +5,7 @@
 	"member": "query.getCell(column_name [, row_number])",
 	"returns": "any",
 	"related": [],
-	"description": "",
+	"description": "Returns data contained in that specific cell",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "column_name", "description": "", "required": true, "default": "", "type": "string", "values": []},
