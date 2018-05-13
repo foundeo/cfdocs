@@ -17,7 +17,7 @@
 		{"name":"startrow","description":"First row of query that is included in the loop.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"endrow","description":"Last row of query that is included in the loop.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"list","description":"A list, variable, or filename; contains a list","required":false,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"Character(s) that separates items in list","required":false,"default":",","type":"string","values":[",",";","|",":"]},
+		{"name":"delimiters","description":"Character(s) that separates items in list","required":false,"default":",","type":"string","values":[]},
 		{"name":"collection","description":"The collection attribute is used with the item attribute.\n often to loop over a structure","required":false,"default":"","type":"any","values":[]},
 		{"name":"item","description":"The item attribute is used with the collection attribute.\n often to loop over a structure","required":false,"default":"","type":"string","values":[]},
 		{"name":"array","description":"CF8+ An array.","required":false,"default":"","type":"AnyValue","values":[]},
