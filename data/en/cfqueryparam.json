@@ -115,13 +115,8 @@
       "description": "Character that separates values in list, in value attribute.",
       "required": false,
       "default": "",
-      "type": "char",
-      "values": [
-        ",",
-        ";",
-        "|",
-        ":"
-      ]
+      "type": "string",
+      "values": []
     }
   ],
   "engines": {
