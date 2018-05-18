@@ -7,7 +7,7 @@
 	"description":"Gets the language from where the locale belongs to.",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version":"", "added": "5.0", "deprecated":"5.0", "notes":"Lucee5+ Deprecated in favor of getLocaleInfo()", "docs":"http://docs.lucee.org/reference/functions/getlocaledisplayname.html"},
+		"lucee": {"minimum_version":"", "added": "5.0", "deprecated":"5.0", "notes":"Lucee5+ Deprecated in favor of getLocaleInfo()", "docs":"http://docs.lucee.org/reference/functions/getlocaledisplayname.html"}
 	},
 	"links": [],
 	"examples": [{
