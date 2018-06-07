@@ -43,7 +43,7 @@ request.gitFilePath = "/edit/master/reports/missing-#page.node#.cfm";
 								</cfloop>
 							</ul>
 						<cfelse>
-							<span>Good Job! Nothing to do anymore.</span>
+							<span class="text-muted">Good Job! Nothing to do anymore.</span>
 						</cfif>
   					</div>
 				</div>
@@ -59,7 +59,7 @@ request.gitFilePath = "/edit/master/reports/missing-#page.node#.cfm";
 								</cfloop>
 							</ul>
 						<cfelse>
-							<span>Good Job! Nothing to do anymore.</span>
+							<span class="text-muted">Good Job! Nothing to do anymore.</span>
 						</cfif>
   					</div>
 				</div>
