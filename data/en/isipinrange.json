@@ -4,9 +4,9 @@
 	"syntax": "isIPInRange(ips, ip)",
 	"returns": "boolean",
 	"related": ["isIPV6", "getLocalhostIP"],
-	"description": "",
+	"description": "Determines whether the given IP address is in a specific range",
 	"params": [
-		{"name": "ips", "description": "comma-delimited list or array as ip range", "required": true, "default": "", "type": "any", "values": []},
+		{"name": "ips", "description": "comma-delimited list or array as ip range, either a specific ip address, a from to range or with * wildcard", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "ip", "description": "ip to test", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
