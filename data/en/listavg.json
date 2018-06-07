@@ -5,7 +5,7 @@
 	"member": "list.listAvg([delimiters] [, multiCharacterDelimiter])",
 	"returns": "numeric",
 	"related": [],
-	"description": "Calculates avarage from all numberic values given in the list",
+	"description": "Calculates average from all numeric values given in the list",
 	"params": [
 		{"name": "list", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "delimiters", "description": "", "required": false, "default": ",", "type": "string", "values": []},
