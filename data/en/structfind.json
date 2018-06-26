@@ -2,6 +2,7 @@
 	"name":"structFind",
 	"type":"function",
 	"syntax":"structFind(structure, key [, defaultValue ])",
+	"member": "struct.find(key [, defaultValue ])",
 	"returns":"any",
 	"related":["structFindKey", "structFindValue"],
 	"description":"Determines the value associated with a key in a structure.",
