@@ -12,7 +12,7 @@
 	"examples": [
     {
       "title": "Simple example",
-      "description": "Dumps the structure returned by the function",
+      "description": "Calls the function and dumps the structure of image formats it returns",
       "code": "writeDump(imageFormats());",
       "result": "",
       "runnable": true
