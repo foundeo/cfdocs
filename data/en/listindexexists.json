@@ -5,7 +5,7 @@
 	"member": "list.listIndexExists(index [, delimiter] [, includeEmptyFields])",
 	"returns": "boolean",
 	"related": [],
-	"description": "",
+	"description": "Determines whether that index exists in the given list or not",
 	"params": [
 		{"name": "list", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "index", "description": "", "required": true, "default": "", "type": "numeric", "values": []},
