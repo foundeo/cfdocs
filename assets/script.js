@@ -64,7 +64,7 @@ $(document).ready(function() {
 function submitSearch(e) {
 	e.preventDefault();
 	var newLocation = $('#lookup-box').val().toLowerCase();
-  	document.location = (newLocation.length && newLocation[0] == '/') ? newLocation.slice(1) : newLocation;
+  	document.location = encodeURIComponent((newLocation.length && newLocation[0] == '/') ? newLocation.slice(1) : newLocation);
 }
 //google analytics
 var _gaq = _gaq || [];
