@@ -4,7 +4,7 @@
 	"syntax": "monthShortAsString(monthnumber)",
 	"returns": "string",
 	"related": [],
-	"description": "",
+	"description": "Returns the first three letters of the given month",
 	"params": [
 		{"name": "monthnumber", "description": "", "required": true, "default": "", "type": "numeric", "values": []}
 	],

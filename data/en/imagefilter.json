@@ -4,7 +4,7 @@
 	"syntax": "imageFilter(name, filtername [, parameters])",
 	"returns": "void",
 	"related": ["imageFilterColorMap","imageFilterCurves","imageFilterKernel","imageFilterWarpGrid"],
-	"description": "",
+	"description": "Executes a filter on the given image",
 	"params": [
 		{"name": "name", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "filtername", "description": "", "required": true, "default": "", "type": "string", "values": []},
