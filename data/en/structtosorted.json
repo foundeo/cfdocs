@@ -1,8 +1,8 @@
 {
 	"name":"structToSorted",
 	"type":"function",
-	"syntax":"structToSorted(struct,function(value1, value2, key1, key2))\nstructToSorted(anyStruct, sorttype, sortorder, localeSensitive)",
-	"member":"someStruct.toSorted(function(value1, value2, key1, key2))",
+	"syntax":"structToSorted(structure, function(value1, value2, key1, key2))\nstructToSorted(structure, sorttype, sortorder, localeSensitive)",
+	"member":"structure.toSorted(function(value1, value2, key1, key2))",
 	"returns": "struct",
 	"related":["structSort"],
 	"description":"Used to sort a struct. Returns a new ordered struct.",
@@ -20,7 +20,7 @@
 			"description": "Closure or function reference that will be called for each iteration. Should return -1, 0 or 1. The arguments passed to the callback are:\n\n<strong>value1:</strong> Value of the key/value pair in the struct\n<strong>key1:</strong> Key name of the key/value pair in the struct\n<strong>value2:</strong> Value of the key/value pair to compare against\n<strong>key2:</strong> Key name of the key/value pair to compare against\n",
 			"required": false,
 			"default": "",
-			"type": "UDF",
+			"type": "function",
 			"values": []
 		},
 		{
