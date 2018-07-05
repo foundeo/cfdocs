@@ -5,7 +5,7 @@
 	"member": "array.last()",
 	"returns": "any",
 	"related": ["arrayFirst"],
-	"description": "Returns the first item from an array. Throws an error if the array is empty.",
+	"description": "Returns the last item from an array. Throws an error if the array is empty.",
 	"params": [
 		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []}
 	],
