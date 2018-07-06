@@ -1,0 +1,130 @@
+{
+	"name":"structToSorted",
+	"type":"function",
+	"syntax":"structToSorted(structure, callback)\nstructToSorted(structure, sorttype, sortorder, localeSensitive)",
+	"member":"structure.toSorted(callback)",
+	"returns": "struct",
+	"related":["structSort"],
+	"description":"Used to sort a struct. Returns a new ordered struct.",
+	"params": [
+		{
+			"name": "structure",
+			"description": "Structure or a variable that contains one.",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "callback",
+			"description": "Closure or function reference that will be called for each iteration. Should return -1, 0 or 1. The arguments passed to the callback are:\n\n<strong>value1:</strong> Value of the key/value pair in the struct\n<strong>value2:</strong> Value of the key/value pair to compare against\n<strong>key1:</strong> Key name of the key/value pair in the struct\n<strong>key2:</strong> Key name of the key/value pair to compare against\n",
+			"required": false,
+			"default": "",
+			"type": "function",
+			"values": [],
+			"callback_params": [
+				{
+					"values": [],
+					"default": "",
+					"description": "The value of the first key/value pair",
+					"name": "value1",
+					"type": "any",
+					"required": false
+				},
+				{
+					"values": [],
+					"default": "",
+					"description": "The value of the second key/value pair",
+					"name": "value2",
+					"type": "any",
+					"required": false
+				},
+				{
+					"values": [],
+					"default": "",
+					"description": "The key name of the first key/value pair",
+					"name": "key1",
+					"type": "string",
+					"required": false
+				},
+				{
+					"values": [],
+					"default": "",
+					"description": "The key name of the second key/value pair",
+					"name": "key2",
+					"type": "string",
+					"required": false
+				}
+			]
+		},
+		{
+			"name": "sorttype",
+			"description": "* numeric\n* text",
+			"required": false,
+			"default": "text",
+			"type": "string",
+			"values": [
+				"numeric",
+				"text"
+			]
+		},
+		{
+			"name": "sortorder",
+			"description": "* asc: ascending (a to z) sort order.\n* desc: descending (z to a) sort order",
+			"required": false,
+			"default": "asc",
+			"type": "string",
+			"values": [
+				"asc",
+				"desc"
+			]
+		},
+		{
+			"name": "localeSensitive",
+			"description": "Respect locale-specific characters (including support for umlaut characters) while sorting (applies to type\"text\").",
+			"required": false,
+			"default": false,
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2016.0.3",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structtosorted.html"
+		}
+	},
+	"links":[],
+	"examples": [
+		{
+			"title": "structToSorted  with an inline function sorting by key value",
+			"description": "Use a function to sort the keys by numeric value descending",
+			"code": "someStruct = {\r\n    \"NINE\": 9,\r\n    \"SIX\": 6,\r\n    \"THREE\": 3,\r\n    \"TWELVE\": 12,\r\n    \"tres\": 3,\r\n    \"seis\": 6,\r\n    \"nueve\": 9,\r\n    \"doce\": 12\r\n};\r\n     \r\nfunction sortByNumericValuesDescending(value1, value2, key1, key2) {\r\n        if (value1 > value2) {\r\n            return -1;\r\n        }\r\n        return 1;\r\n};\r\n    \r\nsortedStruct=StructToSorted(someStruct, sortByNumericValuesDescending);\r\nwritedump(sortedStruct);",
+			"result": "A new struct with the keys ordered by value descending",
+			"runnable": true
+		},
+		{
+			"title": "structToSorted  member function with an inline function sorting by key value",
+			"description": "Use a function to sort the keys by numeric value descending",
+			"code": "someStruct = {\r\n    \"NINE\": 9,\r\n    \"SIX\": 6,\r\n    \"THREE\": 3,\r\n    \"TWELVE\": 12,\r\n    \"tres\": 3,\r\n    \"seis\": 6,\r\n    \"nueve\": 9,\r\n    \"doce\": 12\r\n};\r\n     \r\nfunction sortByNumericValuesDescending(value1, value2, key1, key2) {\r\n        if (value1 > value2) {\r\n            return -1;\r\n        }\r\n        return 1;\r\n};\r\n\r\nsortedStruct=someStruct.ToSorted(sortByNumericValuesDescending);\r\nwritedump(sortedStruct);",
+			"result": "A new struct with the keys ordered by value descending",
+			"runnable": true
+		},
+		{
+			"title": "structToSorted  member function with an inline function sorting by key name",
+			"description": "Use a function to sort the keys by name",
+			"code": "someStruct = {\r\n    \"NINE\": 9,\r\n    \"SIX\": 6,\r\n    \"THREE\": 3,\r\n    \"TWELVE\": 12,\r\n    \"tres\": 3,\r\n    \"seis\": 6,\r\n    \"nueve\": 9,\r\n    \"doce\": 12\r\n};\r\n     \r\nfunction sortByKeyName(value1, value2, key1, key2) {\r\n        return compareNoCase(key1, key2);\r\n}\r\n\r\nsortedStruct=someStruct.ToSorted(sortByKeyName);\r\nwritedump(sortedStruct);",
+			"result": "A new struct with the keys ordered by key name",
+			"runnable": true
+		},
+		{
+			"title": "structToSorted  member function with sorttype argument",
+			"description": "Use a function to sort the keys by name",
+			"code": "someStruct = {\r\n    \"NINE\": 9,\r\n    \"SIX\": 6,\r\n    \"THREE\": 3,\r\n    \"TWELVE\": 12,\r\n    \"tres\": 3,\r\n    \"seis\": 6,\r\n    \"nueve\": 9,\r\n    \"doce\": 12\r\n};\r\n     \r\nsortedStruct=someStruct.ToSorted(\"text\",\"asc\",false);\r\nwritedump(sortedStruct);",
+			"result": "A new struct with the keys ordered by key name",
+			"runnable": true
+		}
+	]
+
+}
