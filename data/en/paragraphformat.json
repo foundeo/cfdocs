@@ -4,7 +4,7 @@
 	"syntax":"paragraphFormat(String)",
 	"returns":"string",
 	"related":[],
-	"description":" Replaces characters in a string:\n * Single newline characters (CR/LF sequences) with spaces\n * Double newline characters with HTML paragraph tags (<code>&lt;p&gt;</code>)",
+	"description":" Replaces characters in a string:\n * Single newline characters (CR/LF sequences) with spaces\n * Double newline characters with HTML paragraph tags (`&lt;p&gt;`)",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]}
 

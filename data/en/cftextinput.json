@@ -27,7 +27,7 @@
 		{"name":"bgcolor","description":"Background color of control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.","required":false,"default":"","type":"string","values":["black","red","blue","magenta","cyan","orange","darkgray","pink","gray","white","lightgray","yellow"]},
 		{"name":"textcolor","description":"Text color for control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.","required":false,"default":"","type":"string","values":["black","red","blue","magenta","cyan","orange","darkgray","pink","gray","white","lightgray","yellow"]},
 		{"name":"maxlength","description":"The maximum length of text entered.","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"notsupported","description":"Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.\n Default:\n \"<b>Browser must support Java to <br>view ColdFusion Java\n Applets!<\/b>\"","required":false,"default":"<b>Browser must support Java to <br>view ColdFusion Java Applets!<\/b>","type":"string","values":[]},
+		{"name":"notsupported","description":"Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.","required":false,"default":"<b>Browser must support Java to <br>view ColdFusion Java Applets!<\/b>","type":"string","values":[]},
 		{"name":"label","description":"Label for text input","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
