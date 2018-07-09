@@ -408,7 +408,7 @@
 		},
 		{
 			"name": "notsupported",
-			"description": "Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.\n Default:\n \"<b>Browser must support Java to <br>view ColdFusion Java\n Applets!</b>\"",
+			"description": "Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.",
 			"required": false,
 			"default": "<b>Browser must support Java to <br>view ColdFusion Java Applets!</b>",
 			"type": "string",

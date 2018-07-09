@@ -25,7 +25,7 @@
 		{"name":"fontsize","description":"Font size for text in tree control, in points.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"italic","description":"Yes: displays tree control text in italics\n No: it does not","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"bold","description":"Yes: displays tree control text in bold\n No: it does not","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"notsupported","description":"Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.\n Default:\n \"<b>Browser must support Java to <br>view ColdFusion Java\n Applets!<\/b>\"","required":false,"default":"<b>Browser must support Java to <br>view ColdFusion Java Applets!<\/b>","type":"string","values":[]},
+		{"name":"notsupported","description":"Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.","required":false,"default":"<b>Browser must support Java to <br>view ColdFusion Java Applets!<\/b>","type":"string","values":[]},
 		{"name":"clickToChange","description":"Whether clicking the slider changes the value of the pointer:","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"max","description":"Maximum value for the slider.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"onChange","description":"Custom JavaScript function to run when slider value changes.\nSpecify only the function name.","required":false,"default":"","type":"string","values":[]},
