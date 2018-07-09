@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"dollarFormat(number)",
 	"returns":"string",
-	"related":["LSCurrencyFormat","LSEuroCurrencyFormat"],
+	"related":["LSCurrencyFormat","LSEuroCurrencyFormat","numberFormat"],
 	"description":"Formats a money string in U.S. currency format.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
@@ -14,7 +14,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/dollarformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dollarformat"}
 	},
-	"links": [],
+	"links": [
+		{
+			"title":"DollarFormat Rounding Bug CF-4199995",
+			"url":"https://tracker.adobe.com/#/view/CF-4199995",
+			"description":"Certain inputs do not cause dollarFormat to round up, for example 6.5850 results in $6.58, yet 6.585 results in $6.59. This bug also existed in Lucee 4.5, but seams to be fixed in Lucee 5. Consdier using numberFormat as a workaround." 
+		}
+	],
 	"examples": [
 		{
 			"title":"Format Positive Numbers",
