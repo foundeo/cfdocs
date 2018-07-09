@@ -181,3 +181,8 @@ endfunction
 command! -nargs=0 CFdocs :call CFDocsSearch()
 ```
 
+#### CFEclipse
+
+Hit `F1` when the cursor is on a tag or function to be taken to the cfdocs.org doc. <http://cfeclipse.org/>
+
+
