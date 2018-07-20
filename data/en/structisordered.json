@@ -20,7 +20,7 @@
         {
             "title":"Check if a struct is ordered",
             "description":"",
-            "code":"StructNew("ordered").isOrdered()",
+            "code":"StructNew(\"ordered\").isOrdered()",
             "result":"YES",
             "runnable":true
         }
