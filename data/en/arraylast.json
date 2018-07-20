@@ -10,7 +10,8 @@
 		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraylast.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraylast.html"},
+		"coldfusion": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraylast.html"}
 	},
 	"examples": [
 		{
