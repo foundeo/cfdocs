@@ -24,7 +24,7 @@
         {
             "title":"Run a function asynchronously and get the result",
             "description":"",
-            "code":"future = runAsync(function(){\n\treturn "Hello World!";\n});\nwriteOutput(future.get());",
+            "code":"future = runAsync(function(){\n\treturn \"Hello World!\";\n});\nwriteOutput(future.get());",
             "result":"Hello World!",
             "runnable":true
         },
@@ -38,7 +38,7 @@
         {
             "title":"Run a function asynchronously with then() and error()",
             "description":"",
-            "code":"future = runAsync(function(){\n\treturn 5;\n}).then(function(input){\n\treturn input + 2;\n}).error(function(){\n\treturn "Error occurred.";\n});\nwriteOutput(future.get());",
+            "code":"future = runAsync(function(){\n\treturn 5;\n}).then(function(input){\n\treturn input + 2;\n}).error(function(){\n\treturn \"Error occurred.\";\n});\nwriteOutput(future.get());",
             "result":7,
             "runnable":true
         }
