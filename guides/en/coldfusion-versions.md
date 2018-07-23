@@ -64,8 +64,22 @@ Historical information about ColdFusion Versions and releases.
 
 ## Adobe ColdFusion 2016 - February 2016 (_Raijin_)
 
+* Security Analyzer
+* API Manager
 * [ColdFusion 2016 New Tags and Functions](/cf2016) 
 
+## Adobe ColdFusion 2018 - July 2018 (_Aether_)
+
+* Semi-colins optional
+* Asynchronous Programming [runAsnyc()](/runasync)
+* Typed Arrays `[type][element1,element2,etc]`
+* Array Negative Indices `lastItem = a[-1]`
+* Array Slices
+* Member Functions on String Literals `"string".len()`
+* Component Enhancements: Abstract, Final, Default Functions, Covariance
+* Performance Monitoring Toolset
+* Lockdown Installer
+* [ColdFusion 2018 New Tags and Functions](/cf2018) 
 
 
 Lots of additional historical and version information can be found on the [ColdFusion Wikipedia Page](https://en.wikipedia.org/wiki/Adobe_ColdFusion)
