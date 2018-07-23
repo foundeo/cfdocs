@@ -31,6 +31,13 @@
 			"code":"config = {a:0, b:0};\noptions= {b:1, c:1};\nstructAppend(config, options);\nwriteOutput( serializeJSON( config ) );",
 			"result":"{\"A\":0,\"B\":1,\"C\":1}",
 			"runnable": true
+		},
+		{
+			"title":"Creating a request context from form and url scopes",
+			"description":"Demonstrates how to construct a Request Context (rc) that combines the values of the form and url scopes",
+			"code":"rc = {};\nstructAppend( rc, form );\nstructAppend( rc, url );\nwriteOutput( serializeJSON( rc ) );",
+			"result": "",
+			"runnable": false
 		}
 	]
 }
