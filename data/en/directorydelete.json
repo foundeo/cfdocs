@@ -4,7 +4,7 @@
 	"syntax":"directoryDelete(path, recurse)",
 	"returns":"void",
 	"related":["directoryCreate","directoryRename","fileDelete"],
-	"description":" Deltes directory for given path",
+	"description":" Deletes directory for given path",
 	"params": [
 		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"recurse","description":"","required":true,"default":false,"type":"boolean","values":[true,false]}
