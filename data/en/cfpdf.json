@@ -545,7 +545,7 @@
 	"engines": {
 		"coldfusion": {
 			"minimum_version": "8",
-			"notes": "CF9+ Added new attributes: jpgdpi, maxBreadth, noAttachments, leftMargin, algo, noMetadata, noBookMarks, noJavaScripts, useStructure, noFonts. CF11 added validatesignature and readsignaturefields. CF2016 added sanitize, export, import, archive, addAttachments, addStamp, redact ",
+			"notes": "CF9+ Added new attributes: jpgdpi, maxBreadth, noAttachments, leftMargin, algo, noMetadata, noBookMarks, noJavaScripts, useStructure, noFonts.\n CF11 added validatesignature and readsignaturefields. CF2016 added sanitize, export, import, archive, addAttachments, addStamp, redact ",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpdf.html"
 		},
 		"lucee": {
