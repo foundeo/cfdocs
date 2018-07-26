@@ -11,5 +11,21 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfreturn"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfreturn"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"Tag Syntax",
+			"description":"<cfreturn value >",
+			"code":"<cffunction name=\"IncrementByTen\">\r\n<cfargument name=\"num\" required=\"true\">\r\n\r\n<cfset incrementedValue = arguments.num + 10 />\r\n\r\n<cfreturn incrementdValue >\r\n</cffunction>\r\n\r\n<cfoutput>#incrementByTen(30) #</cfoutput>",
+			"result":"40",
+			"runnable":true
+		},
+		{
+			"title":"Script Syntax",
+			"description":"return value;",
+			"code":"function incrementByTen( required num ){\r\n   incrementedValue = arguments.num + 10;\r\n  return incrementedValue;\r\n}\r\n\r\nWriteOutput( incrementByTen(30) );",
+			"result":"40",
+			"runnable":true
+		}
+	]
 }
