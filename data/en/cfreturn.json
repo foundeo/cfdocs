@@ -16,7 +16,7 @@
 		{
 			"title":"Tag Syntax",
 			"description":"<cfreturn value >",
-			"code":"<cffunction name=\"IncrementByTen\">\r\n<cfargument name=\"num\" required=\"true\">\r\n\r\n<cfset incrementedValue = arguments.num + 10 />\r\n\r\n<cfreturn incrementdValue >\r\n</cffunction>\r\n\r\n<cfoutput>#incrementByTen(30) #</cfoutput>",
+			"code":"<cffunction name=\"IncrementByTen\">\r\n<cfargument name=\"num\" required=\"true\">\r\n\r\n<cfset incrementedValue = arguments.num + 10 />\r\n\r\n<cfreturn incrementedValue >\r\n</cffunction>\r\n\r\n<cfoutput>#incrementByTen(30) #</cfoutput>",
 			"result":"40",
 			"runnable":true
 		},
