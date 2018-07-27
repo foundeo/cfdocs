@@ -14,16 +14,16 @@
 	"links": [],
 	"examples": [
 		{
-			"title":"Tag Syntax",
-			"description":"<cfreturn value >",
-			"code":"<cffunction name=\"IncrementByTen\">\r\n<cfargument name=\"num\" required=\"true\">\r\n\r\n<cfset incrementedValue = arguments.num + 10 />\r\n\r\n<cfreturn incrementedValue >\r\n</cffunction>\r\n\r\n<cfoutput>#incrementByTen(30) #</cfoutput>",
+			"title":"Tag Syntax: Increment a number by 10",
+			"description":"Function takes a number as an argument and return after incrementing it by 10",
+			"code":"<cffunction name=\"IncrementByTen\">\r\n<cfargument name=\"num\" required=\"true\">\r\n\r\n<cfset incrementedValue = arguments.num + 10 />\r\n\r\n<cfreturn incrementedValue >\r\n</cffunction>\r\n\r\n<cfoutput>#incrementByTen(30)#</cfoutput>",
 			"result":"40",
 			"runnable":true
 		},
 		{
-			"title":"Script Syntax",
-			"description":"return value;",
-			"code":"function incrementByTen( required num ){\r\n   incrementedValue = arguments.num + 10;\r\n  return incrementedValue;\r\n}\r\n\r\nWriteOutput( incrementByTen(30) );",
+			"title":"Script syntax: Increment a number by 10",
+			"description":"Function takes a number as argument and returns after incrementing it by 10",
+			"code":"function IncrementByTen( required num1 ){\r\n  var incrementedValue = arguments.num1 + 10;\r\n  return incrementedValue;\r\n}\r\n\r\nWriteOutput( IncrementByTen( 30 ) );",
 			"result":"40",
 			"runnable":true
 		}
