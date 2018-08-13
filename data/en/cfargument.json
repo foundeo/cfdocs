@@ -27,13 +27,13 @@
 		{
 			"title": "Script Syntax",
 			"description": "For Script syntax the argument is inside the ()",
-			"code": "public boolean function myFunction(required any myArgument) {\r\n // Some function bits \r\n return true; \r\n }",
+			"code": "public boolean function myFunction(required any myArgument) {\n    // Some function bits\n    return true;\n}",
 			"result": ""
 		},
 	        {
 	            "title": "Tag Syntax",
 	            "description": "For Tag syntax the argument is its own tag",
-	            "code": "<cffunction access=\"public\" returntype=\"boolean\" name=\"myFunction\"> \r\n <cfargument required=\"true\" type=\"any\" name=\"myArgument\"> \r\n <!--- Some function bits ---> \r\n <cfreturn true> \r\n </cffunction>",
+	            "code": "<cffunction access=\"public\" returntype=\"boolean\" name=\"myFunction\">\n    <cfargument required=\"true\" type=\"any\" name=\"myArgument\">\n    <!--- Some function bits --->\n    <cfreturn true>\n</cffunction>",
 	            "result": ""
 	        }
 	]
