@@ -1,0 +1,19 @@
+{
+	"name":"isK2ServerABroker",
+	"type":"function",
+	"syntax":"isK2ServerABroker()",
+	"returns":"boolean",
+	"related":[
+    "getK2ServerDocCountLimit", "isK2ServerDocCountExceeded", "isK2ServerOnline"
+  ],
+	"description":"Check if K2Broker is in configured with ColdFusion",
+	"params": [],
+	"engines": {
+		"coldfusion": {"minimum_version":"6", "deprecated":"6.1", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isk2serverabroker.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":""},
+		"railo": {"minimum_version":"", "notes":"", "docs":""}
+	},
+	"links": [
+
+	]
+}
