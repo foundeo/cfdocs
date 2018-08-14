@@ -2,21 +2,21 @@
     "name":"runAsync",
     "type":"function",
     "syntax":"runAsync(function() {})",
-    "script":"runAsync(function() {});",
     "returns":"any",
     "related":[],
-    "description":"",
+    "description":"A function that returns a Future object, which is an eventual result of an asynchronous operation",
     "params":[
-        {"name":"callback", "description":"Closure function that returns a Future object (Promise) to be resolved\n\nCan technically left black but not resolved in that case\nIf callback function is passed to runAsync, it can be resolved using `get` member function.", "required":false, "default":"", "type":"function", "values":[]},
-        {"name":"timeout", "description":"timeout for the asynchronous process in miliseconds", "required":false, "default":"", "type":"numeric", "values":[]}
+        {"name":"callback", "description":"Closure function that returns a result to be resolved.", "required":false, "default":"", "type":"function", "values":[], "callback_params":[]},
+        {"name":"timeout", "description":"Timeout for the asynchronous process in milliseconds", "required":false, "default":1000, "type":"numeric", "values":[]}
     ],
     "engines":{
-        "coldfusion":{"minimum_version":"2018", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/runasync.html"}
+        "coldfusion":{"minimum_version":"2018", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/runasync.html"},
+        "lucee": {"minimum_version": "5.3.0", "notes":"", "docs":""}
     },
     "links":[
         {
             "title":"Asynchronous programming",
-            "description":"ColdFusion introduce async programming with Future object",
+            "description":"ColdFusion introduces asynchronous programming with Future object",
             "url":"https://helpx.adobe.com/coldfusion/using/asynchronous-programming.html"
         }
     ],
@@ -29,7 +29,7 @@
             "runnable":true
         },
         {
-            "title":"Run a function after the asynchronous function and use a five miliseconds timeout when calling get()",
+            "title":"Run a function after the asynchronous function and use a five milliseconds timeout when calling get()",
             "description":"",
             "code":"future = runAsync(function(){\n\treturn 5;\n}).then(function(input){\n\treturn input + 2;\n});\nresult = future.get(3); // 3 is timeout(in ms)\nwriteOutput(result);",
             "result":5,

@@ -2,15 +2,14 @@
     "name":"structIsOrdered",
     "type":"function",
     "syntax":"structIsOrdered()",
-    "script":"structIsOrdered();",
     "member":"struct.isOrdered()",
     "returns":"boolean",
     "related":[
         "structNew"
 	],
-    "description":"Check if a struct is ordered or not",
+    "description":"Check if a struct is ordered",
     "params":[
-        {"name":"struct", "description":"Struct that should be tested whether it is ordered or not", "required":true, "default":"false", "type":"struct", "values":[]}
+        {"name":"struct", "description":"Struct that should be tested whether it is ordered", "required":true, "default":"false", "type":"struct", "values":[]}
     ],
     "engines":{
         "coldfusion":{"minimum_version":"2018", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structisordered.html"}
@@ -20,7 +19,7 @@
         {
             "title":"Check if a struct is ordered",
             "description":"",
-            "code":"StructNew(\"ordered\").isOrdered()",
+            "code":"structNew(\"ordered\").isOrdered()",
             "result":"YES",
             "runnable":true
         }
