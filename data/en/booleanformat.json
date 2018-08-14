@@ -1,12 +1,12 @@
 {
 	"name":"booleanFormat",
 	"type":"function",
-	"syntax":"booleanFormat(number)",
+	"syntax":"booleanFormat(value)",
 	"returns":"numeric",
 	"related":["yesNoFormat", "isBoolean","trueFalseFormat"],
 	"description":"Evaluates the input as a boolean, and outputs either true or false. If not a boolean throws an exception.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
+		{"name":"value","description":"","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/booleanformat.html"},

@@ -4,7 +4,7 @@
 	"syntax":"bitNot(number)",
 	"returns":"numeric",
 	"related":["bitAnd","bitOr","bitXOr"],
-	"description":" Performs a bitwise logical NOT operation.",
+	"description":"Performs a bitwise logical NOT operation.",
 	"params": [
 		{"name":"number","description":"Integer","required":true,"default":"","type":"numeric","values":[]}
 	],

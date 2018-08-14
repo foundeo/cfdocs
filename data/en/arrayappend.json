@@ -2,7 +2,7 @@
 	"name":"arrayAppend",
 	"type":"function",
 	"syntax":"arrayAppend(array, value [, merge])",
-	"member":"someArray.append( value [, merge])",
+	"member":"someArray.append(value [, merge])",
 	"returns":"boolean",
 	"related":["arrayprepend"],
 	"description":"Appends an element to the end of an array.",

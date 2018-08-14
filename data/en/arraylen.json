@@ -5,7 +5,7 @@
 	"member":"someArray.len()",
 	"returns":"numeric",
 	"related":["arrayAvg"],
-	"description":" Determines the number of elements in an array.\n CFML MX: this function can be used on child XML objects.",
+	"description":" Determines the number of elements in an array.\n CF MX: this function can be used on child XML objects.",
 	"params": [
 		{"name":"array","description":"An array which to determine length","required":true,"default":"","type":"array","values":[]}
 
