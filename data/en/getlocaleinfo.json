@@ -4,15 +4,26 @@
 	"syntax":"getLocaleInfo()",
 	"returns":"struct",
 	"related":["getLocaleDisplayName","getLocale","getLocaleCountry","getLocaleLanguage"],
-	"description":"Returns a structure containing info to a specific locale.\r\n\r\nThis function combines the locale functions getLocaleCountry, getLocaleDisplayName, and getLocaleLanguage to a single function.",
+	"description":"Returns a structure containing info to a specific locale. This function combines the locale functions `getLocaleCountry`, `getLocaleDisplayName`, and `getLocaleLanguage` to a single function.",
 	"params": [
-		{"name":"locale", "description": "Geographic/language locale value, where the format is a combination of an <a href=\"https://en.wikipedia.org/wiki/ISO_639-1\">ISO 639-1</a> code and an optional <a href=\"https://en.wikipedia.org/wiki/ISO_3166-1\">ISO 3166-1</a> code separated by a dash or an underscore.", "required": false, "default": "getLocale()", "type":"string", "values": ["en","de-DE","de-CH","..."]},
+		{"name":"locale", "description": "Geographic/language locale value, where the format is a combination of an ISO 639-1 code and an optional ISO 3166-1 code separated by a dash or an underscore.", "required": false, "default": "getLocale()", "type":"string", "values": ["en","de-DE","de-CH","..."]},
 		{"name":"dspLocale", "description": "Locale's display name/output language", "required": false, "default": "getLocaleDisplayName()", "type": "string", "values": ["English","German","French","..."]}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "5", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getlocaleinfo.html"}
 	},
-	"links": [],
+	"links": [
+		{
+			"title": "ISO-639-1",
+			"description":"Wikipedia page for ISO-639-1",
+			"url":"https://en.wikipedia.org/wiki/ISO_639-1"
+		},
+		{
+			"title": "ISO-3166-1",
+			"description":"Wikipedia page for ISO-3166-1",
+			"url":"https://en.wikipedia.org/wiki/ISO_3166-1"
+		}
+	],
 	"examples": [
 		{
 				"title": "Get information about the page's locale",
