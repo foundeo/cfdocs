@@ -5,7 +5,7 @@
 	"member":"someArray.isEmpty()",
 	"returns":"boolean",
 	"related":["ArrayIsDefined"],
-	"description":" Determines whether an array is empty. Equivalent to arrayLen().\n Calling this function on an array with 10 undefined elements\n will return false.\n CFML MX: this function can be used on XML objects.",
+	"description":"Determines whether an array is empty. Equivalent to arrayLen().\n Calling this function on an array with 10 undefined elements\n will return false.\n CF MX: this function can be used on XML objects.",
 	"params": [
 		{"name":"array","description":"An array name or variable name","required":true,"default":"","type":"array","values":[]}
 

@@ -5,7 +5,7 @@
 	"member":"someArray.prepend(value)",
 	"returns":"boolean",
 	"related":["arrayAppend"],
-	"description":" Inserts an array element at the beginning of an array\n and shifts the positions of the existing elements to\n make room.",
+	"description":"Inserts an array element at the beginning of an array\n and shifts the positions of the existing elements to\n make room.",
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
 		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}

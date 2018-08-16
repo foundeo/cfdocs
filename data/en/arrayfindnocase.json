@@ -1,14 +1,14 @@
 {
 	"name":"arrayFindNoCase",
 	"type":"function",
-	"syntax":"arrayFindNoCase(array, object)",
-	"member":"someArray.findNoCase(object)",
+	"syntax":"arrayFindNoCase(array, value or callback)",
+	"member":"someArray.findNoCase(value or callback)",
 	"returns":"numeric",
 	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
-	"description":" These functions performs a case-insensitive search in the array for the specified object. Returns the array index of the first match; 0 if not found.",
+	"description":"These functions performs a case-insensitive search in the array for the specified value. Returns the array index of the first match; 0 if not found.",
 	"params": [
 		{"name":"array","description":"The array to search","required":true,"default":"","type":"array","values":[]},
-		{"name":"object","description":"The value you are looking for in the array.","required":true,"default":"","type":"any","values":[]}
+		{"name":"value or callback","description":"The value you are looking for in the array.","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {
@@ -22,13 +22,13 @@
 	],
 	"examples": [
 		{
-			"title":"Find an \"Apple\" in an array of Fruit",
+			"title":"Find an \"Apple\" in an array of fruit",
 			"description":"Returns the index of the element \"Apple\" in the array",
 			"code":"writeOutput( arrayFindNoCase([\"orange\",\"pineapple\",\"apple\"], \"Apple\" ) );",
 			"result":"3"
 		},
 		{
-			"title":"Member Functions: Find an \"Apple\" in an array of Fruit",
+			"title":"Member Functions: Find an \"Apple\" in an array of fruit",
 			"description":"Calls the findNoCase member function of the array object. Requires CF11+ or Lucee4.5+",
 			"code":"fruit = [\"orange\",\"pineapple\",\"apple\"];\nwriteOutput( fruit.findNoCase(\"Apple\") );",
 			"result":"3"

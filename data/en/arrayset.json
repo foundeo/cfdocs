@@ -1,15 +1,15 @@
 {
 	"name":"arraySet",
 	"type":"function",
-	"syntax":"arraySet(array, start_pos, end_pos, value)",
-	"member":"someArray.set(start_pos, end_pos, value)",
+	"syntax":"arraySet(array, start, end, value)",
+	"member":"someArray.set(start, end, value)",
 	"returns":"boolean",
 	"related":["arrayInsertAt"],
-	"description":" In a one-dimensional array, sets the elements in a specified\n index range to a value. Useful for initializing an array after\n a call to ArrayNew.",
+	"description":"In a one-dimensional array, sets the elements in a specified\n index range to a value. Useful for initializing an array after\n a call to arrayNew.",
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
-		{"name":"start_pos","description":"","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"end_pos","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"start","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"end","description":"","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {

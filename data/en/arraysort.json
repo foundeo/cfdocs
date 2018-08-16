@@ -1,15 +1,15 @@
 {
 	"name":"arraySort",
 	"type":"function",
-	"syntax":"arraySort(array, sort_type [, sort_order])\n or \n arraySort(array, callback)",
-	"member":"someArray.sort(sort_type [, sort_order])",
+	"syntax":"arraySort(array, sortType [, sortOrder])\n or \n arraySort(array, callback)",
+	"member":"someArray.sort(sortType [, sortOrder])",
 	"returns":"boolean",
 	"related":["structSort","listSort","querySort"],
-	"description":" Sorts array elements numerically or alphanumerically.",
+	"description":"Sorts array elements.",
 	"params": [
 		{"name":"array","description":"Name of an array","required":true,"default":"","type":"array","values":[]},
-		{"name":"sort_type","description":"numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n (also known as case sensitive). All letters of one case\n precede the first letter of the other case:\n - aabzABZ, if sort_order = \"asc\" (ascending sort)\n - ZBAzbaa, if sort_order = \"desc\" (descending sort)\n\n textnocase: sorts text alphabetically, without regard to\n case (also known as case-insensitive). A letter in varying\n cases precedes the next letter:\n - aAaBbBzzZ, in an ascending sort; preserves original\n intra-letter order\n - ZzzBbBaAa, in a descending sort; reverses original\n intra-letter order","required":true,"default":"","type":"string","values":["numeric","text","textnocase"]},
-		{"name":"sort_order","description":"asc: ascending sort order. Default.\n - aabzABZ or aAaBbBzzZ, depending on value of sort_type,\n for letters\n - from smaller to larger, for numbers\n\n desc: descending sort order.\n - ZBAzbaa or ZzzBbBaAa, depending on value of sort_type,\n for letters\n - from larger to smaller, for numbers","required":false,"default":"asc","type":"string","values":["asc","desc"]},
+		{"name":"sortType","description":"numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n (also known as case sensitive). All letters of one case\n precede the first letter of the other case:\n - aabzABZ, if sort_order = \"asc\" (ascending sort)\n - ZBAzbaa, if sort_order = \"desc\" (descending sort)\n\n textnocase: sorts text alphabetically, without regard to\n case (also known as case-insensitive). A letter in varying\n cases precedes the next letter:\n - aAaBbBzzZ, in an ascending sort; preserves original\n intra-letter order\n - ZzzBbBaAa, in a descending sort; reverses original\n intra-letter order","required":true,"default":"","type":"string","values":["numeric","text","textnocase"]},
+		{"name":"sortOrder","description":"asc: ascending sort order. Default.\n - aabzABZ or aAaBbBzzZ, depending on value of sort_type,\n for letters\n - from smaller to larger, for numbers\n\n desc: descending sort order.\n - ZBAzbaa or ZzzBbBaAa, depending on value of sort_type,\n for letters\n - from larger to smaller, for numbers","required":false,"default":"asc","type":"string","values":["asc","desc"]},
 		{"name":"callback","description":"The callback function which take two elements of an array, Returns whether the first is less than (-1), equal to (0) or greater than (1) the second one(like as compare function).","required":false,"default":"","type":"any","values":[]}
 	],
 	"engines": {

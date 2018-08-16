@@ -9,7 +9,7 @@
 	"params": [
 		{"name":"array","description":"Name of the array that you want to slice","required":true,"default":"","type":"array","values":[]},
 		{"name":"offset","description":"Specifies the position from which to slice the array. Negative value indicates that the array is sliced, with sequence starting from array's end.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"length","description":"Maximum elements to slice","required":false,"default":"Length of Array","type":"numeric","values":[]}
+		{"name":"length","description":"Maximum elements to slice","required":false,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
