@@ -2,13 +2,14 @@
 	"name":"structAppend",
 	"type":"function",
 	"syntax":"structAppend(destStruct, sourceStruct [, overwriteFlag])",
+	"member": "destStruct.append(sourceStruct [, overwriteFlag])\ndestStruct.putAll(sourceStruct)",
 	"returns":"boolean",
 	"related":[],
 	"description":"Appends one structure to another.",
 	"params": [
 		{"name":"destStruct","description":"Structure to append.","required":true,"default":"","type":"struct","values":[]},
 		{"name":"sourceStruct","description":"Structure that contains the data to append to destStruct","required":true,"default":"","type":"struct","values":[]},
-		{"name":"overwriteFlag","description":"Yes: values in sourceStruct overwrite corresponding values in\n destStruct. Default.","required":false,"default":true,"type":"boolean","values":[true,false]}
+		{"name":"overwriteFlag","description":"Whether values in sourceStruct should overwrite corresponding values in\n destStruct or not.","required":false,"default":true,"type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"CF6+ can be used on XML objects as well as structures.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structappend.html"},
@@ -22,6 +23,13 @@
 			"title":"Append options to config struct (without overwrite flag)",
 			"description":"",
 			"code":"config = {a:0, b:0};\noptions= {b:1, c:1};\nstructAppend(config, options, false);\nwriteOutput( serializeJSON( config ) );",
+			"result":"{\"A\":0,\"B\":0,\"C\":1}",
+			"runnable": true
+		},
+		{
+			"title":"Append options to config struct (same, but using member function)",
+			"description":"",
+			"code":"config = {a:0, b:0};\noptions= {b:1, c:1};\nconfig.append(options, false);\nwriteOutput( serializeJSON( config ) );",
 			"result":"{\"A\":0,\"B\":0,\"C\":1}",
 			"runnable": true
 		},
