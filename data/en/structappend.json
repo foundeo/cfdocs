@@ -2,7 +2,7 @@
 	"name":"structAppend",
 	"type":"function",
 	"syntax":"structAppend(destStruct, sourceStruct [, overwriteFlag])",
-	"member": "destStruct.append(sourceStruct [, overwriteFlag])\ndestStruct.putAll(sourceStruct [, overwriteFlag])",
+	"member": "destStruct.append(sourceStruct [, overwriteFlag])\ndestStruct.putAll(sourceStruct)",
 	"returns":"boolean",
 	"related":[],
 	"description":"Appends one structure to another.",
