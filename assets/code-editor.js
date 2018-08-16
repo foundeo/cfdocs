@@ -106,12 +106,13 @@ angular.module('code.editor', [])
 	'				<label class="control-label">Change CFML Engine</label>'+
 	'		        <div>'+
 	'		         <select id="engine" class="form-control">'+
-	'		             <option value="lucee5">Lucee 5.LATEST</option>'+
-	'		             <option value="lucee">Lucee 4.5.LATEST</option>'+
-	'		             <option value="railo">Railo 4.2</option>'+
-	'				     <option value="acf2016">Adobe ColdFusion 2016</option>'+
-	'				     <option value="acf11">Adobe ColdFusion 11</option>'+
-	'		             <option value="acf">Adobe ColdFusion 10</option>'+
+	'		             	<option value="lucee5">Lucee 5.LATEST</option>'+
+	'		             	<option value="lucee">Lucee 4.5.LATEST</option>'+
+	'		             	<option value="railo">Railo 4.2</option>'+
+	'				<option value="acf2018">Adobe ColdFusion 2018</option>'
+	'				<option value="acf2016">Adobe ColdFusion 2016</option>'+
+	'				<option value="acf11">Adobe ColdFusion 11</option>'+
+	'		             	<option value="acf">Adobe ColdFusion 10</option>'+
 	'		         </select>'+
 	'		        </div>'+
 	'		      </div>'+
