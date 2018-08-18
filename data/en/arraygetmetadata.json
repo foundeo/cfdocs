@@ -1,10 +1,10 @@
 {
-	"name":"arrayGetMetaData",
+	"name":"arrayGetMetadata",
 	"type":"function",
-	"syntax":"arrayGetMetaData(array)",
+	"syntax":"arrayGetMetadata(array)",
 	"member":"someArray.getMetadata()",
 	"returns":"struct",
-	"related":["arraySetMetaData"],
+	"related":["arraySetMetadata"],
 	"description":"Gets metadata for items of an array and indicates the array type.",
 	"params": [
 		{"name":"array","description":"The array for which to get the metadata.","required":true,"default":"","type":"array","values":[]}

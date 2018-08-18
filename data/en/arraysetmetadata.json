@@ -1,10 +1,10 @@
 {
-	"name":"arraySetMetaData",
+	"name":"arraySetMetadata",
 	"type":"function",
-	"syntax":"arraySetMetaData(array, metadata)",
+	"syntax":"arraySetMetadata(array, metadata)",
 	"member":"someArray.setMetadata(metadata)",
 	"returns":"void",
-	"related":["arrayGetMetaData"],
+	"related":["arrayGetMetadata"],
 	"description":"Sets metadata for items of an array. Useful when using serializeJSON with ambiguous data.",
 	"params": [
 		{"name":"array","description":"The array for which to set the metadata.","required":true,"default":"","type":"array","values":[]},
@@ -18,7 +18,7 @@
     {
 			"title": "Serialize an array to JSON",
 			"description": "Outputs serialized JSON for an array containing various data types",
-			"code": "inputs = [\"2016.02\", 42.0, \"Yes\", \"No\", \"32830\", {\"t1\": \"Yes\"}, [\"1\",\"yes\",\"3\",false,\"null\",\"null\"]];\nmetadata = {items: [\"numeric\", \"integer\", \"string\", \"boolean\", \"string\", {t1: {type:\"string\",ignore:true}}, {items: [\"integer\",\"boolean\",\"string\",\"string\",\"string\",\"null\"]}]};\narraySetMetaData(inputs,metadata);\nwriteOutput(serializeJSON(inputs));",
+			"code": "inputs = [\"2016.02\", 42.0, \"Yes\", \"No\", \"32830\", {\"t1\": \"Yes\"}, [\"1\",\"yes\",\"3\",false,\"null\",\"null\"]];\nmetadata = {items: [\"numeric\", \"integer\", \"string\", \"boolean\", \"string\", {t1: {type:\"string\",ignore:true}}, {items: [\"integer\",\"boolean\",\"string\",\"string\",\"string\",\"null\"]}]};\narraySetMetadata(inputs,metadata);\nwriteOutput(serializeJSON(inputs));",
 			"result": "[2016.02,42.0,\"Yes\",false,\"32830\",{},[1,true,\"3\",\"false\",\"null\",\"null\"]]",
 			"runnable": true
 		}
