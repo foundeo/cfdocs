@@ -75,8 +75,8 @@
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DirectoryList.html"
 		},
 		"lucee": {
-			"minimum_version": "In Lucee the filter param can be a closure as well where the path is passed in.\n\nIt seems that there is no way to access the file query.",
-			"notes": "The sort argument only works when `listInfo=\"query\"`.",
+			"minimum_version": "",
+			"notes": "In Lucee the `filter` param can be a closure as well where the path is passed in. The `sort` argument only works when `listInfo=\"query\"`.",
 			"docs": "http://docs.lucee.org/reference/functions/directorylist.html"
 		},
 		"railo": {
