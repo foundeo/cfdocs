@@ -58,13 +58,12 @@
 		{"name":"sqlType","description":"Use this attribute to specify the DB-specific SQLType that should be used for the column. This attribute is used for table creation only.\nIf this attribute is not specified, ColdFusion will automatically decide the SQLType based on the ormtype specified for this property.","required":false,"default":"","type":"string","values":[]},
 		{"name":"dbDefault","description":"This sets the default value of a column in the table when schema is exported.","required":false,"default":"","type":"string","values":[]},
 		{"name":"where","description":"Where condition","required":false,"default":"","type":"string","values":[]},
-		{"name":"persistent","description":"Specifies whether this property should be persisted. If\npersistent=\"false‚Äù all the ORM related attributes are ignored.\nSet this attribute to false if you do not want this property to be persisted by ORM.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"persistent","description":"Specifies whether this property should be persisted. If\npersistent=\"false‚ all the ORM related attributes are ignored.\nSet this attribute to false if you do not want this property to be persisted by ORM.","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"unSavedValue","description":"An identifier property value that indicates that an instance is newly instantiated and not saved\/loaded in the database","required":false,"default":"","type":"string","values":[]},
 		{"name":"serializable","description":"Specifies whether this property can be serialized. If you set this value to\nfalse, the property cannot be serialized, so any changes made are not retained on session replication, and the property has its default value (if any) on the second server. \nUse this attribute to prevent serializaton of properties in CFCs that are serializable.","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"singularname","description":"Use this prperty to define the custom name for generated relationship methods. Applies to one-to-many and many-to-many","required":false,"default":"","type":"string","values":[]},
 		{"name":"remotingFetch","description":"If remotingFetch is false, then the value of that attribute is not sent over flash remoting. remotingFetch is true by default was all properties. But in case of cfcs for which persistent = true, the value of the remotingFetch attribute is false by default for any property that shares one-to-one, one-to-many, many-to-one or many-to-many relationship.","required":false,"default":"","type":"boolean","values":[false,true]},
 		{"name":"table","description":"Table name","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfproperty.html"},
@@ -72,8 +71,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfproperty"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfproperty"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }
