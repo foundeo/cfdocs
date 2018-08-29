@@ -5,7 +5,7 @@
 	"member":"date.createODBCTime()",
 	"returns":"date",
 	"related":["createODBCDateTime", "createTime"],
-	"description":" Creates an ODBC time object.",
+	"description":"Creates an ODBC time object.",
 	"params": [
 		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"date","values":[]}
 	],
@@ -22,7 +22,7 @@
 		{
 			"title": "Creates an ODBC time object",
 			"description": "Uses the CreateODBCTime function to create an ODBC time object",
-			"code": "<cfset time = CreateDateTime(2012, 12, 12, 12, 12, 12)>\r\n<cfset result = CreateODBCTime(time)>\r\n<cfoutput>#result#</cfoutput>",
+			"code": "<cfset time = createDateTime(2012, 12, 12, 12, 12, 12)>\r\n<cfset result = createODBCTime(time)>\r\n<cfoutput>#result#</cfoutput>",
 			"result": "{t '12:12:12'}"
 		}
 	]
