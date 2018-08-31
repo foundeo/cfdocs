@@ -90,13 +90,13 @@
     },
     {
       "name": "null",
-      "description": "Whether parameter is passed as a `NULL` value.\n\n `true`: ignores the `value` attribute and passes `NULL`\n `false`: passes the `value` attribute",
+      "description": "Whether parameter is passed as a `NULL` value.\n\n Yes: ignores the `value` attribute and passes `NULL`\n No: passes the `value` attribute",
       "required": false,
       "default": "",
-      "type": "boolean",
+      "type": "string",
       "values": [
-        true,
-        false
+        'yes',
+        'no'
       ]
     },
     {
@@ -104,10 +104,10 @@
       "description": "Yes: The value attribute value is a delimited list\n No: it is not",
       "required": false,
       "default": "",
-      "type": "boolean",
+      "type": "string",
       "values": [
-        true,
-        false
+        'yes',
+        'no'
       ]
     },
     {
