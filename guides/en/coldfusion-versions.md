@@ -2,17 +2,30 @@
 
 Historical information about ColdFusion Versions and releases.
 
-## Allaire Cold Fusion 1.0 - 1995
+## Allaire Cold Fusion 1.0 - July 1995
+* Database Connectivity
+* Tag-based programming templates (DBML)
 
-## Allaire Cold Fusion 1.5 - 1996
+## Allaire Cold Fusion 1.5 - February 1996
+* Email DBMAIL
+* CFAPI C/C++
 
 ## Allaire Cold Fusion 2 - November 1996
+* CFML (tags were switched from `dbif` to `cfif`)
+* Significantly expanded language capabilities
+* Advanced function library
+* File Upload and Management
 
 ## Allaire Cold Fusion 3 - June 1997
+* Full text searching and indexing (Verity)
+* COM integration
+* Version 3.1 released November 1997 added RDS and Solaris Support
 
 ## Allaire ColdFusion 4.0 - November 1998
 
 * Added cfscript
+* Java form controls
+* Custom Tags
 * [ColdFusion 4 New Tags and Functions](/cf4)
 
 ## Allaire ColdFusion 4.5 - November 1999
