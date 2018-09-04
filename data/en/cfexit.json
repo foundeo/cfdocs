@@ -8,7 +8,7 @@
 		{"name":"method","description":"exittag: aborts processing of currently executing tag\n exittemplate: exits page of currently executing tag\n loop: reexecutes body of currently executing tag","required":false,"default":"","type":"string","values":["exittag","exittemplate","loop"]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexit.html"},
+		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexit.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/exit.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfexit"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfexit"}
