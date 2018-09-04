@@ -2,7 +2,7 @@
 	"name":"cfldap",
 	"type":"tag",
 	"syntax":"<cfldap server=\"\">",
-	"related":["encodeForLDAP","encodeForCN"],
+	"related":["encodeForLDAP","encodeForDN"],
 	"description":"Provides an interface to a Lightweight Directory Access Protocol\n (LDAP) directory server, such as the Netscape Directory Server.",
 	"params": [
 		{"name":"server","description":"Host name or IP address of LDAP server.","required":true,"default":"","type":"string","values":[]},
@@ -31,7 +31,6 @@
 		{"name":"clientcert","description":"CF11+ A file path to a client certificate.","required":false,"default":"","type":"string","values":[]},
 		{"name":"clientcertpassword","description":"CF11+ The password for the client certificate file.","required":false,"default":"","type":"string","values":[]},
 		{"name":"usetls","description":"CF11+ Indicates that the connection should be made using transport layer security.","required":false,"default":"false","type":"boolean","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cfldap.html"},
@@ -39,9 +38,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfldap"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfldap"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Runnable LDAP Query Example",
@@ -65,5 +62,4 @@
 			"runnable":false
 		}
 	]
-
 }
