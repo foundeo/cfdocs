@@ -246,7 +246,7 @@
 			"name": "to",
 			"required": true,
 			"type": "string",
-			"description": "Message recipient email addresses.",
+			"description": "Message recipient email addresses. To specify multiple addresses, separate the addresses with commas.",
 			"default": "",
 			"values": []
 		},
