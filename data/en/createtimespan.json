@@ -10,7 +10,6 @@
 		{"name":"hours","description":"The number of hours","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"minutes","description":"The number of minutes","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"seconds","description":"The number of seconds","required":true,"default":"","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateTimeSpan.html"},

@@ -2,6 +2,7 @@
 	"name":"arrayIsDefined",
 	"type":"function",
 	"syntax":"arrayIsDefined(array, index)",
+	"member":"someArray.isDefined(index)",
 	"returns":"boolean",
 	"related":["ArrayIsEmpty"],
 	"description":"Determines whether an array element is defined in a given index.",

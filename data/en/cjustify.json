@@ -1,14 +1,13 @@
 {
-	"name":"cjustify",
+	"name":"cJustify",
 	"type":"function",
-	"syntax":"cjustify(String, length)",
+	"syntax":"cJustify(string, length)",
 	"returns":"string",
 	"related":[],
-	"description":" Centers a string in a field length.",
+	"description":"Centers a string in a given field length by adding spaces to either side.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"length","description":"","required":true,"default":"","type":"numeric","values":[]}
-
+		{"name":"string","description":"The string that is to be centered","required":true,"default":"","type":"string","values":[]},
+		{"name":"length","description":"The length of the field in which the string should be centered","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CJustify.html"},
@@ -23,7 +22,7 @@
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfset jstring = cjustify(\"ColdFusion\", 35)> \r\n <cfdump var=\"#jstring#\" />   ",
+			"code": "<cfset jstring = cJustify(\"ColdFusion\", 35)> \r\n <cfdump var=\"#jstring#\" />   ",
 			"result": ""
 		}
 	]

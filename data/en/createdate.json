@@ -4,9 +4,9 @@
 	"syntax":"createDate(year, month, day)",
 	"returns":"date",
 	"related":["createDateTime", "createODBCDate"],
-	"description":" Creates a date/time object",
+	"description":"Creates a date/time object",
 	"params": [
-		{"name":"year","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"year","description":"Integer in the range 0-9999. When in the range 0-29, year is converted to 2000-2029. When in the range 30-99, year is converted to 1930-1999. You cannot specify dates before AD 100.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"month","description":"Numeric month of the year (1-12)","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"day","description":"Day of the month","required":true,"default":"","type":"numeric","values":[]}
 	],
