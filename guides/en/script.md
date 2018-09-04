@@ -58,7 +58,7 @@ These implementations are due to old syntax or dual syntax (CF9 cfc’s)
 	   thread.test = "CFML";
     }
     //CF11 syntax
-    cfthread( action="run" name="testName"){
+    cfthread( action="run", name="testName"){
 	   thread.test = "CFML";
     }
     <cfscript>

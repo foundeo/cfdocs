@@ -41,7 +41,7 @@
 		},
 		{
 			"name": "filter",
-			"description": "Applies a filter to the listed files, for example, `*.jpg`. Multiple filters can be applied by using a pipe delimiter. For example: `*.doc|*.xls`",
+			"description": "Applies a filter to the listed files, for example, `*.jpg`. Multiple filters can be applied by using a pipe delimiter. For example: `*.doc|*.xls`\nIn Lucee4.5+ it can be a closure as well.",
 			"required": false,
 			"default": "",
 			"type": "string",
@@ -75,8 +75,8 @@
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DirectoryList.html"
 		},
 		"lucee": {
-			"minimum_version": "In Lucee the filter param can be a closure as well where the path is passed in.\n\nIt seems that there is no way to access the file query.",
-			"notes": "The sort argument only works when `listInfo=\"query\"`.",
+			"minimum_version": "",
+			"notes": "In Lucee the `filter` param can be a closure as well where the path is passed in. The `sort` argument only works when `listInfo=\"query\"`.",
 			"docs": "http://docs.lucee.org/reference/functions/directorylist.html"
 		},
 		"railo": {
@@ -116,6 +116,13 @@
 			"title": "An array of files in the temp directory",
 			"description": "Including sub-directories and as an array containing full paths",
 			"code": "arrayOfTempFiles = directoryList( \"./\", true );",
+			"result": "",
+			"runnable": false
+		},
+		{
+			"title": "Filter files with closure",
+			"description": "Lucee4.5+ Pass a closure instead of a string as `filter` param",
+			"code": "arrayOfFilteredFiles = directoryList(\".\", false, \"name\", function(path) {\n\treturn ListFindNoCase(\"Application.cfc,robots.txt,server.json,favicon.ico,.htaccess,README.md\", path);\n});",
 			"result": "",
 			"runnable": false
 		}
