@@ -14,5 +14,19 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdocumentitem"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdocumentitem"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Pagebreak (Script Syntax)",
+			"description": "Insert a pagebreak into the document",
+			"code": "cfdocumentitem( type=\"pagebreak\" );",
+			"result": ""
+		},
+		{
+			"title": "Footer (Script Syntax)",
+			"description": "Insert a page footer into the document",
+			"code": "cfdocumentitem( type=\"footer\" ) {\r\n    writeOutput(' -- My Page Footer -- ');\r\n}",
+			"result": ""
+		}
+	]
 }
