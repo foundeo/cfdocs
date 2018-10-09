@@ -25,6 +25,24 @@
 			"description":"Invokes the size method on a new HashMap object, which should return 0",
 			"code":"invoke(createObject(\"java\", \"java.util.HashMap\"), \"size\")",
 			"result":"0"
+		},
+		{
+			"title":"Invoke a method on a component",
+			"description":"Invokes the method named 'test' on the component Test.cfc with one parameter",
+			"code":"obj = createObject(\"component\", \"Test\");\rinvoke(obj, \"test\", {parameter=\"Test Data\"});",
+			"result":""
+		},
+		{
+			"title":"Invoke a method on a webservice with one argument",
+			"description":"Invokes the method named 'test' on the webservice Test.cfc with one argument",
+			"code":"obj = createObject(\"webservice\", \"https://example.com/test.cfc?wsdl\");\rinvoke(obj, \"test\", {argument1=\"Test Data\"});",
+			"result":""
+		},
+		{
+			"title":"Invoke a method on a webservice with multiple arguments",
+			"description":"Invokes the method named 'test' on the webservice Test.cfc with multiple arguments",
+			"code":"obj = createObject(\"webservice\", \"https://example.com/test.cfc?wsdl\");\rinvoke(obj, \"test\", {argument1=\"Test Data\", argument2=\"More Data\", argument3=\"Still More Data\"});",
+			"result":""
 		}
 	]
 
