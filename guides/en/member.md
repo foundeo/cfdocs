@@ -56,15 +56,18 @@ Member functions for the following data types are supported:
 - ArrayContains : `someVar.contains()`
 - ArrayDelete : `someVar.delete()`
 - ArrayDeleteAt : `someVar.deleteAt()`
+- ArrayDeleteNoCase : `someVar.deleteNoCase()`
 - ArrayEach : `someVar.each()`
 - ArrayFilter : `someVar.filter()`
 - ArrayFind : `someVar.find()`
 - ArrayFindAll : `someVar.findAll()`
 - ArrayFindAllNoCase : `someVar.findAllNoCase()`
 - ArrayFindNoCase : `someVar.findNoCase()`
+- ArrayFirst : `someVar.first()`
 - ArrayInsertAt : `someVar.insertAt()`
 - ArrayIsDefined : `someVar.isDefined()`
 - ArrayIsEmpty : `someVar.isEmpty()`
+- ArrayLast : `someVar.last()`
 - ArrayLen : `someVar.len()`
 - ArrayMap : `someVar.map()`
 - ArrayMax : `someVar.max()`
@@ -177,27 +180,35 @@ Member functions for the following data types are supported:
 ## Struct member functions
 
 - StructIsEmpty : `someVar.isEmpty()`
+- StructIsOrdered : `someVar.isOrdered()`
 - StructAppend : `someVar.append()`
 - StructClear : `someVar.clear()`
 - StructCopy : `someVar.copy()`
 - StructCount : `someVar.count()`
 - StructDelete : `someVar.delete()`
 - StructFind : `someVar.find()`
+- StructFindKey : `someVar.findKey()`
 - StructFindValue : `someVar.findValue()`
+- StructGetMetadata : `someVar.getMetadata()`
 - StructUpdate : `someVar.update()`
 - StructSort : `someVar.sort()`
+- StructSetMetadata : `someVar.setMatadata()`
 - StructInsert : `someVar.insert()`
 - StructEach : `someVar.each()`
 - StructKeyArray : `someVar.keyArray()`
 - StructKeyExists : `someVar.keyExists()`
 - StructKeyList : `someVar.keyList()`
+- StructMap : `someVar.map()`
+- StructReduce : `someVar.reduce()`
+- StructFilter : `someVar.filter()`
+- StructToSorted : `someVar.toSorted()`
 
 ## Date member functions
 
 - CreateODBCDate : `someVar.createODBCDate()`
 - CreateODBCDateTime : `someVar.createODBCDateTime()`
-- DateDiff : `someVar.diff()`
 - CreateODBCTime : `someVar.createODBCTime()`
+- DateDiff : `someVar.diff()`
 - LSDateFormat : `someVar.lsDateFormat()`
 - DatePart : `someVar.datepart()`
 - DaysInYear : `someVar.daysIn`
@@ -209,6 +220,12 @@ Member functions for the following data types are supported:
 - Month : `someVar.month()`
 - Quarter : `someVar.quarter()`
 - Year : `someVar.year()`
+- setSecond : `<DateObject>.setSecond(second)`
+- setMinute : `<DateObject>.setMinute(minute)`
+- setHour : `<DateObject>.setHour(hour)`
+- setDay : `<DateObject>.setDay(day)`
+- setMonth : `<DateObject>.setMonth(month)`
+- setYear : `<DateObject>.setYear(year)`
 - DaysInMonth : `someVar.daysInMonth()`
 - DayOfWeek : `someVar.dayOfweek()`
 - DayOfYear : `someVar.dayOfYear()`
@@ -218,6 +235,7 @@ Member functions for the following data types are supported:
 - DateFormat : `someVar.dateFormat()`
 - DateAdd : `someVar.add()`
 - DateConvert : `someVar.convert()`
+- Format : `someVar.format()`
 
 ## Image member functions
 
@@ -309,26 +327,44 @@ Member functions for the following data types are supported:
 
 ## XML member functions
 
-- XmlTransform : `someVar.transform()`
-- XmlGetNodeType : `someVar.getNodeType()`
+- Duplicate : `someVar.duplicate()`
+- ToString : `someVar.toString()`
+- XmlAppend : `someVar.append()`
 - XmlChildPos : `someVar.childPos()`
+- XmlCount : `someVar.count()`
 - XmlElemNew : `someVar.elemNew()`
+- XmlGetNodeType : `someVar.getNodeType()`
+- XmlHasChild : `someVar.hasChild()`
+- XmlLen : `someVar.len()`
+- XmlKeyArray : `someVar.keyArray()`
+- XmlKeyList : `someVar.keyList()`
 - XmlSearch : `someVar.search()`
+- XmlTransform : `someVar.transform()`
+- XmlUpdate : `someVar.update()`
 
 ## Query member functions
 
 - QueryAddColumn : `someVar.addColumn()`
+- QueryAddRow : `someVar.addRow()`
+- QueryConvertForGrid : `someVar.convertForGrid()`
+- QueryDeleteColumn : `someVar.deleteColumn()`
+- QueryDeleteRow : `someVar.deleteRow()`
+- QueryEach : `someVar.each()`
+- QueryFilter : `someVar.filter()`
 - QueryGetResult : `someVar.getResult()`
 - QueryGetRow : `someVar.getRow()`
-- QueryConvertForGrid : `someVar.convertForGrid()`
+- QueryKeyExists : `someVar.keyExists()`
+- QueryMap : `someVar.map()`
+- QueryReduce : `someVar.reduce()`
 - QuerySetCell : `someVar.setCell()`
-- QueryAddRow : `someVar.addRow()`
+- QuerySort : `someVar.sort()`
+- ValueArray : `someVar.valueArray()`
 
 When using Query.cfc, you get your results from the execution by using:
 
 - `someVar.getResult()`
 
-Member Functions can also be chained, for example:
+Member Functions can also be chained (on Lucee or CF2018+), for example:
 
     s="the";
     s = s.listAppend("quick brown fox", " ")
