@@ -8,7 +8,14 @@
 	"description": "This function calls a given closure/function with every element in a given string list and returns true, if one of the closure calls returns true.",
 	"params": [
 		{"name": "list", "description": "string list to iterate\n\nAlias: string", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "closure", "description": "function/closure that implements the following constructor [function(any value, numeric index,string list, string delimiter):boolean].\n\nAlias: function, callback, udf", "required": true, "default": "", "type": "function", "values": []},
+		{"name": "closure", "description": "function/closure that implements the following constructor [function(any value, numeric index,string list, string delimiter):boolean].\n\nAlias: function, callback, udf", "required": true, "default": "", "type": "function", "values": [],
+			"callback_params": [
+			    { "name": "value", "values": [], "default": "", "description": "current value from the list", "type": "any", "required": true },
+			    { "name": "index", "values": [], "default": "", "description": "position in the list", "type": "numeric", "required": false }
+			    { "name": "list", "values": [], "default": "", "description": "string list to iterate", "type": "string", "required": true }
+			    { "name": "delimiter", "values": [], "default": "", "description": "delimiter used to separate the string list", "type": "string", "required": false }
+			]
+		},
 		{"name": "delimiter", "description": "delimiter used to separate the string list", "required": false, "default": ",", "type": "string", "values": []},
 		{"name": "includeEmptyFields", "description": "include empty fields or not", "required": false, "default": "false", "type": "boolean", "values": []},
 		{"name": "multiCharacterDelimiter", "description": "specifying whether the delimiters parameter specifies a multi-character delimiter. If this parameter is true, the delimiters parameter must specify a single delimiter consisting of multiple characters. This parameter enables the ListToArray function to convert a list such as the following to an array of color names: red:|orange:|yellow:|green:|blue:|indigo:|violet.", "required": false, "default": "true", "type": "boolean", "values": []},
