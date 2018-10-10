@@ -5,7 +5,7 @@
 	"returns": "string",
 	"related": ["getTimezoneInfo","setTimezone","getLocale"],
 	"description": "Returns the timezone for the current request.",
-	"params": ["This function does not take any arguments"],
+	"params": [],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/gettimezone.html"}
 	},
