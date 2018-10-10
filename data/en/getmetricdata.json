@@ -10,8 +10,8 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getmetricdata.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/getmetricdata.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getmetricdata"}
+		"lucee": {"minimum_version":"", "deprecated": 4, "notes":"", "docs":"http://docs.lucee.org/reference/functions/getmetricdata.html"},
+		"railo": {"minimum_version":"", "deprecated": 0, "notes":"", "docs":"http://railodocs.org/index.cfm/function/getmetricdata"}
 	},
 	"links": []
 }
