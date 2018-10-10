@@ -5,15 +5,15 @@
 	"member": "list.listSome(closure [, delimiter] [, includeEmptyFields] [, multiCharacterDelimiter] [, parallel] [, maxThreads])",
 	"returns": "boolean",
 	"related": [],
-	"description": "",
+	"description": "This function calls a given closure/function with every element in a given string list and returns true, if one of the closure calls returns true.",
 	"params": [
-		{"name": "list", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "delimiter", "description": "", "required": false, "default": ",", "type": "string", "values": []},
-		{"name": "includeEmptyFields", "description": "", "required": false, "default": "false", "type": "boolean", "values": []},
-		{"name": "multiCharacterDelimiter", "description": "", "required": false, "default": "true", "type": "boolean", "values": []},
-		{"name": "parallel", "description": "", "required": false, "default": "false", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "numeric", "values": []}
+		{"name": "list", "description": "string list to iterate\n\nAlias: string", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "closure", "description": "function/closure that implements the following constructor [function(any value, numeric index,string list, string delimiter):boolean].\n\nAlias: function, callback, udf", "required": true, "default": "", "type": "function", "values": []},
+		{"name": "delimiter", "description": "delimiter used to separate the string list", "required": false, "default": ",", "type": "string", "values": []},
+		{"name": "includeEmptyFields", "description": "include empty fields or not", "required": false, "default": "false", "type": "boolean", "values": []},
+		{"name": "multiCharacterDelimiter", "description": "specifying whether the delimiters parameter specifies a multi-character delimiter. If this parameter is true, the delimiters parameter must specify a single delimiter consisting of multiple characters. This parameter enables the ListToArray function to convert a list such as the following to an array of color names: red:|orange:|yellow:|green:|blue:|indigo:|violet.", "required": false, "default": "true", "type": "boolean", "values": []},
+		{"name": "parallel", "description": "execute closures parallel", "required": false, "default": "false", "type": "boolean", "values": []},
+		{"name": "maxThreads", "description": "maximum number of threads executed, ignored when argument \"parallel\" is set to false", "required": false, "default": "20", "type": "numeric", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/listsome.html"}
