@@ -261,8 +261,8 @@ Javascript example:
     Function outerFunction() {
 	    var a = 3;
 	    return function innerFunction(b){
-	    var c = a + b;
-	    return c;
+	        var c = a + b;
+	        return c;
         }
     }
 
