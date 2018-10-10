@@ -11,8 +11,8 @@
 		{"name": "closure", "description": "function/closure that implements the following constructor [function(any value, numeric index,string list, string delimiter):boolean].\n\nAlias: function, callback, udf", "required": true, "default": "", "type": "function", "values": [],
 			"callback_params": [
 			    { "name": "value", "values": [], "default": "", "description": "current value from the list", "type": "any", "required": true },
-			    { "name": "index", "values": [], "default": "", "description": "position in the list", "type": "numeric", "required": false }
-			    { "name": "list", "values": [], "default": "", "description": "string list to iterate", "type": "string", "required": true }
+			    { "name": "index", "values": [], "default": "", "description": "position in the list", "type": "numeric", "required": false },
+			    { "name": "list", "values": [], "default": "", "description": "string list to iterate", "type": "string", "required": true },
 			    { "name": "delimiter", "values": [], "default": "", "description": "delimiter used to separate the string list", "type": "string", "required": false }
 			]
 		},
