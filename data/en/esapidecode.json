@@ -4,10 +4,10 @@
 	"syntax": "esapiDecode(decodeFrom, string)",
 	"returns": "string",
 	"related": ["esapiEncode"],
-	"description": "",
+	"description": "Decodes a string that has been encoded with ESAPIEncode.",
 	"params": [
-		{"name": "decodeFrom", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []}
+		{"name": "decodeFrom", "description": "given value is encoded as:\n\n* url: also decodes html-encoded content in lucee 4\n* html (not in lucee 4)", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "string", "description": "string to encode", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/esapidecode.html"}
