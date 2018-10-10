@@ -85,7 +85,6 @@ In the above example, the outer function sets the operator. myval_addition and m
 
 In the above example, the function operation has an argument logic, which is a closure. While calling operation, an inline closure is passed as an argument. This anonymous closure contains the logic to process the numbers - addition or subtraction. In this case, the logic is dynamic and passed as a closure to the function.
 
-
 #### You can assign a closure to a variable.
 
     var c2 = function () {..}
@@ -108,7 +107,6 @@ Example
 
 #### Calling closure with key-value pair
 
-
     var c2 = function(arg1, arg1) {..} 
     c2(arg1=1, arg2=3);
 
@@ -120,7 +118,6 @@ Example
     hello("Mark");
 
 #### Calling closure with argument collection
-
 
     var c2 = function(arg1, arg1) {..} 
     argsColl = structNew(); 
@@ -135,7 +132,6 @@ A closure retains a copy of variables visible at the time of its creation. The g
 The following details the scope of closure based on the way they are defined:
 
 #### Scenario where closure is defined
-
 
 _In a CFC function_
 
@@ -156,6 +152,7 @@ Scope Chain:
 * Outer function's local scope if available
 * Owner function's local scope if available
 * ColdFusion built-in scope
+
 Note: A closure cannot call any user-defined function, because the function's context is not retained, though the closure's context is retained. It gives erroneous results. For example, when a closure is cached, it can be properly called for later use, while a function cannot.
 
 ### The isClosure Function
@@ -163,6 +160,7 @@ Note: A closure cannot call any user-defined function, because the function's co
 CF10+ added the `isClosure` function which returns true if a variable is a closure, false otherwise.
 
 #### Modifications to the function isCustomFunction
+
 Though closure is a function object, it is not considered as a custom function.
 The function now returns:
 
@@ -172,6 +170,7 @@ Usage scenarios
 The following scenario explains how you can effectively use ColdFusion closures.
 
 ## Example - filtering of arrays using closures
+
 The following example filters employees based on location, age, and designation. A single function is used for filtering. The filtering logic is provided to the function as closures. That's filtering logic changes dynamically.
 
 Create the `employee.cfc` file that defines the variables.
@@ -216,7 +215,6 @@ Create the employee array. This CFC also contains the filterArray() }}function. 
             return empArray; 
         } 
     }
-    
 
 Create the CFM page that accesses the {{filterArray()}}function with a closure which provides the filtering logic. The {{filterArray()}}function is used to filter the employee data in three ways: location, age, and designation. Each time the function is accessed, the filtering logic is changed in the closure.
 
@@ -258,11 +256,11 @@ Create the CFM page that accesses the {{filterArray()}}function with a closure w
 
 Javascript example:
     Function outerFunction() {
-	   var a = 3;
-	   return function innerFunction(b){
-	   var c = a + b;
-	   return c;
-	   }
+       var a = 3;
+       return function innerFunction(b){
+       var c = a + b;
+       return c;
+       }
        }
 (1)     var foo = outerFunction()
 (2)     var result = foo(2);
@@ -277,6 +275,7 @@ http://taha-sh.com/blog/understanding-closures-in-javascript
 ## ColdFusion built in Functions that use Closures:
 
 ### CF10 Closure Functions
+
 * [ArrayEach](/arrayeach)
 * [StructEach](/structeach)
 * [ArrayFilter](/arrayfilter)
@@ -284,10 +283,11 @@ http://taha-sh.com/blog/understanding-closures-in-javascript
 * [ListFilter](/ListFilter)
 * [ArrayFindAll ](/ArrayFindAll)
 * [ArrayFindAllNoCase](/ArrayFindAllNoCase)
-  
 
 ### CF11 Closure Functions
+
 * [isClosure](/isClosure)
+* [ListEach](/ListEach)
 * [ArrayReduce](/ArrayReduce)
 * [StructReduce](/StructReduce)
 * [ListReduce](/ListReduce)
@@ -295,3 +295,10 @@ http://taha-sh.com/blog/understanding-closures-in-javascript
 * [StructMap](/StructMap)
 * [ListMap](/ListMap)
 
+### CF2016 Closure Functions
+
+* [QueryEach](/QueryEach)
+* [QueryFilter](/QueryFilter)
+* [QueryMap](/QueryMap)
+* [QueryReduce](/QueryReduce)
+* [QuerySort](/QuerySort)
