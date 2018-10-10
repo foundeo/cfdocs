@@ -257,21 +257,25 @@ Create the CFM page that accesses the {{filterArray()}}function with a closure w
 ### Other Closure Examples:
 
 Javascript example:
+
     Function outerFunction() {
-	   var a = 3;
-	   return function innerFunction(b){
-	   var c = a + b;
-	   return c;
-	   }
-       }
-(1)     var foo = outerFunction()
-(2)     var result = foo(2);
-(3)     Console.log(result); //5
+	    var a = 3;
+	    return function innerFunction(b){
+	    var c = a + b;
+	    return c;
+        }
+    }
+
+(1) `var foo = outerFunction()`  
+(2) `var result = foo(2);`  
+(3) `Console.log(result); //5`  
 
 We have an outer function with a nested function which accepts a parameter b
-(1)When you invoke the outer you get the inner returned later.
-(2)Notice the outer function was called but the a still has its value and is used in the return function (innerFunction).
-(3)That is why the result Is 5!
+
+(1) When you invoke the outer you get the inner returned later.  
+(2) Notice the outer function was called but the a still has its value and is used in the return function (innerFunction).  
+(3) That is why the result Is 5!
+
 http://taha-sh.com/blog/understanding-closures-in-javascript
 
 ## ColdFusion built in Functions that use Closures:
