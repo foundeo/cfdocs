@@ -10,7 +10,7 @@
 		{"name": "delimiters", "description": "characters that separate list elements", "required": false, "default": ",", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "deprecated": 4, "notes": "use ListCompact instead", "docs": "http://docs.lucee.org/reference/functions/listtrim.html"}
+		"lucee": {"minimum_version": "", "deprecated": "4", "notes": "use ListCompact instead", "docs": "http://docs.lucee.org/reference/functions/listtrim.html"}
 	},
 	"examples": [],
 	"links": []
