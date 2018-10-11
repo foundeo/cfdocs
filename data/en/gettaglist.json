@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "getTagList()",
 	"returns": "struct",
-	"related": ["getTagData()","getFunctionData(),getFunctionList()"],
+	"related": ["getTagData","getFunctionData","getFunctionList"],
 	"description": "Gets a struct that contains a list CF language tags",
 	"params": [],
 	"engines": {
@@ -14,7 +14,7 @@
             "title":"Simple example of getTagList function",
             "description":"Uses the getTagList function to return a list of CF tags",
 			"code":"list = gettagList();\nwriteDump(list);",
-            "result":"128 tags",
+            "result":"",
             "runnable":true
         }
 	],
