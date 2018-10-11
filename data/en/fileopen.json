@@ -17,5 +17,13 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/fileopen"}
 	},
 	"links": [],
-	"examples": []
+	"examples": [
+		{
+			"title":"Opens a file, reads a line then closes it.",
+			"description":"",
+			"code":"// Open File\nvar fileObject = fileOpen("/path/to/file.txt");\n\n// Perform Actions\ntry\n{\n	// Read Line\n	writeOutput(fileReadLine(fileObject));\n}\n\n// Error Handling\ncatch(any ex)\n{\n	// Report Exception\n	writeDump(ex);\n}\n\n// Always Close\nfinally\n{\n	// Close File\n	fileClose(fileObject);\n}",
+			"result":"",
+			"runnable":true
+		}
+	]
 }
