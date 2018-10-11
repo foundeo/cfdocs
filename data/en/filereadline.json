@@ -20,7 +20,7 @@
 		{
 			"title":"Opens a file, reads a line then closes it.",
 			"description":"",
-			"code":"// Open File\nvar fileObject = fileOpen("/path/to/file.txt");\n\n// Perform Actions\ntry\n{\n	// Read Line\n	writeOutput(fileReadLine(fileObject));\n}\n\n// Error Handling\ncatch(any ex)\n{\n	// Report Exception\n	writeDump(ex);\n}\n\n// Always Close\nfinally\n{\n	// Close File\n	fileClose(fileObject);\n}",
+			"code":"// Open File\nvar fileObject = fileOpen(\"/path/to/file.txt\");\n\n// Perform Actions\ntry\n{\n\t// Read Line\n\twriteOutput(fileReadLine(fileObject));\n}\n\n// Error Handling\ncatch(any ex)\n{\n\t// Report Exception\n\twriteDump(ex);\n}\n\n// Always Close\nfinally\n{\n\t// Close File\n\tfileClose(fileObject);\n}",
 			"result":"",
 			"runnable":true
 		}
