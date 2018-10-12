@@ -226,7 +226,6 @@
 			<cfset example_index = 0>
 			<cfloop array="#data.examples#" index="ex">
 				<cfset example_index = example_index + 1>
-				<br />
 				<div class="panel panel-default">
 					<div class="panel-heading" role="tab" id="headingOne">
 						<h4 class="panel-title" id="ex#example_index#">
