@@ -4,8 +4,9 @@
 		guides = [];
 		if (structKeyExists(data, "related") AND arrayLen(data.related)) {
 			for(i = 1; i lte arrayLen(data.related); i++) {
-				jsonPath = expandPath("./data/en/#LCase(data.related[i])#.json");
-				guidePath = expandPath("./guides/en/#LCase(data.related[i])#.md");
+                _doc = data.related[i];
+				jsonPath = expandPath("./data/en/#LCase(_doc)#.json");
+				guidePath = expandPath("./guides/en/#LCase(_doc)#.md");
 				if (fileExists(jsonPath)) {
 					arrayAppend(related,data.related[i]);
 				}
@@ -147,7 +148,7 @@
 			<cfelse>
 				<div class="related">
 					See Also:
-					<cfloop array="#data.related#" index="r">
+					<cfloop array="#related#" index="r">
 						<a href="#linkTo(r)#" class="related label label-default">#r#</a>
 					</cfloop>
 				</div>
