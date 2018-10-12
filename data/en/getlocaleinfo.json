@@ -4,29 +4,45 @@
 	"syntax":"getLocaleInfo()",
 	"returns":"struct",
 	"related":["getLocaleDisplayName","getLocale","getLocaleCountry","getLocaleLanguage"],
-	"description":"A short description that describes what the tag or function does.",
-	"discouraged":"Only add this key if this tag/function is discouraged by the community.",
+	"description":"Returns a structure containing info to a specific locale. This function combines the locale functions `getLocaleCountry`, `getLocaleDisplayName`, and `getLocaleLanguage` to a single function.",
 	"params": [
-		{"name":"locale","description":"Geographic/language locale value","required":true,"default":"getLocale()","type":"string","values":["en","de_DE","de_ch","..."]},
-		{"name":"displayLocale","description":"Locale's display name/Output language","required":false,"default":"getLocaleDisplayName()","type":"string","values":["English","German","French","..."]}
+		{"name":"locale", "description": "Geographic/language locale value, where the format is a combination of an ISO 639-1 code and an optional ISO 3166-1 code separated by a dash or an underscore.", "required": false, "default": "getLocale()", "type":"string", "values": ["en","de-DE","de-CH","..."]},
+		{"name":"dspLocale", "description": "Locale's display name/output language", "required": false, "default": "getLocaleDisplayName()", "type": "string", "values": ["English","German","French","..."]}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"5", "notes":"Combines the locale functions <code>getLocaleCountry</code>, <code>getLocaleDisplayName</code>, <code>getLocaleInfo</code>, <code>getLocaleLanguage</code> to a single function", "docs":""}
+		"lucee": {"minimum_version": "5", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getlocaleinfo.html"}
 	},
-	"links": [],
+	"links": [
+		{
+			"title": "ISO-639-1",
+			"description":"Wikipedia page for ISO-639-1",
+			"url":"https://en.wikipedia.org/wiki/ISO_639-1"
+		},
+		{
+			"title": "ISO-3166-1",
+			"description":"Wikipedia page for ISO-3166-1",
+			"url":"https://en.wikipedia.org/wiki/ISO_3166-1"
+		}
+	],
 	"examples": [
 		{
-				"title": "Get information about locale",
+				"title": "Get information about the page's locale",
 				"description": "",
 				"code": "getLocaleInfo()",
 				"result": "",
-				"runnable":false
-		},{
-				"title": "Output locale in a divergent language",
-				"description": "Same as above but different country display name output",
-				"code": "getLocaleInfo(getLocale(),'French').display.country",
+				"runnable": false
+		}, {
+				"title": "Output page's locale in a divergent language",
+				"description": "Outputs the locale of the page in French.",
+				"code": "getLocaleInfo(dspLocale='French').display.country",
 				"result": "Etats-Unis",
-				"runnable":true
+				"runnable": true
+		}, {
+				"title": "Output German locale in a page's language",
+				"description": "Outputs the German locale in the language defined for the page.",
+				"code": "getLocaleInfo(locale='de-DE', dspLocale=getLocaleDisplayName()).display.country",
+				"result": "Germany",
+				"runnable": true
 		}
 	]
 }

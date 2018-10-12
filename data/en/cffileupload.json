@@ -2,7 +2,7 @@
 	"name": "cffileupload",
 	"type": "tag",
 	"syntax": "<cffileupload url=\"\">",
-	"related": [],
+	"related": ["cffile","cfinput"],
 	"description":"Ajax File upload",
 	"params": [
 		{

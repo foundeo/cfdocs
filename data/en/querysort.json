@@ -4,7 +4,7 @@
 	"syntax": "querySort(query, sortFunction)",
 	"member": "query.sort(sortFunction)",
 	"returns": "boolean",
-	"related": [],
+	"related": ["structSort","listSort","arraySort"],
 	"description": "Sorts a query.",
 	"params": [
 		{"name": "query", "description": "The query you want to sort", "required": true, "default": "", "type": "query", "values": []},

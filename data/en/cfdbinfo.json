@@ -2,7 +2,7 @@
 	"name":"cfdbinfo",
 	"type":"tag",
 	"syntax":"<cfdbinfo type=\"Columns\" name=\"\">",
-	"related":[],
+	"related":["cfquery"],
 	"description":"Lets you retrieve information about a data source, including details about the database, tables, queries, procedures, foreign keys, indexes, and version information about the database, driver, and JDBC",
 	"params": [
 		{"name":"type","description":"Type of information to get:\n\n * dbnames: database name and type\n * tables: name, type, and remarks\n * columns: name, SQL data type, size, decimal precision, default value, maximum length in bytes of a character or integer data type column, whether nulls are allowed, ordinal position, remarks, whether the column is a primary key, whether the column is a foreign key, the table that the foreign key refers to, the key name the foreign key refers to\n * version: database product name and version, driver name and version, JDBC major and minor version\n * procedures: name, type, and remarks\n * foreignkeys: foreign key name and table, primary key name, delete and update rules\n * index: name, column on which the index is applied, ordinal position, cardinality, whether the row represents a table statistic or an index, number of pages used by the table or index, whether the index values are unique","required":true,"default":"Tables","type":"string","values":["Columns","DBNames","Tables","Foreignkeys","Index","Procedures","Version"]},
@@ -13,7 +13,6 @@
 		{"name":"password","description":"Password to connect to the database.","required":false,"default":"","type":"string","values":[]},
 		{"name":"pattern","description":"Used only if type = \"tables\" ,type = \"columns\" , or type = \"procedures\"\n. Specifies a filter to retrieve information about specific tables, columns, or stored procedures. Use an underline (_) to represent a single wildcard character and a percent sign (%) to represent a wildcard of zero or more characters.","required":false,"default":"","type":"string","values":[]},
 		{"name":"table","description":"Name of the table from which you retrieve information.","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfdbinfo.html"},
@@ -21,8 +20,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdbinfo"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdbinfo"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

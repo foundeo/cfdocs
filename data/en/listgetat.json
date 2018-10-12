@@ -3,14 +3,13 @@
 	"type":"function",
 	"syntax":"listGetAt(list, position [, delimiters [, includeEmptyValues]])",
 	"returns":"string",
-	"related":[],
-	"description":" Gets a list element at a specified position.",
+	"related":["listDeleteAt","listInsertAt","listSetAt"],
+	"description":"Gets a list element at a specified position.",
 	"params": [
 		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"position","description":"","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[",","|",";","chr(9)","chr(10)","chr(13)"]},
+		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]},
 		{"name":"includeEmptyValues","description":"","required":false,"default":"false","type":"boolean","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listgetat.html"},
@@ -18,9 +17,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listgetat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listgetat"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Simple Example",
@@ -44,5 +41,4 @@
 			"runnable":true
 		}
 	]
-
 }

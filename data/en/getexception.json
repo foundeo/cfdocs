@@ -3,17 +3,13 @@
 	"type":"function",
 	"syntax":"getException(javaobject)",
 	"returns":"any",
-	"related":[],
+	"related":["cfabort","cfthrow","cftry","cfcatch","onError","cferror"],
 	"description":" Used with the cftry and cfcatch tags. Retrieves a Java\n exception object from a Java object.",
 	"params": [
 		{"name":"javaobject","description":"","required":true,"default":"","type":"any","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getexception.html"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

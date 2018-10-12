@@ -12,6 +12,19 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arrayreverse.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Reverse an Array",
+		"description":"Creates a new array with reversed positions",
+		"code":"myArray = [1,2,3];\r\nmyArrayReversed = arrayReverse(myArray);\r\nwriteOutput( serializeJSON( myArrayReversed ) );",
+		"result":"[3,2,1]",
+		"runnable":true
+	},
+	{
+		"title":"Reverse an Array via Member Function",
+		"description":"",
+		"code":"myArray = [1,2,3]; \r\nwriteOutput( serializeJSON( myArray.reverse() ) );",
+		"result":"[3,2,1]",
+		"runnable":true
+	}],
 	"links": []
 }

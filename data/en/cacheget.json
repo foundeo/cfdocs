@@ -3,8 +3,8 @@
 	"type":"function",
 	"syntax":"cacheGet(id [,region])",
 	"returns":"any",
-	"related":["isNull","cachePut","cacheGetAllIds","cacheGetMetadata","cacheGetProperties","cacheRemove","cacheSetProperties"],
-	"description":" Gets an object that is stored in the cache.",
+	"related":["cachePut","cacheGetAllIds","cacheGetMetadata","cacheGetProperties","cacheRemove","cacheSetProperties"],
+	"description":"Gets an object that is stored in the cache.",
 	"params": [
 		{"name":"id","description":"The ID value assigned to the cache object when it was created","required":true,"default":"","type":"string","values":[]},
 		{"name":"region","description":"CF10+ The name of the cache region where the object was stored. Applies only to ACF.","required":false,"default":"","type":"string","values":[]},
@@ -29,7 +29,7 @@
 		{
 			"title":"Script Syntax - Named Cache",
 			"description":"CF10+ Puts an element in a named cache and then retrieves it.",
-			"code":"cacheID = \"cow\";\r\ntimespan = createTimeSpan(0, 0, 30, 0);\r\nidleTime = createTimeSpan(0, 0, 15, 0);\r\nregionName = \"region_cacheName\";\r\ncowSays = cacheGet(cacheID, regionName);\r\nif (isNull(cowSays)) {\r\n    cowSays = \"moo\";\r\n     cachePut(cacheID, cowSays, timespan, idleTime, regionName);\r\n}\r\nwriteOutput(\"The cow says #cowSays#.\");",
+			"code":"cacheID = \"cow\";\ntimespan = createTimeSpan(0, 0, 30, 0);\nidleTime = createTimeSpan(0, 0, 15, 0);\nregionName = \"region_cacheName\";\ncowSays = cacheGet(cacheID, regionName);\nif (isNull(cowSays)) {\n    cowSays = \"moo\";\n     cachePut(cacheID, cowSays, timespan, idleTime, regionName);\n}\nwriteOutput(\"The cow says #cowSays#.\");",
 			"result":"The cow says moo.",
 			"runnable":true
 		}

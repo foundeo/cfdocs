@@ -2,66 +2,62 @@
 	"name":"cfmodule",
 	"type":"tag",
 	"syntax":"<cfmodule>",
-	"related":[],
+	"related":["cfassociate"],
 	"description":"Invokes a custom tag for use in CFML application pages.\n This tag processes custom tag name conflicts.",
 	"params": [
 		{"name":"template","description":"Mutually exclusive with the name attribute. A path to the\n page that implements the tag.\n\n Relative path: expanded from the current page\n Absolute path: expanded using CFML mapping\n A physical path is not valid.","required":false,"default":"","type":"string","values":[]},
 		{"name":"name","description":"Mutually exclusive with the template attribute. A custom\n tag name, in the form \"Name.Name.Name...\" Identifies\n subdirectory, under the CFML tag root directory,\n that contains custom tag page. For example (Windows format):\n\n &lt;cfmodule name = \"superduper.Forums40.GetUserOptions\"&gt;\n\n This identifies the page GetUserOptions.cfm in the\n directory CustomTags\\superduper\\Forums40 under the\n CFML root directory.","required":false,"default":"","type":"string","values":[]},
 		{"name":"attributecollection","description":"A collection of key-value pairs that represent\n attribute names and values. You can specify multiple\n key-value pairs. You can specify this attribute only\n once.","required":false,"default":"","type":"struct","values":[]}
-
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmodule.html"},
+		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmodule.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/module.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmodule"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmodule"}
 	},
-	"links": [
-
-	],
-  "examples": [
-    {
-      "title": "Using the template attribute with an absolute template path",
-      "description": "",
-      "code": "<cfmodule template=\"\\layout\\default\\mainheader.cfm\">",
-      "result": "",
-      "runnable" : false
-    },
-    {
-      "title": "Using the template attribute with a relative template path",
-      "description": "",
-      "code": "<cfmodule template=\"..\\..\\..\\layout\\register\\sectionheader.cfm\">",
-      "result": "",
-      "runnable" : false
-    },
-    {
-      "title": "Using the name attribute",
-      "description": "",
-      "code": "<cfmodule name=\"layout.corp.copyright\">",
-      "result": "",
-      "runnable" : false
-    },
-    {
-      "title": "Passing two ad-hoc attributes in tag body",
-      "description": "",
-      "code": "<cfmodule template=\"\\layout\\default\\mainheader.cfm\" theme=\"default\" pageTitle=\"Welcome!\">",
-      "result": "",
-      "runnable" : false
-    },
-    {
-      "title": "Passing two ad-hoc attributes using the attributeCollection attribute",
-      "description": "",
-      "code": "<cfset attrs = {theme = \"default\", pageTitle = \"Welcome!\"}>\n<cfmodule template=\"\\layout\\default\\mainheader.cfm\" attributecollection=\"#attrs#\">",
-      "result": "",
-      "runnable" : false
-    },
-    {
-      "title": "Passing content between opening and closing tags",
-      "description": "In this example, the &lt;p&gt; tag and it's content will be availble to super-duper-formatter.cfm to perform whatever the formatting logic dictates.",
-      "code": "<cfmodule template=\"\\layout\\super-duper-formater.cfm\">\n   <p>Some content the module will format</p>\n</cfmodule>",
-      "result": "",
-      "runnable" : false
-    }
-  ]
-
+	"links": [],
+	"examples": [
+		{
+			"title": "Using the template attribute with an absolute template path",
+			"description": "",
+			"code": "<cfmodule template=\"\\layout\\default\\mainheader.cfm\">",
+			"result": "",
+			"runnable" : false
+		},
+		{
+			"title": "Using the template attribute with a relative template path",
+			"description": "",
+			"code": "<cfmodule template=\"..\\..\\..\\layout\\register\\sectionheader.cfm\">",
+			"result": "",
+			"runnable" : false
+		},
+		{
+			"title": "Using the name attribute",
+			"description": "",
+			"code": "<cfmodule name=\"layout.corp.copyright\">",
+			"result": "",
+			"runnable" : false
+		},
+		{
+			"title": "Passing two ad-hoc attributes in tag body",
+			"description": "",
+			"code": "<cfmodule template=\"\\layout\\default\\mainheader.cfm\" theme=\"default\" pageTitle=\"Welcome!\">",
+			"result": "",
+			"runnable" : false
+		},
+		{
+			"title": "Passing two ad-hoc attributes using the attributeCollection attribute",
+			"description": "",
+			"code": "<cfset attrs = {theme = \"default\", pageTitle = \"Welcome!\"}>\n<cfmodule template=\"\\layout\\default\\mainheader.cfm\" attributecollection=\"#attrs#\">",
+			"result": "",
+			"runnable" : false
+		},
+		{
+			"title": "Passing content between opening and closing tags",
+			"description": "In this example, the &lt;p&gt; tag and it's content will be availble to super-duper-formatter.cfm to perform whatever the formatting logic dictates.",
+			"code": "<cfmodule template=\"\\layout\\super-duper-formater.cfm\">\n   <p>Some content the module will format</p>\n</cfmodule>",
+			"result": "",
+			"runnable" : false
+		}
+	]
 }

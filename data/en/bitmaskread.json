@@ -4,7 +4,7 @@
 	"syntax":"bitMaskRead(number, start, length)",
 	"returns":"numeric",
 	"related":["bitMaskClear","bitMaskSet"],
-	"description":" Performs a bitwise mask read operation.\n Returns an integer representation of the corresponding bits specified in the mask.",
+	"description":"Performs a bitwise mask read operation.\n Returns an integer representation of the corresponding bits specified in the mask.",
 	"params": [
 		{"name":"number","description":"Integer","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"start","description":"Start bit for the read mask (Integer in the range 0-31, inclusive)","required":true,"default":"","type":"numeric","values":[]},

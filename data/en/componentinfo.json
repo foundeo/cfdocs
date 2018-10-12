@@ -3,8 +3,8 @@
 	"type": "function",
 	"syntax": "componentInfo(component)",
 	"returns": "struct",
-	"related": [],
-	"description": "",
+	"related": ["cfcomponent"],
+	"description": "Returns meta information from the passed component like \"extends\", \"hint\", etc.",
 	"params": [
 		{"name": "component", "description": "", "required": true, "default": "", "type": "component", "values": []}
 	],

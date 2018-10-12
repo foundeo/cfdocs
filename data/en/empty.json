@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "empty(variable)",
 	"returns": "boolean",
-	"related": [],
+	"related": ["isEmpty","arrayIsEmpty","structIsEmpty"],
 	"description": "Checks if a variable is empty",
 	"params": [
 		{"name": "variable", "description": "", "required": true, "default": "", "type": "any", "values": ["\"\"","{}","[]"]}

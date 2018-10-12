@@ -2,11 +2,10 @@
 	"name":"cfobjectcache",
 	"type":"tag",
 	"syntax":"<cfobjectcache action=\"clear\">",
-	"related":[],
+	"related":["cfobject"],
 	"description":"Flushes the query cache.",
 	"params": [
 		{"name":"action","description":"clear: Clears queries from the cache in the Application\n scope","required":true,"default":"clear","type":"string","values":["clear"]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfobjectcache.html"},
@@ -14,8 +13,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfobjectcache"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfobjectcache"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

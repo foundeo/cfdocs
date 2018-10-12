@@ -6,7 +6,7 @@
 	"script":"",
 	"returns":"webserviceProxy",
 	"related":[],
-	"description":"Creates a web service proxy object, a reference to a remote webservice. This function is a replacement for <code>createObject(\"webservice\",...)</code>.",
+	"description":"Creates a web service proxy object, a reference to a remote webservice. This function is a replacement for `createObject(\"webservice\",...)`.",
 	"params": [
 	    {"name":"url","description":"URL of the Webservice","required":true,"default":"","type":"string","values":[]},
 	    {"name":"arguments","description":"Additional arguments\n(URL params are not allowed in url itself and must be set here)","required":false,"default":"","type":"struct","values":[]}

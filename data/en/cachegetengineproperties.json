@@ -1,0 +1,32 @@
+{
+    "name":"cacheGetEngineProperties",
+    "type":"function",
+    "syntax":"cacheGetEngineProperties()",
+    "returns":"struct",
+    "related":[
+        "cacheGet",
+        "cacheGetProperties",
+		"cacheGetMetadata"
+    ],
+    "description":"Returns some properties of the cache engine",
+    "params":[],
+    "engines":{
+        "coldfusion":{"minimum_version":"2018", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/cachegetengineproperties.html"}
+    },
+    "links":[
+        {
+            "title":"Caching enhancements in ColdFusion 2018",
+            "description":"Example with explanation",
+            "url":"https://helpx.adobe.com/coldfusion/developing-applications/changes-in-coldfusion/caching-enhancements.html#jcs"
+        }
+    ],
+    "examples":[
+        {
+            "title":"Get the name of the cache engine",
+            "description":"Pick the 'name' property from the cache engine property structure",
+            "code":"writeOutput(cacheGetEngineProperties().name);",
+            "result":"Ehcache",
+            "runnable":true
+        }
+    ]
+}

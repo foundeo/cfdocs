@@ -2,14 +2,13 @@
 	"name":"cferror",
 	"type":"tag",
 	"syntax":"<cferror type=\"exception\" template=\"\">",
-	"related":[],
+	"related":["cfabort","cfthrow","cftry","cfcatch","onError"],
 	"description":"Displays a custom HTML page when an error occurs. This lets\n you maintain a consistent look and feel among an application's\n functional and error pages",
 	"params": [
 		{"name":"type","description":"Type of error that the custom error page handles. The type\n also determines how CFML handles the error page. For\n more information, see Specifying a custom error page in\n Developing CFML MX Applications.\n\n exception: a exception of the type specified by the\n exception attribute.\n validation: errors recognized by sever-side type\n validation.\n request: any encountered error.\n monitor: deprecated.","required":true,"default":"","type":"string","values":["exception","validation","request","monitor"]},
 		{"name":"template","description":"Relative path to the custom error page.\n (A CFML page was formerly called a template.)","required":true,"default":"","type":"string","values":[]},
 		{"name":"mailto","description":"An E-mail address. This attribute is available on the\n error page as the variable error.mailto. CFML does\n not automatically send anything to this address.","required":false,"default":"","type":"string","values":[]},
 		{"name":"exception","description":"Type of exception that the tag handles:\n\n application: application exceptions\n database: database exceptions\n template: CFML page exceptions\n security: security exceptions\n object: object exceptions\n missingInclude: missing include file exceptions\n expression: expression exceptions\n lock: lock exceptions\n custom_type: developer-defined exceptions, defined in the\n cfthrow tag\n any: all exception types","required":false,"default":"any","type":"string","values":["any","application","database","template","security","object","missinginclude","expression","lock","custom_type"]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cferror.html"},
@@ -17,8 +16,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cferror"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cferror"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

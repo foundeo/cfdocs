@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"getTemplatePath()",
 	"returns":"string",
-	"related":[],
+	"related":["getBaseTemplatePath","getCurrentTemplatePath"],
 	"description":"Returns the filepath of the base template in this request",
 	"params": [],
 	"engines": {

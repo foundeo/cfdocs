@@ -1,7 +1,7 @@
 {
 	"name":"cfcookie",
 	"type":"tag",
-	"syntax":"<cfcookie name = \"cookie name\" domain = \".domain\" expires = \"period\" httponly = \"yes|no\" path = \"URL\" secure = \"yes|no\" value = \"text\" encodevalue = \"yes|no\" preserveCase = \"yes|no\">",
+	"syntax":"<cfcookie name = \"cookie name\">",
 	"related":[],
 	"description":"Defines web browser cookie variables, including expiration and\n security options.",
 	"params": [
@@ -13,7 +13,6 @@
 		{"name":"domain","description":"Domain in which cookie is valid and to which cookie content\n can be sent from the user's system. By default, the cookie\n is only available to the server that set it. Use this\n attribute to make the cookie available to other servers.\n\n Must start with a period. If the value is a subdomain, the\n valid domain is all domain names that end with this string.\n This attribute sets the available subdomains on the site\n upon which the cookie can be used.","required":false,"default":"","type":"string","values":[]},
 		{"name":"httpOnly","description":"CF9+ Specify whether cookie is http cookie or not","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"encodevalue","description":"CF10+ Specify if cookie value should be encoded","required":false,"default":"","type":"boolean","values":[true,false]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcookie.html"},
@@ -21,21 +20,19 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfcookie"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcookie"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-            "title": "Script Syntax",
-            "description": "",
-            "code": "cfcookie(name=\"TimeVisited\", value=Now(), domain=\".local.com\", path=\"/coldfusion\" expires=30, httponly=\"yes\", encodedvalue=\"yes\" )\r\n"
-        },
-        {
-            "title": "Tag Syntax",
-            "description": "",
-            "code": "<cfcookie name=\"TimeVisited\" value=Now() domain=\".local.com\" path=\"/coldfusion\" expires=30 httponly=\"yes\" encodedvalue=\"yes\" />\r\n"
-        },
-        {
+			"title": "Script Syntax",
+			"description": "",
+			"code": "cfcookie(name=\"TimeVisited\", value=Now(), domain=\".local.com\", path=\"/coldfusion\" expires=30, httponly=\"yes\", encodedvalue=\"yes\" )\r\n"
+		},
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfcookie name=\"TimeVisited\" value=Now() domain=\".local.com\" path=\"/coldfusion\" expires=30 httponly=\"yes\" encodedvalue=\"yes\" />\r\n"
+		},
+		{
 			"title": "Using Cookie Scope",
 			"description": "",
 			"code": "cookie.TimeVisited = { value=\"#Now()#\", domain=\".local.com\", path=\"/coldfusion\", expires=30, httponly=\"yes\", encodedvalue=\"yes\" }; \r\n "

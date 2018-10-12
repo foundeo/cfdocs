@@ -3,14 +3,13 @@
 	"type":"function",
 	"syntax":"toScript(cfvar, javascriptvar [, outputformat] [, asformat])",
 	"returns":"string",
-	"related":[],
+	"related":["cfwddx"],
 	"description":" Creates a JavaScript or ActionScript expression that\n assigns the value of a ColdFusion variable to a JavaScript\n or ActionScript variable. This function can convert\n ColdFusion strings, numbers, arrays, structures, and\n queries to JavaScript or ActionScript syntax that defines\n equivalent variables and values.",
 	"params": [
 		{"name":"cfvar","description":"A ColdFusion variable. This can contain one of the following:\n String, Number, Array, Structure or Query.","required":true,"default":"","type":"any","values":[]},
 		{"name":"javascriptvar","description":"A string that specifies the name of the JavaScript variable\n that the toScript function creates.","required":true,"default":"","type":"string","values":[]},
 		{"name":"outputformat","description":"A Boolean value that determines whether to create\n WDDX (JavaScript) or ActionScript style output for\n structures and queries.\n Default: true","required":false,"default":true,"type":"boolean","values":[true,false]},
 		{"name":"asformat","description":"A Boolean value that specifies whether to use\n ActionScript shortcuts in the script.\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/toscript.html"},
@@ -18,8 +17,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/toscript"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/toscript"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

@@ -155,3 +155,34 @@ Show example code. It is very helpful to readers to use the `result` to show the
 We have an [example JSON utility](http://cfdocs.org/utilities/json/) that can be used to create the JSON by filling out a form.
 
 Please see the [cfdocs contributor guide](CONTRIBUTING.md) for frequently asked questions.
+
+### IDE Integration
+
+There are several CFML code editors that utilize the cfdocs repository to provide documentation within the editor.
+
+#### Sublime Text
+
+Install the CFML Package for Sublime Text 3: <https://packagecontrol.io/packages/CFML> the plugin will provide inline documentation when hovering the mouse over a tag or function, or when or typing code.
+
+#### Visual Studio Code
+
+Install the CFML Plugin from KamasamaK: <https://marketplace.visualstudio.com/items?itemName=KamasamaK.vscode-cfml>
+
+#### VIM
+
+Requires the vim-shell plugin:
+
+```
+function! CFDocsSearch()
+   let wordUnderCursor = expand("<cword>")
+   execute 'Open https://cfdocs.org/' . wordUnderCursor
+endfunction
+
+command! -nargs=0 CFdocs :call CFDocsSearch()
+```
+
+#### CFEclipse
+
+Hit `F1` when the cursor is on a tag or function to be taken to the cfdocs.org doc. <http://cfeclipse.org/>
+
+

@@ -7,8 +7,7 @@
 	"description":" Parses a date/time string according to the English (U.S.)\n locale conventions. (To format a date/time string for other\n locales, use the LSParseDateTime function.)",
 	"params": [
 		{"name":"dt_string","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"pop_conversion","description":"- standard: (the default) function does no conversion.\n - pop: specifies that the date\/time string is in POP format,\n which includes the local time of the sender and a time-zone\n offset from UTC. ColdFusion applies the offset and returns\n a value with the UTC time.","required":false,"default":"standard","type":"string","values":["standard","pop"]}
-
+		{"name":"pop_conversion","description":"- standard: function does no conversion.\n - pop: specifies that the date\/time string is in POP format, which includes the local time of the sender and a time-zone offset from UTC. ColdFusion applies the offset and returns\n a value with the UTC time.\n- Apart from these two values, this parameter allows you to directly specify the format in which to parse the given string.","required":false,"default":"standard","type":"string","values":["standard","pop"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/parsedatetime.html"},
@@ -16,9 +15,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/parsedatetime"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/parsedatetime"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Tag Example",
@@ -28,5 +25,4 @@
 			"runnable":true
 		}
 	]
-
 }

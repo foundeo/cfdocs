@@ -17,7 +17,7 @@
 	"links": [],
 	"examples": [
 		{
-			"title": "Checks if file at the give path exists.",
+			"title": "Checks if file at the given path exists.",
 			"description": "",
 			"code": "var myFile = \"/path/to/the/file.jpg\";\r\nif(fileExists(myFile)) {\r\n\twriteOutput(myFile & 'exists!');\r\n}",
 			"result": ""

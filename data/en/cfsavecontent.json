@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cfsavecontent variable=\"\">",
 	"script":"savecontent variable=\"\" {};",
-	"related":[],
+	"related":["cfset"],
 	"description":"Saves the generated content of the cfsavecontent tag, including\n the results of evaluating expressions and executing custom tags,\n in the specified variable.",
 	"params": [
 		{"name":"variable","description":"Name of the variable in which to save the generated content\n of the tag.","required":true,"default":"","type":"string","values":[]}

@@ -3,12 +3,12 @@
 	"type":"function",
 	"syntax":"listFindNoCase(list, value [, delimiters, includeEmptyValues])",
 	"returns":"numeric",
-	"related":[],
+	"related":["listFind","arrayFindNoCase"],
 	"description":"Determines the index of the first list element in which a specified value occurs. Returns 0 if not found. Case-insensitive.",
 	"params": [
 		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[",","|",";","chr(9)","chr(10)","chr(13)"]},
+		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]},
 		{"name":"includeEmptyValues","description":"","required":false,"default":"false","type":"string","values":["true","false"]}
 	],
 	"engines": {
@@ -17,9 +17,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listfindnocase"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listfindnocase"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Basic Example",
@@ -34,5 +32,4 @@
 			"result":"2"
 		}
 	]
-
 }

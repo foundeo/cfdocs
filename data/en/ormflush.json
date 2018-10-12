@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"ormFlush([datasource])",
 	"returns":"void",
-	"related":[],
+	"related":["ormFlushAll"],
 	"description":"Flushes the current ORM session. ORMFlush flushes all the pending CRUD operations in that request. Any changes made in the objects, in the current ORM session, are saved to the database.",
 	"params": [
 		{"name":"datasource","description":"datasource used for the session, if nor defined the datasource defined in application.cfc/cfapplication is used.","required":false,"default":"","type":"string","values":[]}
@@ -13,9 +13,7 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/ormflush.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ormflush"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Flush all pending CRUD operations for datasource defined in the application.cfc",

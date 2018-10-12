@@ -4,7 +4,7 @@
 	"syntax": "arraySome(array, closure [, parallel] [, maxThreads])",
 	"member": "array.some(closure [, parallel] [, maxThreads])",
 	"returns": "boolean",
-	"related": [],
+	"related": ["arrayEvery"],
 	"description": "Calls a given closure/function with every element in a given array and returns true if one of the closure calls returns true",
 	"params": [
 		{"name": "array", "description": "Array to iterate", "required": true, "default": "", "type": "array", "values": []},

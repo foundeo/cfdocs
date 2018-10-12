@@ -5,7 +5,7 @@
 	"member": "query.rowData(rowNumber)",
 	"returns": "struct",
 	"related": [],
-	"description": "",
+	"description": "Returns the cells of a query row as a structure",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "rowNumber", "description": "", "required": true, "default": "", "type": "numeric", "values": []}

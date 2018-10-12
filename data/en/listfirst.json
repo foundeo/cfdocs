@@ -3,12 +3,11 @@
 	"type":"function",
 	"syntax":"listFirst(list [, delimiters])",
 	"returns":"string",
-	"related":[],
+	"related":["listRest","listLast"],
 	"description":" Gets the first element of a list.",
 	"params": [
 		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
-
+		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listfirst.html"},
@@ -16,9 +15,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listfirst"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listfirst"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 				"title":"Simple listFirst Example",

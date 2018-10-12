@@ -8,8 +8,7 @@
 	"description":" Converts a value to a string.\nLucee parses numbers with one decimal place.\ncomplex object types can only be used in combination with the member syntax.",
 	"params": [
 		{"name":"any_value","description":"Value to convert to a string","required":true,"default":"","type":"any","values":[]},
-		{"name":"encoding","description":"The character encoding (character set) of the string.","required":false,"default":"The default value is the encoding of the page on which the function is called.","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
-
+		{"name":"encoding","description":"The character encoding (character set) of the string.\n\nThe default value is the encoding of the page on which the function is called.","required":false,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/tostring.html"},
@@ -17,14 +16,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/tostring"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/tostring"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "base64Value = toBase64( \"stringValue\" ); \r\n binaryValue = toBinary( base64Value ); \r\n stringValue = toString( binaryValue ); \r\n writeDump(stringValue);",
+			"code": "base64Value = toBase64( \"stringValue\" );\r\nbinaryValue = toBinary( base64Value );\r\nstringValue = toString( binaryValue );\r\nwriteDump(stringValue);",
 			"result": "Expected Result: stringValue"
 		},{
 			"title": "Structure to String",
@@ -40,5 +37,4 @@
 			"runnable":true
         	}
 	]
-
 }

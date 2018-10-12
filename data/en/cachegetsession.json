@@ -1,12 +1,12 @@
 {
 	"name":"cacheGetSession",
 	"type":"function",
-	"syntax":"cacheGetSession()",
+	"syntax":"cacheGetSession(objectType)",
 	"returns":"any",
 	"related":["cfcache", "cachePut", "cacheGet", "cacheGetAllIds", "cacheGetMetadata", "cacheGetProperties", "cacheSetProperties"],
 	"description":"Lets you retrieve the underlying cache object to access additional cache functionality that is not implemented in the tag cfcache.\n\nNote: Caution! Using the cacheGetSession function might pose security vulnerabilities. If you wish to disable the usage of this function, add it to Sandbox Security. ",
 	"params": [
-		{"name":"objectType","description":"Any of the following values: object, template, or name of the user-defined cache","required":true,"default":"","type":"","values":[]},
+		{"name":"objectType","description":"Any of the following values: object, template, or name of the user-defined cache","required":true,"default":"","type":"string","values":["object","template"]},
 		{"name":"isKey","description":"Set to true if objectType is user-defined cache.","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {

@@ -41,7 +41,7 @@
 		},
 		{
 			"name": "filter",
-			"description": "Applies a filter to the listed files, for example, `*.jpg`. Multiple filters can be applied by using a pipe delimiter. For example: `*.doc|*.xls`",
+			"description": "Applies a filter to the listed files, for example, `*.jpg`. Multiple filters can be applied by using a pipe delimiter. For example: `*.doc|*.xls`\nIn Lucee4.5+ it can be a closure as well.",
 			"required": false,
 			"default": "",
 			"type": "string",
@@ -76,12 +76,12 @@
 		},
 		"lucee": {
 			"minimum_version": "",
-			"notes": "The sort argument only works when `listInfo=\"query\"`.",
+			"notes": "In Lucee the `filter` param can be a closure as well where the path is passed in. The `sort` argument only works when `listInfo=\"query\"`.",
 			"docs": "http://docs.lucee.org/reference/functions/directorylist.html"
 		},
 		"railo": {
 			"minimum_version": "",
-			"notes": "",
+			"notes": "If a directory returns false in recursive mode the contained files are processed anyways",
 			"docs": "http://railodocs.org/index.cfm/function/directorylist"
 		},
 		"openbd": {
@@ -90,7 +90,13 @@
 			"docs": "http://openbd.org/manual/?/function/directorylist"
 		}
 	},
-	"links": [],
+	"links": [
+		{
+		    "title":"Enhance closure filter on directory copy (Lucee Development / LDEV-1542)",
+		    "description":"Support ticket by Brad Wood describing the filter misbehavior in recursive mode",
+		    "url":"https://luceeserver.atlassian.net/browse/LDEV-1542"
+		}
+	],
 	"examples": [
 		{
 			"title": "An array of files in this directory",
@@ -110,6 +116,13 @@
 			"title": "An array of files in the temp directory",
 			"description": "Including sub-directories and as an array containing full paths",
 			"code": "arrayOfTempFiles = directoryList( \"./\", true );",
+			"result": "",
+			"runnable": false
+		},
+		{
+			"title": "Filter files with closure",
+			"description": "Lucee4.5+ Pass a closure instead of a string as `filter` param",
+			"code": "arrayOfFilteredFiles = directoryList(\".\", false, \"name\", function(path) {\n\treturn ListFindNoCase(\"Application.cfc,robots.txt,server.json,favicon.ico,.htaccess,README.md\", path);\n});",
 			"result": "",
 			"runnable": false
 		}

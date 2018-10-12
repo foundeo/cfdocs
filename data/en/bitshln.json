@@ -4,7 +4,7 @@
 	"syntax":"bitShln(number, count)",
 	"returns":"numeric",
 	"related":["bitShrn"],
-	"description":" Performs a bitwise shift-left, no-rotation operation.",
+	"description":"Performs a bitwise shift-left, no-rotation operation.",
 	"params": [
 		{"name":"number","description":"Integer","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"count","description":"Number of bits to shift to the left (Integer in the range 0-31, inclusive)","required":true,"default":"","type":"numeric","values":[]}

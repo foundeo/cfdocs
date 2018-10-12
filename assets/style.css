@@ -18,6 +18,7 @@ h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier Ne
 h2 { text-transform: uppercase; }
 .listing { text-align: center; }
 #syntax { font-weight:bold; }
+#syntax > code { white-space: pre; padding: 0; }
 #forkme { position: absolute; top: 0; right: 0; border: 0; z-index: 9999; width:149px; height:149px;}
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {

@@ -5,12 +5,13 @@
 	"member": "array.last()",
 	"returns": "any",
 	"related": ["arrayFirst"],
-	"description": "Returns the first item from an array. Throws an error if the array is empty.",
+	"description": "Returns the last item from an array. Throws an error if the array is empty.",
 	"params": [
 		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraylast.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraylast.html"},
+		"coldfusion": {"minimum_version": "2018", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraylast.html"}
 	},
 	"examples": [
 		{
