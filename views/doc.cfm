@@ -22,7 +22,7 @@
 						<cfset data.script = replaceScript(name = data.name, mode = "cf") & ";">
 					<cfelseif NOT ListFindNoCase("cfif,cfset,cfelse,cfelseif,cfloop,cfinclude,cfparam,cfswitch,cfcase,cftry,cfthrow,cfrethrow,cfcatch,cffinally,cfmodule,cfcomponent,cfinterface,cfproperty,cffunction,cfimport,cftransaction,cftrace,cflock,cfthread,cfsavecontent,cflocation,cfargument,cfapplication,cfscript", data.name)>
 						<!--- add cfscript syntax --->
-						<cfset data.script = replaceScript(script = data.script, name = data.name, sytax = data.syntax, mode = "other">
+						<cfset data.script = replaceScript(script = data.script, name = data.name, sytax = data.syntax, mode = "other")>
 						<cfset data.scriptTitle = "Script Syntax ACF11+, Lucee, Railo 4.2+">
 					</cfif>
 					<cfif StructKeyExists(data, "script")>

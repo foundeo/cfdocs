@@ -63,8 +63,15 @@
 						<ul class="dropdown-menu">
 							<li><a href="#linkTo('engines')#">All Engines</a></li>
 							<li class="divider"></li>
-						<cfloop list="#listEngines#" index="engine">
-							<li><a href="#linkTo(engine)#">#application.engines[engine]#</a></li>
+						<cfloop list="#listEngines#" index="engineName">
+							<li class="dropdown-submenu">
+								<a>#ReReplace(engineName,"^\b(\w)","\u\1")#</a>
+								<ul class="dropdown-menu scrollable-menu">
+                                    <cfloop array="#application.engines[engineName]#" index="tf">
+                                        <li><a href="#linkTo(tf)#">#tf#</a></li>
+                                    </cfloop>
+								</ul>
+							</li>
 						</cfloop>
 						</ul>
 					</li>

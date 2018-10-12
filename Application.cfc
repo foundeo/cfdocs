@@ -32,7 +32,17 @@
 				</cfif>
 				<cfset application.guides[local.guide] = local.title>
 			</cfloop>
-			<cfset application.engines = "coldfusion,lucee,openbd,railo">
+			<cfset dataDir = ExpandPath("./data/en")>
+			<cfset application.engines = {'coldfusion': [],'lucee': [],'openbd': [],'railo': []}>
+			<cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
+				<cfset json = deserializeJSON(fileRead(filePath,"utf-8"))>
+				<cfif StructKeyExists(json,'engines')>
+					<cfloop index="i" array="#StructKeyArray(json.engines)#">
+						<cfset ArrayAppend(application.engines[i],json.name)>
+					</cfloop>
+				</cfif>
+				<cfset application.engines[i].sort("textnocase")>
+			</cfloop>
 		</cfif>
 		<cfset request.content = "">
 		<!--- cache for one day --->
