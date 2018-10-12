@@ -58,8 +58,8 @@
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="##" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a>
-						<ul class="dropdown-menu scrollable-menu">
+						<a href="##" class="dropdown-toggle" data-toggle="dropdown">Guides <b class="caret"></b></a>
+						<ul class="dropdown-menu">
 							<li><a href="#linkTo("application-cfc")#">Application.cfc</a></li>
 						<cfloop list="#listGuides#" index="guide">
 							<li><a href="#linkTo(guide)#">#application.guides[guide]#</a></li>
