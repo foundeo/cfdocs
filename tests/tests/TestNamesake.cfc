@@ -2,7 +2,7 @@ component extends="testbox.system.BaseSpec" {
 	function run(testResults, testBox) {
 		guidesDir = ExpandPath("../guides/en");
 		guides = directoryList(guidesDir, false, "array").map(function(path) {
-			return getFileFromPath(path);
+			return getFileFromPath(path).replace('.md','');
 		});
 		// temporary: should be removed later
 		index.components = ["application-cfc"];
