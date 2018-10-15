@@ -1,12 +1,12 @@
 {
 	"name":"isFileObject",
 	"type":"function",
-	"syntax":"isFileObject(filePath);",
+	"syntax":"isFileObject(object);",
 	"returns":"boolean",
-	"related":["isPDFObject","isSpreadsheetObject"],
-	"description":"",
+	"related":["isPDFObject","isSpreadsheetObject","isObject"],
+	"description":"Checks if the given object is a filestream-object. A filestream-object you usally get, when calling fileOpen-function.",
 	"params": [
-		{"name":"filePath","description":"The path to the file you are checking.","required":true,"default":"","type":"","values":[]}
+		{"name":"object","description":"The object you want to check, if it is a filestream-object.","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"11", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/IsFileObject.html"}
@@ -14,10 +14,11 @@
 	"links": [],
 	"examples": [
         	{
-			"title": "Tag Syntax",
-			"description": "",
-			"code": "<cfscript>\r\nfilePath = expandPath(\"./myfile.txt\");\r\na = fileOpen(filePath);\r\nb = fileRead(filePath);\r\nwriteOutput(isFileObject(a));\r\nwriteOutput(isFileObject(b));\r\nwriteOutput(getFileInfo(filePath).type);\r\nwriteOutput(structKeyExists(getFunctionList(), \"isFileObject\"));\r\n</cfscript>",
-			"result": ""
+			"title": "Check for a filestream-object",
+			"description": "Checks if the fileObj is a filestream-object.",
+			"code": "filePath = expandPath(\"./myfile.txt\");\r\nfileObj = fileOpen(filePath);\r\nwriteOutput(isFileObject(fileObj));",
+			"result": "true",
+			"runnable": false
 		}
 	]
 }
