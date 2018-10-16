@@ -5,7 +5,7 @@
 	"member":"structure.toSorted(callback)",
 	"returns": "struct",
 	"related":["structSort"],
-	"description":"Used to sort a struct. Returns a new ordered struct.",
+	"description":"Converts a struct to an ordered one",
 	"params": [
 		{
 			"name": "structure",
@@ -59,7 +59,7 @@
 		},
 		{
 			"name": "sorttype",
-			"description": "* numeric\n* text",
+			"description": "",
 			"required": false,
 			"default": "text",
 			"type": "string",

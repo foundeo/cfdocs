@@ -1,12 +1,12 @@
 {
 	"name":"asc",
 	"type":"function",
-	"syntax":"asc(String)",
+	"syntax":"asc(string)",
 	"returns":"numeric",
 	"related":["chr"],
-	"description":" Determines the value of a character.",
+	"description":"Determines the ASCII value of a character.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]}
+		{"name":"string","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

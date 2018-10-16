@@ -4,11 +4,10 @@
 	"syntax":"bitXor(number1, number2)",
 	"returns":"numeric",
 	"related":["bitAnd","bitOr"],
-	"description":" Performs a bitwise logical XOR operation.",
+	"description":"Performs a bitwise logical XOR operation.",
 	"params": [
 		{"name":"number1","description":"Integer","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"number2","description":"Integer","required":true,"default":"","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/bitxor.html"},

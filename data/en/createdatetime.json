@@ -4,17 +4,19 @@
 	"syntax":"createDateTime(year, month, day, hour, minute, second)",
 	"returns":"date",
 	"related":["createDate", "createTime", "createODBCDateTime"],
-	"description":" Creates a date-time object.",
+	"description":"Creates a date-time object.",
 	"params": [
-		{"name":"year","description":"","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"month","description":"Numeric month of the year (1-12)","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"day","description":"Day of the month","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"hour","description":"Hour of the day in 24-hour notation (0-23)","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"minute","description":"","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"second","description":"","required":true,"default":"","type":"numeric","values":[]}
+		{"name":"year","description":"Integer in the range 0-9999. When in the range 0-29, year is converted to 2000-2029. When in the range 30-99, year is converted to 1930-1999. You cannot specify dates before AD 100.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"month","description":"Numeric month of the year (1-12). CF2016+ Optional","required":true,"default":"1","type":"numeric","values":[]},
+		{"name":"day","description":"Day of the month. CF2016+ Optional","required":true,"default":"1","type":"numeric","values":[]},
+		{"name":"hour","description":"Hour of the day in 24-hour notation (0-23). CF2016+ Optional","required":true,"default":"0","type":"numeric","values":[]},
+		{"name":"minute","description":"Minute within the hour. CF2016+ Optional","required":true,"default":"0","type":"numeric","values":[]},
+		{"name":"second","description":"Second within the minute. CF2016+ Optional","required":true,"default":"0","type":"numeric","values":[]},
+		{"name":"millisecond","description":"","required":false,"default":"0","type":"numeric","values":[]},
+		{"name":"timezone","description":"","required":false,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateDateTime.html"},
+		"coldfusion": {"minimum_version":"6", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateDateTime.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/createdatetime.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createdatetime"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createdatetime"}

@@ -1,0 +1,19 @@
+{
+	"name":"isK2ServerDocCountExceeded",
+	"type":"function",
+	"syntax":"isK2ServerDocCountExceeded()",
+	"returns":"boolean",
+	"related":[
+    "getK2ServerDocCountLimit", "isK2ServerABroker"
+  ],
+	"description":"Check if the document count limit is exceeded",
+	"params": [],
+	"engines": {
+		"coldfusion": {"minimum_version":"6", "deprecated":"6.1", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isk2serverdoccountexceeded.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":""},
+		"railo": {"minimum_version":"", "notes":"", "docs":""}
+	},
+	"links": [
+
+	]
+}

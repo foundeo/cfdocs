@@ -1,25 +1,25 @@
 {
 	"name":"createObject",
 	"type":"function",
-	"syntax":"createObject(type, class)",
+	"syntax":"createObject(type, className)",
 	"returns":"any",
 	"related":["cfobject","cfinvoke"],
 	"description":"The createObject function takes different arguments depending on the value of the type argument:\n\n createObject('component', cfcName)\n createObject('java', class)\n createObject('java', class, bundleName, bundleVersion) (Lucee only)\n createObject('webservice', urltowsdl, [, portname])\n createObject('.NET', class, assembly [, server, port, protocol, secure])\n createObject('com', class, context, serverName)",
 	"params": [
 		{"name":"type","description":"The type of object","required":true,"default":"","type":"string","values":["component","corba","com","java","webservice",".NET","dotnet"]},
+		{"name":"className","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"context","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"class","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"locale","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"servername","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"component_name","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"urltowsdl","description":"WSDL file URL; location of web service","required":true,"default":"","type":"string","values":[]},
 		{"name":"portname","description":"The port name for the web service. This value is case-sensitive\n and corresponds to the port element's name attribute under the\n service element.\n Specify this parameter if the web service contains multiple ports.\n If no port name is specified, ColdFusion uses the first port found\n in the WSDL.","required":false,"default":"","type":"string","values":[]},
-		{"name":"OSGibundle","description":"Bundle where the object has to be located","required":false,"default":"","type":"string","values":[]},
-		{"name":"OSGiversion","description":"Specific version to","required":false,"":"false","type":"string","values":[]}
+		{"name":"bundleName","description":"Bundle where the object has to be located","required":false,"default":"","type":"string","values":[]},
+		{"name":"bundleVersion","description":"Specific version to","required":false,"":"false","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"CORBA support DEPRECATED in CF11+", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateObject.html"},
-		"lucee": {"minimum_version":"", "notes":"OSGi bundle and version ADDED in Lucee5+", "docs":"http://docs.lucee.org/reference/functions/createobject.html"},
+		"coldfusion": {"minimum_version":"4.5", "notes":"CORBA support DEPRECATED in CF11+", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateObject.html"},
+		"lucee": {"minimum_version":"", "notes":"OSGi bundle and version ADDED in Lucee5+", "docs":"http://docs.lucee.org/reference/functions/createobject.html", "deprecated": "5"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createobject"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createobject"}
 	},

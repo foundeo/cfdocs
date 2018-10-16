@@ -246,7 +246,7 @@
 			"name": "to",
 			"required": true,
 			"type": "string",
-			"description": "Message recipient email addresses.",
+			"description": "Message recipient email addresses. To specify multiple addresses, separate the addresses with commas.",
 			"default": "",
 			"values": []
 		},
@@ -293,7 +293,7 @@
 	],
 	"engines": {
 		"coldfusion": {
-			"minimum_version": "",
+			"minimum_version": "1.5",
 			"notes": "",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmail.html"
 		},

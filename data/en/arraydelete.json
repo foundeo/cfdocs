@@ -1,14 +1,14 @@
 {
   "name": "arrayDelete",
   "type": "function",
-  "syntax": "arrayDelete(array, object)",
-  "member": "someArray.delete(object)",
+  "syntax": "arrayDelete(array, value)",
+  "member": "someArray.delete(value)",
   "returns": "boolean",
   "related": [
     "arrayDeleteAt",
     "arrayDeleteNoCase"
   ],
-  "description": "Deletes the first element in an array that matches the value of `object`.\nThe search is case sensitive.\nReturns `true` if the element was found and removed.\nThe array will be resized, so that the deleted element doesn't leave a gap.",
+  "description": "Deletes the first element in an array that matches the value of `value`.\nThe search is case sensitive.\nReturns `true` if the element was found and removed.\nThe array will be resized, so that the deleted element doesn't leave a gap.",
   "params": [
     {
       "name": "array",
@@ -19,8 +19,8 @@
       "values": []
     },
     {
-      "name": "object",
-      "description": "A string, numeric or boolean value on which to search. Case sensitive.",
+      "name": "value",
+      "description": "A value for which to search. Case sensitive.",
       "required": true,
       "default": "",
       "type": "any",
@@ -28,7 +28,7 @@
     },
     {
       "name": "scope",
-      "description": "Lucee4.5+ remove one (default) or all occurances of the object",
+      "description": "Lucee4.5+ remove one (default) or all occurrences of the value",
       "required": false,
       "default": "one",
       "type": "string",
@@ -68,7 +68,7 @@
     },
     {
       "title": "Use of scope parameter",
-      "description": "Lucee4.5+ Use scope to remove one or all occurances of the object",
+      "description": "Lucee4.5+ Use scope to remove one or all occurrences of the value",
       "code": "arr = ['apple', 'orange', 'pear', 'apple'];\narr.delete('apple', 'all');\n\nwriteDump(arr);",
       "result": "['orange','pear']",
       "runnable": true

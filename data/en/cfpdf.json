@@ -11,7 +11,7 @@
 			"required": true,
 			"default": "",
 			"type": "string",
-			"values": ["addwatermark", "deletepages", "getinfo", "merge", "protect", "processddx", "read", "removewatermark", "setinfo", "thumbnail", "write", "extracttext", "extractimage", "addheader", "addfooter", "removeheaderfooter", "optimize", "transform"]
+			"values": ["archive", "addAttachments", "addStamp", "addWatermark", "deletePages", "export", "getInfo", "import", "merge", "processddx", "protect", "read", "removeWatermark", "sanitize", "setInfo", "sign", "thumbnail", "write", "optimize", "extracttext", "extractimage", "addheader", "addfooter", "removeheaderfooter", "transform", "unsign", "validatesignature", "readsignaturefields"]
 		},
 		{
 			"name": "ascending",
@@ -545,7 +545,7 @@
 	"engines": {
 		"coldfusion": {
 			"minimum_version": "8",
-			"notes": "CF9+ Added new attributes: jpgdpi, maxBreadth, noAttachments, leftMargin, algo, noMetadata, noBookMarks, noJavaScripts, useStructure, noFonts",
+			"notes": "CF9+ Added new attributes: jpgdpi, maxBreadth, noAttachments, leftMargin, algo, noMetadata, noBookMarks, noJavaScripts, useStructure, noFonts.\n CF11 added validatesignature and readsignaturefields. CF2016 added sanitize, export, import, archive, addAttachments, addStamp, redact ",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpdf.html"
 		},
 		"lucee": {

@@ -2,7 +2,6 @@
     "name":"cacheGetEngineProperties",
     "type":"function",
     "syntax":"cacheGetEngineProperties()",
-    "script":"cacheGetEngineProperties();",
     "returns":"struct",
     "related":[
         "cacheGet",
@@ -12,7 +11,7 @@
     "description":"Returns some properties of the cache engine",
     "params":[],
     "engines":{
-        "coldfusion":{"minimum_version":"2018", "notes":"", "docs":""}
+        "coldfusion":{"minimum_version":"2018", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/cachegetengineproperties.html"}
     },
     "links":[
         {
@@ -25,7 +24,7 @@
         {
             "title":"Get the name of the cache engine",
             "description":"Pick the 'name' property from the cache engine property structure",
-            "code":"writeoutput(cacheGetEngineProperties().name);",
+            "code":"writeOutput(cacheGetEngineProperties().name);",
             "result":"Ehcache",
             "runnable":true
         }

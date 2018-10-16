@@ -4,7 +4,7 @@
 	"syntax":"bitOr(number1, number2)",
 	"returns":"numeric",
 	"related":["bitAnd","bitXor"],
-	"description":" Performs a bitwise logical OR operation.",
+	"description":"Performs a bitwise logical OR operation.",
 	"params": [
 		{"name":"number1","description":"Integer","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"number2","description":"Integer","required":true,"default":"","type":"numeric","values":[]}

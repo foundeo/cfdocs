@@ -2,7 +2,7 @@
 	"name":"cfldap",
 	"type":"tag",
 	"syntax":"<cfldap server=\"\">",
-	"related":[],
+	"related":["encodeForLDAP","encodeForDN"],
 	"description":"Provides an interface to a Lightweight Directory Access Protocol\n (LDAP) directory server, such as the Netscape Directory Server.",
 	"params": [
 		{"name":"server","description":"Host name or IP address of LDAP server.","required":true,"default":"","type":"string","values":[]},
@@ -31,32 +31,35 @@
 		{"name":"clientcert","description":"CF11+ A file path to a client certificate.","required":false,"default":"","type":"string","values":[]},
 		{"name":"clientcertpassword","description":"CF11+ The password for the client certificate file.","required":false,"default":"","type":"string","values":[]},
 		{"name":"usetls","description":"CF11+ Indicates that the connection should be made using transport layer security.","required":false,"default":"false","type":"boolean","values":[]}
-
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cfldap.html"},
+		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cfldap.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/ldap.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfldap"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfldap"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
+		{
+			"title":"Runnable LDAP Query Example",
+			"description":"Queries the debian developer LDAP server and returns users with a surname of Smith",
+			"code":"<cfldap server=\"db.debian.org\" \r\n       action=\"query\"\r\n       name=\"results\"\r\n       start=\"dc=debian,dc=org\"\r\n       filter=\"sn=Smith\"\r\n       attributes=\"cn,sn,givenName,mail,st,l,ou\">\r\n\t   \r\n<cfdump var=\"#results#\">",
+			"result":"",
+			"runnable":true
+		},
 		{
 			"title":"Lookup a User in Active Directory Example",
 			"description":"This example gets the user's data from active directory and displays a thumbnail image stored in active directory.",
-			"code":"<cfldap\r\n\tserver=\"ServerName\"\r\n\tport=636\r\n\taction=\"QUERY\"\r\n\tname=\"qLDAP\"\r\n\tsecure=\"CFSSL_BASIC\"\r\n\tusername=\"mydomain\\#ldapUsername#\"\r\n\tpassword=\"#ldapPassword#\"\r\n\tstart=\"dc=MYDOMAIN,dc=MYTLD\"\r\n\tattributes=\"cn,userPrincipalName,title,mail,thumbnailPhoto\"\r\n\tfilter=\"(sAMAccountName=#username#)\"> \r\n\r\n<cfoutput><img src=\"data:image/jpeg;base64,#binaryEncode(qLDAP.thumbnailPhoto,\"Base64\")#\" /></cfoutput>",
+			"code":"<cfldap\r\n\tserver=\"ServerName\"\r\n\tport=636\r\n\taction=\"QUERY\"\r\n\tname=\"qLDAP\"\r\n\tsecure=\"CFSSL_BASIC\"\r\n\tusername=\"mydomain\\#encodeForLDAP(ldapUsername)#\"\r\n\tpassword=\"#ldapPassword#\"\r\n\tstart=\"dc=MYDOMAIN,dc=MYTLD\"\r\n\tattributes=\"cn,userPrincipalName,title,mail,thumbnailPhoto\"\r\n\tfilter=\"(sAMAccountName=#encodeForLDAP(username)#)\"> \r\n\r\n<cfoutput><img src=\"data:image/jpeg;base64,#binaryEncode(qLDAP.thumbnailPhoto,\"Base64\")#\" /></cfoutput>",
 			"result":"",
 			"runnable":false
 		},
 		{
 			"title":"Script Syntax to Authenticate a User via Active Directory",
 			"description":"This is an example of using `cfldap` to authenticate a user against an Active Directory server.  The server or domain CA certificate must be imported into the cacerts java keystore for `security=\"CFSSL_BASIC\"` to work. ",
-			"code":"cfldap(\r\n\tserver = \"ServerName\",\r\n\tport = 636,\r\n\taction = \"QUERY\",\r\n\tname = \"qLDAPLookup\",\r\n\tsecure = \"CFSSL_BASIC\",\r\n\tusername = \"MYDOMAIN\\#arguments.username#\",\r\n\tpassword = arguments.password,\r\n\tstart = \"dc=MYDOMAIN,dc=MYTLD\",\r\n\tattributes = \"cn,userPrincipalName,title,mail\",\r\n\ttimeout = \"10\",\r\n\tfilter = \"(sAMAccountName=#arguments.username#)\"\r\n);\r\n\r\nif (qLDAPLookup.recordCount) {\r\n\tuserAuthenticated = true;\r\n}",
+			"code":"cfldap(\r\n\tserver = \"ServerName\",\r\n\tport = 636,\r\n\taction = \"QUERY\",\r\n\tname = \"qLDAPLookup\",\r\n\tsecure = \"CFSSL_BASIC\",\r\n\tusername = \"MYDOMAIN\\#encodeForLDAP(arguments.username)#\",\r\n\tpassword = arguments.password,\r\n\tstart = \"dc=MYDOMAIN,dc=MYTLD\",\r\n\tattributes = \"cn,userPrincipalName,title,mail\",\r\n\ttimeout = \"10\",\r\n\tfilter = \"(sAMAccountName=#encodeForLDAP(arguments.username)#)\"\r\n);\r\n\r\nif (qLDAPLookup.recordCount) {\r\n\tuserAuthenticated = true;\r\n}",
 			"result":"",
 			"runnable":false
 		}
 	]
-
 }
