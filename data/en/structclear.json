@@ -15,6 +15,20 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structclear"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structclear"}
 	},
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "profile = {name:'John', instrument:'guitar', occupation:'singer'};\r\nstructClear(profile);\r\nwriteDump(profile);",
+			"result": "An empty struct"
+		},
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset vegetable = \"\" />\r<cfswitch expression=\"#vegetable#\">\r\n    <cfcase value=\"carrot\">\r\n        Carrots are orange.\r\n    </cfcase>\r\n    <cfdefaultcase>\r\n        You don't have any vegetables!\r\n    </cfdefaultcase>\r\n</cfswitch>",
+			"result": "An empty struct"
+		}
+	],
 	"links": [
 
 	]
