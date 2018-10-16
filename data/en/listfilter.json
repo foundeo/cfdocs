@@ -2,7 +2,7 @@
 	"name": "listFilter",
 	"type": "function",
 	"syntax": "listFilter(list, function(listElement, [list]) )",
-	"member": "someList.filter(function(listElement, [list]) )",
+	"member": "someList.listFilter(function(listElement, [list]) )",
 	"returns": "string",
 	"related": ["listGetAt"],
 	"description": "Used to filter an list to items for which the closure function returns true.",
@@ -53,6 +53,12 @@
 			"title": "Example using a simple numeric comparison",
 			"description": "Take list and use List Filter to return items that are 3 and higher.",
 			"code": "numberList = '1,2,3,4,5,6';\n\nthreeOrMore = listFilter(numberList, function(item){\n     return item >= 3;\n});\nwritedump(threeOrMore);",
+			"result": "A List with the values '3,4,5,6'"
+		},
+		{
+			"title": "Example using a member function",
+			"description": "This is the same example as above, but using a member function on the list instead of a standalone function.",
+			"code": "numberList = '1,2,3,4,5,6';\n\nthreeOrMore = numberList.listFilter(function(item){\n     return item >= 3;\n});\nwritedump(threeOrMore);",
 			"result": "A List with the values '3,4,5,6'"
 		}
 	]
