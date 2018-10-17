@@ -1,4 +1,21 @@
 <cfoutput>
+	<cfscript>
+		related = [];
+		guides = [];
+		if (structKeyExists(data, "related") AND arrayLen(data.related)) {
+			for(i = 1; i lte arrayLen(data.related); i++) {
+                		_doc = data.related[i];
+				jsonPath = expandPath("./data/en/#LCase(_doc)#.json");
+				guidePath = expandPath("./guides/en/#LCase(_doc)#.md");
+				if (fileExists(jsonPath)) {
+					arrayAppend(related,data.related[i]);
+				}
+				else if (fileExists(guidePath)) {
+					arrayAppend(guides,data.related[i]);
+				}
+			}
+		}
+	</cfscript>
 	<div class="jumbotron">
 		<div class="container" data-doc="#encodeForHTMLAttribute(data.name)#">
 			<h1 id="docname">#data.name#</h1>
@@ -114,7 +131,7 @@
 	</cfif>
 	
 	<div class="container">
-		<cfif StructKeyExists(data, "related") AND ArrayLen(data.related)>
+		<cfif arrayLen(related)>
 			<cfif data.type IS "listing" OR data.type IS "404">
 				<div class="listing">
 					<cfloop array="#data.related#" index="r">
@@ -124,9 +141,23 @@
 			<cfelse>
 				<div class="related">
 					See Also:
-					<cfloop array="#data.related#" index="r">
-						<a href="#linkTo(r)#" class="related label label-default">#r#</a>
+					<cfloop array="#related#" index="r">
+						<a href="#linkTo(r)#" class="related label label-default">
+							<cfif r.startsWith('cf')>
+								<span class="glyphicon glyphicon-tags"></span>
+							<cfelse>
+								<span class="glyphicon glyphicon-flash"></span>
+							</cif>&ensp;
+							#r#
+						</a>
 					</cfloop>
+					<cfif arrayLen(guides)>
+						<cfloop array="#guides#" index="g">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-book" title="Guide"></span>&ensp;<a href="#linkTo(guides[g])#" style="color:white;">#guides[g]# guide</a>
+							</span>
+						</cfloop>
+					</cfif>
 				</div>
 			</cfif>
 		</cfif>
