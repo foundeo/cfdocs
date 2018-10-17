@@ -17,7 +17,7 @@
 	"examples": [{
 		"title": "Return comma separated printer list",
 		"description": "",
-		"code": "getPrinterList(\", \")",
+		"code": "writeDump(getPrinterList());",
 		"result": "",
 		"runnable": true
 	}]
