@@ -4,7 +4,7 @@
 		guides = [];
 		if (structKeyExists(data, "related") AND arrayLen(data.related)) {
 			for(i = 1; i lte arrayLen(data.related); i++) {
-                _doc = data.related[i];
+                		_doc = data.related[i];
 				jsonPath = expandPath("./data/en/#LCase(_doc)#.json");
 				guidePath = expandPath("./guides/en/#LCase(_doc)#.md");
 				if (fileExists(jsonPath)) {
@@ -18,14 +18,7 @@
 	</cfscript>
 	<div class="jumbotron">
 		<div class="container" data-doc="#encodeForHTMLAttribute(data.name)#">
-			<h1 id="docname">
-				#data.name#
-			</h1>
-			<cfif arrayLen(guides)>
-				<span class="label label-success">
-					<span class="glyphicon glyphicon-book" title="Guide"></span> <a href="#linkTo(guides[1])#" style="color:white;">#guides[1]#</a>
-				</span>
-			</cfif>
+			<h1 id="docname">#data.name#</h1>
 			<p>#autoLink(data.description)#</p>
 			<cfif StructKeyExists(data, "syntax") AND Len(data.syntax)>
 				<p id="syntax">
@@ -149,8 +142,22 @@
 				<div class="related">
 					See Also:
 					<cfloop array="#related#" index="r">
-						<a href="#linkTo(r)#" class="related label label-default">#r#</a>
+						<a href="#linkTo(r)#" class="related label label-default">
+							<cfif r.startsWith('cf')>
+								<span class="glyphicon glyphicon-tags"></span>
+							<cfelse>
+								<span class="glyphicon glyphicon-flash"></span>
+							</cif>&ensp;
+							#r#
+						</a>
 					</cfloop>
+					<cfif arrayLen(guides)>
+						<cfloop array="#guides#" index="g">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-book" title="Guide"></span>&ensp;<a href="#linkTo(guides[g])#" style="color:white;">#guides[g]# guide</a>
+							</span>
+						</cfloop>
+					</cfif>
 				</div>
 			</cfif>
 		</cfif>
