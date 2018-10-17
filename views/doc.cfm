@@ -154,7 +154,7 @@
 					<cfif arrayLen(guides)>
 						<cfloop array="#guides#" index="g">
 							<span class="label label-success">
-								<span class="glyphicon glyphicon-book" title="Guide"></span>&ensp;<a href="#linkTo(guides[g])#" style="color:white;">#guides[g]# guide</a>
+								<span class="glyphicon glyphicon-book" title="Guide"></span>&ensp;<a href="#linkTo(g)#" style="color:white;">#g# guide</a>
 							</span>
 						</cfloop>
 					</cfif>
