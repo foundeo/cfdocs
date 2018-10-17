@@ -147,7 +147,7 @@
 								<span class="glyphicon glyphicon-tags"></span>
 							<cfelse>
 								<span class="glyphicon glyphicon-flash"></span>
-							</cif>&ensp;
+							</cfif>&ensp;
 							#r#
 						</a>
 					</cfloop>
