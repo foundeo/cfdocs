@@ -15,7 +15,7 @@
 		{
 			"title": "Convert a date string to a numeric date",
 			"description": "This numeric date represents the number of days after January 1, 2008.",
-			"code": "someDate = '2018-01-01';\nnumericDate = getNumericDate(someDate);\nwriteDump(numericDate);",
+			"code": "getNumericDate('2018-01-01')",
 			"result": "43101"
 		}
 	],
