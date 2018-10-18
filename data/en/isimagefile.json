@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"isImageFile(path)",
 	"returns":"boolean",
-	"related":["isPDFFile","isImageFile"],
+	"related":["isPDFFile"],
 	"description":"Verifies whether an image file is valid.",
 	"params": [
 		{"name":"path","description":"Pathname to a image file.","required":true,"default":"","type":"string","values":[]}
