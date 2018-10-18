@@ -27,7 +27,11 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfzip"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfzip"}
 	},
-	"links": [],
+	"links": [{
+            "title":"Learning ColdFusion 8: CFZip Part IV - Extracting Zip File Archives",
+            "description":"Ben Nadel: The different use cases of cfzip",
+            "url":"https://www.bennadel.com/blog/855-learning-coldfusion-8-cfzip-part-iv---extracting-zip-file-archives.htm"
+        }],
 	"examples": [
 		{
 			"title":"Extract / Unzip a zip file into a folder",
