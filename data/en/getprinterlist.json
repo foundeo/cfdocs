@@ -16,8 +16,8 @@
 	"links": [],
 	"examples": [{
 		"title": "Return comma separated printer list",
-		"description": "",
-		"code": "writeDump(getPrinterList());",
+		"description": "On a server with printers, this will display a result. If there are none, it will be an empty string.",
+		"code": "getPrinterList();",
 		"result": "",
 		"runnable": true
 	}]
