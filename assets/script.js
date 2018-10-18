@@ -63,7 +63,8 @@ $(document).ready(function() {
 //search submit
 function submitSearch(e) {
 	e.preventDefault();
-  	document.location = '/' + $('#lookup-box').val().toLowerCase();
+	var newLocation = $('#lookup-box').val().toLowerCase();
+	document.location = '/' + encodeURIComponent((newLocation.length && newLocation[0] == '/') ? newLocation.slice(1) : newLocation);
 }
 //google analytics
 var _gaq = _gaq || [];
