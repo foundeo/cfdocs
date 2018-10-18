@@ -21,7 +21,7 @@
 			"description":"",
 			"code":"// Open File\nvar fileObject = fileOpen(\"/path/to/file.txt\");\n\n// Perform Actions\ntry\n{\n\t// Read Line\n\twriteOutput(fileReadLine(fileObject));\n}\n\n// Error Handling\ncatch(any ex)\n{\n\t// Report Exception\n\twriteDump(ex);\n}\n\n// Always Close\nfinally\n{\n\t// Close File\n\tfileClose(fileObject);\n}",
 			"result":"",
-			"runnable":true
+			"runnable":false
 		}
 	]
 }
