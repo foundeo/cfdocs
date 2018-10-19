@@ -44,5 +44,11 @@
 			"result":"+5/-5",
 			"runnable":true
 		}
+		{
+			"title":"Formats to a dollar format (US)",
+			"description":"",
+			"code":"numberFormat(123456789,'_$,9.99')",
+			"result":"$123,456,789.00"
+		},
 	]
 }
