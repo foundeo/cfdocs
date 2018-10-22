@@ -45,7 +45,7 @@
 			"runnable":true
 		},{
 			"title":"Formats to a dollar format (US)",
-			"description":"",
+			"description":"You could use dollarFormat() or lsCurrencyFormat() instead",
 			"code":"numberFormat(123456789,'_$,9.99')",
 			"result":"$123,456,789.00"
 		}
