@@ -1,42 +1,65 @@
 {
-	"name":"listFilter",
-	"type":"function",
-	"syntax":"listFilter(list, function(listElement, [list]) )",
-	"member":"someList.filter(function(listElement, [list]) )",
-	"returns":"string",
-	"related":["listGetAt"],
-	"description":"Used to filter an list to items for which the closure function returns true.",
+	"name": "listFilter",
+	"type": "function",
+	"syntax": "listFilter(list, function(listElement, [list]) )",
+	"member": "someList.listFilter(function(listElement, [list]) )",
+	"returns": "string",
+	"related": ["listGetAt"],
+	"description": "Used to filter an list to items for which the closure function returns true.",
 	"params": [
-		{"name":"list","description":"","required":true,"default":"","type":"List","values":[]},
-		{"name":"function","description":"Inline closure function executed for each element in the list. Returns true if the list element should be included in the filtered list. Support for passing the original list to the closure function added in CF11 Update 5.","required":true,"default":"","type":"function","values":[]}
+		{
+			"name": "list",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "List",
+			"values": []
+		},
+		{
+			"name": "function",
+			"description": "Inline closure function executed for each element in the list. Returns true if the list element should be included in the filtered list. Support for passing the original list to the closure function added in CF11 Update 5.",
+			"required": true,
+			"default": "",
+			"type": "function",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listfilter.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/listfilter.html"}
+		"coldfusion": {
+			"minimum_version": "10",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listfilter.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://docs.lucee.org/reference/functions/listfilter.html"
+		}
 	},
-	"links":[{
-		"title":"Map, Reduce and other Higher Order Functions",
-		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
-		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
-	},
-	{
-		"title": "ColdFusion 11: .map() and .reduce()",
-		"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
-		"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
-	}],
+	"links": [
+		{
+			"title": "Map, Reduce and other Higher Order Functions",
+			"description": "A Primer for map, reduce, filter, and Higher Order Functions in general.",
+			"url": "http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+		},
+		{
+			"title": "ColdFusion 11: .map() and .reduce()",
+			"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
+			"url": "http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
+		}
+	],
 	"examples": [
 		{
 			"title": "Example using a simple numeric comparison",
-			"description": "Take an array of struct items and use arrayFilter to return ones of a rating 3 and higher.",
-			"code": "fruitArray = [{fruit='apple', rating=4}, {fruit='banana', rating=1}, {fruit='orange', rating=5}, {fruit='mango', rating=2}, {fruit='kiwi', rating=3}];\n\nfavoriteFruits = arrayFilter(fruitArray, function(item){\n     return item.rating >= 3;\n});\nwritedump(favoriteFruits);",
-			"result": "Array with the structs for apple, orange and kiwi."
+			"description": "Take list and use List Filter to return items that are 3 and higher.",
+			"code": "numberList = '1,2,3,4,5,6';\n\nthreeOrMore = listFilter(numberList, function(item){\n     return item >= 3;\n});\nwritedump(threeOrMore);",
+			"result": "A List with the values '3,4,5,6'"
 		},
 		{
 			"title": "Example using a member function",
-			"description": "This is the same example as above, but using a member function on the array instead of a standalone function.",
-			"code": "fruitArray = [{fruit='apple', rating=4}, {fruit='banana', rating=1}, {fruit='orange', rating=5}, {fruit='mango', rating=2}, {fruit='kiwi', rating=3}];\n\nfavoriteFruits = fruitArray.filter(function(item){\n     return item.rating >= 3;\n});\nwritedump(favoriteFruits);",
-			"result": "Array with the structs for apple, orange and kiwi."
+			"description": "This is the same example as above, but using a member function on the list instead of a standalone function.",
+			"code": "numberList = '1,2,3,4,5,6';\n\nthreeOrMore = numberList.listFilter(function(item){\n     return item >= 3;\n});\nwritedump(threeOrMore);",
+			"result": "A List with the values '3,4,5,6'"
 		}
 	]
-
 }

@@ -10,5 +10,13 @@
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/createguid.html"}
 	},
 	"links": [],
-	"examples": []
+	"examples": [
+		{
+			"title":"Creates a Globally Unique Identifier (GUID). Each GUID will be unique",
+			"description":"",
+			"code":"createGUID()",
+			"result":"",
+			"runnable":true
+		}
+	]
 }

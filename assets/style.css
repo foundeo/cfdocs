@@ -163,3 +163,10 @@ pre.prettyprint {
 	height: 55px;
 	width: 1px
 }
+
+.dropdown-menu.scrollable-menu {
+	max-height: 300px;
+	overflow-x: hidden;
+}
+
+.related .label { margin-right: 4px; }

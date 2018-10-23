@@ -23,10 +23,16 @@
 			<cfelseif data.type IS "listing">
 				<cfset arrayAppend(categories, nameKey)>
 			</cfif>
-			<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "coldfusion") AND structKeyExists(data.engines.coldfusion, "minimum_version") AND isNumeric(data.engines.coldfusion.minimum_version)>
-
-				<cfif structKeyExists(versions, val(data.engines.coldfusion.minimum_version))>
-					<cfset arrayAppend(versions[val(data.engines.coldfusion.minimum_version)], data.name)>
+			<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "coldfusion") AND structKeyExists(data.engines.coldfusion, "minimum_version")>
+				<cfif isNumeric(data.engines.coldfusion.minimum_version)>
+					<cfset minimum_version = data.engines.coldfusion.minimum_version>
+				<cfelseif reFind('^[0-9]{2,4}\.[0-9]\.[0-9]+$', data.engines.coldfusion.minimum_version)>
+					<cfset minimum_version = reFind( '^([0-9]{2,4})', data.engines.coldfusion.minimum_version, 1, true ).match[1]>
+				<cfelse>
+					<cfset minimum_version = ''>
+				</cfif>
+				<cfif structKeyExists(versions, val(minimum_version))>
+					<cfset arrayAppend(versions[val(minimum_version)], data.name)>
 				</cfif>
 			</cfif>
 
@@ -55,7 +61,7 @@
 			<cfdump var="#cfcatch#">
 		</cfcatch>
 		</cftry>
-	</cfif>	
+	</cfif>
 </cfloop>
 <cfset arraySort(tags, "text")>
 <cfset arraySort(functions, "text")>
