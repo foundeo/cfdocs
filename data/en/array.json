@@ -4,7 +4,8 @@
 	"syntax": "array()",
 	"returns": "array",
 	"related": ["arrayNew"],
-	"description": "Creates a new array populated with any arguments that have been passed to the function. It is recommend by lucee to use the inline array notation.",
+	"description": "Creates a new array populated with any arguments that have been passed to the function.",
+	"discouraged": "It is recommend by lucee to use the inline array notation.",
 	"params": [
 		{"name":"values","description":"One or more values that can be used in the initialization of the array.","required":false,"default":"","type":"any","values":[]}
 	],
