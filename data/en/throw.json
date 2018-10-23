@@ -25,9 +25,16 @@
 	],
 	"examples": [
 		{
-			"title":"Throw custom errors",
+			"title":"Throw a custom exception",
 			"description":"Use the throw function to throw a custom application exception.",
-			"code":"if (!isJSON(httpResponse.fileContent)) {\r\n\tthrow(type=\"InvalidJSONResponse\",message=\"The http response was not valid JSON\");\r\n}",
+			"code":"<cfscript>\r\nthrow(type=\"MyCustomError\", message=\"A custom error has been thrown!\");\r\n</cfscript>",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Throw a custom http response exception",
+			"description":"Use the throw function to throw a custom exception when the http response is invalid.",
+			"code":"if (!isJSON(httpResponse.fileContent)) {\r\n\tthrow(type=\"InvalidHTTPResponse\",message=\"The http response was not valid JSON\");\r\n}",
 			"result":"",
 			"runnable":false
 		}
