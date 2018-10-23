@@ -1,31 +1,32 @@
 {
 	"name":"queryExecute",
-	"syntax":"queryExecute(sql [, params, options])",
+	"type":"function",
+	"syntax":"queryExecute(sql [, params, queryOptions])",
+	"returns":"query",
 	"description":"Executes a SQL query, returns the result.",
+	"related":["cfquery","cfqueryparam"],
 	"engines":{
 		"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryexecute.html","notes":""},
 		"lucee":{"minimum_version":"4.5", "docs":"http://docs.lucee.org/reference/functions/queryexecute.html","notes":""}
 		},
 	"links":[],
 	"params":[
-		{"values":[],"default":"","description":"SQL string to execute.","name":"sql","type":"string","required":"1"},
-		{"values":["cfsqltype","list"],"default":"","description":"Array or Struct of parameter values. When passing an array use ? as place holders. When passing a struct use :keyName where keyName is the name of the key in the structure corresponding to the parameter. The struct or array can be a struct with keys such as the following.","name":"params","type":"any","required":"0"},
-		{"values":["datasource","cachename","dbtype"],"default":"","description":"Struct containing query options, all cfquery tag attributes are supported except the name attribute.","name":"options","type":"struct","required":"0"}
+		{"name":"sql","description":"SQL string to execute.","values":[],"default":"","type":"string","required":true},
+		{"name":"params","description":"Array or Struct of parameter values. When passing an array use ? as place holders. When passing a struct use :keyName where keyName is the name of the key in the structure corresponding to the parameter. The struct or array can be a struct with keys such as the following.","values":[],"default":"","type":"any","required":false},
+		{"name":"queryOptions","description":"Struct containing query options, all cfquery tag attributes are supported except the name attribute.","values":[],"default":"","type":"struct","required":false}
 	],
-	"returns":"query",
 	"examples":[
-		{"title":"Simple Example", "description":"SQL Only Example. Assums that a default datasource has been specified (by setting the variable this.datasource in Application.cfc)", "code":"qryResult = queryExecute(\"SELECT * FROM Employees\");", "result":""},
+		{"title":"Simple Example", "description":"SQL Only Example. Assumes that a default datasource has been specified (by setting the variable this.datasource in Application.cfc)", "code":"qryResult = queryExecute(\"SELECT * FROM Employees\");", "result":""},
 		{"title":"Passing Query Parameters using Struct", "description":"Use :structKeyName in your sql then pass a struct with corresponding key names.", "code":"qryResult = queryExecute(\"SELECT * FROM Employees WHERE empid = :empid AND country = :country\", {country=\"USA\", empid=1});", "result":""},
 		{"title":"Passing Query Parameters using Array", "description":"When passing with an array use the ? as a placeholder in your sql", "code":"qryResult = queryExecute(\"SELECT * FROM Employees WHERE empid = ? AND country = ?\", [1,\"USA\"]);", "result":""},
 		{"title":"Passing Query Parameters using Struct of Structs", "description":"If you need to pass the cfsqltype or other cfqueryparam attributes you can pass a struct for each param.", "code":"qryResult = queryExecute(\"SELECT * FROM Employees WHERE empid = :empid AND country = :country\", {country={value=\"USA\", cfsqltype=\"cf_sql_varchar\"}, empid={value=1, cfsqltype=\"cf_sql_integer\"}});", "result":""},
 		{"title":"Specifying the Datasource", "description":"If you have not defined the datasource using this.datasource in Application.cfc or want to explicitly specify the datasource use the third argument.", "code":"qryResult = queryExecute(\"SELECT * FROM Employees\", {}, {datasource=\"myDataSourceName\"});", "result":""},
+		{"title":"Get Primary Key of INSERTed record", "description":"To return the Generated Key of an INSERT query, you need to specify a result variable in the 3rd argument, options.\n* Note your SQL must contain ONLY a single INSERT and no other SQL code or generatedKey will not be available.", "code":"queryExecute( \"INSERT INTO employee ( firstname ) VALUES ( :firstname )\", { firstname = { value=\"Han\", cfsqltype=\"varchar\" } }, { result=\"employee\" } );\nwriteDump( employee.generatedKey );", "result":""},
 		{"title":"IN Query using lists", "description":"Query the database using a list of values", "code":"keys = '1,2,3,4,5,6,7';\ndata = queryExecute(\"select * from sometable where somecolumn in (:keys)\",{keys={value=keys,list=true}}); ", "result":""},
 		{"title": "Query of Queries", "description": "Query a local database variable without going through your database", "code": "users = queryNew( \"firstname\", \"varchar\", [{\"firstname\":\"Han\"}] );\nsubUsers = queryExecute( \"select * from users\", {}, { dbtype=\"query\" } );\nwritedump( subUsers ); ", "result": "" },
 		{"title": "Return Query as an Array of Structs - Lucee5+", "description": "Lucee5+ Return a query object converted into an array of structs.", "code": "users = queryNew( \"firstname\", \"varchar\", [{\"firstname\":\"Han\"}] );\nsubUsers = queryExecute( \"select * from users\", {}, { dbtype=\"query\", returntype=\"array\" } );\nwritedump( subUsers ); ", "result": "[ { firstname: \"Han\" } ]"},
 		{"title": "Return Query as an Array of Structs - Lucee 4.5", "description": "Lucee4.5 Return a query object converted into an array of structs.", "code": "users = queryNew( \"firstname\", \"varchar\", [{\"firstname\":\"Han\"}] );\nsubUsers = queryExecute( \"select * from users\", {}, { dbtype=\"query\", returntype=\"array-of-entities\" } );\nwritedump( subUsers ); ", "result": "[ { firstname: \"Han\" } ]"},
 		{"title": "Return Query as a Struct of Structs", "description": "Lucee5+ Return a query object converted into a struct of structs. (Struct key is based on the \"columnkey\" parameter)", "code": "users = queryNew( \"id, firstname\", \"integer, varchar\", [{\"id\":1, \"firstname\":\"Han\"}] );\nsubUsers = queryExecute( \"select * from users\", {}, { dbtype=\"query\", returntype=\"struct\", columnkey=\"id\" } );\nwritedump( subUsers ); ", "result": "{ 1: { id: 1, firstname: \"Han\" } }"}
-	
+
 	]
-	,"type":"function",
-	"related":["cfquery","cfqueryparam"]
 }
