@@ -16,5 +16,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/xmlparse"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/xmlparse"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"Parse XML read from a file",
+			"description":"Read XML from a file and use the xmlParse method to parse it into an XML data structure.",
+			"code":"<cffile action=\"read\" file=\"#tempxml#\" variable=\"xmlString\">\r\n<cfset myXML = xmlParse(xmlString)>",
+			"result":"",
+			"runnable":false
+		}
+	]
 }
