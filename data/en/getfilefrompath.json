@@ -14,5 +14,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getfilefrompath"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getfilefrompath"}
 	},
-	"links": []
+	"links": [],
+	"examples" : [
+		{
+			"title":"Basic Example",
+			"description":"",
+			"code":"fileName = getFileFromPath(expandPath(\"./file.txt\"));",
+			"result":"The fileName variable will contain the string file.txt",
+			"runnable":false
+		}
+	]
 }
