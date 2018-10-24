@@ -2,12 +2,13 @@
 	"name":"structEach",
 	"type":"function",
 	"syntax":"structEach(struct,function(key, value [, struct]) {})",
-    "member":"someStruct.each(function(key, value [, struct]) {})",
+	"member":"someStruct.each(function(key, value [, struct]) {})",
+	"returns": "void",
 	"related":[],
 	"description":"Used to loop over elements in a structure by accessing key-value pairs.",
 	"params": [
-		{"name":"structure","description":"Structure or a variable that contains one.","required":true,"default":"","type":"String","values":[]},
-		{"name":"callback","description":"Closure or function reference that will be called for each iteration. The arguments passed to the callback are:\n\n<strong>key:</strong> Name of the key in the struct\n<strong>value:</strong> Value of the key in the struct\n<strong>struct:</strong> Lucee4.5+ A reference to the original struct","required":true,"default":"","type":"UDF","values":[]}
+		{"name":"structure","description":"Structure or a variable that contains one.","required":true,"default":"","type":"string","values":[]},
+		{"name":"callback","description":"Closure or function reference that will be called for each iteration. The arguments passed to the callback are:\n\n`key`: Name of the key in the struct\n`value`: Value of the key in the struct\n`struct`: Lucee4.5+ A reference to the original struct","required":true,"default":"","type":"function","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structeach.html"},

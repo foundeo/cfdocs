@@ -2,16 +2,15 @@
 	"name":"encryptBinary",
 	"type":"function",
 	"syntax":"encryptBinary(bytes, key [, algorithm] [, ivorsalt] [, iterations])",
-	"returns":"String",
-	"related":[],
+	"returns":"string",
+	"related":["decryptBinary"],
 	"description":" Encrypts binary data using a specific algorithm and encoding method.",
 	"params": [
-		{"name":"bytes","description":"Bindary data to encrypt.","required":true,"default":"","type":"String","values":[]},
-		{"name":"key","description":"Key or seed used to encrypt the string.\n * For the CFMX_COMPAT algorithm, any combination of any\n number of characters; used as a seed used to generate\n a 32-bit encryption key.\n * For all other algorithms, a key in the format used by the\n algorithm. For these algorithms, use the GenerateSecretKey\n function to generate the key.","required":true,"default":"","type":"String","values":[]},
-		{"name":"algorithm","description":"The algorithm to use to encrypt the string. \n * CFMX_COMPAT: the algorithm used in ColdFusion MX and prior\n releases. This algorithm is the least secure option (default).\n * AES: the Advanced Encryption Standard specified by the\n National Institute of Standards and Technology (NIST) FIPS-197.\n * BLOWFISH: the Blowfish algorithm defined by Bruce Schneier.\n * DES: the Data Encryption Standard algorithm defined by NIST FIPS-46-3.\n * DESEDE: the \"Triple DES\" algorithm defined by NIST FIPS-46-3.","required":false,"default":"CFMX_COMPAT","type":"String","values":["CFMX_COMPAT","AES","BLOWFISH","DES","DESEDE"]},
-		{"name":"ivorsalt","description":"Specify this parameter to adjust ColdFusion encryption to match\n the details of other encryption software. If you specify this\n parameter, you must also specify the algorithm parameter.\n * For Block Encryption Algorithms: This is the binary\n Initialization Vector value to use with the algorithm. The\n algorithm must contain a Feedback Mode other than ECB. This\n must be a binary value that is exactly the same size as the\n algorithm block size.\n * For Password Based Encryption Algorithms: This is the binary\n Salt value to transform the password into a key.","required":false,"default":"","type":"Binary","values":[]},
-		{"name":"iterations","description":"The number of iterations to transform the password into a\n binary key. Specify this parameter to adjust ColdFusion\n encryption to match the details of other encryption software.\n If you specify this parameter, you must also specify the\n algorithm parameter with a Password Based Encryption (PBE)\n algorithm. Do not specify this parameter for Block Encryption\n Algorithms. You must use the same value to encrypt and\n decrypt the data.\n * For Password Based Encryption Algorithms: This is the\n binary Salt value to transform the password into a key.","required":false,"default":"","type":"Numeric","values":[]}
-
+		{"name":"bytes","description":"Bindary data to encrypt.","required":true,"default":"","type":"string","values":[]},
+		{"name":"key","description":"Key or seed used to encrypt the string.\n * For the CFMX_COMPAT algorithm, any combination of any\n number of characters; used as a seed used to generate\n a 32-bit encryption key.\n * For all other algorithms, a key in the format used by the\n algorithm. For these algorithms, use the GenerateSecretKey\n function to generate the key.","required":true,"default":"","type":"string","values":[]},
+		{"name":"algorithm","description":"The algorithm to use to encrypt the string. \n * CFMX_COMPAT: the algorithm used in ColdFusion MX and prior\n releases. This algorithm is the least secure option (default).\n * AES: the Advanced Encryption Standard specified by the\n National Institute of Standards and Technology (NIST) FIPS-197.\n * BLOWFISH: the Blowfish algorithm defined by Bruce Schneier.\n * DES: the Data Encryption Standard algorithm defined by NIST FIPS-46-3.\n * DESEDE: the \"Triple DES\" algorithm defined by NIST FIPS-46-3.","required":false,"default":"CFMX_COMPAT","type":"string","values":["CFMX_COMPAT","AES","BLOWFISH","DES","DESEDE"]},
+		{"name":"ivorsalt","description":"Specify this parameter to adjust ColdFusion encryption to match\n the details of other encryption software. If you specify this\n parameter, you must also specify the algorithm parameter.\n * For Block Encryption Algorithms: This is the binary\n Initialization Vector value to use with the algorithm. The\n algorithm must contain a Feedback Mode other than ECB. This\n must be a binary value that is exactly the same size as the\n algorithm block size.\n * For Password Based Encryption Algorithms: This is the binary\n Salt value to transform the password into a key.","required":false,"default":"","type":"binary","values":[]},
+		{"name":"iterations","description":"The number of iterations to transform the password into a\n binary key. Specify this parameter to adjust ColdFusion\n encryption to match the details of other encryption software.\n If you specify this parameter, you must also specify the\n algorithm parameter with a Password Based Encryption (PBE)\n algorithm. Do not specify this parameter for Block Encryption\n Algorithms. You must use the same value to encrypt and\n decrypt the data.\n * For Password Based Encryption Algorithms: This is the\n binary Salt value to transform the password into a key.","required":false,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/encryptbinary.html"},
@@ -19,8 +18,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/encryptbinary"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/encryptbinary"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

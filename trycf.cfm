@@ -1,12 +1,15 @@
 <cfparam name="url.name" default="rereplace">
 <cfparam name="url.index" default="1" type="numeric">
-<cfparam name="url.engine" default="acf2016" type="variablename">
+<cfparam name="url.engine" default="acf2018" type="variablename">
 <cfsilent>
     <cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL")>
     <cfif FileExists(ExpandPath("./data/en/#url.name#.json"))>
         <cfset data = DeserializeJSON( FileRead(ExpandPath("./data/en/#url.name#.json")))>
     <cfelse>
         <cfset data={title="404"}>
+    </cfif>
+    <cfif structKeyExists(data.engines, "lucee") AND NOT structKeyExists(data.engines, "coldfusion")>
+        <cfset url.engine = "lucee5">
     </cfif>
     <cfset request.skipLayout=true>
 </cfsilent>
@@ -45,8 +48,8 @@
     </cfoutput>
 </cfif>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <cfoutput>
 <!--- TryCF Editor Scripts --->
 <!--- Ace Editor --->

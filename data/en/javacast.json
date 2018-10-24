@@ -2,16 +2,16 @@
 	"name":"javacast",
 	"type":"function",
 	"syntax":"javacast(type, variable)",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":"Converts the data type of a CFML variable to pass as an argument to an overloaded method of a Java object.",
 	"params": [
-		{"name":"type","description":"The name of a java primative or a Java class name.","required":true,"default":"","type":"String","values":["boolean","double","float","int","long","string","null","byte","bigdecimal", "char", "short"]},
-		{"name":"variable","description":"A variable, java object or array.","required":true,"default":"","type":"String","values":[]}
+		{"name":"type","description":"The name of a java primative or a Java class name.","required":true,"default":"","type":"string","values":["boolean","double","float","int","long","string","null","byte","bigdecimal", "char", "short"]},
+		{"name":"variable","description":"A variable, java object or array.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"CF7+ Added null. CF8+ added bigdecimal, byte, char, short and for casting arrays.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/javacast.html"},
+		"coldfusion": {"minimum_version":"4.5", "notes":"CF7+ Added null. CF8+ added bigdecimal, byte, char, short and for casting arrays.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/javacast.html"},
 		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/javacast.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/javacast"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/javacast"}

@@ -2,14 +2,14 @@
 	"name":"evaluate",
 	"type":"function",
 	"syntax":"evaluate(expression1 [, expression2] [, expressionN])",
-	"returns":"Object",
+	"returns":"any",
 	"related":[],
 	"description":"Evaluates one or more string expressions, dynamically, from left to right. (The results of an evaluation on the left can have meaning in an expression to the right.) Returns the result of evaluating the rightmost expression.",
 	"discouraged":"In almost all cases evaluate is unnecessary (use bracket notation instead). Use of evaluate can lead to performance and security issues.",
 	"params": [
-		{"name":"expression1","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"expression2","description":"","required":false,"default":"","type":"String","values":[]},
-		{"name":"expressionN","description":"","required":false,"default":"","type":"String","values":[]}
+		{"name":"expression1","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"expression2","description":"","required":false,"default":"","type":"string","values":[]},
+		{"name":"expressionN","description":"","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -22,7 +22,7 @@
 		{
 			"title":"Avoiding the Evalute Function",
 			"description":"Adobe Document discouraging use of Evaluate.",
-			"url":"http://help.adobe.com/en_US/ColdFusion/9.0/Developing/WSc3ff6d0ea77859461172e0811cbec09d55-7fdf.html"
+			"url":"https://helpx.adobe.com/coldfusion/developing-applications/the-cfml-programming-language/using-expressions-and-number-signs/dynamic-expressions-and-dynamic-variables.html#AvoidingtheEvaluatefunction"
 		}
 	],
 	"examples": [

@@ -2,7 +2,7 @@
 	"name":"getFunctionList",
 	"type":"function",
 	"syntax":"getFunctionList()",
-	"returns":"Struct",
+	"returns":"struct",
 	"related":[],
 	"description":"Returns a struct with keys of the names of functions that are available in CFML.",
 	"params": [],

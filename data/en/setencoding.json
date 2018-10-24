@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Sets the character encoding (character set) of Form and URL\n scope variable values; used when the character encoding of\n the input to a form, or the character encoding of a URL, is\n not in UTF-8 encoding.",
 	"params": [
-		{"name":"scope_name","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"charset","description":"The character encoding in which text in the scope\n variables is encoded.","required":true,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
+		{"name":"scope_name","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"charset","description":"The character encoding in which text in the scope\n variables is encoded.","required":true,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 
 	],
 	"engines": {

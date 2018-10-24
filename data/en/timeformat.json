@@ -3,22 +3,46 @@
 	"type":"function",
 	"syntax":"timeFormat(time [, mask])",
 	"member":"time.timeFormat([mask])",
-	"returns":"String",
-	"related":[],
-	"description":" Formats a time value using US English time formatting\n conventions. If no mask is specified, returns a time value\n using the hh:mm tt format. For international time formatting,\n see LSTimeFormat.\n [mask]\n h,hh,H,HH: Hours; m,mm: Minutes; s,ss: Seconds;\n l: Milliseconds; t: A or P; tt: AM or PM\n \"short\" = h:mm tt; \"medium\" = h:mm:ss tt",
+	"returns":"string",
+	"related":["lsTimeFormat", "dateFormat"],
+	"description":"Formats a time value using US English time formatting conventions. If no mask is specified, returns a time value using the hh:mm tt format. For international time formatting, see LSTimeFormat.",
 	"params": [
-		{"name":"time","description":"A date\/time value or string to convert","required":true,"default":"","type":"DateTime","values":["now()"]},
-		{"name":"mask","description":"Masking characters that determine the format","required":false,"default":"","type":"String","values":["short","medium","long","full"]}
+		{"name":"time","description":"A date\/time value or string to convert","required":true,"default":"","type":"date","values":[]},
+		{"name":"mask","description":"Masking characters that determine the format.\n `h`,`hh`,`H`,`HH`: Hours\n `m`,`mm`: Minutes\n`s`,`ss`: Seconds\n `l`: Milliseconds\n`t`: A or P\n`tt`: AM or PM\n`z`: Time zone in literal format, for example GMT\n`Z`: Time zone in hours offset (RFC822), for example +0400\n`X`,`XX`,`XXX`: Time zone in hourse of offset in ISO 8601 format\n`\"short\"`: `h:mm tt`\n`\"medium\"`: `h:mm:ss tt`","required":false,"default":"hh:mm tt","type":"string","values":["short","medium","long","full"]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/timeformat.html"},
-		"lucee": {"minimum_version":"", "notes":"Member function is not available.", "docs":"http://docs.lucee.org/reference/functions/timeformat.html"},
+		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+. The `z` `Z` and `X` masks were added in CF2016+", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/timeformat.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee5+.", "docs":"http://docs.lucee.org/reference/functions/timeformat.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/timeformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/timeformat"}
 	},
 	"links": [
 
+	],
+	"examples":[
+
+		{
+			"title":"Format a 12 hour time with am/pm",
+			"description":"",
+			"code":"timeFormat( createDateTime(2017, 8, 31, 15, 25, 11), \"h:mm tt\")",
+			"result":"3:25 PM",
+			"runnable":true
+		},
+		{
+			"title":"Member Function Example",
+			"description":"Requires CF11+ or Lucee5+",
+			"code":"createDateTime(2017, 8, 31, 15, 25, 11).timeFormat(\"h:mm tt\")",
+			"result":"3:25 PM",
+			"runnable":true
+		},
+		{
+			"title":"Omitting the Mask",
+			"description":"Should default mask to `hh:mm tt`",
+			"code":"timeFormat( createDateTime(2017, 8, 31, 15, 25, 11) )",
+			"result":"03:25 PM",
+			"runnable":true
+		}
 	]
 
 }

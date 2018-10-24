@@ -1,6 +1,26 @@
 {
-	"name":"Cache Functions",
-	"type":"listing",
-	"related":["cacheClear","cacheCount","cacheDelete","cacheGet","cacheGetAll","cacheGetAllIds","cacheGetDefaultCacheName","cacheGetMetadata","cacheGetProperties","cacheGetSession","cachePut","cacheRemove","cacheSetProperties"],
-	"description":"A listing of CFML Cache Functions."
+  "name": "Cache Functions",
+  "type": "listing",
+  "related": [
+    "cacheClear",
+    "cacheCount",
+    "cacheDelete",
+    "cacheGet",
+    "cacheGetAll",
+    "cacheGetAllIds",
+    "cacheGetDefaultCacheName",
+    "cacheGetEngineProperties",
+    "cacheGetMetadata",
+    "cacheGetProperties",
+    "cacheGetSession",
+    "cacheIdExists",
+    "cachePut",
+    "cacheRegionExists",
+    "cacheRegionNew",
+    "cacheRegionRemove",
+    "cacheRemove",
+    "cacheRemoveAll",
+    "cacheSetProperties"
+  ],
+  "description": "A listing of CFML Cache Functions."
 }

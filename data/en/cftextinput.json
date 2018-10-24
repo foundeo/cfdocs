@@ -2,44 +2,39 @@
 	"name":"cftextinput",
 	"type":"tag",
 	"syntax":"<cftextinput name=\"\">",
-	"returns":"",
-	"related":[],
+	"related":["cftextarea"],
 	"description":"Puts a single-line text entry box in a cfform tag and controls its display characteristics.",
 	"params": [
-		{"name":"name","description":"Name for the cftextinput control.","required":true,"default":"","type":"String","values":[]},
-		{"name":"value","description":"Initial value to display in text control.","required":false,"default":"","type":"String","values":[]},
+		{"name":"name","description":"Name for the cftextinput control.","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"Initial value to display in text control.","required":false,"default":"","type":"string","values":[]},
 		{"name":"required","description":"Yes: the user must enter or change text\n No","required":false,"default":"","type":"boolean","values":[true,false]},
-		{"name":"range","description":"Minimum-maximum value range, delimited by a comma.\n Valid only for numeric data.","required":false,"default":"","type":"String","values":[]},
-		{"name":"validate","description":"date: verifies format mm\/dd\/yy.\n eurodate: verifies date format dd\/mm\/yyyy.\n time: verifies time format hh:mm:ss.\n float: verifies floating point format.\n integer: verifies integer format.\n telephone: verifies telephone format ###-###-####. The\n separator can be a blank. Area code and exchange must\n begin with digit 1 - 9.\n zipcode: verifies, in U.S. formats only, 5- or 9-digit\n format #####-####. The separator can be a blank.\n creditcard: strips blanks and dashes; verifies number using\n mod10 algorithm. Number must have 13-16 digits.\n social_security_number: verifies format ###-##-####. The\n separator can be a blank.\n regular_expression: matches input against pattern\n attribute.","required":false,"default":"","type":"String","values":["date","eurodate","time","float","integer","telephone","zipcode","creditcard","social_security_number","regular_expression"]},
-		{"name":"onvalidate","description":"Custom JavaScript function to validate user input. The form\n object, input object, and input object value are passed to\n routine, which should return True if validation succeeds,\n False otherwise. The validate attribute is ignored.","required":false,"default":"","type":"String","values":[]},
+		{"name":"range","description":"Minimum-maximum value range, delimited by a comma.\n Valid only for numeric data.","required":false,"default":"","type":"string","values":[]},
+		{"name":"validate","description":"date: verifies format mm\/dd\/yy.\n eurodate: verifies date format dd\/mm\/yyyy.\n time: verifies time format hh:mm:ss.\n float: verifies floating point format.\n integer: verifies integer format.\n telephone: verifies telephone format ###-###-####. The\n separator can be a blank. Area code and exchange must\n begin with digit 1 - 9.\n zipcode: verifies, in U.S. formats only, 5- or 9-digit\n format #####-####. The separator can be a blank.\n creditcard: strips blanks and dashes; verifies number using\n mod10 algorithm. Number must have 13-16 digits.\n social_security_number: verifies format ###-##-####. The\n separator can be a blank.\n regular_expression: matches input against pattern\n attribute.","required":false,"default":"","type":"string","values":["date","eurodate","time","float","integer","telephone","zipcode","creditcard","social_security_number","regular_expression"]},
+		{"name":"onvalidate","description":"Custom JavaScript function to validate user input. The form\n object, input object, and input object value are passed to\n routine, which should return True if validation succeeds,\n False otherwise. The validate attribute is ignored.","required":false,"default":"","type":"string","values":[]},
 		{"name":"pattern","description":"JavaScript regular expression pattern to validate input.\n Omit leading and trailing slashes","required":false,"default":"","type":"Regex","values":[]},
-		{"name":"message","description":"Message text to display if validation fails","required":false,"default":"","type":"String","values":[]},
-		{"name":"onerror","description":"Custom JavaScript function to execute if validation fails.","required":false,"default":"","type":"String","values":[]},
-		{"name":"size","description":"Number of characters displayed before horizontal scroll\n bar displays.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"font","description":"Font name for data in tree control.","required":false,"default":"arial","type":"String","values":["arial","times","courier","arialunicodeMS"]},
-		{"name":"fontsize","description":"Font size for text in tree control, in points.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"message","description":"Message text to display if validation fails","required":false,"default":"","type":"string","values":[]},
+		{"name":"onerror","description":"Custom JavaScript function to execute if validation fails.","required":false,"default":"","type":"string","values":[]},
+		{"name":"size","description":"Number of characters displayed before horizontal scroll\n bar displays.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"font","description":"Font name for data in tree control.","required":false,"default":"arial","type":"string","values":["arial","times","courier","arialunicodeMS"]},
+		{"name":"fontsize","description":"Font size for text in tree control, in points.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"italic","description":"Yes: displays tree control text in italics\n No: it does not","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"bold","description":"Yes: displays tree control text in bold\n No: it does not","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"height","description":"Tree control height, in pixels.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"width","description":"Tree control width, in pixels.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"vspace","description":"Vertical margin above and below tree control, in pixels.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"hspace","description":"Horizontal spacing to left and right of tree control, in pixels.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"align","description":"* top\n * left\n * bottom\n * baseline\n * texttop\n * absbottom\n * middle\n * absmiddle\n * right","required":false,"default":"","type":"String","values":["top","left","bottom","baseline","texttop","absbottom","middle","absmiddle","right"]},
-		{"name":"bgcolor","description":"Background color of control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.","required":false,"default":"","type":"String","values":["black","red","blue","magenta","cyan","orange","darkgray","pink","gray","white","lightgray","yellow"]},
-		{"name":"textcolor","description":"Text color for control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.","required":false,"default":"","type":"String","values":["black","red","blue","magenta","cyan","orange","darkgray","pink","gray","white","lightgray","yellow"]},
-		{"name":"maxlength","description":"The maximum length of text entered.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"notsupported","description":"Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.\n Default:\n \"<b>Browser must support Java to <br>view ColdFusion Java\n Applets!<\/b>\"","required":false,"default":"<b>Browser must support Java to <br>view ColdFusion Java Applets!<\/b>","type":"String","values":[]},
-		{"name":"label","description":"Label for text input","required":false,"default":"","type":"String","values":[]}
-
+		{"name":"height","description":"Tree control height, in pixels.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"width","description":"Tree control width, in pixels.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"vspace","description":"Vertical margin above and below tree control, in pixels.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"hspace","description":"Horizontal spacing to left and right of tree control, in pixels.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"align","description":"* top\n * left\n * bottom\n * baseline\n * texttop\n * absbottom\n * middle\n * absmiddle\n * right","required":false,"default":"","type":"string","values":["top","left","bottom","baseline","texttop","absbottom","middle","absmiddle","right"]},
+		{"name":"bgcolor","description":"Background color of control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.","required":false,"default":"","type":"string","values":["black","red","blue","magenta","cyan","orange","darkgray","pink","gray","white","lightgray","yellow"]},
+		{"name":"textcolor","description":"Text color for control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.","required":false,"default":"","type":"string","values":["black","red","blue","magenta","cyan","orange","darkgray","pink","gray","white","lightgray","yellow"]},
+		{"name":"maxlength","description":"The maximum length of text entered.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"notsupported","description":"Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.","required":false,"default":"<b>Browser must support Java to <br>view ColdFusion Java Applets!<\/b>","type":"string","values":[]},
+		{"name":"label","description":"Label for text input","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cftextinput.html", "deprecated":"7", "removed":"11"},
+		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cftextinput.html", "deprecated":"7", "removed":"11"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/textinput.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cftextinput"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cftextinput"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

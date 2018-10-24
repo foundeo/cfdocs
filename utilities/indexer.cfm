@@ -5,7 +5,7 @@
 <cfset guides = []>
 <cfset all = []>
 <cfset categories = []>
-<cfset versions = {4=[], "4.5"=[],5=[],6=[],7=[],8=[],9=[],10=[],11=[],2016=[]}>
+<cfset versions = {4=[], "4.5"=[],5=[],6=[],7=[],8=[],9=[],10=[],11=[],2016=[],2018=[]}>
 <cfset lucee_versions = {5=[]}>
 <cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
 	<cfset json = fileRead(filePath,"utf-8")>
@@ -23,10 +23,16 @@
 			<cfelseif data.type IS "listing">
 				<cfset arrayAppend(categories, nameKey)>
 			</cfif>
-			<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "coldfusion") AND structKeyExists(data.engines.coldfusion, "minimum_version") AND isNumeric(data.engines.coldfusion.minimum_version)>
-
-				<cfif structKeyExists(versions, val(data.engines.coldfusion.minimum_version))>
-					<cfset arrayAppend(versions[val(data.engines.coldfusion.minimum_version)], data.name)>
+			<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "coldfusion") AND structKeyExists(data.engines.coldfusion, "minimum_version")>
+				<cfif isNumeric(data.engines.coldfusion.minimum_version)>
+					<cfset minimum_version = data.engines.coldfusion.minimum_version>
+				<cfelseif reFind('^[0-9]{2,4}\.[0-9]\.[0-9]+$', data.engines.coldfusion.minimum_version)>
+					<cfset minimum_version = reFind( '^([0-9]{2,4})', data.engines.coldfusion.minimum_version, 1, true ).match[1]>
+				<cfelse>
+					<cfset minimum_version = ''>
+				</cfif>
+				<cfif structKeyExists(versions, val(minimum_version))>
+					<cfset arrayAppend(versions[val(minimum_version)], data.name)>
 				</cfif>
 			</cfif>
 
@@ -55,14 +61,14 @@
 			<cfdump var="#cfcatch#">
 		</cfcatch>
 		</cftry>
-	</cfif>	
+	</cfif>
 </cfloop>
 <cfset arraySort(tags, "text")>
 <cfset arraySort(functions, "text")>
 <cfset arraySort(guides, "text")>
 <cfset arraySort(categories, "text")>
 <cfset arraySort(all, "text")>
-<cfset index = {"tags"=tags, "functions"=functions,"categories"=categories, "guides"=guides}>
+<cfset index = {"tags"=tags, "functions"=functions,"categories"=categories, "guides"=guides, "components"=["application-cfc"]}>
 <cfset fileWrite(dataDir & "/index.json", prettyJSON(serializeJSON(index)), "utf-8")>
 <p>Wrote index.json</p>
 

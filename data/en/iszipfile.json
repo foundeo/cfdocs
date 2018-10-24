@@ -4,7 +4,7 @@
 	"syntax": "isZipFile(path)",
 	"returns": "boolean",
 	"related": [],
-	"description": "",
+	"description": "Determines whether the given file is a zip arhcive or not",
 	"params": [
 		{"name": "path", "description": "", "required": true, "default": "", "type": "string", "values": []}
 	],

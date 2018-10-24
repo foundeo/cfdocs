@@ -3,19 +3,18 @@
 	"type":"tag",
 	"syntax":"<cftransaction>",
 	"script": "transaction { }",
-	"returns":"",
 	"related":["cftry", "cfcatch"],
-	"description":" Instructs the database management system to treat multiple\n database operations as a single transaction. Provides database\n commit and rollback processing.",
+	"description":"Instructs the database management system to treat multiple\n database operations as a single transaction. Provides database\n commit and rollback processing.",
 	"params": [
-		{"name":"action","description":"<ul>\n <li>begin: the start of the block of code to execute<\/li>\n <li>commit: commits a pending transaction<\/li>\n <li>rollback: rolls back a pending transaction<\/li>\n <\/ul>","required":false,"default":"begin","type":"String","values":["begin","commit","rollback","setsavepoint"]},
-		{"name":"isolation","description":"ODBC lock type.","required":false,"default":"","type":"String","values":["read_uncommitted","read_committed","repeatable_read","serializable"]},
-		{"name":"savepoint","description":"The name of the savepoint in the transaction.","required":false,"default":"","type":"String","values":[]},
-		{"name":"nested","description":"specifies whether transaction is nested or not","required":false,"default":"","type":"Boolean","values":[true,false]}
+		{"name":"action","description":"`begin`: the start of the block of code to execute\n`commit`: commits a pending transaction\n`rollback`: rolls back a pending transaction\n`setsavepoint`: Marks a place within the transaction as a savepoint.","required":false,"default":"begin","type":"string","values":["begin","commit","rollback","setsavepoint"]},
+		{"name":"isolation","description":"ODBC lock type.","required":false,"default":"","type":"string","values":["read_uncommitted","read_committed","repeatable_read","serializable"]},
+		{"name":"savepoint","description":"The name of the savepoint in the transaction. Used with `action=\"setsavepoint\"` or `action=\"rollback\"`","required":false,"default":"","type":"string","values":[]},
+		{"name":"nested","description":"specifies whether transaction is nested or not","required":false,"default":"","type":"boolean","values":[true,false]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cftransaction.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/transaction.html"},
+		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cftransaction.html"},
+		"lucee": {"minimum_version":"", "notes":"Lucee does not currently support the `savepoint` attribute.", "docs":"http://docs.lucee.org/reference/tags/transaction.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cftransaction"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cftransaction"}
 	},
@@ -29,12 +28,12 @@
 			"code": "\r\ntransaction { \r\n try { \r\n // code to run \r\n transaction action=\"commit\"; \r\n } \r\n catch(any e) { \r\n  transaction action=\"rollback\"; \r\n  } \r\n }",
 			"result": ""
 		},
-	        {
-	            "title": "Tag Syntax",
-	            "description": "",
-	            "code": "<cftransaction> \r\n <cftry> \r\n <!--- code to run ---> \r\n   <cftransaction action=\"commit\" /> \r\n <cfcatch type=\"any\"> \r\n <cftransaction action=\"rollback\" /> \r\n </cfcatch> \r\n </cftry> \r\n </cftransaction>",
-	            "result": ""
-	        }
+        {
+            "title": "Tag Syntax",
+            "description": "",
+            "code": "<cftransaction> \r\n <cftry> \r\n <!--- code to run ---> \r\n   <cftransaction action=\"commit\" /> \r\n <cfcatch type=\"any\"> \r\n <cftransaction action=\"rollback\" /> \r\n </cfcatch> \r\n </cftry> \r\n </cftransaction>",
+            "result": ""
+        }
 	]
 
 }

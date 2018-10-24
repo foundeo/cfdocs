@@ -13,7 +13,7 @@
       "description": "Path of directory in which to upload the file. If not an absolute path (starting with a drive letter and a colon, or a forward or backward slash), it is relative to the ColdFusion temporary directory returned by the function getTempDirectory. If the destination you specify does not exist, ColdFusion creates a file with the specified destination name.",
       "required": true,
       "default": "",
-      "type": "String",
+      "type": "string",
       "values": []
     },
     {
@@ -21,7 +21,7 @@
       "description": "Limits the MIME types to accept. Comma-delimited list. For example, the following code permits JPEG and Microsoft Word file uploads:'image/jpg,application/msword' .The browser uses the filename extension to determine file type.",
       "required": false,
       "default": "",
-      "type": "String",
+      "type": "string",
       "values": []
     },
     {
@@ -29,7 +29,7 @@
       "description": "Action to take if file has the same name of a file in the directory.",
       "required": false,
       "default": "",
-      "type": "String",
+      "type": "string",
       "values": [
         "Error",
         "Skip",

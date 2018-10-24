@@ -1,22 +1,46 @@
 {
 	"name":"binaryDecode",
 	"type":"function",
-	"syntax":"binaryDecode(String, binaryencoding)",
-	"returns":"Binary",
+	"syntax":"binaryDecode(string, encoding)",
+	"returns":"binary",
 	"related":["binaryEncode"],
-	"description":" Converts a string to a binary object. Used to convert\n binary data that has been encoded into string format\n back into binary data.",
+	"description":"Converts a string to a binary object. Used to convert\n binary data that has been encoded into string format\n back into binary data.",
 	"params": [
-		{"name":"String","description":"A string containing encoded binary data.","required":true,"default":"","type":"String","values":[]},
-		{"name":"binaryencoding","description":"A string specifying the algorithm used to encode the original\n binary data into a string; must be one of the following:\n - hex: characters 0-9 and A-F represent the hexadecimal value\n of each byte; for example, 3A.\n - UU: data is encoded using the UNIX UUencode algorithm.\n - base64: data is encoded using the Base64 algorithm.","required":true,"default":"","type":"String","values":["hex","uu","base64"]}
-
+		{"name":"string","description":"A string containing encoded binary data.","required":true,"default":"","type":"string","values":[]},
+		{"name":"encoding","description":"A string specifying the algorithm used to encode the original\n binary data into a string; must be one of the following:\n - hex: characters 0-9 and A-F represent the hexadecimal value\n of each byte; for example, 3A.\n - UU: data is encoded using the UNIX UUencode algorithm.\n - base64: data is encoded using the Base64 algorithm.","required":true,"default":"","type":"string","values":["hex","uu","base64"]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/binarydecode.html"},
+		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/binarydecode.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/binarydecode.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/binarydecode"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Decode a string using hex back into binary encoding of the string",
+			"description": "use binaryDecode to decode with hex",
+			"code": "binaryDecode('F62B','hex');",
+			"result": "[BINARY]"
+		},
+		{
+			"title": "Decode a string using UNIX UUencode (UU) back into binary encoding of the string",
+			"description": "use binaryDecode to decode with UNIX UUencode (UU)",
+			"code": "binaryDecode('&<W1R:6YG','UU');",
+			"result": "[BINARY]"
+		},
+		{
+			"title": "Decode a string using base64 back into binary encoding of the string",
+			"description": "use binaryDecode to decode with base64",
+			"code": "binaryDecode('U3RyaW5n','base64');",
+			"result": "[BINARY]"
+		},
+		{
+			"title": "Create a byte array with 16 bytes",
+			"description": "Each byte in the array is set to 0",
+			"code":"arrayLen(binaryDecode('00000000000000000000000000000000','hex'))",
+			"result":"16"
+		}
 	]
-
 }

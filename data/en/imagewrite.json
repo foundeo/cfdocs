@@ -7,9 +7,9 @@
 	"related":[],
 	"description":" Writes a ColdFusion image to the specified filename or destination.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"destination","description":"The path to write the file.\r\n\r\nIf you create the image with the ImageNew function or another operation where you do not specify the filename, specify the destination parameter. The file format is derived from the extension of the filename. The default value for this parameter is the filename of the original image source.","required":false,"default":"","type":"String","values":[]},
-		{"name":"quality","description":"Defines the JPEG quality used to encode the image. This parameter applies only to destination files with an extension of JPG or JPEG. Valid values are fractions that range from 0 through 1 (the lower the number, the lower the quality). The default value is 0.75.","required":false,"default":"","type":"String","values":[]},
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"destination","description":"The path to write the file.\r\n\r\nIf you create the image with the ImageNew function or another operation where you do not specify the filename, specify the destination parameter. The file format is derived from the extension of the filename. The default value for this parameter is the filename of the original image source.","required":false,"default":"","type":"string","values":[]},
+		{"name":"quality","description":"Defines the JPEG quality used to encode the image. This parameter applies only to destination files with an extension of JPG or JPEG. Valid values are fractions that range from 0 through 1 (the lower the number, the lower the quality). The default value is 0.75.","required":false,"default":"","type":"string","values":[]},
 		{"name":"overwrite","description":"If set to true, overwrites the destination file","required":false,"default":true,"type":"boolean","values":[false,true]}
 
 	],

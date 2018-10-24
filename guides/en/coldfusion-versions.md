@@ -2,13 +2,32 @@
 
 Historical information about ColdFusion Versions and releases.
 
-## Allaire Cold Fusion 1.0 - 1995
+## Allaire Cold Fusion 1.0 - July 1995
+* Database Connectivity
+* Tag-based programming templates (DBML)
 
-## Allaire Cold Fusion 1.5 - 1996
+## Allaire Cold Fusion 1.5 - February 1996
+* Email DBMAIL
+* CFX Tags C/C++
 
 ## Allaire Cold Fusion 2 - November 1996
+* CFML (tags were switched from `dbif` to `cfif`)
+* Significantly expanded language capabilities
+* Advanced function library
+* File Upload and Management
+* Application Framework (Application.cfm)
+* Client Management
 
 ## Allaire Cold Fusion 3 - June 1997
+* Full text searching and indexing (Verity)
+* COM integration
+* Template Encryption
+* Multidimensional Arrays
+* Custom Tags
+* Java Form Controls
+* Server Scope Added
+* Operator short cuts: `GTE` `LTE` `LT` `GT`
+* Version 3.1 released November 1997 added RDS and Solaris Support
 
 ## Allaire ColdFusion 4.0 - November 1998
 
@@ -64,8 +83,22 @@ Historical information about ColdFusion Versions and releases.
 
 ## Adobe ColdFusion 2016 - February 2016 (_Raijin_)
 
+* Security Analyzer
+* API Manager
 * [ColdFusion 2016 New Tags and Functions](/cf2016) 
 
+## Adobe ColdFusion 2018 - July 2018 (_Aether_)
+
+* Semi-colins optional
+* Asynchronous Programming [runAsnyc()](/runasync)
+* Typed Arrays `[type][element1,element2,etc]`
+* Array Negative Indices `lastItem = a[-1]`
+* Array Slices
+* Member Functions on String Literals `"string".len()`
+* Component Enhancements: Abstract, Final, Default Functions, Covariance
+* Performance Monitoring Toolset
+* Lockdown Installer
+* [ColdFusion 2018 New Tags and Functions](/cf2018) 
 
 
 Lots of additional historical and version information can be found on the [ColdFusion Wikipedia Page](https://en.wikipedia.org/wiki/Adobe_ColdFusion)

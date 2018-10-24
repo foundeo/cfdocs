@@ -2,8 +2,7 @@
 	"name": "cfpdfparam",
 	"type": "tag",
 	"syntax": "<cfpdfparam source=\"\">",
-	"returns": "",
-	"related": [],
+	"related": ["cfpdf","cfpdfform"],
 	"description": "Provides additional information for the cfpdf tag.\n The cfpdfparam tag applies only to the merge action of the cfpdf tag.\n The cfpdfparam tag is always a child tag of the cfpdf tag.",
 	"params": [
 		{
@@ -11,7 +10,7 @@
 			"description": "Specify the user or owner password, if the source PDF file is passwordprotected. (optional)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +18,7 @@
 			"description": "Specify the source PDF file to merge. (optional)",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +26,7 @@
 			"description": "Page or pages of the PDF source file to merge. You can specify a range of pages, for example, \"1-5 \", or a comma-separated list of pages, for example, \"1-5,9-10,18\".",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

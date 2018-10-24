@@ -2,15 +2,15 @@
 	"name":"queryGetRow",
 	"type":"function",
 	"syntax":"queryGetRow( query, rowNumber );",
-	"returns":"Struct",
-	"related":[],
-	"description":" A new function, queryGetRow, has been introduced in ColdFusion 11. This function returns a struct having all the columns as keys and their corresponding values:",
+	"returns":"struct",
+	"related":["queryColumnData"],
+	"description":"Returns a struct having all the columns as keys and their corresponding values.",
 	"params": [
 		{"name":"query","description":"query object do get data from.","required":true,"default":"","type":"","values":[]},
         {"name":"rowNumber","description":"position of the row to be returned.","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querygetrow.html"},
+		"coldfusion": {"minimum_version":"11", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querygetrow.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/querygetrow.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/QueryGetRow"}
 	},
@@ -19,10 +19,11 @@
 	],
 	"examples": [
 		{
-			"title": "Tag Syntax",
-			"description": "",
-			"code": "<cfquery name=\"myQuery\" result=\"myresult\" datasource=\"artGallery\" fetchclientinfo=\"yes\" > \r\n select * from art where ARTID ><cfqueryparam value=\"2\" cfsqltype=\"CF_SQL_INTEGER\"> \r\n </cfquery> \r\n <cfdump var='#myQuery#' > \r\n <cfset data = queryGetRow(myQuery, 1) > \r\n <cfdump var='#data#' > \r\n",
-			"result": ""
+			"title":"Use queryGetRow to return a struct",
+			"description":"",
+			"code":"news = queryNew(\"id,title\",\r\n    \"integer,varchar\",\r\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\r\nwriteOutput( serializeJSON( queryGetRow(news, 1) ) );",
+			"result":"{\"title\":\"Dewey defeats Truman\",\"id\":1}",
+			"runnable":true
 		}
 	]
 

@@ -2,13 +2,12 @@
 	"name":"numberFormat",
 	"type":"function",
 	"syntax":"numberFormat(number [, mask])",
-	"returns":"String",
-	"related":[],
-	"description":" Creates a custom-formatted number value. For international\n number formatting use LSNumberFormat.\n The mask is made up of:\n _,9 Digit placeholder; . decimal point; 0 Pads with zeros;\n ( ) less than zero, puts parentheses around the mask\n + plus sign before positive number minus before negative\n - a space before positive minus sign before negative\n , Separates every third decimal place with a comma.\n L,C Left-justifies or center-justifies number\n $ dollar sign before formatted number.\n ^ Separates left and right formatting.",
+	"returns":"string",
+	"related":["lsNumberFormat","decimalFormat"],
+	"description":"Creates a custom-formatted number value. For international\nnumber formatting use LSNumberFormat.\nThe mask is made up of:\n_,9 Digit placeholder; . decimal point; 0 Pads with zeros;\n( ) less than zero, puts parentheses around the mask\n+ plus sign before positive number minus before negative\n- a space before positive minus sign before negative\n, Separates every third decimal place with a comma.\nL,C Left-justifies or center-justifies number\n$ dollar sign before formatted number.\n^ Separates left and right formatting.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"mask","description":"","required":false,"default":"","type":"String","values":[]}
-
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"mask","description":"","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/numberformat.html"},
@@ -16,22 +15,39 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/numberformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/numberformat"}
 	},
-	"links": [
-
-	],
+	"links": [{
+			"title":"ColdFusion NumberFormat() Exploration",
+			"description":"By Ben Nadel on August 13, 2007",
+			"url":"https://www.bennadel.com/blog/908-coldfusion-numberformat-exploration.htm"
+	}],
 	"examples": [
 		{
-			"title":"Two decimal places, decimal input ",
+			"title":"Two decimal places, decimal input",
 			"description":"",
 			"code":"numberFormat(1.23,'__.00')",
 			"result":"1.23"
-		},
-		{
-			"title":"Two decimal places, integer input ",
+		},{
+			"title":"Two decimal places, integer input",
 			"description":"",
 			"code":"numberFormat(123,'__.00')",
 			"result":"123.00"
+		},{
+			"title":"Zero will pad zeros; nine doesn’t",
+			"description":"",
+			"code":"num1 = NumberFormat(123,'00000');\r\nnum2 = NumberFormat(123,'99999');\r\n    \r\nwriteOutput(num1&'/'&num2);",
+			"result":"00123/ 123",
+			"runnable":true
+		},{
+			"title":"show positive/negative sign",
+			"description":"",
+			"code":"num1 = NumberFormat( 5, \"+\" );\r\nnum2 = NumberFormat( -5, \"+\" );\r\n    \r\nwriteOutput(num1&'/'&num2);",
+			"result":"+5/-5",
+			"runnable":true
+		},{
+			"title":"Formats to a dollar format (US)",
+			"description":"You could use dollarFormat() or lsCurrencyFormat() instead",
+			"code":"numberFormat(123456789,'_$,9.99')",
+			"result":"$123,456,789.00"
 		}
 	]
-
 }

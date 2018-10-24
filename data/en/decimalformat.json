@@ -2,12 +2,11 @@
 	"name":"decimalFormat",
 	"type":"function",
 	"syntax":"decimalFormat(number)",
-	"returns":"String",
-	"related":[],
-	"description":" Converts a number to a decimal-formatted string.",
+	"returns":"string",
+	"related":["numberFormat","lsNumberFormat"],
+	"description":"Converts a number to a decimal-formatted string.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
-
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DecimalFormat.html"},
@@ -15,8 +14,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/decimalformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/decimalformat"}
 	},
-	"links": [
-
+	"links": [],
+	"examples": [
+		{
+			"title":"Formatting examples",
+			"description":"",
+			"code":"formattedInt = decimalFormat(123); // 123.00\r\nwriteOutput(formattedInt & \"<br>\");\r\n\r\nformattedWithSeparators = decimalFormat(1000000); // 1,000,000.00\r\nwriteOutput(formattedWithSeparators & \"<br>\");\r\n\r\nformattedDecimal = decimalFormat(987.15); // 987.15\r\nwriteOutput(formattedDecimal & \"<br>\");\r\n\r\nformattedRoundedUp = decimalFormat(456.789); // 456.79 - rounds up\r\nwriteOutput(formattedRoundedUp & \"<br>\");",
+			"result":"",
+			"runnable":true
+		}
 	]
-
 }

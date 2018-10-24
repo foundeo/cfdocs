@@ -36,11 +36,15 @@ request.gitFilePath = "/edit/master/reports/missing-#page.node#.cfm";
 				<div class="panel panel-default">
 					<div class="panel-heading"><h3 class="panel-title">Tags <span class="badge badge-primary">#arrayLen(page.tags[page.node])#</span></h3></div>
   					<div class="panel-body">
-    					<ul>
-							<cfloop index="r" array="#page.tags[page.node]#">
-								<li><a href="/#r#">#r#</a></li>
-							</cfloop>
-						</ul>
+						<cfif arrayLen(page.tags[page.node])>
+							<ul>
+								<cfloop index="r" array="#page.tags[page.node]#">
+									<li><a href="/#r#">#r#</a></li>
+								</cfloop>
+							</ul>
+						<cfelse>
+							<span class="text-muted">Good Job! Nothing to do anymore.</span>
+						</cfif>
   					</div>
 				</div>
 			</div>
@@ -48,14 +52,20 @@ request.gitFilePath = "/edit/master/reports/missing-#page.node#.cfm";
 				<div class="panel panel-default">
 					<div class="panel-heading"><h3 class="panel-title">Functions <span class="badge badge-primary">#arrayLen(page.functions[page.node])#</span></h3></div>
   					<div class="panel-body">
-    					<ul>
-							<cfloop index="r" array="#page.functions[page.node]#">
-								<li><a href="/#r#">#r#</a></li>
-							</cfloop>
-						</ul>
+						<cfif arrayLen(page.functions[page.node])>
+							<ul>
+								<cfloop index="r" array="#page.functions[page.node]#">
+									<li><a href="/#r#">#r#</a></li>
+								</cfloop>
+							</ul>
+						<cfelse>
+							<span class="text-muted">Good Job! Nothing to do anymore.</span>
+						</cfif>
   					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </cfoutput>
+<!--- only cache reports for 1h --->
+<cfset request.cacheControlMaxAge = 3600>

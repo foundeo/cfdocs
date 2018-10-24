@@ -3,11 +3,11 @@
 	"type":"function",
 	"syntax":"dayOfYear(date)",
 	"member":"date.dayOfYear()",
-	"returns":"Numeric",
-	"related":["Day", "DayOfWeek", "DayOfWeekAsString", "DaysInMonth", "DaysInYear", "FirstDayOfMonth"],
+	"returns":"numeric",
+	"related":["day", "dayOfWeek", "dayOfWeekAsString", "daysInMonth", "daysInYear", "firstDayOfMonth"],
 	"description":" Determines the day of the year, in a date.",
 	"params": [
-		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"DateTime","values":["now()"]}
+		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"date","values":[]}
 
 	],
 	"engines": {

@@ -6,10 +6,10 @@
 	"related":[],
 	"description":"Scans all the CFCs in dirPath, and places those that are REST enabled at the serviceMapping URL. Requires the web admin password under Lucee.",
 	"params": [
-		  {"name":"dirPath","description":"The path to a folder of CFCs to scan. Should be a full file system path","required":true,"default":"","type":"String","values":[]},
-		  {"name":"serviceMapping","description":"The root of the exposed API, minus the server-wide prefix. E.g. to expose at '/rest/api/' you should set this to 'api'.","required":true,"default":"","type":"String","values":[]},
-		  {"name":"default","description":"If the mapping is a default mapping set this to true (Lucee only)","required":false,"default":"","type":"String","values":[]},
-		  {"name":"password","description":"The password for the web admin (Lucee only)","required":true,"default":"","type":"String","values":[]}
+		  {"name":"dirPath","description":"The path to a folder of CFCs to scan. Should be a full file system path","required":true,"default":"","type":"string","values":[]},
+		  {"name":"serviceMapping","description":"The root of the exposed API, minus the server-wide prefix. E.g. to expose at '/rest/api/' you should set this to 'api'.","required":true,"default":"","type":"string","values":[]},
+		  {"name":"default","description":"If the mapping is a default mapping set this to true (Lucee only)","required":false,"default":"","type":"string","values":[]},
+		  {"name":"password","description":"The password for the web admin (Lucee only)","required":true,"default":"","type":"string","values":[]}
 		],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/restinitapplication.html"},

@@ -48,6 +48,8 @@ qPeople = oLeader.get();
           </div>
         </div>
     </cfloop>
+    <!--- cache for 1 day --->
+    <cfset request.cacheControlMaxAge = 86400>
   <cfelse>
     <!--- error connecting to github so tell CDN to only cache for 30 seconds --->
     <cfset request.cacheControlMaxAge = 30>

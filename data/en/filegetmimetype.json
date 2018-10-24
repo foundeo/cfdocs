@@ -2,7 +2,7 @@
 	"name":"fileGetMimeType",
 	"type":"function",
 	"syntax":"{{fileGetMimeType(path, strict) fileGetMimeType(fileObject,strict)}};",
-	"returns":"Returns MIME type.",
+	"returns":"string",
 	"related":[],
 	"description":" Gets the MIME type for the file path/file object you have specified.",
 	"params": [
@@ -11,7 +11,7 @@
         {"name":"strict","description":"If false, determines the file type by extension. The default value is true.","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filegetmimetype.html"},
+		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filegetmimetype.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/filegetmimetype.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/FileGetMimeType"}
 	},

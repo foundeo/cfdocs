@@ -2,14 +2,14 @@
 	"name":"listToArray",
 	"type":"function",
 	"syntax":"listToArray(list [, delimiters] [, includeEmptyFields] [, multiCharacterDelimiter])",
-	"returns":"Array",
+	"returns":"array",
 	"related":["ArrayToList"],
 	"description":" Copies the elements of a list to an array.",
 	"params": [
-		{"name":"list","description":"A list or variable name","required":true,"default":"","type":"String","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]},
-		{"name":"includeEmptyFields","description":"A Boolean value specifying whether to create empty array entries if there are two delimiters in a row.","required":false,"default":"","type":"Boolean","values":[true,false]},
-		{"name":"multiCharacterDelimiter","description":"A Boolean value specifying whether the delimiters parameter specifies a multi-character delimiter.","required":false,"default":"","type":"Boolean","values":[true,false]}
+		{"name":"list","description":"A list or variable name","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]},
+		{"name":"includeEmptyFields","description":"A Boolean value specifying whether to create empty array entries if there are two delimiters in a row.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"multiCharacterDelimiter","description":"A Boolean value specifying whether the delimiters parameter specifies a multi-character delimiter.","required":false,"default":"","type":"boolean","values":[true,false]}
 
 	],
 	"engines": {

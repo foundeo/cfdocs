@@ -2,15 +2,14 @@
 	"name":"cfstoredproc",
 	"type":"tag",
 	"syntax":"<cfstoredproc procedure=\"\">",
-	"returns":"",
 	"related":["cfprocparam","cfprocresult"],
-	"description":" Executes a stored procedure in a server database. It\n specifies database connection information and identifies\n the stored procedure.",
+	"description":"Executes a stored procedure in a server database. It\n specifies database connection information and identifies\n the stored procedure.",
 	"params": [
-		{"name":"procedure","description":"Name of stored procedure on database server.","required":true,"default":"","type":"String","values":[]},
-		{"name":"datasource","description":"Name of data source that points to database that contains\n stored procedure.","required":false,"default":"","type":"String","values":[]},
-		{"name":"username","description":"Overrides username in data source setup.","required":false,"default":"","type":"String","values":[]},
-		{"name":"password","description":"Overrides password in data source setup.","required":false,"default":"","type":"String","values":[]},
-		{"name":"blockfactor","description":"Maximum number of rows to get at a time from server.\n Range is 1 to 100.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"procedure","description":"Name of stored procedure on database server.","required":true,"default":"","type":"string","values":[]},
+		{"name":"datasource","description":"Name of data source that points to database that contains\n stored procedure.","required":false,"default":"","type":"string","values":[]},
+		{"name":"username","description":"Overrides username in data source setup.","required":false,"default":"","type":"string","values":[]},
+		{"name":"password","description":"Overrides password in data source setup.","required":false,"default":"","type":"string","values":[]},
+		{"name":"blockfactor","description":"Maximum number of rows to get at a time from server.\n Range is 1 to 100.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"debug","description":"Yes: Lists debug information on each statement\n No: does not","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"returncode","description":"Yes: Tag populates cfstoredproc.statusCode with status\n code returned by stored procedure.\n No: does not","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"result","description":"Specifies a name for the structure in which cfstoredproc\n returns the statusCode and ExecutionTime variables. If\n set, this value replaces cfstoredproc as the prefix to\n use when accessing those variables.","required":false,"default":"","type":"variableName","values":[]}
@@ -24,6 +23,22 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Tag Syntax",
+			"description":"Basic example of calling a stored procedure, passing a parameter, and getting a result set.",
+			"code":"<cfstoredproc procedure=\"spu_my_storedproc\" datasource=\"myDSN\">\r\n\t<cfprocparam cfsqltype=\"cf_sql_integer\" value=\"#myParameterValue#\">\r\n\t<cfprocresult name=\"qResults\">\r\n</cfstoredproc>",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Script Syntax",
+			"description":"Call stored procedure and get back multiple result sets.",
+			"code":"cfstoredproc( procedure=\"spu_my_storedproc\",datasource=\"myDSN\" ) {\r\n\tcfprocparam( cfsqltype=\"cf_sql_date\", value=myDateParam );\r\n\tcfprocresult( name=\"qSummary\", resultset=1 );\r\n\tcfprocresult( name=\"qDetails\", resultset=2 );\r\n}",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }

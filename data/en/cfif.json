@@ -3,9 +3,8 @@
 	"type":"tag",
 	"syntax":"<cfif>",
 	"script":"if (expression) { }",
-	"returns":"",
 	"related":["cfelse","cfelseif"],
-	"description":" Creates simple and compound conditional statements in CFML.\n Tests an expression, variable, function return value, or\n string. Used, optionally, with the cfelse and cfelseif tags.",
+	"description":"Creates simple and compound conditional statements in CFML.\n Tests an expression, variable, function return value, or\n string. Used, optionally, with the cfelse and cfelseif tags.",
 	"params": [
 	],
 	"engines": {

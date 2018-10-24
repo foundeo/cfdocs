@@ -1,0 +1,36 @@
+{
+	"name":"queryGetResult",
+	"type":"function",
+	"syntax":"queryGetResult(query)",
+	"returns":"struct",
+	"related":[],
+	"description":" Returns the metadata of a query.",
+	"params": [
+		{"name":"query","description":"The query whose metadata is to be returned.","required":true,"default":"","type":"query","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2016.3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querygetresult.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Retrieves query metadata using queryGetResult",
+			"description":"",
+			"code":"fruit = queryNew(\"id,name\",  \"integer,varchar\", [ {\"id\":1,\"name\":\"apple\"}, {\"id\":2,\"name\":\"banana\"}, {\"id\":3,\"name\":\"orange\"}, {\"id\":4,\"name\":\"peach\"} ]);\nmyQuery = queryExecute( \"select * from fruit where id < 4\",{},{dbtype=\"query\"});\nmyResult = queryGetResult(myQuery);\nwriteDump(myResult);",
+			"result":""
+
+		},
+		{
+			"title":"Retrieves query metadata using getResult member function",
+            "description":"",
+			"code":"fruit = queryNew(\"id,name\",  \"integer,varchar\", [ {\"id\":1,\"name\":\"apple\"}, {\"id\":2,\"name\":\"banana\"}, {\"id\":3,\"name\":\"orange\"}, {\"id\":4,\"name\":\"peach\"} ]);\nmyQuery = queryExecute( \"select * from fruit where id < 4\",{},{dbtype=\"query\"});\nmyResult = myQuery.getResult();\nwriteDump(myResult);",
+			"result":""
+
+		}
+
+	]
+
+}

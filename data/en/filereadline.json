@@ -2,7 +2,7 @@
 	"name":"fileReadLine",
 	"type":"function",
 	"syntax":"fileReadLine(fileObj)",
-	"returns":"String",
+	"returns":"string",
 	"related":["fileOpen","fileClose","fileIsEOF","fileRead","fileWrite"],
 	"description":"Returns the next line from the file",
 	"params": [
@@ -15,8 +15,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filereadline"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filereadline"}
 	},
-	"links": [
-
+	"links": [],
+	"examples" : [
+		{
+			"title":"Opens a file, reads a line then closes it.",
+			"description":"",
+			"code":"// Open File\nvar fileObject = fileOpen(\"/path/to/file.txt\");\n\n// Perform Actions\ntry\n{\n\t// Read Line\n\twriteOutput(fileReadLine(fileObject));\n}\n\n// Error Handling\ncatch(any ex)\n{\n\t// Report Exception\n\twriteDump(ex);\n}\n\n// Always Close\nfinally\n{\n\t// Close File\n\tfileClose(fileObject);\n}",
+			"result":"",
+			"runnable":false
+		}
 	]
-
 }

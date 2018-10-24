@@ -1,14 +1,14 @@
 {
 	"name":"listLast",
 	"type":"function",
-	"syntax":"listLast(list [, delimiters])",
-	"returns":"String",
-	"related":[],
-	"description":" Gets the last element of a list.",
+	"syntax":"listLast(list [, delimiters, includeEmptyValues ])",
+	"returns":"string",
+	"related":["listFirst","listRest","listGetAt"],
+	"description":"Gets the last element of a list.",
 	"params": [
-		{"name":"list","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
-
+		{"name":"list","description":"A list or a variable that contains a list.","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiters","description":"A string or a variable that contains one. Characters that separate list elements. The default value is comma. If this parameter contains more than one character, ColdFusion processes each occurrence of each character as a delimiter; you cannot specify a multicharacter delimiter.","required":false,"default":",","type":"string","values":[]},
+		{"name":"includeEmptyValues","description":"Set to true to include empty values.","required":false,"default":"","type":"boolean","values":["true","false"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listlast.html"},
@@ -16,15 +16,19 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listlast"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listlast"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 				"title":"Simple listLast Example",
 				"description":"A very basic listLast example",
 				"code" : "listLast(\"one,two,three,four\");",
 				"result":"four"
+		},
+		{
+			"title":"listLast Example with multiple delimiters",
+			"description":"A more advanced listLast example",
+			"code" : "listLast(\"one/two\\three/four\", \"\\/\");",
+			"result":"four"
 		}
 	]
 }

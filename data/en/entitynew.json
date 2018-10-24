@@ -2,20 +2,25 @@
 	"name":"entityNew",
 	"type":"function",
 	"syntax":"entityNew(entityName)",
-	"returns":"Object",
-	"related":[],
+	"returns":"any",
+	"related":["entityDelete"],
 	"description":" Creates a new instance of the persistent CFC with the entity name that you provide.",
 	"params": [
-		{"name":"entityName","description":"Entity name of the persistent CFC.","required":true,"default":"","type":"String","values":[]}
-
+		{"name":"entityName","description":"Entity name of the persistent CFC.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entitynew.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/entitynew.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entitynew"}
 	},
-	"links": [
-
+	"links": [],
+	"examples": [
+		{
+			"title":"Create a new ORM entity",
+			"description":"Use entityNew to get a new instance of an Employee entity.",
+			"code":"var employee = entityNew(\"Employee\");",
+			"result":"",
+			"runnable":false
+		}
 	]
-
 }

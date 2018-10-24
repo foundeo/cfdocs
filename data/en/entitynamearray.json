@@ -3,12 +3,18 @@
 	"type": "function",
 	"syntax": "entityNameArray()",
 	"returns": "array",
-	"related": [],
-	"description": "",
+	"related": ["entityNameList"],
+	"description": "Returns an array of all loaded entities",
 	"params": [],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/entitynamearray.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Dump an array of entities currently loaded",
+		"description":"",
+		"code":"dump(entityNameArray());",
+		"result":"",
+		"runnable":true
+	}],
 	"links": []
 }

@@ -1,20 +1,27 @@
 {
 	"name": "queryReduce",
 	"type": "function",
-	"syntax": "queryReduce(query, closure [, initalValue])",
-	"member": "query.reduce(closure [, initalValue])",
+	"syntax": "queryReduce(query, closure [, initialValue])",
+	"member": "query.reduce(closure [, initialValue])",
 	"returns": "any",
-	"related": [],
-	"description": "",
+	"related": ["querymap", "queryfilter"],
+	"description": "Reduces query columns just like in array or collection",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "initalValue", "description": "", "required": false, "default": "", "type": "object", "values": []}
+		{"name": "initialValue", "description": "", "required": false, "default": "", "type": "any", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryreduce.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryreduce.html"},
+		"coldfusion": {"minimum_version": "2016", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryreduce.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Reduce column to total",
+		"description":"Sum one query column",
+		"code":"fruits = queryNew(\"fruit,amount\",\r\n    \t\"varchar,integer\", [{\r\n    \t\t\"fruit\": \"apples\",\r\n    \t\t\"amount\": 15\r\n    \t}, {\r\n    \t\t\"fruit\": \"pineapples\",\r\n    \t\t\"amount\": 3\r\n    \t}, {\r\n    \t\t\"fruit\": \"strawberries\",\r\n    \t\t\"amount\": 32\r\n    \t}]\r\n    );\r\n    total_fruits = queryReduce(fruits,function(a,b) {\r\n        return a + b.amount;\r\n    },0);\r\n    \r\n    writeOutput(total_fruits);",
+		"result":"50",
+		"runnable":true
+	}],
 	"links":[{
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",

@@ -2,12 +2,11 @@
 	"name":"bitNot",
 	"type":"function",
 	"syntax":"bitNot(number)",
-	"returns":"Numeric",
-	"related":[],
-	"description":" Performs a bitwise logical NOT operation.",
+	"returns":"numeric",
+	"related":["bitAnd","bitOr","bitXOr"],
+	"description":"Performs a bitwise logical NOT operation.",
 	"params": [
-		{"name":"number","description":"Integer","required":true,"default":"","type":"Numeric","values":[]}
-
+		{"name":"number","description":"Integer","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/bitnot.html"},
@@ -15,9 +14,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/bitnot"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/bitnot"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Calculate bitwise logical NOT",
@@ -27,5 +24,4 @@
 			"runnable":true
 		}
 	]
-
 }

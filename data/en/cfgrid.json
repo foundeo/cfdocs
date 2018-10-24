@@ -2,16 +2,16 @@
 	"name": "cfgrid",
 	"type": "tag",
 	"syntax": "<cfgrid name=\"\">",
-	"returns": "",
-	"related": [],
+	"related": ["cfgridcolumn","cfgridrow","cfgridupdate"],
 	"description": "Used within the cfform tag. Puts a grid control (a table of\n data) in a CFML form. To specify grid columns and row\n data, use the cfgridcolumn and cfgridrow tags, or use the\n query attribute, with or without cfgridcolumn tags.",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfgrid/index.html",
 	"params": [
 		{
 			"name": "name",
 			"description": "Name of grid element.",
 			"required": true,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -19,7 +19,7 @@
 			"description": "A bind expression specifying used to fill the \n contents of the grid. Cannot be used with the \n query attribute.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "The number of rows to display per page for a \n dynamic grid. If the number of available rows \n exceeds the page size, the grid displays only \n the specified number of entries on a single \n page, and the user navigates between pages \n to show all data. The grid retrieves data for \n each page only when it is required for display. \n This attribute is ignored if you specify a query \n attribute.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -35,7 +35,7 @@
 			"description": "The color to use for one of the alternating \n stripes. The bgColor setting determines the \n other color",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -59,7 +59,7 @@
 			"description": "- applet: generates a Java applet.\n - Flash: generates a Flash grid control.\n - xml: generates an XMLrepresentation of the grid.\n In XML format forms, includes the generated XML in the form.\n In HTML format forms, puts the XML in a string variable\n with the name specified by the name attribute.\n Default: applet",
 			"required": false,
 			"default": "applet",
-			"type": "String",
+			"type": "string",
 			"values": ["applet", "flash", "xml", "html"]
 		},
 		{
@@ -67,7 +67,7 @@
 			"description": "Control's height, in pixels.\n Default for applet: 300",
 			"required": false,
 			"default": 300,
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -75,7 +75,7 @@
 			"description": "Control's width, in pixels.\n Default for applet: 300",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -91,7 +91,7 @@
 			"description": "Vertical margin above and below control, in pixels.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -99,7 +99,7 @@
 			"description": "Horizontal spacing to left and right of control, in pixels.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -107,7 +107,7 @@
 			"description": "Alignment of the grid cell contents",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["top", "left", "bottom", "baseline", "texttop", "absbottom", "middle", "absmiddle", "right"]
 		},
 		{
@@ -147,7 +147,7 @@
 			"description": "Font of data in column.",
 			"required": false,
 			"default": "arial",
-			"type": "String",
+			"type": "string",
 			"values": ["arial", "times", "courier", "arialunicodeMS"]
 		},
 		{
@@ -155,7 +155,7 @@
 			"description": "Size of text in column.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -179,7 +179,7 @@
 			"description": "Text color for control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.",
 			"required": false,
 			"default": "black",
-			"type": "String",
+			"type": "string",
 			"values": ["black", "red", "blue", "magenta", "cyan", "orange", "darkgray", "pink", "white", "lightgray", "yellow"]
 		},
 		{
@@ -187,7 +187,7 @@
 			"description": "URL or query column name that contains a URL to hyperlink\n each grid column with.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -195,7 +195,7 @@
 			"description": "The query column to use for the value appended to the href\n URL of each column, instead of the column's value.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -203,7 +203,7 @@
 			"description": "Frame in which to open link specified in href.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -227,7 +227,7 @@
 			"description": "JavaScript function to validate user input. The form object,\n input object, and input object value are passed to the\n specified routine, which should return True if validation\n succeeds; False, otherwise.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -235,7 +235,7 @@
 			"description": "JavaScript function to execute if validation fails.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -243,7 +243,7 @@
 			"description": "Left: left-aligns data within column.\n Right: right-aligns data within column.\n Center: center-aligns data within column.",
 			"required": false,
 			"default": "left",
-			"type": "String",
+			"type": "string",
 			"values": ["left", "center", "right"]
 		},
 		{
@@ -259,7 +259,7 @@
 			"description": "Minimum row height, in pixels, of grid control. Used with\n cfgridcolumn type = \"Image\"; defines space for graphics to\n display in row.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -275,7 +275,7 @@
 			"description": "Left: left-aligns data within row header\n Right: right-aligns data within row header\n Center: center-aligns data within row header",
 			"required": false,
 			"default": "left",
-			"type": "String",
+			"type": "string",
 			"values": ["left", "center", "right"]
 		},
 		{
@@ -283,7 +283,7 @@
 			"description": "Font of data in column.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -291,7 +291,7 @@
 			"description": "Size of text in column.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -315,7 +315,7 @@
 			"description": "Text color for control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.",
 			"required": false,
 			"default": "black",
-			"type": "String",
+			"type": "string",
 			"values": ["black", "red", "blue", "magenta", "cyan", "orange", "darkgray", "pink", "white", "lightgray", "yellow"]
 		},
 		{
@@ -331,7 +331,7 @@
 			"description": "Left: left-aligns data within row header\n Right: right-aligns data within row header\n Center: center-aligns data within row header",
 			"required": false,
 			"default": "left",
-			"type": "String",
+			"type": "string",
 			"values": ["left", "center", "right"]
 		},
 		{
@@ -339,7 +339,7 @@
 			"description": "Font of data in column.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -347,7 +347,7 @@
 			"description": "Size of text in column.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -371,7 +371,7 @@
 			"description": "Text color for control. For a hex value, use the form:\n textColor = \"##xxxxxx\", where x = 0-9 or A-F; use two hash\n signs or none.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["black", "red", "blue", "magenta", "cyan", "orange", "darkgray", "pink", "white", "lightgray", "yellow"]
 		},
 		{
@@ -379,7 +379,7 @@
 			"description": "Background color of grid control.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["black", "red", "blue", "magenta", "cyan", "orange", "darkgray", "pink", "white", "lightgray", "yellow"]
 		},
 		{
@@ -387,7 +387,7 @@
 			"description": "Background color for a selected item.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["black", "red", "blue", "magenta", "cyan", "orange", "darkgray", "pink", "white", "lightgray", "yellow"]
 		},
 		{
@@ -395,7 +395,7 @@
 			"description": "Selection mode for items in the control.\n - Edit: user can edit grid data. Selecting a cell opens\n the editor for the cell type.\n - Row: user selections automatically extend to the row\n that contains selected cell.\n - Single: user selections are limited to selected cell.\n (Applet only)\n - Column: user selections automatically extend\n to column that contains selected cell. (Applet only)\n - Browse: user can only browse grid data. (Applet only)",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": ["edit", "single", "row", "column", "browse"]
 		},
 		{
@@ -403,15 +403,15 @@
 			"description": "Maximum number of rows to display in grid.",
 			"required": false,
 			"default": "",
-			"type": "Numeric",
+			"type": "numeric",
 			"values": []
 		},
 		{
 			"name": "notsupported",
-			"description": "Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.\n Default:\n \"<b>Browser must support Java to <br>view ColdFusion Java\n Applets!</b>\"",
+			"description": "Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.",
 			"required": false,
 			"default": "<b>Browser must support Java to <br>view ColdFusion Java Applets!</b>",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -427,7 +427,7 @@
 			"description": "Text for the insert button. Takes effect only if\n selectmode=\"edit\".",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -435,7 +435,7 @@
 			"description": "Text of Delete button text. Takes effect only if\n selectmode=\"edit\".",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -443,7 +443,7 @@
 			"description": "Sort button text",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -451,7 +451,7 @@
 			"description": "Sort button text",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -459,7 +459,7 @@
 			"description": "Flash only: Must be a style specification in CSS format.\n Ignored for type=\"text\".",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -483,7 +483,7 @@
 			"description": "Flash only: text to display when the\n mouse pointer hovers over the control.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -491,7 +491,7 @@
 			"description": "Flash only: ActionScript to run when the control changes\n due to user action in the control.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -499,7 +499,7 @@
 			"description": "* yes: executes the bind attribute expression when first loading the form.\n * no: does not execute the bind attribute expression until the first bound event.\nIgnored if there is no bind attribute.",
 			"required": false,
 			"default": true,
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -507,7 +507,7 @@
 			"description": "* yes: selects the first row of the grid when the gird loads.\n * no: does not select any rows when the grid loads.",
 			"required": false,
 			"default": true,
-			"type": "Boolean",
+			"type": "boolean",
 			"values": [true, false]
 		},
 		{
@@ -515,7 +515,7 @@
 			"description": "ActionScript that runs when the grid loses focus.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -523,7 +523,7 @@
 			"description": "ActionScript that runs when the grid gets focus.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -531,7 +531,7 @@
 			"description": "A Boolean value specifying whether the user can collapse the entire grid by clicking an arrow on the title bar.",
 			"required": false,
 			"default": "",
-			"type": "Boolean",
+			"type": "boolean",
 			"values": []
 		},
 		{
@@ -539,7 +539,7 @@
 			"description": "Puts the grid rows into groups, organized by the column specified in this attribute. Each group is collapsible and has a header with the column name, group field value, and number of entries in the group.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -547,16 +547,12 @@
 			"description": "Java Script funtion that gets called when a grid is loaded for first time",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],
 	"engines": {
-		"coldfusion": {
-			"minimum_version": "",
-			"notes": "",
-			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfgrid.html"
-		}
+		"coldfusion": { "minimum_version": "3", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfgrid.html" }
 	},
 	"links": []
 }

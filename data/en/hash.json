@@ -2,18 +2,18 @@
 	"name":"hash",
 	"type":"function",
 	"syntax":"hash(String [, algorithm] [, encoding] [, iterations])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":"Converts a string into a fixed length hexadecimal string.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"algorithm","description":"A supported algorithm such as MD5,SHA,SHA-256,SHA-384, or SHA-512. Of those listed SHA-512 is the strongest and generates a 128 character hex result. CF7+", "required":false,"default":"MD5","type":"String","values":["CFMX_COMPAT","MD5","SHA","SHA-256","SHA-384","SHA-512"]},
-		{"name":"encoding","description":"A string specifying the encoding to use when converting\n the string to byte data used by the hash algorithm.\n Must be a character encoding name recognized by the\n Java runtime. CF7+","required":false,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]},
+		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"algorithm","description":"A supported algorithm such as MD5,SHA,SHA-256,SHA-384, or SHA-512. Of those listed SHA-512 is the strongest and generates a 128 character hex result. CF7+", "required":false,"default":"MD5","type":"string","values":["CFMX_COMPAT","MD5","SHA","SHA-256","SHA-384","SHA-512"]},
+		{"name":"encoding","description":"A string specifying the encoding to use when converting\n the string to byte data used by the hash algorithm.\n Must be a character encoding name recognized by the\n Java runtime. CF7+","required":false,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]},
 		{"name":"iterations", "description":"Iterates the number of times the hash is computed to create a more computationally intensive hash. Lucee and Adobe CF implement this differently (off by one), see compatibility notes below. CF10+", "default":"1", "required":false, "type":"numeric", "values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"CF7 added additional algorithm support, CF10 added the iterations option.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/hash.html"},
+		"coldfusion": {"minimum_version":"4.5", "notes":"CF7 added additional algorithm support, CF10 added the iterations option.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/hash.html"},
 		"lucee": {"minimum_version":"", "notes":"The iterations value represents the total number of hashes on Lucee, in Adobe CF the value is the number of additional iterations.", "docs":"http://docs.lucee.org/reference/functions/hash.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/hash"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/hash"}

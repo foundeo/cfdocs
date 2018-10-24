@@ -3,8 +3,8 @@
 	"type": "function",
 	"syntax": "imageFilter(name, filtername [, parameters])",
 	"returns": "void",
-	"related": [],
-	"description": "",
+	"related": ["imageFilterColorMap","imageFilterCurves","imageFilterKernel","imageFilterWarpGrid"],
+	"description": "Executes a filter on the given image",
 	"params": [
 		{"name": "name", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "filtername", "description": "", "required": true, "default": "", "type": "string", "values": []},
