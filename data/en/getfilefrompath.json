@@ -19,7 +19,7 @@
 		{
 			"title":"Basic Example",
 			"description":"",
-			"code":"fileName = getFileFromPath(expandPath(\"./file.txt\"));",
+			"code":"fileName = getFileFromPath(\"C:\\temp\\file.txt\"));",
 			"result":"The fileName variable will contain the string file.txt",
 			"runnable":false
 		}
