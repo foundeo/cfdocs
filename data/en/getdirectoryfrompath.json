@@ -19,9 +19,9 @@
 		{
 			"title":"Basic Example",
 			"description":"",
-			"code":"directoryPath = getDirectoryFromPath(\"C:\\temp\\file.txt\");",
-			"result":"The directoryPath variable will contain the string C:\\temp\\",
-			"runnable":false
+			"code":"getDirectoryFromPath(\"C:\\temp\\file.txt\")",
+			"result":"C:\\temp\\",
+			"runnable":true
 		}
 	]
 }
