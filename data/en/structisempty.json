@@ -2,6 +2,7 @@
 	"name":"structIsEmpty",
 	"type":"function",
 	"syntax":"structIsEmpty(structure)",
+	"member":"someStruct.isEmpty()",
 	"returns":"boolean",
 	"related":[],
 	"description":" Determines whether a structure contains data.",
@@ -28,6 +29,13 @@
 			"description":"",
 			"code":"myStructWithThings={ \"one\": \"foo\", \"two\": \"bar\"};\r\nwriteOutput( structIsEmpty(myStructWithThings) );",
 			"result":"false",
+			"runnable":true
+		},
+		{
+			"title": "Using Member Function",
+			"description": "CF11+ Lucee4.5+",
+			"code": "myStruct={};\r\nwriteOutput( myStruct.IsEmpty() );",
+			"result": "true",
 			"runnable":true
 		}
 	],
