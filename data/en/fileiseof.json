@@ -22,16 +22,16 @@
 		{
 			"title":"Simple usage syntax",
 			"description":"Call fileIsEOF on a file object and save the result to a variable.",
-			"code":"ileObj = fileOpen(expandPath('./file.txt');\r\nisEndOfFile = fileIsEOF(fileObj);",
+			"code":"fileObj = fileOpen(expandPath('./file.txt');\r\nisEndOfFile = fileIsEOF(fileObj);",
 			"result":"",
 			"runnable":false
 		},
 		{
 			"title":"Using fileIsEOF to loop over all lines of a text file",
 			"description":"Simplified example of using fileIsEOF to determine when all lines have been read from a file. Error handling omitted for clarity.",
-			"code":"// *************************************************\r\n// Error handling omitted for clarity.\r\n// *************************************************\r\n\r\n// open a file for reading\r\nfileObj = fileOpen(expandPath('./file.txt'), \"read\");\r\n\r\n// read each line until we read the end of the file.\r\n// fileIsEOF(fileObj) == false until we've read in the last line.\r\nwhile (!fileIsEOF(fileObj)) {\r\n\r\n\tlineContent = fileReadLine(fileObj);\r\n\r\n\t// do something with content of each line\r\n}\r\n\r\n// end of file reached, close the file handle\r\nfileClose(fileObj);",
+			"code":"// Error handling omitted for clarity.\r\n\r\n// open a file for reading\r\nfileObj = fileOpen(expandPath('./file.txt'), \"read\");\r\n\r\n// read each line until we read the end of the file.\r\n// fileIsEOF(fileObj) == false until we've read in the last line.\r\nwhile (!fileIsEOF(fileObj)) {\r\n\r\n\tlineContent = fileReadLine(fileObj);\r\n\r\n\t// do something with content of each line\r\n}\r\n\r\n// end of file reached, close the file handle\r\nfileClose(fileObj);",
 			"result":"",
-			"runnable":false
+			"runnable":true
 		}
 	]
 
