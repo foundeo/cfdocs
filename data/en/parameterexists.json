@@ -4,7 +4,7 @@
 	"syntax":"parameterExists(name)",
 	"returns":"boolean",
 	"related":[],
-	"description":"This function is deprecated and is still available for backward compatibility. Use StructKeyExists() or IsDefined() functions instead. \r\n\r\n Determines whether a parameter exists. ColdFusion does not evaluate the argument.",
+	"description":"This function is deprecated but is still available for backward compatibility. Use StructKeyExists() or IsDefined() functions instead. \r\n\r\n Determines whether a parameter exists. ColdFusion does not evaluate the argument.",
 	"params": [
 		{"name":"parameter","description":"A syntactically valid parameter name.","required":true,"default":"","type":"","values":[]}
 	],
