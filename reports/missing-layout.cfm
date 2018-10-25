@@ -15,6 +15,8 @@ page.description = replace( page.description, "{total}", page.total );
 page.description = replace( page.description, "{complete}", page.complete );
 page.description = replace( page.description, "{percent}", page.percent );
 
+request.title = page.name;
+
 if( structKeyExists( page, "dump" ) && page.dump ){
 	writedump( page );
 	abort;
