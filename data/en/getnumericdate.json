@@ -4,20 +4,62 @@
 	"syntax": "getNumericDate(date)",
 	"returns": "numeric",
 	"related": ["isNumericDate","createODBCDate","createDate"],
-	"description": "",
+	"description": "Returns a real number whose integer part represents the number of days since the EPOCH and whose fractional part represents the time value expressed in hours then divided by 24.\r NOTE: Lucee (and ACF) uses 12/30/1899 00:00:00 as it's epoch time. See links below.",
 	"params": [
-		{"name": "date", "description": "", "required": true, "default": "", "type": "any", "values": []}
+		{"name": "arg1", "description": "A date/time object, or a representation of one.", "required": true, "default": "", "type": "any", 
+			"values": [
+				"2018-01-01",
+				"{ts '2018-01-01 00:00:00'}",
+				"createDate(2018,1,1)",
+				"1/1/2018",
+				"January 1, 1990",
+				"Monday, January 1, 1990",
+				"1/1/1990 5:00 PM",
+				"123 < Doesn't fail. Just returns the number",
+				"-123 < Doesn't fail. Just returns the number",
+				"2/29/1999 < Fails",
+				"abc < Fails"
+			]
+		}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getnumericdate.html"}
 	},
 	"examples": [
 		{
-			"title": "Convert a date string to a numeric date",
-			"description": "This numeric date represents the number of days after January 1, 2008.",
+			"title": "Convert a date string to a numeric date - Tag Syntax",
+			"description": "This numeric date represents the number of days between December 30, 1899 and January 1, 2008.",
 			"code": "getNumericDate('2018-01-01')",
 			"result": "43101"
+		},
+		{
+			"title": "Convert a date string to a numeric date - Script Syntax",
+			"description": "This numeric date represents the number of days between December 30, 1899 and January 1, 2008.",
+			"code": "dump(getNumericDate('2008-01-01');",
+			"result": "43101"
+		},
+		{
+			"title": "Difference between two dates.",
+			"description": "This shows an example of how you could use getNumericDate() to determine the difference between two dates.",
+			"code": "<cfscript>\r\n date1='2017-01-01' \r\n date2='2018-01-01'\r\n writeoutput(date2-date1 & \" days\") \r\n</cfscript>",
+			"result": "365 days"
 		}
 	],
-	"links": []
+	"links": [
+		{
+		    "title":"What is Epoch?",
+		    "description":"A description of what general \"Epoch\" means in computers, and how it can differ on various systems. NOTE: ColdFusion doesn't generally rely on UNIX Epoch of 1/1/1970.",
+		    "url":"https://en.wikipedia.org/wiki/Epoch_(reference_date)#Notable_epoch_dates_in_computing"
+		},
+		{
+		    "title":"Why does ColdFusion (Lucee and Adobe) use 12/30/1899 00:00:00 as \"Epoch time\"?",
+		    "description":"A brief comment on how Allaire probably came to use 12/30/1899 as Epoch. For more history, view the answer's Source link.",
+		    "url":"https://stackoverflow.com/questions/6714372/why-is-coldfusions-epoch-time-dec-30-1899"
+		},
+		{
+		    "title":"If you want to more of the \"Why\" of the various versions of \"Epoch time\"...",
+		    "description":"This is a MSDN link that discusses different types of Timestamps nd how they relate to an Epoch.",
+		    "url":"https://blogs.msdn.microsoft.com/oldnewthing/20030905-02/?p=42653"
+		}
+	]
 }
