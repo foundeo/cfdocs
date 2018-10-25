@@ -11,7 +11,7 @@
 		{"name":"tablequalifier","description":"For data sources that support table qualifiers. The purpose\n of table qualifiers is as follows:\n SQL Server and Oracle: name of database that contains\n table\n Intersolv dBASE driver: directory of DBF files","required":false,"default":"","type":"string","values":[]},
 		{"name":"username","description":"Overrides username value specified in ODBC setup.","required":false,"default":"","type":"string","values":[]},
 		{"name":"password","description":"Overrides password value specified in ODBC setup.","required":false,"default":"","type":"string","values":[]},
-		{"name":"formfields","description":"Comma-delimited list of form fields to update.\n\n If a form field is not matched by a column name in the\n database, CFML throws an error.\n\n The formFields lies must include the database table primary\n key field, which must be present in the form. It can be\n hidden.","required":false,"default":"","type":"string","values":[]}
+		{"name":"formfields","description":"Comma-delimited list of form fields to update.\n\n If a form field is not matched by a column name in the\n database, CFML throws an error.\n\n The formFields list must include the database table primary\n key field, which must be present in the form. It can be\n hidden.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfupdate.html"},
