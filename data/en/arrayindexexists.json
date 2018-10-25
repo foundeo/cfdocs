@@ -4,7 +4,7 @@
 	"syntax": "arrayIndexExists(array, index)",
 	"member": "array.indexExists(index)",
 	"returns": "boolean",
-	"related": ["arrayContains","structKeyExists"],
+	"related": ["arrayIsDefined","arrayContains","structKeyExists"],
 	"description": "Returns whether there exists an item in the array at the selected index.",
 	"params": [
 		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []},
