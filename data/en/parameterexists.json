@@ -4,9 +4,9 @@
 	"syntax":"parameterExists(name)",
 	"returns":"boolean",
 	"related":[],
-	"description":"This function is deprecated. Use the IsDefined or StructKeyExists functions. Determines whether a parameter exists. ColdFusion does not evaluate the argument.",
+	"description":"This function is deprecated and is still available for backward compatibility. Use StructKeyExists() or IsDefined() functions instead. \r\n\r\n Determines whether a parameter exists. ColdFusion does not evaluate the argument.",
 	"params": [
-		{"name":"region","description":"Name of the cache region.","required":true,"default":"","type":"","values":[]}
+		{"name":"parameter","description":"A syntactically valid parameter name.","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/parameterexists.html", "deprecated":"6"}
@@ -18,7 +18,7 @@
         {
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<CFIF parameterExists(FORM.myString)> \r\n <P>Using parameterExists, we have shown that the FORM field 'myString' now exists.  However, this function is provided for backward compatibility and the function IsDefined should be used instead, as below. \r\n </CFIF> \r\n",
+			"code": "<CFIF parameterExists(FORM.myString)> \r\n <P>Using parameterExists, we have shown that the FORM field 'myString' now exists. \r\n </CFIF> \r\n",
 			"result": ""
 		}
 	]
