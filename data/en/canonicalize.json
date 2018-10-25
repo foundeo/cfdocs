@@ -4,6 +4,7 @@
     "syntax":"canonicalize(input, restrictMultiple, restrictMixed)",
     "returns":"string",
     "description":"Canonicalize or decode the input string. Canonicalization is simply the operation of reducing a possibly encoded string down to its simplest form. This is important because attackers frequently use encoding to change their input in a way that will bypass validation filters, but still be interpreted properly by the target of the attack. Note that data encoded more than once is not something that a normal user would generate and should be regarded as an attack.",
+    "related": ["encodeForCSS","encodeForXML","encodeForJavaScript","encodeForHTML"],
     "params": [
         {"name":"input","description":"String to be encoded.","required":true,"type":"string"},
         {"name":"restrictMultiple","description":"If set to true, multiple encoding is restricted. This argument can be set to true to restrict the input if multiple or nested encoding is detected. If this argument is set to true, and the given input is multiple or nested encoded using one encoding scheme an error will be thrown.","required":true,"type":"boolean"},
