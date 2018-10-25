@@ -3,10 +3,10 @@
 	"type":"function",
 	"syntax":"isDefined(variable_name)",
 	"returns":"boolean",
-	"related":["structKeyExists","isEmpty"],
-	"description":" Evaluates a string value to determine whether the variable\n named in it exists.",
+	"related":["structKeyExists","isEmpty","ArrayIsDefined"],
+	"description":"Evaluates a string value to determine whether the variable named in it exists.\n NOTE: Passing an Array entry {isDefined('thisArray[2]')} will error. Use ArrayIsDefined() instead",
 	"params": [
-		{"name":"variable_name","description":"","required":true,"default":"","type":"string","values":[]}
+		{"name":"variable_name","description":"The quoted string of the variable to test for existence.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isdefined.html"},
@@ -14,11 +14,17 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isdefined"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isdefined"}
 	},
-	"links": [],
+	"links": [
+		{
+		    "title":"structKeyExists() vs isDefined()",
+		    "description":"An Adobe Forums discussion on the differences between structKeyExists() and isDefined().",
+		    "url":"https://forums.adobe.com/thread/491991"
+		}
+	],
 	"examples": [
 		{
 			"title":"Using IsDefined",
-			"description":"Checking for the existence of a form variable",
+			"description":"Checking for the existence of a variable named 'form.submit' or a variable named 'submit' in the 'form' object.",
 			"code":"<cfif isDefined(\"form.submit\")>\n ...\n</cfif>",
 			"result":""
 		}
