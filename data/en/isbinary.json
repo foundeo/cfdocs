@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"isBinary(value)",
 	"returns":"boolean",
-	"related":[],
+	"related":["toBase64","toBinary","spreadsheetReadBinary","fileReadBinary"],
 	"description":" Determines whether a value is stored as binary data.",
 	"params": [
 		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isbinary.html"},
@@ -15,10 +14,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isbinary"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isbinary"}
 	},
-	"links": [
-
-	],
-
+	"links": [],
 	"examples": [
 		{
 			"title":"Checks if toBase64() function returns binary data ",
