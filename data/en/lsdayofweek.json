@@ -4,7 +4,7 @@
 	"syntax": "lsDayOfWeek(date [, locale] [, timezone])",
 	"member": "date.lsDayOfWeek([locale] [, timezone])",
 	"returns": "numeric",
-	"related": [],
+	"related": ["day","dayOfWeek"],
 	"description": "Returns the day of the week using locale-specific date and time formatting conventions.",
 	"params": [
 		{
