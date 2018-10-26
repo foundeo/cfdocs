@@ -118,7 +118,7 @@
 	  "result": "",
 	  "title": "CFSCRIPT Example",
 	  "description": "The following example shows a simple authentication:",
-	  "code": "cflogin() {\r\n\tcfoauth(\r\n\t\ttype=\"Google\",\r\n\t\tclientid=\"YOUR_CLIENT_ID\",\r\n\t\tsecretkey=\"YOUR_GOOGLE_CLIENTSECRET\",\r\n\t\tredirecturi=\"YOUR_CALLBACK_URI\",\r\n\t\tresult=\"res\",\r\n\t\tscope=\"YOUR_SCOPES\",\r\n\t\tstate=\"cftoken=cftoken\"\r\n\t);\r\n\tcfloginuser(name=\res.other.email\", password=\res.access_token\", roles=\"user\");\r\n}",
+	  "code": "\n cflogin() {\n cfoauth(\n type=\"Google\",\n clientid=\"YOUR_CLIENT_ID\",\n secretkey=\"YOUR_GOOGLE_CLIENTSECRET\",\n redirecturi=\"YOUR_CALLBACK_URI\",\n result=\"res\",\n scope=\"YOUR_SCOPES\",\n state=\"cftoken=#cftoken#\"\n );\n cfloginuser(name=\"#res.other.email#\", password=\"#res.access_token#\", roles=\"user\");\n }\n",
 	  "runnable":false
 	}
   ]
