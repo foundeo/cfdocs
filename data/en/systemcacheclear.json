@@ -26,6 +26,21 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/systemcacheclear.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"Clear all caches",
+			"description":"Clear all caches.",
+			"code":"systemCacheClear();",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Clear the template cache",
+			"description":"Clear the template cache.",
+			"code":"systemCacheClear(\"template\");",
+			"result":"",
+			"runnable":false
+		}
+	],
 	"links": []
 }
