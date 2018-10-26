@@ -118,7 +118,7 @@
 	  "result": "",
 	  "title": "CFSCRIPT Example",
 	  "description": "The following example shows a simple authentication:",
-	  "code": "\n cflogin() {\n cfoauth(\n type=\"Google\",\n clientid=\"YOUR_CLIENT_ID\",\n secretkey=\"YOUR_GOOGLE_CLIENTSECRET\",\n redirecturi=\"YOUR_CALLBACK_URI\",\n result=\"res\",\n scope=\"YOUR_SCOPES\",\n state=\"cftoken=#cftoken#\"\n );\n cfloginuser(name=\"#res.other.email#\", password=\"#res.access_token#\", roles=\"user\");\n }\n",
+	  "code": "cflogin() {\n cfoauth(\n type=\"Google\",\n clientid=\"YOUR_CLIENT_ID\",\n secretkey=\"YOUR_GOOGLE_CLIENTSECRET\",\n redirecturi=\"YOUR_CALLBACK_URI\",\n result=\"res\",\n scope=\"YOUR_SCOPES\",\n state=\"cftoken=#cftoken#\"\n );\n cfloginuser(name=\"#res.other.email#\", password=\"#res.access_token#\", roles=\"user\");\n }\n",
 	  "runnable":false
 	}
   ]
