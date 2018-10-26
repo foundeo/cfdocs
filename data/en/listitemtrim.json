@@ -4,7 +4,7 @@
 	"syntax": "listItemTrim(list [, delimiters] [, includeEmptyFields])",
 	"member": "list.listItemTrim([delimiters] [, includeEmptyFields])",
 	"returns": "string",
-	"related": [],
+	"related": ["listCompact","listTrim","trim"],
 	"description": "Trims every item in the list and returns a new list.",
 	"params": [
 		{"name": "list", "description": "The list with the items, you want to trim.", "required": true, "default": "", "type": "string", "values": []},
@@ -16,25 +16,25 @@
 	},
 	"examples": [
 		{
-            "title":"Simple Example",
-            "description":"Trims each item in the list.",
-            "code":"exampleList = \"hello, world ,this, is a, ,example\";\r\nwriteOutput(listItemTrim(examplelist));",
-            "result":"hello,world,this,is a,,example",
-            "runnable":true
+            		"title":"Simple Example",
+            		"description":"Trims each item in the list.",
+            		"code":"exampleList = \"hello, world ,this, is a, ,example\";\r\nwriteOutput(listItemTrim(examplelist));",
+            		"result":"hello,world,this,is a,,example",
+            		"runnable":true
 		},
 		{
-            "title":"Using as member function",
-            "description":"Trims each item in the list.",
-            "code":"exampleList = \"hello, world ,this, is a, ,example\";\r\nexampleList = exampleList.listItemTrim();\r\nwriteOutput(examplelist);",
-            "result":"hello,world,this,is a,,example",
-            "runnable":true
+            		"title":"Using as member function",
+            		"description":"Trims each item in the list.",
+            		"code":"exampleList = \"hello, world ,this, is a, ,example\";\r\nexampleList = exampleList.listItemTrim();\r\nwriteOutput(examplelist);",
+            		"result":"hello,world,this,is a,,example",
+            		"runnable":true
 		},
 		{
-            "title":"Keep empty items in the list",
-            "description":"Trims each item in the list and keep empty items.",
-            "code":"exampleList = \"hello, world ,this, is a,  ,,example\";\r\nwriteOutput(listItemTrim(examplelist, \",\", true));",
-            "result":"hello,world,this,is a,,,example",
-            "runnable":true
+            		"title":"Keep empty items in the list",
+            		"description":"Trims each item in the list and keep empty items.",
+            		"code":"exampleList = \"hello, world ,this, is a,  ,,example\";\r\nwriteOutput(listItemTrim(examplelist, \",\", true));",
+            		"result":"hello,world,this,is a,,,example",
+            		"runnable":true
 		}
 	],
 	"links": []
