@@ -111,7 +111,7 @@
 	  "result": "",
 	  "title": "Adobe Example",
 	  "description": "The following example shows a simple authentication:",
-	  "code": "<cflogin>\r\n<cfoauth\r\n\ttype=\"Facebook\"\r\n\tclientid=\"YOUR_CLIENT_ID\"\r\n\tsecretkey=\"YOUR_SECRET_KEY\"\r\n\tresult=\"res\"\r\n\tredirecturi=\"http:\/\/localhost:8500\/doc\/login.cfm\"\r\n>\r\n<cfloginuser name=\"#res.other.username#\" password=\"#res.access_token#\" roles=\"user\"\/>\r\n<\/cflogin>\r\n<cflocation url=\"http:\/\/localhost:8500\/doc\/index.cfm\">"
+	  "code": "<cflogin>\r\n<cfoauth\r\n\ttype=\"Facebook\"\r\n\tclientid=\"YOUR_CLIENT_ID\"\r\n\tsecretkey=\"YOUR_SECRET_KEY\"\r\n\tresult=\"res\"\r\n\tredirecturi=\"http:\/\/localhost:8500\/doc\/login.cfm\"\r\n>\r\n<cfloginuser name=\"#res.other.username#\" password=\"#res.access_token#\" roles=\"user\"\/>\r\n<\/cflogin>\r\n<cflocation url=\"http:\/\/localhost:8500\/doc\/index.cfm\">",
 	  "runnable":false
 	},
 	{
