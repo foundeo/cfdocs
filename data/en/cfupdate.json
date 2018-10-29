@@ -19,5 +19,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfupdate"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfupdate"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Update a record using passed form fields",
+			"description": "Uses the cfupdate function to update a record in the a users table based on a list form fields. The primary key must be included in the list of fields",
+			"code": "cfupdate( datasource=\"myDsn\", tablename=\"users\", formFields=\"userId,firstName,lastName,emailAddress\" );",
+			"result": ""
+		}
+	]
 }
