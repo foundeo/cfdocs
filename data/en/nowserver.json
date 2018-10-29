@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "nowServer()",
 	"returns": "date",
-	"related": [],
+	"related": ["now"],
 	"description": "Returns the current time on the server independent of Lucee timezone definition.",
 	"params": [],
 	"engines": {

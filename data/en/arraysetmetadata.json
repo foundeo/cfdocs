@@ -4,7 +4,7 @@
 	"syntax":"arraySetMetadata(array, metadata)",
 	"member":"someArray.setMetadata(metadata)",
 	"returns":"void",
-	"related":["arrayGetMetadata"],
+	"related":["arrayGetMetadata","structGetMetadata","structSetMetadata"],
 	"description":"Sets metadata for items of an array. Useful when using serializeJSON with ambiguous data.",
 	"params": [
 		{"name":"array","description":"The array for which to set the metadata.","required":true,"default":"","type":"array","values":[]},
@@ -13,9 +13,9 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"2016.0.2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraysetmetadata.html"}
 	},
-  "links": [],
-  "examples": [
-    {
+  	"links": [],
+  	"examples": [
+    		{
 			"title": "Serialize an array to JSON",
 			"description": "Outputs serialized JSON for an array containing various data types",
 			"code": "inputs = [\"2016.02\", 42.0, \"Yes\", \"No\", \"32830\", {\"t1\": \"Yes\"}, [\"1\",\"yes\",\"3\",false,\"null\",\"null\"]];\nmetadata = {items: [\"numeric\", \"integer\", \"string\", \"boolean\", \"string\", {t1: {type:\"string\",ignore:true}}, {items: [\"integer\",\"boolean\",\"string\",\"string\",\"string\",\"null\"]}]};\narraySetMetadata(inputs,metadata);\nwriteOutput(serializeJSON(inputs));",

@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"monthAsString(month_number)",
 	"returns":"string",
-	"related":[],
+	"related":["month","monthShortAsString"],
 	"description":" ",
 	"params": [
 		{"name":"month_number","description":"","required":true,"default":"","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/monthasstring.html"},
@@ -15,9 +14,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/monthasstring"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/monthasstring"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Script Syntax",
@@ -26,5 +23,4 @@
 			"result": "result is: November"
 		}
 	]
-
 }
