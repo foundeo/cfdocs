@@ -111,7 +111,15 @@
 	  "result": "",
 	  "title": "Adobe Example",
 	  "description": "The following example shows a simple authentication:",
-	  "code": "<cflogin>\r\n<cfoauth\r\n\ttype=\"Facebook\"\r\n\tclientid=\"YOUR_CLIENT_ID\"\r\n\tsecretkey=\"YOUR_SECRET_KEY\"\r\n\tresult=\"res\"\r\n\tredirecturi=\"http:\/\/localhost:8500\/doc\/login.cfm\"\r\n>\r\n<cfloginuser name=\"#res.other.username#\" password=\"#res.access_token#\" roles=\"user\"\/>\r\n<\/cflogin>\r\n<cflocation url=\"http:\/\/localhost:8500\/doc\/index.cfm\">"
+	  "code": "<cflogin>\r\n<cfoauth\r\n\ttype=\"Facebook\"\r\n\tclientid=\"YOUR_CLIENT_ID\"\r\n\tsecretkey=\"YOUR_SECRET_KEY\"\r\n\tresult=\"res\"\r\n\tredirecturi=\"http:\/\/localhost:8500\/doc\/login.cfm\"\r\n>\r\n<cfloginuser name=\"#res.other.username#\" password=\"#res.access_token#\" roles=\"user\"\/>\r\n<\/cflogin>\r\n<cflocation url=\"http:\/\/localhost:8500\/doc\/index.cfm\">",
+	  "runnable":false
+	},
+	{
+	  "result": "",
+	  "title": "CFSCRIPT Example",
+	  "description": "The following example shows a simple authentication:",
+	  "code": "cflogin() {\n cfoauth(\n type=\"Google\",\n clientid=\"YOUR_CLIENT_ID\",\n secretkey=\"YOUR_GOOGLE_CLIENTSECRET\",\n redirecturi=\"YOUR_CALLBACK_URI\",\n result=\"res\",\n scope=\"YOUR_SCOPES\",\n state=\"cftoken=#cftoken#\"\n );\n cfloginuser(name=\"#res.other.email#\", password=\"#res.access_token#\", roles=\"user\");\n }\n",
+	  "runnable":false
 	}
   ]
 }
