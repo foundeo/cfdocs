@@ -8,18 +8,23 @@
 	"params": [
 		{
 			"name": "cacheName", 
-			"description": "Name of the cache you want to clear. If not specified it will clear all caches.", 
+			"description": "Name of the cache you want to clear. If not specified it will clear all caches.\r\n Some cachenames are aliases:\r\npage = template\r\ncfc, class = component\r\nct = customtag\r\nobject = query", 
 			"required": false, 
 			"default": "", 
 			"type": "string", 
 			"values": [
-				"all (clear all caches)",
-				"template or page (clears template cache)",
-				"component, cfc or class (clears component path cache)",
-				"customtag or ct (clears customtag path cache)",
-				"query or object (clears query cache)",
-				"tag (clears cfml/cfc based built in tag cache)",
-				"function (clears cfml based built in function cache)"
+				"all",
+				"template",
+				"page",
+				"component",
+				"cfc",
+				"class",
+				"customtag",
+				"ct",
+				"query",
+				"object",
+				"tag",
+				"function"
 			]
 		}
 	],
