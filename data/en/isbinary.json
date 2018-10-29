@@ -18,9 +18,16 @@
 	"examples": [
 		{
 			"title":"Checks if toBase64() function returns binary data ",
-			"description":"returns true if given value is binary data, returns false if otherwise",
+			"description":"toBase64() returns base64 encoded data which is not binary",
 			"code":"isBinary( toBase64(1) )",
 			"result":false,
+			"runnable":true
+		},
+		{
+			"title":"Checks if toBinary() function returns binary data ",
+			"description":"toBinary() expects base64 encoded data and returns binary data",
+			"code":"isBinary( toBinary(toBase64(1)) )",
+			"result":true,
 			"runnable":true
 		}
 	]
