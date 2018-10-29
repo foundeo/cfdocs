@@ -51,7 +51,8 @@
 			"description": "Beware of scope evaluation order when checking for an unscoped variable name.",
 			"code": "url.foo = \"url.foo\" ; form.foo = \"form.foo\"; writeoutput(\"Is 'foo' defined? \" & isDefined(\"foo\")); writeoutput(isDefined(\"foo\") ? \" (\" & foo & \")\" : \"\");",
 			"result": "Is 'foo' defined? YES (url.foo)"
-		}, {
+		}, 
+		{
 			"title": "Dot-notation Variable Names",
 			"description": "Potentially unexpected behavior when checking for a dot-notation variable containing a scope name.",
 			"code": "local[\"form.submit\"] = \"local['form.submit']\" ; form.submit = \"form.submit\"; writeoutput(\"Is 'form.submit' defined?\" & isDefined(\"form.submit\")); writeoutput(isDefined(\"form.submit\") ? \" (\" & form.submit & \")\" : \"\"); writeoutput(\"<br>\"); writeoutput(\"Is 'submit' defined? \" & isDefined(\"submit\")); writeoutput(isDefined(\"submit\") ? \" (\" & submit & \")\" : \"\");",
