@@ -1,7 +1,7 @@
 {
 	"name": "datasourceFlushMetacache",
 	"type": "function",
-	"syntax": "datasourceFlushMetacache([datasourceName])",
+	"syntax": "DatasourceFlushMetacache([datasourceName])",
 	"returns": "boolean",
 	"related": [],
 	"description": "Flush the meta data stored for a certain datasource used for stored procedures.\n NOTE: This is only supported for Oracle datasources.",
