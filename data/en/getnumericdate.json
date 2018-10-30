@@ -1,15 +1,16 @@
 {
 	"name": "getNumericDate",
 	"type": "function",
-	"syntax": "getNumericDate(date)",
+	"syntax": "GetNumericDate(arg1)",
 	"returns": "numeric",
 	"related": ["isNumericDate","createODBCDate","createDate"],
 	"description": "Returns a real number whose integer part represents the number of days since the EPOCH and whose fractional part represents the time value expressed in hours then divided by 24.\r NOTE: Lucee (and ACF) uses 12/30/1899 00:00:00 as it's epoch time. See links below.",
 	"params": [
-		{"name": "arg1", "description": "A date/time object, or a representation of one.", "required": true, "default": "", "type": "any", "values": [] }
+		{"name": "arg1", "description": "A datetime object or a date-parsable String.", "required": true, "default": "", "type": "any", "values": [] }
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getnumericdate.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getnumericdate.html"},
+		"railo": {"minimum_version": "3.1", "notes": "", "docs": ""}
 	},
 	"examples": [
 		{
