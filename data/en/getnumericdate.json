@@ -1,7 +1,7 @@
 {
 	"name": "getNumericDate",
 	"type": "function",
-	"syntax": "GetNumericDate(arg1)",
+	"syntax": "getNumericDate(arg1)",
 	"returns": "numeric",
 	"related": ["isNumericDate","createODBCDate","createDate"],
 	"description": "Returns a real number whose integer part represents the number of days since the EPOCH and whose fractional part represents the time value expressed in hours then divided by 24.\r NOTE: Lucee (and ACF) uses 12/30/1899 00:00:00 as it's epoch time. See links below.",
