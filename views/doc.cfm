@@ -207,7 +207,7 @@
 											&#42;
 										</cfif>
 										<cfif structKeyExists(i, 'type') AND Len(i.type)>
-											<em class="text-muted" style="font-family:Menlo,Monaco,Consolas,"Courier New",monospace;">#i.type#</em>
+											<em class="text-muted typewriter">#i.type#</em>
 										</cfif>:
 										#i.description#
 									</li>
