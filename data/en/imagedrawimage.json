@@ -4,7 +4,7 @@
 	"syntax": "imageDrawImage(name, image, x, y)",
 	"returns": "void",
 	"related": [],
-	"description": "",
+	"description": "Draws an image on an image with the baseline of the first pixel positioned at (x,y) in the image i.e. with the top left corner positioned at (x,y).",
 	"params": [
 		{"name": "name", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "image", "description": "", "required": true, "default": "", "type": "any", "values": []},
