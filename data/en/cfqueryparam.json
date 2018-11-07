@@ -122,7 +122,7 @@
   "engines": {
     "coldfusion": {
       "minimum_version": "4.5",
-      "notes": "",
+      "notes": "CF2018+ Throws exceptions on invalid `cfsqltype` values, prior versions treated invalid types as `varchar` - see CF-4198194 for reference.",
       "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfqueryparam.html"
     },
     "lucee": {
