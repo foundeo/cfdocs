@@ -20,7 +20,7 @@ h2 { text-transform: uppercase; }
 #syntax { font-weight:bold; }
 #syntax > code { white-space: pre; padding: 0; }
 #forkme {
-    background-color: #d5d5d5;
+    background-color: #e3e3e3;
     height: 23px;
     display: inline-block;
     position: absolute;
@@ -34,8 +34,8 @@ h2 { text-transform: uppercase; }
     transform: rotate(45deg);
     transform-origin: initial;
     text-align: center;
-    border-top: 1.5px dashed #999;
-    border-bottom: 1.5px dashed #999;
+    border-top: 1.5px dashed #c2c2c2;
+    border-bottom: 1.5px dashed #c2c2c2;
 }
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
