@@ -37,6 +37,8 @@ h2 { text-transform: uppercase; }
     border-top: 1.5px dashed #c2c2c2;
     border-bottom: 1.5px dashed #c2c2c2;
     line-height: 25px;
+    letter-spacing: -0.6px;
+    word-spacing: 1px;
 }
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
