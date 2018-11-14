@@ -25,7 +25,7 @@
 		},
 		{
 			"name":"date",
-			"description":"A datetime object in the range of 100AD-9999AD.\n\r <em>NOTE: When passing a datetime object as a string, enclose it in quotation marks. Otherwise, it is interpreted as a numeric representation of a datetime object.</em>",
+			"description":"A datetime object in the range of 100AD-9999AD.\n\r NOTE: When passing a datetime object as a string, enclose it in quotation marks. Otherwise, it is interpreted as a numeric representation of a datetime object.",
 			"required":true,
 			"default":"",
 			"type":"date",
