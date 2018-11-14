@@ -108,9 +108,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 <cfoutput><script src="#request.assetBaseURL#script.js"></script></cfoutput>
 <cfparam name="request.gitFilePath" default="/">
-<cfoutput><a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="visible-lg visible-md">Fork me on GitHub<span id="forkme"></span></a></cfoutput>
+<cfoutput><a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="visible-lg visible-md"><span id="forkme">Fork me on GitHub</span></a></cfoutput>
 <cfif request.hasExamples><script src="https://cdn.jsdelivr.net/npm/code-prettify@0.1.0/loader/prettify.js"></script></cfif>
-
 </body>
 </html>
 </cfif>
