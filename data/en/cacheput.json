@@ -1,7 +1,7 @@
 {
 	"name":"cachePut",
 	"type":"function",
-	"syntax":"cachePut(id, value [, timespan] [, idleTime])",
+	"syntax":"cachePut(id, value [, timespan] [, idleTime] [, region] [, throwOnError])",
 	"returns":"void",
 	"related":["cacheGet"],
 	"description":"Stores an object in the cache.",
