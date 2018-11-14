@@ -1,15 +1,16 @@
 {
 	"name":"dayOfWeekAsString",
 	"type":"function",
-	"syntax":"dayOfWeekAsString(day_of_week)",
+	"syntax":"dayOfWeekAsString(dayOfWeek [, locale])",
 	"returns":"string",
 	"related":["dayOfWeekShortAsString"],
 	"description":" Determines the day of the week as a string from 1-7",
 	"params": [
-		{"name":"day_of_week","description":"Only values from 1 to 7 are valid.\nWeek starting with 1 for Sunday and ends with 7 for Saturday.","required":true,"default":"","type":"numeric","values":[1,2,3,4,5,6,7]}
+		{"name":"dayOfWeek","description":"Only values from 1 to 7 are valid.\nWeek starting with 1 for Sunday and ends with 7 for Saturday:\n\t- 1 = Sunday \n\t- 2 = Monday \n\t- 3 = Tuesday \n\t- 4 = Wednesday \n\t- 5 = Thursday \n\t- 6 = Friday \n\t- 7 = Saturday","required":true,"default":"","type":"numeric","values":[1,2,3,4,5,6,7]},
+		{"name":"locale","description":"Locale to use instead of the default JVM locale.","required":false,"default":"Default JVM Locale","type":"locale","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DayOfWeekAsString.html"},
+		"coldfusion": {"minimum_version":"", "notes":"CF2018: Renamed parameter `day_of_week` to `dayofweek`. \n CF8: Added `locale` parameter. \n CFMX7: Changed behavior. The returned string is now in the language of the current locale.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DayOfWeekAsString.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/dayofweekasstring.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/dayofweekasstring"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dayofweekasstring"}
