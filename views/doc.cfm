@@ -196,7 +196,24 @@
 									</ul>
 								</div>
 							</cfif>
-						</cfif>						
+						</cfif>
+						<cfif structKeyExists(p, "callback_params") AND isArray(p.callback_params) and not arrayIsEmpty(p.callback_params)>
+							<strong>Callback parameters:</strong>
+							<ul>
+								<cfloop array="#callback_params#" index="i">									
+									<li>
+										<code>#encodeForHTML(i.name)#</code>
+										<cfif structKeyExists(i, 'required') AND Len(i.required)>
+											&#42;
+										</cfif>
+										<cfif structKeyExists(i, 'type') AND Len(i.type)>
+											<em class="text-muted typewriter">#i.type#</em>
+										</cfif>:
+										#i.description#
+									</li>
+								</cfloop>
+							</ul>
+						</cfif>
 					</div>
 				</div>			
 			</cfloop>

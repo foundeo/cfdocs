@@ -6,7 +6,7 @@ body {
 div.listing > h2 > a.btn { text-transform: none; }
 
 nav.navbar { background-color:#eee; }
-#docname,h4 { font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
+#docname,h4,.typewriter { font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
 .param h4 { background-color: #f1f1f1; padding: 8px 8px; margin-bottom: 2px; }
 .p-default { font-weight:normal; font-size: smaller; }
 h2 { border-bottom:1px solid #f1f1f1; padding-bottom: 12px; }
@@ -51,7 +51,6 @@ h2 { text-transform: uppercase; }
 }
 #foundeo img {
   width: 70px; height:20px;
-
 }
 
 #foundeo.foundeoAppear {
