@@ -7,7 +7,7 @@
 	<cfparam name="request.title" default="">
 	<cfparam name="request.assetBaseURL" default="/assets/">
 	<title><cfoutput>#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation</cfoutput></title>
-	<link href="https://netdna.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootswatch@3.3.7/lumen/bootstrap.min.css" rel="stylesheet">
 	<cfparam name="request.hasExamples" default="false">
 	<cfif request.hasExamples><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-themes-for-google-code-prettify@2.0.4/dist/themes/tomorrow-night-bright.min.css" /></cfif>
 	<cfoutput><link href="#request.assetBaseURL#style.css" rel="stylesheet"></cfoutput>
