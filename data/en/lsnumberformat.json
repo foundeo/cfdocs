@@ -20,7 +20,7 @@
 		{
 			"title":"Tag Example",
 			"description":"lsNumberFormat returns a number value using the locale convention. ",
-			"code":"<!--- loop through a list of locales and show number values --->\r\n<cfloop LIST = \"#Server.Coldfusion.SupportedLocales#\"\r\nindex = \"locale\" delimiters = \",\">\r\n<cfset oldlocale = setLocale(locale)> \r\n<cfoutput><p><b><i>#locale#</i></b>\r\n #lsNumberFormat(-1234.5678, \"_________\")# \r\n #lsNumberFormat(-1234.5678, \"_________.___\")#\r\n#lsNumberFormat(1234.5678, \"_________\")#\r\n#lsNumberFormat(1234.5678, \"_________.___\")#\r\n#lsNumberFormat(1234.5678, \"$_(_________.___)\")#\r\n#lsNumberFormat(-1234.5678, \"$_(_________.___)\")#\r\n#lsNumberFormat(1234.5678, \"+_________.___\")#\r\n#lsNumberFormat(1234.5678, \"-_________.___\")#\r\n</cfoutput>\r\n</cfloop>",
+			"code":"<!--- loop through a list of locales and show number values --->\r\n<cfloop LIST = \"#Server.Coldfusion.SupportedLocales#\"\r\nindex = \"locale\" delimiters = \",\">\r\n<cfset oldlocale = setLocale(locale)>\r\n<cfoutput><p><b><i>#locale#</i></b><br />\r\n#lsNumberFormat(-1234.5678, \"_________\")#<br />\r\n#lsNumberFormat(-1234.5678, \"_________.___\")#<br />\r\n#lsNumberFormat(1234.5678, \"_________\")#<br />\r\n#lsNumberFormat(1234.5678, \"_________.___\")#<br />\r\n#lsNumberFormat(1234.5678, \"$_(_________.___)\")#<br />\r\n#lsNumberFormat(-1234.5678, \"$_(_________.___)\")#<br />\r\n#lsNumberFormat(1234.5678, \"+_________.___\")#<br />\r\n#lsNumberFormat(1234.5678, \"-_________.___\")#<br />\r\n</cfoutput>\r\n</cfloop>",
 			"result":"",
 			"runnable":true
 		}

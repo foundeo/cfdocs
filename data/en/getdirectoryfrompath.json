@@ -14,5 +14,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getdirectoryfrompath"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getdirectoryfrompath"}
 	},
-	"links": []
+	"links": [],
+	"examples":[
+		{
+			"title":"Basic Example",
+			"description":"",
+			"code":"getDirectoryFromPath(\"C:\\temp\\file.txt\")",
+			"result":"C:\\temp\\",
+			"runnable":true
+		}
+	]
 }

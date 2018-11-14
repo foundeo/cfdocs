@@ -2,7 +2,7 @@
 	"name": "cfspreadsheet",
 	"type": "tag",
 	"syntax": "<cfspreadsheet>",
-	"related": [],
+	"related": ["isSpreadsheetFile","isSpreadsheetObject"],
 	"description": "Read and writes Microsoft Excel spreadsheet files.",
 	"params": [
 		{

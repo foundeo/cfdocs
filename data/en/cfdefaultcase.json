@@ -11,5 +11,21 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdefaultcase"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdefaultcase"}
 	},
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "vegetable = \"\";\r\nswitch(vegetable) {\r\n    case \"carrot\":\r\n        writeOutput(\"Carrots are orange.\");\r\n        break;\r\n    default:\r\n        writeOutput(\"You don't have any vegetables!\");\r\n        break;\r\n}",
+			"result": "You don't have any vegetables!",
+			"runnable": true
+		},
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset vegetable = \"\" />\r<cfswitch expression=\"#vegetable#\">\r\n    <cfcase value=\"carrot\">\r\n        Carrots are orange.\r\n    </cfcase>\r\n    <cfdefaultcase>\r\n        You don't have any vegetables!\r\n    </cfdefaultcase>\r\n</cfswitch>",
+			"result": "You don't have any vegetables!",
+			"runnable": true
+		}
+	],
 	"links": []
 }

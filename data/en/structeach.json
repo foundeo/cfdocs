@@ -29,7 +29,7 @@
 		{
 			"title": "structEach() with an inline function (closure)",
 			"description": "Use a function to write out the keys in a structure to the screen",
-			"code": "someStruct = {a=1,b=2,c=3};\n\narrayEach(someStruct,function(obj) {\n     writeOutput('Key ' & key & ' is ' & value & '; ');\n});",
+			"code": "someStruct = {a=1,b=2,c=3};\n\nstructEach(someStruct,function(key,value) {\n     writeOutput('Key ' & key & ' is ' & value & '; ');\n});",
 			"result": "Key a is 1; Key b is 2; Key c is 3; "
 		},
 		{

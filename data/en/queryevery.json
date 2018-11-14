@@ -5,20 +5,62 @@
 	"member": "query.every(closure [, parallel] [, maxThreads])",
 	"returns": "boolean",
 	"related": [],
-	"description": "",
+	"description": "Executes a callback/closure against every row in a query and returns true if the callback/closure returned true for every row.",
 	"params": [
-		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
-		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "parallel", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "numeric", "values": []}
+		{
+			"name": "query",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "query",
+			"values": []
+		},
+		{
+			"name": "closure",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "function",
+			"values": []
+		},
+		{
+			"name": "parallel",
+			"description": "",
+			"required": false,
+			"default": "",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "maxThreads",
+			"description": "",
+			"required": false,
+			"default": "20",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryevery.html"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://docs.lucee.org/reference/functions/queryevery.html"
+		}
 	},
-	"examples": [],
-	"links": [{
-		"title":"Map, Reduce and other Higher Order Functions",
-		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
-		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
-	}]
+	"examples": [
+		{
+			"title": "All values greater than 50",
+			"description": "Find out if every value in the query is greater than 50",
+			"code": "<cfscript>\r\ndata = query(foo: [51,52,535]);\r\nallGT50 = queryEvery(function(row){ return row.foo > 50; });\r\n</cfscript>",
+			"result": "true",
+			"runnable": true
+		}
+	],
+	"links": [
+		{
+			"title": "Map, Reduce and other Higher Order Functions",
+			"description": "A Primer for map, reduce, filter, and Higher Order Functions in general.",
+			"url": "http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+		}
+	]
 }

@@ -4,7 +4,7 @@
 	"syntax": "listEvery(list, closure [, delimiter] [, includeEmptyFields] [, multiCharacterDelimiter] [, parallel] [, maxThreads])",
 	"member": "list.listEvery(closure [, delimiter] [, includeEmptyFields] [, multiCharacterDelimiter] [, parallel] [, maxThreads])",
 	"returns": "boolean",
-	"related": [],
+	"related": ["arrayEvery","structEvery","queryEvery"],
 	"description": "This function calls a given callback function for every element in a given string list and returns true, if all of the calls returns true.",
 	"params": [
 		{"name": "list", "description": "List to iterate.", "required": true, "default": "", "type": "string", "values": []},

@@ -27,7 +27,7 @@ Use `true`/`false`
 
 ### How are my contributions licensed?
 
-Please see the [LICENSE](/foundeo/cfdocs/LICENSE) file.
+Please see the [LICENSE](https://github.com/foundeo/cfdocs/blob/master/LICENSE) file.
 
 ### Can I copy code examples from other sources?
 

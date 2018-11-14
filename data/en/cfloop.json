@@ -90,13 +90,13 @@
 			"result": ""
 		},
 		{
-			"title": "Query Loop with Grouping (Script Syntax)",
+			"title": "Loop over a Query with Grouping (Script Syntax)",
 			"description": "Query Loop use grouping",
 			"code": "q = queryNew(\"pk,fk,data\", \"integer,integer,varchar\",[ \r\n [1, 10, \"aa\"], \r\n [2, 20, \"bb\"], \r\n [3, 20, \"cc\"], \r\n [4, 30, \"dd\"], \r\n [5, 30, \"ee\"], \r\n [6, 30, \"ff\"] \r\n]); \r\ncfloop(query=q, group=\"fk\"){ \r\n    writeOutput(\"<strong>#fk#</strong><br />\"); \r\n    cfloop(){ \r\n        writeOutput(\"&emsp;#pk#:#data#<br />\"); \r\n    } \r\n    writeOutput(\"<hr>\"); \r\n}",
 			"result": ""
 		},
 		{
-			"title": "Query Loop using CFLoop",
+			"title": "CFLoop over a Query",
 			"description": "Query Loop",
 			"code": "<!--- Define our query ---> \r\n <cfset platform = [\"Adobe ColdFusion\", \"Railo\", \"Lucee\"]> \r\n <cfset myQuery = queryNew(\" \")> \r\n <cfset queryAddColumn(myQuery, \"platform\", \"CF_SQL_VARCHAR\", platform)> \r\n <!--- By row index ---> \r\n <cfloop index=\"i\" from=\"1\" to=\"#myQuery.recordCount#\"> \r\n <cfoutput><li>#myQuery[\"platform\"][i]#</li></cfoutput> \r\n </cfloop> \r\n <!--- By group ---> \r\n <cfloop query=\"myQuery\" group=\"platform\"> \r\n <cfoutput><li>#platform#</li></cfoutput> \r\n </cfloop>",
 			"result": ""

@@ -3,13 +3,13 @@
 	"type":"function",
 	"syntax":"listEach(String str, UDFMethod function [, String delim, boolean includeEmptyFields]);",
 	"returns":"void",
-	"related":[],
+	"related":["arrayEach","structEach","queryEach"],
 	"description":"Iterates over every element of a List object and can call a UDF function, passed as the second argument.",
 	"params": [
 		{"name":"str","description":"An input list object.","required":true,"default":"","type":"","values":[]},
-        {"name":"function","description":"UDF or closure object.","required":true,"default":"","type":"","values":[]},
-        {"name":"delim","description":"A list delimiter to be used. The default value is comma (,).","required":true,"default":"","type":"","values":[]},
-        {"name":"includeEmptyFields","description":"Boolean. Whether to allow empty fields. Default is false.","required":false,"default":"","type":"","values":[]}
+        	{"name":"function","description":"UDF or closure object.","required":true,"default":"","type":"","values":[]},
+		{"name":"delim","description":"A list delimiter to be used. The default value is comma (,).","required":true,"default":"","type":"","values":[]},
+        	{"name":"includeEmptyFields","description":"Boolean. Whether to allow empty fields. Default is false.","required":false,"default":"","type":"","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"11", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listeach.html"},
@@ -45,13 +45,11 @@
 			"code": "empArray = [\"john\", \"pete\", \"bob\"]; \r\n listS = \"'john', 'pete', 'bob'\"; \r\n arrayEach(empArray, xclosure); \r\n listEach(listS, xclosure); \r\n function xclosure(empname, index) {  \r\n    writeOutput(empName & \" at index: \" & index); \r\n }",
 			"result": "john at index: 1pete at index: 2bob at index: 3'john' at index: 1 'pete' at index: 2 'bob' at index: 3"
 		},
-
-        {
+        	{
 			"title": "Another Closure Example",
 			"description": "Example 2",
 			"code": "cityList = \"Pittsburgh, Raleigh, Miami, Las Vegas\"; \r\n function printCity(String city) { \r\n    writeOutput(\"Current city: \" & city); \r\n } \r\n listEach(cityList ,printCity);",
 			"result": "Current city: PittsburghCurrent city: RaleighCurrent city: MiamiCurrent city: Las Vegas"
 		}
 	]
-
 }

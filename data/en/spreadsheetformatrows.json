@@ -1,18 +1,18 @@
 {
 	"name":"spreadsheetFormatRows",
 	"type":"function",
-	"syntax":"spreadsheetFormatRows(spreadsheetObj, format, row)",
+	"syntax":"spreadsheetFormatRows(spreadsheetObj, format, rows)",
 	"returns":"void",
 	"related":[],
-	"description":" Formats the contents of a multipe rows of an Excel spreadsheet object.",
+	"description":"Formats the contents of a multiple rows of an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"format","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
-		{"name":"row","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
+		{"name":"spreadsheetObj","description":"The spreadsheet object for which formatting will be applied","required":true,"default":"","type":"any","values":[]},
+		{"name":"format","description":"A structure containing the formatting information","required":true,"default":"","type":"struct","values":[]},
+		{"name":"rows","description":"A string containing comma-separated row numbers or row ranges","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetformatrows.html"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetformatrows.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetformatrows"}
 	},
 	"links": [
@@ -22,7 +22,7 @@
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \r\n <!---<cfloop index=\"x\" from=\"1\" to=\"10\">---> \r\n <cfset queryAddRow(q)> \r\n <cfset querySetCell(q, \"Name\", \"John\")> \r\n <cfset querySetCell(q, \"Beers\", \"1\")> \r\n <cfset querySetCell(q, \"Vegetables\", \"1\")> \r\n <cfset querySetCell(q, \"Fruits\", \"1\")> \r\n <cfset querySetCell(q, \"Meats\", \"1\")> \r\n <cfset mySheet =   SpreadsheetNew( \"Test\"  ) /> \r\n <!--- Make a spreadsheet object ---> \r\n <cfset s = spreadsheetNew()> \r\n <!--- Add header row ---> \r\n <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \r\n <!--- Add query ---> \r\n  <cfscript>format1.font=\"Courier\"; \r\n     format1.fontsize=\"10\"; \r\n     format1.color=\"dark_blue;\"; \r\n     SpreadsheetFormatRows(s,format1,1-2); \r\n     </cfscript> \r\n <cfdump var=\"#s#\" /> <cfheader name=\"Content-Disposition\" value=\"inline; filename=testFile.xls\">  <cfcontent type=\"application/vnd.msexcel\" variable=\"#SpreadSheetReadBinary(s)#\">  ",
+			"code":"<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \n <!---<cfloop index=\"x\" from=\"1\" to=\"10\">---> \n <cfset queryAddRow(q)> \n <cfset querySetCell(q, \"Name\", \"John\")> \n <cfset querySetCell(q, \"Beers\", \"1\")> \n <cfset querySetCell(q, \"Vegetables\", \"1\")> \n <cfset querySetCell(q, \"Fruits\", \"1\")> \n <cfset querySetCell(q, \"Meats\", \"1\")> \n <cfset mySheet =   spreadsheetNew( \"Test\"  ) /> \n <!--- Make a spreadsheet object ---> \n <cfset s = spreadsheetNew()> \n <!--- Add header row ---> \n <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \n <!--- Add query ---> \n  <cfscript>format1.font=\"Courier\"; \n     format1.fontsize=\"10\"; \n     format1.color=\"dark_blue;\"; \n     spreadsheetFormatRows(s,format1,\"1-2\"); \n     </cfscript> \n <cfdump var=\"#s#\" /> <cfheader name=\"Content-Disposition\" value=\"inline; filename=testFile.xls\">  <cfcontent type=\"application/vnd.msexcel\" variable=\"#spreadSheetReadBinary(s)#\">  ",
 			"result":"",
 			"runnable":true
 		}

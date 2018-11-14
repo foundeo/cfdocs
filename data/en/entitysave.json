@@ -14,5 +14,14 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/entitysave.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entitysave"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"Save a new ORM entity",
+			"description":"Use entitySave to save a newly created entity.",
+			"code":"var company = entityNew(\"Company\");\r\ncompany.setName(form.companyName);\r\ncompany.setIndustry(form.industry);\r\ncompany.setEmployees(form.employeeCount);\r\ncompany.setWebsite(form.companyWebsite);\r\nentitySave(company);",
+			"result":"",
+			"runnable":false
+		}
+	]
 }

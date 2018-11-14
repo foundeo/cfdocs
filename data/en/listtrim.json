@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "listTrim(list [, delimiters])",
 	"returns": "string",
-	"related": [],
+	"related": ["listCompact","listItemTrim","trim"],
 	"description": "trims leading and trailing spaces from each list element",
 	"params": [
 		{"name": "list", "description": "a string list", "required": true, "default": "", "type": "string", "values": []},

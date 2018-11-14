@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"formatBaseN(number, radix)",
 	"returns":"string",
-	"related":[],
+	"related":["parseNumber","inputBaseN","toString"],
 	"description":" String Converts number to a string, in the base specified by radix.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]},

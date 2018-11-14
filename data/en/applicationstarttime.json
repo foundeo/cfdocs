@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "applicationStartTime()",
 	"returns": "date",
-	"related": [],
+	"related": ["applicationStop","onApplicationStart","application-cfc"],
 	"description": "Provides information about the time when the current application scope was created.",
 	"params": [],
 	"engines": {

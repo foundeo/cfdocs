@@ -13,5 +13,14 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/entitynew.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entitynew"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"Create a new ORM entity",
+			"description":"Use entityNew to get a new instance of an Employee entity.",
+			"code":"var employee = entityNew(\"Employee\");",
+			"result":"",
+			"runnable":false
+		}
+	]
 }

@@ -6,13 +6,13 @@
 	"related":[],
 	"description":"Formats the contents of a single cell of an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"Spreadsheet variable","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"format","description":"Object with formatting instructions","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheetObj","description":"The spreadsheet object for which formatting will be applied","required":true,"default":"","type":"any","values":[]},
+		{"name":"format","description":"A structure containing the formatting information","required":true,"default":"","type":"struct","values":[]},
 		{"name":"row","description":"The row the cell to format is in","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"column","description":"The column the cell to format is in","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetformatcell.html"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetformatcell.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetformatcell"}
 	},
 	"links": [],
@@ -20,7 +20,7 @@
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \r\n <!---<cfloop index=\"x\" from=\"1\" to=\"10\">---> \r\n <cfset queryAddRow(q)> \r\n <cfset querySetCell(q, \"Name\", \"John\")> \r\n <cfset querySetCell(q, \"Beers\", \"1\")> \r\n <cfset querySetCell(q, \"Vegetables\", \"1\")> \r\n <cfset querySetCell(q, \"Fruits\", \"1\")> \r\n <cfset querySetCell(q, \"Meats\", \"1\")> \r\n <cfset mySheet =   SpreadsheetNew( \"Test\"  ) /> \r\n <!--- Make a spreadsheet object ---> \r\n <cfset s = spreadsheetNew()> \r\n <!--- Add header row ---> \r\n <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \r\n <!--- Add query ---> \r\n <cfset Spreadsheetformatcell(sheet,{dataformat=\"@\"},2,2) > \r\n <cfdump var=\"#s#\" /> <cfheader name=\"Content-Disposition\" value=\"inline; filename=testFile.xls\">  <cfcontent type=\"application/vnd.msexcel\" variable=\"#SpreadSheetReadBinary(s)#\"> ",
+			"code":"<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \n <!---<cfloop index=\"x\" from=\"1\" to=\"10\">---> \n <cfset queryAddRow(q)> \n <cfset querySetCell(q, \"Name\", \"John\")> \n <cfset querySetCell(q, \"Beers\", \"1\")> \n <cfset querySetCell(q, \"Vegetables\", \"1\")> \n <cfset querySetCell(q, \"Fruits\", \"1\")> \n <cfset querySetCell(q, \"Meats\", \"1\")> \n <cfset mySheet =   SpreadsheetNew( \"Test\"  ) /> \n <!--- Make a spreadsheet object ---> \n <cfset s = spreadsheetNew()> \n <!--- Add header row ---> \n <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \n <!--- Add query ---> \n <cfset Spreadsheetformatcell(sheet,{dataformat=\"@\"},2,2) > \n <cfdump var=\"#s#\" /> <cfheader name=\"Content-Disposition\" value=\"inline; filename=testFile.xls\">  <cfcontent type=\"application/vnd.msexcel\" variable=\"#SpreadSheetReadBinary(s)#\"> ",
 			"result":"",
 			"runnable":false
 		}

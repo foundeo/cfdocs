@@ -13,6 +13,7 @@
 		{"name":"filter","description":"File filter applied to the action. The action\n applies to all files in the pathname specified that match the filter. (optional)","required":false,"default":"","type":"string","values":[]},
 		{"name":"name","description":"Record set name in which the result of the list action is stored.\n The record set columns are:\n name: filename of the entry in the JAR file. For example, if the entry is\n help\/docs\/index.htm, the name is index.htm.\n directory: directory containing the entry. For the example above, the\n directory is help\/docs. You can obtain the full entry name by concatenating\n directory and name. If an entry is at the root level, the directory is empty ('').\n size: uncompressed size of the entry, in bytes.\n compressedSize: compressed size of the entry, in bytes.\n type: type of entry (directory or file).\n dateLastModified: last modified date of the entry, cfdate object.\n comment: any comment, if present, for the entry.\n crc: crc-32 checksum of the uncompressed entry data. (required)","required":false,"default":"","type":"string","values":[]},
 		{"name":"overwrite","description":"unzip: Specifies whether to overwrite the extracted files:\n yes: if the extracted file already exists at the destination specified,\n the file is overwritten.\n no: if the extracted file already exists at the destination specified,\n the file is not overwritten and that entry is not extracted. The remaining\n entries are extracted.\n zip: Specifies whether to overwrite the contents of a ZIP or JAR file:\n yes: overwrites all of the content in the ZIP or JAR file if it exists.\n no: updates existing entries and adds new entries to the ZIP or JAR file\n if it exists. (optional, default=no)","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"password","description":"The password to be used for the archive when action is zip. (optional)","required":false,"default":"","type":"string","values":[]},
 		{"name":"prefix","description":"String added as a prefix to the ZIP or JAR entry.\n The string is the name of a subdirectory in which the\n entries are added. (optional)","required":false,"default":"","type":"string","values":[]},
 		{"name":"recurse","description":"Specifies whether the action\n applies to subdirectories:\n yes: includes subdirectories.\n no: does not include subdirectories. (optional, default=yes)","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"showDirectory","description":"yes: lists the directories.\n no: does not list directories. (optional, default= no)","required":false,"default":"","type":"boolean","values":[true,false]},
@@ -26,7 +27,11 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfzip"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfzip"}
 	},
-	"links": [],
+	"links": [{
+            "title":"Learning ColdFusion 8: CFZip Part IV - Extracting Zip File Archives",
+            "description":"Ben Nadel: The different use cases of cfzip",
+            "url":"https://www.bennadel.com/blog/855-learning-coldfusion-8-cfzip-part-iv---extracting-zip-file-archives.htm"
+        }],
 	"examples": [
 		{
 			"title":"Extract / Unzip a zip file into a folder",
