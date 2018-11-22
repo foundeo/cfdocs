@@ -18,18 +18,6 @@
 			"description": "This numeric date represents the number of days between December 30, 1899 and January 1, 2008.",
 			"code": "getNumericDate('2018-01-01')",
 			"result": "43101"
-		},
-		{
-			"title": "Convert a date string to a numeric date - Script Syntax",
-			"description": "This numeric date represents the number of days between December 30, 1899 and January 1, 2008.",
-			"code": "dump(getNumericDate('2008-01-01');",
-			"result": "43101"
-		},
-		{
-			"title": "Difference between two dates.",
-			"description": "This shows an example of how you could use getNumericDate() to determine the difference between two dates.",
-			"code": "<cfscript>\r\n date1='2017-01-01' \r\n date2='2018-01-01'\r\n writeoutput(date2-date1 & \" days\") \r\n</cfscript>",
-			"result": "365 days"
 		}
 	],
 	"links": [
