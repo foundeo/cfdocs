@@ -1,15 +1,15 @@
 {
 	"name":"dateConvert",
 	"type":"function",
-	"syntax":"dateConvert(type, date)",
-	"member":"date.convert(type)",
+	"syntax":"dateConvert(conversionType, date)",
+	"member":"date.convert(conversionType)",
 	"returns":"date",
 	"related":["getTimeZoneInfo","createDateTime"],
 	"description":"Converts local time to Coordinated Universal Time (UTC), or UTC to local time. The function uses the daylight savings settings in the executing computer to compute daylight savings time, if required.",
 	"params": [
 		{
-			"name":"type",
-			"description":"'local2Utc' - Converts local time to UTC time.\n'utc2Local' - Converts UTC time to local time.",
+			"name":"conversionType",
+			"description":"`local2Utc` : Converts local time to UTC time.\n`utc2Local` : Converts UTC time to local time.",
 			"required":true,
 			"default":"",
 			"type":"string",

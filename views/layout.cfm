@@ -7,9 +7,9 @@
 	<cfparam name="request.title" default="">
 	<cfparam name="request.assetBaseURL" default="/assets/">
 	<title><cfoutput>#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation</cfoutput></title>
-	<link href="https://netdna.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootswatch@3.3.7/lumen/bootstrap.min.css" rel="stylesheet">
 	<cfparam name="request.hasExamples" default="false">
-	<cfif request.hasExamples><link rel="stylesheet" href="https://cdn.rawgit.com/foundeo/cfdocs/3da43f03663c57f499cf2de82ef82d4f74fe04cd/assets/vendor/google/code-prettify/theme-monokai.css" /></cfif>
+	<cfif request.hasExamples><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-themes-for-google-code-prettify@2.0.4/dist/themes/tomorrow-night-bright.min.css" /></cfif>
 	<cfoutput><link href="#request.assetBaseURL#style.css" rel="stylesheet"></cfoutput>
 	<link rel="search" type="application/opensearchdescription+xml" title="Search CFML Documentation" href="/opensearch.xml" />
 	<!--[if lt IE 9]>
@@ -108,9 +108,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 <cfoutput><script src="#request.assetBaseURL#script.js"></script></cfoutput>
 <cfparam name="request.gitFilePath" default="/">
-<cfoutput><a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="visible-lg visible-md">Fork me on GitHub<span id="forkme"></span></a></cfoutput>
-<cfif request.hasExamples><script src="https://cdn.rawgit.com/foundeo/cfdocs/3da43f03663c57f499cf2de82ef82d4f74fe04cd/assets/vendor/google/code-prettify/prettify.js"></script></cfif>
-
+<cfoutput><a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="visible-lg visible-md"><span id="forkme">Fork me on GitHub</span></a></cfoutput>
+<cfif request.hasExamples><script src="https://cdn.jsdelivr.net/npm/code-prettify@0.1.0/loader/prettify.js"></script></cfif>
 </body>
 </html>
 </cfif>
