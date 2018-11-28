@@ -14,5 +14,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getfilefrompath"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getfilefrompath"}
 	},
-	"links": []
+	"links": [],
+	"examples" : [
+		{
+			"title":"Basic Example",
+			"description":"",
+			"code":"getFileFromPath(\"C:\\temp\\file.txt\")",
+			"result":"file.txt",
+			"runnable":true
+		}
+	]
 }

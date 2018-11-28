@@ -1,8 +1,8 @@
 {
 	"name":"arrayFilter",
 	"type":"function",
-	"syntax":"arrayFilter(array, function(item, [index, [array]]), [parallel], [maxThreads])",
-	"member":"someArray.filter(function(item, [index, [array]]), [parallel], [maxThreads])",
+	"syntax":"arrayFilter(array, callback)",
+	"member":"someArray.filter(callback)",
 	"returns":"array",
 	"related":["arrayEach", "arrayReduce"],
 	"description":"Used to filter an array to items for which the closure function returns true.",
@@ -11,7 +11,6 @@
 		{"name":"callback","description":"Inline closure function executed for each element in the array. Returns true if the array element should be included in the filtered array. Support for passing the original array to the closure function added in CF11 Update 5.","required":true,"default":"","type":"function","values":[]},
 		{"name":"parallel","description":"Lucee4.5+ true if the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[true, false]},
 		{"name":"maxThreads","description":"Lucee4.5+ the maximum number of threads to use when parallel = true","required":false,"default":"20","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayfilter.html"},
@@ -30,17 +29,16 @@
 	}],
 	"examples": [
 		{
-			"title": "Example using a simple numeric comparison",
+			"title": "Simple numeric comparison",
 			"description": "Take an array of struct items and use arrayFilter to return ones of a rating 3 and higher.",
-			"code": "fruitArray = [{fruit='apple', rating=4}, {fruit='banana', rating=1}, {fruit='orange', rating=5}, {fruit='mango', rating=2}, {fruit='kiwi', rating=3}];\n\nfavoriteFruits = arrayFilter(fruitArray, function(item){\n     return item.rating >= 3;\n});\nwritedump(favoriteFruits);",
-			"result": "Array with the structs for apple, orange and kiwi."
+			"code": "fruitArray = [{'fruit'='apple', 'rating'=4}, {'fruit'='banana', 'rating'=1}, {'fruit'='orange', 'rating'=5}, {'fruit'='mango', 'rating'=2}, {'fruit'='kiwi', 'rating'=3}];\n\nfavoriteFruits = arrayFilter(fruitArray, function(item){\n\treturn item.rating >= 3;\n});\nwritedump(serializeJSON(favoriteFruits));",
+			"result": "[{\"fruit\":\"apple\",\"rating\":4},{\"fruit\":\"orange\",\"rating\":5},{\"fruit\":\"kiwi\",\"rating\":3}]"
 		},
 		{
-			"title": "Example using a member function",
+			"title": "Using a member function",
 			"description": "This is the same example as above, but using a member function on the array instead of a standalone function.",
-			"code": "fruitArray = [{fruit='apple', rating=4}, {fruit='banana', rating=1}, {fruit='orange', rating=5}, {fruit='mango', rating=2}, {fruit='kiwi', rating=3}];\n\nfavoriteFruits = fruitArray.filter(function(item){\n     return item.rating >= 3;\n});\nwritedump(favoriteFruits);",
-			"result": "Array with the structs for apple, orange and kiwi."
+			"code": "fruitArray = [{'fruit'='apple', 'rating'=4}, {'fruit'='banana', 'rating'=1}, {'fruit'='orange', 'rating'=5}, {'fruit'='mango', 'rating'=2}, {'fruit'='kiwi', 'rating'=3}];\n\nfavoriteFruits = fruitArray.filter(function(item){\n\treturn item.rating >= 3;\n});\nwritedump(serializeJSON(favoriteFruits));",
+			"result": "[{\"fruit\":\"apple\",\"rating\":4},{\"fruit\":\"orange\",\"rating\":5},{\"fruit\":\"kiwi\",\"rating\":3}]"
 		}
 	]
-
 }

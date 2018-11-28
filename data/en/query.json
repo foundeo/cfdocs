@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "query()",
 	"returns": "query",
-	"related": [],
+	"related": ["queryNew","queryExecute"],
 	"description": "Create and populate a query object. You can initialize with data by passing arrays of data as arguments, where the argument name is the desired column name and each item in the array is the value for a row.",
 	"params": [],
 	"engines": {
@@ -17,14 +17,14 @@
 		{
 			"title": "Empty query",
 			"description": "Create an empty query object",
-			"code": "<cfscript>myQuery = query(); </cfscript>",
+			"code": "<cfscript>myQuery = query();</cfscript>",
 			"result": "",
 			"runnable": true
 		},
 		{
 			"title": "Query with some data",
 			"description": "Create query object with some initial data",
-			"code": "<cfscript>myQuery = query(foo: [1,2,3], bar: ['a','b','c']); </cfscript>",
+			"code": "<cfscript>myQuery = query(foo: [1,2,3], bar: ['a','b','c']);</cfscript>",
 			"result": "",
 			"runnable": true
 		}
