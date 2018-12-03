@@ -38,6 +38,13 @@
 			"code":"cfstoredproc( procedure=\"spu_my_storedproc\",datasource=\"myDSN\" ) {\r\n\tcfprocparam( cfsqltype=\"cf_sql_date\", value=myDateParam );\r\n\tcfprocresult( name=\"qSummary\", resultset=1 );\r\n\tcfprocresult( name=\"qDetails\", resultset=2 );\r\n}",
 			"result":"",
 			"runnable":false
+		},
+		{
+			"title":"Scripted Tag Syntax (for Lucee)",
+			"description":"Call stored procedure and get back multiple result sets.",
+			"code":"cfstoredproc procedure=\"spu_my_storedproc\",datasource=\"myDSN\" {\r\n\tprocparam cfsqltype=\"cf_sql_date\", value=myDateParam;\r\n\tprocresult name=\"qSummary\", resultset=1;\r\n\tprocresult name=\"qDetails\", resultset=2;\r\n}",
+			"result":"",
+			"runnable":false
 		}
 	]
 
