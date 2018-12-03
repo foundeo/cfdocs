@@ -1,15 +1,16 @@
 {
 	"name":"duplicate",
 	"type":"function",
-	"syntax":"duplicate(variable)",
+	"syntax":"duplicate(object)",
 	"returns":"any",
 	"related":["structCopy"],
-	"description":" Returns a clone, also known as a deep copy, of a variable\n or XML object. There is no reference to the original variable.",
+	"description":"Returns a clone (or deep copy) of an object or variable, leaving no reference to the original. \rUse this function to duplicate complex structures, such as nested structures and queries. When you duplicate a CFC instance, the entire CFC contents is copied, including the values of the variables in the this scope at the time you call the `Duplicate` function. Thereafter, the two CFC instances are independent, and changes to one copy, for example by calling one of its functions, have no effect on the other copy. \rNote: With this function, you cannot duplicate a COM, CORBA, or JAVA object returned from the cfobject tag or the CreateObject function. If an array element or structure field is a COM, CORBA, or JAVA object, you cannot duplicate the array or structure.",
 	"params": [
-		{"name":"variable","description":"","required":true,"default":"","type":"any","values":[]}
+		{"name":"object","description":"Name of the object to duplicate.","required":true,"default":"","type":"any","values":[]},
+		{"name":"deepcopy","description":"Lucee Only. \rIf set to `true` (default) the child elements are also cloned. If `false`, child elements retain a reference to their corresponding element in the original object. \rNote: deeply cloned elements that are not native Lucee objects (i.e. Java objects) may change data type when they can be converted to a native CFML object.","required":false,"default":"true","type":"boolean","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/duplicate.html"},
+		"coldfusion": {"minimum_version":"4.5", "notes":"CFMX allows this function to be used on XML objects. CF8 allows this to duplicate CFCs. CF2018 introduced named parameters.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/duplicate.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/duplicate.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/duplicate"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/duplicate"}
