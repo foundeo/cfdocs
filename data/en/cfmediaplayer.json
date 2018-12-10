@@ -27,7 +27,7 @@
 			"required": false,
 			"default": "",
 			"type": "boolean",
-			"values": [false, true]
+			"values": []
 		},
 		{
 			"name": "hideBorder",
@@ -35,7 +35,7 @@
 			"required": false,
 			"default": "",
 			"type": "boolean",
-			"values": [false, true]
+			"values": []
 		},
 		{
 			"name": "controlbar",
@@ -43,7 +43,7 @@
 			"required": false,
 			"default": "",
 			"type": "boolean",
-			"values": [false, true]
+			"values": []
 		},
 		{
 			"name": "align",
@@ -99,7 +99,7 @@
 			"required": false,
 			"default": "",
 			"type": "boolean",
-			"values": [false, true]
+			"values": []
 		},
 		{
 			"name": "oncomplete",
@@ -131,7 +131,7 @@
 			"required": false,
 			"default": "",
 			"type": "boolean",
-			"values": [false, true]
+			"values": []
 		},
 		{
 			"name": "style",
