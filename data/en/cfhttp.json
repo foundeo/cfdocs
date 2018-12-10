@@ -16,16 +16,16 @@
 		{"name":"password","description":"A password. May be required by server","required":false,"default":"","type":"string","values":[]},
 		{"name":"useragent","description":"Text to put in the user agent request header. Used to\n identify the request client software. Can make the\n CFML application appear to be a browser.","required":false,"default":"ColdFusion","type":"string","values":[]},
 		{"name":"charset","description":"The character encoding of the request, including the URL\n query string and form or file data, and the response.\n\n For more information on character encodings, see:\n www.w3.org\/International\/O-charset.html.","required":false,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]},
-		{"name":"resolveurl","description":"No does not resolve URLs in the response body. As a result,\n any relative URL links in the response body do not work.\n Yes resolves URLs in the response body to absolute URLs,\n including the port number, so that links in a retrieved\n page remain functional.","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"throwonerror","description":"Yes if the server returns an error response code, throws\n an exception that can be caught using the cftry and\n cfcatch or CFML error pages.\n No does not throw an exception if an error response is\n returned. In this case, your application can use the\n cfhttp.StatusCode variable to determine if there was\n an error and its cause.","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"redirect","description":"If the response header includes a Location field,\n determines whether to redirect execution to the URL\n specified in the field.","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"resolveurl","description":"No does not resolve URLs in the response body. As a result,\n any relative URL links in the response body do not work.\n Yes resolves URLs in the response body to absolute URLs,\n including the port number, so that links in a retrieved\n page remain functional.","required":false,"default":false,"type":"boolean","values":[]},
+		{"name":"throwonerror","description":"Yes if the server returns an error response code, throws\n an exception that can be caught using the cftry and\n cfcatch or CFML error pages.\n No does not throw an exception if an error response is\n returned. In this case, your application can use the\n cfhttp.StatusCode variable to determine if there was\n an error and its cause.","required":false,"default":false,"type":"boolean","values":[]},
+		{"name":"redirect","description":"If the response header includes a Location field,\n determines whether to redirect execution to the URL\n specified in the field.","required":false,"default":true,"type":"boolean","values":[]},
 		{"name":"timeout","description":"Value, in seconds of the maximum time the request can take.\n If the timeout passes without a response, CFML\n considers the request to have failed.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"getasbinary","description":"* No If CFML does not recognize the response body\n type as text, convert it to a CFML object.\n * Auto If CFML does not recognize the response body\n type as text, convert it to CFML Binary type data.\n * Yes Always convert the response body content into\n CFML Binary type data, even if CFML\n recognizes the response body type as text.","required":false,"default":"auto","type":"string","values":["auto",false,true]},
 		{"name":"result","description":"CF7+ Specifies the name of the variable in which you want the result returned. ","required":false,"default":"cfhttp","type":"string","values":[]},
 		{"name":"delimiter","description":"A character that separates query columns. The response body must use this character to separate the query columns.","required":false,"default":"","type":"string","values":[]},
 		{"name":"name","description":"Tells ColdFusion to create a query object with the given\n name from the returned HTTP response body.","required":false,"default":"","type":"string","values":[]},
 		{"name":"columns","description":"The column names for the query, separated by commas, with no\n spaces. Column names must start with a letter. The remaining\n characters can be letters, numbers, or underscore\n characters (_).\n \n If there are no column name headers in the response,\n specify this attribute to identify the column names.\n \n If you specify this attribute, and the firstrowasHeader\n attribute is True (the default), the column names specified\n by this attribute replace the first line of the response.\n You can use this behavior to replace the column names\n retrieved by the request with your own names.\n \n If a duplicate column heading is encountered in either this\n attribute or in the column names from the response,\n ColdFusion appends an underscore to the name to make it\n unique.\n \n If the number of columns specified by this attribute does\n not equal the number of columns in the HTTP response body,\n ColdFusion generates an error.","required":false,"default":"","type":"string","values":[]},
-		{"name":"firstrowasheaders","description":"Determines how ColdFusion processes the first row of the\n query record set:\n * yes: processes the first row as column heads. If you\n specify a columns attribute, ColdFusion ignores the\n first row of the file.\n * no: processes the first row as data. If you do not\n specify a columns attribute, ColdFusion generates column\n names by appending numbers to the word \"column\"; for\n example, \"column_1\".","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"firstrowasheaders","description":"Determines how ColdFusion processes the first row of the\n query record set:\n * yes: processes the first row as column heads. If you\n specify a columns attribute, ColdFusion ignores the\n first row of the file.\n * no: processes the first row as data. If you do not\n specify a columns attribute, ColdFusion generates column\n names by appending numbers to the word \"column\"; for\n example, \"column_1\".","required":false,"default":true,"type":"boolean","values":[]},
 		{"name":"textqualifier","description":"A character that, optionally, specifies the start and end\n of a text column. This character must surround any text\n fields in the response body that contain the delimiter\n character as part of the field value.\n \n To include this character in column text, escape it by\n using two characters in place of one. For example, if the\n qualifier is a double-quotation mark, escape it as \"\".","required":false,"default":"\"","type":"string","values":["\"","'"]},
 		{"name":"file","description":"Name of the file in which to store the response body. The directory that the file will be written to must be passed in the `path` attribute.","required":false,"default":"","type":"string","values":[]},
 		{"name":"multipart","description":"Tells ColdFusion to send all data specified by cfhttpparam type=\"formField\" tags as multipart form data, with a Content-Type of multipart\/form-data.","required":false,"default":false,"type":"boolean","values":[false,true]},
@@ -45,9 +45,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfhttp"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfhttp"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Script Syntax (CF11+)",
@@ -61,12 +59,11 @@
 			"code": "httpService = new http(method = \"GET\", charset = \"utf-8\", url = \"https://www.google.com/\"); \r\n httpService.addParam(name = \"q\", type = \"formfield\", value = \"cfml\"); \r\n result = httpService.send().getPrefix(); \r\n writeDump(result);",
 			"result": ""
 		},
-        {
-            "title": "CFHTTP Tag Syntax",
-            "description": "",
-            "code": "<cfhttp result=\"result\" method=\"GET\" charset=\"utf-8\" url=\"https://www.google.com/\">\r\n    <cfhttpparam name=\"q\" type=\"formfield\" value=\"cfml\">\r\n</cfhttp>\r\n<cfdump var=\"#result#\">",
-            "result": ""
-        }
+		{
+		    "title": "CFHTTP Tag Syntax",
+		    "description": "",
+		    "code": "<cfhttp result=\"result\" method=\"GET\" charset=\"utf-8\" url=\"https://www.google.com/\">\r\n    <cfhttpparam name=\"q\" type=\"formfield\" value=\"cfml\">\r\n</cfhttp>\r\n<cfdump var=\"#result#\">",
+		    "result": ""
+		}
 	]
-
 }
