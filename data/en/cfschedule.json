@@ -14,7 +14,7 @@
 		{"name":"starttime","description":"Time at which to run the scheduled of task starts.","required":false,"default":"","type":"string","values":[]},
 		{"name":"URL","description":"URL of the page to execute.","required":false,"default":"","type":"URL","values":[]},
 		{"name":"port","description":"Port to use on the server that is specified by the url\n parameter. If resolveURL = \"yes\", retrieved document URLs\n that specify a port number are automatically resolved, to\n preserve links in the retrieved document. A port value in\n the url attribute overrides this value.","required":false,"default":80,"type":"numeric","values":[]},
-		{"name":"publish","description":"Yes: save the result to a file\n No: does not","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"publish","description":"Yes: save the result to a file\n No: does not","required":false,"default":false,"type":"boolean","values":[]},
 		{"name":"endDate","description":"Date when scheduled task ends.","required":false,"default":"","type":"string","values":[]},
 		{"name":"endTime","description":"Time when scheduled task ends (seconds).","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"interval","description":"Interval at which task is scheduled.\n * number of seconds (minimum is 60)\n * once\n * daily\n * weekly\n * monthly","required":false,"default":"","type":"string","values":["once","daily","weekly","monthly"]},
@@ -25,7 +25,7 @@
 		{"name":"proxyport","description":"Port number to use on the proxy server.","required":false,"default":80,"type":"numeric","values":[]},
 		{"name":"proxyuser","description":"User name to provide to the proxy server.","required":false,"default":"","type":"string","values":[]},
 		{"name":"proxypassword","description":"Password to provide to the proxy server.","required":false,"default":"","type":"string","values":[]},
-		{"name":"resolveurl","description":"Yes: resolve links in the output page to absolute\n references\n No: does not","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"resolveurl","description":"Yes: resolve links in the output page to absolute\n references\n No: does not","required":false,"default":false,"type":"boolean","values":[]},
 		{"name":"group","description":"The group to which the scheduled task belongs.","required":false,"default":"default","type":"string"},
 		{"name":"mode","description":"If the task is server-specific or application specific.","required":false,"default":"server","type":"string"},
 		{"name":"result (coldfusion)/returnvariable (lucee)","description":"Name for the query in which cfschedule returns the result variables.","required":"For the list action","default":"","type":"query"}
@@ -36,23 +36,21 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfschedule"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfschedule"}
 	},
-	"links": [
-	],
-  "examples": [
-    {
-      "title": "Create or update a task",
-      "description": "Tell Coldfusion to run 'importData.cfm' daily at 7AM",
-      "code": "<cfschedule\r\n action=\"update\"\r\n task=\"importMyCSVFileToDB\"\r\n operation=\"HTTPRequest\"\r\n startDate=\"5/12/2016\"\r\n startTime=\"7:00 AM\"\r\n url=\"http://www.mydomain.com/scheduled/importData.cfm\"\r\n interval=\"daily\" />",
-      "result": "",
-      "runnable":false
-    },
-    {
-      "title": "Delete a scheduled task",
-      "description": "Delete the task 'importMyCSVFileToDB' from the list of Coldfusion scheduled jobs",
-      "code": "<cfschedule\r\n action=\"delete\"\r\n task=\"importMyCSVFileToDB\" />",
-      "result": "",
-      "runnable":false
-    }
-
-  ]
+	"links": [],
+	"examples": [
+		{
+			"title": "Create or update a task",
+			"description": "Tell Coldfusion to run 'importData.cfm' daily at 7AM",
+			"code": "<cfschedule\r\n action=\"update\"\r\n task=\"importMyCSVFileToDB\"\r\n operation=\"HTTPRequest\"\r\n startDate=\"5/12/2016\"\r\n startTime=\"7:00 AM\"\r\n url=\"http://www.mydomain.com/scheduled/importData.cfm\"\r\n interval=\"daily\" />",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title": "Delete a scheduled task",
+			"description": "Delete the task 'importMyCSVFileToDB' from the list of Coldfusion scheduled jobs",
+			"code": "<cfschedule\r\n action=\"delete\"\r\n task=\"importMyCSVFileToDB\" />",
+			"result": "",
+			"runnable":false
+		}
+	]
 }
