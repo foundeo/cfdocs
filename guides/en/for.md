@@ -40,7 +40,7 @@ For in support for native java arrays was added in CF10+
 ### For In Loop (over a query) CF10+
 
 	for (row in query) {
-		writeOutput(row.currentrow);
+		writeOutput(query.currentrow);
 	}
 
 ### Query Loop (with grouping) CF10+
