@@ -1,12 +1,12 @@
 {
 	"name":"decodeFromURL",
 	"type":"function",
-	"syntax":"decodeFromURL(String encodedinput);",
+	"syntax":"decodeFromURL(string);",
 	"returns":"string",
 	"related":["encodeForURL"],
 	"description":" Decodes an encoded HTML URL string.",
 	"params": [
-		{"name":"inputString","description":"The encoded URL string to decode..","required":true,"default":"","type":"","values":[]}
+		{"name":"string","description":"The encoded URL string to decode..","required":true,"default":"","type":"","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DecodeFromURL.html"},

@@ -4,25 +4,27 @@
 	"syntax":"<cfhtmltopdf>html</cfhtmltopdf>",
 	"script":"cfhtmltopdf() { writeOutput(html); };",
 	"description":"Creates PDFs from HTML using a WebKit based rendering engine.",
-	"engines":{"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfhtmltopdf.html","notes":"The rendering engine only runs on Windows or Linux. You can still run this tag on a Mac, but it must connect to a remote rendering engine running on Windows or Linux. Rendering engines are configured in the ColdFusion adminstrator."}},
+	"engines":{"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfhtmltopdf.html","notes":"The rendering engine only runs on Windows or Linux. You can still run this tag on a Mac, but it must connect to a remote rendering engine running on Windows or Linux. Rendering engines are configured in the ColdFusion administrator."}},
 	"params":[
-		{"values":["AES_128","RC4_40","RC4_128","RC4_128M","none"],"default":"none","description":"","name":"encryption","type":"string","required":"0"},
-		{"values":[],"default":"","description":"Pathname of a file to contain the PDF output. If you omit the destination attribute, ColdFusion displays the output in the browser.","name":"destination","type":"string","required":"0"},
-		{"values":[],"default":"","description":"Bottom margin in inches or cm based on unit attribute","name":"marginBottom","type":"numeric","required":"0"},
-		{"values":[],"default":"","description":"Top margin in inches or cm based on unit attribute","name":"marginTop","type":"numeric","required":"0"},
-		{"values":[],"default":"","description":"Left margin in inches or cm based on unit attribute","name":"marginLeft","type":"numeric","required":"0"},
-		{"values":[],"default":"","description":"Right margin in inches or cm based on unit attribute","name":"marginRight","type":"numeric","required":"0"},
-		{"values":[],"default":"","description":"Name of an existing variable into which the tag stores the PDF.","name":"name","type":"variableName","required":"0"},
-		{"values":["portrait","landscape"],"default":"portrait","description":"","name":"orientation","type":"string","required":"0"},
-		{"values":[],"default":"no","description":"Specifies whether ColdFusion overwrites an existing file. Used in conjunction with the destination attribute.","name":"overwrite","type":"string","required":"0"},
-		{"values":[],"default":"","description":"Specifies the owner password. Cannot be same as userPassword.","name":"ownerPassword","type":"string","required":"0"},
-		{"values":[],"default":"","description":"Specifies a user password. Cannot be same as ownerPassword.","name":"userPassword","type":"string","required":"0"},
-		{"values":["AllowPrinting","AllowModifyContents","AllowCopy","AllowModifyAnnotations","AllowFillIn","AllowScreenReaders","AllowAssembly","AllowDegradedPrinting","AllowSecure","All","None"],"default":"","description":"Separate multiple permissions with commas.","name":"permissions","type":"string","required":"0"},
-		{"values":["legal","letter","A4","A5","B4","B5","B4-JIS","B5-JIS","custom"],"default":"Letter","description":"","name":"pageType","type":"string","required":"0"},
-		{"values":[],"default":"","description":"Only valid if pagetype=custom. based on unit attribute","name":"pageWidth","type":"numeric","required":"0"},
-		{"values":[],"default":"","description":"Only valid if pagetype=custom. based on unit attribute","name":"pageHeight","type":"numeric","required":"0"},
-		{"values":[],"default":"","description":"The filename that appears in the SaveAs dialog when a user saves a PDF file written to the browser.","name":"saveAsName","type":"string","required":"0"},
-		{"values":["in","cm"],"default":"in","description":"Default unit for the pageHeight, pageWidth, and margin attributes:","name":"unit","type":"string","required":"0"}
+		{"name":"encryption","description":"","values":["AES_128","RC4_40","RC4_128","RC4_128M","none"],"default":"none","type":"string","required":false},
+		{"name":"source","description":"A URL of the source HTML document to use instead of providing content directly.","values":[],"default":"","type":"string","required":false},
+		{"name":"destination","description":"Pathname of a file to contain the PDF output. If you omit the destination attribute, ColdFusion displays the output in the browser.","values":[],"default":"","type":"string","required":false},
+		{"name":"marginBottom","description":"Bottom margin in inches or cm based on unit attribute","values":[],"default":"","type":"numeric","required":false},
+		{"name":"marginTop","description":"Top margin in inches or cm based on unit attribute","values":[],"default":"","type":"numeric","required":false},
+		{"name":"marginLeft","description":"Left margin in inches or cm based on unit attribute","values":[],"default":"","type":"numeric","required":false},
+		{"name":"marginRight","description":"Right margin in inches or cm based on unit attribute","values":[],"default":"","type":"numeric","required":false},
+		{"name":"name","description":"Name of an existing variable into which the tag stores the PDF.","values":[],"default":"","type":"variableName","required":false},
+		{"name":"orientation","description":"","values":["portrait","landscape"],"default":"portrait","type":"string","required":false},
+		{"name":"overwrite","description":"Specifies whether ColdFusion overwrites an existing file. Used in conjunction with the destination attribute.","values":[],"default":"no","type":"string","required":false},
+		{"name":"ownerPassword","description":"Specifies the owner password. Cannot be same as userPassword.","values":[],"default":"","type":"string","required":false},
+		{"name":"userPassword","description":"Specifies a user password. Cannot be same as ownerPassword.","values":[],"default":"","type":"string","required":false},
+		{"name":"permissions","description":"Separate multiple permissions with commas.","values":["AllowPrinting","AllowModifyContents","AllowCopy","AllowModifyAnnotations","AllowFillIn","AllowScreenReaders","AllowAssembly","AllowDegradedPrinting","AllowSecure","All","None"],"default":"","type":"string","required":false},
+		{"name":"pageType","description":"Provide a type with standard dimensions or indicate custom to define your own","values":["legal","letter","A4","A5","B4","B5","B4-JIS","B5-JIS","custom"],"default":"letter","type":"string","required":false},
+		{"name":"pageWidth","description":"Only valid if pagetype=custom. based on unit attribute","values":[],"default":"","type":"numeric","required":false},
+		{"name":"pageHeight","description":"Only valid if pagetype=custom. based on unit attribute","values":[],"default":"","type":"numeric","required":false},
+		{"name":"saveAsName","description":"The filename that appears in the SaveAs dialog when a user saves a PDF file written to the browser.","values":[],"default":"","type":"string","required":false},
+		{"name":"unit","description":"Default unit for the pageHeight, pageWidth, and margin attributes:","values":["in","cm"],"default":"in","type":"string","required":false},
+		{"name":"language","description":"CF2016+ Document language","values":[],"default":"English","type":"string","required":false}
 	],
 	"links":[
 		{
@@ -37,10 +39,10 @@
 		}
 	],
 	"examples":[
-		{"result":"","title":"Basic Usage","description":"Put HTML inside the tags to render it as a PDF. When the destination attribute is omitted the pdf is sent back to the browser.","code":"<cfhtmltopdf>\r\n  <h1>Hello World</h1>\r\n<\/cfhtmltopdf>"},
-		{"result":"","title":"External Source","description":"Use the source attribute to specify an external url.","code":"<cfhtmltopdf\r\n destination=\"usage_example.pdf\" overwrite=\"yes\"\r\n source=\"http:\/\/www.google.com\/\"\r\n unit=\"in\" pageheight=\"8\" pagewidth=\"4\"\r\n pagetype=\"custom\">\r\n<\/cfhtmltopdf>"},
-		{"result":"","title":"Set Margins","description":"Uses the margintop, marginbottom, marginleft, marginright to set the page margins","code":"\r\n<cfhtmltopdf destination=\"usage_example2.pdf\"\r\n source=\"http:\/\/www.google.com\" overwrite=\"true\" \r\n orientation=\"portrait\" pagetype=\"A4\" margintop=\"1\" marginbottom=\"1\" \r\n marginleft=\"1\" marginright=\"1\">\r\n<\/cfhtmltopdf>"},
-		{"result":"","title":"Protect PDF","description":"Uses the ownerpassword, encryption, and permissions attributes to produce a password encrypted pdf.","code":"\r\n<cfhtmltopdf \r\n source=\"http:\/\/www.google.com\"\r\n ownerpassword=\"owner\" userpassword=\"user\"\r\n encryption=\"RC4_128\" permissions=\"AllowPrinting,AllowCopy\">\r\n<\/cfhtmltopdf>"}
+		{"result":"","title":"Basic Usage","description":"Put HTML inside the tags to render it as a PDF. When the destination attribute is omitted the pdf is sent back to the browser.","code":"<cfhtmltopdf>\n  <h1>Hello World</h1>\n<\/cfhtmltopdf>"},
+		{"result":"","title":"External Source","description":"Use the source attribute to specify an external url.","code":"<cfhtmltopdf\n destination=\"usage_example.pdf\" overwrite=\"yes\"\n source=\"http:\/\/www.google.com\/\"\n unit=\"in\" pageheight=\"8\" pagewidth=\"4\"\n pagetype=\"custom\">\n<\/cfhtmltopdf>"},
+		{"result":"","title":"Set Margins","description":"Uses the margintop, marginbottom, marginleft, marginright to set the page margins","code":"\n<cfhtmltopdf destination=\"usage_example2.pdf\"\n source=\"http:\/\/www.google.com\" overwrite=\"true\" \n orientation=\"portrait\" pagetype=\"A4\" margintop=\"1\" marginbottom=\"1\" \n marginleft=\"1\" marginright=\"1\">\n<\/cfhtmltopdf>"},
+		{"result":"","title":"Protect PDF","description":"Uses the ownerpassword, encryption, and permissions attributes to produce a password encrypted pdf.","code":"\n<cfhtmltopdf \n source=\"http:\/\/www.google.com\"\n ownerpassword=\"owner\" userpassword=\"user\"\n encryption=\"RC4_128\" permissions=\"AllowPrinting,AllowCopy\">\n<\/cfhtmltopdf>"}
 	],
 	"related":["cfhtmltopdfitem","cfdocument"]
 }

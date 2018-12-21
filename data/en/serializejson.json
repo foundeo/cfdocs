@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"serializeJSON(var[, serializeQueryByColumns[, useSecureJSONPrefix[, useCustomSerializer]]])",
 	"returns":"string",
-	"related":["deserializeJSON"],
+	"related":["deserializeJSON", "structSetMetadata"],
 	"description":"Converts a ColdFusion variable into a JSON (JavaScript Object Notation) string.",
 	"params": [
 		{"name":"var","description":"A ColdFusion variable.","required":true,"default":"","type":"variableName","values":[]},
@@ -55,5 +55,4 @@
 			"result": "{\"zip\":\"00123\"}"
 		}
 	]
-
 }
