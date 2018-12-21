@@ -39,7 +39,7 @@
 		},
 		{
 			"name": "type",
-			"description": "* string: returns string values.\n * dWord: returns DWord values.\n * key: returns keys.\n * any: returns keys and values.",
+			"description": "",
 			"required": false,
 			"default": "String",
 			"type": "string",

@@ -6,11 +6,11 @@
 	"related": [
 		"cfdirectory"
 	],
-	"description": "List the contents of a directory. Returns either an array, or a query.",
+	"description": "List the contents of a directory. Returns either an array, or a query. \rNOTE: Ensure that you have the required permissions to run this function.",
 	"params": [
 		{
 			"name": "path",
-			"description": "The path to a directory. If given a relative path, that path will be relative to the server\"s temp directory.",
+			"description": "The absolute path of the directory for which to list the contents. Alternatively, you can specify IP address as in the following example: `DirectoryList(\"//12.3.123.123/c_drive/test\");`.",
 			"required": true,
 			"default": "",
 			"type": "string",
@@ -41,7 +41,7 @@
 		},
 		{
 			"name": "filter",
-			"description": "Applies a filter to the listed files, for example, `*.jpg`. Multiple filters can be applied by using a pipe delimiter. For example: `*.doc|*.xls`\nIn Lucee4.5+ it can be a closure as well.",
+			"description": "File extension filter applied to the listed files, for example, `*.jpg`. \rMultiple filters can be applied by using a pipe delimiter. For example: `*.doc|*.xls`. \rYou can also pass a function. The arguments of the passed function must have: `path` :the file path, `type`: The values (file or dir), `extension`: The file extension, if any, otherwise and empty string. \rThis argument can also accept the instances of Java `FileFilter` Objects. \rIn Lucee4.5+ it can be a closure as well.",
 			"required": false,
 			"default": "",
 			"type": "string",
@@ -49,7 +49,7 @@
 		},
 		{
 			"name": "sort",
-			"description": "Columns by which to sort. e.g. `Directory, Size DESC, DateLastModified`.",
+			"description": "Columns by which to sort. e.g. `Directory, Size DESC, DateLastModified`. To qualify a column, use `asc` (ascending sort a-z) or `dec` (descending sort z-a).",
 			"required": false,
 			"default": "",
 			"type": "string",
