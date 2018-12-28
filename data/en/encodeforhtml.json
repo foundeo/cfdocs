@@ -1,12 +1,12 @@
 {
 	"name":"encodeForHTML",
 	"type":"function",
-	"syntax":"encodeForHTML(inputString [, canonicalize])",
+	"syntax":"encodeForHTML(string [, canonicalize])",
 	"returns":"string",
 	"related":["htmleditformat", "encodeforhtmlattribute"],
-	"description":"Encodes the inputString for safe output in the body of a HTML tag. The encoding in meant to mitigate Cross Site Scripting (XSS) attacks. This function can provide more protection from XSS than the HTMLEditFormat or XMLFormat functions do.",
+	"description":"Encodes the input string for safe output in the body of a HTML tag. The encoding in meant to mitigate Cross Site Scripting (XSS) attacks. This function can provide more protection from XSS than the `HTMLEditFormat` or `XMLFormat` functions do.",
 	"params": [
-		{"name":"inputString","description":"A string to encode","required":true,"default":"","type":"string","values":[]},
+		{"name":"string","description":"A string to encode","required":true,"default":"","type":"string","values":[]},
 		{"name":"canonicalize","description":"When true runs the canonicalize function against the input before encoding. This argument is not supported on Lucee.","required":false,"default":"","type":"boolean","values":[]}
 	],
 	"engines": {
