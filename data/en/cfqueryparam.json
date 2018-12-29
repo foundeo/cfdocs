@@ -17,7 +17,7 @@
     },
     {
       "name": "cfsqltype",
-      "description": "SQL type that parameter (any type) is bound to. As of CF11+ or Lucee4.5+ you can omit the `cf_sql_` prefix. \nSee [CFSqlType Cheatsheet](https://cfdocs.com/cfsqltype-cheatsheet) for a mapping of CFSQL data types to DBMS data types.",
+      "description": "SQL type that parameter (any type) is bound to. As of CF11+ or Lucee4.5+ you can omit the `cf_sql_` prefix. \nSee [CFSqlType Cheatsheet](https://cfdocs.org/cfsqltype-cheatsheet) for a mapping of CFSQL data types to DBMS data types.",
       "required": false,
       "default": "",
       "type": "string",
