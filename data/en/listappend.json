@@ -22,7 +22,7 @@
 		{
 				"title":"Simple listAppend Example",
 				"description":"Add 'foo' to the end of this list",
-				"code" : "newList = listAppend(\"bar,bar2\", \"foo\")",
+				"code" : "oldList = \"bar,bar2\";\nnewList = listAppend(oldList, \"foo\");\nwriteOutput(oldList & \"-->\" & newList);",
 				"result":"bar,bar2,foo"
 		},
 			{
