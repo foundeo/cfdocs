@@ -28,7 +28,7 @@
 			{
 				"title":"Simple listAppend Example with Delimiter",
 				"description":"Add 'foo' to the end of this list using a custom delimiter",
-				"code" : "newList = listAppend(\"bar|bar2\", \"foo\", \"|\")",
+				"code" : "oldList = \"bar,bar2\";\nnewList = listAppend(oldList, \"foo\");\nwriteOutput(oldList & \"-->\" & newList);",
 				"result":"bar|bar2|foo"
 		}
 	]
