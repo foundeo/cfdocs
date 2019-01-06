@@ -20,7 +20,7 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n  myfile = fileOpen(\"c:\temp\test1.txt\", \"write\"); \r\n     fileWriteLine(myfile,\"This line is new.\"); \r\n     fileClose(myfile);  \r\n </cfscript>  ",
+			"code": "myfile = fileOpen(\"c:\\temp\\test1.txt\", \"write\"); \r\nfileWriteLine(myfile,\"This line is new.\"); \r\nfileClose(myfile);",
 			"result": "",
 			"runnable":false
 		}
