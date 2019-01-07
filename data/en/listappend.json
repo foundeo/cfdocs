@@ -5,7 +5,7 @@
 	"member": "str.listAppend(value [, delimiters])",
 	"returns":"string",
 	"related":["listPrepend"],
-	"description":"Concatenates a list or element to a list.",
+	"description":"Concatenates a list or element to a list and returns the concatenated list.",
 	"params": [
 		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"An element or a list of elements.","required":true,"default":"","type":"string","values":[]},
@@ -22,13 +22,13 @@
 		{
 				"title":"Simple listAppend Example",
 				"description":"Add 'foo' to the end of this list",
-				"code" : "listAppend(\"bar,bar2\", \"foo\")",
+				"code" : "oldList = \"bar,bar2\";\nnewList = listAppend(oldList, \"foo\");\nwriteOutput(oldList & \"-->\" & newList);",
 				"result":"bar,bar2,foo"
 		},
 			{
 				"title":"Simple listAppend Example with Delimiter",
 				"description":"Add 'foo' to the end of this list using a custom delimiter",
-				"code" : "listAppend(\"bar|bar2\", \"foo\", \"|\")",
+				"code" : "oldList = \"bar,bar2\";\nnewList = listAppend(oldList, \"foo\");\nwriteOutput(oldList & \"-->\" & newList);",
 				"result":"bar|bar2|foo"
 		}
 	]
