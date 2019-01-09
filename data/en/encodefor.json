@@ -4,7 +4,7 @@
 	"syntax":"encodeFor(type, value)",
 	"returns":"string",
 	"related":["encodeForHTML", "canonicalize"],
-	"description":"Encodes a given string for safe output in the specified context. The encoding in meant to mitigate Cross Site Scripting (XSS) attacks.",
+	"description":"Encodes a given string for safe output in the specified context. The encoding is meant to mitigate Cross Site Scripting (XSS) attacks.",
 	"params": [
 		{"name":"type","description":"The context of the encoding to perform.","required":true,"default":"","type":"string","values":["css","dn","html","htmlattribute","javascript","ldap","url","xml","xmlattribute","xpath"]},
 		{"name":"value","description":"The value to encode.","required":true,"default":"","type":"string","values":[]}
