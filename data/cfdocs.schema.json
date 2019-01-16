@@ -145,7 +145,7 @@
           },
           "callback_params": {
             "title": "Callback Parameters",
-            "description": "When type is function, this ",
+            "description": "When type is function, this represents the parameters for the callback",
             "type": "array",
             "$ref": "#/definitions/params",
             "minItems": 0,
@@ -261,6 +261,12 @@
           "description": "Engine compatibility information",
           "type": "object",
           "$ref": "#/definitions/engines"
+        },
+        "base_param_index": {
+          "title": "Base Param Index",
+          "description": "A 1-based index referencing the param on which the member function is based",
+          "type": "number",
+          "default": 1
         }
       },
       "required": [
@@ -271,7 +277,7 @@
     },
     "returns": {
       "title": "Return Type",
-      "description": "The return type of a function.",
+      "description": "The return type of a function",
       "type": "string",
       "enum": [
         "any",
