@@ -1,7 +1,7 @@
 {
   "name": "fileUploadAll",
   "type": "function",
-  "syntax": "fileUploadAll(string destination,[string accept,[string nameConflict]])",
+  "syntax": "fileUploadAll(destination,[mimeType,[onConflict]])",
   "returns": "array",
   "related": [
     "fileUpload"
@@ -17,7 +17,7 @@
       "values": []
     },
     {
-      "name": "accept",
+      "name": "mimeType",
       "description": "Limits the MIME types to accept. Comma-delimited list. For example, the following code permits JPEG and Microsoft Word file uploads:'image/jpg,application/msword' .The browser uses the filename extension to determine file type.",
       "required": false,
       "default": "",
@@ -25,17 +25,41 @@
       "values": []
     },
     {
-      "name": "nameConflict",
+      "name": "onConflict",
       "description": "Action to take if file has the same name of a file in the directory.",
       "required": false,
-      "default": "",
+      "default": "error",
       "type": "string",
       "values": [
-        "Error",
-        "Skip",
-        "Overwrite",
-        "MakeUnique"
+        "error",
+        "skip",
+        "overwrite",
+        "makeUnique"
       ]
+    },
+    {
+      "name": "strict",
+      "description": "Defines which method is used to determine the file type to check against the value of the `mimeType` parameter.\n`true`: The first few bytes of the uploaded file are used to determine the MIME type.\n`false`: The MIME type provided by the browser in the request payload is used.",
+      "required": false,
+      "default": "true",
+      "type": "boolean",
+      "values": []
+    },
+    {
+      "name": "continueOnError",
+      "description": "CF11+ Whether to continue uploading the remaining files when uploading one of the files fails.",
+      "required": false,
+      "default": "false",
+      "type": "boolean",
+      "values": []
+    },
+    {
+      "name": "errorVariable",
+      "description": "CF11+ The name of the variable in which the file upload errors will be stored.",
+      "required": false,
+      "default": "",
+      "type": "variableName",
+      "values": []
     }
   ],
   "engines": {

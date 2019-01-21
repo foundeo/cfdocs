@@ -1,13 +1,13 @@
 {
 	"name":"fileRead",
 	"type":"function",
-	"syntax":"fileRead(filepath [, charset])",
+	"syntax":"fileRead(filePath [, charset])",
 	"returns":"string",
 	"related":["filewrite","filereadline"],
 	"description":"Reads an on-disk or in-memory text file or a file object created with the FileOpen function.",
 	"params": [
-		{"name":"filepath","description":"An absolute file path, or file object.","required":true,"default":"","type":"string","values":[]},
-		{"name":"charset","description":"Character encoding used to read the file","required":false,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
+		{"name":"filePath","description":"An absolute file path, or file object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"charsetOrBufferSize","description":"Character encoding used to read the file or the number of characters to read","required":false,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileread.html"},
