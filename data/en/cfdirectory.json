@@ -13,7 +13,7 @@
 		{"name":"mode","description":"Applies only to UNIX and Linux. Permissions. Octal values\n of Unix chmod command. Assigned to owner, group, and\n other, respectively.","required":false,"default":"","type":"string","values":[]},
 		{"name":"sort","description":"Query column(s) by which to sort directory listing.\n Delimited list of columns from query output.","required":false,"default":"asc","type":"string","values":["asc","desc"]},
 		{"name":"newdirectory","description":"New name for directory.","required":false,"default":"","type":"string","values":[]},
-		{"name":"recurse","description":"Whether ColdFusion performs the action on subdirectories.","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"recurse","description":"Whether ColdFusion performs the action on subdirectories.","required":false,"default":false,"type":"boolean","values":[]},
 		{"name":"type","description":"","required":false,"default":"all","type":"string","values":["dir","file","all"]},
 		{"name":"listinfo","description":"","required":false,"default":"all","type":"string","values":["name","all"]}
 	],
@@ -28,8 +28,8 @@
 		    "title":"Railo tip: use a custom function for the cfdirectory \"filter\" attribute",
 		    "description":"Paul Klinkenberg shows an example usage of filter parameter as a closure",
 		    "url":"http://www.lucee.nl/post.cfm/railo-tip-use-a-custom-function-for-the-cfdirectory-filter-attribute"
-    },
-    {
+		},
+		{
 		    "title":"Enhance closure filter on directory copy (Lucee Development / LDEV-1542)",
 		    "description":"Support ticket by Brad Wood describing the filter misbehavior in recursive mode",
 		    "url":"https://luceeserver.atlassian.net/browse/LDEV-1542"
