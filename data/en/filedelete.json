@@ -1,12 +1,12 @@
 {
 	"name":"fileDelete",
 	"type":"function",
-	"syntax":"fileDelete(file)",
+	"syntax":"fileDelete(filePath)",
 	"returns":"void",
 	"related":["fileWrite","directoryDelete"],
 	"description":"Deletes the specified file on the server. fileDelete throws an exception whenever a file doesn't exist.",
 	"params": [
-		{"name":"filepath","description":"Pathname of the file to delete. If not an absolute path (starting with a drive letter and a colon, or a forward or backward slash), it is relative to the ColdFusion temporary directory, which is returned by the GetTempDirectory function.","required":true,"default":"","type":"","values":[]}
+		{"name":"filePath","description":"Pathname of the file to delete. If not an absolute path (starting with a drive letter and a colon, or a forward or backward slash), it is relative to the ColdFusion temporary directory, which is returned by the GetTempDirectory function.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filedelete.html"},

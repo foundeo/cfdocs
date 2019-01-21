@@ -4,7 +4,7 @@
 	"syntax":"fileCopy(source, destination)",
 	"returns":"void",
 	"related":["fileMove"],
-	"description":" Copies the specified on-disk or in-memory source file to the specified destination file.",
+	"description":"Copies the specified on-disk or in-memory source file to the specified destination file.",
 	"params": [
 		{"name":"source","description":"Path where the file is located currently","required":true,"default":"","type":"string","values":[]},
 		{"name":"destination","description":"Path where a copy of the file should be placed","required":true,"default":"","type":"string","values":[]}

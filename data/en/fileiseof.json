@@ -1,13 +1,12 @@
 {
 	"name":"fileIsEOF",
 	"type":"function",
-	"syntax":"fileIsEOF(fileObject)",
+	"syntax":"fileIsEOF(file)",
 	"returns":"boolean",
 	"related":[],
-	"description":" Determines whether ColdFusion has reached the end of the file while reading it.",
+	"description":"Determines whether ColdFusion has reached the end of the file while reading it.",
 	"params": [
-		{"name":"fileObject","description":"The file object.","required":true,"default":"","type":"any","values":[]}
-
+		{"name":"file","description":"The file object.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileiseof.html"},
