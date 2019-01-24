@@ -15,5 +15,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmailpart"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmailpart"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+		"title": "Script syntax using function call",
+		"description": ".",
+		"code": "cfmail( to = \"recipient@example.com\", from = \"sender@example.com\", subject = \"Example email\" ) {\ncfmailpart(type=\"text/plain\") {\n\twriteOutput(\"If you are seeing this, your e-mail client does not support HTML messages.\");\n}\ncfmailpart(type=\"text/html\") {\n\twriteOutput(htmlVersionOfMessage);\n}\n}"
+		}
+	]
 }
