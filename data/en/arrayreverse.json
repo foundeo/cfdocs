@@ -25,6 +25,13 @@
 		"code":"myArray = [1,2,3]; \r\nwriteOutput( serializeJSON( myArray.reverse() ) );",
 		"result":"[3,2,1]",
 		"runnable":true
+	},
+	{
+		"title":"Reverse an Array using array slice syntax",
+		"description":"Reverse an Array using array slice syntax adding in ColdFusion 2018",
+		"code":"myArray = [1,2,3]; \r\nwriteOutput( serializeJSON( myArray[::-1] ) );",
+		"result":"[3,2,1]",
+		"runnable":true
 	}],
 	"links": []
 }
