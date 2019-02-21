@@ -61,3 +61,9 @@ OR
 
     result = firstOperand ? secondOperand : thirdOperand; // ternary
     result = isNumeric("nineteen") ? "it's numeric" : "no it isn't"; // "no it isn't"
+
+Nesting examples for if/elseif/else
+
+    result = stage1.firstOperand ? stage1.SecondOperand : stage2.firstOperand ? stage2.SecondOperand : Stage1.thirdOperand
+    value = "nineteen"
+    result = isNumeric(value) ? "it's numeric" : (REFIND("[A-Za-z]",value) > 0) ? "it's alphabetic" : "it's neither"; // "it's alphabetic"
