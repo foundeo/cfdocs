@@ -62,7 +62,7 @@ OR
     result = firstOperand ? secondOperand : thirdOperand; // ternary
     result = isNumeric("nineteen") ? "it's numeric" : "no it isn't"; // "no it isn't"
 
-Nesting examples for if/elseif/else
+Nesting examples for if/elseif/else. Note: It's not advisable to nest it because of poor readability, but useful in some rare situations.
 
     result = stage1.firstOperand ? stage1.SecondOperand : stage2.firstOperand ? stage2.SecondOperand : Stage1.thirdOperand
     value = "nineteen"
