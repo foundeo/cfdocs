@@ -37,7 +37,8 @@
         	{"name":"authType","description":"CF11+ NOTE When authentication type is NTLM, do not set the redirect as false.","required":false,"default":"BASIC","type":"string","values":["BASIC","NTLM"]},
         	{"name":"domain","description":"CF11+ The domain name for authentication. (Use for NTLM-based authentication)","required":false,"default":"","type":"string","values":[]},
         	{"name":"workstation","description":"CF11+ The workstation name for authentication. (Use for NTLM-based authentication)","required":false,"default":"","type":"string","values":[]},
-		{"name":"cachedwithin","description":"Lucee5+ Timespan, using the CreateTimeSpan function. If original\n file date falls within the time span, cached file data is\n used. CreateTimeSpan defines a period from the present, back.","required":false,"default":"","type":"Timespan","values":[]}
+		{"name":"cachedwithin","description":"Lucee5+ Timespan, using the CreateTimeSpan function. If original\n file date falls within the time span, cached file data is\n used. CreateTimeSpan defines a period from the present, back.","required":false,"default":"","type":"Timespan","values":[]},
+		{"name":"encodeurl","description":"Allow the CFML engine to encode the url provided in the url attribute, or prevent it from doing so.","required":false,"default":"true","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfhttp.html"},
