@@ -3,10 +3,10 @@
 	"type":"function",
 	"syntax":"transactionSetSavepoint(savepoint)",
 	"returns":"void",
-	"related":[],
-	"description":" Set savepoint for transaction",
+	"related":["cftry", "cfcatch","cftransaction","transactioncommit","transactionrollback"],
+	"description":"Set savepoint for transaction",
 	"params": [
-		{"name":"savepoint","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
+		{"name":"savepoint","description":"Savepoint name, referenced when rolling back to a savepoint","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -16,6 +16,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Roll back to a specified savepoint",
+			"description": "This example runs multiple queries with a savepoint for each, and rolls back to the 'useradded' savepoint if the last query fails.",
+			"code": "transaction { \r\n  // insert user \r\n  transactionSetSavepoint('useradded'); \r\n  try { \r\n    // another query \r\n  } \r\n  catch(any e) { \r\n   transactionRollback(); \r\n  } \r\n}",
+			"result": ""
+		}
 	]
 
 }
