@@ -44,6 +44,12 @@
 		},
 		{
 			"result":"",
+			"title":"LUCEE also supports this syntax (Script Based)",
+			"description":"Outputs a listing of all the variables in the server scope. Only for LUCEE.",
+			"code":"dump(var = server, label = \"Server Scope\");"
+		},
+		{
+			"result":"",
 			"title":"Dump Then Abort",
 			"description":"CF9+ Specifying the \"abort\" attribute without corresponding value is equivalent to assigning it with a \"true\" value. However, when this attribute is excluded, the default value of \"false\" is applied.",
 			"code":"<cfdump var=\"#server#\" abort>"
