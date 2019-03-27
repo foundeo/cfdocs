@@ -27,7 +27,7 @@
         },
         {
             "title": "Using Member Function",
-            "description": "CF11+ Lucee4.5+ Retrieve a comma seperated list of keys using the member function",
+            "description": "CF11+ Lucee4.5+ Retrieve a comma separated list of keys using the member function",
             "code": "statusCodes = {\n    OK = 200,\n    CREATED = 201,\n    NOT_MODIFIED = 304,\n    BAD_REQUEST = 400,\n    NOT_FOUND = 404\n};\n\nwriteDump(statusCodes.keyArray());",
             "result": "[NOT_FOUND, BAD_REQUEST, CREATED, OK, NOT_MODIFIED]"
         }
