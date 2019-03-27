@@ -48,8 +48,8 @@
 			"runnable": false
 		},
 		{
-			"title": "Polyfill for ealier versions",
-			"description": "In older coldfusion version where this function is not supported yet, you can fall back to a native java method to achive the same behavior except that it does not have the `overwriteFlag`.",
+			"title": "Polyfill for earlier versions",
+			"description": "In older coldfusion version where this function is not supported yet, you can fall back to a native java method to achieve the same behavior except that it does not have the `overwriteFlag`.",
 			"code":"config = {a:0, b:0};\noptions= {b:1, c:1};\nconfig.putAll(options);\nwriteOutput( serializeJSON( config ) );",
 			"result":"{\"A\":0,\"B\":0,\"C\":1}",
 			"runnable": true
