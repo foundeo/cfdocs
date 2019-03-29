@@ -39,7 +39,7 @@
 		{"name":"fetch","description":"Specifies if it is outer-join fetching or sequential select fetching","required":false,"default":"","type":"string","values":["join","select"]},
 		{"name":"cascade","description":"Specifies which operations should be cascaded from the parent object to the associated object","required":false,"default":"","type":"string","values":["all","none","save-update","delete","all-delete-orphan","delete-orphan","create","merge","lock","refresh","evict","replicate"]},
 		{"name":"constrained","description":"Whether a constraint is set on this table's Primary Key column to reference the Primary Key in the other table","required":false,"default":"","type":"boolean","values":[]},
-		{"name":"unique","description":"Specifies if there should be a unique constraint on the column.","required":false,"default":"","type":"string","values":[]},
+		{"name":"unique","description":"Specifies if there should be a unique constraint on the column.","required":false,"default":"","type":"boolean","values":[false,true]},
 		{"name":"uniquekey","description":"Groups columns in a single unique key constraint.","required":false,"default":"","type":"string","values":[]},
 		{"name":"notnull","description":"A Boolean value that specifies whether a notnull constriant should be added for this column.","required":false,"default":"","type":"boolean","values":[]},
 		{"name":"update","description":"Whether the column should be included in the SQL update statement.\nSet update=false and insert=false if the column needs to be read-only.","required":false,"default":"","type":"string","values":[]},
