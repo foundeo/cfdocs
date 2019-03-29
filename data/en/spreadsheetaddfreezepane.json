@@ -6,7 +6,7 @@
 	"related":[],
 	"description":"Adds freeze pane (non-scrollable columns/rows) to spreadsheet",
 	"params": [
-		{"name":"spreadsheetObj","description":"Spreadsheet variable","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"spreadsheetObj","description":"Spreadsheet variable name","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"freezeColumn","description":"Amount of columns from left which should be freeze","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"freezeRow","description":"Amount of rows from top which should be freeze","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"hideColumn","description":"Amount of columns which should be hidden under/behind freeze columns (Scrolls left to first unhidden column).","required":false,"default":"","type":"numeric","values":[]},
