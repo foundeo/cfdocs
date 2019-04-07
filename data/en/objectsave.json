@@ -3,15 +3,14 @@
 	"type":"function",
 	"syntax":"objectSave(object [, file])",
 	"returns":"binary",
-	"related":[],
-	"description":" Serialize object to file or convert it to binary format",
+	"related":["objectLoad"],
+	"description":"Serialize object to file or convert it to binary format",
 	"params": [
 		{"name":"object","description":"Object to be serialized","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"file","description":"File in which serialized object will be stored","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/objectsave.html"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/objectsave.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/objectsave.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/objectsave"}
 	},

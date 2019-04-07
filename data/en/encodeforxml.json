@@ -14,9 +14,7 @@
 		"lucee": {"minimum_version":"4.5", "notes":"This function has been deprecated. Use `ESAPIEncode('xml',...)` instead.", "docs":"http://docs.lucee.org/reference/functions/encodeforxml.html", "deprecated":"5"},
 		"railo": {"minimum_version":"4.0", "notes":"", "docs":"http://railodocs.org/index.cfm/function/encodeForXML"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Simple encodeForXML Example",
@@ -25,5 +23,4 @@
 			"result": "Fred &#x26; Ted"
 		}
 	]
-
 }

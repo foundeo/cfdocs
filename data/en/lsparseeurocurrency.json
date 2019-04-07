@@ -4,6 +4,7 @@
 	"syntax":"lsParseEuroCurrency(currency_string)",
 	"returns":"numeric",
 	"related":[],
+	"discouraged": "Use LSParseCurrency instead",
 	"description":"Formats a locale-specific currency string as a number. Attempts conversion through each of the default currency formats (none, local, international). Ensures correct handling of euro currency for Euro zone countries.",
 	"params": [
 		{"name":"currency_string","description":"","required":true,"default":"","type":"string","values":[]}
@@ -15,8 +16,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsparseeurocurrency"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsparseeurocurrency"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

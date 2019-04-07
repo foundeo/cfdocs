@@ -6,8 +6,8 @@
 	"related":[],
 	"description":"Gets the MIME type for the file path/file object you have specified.",
 	"params": [
-		{"name":"file","description":"Name of the file object or full path on disk to the file if strict is set to true. If you do not specify the full path, the file is assumed to be present in the temp directory, as returned by the function getTempDirectory.","required":true,"default":"","type":"","values":[]},
-        	{"name":"strict","description":"If false, determines the file type by extension. The default value is true.","required":true,"default":"","type":"","values":[]}
+		{"name":"file","description":"Name of the file object or full path on disk to the file if strict is set to true. If you do not specify the full path, the file is assumed to be present in the temp directory, as returned by the function getTempDirectory.","required":true,"default":"","type":"any","values":[]},
+		{"name":"strict","description":"If false, determines the file type by extension. The default value is true.","required":false,"default":"true","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filegetmimetype.html"},
