@@ -2,7 +2,7 @@
 	"name":"listPrepend",
 	"type":"function",
 	"syntax":"listPrepend(someList, value [, delimiters])",
-    	"member":"someList.listPrepend( value [, delimeters])",
+    	"member":"someList.listPrepend( value [, delimiters])",
 	"returns":"string",
 	"related":["listAppend"],
 	"description":" Inserts an element at the beginning of a list.",
@@ -20,7 +20,7 @@
 	"links": [],
     	"examples": [
         {
-            "title": "Prepend to a List using a dash delimeter",
+            "title": "Prepend to a List using a dash delimiter",
             "description": "",
             "code": "someList = \"1-2-3-4\";\nsomeList = listPrepend(someList,\"0\",\"-\");\nwriteOutput(someList);",
             "result": "\"0-1-2-3-4\""
