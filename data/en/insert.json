@@ -8,7 +8,7 @@
 	"params": [
 		{"name":"substring","description":"A string to insert","required":true,"default":"","type":"string","values":[]},
 		{"name":"String","description":"A string, which to insert substring","required":true,"default":"","type":"string","values":[]},
-		{"name":"position","description":"Substring add after this postion value in given string","required":true,"default":"","type":"numeric","values":[]}
+		{"name":"position","description":"Substring add after this position value in given string","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
