@@ -32,7 +32,7 @@
 			"runnable": false
 		},
 		{
-			"title":"Using drawRoundRect member fucntion",
+			"title":"Using drawRoundRect member function",
 			"description":"CF11+ Lucee4.5+ Create an new image. With the new image draw filled rounded rectangle (width=70, height=50) starting at point (x=40,y=50)",
 			"code":"imgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.drawRoundRect(40,50,70,50,35,35,\"yes\");\r\ncfimage (action=\"writeToBrowser\", source=imgObj);",
 			"result":"",
