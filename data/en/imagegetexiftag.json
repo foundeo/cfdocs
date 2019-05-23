@@ -26,7 +26,7 @@
 			"runnable": false
 		},
 		{
-			"title":"Using getEXIFTag member fucntion",
+			"title":"Using getEXIFTag member function",
 			"description":"CF11+ Lucee4.5+ Extract model of camera used for image on exiv sample page (http://www.exiv2.org/sample.html)",
 			"code":"imgObj = imageRead(\"http://www.exiv2.org/include/img_1771.jpg\");\r\nmodel = imgObj.getEXIFTag('Model');\r\nwriteOutput(model);",
 			"result":"Canon PowerShot S40",
