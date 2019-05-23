@@ -32,7 +32,7 @@
 		},
 		{
 			"title":"Using drawBeveledRect member function",
-			"description":"CF11+ Lucee4.5+ Create a new image and place a raised beveled rectange at its center",
+			"description":"CF11+ Lucee4.5+ Create a new image and place a raised beveled rectangle at its center",
 			"code":"imgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.drawBeveledRect(50,50,50,50,\"yes\",\"yes\");\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
 			"result":"",
 			"runnable":true
