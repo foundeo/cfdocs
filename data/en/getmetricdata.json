@@ -4,7 +4,7 @@
 	"syntax":"getMetricData(mode)",
 	"returns":"any",
 	"related":[],
-	"description":"Gets server performance metrics\n [mode - quicky]",
+	"description":"Gets server performance metrics\n [mode - quickly]",
 	"params": [
 		{"name":"mode","description":"perf_monitor - Returns internal data, in a structure.\n simple_load - Returns an integer value that is computed\n from the state of the server's internal\n queues. Indicates the overall server load.\n prev_req_time - Returns the time, in milliseconds, that it\n took the server to process the previous\n request.\n avg_req_time - Returns the average time, in milliseconds,\n that it takes the server to process a\n request.","required":true,"default":"","type":"string","values":["perf_monitor","simple_load","prev_req_time","avg_req_time"]}
 	],
