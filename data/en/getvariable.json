@@ -4,7 +4,7 @@
 	"syntax": "getVariable(name)",
 	"returns": "any",
 	"related": ["setVariable"],
-	"description": "Retrieves value of a variabl",
+	"description": "Retrieves value of a variable",
 	"params": [
 		{"name": "name", "description": "", "required": true, "default": "", "type": "string", "values": []}
 	],
