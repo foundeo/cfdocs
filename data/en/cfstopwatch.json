@@ -1,0 +1,32 @@
+{
+	"name":"cfstopwatch",
+	"type":"tag",
+	"syntax":"<cfstopwatch variable=\"time\" label=\"timer\"></cfstopwatch>",
+	"script":"cfstopwatch( variable=\"time\" label=\"timer\" ) {}",
+	"related":["getTickCount","cftimer"],
+	"description":"Measures the time taken, in milliseconds, for the code between the start tag and end tag to execute.",
+	"params": [
+		{"name":"variable","description":"The name of the variable that will contain the value of the time taken.","required":true,"type":"string","values":[]},
+		{"name":"label","description":"The label for the stopwatch, used in debugging output.","required":false,"default":"","type":"string"}
+	],
+	"engines": {
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/stopwatch.html"}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Tag version",
+			"description": "",
+			"code": "<cfstopwatch variable=\"stopwatchVar\" label=\"Nap time\">\nBegin some long running process ...\n<cfset sleep(2000)>\ndone.\n</cfstopwatch><cfdump var=\"stopwatchVar\">",
+			"result": "The time elapsed while executing the code inside the <cfstopwatch> block is returned as a variable then displayed below.",
+			"runnable": false
+		},
+		{
+			"title": "Script version",
+			"description": "",
+			"code": "cfstopwatch( variable=\"stopwatchVar\", label = \"Nap time\" ){\nwriteoutput(\"Begin some long running process ... \");\nsleep(2000);\n}\nwriteDump( stopwatchVar );",
+			"result": "The time elapsed while executing the code inside the <cfstopwatch> block is returned as a variable then displayed below.",
+			"runnable": false
+		}
+	]
+}
