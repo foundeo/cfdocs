@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cflocation url=\"page.cfm\" addtoken=\"false\" statusCode=\"301\">",
 	"script":"location(\"mypage.cfm\", \"false\", \"301\");",
-	"related":[],
+	"related":["cfforward","cfheader"],
 	"description":"Stops execution of the current page and redirects to the specified URI.",
 	"params": [
 		{"name":"url","description":"URI or URL to redirect to.","required":true,"default":"","type":"string","values":[]},
@@ -24,11 +24,11 @@
 			"code": "\r\nlocation(\"mypage.cfm\", \"false\", \"301\");",
 			"result": ""
 		},
-	        {
-	            "title": "Tag Syntax",
-	            "description": "",
-	            "code": "<cflocation url=\"mypage.cfm\" addToken=\"false\" statusCode=\"301\">",
-	            "result": ""
-	        }
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cflocation url=\"mypage.cfm\" addToken=\"false\" statusCode=\"301\">",
+			"result": ""
+		}
 	]
 }
