@@ -9,7 +9,7 @@
 		{"name": "delimiter", "description": "", "required": false, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/entitynamelist.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/entitynamelist.html"}
 	},
 	"examples": [{
 		"title":"Outputs a list of entities currently loaded",

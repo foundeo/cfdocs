@@ -10,7 +10,7 @@
 		{"name": "dialect", "description": "The dialect you want details for", "required": false, "default": "current template's dialect", "type": "string", "values": ["CFML","Lucee"]}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getfunctiondata.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getfunctiondata.html"}
 	},
 	"examples": [{
 		"title": "Output information about a function",

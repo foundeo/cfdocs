@@ -13,7 +13,7 @@
 		{"name":"maxThreads","description":"The number of threads to use when `parallel=true`","required":false,"default":"20","type":"boolean","values":[]}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayevery.html"}
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arrayevery.html"}
 	},
 	"links": [{
 		"title":"Map, Reduce and other Higher Order Functions",

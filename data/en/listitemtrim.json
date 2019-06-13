@@ -12,7 +12,7 @@
 		{"name": "includeEmptyFields", "description": "By default empty items will be removed from the list. If it is true, empty items will be stay in the list.", "required": false, "default": "false", "type": "boolean", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/listitemtrim.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/listitemtrim.html"}
 	},
 	"examples": [
 		{

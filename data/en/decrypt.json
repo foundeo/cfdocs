@@ -16,7 +16,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"CF2018+ uses separate `iv` or `salt` named parameters.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/Decrypt.html"},
-		"lucee": {"minimum_version":"", "notes":"Uses `IVorSalt` parameter or aliases of `iv` and `salt`.", "docs":"http://docs.lucee.org/reference/functions/decrypt.html"},
+		"lucee": {"minimum_version":"", "notes":"Uses `IVorSalt` parameter or aliases of `iv` and `salt`.", "docs":"https://docs.lucee.org/reference/functions/decrypt.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/decrypt"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/decrypt"}
 	},
