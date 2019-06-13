@@ -11,7 +11,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"CF2018: Renamed parameter `day_of_week` to `dayofweek`. \n CF8: Added `locale` parameter. \n CFMX7: Changed behavior. The returned string is now in the language of the current locale.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DayOfWeekAsString.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/dayofweekasstring.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/dayofweekasstring.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/dayofweekasstring"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dayofweekasstring"}
 	},
