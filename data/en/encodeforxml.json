@@ -11,7 +11,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/encodeforxml.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"This function has been deprecated. Use `ESAPIEncode('xml',...)` instead.", "docs":"http://docs.lucee.org/reference/functions/encodeforxml.html", "deprecated":"5"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/encodeforxml.html"},
 		"railo": {"minimum_version":"4.0", "notes":"", "docs":"http://railodocs.org/index.cfm/function/encodeForXML"}
 	},
 	"links": [],
