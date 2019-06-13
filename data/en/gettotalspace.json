@@ -4,7 +4,7 @@
 	"syntax":"getTotalSpace(path);",
 	"returns":"numeric",
 	"related":["getSystemTotalMemory"],
-	"description":" Returns the total disk space or in-memory space avaialbe for an appliation.",
+	"description":" Returns the total disk space or in-memory space available for an application.",
 	"params": [
 		{"name":"path","description":"path to the hard drive or for in memory file system.","required":true,"default":"","type":"","values":[]}
 	],

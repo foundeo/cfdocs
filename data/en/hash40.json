@@ -12,7 +12,7 @@
 		{"name": "numIterations", "description": "number of iterations", "required": false, "default": "1", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "deprecated": "4.5", "notes": "This function only exists for backward compstibility to Lucee 4.0 or older version that has produced a incorrect result for non us-ascii caharacters, Only use this function for backward compatibility.", "docs": "http://docs.lucee.org/reference/functions/hash40.html"}
+		"lucee": {"minimum_version": "", "deprecated": "4.5", "notes": "This function only exists for backward compatibility to Lucee 4.0 or older version that has produced a incorrect result for non us-ascii characters, Only use this function for backward compatibility.", "docs": "http://docs.lucee.org/reference/functions/hash40.html"}
 	},
 	"examples": [],
 	"links": []
