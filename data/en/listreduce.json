@@ -4,14 +4,23 @@
 		"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listreduce.html","notes":""}
 	},
 	"name":"listReduce",
-	"links":[],
+	"links":[{
+		"title":"Map, Reduce and other Higher Order Functions",
+		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
+		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+	},
+	{
+		"title": "ColdFusion 11: .map() and .reduce()",
+		"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
+		"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
+	}],
 	"params":[
-		{"values":[],"default":"","description":"Input list","name":"list","type":"String","required":"1"},
-		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: value\r\nindex : current index for the iteration\r\nlist : reference of the original list","name":"function","type":"Any","required":"1"},
-		{"values":[],"default":"","description":"Initial value which will be used for the reduce operation. The type is any.","name":"intialValue","type":"Any","required":"0"},
-		{"values":[],"default":"comma","description":"The list delimiter.","name":"delimiter","type":"String","required":"0"},{"values":[],"default":"false","description":"Include empty values.","name":"includeEmptyFields","type":"Boolean","required":"0"}
+		{"values":[],"default":"","description":"Input list","name":"list","type":"string","required":"1"},
+		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: value\r\nindex : current index for the iteration\r\nlist : reference of the original list","name":"function","type":"any","required":"1"},
+		{"values":[],"default":"","description":"Initial value which will be used for the reduce operation. The type is any.","name":"intialValue","type":"any","required":"0"},
+		{"values":[],"default":"comma","description":"The list delimiter.","name":"delimiter","type":"string","required":"0"},{"values":[],"default":"false","description":"Include empty values.","name":"includeEmptyFields","type":"boolean","required":"0"}
 	],
-	"returns":"Any",
+	"returns":"any",
 	"examples":[{
 			"title": "Script Syntax",
 			"description": "",

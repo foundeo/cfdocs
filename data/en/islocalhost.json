@@ -6,16 +6,51 @@
 	"related":[],
 	"description":" Determines whether the specified IP address is the localhost.",
 	"params": [
-		{"name":"ipaddress","description":"Valid IP address.","required":true,"default":"","type":"String","values":[]}
+		{"name":"ipaddress","description":"Valid IP address.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/islocalhost.html"},
+		"coldfusion": {"minimum_version":"", "notes":"7", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/islocalhost.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/islocalhost.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/islocalhost"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/islocalhost"}
 	},
 	"links": [
+		{
+			"title":"Localhost Details",
+			"url":"https://en.wikipedia.org/wiki/Localhost",
+			"description":"Details about `localhost`"
+		}
+	],
+	"examples": [
+		{
+			"title":"Is 127.0.0.1 localhost",
+			"description":"",
+			"code":"isLocalHost(\"127.0.0.1\")",
+			"result":true,
+			"runnable":true
+		},
+		{
+			"title":"Is ::1 localhost",
+			"description":"Test the IPv6 Loopback address. IPv6 only has one loopback address.",
+			"code":"isLocalHost(\"::1\")",
+			"result":true,
+			"runnable":true
+		},
+		{
+			"title":"Is 127.8.8.8 localhost",
+			"description":"IPv4 network standards reserve the entire 127.0.0.0/8 address block for loopback networking purposes however they are not usually mapped to `localhost` by default.",
+			"code":"isLocalHost(\"127.8.8.8\")",
+			"result":false,
+			"runnable":true
+		},
+		{
+			"title":"Is 8.8.8.8 localhost",
+			"description":"Not a localhost ip.",
+			"code":"isLocalHost(\"8.8.8.8\")",
+			"result":false,
+			"runnable":true
+		}
 
 	]
 

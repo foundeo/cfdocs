@@ -3,11 +3,10 @@
 	"type":"function",
 	"syntax":"isStruct(variable)",
 	"returns":"boolean",
-	"related":[],
+	"related":["isArray","isNumeric","isValid","sturctIsEmpty"],
 	"description":" Determines whether a variable is a structure.\n True, if variable is a CFML structure or is a Java object\n that implements the java.lang.Map interface. Returns False if the\n object in variable is a user-defined function (UDF).",
 	"params": [
-		{"name":"variable","description":"","required":true,"default":"","type":"Object","values":[]}
-
+		{"name":"variable","description":"","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isstruct.html"},
@@ -15,8 +14,21 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isstruct"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isstruct"}
 	},
-	"links": [
-
+	"links": [],
+	"examples": [
+		{
+		"title":"isStruct Example",
+		"description":"Returns true if variable is a ColdFusion structure or is a Java object that implements the java.lang.Map interface. ",
+		"code":"isStruct( structNew() )",
+		"result":true,
+		"runnable":true
+		},
+		{
+		"title":"isStruct Example for False",
+		"description":"Returns false is the object in the variable parameter is a user-defined function UDF).  In the example below exponent is a function created by the user",
+		"code":"isStruct( arrayNew(1) )",
+		"result":false,
+		"runnable":true
+		}
 	]
-
 }

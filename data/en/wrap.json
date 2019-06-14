@@ -2,12 +2,12 @@
 	"name":"wrap",
 	"type":"function",
 	"syntax":"wrap(String, limit [, strip])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Wraps text so that each line has a specified maximum number\n of characters.",
 	"params": [
-		{"name":"String","description":"String or variable that contains one. The text to wrap.","required":true,"default":"","type":"String","values":[]},
-		{"name":"limit","description":"Positive integer maximum number of characters to allow on\n a line.","required":true,"default":"","type":"Numeric","values":[]},
+		{"name":"String","description":"String or variable that contains one. The text to wrap.","required":true,"default":"","type":"string","values":[]},
+		{"name":"limit","description":"Positive integer maximum number of characters to allow on\n a line.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"strip","description":"whether to remove all existing newline and carriage return\n characters in the input string with spaces before wrapping\n the text. Default: False.","required":false,"default":false,"type":"boolean","values":[true,false]}
 
 	],
@@ -17,6 +17,20 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/wrap"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/wrap"}
 	},
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "sentence = \"This is a standard sentence.\";\r\nwrappedSentence = wrap(sentence, 7);\r\nwriteOutput(wrappedSentence);",
+			"result": "This is a standar d senten ce."
+		},
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset sentence = \"This is a standard sentence.\" />\r\n<cfset wrappedSentence = wrap(sentence, 7) />\r\n<cfoutput>#wrappedSentence#</cfoutput>",
+			"result": "This is a standar d senten ce."
+		}
+	],
 	"links": [
 
 	]

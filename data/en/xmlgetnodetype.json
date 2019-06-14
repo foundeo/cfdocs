@@ -1,12 +1,12 @@
 {
-	"name":"XMLGetNodeType",
+	"name":"xmlGetNodeType",
 	"type":"function",
-	"syntax":"XMLGetNodeType(xmlNode)",
-	"returns":"String",
+	"syntax":"xmlGetNodeType(xmlNode)",
+	"returns":"string",
 	"related":[],
-	"description":" Determines the type of an XML document object node.",
+	"description":"Determines the type of an XML document object node.",
 	"params": [
-		{"name":"xmlNode","description":"An XML DOM object node.","required":true,"default":"","type":"Object","values":[]}
+		{"name":"xmlNode","description":"An XML DOM object node.","required":true,"default":"","type":"xml","values":[]}
 
 	],
 	"engines": {

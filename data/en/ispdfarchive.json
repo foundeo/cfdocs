@@ -1,0 +1,20 @@
+{
+	"name":"isPDFArchive",
+	"type":"function",
+	"syntax":"isPDFArchive(path, standard)",
+	"returns":"boolean",
+	"related":["isPDFFile"],
+	"description":"Returns `true` if the pdf file at the specified `path` meets the specified `standard`.",
+	"params": [
+		{"name":"path","description":"Path to a PDF file.","required":true,"default":"","type":"string","values":[]},
+		{"name":"standard","description":"PDF Archiving Standard","required":true,"default":"","type":"string","values":["1b","2b","3b"]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/ispdfarchive.html"}
+	},
+	"links": [
+
+	]
+
+}

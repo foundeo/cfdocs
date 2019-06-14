@@ -2,13 +2,13 @@
 	"name":"insert",
 	"type":"function",
 	"syntax":"insert(substring, String, position)",
-	"returns":"String",
+	"returns":"string",
 	"related":["RemoveChars", "Len"],
 	"description":" Inserts a substring in a string after a specified character\n position. If position = 0, prefixes the substring to the\n string.",
 	"params": [
-		{"name":"substring","description":"A string to insert","required":true,"default":"","type":"String","values":[]},
-		{"name":"String","description":"A string, which to insert substring","required":true,"default":"","type":"String","values":[]},
-		{"name":"position","description":"Substring add after this postion value in given string","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"substring","description":"A string to insert","required":true,"default":"","type":"string","values":[]},
+		{"name":"String","description":"A string, which to insert substring","required":true,"default":"","type":"string","values":[]},
+		{"name":"position","description":"Substring add after this position value in given string","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

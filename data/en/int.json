@@ -2,12 +2,11 @@
 	"name":"int",
 	"type":"function",
 	"syntax":"int(number)",
-	"returns":"Numeric",
-	"related":[],
+	"returns":"numeric",
+	"related":["round","floor","ceiling"],
 	"description":" Calculates the closest integer that is smaller than number.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
-
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/int.html"},
@@ -15,8 +14,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/int"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/int"}
 	},
-	"links": [
-
+	"links": [],
+	"examples": [
+		{
+			"title":"Closest integer less than 1.8",
+			"description":"",
+			"code":"int(1.8)",
+			"result":"1",
+			"runnable":true
+		}
 	]
-
 }

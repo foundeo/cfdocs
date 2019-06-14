@@ -5,13 +5,33 @@
 	"member": "array.reverse()",
 	"returns": "array",
 	"related": [],
-	"description": "",
-	"params": [
-		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []}
-	],
+	"description":"Returns an array with all of the elements reversed. The value in [0] within the input array will then exist in [n] in the output array, where n is the amount of elements in the array minus one.",
+        "params": [
+                {"name":"array","description":"The array to reverse","required":true,"default":"","type":"array","values":[]}
+        ],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arrayreverse.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Reverse an Array",
+		"description":"Creates a new array with reversed positions",
+		"code":"myArray = [1,2,3];\r\nmyArrayReversed = arrayReverse(myArray);\r\nwriteOutput( serializeJSON( myArrayReversed ) );",
+		"result":"[3,2,1]",
+		"runnable":true
+	},
+	{
+		"title":"Reverse an Array via Member Function",
+		"description":"",
+		"code":"myArray = [1,2,3]; \r\nwriteOutput( serializeJSON( myArray.reverse() ) );",
+		"result":"[3,2,1]",
+		"runnable":true
+	},
+	{
+		"title":"Reverse an Array using array slice syntax",
+		"description":"Reverse an Array using array slice syntax adding in ColdFusion 2018",
+		"code":"myArray = [1,2,3]; \r\nwriteOutput( serializeJSON( myArray[::-1] ) );",
+		"result":"[3,2,1]",
+		"runnable":true
+	}],
 	"links": []
 }

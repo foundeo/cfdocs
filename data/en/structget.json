@@ -2,11 +2,11 @@
 	"name":"structGet",
 	"type":"function",
 	"syntax":"structGet(path)",
-	"returns":"Any",
+	"returns":"any",
 	"related":[],
 	"description":"Returns a value in a structure or a structure in the specified path.",
 	"params": [
-		{"name":"path","description":"Pathname of variable that contains structure or array from which CFML retrieves the value. If there is no structure or array present in the path, this function creates structures or arrays to make it a valid variable path.","required":true,"default":"","type":"String","values":[]}
+		{"name":"path","description":"Pathname of variable that contains structure or array from which CFML retrieves the value. If there is no structure or array present in the path, this function creates structures or arrays to make it a valid variable path.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -26,13 +26,13 @@
 			"result":"8"
 		},
 		{
-			"title":"Accidentially Modifying a Structure",
-			"description":"The structGet function will modify the varaible x by adding a new structure x.a and also adds a key x.a.b to satisfy the path.",
+			"title":"Accidentally Modifying a Structure",
+			"description":"The structGet function will modify the variable x by adding a new structure x.a and also adds a key x.a.b to satisfy the path.",
 			"code":"x = { y = { z=8 } };\nwriteDump( structGet(\"x.a.b\") );\nwriteDump(x);",
 			"result":""
 		},
 		{
-			"title":"Accidentially Overwriting a variable using structGet",
+			"title":"Accidentally Overwriting a variable using structGet",
 			"description":"The value of x.y.z[2] will be set to an empty struct.",
 			"code":"x = { y = { z=[1,2,3] } };\nwriteDump( structGet(\"x.y.z[2]\") );\nwriteDump(x);",
 			"result":""

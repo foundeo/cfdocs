@@ -4,11 +4,11 @@
 	"syntax": "listIndexExists(list, index [, delimiter] [, includeEmptyFields])",
 	"member": "list.listIndexExists(index [, delimiter] [, includeEmptyFields])",
 	"returns": "boolean",
-	"related": [],
-	"description": "",
+	"related": ["arrayIndexExists","structKeyExists"],
+	"description": "Determines whether that index exists in the given list or not",
 	"params": [
 		{"name": "list", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "index", "description": "", "required": true, "default": "", "type": "number", "values": []},
+		{"name": "index", "description": "", "required": true, "default": "", "type": "numeric", "values": []},
 		{"name": "delimiter", "description": "", "required": false, "default": ",", "type": "string", "values": []},
 		{"name": "includeEmptyFields", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
 	],

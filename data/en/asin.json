@@ -2,11 +2,11 @@
 	"name":"asin",
 	"type":"function",
 	"syntax":"asin(number)",
-	"returns":"Numeric",
-	"related":[],
-	"description":" Determines the arcsine of a number. The arcsine is the angle\n whose sine is number.",
+	"returns":"numeric",
+	"related":["acos","atn","cos","exp","log","log10","sin","tan"],
+	"description":"Determines the arcsine of a number. The arcsine is the angle whose sine is `number`.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
@@ -17,6 +17,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Arcsine of 0.3",
+			"description":"",
+			"code":"asin(0.3)",
+			"result":"0.304692654015",
+			"runnable":true
+		}
 	]
 
 }

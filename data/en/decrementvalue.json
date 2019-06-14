@@ -2,11 +2,11 @@
 	"name":"decrementValue",
 	"type":"function",
 	"syntax":"decrementValue(number)",
-	"returns":"Numeric",
-	"related":[],
-	"description":" Decrements the integer part of a number.",
+	"returns":"numeric",
+	"related":["incrementValue"],
+	"description":"Decrements the integer part of a number. Same as x=x-1 or x--",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
@@ -16,7 +16,21 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/decrementvalue"}
 	},
 	"links": [
-
+	],
+	"examples": [
+		{
+			"title":"Decrement 7",
+			"description":"",
+			"code":"decrementValue(7)",
+			"result":"6",
+			"runnable":true
+		},
+		{
+			"title":"Decrement 7.5",
+			"description":"There is a difference between CFML engines.  ACF will return the integer decremented removing the decimal part, returns 6.  Lucee will decrement the integer part but return both, returns 6.5.",
+			"code":"decrementValue(7.5)",
+			"result":"",
+			"runnable":true
+		}
 	]
-
 }

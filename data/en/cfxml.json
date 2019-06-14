@@ -2,13 +2,11 @@
 	"name":"cfxml",
 	"type":"tag",
 	"syntax":"<cfxml variable=\"\">",
-	"returns":"",
-	"related":[],
-	"description":" Creates a CFML XML document object that contains the\n markup in the tag body. This tag can include XML and CFML tags.\n CFML processes the CFML code in the tag body, then assigns\n the resulting text to an XML document object variable.",
+	"related":["deserializeXML","encodeForXML","isXML","XMLnew","XMLvalidate"],
+	"description":"Creates a CFML XML document object that contains the\n markup in the tag body. This tag can include XML and CFML tags.\n CFML processes the CFML code in the tag body, then assigns\n the resulting text to an XML document object variable.",
 	"params": [
-		{"name":"variable","description":"Name of an xml variable","required":true,"default":"","type":"String","values":[]},
-		{"name":"casesensitive","description":"Maintains the case of document elements and attributes","required":false,"default":false,"type":"boolean","values":[true,false]}
-
+		{"name":"variable","description":"Name of an xml variable","required":true,"default":"","type":"string","values":[]},
+		{"name":"casesensitive","description":"Maintains the case of document elements and attributes","required":false,"default":false,"type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfxml.html"},
@@ -16,8 +14,5 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfxml"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfxml"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

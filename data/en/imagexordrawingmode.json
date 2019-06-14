@@ -7,8 +7,8 @@
 	"related":[],
 	"description":" Sets the paint mode of the image to alternate between the image's current color and the new specified color.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"c1","description":"The color","required":true,"default":"black","type":"String","values":["Hexadecimal value of RGB color. For example, specify the color white as ##FFFFFF or FFFFFF.","String value of color (for example, 'black', 'red', 'green').","List of three numbers for (R,G,B) values. Each value must be in the range 0-255."]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"c1","description":"The color","required":true,"default":"black","type":"string","values":["Hexadecimal value of RGB color. For example, specify the color white as ##FFFFFF or FFFFFF.","String value of color (for example, 'black', 'red', 'green').","List of three numbers for (R,G,B) values. Each value must be in the range 0-255."]}
 
 	],
 	"engines": {

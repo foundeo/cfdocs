@@ -1,18 +1,25 @@
 {
 	"name":"dateConvert",
 	"type":"function",
-	"syntax":"dateConvert(type, date)",
-	"returns":"DateTime",
-	"related":["Now","CreateDateTime"],
-	"description":" Converts local time to Coordinated Universal Time (UTC),\n or UTC to local time. The function uses the daylight savings\n settings in the executing computer to compute daylight\n savings time, if required. ",
+	"syntax":"dateConvert(conversionType, date)",
+	"member":"date.convert(conversionType)",
+	"returns":"date",
+	"related":["getTimeZoneInfo","createDateTime"],
+	"description":"Converts local time to Coordinated Universal Time (UTC), or UTC to local time. The function uses the daylight savings settings in the executing computer to compute daylight savings time, if required.",
 	"params": [
-		{"name":"type","description":"","required":true,"default":"","type":"String","values":["'local2Utc' - Converts local time to UTC time.","'utc2Local' - Converts UTC time to local time."]},
-		{"name":"date","description":"","required":true,"default":"","type":"DateTime","values":["now()","createDateTime()"]}
-
+		{
+			"name":"conversionType",
+			"description":"`local2Utc` : Converts local time to UTC time.\n`utc2Local` : Converts UTC time to local time.",
+			"required":true,
+			"default":"",
+			"type":"string",
+			"values":["local2Utc","utc2Local"]
+		},
+		{"name":"date","description":"","required":true,"default":"","type":"date","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateConvert.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/dateconvert.html"},
+		"coldfusion": {"minimum_version":"4", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateConvert.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is not available.", "docs":"http://docs.lucee.org/reference/functions/dateconvert.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/dateconvert"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dateconvert"}
 	},

@@ -1,7 +1,7 @@
 {
     "name":"isSafeHTML",
-    "syntax":"isSafeHTML(inputString [, PolicyFile, throwOnError])",
-    "returns":"Boolean",
+    "syntax":"isSafeHTML(inputString [, PolicyFile])",
+    "returns":"boolean",
     "type":"function",
     "related":["getSafeHTML"],
     "description":"Checks a HTML string against antisamy policy file to determine if it may be vulnerable to XSS / Cross Site Scripting.",
@@ -10,12 +10,11 @@
     },
 
     "links":[
-        {"title":"AntiSamy OWASP","description":"","url":"https:\/\/www.owasp.org\/index.php\/Category:OWASP_AntiSamy_Project"}
+        {"title":"AntiSamy OWASP","description":"","url":"https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project"}
     ],
     "params":[
-        {"values":[],"default":"","description":"String to be validated","name":"inputString","type":"String","required":"1"},
-        {"values":[],"default":"","description":"File path for custom antisamy policy file. Can be defined in the application scope or if not defined will use Coldfusion server default","name":"PolicyFile","type":"String","required":"0"},
-        {"values":[],"default":"","description":"If true will throw error else empty string will be returned","name":"throwOnError","type":"Boolean","required":"0"}
+        {"values":[],"default":"","description":"String to be validated","name":"inputString","type":"string","required":true},
+        {"values":[],"default":"","description":"File path for custom AntiSamy policy file. Can be defined in the application scope or if not defined will use Coldfusion server default","name":"PolicyFile","type":"string","required":false}
     ],
     "examples":[
         {"result":"no","title":"Unsafe HTML Example","description":"Example with HTML that causes isSafeHTML to return false.","code":"<cfsavecontent variable=\"html\">\r\n    <div onmouseover=alert(1)>\r\n</cfsavecontent>\r\n<cfoutput>#isSafeHTML(html)#</cfoutput>"},

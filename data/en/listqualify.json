@@ -2,16 +2,15 @@
 	"name":"listQualify",
 	"type":"function",
 	"syntax":"listQualify(list, qualifier [, delimiters] [, elements] [, includeEmptyValues])",
-	"returns":"String",
-	"related":[],
-	"description":" Inserts a string at the beginning and end of list elements.",
+	"returns":"string",
+	"related":["listCompact"],
+	"description":"Inserts a string at the beginning and end of list elements.",
 	"params": [
-		{"name":"list","description":"A list or variable name","required":true,"default":"","type":"String","values":[]},
-		{"name":"qualifier","description":"A string or character in which to insert before and after the list elements","required":true,"default":"","type":"String","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]},
-		{"name":"elements","description":"","required":false,"default":"all","type":"String","values":["all","char"]},
-		{"name":"includeEmptyFields","description":"If includeEmptyFields is true, empty value add in list elements","required":false,"default":"","type":"Boolean","values":[true,false]}
-
+		{"name":"list","description":"A list or variable name","required":true,"default":"","type":"string","values":[]},
+		{"name":"qualifier","description":"A string or character in which to insert before and after the list elements","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]},
+		{"name":"elements","description":"","required":false,"default":"all","type":"string","values":["all","char"]},
+		{"name":"includeEmptyFields","description":"If includeEmptyFields is true, empty value add in list elements","required":false,"default":"","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listqualify.html"},
@@ -19,9 +18,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listqualify"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listqualify"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
         {
             "title": "Simple example for listQualify function with delimiter",
@@ -42,5 +39,4 @@
             "result": "|coldfusion|:|railo|:144:||:|lucee|:||:46"
         }
     ]
-
 }

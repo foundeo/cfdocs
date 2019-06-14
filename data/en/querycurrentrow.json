@@ -5,7 +5,7 @@
 	"member": "query.currentRow()",
 	"returns": "numeric",
 	"related": [],
-	"description": "",
+	"description": "Returns the current row number",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []}
 	],

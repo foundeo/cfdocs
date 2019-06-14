@@ -2,12 +2,11 @@
 	"name":"chr",
 	"type":"function",
 	"syntax":"chr(number)",
-	"returns":"char",
-	"related":[],
-	"description":" Converts a numeric value to a UCS-2 character.",
+	"returns":"string",
+	"related":["asc"],
+	"description":"Converts a numeric value to a UCS-2 character.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"Numeric","values":["9: \\t tab", "10: \\n New Line", "13: \\r Carriage Return"]}
-
+		{"name":"number","description":"The UCS-2 code value (a number in the range 0 - 65535)","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/Chr.html"},
@@ -16,7 +15,15 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/chr"}
 	},
 	"links": [
-
+	],
+	"examples": [
+		{
+			"title":"Character and value of Korean currency symbol ( unicode number 8361 )",
+			"description":"",
+			"code":"x = chr( 8361 ); \n writeOutput( 'character: #x#' ); \n x = asc( x ); \n writeOutput( '<br>Unicode value: #x#');",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

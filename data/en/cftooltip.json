@@ -2,24 +2,24 @@
 	"name": "cftooltip",
 	"type": "tag",
 	"syntax": "<cftooltip>",
-	"returns": "",
 	"related": [],
 	"description": "Specifies tool tip text that displays when the user hovers the mouse pointer over the elements \n in the tag body. This tag does not require a form and is not used inside Flash forms.",
+	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cftooltip/index.html",
 	"params": [
 		{
 			"name": "preventoverlap",
 			"description": "A Boolean value specifying whether to prevent the \n tooltip from overlapping the component that it \n describes.",
 			"required": false,
 			"default": true,
-			"type": "String",
-			"values": [true, false]
+			"type": "string",
+			"values": []
 		},
 		{
 			"name": "autodismissdelay",
 			"description": "The number of milliseconds between the time \n when the user moves the mouse pointer over the \n component (and leaves it there) and when the \n tooltip disappears.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "The number of milliseconds to delay between the \n time when the user moves the mouse pointer away \n from the component and when the tooltip \n disappears.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -35,7 +35,7 @@
 			"description": "The number of milliseconds to delay between the \n time when the user moves the mouse over the \n component and when the tooltip appears.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -43,7 +43,7 @@
 			"description": "The URL of a page with the tool tip contents. The \n page can include HTML markup to control the \n format, and the tip can include images. \n If you specify this attribute, an animated icon \n appears with the text \"Loading...\" while the tip is \n being loaded.",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -51,7 +51,7 @@
 			"description": "Tip text to display. The text can include HTML \n formatting. \n Ignored if you specify a sourceForTooltip attribute",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		},
 		{
@@ -59,7 +59,7 @@
 			"description": "",
 			"required": false,
 			"default": "",
-			"type": "String",
+			"type": "string",
 			"values": []
 		}
 	],

@@ -3,10 +3,10 @@
 	"type":"function",
 	"syntax":"transactionRollback([savepoint])",
 	"returns":"void",
-	"related":[],
-	"description":" Rollback current transaction",
+	"related":["cftry", "cfcatch","cftransaction","transactioncommit","transactionsetsavepoint"],
+	"description":"Rollback current transaction",
 	"params": [
-		{"name":"savepoint","description":"No Help Available","required":false,"default":"","type":"String","values":[]}
+		{"name":"savepoint","description":"Name of the savepoint to roll back to","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -16,6 +16,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "In this code, any error triggered will cause transactionRollback() to run and roll back the pending transaction",
+			"code": "\r\ntransaction { \r\n try { \r\n // code to run \r\n transactionCommit(); \r\n } \r\n catch(any e) { \r\n  transactionRollback(); \r\n  } \r\n }",
+			"result": ""
+		}
 	]
 
 }

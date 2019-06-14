@@ -2,17 +2,61 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
-#docname,h4 { font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
-h2 { border-bottom:1px solid #f1f1f1; padding-bottom: 12px; }
 
+div.listing > h2 > a.btn { text-transform: none; }
+
+nav.navbar { background-color:#eee; }
+#docname,h4,.typewriter { font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
+.param h4 { background-color: #f1f1f1; padding: 8px 8px; margin-bottom: 2px; }
+.p-default { font-weight:normal; font-size: smaller; }
+h2 { border-bottom:1px solid #f1f1f1; padding-bottom: 12px; }
 h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
 .p-name { font-weight:bold; font-size:larger;}
-h2.listing { display:inline; line-height:60px;}
+.p-desc { padding: 8px; margin: 0 5%; }
+.listing a { margin-right: 15px; margin-bottom: 15px; font-size: larger }
+.listing h2 { margin: inherit; font-size: inherit; padding: inherit; border: none; display: inline }
+h2 { text-transform: uppercase; }
+.listing { text-align: center; }
 #syntax { font-weight:bold; }
-#forkme { position: absolute; top: 0; right: 0; border: 0; z-index: 9999; width:149px; height:149px;}
+#syntax > code { white-space: pre; padding: 0; }
+#forkme {
+    background-color: #e3e3e3;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    top: 35px;
+    right: -35px;
+    border: 0;
+    z-index: 9999;
+    width: 200px;
+    color: #484848;
+    font-weight: bold;
+    transform: rotate(45deg);
+    transform-origin: initial;
+    text-align: center;
+    border-top: 1.5px dashed #c2c2c2;
+    border-bottom: 1.5px dashed #c2c2c2;
+    line-height: 25px;
+    letter-spacing: -0.6px;
+    word-spacing: 1px;
+}
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
   margin-bottom: 0;
+}
+
+#foundeo {
+  opacity:0;
+  margin-left: 100px;
+}
+#foundeo img {
+  width: 70px; height:20px;
+}
+
+#foundeo.foundeoAppear {
+  opacity:1;
+
+  transition: all 2.5s ease-in-out;
 }
 
 .tt-menu {
@@ -41,7 +85,7 @@ h2.listing { display:inline; line-height:60px;}
 }
 
 .tt-suggestion:hover, .tt-cursor {
-  color: #fff;
+  color: #ccc;
   cursor: pointer;
   background-color: #0081c2;
   background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
@@ -55,15 +99,12 @@ h2.listing { display:inline; line-height:60px;}
 
 .twitter-typeahead .tt-hint {
     display: block;
-    height: 43px;
-    padding: 8px 25px;
-    font-size: 14px;
-    line-height: 1.428571429;
     border: 1px solid transparent;
-    color:#fff;
+    color:#ccc;
 }
 .breadcrumb li.pull-right:before { content: " ";}
 .breadcrumb li.divider:before { content: "|"; padding-right:0px; padding-left:8px; }
+.breadcrumb hr { margin:3px; }
 footer { text-align: center; margin-top: 10px; font-size:smaller; }
 .navbar-brand { font-weight:bold; }
 
@@ -123,3 +164,28 @@ pre.prettyprint {
 @media (max-width:991px) {
   #search { margin-right:10px; }
 }
+
+.issuecount {
+	padding: 2px 5px;
+}
+
+.issuebutton {
+	color: white;
+	padding-left: 2px;
+	padding-right: 5px;
+}
+
+:target::before {
+	content: "";
+	display: block;
+	margin-top: -55px;
+	height: 55px;
+	width: 1px
+}
+
+.dropdown-menu.scrollable-menu {
+	max-height: 300px;
+	overflow-x: hidden;
+}
+
+.related .label { margin-right: 4px; }

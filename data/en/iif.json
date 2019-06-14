@@ -2,14 +2,14 @@
 	"name":"iIf",
 	"type":"function",
 	"syntax":"iIf(condition, expression1, expression2)",
-	"returns":"String",
+	"returns":"string",
 	"related":["evaluate", "de"],
 	"description":"A boolean condition or value is passed into the first argument. If the condition is `true` the second argument is evaluated and returned, if `false` the third argument is evaluated and returned.",
 	"discouraged":"Use the ternary operator CF9+ instead because it does not evaluate.\nExample ternary operator: `( (condition) ? valueIfTrue : valueIfFalse )`",
 	"params": [
 		{"name":"condition","description":"A boolean value or an expression that evaluates to a boolean.","required":true,"default":"","type":"boolean","values":[]},
-		{"name":"expression1","description":"A CFML expression that is evaluated dynamically using Evaluate if the condition is `true`.","required":true,"default":"","type":"String","values":[]},
-		{"name":"expression2","description":"A CFML expression that is evaluated dynamically using Evaluate if the condition is `false`.","required":true,"default":"","type":"String","values":[]}
+		{"name":"expression1","description":"A CFML expression that is evaluated dynamically using Evaluate if the condition is `true`.","required":true,"default":"","type":"string","values":[]},
+		{"name":"expression2","description":"A CFML expression that is evaluated dynamically using Evaluate if the condition is `false`.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -26,6 +26,13 @@
 			"title": "Simple iIf Example",
 			"description": "",
 			"code": "iIf( server.os.name IS \"Bacon\", de(\"Running Bacon OS\"), de(\"Not Running Bacon OS\") )",
+			"result": "Not Running Bacon OS",
+			"runnable":true
+		},
+		{
+			"title": "Simple Example using Ternary Operator Instead",
+			"description" : "Instead of using iif, you should use the ternary operator CF9+",
+			"code" : "( (server.os.name IS \"Bacon\") ? \"Running Bacon OS\" : \"Not Running Bacon OS\")",
 			"result": "Not Running Bacon OS",
 			"runnable":true
 		}

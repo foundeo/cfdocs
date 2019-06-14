@@ -1,23 +1,33 @@
 {
 	"name":"charsetEncode",
 	"type":"function",
-	"syntax":"charsetEncode(binaryobject, encoding)",
-	"returns":"Binary",
-	"related":[],
-	"description":" Uses the specified encoding to convert binary data to a string.",
+	"syntax":"charsetEncode(binaryData, encoding)",
+	"returns":"string",
+	"related":["charsetDecode"],
+	"description":"Uses the specified encoding to convert binary data to a string.",
 	"params": [
-		{"name":"binaryobject","description":"A variable containing binary data to decode into text.","required":true,"default":"","type":"Binary","values":[]},
-		{"name":"encoding","description":"The character encoding that was used to encode the string into binary format.","required":true,"default":"","type":"String","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
-
+		{"name":"binaryData","description":"A variable containing binary data to decode into text.","required":true,"default":"","type":"binary","values":[]},
+		{"name":"encoding","description":"The character encoding that was used to encode the string into binary format.","required":true,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CharsetEncode.html"},
+		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CharsetEncode.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/charsetencode.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/charsetencode"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/charsetencode"}
 	},
-	"links": [
-
+	"links": [],
+	"examples": [
+		{
+			"title": "Encode a string using utf-8 back into binary encoding of the string",
+			"description": "Use charsetEncode to Encode with utf-8",
+			"code": "s=charsetDecode('string','utf-8');\n charsetEncode(s,'utf-8');",
+			"result": "string"
+		},
+		{
+			"title": "Encode a string using us-ascii back into binary encoding of the string",
+			"description": "Use charsetEncode to Encode with us-ascii",
+			"code": "s=charsetDecode('string','us-ascii');\n charsetEncode(s,'us-ascii');",
+			"result": "string"
+		}
 	]
-
 }

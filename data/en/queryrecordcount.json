@@ -3,9 +3,9 @@
 	"type": "function",
 	"syntax": "queryRecordCount(query)",
 	"member": "query.recordCount()",
-	"returns": "number",
+	"returns": "numeric",
 	"related": [],
-	"description": "",
+	"description": "Returns the number of rows given in the query object result set",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []}
 	],

@@ -4,13 +4,20 @@
 	"syntax": "getBuiltinFunction(name)",
 	"returns": "any",
 	"related": [],
-	"description": "",
+	"description": "Returns a object, which contains the description, parameters and return-type of the given function. Throws an exception when the function do not exists.",
 	"params": [
-		{"name": "name", "description": "", "required": true, "default": "", "type": "string", "values": []}
+		{"name": "name", "description": "Name of the function.", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getbuiltinfunction.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+            "title":"Show information about the StructKeyExists-function",
+            "description":"Dump the StructKeyExists-function to show information about this function.",
+            "code":"dump(getBuiltinFunction(\"StructKeyExists\"));",
+            "runnable":true
+		}
+	],
 	"links": []
 }

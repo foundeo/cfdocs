@@ -2,29 +2,28 @@
 	"name":"cfcache",
 	"type":"tag",
 	"syntax":"<cfcache>",
-	"returns":"",
 	"related":[],
-	"description":" Stores a copy of a page on the server and/or client computer,\n to improve page rendering performance. To do this, the tag\n creates temporary files that contain the static HTML returned\n from a CFML page.\n\n Use this tag if it is not necessary to get dynamic content each\n time a user accesses a page.\n You can use this tag for simple URLs and for URLs that contain\n URL parameters.",
+	"description":"Stores a copy of a page on the server and/or client computer,\n to improve page rendering performance. To do this, the tag\n creates temporary files that contain the static HTML returned\n from a CFML page.\n\n Use this tag if it is not necessary to get dynamic content each\n time a user accesses a page.\n You can use this tag for simple URLs and for URLs that contain\n URL parameters.",
 	"params": [
-		{"name":"action","description":"* cache: server-side and client-side caching.\n * flush: refresh cached page(s).\n * clientcache: browser-side caching only. To cache a personalized page, use this option.\n * servercache: server-side caching only. Not recommended.\n * optimal: same as \"cache\".","required":false,"default":"","type":"String","values":["cache","flush","clientcache","servercache","optimal","get","put"]},
-		{"name":"directory","description":"Absolute path of cache directory.","required":false,"default":"","type":"String","values":[]},
+		{"name":"action","description":"* cache: server-side and client-side caching.\n * flush: refresh cached page(s).\n * clientcache: browser-side caching only. To cache a personalized page, use this option.\n * servercache: server-side caching only. Not recommended.\n * optimal: same as \"cache\".","required":false,"default":"","type":"string","values":["cache","flush","clientcache","servercache","optimal","get","put"]},
+		{"name":"directory","description":"Absolute path of cache directory.","required":false,"default":"","type":"string","values":[]},
 		{"name":"timespan","description":"The interval until the page is flushed from the cache.","required":false,"default":"","type":"Timespan","values":[]},
-		{"name":"expireurl","description":"Used with action = \"flush\". A URL reference. CFML\n matches it against the mappings in the specified cache\n directory. Can include wildcards. For example:\n \"*\/view.cfm?id=*\".","required":false,"default":"","type":"String","values":[]},
-		{"name":"username","description":"A username","required":false,"default":"","type":"String","values":[]},
-		{"name":"password","description":"A password","required":false,"default":"","type":"String","values":[]},
-		{"name":"port","description":"Remote port to which to connect","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"protocol","description":"Protocol that is used to create URL from cache.","required":false,"default":"","type":"String","values":["http:\/\/","https:\/\/"]},
-		{"name":"value","description":"For action=\"set\", object which needs to be stored","required":false,"default":"","type":"String","values":[]},
-		{"name":"metadata","description":"Name of the struct variable","required":false,"default":"","type":"String","values":[]},
-		{"name":"stripwhitespace","description":"Reduces whitespace","required":false,"default":false,"type":"Boolean","values":[true,false]},
-		{"name":"throwonerror","description":"A Boolean value specifying whether t throw an error if the\nflush\naction encounters an error. Otherwise the action does not generate an error if it fails. If this attribute is\ntrue\nyou can handle the error in a\ncfcatch\nblock, for example, if a specified id value is invalid","required":false,"default":"","type":"Boolean","values":[]},
-		{"name":"id","description":"Id of the cached object","required":false,"default":"","type":"String","values":[]},
-		{"name":"key","description":"key to access cache","required":false,"default":"","type":"String","values":[]},
-		{"name":"usecache","description":"to use cache or not (if false it will process the content each time)","required":false,"default":true,"type":"Boolean","values":[true,false]},
-		{"name":"dependson","description":"Comma seperated list of all variables on which this cache would depend","required":false,"default":"","type":"String","values":[]},
-		{"name":"idletime","description":"Flushes the cached item if it is not accessed for the specified time span.","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"cachedirectory","description":"Cache directory","required":false,"default":"","type":"String","values":[]},
-		{"name":"name","description":"name of return variable, valid with action=\"get\"","required":false,"default":"","type":"String","values":[]}
+		{"name":"expireurl","description":"Used with action = \"flush\". A URL reference. CFML\n matches it against the mappings in the specified cache\n directory. Can include wildcards. For example:\n \"*\/view.cfm?id=*\".","required":false,"default":"","type":"string","values":[]},
+		{"name":"username","description":"A username","required":false,"default":"","type":"string","values":[]},
+		{"name":"password","description":"A password","required":false,"default":"","type":"string","values":[]},
+		{"name":"port","description":"Remote port to which to connect","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"protocol","description":"Protocol that is used to create URL from cache.","required":false,"default":"","type":"string","values":["http:\/\/","https:\/\/"]},
+		{"name":"value","description":"For action=\"set\", object which needs to be stored","required":false,"default":"","type":"string","values":[]},
+		{"name":"metadata","description":"Name of the struct variable","required":false,"default":"","type":"string","values":[]},
+		{"name":"stripwhitespace","description":"Reduces whitespace","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"throwonerror","description":"A Boolean value specifying whether to throw an error if the\nflush action encounters an error. Otherwise the action does not\ngenerate an error if it fails. If this attribute is 'true' you can handle the\nerror in a cfcatch block,for example, if a specified id value is invalid","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"id","description":"Id of the cached object","required":false,"default":"","type":"string","values":[]},
+		{"name":"key","description":"key to access cache","required":false,"default":"","type":"string","values":[]},
+		{"name":"usecache","description":"to use cache or not (if false it will process the content each time)","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"dependson","description":"Comma seperated list of all variables on which this cache would depend","required":false,"default":"","type":"string","values":[]},
+		{"name":"idletime","description":"Flushes the cached item if it is not accessed for the specified time span.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"cachedirectory","description":"Cache directory","required":false,"default":"","type":"string","values":[]},
+		{"name":"name","description":"name of return variable, valid with action=\"get\"","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -35,6 +34,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Adding a page to the cache",
+			"code":"<cfcache action='optimal' directory='/path/to/directory' timespan='#createTimeSpan( 1, 0, 0, 0 )#' idletime='#createTimeSpan( 0, 12, 0, 0 )#'>\n\t<div id=\"some-id\">Hello World!</div>\n</cfcache>",
+			"description":"Puts HTML page into the cache and uses the cached version on subsequent calls to the page.",
+			"result":"<div id=\"some-id\">Hello World!</div>"
+		},
+		{
+			"title":"Flushing a page from the cache",
+			"code":"<cfcache action='flush' directory='/path/to/directory' expireURL='/hello-world.cfm'></cfcache>",
+			"description":"Flushes the 'hello-world.cfm' page from the cache.",
+			"result":""
+		}
 	]
 
 }

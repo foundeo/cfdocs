@@ -3,9 +3,9 @@
 	"type": "function",
 	"syntax": "listAvg(list [, delimiters] [, multiCharacterDelimiter])",
 	"member": "list.listAvg([delimiters] [, multiCharacterDelimiter])",
-	"returns": "number",
-	"related": [],
-	"description": "",
+	"returns": "numeric",
+	"related": ["arrayAvg","listReduce"],
+	"description": "Calculates average from all numeric values given in the list",
 	"params": [
 		{"name": "list", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "delimiters", "description": "", "required": false, "default": ",", "type": "string", "values": []},
@@ -14,6 +14,12 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/listavg.html"}
 	},
-	"examples": [],
+	"examples": [{
+            "title":"Calculate average from query columns",
+            "description":"",
+            "code":"athletes = queryNew('id,name,bestTime', 'integer,varchar,decimal');\nqueryAddRow(athletes,[{\n\tid: 0,\n\tname: 'Anne',\n\tbestTime: 15.4\n},{\n\tid: 1,\n\tname: 'John',\n\tbestTime: 12.8\n},{\n\tid: 2,\n\tname: 'Sue',\n\tbestTime: 9.1\n}]);\nwriteOutput('Athlete''s average best time is #NumberFormat(listAvg(ValueList(athletes.bestTime)),'0.00')# seconds.');",
+            "result":"Athlete's average best time is 12.43 seconds.",
+            "runnable":true
+        }],
 	"links": []
 }

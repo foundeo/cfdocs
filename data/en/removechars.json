@@ -2,13 +2,13 @@
 	"name":"removeChars",
 	"type":"function",
 	"syntax":"removeChars(String, start, count)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Removes characters from a string.",
 	"params": [
-		{"name":"String","description":"The string or variable containing a string to search.","required":true,"default":"","type":"String","values":[]},
-		{"name":"start","description":"The starting position in the string to search.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"count","description":"Number of characters to remove.","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"String","description":"The string or variable containing a string to process.","required":true,"default":"","type":"string","values":[]},
+		{"name":"start","description":"The starting position in the string to process.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"count","description":"Number of characters to remove.","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
@@ -19,6 +19,13 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Remove a string",
+			"description": "",
+			"code": "removeChars('Hello CFML World',6,5)",
+			"result": "Hello World"
+		}
 	]
-
 }

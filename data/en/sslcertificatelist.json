@@ -1,17 +1,17 @@
 {
-	"name": "SSLCertificateList",
+	"name": "sslCertificateList",
 	"type": "function",
-	"syntax": "SSLCertificateList(host [, port])",
+	"syntax": "sslCertificateList(host [, port])",
 	"returns": "query",
-	"related": [],
-	"description": "",
+	"related": ["sslCertificateInstall"],
+	"description": "List all Certificates available on a specific host",
 	"params": [
 		{"name": "host", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "port", "description": "", "required": false, "default": "443", "type": "number", "values": []}
+		{"name": "port", "description": "", "required": false, "default": "443", "type": "numeric", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/sslcertificatelist.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": []
 }

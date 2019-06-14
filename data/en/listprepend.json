@@ -2,15 +2,14 @@
 	"name":"listPrepend",
 	"type":"function",
 	"syntax":"listPrepend(someList, value [, delimiters])",
-    "member":"someList.listPrepend( value [, delimeters])",
-	"returns":"String",
-	"related":[],
+    	"member":"someList.listPrepend( value [, delimiters])",
+	"returns":"string",
+	"related":["listAppend"],
 	"description":" Inserts an element at the beginning of a list.",
 	"params": [
-		{"name":"list","description":"A string list.","required":true,"default":"","type":"String","values":[]},
-		{"name":"value","description":"An element or list of elements.","required":true,"default":"","type":"String","values":[]},
-		{"name":"delimiters","description":"Characters that separate list elements.","required":false,"default":",","type":"String","values":[",","|",";","-","chr(9)","chr(10)","chr(13)"]}
-
+		{"name":"list","description":"A string list.","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"An element or list of elements.","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiters","description":"Characters that separate list elements.","required":false,"default":",","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listprepend.html"},
@@ -18,12 +17,10 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listprepend"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listprepend"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+    	"examples": [
         {
-            "title": "Prepend to a List using a dash delimeter",
+            "title": "Prepend to a List using a dash delimiter",
             "description": "",
             "code": "someList = \"1-2-3-4\";\nsomeList = listPrepend(someList,\"0\",\"-\");\nwriteOutput(someList);",
             "result": "\"0-1-2-3-4\""
@@ -35,5 +32,4 @@
             "result": "\"Puffy Shirt,Close Talker,Soup Nazi\""
         }
     ]
-
 }

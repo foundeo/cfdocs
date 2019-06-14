@@ -3,12 +3,12 @@
 	"type":"function",
 	"syntax":"structKeyList(structure [, delimiter])",
     "member":"someStruct.keyList([delimiter])",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Extracts keys from a CFML structure.",
 	"params": [
-		{"name":"structure","description":"Structure from which to extract a list of keys","required":true,"default":"","type":"Struct","values":[]},
-		{"name":"delimiter","description":"Character that separates keys in list. Default: comma.","required":false,"default":",","type":"String","values":[",","|",";","chr(9)","chr(10)","chr(13)"]}
+		{"name":"structure","description":"Structure from which to extract a list of keys","required":true,"default":"","type":"struct","values":[]},
+		{"name":"delimiter","description":"Character that separates keys in list. Default: comma.","required":false,"default":",","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -23,13 +23,13 @@
     "examples": [
         {
             "title": "Using Custom Delimiter",
-            "description": "Retrieve a pipe seperated list of keys",
+            "description": "Retrieve a pipe separated list of keys",
             "code": "statusCodes = {\n    OK = 200,\n    CREATED = 201,\n    NOT_MODIFIED = 304,\n    BAD_REQUEST = 400,\n    NOT_FOUND = 404\n};\n\nwriteDump(structKeyList(statusCodes, \" | \"));",
             "result": "\"OK | CREATED | NOT_MODIFIED | BAD_REQUEST | NOT_FOUND\""
         },
         {
             "title": "Using Member Function",
-            "description": "CF11+ Lucee4.5+ Retrieve a comma seperated list of keys using the member function",
+            "description": "CF11+ Lucee4.5+ Retrieve a comma separated list of keys using the member function",
             "code": "statusCodes = {\n    OK = 200,\n    CREATED = 201,\n    NOT_MODIFIED = 304,\n    BAD_REQUEST = 400,\n    NOT_FOUND = 404\n};\n\nwriteDump(statusCodes.keyList());",
             "result": "\"OK,CREATED,NOT_MODIFIED,BAD_REQUEST,NOT_FOUND\""
         }

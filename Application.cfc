@@ -13,10 +13,12 @@
 			<cfset application.index = DeserializeJSON( FileRead(ExpandPath("./data/en/index.json")))>
 			<cfset application.categories = {}>
 			<cfloop array="#application.index.categories#" index="local.cat">
-				<cfset application.categories[local.cat] = {name="", items=[]}>
-				<cfset local.catData = DeserializeJSON( FileRead(ExpandPath("./data/en/#local.cat#.json")))>
-				<cfset application.categories[local.cat].name = local.catData.name>
-				<cfset application.categories[local.cat].items = local.catData.related>
+				<cfif fileExists(ExpandPath("./data/en/#local.cat#.json"))>
+					<cfset application.categories[local.cat] = {name="", items=[]}>
+					<cfset local.catData = DeserializeJSON( FileRead(ExpandPath("./data/en/#local.cat#.json")))>
+					<cfset application.categories[local.cat].name = local.catData.name>
+					<cfset application.categories[local.cat].items = local.catData.related>
+				</cfif>
 			</cfloop>
 			<cfset application.guides = {}>
 			<cfloop array="#application.index.guides#" index="local.guide">
@@ -56,6 +58,7 @@
 	<cffunction name="autoLink" output="false">
 		<cfargument name="content">
 		<cfargument name="exclude" default="">
+		<cfargument name="isMarkdown" default=false>
 		<cfset var i = "">
 		<cfif NOT len(arguments.exclude) AND structKeyExists(url, "name")>
 			<cfset arguments.exclude = url.name>
@@ -72,7 +75,7 @@
 			</cfif>
 		</cfloop>
 		<cfloop array="#application.index.functions#" index="i">
-			<cfif i IS NOT arguments.exclude AND NOT ListFindNoCase("insert,include,now,invoke,array,query", i)>
+			<cfif i IS NOT arguments.exclude AND NOT ListFindNoCase("insert,include,now,invoke,array,query,each,second", i)>
 				<cfset arguments.content = ReReplaceNoCase(arguments.content, "([ >])(#i#)([< .!,])", "\1<a href=""#linkTo(i)#"">\2</a>\3", "all")>
 			</cfif>
 		</cfloop>
@@ -85,8 +88,11 @@
 			<cfset arguments.content = ReReplace(arguments.content, "Lucee([0-9.]+\+)", "<span class=""label label-lucee"" title=""Requires Lucee \1"">Lucee \1</span>", "ALL")>
 		</cfif>
 		<!--- replace \n with br tags --->
-		<cfset arguments.content = Replace(arguments.content, "#Chr(10)#", "<br />", "ALL")>
+		<cfif not isMarkdown>
+			<cfset arguments.content = Replace(arguments.content, "#Chr(10)#", "<br />", "ALL")>
+		</cfif>
 		<!--- replace backticks with code tag block --->
+		<cfset arguments.content = replace(arguments.content, "&##x60;", "`", "ALL")>
 		<cfset arguments.content = ReReplace(arguments.content, "`([^`]+)`", "<code>\1</code>", "ALL")>
 		<cfreturn arguments.content>
 	</cffunction>

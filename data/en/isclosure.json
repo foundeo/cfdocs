@@ -4,6 +4,7 @@
 	"syntax":"isClosure(object)",
 	"returns":"boolean",
 	"description":"Checks if a given object is a closure.",
+	"related": ["isCustomFunction"],
 	"params": [
 		{"name":"object","description":"The object to check if it is a closure.","required":true,"default":"","type":"any","values":[]}
 	],
@@ -11,9 +12,8 @@
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isclosure.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/isclosure.html"}
 	},
-	"links": [
-	],
-    "examples": [
+	"links": [],
+    	"examples": [
         {
             "title": "Returns true if the object is a closure",
             "description": "",
@@ -27,5 +27,4 @@
             "result": "FALSE"
         }
     ]
-
 }

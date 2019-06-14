@@ -2,19 +2,21 @@
 	"name":"cfcontinue",
 	"type":"tag",
 	"syntax":"<cfcontinue>",
-	"returns":"",
 	"related":["cfloop","cfbreak"],
 	"description":"Used within a cfloop tag. Skips processing the remainder of the loop interation, and continues on to the next iteration.",
-	"params": [
-	],
+	"params": [],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcontinue.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/continue.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfcontinue"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcontinue"}
 	},
-	"links": [
-
-	]
-
+	"links": [],
+	"examples": [{
+		"title": "Continue when query row is empty",
+		"description": "",
+		"code": "qry = queryNew('ID,Name','integer,varchar',[{\n\tid: 0,\n\tname: 'hello'\n},{},{\n\tid: 1,\n\tname: 'world'\n}]);\nfor(row in qry) {\n\tif(row.ID is '') {\n\t\tcontinue;\n\t}\n\twriteOutput(row.ID&'.: '&row.name&', ');\n}",
+		"result": "0.: hello, 1.: world,",
+		"runnable": true
+	}]
 }

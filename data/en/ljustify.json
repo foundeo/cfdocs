@@ -2,12 +2,12 @@
 	"name":"lJustify",
 	"type":"function",
 	"syntax":"lJustify(String, length)",
-	"returns":"String",
+	"returns":"string",
 	"related":[],
 	"description":" Left justifies characters in a string of a specified length.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"length","description":"","required":true,"default":"","type":"Numeric","values":[]}
+		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"length","description":"","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

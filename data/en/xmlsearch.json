@@ -1,23 +1,31 @@
 {
-	"name":"XMLSearch",
+	"name":"xmlSearch",
 	"type":"function",
-	"syntax":"XMLSearch(xmldoc, xpathstring)",
-	"returns":"Array",
-	"related":[],
-	"description":" ",
+	"syntax":"xmlSearch(xmlNode, xpath [, params])",
+	"returns":"array",
+	"related":["xmlParse"],
+	"description":"Get XML values according to given xPath query",
 	"params": [
-		{"name":"xmldoc","description":"XML document object","required":true,"default":"","type":"Object","values":[]},
-		{"name":"xpathstring","description":"XPath expression","required":true,"default":"","type":"String","values":[]}
-
+		{"name":"xmlNode","description":"An XML document object","required":true,"default":"","type":"xml","values":[]},
+		{"name":"xpath","description":"xPath expression","required":true,"default":"","type":"string","values":[]},
+		{"name":"params","description":"CF10+ A struct with key value pairs to be used a variables within the xPath Expression","required":false,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlsearch.html"},
+		"coldfusion": {"minimum_version":"6", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlsearch.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/xmlsearch.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/xmlsearch"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/xmlsearch"}
 	},
-	"links": [
-
-	]
-
+	"links": [{
+			"title":"W3Schools",
+			"description":"XPath tutorial",
+			"url":"https://www.w3schools.com/xml/xpath_intro.asp"
+	}],
+	"examples": [{
+		"title":"Read specific properties from XML collection",
+		"description":"XPath extracts 'name' property from every user given in the XML collection",
+		"code":"<cfsavecontent variable=\"xmlstring\">\r\n    <?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n    <users>\r\n        <user id=\"1\">\r\n            <name>Me</name>\r\n        </user>\r\n        <user id=\"2\">\r\n            <name>You</name>\r\n            <address>\r\n                <street>Long Road</street>\r\n            </address>\r\n        </user>\r\n    </users>\r\n</cfsavecontent>\r\n<cfscript>\r\n    xml = XMLParse(xmlstring);\r\n    result = xmlSearch(xml,'users//name');\r\n    userlist = '';\r\n    for(i = 1; i <= ArrayLen(result); i++) {\r\n        userlist = ListAppend(userlist,result[i].XmlText);\r\n    }\r\n    writeOutput(userlist);\r\n</cfscript>",
+		"result":"Me,You",
+		"runnable":true
+	}]
 }

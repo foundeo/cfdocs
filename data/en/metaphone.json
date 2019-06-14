@@ -3,14 +3,44 @@
 	"type": "function",
 	"syntax": "metaphone(str)",
 	"returns": "string",
-	"related": [],
-	"description": "",
+	"related": ["soundex"],
+	"description": "Metaphone is a phonetic algorithm, an algorithm published in 1990 for indexing words by their English pronunciation. The algorithm produces variable length keys as its output, as opposed to Soundex's fixed-length keys. Similar sounding words share the same keys.",
 	"params": [
 		{"name": "str", "description": "", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/metaphone.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [{
+		"title":"Homophone",
+		"description":"Overview about phonetic beeing utilizing for these algorithms",
+		"url":"https://en.wikipedia.org/wiki/Homophone"
+	},{
+		"title":"Metaphone, Double Metaphone and Metaphone 3",
+		"description":"Metaphone and it's improved successors",
+		"url":"https://en.wikipedia.org/wiki/Metaphone"
+	},{
+		"title":"Soundex",
+		"description":"Predecessor of Metaphone",
+		"url":"https://en.wikipedia.org/wiki/Soundex"
+	}],
+	"examples": [{
+		"title": "Metaphone long words",
+		"description": "This compound word is the longest word published with 79 letters according to the 1996 Guinness Book of World Records",
+		"code": "Metaphone(\"Donaudampfschiffahrtsgesellschaftskapitän\")",
+		"result": "TNTM",
+		"runnable": true
+	},{
+		"title": "Different words with the same metaphone",
+		"description": "",
+		"code": "Metaphone(\"Truck\")&\"/\"&Metaphone(\"Trek\")",
+		"result": "TRK/TRK",
+		"runnable": true
+	},{
+		"title": "Metaphone of a word and then same word with prefix",
+		"description": "Adding a word changes the whole metaphone",
+		"code": "Metaphone(\"Trek\")&\"/\"&Metaphone(\"Star Trek\")",
+		"result": "TRK/STRT",
+		"runnable": true
+	}]
 }

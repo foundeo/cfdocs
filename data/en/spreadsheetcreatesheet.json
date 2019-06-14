@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Create spreadsheet from given spreadsheet object",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"Variablename","values":[]},
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"String","values":[]}
+		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"name","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -21,7 +21,7 @@
 		{
 			"title":"Tag Example",
 			"description":"The following example creates two sheets: CourseData and EvaluationSheet. ",
-			"code":"<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \r\n <!---<cfloop index=\"x\" from=\"1\" to=\"10\">---> \r\n <cfset queryAddRow(q)> \r\n <cfset querySetCell(q, \"Name\", \"John\")> \r\n <cfset querySetCell(q, \"Beers\", \"1\")> \r\n <cfset querySetCell(q, \"Vegetables\", \"1\")> \r\n <cfset querySetCell(q, \"Fruits\", \"1\")> \r\n <cfset querySetCell(q, \"Meats\", \"1\")> \r\n <cfset mySheet =   SpreadsheetNew( \"Test\"  ) /> \r\n <!--- Make a spreadsheet object ---> \r\n <cfset s = spreadsheetNew()> \r\n <!--- Add header row ---> \r\n <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \r\n <!--- Add query ---> \r\n <cfset spreadsheetAddRows(s, q)> \r\n <cfdump var=\"#s#\" /> <cfheader name=\"Content-Disposition\" value=\"inline; filename=testFile.xls\">  <cfcontent type=\"application/vnd.msexcel\" variable=\"#SpreadSheetReadBinary(s)#\"> ",
+			"code":"<cfscript>\r\n// Make a spreadsheet object\r\nspreadsheet = spreadsheetNew(\"Sheet A\");\r\n\r\n// add a new sheet\r\nspreadsheetCreateSheet(spreadsheet, \"Sheet B\");\r\n\r\n// set the new sheet to be the active one\r\nSpreadsheetSetActiveSheet(spreadsheet, \"Sheet B\");\r\n\r\n// populate Sheet B\r\ni = 1;\r\nwhile (i < 10) {\r\n    SpreadsheetSetCellValue(spreadsheet, \"col #i#\", 1, i);\r\n    i++;\r\n}\r\n\r\n</cfscript>\r\n<cfheader name=\"Content-Disposition\" value=\"inline; filename=testFile.xls\">\r\n<cfcontent type=\"application/vnd.msexcel\" variable=\"#SpreadSheetReadBinary(spreadsheet)#\">",
 			"result":"",
 			"runnable":true
 		}

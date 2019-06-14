@@ -3,8 +3,8 @@
 	"type": "function",
 	"syntax": "isZipFile(path)",
 	"returns": "boolean",
-	"related": [],
-	"description": "",
+	"related": ["isPDFFile","isSpreadsheetFile"],
+	"description": "Determines whether the given file is a zip archive or not",
 	"params": [
 		{"name": "path", "description": "", "required": true, "default": "", "type": "string", "values": []}
 	],

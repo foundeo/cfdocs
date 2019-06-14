@@ -7,12 +7,12 @@
 	"related":[],
 	"description":" Draws an oval.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"x","description":"The x coordinate of the upper left corner of the oval to draw.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"y","description":"The y coordinate of the upper left corner of the oval to draw.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"width","description":"The width of the oval to draw.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"height","description":"The height of the oval to draw.","required":true,"default":"","type":"Numeric","values":[]},
-		{"name":"filled","description":"Specify whether the oval is filled","required":false,"default":"false","type":"Boolean","values":[]}
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"x","description":"The x coordinate of the upper left corner of the oval to draw.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"y","description":"The y coordinate of the upper left corner of the oval to draw.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"width","description":"The width of the oval to draw.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"height","description":"The height of the oval to draw.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"filled","description":"Specify whether the oval is filled","required":false,"default":"false","type":"boolean","values":[]}
 
 	],
 	"engines": {

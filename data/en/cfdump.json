@@ -3,22 +3,21 @@
 	"type":"tag",
 	"syntax":"<cfdump var=\"\">",
 	"script": "writeDump(var = cgi, label = \"CGI Scope\");",
-	"returns":"",
 	"related":["writeDump"],
 	"description":"Outputs the contents of a variable of any type for debugging purposes. The variable can be as simple as a string or as complex as a cfc component instance.",
 	"params": [
-		{"name":"var","description":"Variable to display. Enclose a variable name in pound\n signs.","required":true,"default":"","type":"variablename","values":[]},
+		{"name":"var","description":"Variable to display. Enclose a variable name in pound signs.","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"expand","description":"Yes: In Internet Explorer and Mozilla, expands views","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"label","description":"A string; header for the dump output.","required":false,"default":"","type":"String","values":[]},
-		{"name":"top","description":"CF7+ The number of rows to display. For a structure, this is the number of nested levels to display (useful for large stuctures).","required":false,"default":"","type":"Numeric","values":[]},
-		{"name":"format","description":"CF8+ specify whether to save the results of a cfdump to a file in text or HTML format","required":false,"default":"text","type":"String","values":["html","text"]},
-		{"name":"hide","description":"CF8+ hide column or keys.","required":false,"default":"","type":"String","values":[]},
-		{"name":"keys","description":"CF8+ For a structure, number of keys to display.","required":false,"default":"","type":"Numeric","values":[]},
+		{"name":"label","description":"A string; header for the dump output.","required":false,"default":"","type":"string","values":[]},
+		{"name":"top","description":"CF7+ The number of rows to display. For a structure, this is the number of nested levels to display (useful for large structures).","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"format","description":"CF8+ Specify whether to save the results of a cfdump to a file in text or HTML format.","required":false,"default":"text","type":"string","values":["html","text"]},
+		{"name":"hide","description":"CF8+ Hide column or keys.","required":false,"default":"","type":"string","values":[]},
+		{"name":"keys","description":"CF8+ For a structure, number of keys to display.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"metainfo","description":"CF8+ Includes information about the query in the cfdump results.","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"output","description":"CF8+ Where to send the results of cfdump.","required":false,"default":"browser","type":"String","values":["browser","console","filename"]},
-		{"name":"show","description":"CF8+ show column or keys.","required":false,"default":"","type":"String","values":[]},
-		{"name":"showUDfs","description":"CF8+ show UDFs in cfdump output.","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"abort","description":"CF9+ stops further processing of page","required":false,"default":false,"type":"boolean","values":[true,false]}
+		{"name":"output","description":"CF8+ Where to send the results of cfdump.","required":false,"default":"browser","type":"string","values":["browser","console","filename"]},
+		{"name":"show","description":"CF8+ Show column or keys.","required":false,"default":"","type":"string","values":[]},
+		{"name":"showUDfs","description":"CF8+ Show UDFs in cfdump output.","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"abort","description":"CF9+ Stops further processing of page.","required":false,"default":false,"type":"boolean","values":[true,false]}
 
 	],
 	"engines": {
@@ -45,8 +44,14 @@
 		},
 		{
 			"result":"",
+			"title":"LUCEE also supports this syntax (Script Based)",
+			"description":"Outputs a listing of all the variables in the server scope. Only for LUCEE.",
+			"code":"dump(var = server, label = \"Server Scope\");"
+		},
+		{
+			"result":"",
 			"title":"Dump Then Abort",
-			"description":"CF9+ Instead of using a boolean for the abort-Attribute to abort after a dump, it works like that:",
+			"description":"CF9+ Specifying the \"abort\" attribute without corresponding value is equivalent to assigning it with a \"true\" value. However, when this attribute is excluded, the default value of \"false\" is applied.",
 			"code":"<cfdump var=\"#server#\" abort>"
 		}
 	]

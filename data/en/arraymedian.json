@@ -3,15 +3,22 @@
 	"type": "function",
 	"syntax": "arrayMedian(array)",
 	"member": "array.median()",
-	"returns": "number",
-	"related": [],
-	"description": "",
+	"returns": "numeric",
+	"related": ["arrayMid"],
+	"description": "Calculates the Median value of items in an array. All elements in the array must contain values that can be converted to numeric.",
 	"params": [
 		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraymedian.html"}
 	},
-	"examples": [],
+	"examples": [
+			{
+			"title": "Calculates the Median value",
+			"description": "Uses the arrayMedian function to calculates the Median value",
+			"code": "someArray = [1,2,2];\nm=arrayMedian(someArray);\nwriteOutput(m);",
+			"result": "2"
+			}
+		    ],
 	"links": []
 }

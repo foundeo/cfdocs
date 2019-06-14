@@ -1,10 +1,10 @@
 {
-	"name": "HTMLParse",
+	"name": "htmlParse",
 	"type": "function",
-	"syntax": "HTMLParse(html [, caseSensitive])",
+	"syntax": "htmlParse(html [, caseSensitive])",
 	"returns": "xml",
 	"related": [],
-	"description": "",
+	"description": "Parse the given HTML/XHTML and converts it to an xml object. Similar to xmlParse, but this function is very forgiving",
 	"params": [
 		{"name": "html", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "caseSensitive", "description": "", "required": false, "default": "", "type": "boolean", "values": []}

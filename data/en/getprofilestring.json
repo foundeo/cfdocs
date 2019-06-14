@@ -2,13 +2,13 @@
 	"name":"getProfileString",
 	"type":"function",
 	"syntax":"getProfileString(inipath, section, entry)",
-	"returns":"String",
+	"returns":"string",
 	"related":["setProfileString"],
 	"description":"Gets an initialization file entry. An initialization file assigns values to configuration variables, also known as entries, that are set when the system\n boots, the operating system comes up, or an application starts. Returns the entry - if no value, returns an empty string.",
 	"params": [
-		{"name":"inipath","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"section","description":"","required":true,"default":"","type":"String","values":[]},
-		{"name":"entry","description":"","required":true,"default":"","type":"String","values":[]}
+		{"name":"inipath","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"section","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"entry","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
@@ -19,7 +19,7 @@
 	},
 	"links": [
 
-	], 
+	],
     "examples": [
 		{
 			"title": "Tag Syntax",

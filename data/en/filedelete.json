@@ -1,13 +1,12 @@
 {
 	"name":"fileDelete",
 	"type":"function",
-	"syntax":"fileDelete(file)",
+	"syntax":"fileDelete(filePath)",
 	"returns":"void",
-	"related":[],
-	"description":"Deletes the specified file on the server.",
+	"related":["fileWrite","directoryDelete"],
+	"description":"Deletes the specified file on the server. fileDelete throws an exception whenever a file doesn't exist.",
 	"params": [
-		{"name":"filepath","description":"Pathname of the file to delete. If not an absolute path (starting with a drive letter and a colon, or a forward or backward slash), it is relative to the ColdFusion temporary directory, which is returned by the GetTempDirectory function.","required":true,"default":"","type":"","values":[]}
-
+		{"name":"filePath","description":"Pathname of the file to delete. If not an absolute path (starting with a drive letter and a colon, or a forward or backward slash), it is relative to the ColdFusion temporary directory, which is returned by the GetTempDirectory function.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filedelete.html"},
@@ -15,7 +14,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filedelete"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filedelete"}
 	},
-	"links": [
-
+	"links": [],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "Obtaining files within an archive folder and then removing them if they are older than one hour.",
+			"code": "var existingFiles = directoryList(expandPath(\"/archive/\"), false, \"query\");\nfor (file in existingFiles) {\n\tif (dateDiff(\"h\", file.datelastmodified, now()) GT 1) {\n\t\tfileDelete(file.directory & \"\\\" & file.name);\n\t}\n}",
+			"result": "All files within the archive directory older than one hour will be deleted."
+		}
 	]
 }

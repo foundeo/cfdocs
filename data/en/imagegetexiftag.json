@@ -3,13 +3,12 @@
 	"type":"function",
 	"syntax":"imageGetEXIFTag(name, tagName)",
 	"member":"someImage.getEXIFTag(tagName)",
-	"returns":"String",
-	"related":[],
+	"returns":"string",
+	"related":["imageGetExifMetaData"],
 	"description":" Retrieves the specified EXIF tag in an image.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
-		{"name":"tagName","description":"The EXIF tag name to be returned.","required":true,"default":"","type":"String","values":[]}
-
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"tagName","description":"The EXIF tag name to be returned.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagegetexiftag.html"},
@@ -17,10 +16,8 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagegetexiftag"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagegetexiftag"}
 	},
-	"links": [
-
-	], 
-    "examples": [
+	"links": [],
+    	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": " This example shows how to retrieve one element from the EXIF information associated with an image. ",
@@ -29,12 +26,11 @@
 			"runnable": false
 		},
 		{
-			"title":"Using getEXIFTag member fucntion",
+			"title":"Using getEXIFTag member function",
 			"description":"CF11+ Lucee4.5+ Extract model of camera used for image on exiv sample page (http://www.exiv2.org/sample.html)",
 			"code":"imgObj = imageRead(\"http://www.exiv2.org/include/img_1771.jpg\");\r\nmodel = imgObj.getEXIFTag('Model');\r\nwriteOutput(model);",
-			"result":"",
+			"result":"Canon PowerShot S40",
 			"runnable":true
 		}
 	]
-
 }
