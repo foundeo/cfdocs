@@ -7,7 +7,7 @@
 	"related": ["structSort","listSort","arraySort"],
 	"description": "Sorts a query.",
 	"params": [
-		{"name": "query", "description": "The query you want to sort", "required": true, "default": "", "type": "query", "values": []},
+		{"name": "query", "description": "The query to sort", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "sortFunction", "description": "CF2016+ or Lucee5.1.0.13+ a function with two arguments each corresponding to a query row. The function returns -1 if first row is less than second, 0 if equal, or 1 if first row is greater than second. Lucee4.5+ accepts a column name to sort by instead of a function.", "required": true, "default": "", "type": "function", "values": []},
 		{"name": "direction", "description": "Lucee4.5+ Only supported on Lucee when second argument is a column name instead of a callback function.", "required": false, "default": "", "type": "string", "values": []}
 	],
@@ -24,5 +24,9 @@
 			"runnable":true
 		}
 	],
-	"links": []
+	"links": [{
+		"title": "ColdFusion 2016: query iteration functions",
+		"description": "A look at the higher-order functions that queries have",
+		"url":"http://blog.adamcameron.me/2016/02/coldfusion-2016-query-iteration.html"
+	}]
 }
