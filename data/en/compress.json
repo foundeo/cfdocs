@@ -13,7 +13,7 @@
 		{"name": "mode", "description": "", "required": false, "default": "777", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/compress.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/compress.html"}
 	},
 	"examples": [{
 			"title":"Compress a file",

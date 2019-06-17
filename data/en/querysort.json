@@ -13,7 +13,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querysort.html"},
-		"lucee": {"minimum_version": "", "notes": "Lucee also supports `querySort(query, column_name [, direction])` syntax. As of 5.1.0.13 it accepts a callback function. When called as a member function query.sort() is chainable.", "docs": "http://docs.lucee.org/reference/functions/querysort.html"}
+		"lucee": {"minimum_version": "", "notes": "Lucee also supports `querySort(query, column_name [, direction])` syntax. As of 5.1.0.13 it accepts a callback function. When called as a member function query.sort() is chainable.", "docs": "https://docs.lucee.org/reference/functions/querysort.html"}
 	},
 	"examples": [
 		{

@@ -7,7 +7,7 @@
 	"description": "Return the context (stacktrace) of the current position.",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "deprecated": "5", "notes": "Lucee5+ this function is deprecated, use function CallStackGet instead.", "docs": "http://docs.lucee.org/reference/functions/getcurrentcontext.html"}
+		"lucee": {"minimum_version": "", "deprecated": "5", "notes": "Lucee5+ this function is deprecated, use function CallStackGet instead.", "docs": "https://docs.lucee.org/reference/functions/getcurrentcontext.html"}
 	},
 	"links": [],
 	"examples": [

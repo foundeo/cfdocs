@@ -13,7 +13,7 @@
 		{"name": "maxThreads", "description": "Lucee4.5+ Maximum number of threads executed\nIf \"parallel\" argument is set to false it will be ignored", "required": false, "default": "20", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "When called as a member function query.each() is chainable.", "docs": "http://docs.lucee.org/reference/functions/queryeach.html"},
+		"lucee": {"minimum_version": "", "notes": "When called as a member function query.each() is chainable.", "docs": "https://docs.lucee.org/reference/functions/queryeach.html"},
 		"coldfusion": {"minimum_version": "2016", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryeach.html"}
 	},
 	"examples": [{

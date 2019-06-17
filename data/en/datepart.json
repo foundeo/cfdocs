@@ -20,7 +20,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"Member function is available is CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DatePart.html"},
-		"lucee": {"minimum_version":"", "notes":"Member function is available is Lucee4.5+. The syntax for this member function is `date.part(datepart)`.", "docs":"http://docs.lucee.org/reference/functions/datepart.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is available is Lucee4.5+. The syntax for this member function is `date.part(datepart)`.", "docs":"https://docs.lucee.org/reference/functions/datepart.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/datepart"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/datepart"}
 	},
