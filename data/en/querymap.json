@@ -1,16 +1,39 @@
 {
 	"name": "queryMap",
 	"type": "function",
-	"syntax": "queryMap(query, closure [, parallel] [, maxThreads])",
-	"member": "query.map(closure [, parallel] [, maxThreads])",
+	"syntax": "queryMap(query, function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
+	"member": "query.map(function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
 	"returns": "query",
-	"related": ["queryFilter","queryReduce","querySome"],
+	"related": ["queryFilter","queryReduce","querySome","queryEach"],
 	"description": "Maps each query row using a function to manipulate the rows fields",
 	"params": [
-		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
-		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "parallel", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "numeric", "values": []}
+		{"name": "query", "description": "query to process entries from", "required": true, "default": "", "type": "query", "values": []},
+		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+			"callback_params": [
+			{
+				"values": [],
+				"default": "",
+				"description": "A struct with all of the columns for the current iteration",
+				"name": "row",
+				"type": "struct",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "The value for the current iteration",
+				"name": "currentRow",
+				"type": "numeric",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "A reference of the original struct",
+				"name": "query",
+				"type": "query",
+				"required": false
+			}],"type":"boolean","required":"true","values":[],"default":""},
+		{"name":"parallel","description":"Lucee4.5+ true if the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[true, false]},
+		{"name":"maxThreads","description":"Lucee4.5+ the maximum number of threads to use when parallel = true","required":false,"default":"20","type":"numeric","values":[]}
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querymap.html"},

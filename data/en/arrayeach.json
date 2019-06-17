@@ -1,14 +1,37 @@
 {
 	"name":"arrayEach",
 	"type":"function",
-	"syntax":"arrayEach(array, function(item, [index, [array]]), [parallel], [maxThreads])",
-	"member":"someArray.each(function(item, [index, [array]]), [parallel], [maxThreads])",
+	"syntax":"arrayEach(array, function(item, [index, [array]]){} [, parallel] [, maxThreads])",
+	"member":"someArray.each(function(item, [index, [array]]){} [, parallel] [, maxThreads])",
 	"returns":"void",
 	"related":["arrayMap", "arrayReduce"],
 	"description":"Used to iterate over an array and run the function closure for each item in the array.",
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
-		{"name":"callback","description":"function / closure with the signature: any function (any item, [numeric index], [array array]) - will be executed once per item in the array","required":true,"default":"","type":"function","values":[]},
+		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+			"callback_params": [
+			{
+				"values": [],
+				"default": "",
+				"description": "The value for the current iteration",
+				"name": "value",
+				"type": "any",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "The current index for the iteration",
+				"name": "index",
+				"type": "numeric",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "A reference of the original array",
+				"name": "array",
+				"type": "array",
+				"required": false
+			}],"type":"","required":"true","values":[],"default":""},
 		{"name":"parallel","description":"Lucee4.5+ Specifies whether the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[]},
 		{"name":"maxThreads","description":"Lucee4.5+ The maximum number of threads to use when parallel = true","required":false,"default":"20","type":"numeric","values":[]}
 	],

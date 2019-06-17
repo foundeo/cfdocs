@@ -1,14 +1,37 @@
 {
 	"name": "arraySome",
 	"type": "function",
-	"syntax": "arraySome(array, closure [, parallel] [, maxThreads])",
-	"member": "array.some(closure [, parallel] [, maxThreads])",
+	"syntax":"arraySome(array, function(item [,index, array]){} [, parallel] [, maxThreads])",
+	"member":"someArray.soe(function(item [,index, array]){} [, parallel] [, maxThreads])",
 	"returns": "boolean",
 	"related": ["arrayEvery"],
 	"description": "Calls a given closure/function with every element in a given array and returns true if one of the closure calls returns true",
 	"params": [
 		{"name": "array", "description": "Array to iterate", "required": true, "default": "", "type": "array", "values": []},
-		{"name": "closure", "description": "Function/closure that implements the following constructor [function(any value[,numeric index,array array]):boolean].", "required": true, "default": "", "type": "function", "values": []},
+		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+			"callback_params": [
+			{
+				"values": [],
+				"default": "",
+				"description": "The value for the current iteration",
+				"name": "value",
+				"type": "any",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "The current index for the iteration",
+				"name": "index",
+				"type": "numeric",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "A reference of the original array",
+				"name": "array",
+				"type": "array",
+				"required": false
+			}],"type":"boolean","required":"true","values":[],"default":""},
 		{"name": "parallel", "description": "Execute closures parallel", "required": false, "default": "", "type": "boolean", "values": []},
 		{"name": "maxThreads", "description": "Maximum number of threads executed, ignored when argument \"parallel\" is set to false", "required": false, "default": "20", "type": "numeric", "values": []}
 	],
