@@ -4,7 +4,7 @@
 	"syntax":"entityMerge(entity)",
 	"returns":"any",
 	"related":["entitySave","entityReload","entityToQuery","entityDelete"],
-	"description":"Attaches given enity to current ORM session",
+	"description":"Attaches given entity to current ORM session",
 	"params": [
 		{"name":"entity","description":"The entity that must be attached to the ORM session.","required":true,"default":"","type":"variableName","values":[]}
 	],
