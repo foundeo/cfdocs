@@ -29,7 +29,7 @@
 		},
 		{
 			"name": "listInfo",
-			"description": "Sets the return type. `name` returns an array with only the file names, `path` returns an array with the full path names and `query` returns a query containing the follwing fields: `Attributes`, `DateLastModified`, `Directory`, `Link`, `Mode`, `Name`, `Size`, `Type`.",
+			"description": "Sets the return type. `name` returns an array with only the file names, `path` returns an array with the full path names and `query` returns a query containing the following fields: `Attributes`, `DateLastModified`, `Directory`, `Link`, `Mode`, `Name`, `Size`, `Type`.",
 			"required": false,
 			"default": "path",
 			"type": "string",
