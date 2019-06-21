@@ -20,7 +20,7 @@
 		{"name":"id","description":"Id of the cached object","required":false,"default":"","type":"string","values":[]},
 		{"name":"key","description":"key to access cache","required":false,"default":"","type":"string","values":[]},
 		{"name":"usecache","description":"to use cache or not (if false it will process the content each time)","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"dependson","description":"Comma seperated list of all variables on which this cache would depend","required":false,"default":"","type":"string","values":[]},
+		{"name":"dependson","description":"Comma separated list of all variables on which this cache would depend","required":false,"default":"","type":"string","values":[]},
 		{"name":"idletime","description":"Flushes the cached item if it is not accessed for the specified time span.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"cachedirectory","description":"Cache directory","required":false,"default":"","type":"string","values":[]},
 		{"name":"name","description":"name of return variable, valid with action=\"get\"","required":false,"default":"","type":"string","values":[]}
