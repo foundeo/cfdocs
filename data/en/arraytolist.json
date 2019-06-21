@@ -19,7 +19,7 @@
 	"examples": [
 		{
 		    "title": "Retrieve an array as a list",
-		    "description": "Uses the arrayToList function with a pipe dilimeter to retrieve an array as a list",
+		    "description": "Uses the arrayToList function with a pipe delimiter to retrieve an array as a list",
 		    "code": "someArray = [1,2,3,4];\nsomeList = arrayToList(someArray,\"|\");\nwriteOutput(someList);",
 		    "result": "\"1|2|3|4\""
 		},
