@@ -43,7 +43,7 @@
 			"runnable":true
 		},
         {
-			"title":"Tag Example",
+			"title":"Script Example",
 			"description":" ",
 			"code":"<cfscript> \r\n bytes = []; \r\n bytecount = 32; \r\n arrayResize( bytes, byteCount ); \r\n for (  i = 1 ; i <= byteCount ; i++ ) { \r\n  bytes[ i ] = randRange( -128, 127, \"SHA1PRNG\" ); \r\n         } \r\n </cfscript> \r\n <cfdump var=\"#bytes#\" />  ",
 			"result":"",
