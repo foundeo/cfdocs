@@ -1,4 +1,4 @@
-#CFSqlType Cheatsheet
+# CFSqlType Cheatsheet
 
 [Table sourced from Adobe Documentation](https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfqueryparam.html)
 
