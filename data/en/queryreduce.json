@@ -42,7 +42,7 @@
 		{"name": "initialValue", "description": "inital value passed as part of the first closure call", "required": false, "default": "", "type": "any", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryreduce.html"},
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/queryreduce.html"},
 		"coldfusion": {"minimum_version": "2016", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryreduce.html"}
 	},
 	"examples": [{
@@ -58,8 +58,8 @@
 		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
 	},
 	{
-		"title": "ColdFusion 11: .map() and .reduce()",
-		"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
-		"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
+		"title": "ColdFusion 2016: query iteration functions",
+		"description": "A look at the higher-order functions that queries have",
+		"url":"http://blog.adamcameron.me/2016/02/coldfusion-2016-query-iteration.html"
 	}]
 }

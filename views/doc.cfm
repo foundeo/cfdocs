@@ -70,12 +70,17 @@
 			<cfelseif StructKeyExists(data, "engines") AND structCount(data.engines) EQ 1>
 				<div class="alert alert-warning">
 					This <cfif data.type IS "tag">tag<cfelseif data.type IS "function">function</cfif> requires
-					<cfif structKeyExists(data.engines, "coldfusion")>
-						Adobe ColdFusion<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)> #data.engines.coldfusion.minimum_version# and up</cfif>.
-						<em> Not supported on Lucee, OpenBD, etc.</em>
-					<cfelseif structKeyExists(data.engines, "lucee")>
-						Lucee. <em>Not supported on Adobe ColdFusion.</em>
-					</cfif>
+					<cfscript>
+						engineMap = {
+							"coldfusion": "Adobe ColdFusion",
+							"lucee": "Lucee",
+							"openbd": "OpenBD",
+							"railo": "Railo"
+						};
+						engine = structKeyList(data.engines);
+					</cfscript>
+					#engineMap[engine]#<cfif StructKeyExists(data.engines[engine], "minimum_version") AND Len(data.engines[engine])> #data.engines[engine].minimum_version# and up</cfif>.&nbsp;
+					<em>Not supported on <cfif engine neq 'lucee'>Lucee, </cfif><cfif engine neq 'coldfusion'>Adobe ColdFusion, </cfif> etc.</em>
 				</div>
 			</cfif>
 			<cfif StructKeyExists(data, "discouraged") AND Len(data.discouraged)>

@@ -14,7 +14,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cfthread.html"},
-		"lucee": {"minimum_version":"", "notes":"In Lucee `name` attribute is optional.", "docs":"http://docs.lucee.org/reference/tags/thread.html"},
+		"lucee": {"minimum_version":"", "notes":"In Lucee `name` attribute is optional.", "docs":"https://docs.lucee.org/reference/tags/thread.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfthread"},
 		"openbd": {"minimum_version":"", "notes":"In OpenBD `name` attribute is optional.", "docs":"http://openbd.org/manual/?/tag/cfthread"}
 	},

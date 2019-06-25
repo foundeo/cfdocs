@@ -11,7 +11,7 @@
 		{"name": "column", "description": "Name of the column to delete", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querydeletecolumn.html"},
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querydeletecolumn.html"},
 		"coldfusion": {"minimum_version": "2018", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querydeletecolumn.html"}
 	},
 	"examples": [

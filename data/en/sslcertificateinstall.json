@@ -10,7 +10,7 @@
 		{"name": "port", "description": "", "required": false, "default": "443", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/sslcertificateinstall.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/sslcertificateinstall.html"}
 	},
 	"links": [],
 	"examples": []

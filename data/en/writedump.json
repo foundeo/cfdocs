@@ -21,7 +21,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/writedump.html"},
-		"lucee": {"minimum_version":"", "notes":"In Lucee there is a shortcut. Simply use `dump()`. Important: If using positional arguments, their order is different with Lucee (https://luceeserver.atlassian.net/browse/LDEV-2045).", "docs":"http://docs.lucee.org/reference/functions/writedump.html"},
+		"lucee": {"minimum_version":"", "notes":"In Lucee there is a shortcut. Simply use `dump()`. Important: If using positional arguments, their order is different with Lucee (https://luceeserver.atlassian.net/browse/LDEV-2045).", "docs":"https://docs.lucee.org/reference/functions/writedump.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/writedump"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/writedump"}
 	},
