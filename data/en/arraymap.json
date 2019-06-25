@@ -1,14 +1,37 @@
 {
 	"name":"arrayMap",
 	"type":"function",
-	"syntax":"arrayMap(array, function(item [,index, array]))",
-	"member":"someArray.map(function(item [,index, array]))",
+	"syntax":"arrayMap(array, function(item [,index, array]){} [, parallel] [, maxThreads])",
+	"member":"someArray.map(function(item [,index, array]){} [, parallel] [, maxThreads])",
 	"returns":"array",
 	"related":["arrayReduce"],
 	"description":"Iterates over every entry of the array and calls the closure function to work on the element of the array. The returned value will be set at the same index in a new array and the new array will be returned",
 	"params":[
 		{"name":"array", "description":"The input array", "default":"","type":"array","required":true, "values":[]},
-		{"name":"callback", "description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: item in the array\r\nindex: index of the array\r\narray: a reference of the original array","default":"","type":"function","required":true, "values":[]},
+		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+			"callback_params": [
+			{
+				"values": [],
+				"default": "",
+				"description": "The value for the current iteration",
+				"name": "value",
+				"type": "any",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "The current index for the iteration",
+				"name": "index",
+				"type": "numeric",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "A reference of the original array",
+				"name": "array",
+				"type": "array",
+				"required": false
+			}],"type":"any","required":"true","values":[],"default":""},
 		{"name":"parallel","description":"Lucee4.5+ true if the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[true, false]},
 		{"name":"maxThreads","description":"Lucee4.5+ the maximum number of threads to use when parallel = true","required":false,"default":"20","type":"numeric","values":[]}
 	],
