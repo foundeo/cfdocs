@@ -1,14 +1,14 @@
 {
 	"name":"arrayEach",
 	"type":"function",
-	"syntax":"arrayEach(array, function(item, [index, [array]]){} [, parallel] [, maxThreads])",
-	"member":"someArray.each(function(item, [index, [array]]){} [, parallel] [, maxThreads])",
+	"syntax":"arrayEach(array, callback(item, [index, [array]]){} [, parallel] [, maxThreads])",
+	"member":"someArray.each(callback(item, [index, [array]]){} [, parallel] [, maxThreads])",
 	"returns":"void",
 	"related":["arrayMap", "arrayReduce"],
 	"description":"Used to iterate over an array and run the function closure for each item in the array.",
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
-		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
 			"callback_params": [
 			{
 				"values": [],

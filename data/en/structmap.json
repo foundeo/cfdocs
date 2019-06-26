@@ -1,6 +1,6 @@
 {
-	"syntax":"structMap(struct, function(key, value [,struct]){} [, parallel] [, maxThreads])",
-	"member":"someStruct.map(function(key, value [,struct]){} [, parallel] [, maxThreads])",
+	"syntax":"structMap(struct, callback(key, value [,struct]){} [, parallel] [, maxThreads])",
+	"member":"someStruct.map(callback(key, value [,struct]){} [, parallel] [, maxThreads])",
 	"description":"Iterates over every entry of the Struct and calls the closure function to work on the key value pair of the struct. The returned value will be set for the same key in a new struct and the new struct will be returned.",
 	"type":"function",
 	"related":["structEach","structSome","structReduce","structFilter"],
@@ -22,7 +22,7 @@
 	}],
 	"params":[
 		{"values":[],"default":"","description":"The input struct.","name":"struct","type":"struct","required":"1"},
-		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
 			"callback_params": [
 			{
 				"values": [],

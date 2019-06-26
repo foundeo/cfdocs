@@ -1,14 +1,14 @@
 {
 	"name":"arrayFilter",
 	"type":"function",
-	"syntax":"arrayFilter(array, function(item [,index, array]){} [, parallel] [, maxThreads])",
-	"member":"someArray.filter(function(item [,index, array]){} [, parallel] [, maxThreads])",
+	"syntax":"arrayFilter(array, callback(item [,index, array]){} [, parallel] [, maxThreads])",
+	"member":"someArray.filter(callback(item [,index, array]){} [, parallel] [, maxThreads])",
 	"returns":"array",
 	"related":["arrayEach", "arraySome","ArrayMap","arrayReduce"],
 	"description":"Used to filter an array to items for which the closure function returns true.",
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
-		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration. Returns true if the array element should be included in the filtered array. Support for passing the original array to the closure function added in CF11 Update 5.",
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration. Returns true if the array element should be included in the filtered array. Support for passing the original array to the closure function added in CF11 Update 5.",
 			"callback_params": [
 			{
 				"values": [],

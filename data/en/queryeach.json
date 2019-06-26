@@ -1,14 +1,14 @@
 {
 	"name": "queryEach",
 	"type": "function",
-	"syntax": "queryEach(query, function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
-	"member": "query.each(function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
+	"syntax": "queryEach(query, callback(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
+	"member": "query.each(callback(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
 	"returns": "void",
 	"related": [],
 	"description": "Iterates over query rows and passes each row per iteration to a callback function",
 	"params": [
 		{"name": "query", "description": "query to loop over", "required": true, "default": "", "type": "query", "values": []},
-		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
 			"callback_params": [
 			{
 				"values": [],

@@ -1,14 +1,14 @@
 {
 	"name":"arrayMap",
 	"type":"function",
-	"syntax":"arrayMap(array, function(item [,index, array]){} [, parallel] [, maxThreads])",
-	"member":"someArray.map(function(item [,index, array]){} [, parallel] [, maxThreads])",
+	"syntax":"arrayMap(array, callback(item [,index, array]){} [, parallel] [, maxThreads])",
+	"member":"someArray.map(callback(item [,index, array]){} [, parallel] [, maxThreads])",
 	"returns":"array",
 	"related":["arrayReduce"],
 	"description":"Iterates over every entry of the array and calls the closure function to work on the element of the array. The returned value will be set at the same index in a new array and the new array will be returned",
 	"params":[
 		{"name":"array", "description":"The input array", "default":"","type":"array","required":true, "values":[]},
-		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
 			"callback_params": [
 			{
 				"values": [],

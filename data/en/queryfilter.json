@@ -1,8 +1,8 @@
 {
 	"name": "queryFilter",
 	"type": "function",
-	"syntax": "queryFilter(query, function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
-	"member": "query.filter(function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
+	"syntax": "queryFilter(query, callback(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
+	"member": "query.filter(callback(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
 	"returns": "query",
 	"related": ["querySome", "queryReduce", "queryMap", "queryEach"],
 	"description": "Filters query rows specified in filter criteria",
@@ -15,7 +15,7 @@
 			"type": "query",
 			"values": []
 		},
-		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration. Returns true if the row should be included in the filtered query.",
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration. Returns true if the row should be included in the filtered query.",
 			"callback_params": [
 			{
 				"values": [],

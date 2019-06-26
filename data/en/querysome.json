@@ -1,14 +1,14 @@
 {
 	"name": "querySome",
 	"type": "function",
-	"syntax": "querySome(query, function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
-	"member": "query.some(function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
+	"syntax": "querySome(query, callback(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
+	"member": "query.some(callback(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
 	"returns": "boolean",
 	"description": "This function calls a given closure/function with every element in a given query and returns true, if one of the closure calls returns true",
 	"related": ["queryFilter","queryReduce","queryMap"],
 	"params": [
 		{"name": "query", "description": "query to filter entries from", "required": true, "default": "", "type": "query", "values": []},
-		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
 			"callback_params": [
 			{
 				"values": [],
