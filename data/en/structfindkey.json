@@ -1,12 +1,12 @@
 {
 	"name":"structFindKey",
 	"type":"function",
-	"syntax":"structFindKey(top, value, scope)",
+	"syntax":"structFindKey(struct, value, scope)",
 	"returns":"array",
 	"related":[],
 	"description":" Searches recursively through a substructure of nested arrays,\n structures, and other elements, for structures whose keys\n match the search key in the value parameter.",
 	"params": [
-		{"name":"top","description":"CFML object (structure or array) from which to start\n search. This attribute requires an object, not a name of\n an object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"struct","description":"CFML object (structure or array) from which to start\n search. This attribute requires an object, not a name of\n an object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"value","description":"String or a variable that contains one for which to search.","required":true,"default":"","type":"string","values":[]},
 		{"name":"scope","description":"* one: returns one matching key. Default.\n * all: returns all matching keys","required":true,"default":"","type":"string","values":["one","all"]}
 

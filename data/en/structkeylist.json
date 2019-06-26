@@ -1,13 +1,13 @@
 {
 	"name":"structKeyList",
 	"type":"function",
-	"syntax":"structKeyList(structure [, delimiter])",
+	"syntax":"structKeyList(struct [, delimiter])",
     "member":"someStruct.keyList([delimiter])",
 	"returns":"string",
 	"related":[],
 	"description":" Extracts keys from a CFML structure.",
 	"params": [
-		{"name":"structure","description":"Structure from which to extract a list of keys","required":true,"default":"","type":"struct","values":[]},
+		{"name":"struct","description":"Structure from which to extract a list of keys","required":true,"default":"","type":"struct","values":[]},
 		{"name":"delimiter","description":"Character that separates keys in list. Default: comma.","required":false,"default":",","type":"string","values":[]}
 
 	],

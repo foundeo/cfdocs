@@ -1,12 +1,12 @@
 {
 	"name":"structClear",
 	"type":"function",
-	"syntax":"structClear(structure)",
+	"syntax":"structClear(struct)",
 	"returns":"boolean",
 	"related":[],
 	"description":" Removes all data from a structure.",
 	"params": [
-		{"name":"structure","description":"Structure to clear","required":true,"default":"","type":"struct","values":[]}
+		{"name":"struct","description":"Structure to clear","required":true,"default":"","type":"struct","values":[]}
 
 	],
 	"engines": {

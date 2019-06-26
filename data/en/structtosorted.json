@@ -1,14 +1,14 @@
 {
 	"name":"structToSorted",
 	"type":"function",
-	"syntax":"structToSorted(structure, callback)\nstructToSorted(structure, sorttype, sortorder, localeSensitive)",
-	"member":"structure.toSorted(callback)",
+	"syntax":"structToSorted(struct, callback)\nstructToSorted(struct, sorttype, sortorder, localeSensitive)",
+	"member":"struct.toSorted(callback)",
 	"returns": "struct",
 	"related":["structSort"],
 	"description":"Converts a struct to an ordered one",
 	"params": [
 		{
-			"name": "structure",
+			"name": "struct",
 			"description": "Structure or a variable that contains one.",
 			"required": true,
 			"default": "",

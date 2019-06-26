@@ -1,12 +1,12 @@
 {
 	"name":"structCount",
 	"type":"function",
-	"syntax":"structCount(structure)",
+	"syntax":"structCount(struct)",
 	"returns":"numeric",
 	"related":[],
 	"description":" Counts the keys in a structure.",
 	"params": [
-		{"name":"structure","description":"Structure to access","required":true,"default":"","type":"struct","values":[]}
+		{"name":"struct","description":"Structure to access","required":true,"default":"","type":"struct","values":[]}
 
 	],
 	"engines": {

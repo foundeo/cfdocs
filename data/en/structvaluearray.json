@@ -1,7 +1,7 @@
 {
   "name": "structValueArray",
   "type": "function",
-  "syntax": "structValueArray(structure)",
+  "syntax": "structValueArray(struct)",
   "returns": "array",
   "related": [
     "structKeyArray"
@@ -9,7 +9,7 @@
   "description": "Returns all the values as an array",
   "params": [
     {
-      "name": "structure",
+      "name": "struct",
       "description": "",
       "required": true,
       "default": "",

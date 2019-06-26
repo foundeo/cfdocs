@@ -1,12 +1,12 @@
 {
 	"name":"structInsert",
 	"type":"function",
-	"syntax":"structInsert(structure, key, value [, allowoverwrite])",
+	"syntax":"structInsert(struct, key, value [, allowoverwrite])",
 	"returns":"boolean",
 	"related":[],
 	"description":" Inserts a key-value pair into a structure.",
 	"params": [
-		{"name":"structure","description":"Structure to contain the new key-value pair.","required":true,"default":"","type":"struct","values":[]},
+		{"name":"struct","description":"Structure to contain the new key-value pair.","required":true,"default":"","type":"struct","values":[]},
 		{"name":"key","description":"Key that contains the inserted value.","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"Value to add.","required":true,"default":"","type":"any","values":[]},
 		{"name":"allowoverwrite","description":"Whether to allow overwriting a key. Default: False.","required":false,"default":false,"type":"boolean","values":[true,false]}

@@ -1,12 +1,12 @@
 {
 	"name":"structCopy",
 	"type":"function",
-	"syntax":"structCopy(structure)",
+	"syntax":"structCopy(struct)",
 	"returns":"struct",
 	"related":["duplicate"],
 	"description":" Copies a structure. Copies top-level keys, values, and arrays\n in the structure by value; copies nested structures by\n reference.",
 	"params": [
-		{"name":"structure","description":"Structure to copy","required":true,"default":"","type":"struct","values":[]}
+		{"name":"struct","description":"Structure to copy","required":true,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structcopy.html"},

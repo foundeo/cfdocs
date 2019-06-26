@@ -1,14 +1,14 @@
 {
 	"name":"structSetMetadata",
 	"type":"function",
-	"syntax":"structSetMetadata(inputStruct, metaStruct)",
+	"syntax":"structSetMetadata(struct, metadata)",
 	"returns":"void",
 	"related":["arraySetMetadata","arrayGetMetadata","structGetMetadata"],
-	"member":"inputStruct.setMetadata(metaStruct)",
+	"member":"inputStruct.setMetadata(metadata)",
 	"description":"Sets metadata for a key in a struct. When you want to SerializeJSON, the key and the value will be display as you defined in the metadata.",
 	"params": [
-		{"name":"inputStruct","description":"The struct in which you want to add the metadata.","required":true,"default":"","type":"struct","values":[]},
-		{"name":"metaStruct","description":"The metadata struct you want to add.","required":true,"default":"","type":"struct","values":[]}
+		{"name":"struct","description":"The struct in which you want to add the metadata.","required":true,"default":"","type":"struct","values":[]},
+		{"name":"metadata","description":"The metadata struct you want to add.","required":true,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2016.0.2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structsetmetadata.html"}

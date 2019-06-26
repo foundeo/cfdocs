@@ -1,13 +1,13 @@
 {
 	"name":"structKeyArray",
 	"type":"function",
-	"syntax":"structKeyArray(structure)",
+	"syntax":"structKeyArray(struct)",
     "member":"someStruct.keyArray()",
 	"returns":"array",
 	"related":[],
 	"description":"Returns the keys in a CFML structure as an array. If structure does not exist throws an exception.",
 	"params": [
-		{"name":"structure","description":"","required":true,"default":"","type":"struct","values":[]}
+		{"name":"struct","description":"","required":true,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structkeyarray.html"},

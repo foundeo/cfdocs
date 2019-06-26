@@ -1,14 +1,14 @@
 {
 	"name":"structDelete",
 	"type":"function",
-	"syntax":"structDelete(structure, key [, indicateNotExisting])",
+	"syntax":"structDelete(struct, key [, indicateExists])",
 	"returns":"boolean",
 	"related":["structclear"],
 	"description":"Removes an element from a structure.",
 	"params": [
-		{"name":"structure","description":"Structure or a variable that contains one. Contains element\n to remove","required":true,"default":"","type":"string","values":[]},
+		{"name":"struct","description":"Structure or a variable that contains one. Contains element\n to remove","required":true,"default":"","type":"string","values":[]},
 		{"name":"key","description":"Element to remove","required":true,"default":"","type":"string","values":[]},
-		{"name":"indicateNotExisting","description":"When true this function will return true only if the key that was deleted existed. When false (default) this function will return true if the key is successfully removed.","required":false,"default":false,"type":"boolean","values":[]}
+		{"name":"indicateExists","description":"When true this function will return true only if the key that was deleted existed. When false (default) this function will return true if the key is successfully removed.","required":false,"default":false,"type":"boolean","values":[]}
 
 	],
 	"engines": {
