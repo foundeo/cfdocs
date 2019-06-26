@@ -7,7 +7,7 @@
 	"description": "Get ID, ApiKey and SecurityKey for the Server and the current Web-Context.",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getluceeid.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getluceeid.html"}
 	},
 	"examples": [{
 			"title":"Dump getLuceeID",

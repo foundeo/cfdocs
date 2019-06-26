@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cflocation url=\"page.cfm\" addtoken=\"false\" statusCode=\"301\">",
 	"script":"location(\"mypage.cfm\", \"false\", \"301\");",
-	"related":[],
+	"related":["cfforward","cfheader"],
 	"description":"Stops execution of the current page and redirects to the specified URI.",
 	"params": [
 		{"name":"url","description":"URI or URL to redirect to.","required":true,"default":"","type":"string","values":[]},
@@ -12,7 +12,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cflocation.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/location.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/location.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflocation"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflocation"}
 	},
@@ -21,14 +21,14 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "\r\nlocation(\"mypage.cfm\", \"false\", \"301\");",
+			"code": "location(\"mypage.cfm\", \"false\", \"301\");",
 			"result": ""
 		},
-	        {
-	            "title": "Tag Syntax",
-	            "description": "",
-	            "code": "<cflocation url=\"mypage.cfm\" addToken=\"false\" statusCode=\"301\">",
-	            "result": ""
-	        }
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cflocation url=\"mypage.cfm\" addToken=\"false\" statusCode=\"301\">",
+			"result": ""
+		}
 	]
 }

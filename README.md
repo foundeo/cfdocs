@@ -79,7 +79,7 @@ We need help expanding existing tag and function documentation. Look through the
         "engines":{
             "coldfusion":{"minimum_version":"10", "notes":"CF Specific Info Here", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/function"},
             "railo":{"minimum_version":"4.1", "notes":"Railo Specific Here", "docs":"http://railodocs.org/index.cfm/function/sessionrotate"},
-            "lucee":{"minimum_version":"4.5", "notes":"Lucee Specific Info Here", "docs":"http://docs.lucee.org/reference/functions/name.html"}
+            "lucee":{"minimum_version":"4.5", "notes":"Lucee Specific Info Here", "docs":"https://docs.lucee.org/reference/functions/name.html"}
         },
         "links":[
             {

@@ -1,18 +1,48 @@
 {
 	"name": "queryReduce",
 	"type": "function",
-	"syntax": "queryReduce(query, closure [, initialValue])",
-	"member": "query.reduce(closure [, initialValue])",
+    "syntax": "queryReduce(struct, function(result, row [, currentRow] [, query]){} [, initialVal])",
+	"script": "query.reduce(function(result, [, currentRow] [, query]){} [, initialVal])",
 	"returns": "any",
 	"related": ["querymap", "queryfilter"],
 	"description": "Reduces query columns just like in array or collection",
 	"params": [
-		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
-		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "initialValue", "description": "", "required": false, "default": "", "type": "any", "values": []}
+		{"name": "query", "description": "query to process entries from", "required": true, "default": "", "type": "query", "values": []},
+		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+			"callback_params": [
+			{
+				"values": [],
+				"default": "",
+				"description": "The result of the reduce operation after the previous iteration",
+				"name": "result",
+				"type": "any",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "A struct with all of the columns for the current iteration",
+				"name": "row",
+				"type": "struct",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "The value for the current iteration",
+				"name": "currentRow",
+				"type": "numeric",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "A reference of the original struct",
+				"name": "query",
+				"type": "query",
+				"required": false
+			}],"type":"any","required":"true","values":[],"default":""},
+		{"name": "initialValue", "description": "inital value passed as part of the first closure call", "required": false, "default": "", "type": "any", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryreduce.html"},
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/queryreduce.html"},
 		"coldfusion": {"minimum_version": "2016", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryreduce.html"}
 	},
 	"examples": [{
@@ -28,8 +58,8 @@
 		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
 	},
 	{
-		"title": "ColdFusion 11: .map() and .reduce()",
-		"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
-		"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
+		"title": "ColdFusion 2016: query iteration functions",
+		"description": "A look at the higher-order functions that queries have",
+		"url":"http://blog.adamcameron.me/2016/02/coldfusion-2016-query-iteration.html"
 	}]
 }

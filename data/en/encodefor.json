@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"encodeFor(type, value)",
 	"returns":"string",
-	"related":["encodeForHTML", "canonicalize"],
+	"related":["encodeForHTML", "canonicalize","esapiEncode"],
 	"description":"Encodes a given string for safe output in the specified context. The encoding is meant to mitigate Cross Site Scripting (XSS) attacks.",
 	"params": [
 		{"name":"type","description":"The context of the encoding to perform.","required":true,"default":"","type":"string","values":["css","dn","html","htmlattribute","javascript","ldap","url","xml","xmlattribute","xpath"]},

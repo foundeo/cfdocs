@@ -10,7 +10,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/threadterminate.html"},
-		"lucee": {"minimum_version":"", "notes":"In Lucee the default for threadname parameter is \"run\" and the terminated thread scope will have an error object included after termination.", "docs":"http://docs.lucee.org/reference/functions/threadterminate.html"},
+		"lucee": {"minimum_version":"", "notes":"In Lucee the default for threadname parameter is \"run\" and the terminated thread scope will have an error object included after termination.", "docs":"https://docs.lucee.org/reference/functions/threadterminate.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/threadterminate"}
 	},
 	"links": []
