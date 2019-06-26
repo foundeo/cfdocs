@@ -1,8 +1,8 @@
 {
 	"name":"structEach",
 	"type":"function",
-	"syntax":"structEach(struct,callback(key, value [, struct]){} [, parallel] [, maxThreads])",
-	"member":"someStruct.each(callback(key, value [, struct]){} [, parallel] [, maxThreads])",
+	"syntax":"structEach(struct,function(key, value [, struct]){} [, parallel] [, maxThreads])",
+	"member":"someStruct.each(function(key, value [, struct]){} [, parallel] [, maxThreads])",
 	"returns": "void",
 	"related":["structSome","structMap","structReduce","structFilter"],
 	"description":"Used to loop over elements in a structure by accessing key-value pairs.",

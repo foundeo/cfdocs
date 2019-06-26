@@ -1,8 +1,8 @@
 {
 	"name":"structFilter",
 	"type":"function",
-	"syntax":"structFilter(struct,callback(key, value [,struct]){} [, parallel] [, maxThreads])",
-	"member":"someStruct.filter(callback(key, value [,struct]){} [, parallel] [, maxThreads])",
+	"syntax":"structFilter(struct,function(key, value [,struct]){} [, parallel] [, maxThreads])",
+	"member":"someStruct.filter(function(key, value [,struct]){} [, parallel] [, maxThreads])",
 	"returns":"struct",
 	"related":["structEach","structSome","structMap","structReduce"],
 	"description":"Used to filter the key-value pairs in a structure.",

@@ -1,8 +1,8 @@
 {
 	"name": "queryFilter",
 	"type": "function",
-	"syntax": "queryFilter(query, callback(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
-	"member": "query.filter(callback(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
+	"syntax": "queryFilter(query, function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
+	"member": "query.filter(function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
 	"returns": "query",
 	"related": ["querySome", "queryReduce", "queryMap", "queryEach"],
 	"description": "Filters query rows specified in filter criteria",

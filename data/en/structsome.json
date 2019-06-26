@@ -1,8 +1,8 @@
 {
 	"name": "structSome",
 	"type": "function",
-	"syntax": "structSome(struct, callback(key, value [,struct]){} [, parallel] [, maxThreads])",
-	"member": "struct.some(callback(key, value [,struct]){} [, parallel] [, maxThreads])",
+	"syntax": "structSome(struct, function(key, value [,struct]){} [, parallel] [, maxThreads])",
+	"member": "struct.some(function(key, value [,struct]){} [, parallel] [, maxThreads])",
 	"returns": "boolean",
 	"related": ["structEach","structMap","structReduce","structFilter"],
 	"description": "This function calls a given closure/function with every element in a given struct and returns true, if one of the closure calls returns true",

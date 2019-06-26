@@ -1,8 +1,8 @@
 {
     "name":"structReduce",
     "type":"function",
-    "syntax":"structReduce(struct, callback(result, key, value [,struct]){} [, initialVal])",
-    "script":"someStruct.reduce(callback(result, key, value [,struct]){} [, initialVal])",
+    "syntax":"structReduce(struct, function(result, key, value [,struct]){} [, initialVal])",
+    "script":"someStruct.reduce(function(result, key, value [,struct]){} [, initialVal])",
     "returns":"any",
     "related":["structEach","structSome","structMap","structFilter"],
     "description":"Iterates over every entry of the struct and calls the closure to work on the key value pair of the struct. This function will reduce the struct to a single value and will return the value.",

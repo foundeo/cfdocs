@@ -1,8 +1,8 @@
 {
 	"name":"arrayFilter",
 	"type":"function",
-	"syntax":"arrayFilter(array, callback(item [,index, array]){} [, parallel] [, maxThreads])",
-	"member":"someArray.filter(callback(item [,index, array]){} [, parallel] [, maxThreads])",
+	"syntax":"arrayFilter(array, function(item [,index, array]){} [, parallel] [, maxThreads])",
+	"member":"someArray.filter(function(item [,index, array]){} [, parallel] [, maxThreads])",
 	"returns":"array",
 	"related":["arrayEach", "arraySome","ArrayMap","arrayReduce"],
 	"description":"Used to filter an array to items for which the closure function returns true.",

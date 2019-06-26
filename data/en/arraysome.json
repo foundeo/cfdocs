@@ -1,8 +1,8 @@
 {
 	"name": "arraySome",
 	"type": "function",
-	"syntax":"arraySome(array, callback(item [,index, array]){} [, parallel] [, maxThreads])",
-	"member":"someArray.some(callback(item [,index, array]){} [, parallel] [, maxThreads])",
+	"syntax":"arraySome(array, function(item [,index, array]){} [, parallel] [, maxThreads])",
+	"member":"someArray.some(function(item [,index, array]){} [, parallel] [, maxThreads])",
 	"returns": "boolean",
 	"related": ["arrayEvery"],
 	"description": "Calls a given closure/function with every element in a given array and returns true if one of the closure calls returns true",

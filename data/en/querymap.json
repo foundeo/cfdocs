@@ -1,8 +1,8 @@
 {
 	"name": "queryMap",
 	"type": "function",
-	"syntax": "queryMap(query, callback(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
-	"member": "query.map(callback(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
+	"syntax": "queryMap(query, function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
+	"member": "query.map(function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
 	"returns": "query",
 	"related": ["queryFilter","queryReduce","querySome","queryEach"],
 	"description": "Maps each query row using a function to manipulate the rows fields",

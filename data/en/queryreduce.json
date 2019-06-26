@@ -1,8 +1,8 @@
 {
 	"name": "queryReduce",
 	"type": "function",
-    "syntax": "queryReduce(struct, callback(result, row [, currentRow] [, query]){} [, initialVal])",
-	"script": "query.reduce(callback(result, [, currentRow] [, query]){} [, initialVal])",
+    "syntax": "queryReduce(struct, function(result, row [, currentRow] [, query]){} [, initialVal])",
+	"script": "query.reduce(function(result, [, currentRow] [, query]){} [, initialVal])",
 	"returns": "any",
 	"related": ["querymap", "queryfilter"],
 	"description": "Reduces query columns just like in array or collection",
