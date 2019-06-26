@@ -2,13 +2,13 @@
 	"name": "arraySome",
 	"type": "function",
 	"syntax":"arraySome(array, function(item [,index, array]){} [, parallel] [, maxThreads])",
-	"member":"someArray.soe(function(item [,index, array]){} [, parallel] [, maxThreads])",
+	"member":"someArray.some(function(item [,index, array]){} [, parallel] [, maxThreads])",
 	"returns": "boolean",
 	"related": ["arrayEvery"],
 	"description": "Calls a given closure/function with every element in a given array and returns true if one of the closure calls returns true",
 	"params": [
 		{"name": "array", "description": "Array to iterate", "required": true, "default": "", "type": "array", "values": []},
-		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
 			"callback_params": [
 			{
 				"values": [],

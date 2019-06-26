@@ -8,7 +8,7 @@
 	"description": "Reduces query columns just like in array or collection",
 	"params": [
 		{"name": "query", "description": "query to process entries from", "required": true, "default": "", "type": "query", "values": []},
-		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
 			"callback_params": [
 			{
 				"values": [],

@@ -22,7 +22,7 @@
 	}],
 	"params":[
 		{"values":[],"default":"","description":"The input struct.","name":"struct","type":"struct","required":"1"},
-		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
 			"callback_params": [
 			{
 				"values": [],

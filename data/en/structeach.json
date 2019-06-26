@@ -7,8 +7,8 @@
 	"related":["structSome","structMap","structReduce","structFilter"],
 	"description":"Used to loop over elements in a structure by accessing key-value pairs.",
 	"params": [
-		{"name":"structure","description":"Structure or a variable that contains one.","required":true,"default":"","type":"string","values":[]},
-		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+		{"name":"struct","description":"Structure or a variable that contains one.","required":true,"default":"","type":"string","values":[]},
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
 			"callback_params": [
 			{
 				"values": [],
