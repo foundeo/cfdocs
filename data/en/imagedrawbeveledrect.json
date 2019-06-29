@@ -17,7 +17,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagedrawbeveledrect.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagedrawbeveledrect.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/imagedrawbeveledrect.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagedrawbeveledrect"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagedrawbeveledrect"}
 	},
@@ -32,7 +32,7 @@
 		},
 		{
 			"title":"Using drawBeveledRect member function",
-			"description":"CF11+ Lucee4.5+ Create a new image and place a raised beveled rectange at its center",
+			"description":"CF11+ Lucee4.5+ Create a new image and place a raised beveled rectangle at its center",
 			"code":"imgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.drawBeveledRect(50,50,50,50,\"yes\",\"yes\");\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
 			"result":"",
 			"runnable":true

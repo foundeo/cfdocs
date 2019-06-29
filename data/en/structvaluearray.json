@@ -1,0 +1,37 @@
+{
+  "name": "structValueArray",
+  "type": "function",
+  "syntax": "structValueArray(structure)",
+  "returns": "array",
+  "related": [
+    "structKeyArray"
+  ],
+  "description": "Returns all the values as an array",
+  "params": [
+    {
+      "name": "structure",
+      "description": "",
+      "required": true,
+      "default": "",
+      "type": "struct",
+      "values": []
+    }
+  ],
+  "engines": {
+    "openbd": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://openbd.org/manual/?/function/structvaluearray"
+    }
+  },
+  "links": [],
+  "examples": [
+    {
+      "title": "Traditional function",
+      "description": "",
+      "code": "statusCodes = {\n    OK = 200,\n    CREATED = 201,\n    NOT_MODIFIED = 304,\n    BAD_REQUEST = 400,\n    NOT_FOUND = 404\n};\n\nwriteDump(structValueArray(statusCodes));",
+      "runnable": false,
+      "result": "[200, 201, 304, 400, 404]"
+    }
+  ]
+}

@@ -9,7 +9,7 @@
 		{"name":"index","description":"Index value. CFML sets it to from value and\n increments or decrements by step value, until it equals to\n value.","required":false,"default":"","type":"string","values":[]},
 		{"name":"to","description":"Beginning value of index.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"from","description":"Ending value of index.","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"step","description":"Ending value of index.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"step","description":"Step by which to increment or decrement the index value.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"condition","description":"Condition that controls the loop.","required":false,"default":"","type":"string","values":[]},
 		{"name":"query","description":"Query that controls the loop.","required":false,"default":"","type":"query","values":[]},
 		{"name":"group","description":"CF10+ and Lucee4.5+. Query column to use to group sets of records. Eliminates adjacent duplicate rows when data is sorted. Use if you retrieved a recordset ordered on one or more query columns.","required":false,"default":"","type":"string","values":[]},
@@ -27,7 +27,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cfloop.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/loop.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/loop.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfloop"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfloop"}
 	},

@@ -4,15 +4,15 @@
 	"syntax": "each(collection, closure [, parallel] [, maxThreads])",
 	"returns": "void",
 	"related": ["collectionEach"],
-	"description": "Same as collectionEach expect it has the two additional optinal params `parallel` and `maxThreads`",
+	"description": "Function that will call the given UDF/Closure with every entry (key/value) in the given collection.",
 	"params": [
-		{"name": "collection", "description": "", "required": true, "default": "", "type": "any", "values": []},
-		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "parallel", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "numeric", "values": []}
+		{"name": "collection", "description": "Collection to take values from.", "required": true, "default": "", "type": "any", "values": []},
+		{"name": "closure", "description": "UDF/Closure that is called with each entry from the collection.", "required": true, "default": "", "type": "function", "values": []},
+		{"name": "parallel", "description": "Execute the closures in parallel.", "required": false, "default": "false", "type": "boolean", "values": []},
+		{"name": "maxThreads", "description": "Maximum number of threads executed. Ignored when `parallel` argument is set to `false`.", "required": false, "default": "20", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/each.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/each.html"}
 	},
 	"links": [],
 	"examples": [{

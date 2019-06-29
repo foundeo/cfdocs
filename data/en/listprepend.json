@@ -2,7 +2,7 @@
 	"name":"listPrepend",
 	"type":"function",
 	"syntax":"listPrepend(someList, value [, delimiters])",
-    	"member":"someList.listPrepend( value [, delimeters])",
+    	"member":"someList.listPrepend( value [, delimiters])",
 	"returns":"string",
 	"related":["listAppend"],
 	"description":" Inserts an element at the beginning of a list.",
@@ -13,14 +13,14 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listprepend.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/listprepend.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/listprepend.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listprepend"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listprepend"}
 	},
 	"links": [],
     	"examples": [
         {
-            "title": "Prepend to a List using a dash delimeter",
+            "title": "Prepend to a List using a dash delimiter",
             "description": "",
             "code": "someList = \"1-2-3-4\";\nsomeList = listPrepend(someList,\"0\",\"-\");\nwriteOutput(someList);",
             "result": "\"0-1-2-3-4\""

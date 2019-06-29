@@ -10,7 +10,7 @@
 		{"name":"dspLocale", "description": "Locale's display name/output language", "required": false, "default": "getLocaleDisplayName()", "type": "string", "values": ["English","German","French","..."]}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "5", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getlocaleinfo.html"}
+		"lucee": {"minimum_version": "5", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getlocaleinfo.html"}
 	},
 	"links": [
 		{

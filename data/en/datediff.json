@@ -13,7 +13,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateDiff.html"},
-		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+. The Lucee member function diffs dates in the opposite direction (+/-) than the Adobe CF member function. See the example below.", "docs":"http://docs.lucee.org/reference/functions/datediff.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+. The Lucee member function diffs dates in the opposite direction (+/-) than the Adobe CF member function. See the example below.", "docs":"https://docs.lucee.org/reference/functions/datediff.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/datediff"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/datediff"}
 	},
