@@ -41,11 +41,19 @@
 	},
 	"examples": [{
 		"title":"Iterate over query rows instead of cfloop()",
-		"description":"",
-		"code":"<cfscript>\r\n    news = queryNew(\"id,title\",\r\n    \t\"integer,varchar\", [{\r\n    \t\t\"id\": 1,\r\n    \t\t\"title\": \"Dewey defeats Truman\"\r\n    \t}, {\r\n    \t\t\"id\": 2,\r\n    \t\t\"title\": \"Man walks on Moon\"\r\n    \t}]\r\n    );\r\n    \r\n    function newsRow(row) {\r\n        writeOutput('<tr>');\r\n            writeOutput('<td>#row.id#</td>')\r\n            writeOutput('<td>#row.title#</td>');\r\n        writeOutput('<tr>');\r\n    }\r\n</cfscript>\r\n<cfoutput>\r\n    <table>\r\n        #queryEach(news,newsRow)#\r\n    </table>\r\n</cfoutput>",
-		"result":"1&emsp;Dewey defeats Truman\n2&emsp;Man walks on Moon",
-		"runnable":false
-	}],
+		"description":"Adobe Coldfusion 2016+ and Lucee 5+",
+		"code":"<cfscript>\r\n    news = queryNew(\"id,title\",\r\n    \t\"integer,varchar\", [{\r\n    \t\t\"id\": 1,\r\n    \t\t\"title\": \"Dewey defeats Truman\"\r\n    \t}, {\r\n    \t\t\"id\": 2,\r\n    \t\t\"title\": \"Man walks on Moon\"\r\n    \t}]\r\n    );\r\n    function newsRow(row) {\r\n        writeOutput(\"<tr>\");\r\n            writeOutput(\"<td>#row.id#</td>\");\r\n            writeOutput(\"<td>#row.title#</td>\");\r\n        writeOutput(\"</tr>\");\r\n    }\r\n</cfscript>\r\n<table>\r\n    <cfscript>\r\n        queryEach(news,newsRow);\r\n    </cfscript>\r\n</table>",
+		"result":"1 Dewey defeats Truman\r\n2 Man walks on Moon",
+		"runnable":true
+	},
+	{
+		"title": "Iterate over query rows instead of cfloop()",
+		"description": "Lucee 5+ ONLY",
+		"code": "<cfscript>\r\n    news = queryNew(\"id,title\",\r\n    \t\"integer,varchar\", [{\r\n    \t\t\"id\": 1,\r\n    \t\t\"title\": \"Dewey defeats Truman\"\r\n    \t}, {\r\n    \t\t\"id\": 2,\r\n    \t\t\"title\": \"Man walks on Moon\"\r\n    \t}]\r\n    );\r\n    function newsRow(row) {\r\n        writeOutput(\"<tr>\");\r\n            writeOutput(\"<td>#row.id#</td>\");\r\n            writeOutput(\"<td>#row.title#</td>\");\r\n        writeOutput(\"</tr>\");\r\n    }\r\n</cfscript>\r\n<table>\r\n    <cfoutput>#queryEach(news,newsRow)#</cfoutput>\r\n</table>",
+		"result": "1 Dewey defeats Truman\r\n2 Man walks on Moon",
+		"runnable": true
+	}
+	],
 	"links":[{
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
