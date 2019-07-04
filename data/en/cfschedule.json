@@ -39,7 +39,10 @@
 		{"name":"onMisfire","description":"CF10+ Specify what to do if a task misfires. If unspecified, then no action is taken.","required":false,"default":"invokeHandler if eventHandler is specified","type":"string","values":["fire_now","invokeHandler"]},
 		{"name":"cluster","description":"CF10+ If yes, the task can be executed in a cluster setup.","required":false,"default":"no","type":"boolean"},
 		{"name":"overwrite","description":"CF10+ Specify whether to overwrite the output files on task execution (if true) or create new output files (if false).","required":false,"default":"true","type":"boolean"},
-		{"name":"retryCount","description":"CF10+ Number of times to retry the task if the task fails. Must be between 0 and 3, inclusive.","required":false,"default":"3","type":"integer","values":[0,1,2,3]}
+		{"name":"retryCount","description":"CF10+ Number of times to retry the task if the task fails. Must be between 0 and 3, inclusive.","required":false,"default":"3","type":"integer","values":[0,1,2,3]},
+		{"name":"unique","description":"lucee4.5+ If true, the scheduled task is only executed once at time. If a task is still running from previous round no new task is started.","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"autodelete","description":"lucee4.5+ If set to true, the scheduled task will be deleted when there is no possible future execution.","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"readonly","description":"lucee4.5+ If true, the scheduled task can not be modified or deleted in the Lucee Administrator.","required":false,"default":"","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfschedule.html"},
