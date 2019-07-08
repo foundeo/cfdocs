@@ -48,7 +48,7 @@
 	},
 	{
 		"title": "Iterate over query rows instead of cfloop()",
-		"description": "Lucee 5+ ONLY",
+		"description": "Lucee5+",
 		"code": "<cfscript>\r\n    news = queryNew(\"id,title\",\r\n    \t\"integer,varchar\", [{\r\n    \t\t\"id\": 1,\r\n    \t\t\"title\": \"Dewey defeats Truman\"\r\n    \t}, {\r\n    \t\t\"id\": 2,\r\n    \t\t\"title\": \"Man walks on Moon\"\r\n    \t}]\r\n    );\r\n    function newsRow(row) {\r\n        writeOutput(\"<tr>\");\r\n            writeOutput(\"<td>#row.id#</td>\");\r\n            writeOutput(\"<td>#row.title#</td>\");\r\n        writeOutput(\"</tr>\");\r\n    }\r\n</cfscript>\r\n<table>\r\n    <cfoutput>#queryEach(news,newsRow)#</cfoutput>\r\n</table>",
 		"result": "1 Dewey defeats Truman\r\n2 Man walks on Moon",
 		"runnable": true
