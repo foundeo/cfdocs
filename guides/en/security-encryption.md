@@ -9,10 +9,10 @@ Encryption, on the other hand, **is** reversible and allows you to safely encode
 Before we dive much further into actual encryption, we need to visit another function that helps us to generate the encryption keys we'll use… [generateSecretKey()](/generatesecretkey):
 
     \\ generate a 128 bit AES encryption key
-    writeOutput( generateSecretKey( 'AES' );
+    writeOutput( generateSecretKey( 'AES' ) );
     
     \\ generate a 256 bit AES encryption key CF10+ Lucee4.5+
-    writeOutput( generateSecretKey( 'AES', 256 );
+    writeOutput( generateSecretKey( 'AES', 256 ) );
 
 Note that by default [generateSecretKey()](/generatesecretkey) generates 128-bit encryption keys. You can pass the optional parameter for key size to this function, however, and generate 256 bit (and indeed, 512 bit, 1024 bit, etc.) keys. As of this writing, 256 bit keys are supported for the AES and BLOWFISH encryption algorithms. If you're using CF10+ or Lucee4.5+ then you can generate and use 256 bit keys instead of 128 bit keys.
 

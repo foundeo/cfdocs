@@ -74,12 +74,12 @@ We need help expanding existing tag and function documentation. Look through the
         "description":"A short description that describes what the tag or function does.",
         "discouraged":"Only add this key if this tag/function is discouraged by the community.",
         "params":[
-            {"name":"funcArgNameOrTagAttributeName", "description":"What it does", "required":true, "default":"false", "type":"boolean", "values":["true", "false"]}
+            {"name":"funcArgNameOrTagAttributeName", "description":"What it does", "required":true, "default":"false", "type":"boolean", "values":[]}
         ],
         "engines":{
             "coldfusion":{"minimum_version":"10", "notes":"CF Specific Info Here", "docs":"http://learn.adobe.com/wiki/display/coldfusionen/function"},
             "railo":{"minimum_version":"4.1", "notes":"Railo Specific Here", "docs":"http://railodocs.org/index.cfm/function/sessionrotate"},
-            "lucee":{"minimum_version":"4.5", "notes":"Lucee Specific Info Here", "docs":"http://docs.lucee.org/reference/functions/name.html"}
+            "lucee":{"minimum_version":"4.5", "notes":"Lucee Specific Info Here", "docs":"https://docs.lucee.org/reference/functions/name.html"}
         },
         "links":[
             {

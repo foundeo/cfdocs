@@ -14,7 +14,7 @@
     "engines": {
         "coldfusion": {"minimum_version":"10", "notes":"ColdFusion 11: Added the new attribute, throwOnError.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/Canonicalize.html"},
         "railo": {"minimum_version":"4.0", "notes":"", "docs":"http://www.getrailo.org/javadoc-4-0/railo/runtime/functions/owasp/Canonicalize.html"},
-        "lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/canonicalize.html"}
+        "lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/canonicalize.html"}
     },
     "examples": [
         {
@@ -26,7 +26,7 @@
         {
             "title": "Enforce multiple and mixed encoding detection",
             "description": "(Adode CF11+ example with `throwOnError` parameter set to true) Enforce multiple and mixed encoding detection. Mixed encoding is detected as the data is encoded using URL and HTML entity encoding. Multiple Encoding is also detected.",
-            "code": "<cftry>\n\t<cfoutput>#canonicalize(\"%26lt; %26lt; %2526lt%253B %2526lt%253B %2526lt%253B\",true,true, true)#</cfoutput><br/>\n\t<cfcatch type=\"any\" >\n\t\t<!--- throws Error when throwOnError set to true (CF11+) when mixed or mutiple encoding is detected. --->\n\t\t<cfdump var=\"#cfcatch#\" >\n\t</cfcatch>\n</cftry>",
+            "code": "<cftry>\n\t<cfoutput>#canonicalize(\"%26lt; %26lt; %2526lt%253B %2526lt%253B %2526lt%253B\",true,true, true)#</cfoutput><br/>\n\t<cfcatch type=\"any\" >\n\t\t<!--- throws Error when throwOnError set to true (CF11+) when mixed or multiple encoding is detected. --->\n\t\t<cfdump var=\"#cfcatch#\" >\n\t</cfcatch>\n</cftry>",
             "result": "Error Message: Input validation failure. The log message will contain more detailed information on the error."
         },
         {

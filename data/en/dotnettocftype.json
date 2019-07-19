@@ -1,19 +1,23 @@
 {
 	"name":"dotnetToCFType",
 	"type":"function",
-	"syntax":"dotnetToCFType(variable_name)",
+	"syntax":"dotnetToCFType(variableName)",
 	"returns":"any",
 	"related":[],
-	"description":" Explicitly converts a value returned by a .NET method to the corresponding ColdFusion data type.",
+	"description":"Explicitly converts a value returned by a .NET method to the corresponding ColdFusion data type.",
 	"params": [
-		{"name":"variable_name","description":"","required":true,"default":"","type":"Varible","values":[]}
+		{"name":"variableName","description":"Name of the .NET variable to convert.","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/dotnettocftype.html"}
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/dotnettocftype.html"}
 	},
 	"links": [
-
+               	{
+                    "title":"Using .NET Classes",
+                    "description":"This is a chapter from Developing ColdFusion Applications that discusses .NET Class usage in CF.",
+                    "url":"https://helpx.adobe.com/coldfusion/developing-applications/using-web-elements-and-external-objects/using-microsoft-net-assemblies/using-net-classes.html"
+		}
 	]
 
 }

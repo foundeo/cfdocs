@@ -9,19 +9,16 @@
 		{"name":"timeout","description":"Maximum length of time, in seconds, to wait to obtain a\n lock. If lock is obtained, tag execution continues.\n Otherwise, behavior depends on throwOnTimeout attribute\n value.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"scope","description":"Lock scope. Mutually exclusive with the name attribute.\n Lock name. Only one request in the specified scope can\n execute the code within this tag (or within any other\n cflock tag with the same lock scope scope) at a time.","required":false,"default":"","type":"string","values":["Application","request","Server","Session"]},
 		{"name":"name","description":"Lock name. Mutually exclusive with the scope attribute.\n Only one request can execute the code within a cflock tag\n with a given name at a time. Cannot be an empty string.","required":false,"default":"","type":"string","values":[]},
-		{"name":"throwontimeout","description":"How timeout conditions are handled.","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"throwontimeout","description":"How timeout conditions are handled.","required":false,"default":true,"type":"boolean","values":[]},
 		{"name":"type","description":"readOnly: lets more than one request read shared data.\n exclusive: lets one request read or write shared data.","required":false,"default":"exclusive","type":"string","values":["readonly","exclusive"]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cflock.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/lock.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/lock.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflock"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflock"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Script Syntax",
@@ -36,5 +33,4 @@
 	            "result": ""
 	        }
 	]
-
 }

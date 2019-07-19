@@ -5,16 +5,16 @@
 	"related":["cfabort","cfthrow","cfcatch","cflog","writeLog"],
 	"description":"Displays and logs debugging data about the state of an\n application at the time the cftrace tag executes. Tracks\n runtime logic flow, variable values, and execution time.\n Displays output at the end of the request or in the debugging\n section at the end of the request;\n\n CFML logs cftrace output to the file logs\\cftrace.log, in\n the CFML installation directory.\n\n Note: To permit this tag to execute, you must enable debugging\n in the CFML Administrator. Optionally, to report trace\n summaries, enable the Trace section.",
 	"params": [
-		{"name":"abort","description":"Calls cfabort tag when the tag is executed","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"abort","description":"Calls cfabort tag when the tag is executed","required":false,"default":false,"type":"boolean","values":[]},
 		{"name":"category","description":"User-defined string for identifying trace groups","required":false,"default":"","type":"string","values":[]},
-		{"name":"inline","description":"Displays trace code in line on the page in the\n location of the cftrace tag, addition to the debugging\n information output.","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"inline","description":"Displays trace code in line on the page in the\n location of the cftrace tag, addition to the debugging\n information output.","required":false,"default":false,"type":"boolean","values":[]},
 		{"name":"text","description":"User-defined string, which can include simple variable,\n but not complex variables such as arrays. Outputs to cflog\n text attribute","required":false,"default":"","type":"string","values":[]},
 		{"name":"type","description":"Corresponds to the cflog type attribute; displays an\n appropriate icon.\n\n * Information\n * Warning\n * Error\n * Fatal Information","required":false,"default":"information","type":"string","values":["information","warning","error","fatal information"]},
 		{"name":"var","description":"The name of a simple or complex variable to display.\n\n Useful for displaying a temporary value, or a value that\n does not display on any CFM page.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cftrace.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/trace.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/trace.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cftrace"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cftrace"}
 	},

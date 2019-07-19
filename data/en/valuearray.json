@@ -11,7 +11,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/valuearray.html"},
-		"lucee": {"minimum_version": "", "notes": "Lucee also supports passing `query.columnName` as the first argument, however it appears to be deprecated syntax. Use `queryColumnData()` instead.", "docs": "http://docs.lucee.org/reference/functions/valuearray.html"}
+		"lucee": {"minimum_version": "", "notes": "Lucee also supports passing `query.columnName` as the first argument, however it appears to be deprecated syntax. Use `queryColumnData()` instead.", "docs": "https://docs.lucee.org/reference/functions/valuearray.html"}
 	},
 	"examples": [
 		{

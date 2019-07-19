@@ -7,11 +7,11 @@
 	"description":"Creates an array of 1-3 dimensions. Index array elements with square brackets: [ ]. CFML arrays expand dynamically as data is added.",
 	"params": [
 		{"name":"dimension","description":"","required":true,"default":1,"type":"numeric","values":[1,2,3]},
-		{"name":"isSynchronized","description":"CF2016+ Lucee5.1+ When true creates a synchronized array. Unsynchronized arrays are not thread safe so they should not be used within shared scopes (application, session, etc). According to the CF2016 Performance whitepaper: Unsynchronized arrays are about 93% faster due to lock avoidance.","required":false,"default":false,"type":"boolean","values":[true,false]}
+		{"name":"isSynchronized","description":"CF2016+ Lucee5.1+ When true creates a synchronized array. Unsynchronized arrays are not thread safe so they should not be used within shared scopes (application, session, etc). According to the CF2016 Performance whitepaper: Unsynchronized arrays are about 93% faster due to lock avoidance.","required":false,"default":false,"type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraynew.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arraynew.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arraynew.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraynew"}
 	},
 	"links": [
