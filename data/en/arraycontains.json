@@ -24,32 +24,37 @@
 		{
 			"title": "Array Contains",
 			"description": "CF9+",
-			"code": "someArray = [1,2,3];\nwriteDump(arrayContains(someArray,2));",
-			"result": "true"
+			"code": "someArray = [1,2,3];\nwriteOutput(arrayContains(someArray,2));",
+			"result": "true",
+			"runnable":true
 		},
 		{
 			"title": "Array Contains (member function)",
 			"description": "CF10+",
-			"code": "someArray = [1,2,3];\nwriteDump(someArray.contains(2));",
-			"result": "true"
+			"code": "someArray = [1,2,3];\nwriteOutput(someArray.contains(2));",
+			"result": "true",
+			"runnable":true
 		},
 		{
 			"title": "Array Contains",
 			"description": "Lucee4.5+",
-			"code": "someArray = [1,2,3];\nwriteDump(arrayContains(someArray,2));",
-			"result": "2"
+			"code": "someArray = [1,2,3];\nwriteOutput(arrayContains(someArray,2));",
+			"result": "2",
+			"runnable":true
 		},
 		{
 			"title": "Array Contains (member function)",
 			"description": "Lucee4.5+",
-			"code": "someArray = [1,2,3];\nwriteDump(someArray.contains(2));",
-			"result": "2"
+			"code": "someArray = [1,2,3];\nwriteOutput(someArray.contains(2));",
+			"result": "2",
+			"runnable":true
 		},
 		{
 		   "title": "Substring Search",
 		   "description": "Lucee4.5+",
-		   "code": "words = [ 'hello' , 'world' ];\npositionOfSubstring = arrayContains( words, 'el', true );\nwriteDump(positionOfSubstring);",
-		   "result": "1"
+		   "code": "words = [ 'hello' , 'world' ];\npositionOfSubstring = arrayContains( words, 'el', true );\nwriteOutput(positionOfSubstring);",
+		   "result": "1",
+		   "runnable":true
 		}
 	]
 

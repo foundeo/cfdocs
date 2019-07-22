@@ -19,15 +19,15 @@
 		{
 			"title": "Numeric characters at beginning and middle of a string",
 			"description": "",
-			"code": "val(\"120test12sstring\");",
+			"code": "val(\"120test12sstring\")",
 			"result": "120",
 			"runnable": true
 		},
 		{
 			"title": "Numeric characters only at the end of a string",
 			"description": "",
-			"code": "val(\"string98\");",
-            		"result": "0",
+			"code": "val(\"string98\")",
+            "result": "0",
 			"runnable": true
 		}
 	]

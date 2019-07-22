@@ -31,7 +31,7 @@
 			"description":"CF10+ Puts an element in a named cache and then retrieves it.",
 			"code":"cacheID = \"cow\";\ntimespan = createTimeSpan(0, 0, 30, 0);\nidleTime = createTimeSpan(0, 0, 15, 0);\nregionName = \"region_cacheName\";\ncowSays = cacheGet(cacheID, regionName);\nif (isNull(cowSays)) {\n    cowSays = \"moo\";\n     cachePut(cacheID, cowSays, timespan, idleTime, regionName);\n}\nwriteOutput(\"The cow says #cowSays#.\");",
 			"result":"The cow says moo.",
-			"runnable":true
+			"runnable":false
 		}
 	]
 }

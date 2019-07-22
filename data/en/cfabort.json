@@ -21,14 +21,14 @@
 			"description":"In this example we demonstrate using the abort() function to stop any further processing after we deliberately call a non-existent function.",
 			"code":"try {\r\n\t// make a call to a non-existent function\r\n\tfirstName = userService.getUserById( 1 ).getFirstName();\r\n// catch any errors    \r\n} catch ( any e ) {\r\n\t// dump the error to the browser\r\n\twriteDump( e );\r\n\t// abort further processing\r\n\tabort;\r\n}",
 			"result":"Error page: Variable USERSERVICE is undefined.",
-			"runnable":true
+			"runnable":false
 		},
 		{
 			"title":"Example of using <cfabort> to stop processing after an error occurs",
 			"description":"In this example we demonstrate using the <cfabort> tag to stop any further processing after we deliberately call a non-existent function.",
 			"code":"<cftry>\r\n\t<!--- make a call to a non-existent function --->\r\n\t<cfset firstName = userService.getUserById( 1 ).getFirstName()>\r\n<!--- catch any errors --->\r\n<cfcatch type=\"any\">\r\n\t<!--- dump the error to the browser --->\r\n\t<cfdump var=\"#cfcatch#\">\r\n\t<!--- abort further processing --->\r\n\t<cfabort>\r\n</cfcatch>\r\n</cftry>",
 			"result":"Error page: Variable USERSERVICE is undefined.",
-			"runnable":true
+			"runnable":false
 		}
 	]
 }

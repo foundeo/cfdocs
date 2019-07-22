@@ -16,8 +16,8 @@
 	"examples": [{
 		"title":"Output current Locale's display name than set it to swiss locale",
 		"description":"",
-		"code":"writeOutput(getLocaleDisplayName());\r\nwriteOutput(' → ');\r\nsetLocale('de_ch');\r\nwriteOutput(getLocaleDisplayName());",
-		"result":"English (United States) → Deutsch (Schweiz)",
+		"code":"setLocale(\"English (US)\");\r\nwriteOutput(getLocaleDisplayName());",
+		"result":"English (United States)",
 		"runnable":true
 	}]
 }

@@ -55,13 +55,15 @@
 			"title": "Simple Example",
 			"description": "",
 			"code": "letters = [\"a\",\"b\",\"c\",\"d\"]; \narrayEach(letters, function(element,index) {\n    writeOutput(\"#index#:#element#;\");\n});",
-			"result": "1:a;2:b;3:c;4:d;"
+			"result": "1:a;2:b;3:c;4:d;",
+			"runnable":true
 		},
 		{
 			"title": "Member Function Example",
 			"description": "",
 			"code": "a = [\"a\",\"b\",\"c\"];\na.each(function(element,index,array){\n    writeOutput(\"#index#:#element#;\"); \n});",
-			"result": "1:a;2:b;3:c;"
+			"result": "1:a;2:b;3:c;",
+			"runnable":true
 		}
 	]
 }

@@ -38,7 +38,7 @@
 			"description":"Calls a remote web service to perform an addition, uses cfinvokeargument to pass the arguments to the method.",
 			"code":"<cfinvoke webservice=\"http://soaptest.parasoft.com/calculator.wsdl\" method=\"add\" returnvariable=\"answer\">\r\n    <cfinvokeargument name=\"x\" value=\"2\">\r\n    <cfinvokeargument name=\"y\" value=\"3\">\r\n</cfinvoke>\r\n<cfoutput>#answer#</cfoutput>",
 			"result":"5.0",
-			"runnable":true
+			"runnable":false
 		}
 	]
 

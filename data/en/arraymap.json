@@ -58,7 +58,7 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "complexData = [ {a: 4}, {a: 18}, {a: 51} ];\nnewArray = arrayMap( complexData, function(item){\n   return item.a;\n});\nwriteDump(newArray);",
+			"code": "complexData = [ {a: 4}, {a: 18}, {a: 51} ];\nnewArray = arrayMap( complexData, function(item){\n   return item.a;\n});\nwriteOutput(serializeJSON(newArray));",
 			"result": "[4, 18, 51]"
 		}
 	]

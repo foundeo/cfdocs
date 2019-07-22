@@ -55,22 +55,22 @@
     {
       "title": "Delete an element from an array",
       "description": "Uses the arrayDelete function to delete an element from an array",
-      "code": "arr = ['apple', 'orange', 'pear', 'apple'];\narrayDelete(arr, 'apple');\n\nwriteDump(arr);",
-      "result": "['orange','pear','apple']",
+      "code": "arr = [\"apple\", \"orange\", \"pear\", \"apple\"];\narrayDelete(arr, \"apple\");\n\nwriteOutput(serializeJSON(arr));",
+      "result": "[\"orange\",\"pear\",\"apple\"]",
       "runnable": true
     },
     {
       "title": "Delete an element from an array using the Array member function",
       "description": "CF11+ Lucee4.5+ Invoking the delete function on an array is the same as running arrayDelete.",
-      "code": "arr = ['apple', 'orange', 'pear', 'apple'];\narr.delete('apple');\n\nwriteDump(arr);",
-      "result": "['orange','pear','apple']",
+      "code": "arr = [\"apple\", \"orange\", \"pear\", \"apple\"];\narr.delete(\"apple\");\n\nwriteOutput(serializeJSON(arr));",
+      "result": "[\"orange\",\"pear\",\"apple\"]",
       "runnable": true
     },
     {
       "title": "Use of scope parameter",
       "description": "Lucee4.5+ Use scope to remove one or all occurrences of the value",
-      "code": "arr = ['apple', 'orange', 'pear', 'apple'];\narr.delete('apple', 'all');\n\nwriteDump(arr);",
-      "result": "['orange','pear']",
+      "code": "arr = [\"apple\", \"orange\", \"pear\", \"apple\"];\narr.delete(\"apple\", \"all\");\n\nwriteOutput(serializeJSON(arr));",
+      "result": "[\"orange\",\"pear\"]",
       "runnable": true
     }
   ]

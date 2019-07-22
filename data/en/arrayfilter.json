@@ -54,14 +54,16 @@
 		{
 			"title": "Simple numeric comparison",
 			"description": "Take an array of struct items and use arrayFilter to return ones of a rating 3 and higher.",
-			"code": "fruitArray = [{'fruit'='apple', 'rating'=4}, {'fruit'='banana', 'rating'=1}, {'fruit'='orange', 'rating'=5}, {'fruit'='mango', 'rating'=2}, {'fruit'='kiwi', 'rating'=3}];\n\nfavoriteFruits = arrayFilter(fruitArray, function(item){\n\treturn item.rating >= 3;\n});\nwritedump(serializeJSON(favoriteFruits));",
-			"result": "[{\"fruit\":\"apple\",\"rating\":4},{\"fruit\":\"orange\",\"rating\":5},{\"fruit\":\"kiwi\",\"rating\":3}]"
+			"code": "fruitArray = [{'fruit'='apple', 'rating'=4}, {'fruit'='banana', 'rating'=1}, {'fruit'='orange', 'rating'=5}, {'fruit'='mango', 'rating'=2}, {'fruit'='kiwi', 'rating'=3}];\n\nfavoriteFruits = arrayFilter(fruitArray, function(item){\n\treturn item.rating >= 3;\n});\nwriteOutput(serializeJSON(favoriteFruits));",
+			"result": "[{\"fruit\":\"apple\",\"rating\":4},{\"fruit\":\"orange\",\"rating\":5},{\"fruit\":\"kiwi\",\"rating\":3}]",
+			"runnable":true
 		},
 		{
 			"title": "Using a member function",
 			"description": "This is the same example as above, but using a member function on the array instead of a standalone function.",
-			"code": "fruitArray = [{'fruit'='apple', 'rating'=4}, {'fruit'='banana', 'rating'=1}, {'fruit'='orange', 'rating'=5}, {'fruit'='mango', 'rating'=2}, {'fruit'='kiwi', 'rating'=3}];\n\nfavoriteFruits = fruitArray.filter(function(item){\n\treturn item.rating >= 3;\n});\nwritedump(serializeJSON(favoriteFruits));",
-			"result": "[{\"fruit\":\"apple\",\"rating\":4},{\"fruit\":\"orange\",\"rating\":5},{\"fruit\":\"kiwi\",\"rating\":3}]"
+			"code": "fruitArray = [{'fruit'='apple', 'rating'=4}, {'fruit'='banana', 'rating'=1}, {'fruit'='orange', 'rating'=5}, {'fruit'='mango', 'rating'=2}, {'fruit'='kiwi', 'rating'=3}];\n\nfavoriteFruits = fruitArray.filter(function(item){\n\treturn item.rating >= 3;\n});\nwriteOutput(serializeJSON(favoriteFruits));",
+			"result": "[{\"fruit\":\"apple\",\"rating\":4},{\"fruit\":\"orange\",\"rating\":5},{\"fruit\":\"kiwi\",\"rating\":3}]",
+			"runnable":true
 		}
 	]
 }

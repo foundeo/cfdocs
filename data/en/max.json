@@ -20,7 +20,7 @@
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<cfset myNum1 = 4 /> \r\n<cfset myNum2 = 9 /> \r\n<cfoutput>The maximum of #myNum1# and #myNum2# numbers is #max(myNum1, myNum2)#.</cfoutput>",
+			"code":"<cfset myNum1 = 4 /> \r\n<cfset myNum2 = 9 /> \r\n<cfoutput>The maximum of #myNum1# and #myNum2# is #max(myNum1, myNum2)#.</cfoutput>",
 			"result":"The maximum of 4 and 9 is 9.",
 			"runnable":true
 		}

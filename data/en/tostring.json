@@ -25,16 +25,16 @@
 			"result": "Expected Result: stringValue"
 		},{
 			"title": "Structure to String",
-			"description": "",
+			"description": "Not supported on CF 2016 or 2018",
 			"code": "s = {\r\n    \"a\": \"1\",\r\n    \"b\":\"2\"\r\n};\r\nwriteOutput(toString(s));",
 			"result": "{a={1},b={2}}",
-			"runnable":true
-        	},{
+			"runnable":false
+		},{
 			"title": "Member syntax",
 			"description": "toString as a method",
 			"code": "num = 42;\nwriteOutput(num.toString());",
-			"result": "{a={1},b={2}}",
+			"result": "42",
 			"runnable":true
-        	}
+		}
 	]
 }

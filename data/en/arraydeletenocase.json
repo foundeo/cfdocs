@@ -39,8 +39,8 @@
     {
       "title": "Delete an element from an array",
       "description": "Deletes the first `apple` element from the array `arr`.",
-      "code": "arr = ['apple', 'orange', 'pear', 'Apple'];\narrayDeleteNoCase(arr, 'Apple');\n\nwriteDump(arr);",
-      "result": "['orange','pear','Apple']",
+      "code": "arr = ['apple', 'orange', 'pear', 'Apple'];\narrayDeleteNoCase(arr, 'Apple');\n\nwriteOutput(serializeJSON(arr));",
+      "result": "[\"orange\",\"pear\",\"Apple\"]",
       "runnable": true
     }
   ]

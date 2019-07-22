@@ -18,8 +18,8 @@
 	"examples": [{
             "title": "Output UTC Date of 2017/8/8",
             "description": "",
-            "code": "getHTTPTimeString(\"{ts '2017-07-08 00:00:00'}\")",
+            "code": "writeOutput( getHTTPTimeString(\"{ts '2017-07-08 00:00:00'}\") );",
             "result": "Tue, 08 Aug 2017 00:00:00 GMT",
-            "runnable": true
+            "runnable": false
 	}]
 }

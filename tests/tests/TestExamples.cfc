@@ -1,14 +1,15 @@
 component extends="testbox.system.BaseSpec" {
-
 	variables.supportedFunctions = structKeyList(getFunctionList());
 
 	function run(testResults, testBox) {
-		dataDir = ExpandPath("../data/en");
+		dataDir = ExpandPath("data/en");
 		files = directoryList(dataDir, false, "array");
-
+	
 		describe("Test Examples", function() {
 			it("should match the expected result", function() {
+				var idy=0;
 				for (filePath in files) {
+					idy++;
 					var json = fileRead(filePath);
 					var isItJson = isJSON(json);
 					var fileName = getFileFromPath(filePath);
@@ -19,35 +20,39 @@ component extends="testbox.system.BaseSpec" {
 								//skip this test because it does not run on lucee, ACF specific tag or function
 								continue;
 							}
-              				var idx=0;
+							var idx=0;
 							for (var e in json.examples) {
-                				idx++;
-								if (e.keyExists("code") && e.keyExists("result") && Len(e.result)) {
-									if (json.type == "function" && !listFindNoCase(variables.supportedFunctions, json.name)) {
-										//skip because it is not supported by current engine
-										continue;
-									}
-									if (!find("<cf", e.code) && !find(";", e.code) && !find("{", e.code)) {
+								idx++;
+								if (e.keyExists("runnable") && e.runnable) {
+									if (e.keyExists("code") && e.keyExists("result") && Len(e.result)) {
+										if (json.type == "function" && !listFindNoCase(variables.supportedFunctions, json.name)) {
+											//skip because it is not supported by current engine
+											continue;
+										}
+										if (find("ColdFusion",server.coldfusion.productname) && findNoCase("lucee",e.description)) {
+											//skip because this example is Lucee specific
+											continue;
+										}
 										var actualResult = "";
-										local.examplePath = "#getTempDirectory()#cfdoc-example-#createUUID()#.cfm";
+										local.examplePath = "#getTempDirectory()##idy#-#idx##json.name##createUUID()#.cfm";
 										try {
-											
-											fileWrite(local.examplePath, "<c" & "fscript>writeOutput( " & e.code & ");</c" & "fscript>");
-
+											if (!find("<cf", e.code) && !find(";", e.code) && !find("{", e.code)) {
+												e.code = "<cfscript>writeOutput(" & e.code & ");</cfscript>";
+											} else if (!find("<cf", e.code)) {
+												e.code = "<cfscript>" & e.code & "</cfscript>";
+											}
+											fileWrite(local.examplePath, e.code);
 											cfsavecontent( variable="actualResult" ) {
 												include "/temp/#getFileFromPath(local.examplePath)#";
 											}
-											
 											actualResult = trim(actualResult);
 										} catch(any ex) {
 											actualResult = "EXCEPTION in example #idx# in #fileName#: #ex.message#";
 										} finally {
 											if (fileExists(local.examplePath)) {
-												fileDelete(local.examplePath);
+												//fileDelete(local.examplePath);
 											}
 										}
-
-										
 										if (isBoolean(e.result) && !isNumeric(e.result)) {
 											expect(isBoolean(actualResult)).toBeTrue("#fileName# example result is:#e.result# but evaluated to:#actualResult#");
 											if (e.result == true) {
@@ -62,13 +67,10 @@ component extends="testbox.system.BaseSpec" {
 											} else if (isJSON(e.result)) {
 												//ACF and Lucee may serialize numbers or booleans differently so try to normalize it
 												expect(deserializeJSON(actualResult)).toBe(deserializeJSON(e.result), "#fileName# example result is:#e.result# but evaluated to:#actualResult#");
-
 											} else {
 												expect(actualResult).toBe(e.result, "#fileName# example result is:#e.result# but evaluated to:#actualResult#");	
-											}
-											
+											}	
 										}
-
 									}
 								}
 							}

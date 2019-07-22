@@ -28,15 +28,15 @@
 		},
 		{
 			"title":"Append options to config struct (same, but using member function)",
-			"description":"",
+			"description":"Lucee and CF 2018 only. CF 2016 does not respect the overwrite flag.",
 			"code":"config = {a:0, b:0};\noptions= {b:1, c:1};\nconfig.append(options, false);\nwriteOutput( serializeJSON( config ) );",
 			"result":"{\"A\":0,\"B\":0,\"C\":1}",
-			"runnable": true
+			"runnable": false
 		},
 		{
 			"title":"Append options to config struct (with overwrite flag)",
 			"description":"",
-			"code":"config = {a:0, b:0};\noptions= {b:1, c:1};\nstructAppend(config, options);\nwriteOutput( serializeJSON( config ) );",
+			"code":"config = {a:0, b:0};\noptions= {b:1, c:1};\nstructAppend(config, options, true);\nwriteOutput( serializeJSON( config ) );",
 			"result":"{\"A\":0,\"B\":1,\"C\":1}",
 			"runnable": true
 		},
@@ -49,9 +49,9 @@
 		},
 		{
 			"title": "Polyfill for earlier versions",
-			"description": "In older coldfusion version where this function is not supported yet, you can fall back to a native java method to achieve the same behavior except that it does not have the `overwriteFlag`.",
+			"description": "In older coldfusion version where this function is not supported yet, you can fall back to a native java method to achieve the same behavior except that it does not have the `overwriteFlag`. CF 2016 and 2018 default to overwrite.",
 			"code":"config = {a:0, b:0};\noptions= {b:1, c:1};\nconfig.putAll(options);\nwriteOutput( serializeJSON( config ) );",
-			"result":"{\"A\":0,\"B\":0,\"C\":1}",
+			"result":"{\"A\":0,\"B\":1,\"C\":1}",
 			"runnable": true
 		}
 	]

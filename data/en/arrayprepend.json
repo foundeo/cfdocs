@@ -20,14 +20,14 @@
 		{
 			"title": "Prepend a value to an array",
 			"description": "Uses the arrayPrepend function to prepend a value to the beginning of an array and shifts the positions of the existing elements.",
-			"code": "someArray = [3,2,1]; \narrayPrepend(someArray, 4);\nwriteDump(someArray);",
+			"code": "someArray = [3,2,1]; \narrayPrepend(someArray, 4);\nwriteOutput(serializeJSON(someArray));",
 			"result": "[4,3,2,1]"
 		},
 		{
 			"title": "Prepend a value to an array using the Array member function",
 			"description": "CF11+ Lucee4.5+ Invoking the the prepend function on an array is the same as running arrayPrepend.",
-			"code": "doctorArray = ['Eccleston','Tennant','Smith','Capaldi'];\ndoctorArray.prepend('Hurt');\nwriteDump(doctorArray);",
-			"result": "['Hurt','Eccleston','Tennant','Smith','Capaldi']"
+			"code": "doctorArray = ['Eccleston','Tennant','Smith','Capaldi'];\ndoctorArray.prepend('Hurt');\nwriteOutput(serializeJSON(doctorArray));",
+			"result": "[\"Hurt\",\"Eccleston\",\"Tennant\",\"Smith\",\"Capaldi\"]"
 		}
 	]
 }

@@ -20,7 +20,7 @@
 		{
 			"title":"Minimum of 4 and 9",
 			"description":"",
-			"code":"<cfset myNum1 = 4 /> \r\n<cfset myNum2 = 9 /> \r\n<cfoutput>The minimum of #myNum1# and #myNum2# numbers is #min(myNum1, myNum2)#.</cfoutput>",
+			"code":"<cfset myNum1 = 4 /> \r\n<cfset myNum2 = 9 /> \r\n<cfoutput>The minimum of #myNum1# and #myNum2# is #min(myNum1, myNum2)#.</cfoutput>",
 			"result":"The minimum of 4 and 9 is 4.",
 			"runnable":true
 		}

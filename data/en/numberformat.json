@@ -35,7 +35,7 @@
 			"title":"Zero will pad zeros; nine doesn’t",
 			"description":"",
 			"code":"num1 = NumberFormat(123,'00000');\r\nnum2 = NumberFormat(123,'99999');\r\n    \r\nwriteOutput(num1&'/'&num2);",
-			"result":"00123/ 123",
+			"result":"00123/  123",
 			"runnable":true
 		},{
 			"title":"show positive/negative sign",

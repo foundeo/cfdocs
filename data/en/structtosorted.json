@@ -100,8 +100,8 @@
 		{
 			"title": "structToSorted  with an inline function sorting by key value",
 			"description": "Use a function to sort the keys by numeric value descending",
-			"code": "someStruct = {\r\n    \"NINE\": 9,\r\n    \"SIX\": 6,\r\n    \"THREE\": 3,\r\n    \"TWELVE\": 12,\r\n    \"tres\": 3,\r\n    \"seis\": 6,\r\n    \"nueve\": 9,\r\n    \"doce\": 12\r\n};\r\n     \r\nfunction sortByNumericValuesDescending(value1, value2, key1, key2) {\r\n        if (value1 > value2) {\r\n            return -1;\r\n        }\r\n        return 1;\r\n};\r\n    \r\nsortedStruct=StructToSorted(someStruct, sortByNumericValuesDescending);\r\nwritedump(sortedStruct);",
-			"result": "A new struct with the keys ordered by value descending",
+			"code": "someStruct = {\"NINE\": 9,\"SIX\": 6,\"THREE\": 3,\"TWELVE\": 12,\"tres\": 3,\"seis\": 6,\"nueve\": 9,\"doce\": 12\r\n};\r\n     \r\nfunction sortByNumericValuesDescending(value1, value2, key1, key2) {\r\n        if (value1 > value2) {\r\n            return -1;\r\n        }\r\n        return 1;\r\n};\r\n    \r\nsortedStruct=StructToSorted(someStruct, sortByNumericValuesDescending);\r\nwriteOutput(serializeJSON(sortedStruct));",
+			"result": "{\"TWELVE\":12,\"doce\":12,\"NINE\":9,\"nueve\":9,\"SIX\":6,\"seis\":6,\"tres\":3,\"THREE\":3}",
 			"runnable": true
 		},
 		{
@@ -109,21 +109,21 @@
 			"description": "Use a function to sort the keys by numeric value descending",
 			"code": "someStruct = {\r\n    \"NINE\": 9,\r\n    \"SIX\": 6,\r\n    \"THREE\": 3,\r\n    \"TWELVE\": 12,\r\n    \"tres\": 3,\r\n    \"seis\": 6,\r\n    \"nueve\": 9,\r\n    \"doce\": 12\r\n};\r\n     \r\nfunction sortByNumericValuesDescending(value1, value2, key1, key2) {\r\n        if (value1 > value2) {\r\n            return -1;\r\n        }\r\n        return 1;\r\n};\r\n\r\nsortedStruct=someStruct.ToSorted(sortByNumericValuesDescending);\r\nwritedump(sortedStruct);",
 			"result": "A new struct with the keys ordered by value descending",
-			"runnable": true
+			"runnable": false
 		},
 		{
 			"title": "structToSorted  member function with an inline function sorting by key name",
 			"description": "Use a function to sort the keys by name",
 			"code": "someStruct = {\r\n    \"NINE\": 9,\r\n    \"SIX\": 6,\r\n    \"THREE\": 3,\r\n    \"TWELVE\": 12,\r\n    \"tres\": 3,\r\n    \"seis\": 6,\r\n    \"nueve\": 9,\r\n    \"doce\": 12\r\n};\r\n     \r\nfunction sortByKeyName(value1, value2, key1, key2) {\r\n        return compareNoCase(key1, key2);\r\n}\r\n\r\nsortedStruct=someStruct.ToSorted(sortByKeyName);\r\nwritedump(sortedStruct);",
 			"result": "A new struct with the keys ordered by key name",
-			"runnable": true
+			"runnable": false
 		},
 		{
 			"title": "structToSorted  member function with sorttype argument",
 			"description": "Use a function to sort the keys by name",
 			"code": "someStruct = {\r\n    \"NINE\": 9,\r\n    \"SIX\": 6,\r\n    \"THREE\": 3,\r\n    \"TWELVE\": 12,\r\n    \"tres\": 3,\r\n    \"seis\": 6,\r\n    \"nueve\": 9,\r\n    \"doce\": 12\r\n};\r\n     \r\nsortedStruct=someStruct.ToSorted(\"text\",\"asc\",false);\r\nwritedump(sortedStruct);",
 			"result": "A new struct with the keys ordered by key name",
-			"runnable": true
+			"runnable": false
 		}
 	]
 

@@ -24,19 +24,19 @@
 		{
 			"title":"Simple arraySlice Example",
 			"description":"",
-			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = arraySlice(array, 2, 3);\nwritedump(newArray)",
+			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = arraySlice(array, 2, 3);\nwriteOutput(serializeJSON(newArray));",
 			"result":"[2,3,4]"
 		},
 		{
 			"title":"arraySlice with no length specified",
 			"description":"",
-			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = arraySlice(array, 4);\nwritedump(newArray)",
+			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = arraySlice(array, 4);\nwriteOutput(serializeJSON(newArray));",
 			"result":"[4,5,6,7,8]"
 		},
 		{
 			"title":"arraySlice using a negative offset",
 			"description":"",
-			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = arraySlice(array, -5, 3);\nwritedump(newArray)",
+			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = arraySlice(array, -5, 3);\nwriteOutput(serializeJSON(newArray));",
 			"result":"[4,5,6]"
 		}
 	]

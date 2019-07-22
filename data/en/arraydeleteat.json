@@ -50,13 +50,15 @@
       "title": "Simple example for arrayDeleteAt function",
       "description": "Uses the arrayDeleteAt function to delete the value in specific position",
       "code": "someArray = [\"Red\", \"White\", \"Green\", \"Blue\", \"Pink\"];\narrayDeleteAt(someArray, 3);\nwriteOutput(serializeJSON(someArray));",
-      "result": "[\"Red\", \"White\", \"Blue\", \"Pink\"]"
+      "result": "[\"Red\", \"White\", \"Blue\", \"Pink\"]",
+			"runnable":true
     },
     {
       "title": "Simple example with member function",
       "description": "CF11+ Lucee4.5+ Uses the member function is the same as running arrayDeleteAt.",
       "code": "someArray = [\"Red\", \"White\", \"Green\", \"Blue\", \"Pink\"];\nsomeArray.DeleteAt(2);\nwriteOutput(serializeJSON(someArray));",
-      "result": "[\"Red\", \"Green\", \"Blue\", \"Pink\"]"
+      "result": "[\"Red\", \"Green\", \"Blue\", \"Pink\"]",
+			"runnable":true
     }
   ]
 }
