@@ -4,7 +4,7 @@
 	"syntax":"isSimpleValue(value)",
 	"returns":"boolean",
 	"related":["isArray","isStruct"],
-	"description":" Determines the type of a value.",
+	"description":"Returns true only if the value is a string, boolean, numeric, or date.",
 	"params": [
 		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
 	],
