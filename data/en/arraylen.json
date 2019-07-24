@@ -26,13 +26,15 @@
 			"title": "Simple example for arrayLen function",
 			"description": "Uses the arrayLen function to get the total length of an array",
 			"code": "numberArray = [1,2,3,4];\nwriteOutput(arrayLen(numberArray));",
-			"result": "4"
+			"result": "4",
+			"runnable":true
 		},
 		{
 			"title": "Total length of an array using the member function",
 			"description": "CF11+ Lucee4.5+ Uses the len member function is the same as running arrayLen.",
 			"code": "colorArray = ['Green','red','blue'];\nwriteOutput(colorArray.len());",
-			"result": "3"
+			"result": "3",
+			"runnable":true
 		}
 	]
 }

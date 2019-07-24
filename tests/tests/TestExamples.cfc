@@ -2,7 +2,7 @@ component extends="testbox.system.BaseSpec" {
 	variables.supportedFunctions = structKeyList(getFunctionList());
 
 	function run(testResults, testBox) {
-		dataDir = ExpandPath("data/en");
+		dataDir = ExpandPath("../data/en");
 		files = directoryList(dataDir, false, "array");
 	
 		describe("Test Examples", function() {
@@ -34,7 +34,7 @@ component extends="testbox.system.BaseSpec" {
 											continue;
 										}
 										var actualResult = "";
-										local.examplePath = "#getTempDirectory()##idy#-#idx##json.name##createUUID()#.cfm";
+										local.examplePath = "#getTempDirectory()#cfdoc-example-#createUUID()#.cfm";
 										try {
 											if (!find("<cf", e.code) && !find(";", e.code) && !find("{", e.code)) {
 												e.code = "<cfscript>writeOutput(" & e.code & ");</cfscript>";
@@ -50,7 +50,7 @@ component extends="testbox.system.BaseSpec" {
 											actualResult = "EXCEPTION in example #idx# in #fileName#: #ex.message#";
 										} finally {
 											if (fileExists(local.examplePath)) {
-												//fileDelete(local.examplePath);
+												fileDelete(local.examplePath);
 											}
 										}
 										if (isBoolean(e.result) && !isNumeric(e.result)) {
@@ -76,9 +76,7 @@ component extends="testbox.system.BaseSpec" {
 							}
 						}
 					}
-
 				}
-
 			});
 		});
 	}

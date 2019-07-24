@@ -21,7 +21,8 @@
             "title": "Canonicalize the simple html entity encoded string",
             "description": "Canonicalize the simple html entity encoded string.",
             "code": "<cfoutput>#canonicalize(\"&lt;\",false,false)#</cfoutput>",
-            "result": "<"
+            "result": "<",
+			"runnable":true
         },
         {
             "title": "Enforce multiple and mixed encoding detection",
@@ -44,8 +45,9 @@
         {
             "title": "Mixed and multiple encoding detected",
             "description": "Mixed encoding is detected as the data is encoded using URL and HTML entity encoding. Multiple Encoding is also detected.",
-            "code": "<!--- Decodes the string using both percent and HTML Entity encodings as the flags were set to false --->\n<cfoutput>#canonicalize(\"%26lt; %26lt; %2526lt%253B %2526lt%253B %2526lt%253B\",false,false)#</cfoutput><br/>\n<cfoutput>#canonicalize(\"&##X25;3c\",false,false)#</cfoutput><br/>\n<cfoutput>#canonicalize(\"&##x25;3c\",false,false)#</cfoutput>",
-            "result": "< < < < <\n<\n<"
+            "code": "<!--- Decodes the string using both percent and HTML Entity encodings as the flags were set to false --->\n<cfoutput>#canonicalize(\"%26lt; %26lt; %2526lt%253B %2526lt%253B %2526lt%253B\",false,false)#</cfoutput>\n<cfoutput>#canonicalize(\"&##X25;3c\",false,false)#</cfoutput>\n<cfoutput>#canonicalize(\"&##x25;3c\",false,false)#</cfoutput>",
+            "result": "< < < < < < <",
+			"runnable":true
         },
         {
             "title": "Simple Javascript decoding",

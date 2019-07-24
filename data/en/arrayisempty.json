@@ -23,25 +23,29 @@
 			"title": "Simple example for arrayIsEmpty function",
 			"description": "To check an array is empty or not",
 			"code": "someArray = [1,2,3,4,5];\nwriteOutput(arrayIsEmpty(someArray));",
-			"result": "No"
+			"result": "No",
+			"runnable":true
 		},
 		{
 			"title": "Simple example for arrayIsEmpty function",
 			"description": "Lucee4.5+ To check an array is empty or not",
 			"code": "someArray = [1,2,3,4,5];\nwriteOutput(arrayIsEmpty(someArray));",
-			"result": "false"
+			"result": "false",
+			"runnable":true
 		},
 		{
 			"title": "Simple example with member function",
 			"description": "CF11+ Uses the member function is the same as running arrayIsEmpty.",
 			"code": "numberArray = arrayNew(1);\nwriteOutput(numberArray.isEmpty());",
-			"result": "Yes"
+			"result": "Yes",
+			"runnable":true
 		},
 		{
 			"title": "Simple example with member function",
 			"description": "Lucee4.5+ Uses the member function is the same as running arrayIsEmpty.",
 			"code": "numberArray = arrayNew(1);\nwriteOutput(numberArray.isEmpty());",
-			"result": "true"
+			"result": "true",
+			"runnable":true
 		}
 	]
 

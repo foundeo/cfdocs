@@ -25,13 +25,15 @@
 			"title":"Find an \"Apple\" in an array of fruit",
 			"description":"Returns the index of the element \"Apple\" in the array",
 			"code":"writeOutput( arrayFindNoCase([\"orange\",\"pineapple\",\"apple\"], \"Apple\" ) );",
-			"result":"3"
+			"result":"3",
+			"runnable":true
 		},
 		{
 			"title":"Member Functions: Find an \"Apple\" in an array of fruit",
 			"description":"Calls the findNoCase member function of the array object. Requires CF11+ or Lucee4.5+",
 			"code":"fruit = [\"orange\",\"pineapple\",\"apple\"];\nwriteOutput( fruit.findNoCase(\"Apple\") );",
-			"result":"3"
+			"result":"3",
+			"runnable":true
 		}
 	]
 }

@@ -25,8 +25,9 @@
 		{
 			"title": "Example Syntax",
 			"description": " ",
-			"code": "<cfset cacheRegionRemove('testregion')>",
-			"result": ""
+			"code": "<cfset cacheRegionRemove('testregion')>\r\n<cfoutput>#cacheRegionExists('testregion')#</cfoutput>",
+			"result": "false",
+			"runnable":true
 		}
 	]
 }

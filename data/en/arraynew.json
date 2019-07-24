@@ -26,25 +26,29 @@
 			"title": "Create the One dimensional array",
 			"description": "Uses the arrayNew function to create the new array",
 			"code": "newArray = arrayNew(1);\nsomeArray = arraySet(newArray, 1, 4, \"All is well\");\nwriteOutput( serializeJSON(newArray) );",
-			"result": "[\"All is well\", \"All is well\", \"All is well\", \"All is well\"]"
+			"result": "[\"All is well\", \"All is well\", \"All is well\", \"All is well\"]",
+			"runnable":true
 		},
 		{
 			"title": "Create the Two dimensional array",
 			"description": "Uses the arrayNew function to create the new array",
 			"code": "newArray = arrayNew(2);\nnewArray[1][1] = \"First value\";\nnewArray[1][1] = \"First value\";\nnewArray[1][2] = \"First value\";\nnewArray[2][1] = \"Second value\";\nnewArray[2][2] = \"Second value\";\nwriteOutput( serializeJSON(newArray) );",
-			"result": "[[\"First value\", \"First value\"],[\"Second value\", \"Second value\"]]"
+			"result": "[[\"First value\", \"First value\"],[\"Second value\", \"Second value\"]]",
+			"runnable":true
 		},
 		{
 			"title": "Create unsynchronized array",
 			"description": "CF2016+ Uses the arrayNew function to create the new unsynchronized array",
 			"code": "newArray = arrayNew(1, true);\nnewArray.append(\"one\");\nwriteOutput( serializeJSON(newArray) );",
-			"result": "[\"one\"]"
+			"result": "[\"one\"]",
+			"runnable":true
 		},
 		{
 			"title": "Create an array using implicit notation",
 			"description": "CF8+ Instead of using arrayNew you can also create an array using square brackets.",
 			"code": "newArray = [\"one\",\"two\"];\nwriteOutput( serializeJSON(newArray) );",
-			"result": "[\"one\", \"two\"]"
+			"result": "[\"one\", \"two\"]",
+			"runnable":true
 		}
 	]
 }

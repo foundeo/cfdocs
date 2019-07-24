@@ -24,13 +24,15 @@
 			"title": "Script Syntax",
 			"description": "",
 			"code": "fruit = \"\";\r\nswitch(fruit) {\r\n    case \"Apple\":\r\n        writeOutput(\"I like apples!\");\r\n        break; \r\n    case \"Orange\": case \"Citrus\":\r\n        writeOutput(\"I like oranges!\");\r\n        break; \r\n    case \"Kiwi\":\r\n        writeOutput(\"I like kiwi!\"); \r\n        break; \r\n    default: \r\n        writeOutput(\"Fruit, what fruit?\"); \r\n        break; \r\n }",
-			"result": "Fruit, what fruit?"
+			"result": "Fruit, what fruit?",
+			"runnable":true
 		},
         {
             "title": "Tag Syntax",
             "description": "",
             "code": "<cfset fruit = \"Orange\"> \r\n<cfswitch expression=\"#fruit#\"> \r\n    <cfcase value=\"Apple\">I like apples!</cfcase>\r\n    <cfcase value=\"Orange;Citrus\" delimiters=\";\">I like oranges!</cfcase> \r\n    <cfcase value=\"Kiwi\">I like kiwi!</cfcase>\r\n    <cfdefaultcase>Fruit, what fruit?</cfdefaultcase> \r\n</cfswitch>",
-            "result": "I like oranges!"
+            "result": "I like oranges!",
+			"runnable":true
         }
 	]
 

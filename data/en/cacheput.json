@@ -26,14 +26,14 @@
 			"description": "",
 			"code": "<cfset cachedData = cacheGet(\"wt-6-cache\")>\r\n<!--- If the data is not cached, create it and do a cache put. --->\r\n<cfif isNull(cachedData)>\r\n\tCache doesn't exist, so create it.<br />\r\n\t<cfset sleep(1000)>\r\n\t<cfset cachedData = \"This date/time IS cached: #now()#<br />\">\r\n\t<cfoutput>#cachedData#</cfoutput> \r\n\t<cfset cachePut(\"wt-6-cache\", cachedData, createTimespan(0,0,0,10))>\r\n</cfif>",
 			"result": "",
-            		"runnable":false
+			"runnable":false
 		},
 		{
 			"title":"Script Syntax",
 			"description":"I place data into the default cache.",
-			"code":"<cfscript>\r\n// generate some data to cache\r\ndata = { bar = 'foo', foo = 'bar' };\r\n\r\n// add the data to a named cache\r\ncachePut( 'cached_object_name_or_id', data, createTimeSpan( 0, 0, 30, 0 ), createTimeSpan( 0, 0, 15, 0 ) );\r\n</cfscript>",
-			"result":"",
-			"runnable":false
+			"code":"// generate some data to cache\r\ndata = { bar = 'foo', foo = 'bar' };\r\n\r\n// add the data to a named cache\r\ncachePut( 'cached_object_name_or_id', data, createTimeSpan( 0, 0, 30, 0 ), createTimeSpan( 0, 0, 15, 0 ) );\r\nwriteOutput( serializeJson( cacheGet( 'cached_object_name_or_id' ) ) );",
+			"result":"{\"BAR\":\"foo\",\"FOO\":\"bar\"}",
+			"runnable":true
 		},
 		{
 			"title":"Script Syntax - Named Cache",

@@ -24,6 +24,8 @@
 			"title":"Validate against an XML Schema",
 			"description": "Validates that note.xml is valid according to the schema note.xsd",
 			"code": "xmlValidate(\"https://www.w3schools.com/xml/note.xml\", \"https://www.w3schools.com/xml/note.xsd\").status",
+			"result":"true",
+			"runnable":false
 		}
 
 	]

@@ -23,7 +23,7 @@
 			"title": "Clear the value of an array",
 			"description": "Uses the arrayClear function to clear the value of an array",
 			"code": "someArray = [\"Red\", \"White\", \"Green\", \"Blue\", \"Pink\"];\nwriteOutput(arrayClear(someArray));",
-			"result": "Yes",
+			"result": "true",
 			"runnable":true
 		},
 		{
@@ -37,7 +37,7 @@
 			"title": "Clear value of an array using member function",
 			"description": "CF11+ Uses the member function is the same as running arrayClear.",
 			"code": "numberArray = [1,2,3];\nwriteOutput(numberArray.Clear());",
-			"result": "Yes",
+			"result": "true",
 			"runnable":true
 		}
 	]

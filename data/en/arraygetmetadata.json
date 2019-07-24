@@ -13,5 +13,13 @@
 		"coldfusion": {"minimum_version":"2016.0.2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraygetmetadata.html"}
 	},
   	"links": [],
-  	"examples": []
+  	"examples": [
+		{
+			"title":"cfscript",
+			"description":"Gets metadata values for element(s) in an array.",
+			"code":"<cfscript>\r\n    inputs = [\"CFdocs\", 123.456, \"False\", \"null\"];\r\n    metadata={items: [\"string\", \"numeric\", \"boolean\", \"null\"]};\r\n    ArraySetMetaData(inputs,metadata);\r\n    writeOutput(serializeJSON(ArrayGetMetaData(inputs)));\r\n</cfscript>",
+			"result":"{\"ITEMS\":[\"string\",\"numeric\",\"boolean\",\"null\"],\"type\":\"synchronized\"}",
+			"runnable":true
+		}
+	  ]
 }

@@ -67,7 +67,8 @@
 			"title": "Simple arrayReduce Example",
 			"description": "Sum each `a` element in the array",
 			"code": "complexData = [ {a: 4}, {a: 18}, {a: 51} ];sum = arrayReduce( complexData, function(prev, element){\n\treturn prev + element.a;\n}, 0 );\nwriteOutput(sum);",
-			"result": "73"
+			"result": "73",
+			"runnable":true
 		}
     ]
 }

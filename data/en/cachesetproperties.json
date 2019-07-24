@@ -16,5 +16,13 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cachesetproperties"}
 	},
 	"links": [],
-	"examples":[]
+	"examples":[
+		{
+			"title":"cfscript",
+			"description":"Create cache object, set a property, then read the property",
+			"code":"<cfscript>\r\n  if ( cacheRegionExists( 'cacheRegion' ) ) cacheRegionRemove( 'cacheRegion' );\r\n  cacheProperties = {};\r\n  cacheRegionNew( \"cacheRegion\", cacheProperties, true);\r\n  cacheProperties.diskPersistent = false;\r\n  cacheSetProperties( cacheProperties, \"cacheRegion\" );\r\n  writeOutput( cacheGetProperties( 'cacheRegion' ).diskPersistent );\r\n  cacheRegionRemove( 'cacheRegion' );\r\n</cfscript>\r\n",
+			"result":"false",
+			"runnable":true
+		}
+	]
 }

@@ -18,13 +18,15 @@
             "title": "Member Function",
             "description": "Use the member function to return the first item from an array",
             "code": "someArray = [1,2,3,4];\nWriteOutput(someArray.first());",
-            "result": "1"
+            "result": "1",
+			"runnable":true
         },
         {
             "title": "Non-Member Function",
             "description": "Return the first item from an array",
             "code": "seinfeldArray = [\"Jerry\",\"Elaine\",\"Kramer\",\"George\"];\nWriteOutput(arrayFirst(seinfeldArray));",
-            "result": "\"Jerry\""
+            "result": "\"Jerry\"",
+			"runnable":true
         }
     ],
 	"links": []

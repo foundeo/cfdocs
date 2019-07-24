@@ -12,5 +12,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cachegetallids"}
 	},
 	"links": [],
-	"examples": []
+	"examples": [
+		{
+			"title":"cfscript",
+			"description":"Gets the IDs of all objects stored in the cache.",
+			"code":"<cfscript>    cacheRemoveAll();\r\n    cachePut(\"1\", \"1\");\r\n    cachePut(\"2\", \"2\");\r\n    writeOutput(serializeJson(CacheGetAllIds()));\r\n</cfscript>",
+			"result":"[\"1\",\"2\"]",
+			"runnable":true
+		}
+	]
 }

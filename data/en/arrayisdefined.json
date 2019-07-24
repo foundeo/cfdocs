@@ -24,25 +24,29 @@
 			"title": "Simple example",
 			"description": "CF8+ To check an array element is define or not",
 			"code": "someArray = [1,2,3,4,5];\nwriteOutput(arrayIsDefined(someArray, 3));",
-			"result": "Yes"
+			"result": "Yes",
+			"runnable":true
 		},
 		{
 			"title": "Simple example",
 			"description": "Lucee4.5+ To check an array element is define or not",
 			"code": "someArray = [1,2,3,4,5];\nwriteOutput(arrayIsDefined(someArray, 6));",
-			"result": "false"
+			"result": "false",
+			"runnable":true
 		},
 		{
 			"title": "Simple example with two dimensional array",
 			"description": "CF8+ To check an array element is define or not",
 			"code": "FirstArray = [1,2,3];\nsecondArray = [11,12,13];\ncombineArray = arrayNew(2);\narrayAppend(combineArray, firstArray);\narrayAppend(combineArray, secondArray);\nwriteOutput(arrayIsDefined(combineArray, 3));",
-			"result": "No"
+			"result": "No",
+			"runnable":true
 		},
 		{
 			"title": "Simple example with two dimensional array",
 			"description": "Lucee4.5+ To check an array element is define or not",
 			"code": "FirstArray = [1,2,3];\nsecondArray = [11,12,13];\ncombineArray = arrayNew(2);\narrayAppend(combineArray, firstArray);\narrayAppend(combineArray, secondArray);\nwriteOutput(arrayIsDefined(combineArray, 2));",
-			"result": "true"
+			"result": "true",
+			"runnable":true
 		}
 	]
 

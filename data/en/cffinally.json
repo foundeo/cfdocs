@@ -20,13 +20,15 @@
 			"title": "Script Syntax",
 			"description": "",
 			"code": "try {\r\n\twriteOutput('hello world<br/>');\r\n\tthrow(message='threw on purpose!');\r\n}catch(any e){\r\n\twriteOutput('Caught an exception<br/>');\r\n}finally{\r\n\twriteOutput('Ran clean-up code regardless of error');\r\n}",
-			"result": "hello world\r\nCaught an exception\r\nRan clean-up code regardless of error"
+			"result": "hello world<br/>Caught an exception<br/>Ran clean-up code regardless of error",
+			"runnable":true
 		},
 		{
 			"title": "Tag Syntax",
 			"description": "",
 			"code": "<cftry>\r\n\thello world<br/>\r\n\t<cfthrow message=\"threw on purpose!\" />\r\n\t<cfcatch type=\"any\">\r\n\t\tCaught an exception<br/>\r\n\t</cfcatch>\r\n\t<cffinally>\r\n\t\tRan clean-up code regardless of error\r\n\t</cffinally>\r\n</cftry>",
-			"result": "hello world\r\nCaught an exception\r\nRan clean-up code regardless of error"
+			"result": "hello world<br/> Caught an exception<br/> Ran clean-up code regardless of error",
+			"runnable":false
 		}
 	]
 

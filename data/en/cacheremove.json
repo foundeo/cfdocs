@@ -22,9 +22,9 @@
     {
       "title": "Remove one ID using exact match",
       "description": "",
-      "code": "cacheRemove( 'myCachedQuery' );",
-      "result": "",
-      "runnable": false
+      "code": "data = 'CFdocs';\r\ncachePut( 'demo', data );\r\ncacheRemove( 'demo' );\r\nwriteOutput( cacheIdExists( 'demo' ) );",
+      "result": "false",
+      "runnable": true
     },
     {
       "title": "Example using exact=false",

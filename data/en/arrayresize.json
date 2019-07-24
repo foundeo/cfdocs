@@ -24,7 +24,15 @@
 			"title": "Tag Syntax",
 			"description": "",
 			"code": "<cfset MyArray = arrayNew(1)> \r\n <!--- Resize that array to the number of records in the query. ---> \r\n <cfset temp = arrayResize(MyArray, 8)> \r\n  <cfdump var=\"#MyArray#\" />  ",
-			"result": ""
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title":"cfscript",
+			"description":"Gets metadata values for element(s) in an array.",
+			"code":"<cfscript>\r\n    cfdocsArray = arrayNew(1);\r\n\tarrayResize( cfdocsArray, 3 );\r\n\twriteOutput( serializeJSON( cfdocsArray ) );\r\n</cfscript>",
+			"result":"[null,null,null]",
+			"runnable":true
 		}
 	]
 

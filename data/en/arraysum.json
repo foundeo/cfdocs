@@ -21,19 +21,22 @@
 			"title": "Sum of values in an array",
 			"description": "Uses the arraySum function to get sum of values in an array",
 			"code": "numberArray = [10,99,27,72];\nwriteOutput( arraySum(numberArray));",
-			"result": "208"
+			"result": "208",
+			"runnable":true
 		},
 		{
 			"title": "Sum of values in an array",
 			"description": "To get sum of values in an empty array",
 			"code": "numberArray = [];\nwriteOutput( arraySum(numberArray));",
-			"result": "0"
+			"result": "0",
+			"runnable":true
 		},
 		{
 			"title": "Sum of values in an array",
 			"description": "CF11+ Lucee4.5+ Uses the sum member function is the same as running arraySum.",
 			"code": "numberArray = [10,99,27,72];\nwriteOutput( numberArray.sum() );",
-			"result": "208"
+			"result": "208",
+			"runnable":true
 		}
 	]
 }

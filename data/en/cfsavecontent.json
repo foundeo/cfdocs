@@ -19,8 +19,9 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "\r\nsavecontent variable=\"myContent\" {\r\n writeOutput(\"Somecontent.\");\r\n}\r\n",
-			"result": ""
+			"code": "\r\nsavecontent variable=\"myContent\" {\r\n writeOutput(\"Somecontent.\");\r\n}\r\nwriteOutput( myContent );",
+			"result": "Somecontent.",
+			"runnable":true
 		},
 	        {
 			"title": "Tag Syntax",

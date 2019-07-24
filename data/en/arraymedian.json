@@ -13,12 +13,12 @@
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/arraymedian.html"}
 	},
 	"examples": [
-			{
+		{
 			"title": "Calculates the Median value",
 			"description": "Uses the arrayMedian function to calculates the Median value",
 			"code": "someArray = [1,2,2];\nm=arrayMedian(someArray);\nwriteOutput(m);",
-			"result": "2"
-			}
-		    ],
+			"result": "2",
+			"runnable":true
+		}],
 	"links": []
 }

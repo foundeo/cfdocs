@@ -39,7 +39,8 @@
 			"title": "For Loop (Script Syntax)",
 			"description": "General Purpose Loop",
 			"code": "for (i = 1; i <= 10; i++) {\r\n    writeOutput(i); \r\n}",
-			"result": "12345678910"
+			"result": "12345678910",
+			"runnable":true
 		},
 		{
 			"title": "For Loop using CFLoop Tag",

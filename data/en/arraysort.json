@@ -23,19 +23,22 @@
 		    "title": "Simple example for arraySort function",
 		    "description": "Uses the arraySort() function to get the sorted array and which sorted by type numeric",
 		    "code": "SomeArray = [10,20,-99,46,50];\narraySort(SomeArray, \"numeric\", \"desc\");\nwriteOutput( serializeJSON(SomeArray) );",
-		    "result": "[50,46,20,10,-99]"
+		    "result": "[50,46,20,10,-99]",
+			"runnable":true
 		},
 		{
 		    "title": "Simple example with member function",
 		    "description": "CF11+ Lucee4.5+",
 		    "code": "SomeArray = [\"COLDFUSION\",\"coldfusion\",\"adobe\",\"LucEE\",\"RAILO\"];\nSomeArray.sort(\"text\",\"desc\");\nwriteOutput( serializeJSON(SomeArray) );",
-		    "result": "[\"coldfusion\",\"adobe\",\"RAILO\",\"LucEE\",\"COLDFUSION\"]"
+		    "result": "[\"coldfusion\",\"adobe\",\"RAILO\",\"LucEE\",\"COLDFUSION\"]",
+			"runnable":true
 		},
 		{
 		    "title": "Simple example with callback function",
 		    "description": "Uses the callback function",
 		    "code": "SomeArray = [\n    {name=\"testemployee\", age=\"32\"},\n    {name=\"employeetest\", age=\"36\"}\n];\narraySort(\n    SomeArray,\n    function (e1, e2){\n        return compare(e1.name, e2.name);\n    }\n);\nwriteOutput( serializeJSON(SomeArray) );",
-		    "result": "[{\"NAME\":\"employeetest\",\"AGE\":\"36\"},{\"NAME\":\"testemployee\",\"AGE\":\"32\"}] "
+		    "result": "[{\"NAME\":\"employeetest\",\"AGE\":\"36\"},{\"NAME\":\"testemployee\",\"AGE\":\"32\"}] ",
+			"runnable":true
 		}
 	]
 }

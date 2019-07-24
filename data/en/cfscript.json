@@ -16,8 +16,9 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n x = y = 1; \r\n writeDump(x); \r\n </cfscript>",
-			"result": ""
+			"code": "<cfscript> \r\n x = y = 1; \r\n writeOutput(x); \r\n </cfscript>",
+			"result": "1",
+			"runnable":true
 		}
 	]
 }

@@ -19,9 +19,9 @@
     {
       "title": "Demonstrates the behavior using test data",
       "description": "",
-      "code": "// generate some data to cache\r\nfor ( i = 1; i <= 10; i++ ) {\r\n  cachePut( 'cache_#i#', \"Test data #i#\" );\r\n}\r\n\r\nfunction cacheObjCount() {\r\n    return arrayLen(cacheGetAllIds());\r\n}\r\n\r\n_numCacheObj = \"Number of objects in the cache: \";\r\n\r\nwriteOutput('Before cacheRemove() :: #_numCacheObj# #cacheObjCount()#<br />');\r\n\r\n// clear all objects from the cache\r\ncacheRemoveAll();\r\n\r\nwriteOutput('After cacheRemove() :: #_numCacheObj# #cacheObjCount()#<br /><br />');",
-      "result": "",
-      "runnable": false
+      "code": "// generate some data to cache\r\nfor ( i = 1; i <= 10; i++ ) {\r\n  cachePut( 'cache_#i#', \"Test data #i#\" );\r\n}\r\n\r\nfunction cacheObjCount() {\r\n    return arrayLen(cacheGetAllIds());\r\n}\r\n\r\n_numCacheObj = \"Number of objects in the cache: \";\r\n\r\n// clear all objects from the cache\r\ncacheRemoveAll();\r\n\r\nwriteOutput( cacheObjCount() );",
+      "result": "0",
+      "runnable": true
     }
   ]
 }
