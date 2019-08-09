@@ -5,7 +5,7 @@ Scopes are regions of a programm or application in which a variable exists. Vari
 see Variables Scope
 
 ## CGI Scope
-see CGI Scope
+see [CGI Scope](/cgi-scope)
 
 ## Application Scope
 see Application Scope
@@ -30,3 +30,7 @@ According to this URL given output could be the following:
 	<cfif StructKeyExists(URL,'start')>
 		Start with letter: #URL.start#
 	</cfif>
+
+## Server Scope
+
+See the [Server Scope Guide](/server-scope)
