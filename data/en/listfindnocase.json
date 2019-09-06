@@ -34,9 +34,9 @@
 		},{
 			"title": "Member syntax",
 			"description": "listFindNoCase as a method",
-			"code": "fruits = \"apple|orange|banana\";\nwriteOutput(fruits.listfindNoCase(\"ORANGE\", \"|\"));",
+			"code": "fruits = \"apple|orange|banana\";\nwriteOutput(fruits.listFindNoCase(\"ORANGE\", \"|\"));",
 			"result": "2",
 			"runnable":true
-        	}
+		}
 	]
 }
