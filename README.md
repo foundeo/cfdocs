@@ -43,7 +43,7 @@ CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. att
 
 #### The better way to edit the docs
 
-1. fork the project to your GitHub account *need help? read this: [GitHub tip for your first pull request](http://fusiongrokker.com/post/github-tip-for-your-first-pull-request)*
+1. fork the project to your GitHub account *need help? read this: [GitHub tip for your first pull request](http://adamtuttle.codes/blog/2014/your-first-github-pull-request/)*
 2. clone it locally
 3. make your changes
 4. test it locally using commandbox (see above)
