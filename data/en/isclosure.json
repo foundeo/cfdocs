@@ -4,7 +4,7 @@
 	"syntax":"isClosure(object)",
 	"returns":"boolean",
 	"description":"Checks if a given object is a closure.",
-	"related": ["isCustomFunction"],
+	"related": ["isCustomFunction", "isClosure"],
 	"params": [
 		{"name":"object","description":"The object to check if it is a closure.","required":true,"default":"","type":"any","values":[]}
 	],
