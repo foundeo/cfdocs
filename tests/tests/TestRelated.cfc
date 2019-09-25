@@ -44,7 +44,7 @@ component extends="testbox.system.BaseSpec" {
 			
 			it("shouldn't relate to itself", function() {
 				for(tag in fileTypes.tags) {
-					expect(arrayFind(tag.related,tag.name) is 0).toBeTrue("#tag.name# currently relates to itsef");
+					expect(arrayFindNoCase(tag.related,tag.name) is 0).toBeTrue("#tag.name# currently relates to itsef");
 				}
 			});
 		});
