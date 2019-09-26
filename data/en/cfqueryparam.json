@@ -90,7 +90,7 @@
       "name": "scale",
       "description": "Number of decimal places in parameter. Applies to `CF_SQL_NUMERIC` and `CF_SQL_DECIMAL`.",
       "required": false,
-      "default": "",
+      "default": "0",
       "type": "numeric",
       "values": []
     },

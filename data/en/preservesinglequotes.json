@@ -3,10 +3,11 @@
 	"type":"function",
 	"syntax":"preserveSingleQuotes(variable)",
 	"returns":"void",
-	"related":[],
-	"description":" Prevents CFML from automatically escaping single\n quotation mark characters that are contained in a variable.\n CFML does not evaluate the argument.\n\n Note: ColdFusion automatically escapes simple-variable,\n array-variable, and structure-variable references within a\n cfquery tag body or block.",
+	"related":["cfqueryparam"],
+	"description":"Prevents CFML from automatically escaping single quotation mark characters that are contained in a variable. CFML does not evaluate the argument.",
+	"discouraged": "The use of preserveSingleQuotes often (but not always) results in code that will be vulnerable to SQL Injection. Use the cfqueryparam tag instead, and you will not need to worry about single quotes.",
 	"params": [
-		{"name":"variable","description":"Variable that contains a string in which to preserve\n single quotation marks.","required":true,"default":"","type":"string","values":[]}
+		{"name":"variable","description":"Variable that contains a string in which to preserve single quotation marks.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

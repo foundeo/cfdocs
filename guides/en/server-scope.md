@@ -1,6 +1,6 @@
 # Server Scope
 
-The `server` can hold variables that exist, and are accessible to all applications on the server.
+The `server` [scope](/scopes) can hold variables that exist, and are accessible to all applications on the server.
 
 ## Builtin Server Scope Variables
 

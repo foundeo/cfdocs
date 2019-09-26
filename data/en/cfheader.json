@@ -44,6 +44,13 @@
 			"code":"<cfif uCase(cgi.request_method) IS NOT \"POST\">\n    <cfheader statuscode=\"405\" statustext=\"Method Not Allowed\">\n    Sorry POST only.<cfabort>\n</cfif>",
 			"result":"",
 			"runnable":false
+		},
+		{
+			"title":"Content-Type header in CFScript",
+			"description":"CFScript syntax to return a JSON content type header.",
+			"code":"cfheader( name=\"Content-Type\", value=\"application/json\" )",
+			"result":"",
+			"runnable":false
 		}
 	]
 
