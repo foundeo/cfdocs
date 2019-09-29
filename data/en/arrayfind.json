@@ -12,7 +12,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"CF10+ Added support for closure instead of value", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayfind.html"},
-		"lucee": {"minimum_version":"", "notes":"Lucee4.5+ Added support for closure instead of value", "docs":"http://docs.lucee.org/reference/functions/arrayfind.html"},
+		"lucee": {"minimum_version":"", "notes":"Lucee4.5+ Added support for closure instead of value", "docs":"https://docs.lucee.org/reference/functions/arrayfind.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arrayfind"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayfind"}
 	},

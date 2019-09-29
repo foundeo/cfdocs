@@ -1,0 +1,25 @@
+{
+	"name":"structEquals",
+	"type":"function",
+	"syntax":"structEquals(struct1,  struct2)",
+	"returns":"boolean",
+	"related":[],
+	"description":"Performs a deep comparison of two structures to see if they represent the same values",
+	"params": [
+		{"name":"struct1","description":"A structure to compare","required":true,"default":"","type":"struct","values":[]},
+		{"name":"struct2","description":"A structure to compare","required":true,"default":"","type":"struct","values":[]}
+	],
+	"engines": {
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structequals"}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title":"Append options to config struct (without overwrite flag)",
+			"description":"",
+			"code":"config1 = {a:0, b:0};\nconfig2 = {a:0, b:1};\nwriteOutput( structEquals(config1, config2) );",
+			"result":"NO",
+			"runnable": false
+		}
+	]
+}

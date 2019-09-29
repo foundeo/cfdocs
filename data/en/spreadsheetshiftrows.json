@@ -4,7 +4,7 @@
 	"syntax":"spreadsheetShiftRows(spreadsheetObj, start, end [, rows])",
 	"returns":"void",
 	"related":[],
-	"description":" shifts one or more rows in Excel spreadsheet object up or down. . The contents of the shifted row, including empty cells, overwrites data in the column to which it is shfted.",
+	"description":" shifts one or more rows in Excel spreadsheet object up or down. . The contents of the shifted row, including empty cells, overwrites data in the column to which it is shifted.",
 	"params": [
 		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"start","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},

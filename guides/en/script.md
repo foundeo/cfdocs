@@ -14,10 +14,10 @@ To handle exceptions use try and catch statements, which are equivalent to the c
 CF11+ ColdFusion 11 allows you to invoke nearlly all the builtin tags in a generic manner. 
 
     <cfscript>
-    cfexampletag (attrib=1, attr2=2) // The parent tag
+    cfexampletag (attrib=1, attr2=2); // The parent tag
     {
         // First child tag having attributes in the parenthesis (Optional)
-        cfexamplechild (child_attr1='cv1', child_attr2='cv2')  
+        cfexamplechild (child_attr1='cv1', child_attr2='cv2');  
         {
             // Nested child tag
             cfexamplegrandchild (name="bob"); 

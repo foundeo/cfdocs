@@ -145,7 +145,7 @@
           },
           "callback_params": {
             "title": "Callback Parameters",
-            "description": "When type is function, this ",
+            "description": "When type is function, this represents the parameters for the callback",
             "type": "array",
             "$ref": "#/definitions/params",
             "minItems": 0,
@@ -168,7 +168,7 @@
   "properties": {
     "name": {
       "title": "Name",
-      "description": "The name of the tag or function. Use lowercase.",
+      "description": "The name of the tag or function. Start with lowercase.",
       "type": "string",
       "pattern": "^[a-z]\\w+$"
     },
@@ -201,13 +201,83 @@
     },
     "member": {
       "title": "Member",
-      "description": "For functions, shows the available member function syntax.",
+      "description": "Deprecated. For functions, shows the available member function syntax.",
       "type": "string",
       "default": ""
     },
+    "member_details": {
+      "title": "Member Details",
+      "description": "For details of the member function equivalent of this function.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "description": "The name of the member function. Start with lowercase.",
+          "type": "string",
+          "pattern": "^[a-z]\\w+$"
+        },
+        "type": {
+          "title": "Type",
+          "description": "The data type for which this function is a member",
+          "type": "string",
+          "enum": [
+            "array",
+            "boolean",
+            "date",
+            "image",
+            "locale",
+            "query",
+            "string",
+            "struct",
+            "spreadsheet",
+            "xml"
+          ]
+        },
+        "returns": {
+          "title": "Return Type",
+          "description": "The return type of the member function.",
+          "type": "string",
+          "enum": [
+            "any",
+            "array",
+            "binary",
+            "boolean",
+            "date",
+            "function",
+            "guid",
+            "numeric",
+            "query",
+            "string",
+            "struct",
+            "uuid",
+            "variableName",
+            "void",
+            "xml"
+          ],
+          "default": "void"
+        },
+        "engines": {
+          "title": "Engines",
+          "description": "Engine compatibility information",
+          "type": "object",
+          "$ref": "#/definitions/engines"
+        },
+        "base_param_index": {
+          "title": "Base Param Index",
+          "description": "A 1-based index referencing the param on which the member function is based",
+          "type": "number",
+          "default": 1
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "returns"
+      ]
+    },
     "returns": {
       "title": "Return Type",
-      "description": "The return type of a function.",
+      "description": "The return type of a function",
       "type": "string",
       "enum": [
         "any",

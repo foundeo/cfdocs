@@ -5,7 +5,7 @@
   "related": [
     "cfquery","queryExecute"
   ],
-  "description": "Verifies the data type of a query parameter and, for DBMSs that\n support bind variables, enables CFML to use bind variables\n in the SQL statement. Bind variable usage enhances performance\n when executing a cfquery statement multiple times.\n\n This tag is nested within a cfquery tag, embedded in a query SQL\n statement. If you specify optional parameters, this tag performs\n data validation.",
+  "description": "Verifies the data type of a query parameter and, for DBMSs that\n support bind variables, enables CFML to use bind variables\n in the SQL statement. Bind variable usage enhances performance\n when executing a cfquery statement multiple times.\n\n This tag is nested within a cfquery tag, embedded in a query SQL\n statement. If you specify optional parameters, this tag performs\n data validation.\n\nNOTE: Due to security it's highly recommended to use this tag for any user input or non-static value used in a query to prevent code injections and the like.",
   "params": [
     {
       "name": "value",
@@ -90,7 +90,7 @@
       "name": "scale",
       "description": "Number of decimal places in parameter. Applies to `CF_SQL_NUMERIC` and `CF_SQL_DECIMAL`.",
       "required": false,
-      "default": "",
+      "default": "0",
       "type": "numeric",
       "values": []
     },
@@ -128,7 +128,7 @@
     "lucee": {
       "minimum_version": "",
       "notes": "Supports `int` and `cf_sql_int` for integer",
-      "docs": "http://docs.lucee.org/reference/tags/queryparam.html"
+      "docs": "https://docs.lucee.org/reference/tags/queryparam.html"
     },
     "railo": {
       "minimum_version": "",

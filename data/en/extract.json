@@ -11,7 +11,7 @@
 		{"name": "target", "description": "Path (relative or absolute) to the the directory, where you want to extract the data.", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/extract.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/extract.html"}
 	},
 	"examples": [{
 			"title":"Extract a zip-file",

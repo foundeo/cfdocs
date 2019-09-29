@@ -4,12 +4,12 @@
 	"syntax": "getVariable(name)",
 	"returns": "any",
 	"related": ["setVariable"],
-	"description": "Retrieves value of a variabl",
+	"description": "Retrieves value of a variable",
 	"params": [
 		{"name": "name", "description": "", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getvariable.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getvariable.html"}
 	},
 	"links": [],
 	"examples": [{

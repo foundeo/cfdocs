@@ -12,7 +12,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/ljustify.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/ljustify.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/ljustify.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ljustify"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/ljustify"}
 	},
@@ -23,7 +23,7 @@
 		{
 			"title":"Tag Example",
 			"description":" ",
-			"code":"<cfset local.justifyString = \"abcdefghijklmnop\" /> \r\n <cfset jstring = lJustify(local.justifyString, 10)> \r\n <cfdump var=\"#jstring#\" /> ",
+			"code":"<cfset length=10>\r\n<cfset result = LJustify(\"abc\",length)>\r\n<cfoutput>\r\n    <pre>~#result#~</pre>\r\n</cfoutput>",
 			"result":"",
 			"runnable":true
 		}

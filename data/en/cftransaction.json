@@ -3,8 +3,8 @@
 	"type":"tag",
 	"syntax":"<cftransaction>",
 	"script": "transaction { }",
-	"related":["cftry", "cfcatch"],
-	"description":"Instructs the database management system to treat multiple\n database operations as a single transaction. Provides database\n commit and rollback processing.",
+	"related":["cftry", "cfcatch","transactioncommit","transactionrollback","transactionsetsavepoint"],
+	"description":"Instructs the database management system to treat multiple\n database operations as a single transaction. Provides database\n commit and rollback processing.\r\nNote that distributed transactions (transactions across multiple datasources) are not supported - you must commit one transaction and begin a separate transaction to ",
 	"params": [
 		{"name":"action","description":"`begin`: the start of the block of code to execute\n`commit`: commits a pending transaction\n`rollback`: rolls back a pending transaction\n`setsavepoint`: Marks a place within the transaction as a savepoint.","required":false,"default":"begin","type":"string","values":["begin","commit","rollback","setsavepoint"]},
 		{"name":"isolation","description":"ODBC lock type.","required":false,"default":"","type":"string","values":["read_uncommitted","read_committed","repeatable_read","serializable"]},
@@ -14,7 +14,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cftransaction.html"},
-		"lucee": {"minimum_version":"", "notes":"Lucee does not currently support the `savepoint` attribute.", "docs":"http://docs.lucee.org/reference/tags/transaction.html"},
+		"lucee": {"minimum_version":"", "notes":"Lucee does not currently support the `savepoint` attribute.", "docs":"https://docs.lucee.org/reference/tags/transaction.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cftransaction"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cftransaction"}
 	},

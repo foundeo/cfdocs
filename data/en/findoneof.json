@@ -4,7 +4,7 @@
 	"syntax": "findOneOf(set, string [, start])",
 	"returns": "numeric",
 	"related": ["listFind","find","findNoCase"],
-	"description": "Finds the first occurrence of any one of a set of characters in a string,\n from a specified start position. The search is case-sensitive.\n\n Returns the position of the first member of set found in string; or 0, if no member of set is found in string.",
+	"description": "Finds the first occurrence of any one of a set of characters in a string, from a specified start position. The search is case-sensitive.\n\n Returns the position of the first member of set found in string; or 0, if no member of set is found in string.",
 	"params": [
 		{
 			"name": "set",
@@ -24,9 +24,9 @@
 		},
 		{
 			"name": "start",
-			"description": "Start position of search. Can be 1 through the length of the string to search.\n Choosing a start index greater than the length of the string to search will return a 0.",
+			"description": "Start position of search. Can be 1 through the length of the string to search. Choosing a start index greater than the length of the string to search will return a 0.",
 			"required": false,
-			"default": 1,
+			"default": "1",
 			"type": "numeric",
 			"values": []
 		}
@@ -37,7 +37,7 @@
 			"notes": "",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/findoneof.html"
 		},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/findoneof.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/findoneof.html"},
 		"railo": {
 			"minimum_version": "",
 			"notes": "",

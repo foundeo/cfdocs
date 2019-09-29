@@ -4,18 +4,18 @@
 	"syntax":"fileMove(source, destination)",
 	"returns":"void",
 	"related":["fileWrite","fileDelete","directoryRename"],
-	"description":" Moves file from source to destination",
+	"description":"Moves file from source to destination",
 	"params": [
 		{"name":"source","description":"Path where the file is located currently","required":true,"default":"","type":"string","values":[]},
 		{"name":"destination","description":"Path where a copy of the file should be placed","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filemove.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/filemove.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/filemove.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filemove"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filemove"}
 	},
-	"links": [], 
+	"links": [],
     	"examples": [
 		{
 			"title": "Move file from here to there",

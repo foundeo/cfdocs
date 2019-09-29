@@ -5,15 +5,22 @@
 	"related":["cfmail"],
 	"description":"Specifies one part of a multipart e-mail message. Can only be\n used in the cfmail tag. You can use more than one cfmailpart\n tag within a cfmail tag.",
 	"params": [
-		{"name":"type","description":"The MIME media type of the part. Can be a can be valid MIME\n media type","required":true,"default":"","type":"string","values":["text\/plain","text\/html"]},
+		{"name":"type","description":"The MIME media type of the part. Can be a valid MIME\n media type","required":true,"default":"","type":"string","values":["text\/plain","text\/html"]},
 		{"name":"wraptext","description":"Specifies the maximum line length, in characters of the\n mail text. If a line has more than the specified number of\n characters, replaces the last white space character, such\n as a tab or space, preceding the specified position with a\n line break. If there are no white space characters,\n inserts a line break at the specified position. A common\n value for this attribute is 72.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"charset","description":"The character encoding in which the part text is encoded.\n\n For more information on character encodings, see:\n www.w3.org\/International\/O-charset.html.","required":false,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmailpart.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/mailpart.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/mailpart.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmailpart"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmailpart"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+		"title": "Script syntax using function call",
+		"description": ".",
+		"code": "cfmail( to = \"recipient@example.com\", from = \"sender@example.com\", subject = \"Example email\" ) {\ncfmailpart(type=\"text/plain\") {\n\twriteOutput(\"If you are seeing this, your e-mail client does not support HTML messages.\");\n}\ncfmailpart(type=\"text/html\") {\n\twriteOutput(htmlVersionOfMessage);\n}\n}"
+		}
+	]
 }

@@ -4,15 +4,14 @@
 	"syntax":"fileSetLastModified(filePath, date)",
 	"returns":"void",
 	"related":[],
-	"description":" Sets the date when an on-disk or in-memory file was most recently modified.",
+	"description":"Sets the date when an on-disk or in-memory file was most recently modified.",
 	"params": [
-		{"name":"filePath","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
-		{"name":"date","description":"No Help Available","required":true,"default":"","type":"date","values":[]}
-
+		{"name":"filePath","description":"An absolute path to an on-disk or in-memory file on the server","required":true,"default":"","type":"string","values":[]},
+		{"name":"date","description":"The date to set for when the file was last modified","required":true,"default":"","type":"date","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filesetlastmodified.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/filesetlastmodified.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/filesetlastmodified.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filesetlastmodified"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filesetlastmodified"}
 	},

@@ -9,12 +9,12 @@
 	"params": [
 		{"name": "structure", "description": "Structure that contains the value to return", "required": true, "default": "", "type": "struct", "values": []},
 		{"name": "key", "description": "Key whose value to return", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "defaultValue", "description": "Lucee4.5+ Default value which will be returned if the key does not exist or if null was found. Currently only supported by Lucee. See http://docs.lucee.org/reference/functions/structfind.html#argument-defaultValue", "required": false, "default": "", "type": "any"}
+		{"name": "defaultValue", "description": "Lucee4.5+ Default value which will be returned if the key does not exist or if null was found. Currently only supported by Lucee. See https://docs.lucee.org/reference/functions/structfind.html#argument-defaultValue", "required": false, "default": "", "type": "any"}
 
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structfind.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/structfind.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/structfind.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structfind"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structfind"}
 	},

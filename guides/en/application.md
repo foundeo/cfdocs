@@ -2,61 +2,61 @@
 
 ## Example: Full Application/Request Lifecycle Methods
 This shows all of the built-in Application.cfc methods.
-[Application variables](https://wikidocs.adobe.com/wiki/display/coldfusionen/Application+variables) are explained in Application.cfc doc.
+[Application variables](https://helpx.adobe.com/coldfusion/cfml-reference/application-cfc-reference/application-variables.html) are explained in Adobe's Application.cfc documentation.
 
-```ColdFusion
-	component {
-		this.name = "YourAppName" & hash(getCurrentTemplatePath()); 
-		this.applicationTimeout = createTimeSpan(1,0,0,0); 
-		this.sessionTimeout = createTimeSpan(1,0,0,0); 
-		this.sessionManagement = true; 
-		this.setClientCookies = false; 
+```cfc
+component {
+	this.name = "YourAppName" & hash(getCurrentTemplatePath()); 
+	this.applicationTimeout = createTimeSpan(1,0,0,0); 
+	this.sessionTimeout = createTimeSpan(1,0,0,0); 
+	this.sessionManagement = true; 
+	this.setClientCookies = false; 
 
-		public boolean function onApplicationStart() { 
-			return true; 
-		} 
+	public boolean function onApplicationStart() { 
+		return true; 
+	} 
 
-		public void function onApplicationEnd(struct applicationScope={}) { 
-			return; 
-		} 
+	public void function onApplicationEnd(struct applicationScope={}) { 
+		return; 
+	} 
 
-		public void function onSessionStart() { 
-			return; 
-		} 
+	public void function onSessionStart() { 
+		return; 
+	} 
 
-		public void function onSessionEnd(required struct sessionScope, struct applicationScope={}) { 
-			return; 
-		} 
+	public void function onSessionEnd(required struct sessionScope, struct applicationScope={}) { 
+		return; 
+	} 
 
-		public boolean function onRequestStart(required string targetPage) { 
-			return true; 
-		} 
+	public boolean function onRequestStart(required string targetPage) { 
+		return true; 
+	} 
 
-		public void function onRequest(required string targetPage) { 
-			include arguments.targetPage; 
-			return; 
-		} 
+	public void function onRequest(required string targetPage) { 
+		include arguments.targetPage; 
+		return; 
+	} 
 
-		public void function onCFCRequest(string cfcname, string method, struct args) { 
-			return; 
-		} 
+	public void function onCFCRequest(string cfcname, string method, struct args) { 
+		return; 
+	} 
 
-		public void function onRequestEnd() { 
-			return; 
-		} 
+	public void function onRequestEnd() { 
+		return; 
+	} 
 
-		public void function onAbort(required string targetPage) { 
-			return; 
-		} 
+	public void function onAbort(required string targetPage) { 
+		return; 
+	} 
 
-		public void function onError(required any exception, required string eventName) { 
-			return; 
-		} 
+	public void function onError(required any exception, required string eventName) { 
+		return; 
+	} 
 
-		public boolean function onMissingTemplate(required string targetPage) { 
-			return true; 
-		} 
-	}
+	public boolean function onMissingTemplate(required string targetPage) { 
+		return true; 
+	} 
+}
 ```
 
 
@@ -88,33 +88,38 @@ The `APPLICATION` scope is used for setting the information at application level
 
 ### Example using onApplicationStart:
 
-	component {
-		this.name = "myApplication";
+```cfc
+component {
+	this.name = "myApplication";
 
-		function onApplicationStart() {
-			application.something = "otherthing";
-		}
+	function onApplicationStart() {
+		application.something = "otherthing";
 	}
+}
+```
 
 ### Locking Concerns
 
-Since variables within the application scope can be accessed by multiple threads at once (simultaneous requests) you should consider if locking is necessary.
+Since variables within the application scope can be accessed by multiple threads at once (simultaneous requests), you should consider if locking is necessary.
 
-In very early versions of ColdFusion (pre CF6) locking was required when reading / writing to shared scope such as the application scope. In modern versions of ColdFusion or Lucee, in most cases locking is taken care of automatically and you do not need to use cflock. 
+In very early versions of ColdFusion (pre-CF6), locking was required when reading or writing to a shared scope, such as the application scope. In modern versions of ColdFusion or Lucee, in most cases locking is taken care of automatically and you do not need to use `cflock`.
 
-One case that does not require locking is if you set your `application` variables in `onApplicationStart` and do not modify them (they are only read, except for in onRequestStart).
+One case that does not require locking is if you set your `application` variables in `onApplicationStart` and do not modify them (i.e., they are only read, except in `onRequestStart`).
 
-You should take care not to lock unnecessairly as it may create a performance bottle neck.
+You should take care not to lock unnecessarily, as it may create a performance bottle neck.
 
-One case where you should use locking is in the event that you are using the application scope on both sides of the assignment. For example:
+One case where you _should_ use locking is when you are using the `application` scope on both sides of the assignment. For example:
 
-	application.counter = application.counter + 1;
+```cfc
+application.counter = application.counter + 1;
+```
 
 The above example requires locking to ensure that a concurrent thread does not corrupt the value of the counter.
 
-	lock scope="application" timeout="1" type="exclusive" { {
-		application.counter = application.counter + 1;
-	}
+```cfc
+lock scope="application" timeout="1" type="exclusive" { {
+	application.counter = application.counter + 1;
+}
+```
 
-Keep in mind that if the application scoped variable is written to at any time other than onApplicationStart then there is a possibility that the value of the application variable could change mid request. If this is a problem then consider using cflock to ensure a consistant value. 
-
+Keep in mind that, if the application scoped variable is written to at any time other than `onApplicationStart`, there is a possibility that the value of the application variable could change mid-request. If this is a problem, consider using `cflock` to ensure a consistant value. 

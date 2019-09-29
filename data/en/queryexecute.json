@@ -7,7 +7,7 @@
 	"related":["cfquery","cfqueryparam"],
 	"engines":{
 		"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryexecute.html","notes":""},
-		"lucee":{"minimum_version":"4.5", "docs":"http://docs.lucee.org/reference/functions/queryexecute.html","notes":""}
+		"lucee":{"minimum_version":"4.5", "docs":"https://docs.lucee.org/reference/functions/queryexecute.html","notes":""}
 		},
 	"links":[],
 	"params":[
@@ -25,8 +25,7 @@
 		{"title":"IN Query using lists", "description":"Query the database using a list of values", "code":"keys = '1,2,3,4,5,6,7';\ndata = queryExecute(\"select * from sometable where somecolumn in (:keys)\",{keys={value=keys,list=true}}); ", "result":""},
 		{"title": "Query of Queries", "description": "Query a local database variable without going through your database", "code": "users = queryNew( \"firstname\", \"varchar\", [{\"firstname\":\"Han\"}] );\nsubUsers = queryExecute( \"select * from users\", {}, { dbtype=\"query\" } );\nwritedump( subUsers ); ", "result": "" },
 		{"title": "Return Query as an Array of Structs - Lucee5+", "description": "Lucee5+ Return a query object converted into an array of structs.", "code": "users = queryNew( \"firstname\", \"varchar\", [{\"firstname\":\"Han\"}] );\nsubUsers = queryExecute( \"select * from users\", {}, { dbtype=\"query\", returntype=\"array\" } );\nwritedump( subUsers ); ", "result": "[ { firstname: \"Han\" } ]"},
-		{"title": "Return Query as an Array of Structs - Lucee 4.5", "description": "Lucee4.5 Return a query object converted into an array of structs.", "code": "users = queryNew( \"firstname\", \"varchar\", [{\"firstname\":\"Han\"}] );\nsubUsers = queryExecute( \"select * from users\", {}, { dbtype=\"query\", returntype=\"array-of-entities\" } );\nwritedump( subUsers ); ", "result": "[ { firstname: \"Han\" } ]"},
+		{"title": "Return Query as an Array of Structs - Lucee 4.5", "description": "Lucee4.5+ Return a query object converted into an array of structs.", "code": "users = queryNew( \"firstname\", \"varchar\", [{\"firstname\":\"Han\"}] );\nsubUsers = queryExecute( \"select * from users\", {}, { dbtype=\"query\", returntype=\"array-of-entities\" } );\nwritedump( subUsers ); ", "result": "[ { firstname: \"Han\" } ]"},
 		{"title": "Return Query as a Struct of Structs", "description": "Lucee5+ Return a query object converted into a struct of structs. (Struct key is based on the \"columnkey\" parameter)", "code": "users = queryNew( \"id, firstname\", \"integer, varchar\", [{\"id\":1, \"firstname\":\"Han\"}] );\nsubUsers = queryExecute( \"select * from users\", {}, { dbtype=\"query\", returntype=\"struct\", columnkey=\"id\" } );\nwritedump( subUsers ); ", "result": "{ 1: { id: 1, firstname: \"Han\" } }"}
-
 	]
 }

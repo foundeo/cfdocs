@@ -3,15 +3,15 @@
 	"type":"function",
 	"syntax":"objectLoad(binaryObject)\nobjectLoad(filepath)",
 	"returns":"any",
-	"related":[],
+	"related":["objectSave"],
 	"description":"Load object from binary obj",
 	"params": [
 		{"name":"binaryObject","description":"A binary object returned by objectSave function","required":true,"default":"","type":"binary","values":[]},
 		{"name":"filepath","description":"A file path to a serialized object","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/objectload.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/objectload.html"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/objectload.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/objectload.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/objectload"}
 	},
 	"links": [
