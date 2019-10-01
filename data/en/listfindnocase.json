@@ -2,6 +2,7 @@
 	"name":"listFindNoCase",
 	"type":"function",
 	"syntax":"listFindNoCase(list, value [, delimiters, includeEmptyValues])",
+	"member":"list.listFindNoCase(value [, delimiters, includeEmptyValues])",
 	"returns":"numeric",
 	"related":["listFind","arrayFindNoCase"],
 	"description":"Determines the index of the first list element in which a specified value occurs. Returns 0 if not found. Case-insensitive.",
@@ -30,6 +31,13 @@
 			"description":"Find item in a pipe delimited list and return the index.",
 			"code":"listFindNoCase(\"apple|orange|banana\", \"orange\", \"|\")",
 			"result":"2"
+		},
+		{
+			"title": "Member Syntax",
+			"description": "listFindNoCase as a member function",
+			"code": "fruits = \"apple|orange|banana\";\nwriteOutput(fruits.listFindNoCase(\"ORANGE\", \"|\"));",
+			"result": "2",
+			"runnable":true
 		}
 	]
 }

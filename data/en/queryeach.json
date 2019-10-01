@@ -8,7 +8,7 @@
 	"description": "Iterates over query rows and passes each row per iteration to a callback function",
 	"params": [
 		{"name": "query", "description": "query to loop over", "required": true, "default": "", "type": "query", "values": []},
-		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration.",
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
 			"callback_params": [
 			{
 				"values": [],

@@ -12,7 +12,7 @@
 		{"name":"timeout","description":"Length of time, in seconds, that CFML waits for\n output from the spawned program.","required":false,"default":0,"type":"numeric","values":[]},
 		{"name":"errorVariable","description":"The name of a variable in which to save the error stream output.","required":false,"default":"","type":"string","values":[]},
 		{"name":"errorFile","description":"The pathname of a file in which to save the error stream output. If not an\nabsolute path (starting a with a drive letter and a colon, or a forward or backward slash), it is\nrelative to the ColdFusion temporary directory, which is returned by the GetTempDirectory\nfunction.","required":false,"default":"","type":"string","values":[]},
-		{"name":"executeOnTimeout","description":"Lucee4.5+ Terminate the process after the specified timeout is reached. Ignored if timeout is not set or is 0.","required":false,"default":"false","type":"boolean","values":[true, false]}
+		{"name":"terminateOnTimeout","description":"Lucee4.5+ Terminate the process after the specified timeout is reached. Ignored if timeout is not set or is 0.","required":false,"default":"false","type":"boolean","values":[true, false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexecute.html"},

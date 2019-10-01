@@ -15,7 +15,7 @@
 			"type": "query",
 			"values": []
 		},
-		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration. Returns true if the row should be included in the filtered query.",
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration. Returns true if the row should be included in the filtered query.",
 			"callback_params": [
 			{
 				"values": [],

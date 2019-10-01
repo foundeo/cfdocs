@@ -7,8 +7,8 @@
 	"related":["structEach","structSome","structMap","structReduce"],
 	"description":"Used to filter the key-value pairs in a structure.",
 	"params": [
-		{"name":"structure","description":"Name of the structure to filter","required":true,"default":"","type":"struct","values":[]},
-		{"name":"function","description":"Closure or a function reference that will be called for each of the iteration. Returns true if the key-value pair in the structure should be included in the filtered struct. Support for passing the original struct to the closure function added in CF11 Update 5.",
+		{"name":"struct","description":"Name of the structure to filter","required":true,"default":"","type":"struct","values":[]},
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration. Returns true if the key-value pair in the structure should be included in the filtered struct. Support for passing the original struct to the closure function added in CF11 Update 5.",
 			"callback_params": [
 			{
 				"values": [],
