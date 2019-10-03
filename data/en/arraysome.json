@@ -38,7 +38,20 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/arraysome.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title": "Simple Example",
+			"description": "",
+			"code": "// Create an array\r\narrayList = [\"apple\", \"pineapple\", \"mango\", \"apricot\"];\r\n\r\n// Match some\r\nresult = arraySome(arrayList, function(fruit) {\r\n    return fruit.startsWith(\"a\");\r\n});\r\n\r\n// Print result\r\nwriteOutput((result ? \"Some\" : \"No\") & \" matches  were found!\");",
+			"result": "Prints 'Some matches were found!'"
+		},
+		{
+			"title": "Member Function Example",
+			"description": "",
+			"code": "// Create an array\r\narrayList = [\"apple\", \"pineapple\", \"mango\", \"apricot\"];\r\n\r\n// Match some\r\nresult = arrayList.some(function(fruit) {\r\n    return fruit.endsWith(\"a\");\r\n});\r\n\r\n// Print result\r\nwriteOutput((result ? \"Some\" : \"No\") & \" matches  were found!\");",
+			"result": "Prints 'No matches were found!'"
+		}
+	],
 	"links": [{
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
