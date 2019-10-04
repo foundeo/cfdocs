@@ -79,7 +79,7 @@
 						};
 						engine = structKeyList(data.engines);
 					</cfscript>
-					#engineMap[engine]#<cfif StructKeyExists(data.engines[engine], "minimum_version") AND Len(data.engines[engine])> #data.engines[engine].minimum_version# and up</cfif>.&nbsp;
+					#engineMap[engine]#<cfif StructKeyExists(data.engines[engine], "minimum_version") AND Len(data.engines[engine].minimum_version)> #data.engines[engine].minimum_version# and up</cfif>.&nbsp;
 					<em>Not supported on <cfif engine neq 'lucee'>Lucee, </cfif><cfif engine neq 'coldfusion'>Adobe ColdFusion, </cfif> etc.</em>
 				</div>
 			</cfif>
