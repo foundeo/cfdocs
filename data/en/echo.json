@@ -16,13 +16,15 @@
 			"title": "Simple Example",
 			"description": "Prints a simple string.",
 			"code": "echo(\"hello world\");",
-			"result": "hello world"
+			"result": "hello world",
+			"runnable":true
 		},
 		{
 			"title": "Complex Data Example",
 			"description": "Note that complex objects will not automatically be converted to String, as with System.out.println in Java.",
 			"code": "// Create data\r\ndata = {\r\n    \"title\"  : \"A Game of Thrones\",\r\n    \"author\" : \"George R. R. Martin\",\r\n    \"ISBN\"   : \"0-00-224584-1\"\r\n};\r\n\r\n// Print data\r\necho(data.toString());",
-			"result": "{ISBN={0-00-224584-1}, author={George R. R. Martin}, title={A Game of Thrones}}"
+			"result": "{ISBN={0-00-224584-1}, author={George R. R. Martin}, title={A Game of Thrones}}",
+			"runnable":true
 		}
 	],
 	"links": []
