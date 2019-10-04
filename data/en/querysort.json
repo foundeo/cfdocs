@@ -17,9 +17,37 @@
 	},
 	"examples": [
 		{
-			"title":"Sorting a query using sort member function",
+			"title":"Sort a query using the querySort function on a column with date values in ascending order",
 			"description":"",
-			"code":"//build a query\r\nnews = queryNew(\"id,title\",\r\n    \"integer,varchar\",\r\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\r\n//sort it\r\nnews.sort(function(rowA, rowB) { return compare(rowA.title, rowB.title); });\r\n//dump it\r\nwriteDump(news);\r\n",
+			"code":"//build a query\r\nexampleQuery = queryNew(\r\n    \"id,createdDate\",\r\n    \"integer,timestamp\",\r\n    [\r\n        {id=1, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=2, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=3, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=4, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=5, createdDate=dateAdd(\"d\", randRange(-100, 100), now())}\r\n    ]\r\n);\r\n//sort it\r\nquerySort(exampleQuery, function(rowA, rowB) {\r\n    return dateCompare(rowA.createdDate, rowB.createdDate);\r\n});\r\n//dump it\r\nwriteDump(exampleQuery);\r\n",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Sort a query using a sort member function on a column with date values in descending order",
+			"description":"",
+			"code":"//build a query\r\nexampleQuery = queryNew(\r\n    \"id,createdDate\",\r\n    \"integer,timestamp\",\r\n    [\r\n        {id=1, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=2, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=3, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=4, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=5, createdDate=dateAdd(\"d\", randRange(-100, 100), now())}\r\n    ]\r\n);\r\n//sort it\r\nexampleQuery.sort(function(rowA, rowB) {\r\n    return -(dateCompare(rowA.createdDate, rowB.createdDate));\r\n});\r\n//dump it\r\nwriteDump(exampleQuery);\r\n",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Sort a query using a sort member function on a column with string values in ascending order",
+			"description":"",
+			"code":"//build a query\r\nexampleQuery = queryNew(\r\n    \"id,description\",\r\n    \"integer,varchar\",\r\n    [\r\n        {id=1, description=\"dog\"},\r\n        {id=2, description=\"cat\"},\r\n        {id=3, description=\"bird\"},\r\n        {id=4, description=\"zebra\"},\r\n        {id=5, description=\"snake\"}\r\n    ]\r\n);\r\n//sort it\r\nexampleQuery.sort(function(rowA, rowB) {\r\n    return compare(rowA.description, rowB.description);\r\n});\r\n//dump it\r\nwriteDump(exampleQuery);\r\n",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Sort a query using the querySort function on a column with string values in descending order",
+			"description":"",
+			"code":"//build a query\r\nexampleQuery = queryNew(\r\n    \"id,description\",\r\n    \"integer,varchar\",\r\n    [\r\n        {id=1, description=\"dog\"},\r\n        {id=2, description=\"cat\"},\r\n        {id=3, description=\"bird\"},\r\n        {id=4, description=\"zebra\"},\r\n        {id=5, description=\"snake\"}\r\n    ]\r\n);\r\n//sort it\r\nquerySort(exampleQuery, function(rowA, rowB) {\r\n    return -(compare(rowA.description, rowB.description));\r\n});\r\n//dump it\r\nwriteDump(exampleQuery);\r\n",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Sort a query using the querySort function on a column with numeric values in ascending order",
+			"description":"",
+			"code":"//build a query\r\nexampleQuery = queryNew(\r\n    \"id,description\",\r\n    \"integer,varchar\",\r\n    [\r\n        {id=3, description=\"dog\"},\r\n        {id=5, description=\"cat\"},\r\n        {id=4, description=\"bird\"},\r\n        {id=1, description=\"zebra\"},\r\n        {id=2, description=\"snake\"}\r\n    ]\r\n);\r\n//sort it\r\nquerySort(exampleQuery, function(rowA, rowB) {\r\n    return val(rowA.id) < val(rowB.id) ? -1 : val(rowA.id) == val(rowB.id) ? 0 : 1;\r\n});\r\n//dump it\r\nwriteDump(exampleQuery);\r\n",
 			"result":"",
 			"runnable":true
 		}
