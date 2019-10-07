@@ -15,6 +15,14 @@
 		"coldfusion": {"minimum_version":"", "notes":"Prior to CF2016u11 and CF2018u4, charset param was required.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileappend.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/fileappend.html"}
 	},
+	"examples" : [
+		{
+			"title": "Simple Example",
+			"description":"Appends a mock entry to a file.",
+			"code":"// Create mock log entry\r\nlogEntry = dateTimeFormat(now(), \"yyyy/mm/dd HH:nn\") & \" this is a mock log entry!\";\r\n\r\n// Append line to file\r\nfileAppend(\"/path/to/file.log\", logEntry);",
+			"result":""
+		}
+	],
 	"links": [
 
 	]
