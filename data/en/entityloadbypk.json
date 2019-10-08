@@ -15,5 +15,14 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/entityloadbypk.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entityloadbypk"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Load an existing User object",
+			"description": "",
+			"code": "user = entityLoadByPK(\"User\", userID);",
+			"result": "",
+			"runnable":false
+		}
+	]
 }
