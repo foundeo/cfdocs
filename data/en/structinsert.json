@@ -33,7 +33,8 @@
 			"title": "Overwrite Example",
 			"description": "Throws exception when you try to add a duplicate key, when allowoverwrite parameter is false.",
 			"code": "map = {\r\n    \"hair\" : \"brown\",\r\n    \"eyes\" : \"green\"\r\n};\r\ntry {structInsert(map, \"hair\", \"red\", false);}\r\ncatch(any ex) {writeOutput(\"error!\");}",
-			"result": "error!"
+			"result": "error!",
+			"runnable" : true
 		}
 	]
 
