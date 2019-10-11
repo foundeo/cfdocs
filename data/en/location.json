@@ -20,7 +20,7 @@
 	"examples": [
 		{
 			"title": "Simple Example",
-			"description": "Relocations to a different page if user is not logged in.",
+			"description": "Relocates to a different page if user is not logged in.",
 			"code": "if(!structKeyExists(session, \"userID\") {\n    location(\"login.cfm\");\n}",
 			"result": ""
 		}
