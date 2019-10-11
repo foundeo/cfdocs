@@ -55,7 +55,7 @@
 		},
 		{
 			"title": "Passing content between opening and closing tags",
-			"description": "In this example, the &lt;p&gt; tag and it's content will be availble to super-duper-formatter.cfm to perform whatever the formatting logic dictates.",
+			"description": "In this example, the &lt;p&gt; tag and it's content will be available to super-duper-formatter.cfm to perform whatever the formatting logic dictates.",
 			"code": "<cfmodule template=\"\\layout\\super-duper-formater.cfm\">\n   <p>Some content the module will format</p>\n</cfmodule>",
 			"result": "",
 			"runnable" : false

@@ -6,7 +6,7 @@
 	"description":"Creates a CFML object, of a specified type.\n\n The tag syntax depends on the object type. Some types use the\n type attribute; others do not.",
 	"params": [
 		{"name":"type","description":"The object type. You can omit this attribute or specify component. ColdFusion automatically sets the type to component.","required":false,"default":"","type":"string","values":["com","component","corba","java","dotnet","webservice"]},
-		{"name":"action","description":"* create: instantiates a COM object (typically, a DLL) before invoking methods or properties.\n * connect: ionnects to a COM object (typically, an EXE) running on server.","required":false,"default":"","type":"string","values":["create","connect"]},
+		{"name":"action","description":"* create: instantiates a COM object (typically, a DLL) before invoking methods or properties.\n * connect: connects to a COM object (typically, an EXE) running on server.","required":false,"default":"","type":"string","values":["create","connect"]},
 		{"name":"class","description":"Component ProgID for the object to invoke. When using Java stubs to connect to the COM object, the class must be the ProgID of the COM object.","required":false,"default":"","type":"string","values":[]},
 		{"name":"name","description":"name for the instantiated component.","required":true,"default":"","type":"string","values":[]},
 		{"name":"context","description":"* inproc\n * local\n * remote\n\nIn Windows, if not specified, uses Registry setting.","required":false,"default":"","type":"string","values":["inproc","local","remote","ior","nameservice"]},
