@@ -33,7 +33,7 @@
 				</cfif>
 				<cfset local._guides[local.guide] = local.title>
 			</cfloop>
-			<cfloop array="#structSort(application.guides, "textnocase", "asc")#" index="local.guide">
+			<cfloop array="#structSort(local._guides, "textnocase", "asc")#" index="local.guide">
 				<cfset application.guides[local.guide] = local._guides[local.guide]>
 			</cfloop>
 		</cfif>
