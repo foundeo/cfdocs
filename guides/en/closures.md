@@ -31,7 +31,7 @@ The inner function is available for execution after the outer function is return
 
 As seen in the example, even after the outer function is returned, the inner function can access the variables in the outer function. Closure retains the reference to the environment at the time it is created. For example, the value of a local variable in the outer function. It makes closure an easy to use and handy feature.
 
-To see more details on closure, see http://jibbering.com/faq/notes/closures.
+To see more details on closure, see http://jibbering.com/faq/notes/closures/.
 
 ### Closure in ColdFusion
 
