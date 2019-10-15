@@ -1,7 +1,7 @@
 {
 	"name":"getSOAPRequest",
 	"type":"function",
-	"syntax":"getSOAPRequest()",
+	"syntax":"getSOAPRequest(webservice)",
 	"returns":"any",
 	"related":["getSOAPRequestHeader","getSOAPResponse","getSOAPResponseHeader"],
 	"description":" Returns an XML object that contains the entire SOAP\n request. Usually called from within a web service CFC.",
@@ -12,5 +12,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getsoaprequest"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getsoaprequest"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"Create a SOAP call and retrieve the request",
+			"description":"Create a SOAP webservice to call, then we can use  getSOAPRequest() to view the request",
+			"code":"soapURL = \"https://graphical.weather.gov/xml/SOAP_server/ndfdXMLserver.php?wsdl\";\r\nws = CreateObject(\"webservice\", soapURL);\r\nzipLatLong = ws.LatLonListZipCode(\"10001\");\r\nreq = getSOAPRequest(ws);\r\nwriteDump(req);",
+			"result":"",
+			"runnable":false
+		}
+	]
 }

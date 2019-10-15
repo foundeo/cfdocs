@@ -14,5 +14,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getsoapresponse"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getsoapresponse"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"Create a SOAP call and retrieve the response",
+			"description":"Create a SOAP webservice to call, then we can use  getSOAPResponse() to view the full response",
+			"code":"soapURL = \"https://graphical.weather.gov/xml/SOAP_server/ndfdXMLserver.php?wsdl\";\r\nws = CreateObject(\"webservice\", soapURL);\r\nzipLatLong = ws.LatLonListZipCode(\"10001\");\r\nres = getSOAPResponse(ws);\r\nwriteDump(res);",
+			"result":"",
+			"runnable":false
+		}
+	]
 }
