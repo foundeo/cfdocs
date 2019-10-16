@@ -1,0 +1,53 @@
+{
+	"name":"arraySplice",
+	"type":"function",
+	"syntax":"arraySplice(array, index[, elementCountForRemoval, replacements])",
+	"member":"someArray.splice(index[, elementCountForRemoval, replacements])",
+	"returns":"array",
+	"related":[],
+	"description":"Modifies an array by removing elements and adding new elements. It starts from the index, removes as many elements as specified by elementCountForRemoval, and puts the replacements starting from index position.",
+	"params": [
+		{"name":"array","description":"The array to splice and modify.","required":true,"default":"","type":"array","values":[]},
+		{"name":"index","description":"The position at which to start modifying the array. If the position is greater than the length of the array, the replacement elements will be inserted after the last array element. If the position is less than 0, the start is set to the end of the array and the origin is set accordingly.","required":true,"default":"","type":"numeric","values":[]},
+        {"name":"elementCountForRemoval","description":"The number of elements to be removed starting with the start index.","required":false,"default":"","type":"numeric","values":[]},
+        {"name":"replacements","description":"Array of elements to be added to the array starting with index start.","required":false,"default":"","type":"array","values":[]}
+
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2018.0.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraysplice.html"}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title":"arraySplice inserting replacements at position 2 while removing 0 elements",
+			"description":"",
+			"code":"months = ['Jan', 'March', 'April', 'June'];\nitem = [\"Feb\"];\narraySplice( months, 2, 0, item );\nwritedump(months);",
+			"result":"[\"Jan\",\"Feb\",\"March\",\"April\",\"June\"]"
+		},
+		{
+			"title":"arraySplice inserting replacements at position 3 while removing 2 elements",
+			"description":"",
+			"code":"months = ['Jan', 'March', 'April', 'June'];\nitem = [\"Feb\"];\narraySplice( months, 3, 2, item );\nwritedump(months);",
+			"result":"[\"Jan\",\"March\",\"Feb\"]"
+		},
+		{
+			"title":"arraySplice inserting replacements at position -3 while removing 0 elements",
+			"description":"",
+			"code":"months = ['Jan', 'March', 'April', 'June'];\nitem = [\"Feb\"];\narraySplice( months, -3, 0, item );\nwritedump(months);",
+			"result":"[\"Jan\",\"Feb\",\"March\",\"April\",\"June\"]"
+		},
+		{
+			"title":"arraySplice inserting replacements at position 5 which is greater than the length of the array",
+			"description":"",
+			"code":"months = ['Jan', 'March', 'April', 'June'];\nitem = [\"Feb\"];\narraySplice( months, 5, 0, item );\nwritedump(months);",
+			"result":"[\"Jan\",\"March\",\"April\",\"June\",\"Feb\"]"
+		},
+		{
+			"title":"Splice an array using member function",
+			"description":"",
+			"code":"months = ['Jan', 'March', 'April', 'June'];\nitem = [\"Feb\"];\nmonths.splice(  2, 0, item );\nwritedump(months);",
+			"result":"[\"Jan\",\"Feb\",\"March\",\"April\",\"June\"]"
+		}
+	]
+
+}

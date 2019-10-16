@@ -38,6 +38,12 @@
 			"description":"",
 			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = arraySlice(array, -5, 3);\nwritedump(newArray)",
 			"result":"[4,5,6]"
+		},
+		{
+			"title":"Slice an array using member function",
+			"description":"CF11+ calling the slice member function on an array.",
+			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = array.slice(2, 3);\nwritedump(newArray)",
+			"result":"[2,3,4]"
 		}
 	]
 

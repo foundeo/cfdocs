@@ -20,6 +20,22 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Simple Example",
+			"description": "Inserts a new key/value into the structure",
+			"code": "map = {\r\n    \"hair\" : \"brown\",\r\n    \"eyes\" : \"green\"\r\n};\r\nstructInsert(map, \"lips\", \"red\");\r\nwriteOutput(structKeyList(map));",
+			"result": "eyes,lips,hair",
+			"runnable" : true
+		},
+		{
+			"title": "Overwrite Example",
+			"description": "Throws exception when you try to add a duplicate key, when allowoverwrite parameter is false.",
+			"code": "map = {\r\n    \"hair\" : \"brown\",\r\n    \"eyes\" : \"green\"\r\n};\r\ntry {structInsert(map, \"hair\", \"red\", false);}\r\ncatch(any ex) {writeOutput(\"error!\");}",
+			"result": "error!",
+			"runnable" : true
+		}
 	]
 
 }

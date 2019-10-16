@@ -1,8 +1,8 @@
 # Scopes
-Scopes are regions of a programm or application in which a variable exists. Variables with the same name in different scopes are different variables.
+Scopes are regions of a program or application in which a variable exists. Variables with the same name in different scopes are different variables.
 
 ## Variables Scope
-see Variables Scope
+see [Variables Scope](/variables-scope)
 
 ## CGI Scope
 see [CGI Scope](/cgi-scope)
@@ -32,5 +32,4 @@ According to this URL given output could be the following:
 	</cfif>
 
 ## Server Scope
-
-See the [Server Scope Guide](/server-scope)
+See [Server Scope](/server-scope)

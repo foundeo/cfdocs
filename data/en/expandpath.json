@@ -14,5 +14,28 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/expandpath"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/expandpath"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Expand the current path",
+			"description": "",
+			"code": "expandPath(\"./\")",
+			"result": "",
+			"runnable": false
+		},
+		{
+			"title": "Expand the parent folder path",
+			"description": "",
+			"code": "expandPath(\"../\")",
+			"result": "",
+			"runnable": false
+		},
+		{
+			"title": "Expand the path to a subfolder",
+			"description": "",
+			"code": "expandPath(\"path/to/subfolder\")",
+			"result": "",
+			"runnable": false
+		}
+	]
 }
