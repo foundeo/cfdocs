@@ -183,7 +183,7 @@
 		},
 		{
 			"name": "enabled",
-			"description": "Flash only: Boolean value specifying whether the control is enabled.\n A disabled control appears in light gray. The inverse of the\n diabled attribute.\n Default: true",
+			"description": "Flash only: Boolean value specifying whether the control is enabled.\n A disabled control appears in light gray. The inverse of the\n disabled attribute.\n Default: true",
 			"required": false,
 			"default": true,
 			"type": "boolean",
