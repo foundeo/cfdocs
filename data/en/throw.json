@@ -16,12 +16,28 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/throw.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/throw.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/throw.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/throw"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/throw"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Throw a custom exception",
+			"description":"Use the throw function to throw a custom application exception.",
+			"code":"<cfscript>\r\nthrow(type=\"MyCustomError\", message=\"A custom error has been thrown!\");\r\n</cfscript>",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Throw a custom http response exception",
+			"description":"Use the throw function to throw a custom exception when the http response is invalid.",
+			"code":"if (!isJSON(httpResponse.fileContent)) {\r\n\tthrow(type=\"InvalidHTTPResponse\",message=\"The http response was not valid JSON\");\r\n}",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }

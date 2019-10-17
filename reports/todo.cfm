@@ -16,3 +16,5 @@
 <cfset url.name = "todo">
 <cfset request.gitFilePath = "/edit/master/reports/" & url.name & ".cfm">
 <cfinclude template="../views/doc.cfm">
+<!--- only cache reports for 1h --->
+<cfset request.cacheControlMaxAge = 3600>

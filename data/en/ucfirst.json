@@ -4,16 +4,17 @@
 	"syntax": "ucFirst(string [, doAll] [, doLowerIfAllUppercase])",
 	"member": "string.ucFirst([doAll] [, doLowerIfAllUppercase])",
 	"returns": "string",
-	"related": [],
-	"description": "Transforms the first letter of a string to uppercase",
+	"related": ["uCase"],
+	"description": "Transforms the first letter of a string to uppercase or the first letter of each word, and optionally lowercase uppercase characters.",
 	"params": [
 		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "doAll", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
 		{"name": "doLowerIfAllUppercase", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/ucfirst.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/ucfirst.html"}
 	},
+	"links": [],
 	"examples": [
 		{
 			"title": "Basic usage",
@@ -36,6 +37,5 @@
 			"result": "Cfdocs.Org Your (Everyone's) Resource For Cf-Related Documentation!",
 			"runnable":true
 		}
-	],
-	"links": []
+	]
 }

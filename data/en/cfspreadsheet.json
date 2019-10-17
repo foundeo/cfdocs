@@ -2,7 +2,7 @@
 	"name": "cfspreadsheet",
 	"type": "tag",
 	"syntax": "<cfspreadsheet>",
-	"related": ["spreadsheet-functions"],
+	"related": ["isSpreadsheetFile","isSpreadsheetObject"],
 	"description": "Read and writes Microsoft Excel spreadsheet files.",
 	"params": [
 		{
@@ -37,7 +37,7 @@
 			"required": false,
 			"default": "false",
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "filename",
@@ -69,7 +69,7 @@
 			"description": "A Boolean value specifying whether to overwrite an existing file.",
 			"required": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "password",

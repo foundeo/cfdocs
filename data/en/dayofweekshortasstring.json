@@ -4,13 +4,13 @@
 	"syntax": "dayOfWeekShortAsString(day_of_week [, locale])",
 	"returns": "string",
 	"related": ["dayOfWeekAsString"],
-	"description": "",
+	"description": "Returns the first three letters of the day of the week passed to the function",
 	"params": [
 		{"name": "day_of_week", "description": "Only values from 1 to 7 are valid.\nWeek starting with 1 for Sunday and ends with 7 for Saturday.", "required": true, "default": "", "type": "numeric", "values": [1,2,3,4,5,6,7]},
 		{"name": "locale", "description": "", "required": false, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/dayofweekshortasstring.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/dayofweekshortasstring.html"}
 	},
 	"links": [],
 	"examples": [{

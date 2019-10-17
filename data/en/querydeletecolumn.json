@@ -5,14 +5,22 @@
 	"member": "query.deleteColumn(column)",
 	"returns": "array",
 	"related": [],
-	"description": "",
+	"description": "Deletes a column within a query object.",
 	"params": [
-		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
-		{"name": "column", "description": "", "required": true, "default": "", "type": "string", "values": []}
+		{"name": "query", "description": "Query to modify", "required": true, "default": "", "type": "query", "values": []},
+		{"name": "column", "description": "Name of the column to delete", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querydeletecolumn.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querydeletecolumn.html"},
+		"coldfusion": {"minimum_version": "2018", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querydeletecolumn.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"Deletes a column from the query",
+			"description":"Builds a simple query and removes the 'id' column.",
+			"code":"news = queryNew(\"id,title\", \"integer,varchar\", [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nqueryDeleteColumn(news, 'id');\nwriteOutput(serializeJSON(news));",
+			"result":"{\"COLUMNS\":[\"TITLE\"],\"DATA\":[[\"Dewey defeats Truman\"],[\"Man walks on Moon\"]]}"
+		}
+	],
 	"links": []
 }

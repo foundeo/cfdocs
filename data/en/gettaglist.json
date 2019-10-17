@@ -3,12 +3,20 @@
 	"type": "function",
 	"syntax": "getTagList()",
 	"returns": "struct",
-	"related": [],
-	"description": "",
+	"related": ["getTagData","getFunctionData","getFunctionList"],
+	"description": "Gets a struct that contains a list CF language tags",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/gettaglist.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/gettaglist.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+            "title":"Simple example of getTagList function",
+            "description":"Uses the getTagList function to return a list of CF tags",
+			"code":"list = gettagList();\nwriteDump(list);",
+            "result":"",
+            "runnable":true
+        }
+	],
 	"links": []
 }

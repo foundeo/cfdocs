@@ -5,14 +5,14 @@
 	"member": "query.getCell(column_name [, row_number])",
 	"returns": "any",
 	"related": [],
-	"description": "",
+	"description": "Returns data contained in that specific cell",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "column_name", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "row_number", "description": "", "required": false, "default": "-9999", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querygetcell.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querygetcell.html"}
 	},
 	"examples": [],
 	"links": []

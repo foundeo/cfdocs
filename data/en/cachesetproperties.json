@@ -4,13 +4,14 @@
 	"syntax":"cacheSetProperties(properties)",
 	"returns":"void",
 	"related":["cacheGetProperties"],
-	"description":" Set multiple cache settings",
+	"description":"Set multiple cache settings",
 	"params": [
-		{"name":"properties","description":"Key-Value pairs of properties to be changed","required":true,"default":"","type":"structure","values":[]}
+		{"name":"properties","description":"Structure of properties to be changed","required":true,"default":"","type":"struct","values":[]},
+		{ "name": "region", "description": "CF10+ Indicates the cache region for which to set the properties.", "required": false, "default": "", "type": "string", "values": [] }
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheSetProperties.html"},
-		"lucee": {"minimum_version":"", "deprecated":"4.5", "notes":"This function is not supported by Lucee, because we see this as a security risk, you can modifie cache configuration without a password, you can use tag cfadmin instead. we will add support for this function in a future release, but then you can enable,disable this function in admin for every single cache instance.", "docs":"http://docs.lucee.org/reference/functions/cachesetproperties.html"},
+		"lucee": {"minimum_version":"", "deprecated":"4.5", "notes":"This function is not supported by Lucee, because they see this as a security risk, as you can modify cache configuration without a password, you can use tag cfadmin instead. Lucee will add support for this function in a future release.", "docs":"https://docs.lucee.org/reference/functions/cachesetproperties.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cachesetproperties"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cachesetproperties"}
 	},

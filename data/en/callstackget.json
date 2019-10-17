@@ -1,14 +1,14 @@
 {
 	"name":"callStackGet",
 	"type":"function",
-	"syntax":"callStackGet();",
+	"syntax":"callStackGet()",
 	"returns":"array",
 	"related":["callStackDump"],
-	"description":" Returns an array of structs. Each struct contains template name, line number, and function name (if applicable). This is a snapshot of all function calls or invocations.",
+	"description":"Returns an array of structs. Each struct contains template name, line number, and function name (if applicable). This is a snapshot of all function calls or invocations.",
 	"params": [],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CallStackGet.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/callstackget.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/callstackget.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/CallStackGet"}
 	},
 	"links": [],

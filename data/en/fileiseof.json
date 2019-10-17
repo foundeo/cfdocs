@@ -1,22 +1,37 @@
 {
 	"name":"fileIsEOF",
 	"type":"function",
-	"syntax":"fileIsEOF(fileObject)",
+	"syntax":"fileIsEOF(file)",
 	"returns":"boolean",
 	"related":[],
-	"description":" Determines whether ColdFusion has reached the end of the file while reading it.",
+	"description":"Determines whether ColdFusion has reached the end of the file while reading it.",
 	"params": [
-		{"name":"fileObject","description":"The file object.","required":true,"default":"","type":"any","values":[]}
-
+		{"name":"file","description":"The file object.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileiseof.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/fileiseof.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/fileiseof.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/fileiseof"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/fileiseof"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Simple usage syntax",
+			"description":"Call fileIsEOF on a file object and save the result to a variable.",
+			"code":"fileObj = fileOpen(expandPath('./file.txt');\r\nisEndOfFile = fileIsEOF(fileObj);",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Using fileIsEOF to loop over all lines of a text file",
+			"description":"Simplified example of using fileIsEOF to determine when all lines have been read from a file. Error handling omitted for clarity.",
+			"code":"// Error handling omitted for clarity.\r\n\r\n// open a file for reading\r\nfileObj = fileOpen(expandPath('./file.txt'), \"read\");\r\n\r\n// read each line until we read the end of the file.\r\n// fileIsEOF(fileObj) == false until we've read in the last line.\r\nwhile (!fileIsEOF(fileObj)) {\r\n\r\n\tlineContent = fileReadLine(fileObj);\r\n\r\n\t// do something with content of each line\r\n}\r\n\r\n// end of file reached, close the file handle\r\nfileClose(fileObj);",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }

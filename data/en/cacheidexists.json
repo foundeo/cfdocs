@@ -1,17 +1,17 @@
 {
 	"name":"cacheIdExists",
 	"type":"function",
-	"syntax":"cacheIdExists(id [,_ region___]);",
+	"syntax":"cacheIdExists(id [, region])",
 	"returns":"boolean",
 	"related":[],
-	"description":" Used to find if a cached object exists in the cache region. The region can be the default cache region (either at server or application level) or the custom region you specify.",
+	"description":"Used to find if a cached object exists in the cache region. The region can be the default cache region (either at server or application level) or the custom region you specify.",
 	"params": [
-		{"name":"id","description":"The ID of the cached object.","required":true,"default":"","type":"","values":[]},
-        {"name":"region","description":"The cache region where you check for the cached object.","required":false,"default":"","type":"","values":[]}
+		{"name":"id","description":"The ID of the cached object.","required":true,"default":"","type":"string","values":[]},
+    {"name":"region","description":"The cache region where you check for the cached object.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/cacheidexists.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/cacheidexists.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/cacheidexists.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/CacheIdExists"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cacheidexists"}
 	},

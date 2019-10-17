@@ -3,23 +3,20 @@
 	"type":"function",
 	"syntax":"dateCompare(date1, date2 [, datePart])",
 	"returns":"numeric",
-	"related":[],
+	"related":["compare","compareNoCase","dateDiff"],
 	"description":"Performs a full date/time comparison of two dates.\n `-1` if date1 is less than date2\n `0` if date1 is equal to date2\n `1` if date1 is greater than date2\n [DatePart] `yyyy`: Year; `m`: Month; `d`: Day; `h`: Hour; `n`: Minute; `s`: Second",
 	"params": [
 		{"name":"date1","description":"A date to compare","required":true,"default":"","type":"date","values":[]},
 		{"name":"date2","description":"Another date to compare","required":true,"default":"","type":"date","values":[]},
 		{"name":"datePart","description":"","required":false,"default":"s","type":"string","values":["yyyy","m","y","d","h","n","s"]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateCompare.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/datecompare.html"},
+		"lucee": {"minimum_version":"", "notes":"In Lucee \"y\" can be used instead of \"yyyy\"", "docs":"https://docs.lucee.org/reference/functions/datecompare.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/datecompare"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/datecompare"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Compare Two Dates by Year",
@@ -34,5 +31,4 @@
 			"result": "1"
 		}
 	]
-
 }

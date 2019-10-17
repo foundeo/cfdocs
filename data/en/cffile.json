@@ -24,136 +24,166 @@
 		{"name":"cachedwithin","description":"Lucee5+ Timespan, using the CreateTimeSpan function. If original\n file date falls within the time span, cached file data is\n used. CreateTimeSpan defines a period from the present, back.","required":false,"default":"","type":"Timespan","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-f/cffile.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/file.html"},
+		"coldfusion": {"minimum_version":"2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-f/cffile.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/file.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cffile"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cffile"}
 	},
 	"links": [
-
+		{
+			"title":"Tips for Secure File Uploads with CFML",
+			"description":"Blog entry by Pete Freitag outlining some tips to improve security when dealing with file uploads in CFML.",
+			"url":"https://www.petefreitag.com/item/701.cfm"
+		}
 	],
 	"examples": [
 		{
-			"title": "Script Syntax",
+			"title": "Script Syntax - Write",
 			"description": "File Write",
 			"code": "fileWrite(expandPath(\"./myFile.txt\"), \"Here's some content for my file.\");",
+			"runnable":false,
 			"result": ""
 		},
 		{
-			"title": "Script Syntax",
+			"title": "Script Syntax - Append",
 			"description": "File Append - There is no fileAppend() so we access the file and use fileWriteLine()",
 			"code": "myFile = fileOpen(expandPath(\"./myFile.txt\"), \"write\"); \r\n fileWriteLine(myFile, \"Here's some new content.\"); \r\n fileClose(myFile);",
+			"runnable":false,
 			"result": ""
 		},
 		{
-			"title": "Script Syntax",
+			"title": "Script Syntax - Read",
 			"description": "File Read",
 			"code": "myFile = fileRead(expandPath(\"./myFile.txt\"));",
+			"runnable":false,
 			"result": ""
 		},
 		{
-			"title": "Script Syntax",
+			"title": "Script Syntax - Read Binary",
 			"description": "File Read Binary",
 			"code": "myImageBinary = fileReadBinary(expandPath(\"./myImage.jpg\"));",
+			"runnable":false,
 			"result": ""
 		},
 		{
-			"title": "Script Syntax",
+			"title": "Script Syntax - Rename",
 			"description": "File Rename - Since there is no fileRename(), fileMove() works just as well",
 			"code": "fileMove(expandPath(\"./myFile.txt\"), expandPath(\"./myNewFileName.txt\"));",
+			"runnable":false,
 			"result": ""
 		},
 		{
-			"title": "Script Syntax",
+			"title": "Script Syntax - Copy",
 			"description": "File Copy",
 			"code": "fileCopy(expandPath(\"./myFile.txt\"), expandPath(\"./some/other/path\"));",
+			"runnable":false,
 			"result": ""
 		},
 		{
-			"title": "Script Syntax",
+			"title": "Script Syntax - Move",
 			"description": "File Move",
 			"code": "fileMove(expandPath(\"./myFile.txt\"), expandPath(\"./some/other/path\"));",
+			"runnable":false,
 			"result": ""
 		},
 		{
-			"title": "Script Syntax",
+			"title": "Script Syntax - Delete",
 			"description": "File Delete",
 			"code": "fileDelete(expandPath(\"./myFile.txt\"));",
+			"runnable":false,
 			"result": ""
 		},
 		{
-			"title": "Script Syntax",
+			"title": "Script Syntax - Upload",
 			"description": "File Upload",
-			"code": "fileUpload(expandPath(\"./destination\"), \"form.myFile\", \" \", \"makeunique\");",
+			"code": "fileUpload(getTempDirectory(), \"form.myFile\", \" \", \"makeunique\");",
+			"runnable":false,
 			"result": ""
 		},
 		{
-			"title": "Script Syntax",
+			"title": "Script Syntax - Upload All",
 			"description": "File Upload All",
-			"code": "fileUploadAll(expandPath(\"./destination\"), \" \", \"makeunique\");",
+			"code": "fileUploadAll(getTempDirectory(), \" \", \"makeunique\");",
+			"runnable":false,
 			"result": ""
 		},
-	        {
-	            "title": "Tag Syntax",
-	            "description": "File Write",
-	            "code": "<cffile action=\"write\" file=\"#expandPath(\"./myFile.txt\")#\" output=\"Here's some content for my file.\">",
-	            "result": ""
-	        },
-	        {
-	            "title": "Tag Syntax",
-	            "description": "File Append",
-	            "code": "<cffile action=\"append\" file=\"#expandPath(\"./myFile.txt\")#\" attributes=\"normal\" output=\"Here's some new content.\">",
-	            "result": ""
-	        },
-	        {
-	            "title": "Tag Syntax",
-	            "description": "File Read",
-	            "code": "<cffile action=\"read\" file=\"#expandPath(\"./myFile.txt\")#\" variable=\"myFile\">",
-	            "result": ""
-	        },
-	        {
-	            "title": "Tag Syntax",
-	            "description": "File Read Binary",
-	            "code": "<cffile action=\"readBinary\" file=\"#expandPath(\"./myImage.jpg\")#\" variable=\"myImageBinary\">",
-	            "result": ""
-	        },
-	        {
-	            "title": "Tag Syntax",
-	            "description": "File Rename",
-	            "code": "<cffile action=\"rename\" source=\"#expandPath(\"./myFile.txt\")#\" destination=\"#expandPath(\"./myNewFileName.txt\")#\" attributes=\"normal\">",
-	            "result": ""
-	        },
-	        {
-	            "title": "Tag Syntax",
-	            "description": "File Copy",
-	            "code": "<cffile action=\"copy\" source=\"#expandPath(\"./myFile.txt\")#\" destination=\"#expandPath(\"./some/other/path\")#\">",
-	            "result": ""
-	        },
-	        {
-	            "title": "Tag Syntax",
-	            "description": "File Move",
-	            "code": "<cffile action=\"move\" source=\"#expandPath(\"./myFile.txt\")#\" destination=\"#expandPath(\"./some/other/path\")#\">",
-	            "result": ""
-	        },
-	        {
-	            "title": "Tag Syntax",
-	            "description": "File Delete",
-	            "code": "<cffile action=\"delete\" file=\"#expandPath(\"./myFile.txt\")#\">",
-	            "result": ""
-	        },
-	        {
-	            "title": "Tag Syntax",
-	            "description": "File Upload",
-	            "code": "<cffile action=\"upload\" destination=\"#expandPath(\"./destination)#\" filefield=\"form.myFile\" nameconflict=\"makeunique\">",
-	            "result": ""
-	        }
-	        ,
-	        {
-	            "title": "Tag Syntax",
-	            "description": "File Upload All",
-	            "code": "<cffile action=\"uploadall\" destination=\"#expandPath(\"./destination\")#\" nameconflict=\"makeunique\">",
-	            "result": ""
-	        }
+        {
+            "title": "Tag Syntax (action=write)",
+            "description": "Write the contents of a variable to a file.",
+            "code": "<cffile action=\"write\" file=\"#expandPath(\"./myFile.txt\")#\" output=\"Here's some content for my file.\">",
+            "runnable":false,
+            "result": ""
+        },
+        {
+            "title": "Tag Syntax (action=append)",
+            "description": "Append content to the end of a file.",
+            "code": "<cffile action=\"append\" file=\"#expandPath(\"./myFile.txt\")#\" attributes=\"normal\" output=\"Here's some new content.\">",
+            "runnable":false,
+            "result": ""
+        },
+        {
+            "title": "Tag Syntax (action=read)",
+            "description": "Read a file into a variable",
+            "code": "<cffile action=\"read\" file=\"#expandPath(\"./myFile.txt\")#\" variable=\"myFile\">",
+            "runnable":false,
+            "result": ""
+        },
+        {
+            "title": "Tag Syntax (action=readBinary)",
+            "description": "File Read Binary",
+            "code": "<cffile action=\"readBinary\" file=\"#expandPath(\"./myImage.jpg\")#\" variable=\"myImageBinary\">",
+            "runnable":false,
+            "result": ""
+        },
+        {
+            "title": "Tag Syntax (action=rename)",
+            "description": "Rename a file",
+            "code": "<cffile action=\"rename\" source=\"#expandPath(\"./myFile.txt\")#\" destination=\"#expandPath(\"./myNewFileName.txt\")#\" attributes=\"normal\">",
+            "runnable":false,
+            "result": ""
+        },
+        {
+            "title": "Tag Syntax (action=copy)",
+            "description": "Copy a file",
+            "code": "<cffile action=\"copy\" source=\"#expandPath(\"./myFile.txt\")#\" destination=\"#expandPath(\"./some/other/path\")#\">",
+            "runnable":false,
+            "result": ""
+        },
+        {
+            "title": "Tag Syntax (action=move)",
+            "description": "Move a file",
+            "code": "<cffile action=\"move\" source=\"#expandPath(\"./myFile.txt\")#\" destination=\"#expandPath(\"./some/other/path\")#\">",
+            "runnable":false,
+            "result": ""
+        },
+        {
+            "title": "Tag Syntax (action=delete)",
+            "description": "Delete a file",
+            "code": "<cffile action=\"delete\" file=\"#expandPath(\"./myFile.txt\")#\">",
+            "runnable":false,
+            "result": ""
+        },
+        {
+            "title": "Tag Syntax (action=upload)",
+            "description": "Upload the file contained in the myFile field. Always upload to a directory outside of the webroot, validate the file extension, file content and then only if necessary copy it back to the web root.",
+            "code": "<cffile action=\"upload\" destination=\"#getTempDirectory()#\" filefield=\"form.myFile\" nameconflict=\"makeunique\">",
+            "runnable":false,
+            "result": ""
+        },
+        {
+            "title": "Tag Syntax (action=upload) with accept",
+            "description": "CF10+ Checks file extensions against a whitelist of allowed file extensions. You must set `strict=false` when specifying a file extension list.",
+            "code": "<cffile action=\"upload\" accept=\".png,.jpg\" strict=\"false\" destination=\"#getTempDirectory()#\" filefield=\"form.myFile\" nameconflict=\"makeunique\">",
+            "runnable":false,
+            "result": ""
+        },
+        {
+            "title": "Tag Syntax (action=uploadall)",
+            "description": "Upload all files in the form scope.",
+            "code": "<cffile action=\"uploadall\" destination=\"#getTempDirectory()#\" nameconflict=\"makeunique\">",
+            "runnable":false,
+            "result": ""
+        }
 	]
 
 }

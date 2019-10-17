@@ -1,16 +1,16 @@
 {
   "name": "cacheRemoveAll",
   "type": "function",
-  "syntax": "cacheRemoveAll( region );",
+  "syntax": "cacheRemoveAll( region )",
   "returns": "void",
   "related": ["cacheDelete","cacheClear"],
-  "description": " Removes all stored objects in a cache region. If no cache region is specified, objects in the default region are removed.",
+  "description": "Removes all stored objects in a cache region. If no cache region is specified, objects in the default region are removed.",
   "params": [
-    { "name": "region", "description": "Indicates the cache region from which to remove the stored objects. If no value is specified, default cache region is considered by default.", "required": false, "default": "", "type": "", "values": [] }
+    { "name": "region", "description": "Indicates the cache region from which to remove the stored objects. If no value is specified, default cache region is considered by default.", "required": false, "default": "", "type": "string", "values": [] }
   ],
   "engines": {
     "coldfusion": { "minimum_version": "10", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheRemoveAll.html" },
-    "lucee": { "minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/cacheremoveall.html" },
+    "lucee": { "minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/cacheremoveall.html" },
     "railo": { "minimum_version": "", "notes": "", "docs": "http://railodocs.org/index.cfm/function/cacheRemoveAll" },
     "openbd": { "minimum_version": "", "notes": "", "docs": "http://openbd.org/manual/?/function/cacheremoveall" }
   },

@@ -1,19 +1,19 @@
 {
   "name": "cacheRemove",
   "type": "function",
-  "syntax": "cacheRemove(ids [, throwOnError [, key[, exact]]])",
+  "syntax": "cacheRemove(id [, throwOnError [, region[, exact]]])",
   "returns": "void",
   "related": [ "cacheRemoveAll", "cacheGetAllIds" ,"cachePut" ],
   "description": "Removes an object from the cache.",
   "params": [
-    { "name": "ids", "description": "Comma delimited list of cache IDs. A list of all available IDs can be retrieved using cacheGetAllIds. CF11+ Can take an array instead of a list.", "required": true, "default": "", "type": "string", "values": [] },
-    { "name": "throwOnError", "description": "`true` throws an error when cache ID does not exist.", "required": false, "default": false, "type": "boolean", "values": [true,false] },
-    { "name": "key", "description": "CF10+ Specify which cache region to search", "required": false, "default": "", "type": "string", "values": [] },
-    { "name": "exact", "description": "CF10+ Used to partially match on keys", "required": false, "default": true, "type": "boolean", "values": [true, false] }
+    { "name": "id", "description": "Comma delimited list of cache IDs. A list of all available IDs can be retrieved using cacheGetAllIds. CF11+ Can take an array instead of a list.", "required": true, "default": "", "type": "any", "values": [] },
+    { "name": "throwOnError", "description": "When `true` throws an error when cache ID does not exist.", "required": false, "default": false, "type": "boolean", "values": [] },
+    { "name": "region", "description": "CF10+ Specify which cache region to search", "required": false, "default": "", "type": "string", "values": [] },
+    { "name": "exact", "description": "CF10+ When `true`, matches values in `id` exactly", "required": false, "default": true, "type": "boolean", "values": [] }
   ],
   "engines": {
     "coldfusion": { "minimum_version": "9", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheRemove.html" },
-    "lucee": { "minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/cacheremove.html" },
+    "lucee": { "minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/cacheremove.html" },
     "railo": { "minimum_version": "", "notes": "", "docs": "http://railodocs.org/index.cfm/function/cacheremove" },
     "openbd": { "minimum_version": "", "notes": "", "docs": "http://openbd.org/manual/?/function/cacheremove" }
   },

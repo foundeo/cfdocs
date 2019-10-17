@@ -13,11 +13,11 @@
 		{"name":"disposition","description":"How the attached file is to be handled. Can be one\n of the following:\n - attachment: present the file as an attachment\n - inline: display the file contents in the message","required":false,"default":"attachment","type":"string","values":["attachment","inline"]},
 		{"name":"content","description":"Lets you send the contents of a\nColdFusion variable as an attachment","required":false,"default":"","type":"string","values":[]},
 		{"name":"remove","description":"Tells ColdFusion to remove any attachments after successful mail delivery.","required":false,"default":"","type":"boolean","values":[]},
-		{"name":"filename","description":"CF2016+ The file name of the attachment as seen by the recipient.","required":false,"default":"","type":"string","values":[]}
+		{"name":"filename","description":"CF2016+ Lucee5.1.0.17+ The file name of the attachment as seen by the recipient.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmailparam.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/mailparam.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/mailparam.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmailparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmailparam"}
 	},

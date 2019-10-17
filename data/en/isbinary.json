@@ -3,28 +3,31 @@
 	"type":"function",
 	"syntax":"isBinary(value)",
 	"returns":"boolean",
-	"related":[],
+	"related":["toBase64","toBinary","spreadsheetReadBinary","fileReadBinary"],
 	"description":" Determines whether a value is stored as binary data.",
 	"params": [
 		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isbinary.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/isbinary.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isbinary.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isbinary"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isbinary"}
 	},
-	"links": [
-
-	],
-
+	"links": [],
 	"examples": [
 		{
 			"title":"Checks if toBase64() function returns binary data ",
-			"description":"returns true if given value is binary data, returns false if otherwise",
+			"description":"toBase64() returns base64 encoded data which is not binary",
 			"code":"isBinary( toBase64(1) )",
 			"result":false,
+			"runnable":true
+		},
+		{
+			"title":"Checks if toBinary() function returns binary data ",
+			"description":"toBinary() expects base64 encoded data and returns binary data",
+			"code":"isBinary( toBinary(toBase64(1)) )",
+			"result":true,
 			"runnable":true
 		}
 	]

@@ -1,16 +1,16 @@
 {
 	"name":"cacheGetProperties",
 	"type":"function",
-	"syntax":"cacheGetProperties(type)",
+	"syntax":"cacheGetProperties(region)",
 	"returns":"array",
 	"related":["cacheSetProperties"],
-	"description":" Gets the cache properties for the object cache, the page cache, or both. The information is application-specific.",
+	"description":"Gets the cache properties for the object cache, the page cache, or both. The information is application-specific.",
 	"params": [
-		{"name":"type","description":"Properties to get information for\n\n\"\" or not set - information to all default caches\nobject - information to \"Default Object\" Cache\ntemplate - information to \"Default Template\" Cache\nquery - information to \"Default Query\" Cache\nresource - information to \"Default Resource\" Cache\n{cache name} - information to a specific cache","required":true,"default":"","type":"string","values":["object","template","resource","query"]}
+		{"name":"region","description":"Lucee4.5+ CF10+ Properties to get information for\n\n\"\" or not set - information to all default caches\nobject - information to \"Default Object\" Cache\ntemplate - information to \"Default Template\" Cache\nquery - information to \"Default Query\" Cache\nresource - information to \"Default Resource\" Cache\n{cache name} - information to a specific cache","required":false,"default":"","type":"string","values":["object","template","resource","query"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheGetProperties.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/cachegetproperties.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/cachegetproperties.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cachegetproperties"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cachegetproperties"}
 	},

@@ -4,21 +4,22 @@
 	"syntax":"<cfselect name=\"\">",
 	"related":[],
 	"description":"Constructs a drop-down list box form control. Used within a\n cfform tag.\n\n You can populate the list from a query, or by using the HTML\n option tag.",
+ 	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html",
 	"params": [
 		{"name":"name","description":"Name of the select form element","required":true,"default":"","type":"string","values":[]},
 		{"name":"id","description":"ID for form input element.","required":false,"default":"","type":"string","values":[]},
 		{"name":"bind","description":"A bind expression that dynamically sets an attribute \n of the control.","required":false,"default":"","type":"string","values":[]},
 		{"name":"bindAttribute","description":"Specifies the HTML tag attribute whose value is set \n by the bind attribute. You can only specify attributes \n in the browser‚ HTML DOM tree, not ColdFusion- \n specific attributes. \n Ignored if there is no bind attribute.","required":false,"default":"","type":"string","values":[]},
-		{"name":"bindOnLoad","description":"A Boolean value that specifies whether to execute \n the bind attribute expression when first loading the \n form. Ignored if there is no bind attribute.","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"editable","description":"Boolean value specifying whether you can edit the \n contents of the control.","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"bindOnLoad","description":"A Boolean value that specifies whether to execute \n the bind attribute expression when first loading the \n form. Ignored if there is no bind attribute.","required":false,"default":false,"type":"boolean","values":[]},
+		{"name":"editable","description":"Boolean value specifying whether you can edit the \n contents of the control.","required":false,"default":false,"type":"boolean","values":[]},
 		{"name":"label","description":"Label to put next to the control on a Flash or XML-format form.","required":false,"default":"","type":"string","values":[]},
 		{"name":"style","description":"In HTML or XML format forms, ColdFusion passes the\n style attribute to the browser or XML.\n In Flash format, must be a style specification in CSS\n format, with the same syntax and contents as used in\n Macromedia Flex for the corresponding Flash element.\n Post alpha we will document specifics.","required":false,"default":"","type":"string","values":[]},
 		{"name":"sourceForTooltip","description":"The URL of a page to display as a tool tip. The page \n can include CFML and HTML markup to control the \n tip contents and format, and the tip can include \n images. \n If you specify this attribute, an animated icon \n appears with the text \"Loading...\" while the tip is \n being loaded.","required":false,"default":"","type":"string","values":[]},
 		{"name":"size","description":"Number of entries to display at one time. The default, 1,\n displays a drop-down list. Any other value displays a list\n box with size number of entries visible at one time.","required":false,"default":1,"type":"numeric","values":[]},
-		{"name":"required","description":"If true a list element must be selected when form is submitted.\n Note: This attribute has no effect if you omit the size\n attribute or set it to 1 because the browser always submits\n the displayed item. You can work around this issue format\n forms by having an initial option tag with value=\" \" (note the\n space character between the quotation marks).\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"required","description":"If true a list element must be selected when form is submitted.\n Note: This attribute has no effect if you omit the size\n attribute or set it to 1 because the browser always submits\n the displayed item. You can work around this issue format\n forms by having an initial option tag with value=\" \" (note the\n space character between the quotation marks).\n Default: false","required":false,"default":false,"type":"boolean","values":[]},
 		{"name":"message","description":"Message to display if required=\"true\" and no selection is made.","required":false,"default":"","type":"string","values":[]},
 		{"name":"onerror","description":"Custom JavaScript function to execute if validation fails.","required":false,"default":"","type":"string","values":[]},
-		{"name":"multiple","description":"- true: allow selecting multiple elements in drop-down list\n - false: don't allow selecting multiple elements\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"multiple","description":"- true: allow selecting multiple elements in drop-down list\n - false: don't allow selecting multiple elements\n Default: false","required":false,"default":false,"type":"boolean","values":[]},
 		{"name":"query","description":"Name of query to populate drop-down list.","required":false,"default":"","type":"string","values":[]},
 		{"name":"value","description":"Query column to use for the value of each list element.\n Used with query attribute.","required":false,"default":"","type":"string","values":[]},
 		{"name":"display","description":"Query column to use for the display label of each list\n element. Used with query attribute.","required":false,"default":"","type":"string","values":[]},
@@ -31,23 +32,19 @@
 		{"name":"onmousedown","description":"JavaScript (HTML\/XML) or ActionScript (Flash) to run\n when the user releases a mouse button in the control.","required":false,"default":"","type":"string","values":[]},
 		{"name":"onchange","description":"JavaScript (HTML\/XML) or ActionScript (Flash) to run\n when the control changes due to user action.","required":false,"default":"","type":"string","values":[]},
 		{"name":"onclick","description":"JavaScript to run when the user clicks the control.","required":false,"default":"","type":"string","values":[]},
-		{"name":"enabled","description":"Flash only: Boolean value specifying whether to show the control.\n Space that would be occupied by an invisible control is\n blank.\n Default: true","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"visible","description":"Flash only: Boolean value specifying whether to show the control.\n Space that would be occupied by an invisible control is\n blank.\n Default: true","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"enabled","description":"Flash only: Boolean value specifying whether to show the control.\n Space that would be occupied by an invisible control is\n blank.\n Default: true","required":false,"default":true,"type":"boolean","values":[]},
+		{"name":"visible","description":"Flash only: Boolean value specifying whether to show the control.\n Space that would be occupied by an invisible control is\n blank.\n Default: true","required":false,"default":true,"type":"boolean","values":[]},
 		{"name":"tooltip","description":"Flash only: Text to display when the mouse pointer hovers over the control.","required":false,"default":"","type":"string","values":[]},
 		{"name":"height","description":"The height of the control, in pixels.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"width","description":"The width of the control, in pixels.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"passthrough","description":"This attribute is deprecated.\n \n Passes arbitrary attribute-value pairs to the HTML code\n that is generated for the tag. You can use either of the\n following formats:\n \n passthrough=\"title=\"\"myTitle\"\"\"\n passthrough='title=\"mytitle\"'","required":false,"default":"","type":"string","values":[]},
 		{"name":"onbinderror","description":"The name of a JavaScript function to execute if evaluating a bind expression results in an error. The function must take two attributes: an HTTP status code and a message.","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfselect.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/select.html"},
+		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfselect.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/select.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfselect"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfselect"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

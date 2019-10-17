@@ -1,16 +1,17 @@
 {
 	"name":"directoryExists",
 	"type":"function",
-	"syntax":"directoryExists(absolute_path)",
+	"syntax":"directoryExists(path)",
 	"returns":"boolean",
-	"related":["directoryCreate","fileExists"],
-	"description":" Determines whether a directory exists.",
+	"related":["directoryCreate","directoryDelete","fileExists"],
+	"description":"Determines whether an on-disk or in-memory directory exists.",
 	"params": [
-		{"name":"absolute_path","description":"","required":true,"default":"","type":"string","values":[]}
+		{"name":"path","description":"An absolute on-disk or in-memory path. Alternatively, you can specify IP address as in the following example: `DirectoryExists(\"//12.3.123.123/c_drive/test\");`","required":true,"default":"","type":"string","values":[]},
+		{"name":"allowRealPath ","description":"Lucee Only. boolean that defines if relative paths are interpreted or not.","required":false,"default":"","type":"boolean","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DirectoryExists.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/directoryexists.html"},
+		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DirectoryExists.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/directoryexists.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/directoryexists"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/directoryexists"}
 	},

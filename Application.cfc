@@ -13,10 +13,12 @@
 			<cfset application.index = DeserializeJSON( FileRead(ExpandPath("./data/en/index.json")))>
 			<cfset application.categories = {}>
 			<cfloop array="#application.index.categories#" index="local.cat">
-				<cfset application.categories[local.cat] = {name="", items=[]}>
-				<cfset local.catData = DeserializeJSON( FileRead(ExpandPath("./data/en/#local.cat#.json")))>
-				<cfset application.categories[local.cat].name = local.catData.name>
-				<cfset application.categories[local.cat].items = local.catData.related>
+				<cfif fileExists(ExpandPath("./data/en/#local.cat#.json"))>
+					<cfset application.categories[local.cat] = {name="", items=[]}>
+					<cfset local.catData = DeserializeJSON( FileRead(ExpandPath("./data/en/#local.cat#.json")))>
+					<cfset application.categories[local.cat].name = local.catData.name>
+					<cfset application.categories[local.cat].items = local.catData.related>
+				</cfif>
 			</cfloop>
 			<cfset application.guides = {}>
 			<cfloop array="#application.index.guides#" index="local.guide">

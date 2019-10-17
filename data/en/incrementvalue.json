@@ -10,7 +10,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"For floats ACF will return the integer incremented removing the decimal part", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/incrementvalue.html"},
-		"lucee": {"minimum_version":"", "notes":"For floats Lucee will keep the decimal part while incrementing", "docs":"http://docs.lucee.org/reference/functions/incrementvalue.html"},
+		"lucee": {"minimum_version":"", "notes":"For floats Lucee will keep the decimal part while incrementing", "docs":"https://docs.lucee.org/reference/functions/incrementvalue.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/incrementvalue"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/incrementvalue"}
 	},

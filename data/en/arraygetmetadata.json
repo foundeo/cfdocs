@@ -1,0 +1,30 @@
+{
+	"name":"arrayGetMetadata",
+	"type":"function",
+	"syntax":"arrayGetMetadata(array)",
+	"member":"someArray.getMetadata()",
+	"returns":"struct",
+	"related":["arraySetMetadata","structGetMetadata","structSetMetadata"],
+	"description":"Gets metadata for items of an array and indicates the array type.",
+	"params": [
+		{"name":"array","description":"The array for which to get the metadata.","required":true,"default":"","type":"array","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2016.0.2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraygetmetadata.html"}
+	},
+  	"links": [],
+	"examples": [
+		{
+			"title": "Simple Example",
+			"description": "",
+			"code": "// Create an array\narrayList = [\"apple\", \"pineapple\", \"mango\"];\n\n// Fetch meta data\ndata = arrayGetMetadata(arrayList);\n\n// Print array type\nwriteOutput(data.type);",
+			"result": "synchronized"
+		},
+		{
+			"title": "Member Function Example",
+			"description": "",
+			"code": "// Create an array\narrayList = [\"apple\", \"pineapple\", \"mango\"];\n\n// Fetch meta data\ndata = arrayList.getMetadata();\n\n// Print array type\nwriteOutput(data.type);",
+			"result": "synchronized"
+		}
+	]
+}

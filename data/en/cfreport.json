@@ -2,7 +2,7 @@
 	"name": "cfreport",
 	"type": "tag",
 	"syntax": "<cfreport>",
-	"related": [],
+	"related": ["cfreportparam"],
 	"description": "Used to do either of the following:\n - Execute a report definition created with the ColdFusion\n Report Builder, displaying it in PDF, FlashPaper, or Excel\n format. You can optionally save this report to a file.\n - Run a predefined Crystal Reports report. Applies only to\n Windows systems. Uses the CFCRYSTAL.exe file to generate\n reports. Sets parameters in the Crystal Reports engine\n according to its attribute values.",
 	"params": [
 		{
@@ -168,7 +168,7 @@
 	],
 	"engines": {
 		"coldfusion": {
-			"minimum_version": "",
+			"minimum_version": "2",
 			"notes": "",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfreport.html"
 		}

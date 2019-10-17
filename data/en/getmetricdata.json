@@ -4,18 +4,14 @@
 	"syntax":"getMetricData(mode)",
 	"returns":"any",
 	"related":[],
-	"description":" Gets server performance metrics\n [mode - quicky]\n perf_monitor - Returns internal data, in a structure.\n simple_load - Returns an integer value that is computed\n from the state of the server's internal\n queues. Indicates the overall server load.\n prev_req_time - Returns the time, in milliseconds, that it\n took the server to process the previous\n request.\n avg_req_time - Returns the average time, in milliseconds,\n that it takes the server to process a\n request.",
+	"description":"Gets server performance metrics\n [mode - quickly]",
 	"params": [
-		{"name":"mode","description":"","required":true,"default":"","type":"string","values":["perf_monitor","simple_load","prev_req_time","avg_req_time"]}
-
+		{"name":"mode","description":"perf_monitor - Returns internal data, in a structure.\n simple_load - Returns an integer value that is computed\n from the state of the server's internal\n queues. Indicates the overall server load.\n prev_req_time - Returns the time, in milliseconds, that it\n took the server to process the previous\n request.\n avg_req_time - Returns the average time, in milliseconds,\n that it takes the server to process a\n request.","required":true,"default":"","type":"string","values":["perf_monitor","simple_load","prev_req_time","avg_req_time"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getmetricdata.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/getmetricdata.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getmetricdata"}
+		"lucee": {"minimum_version":"", "deprecated": "4", "notes":"", "docs":"https://docs.lucee.org/reference/functions/getmetricdata.html"},
+		"railo": {"minimum_version":"", "deprecated": "0", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getmetricdata"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

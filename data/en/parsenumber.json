@@ -3,15 +3,16 @@
 	"type": "function",
 	"syntax": "parseNumber(number [, radix])",
 	"returns": "numeric",
-	"related": [],
+	"related": ["lsparseNumber","toNumeric","parseNumber"],
 	"description": "Converts string to number in numeral system",
 	"params": [
 		{"name": "number", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "radix", "description": "", "required": false, "default": "", "type": "string", "values": ["bin","oct","dec","hex"]}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/parsenumber.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/parsenumber.html"}
 	},
+	"links": [],
 	"examples": [{
 		"title":"Convert decimal number to binary",
 		"description":"",
@@ -24,6 +25,5 @@
 		"code":"parseNumber(1010,\"hex\")",
 		"result":4112,
 		"runnable":true
-	}],
-	"links": []
+	}]
 }

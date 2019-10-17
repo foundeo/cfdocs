@@ -1,33 +1,30 @@
 {
 	"name":"lsDateFormat",
 	"type":"function",
-	"syntax":"lsDateFormat(date [, mask])",
-	"member":"date.lsDateFormat([mask])",
+	"syntax":"lsDateFormat(date [, mask, locale])",
+	"member":"date.lsDateFormat([mask, locale])",
 	"returns":"string",
-	"related":[],
+	"related":["lsTimeFormat","dateFormat"],
 	"description":"Formats the date part of a date/time value in a locale-specific format.\n [mask - quicky]\n d,dd,ddd,dddd: Day of month / week\n m,mm,mmm,mmmm: Month\n y,yy,yyyy: Year\n gg: Period/era string\n short / medium / long / full",
 	"params": [
-		{"name":"date","description":"","required":true,"default":"","type":"date","values":[]},
-		{"name":"mask","description":"","required":false,"default":"","type":"string","values":["short","medium","long","full"]}
-
+		{"name":"date","description":"The datetime object","required":true,"default":"","type":"date","values":[]},
+		{"name":"mask","description":"A keyword or custom combination of components","required":false,"default":"medium","type":"string","values":["short","medium","long","full"]},
+		{"name":"locale","description":"CF8+ Locale to use instead of the locale of the page when processing the function","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/lsdateformat.html"},
-		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+.", "docs":"http://docs.lucee.org/reference/functions/lsdateformat.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+.", "docs":"https://docs.lucee.org/reference/functions/lsdateformat.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsdateformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsdateformat"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Tag Example",
 			"description":"lsDateFormat formats the date part of a date/time value using the locale convention. ",
-			"code":"<!--- loop through a list of locales; show date values for now()---> \r\n <cfloop list = \"#Server.Coldfusion.SupportedLocales#\" \r\n index = \"locale\" delimiters = \",\"> \r\n <cfset oldlocale = setLocale(locale)> \r\n  <cfoutput><p><B><I>#locale#</I></B> \r\n #lsDateFormat(now(), \"mmm-dd-yyyy\")# \r\n #lsDateFormat(now(), \"mmmm d, yyyy\")# \r\n #lsDateFormat(now(), \"mm/dd/yyyy\")# \r\n #lsDateFormat(now(), \"d-mmm-yyyy\")# \r\n #lsDateFormat(now(), \"ddd, mmmm dd, yyyy\")# \r\n #lsDateFormat(now(), \"d/m/yy\")# \r\n #lsDateFormat(now())# \r\n <hr noshade> \r\n </cfoutput> \r\n </cfloop> ",
+			"code":"<!--- loop through a list of locales; show date values for now()---> \n <cfloop list = \"#Server.Coldfusion.SupportedLocales#\" \n index = \"locale\" delimiters = \",\"> \n <cfset oldlocale = setLocale(locale)> \n  <cfoutput><p><B><I>#locale#</I></B> \n #lsDateFormat(now(), \"mmm-dd-yyyy\")# \n #lsDateFormat(now(), \"mmmm d, yyyy\")# \n #lsDateFormat(now(), \"mm/dd/yyyy\")# \n #lsDateFormat(now(), \"d-mmm-yyyy\")# \n #lsDateFormat(now(), \"ddd, mmmm dd, yyyy\")# \n #lsDateFormat(now(), \"d/m/yy\")# \n #lsDateFormat(now())# \n <hr noshade> \n </cfoutput> \n </cfloop> ",
 			"result":"",
 			"runnable":true
 		}
 	]
-
 }

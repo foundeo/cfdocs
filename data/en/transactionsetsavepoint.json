@@ -3,19 +3,23 @@
 	"type":"function",
 	"syntax":"transactionSetSavepoint(savepoint)",
 	"returns":"void",
-	"related":[],
-	"description":" Set savepoint for transaction",
+	"related":["cftry", "cfcatch","cftransaction","transactioncommit","transactionrollback"],
+	"description":"Set savepoint for transaction",
 	"params": [
-		{"name":"savepoint","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
-
+		{"name":"savepoint","description":"Savepoint name to which can be rolled back","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/transactionsetsavepoint.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/transactionsetsavepoint.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/transactionsetsavepoint.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/transactionsetsavepoint"}
 	},
-	"links": [
-
+	"links": [],
+	"examples": [
+		{
+			"title": "Roll back to a specified savepoint",
+			"description": "This example runs multiple queries with a savepoint for each, and rolls back to the 'useradded' savepoint if the last query fails.",
+			"code": "transaction { \r\n  // insert user \r\n  transactionSetSavepoint('useradded'); \r\n  try { \r\n    // another query \r\n  } \r\n  catch(any e) { \r\n   transactionRollback(); \r\n  } \r\n}",
+			"result": ""
+		}
 	]
-
 }

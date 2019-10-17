@@ -4,29 +4,25 @@
 	"syntax":"fileSetAccessMode(filePath, mode)",
 	"returns":"void",
 	"related":[],
-	"description":" Sets the attributes of an on-disk file on UNIX or Linux. This function does not work with in-memory files.",
+	"description":"Sets the attributes of an on-disk file on UNIX or Linux. This function does not work with in-memory files.",
 	"params": [
-		{"name":"filePath","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
-		{"name":"mode","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
-
+		{"name":"filePath","description":"Path to file","required":true,"default":"","type":"string","values":[]},
+		{"name":"mode","description":"Access mode (the same attributes you use for the Linux command 'chmod')\n\nEach digit specifies who is granted the access:\n* 1st digit: owner\n* 2nd digit: group\n* 3rd digit: other\n\nEach number specifies which right is granted:\n* 4: read (r)\n* 2: write (w)\n* 1: execute (e)\n\nLet's assume that matrix as seen on linux systems: rwerwerwe. You can combine the numbers for read, write and exucute permissions to achieve combined permissions:\n* 3: write & execute\n* 5: read & execute\n* 6: read & write\n* 7: read, write and execute\n\nFor example, 400 specifies that only the owner can read the file; 004 specifies that anyone can read the file.\nIn rwe-notation 400 means r-------- and 004 ------r-- whereas 751 means rwer-er--.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filesetaccessmode.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/filesetaccessmode.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/filesetaccessmode.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filesetaccessmode"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filesetaccessmode"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+    	"examples": [
 		{
-			"title": "Script Syntax",
+			"title": "Grant read access to everyone",
 			"description": "",
 			"code": "<cfscript> \r\n fileSetAccessMode(\"test1.txt\", \"004\"); \r\n </cfscript>   ",
 			"result": "",
 			"runnable":false
 		}
 	]
-
 }

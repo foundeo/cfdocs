@@ -6,14 +6,14 @@
 	"related":["hash"],
 	"description":"Creates a keyed-hash message authentication code (HMAC), which can be used to verify authenticity and integrity of a message by two parties that share the key.",
 	"params": [
-		{"name":"message","description":"The message or data to autenticate","required":true,"default":"","type":"string","values":[]},
+		{"name":"message","description":"The message or data to authenticate","required":true,"default":"","type":"string","values":[]},
 		{"name":"key","description":"The secret key.","required":true,"default":"","type":"string","values":[]},
 		{"name":"algorithm","description":"An algorithm supported by the java crypto provider, for example HMACSHA256", "required":false,"default":"HMACMD5","type":"string","values":["HMACMD5","HMACSHA1","HMACSHA256","HMACSHA384","HMACSHA512"]},
 		{"name":"encoding","description":"The character encoding to use when converting the message to bytes. Must be a character encoding name recognized by the Java runtime.","required":false,"default":"utf-8","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/hmac.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/hmac.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/hmac.html"},
 		"openbd": {"minimum_version":"3.1", "notes":"", "docs":"http://openbd.org/manual/?/function/hmac"}
 	},
 	"links": [

@@ -14,7 +14,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"CF11+ Added script-based cfheader()", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfheader.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/header.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/header.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfheader"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfheader"}
 	},
@@ -42,6 +42,13 @@
 			"title":"Return a Custom Status Code and Status Text",
 			"description":"Uses cfheader to return a 405 Method Not Allowed status when method is not POST.",
 			"code":"<cfif uCase(cgi.request_method) IS NOT \"POST\">\n    <cfheader statuscode=\"405\" statustext=\"Method Not Allowed\">\n    Sorry POST only.<cfabort>\n</cfif>",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Content-Type header in CFScript",
+			"description":"CFScript syntax to return a JSON content type header.",
+			"code":"cfheader( name=\"Content-Type\", value=\"application/json\" )",
 			"result":"",
 			"runnable":false
 		}

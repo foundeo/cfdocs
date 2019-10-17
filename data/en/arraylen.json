@@ -5,19 +5,22 @@
 	"member":"someArray.len()",
 	"returns":"numeric",
 	"related":["arrayAvg"],
-	"description":" Determines the number of elements in an array.\n CFML MX: this function can be used on child XML objects.",
+	"description":"Determines the number of elements in an array.\n CF MX: this function can be used on child XML objects.",
 	"params": [
 		{"name":"array","description":"An array which to determine length","required":true,"default":"","type":"array","values":[]}
-
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraylen.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arraylen.html"},
+		"coldfusion": {"minimum_version":"3", "notes":"The member function cannot be called on literals", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraylen.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arraylen.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraylen"}
 	},
 	"links": [
-
-	],
+		{
+		    "title":"[ANeff] Bug for: member functions cannot be called on literals (continuation of CF-3712122)",
+		    "description":"Adobe bug ticket to add literal support to struct and array member functions",
+		    "url":"https://tracker.adobe.com/#/view/CF-4202071"
+		}
+    	],
 	"examples": [
 		{
 			"title": "Simple example for arrayLen function",
@@ -32,5 +35,4 @@
 			"result": "3"
 		}
 	]
-
 }

@@ -1,19 +1,27 @@
 {
 	"name":"fileClose",
 	"type":"function",
-	"syntax":"fileClose(fileObj)",
+	"syntax":"fileClose(file)",
 	"returns":"void",
 	"related":["fileOpen"],
 	"description":"Closes an on-disk or in-memory file that is open.",
 	"params": [
-		{"name":"fileObj","description":"A file object","required":true,"default":"","type":"any","values":[]}
+		{"name":"file","description":"A file object","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileclose.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/fileclose.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/fileclose.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/fileclose"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/fileclose"}
 	},
 	"links": [],
-	"examples": []
+	"examples": [
+		{
+			"title":"Opens a file, reads a line then closes it.",
+			"description":"",
+			"code":"// Open File\nvar fileObject = fileOpen(\"/path/to/file.txt\");\n\n// Perform Actions\ntry\n{\n\t// Read Line\n\twriteOutput(fileReadLine(fileObject));\n}\n\n// Error Handling\ncatch(any ex)\n{\n\t// Report Exception\n\twriteDump(ex);\n}\n\n// Always Close\nfinally\n{\n\t// Close File\n\tfileClose(fileObject);\n}",
+			"result":"",
+			"runnable":false
+		}
+	]
 }

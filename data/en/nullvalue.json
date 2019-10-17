@@ -3,12 +3,18 @@
 	"type": "function",
 	"syntax": "nullValue()",
 	"returns": "any",
-	"related": [],
+	"related": ["javaCast", "isNull"],
 	"description": "returns null",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/nullvalue.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/nullvalue.html"}
 	},
-	"examples": [],
+	"examples": [{
+            "title":"Coldfusion polyfill",
+            "description":"Using java data type null instead",
+            "code":"nullValue = javacast('null','');\nwriteOutput(isNull(nullValue));",
+            "result":"YES",
+            "runnable":true
+        }],
 	"links": []
 }

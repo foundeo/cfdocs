@@ -5,14 +5,14 @@
 	"member":"someArray.isEmpty()",
 	"returns":"boolean",
 	"related":["ArrayIsDefined"],
-	"description":" Determines whether an array is empty. Equivalent to arrayLen().\n Calling this function on an array with 10 undefined elements\n will return false.\n CFML MX: this function can be used on XML objects.",
+	"description":"Determines whether an array is empty. Equivalent to arrayLen().\n Calling this function on an array with 10 undefined elements\n will return false.\n CF MX: this function can be used on XML objects.",
 	"params": [
 		{"name":"array","description":"An array name or variable name","required":true,"default":"","type":"array","values":[]}
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayisempty.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayisempty.html"},
+		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayisempty.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arrayisempty.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayisempty"}
 	},
 	"links": [

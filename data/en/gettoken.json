@@ -1,33 +1,29 @@
 {
 	"name":"getToken",
 	"type":"function",
-	"syntax":"getToken(String, index [, delimiters])",
+	"syntax":"getToken(string, index [, delimiters])",
 	"returns":"string",
 	"related":[],
 	"description":" Determines whether a token of the list in the delimiters\n parameter is present in a string.\n Returns the token found at position index of the string, as a\n string. If index is greater than the number of tokens in the\n string, returns an empty string.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"index","description":"","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":"space, tab, or newline character; or their codes: 'chr(32)', 'chr(9)', 'chr(10)'","type":"string","values":[",","|","_",";",":"]}
-
+		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/gettoken.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/gettoken.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/gettoken.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/gettoken"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/gettoken"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "In the following example, the function call requests element number 2 from the string, using the delimiter '[:;\".' ",
-			"code": "<cfoutput> <cfset mystring = \"four,\" & #chr(32)# & #chr(9)# & #chr(10)# & \",five, nine,zero:;\" & #chr(10)# & \"nine,ten:, eleven:;twelve:;thirteen,\" & #chr(32)# & #chr(9)# & #chr(10)# & \",four\">  \r\n getToken(mystring, 3) is : #getToken(mystring, 3)# \r\n </cfoutput><br>   ",
+			"code": "<cfoutput>\n<cfset mystring = \"four,\" & #chr(32)# & #chr(9)# & #chr(10)# & \",five, nine,zero:;\" & #chr(10)# & \"nine,ten:, eleven:;twelve:;thirteen,\" & #chr(32)# & #chr(9)# & #chr(10)# & \",four\">\r\ngetToken(mystring, 3) is : #getToken(mystring, 3)#\r\n</cfoutput>",
 			"result": "",
 			"runnable":true
 		}
 	]
-
 }

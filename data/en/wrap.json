@@ -13,10 +13,24 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/wrap.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/wrap.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/wrap.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/wrap"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/wrap"}
 	},
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "sentence = \"This is a standard sentence.\";\r\nwrappedSentence = wrap(sentence, 7);\r\nwriteOutput(wrappedSentence);",
+			"result": "This is a standar d senten ce."
+		},
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset sentence = \"This is a standard sentence.\" />\r\n<cfset wrappedSentence = wrap(sentence, 7) />\r\n<cfoutput>#wrappedSentence#</cfoutput>",
+			"result": "This is a standar d senten ce."
+		}
+	],
 	"links": [
 
 	]

@@ -3,8 +3,9 @@
 	"type":"function",
 	"syntax":"structFindValue(top, value [, scope])",
 	"returns":"array",
-	"related":[],
+	"related":["structFindKey"],
 	"description":" Searches recursively through a substructure of nested arrays,\n structures, and other elements for structures with values that\n match the search key in the value parameter.",
+	"member":"struct.findValue( value, scope )",
 	"params": [
 		{"name":"top","description":"CFML object (a structure or an array) from which to\n start search. This attribute requires an object, not a\n name of an object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"value","description":"String or a variable that contains one for which to search.\n The type must be a simple object. Arrays and structures\n are not supported.","required":true,"default":"","type":"string","values":[]},
@@ -13,12 +14,29 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structfindvalue.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/structfindvalue.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/structfindvalue.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structfindvalue"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structfindvalue"}
 	},
-	"links": [
-
+	"links": [],
+	"examples": [
+		{
+			"title": "Find first match for a nested struct value",
+			"description": "",
+			"code": "myStruct = { a=2, b=4, c=8, d=10, e=12, f=12 };\nmyStruct.mySecondStruct = { a1=50, a2=12 };\nmyStruct.mySecondStruct.myThirdStruct = { b1=12, b2=65 };\nmyValue=StructFindValue( myStruct, \"12\", \"one\" );\nWriteOutput( serializeJSON( myValue ) );",
+			"result": "[{\"path\":\".E\",\"owner\":{\"A\":2,\"B\":4,\"C\":8,\"D\":10,\"E\":12,\"F\":12,\"MYSECONDSTRUCT\":{\"A1\":50,\"A2\":12,\"MYTHIRDSTRUCT\":{\"B2\":65,\"B1\":12}}},\"key\":\"E\"}]"
+		},
+		{
+			"title": "Find all matches for a nested struct value",
+			"description": "",
+			"code": "myStruct = { a=2, b=4, c=8, d=10, e=12, f=12 };\nmyStruct.mySecondStruct = { a1=50, a2=12 };\nmyStruct.mySecondStruct.myThirdStruct = { b1=12, b2=65 };\nmyValue=StructFindValue( myStruct, \"12\", \"all\" );\nWriteOutput( serializeJSON( myValue ) );",
+			"result": "[{\"path\":\".E\",\"owner\":{\"A\":2,\"B\":4,\"C\":8,\"D\":10,\"E\":12,\"F\":12,\"MYSECONDSTRUCT\":{\"A1\":50,\"A2\":12,\"MYTHIRDSTRUCT\":{\"B2\":65,\"B1\":12}}},\"key\":\"E\"},{\"path\":\".F\",\"owner\":{\"A\":2,\"B\":4,\"C\":8,\"D\":10,\"E\":12,\"F\":12,\"MYSECONDSTRUCT\":{\"A1\":50,\"A2\":12,\"MYTHIRDSTRUCT\":{\"B2\":65,\"B1\":12}}},\"key\":\"F\"},{\"path\":\".MYSECONDSTRUCT.A2\",\"owner\":{\"A1\":50,\"A2\":12,\"MYTHIRDSTRUCT\":{\"B2\":65,\"B1\":12}},\"key\":\"A2\"},{\"path\":\".MYSECONDSTRUCT.MYTHIRDSTRUCT.B1\",\"owner\":{\"B2\":65,\"B1\":12},\"key\":\"B1\"}]"
+		},
+		{
+			"title": "Find first match for a nested struct value using member function",
+			"description": "CF11+ calling the findValue member function on a struct.",
+			"code": "myStruct = { a=2, b=4, c=8, d=10, e=12, f=12 };\nmyStruct.mySecondStruct = { a1=50, a2=12 };\nmyStruct.mySecondStruct.myThirdStruct = { b1=12, b2=65 };\nmyValue=myStruct.findValue( \"12\", \"one\" );\nWriteOutput( serializeJSON( myValue ) );",
+			"result": "[{\"path\":\".E\",\"owner\":{\"A\":2,\"B\":4,\"C\":8,\"D\":10,\"E\":12,\"F\":12,\"MYSECONDSTRUCT\":{\"A1\":50,\"A2\":12,\"MYTHIRDSTRUCT\":{\"B2\":65,\"B1\":12}}},\"key\":\"E\"}]"
+		}
 	]
-
 }

@@ -4,14 +4,14 @@
 	"syntax": "arrayIndexExists(array, index)",
 	"member": "array.indexExists(index)",
 	"returns": "boolean",
-	"related": [],
+	"related": ["arrayIsDefined","arrayContains","structKeyExists"],
 	"description": "Returns whether there exists an item in the array at the selected index.",
 	"params": [
 		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []},
 		{"name": "index", "description": "", "required": true, "default": "", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arrayindexexists.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/arrayindexexists.html"}
 	},
 	"examples": [
 		{

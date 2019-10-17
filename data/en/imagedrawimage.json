@@ -4,7 +4,7 @@
 	"syntax": "imageDrawImage(name, image, x, y)",
 	"returns": "void",
 	"related": [],
-	"description": "",
+	"description": "Draws an image on an image with the baseline of the first pixel positioned at (x,y) in the image i.e. with the top left corner positioned at (x,y).",
 	"params": [
 		{"name": "name", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "image", "description": "", "required": true, "default": "", "type": "any", "values": []},
@@ -12,7 +12,7 @@
 		{"name": "y", "description": "", "required": true, "default": "", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/imagedrawimage.html"}
+		"lucee": {"minimum_version": "4.5", "deprecated": "5", "notes": "This function is deprecated, use ImagePaste instead.", "docs": "https://docs.lucee.org/reference/functions/imagedrawimage.html"}
 	},
 	"examples": [],
 	"links": []

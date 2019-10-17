@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"ormFlushAll();",
 	"returns":"void",
-	"related":[],
+	"related":["ormFlush"],
 	"description":"Flushes all the current Hibernate sessions in the request.",
 	"params": [
 		{"name":"region","description":"Name of the cache region.","required":true,"default":"","type":"","values":[]}
@@ -11,11 +11,14 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"9.0.1", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormflushall.html"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
-
+		{
+			"title": "Flush all pending CRUD operations for ALL Hibernate sessions for the default datasource.",
+			"description": "Please note this will flush all operations for all users, use with care.",
+			"code": "ormFlushAll();",
+			"result": "",
+			"runnable": false
+		}
 	]
-
 }

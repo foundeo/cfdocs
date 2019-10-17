@@ -1,18 +1,17 @@
 {
 	"name":"fileSkipBytes",
 	"type":"function",
-	"syntax":"fileSkipBytes(file, bytes)",
+	"syntax":"fileSkipBytes(file, skipCount)",
 	"returns":"void",
 	"related":[],
-	"description":" Shifts the file pointer by the given number of bytes.",
+	"description":"Shifts the file pointer by the given number of bytes.",
 	"params": [
-		{"name":"file","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"bytes","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
-
+		{"name":"file","description":"The file object","required":true,"default":"","type":"any","values":[]},
+		{"name":"skipCount","description":"The number of bytes that must be skipped before the next file operation","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileskipbytes.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/fileskipbytes.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/fileskipbytes.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/fileskipbytes"}
 	},
 	"links": [

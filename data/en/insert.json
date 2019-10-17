@@ -8,12 +8,12 @@
 	"params": [
 		{"name":"substring","description":"A string to insert","required":true,"default":"","type":"string","values":[]},
 		{"name":"String","description":"A string, which to insert substring","required":true,"default":"","type":"string","values":[]},
-		{"name":"position","description":"Substring add after this postion value in given string","required":true,"default":"","type":"numeric","values":[]}
+		{"name":"position","description":"Substring add after this position value in given string","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/insert.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/insert.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/insert.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/insert"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/insert"}
 	},

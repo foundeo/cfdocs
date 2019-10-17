@@ -1,28 +1,28 @@
 {
 	"name":"directoryDelete",
 	"type":"function",
-	"syntax":"directoryDelete(path, recurse)",
+	"syntax":"directoryDelete(path[, recurse])",
 	"returns":"void",
 	"related":["directoryCreate","directoryRename","fileDelete"],
-	"description":" Deltes directory for given path",
+	"description":"Deletes on-disk or in-memory directory at the given path. \rNOTE: Ensure that you have the required permissions to run this function.",
 	"params": [
-		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"recurse","description":"","required":true,"default":false,"type":"boolean","values":[true,false]}
+		{"name":"path","description":"Absolute path of the directory to be deleted. Alternatively, you can specify IP address, as in the following example: `DirectoryDelete(\"//12.3.123.123/c_drive/test\");`.","required":true,"default":"","type":"string","values":[]},
+		{"name":"recurse","description":"If true, the directory and the sub-directories are deleted. If the directory (being deleted) has sub-directories and you set `recurse` to false, an exception occurs.","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DirectoryDelete.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/directorydelete.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/directorydelete.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/directorydelete"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/directorydelete"}
 	},
 	"links": [],
 	"examples": [
 		{
-			"title": "Tag Syntax",
-			"description": "",
-			"code": "<cfset delDirectory = \"someDirPath\" />\r\n<cfset recurse = true />\r\n<cfset directoryDelete(delDirectory,recurse)>",
-			"result": "",
-            		"runnable":false
+		    "title": "Tag Syntax",
+		    "description": "",
+		    "code": "<cfset delDirectory = \"someDirPath\" />\r\n<cfset recurse = true />\r\n<cfset directoryDelete(delDirectory,recurse)>",
+		    "result": "",
+            	    "runnable":false
 		}
 	]
 }

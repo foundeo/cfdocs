@@ -2,7 +2,7 @@
 	"name": "cfwindow",
 	"type": "tag",
 	"syntax": "<cfwindow>",
-	"related": [],
+	"related": ["cfpod","cflayout"],
 	"description": "Creates a pop-up window in the browser. Does not create a \n separate browser pop-up instance.",
 	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfwindow/index.html",
 	"params": [
@@ -20,7 +20,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "closable",
@@ -28,7 +28,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "draggable",
@@ -36,7 +36,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "headerStyle",
@@ -60,7 +60,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "minHeight",
@@ -84,7 +84,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "name",
@@ -108,7 +108,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "source",
@@ -156,7 +156,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "destroyOnClose",
@@ -164,7 +164,7 @@
 			"required": false,
 			"default": "",
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		}
 	],
 	"engines": {

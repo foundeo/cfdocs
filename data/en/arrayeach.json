@@ -1,21 +1,43 @@
 {
 	"name":"arrayEach",
 	"type":"function",
-	"syntax":"arrayEach(array, function(item, [index, [array]]), [parallel], [maxThreads])",
-	"member":"someArray.each(function(item, [index, [array]]), [parallel], [maxThreads])",
+	"syntax":"arrayEach(array, function(item, [index, [array]]){} [, parallel] [, maxThreads])",
+	"member":"someArray.each(function(item, [index, [array]]){} [, parallel] [, maxThreads])",
 	"returns":"void",
 	"related":["arrayMap", "arrayReduce"],
 	"description":"Used to iterate over an array and run the function closure for each item in the array.",
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
-		{"name":"closure","description":"function / closure with the signature: any function (any item, [numeric index], [array array]) - will be executed once per item in the array","required":true,"default":"","type":"function","values":[]},
-		{"name":"parallel","description":"Railo only option, true or false if the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[true, false]},
-		{"name":"maxThreads","description":"Railo only option, the number of threads to use when parallel = true","required":false,"default":"20","type":"boolean","values":[]}
-
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
+			"callback_params": [
+			{
+				"values": [],
+				"default": "",
+				"description": "The value for the current iteration",
+				"name": "value",
+				"type": "any",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "The current index for the iteration",
+				"name": "index",
+				"type": "numeric",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "A reference of the original array",
+				"name": "array",
+				"type": "array",
+				"required": false
+			}],"type":"","required":"true","values":[],"default":""},
+		{"name":"parallel","description":"Lucee4.5+ Specifies whether the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[]},
+		{"name":"maxThreads","description":"Lucee4.5+ The maximum number of threads to use when parallel = true","required":false,"default":"20","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayeach.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayeach.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arrayeach.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayeach"}
 	},
 	"links":[{
@@ -32,15 +54,14 @@
 		{
 			"title": "Simple Example",
 			"description": "",
-			"code": "letters = [\"a\",\"b\",\"c\",\"d\"]; \r\narrayEach(letters, function(element,index) \r\n {\r\n    writeOutput(\"#index#:#element#;\");\r\n});",
+			"code": "letters = [\"a\",\"b\",\"c\",\"d\"]; \narrayEach(letters, function(element,index) {\n    writeOutput(\"#index#:#element#;\");\n});",
 			"result": "1:a;2:b;3:c;4:d;"
 		},
 		{
 			"title": "Member Function Example",
-			"description": "Array Loop -- array.Each()",
-			"code": "a = [\"a\",\"b\",\"c\"];\r\na.each(function(element,index,array){\r\n    writeOutput(\"#index#:#element#;\"); \r\n});",
+			"description": "",
+			"code": "a = [\"a\",\"b\",\"c\"];\na.each(function(element,index,array){\n    writeOutput(\"#index#:#element#;\"); \n});",
 			"result": "1:a;2:b;3:c;"
 		}
 	]
-
 }

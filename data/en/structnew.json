@@ -26,7 +26,7 @@
     "lucee": {
       "minimum_version": "",
       "notes": "",
-      "docs": "http://docs.lucee.org/reference/functions/structnew.html"
+      "docs": "https://docs.lucee.org/reference/functions/structnew.html"
     },
     "railo": {
       "minimum_version": "",
@@ -61,8 +61,14 @@
     },
     {
       "title": "New ordered struct using function",
-      "description": "CF2016+ Creates an ordered struct.",
+      "description": "CF2016+ Lucee4.5+ Creates an ordered struct.",
       "code": "ordered = structNew( \"ordered\" );\r\nordered.a = 1;\r\nordered.b = 2;\r\nordered.c = 3;\r\nwriteDump( ordered );",
+      "result": ""
+    },
+    {
+      "title": "New ordered struct using literal notation",
+      "description": "CF2016+ Lucee5+ Creates an ordered struct.",
+      "code": "ordered = [:];\r\nordered.a = 1;\r\nordered.b = 2;\r\nordered.c = 3;\r\nwriteDump( ordered );",
       "result": ""
     }
   ]

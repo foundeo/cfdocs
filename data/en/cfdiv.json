@@ -2,7 +2,7 @@
 	"name": "cfdiv",
 	"type": "tag",
 	"syntax": "<cfdiv>",
-	"related": [],
+	"related": ["cfform","cftable"],
 	"description": "Creates an HTML tag with specified contents and lets you to use bind expressions to \n dynamically control the tag contents.",
 	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfdiv/index.html",
 	"params": [
@@ -56,7 +56,7 @@
 		"lucee": {
 			"minimum_version": "",
 			"notes": "",
-			"docs": "http://docs.lucee.org/reference/tags/div.html"
+			"docs": "https://docs.lucee.org/reference/tags/div.html"
 		},
 		"railo": {
 			"minimum_version": "",

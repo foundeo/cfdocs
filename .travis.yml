@@ -1,13 +1,13 @@
 language: java
 sudo: false
 jdk:
-- oraclejdk8
+- openjdk8
 env:
   global:
     - TEST_RUNNER_URI=/tests/run.cfm?reporter=text
   matrix:
     - CFENGINE=lucee@5
-    - CFENGINE=adobe@2016
+    - CFENGINE=adobe@2018
 before_install:
 - git clone https://github.com/foundeo/cfmatrix.git cfmatrix
 install:

@@ -12,6 +12,10 @@ The name of the web server / connector used to communicate with the CFML server.
 
 The hostname or IP address of the web server. Typically this is the value of the `Host` header sent by the client in the HTTP request. 
 
+### `cgi.remote_addr`
+
+The IP address of the client that made the connection to the web server. In basic server configurations this will be the IP address of the user or their proxy server. If your CF server is behind a reverse proxy or load balancer, then it may be the IP address of the load balancer or proxy server. In that case you may need to look at a HTTP header such as `X-Forwarded-For` to get the end users _real_ ip address. 
+
 Adobe CGI Server Variables Documentation: https://helpx.adobe.com/coldfusion/cfml-reference/reserved-words-and-variables/cgi-environment-cgi-scope-variables/cgi-server-variables.html
 
 

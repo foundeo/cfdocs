@@ -3,19 +3,15 @@
 	"type":"function",
 	"syntax":"isIPV6(IP)",
 	"returns":"boolean",
-	"related":[],
+	"related":["isIPInRange","getLocalhostIP"],
 	"description":" checks if given IP is of IPV6 format",
 	"params": [
-		{"name":"IP","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
-
+		{"name":"IP","description":"ip address to check","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isipv6.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/isipv6.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isipv6.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isipv6"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

@@ -1,11 +1,11 @@
 {
   "name": "arrayContainsNoCase",
   "type": "function",
-  "syntax": "arrayContainsNoCase(array, object)",
-  "member": "someArray.containsNoCase(object)",
+  "syntax": "arrayContainsNoCase(array, value)",
+  "member": "someArray.containsNoCase(value)",
   "returns": "boolean",
   "related": [ "arrayContains", "arrayFind", "arrayFindNoCase", "arrayFindAll", "arrayFindAllNoCase" ],
-  "description": "Used to determine if an object is in the given array, case insensitive.",
+  "description": "Used to determine if a value is in the given array, case insensitive.",
   "params": [
     {
       "name": "array",
@@ -16,7 +16,7 @@
       "values": []
     },
     {
-      "name": "object",
+      "name": "value",
       "description": "",
       "required": true,
       "default": "",
@@ -28,7 +28,7 @@
     "lucee": {
       "minimum_version": "",
       "notes": "Returns index of first occurrence",
-      "docs": "http://docs.lucee.org/reference/functions/arraycontainsnocase.html"
+      "docs": "https://docs.lucee.org/reference/functions/arraycontainsnocase.html"
     },
     "railo": {
       "minimum_version": "",
@@ -57,7 +57,7 @@
     {
       "title": "Member function syntax",
       "description":"Lucee4+",
-      "code": "arrayWithStrings = [\"first\", \"SECOND\"];\r\nwriteOutput(arrayWithStrings.containsNoCase(\"FIrst\"));",
+      "code": "arrayWithStrings = [\"first\", \"SECOND\"];\nwriteOutput(arrayWithStrings.containsNoCase(\"FIrst\"));",
       "runnable": true
     }
   ]

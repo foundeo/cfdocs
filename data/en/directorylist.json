@@ -6,11 +6,11 @@
 	"related": [
 		"cfdirectory"
 	],
-	"description": "List the contents of a directory. Returns either an array, or a query.",
+	"description": "List the contents of a directory. Returns either an array, or a query. \rNOTE: Ensure that you have the required permissions to run this function.",
 	"params": [
 		{
 			"name": "path",
-			"description": "The path to a directory. If given a relative path, that path will be relative to the server\"s temp directory.",
+			"description": "The absolute path of the directory for which to list the contents. Alternatively, you can specify IP address as in the following example: `DirectoryList(\"//12.3.123.123/c_drive/test\");`.",
 			"required": true,
 			"default": "",
 			"type": "string",
@@ -29,7 +29,7 @@
 		},
 		{
 			"name": "listInfo",
-			"description": "Sets the return type. `name` returns an array with only the file names, `path` returns an array with the full path names and `query` returns a query containing the follwing fields: `Attributes`, `DateLastModified`, `Directory`, `Link`, `Mode`, `Name`, `Size`, `Type`.",
+			"description": "Sets the return type. `name` returns an array with only the file names, `path` returns an array with the full path names and `query` returns a query containing the following fields: `Attributes`, `DateLastModified`, `Directory`, `Link`, `Mode`, `Name`, `Size`, `Type`.",
 			"required": false,
 			"default": "path",
 			"type": "string",
@@ -41,7 +41,7 @@
 		},
 		{
 			"name": "filter",
-			"description": "Applies a filter to the listed files, for example, `*.jpg`. Multiple filters can be applied by using a pipe delimiter. For example: `*.doc|*.xls`",
+			"description": "File extension filter applied to the listed files, for example, `*.jpg`. \rMultiple filters can be applied by using a pipe delimiter. For example: `*.doc|*.xls`. \rYou can also pass a function. The arguments of the passed function must have: `path` :the file path, `type`: The values (file or dir), `extension`: The file extension, if any, otherwise and empty string. \rThis argument can also accept the instances of Java `FileFilter` Objects. \rIn Lucee4.5+ it can be a closure as well.",
 			"required": false,
 			"default": "",
 			"type": "string",
@@ -49,7 +49,7 @@
 		},
 		{
 			"name": "sort",
-			"description": "Columns by which to sort. e.g. `Directory, Size DESC, DateLastModified`.",
+			"description": "Columns by which to sort. e.g. `Directory, Size DESC, DateLastModified`. To qualify a column, use `asc` (ascending sort a-z) or `dec` (descending sort z-a).",
 			"required": false,
 			"default": "",
 			"type": "string",
@@ -76,12 +76,12 @@
 		},
 		"lucee": {
 			"minimum_version": "",
-			"notes": "The sort argument only works when `listInfo=\"query\"`.",
-			"docs": "http://docs.lucee.org/reference/functions/directorylist.html"
+			"notes": "In Lucee the `filter` param can be a closure as well where the path is passed in. The `sort` argument only works when `listInfo=\"query\"`.",
+			"docs": "https://docs.lucee.org/reference/functions/directorylist.html"
 		},
 		"railo": {
 			"minimum_version": "",
-			"notes": "",
+			"notes": "If a directory returns false in recursive mode the contained files are processed anyways",
 			"docs": "http://railodocs.org/index.cfm/function/directorylist"
 		},
 		"openbd": {
@@ -90,7 +90,13 @@
 			"docs": "http://openbd.org/manual/?/function/directorylist"
 		}
 	},
-	"links": [],
+	"links": [
+		{
+		    "title":"Enhance closure filter on directory copy (Lucee Development / LDEV-1542)",
+		    "description":"Support ticket by Brad Wood describing the filter misbehavior in recursive mode",
+		    "url":"https://luceeserver.atlassian.net/browse/LDEV-1542"
+		}
+	],
 	"examples": [
 		{
 			"title": "An array of files in this directory",
@@ -110,6 +116,13 @@
 			"title": "An array of files in the temp directory",
 			"description": "Including sub-directories and as an array containing full paths",
 			"code": "arrayOfTempFiles = directoryList( \"./\", true );",
+			"result": "",
+			"runnable": false
+		},
+		{
+			"title": "Filter files with closure",
+			"description": "Lucee4.5+ Pass a closure instead of a string as `filter` param",
+			"code": "arrayOfFilteredFiles = directoryList(\".\", false, \"name\", function(path) {\n\treturn ListFindNoCase(\"Application.cfc,robots.txt,server.json,favicon.ico,.htaccess,README.md\", path);\n});",
 			"result": "",
 			"runnable": false
 		}

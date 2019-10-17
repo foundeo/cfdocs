@@ -5,7 +5,7 @@
 	"related":[],
 	"description":"Creates a JavaScript proxy for a ColdFusion component, for use in an AJAX client.",
 	"params": [
-		{"name":"cfc","description":"The CFC for which to create a proxy. You must specify a dot-delimited path to the CFC.\n The path can be absolute or relative to location of the CFML page.\n For example, if the myCFC CFC is in the cfcs subdirectory of the ColdFusion page, specify cfcs.myCFC.\n On UNIX based systems, the tag searches first for a file whos name or path corresponds to the specified name or path, but is in all lower case.\n If it does not find it, ColdFusion then searches for a file name or path that coresponds to the attribute value exactly, with identical character casing. (required)","required":false,"default":"","type":"string","values":[]},
+		{"name":"cfc","description":"The CFC for which to create a proxy. You must specify a dot-delimited path to the CFC.\n The path can be absolute or relative to location of the CFML page.\n For example, if the myCFC CFC is in the cfcs subdirectory of the ColdFusion page, specify cfcs.myCFC.\n On UNIX based systems, the tag searches first for a file who's name or path corresponds to the specified name or path, but is in all lower case.\n If it does not find it, ColdFusion then searches for a file name or path that corresponds to the attribute value exactly, with identical character casing. (required)","required":false,"default":"","type":"string","values":[]},
 		{"name":"jsclassname","description":"The name to use for the JavaScript proxy class. (optional)","required":false,"default":"","type":"string","values":[]},
 		{"name":"bind","description":"A bind expression that specifies a CFC method, JavaScript function, or URL to call.","required":false,"default":"","type":"string","values":[]},
 		{"name":"onerror","description":"The name of a JavaScript function to invoke when a bind, specified by the bind attribute fails. The function must take two arguments: an error code and an error message.","required":false,"default":"","type":"string","values":[]},
@@ -14,7 +14,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-a-b/cfajaxproxy.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/ajaxproxy.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/ajaxproxy.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfajaxproxy"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfajaxproxy"}
 	},

@@ -5,12 +5,28 @@
 	"returns": "array",
 	"related": ["arrayNew"],
 	"description": "Creates a new array populated with any arguments that have been passed to the function.",
+	"discouraged": "Lucee recommends to use the inline array notation.",
 	"params": [
 		{"name":"values","description":"One or more values that can be used in the initialization of the array.","required":false,"default":"","type":"any","values":[]}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/array.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/array.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"Example",
+			"description":"Creates and dump a new array.",
+			"code":"exampleArray = Array(\"example-string\", 1, {structExample = \"value\"}, [1,2,3]);\r\ndump(exampleArray);",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Inline Array Notation Example",
+			"description":"Creates and dump a new array.",
+			"code":"exampleArray = [\"example-string\", 1, {structExample = \"value\"}, [1,2,3]];\r\ndump(exampleArray);",
+			"result":"",
+			"runnable":true
+		}
+	],
 	"links": []
 }

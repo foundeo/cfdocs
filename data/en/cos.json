@@ -4,14 +4,13 @@
 	"syntax":"cos(number)",
 	"returns":"numeric",
 	"related":["acos","asin","atn","exp","log","log10","sin","tan"],
-	"description":" Calculates the cosine of an angle that is entered\n in radians.\n A number; the cosine of the angle.",
+	"description":"Calculates the cosine of an angle that is entered in radians.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
-
+		{"name":"number","description":"The angle, in radians, for which to calculate the cosine","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/Cos.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/cos.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/cos.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cos"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cos"}
 	},

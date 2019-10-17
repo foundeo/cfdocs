@@ -15,7 +15,7 @@ qPeople = oLeader.get();
   <div class="row">
     <div class="col-lg-4">
       <h2><span class="glyphicon glyphicon-cloud-download"></span> &nbsp; CDN Hosted</h2>
-      <p>Hosted on Amazon CloudFront CDN for ultra fast response around the globe. Sponsored by <a href="http://foundeo.com/">Foundeo Inc.</a></p>
+      <p>Hosted on Amazon CloudFront CDN for ultra fast response around the globe. Sponsored by <a href="https://foundeo.com/">Foundeo Inc.</a></p>
     </div>
     <div class="col-lg-4">
       <h2><span class="glyphicon glyphicon-thumbs-up"></span> &nbsp; Handy</h2>
@@ -48,6 +48,8 @@ qPeople = oLeader.get();
           </div>
         </div>
     </cfloop>
+    <!--- cache for 1 day --->
+    <cfset request.cacheControlMaxAge = 86400>
   <cfelse>
     <!--- error connecting to github so tell CDN to only cache for 30 seconds --->
     <cfset request.cacheControlMaxAge = 30>

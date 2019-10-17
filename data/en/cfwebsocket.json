@@ -48,7 +48,7 @@
 			"values":[]
 		},
 		{	"name":"subscribeTo",
-			"description":"Comma-separated list of channels to subscribe to. You can specify any or all channels set in your <a href=\"\/application-cfc#wschannels\">Application this.wschannels settings<\/a>",
+			"description":"Comma-separated list of channels to subscribe to. You can specify any or all channels set in your `this.wschannels` Application settings",
 			"required":false,
 			"default":"",
 			"type":"string",

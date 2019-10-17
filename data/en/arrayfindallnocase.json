@@ -1,18 +1,18 @@
 {
 	"name":"arrayFindAllNoCase",
 	"type":"function",
-	"syntax":"arrayFindAllNoCase(array, object or closure)",
-	"member":"someArray.findAllNoCase(object or closure)",
+	"syntax":"arrayFindAllNoCase(array, value or callback)",
+	"member":"someArray.findAllNoCase(value or callback)",
 	"returns":"array",
 	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
-	"description":"Searches an array for all positions of a specified object. The function searches for simple objects such as strings and numbers or for complex objects such as structures. When the second parameter is a simple object, string searches are case-sensitive",
+	"description":"Searches an array for all positions of a specified value. The function searches for simple values such as strings and numbers or for complex objects such as structures. When the second parameter is a simple value, string searches are case-sensitive",
 	"params": [
 		{"name":"array","description":"The source array to search through","required":true,"default":"","type":"array","values":[]},
-		{"name":"object or closure","description":"If string, case insensitive value to search for; if closure, use signature function (item, index, array) : boolean","required":true,"default":"","type":"variableName","values":[]}
+		{"name":"value or callback","description":"If string, case insensitive value to search for; if callback, use signature function (item, index, array) : boolean","required":true,"default":"","type":"variableName","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayfindallnocase.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayfindallnocase.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arrayfindallnocase.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arrayfindallnocase"}
 	},
 	"links": [

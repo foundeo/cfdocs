@@ -13,12 +13,27 @@
 		{"name":"maxThreads","description":"The number of threads to use when `parallel=true`","required":false,"default":"20","type":"boolean","values":[]}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayevery.html"}
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arrayevery.html"}
 	},
 	"links": [{
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
 		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
-	}]
-
+	}],
+	"examples": [
+		{
+			"title": "Example for positive result",
+			"description": "Checks whether all items in an array are greater than 2 and outputs true because all of them fulfill the requirement.",
+			"code": "array = [4, 5, 6, 7];\r\nwriteOutput(arrayEvery(array, function(value) { return value gt 2; }));",
+			"result": true,
+			"runnable": true
+		},
+		{
+			"title":"Example for negative result",
+			"description":"Checks whether all items in an array are greater than 2 and outputs false because some of them do not fulfill the requirement.",
+			"code":"array = [1, 2, 3, 4];\r\nwriteOutput(arrayEvery(array, function(value) { return value gt 2; }));",
+			"result":false,
+			"runnable":true
+		}
+	]
 }

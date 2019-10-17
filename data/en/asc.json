@@ -1,17 +1,17 @@
 {
 	"name":"asc",
 	"type":"function",
-	"syntax":"asc(String)",
+	"syntax":"asc(string)",
 	"returns":"numeric",
 	"related":["chr"],
-	"description":" Determines the value of a character.",
+	"description":"Determines the ASCII value of a character.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]}
+		{"name":"string","description":"","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/asc.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/asc.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/asc.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/asc"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/asc"}
 	},
@@ -20,7 +20,7 @@
 	],
 	"examples": [
 		{
-			"title":"character and value of korean currency symbol ( unicode number 8361 )",
+			"title":"character and value of Korean currency symbol ( unicode number 8361 )",
 			"description":"",
 			"code":"x = chr( 8361 ); \n writeoutput( 'character: #x#' ); \n x = asc( x ); \n writeoutput( '<br>Unicode value: #x#');",
 			"result":"",

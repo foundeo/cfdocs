@@ -4,26 +4,23 @@
 	"syntax":"imageDrawLines(name, xcords, ycords [, isPolygon] [, filled])",
 	"member":"someImage.drawLines(xcords, ycords [, isPolygon] [, filled])",
 	"returns":"void",
-	"related":[],
-	"description":" Draws a sequence of connected lines defined by arrays of x and y coordinates.",
+	"related":["imageDrawLine"],
+	"description":"Draws a sequence of connected lines defined by arrays of x and y coordinates.",
 	"params": [
-		{"name":"name","description":"NThe image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
 		{"name":"xcords","description":"A array of x coordinates.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"ycords","description":"A array of y coordinates.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"isPolygon","description":"Specify whether the lines form a polygon","required":false,"default":"false","type":"boolean","values":[]},
 		{"name":"filled","description":"Specify whether the polygon is filled","required":false,"default":"false","type":"boolean","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagedrawlines.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagedrawlines.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/imagedrawlines.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagedrawlines"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagedrawlines"}
 	},
-	"links": [
-
-	],
-    "examples": [
+	"links": [],
+    	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to draw a zigzag line.",
@@ -39,5 +36,4 @@
 			"runnable":true
 		}
 	]
-
 }

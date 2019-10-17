@@ -9,17 +9,23 @@
 	"params": [
 		{
 			"name":"date",
-			"description":"The date object",
+			"description":"The datetime object (100AD-9999AD)",
 			"required":true,
 			"default":"",
 			"type":"date",
 			"values":[]
 		},
-		{"name":"mask","description":"Each keyword below will be replaced in the string by its respective datepart \n`d`: Day of the month as digits; no leading zero for single-digit days.\n`dd`: Day of the month as digits; leading zero for single-digit days.\n`ddd`: Day of the week as a three-letter abbreviation.\n`dddd`: Day of the week as its full name.\n`e`: Day in a week (CF2016u3+).\n`f`: Day of a week in a month (CF2016u3+).\n`m`: Month as digits; no leading zero for single-digit months.\n`mm`: Month as digits; leading zero for single-digit months.\n`mmm`: Month as a three-letter abbreviation.\n`mmmm`: Month as its full name.\n`k`: Hour in a day (CF2016u3+).\n`w`: Week in a month (CF2016u3+).\n`W`: Week in a year (CF2016u3+).\n`yy`: Year as last two digits; leading zero for years less than 10.\n`yyyy`,`YYYY`: Year represented by four digits.\n`gg`: Period/era string.\n`z`: Time zone in unstandardized abbreviated format, for example, EST (CF2016u3+).\n`Z`: Time zone in hours of offset (RFC 822 TimeZone), for example, +0530 (CF2016u3+).\n`X`: Time zone in hours of offset in ISO 8601 format. (CF2016u3+).\n\n The following keywords are shorthand for specific full formats and cannot be combined with other masks:\n`short`: equivalent to `m/d/y`\n`medium`: equivalent to `mmm d, yyyy`\n`long`: equivalent to `mmmm d, yyyy`\n`full`: equivalent to `dddd, mmmm d, yyyy`","required":false,"default":"dd-mmm-yy","type":"string","values":[]}
+		{
+			"name":"mask",
+			"description":"Each keyword below will be replaced in the string by its respective datepart: \n\t-d: Day of the month as digits; no leading zero for single-digit days.\n\t-dd: Day of the month as digits; leading zero for single-digit days.\n\t-ddd: Day of the week as a three-letter abbreviation.\n\t-dddd: Day of the week as its full name.\n\t-e: Day in a week (CF2016u3+).\n\t-f: Day of a week in a month (CF2016u3+).\n\t-m: Month as digits; no leading zero for single-digit months.\n\t-mm: Month as digits; leading zero for single-digit months.\n\t-mmm: Month as a three-letter abbreviation.\n\t-mmmm: Month as its full name.\n\t-k: Hour in a day (CF2016u3+).\n\t-w: Week in a month (CF2016u3+).\n\t-W: Week in a year (CF2016u3+).\n\t-yy: Year as last two digits; leading zero for years less than 10.\n\t-yyyy,YYYY: Year represented by four digits.\n\t-gg: Period/era string.\n\t-z: Time zone in unstandardized abbreviated format, for example, `EST` (CF2016u3+).\n\t-Z: Time zone in hours of offset (RFC 822 TimeZone), for example, `+0530` (CF2016u3+).\n\t-X: Time zone in hours of offset in ISO 8601 format. (CF2016u3+).\n\t-X: `+05`\n\t -XX: `+0530`\n\t -XXX: `+5:30` \n The following keywords are shorthand for specific full formats and cannot be combined with other masks:\n\t-short: equivalent to `m/d/y`\n\t-medium: equivalent to `mmm d, yyyy`\n\t-long: equivalent to `mmmm d, yyyy`\n\t-full: equivalent to `dddd, mmmm d, yyyy`",
+			"required":false,
+			"default":"dd-mmm-yy",
+			"type":"string",
+			"values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"CF6+ Added support for the `short`, `medium`, `long` and `full` mask formats. Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateFormat.html"},
-		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+.", "docs":"http://docs.lucee.org/reference/functions/dateformat.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+.", "docs":"https://docs.lucee.org/reference/functions/dateformat.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/dateformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dateformat"}
 	},

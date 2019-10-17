@@ -7,13 +7,13 @@
 	"description":"Defines an interface that consists of a set of signatures for functions.\n The interface does not include the full function definitions;\n instead, you implement the functions in a CFC.\n The interfaces that you define by using this tag can make up\n the structure of a reusable application framework.",
 	"params": [
 		{"name":"displayName","description":"A value to be displayed when using introspection to\n show a descriptive name for the interface. (optional)","required":false,"default":"","type":"string","values":[]},
-		{"name":"extends","description":"A comma delimited list of one or more interfaces that this interface extends.\n Any CFC that implements an interface must also implement all the functions\n in the interfaces specified by this property.\n If an interface extends another interface, and the child interface specifies\n a function with the same name as one in the parent interface, both functions\n must have the same attribues; otherwise ColdFusion generates an error. (optional)","required":false,"default":"","type":"string","values":[]},
+		{"name":"extends","description":"A comma delimited list of one or more interfaces that this interface extends.\n Any CFC that implements an interface must also implement all the functions\n in the interfaces specified by this property.\n If an interface extends another interface, and the child interface specifies\n a function with the same name as one in the parent interface, both functions\n must have the same attributes; otherwise ColdFusion generates an error. (optional)","required":false,"default":"","type":"string","values":[]},
 		{"name":"hint","description":"Text to be displayed when using introspection to show information about the interface.\n The hint attribute value follows the syntax line in the function description. (optional)","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfinterface.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/interface.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/interface.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfinterface"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfinterface"}
 	},

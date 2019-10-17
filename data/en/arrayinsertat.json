@@ -5,7 +5,7 @@
 	"member":"someArray.insertAt(position, value)",
 	"returns":"boolean",
 	"related":["arrayappend","arrayprepend","arraydelete","arraydeleteat","arrayset"],
-	"description":" Inserts a value at the specified position in the array. If\n the element is inserted before the end of the array, ColdFusion\n shifts the positions of all elements with a higher index to make room.",
+	"description":"Inserts a value at the specified position in the array. If the element is inserted before the end of the array, ColdFusion shifts the positions of all elements with a higher index to make room.",
 	"params": [
 		{"name":"array","description":"The array which will have the new element inserted.","required":true,"default":"","type":"array","values":[]},
 		{"name":"position","description":"The numerical index in the array where the new element will be inserted.\n Must be less than or equal to the length of the array.\n Remember ColdFusion arrays start at 1 not 0.","required":true,"default":"","type":"numeric","values":[]},
@@ -13,8 +13,8 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayinsertat.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayinsertat.html"},
+		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayinsertat.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arrayinsertat.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayinsertat"}
 	},
 	"links": [
@@ -25,7 +25,7 @@
 		{
 			"title":"Insert an Item in an Array at Position 2",
 			"description":"Inserts the number 4 at position 2",
-			"code":"someArray = [1,2,3];\r\narrayInsertAt(someArray, 2, 4);\r\nwriteOutput(serializeJSON(someArray));",
+			"code":"someArray = [1,2,3];\narrayInsertAt(someArray, 2, 4);\nwriteOutput(serializeJSON(someArray));",
 			"result":"[1,4,2,3]",
 			"runnable":true
 		}

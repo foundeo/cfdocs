@@ -5,7 +5,7 @@
   "related": [
     "cfquery","queryExecute"
   ],
-  "description": "Verifies the data type of a query parameter and, for DBMSs that\n support bind variables, enables CFML to use bind variables\n in the SQL statement. Bind variable usage enhances performance\n when executing a cfquery statement multiple times.\n\n This tag is nested within a cfquery tag, embedded in a query SQL\n statement. If you specify optional parameters, this tag performs\n data validation.",
+  "description": "Verifies the data type of a query parameter and, for DBMSs that\n support bind variables, enables CFML to use bind variables\n in the SQL statement. Bind variable usage enhances performance\n when executing a cfquery statement multiple times.\n\n This tag is nested within a cfquery tag, embedded in a query SQL\n statement. If you specify optional parameters, this tag performs\n data validation.\n\nNOTE: Due to security it's highly recommended to use this tag for any user input or non-static value used in a query to prevent code injections and the like.",
   "params": [
     {
       "name": "value",
@@ -17,7 +17,7 @@
     },
     {
       "name": "cfsqltype",
-      "description": "SQL type that parameter (any type) is bound to. As of CF11+ or Lucee 4.5+ you can omit the `cf_sql_` prefix.",
+      "description": "SQL type that parameter (any type) is bound to. As of CF11+ or Lucee4.5+ you can omit the `cf_sql_` prefix. \nSee [CFSqlType Cheatsheet](https://cfdocs.org/cfsqltype-cheatsheet) for a mapping of CFSQL data types to DBMS data types.",
       "required": false,
       "default": "",
       "type": "string",
@@ -27,6 +27,7 @@
         "cf_sql_char",
         "cf_sql_blob",
         "cf_sql_clob",
+        "cf_sql_nclob",
         "cf_sql_date",
         "cf_sql_decimal",
         "cf_sql_double",
@@ -37,19 +38,44 @@
         "cf_sql_longnvarchar",
         "cf_sql_money",
         "cf_sql_money4",
+        "cf_sql_nchar",
+        "cf_sql_nvarchar",
         "cf_sql_numeric",
         "cf_sql_real",
         "cf_sql_refcursor",
         "cf_sql_smallint",
+        "cf_sql_sqlxml",
         "cf_sql_time",
         "cf_sql_timestamp",
         "cf_sql_tinyint",
         "cf_sql_varchar",
-        "cf_sql_nvarchar",
+        "bigint",
+        "bit",
+        "char",
+        "blob",
+        "clob",
+        "nclob",
+        "date",
+        "decimal",
+        "double",
+        "float",
+        "idstamp",
         "integer",
-        "varchar",
+        "longvarchar",
+        "longnvarchar",
+        "money",
+        "money4",
+        "nchar",
+        "nvarchar",
+        "numeric",
+        "real",
+        "refcursor",
+        "smallint",
+        "sqlxml",
+        "time",
         "timestamp",
-        "date"
+        "tinyint",
+        "varchar"
       ]
     },
     {
@@ -64,20 +90,17 @@
       "name": "scale",
       "description": "Number of decimal places in parameter. Applies to `CF_SQL_NUMERIC` and `CF_SQL_DECIMAL`.",
       "required": false,
-      "default": "",
+      "default": "0",
       "type": "numeric",
       "values": []
     },
     {
       "name": "null",
-      "description": "Whether parameter is passed as a `NULL` value.\n\n `true`: ignores the `value` attribute and passes `NULL`\n `false`: passes the `value` attribute",
+      "description": "Whether parameter is passed as a `NULL` value.\n\n Yes: ignores the `value` attribute and passes `NULL`\n No: passes the `value` attribute",
       "required": false,
       "default": "",
       "type": "boolean",
-      "values": [
-        true,
-        false
-      ]
+      "values": []
     },
     {
       "name": "list",
@@ -85,39 +108,31 @@
       "required": false,
       "default": "",
       "type": "boolean",
-      "values": [
-        true,
-        false
-      ]
+      "values": []
     },
     {
       "name": "separator",
       "description": "Character that separates values in list, in value attribute.",
       "required": false,
       "default": "",
-      "type": "char",
-      "values": [
-        ",",
-        ";",
-        "|",
-        ":"
-      ]
+      "type": "string",
+      "values": []
     }
   ],
   "engines": {
     "coldfusion": {
       "minimum_version": "4.5",
-      "notes": "",
+      "notes": "CF2018+ Throws exceptions on invalid `cfsqltype` values, prior versions treated invalid types as `varchar` - see CF-4198194 for reference.",
       "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfqueryparam.html"
     },
     "lucee": {
       "minimum_version": "",
-      "notes": "",
-      "docs": "http://docs.lucee.org/reference/tags/queryparam.html"
+      "notes": "Supports `int` and `cf_sql_int` for integer",
+      "docs": "https://docs.lucee.org/reference/tags/queryparam.html"
     },
     "railo": {
       "minimum_version": "",
-      "notes": "",
+      "notes": "Supports `int` and `cf_sql_int` for integer",
       "docs": "http://railodocs.org/index.cfm/tag/cfqueryparam"
     },
     "openbd": {
@@ -138,7 +153,7 @@
     {
       "runnable": false,
       "title": "Using a list on an IN statement",
-      "description": "Assumes url.idList is a comma seperated list of integers, eg: 1,2,3",
+      "description": "Assumes url.idList is a comma separated list of integers, eg: 1,2,3",
       "code": "<cfquery name=\"news\">\n    SELECT id,title,story\n    FROM news\n    WHERE id IN (<cfqueryparam value=\"#url.idList#\" cfsqltype=\"cf_sql_integer\" list=\"true\">)\n</cfquery>",
       "result": ""
     },

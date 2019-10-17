@@ -1,17 +1,17 @@
 {
 	"name":"encodeForHTMLAttribute",
 	"type":"function",
-	"syntax":"encodeForHTMLAttribute(inputString [, canonicalize])",
+	"syntax":"encodeForHTMLAttribute(string [, canonicalize])",
 	"returns":"string",
-	"related":["htmleditformat", "encodeforhtml"],
-	"description":"Encodes the inputString for safe output in the attribute value of an HTML attribute, such as table width or image height. The encoding is meant to mitigate Cross Site Scripting (XSS) attacks.",
+	"related":["htmleditformat", "encodeforhtml", "Canonicalize"],
+	"description":"Encodes the input string for safe output in the attribute value of an HTML attribute, such as table width or image height. The encoding is meant to mitigate Cross Site Scripting (XSS) attacks.",
 	"params": [
-		{"name":"inputString","description":"A string to encode","required":true,"default":"","type":"string","values":[]},
-		{"name":"canonicalize","description":"When true runs the canonicalize function against the input before encoding. This argument is not supported on Lucee.","required":false,"default":"","type":"boolean","values":[]}
+		{"name":"string","description":"A string to encode.","required":true,"default":"","type":"string","values":[]},
+		{"name":"canonicalize","description":"If set to true, canonicalization happens before encoding. If set to false, the given input string will just be encoded. The default value for canonicalize is false. \nWhen this parameter is not specified, canonicalization will not happen. By default, when canonicalization is performed, both mixed and multiple encodings will be allowed. \nTo use any other combinations you should canonicalize using canonicalize method and then do encoding.","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/encodeforhtmlattribute.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/encodeforhtmlattribute.html"}
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/encodeforhtmlattribute.html"}
 	},
 	"links": [
         {

@@ -5,13 +5,13 @@
 	"member":"date.createODBCTime()",
 	"returns":"date",
 	"related":["createODBCDateTime", "createTime"],
-	"description":" Creates an ODBC time object.",
+	"description":"Creates an ODBC time object.",
 	"params": [
 		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"date","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateODBCTime.html"},
-		"lucee": {"minimum_version":"", "notes":"Member function is not available.", "docs":"http://docs.lucee.org/reference/functions/createodbctime.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is not available.", "docs":"https://docs.lucee.org/reference/functions/createodbctime.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createodbctime"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createodbctime"}
 	},
@@ -22,7 +22,7 @@
 		{
 			"title": "Creates an ODBC time object",
 			"description": "Uses the CreateODBCTime function to create an ODBC time object",
-			"code": "<cfset time = CreateDateTime(2012, 12, 12, 12, 12, 12)>\r\n<cfset result = CreateODBCTime(time)>\r\n<cfoutput>#result#</cfoutput>",
+			"code": "<cfset time = createDateTime(2012, 12, 12, 12, 12, 12)>\r\n<cfset result = createODBCTime(time)>\r\n<cfoutput>#result#</cfoutput>",
 			"result": "{t '12:12:12'}"
 		}
 	]

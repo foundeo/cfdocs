@@ -1,14 +1,14 @@
 {
   "name": "arrayDeleteAt",
   "type": "function",
-  "syntax": "arrayDeleteAt(array, position)",
-  "member": "someArray.deleteAt(position)",
+  "syntax": "arrayDeleteAt(array, index)",
+  "member": "someArray.deleteAt(index)",
   "returns": "boolean",
   "related": [
     "arrayDelete",
     "arrayDeleteNoCase"
   ],
-  "description": "Deletes the element at `position` from an array\nThe array will be resized, so that the deleted element doesn't leave a gap.",
+  "description": "Deletes the element at `index` from an array\nThe array will be resized, so that the deleted element doesn't leave a gap.",
   "params": [
     {
       "name": "array",
@@ -19,8 +19,8 @@
       "values": []
     },
     {
-      "name": "position",
-      "description": "The numeric position of the element. Remember that ColdFusion arrays start at 1 not 0.",
+      "name": "index",
+      "description": "The numeric index of the element. Remember that ColdFusion arrays start at 1 not 0.",
       "required": true,
       "default": "",
       "type": "numeric",
@@ -29,14 +29,14 @@
   ],
   "engines": {
     "coldfusion": {
-      "minimum_version": "",
+      "minimum_version": "3",
       "notes": "",
       "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraydeleteat.html"
     },
     "lucee": {
       "minimum_version": "",
       "notes": "",
-      "docs": "http://docs.lucee.org/reference/functions/arraydeleteat.html"
+      "docs": "https://docs.lucee.org/reference/functions/arraydeleteat.html"
     },
     "openbd": {
       "minimum_version": "",

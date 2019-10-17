@@ -4,16 +4,38 @@
 	"syntax": "listItemTrim(list [, delimiters] [, includeEmptyFields])",
 	"member": "list.listItemTrim([delimiters] [, includeEmptyFields])",
 	"returns": "string",
-	"related": [],
-	"description": "",
+	"related": ["listCompact","listTrim","trim"],
+	"description": "Trims every item in the list and returns a new list.",
 	"params": [
-		{"name": "list", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "delimiters", "description": "", "required": false, "default": ",", "type": "string", "values": []},
-		{"name": "includeEmptyFields", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
+		{"name": "list", "description": "The list with the items, you want to trim.", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "delimiters", "description": "The delimiters which the list is using.", "required": false, "default": ",", "type": "string", "values": []},
+		{"name": "includeEmptyFields", "description": "By default empty items will be removed from the list. If it is true, empty items will be stay in the list.", "required": false, "default": "false", "type": "boolean", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/listitemtrim.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/listitemtrim.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+            		"title":"Simple Example",
+            		"description":"Trims each item in the list.",
+            		"code":"exampleList = \"hello, world ,this, is a, ,example\";\r\nwriteOutput(listItemTrim(examplelist));",
+            		"result":"hello,world,this,is a,,example",
+            		"runnable":true
+		},
+		{
+            		"title":"Using as member function",
+            		"description":"Trims each item in the list.",
+            		"code":"exampleList = \"hello, world ,this, is a, ,example\";\r\nexampleList = exampleList.listItemTrim();\r\nwriteOutput(examplelist);",
+            		"result":"hello,world,this,is a,,example",
+            		"runnable":true
+		},
+		{
+            		"title":"Keep empty items in the list",
+            		"description":"Trims each item in the list and keep empty items.",
+            		"code":"exampleList = \"hello, world ,this, is a,  ,,example\";\r\nwriteOutput(listItemTrim(examplelist, \",\", true));",
+            		"result":"hello,world,this,is a,,,example",
+            		"runnable":true
+		}
+	],
 	"links": []
 }

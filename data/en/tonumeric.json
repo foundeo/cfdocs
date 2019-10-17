@@ -3,15 +3,16 @@
 	"type": "function",
 	"syntax": "toNumeric(value [, radix])",
 	"returns": "numeric",
-	"related": [],
+	"related": ["parseNumber","inputBaseN","int"],
 	"description": "Cast a value to a number.",
 	"params": [
 		{"name": "value", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "radix", "description": "The base of the value.", "required": false, "default": "10", "type": "any", "values": ["2", "...", "36", "bin", "oct", "dec", "hex"]}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/tonumeric.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/tonumeric.html"}
 	},
+	"links": [],
 	"examples": [{
 		"title":"Cast a string to a number.",
 		"description":"",
@@ -30,6 +31,5 @@
 		"code":"toNumeric(\"1010\", \"bin\")",
 		"result":"10",
 		"runnable":true
-	}],
-	"links": []
+	}]
 }

@@ -1,0 +1,17 @@
+{
+	"name":"structGetMetadata",
+	"type":"function",
+	"syntax":"structGetMetadata(struct)",
+	"member":"someStruct.getMetadata()",
+	"returns":"struct",
+	"related":["arraySetMetadata","arrayGetMetadata","structSetMetadata"],
+	"description":"Gets metadata for keys in a struct and indicates if it is an ordered struct.",
+	"params": [
+		{"name":"struct","description":"The struct in which you want to add the metadata.","required":true,"default":"","type":"struct","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2016.0.2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structgetmetadata.html"}
+	},
+  	"links": [],
+  	"examples": []
+}

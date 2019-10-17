@@ -9,12 +9,12 @@
 	"params": [
 		{"name":"array","description":"Name of the array that you want to slice","required":true,"default":"","type":"array","values":[]},
 		{"name":"offset","description":"Specifies the position from which to slice the array. Negative value indicates that the array is sliced, with sequence starting from array's end.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"length","description":"Maximum elements to slice","required":false,"default":"Length of Array","type":"numeric","values":[]}
+		{"name":"length","description":"Maximum elements to slice","required":false,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayslice.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayslice.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arrayslice.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayslice"}
 	},
 	"links": [
@@ -38,6 +38,12 @@
 			"description":"",
 			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = arraySlice(array, -5, 3);\nwritedump(newArray)",
 			"result":"[4,5,6]"
+		},
+		{
+			"title":"Slice an array using member function",
+			"description":"CF11+ calling the slice member function on an array.",
+			"code":"\narray = [1, 2, 3, 4, 5, 6, 7, 8];\nnewArray = array.slice(2, 3);\nwritedump(newArray)",
+			"result":"[2,3,4]"
 		}
 	]
 

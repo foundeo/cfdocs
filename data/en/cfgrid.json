@@ -44,7 +44,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "striperows",
@@ -52,7 +52,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "format",
@@ -84,7 +84,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "vspace",
@@ -124,7 +124,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "delete",
@@ -132,7 +132,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "sort",
@@ -140,7 +140,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "font",
@@ -164,7 +164,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "bold",
@@ -172,7 +172,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "textcolor",
@@ -212,7 +212,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "highlighthref",
@@ -220,7 +220,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "onvalidate",
@@ -252,7 +252,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "rowheight",
@@ -268,7 +268,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "rowheaderalign",
@@ -300,7 +300,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "rowheaderbold",
@@ -308,7 +308,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "rowheadertextcolor",
@@ -324,7 +324,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "colheaderalign",
@@ -356,7 +356,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "colheaderbold",
@@ -364,7 +364,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "colheadertextcolor",
@@ -408,7 +408,7 @@
 		},
 		{
 			"name": "notsupported",
-			"description": "Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.\n Default:\n \"<b>Browser must support Java to <br>view ColdFusion Java\n Applets!</b>\"",
+			"description": "Text to display if a page that contains a Java applet-based\n cfform control is opened by a browser that does not\n support Java or has Java support disabled.",
 			"required": false,
 			"default": "<b>Browser must support Java to <br>view ColdFusion Java Applets!</b>",
 			"type": "string",
@@ -420,7 +420,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "insertbutton",
@@ -468,7 +468,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "visible",
@@ -476,7 +476,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "tooltip",
@@ -500,7 +500,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "selectonload",
@@ -508,7 +508,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "onblur",
@@ -552,7 +552,7 @@
 		}
 	],
 	"engines": {
-		"coldfusion": { "minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfgrid.html" }
+		"coldfusion": { "minimum_version": "3", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfgrid.html" }
 	},
 	"links": []
 }

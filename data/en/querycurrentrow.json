@@ -5,12 +5,12 @@
 	"member": "query.currentRow()",
 	"returns": "numeric",
 	"related": [],
-	"description": "",
+	"description": "Returns the current row number",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querycurrentrow.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querycurrentrow.html"}
 	},
 	"examples": [],
 	"links": []

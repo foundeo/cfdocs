@@ -8,11 +8,10 @@
 	"params": [
 		{"name":"token","description":"The passed in token that is to be validated against the token stored in the session.","required":true,"default":"","type":"string","values":[]},
 		{"name":"key","description":"The key against which the token was originally generated.","required":false,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"10", "notes":"CF10+ Added this function.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CSRFVerifyToken.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/csrfverifytoken.html"}
+		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CSRFVerifyToken.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/csrfverifytoken.html"}
 	},
 	"links": [],
 	"examples": [

@@ -1,15 +1,15 @@
 {
 	"name":"dateConvert",
 	"type":"function",
-	"syntax":"dateConvert(type, date)",
-	"member":"date.convert(type)",
+	"syntax":"dateConvert(conversionType, date)",
+	"member":"date.convert(conversionType)",
 	"returns":"date",
 	"related":["getTimeZoneInfo","createDateTime"],
 	"description":"Converts local time to Coordinated Universal Time (UTC), or UTC to local time. The function uses the daylight savings settings in the executing computer to compute daylight savings time, if required.",
 	"params": [
 		{
-			"name":"type",
-			"description":"'local2Utc' - Converts local time to UTC time.\n'utc2Local' - Converts UTC time to local time.",
+			"name":"conversionType",
+			"description":"`local2Utc` : Converts local time to UTC time.\n`utc2Local` : Converts UTC time to local time.",
 			"required":true,
 			"default":"",
 			"type":"string",
@@ -19,7 +19,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateConvert.html"},
-		"lucee": {"minimum_version":"", "notes":"Member function is not available.", "docs":"http://docs.lucee.org/reference/functions/dateconvert.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is not available.", "docs":"https://docs.lucee.org/reference/functions/dateconvert.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/dateconvert"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dateconvert"}
 	},
