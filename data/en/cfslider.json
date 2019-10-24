@@ -33,7 +33,7 @@
 		{"name":"onDrag","description":"Custom JavaScript function to run when you drag the slider.\nSpecify only the function name.","required":false,"default":"","type":"string","values":[]},
 		{"name":"onError","description":"Custom JavaScript function to run if validation fails.\nSpecify only the function name.","required":false,"default":"","type":"string","values":[]},
 		{"name":"increment","description":"The unit increment value for a snapping slider.","required":false,"default":"","type":"string","values":[]},
-		{"name":"tip","description":"Whether the data valu has to display as data tips","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"tip","description":"Whether the data value has to display as data tips","required":false,"default":"","type":"boolean","values":[]},
 		{"name":"format","description":"Specifies if the format is:html\/applet","required":false,"default":"","type":"string","values":["html","applet"]}
 	],
 	"engines": {
