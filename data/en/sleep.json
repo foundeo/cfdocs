@@ -18,7 +18,7 @@
 	"examples": [
 		{
 			"title":"Sleep for 5 seconds",
-			"description":"Outputs the the current date/time, sleeps for 5 seconds, then outputs the current date time again.",
+			"description":"Outputs the the current date/time, sleeps for 5 seconds, then outputs the current date/time again.",
 			"code":"<cfscript>\r\n    writeOutput(now());\r\n    writeOutput(\"<br />\");\r\n    sleep(5000);\r\n    writeOutput(now());\r\n</cfscript>",
 			"result":"",
 			"runnable":true
