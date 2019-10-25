@@ -12,6 +12,14 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryrecordcount.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"Returns the record count of the query",
+			"description":"",
+			"code":"heroes = queryNew(\"id,Name\",\r\n            \"integer,varchar\",\r\n            [\r\n                {\"id\":1,\"Name\":\"Bruce Banner\"},\r\n                {\"id\":2,\"Name\":\"Tony Stark\"},\r\n                {\"id\":3,\"Name\":\"Bobby Drake\"},\r\n                {\"id\":4,\"Name\":\"Jean Grey\"}\r\n            ]\r\n            )\r\n    writeDump(heroes.recordCount());",
+			"result":"4",
+			"runnable":true
+		}
+	],
 	"links": []
 }
