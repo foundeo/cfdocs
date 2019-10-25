@@ -4,7 +4,7 @@
     "syntax":"queryClear(query)",
     "member":"query.clear()",
     "returns":"query",
-    "description":"This function takes a query, removes all the rows, then returns an query object with no rows",
+    "description":"This function takes a query, removes all the rows, then returns a query object with no records",
     "engines":{
         "coldfusion":{"minimum_version":"10", "notes":"New tag in Update 5", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryclear.html"}
     },
