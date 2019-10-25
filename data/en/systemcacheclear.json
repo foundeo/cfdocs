@@ -6,11 +6,46 @@
 	"related": [],
 	"description": "Clears all caches or the specified cache",
 	"params": [
-		{"name": "cacheName", "description": "", "required": false, "default": "", "type": "string", "values": []}
+		{
+			"name": "cacheName", 
+			"description": "Name of the cache you want to clear. If not specified it will clear all caches.\r\n Some cachenames are aliases:\r\npage = template\r\ncfc, class = component\r\nct = customtag\r\nobject = query", 
+			"required": false, 
+			"default": "", 
+			"type": "string", 
+			"values": [
+				"all",
+				"template",
+				"page",
+				"component",
+				"cfc",
+				"class",
+				"customtag",
+				"ct",
+				"query",
+				"object",
+				"tag",
+				"function"
+			]
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/systemcacheclear.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/systemcacheclear.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"Clear all caches",
+			"description":"Clear all caches.",
+			"code":"systemCacheClear();",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Clear the template cache",
+			"description":"Clear the template cache.",
+			"code":"systemCacheClear(\"template\");",
+			"result":"",
+			"runnable":false
+		}
+	],
 	"links": []
 }

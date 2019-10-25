@@ -4,7 +4,7 @@
 	"syntax":"function onError(exception, eventName) {}",
 	"returns":"void",
 	"related":["application-cfc"],
-	"description":"Defined in Application.cfc, invoked when an exception occurrs that was not caught by a cftry or cfcatch statement.",
+	"description":"Defined in Application.cfc, invoked when an exception occurs that was not caught by a cftry or cfcatch statement.",
 	"params": [
 		{"name":"exception","description":"A structure containing the exception similar to what the cfcatch tag has.","required":true,"default":"","type":"struct","values":[]},
         {"name":"eventName","description":"The name of the application event at which the exception occurred. If no onRequest method is defined then an empty string may be passed.","required":true,"default":"","type":"string","values":["onApplicationStart","onApplicationEnd","onRequest","onRequestStart","onSessionStart","onSessionEnd","[empty string]"]}

@@ -311,7 +311,7 @@
     },
     {
       "name": "daynames",
-      "description": "A comma-delimited list that sets the names of the weekdays displayed in the calendar. Sunday is the first day and the rest of the weekday names follow in the normal order. You can use one-/two-letter, three-letter abreviation or the full name.",
+      "description": "A comma-delimited list that sets the names of the weekdays displayed in the calendar. Sunday is the first day and the rest of the weekday names follow in the normal order. You can use one-/two-letter, three-letter abbreviation or the full name.",
       "required": false,
       "default": "S,M,T,W,Th,F,S",
       "type": "string",
@@ -517,7 +517,7 @@
     "lucee": {
       "minimum_version": "",
       "notes": "Does not support `validateAt` attribute.",
-      "docs": "http://docs.lucee.org/reference/tags/input.html"
+      "docs": "https://docs.lucee.org/reference/tags/input.html"
     },
     "railo": {
       "minimum_version": "",

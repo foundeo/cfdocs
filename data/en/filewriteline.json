@@ -1,17 +1,17 @@
 {
 	"name":"fileWriteLine",
 	"type":"function",
-	"syntax":"fileWriteLine(fileobj, content)",
+	"syntax":"fileWriteLine(file, data)",
 	"returns":"void",
 	"related":["fileWrite","fileAppend"],
 	"description":"Appends content to an existing file",
 	"params": [
-		{"name":"fileobj","description":"The file where you want to add your content","required":true,"default":"","type":"any","values":[]},
-		{"name":"content","description":"","required":true,"default":"","type":"string","values":[]}
+		{"name":"file","description":"The file where you want to add your content","required":true,"default":"","type":"any","values":[]},
+		{"name":"data","description":"Content to add to the file","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filewriteline.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/filewriteline.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/filewriteline.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filewriteline"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filewriteline"}
 	},
@@ -20,7 +20,7 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "<cfscript> \r\n  myfile = fileOpen(\"c:\temp\test1.txt\", \"write\"); \r\n     fileWriteLine(myfile,\"This line is new.\"); \r\n     fileClose(myfile);  \r\n </cfscript>  ",
+			"code": "myfile = fileOpen(\"c:\\temp\\test1.txt\", \"write\"); \r\nfileWriteLine(myfile,\"This line is new.\"); \r\nfileClose(myfile);",
 			"result": "",
 			"runnable":false
 		}

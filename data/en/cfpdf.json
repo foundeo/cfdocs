@@ -159,7 +159,7 @@
 		},
 		{
 			"name": "permissions",
-			"description": "Specify the type of permissions on the PDF document:\n AllowPrintHigh\n AllowPrintLow\n AllowModify\n AllowCopy\n AllowAdd\n AllowSecure\n AllowModifyAnnotations\n AllowExtract\n AllowFillIn\n all\n none\n Except for all or none, you can specify a\n commaseparated list of permissions. (optional)",
+			"description": "Specify the type of permissions on the PDF document:\n AllowPrintHigh\n AllowPrintLow\n AllowModify\n AllowCopy\n AllowAdd\n AllowSecure\n AllowModifyAnnotations\n AllowExtract\n AllowFillIn\n all\n none\n Except for all or none, you can specify a\n comma separated list of permissions. (optional)",
 			"required": false,
 			"default": "",
 			"type": "string",
@@ -215,7 +215,7 @@
 		},
 		{
 			"name": "transparent",
-			"description": "Specifies whether the image background is transparent or opaque: foormat=png only\n * yes: the background is transparent.\n * no: the background is opaque.",
+			"description": "Specifies whether the image background is transparent or opaque: format=png only\n * yes: the background is transparent.\n * no: the background is opaque.",
 			"required": false,
 			"default": false,
 			"type": "boolean",
@@ -551,7 +551,7 @@
 		"lucee": {
 			"minimum_version": "",
 			"notes": "",
-			"docs": "http://docs.lucee.org/reference/tags/pdf.html"
+			"docs": "https://docs.lucee.org/reference/tags/pdf.html"
 		},
 		"railo": {
 			"minimum_version": "",

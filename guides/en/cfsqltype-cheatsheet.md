@@ -1,0 +1,179 @@
+# CFSqlType Cheatsheet
+
+[Table sourced from Adobe Documentation](https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfqueryparam.html)
+
+- CF_SQL_ARRAY
+    - JDBC : ARRAY
+    - DB2 : N/A
+    - Oracle : N/A
+    - SQL Server : N/A
+- CF_SQL_BIGINT
+    - JDBC : BIGINT
+    - DB2 : BigInt
+    - Oracle : N/A
+    - SQL Server : bigint
+- CF_SQL_BINARY
+    - JDBC : BINARY
+    - DB2 : Char for Bit Data
+    - Oracle : N/A
+    - SQL Server : binaryt
+- CF_SQL_BIT
+    - JDBC : BIT
+    - DB2 : N/A
+    - Oracle : N/A
+    - SQL Server : bit
+- CF_SQL_BLOB
+    - JDBC : BLOB
+    - DB2 : Blob
+    - Oracle : blob, bfile
+    - SQL Server : longvarbinary
+- CF_SQL_CHAR
+    - JDBC : CHAR
+    - DB2 : Char
+    - Oracle : char, nchar
+    - SQL Server : char
+- CF_SQL_CLOB
+    - JDBC : CLOB
+    - DB2 : Clob
+    - Oracle : clob, nclob
+    - SQL Server : N/A
+- CF_SQL_DATE
+    - JDBC : DATE
+    - DB2 : Date
+    - Oracle : N/A
+    - SQL Server : date
+- CF_SQL_DECIMAL
+    - JDBC : DECIMAL
+    - DB2 : Decimal
+    - Oracle : number
+    - SQL Server : decimal
+- CF_SQL_DISTINCT
+    - JDBC : DISTINCT
+    - DB2 : N/A
+    - Oracle : N/A
+    - SQL Server : N/A
+- CF_SQL_DOUBLE
+    - JDBC : DOUBLE
+    - DB2 : Double
+    - Oracle : N/A
+    - SQL Server : double
+- CF_SQL_FLOAT
+    - JDBC : FLOAT
+    - DB2 : Float
+    - Oracle : number
+    - SQL Server : real
+- CF_SQL_IDSTAMP
+    - JDBC : CHAR
+    - DB2 : Char
+    - Oracle : char, nchar
+    - SQL Server : char
+- CF_SQL_INTEGER
+    - JDBC : INTEGER
+    - DB2 : Integer
+    - Oracle : N/A
+    - SQL Server : integer
+- CF_SQL_LONGVARBINARY
+    - JDBC : LONGVARBINARY
+    - DB2 : Long Varchar for Bit Data
+    - Oracle : long raw
+    - SQL Server : image
+- CF_SQL_LONGNVARCHAR
+    - JDBC : LONGNVARCHAR
+    - DB2 : LONGVARGRAPHIC
+    - Oracle : NVARCHAR2
+    - SQL Server : ntext
+- CF_SQL_LONGVARCHAR
+    - JDBC : LONGVARCHAR
+    - DB2 : Long Varchar
+    - Oracle : long
+    - SQL Server : text
+- CF_SQL_MONEY
+    - JDBC : DOUBLE
+    - DB2 : Double
+    - Oracle : N/A
+    - SQL Server : double
+- CF_SQL_MONEY4
+    - JDBC : DOUBLE
+    - DB2 : Double
+    - Oracle : N/A
+    - SQL Server : double
+- CF_SQL_NCHAR
+    - JDBC : NCHAR
+    - DB2 : NCHAR
+    - Oracle : NCHAR
+    - SQL Server : nchar
+- CF_SQL_NCLOB
+    - JDBC : CLOB
+    - DB2 : NCLOB
+    - Oracle : NCLOB
+    - SQL Server : nvarchar
+- CF_SQL_NULL
+    - JDBC : NULL
+    - DB2 : N/A
+    - Oracle : N/A
+    - SQL Server : N/A
+- CF_SQL_NUMERIC
+    - JDBC : NUMERIC
+    - DB2 : Numeric
+    - Oracle : N/A
+    - SQL Server : numeric
+- CF_SQL_NVARCHAR
+    - JDBC : NVARCHAR
+    - DB2 : NVARCHAR
+    - Oracle : NVARCHAR2
+    - SQL Server : nvarchar
+- CF_SQL_OTHER
+    - JDBC : OTHER
+    - DB2 : N/A
+    - Oracle : N/A
+    - SQL Server : N/A
+- CF_SQL_REAL
+    - JDBC : REAL
+    - DB2 : Real
+    - Oracle : N/A
+    - SQL Server : real
+- CF_SQL_REFCURSOR
+    - JDBC : REF
+    - DB2 : N/A
+    - Oracle : N/A
+    - SQL Server : N/A
+- CF_SQL_SMALLINT
+    - JDBC : SMALLINT
+    - DB2 : Smallint
+    - Oracle : N/A
+    - SQL Server : smallint
+- CF_SQL_STRUCT
+    - JDBC : STRUCT
+    - DB2 : N/A
+    - Oracle : N/A
+    - SQL Server : N/A
+- CF_SQL_SQLXML
+    - JDBC : N/A
+    - DB2 : N/A
+    - Oracle : N/A
+    - SQL Server : xml
+- CF_SQL_TIME
+    - JDBC : TIME
+    - DB2 : Time
+    - Oracle : N/A
+    - SQL Server : time
+- CF_SQL_TIMESTAMP
+    - JDBC : TIMESTAMP
+    - DB2 : Timestamp
+    - Oracle : date
+    - SQL Server : datetime
+- CF_SQL_TINYINT
+    - JDBC : TINYINT
+    - DB2 : N/A
+    - Oracle : N/A
+    - SQL Server : tinyint
+- CF_SQL_VARBINARY
+    - JDBC : VARBINARY
+    - DB2 : Rowid
+    - Oracle : raw
+    - SQL Server : varbinary
+- CF_SQL_VARCHAR
+    - JDBC : VARCHAR
+    - DB2 : Varchar
+    - Oracle : varchar2, nvarchar2
+    - SQL Server : varchar

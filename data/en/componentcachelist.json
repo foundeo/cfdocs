@@ -4,11 +4,26 @@
 	"syntax": "componentCacheList()",
 	"returns": "struct",
 	"related": ["componentCacheClear","getComponentMetadata","cfcomponent","cfcache"],
-	"description": "",
+	"description": "This function Lists elements in the component path cache.",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/componentcachelist.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/componentcachelist.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+            "title":"Simple Tag Example",
+            "description":"Dumps a struct of components in the cache",
+            "code":"<cfset c = componentCacheList() />\n<cfdump var=\"#c#\" />",
+            "result":"struct",
+            "runnable":true
+		},
+		{
+            "title":"Simple Script Example",
+            "description":"Dumps a struct of components in the cache",
+            "code":"c = componentCacheList();\ndump(c);",
+            "result":"struct",
+            "runnable":true
+        }
+	],
 	"links": []
 }

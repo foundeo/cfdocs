@@ -11,13 +11,21 @@
 		{"name":"tablequalifier","description":"For data sources that support table qualifiers. The purpose\n of table qualifiers is as follows:\n SQL Server and Oracle: name of database that contains\n table\n Intersolv dBASE driver: directory of DBF files","required":false,"default":"","type":"string","values":[]},
 		{"name":"username","description":"Overrides username value specified in ODBC setup.","required":false,"default":"","type":"string","values":[]},
 		{"name":"password","description":"Overrides password value specified in ODBC setup.","required":false,"default":"","type":"string","values":[]},
-		{"name":"formfields","description":"Comma-delimited list of form fields to update.\n\n If a form field is not matched by a column name in the\n database, CFML throws an error.\n\n The formFields lies must include the database table primary\n key field, which must be present in the form. It can be\n hidden.","required":false,"default":"","type":"string","values":[]}
+		{"name":"formfields","description":"Comma-delimited list of form fields to update.\n\n If a form field is not matched by a column name in the\n database, CFML throws an error.\n\n The formFields list must include the database table primary\n key field, which must be present in the form. It can be\n hidden.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfupdate.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/update.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/update.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfupdate"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfupdate"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Update a record using passed form fields",
+			"description": "Uses the cfupdate function to update a record in the a users table based on a list form fields. The primary key must be included in the list of fields",
+			"code": "cfupdate( datasource=\"myDsn\", tablename=\"users\", formFields=\"userId,firstName,lastName,emailAddress\" );",
+			"result": ""
+		}
+	]
 }

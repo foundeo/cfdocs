@@ -1,30 +1,26 @@
 {
 	"name":"fileGetMimeType",
 	"type":"function",
-	"syntax":"{{fileGetMimeType(path, strict) fileGetMimeType(fileObject,strict)}};",
+	"syntax":"fileGetMimeType(file, strict)",
 	"returns":"string",
 	"related":[],
-	"description":" Gets the MIME type for the file path/file object you have specified.",
+	"description":"Gets the MIME type for the file path/file object you have specified.",
 	"params": [
-		{"name":"path","description":"Full path on disk to the file if strict is set to true.If you do not specify the full path, the file is assumed to be present in the temp directory, as returned by the function getTempDirectory.","required":true,"default":"","type":"","values":[]},
-        {"name":"fileObject","description":"Name of the file object.","required":true,"default":"","type":"","values":[]},
-        {"name":"strict","description":"If false, determines the file type by extension. The default value is true.","required":true,"default":"","type":"","values":[]}
+		{"name":"file","description":"Name of the file object or full path on disk to the file if strict is set to true. If you do not specify the full path, the file is assumed to be present in the temp directory, as returned by the function getTempDirectory.","required":true,"default":"","type":"any","values":[]},
+		{"name":"strict","description":"If false, determines the file type by extension. The default value is true.","required":false,"default":"true","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filegetmimetype.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/filegetmimetype.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/filegetmimetype.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/FileGetMimeType"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title": "Tag Syntax",
-			"description": "Assume that you have a file named test.pdf in /folder1 and test.txt in the same folder, and you want to check the MIME type. Here test.txt is a copy of test.pdf with extension renamed to txt.",
-			"code": "<cfscript> \r\n //Case 1. \r\n mime.mimeType1 = fileGetMimeType(expandPath(‘/folder1/test.pdf’)); \r\n //Case 2. \r\n mime.mimeType2 = fileGetMimeType(expandPath(‘/folder1/test.pdf’),false); \r\n //Case 3. \r\n mime.mimeType3 =  fileGetMimeType(expandPath(‘/folder1/test.txt’)); \r\n //Case 4. \r\n mime.mimeType4 = fileGetMimeType(expandPath(‘/folder1/test.txt’),false); \r\n writeDump(mime); \r\n </cfscript> \r\n",
-			"result": "Case 1 and Case 2: Returns application/pdf no matter if strict = true or false because the file is originally a PDF file. \r\n Case 3: Returns application/pdf since by default{{ strict = true}} and the file is originally a PDF which is renamed as TXT. \r\n Case 4: Returns text/plain since strict = false. "
+			"title": "Two PDFs and two text files with and without strict mode",
+			"description": "Assume that you have a file named test.pdf in temp directory and test.txt in the same folder, and you want to check the MIME type. Here test.txt is a copy of test.pdf with extension renamed to txt.",
+			"code": "<cfscript>\n\tmimeTypes = '';\n\tmimeTypes = listAppend(mimeTypes, fileGetMimeType(expandPath('/folder1/test.pdf')));\n\tmimeTypes = listAppend(mimeTypes, fileGetMimeType(expandPath('/folder1/test.pdf'),false));\n\tmimeTypes = listAppend(mimeTypes, fileGetMimeType(expandPath('/folder1/test.txt')));\n\tmimeTypes = listAppend(mimeTypes, fileGetMimeType(expandPath('/folder1/test.txt'),false));\n\twriteOutput(mimeTypes);\n</cfscript>",
+			"result": "application/pdf,application/pdf,text/plain,text/plain"
 		}
 	]
-
 }

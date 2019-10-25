@@ -83,7 +83,7 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "coverpage",
@@ -91,7 +91,7 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "type",
@@ -131,7 +131,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		}
 	],
 	"engines": {

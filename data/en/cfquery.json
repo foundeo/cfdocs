@@ -31,7 +31,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfquery.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/query.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/query.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfquery"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfquery"}
 	},
@@ -78,6 +78,11 @@
 			"description":"Lucee5+ Return a query object converted into a struct of structs. (Struct key is based on the \"columnkey\" parameter)",
 			"code":"<!--- create a dummy query using queryNew --->\n<cfset users = queryNew(\"id, firstname\", \"integer, varchar\", [{\"id\":1, \"firstname\":\"Han\"}])>\n<cfset writeDump(users)>\n\n<!--- run QofQ (query of query) --->\n<cfquery name=\"subUsers\" dbtype=\"query\" returntype=\"struct\" columnkey=\"id\">\n    SELECT * FROM users\n</cfquery>\n<cfset writeDump(subUsers)>",
 			"result":"{ 1: { id: 1, firstname: \"Han\" } }"
+		},
+		{
+			"title":"Insert a Record and Retrieve the Generated Key",
+			"description":"Inserts a new record into a table called myTable. The \"ID\" column is an auto-incremented primary key column.",
+			"code":"<!--- insert the new record --->\n<cfquery datasource=\"myDatasource\" result=\"result\">\nINSERT INTO myTable ( name, email ) VALUES ( 'Joe', 'joe@domain.com' )\n</cfquery>\n\n<!--- output the new primary key --->\n<cfdump var=\"#result.generatedKey#\" />"
 		}
 
 	]

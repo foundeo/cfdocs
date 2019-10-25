@@ -14,12 +14,28 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structinsert.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/structinsert.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/structinsert.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structinsert"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structinsert"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Simple Example",
+			"description": "Inserts a new key/value into the structure",
+			"code": "map = {\r\n    \"hair\" : \"brown\",\r\n    \"eyes\" : \"green\"\r\n};\r\nstructInsert(map, \"lips\", \"red\");\r\nwriteOutput(structKeyList(map));",
+			"result": "eyes,lips,hair",
+			"runnable" : true
+		},
+		{
+			"title": "Overwrite Example",
+			"description": "Throws exception when you try to add a duplicate key, when allowoverwrite parameter is false.",
+			"code": "map = {\r\n    \"hair\" : \"brown\",\r\n    \"eyes\" : \"green\"\r\n};\r\ntry {structInsert(map, \"hair\", \"red\", false);}\r\ncatch(any ex) {writeOutput(\"error!\");}",
+			"result": "error!",
+			"runnable" : true
+		}
 	]
 
 }

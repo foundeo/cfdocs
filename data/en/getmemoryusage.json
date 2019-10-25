@@ -4,12 +4,12 @@
 	"syntax": "getMemoryUsage([type])",
 	"returns": "query",
 	"related": ["getSystemFreeMemory","getSystemTotalMemory","getCpuUsage"],
-	"description": "",
+	"description": "Return detailed information to the memory usage of the container.",
 	"params": [
-		{"name": "type", "description": "", "required": false, "default": "", "type": "string", "values": []}
+		{"name": "type", "description": "Specify the type of memory information to return. If not specified, both types are returned.", "required": false, "default": "", "type": "string", "values": ["heap","non_heap"]}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getmemoryusage.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getmemoryusage.html"}
 	},
 	"links": [],
 	"examples": [{

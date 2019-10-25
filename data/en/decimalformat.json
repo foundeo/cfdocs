@@ -10,9 +10,18 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DecimalFormat.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/decimalformat.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/decimalformat.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/decimalformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/decimalformat"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"Formatting examples",
+			"description":"",
+			"code":"formattedInt = decimalFormat(123); // 123.00\r\nwriteOutput(formattedInt & \"<br>\");\r\n\r\nformattedWithSeparators = decimalFormat(1000000); // 1,000,000.00\r\nwriteOutput(formattedWithSeparators & \"<br>\");\r\n\r\nformattedDecimal = decimalFormat(987.15); // 987.15\r\nwriteOutput(formattedDecimal & \"<br>\");\r\n\r\nformattedRoundedUp = decimalFormat(456.789); // 456.79 - rounds up\r\nwriteOutput(formattedRoundedUp & \"<br>\");",
+			"result":"",
+			"runnable":true
+		}
+	]
 }

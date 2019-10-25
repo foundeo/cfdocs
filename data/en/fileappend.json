@@ -1,19 +1,28 @@
 {
 	"name":"fileAppend",
 	"type":"function",
-	"syntax":"fileAppend(file, data [, charset])",
+	"syntax":"fileAppend(filePath, data [, charset])",
 	"returns":"void",
 	"related":["filewrite"],
 	"description":"Appends the data contents to the file.",
 	"params": [
 		{"name":"filePath","description":"File path","required":true,"default":"","type":"string","values":[]},
 		{"name":"data","description":"Data to append to the file","required":true,"default":"","type":"string","values":[]},
-		{"name":"charset","description":"The character encoding in which the file contents is encoded.","required":false,"default":"","type":"string","values":[]}
-
+		{"name":"charset","description":"The character encoding in which the file contents is encoded.","required":false,"default":"","type":"string","values":[]},
+		{"name":"addNewLine","description":"CF2016u11+ Indicates whether a new line is added to the end of the appended data","required":false,"default":"true","type":"boolean","values":[]}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/fileappend.html"}
+		"coldfusion": {"minimum_version":"", "notes":"Prior to CF2016u11 and CF2018u4, charset param was required.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileappend.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/fileappend.html"}
 	},
+	"examples" : [
+		{
+			"title": "Simple Example",
+			"description":"Appends a mock entry to a file.",
+			"code":"// Create mock log entry\r\nlogEntry = dateTimeFormat(now(), \"yyyy/mm/dd HH:nn\") & \" this is a mock log entry!\";\r\n\r\n// Append line to file\r\nfileAppend(\"/path/to/file.log\", logEntry);",
+			"result":""
+		}
+	],
 	"links": [
 
 	]

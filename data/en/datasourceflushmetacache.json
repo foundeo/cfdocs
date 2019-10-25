@@ -4,12 +4,13 @@
 	"syntax": "datasourceFlushMetacache([datasourceName])",
 	"returns": "boolean",
 	"related": [],
-	"description": "",
+	"description": "Flush the meta data stored for a certain datasource used for stored procedures.\n NOTE: This is only supported for Oracle datasources.",
 	"params": [
-		{"name": "datasourceName", "description": "", "required": false, "default": "", "type": "string", "values": []}
+		{"name": "datasourceName", "description": "Name of the datasource to flush. When not defined all caches are flushed.", "required": false, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/datasourceflushmetacache.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/datasourceflushmetacache.html"},
+		"railo": {"minimum_version": "3.3", "notes": "", "docs": ""}
 	},
 	"examples": [],
 	"links": []

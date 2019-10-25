@@ -4,13 +4,15 @@
 	"syntax":"directoryCreate(path)",
 	"returns":"void",
 	"related":["fileWrite","directoryDelete","directoryExists","directoryRename"],
-	"description":" Creates new directory for specified path",
+	"description":"Creates an on-disk or in-memory directory in the specified path",
 	"params": [
-		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]}
+		{"name":"path","description":"Absolute path of the directory to be created. Alternatively, you can specify an IP address, as in the following example: `DirectoryCreate(\"//12.3.123.123/c_drive/test\". \rNOTE: You have to have the required permissions to run this function.`);","required":true,"default":"","type":"string","values":[]},
+		{"name":"createPath","description":"Lucee Only. Create parent directory when it doesn't exist.","required":false,"default":"true","type":"boolean","values":[]},
+                {"name":"ignoreExists","description":"Pass false (default) to throw an error if the directory already exists, or true to skip the create operation without an error.","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DirectoryCreate.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/directorycreate.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/directorycreate.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/directorycreate"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/directorycreate"}
 	},

@@ -6,7 +6,7 @@ body {
 div.listing > h2 > a.btn { text-transform: none; }
 
 nav.navbar { background-color:#eee; }
-#docname,h4 { font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
+#docname,h4,.typewriter { font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
 .param h4 { background-color: #f1f1f1; padding: 8px 8px; margin-bottom: 2px; }
 .p-default { font-weight:normal; font-size: smaller; }
 h2 { border-bottom:1px solid #f1f1f1; padding-bottom: 12px; }
@@ -19,7 +19,27 @@ h2 { text-transform: uppercase; }
 .listing { text-align: center; }
 #syntax { font-weight:bold; }
 #syntax > code { white-space: pre; padding: 0; }
-#forkme { position: absolute; top: 0; right: 0; border: 0; z-index: 9999; width:149px; height:149px;}
+#forkme {
+    background-color: #e3e3e3;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    top: 35px;
+    right: -35px;
+    border: 0;
+    z-index: 9999;
+    width: 200px;
+    color: #484848;
+    font-weight: bold;
+    transform: rotate(45deg);
+    transform-origin: initial;
+    text-align: center;
+    border-top: 1.5px dashed #c2c2c2;
+    border-bottom: 1.5px dashed #c2c2c2;
+    line-height: 25px;
+    letter-spacing: -0.6px;
+    word-spacing: 1px;
+}
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
   margin-bottom: 0;
@@ -31,7 +51,6 @@ h2 { text-transform: uppercase; }
 }
 #foundeo img {
   width: 70px; height:20px;
-
 }
 
 #foundeo.foundeoAppear {
@@ -163,3 +182,10 @@ pre.prettyprint {
 	height: 55px;
 	width: 1px
 }
+
+.dropdown-menu.scrollable-menu {
+	max-height: 300px;
+	overflow-x: hidden;
+}
+
+.related .label { margin-right: 4px; }

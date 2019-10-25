@@ -4,25 +4,39 @@
 	"syntax": "isNotMap(obj)",
 	"returns": "boolean",
 	"related": [],
-	"description": "",
+	"description": "Returns true if the given Object is not of Type java.util.Map.",
 	"params": [
-		{"name": "obj", "description": "", "required": true, "default": "", "type": "any", "values": []}
+		{
+			"name": "obj",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/isnotmap.html"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isnotmap.html"
+		}
 	},
-	"examples": [{
-            "title":"Check if Map is of type Map",
-            "description":"",
-            "code":"myMap = createObject('java','java.util.HashMap');\nmyMap.put('a','1');\nwriteOutput(isNotMap(myMap));",
-            "result":"true",
-            "runnable":true
-        },{
-            "title":"Check if something else is of type Map",
-            "description":"",
-            "code":"myStruct = {'a': 1};\nwriteOutput(isNotMap(myStruct));",
-            "result":"false",
-            "runnable":true
-        }],
+	"examples": [
+		{
+			"title": "Check if Map is of type Map",
+			"description": "",
+			"code": "myMap = createObject('java','java.util.HashMap');\nmyMap.put('a','1');\nwriteOutput(isNotMap(myMap));",
+			"result": "true",
+			"runnable": true
+		},
+		{
+			"title": "Check if something else is of type Map",
+			"description": "",
+			"code": "myStruct = {'a': 1};\nwriteOutput(isNotMap(myStruct));",
+			"result": "false",
+			"runnable": true
+		}
+	],
 	"links": []
 }

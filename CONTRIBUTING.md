@@ -9,7 +9,7 @@
 
 ### Where can I find documentation about the JSON file format used?
 
-It's documented in the [main README](/foundeo/cfdocs#json-file-documentation).
+It's documented in the [main README](https://github.com/foundeo/cfdocs#json-file-documentation).
 
 ### What version of CF should the cfdocs CFML code work on?
 
@@ -27,7 +27,7 @@ Use `true`/`false`
 
 ### How are my contributions licensed?
 
-Please see the [LICENSE](/foundeo/cfdocs/LICENSE) file.
+Please see the [LICENSE](https://github.com/foundeo/cfdocs/blob/master/LICENSE) file.
 
 ### Can I copy code examples from other sources?
 

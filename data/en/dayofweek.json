@@ -5,27 +5,25 @@
 	"member":"date.dayOfWeek()",
 	"returns":"numeric",
 	"related":["day", "dayOfWeekAsString", "dayOfYear", "daysInMonth", "daysInYear", "firstDayOfMonth"],
-	"description":" Determines the day of the week, in a date. Returns the ordinal for the day of the week, as an integer in the range 1 (Sunday) to 7 (Saturday).",
+	"description":"Determines the day of the week from a date. Returns the ordinal for the day of the week, as an integer in the range 1 (Sunday) to 7 (Saturday).",
 	"params": [
-		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"date","values":[]}
-
+		{"name":"date","description":"Date or datetime object (100AD-9999AD).\nWhen passing a datetime object as a string, enclose it in quotation marks. Otherwise, it is interpreted as a numeric representation of a datetime object.","required":true,"default":"","type":"date","values":[]},
+		{"name":"calendar","description":"CF2016u8+ Indicates whether the week starts on Sunday (gregorian) or Monday (iso)","required":false,"default":"gregorian","type":"string","values":["gregorian","iso"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DayOfWeek.html"},
-		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+.", "docs":"http://docs.lucee.org/reference/functions/dayofweek.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+. Lucee accepts an additional argument for `timezone`.", "docs":"https://docs.lucee.org/reference/functions/dayofweek.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/dayofweek"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dayofweek"}
 	},
 	"links": [
-
 	],
 	"examples": [
 		{
 			"title": "Determines the day of the week",
 			"description": "Uses the dayOfWeek function to determine the day of the week",
-			"code": "<cfset Date = CreateDate(2010, 09, 08)>\r\n<cfset result = dayOfWeek(Date)>\r\n<cfoutput>#result#</cfoutput>",
+			"code": "<cfset date = createDate(2010, 09, 08)>\r\n<cfset result = dayOfWeek(date)>\r\n<cfoutput>#result#</cfoutput>",
 			"result": "4"
 		}
 	]
-
 }

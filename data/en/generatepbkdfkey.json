@@ -14,7 +14,7 @@
 	    ],
 	"engines":{
 		"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/generatepbkdfkey.html","notes":"Adobe ColdFusion Enterprise includes a java crypto provider that implements these algorithms. These algorithms are available only in enterprise versions:\n\nPBKDF2WithSHA1\nPBKDF2WithSHA224\nPBKDF2WithSHA256\nPBKDF2WithSHA384\nPBKDF2WithSHA512\nPBKDF2WithSHA512-224\nPBKDF2WithSHA512-256"},
-		"lucee":{"minimum_version":"5","docs":"http://docs.lucee.org/reference/functions/generatepbkdfkey.html","notes":"For Lucee it is up to the provider that you have installed, if using the default java crypto provider it only supports \"PBKDF2WithHmacSHA1\" on Java 1.7 for example. If you are using Java 8 it supports more algorithms.\n\n`iterations` and `keySize` parameters are optional in Lucee."}
+		"lucee":{"minimum_version":"5","docs":"https://docs.lucee.org/reference/functions/generatepbkdfkey.html","notes":"For Lucee it is up to the provider that you have installed, if using the default java crypto provider it only supports \"PBKDF2WithHmacSHA1\" on Java 1.7 for example. If you are using Java 8 it supports more algorithms.\n\n`iterations` and `keySize` parameters are optional in Lucee."}
 	},
 	"links":[
 		{"title":"PBKDF2 Wikipedia","description":"Information on what PBKDF2 is all about","url":"http:\/\/en.wikipedia.org\/wiki\/PBKDF2"},

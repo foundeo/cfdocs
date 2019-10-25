@@ -4,15 +4,30 @@
 	"syntax": "systemOutput(obj [, addNewLine] [, doErrorStream])",
 	"returns": "boolean",
 	"related": [],
-	"description": "Writes the given string to the output stream",
+	"description": "Writes the given object to the output stream",
 	"params": [
 		{"name": "obj", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "addNewLine", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
 		{"name": "doErrorStream", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/systemoutput.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/systemoutput.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title":"Write a string to the output stream \"Hello World\"",
+		"description":"",
+		"code":"systemOutput(\"Hello World\");"
+	},
+     	{
+		"title":"Write an array to the output stream",
+		"description":"",
+		"code":"systemOutput([ \"foo\", \"bar\" ]);"
+	},
+     	{
+		"title":"Write a struct to the output stream",
+		"description":"",
+		"code":"systemOutput({ \"myKey\", \"myValue\" });"
+	}
+    	],
 	"links": []
 }

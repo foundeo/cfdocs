@@ -1,18 +1,20 @@
 {
 	"name":"listAppend",
 	"type":"function",
-	"syntax":"listAppend(list, value [, delimiters])",
+	"syntax":"listAppend(list, value [, delimiters, includeEmptyFields])",
+	"member": "str.listAppend(value [, delimiters, includeEmptyFields])",
 	"returns":"string",
 	"related":["listPrepend"],
-	"description":"Concatenates a list or element to a list.",
+	"description":"Concatenates a list or element to a list and returns the concatenated list.",
 	"params": [
-		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"list","description":"A list or variable with the list.","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"An element or a list of elements.","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]}
+		{"name":"delimiters","description":"A string or variable with a character that separates list elements.","required":false,"default":",","type":"string","values":[]},
+		{"name":"includeEmptyFields","description":"Set to true to append blank values to the list.","required":false,"default":"false","type":"boolean","values":["true","false"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listappend.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/listappend.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/listappend.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listappend"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listappend"}
 	},
@@ -21,14 +23,26 @@
 		{
 				"title":"Simple listAppend Example",
 				"description":"Add 'foo' to the end of this list",
-				"code" : "listAppend(\"bar,bar2\", \"foo\")",
+				"code" : "oldList = \"bar,bar2\";\nnewList = listAppend(oldList, \"foo\");\nwriteOutput(oldList & \"-->\" & newList);",
 				"result":"bar,bar2,foo"
 		},
-			{
+		{
 				"title":"Simple listAppend Example with Delimiter",
 				"description":"Add 'foo' to the end of this list using a custom delimiter",
-				"code" : "listAppend(\"bar|bar2\", \"foo\", \"|\")",
-				"result":"bar|bar2|foo"
-		}
+				"code" : "oldList = \"bar,bar2\";\nnewList = listAppend(oldList, \"foo\", \"|\");\nwriteOutput(oldList & \"-->\" & newList);",
+				"result":"bar,bar2|foo"
+		},
+		{
+			"title":"Simple listAppend Example with Empty Fields On",
+			"description":"Add 'foo,,' to the end of this list using includeEmptyFields as true",
+			"code" : "oldList = \"bar,bar2\";\nnewList = listAppend(oldList, \"foo,,\", \",\", true);\nwriteOutput(oldList & \"-->\" & newList);",
+			"result":"bar,bar2,foo,,"
+		},
+		{
+			"title":"Simple listAppend Example with Empty Fields Off",
+			"description":"Add 'foo' to the end of this list using includeEmptyFields as false",
+			"code" : "oldList = \"bar,bar2\";\nnewList = listAppend(oldList, \"foo,,\", \",\", false);\nwriteOutput(oldList & \"-->\" & newList);",
+			"result":"bar,bar2,foo"
+		}	
 	]
 }

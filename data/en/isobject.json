@@ -3,21 +3,18 @@
 	"type":"function",
 	"syntax":"isObject(value)",
 	"returns":"boolean",
-	"related":[],
+	"related":["isStruct","isJSON","isSpreadsheetObject","isPDFObject"],
 	"description":" Determines whether a value is an object.\n True, if the value represents a CFML object. False if\n the value is any other type of data, such as an integer, string,\n date, or struct.",
 	"params": [
 		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isobject.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/isobject.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isobject.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isobject"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isobject"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"isObject Example",

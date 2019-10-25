@@ -1,4 +1,21 @@
 <cfoutput>
+	<cfscript>
+		related = [];
+		guides = [];
+		if (structKeyExists(data, "related") AND arrayLen(data.related)) {
+			for(i = 1; i lte arrayLen(data.related); i++) {
+                		_doc = data.related[i];
+				jsonPath = expandPath("./data/en/#LCase(_doc)#.json");
+				guidePath = expandPath("./guides/en/#LCase(_doc)#.md");
+				if (fileExists(jsonPath)) {
+					arrayAppend(related,data.related[i]);
+				}
+				else if (fileExists(guidePath)) {
+					arrayAppend(guides,data.related[i]);
+				}
+			}
+		}
+	</cfscript>
 	<div class="jumbotron">
 		<div class="container" data-doc="#encodeForHTMLAttribute(data.name)#">
 			<h1 id="docname">#data.name#</h1>
@@ -53,12 +70,17 @@
 			<cfelseif StructKeyExists(data, "engines") AND structCount(data.engines) EQ 1>
 				<div class="alert alert-warning">
 					This <cfif data.type IS "tag">tag<cfelseif data.type IS "function">function</cfif> requires
-					<cfif structKeyExists(data.engines, "coldfusion")>
-						Adobe ColdFusion<cfif StructKeyExists(data.engines.coldfusion, "minimum_version") AND Len(data.engines.coldfusion.minimum_version)> #data.engines.coldfusion.minimum_version# and up</cfif>.
-						<em> Not supported on Lucee, OpenBD, etc.</em>
-					<cfelseif structKeyExists(data.engines, "lucee")>
-						Lucee. <em>Not supported on Adobe ColdFusion.</em>
-					</cfif>
+					<cfscript>
+						engineMap = {
+							"coldfusion": "Adobe ColdFusion",
+							"lucee": "Lucee",
+							"openbd": "OpenBD",
+							"railo": "Railo"
+						};
+						engine = structKeyList(data.engines);
+					</cfscript>
+					#engineMap[engine]#<cfif StructKeyExists(data.engines[engine], "minimum_version") AND Len(data.engines[engine].minimum_version)> #data.engines[engine].minimum_version# and up</cfif>.&nbsp;
+					<em>Not supported on <cfif engine neq 'lucee'>Lucee, </cfif><cfif engine neq 'coldfusion'>Adobe ColdFusion, </cfif> etc.</em>
 				</div>
 			</cfif>
 			<cfif StructKeyExists(data, "discouraged") AND Len(data.discouraged)>
@@ -114,7 +136,7 @@
 	</cfif>
 	
 	<div class="container">
-		<cfif StructKeyExists(data, "related") AND ArrayLen(data.related)>
+		<cfif arrayLen(related)>
 			<cfif data.type IS "listing" OR data.type IS "404">
 				<div class="listing">
 					<cfloop array="#data.related#" index="r">
@@ -124,9 +146,23 @@
 			<cfelse>
 				<div class="related">
 					See Also:
-					<cfloop array="#data.related#" index="r">
-						<a href="#linkTo(r)#" class="related label label-default">#r#</a>
+					<cfloop array="#related#" index="r">
+						<a href="#linkTo(r)#" class="related label label-default">
+							<cfif r.startsWith('cf')>
+								<span class="glyphicon glyphicon-tags"></span>
+							<cfelse>
+								<span class="glyphicon glyphicon-flash"></span>
+							</cfif>&ensp;
+							#r#
+						</a>
 					</cfloop>
+					<cfif arrayLen(guides)>
+						<cfloop array="#guides#" index="g">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-book" title="Guide"></span>&ensp;<a href="#linkTo(g)#" style="color:white;">#g# guide</a>
+							</span>
+						</cfloop>
+					</cfif>
 				</div>
 			</cfif>
 		</cfif>
@@ -165,7 +201,21 @@
 									</ul>
 								</div>
 							</cfif>
-						</cfif>						
+						</cfif>
+						<cfif structKeyExists(p, "callback_params") AND isArray(p.callback_params) and not arrayIsEmpty(p.callback_params)>
+							<h4>Callback parameters:</h4>
+							<ul>
+								<cfloop array="#p.callback_params#" index="i">									
+									<li>
+										<code>#encodeForHTML(i.name)#</code><cfif structKeyExists(i, 'required') AND Len(i.required)><span title="required">&##42;</span></cfif>&ensp;
+										<cfif structKeyExists(i, 'type') AND Len(i.type)>
+											<em class="text-muted typewriter">#i.type#</em>
+										</cfif>:
+										#i.description#
+									</li>
+								</cfloop>
+							</ul>
+						</cfif>
 					</div>
 				</div>			
 			</cfloop>
@@ -224,35 +274,32 @@
 			<cfset request.hasExamples = true>
 			<h2 id="examples">Examples <small>sample code <cfif data.type IS "function">invoking<cfelse>using</cfif> the #data.name# <cfif data.type IS "tag">tag<cfelse>function</cfif></small></h2>
 			<cfset example_index = 0>
-			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-				<cfloop array="#data.examples#" index="ex">
-					<cfset example_index = example_index + 1>
-					<br />
-					<div class="panel panel-default">
-						<div class="panel-heading" role="tab" id="headingOne">						
-							<h4 class="panel-title" id="ex#example_index#">
-								<a role="button" data-toggle="collapse" data-parent="##accordion" href="##collapseEx#example_index#" aria-expanded="true" aria-controls="collapseEx#example_index#">
-								  #XmlFormat(ex.title)#
-								</a>
-							</h4>
-						</div>
-						<div id="collapseEx#example_index#" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-							<div class="panel-body">
-								<cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
-									<div class="pull-right">
-										<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
-									</div>
-								</cfif>
-								<p class="clearfix">#autoLink(ex.description)#</p>
-								<pre class="prettyprint"><code>#encodeForHTML(ex.code)#</code></pre>
-								<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
-									<p><strong>Expected Result: </strong> #encodeForHTML(ex.result)#</p>
-								</cfif>
-							</div>
+			<cfloop array="#data.examples#" index="ex">
+				<cfset example_index = example_index + 1>
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingOne">
+						<h4 class="panel-title" id="ex#example_index#">
+							<a role="button" data-toggle="collapse" data-parent="##accordion" href="##collapseEx#example_index#" aria-expanded="#example_index lte 5#" aria-controls="collapseEx#example_index#"<cfif example_index gt 5> class="collapsed"</cfif>>
+							  #XmlFormat(ex.title)#
+							</a>
+						</h4>
+					</div>
+					<div id="collapseEx#example_index#" class="panel-collapse collapse<cfif example_index lte 5> in</cfif>" role="tabpanel" aria-labelledby="headingOne">
+						<div class="panel-body">
+							<cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
+								<div class="pull-right">
+									<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
+								</div>
+							</cfif>
+							<p class="clearfix">#autoLink(ex.description)#</p>
+							<pre class="prettyprint"><code>#encodeForHTML(ex.code)#</code></pre>
+							<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
+								<p><strong>Expected Result: </strong> #encodeForHTML(ex.result)#</p>
+							</cfif>
 						</div>
 					</div>
-				</cfloop>				
-			</div>
+				</div>
+			</cfloop>
 			<div class="modal fade example-modal" tabindex="-1" role="dialog">
 				<div class="modal-dialog modal-lg">
 					<div class="modal-content">

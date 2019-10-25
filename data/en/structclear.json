@@ -11,10 +11,24 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structclear.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/structclear.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/structclear.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structclear"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structclear"}
 	},
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "profile = {name:'John', instrument:'guitar', occupation:'singer'};\r\nstructClear(profile);\r\nwriteOutput(serializeJSON(profile));",
+			"result": "An empty struct"
+		},
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfset profile = {name:'John', instrument:'guitar', occupation:'singer'} />\r\n<cfset structClear(profile) />\r\n<cfdump var=\"#profile#\" />",
+			"result": "An empty struct"
+		}
+	],
 	"links": [
 
 	]

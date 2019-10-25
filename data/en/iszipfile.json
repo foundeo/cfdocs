@@ -3,13 +3,13 @@
 	"type": "function",
 	"syntax": "isZipFile(path)",
 	"returns": "boolean",
-	"related": [],
-	"description": "Determines whether the given file is a zip arhcive or not",
+	"related": ["isPDFFile","isSpreadsheetFile"],
+	"description": "Determines whether the given file is a zip archive or not",
 	"params": [
 		{"name": "path", "description": "", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/iszipfile.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/iszipfile.html"}
 	},
 	"examples": [],
 	"links": []

@@ -1,18 +1,18 @@
 {
 	"name":"fileWrite",
 	"type":"function",
-	"syntax":"fileWrite(file, data [, charset])",
+	"syntax":"fileWrite(filePath, data [, charset])",
 	"returns":"void",
 	"related":["cffile","fileAppend","fileWriteLine"],
 	"description":"Writes the data to the file object or file path specified using the charset specified or the java default character set if unspecified.",
 	"params": [
-		{"name":"file","description":"A file object or a file system path string.","required":true,"default":"","type":"any","values":[]},
-		{"name":"data","description":"The variable to  write to the file.","required":true,"default":"","type":"String","values":[]},
-		{"name":"charset","description":"An optional character set that the data is encoded with. Defaults to the Java default character set (which is usually UTF-8).","required":false,"default":"","type":"String","values":[]}
+		{"name":"filePath","description":"A file object or a file system path string.","required":true,"default":"","type":"any","values":[]},
+		{"name":"data","description":"The variable to  write to the file.","required":true,"default":"","type":"any","values":[]},
+		{"name":"charset","description":"An optional character set that the data is encoded with. Defaults to the Java default character set (which is usually UTF-8).","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filewrite.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/filewrite.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/filewrite.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filewrite"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filewrite"}
 	},

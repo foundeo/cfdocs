@@ -20,9 +20,17 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"CF6+ `providerdsn`, `dbtype`, `dbname`, `dbserver` and `provider` are deprecated in all engines", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfinsert.html"},
-		"lucee": {"minimum_version":"", "notes":"`providerdsn`, `dbtype`, `dbname`, `dbserver` and `provider` are deprecated in all engines", "docs":"http://docs.lucee.org/reference/tags/insert.html"},
+		"lucee": {"minimum_version":"", "notes":"`providerdsn`, `dbtype`, `dbname`, `dbserver` and `provider` are deprecated in all engines", "docs":"https://docs.lucee.org/reference/tags/insert.html"},
 		"railo": {"minimum_version":"", "notes":"`providerdsn`, `dbtype`, `dbname`, `dbserver` and `provider` are deprecated in all engines", "docs":"http://railodocs.org/index.cfm/tag/cfinsert"},
 		"openbd": {"minimum_version":"", "notes":"`providerdsn`, `dbtype`, `dbname`, `dbserver` and `provider` are deprecated in all engines", "docs":"http://openbd.org/manual/?/tag/cfinsert"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Insert a record using passed form fields",
+			"description": "Uses the cfinsert function to insert a record into the a users table based on a list form fields",
+			"code": "cfinsert( datasource=\"myDsn\", tablename=\"users\", formFields=\"firstName,lastName,emailAddress\" );",
+			"result": ""
+		}
+	]
 }

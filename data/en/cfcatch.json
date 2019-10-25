@@ -6,12 +6,12 @@
 	"related":["cftry","cffinally"],
 	"description":"Used inside a cftry tag. Together, they catch and process\n exceptions in CFML pages. Exceptions are events that\n disrupt the normal flow of instructions in a CFML page,\n such as failed database operations, missing include files, and\n developer-specified events.",
 	"params": [
-		{"name":"type","description":"`application`: catches application exceptions\n`database`: catches database exceptions\n`template`: catches ColdFusion page exceptions\n`security`: catches security exceptions\n`object`: catches object exceptions\n`missingInclude`: catches missing include file exceptions\n`expression`: catches expression exceptions\n`lock`: catches lock exceptions\n`custom_type`: catches the specified custom exception type that is defined in a cfthrow tag\n `java.lang.Exception`: catches Java object exceptions\n *`searchengine`: catches Verity search engine exceptions\n *`any`: catches all exception types","required":false,"default":"any","type":"string","values":["application","database","template","security","object","missinginclude","expression","lock","custom_type","searchengine","any"]}
+		{"name":"type","description":"`application`: catches application exceptions\n`database`: catches database exceptions\n`template`: catches ColdFusion page exceptions\n`security`: catches security exceptions\n`object`: catches object exceptions\n`missingInclude`: catches missing include file exceptions\n`expression`: catches expression exceptions\n`lock`: catches lock exceptions\n`custom_type`: catches the specified custom exception type that is defined in a cfthrow tag\n `java.lang.Exception`: catches Java object exceptions\n `searchengine`: catches Verity search engine exceptions\n `any`: catches all exception types","required":false,"default":"any","type":"string","values":["application","database","template","security","object","missinginclude","expression","lock","custom_type","searchengine","any"]}
 
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcatch.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/catch.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/catch.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfcatch"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcatch"}
 	},
@@ -23,6 +23,12 @@
 			"title": "A simple try/catch script based example",
 			"description":"Create a divide by zero error and then catch it.",
 			"code":"try {\n    x = 5/0;\n}\ncatch (any e) {\n    writeOutput(\"Error: \" & e.message);\n}",
+			"result":"Error: Division by zero."
+		},
+		{
+			"title": "A simple try/catch tag based example",
+			"description":"Create a divide by zero error and then catch it.",
+			"code":"<cftry>\n    <cfset x = 5/0 />\n    <cfcatch type=\"any\">\n        Error: <cfoutput>#cfcatch.message#</cfoutput>\n    </cfcatch>\n</cftry>",
 			"result":"Error: Division by zero."
 		}
 	]

@@ -5,7 +5,7 @@
 	"related":[],
 	"description":"Reads or creates an RSS or Atom syndication feed.\n This tag can read RSS versions 0.90, 0.91, 0.92, 0.93, 0.94, 1.0, and 2.0, and Atom 0.3 or 1.0.\n It can create RSS 2.0 or Atom 1.0 feeds.",
 	"params": [
-		{"name":"action","description":"The name to use for the JavaScript proxy class.\n The action to take, one of the following values:\n \"create\" Creates an RSS 2.0 or Atom 1.0 feed XML document and saves it in a variable, writes it to a file, or both.\n \"read\" Parses an RSS or Atom feed from a URL or an XML file and saves it in a structure or query.\n You can also get query metadata in a separate structure. (optional, default= read)","required":false,"default":"","type":"any","values":["create","read"]},
+		{"name":"action","description":"The action to take, one of the following values:\n \"create\" Creates an RSS 2.0 or Atom 1.0 feed XML document and saves it in a variable, writes it to a file, or both.\n \"read\" Parses an RSS or Atom feed from a URL or an XML file and saves it in a structure or query.\n You can also get query metadata in a separate structure. (optional, default= read)","required":false,"default":"","type":"any","values":["create","read"]},
 		{"name":"columnMap","description":"Used only for the create action with a query attribute.\n A structure specifying a mapping between the names of the columns in the object specified by the query attribute\n and the columns of the ColdFusion feed format, as described in the Query attribute section.\n The key for each field must be a column name listed in the Query columns section. The value of the field must be\n the name of the corresponding column in the query object used as input to the create action. (optional)","required":false,"default":"","type":"any","values":[]},
 		{"name":"enclosureDir","description":"Used only for the read action.\n Path to the directory in which to save any enclosures that are available in the feed being read.\n The path can be absolute or relative to the CFML file.\n If the directory does not exist, ColdFusion generates an error.\n If you omit this attribute, ColdFusion does not save enclosures.\n To specify the directory that contains the current page, set this attribute to .(period). (optional)","required":false,"default":"","type":"string","values":[]},
 		{"name":"ignoreEnclosureError","description":"If this attribute is true, ColdFusion attempts to save all enclosures.\n If it encounters an error downloading one enclosure, it continues downloading other enclosures and writes the\n error information in the server log.\n If this attribute is false, ColdFusion stops downloading all enclosures and generates an error when it encounters\n an error downloading an enclosure.\n Note: Enclosure errors can occur if the specified enclosure is of a type that the web server does not allow to be\n downloaded. (optional, default=false)","required":false,"default":"","type":"boolean","values":[true,false]},
@@ -28,7 +28,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-f/cffeed.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/feed.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/feed.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cffeed"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cffeed"}
 	},

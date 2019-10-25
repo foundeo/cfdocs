@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"structSetMetadata(inputStruct, metaStruct)",
 	"returns":"void",
-	"related":[],
+	"related":["arraySetMetadata","arrayGetMetadata","structGetMetadata"],
 	"member":"inputStruct.setMetadata(metaStruct)",
 	"description":"Sets metadata for a key in a struct. When you want to SerializeJSON, the key and the value will be display as you defined in the metadata.",
 	"params": [
@@ -13,8 +13,8 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"2016.0.2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structsetmetadata.html"}
 	},
-    "links": [],
-    "examples": [
+    	"links": [],
+    	"examples": [
 		{
 			"title":"Add metadata to a struct",
 			"description":"Add metadata to a struct and serialze to a json.\nIt is changing the keyname and convert a string (\"20\") to a number.",

@@ -9,10 +9,10 @@ Encryption, on the other hand, **is** reversible and allows you to safely encode
 Before we dive much further into actual encryption, we need to visit another function that helps us to generate the encryption keys we'll use… [generateSecretKey()](/generatesecretkey):
 
     \\ generate a 128 bit AES encryption key
-    writeOutput( generateSecretKey( 'AES' );
+    writeOutput( generateSecretKey( 'AES' ) );
     
     \\ generate a 256 bit AES encryption key CF10+ Lucee4.5+
-    writeOutput( generateSecretKey( 'AES', 256 );
+    writeOutput( generateSecretKey( 'AES', 256 ) );
 
 Note that by default [generateSecretKey()](/generatesecretkey) generates 128-bit encryption keys. You can pass the optional parameter for key size to this function, however, and generate 256 bit (and indeed, 512 bit, 1024 bit, etc.) keys. As of this writing, 256 bit keys are supported for the AES and BLOWFISH encryption algorithms. If you're using CF10+ or Lucee4.5+ then you can generate and use 256 bit keys instead of 128 bit keys.
 
@@ -113,6 +113,6 @@ If you're a keen observer you'll notice that, in addition to using a different [
 
 The last, and arguably the most important, use of encryption is to secure the data stored in your database, typically anything that is considered Personally Identifiable Information (PII, for short). While there are dozens of differing opinions online as to what constitutes personally identifiable information, the [NIST Guide to Protecting the Confidentiality of Personally Identifiable Information](http://1.usa.gov/1DgxrRy), covers what should be protected at a minimum. Names, addresses, email addresses, phone numbers, social security numbers, credit card numbers (which you ought not store at all if you can avoid it) and date of birth are some examples of what should be encrypted in your database.
 
-In addition, use of CBC/PKCS5Padding and multi-pass encryption is highly recommended when storing PII – though the NIST standards are less restrictive, more encryption is almost always better than less encryption and a couple extra encryption passes can have a big impact on security for the small cost of a couple of extra compute cycles. That being said, however, use your best judgement based on the expected server load and available hardware as to how many passes you should give PII before storing it in your database so you don't accidentally create an artificial bottleneck. As mentioned previously, 128 bit keys are suitable for encrypting data today with AES or BLOWFISH algorithms, but use of 256-bit keys are supported.
+In addition, use of CBC/PKCS5Padding and multi-pass encryption is highly recommended when storing PII – though the NIST standards are less restrictive, more encryption is almost always better than less encryption and a couple extra encryption passes can have a big impact on security for the small cost of a couple of extra compute cycles. That being said, however, use your best judgment based on the expected server load and available hardware as to how many passes you should give PII before storing it in your database so you don't accidentally create an artificial bottleneck. As mentioned previously, 128 bit keys are suitable for encrypting data today with AES or BLOWFISH algorithms, but use of 256-bit keys are supported.
 
 All of these concepts – different keys and algorithms depending on scope, repeatable but secure encryption, and multi-pass encryption for database storage – can all be found in convenient dataEnc( string, scope ) and dataDec( string, scope ) functions in my [SecurityService.cfc available on GitHub](http://bit.ly/1IkY5zK), which are part of a larger example of using the other security techniques outlined in this document to create a [secure](http://bit.ly/1Msdwkt), or [two-factor](http://bit.ly/1Yx4hGt), [framework one (FW/1)](http://bit.ly/22lB2eu) application.

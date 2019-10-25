@@ -2,6 +2,7 @@
 	"name":"structIsEmpty",
 	"type":"function",
 	"syntax":"structIsEmpty(structure)",
+	"member":"someStruct.isEmpty()",
 	"returns":"boolean",
 	"related":[],
 	"description":" Determines whether a structure contains data.",
@@ -11,7 +12,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structisempty.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/structisempty.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/structisempty.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structisempty"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structisempty"}
 	},
@@ -28,6 +29,13 @@
 			"description":"",
 			"code":"myStructWithThings={ \"one\": \"foo\", \"two\": \"bar\"};\r\nwriteOutput( structIsEmpty(myStructWithThings) );",
 			"result":"false",
+			"runnable":true
+		},
+		{
+			"title": "Using Member Function",
+			"description": "CF11+ Lucee4.5+",
+			"code": "myStruct={};\r\nwriteOutput( myStruct.IsEmpty() );",
+			"result": "true",
 			"runnable":true
 		}
 	],

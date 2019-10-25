@@ -7,12 +7,12 @@
 	"related":["day", "dayOfWeek", "dayOfWeekAsString", "dayOfYear", "daysInYear", "firstDayOfMonth"],
 	"description":" Determines the number of days in a month.",
 	"params": [
-		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"date","values":[]}
+		{"name":"date","description":"Date or datetime object (100AD-9999AD). \nWhen passing a datetime object as a string, enclose it in quotation marks, otherwise, it is interpreted as a numeric representation of a datetime object.","required":true,"default":"","type":"date","values":[]}
 
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DaysInMonth.html"},
-		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+.", "docs":"http://docs.lucee.org/reference/functions/daysinmonth.html"},
+		"lucee": {"minimum_version":"", "notes":"Lucee allows an optional `timezone` parameter. \nMember function is available in Lucee4.5+.", "docs":"https://docs.lucee.org/reference/functions/daysinmonth.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/daysinmonth"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/daysinmonth"}
 	},

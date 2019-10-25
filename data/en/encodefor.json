@@ -1,0 +1,26 @@
+{
+	"name":"encodeFor",
+	"type":"function",
+	"syntax":"encodeFor(type, value)",
+	"returns":"string",
+	"related":["encodeForHTML", "canonicalize","esapiEncode"],
+	"description":"Encodes a given string for safe output in the specified context. The encoding is meant to mitigate Cross Site Scripting (XSS) attacks.",
+	"params": [
+		{"name":"type","description":"The context of the encoding to perform.","required":true,"default":"","type":"string","values":["css","dn","html","htmlattribute","javascript","ldap","url","xml","xmlattribute","xpath"]},
+		{"name":"value","description":"The value to encode.","required":true,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"http://cfdownload.adobe.com/pub/adobe/coldfusion/2018/publicBeta/NamedParametersColdFusion2018.pdf"}
+	},
+	"links": [
+	],
+	"examples": [
+		{
+			"title": "Simple encodeFor Example",
+			"description": "Pass in a tag and HTML encode the result.",
+			"code": "encodeFor(\"html\",\"<br>\")",
+			"result": "&lt;br&gt;"
+		}
+	]
+
+}

@@ -4,13 +4,13 @@
 	"syntax": "htmlParse(html [, caseSensitive])",
 	"returns": "xml",
 	"related": [],
-	"description": "",
+	"description": "Parse the given HTML/XHTML and converts it to an xml object. Similar to xmlParse, but this function is very forgiving",
 	"params": [
 		{"name": "html", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "caseSensitive", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/htmlparse.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/htmlparse.html"}
 	},
 	"examples": [],
 	"links": []

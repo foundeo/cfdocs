@@ -6,6 +6,14 @@
 	"description": "Sends an email message that optionally contains query output, using an SMTP server.",
 	"params": [
 		{
+			"name": "async",
+			"required": false,
+			"type": "boolean",
+			"description": "Lucee4.5+ Specifies the mail is sent asynchronously by the Lucee Task manager (with multiple tries), if set to false the mail is sent in the same thread that executes the request, which is useful for troubleshooting because you get an error message if there is one. This setting overrides the setting with the same name in the Lucee Administrator. This attribute replaces the old 'spoolenable' attribute which is still supported as an alias.",
+			"default": "",
+			"values": [ true, false ]
+		},
+		{
 			"name": "bcc",
 			"required": false,
 			"type": "string",
@@ -136,7 +144,7 @@
 			"name": "mimeattach",
 			"required": false,
 			"type": "string",
-			"description": "Path of file to attach to message. Attached file is MIME-encoded. CFML attempts to determine the MIME type of the file; use the cfmailparam tag to send an attachement and specify the MIME type.",
+			"description": "Path of file to attach to message. Attached file is MIME-encoded. CFML attempts to determine the MIME type of the file; use the cfmailparam tag to send an attachment and specify the MIME type.",
 			"default": "",
 			"values": []
 		},
@@ -165,6 +173,38 @@
 			"values": [ "highest", "urgent", "high", "normal", "low", "lowest", "non-urgent" ]
 		},
 		{
+			"name": "proxyserver",
+			"required": false,
+			"type": "string",
+			"description": "Lucee4.5+ Host name or IP address of a proxy server.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "proxyport",
+			"required": false,
+			"type": "numeric",
+			"description": "Lucee4.5+ The port number on the proxy server from which the object is requested. Default is 80. When used with resolveURL, the URLs of retrieved documents that specify a port number are automatically resolved to preserve links in the retrieved document.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "proxyuser",
+			"required": false,
+			"type": "string",
+			"description": "Lucee4.5+ When required by a proxy server, a valid username.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "proxypassword",
+			"required": false,
+			"type": "string",
+			"description": "Lucee4.5+ When required by a proxy server, a valid password.",
+			"default": "",
+			"values": []
+		},
+		{
 			"name": "query",
 			"required": false,
 			"type": "query",
@@ -191,6 +231,14 @@
 			"required": false,
 			"type": "string",
 			"description": "Email address(es) to which the recipient is directed to send replies.",
+			"default": "",
+			"values": []
+		},
+		{
+			"name": "sendtime",
+			"required": false,
+			"type": "date",
+			"description": "Lucee4.5+ Set a future date time to send an email in the future via the spooler.",
 			"default": "",
 			"values": []
 		},
@@ -300,7 +348,7 @@
 		"lucee": {
 			"minimum_version": "",
 			"notes": "",
-			"docs": "http://docs.lucee.org/reference/tags/mail.html"
+			"docs": "https://docs.lucee.org/reference/tags/mail.html"
 		},
 		"railo": {
 			"minimum_version": "",

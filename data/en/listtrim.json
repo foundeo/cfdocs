@@ -3,14 +3,14 @@
 	"type": "function",
 	"syntax": "listTrim(list [, delimiters])",
 	"returns": "string",
-	"related": [],
-	"description": "",
+	"related": ["listCompact","listItemTrim","trim"],
+	"description": "trims leading and trailing spaces from each list element",
 	"params": [
-		{"name": "list", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "delimiters", "description": "", "required": false, "default": ",", "type": "string", "values": []}
+		{"name": "list", "description": "a string list", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "delimiters", "description": "characters that separate list elements", "required": false, "default": ",", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/listtrim.html"}
+		"lucee": {"minimum_version": "", "deprecated": "4", "notes": "use ListCompact instead", "docs": "https://docs.lucee.org/reference/functions/listtrim.html"}
 	},
 	"examples": [],
 	"links": []

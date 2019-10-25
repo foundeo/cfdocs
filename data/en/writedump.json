@@ -1,27 +1,27 @@
 {
 	"name":"writeDump",
 	"type":"function",
-	"syntax":"writeDump(var [, expand] [, format] [, abort] [, hide] [, keys] [, label] [, metainfo] [, output] [, show] [, showUDfs] [, top])",
+	"syntax":"writeDump(var [, output] [, format] [, abort] [, label] [, metainfo] [, top] [, show] [, hide] [, keys] [, expand] [, showUDFs])",
 	"returns":"void",
 	"related":["cfdump"],
 	"description":"Outputs the elements, variables and values of most kinds of CFML objects. Useful for debugging. You can display the contents of simple and complex variables, objects, components, user-defined functions, and other elements. Equivalent to the cfdump tag, useful in cfscript.",
 	"params": [
 		{"name":"var","description":"Variable to display. Enclose a variable name in pound\n signs.","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"expand","description":"Yes: In Internet Explorer and Mozilla, expands views","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"output","description":"Where to send the results of cfdump.","required":false,"default":"browser","type":"string","values":["browser","console","filename"]},
 		{"name":"format","description":"specify whether to save the results of a cfdump to a file in text or HTML format","required":false,"default":"text","type":"string","values":["html","text"]},
 		{"name":"abort","description":"Boolean value to immediately abort after displaying the dump.","required": false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"hide","description":"hide column or keys.","required":false,"default":"","type":"string","values":[]},
-		{"name":"keys","description":"For a structure, number of keys to display.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"label","description":"A string; header for the dump output.","required":false,"default":"","type":"string","values":[]},
 		{"name":"metainfo","description":"Includes information about the query in the cfdump results.","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"output","description":"Where to send the results of cfdump.","required":false,"default":"browser","type":"string","values":["browser","console","filename"]},
+		{"name":"top","description":"The number of rows to display.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"show","description":"show column or keys.","required":false,"default":"","type":"string","values":[]},
-		{"name":"showUDfs","description":"show UDFs in cfdump output.","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"top","description":"The number of rows to display.","required":false,"default":"","type":"numeric","values":[]}
+		{"name":"hide","description":"hide column or keys.","required":false,"default":"","type":"string","values":[]},
+		{"name":"keys","description":"For a structure, number of keys to display.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"expand","description":"Yes: In Internet Explorer and Mozilla, expands views","required":false,"default":true,"type":"boolean","values":[true,false]},
+		{"name":"showUDfs","description":"show UDFs in cfdump output.","required":false,"default":true,"type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/writedump.html"},
-		"lucee": {"minimum_version":"", "notes":"In Lucee there is a shortcut. Simply use `dump()`", "docs":"http://docs.lucee.org/reference/functions/writedump.html"},
+		"lucee": {"minimum_version":"", "notes":"In Lucee there is a shortcut. Simply use `dump()`. Important: If using positional arguments, their order is different with Lucee (https://luceeserver.atlassian.net/browse/LDEV-2045).", "docs":"https://docs.lucee.org/reference/functions/writedump.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/writedump"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/writedump"}
 	},

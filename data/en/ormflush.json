@@ -6,11 +6,11 @@
 	"related":["ormFlushAll"],
 	"description":"Flushes the current ORM session. ORMFlush flushes all the pending CRUD operations in that request. Any changes made in the objects, in the current ORM session, are saved to the database.",
 	"params": [
-		{"name":"datasource","description":"datasource used for the session, if nor defined the datasource defined in application.cfc/cfapplication is used.","required":false,"default":"","type":"string","values":[]}
+		{"name":"datasource","description":"datasource used for the session, if not defined the datasource defined in application.cfc/cfapplication is used.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormflush.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/ormflush.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/ormflush.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ormflush"}
 	},
 	"links": [],

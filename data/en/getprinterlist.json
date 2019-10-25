@@ -10,15 +10,15 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getprinterlist.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/getprinterlist.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/getprinterlist.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getprinterlist"}
 	},
 	"links": [],
 	"examples": [{
 		"title": "Return comma separated printer list",
-		"description": "",
-		"code": "getPrinterList(\", \")",
+		"description": "On a server with printers, this will display a result. If there are none, it will be an empty string.",
+		"code": "getPrinterList();",
 		"result": "",
-		"runnable": ""
+		"runnable": true
 	}]
 }

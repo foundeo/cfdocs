@@ -4,7 +4,7 @@
 	"syntax": "listIndexExists(list, index [, delimiter] [, includeEmptyFields])",
 	"member": "list.listIndexExists(index [, delimiter] [, includeEmptyFields])",
 	"returns": "boolean",
-	"related": [],
+	"related": ["arrayIndexExists","structKeyExists"],
 	"description": "Determines whether that index exists in the given list or not",
 	"params": [
 		{"name": "list", "description": "", "required": true, "default": "", "type": "string", "values": []},
@@ -13,7 +13,7 @@
 		{"name": "includeEmptyFields", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/listindexexists.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/listindexexists.html"}
 	},
 	"examples": [],
 	"links": []
