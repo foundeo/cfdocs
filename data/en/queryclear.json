@@ -12,7 +12,7 @@
         {
             "title":"queryClear member function",
             "description":"Description of the code example",
-            "code":"\r\n    heroes = queryNew(\"id,Name\",\r\n            \"integer,varchar\",\r\n            [\r\n                {\"id\":1,\"Name\":\"Bruce Banner\"},\r\n                {\"id\":2,\"Name\":\"Tony Stark\"},\r\n                {\"id\":3,\"Name\":\"Bobby Drake\"},\r\n                {\"id\":4,\"Name\":\"Jean Grey\"}\r\n            ]\r\n            );\r\n    writeOutput(\"Query with records<br />\");\r\n    writeDump(heroes);\r\n    writeOutput(\"The same query, but cleared<br />\");\r\n    writeDump(heroes.clear());\r\n",
+            "code":"heroes = queryNew(\"id,Name\",\r\n            \"integer,varchar\",\r\n            [\r\n                {\"id\":1,\"Name\":\"Bruce Banner\"},\r\n                {\"id\":2,\"Name\":\"Tony Stark\"},\r\n                {\"id\":3,\"Name\":\"Bobby Drake\"},\r\n                {\"id\":4,\"Name\":\"Jean Grey\"}\r\n            ]\r\n            );\r\nwriteOutput(\"Query with records<br />\");\r\nwriteDump(heroes);\r\nwriteOutput(\"The same query, but cleared<br />\");\r\nwriteDump(heroes.clear());",
             "result":"A query with 4 heroes, then a query with none",
             "runnable":true
         }
