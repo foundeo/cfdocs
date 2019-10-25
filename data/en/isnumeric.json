@@ -34,7 +34,7 @@
 		{
 			"title":"Scientific Notation",
 			"description":"The number `5e2` is scientific notation for `5 x 10^2` aka `500`",
-			"code":"isNumeric(\"5e2\")",
+			"code":"isNumeric(5e2)",
 			"result":"YES"
 		}
 	]

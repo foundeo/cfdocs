@@ -46,6 +46,7 @@ The `EQ` `IS` and `==` operators are case insensitive, so `"PETE" IS "pete"` eva
 
 `GREATER THAN OR EQUAL TO` _Script_ ✓ _Tags_ ✓
 `GTE` _Script_ ✓ _Tags_ ✓
+`GE` _Script_ ✓ _Tags_ ✓
 `>=` _Script_ ✓ _Tags_ ✖
 
 `LESS THAN` _Script_ ✓ _Tags_ ✓
@@ -54,6 +55,7 @@ The `EQ` `IS` and `==` operators are case insensitive, so `"PETE" IS "pete"` eva
 
 `LESS THAN OR EQUAL TO` _Script_ ✓ _Tags_ ✓
 `LTE` _Script_ ✓ _Tags_ ✓
+`LE` _Script_ ✓ _Tags_ ✓
 `<=` _Script_ ✓ _Tags_ ✖
 
 ### Concatenation 
