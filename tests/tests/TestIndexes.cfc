@@ -1,10 +1,10 @@
 component extends="testbox.system.BaseSpec" {
 	function run(testResults, testBox) {
-		dataDir = ExpandPath("../data/en");
-		files = directoryList(dataDir, false, "array");
-		tags = deserializeJSON(fileRead(dataDir & "/tags.json"));
-		index = deserializeJSON(fileRead(dataDir & "/index.json"));
-		funcs = deserializeJSON(fileRead(dataDir & "/functions.json"));
+		var dataDir = ExpandPath("../data/en");
+		var files = directoryList(dataDir, false, "array");
+		var tags = deserializeJSON(fileRead(dataDir & "/tags.json"));
+		var index = deserializeJSON(fileRead(dataDir & "/index.json"));
+		var funcs = deserializeJSON(fileRead(dataDir & "/functions.json"));
 		describe("JSON Index Tests", function() {
 			it("should be in index.json if it is a tag or a function", function() {
 				for (filePath in files) {
@@ -28,11 +28,11 @@ component extends="testbox.system.BaseSpec" {
 			
 			fileTypes = {tags=[], functions=[], listings=[]};
 			for (filePath in files) {
-				json = fileRead(filePath);
-				isItJson = isJSON(json);
-				fileName = getFileFromPath(filePath);
+				var json = fileRead(filePath);
+				var isItJson = isJSON(json);
+				var fileName = getFileFromPath(filePath);
 				if (isItJson) {
-					json = deserializeJSON(json);
+					var json = deserializeJSON(json);
 					if (structKeyExists(json, "type")) {
 						if (json.type IS "tag") {
 							arrayAppend(fileTypes.tags, json.name);

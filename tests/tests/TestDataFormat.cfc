@@ -1,7 +1,7 @@
 component extends="testbox.system.BaseSpec" {
 	function run(testResults, testBox) {
-		dataDir = ExpandPath("../data/en");
-		files = directoryList(dataDir, false, "array");
+		var dataDir = ExpandPath("../data/en");
+		var files = directoryList(dataDir, false, "array");
 		
 		describe("JSON Format Tests", function() {
 			it("should be valid isJSON==true", function() {

@@ -5,6 +5,7 @@ component extends="testbox.system.BaseSpec" {
 			return getFileFromPath(path).replace('.md','');
 		});
 		// temporary: should be removed later
+		var index = {};
 		index.components = ["application-cfc"];
 		describe("JSON Related Tests", function() {
 			it("there should be no guides and function/tag with the same name", function() {
