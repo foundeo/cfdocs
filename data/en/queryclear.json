@@ -1,0 +1,20 @@
+{
+    "name":"queryClear",
+    "type":"function",
+    "syntax":"queryClear(query)",
+    "member":"query.clear()",
+    "returns":"query",
+    "description":"This function takes a query, removes all the rows, then returns an query object with no rows",
+    "engines":{
+        "coldfusion":{"minimum_version":"10", "notes":"New tag in Update 5", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryclear.html"}
+    },
+    "examples":[
+        {
+            "title":"queryClear member function",
+            "description":"Description of the code example",
+            "code":"\r\n    heroes = queryNew(\"id,Name\",\r\n            \"integer,varchar\",\r\n            [\r\n                {\"id\":1,\"Name\":\"Bruce Banner\"},\r\n                {\"id\":2,\"Name\":\"Tony Stark\"},\r\n                {\"id\":3,\"Name\":\"Bobby Drake\"},\r\n                {\"id\":4,\"Name\":\"Jean Grey\"}\r\n            ]\r\n            );\r\n    writeOutput(\"Query with records<br />\");\r\n    writeDump(heroes);\r\n    writeOutput(\"The same query, but cleared<br />\");\r\n    writeDump(heroes.clear());\r\n",
+            "result":"A query with 4 heroes, then a query with none",
+            "runnable":true
+        }
+    ]
+}
