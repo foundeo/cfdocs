@@ -17,6 +17,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Set Locale Script Example",
+			"description":"Outputs the current locale, Sets the locale to French (Belgian) and outputs it, then puts it back to the original and outputs it",
+			"code":"<cfscript>\r\n    currentLocale = getLocale();\r\n    writeOutput(\"Current: \");\r\n    writeDump(currentLocale);\r\n    writeOutput(\"<br />\");\r\n    setLocale(\"French (Belgian)\");\r\n    writeOutput(\"New: \");\r\n    writeDump(getLocale());\r\n    writeOutput(\"<br />\");\r\n    setLocale(currentLocale);\r\n    writeOutput(\"Original: \");\r\n    writeDump(getLocale());\r\n</cfscript>",
+			"result":"",
+			"runnable":true
+		}
 	]
 
 }
