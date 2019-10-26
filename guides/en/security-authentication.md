@@ -44,7 +44,7 @@ Which might confuse the hacker into believing that this is a Google Analytics co
 
 ### The Login View (Page)
 
-We'll start exploring how to build a secure authentication mechanism by examining the login page you should use for your web application. This login page should take advantage of both federation and prevent against password disclosure. Our examples will, again, be using fw/1 to demonstrate ways of handling these tasks, but the same concepts are applicable accross all web applications (even non-CFML ones!).
+We'll start exploring how to build a secure authentication mechanism by examining the login page you should use for your web application. This login page should take advantage of both federation and prevent against password disclosure. Our examples will, again, be using fw/1 to demonstrate ways of handling these tasks, but the same concepts are applicable across all web applications (even non-CFML ones!).
 
 Let's start by looking at our login() controller. One of the first things we do is to set a zero-value session cookie when requesting the login form. This will be checked during authentication to ensure that our form is being posted from our own server:
 

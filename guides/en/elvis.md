@@ -29,7 +29,7 @@ See the following example:
 
 In the above example, if getEmployeeName(ID) does not return any value, the value "Joe" will be assigned to the employeeName variable.
 
-Similiarly, you can use this operator for Struct:
+Similarly, you can use this operator for Struct:
 
     securityNumber = securityStruct['Joe'] ?: "";
 

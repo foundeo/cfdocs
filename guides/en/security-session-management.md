@@ -115,7 +115,7 @@ Now that we have a sesson object (bean) to check, we have to see if the user id 
             variables.fw.redirect( action = 'main.login', queryString = "msg=502" );            
         }
 
-In the above code we check if the user id is zero, which is specified as the default value in our bean's init() method upon creation. If it *is* zero, then the user does not have a valid session and is redirected back to the login page. If the user is is a non-zero value, then we know we now have a valid session and can proceed to operate on that session object to a) rotate the users session and b) update the users session with the last action datetime, as follows:
+In the above code we check if the user id is zero, which is specified as the default value in our bean's init() method upon creation. If it *is* zero, then the user does not have a valid session and is redirected back to the login page. If the user is a non-zero value, then we know we now have a valid session and can proceed to operate on that session object to a) rotate the users session and b) update the users session with the last action datetime, as follows:
 
         // lock the session and rotate the session id (for every request)
         lock scope='session' timeout='10' {
