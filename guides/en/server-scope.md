@@ -2,11 +2,11 @@
 
 The `server` [scope](/scopes) can hold variables that exist, and are accessible to all applications on the server.
 
-## Builtin Server Scope Variables
+## Built-in Server Scope Variables
 
 ### `server.coldfusion`
 
-A struct containing serveral keys such as `productversion` `productname` `rootdir` `updatelevel`
+A struct containing several keys such as `productversion` `productname` `rootdir` `updatelevel`
 
 This is populated on both ACF and Lucee, `productname` is `Lucee` or `ColdFusion`.
 
