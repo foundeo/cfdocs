@@ -18,5 +18,26 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfhttpparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfhttpparam"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"Script Syntax (CF11+)",
+			"description":"",
+			"code":"cfhttp(method=\"GET\", charset=\"utf-8\", url=\"https://www.google.com/\", result=\"result\") {\r\n    cfhttpparam(name=\"q\", type=\"formfield\", value=\"cfml\");\r\n}\r\nwriteDump(result);",
+			"result":""
+		},
+		{
+			"title": "Alternate Script Syntax (CF9+)",
+			"description": "",
+			"code": "httpService = new http(method = \"GET\", charset = \"utf-8\", url = \"https://www.google.com/\");\r\nhttpService.addParam(name = \"q\", type = \"formfield\", value = \"cfml\");\r\nresult = httpService.send().getPrefix();\r\nwriteDump(result);",
+			"result": ""
+		},
+		{
+		    "title": "CFHTTP Tag Syntax",
+		    "description": "",
+		    "code": "<cfhttp result=\"result\" method=\"GET\" charset=\"utf-8\" url=\"https://www.google.com/\">\r\n    <cfhttpparam name=\"q\" type=\"formfield\" value=\"cfml\">\r\n</cfhttp>\r\n<cfdump var=\"#result#\">",
+		    "result": ""
+		}
+	]
+
 }
