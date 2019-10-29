@@ -31,7 +31,7 @@
 		{
 			"title": "Send basic email message with attachment and specified MIME type",
 			"description": "The SMTP server details are provided through the Administrator. This example attaches a file. Use the full path of the file. Set the MIME type of the file by using the optional type parameter.",
-			"code": "<cfmail to=\"recipient@example.com\" from=\"sender@example.com\" subject=\"Example email\">\n  <cfmailparam file=\"/#attachment#\" type="text/plain">\n  Your Email Message!!\n</cfmail>"
+			"code": "<cfmail to=\"recipient@example.com\" from=\"sender@example.com\" subject=\"Example email\">\n  <cfmailparam file=\"/#attachment#\" type=\"text/plain\">\n  Your Email Message!!\n</cfmail>"
 		},
 		{
 			"title": "Send basic email message with an additional email header parameter",
