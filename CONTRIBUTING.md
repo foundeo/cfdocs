@@ -31,7 +31,7 @@ Example:
 ```
 arr = []; // implicit
 // is the same as
-arr = arrayNew();
+arr = arrayNew(1);
 
 unorderedStruct = {}:
 orderedStruct = [:];
