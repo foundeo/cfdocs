@@ -11,7 +11,7 @@ To handle exceptions use try and catch statements, which are equivalent to the c
 
 ## Script support for tags
 
-CF11+ ColdFusion 11 allows you to invoke nearlly all the builtin tags in a generic manner. 
+CF11+ ColdFusion 11 allows you to invoke nearly all the built-in tags in a generic manner. 
 
     <cfscript>
     cfexampletag (attrib=1, attr2=2); // The parent tag
@@ -43,7 +43,7 @@ Note that the attributes of a tag must be enclosed within a parenthesis and also
 
 ### Using custom tags in scripts
 
-Custom tags can also be used  in cfscript blocks just like builtin ColdFusion tags. This practice is not recommended, use a component instead of a custom tag. But if you really must, you can invoke a custom tag like this:
+Custom tags can also be used  in cfscript blocks just like built-in ColdFusion tags. This practice is not recommended, use a component instead of a custom tag. But if you really must, you can invoke a custom tag like this:
 
     cf_myCustomTag(myArg="x", otherArg="y");
 

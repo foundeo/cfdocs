@@ -111,7 +111,7 @@ Specifies whether the SQL queries that are executed by ORM will be logged. When 
 Defines database standard and naming convention.
 
 * default: This strategy uses the logical table or column name as it is.
-* smart: This strategy changes the logical table or column name to uppercase. Also, if the logical table or column name is in camel case, this strategy breaks the camelcased name and separates the broken words using underscore. For example, for a CFC named "OrderProduct", this strategy changes the table name as "ORDER_PRODUCT".
+* smart: This strategy changes the logical table or column name to uppercase. Also, if the logical table or column name is in camel case, this strategy breaks the camel cased name and separates the broken words using underscore. For example, for a CFC named "OrderProduct", this strategy changes the table name as "ORDER_PRODUCT".
 * your own cfc : You can get complete control of the naming strategy by providing your own implementation. You need to specify the fully qualified name of the CFC as the value for naming strategy. This CFC must implement cfide.orm.INamingStrategy interface.
 
 ### `string ORMConfig`
