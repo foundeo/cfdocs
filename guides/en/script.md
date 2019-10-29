@@ -11,7 +11,7 @@ To handle exceptions use try and catch statements, which are equivalent to the c
 
 ## Script support for tags
 
-CF11+ ColdFusion 11 allows you to invoke nearlly all the builtin tags in a generic manner. 
+CF11+ ColdFusion 11 allows you to invoke nearly all the builtin tags in a generic manner. 
 
     <cfscript>
     cfexampletag (attrib=1, attr2=2); // The parent tag
