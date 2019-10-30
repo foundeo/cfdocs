@@ -10,7 +10,7 @@
 		{"name":"list","description":"A string list.","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"An element or list of elements.","required":true,"default":"","type":"string","values":[]},
 		{"name":"delimiters","description":"Characters that separate list elements.","required":false,"default":",","type":"string","values":[]},
-		{"name":"includeEmptyFields","description":"Set to true to insert blank values to the beginning of the list.","required":false,"default":"false","type":"boolean","values":["true","false"]}
+		{"name":"includeEmptyFields","description":"CF2018+ Set to true to insert blank values to the beginning of the list.","required":false,"default":"false","type":"boolean","values":["true","false"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listprepend.html"},
