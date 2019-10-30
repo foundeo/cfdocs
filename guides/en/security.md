@@ -64,7 +64,7 @@ The [Online Web Application Security Project](http://bit.ly/1devYyR) is the go-t
 
 Obfuscation is the art of hiding things in plain sight, and using obfuscation in our application designs can significantly improve application security.
 
-[Click Here](/security-obfuscation) to learn how obscuring data will help protect you from paramter tampering.
+[Click Here](/security-obfuscation) to learn how obscuring data will help protect you from parameter tampering.
 
 ### Encryption
 
