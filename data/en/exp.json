@@ -4,10 +4,9 @@
 	"syntax":"exp(number)",
 	"returns":"numeric",
 	"related":["acos","asin","atn","cos","log","log10","sin","tan"],
-	"description":" Calculates the exponent whose base is e that represents number.\n The constant e equals 2.71828182845904, the base of the natural\n logarithm. This function is the inverse of Log, the natural\n logarithm of number.",
+	"description":"Calculates the exponent whose base is e that represents number. The constant e equals 2.71828182845904, the base of the natural logarithm. This function is the inverse of Log, the natural logarithm of number.",
 	"params": [
-		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
-
+		{"name":"number","description":"Exponent to apply to the base e.","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/exp.html"},
