@@ -21,5 +21,22 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmailparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmailparam"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Send basic email message with attachment",
+			"description": "The SMTP server details are provided through the Administrator. This example attaches a file. Use the full path of the file.",
+			"code": "<cfmail to=\"recipient@example.com\" from=\"sender@example.com\" subject=\"Example email\">\n  <cfmailparam file=\"/#attachment#\">\n  Your Email Message!!\n</cfmail>"
+		},
+		{
+			"title": "Send basic email message with attachment and specified MIME type",
+			"description": "The SMTP server details are provided through the Administrator. This example attaches a file. Use the full path of the file. Set the MIME type of the file by using the optional type parameter.",
+			"code": "<cfmail to=\"recipient@example.com\" from=\"sender@example.com\" subject=\"Example email\">\n  <cfmailparam file=\"/#attachment#\" type=\"text/plain\">\n  Your Email Message!!\n</cfmail>"
+		},
+		{
+			"title": "Send basic email message with an additional email header parameter",
+			"description": "The SMTP server details are provided through the Administrator. This example sets an optional X-Header. Check with your email server or service provider to find out what headers are supported.",
+			"code": "<cfmail to=\"recipient@example.com\" from=\"sender@example.com\" subject=\"Example email\">\n  <cfmailparam name=\"X-Priority\" value=\"#priority#\">\n  Your Email Message!!\n</cfmail>"
+		}
+	]
 }
