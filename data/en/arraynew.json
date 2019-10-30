@@ -45,6 +45,12 @@
 			"description": "CF8+ Instead of using arrayNew you can also create an array using square brackets.",
 			"code": "newArray = [\"one\",\"two\"];\nwriteOutput( serializeJSON(newArray) );",
 			"result": "[\"one\", \"two\"]"
+		},
+		{
+			"title": "Create an array with data type",
+			"description": "CF2018+ When using data types on array creation, items are converted if possible, otherwise an error is thrown.",
+			"code": "typedArray = arrayNew['boolean'](1);\ntypedArray[1] = true;\ntypedArray[2] = 'true';\ntypedArray[3] = 1;\ntypedArray[4] = '1';\ntypedArray[5] = 'yes';\n\ntypelessArray = arrayNew(1);\ntypelessArray[1] = true;\ntypelessArray[2] = 'true';\ntypelessArray[3] = 1;\ntypelessArray[4] = '1';\ntypelessArray[5] = 'yes';\nwriteOutput(serializeJSON([typedArray,typelessArray]));",	
+			"result": "[[true,true,true,true,null,true],[true,\"true\",1,\"1\",null,\"yes\"]]"
 		}
 	]
 }
