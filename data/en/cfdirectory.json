@@ -9,7 +9,7 @@
 		{"name":"action","description":"Action to perform","required":false,"default":"list","type":"string","values":["list","create","delete","rename"]},
 		{"name":"directory","description":"Absolute pathname of directory against which to perform\n action.","required":true,"default":"","type":"string","values":[]},
 		{"name":"name","description":"Name for output record set.","required":false,"default":"","type":"string","values":[]},
-		{"name":"filter","description":"Filter applied to returned names. For example: *.cfm\nYou can use a pipe (\"|\") delimiter to specify multiple filters. For example: *.cfm|*.cfc\nFilter pattern matches are case sensitive on UNIX and Linux.","required":false,"default":"","type":"string","values":[]},
+		{"name":"filter","description":"Filter applied to returned names. For example: *.cfm\nYou can use a pipe (\"|\") delimiter to specify multiple filters. For example: *.cfm|*.cfc\nFilter pattern matches are case-sensitive on UNIX and Linux.","required":false,"default":"","type":"string","values":[]},
 		{"name":"mode","description":"Applies only to UNIX and Linux. Permissions. Octal values\n of Unix chmod command. Assigned to owner, group, and\n other, respectively.","required":false,"default":"","type":"string","values":[]},
 		{"name":"sort","description":"Query column(s) by which to sort directory listing.\n Delimited list of columns from query output.","required":false,"default":"asc","type":"string","values":["asc","desc"]},
 		{"name":"newdirectory","description":"New name for directory.","required":false,"default":"","type":"string","values":[]},

@@ -38,7 +38,7 @@
 		},
 		{
 			"title":"Lower Case Keys",
-			"description":"Same as above but they variable names are case sensitive by quoting them.",
+			"description":"Same as above but they variable names are case-sensitive by quoting them.",
 			"code":"person = {\"name\"=\"Pete Freitag\", \"company\"=\"Foundeo\"};\nwriteOutput( serializeJSON(person) );",
 			"result": "{\"company\":\"Foundeo\",\"name\":\"Pete Freitag\"}"
 		},
