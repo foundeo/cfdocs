@@ -4,7 +4,7 @@
 	"syntax":"isInstanceOf(object, typename)",
 	"returns":"boolean",
 	"related":[],
-	"description":" Determines whether an object is an instance of a Coldfusion interface or component, or of a Java class.",
+	"description":" Determines whether an object is an instance of a ColdFusion interface or component, or of a Java class.",
 	"params": [
 		{"name":"object","description":"The CFC instance or Java object that you are testing","required":true,"default":"","type":"any","values":[]},
 		{"name":"typename","description":"The name of the interface, component, or Java class of which the object might be an instance","required":true,"default":"","type":"string","values":[]}

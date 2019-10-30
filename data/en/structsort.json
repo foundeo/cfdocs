@@ -7,7 +7,7 @@
 	"description":" Returns a sorted array of the top level keys in a structure.\n Sorts using alphabetic or numeric sorting, and can sort based\n on the values of any structure element.",
 	"params": [
 		{"name":"base","description":"","required":true,"default":"","type":"struct","values":[]},
-		{"name":"sorttype","description":"* numeric\n* text: case sensitive\n* textnocase","required":false,"default":"text","type":"string","values":["numeric","text","textnocase"]},
+		{"name":"sorttype","description":"* numeric\n* text: case-sensitive\n* textnocase","required":false,"default":"text","type":"string","values":["numeric","text","textnocase"]},
 		{"name":"sortorder","description":"* asc: ascending (a to z) sort order.\n* desc: descending (z to a) sort order","required":false,"default":"ASC","type":"string","values":["asc","desc"]},
 		{"name":"pathtosubelement","description":"Top level key path; String or a variable that contains one","required":false,"default":"","type":"string","values":[]},
 		{"name":"localeSensitive","description":"CF10+ Respect locale-specific characters (including support for umlaut characters) while sorting/n(Applies to type\"text\" and \"textnocase\".","required":false,"default":false,"type":"boolean","values":[]},
