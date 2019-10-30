@@ -21,7 +21,7 @@
 				</cfif>
 			</cfloop>
 			<cfset var _guides = {}>
-			<cfset application.guides = [:]>
+			<cfset application.guides = structNew('ordered')>
 			<cfloop array="#application.index.guides#" index="local.guide">
 				<cfset local.fileObj = fileOpen(ExpandPath("./guides/en/#local.guide#.md"),"read")>
 				<cfset local.title = fileReadLine(local.fileObj)>
