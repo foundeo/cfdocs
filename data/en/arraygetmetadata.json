@@ -1,30 +1,37 @@
 {
-	"name":"arrayGetMetadata",
+	"name":"getMetadata",
 	"type":"function",
-	"syntax":"arrayGetMetadata(array)",
-	"member":"someArray.getMetadata()",
-	"returns":"struct",
-	"related":["arraySetMetadata","structGetMetadata","structSetMetadata"],
-	"description":"Gets metadata for items of an array and indicates the array type.",
+	"syntax":"getMetadata(Object)",
+	"member":"arr.getMetadata()",
+	"returns":"any",
+	"related":["getFunctionData","getTagData","arrayGetMetadata"],
+	"description":" Gets metadata (the methods, properties, and parameters of a\n component) associated with an object that is deployed on the\n CFML server.",
 	"params": [
-		{"name":"array","description":"The array for which to get the metadata.","required":true,"default":"","type":"array","values":[]}
+		{"name":"Object","description":"","required":true,"default":"","type":"any","values":[]}
+
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"2016.0.2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraygetmetadata.html"}
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getmetadata.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/getmetadata.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getmetadata"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getmetadata"}
 	},
-  	"links": [],
+	"links": [
+
+	],
 	"examples": [
 		{
-			"title": "Simple Example",
-			"description": "",
-			"code": "// Create an array\narrayList = [\"apple\", \"pineapple\", \"mango\"];\n\n// Fetch meta data\ndata = arrayGetMetadata(arrayList);\n\n// Print array type\nwriteOutput(data.type);",
-			"result": "synchronized"
+			"title":"Dump MetaData of CFC Instance",
+			"description":"CF9+",
+			"code":"writeDump(getMetaData(new Query()));",
+			"result":""
 		},
 		{
-			"title": "Member Function Example",
-			"description": "",
-			"code": "// Create an array\narrayList = [\"apple\", \"pineapple\", \"mango\"];\n\n// Fetch meta data\ndata = arrayList.getMetadata();\n\n// Print array type\nwriteOutput(data.type);",
-			"result": "synchronized"
-		}
+			"title":"Dump MetaData of Array",
+			"description":"CF2018+ Struct has a new key called <i>dimensions</i> and can also have a defined datatype. Supported datatypes are String, Numeric, Boolean, Date, Array, Struct, Query, Component, Binary, and Function.",
+			"code":"arr = arrayNew['String'](1);\nwriteDump(arr.getMetadata());",
+			"result":""
+		}		
 	]
+
 }
