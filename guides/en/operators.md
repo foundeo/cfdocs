@@ -68,7 +68,7 @@ The `EQ` `IS` and `==` operators are case insensitive, so `"PETE" IS "pete"` eva
 
 	name &= " Jr.";	
 
-Both code examples are equivilent.
+Both code examples are equivalent.
 
 ## Compatibility Notes
 

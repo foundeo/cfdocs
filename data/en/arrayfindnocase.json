@@ -28,6 +28,13 @@
 			"result":"3"
 		},
 		{
+			"title":"arrayFind is not Case Sensitive",
+			"description":"Not case sensitive so \"Apple\" will be found in the array, returns 1. Use arrayFind for case sensitive matching.",
+			"code":"writeOutput( arrayFindNoCase([\"orange\",\"pineapple\",\"apple\"], \"Apple\") );",
+			"result":"1",
+			"runnable":true
+		},
+		{
 			"title":"Member Functions: Find an \"Apple\" in an array of fruit",
 			"description":"Calls the findNoCase member function of the array object. Requires CF11+ or Lucee4.5+",
 			"code":"fruit = [\"orange\",\"pineapple\",\"apple\"];\nwriteOutput( fruit.findNoCase(\"Apple\") );",
