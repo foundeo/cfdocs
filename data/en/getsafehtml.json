@@ -33,7 +33,7 @@
     {
       "values": [],
       "default": "",
-      "description": "File path for custom antisamy policy file. Can be defined in the application scope or if not defined will use Coldfusion  server default",
+      "description": "File path for custom antisamy policy file. Can be defined in the application scope or if not defined will use ColdFusion server default",
       "name": "PolicyFile",
       "type": "string",
       "required": "0"
