@@ -40,7 +40,8 @@
 		{"name":"URL","description":"URL to open if the user clicks item in a data series; the\n onClick destination page.\n\n You can specify variables within the URL string;\n ColdFusion passes current values of the variables.\n * $VALUE$: the value of the selected row. If none, the value is an empty string.\n * $ITEMLABEL$: the label of the selected item. If none, the value is an empty string.\n * $SERIESLABEL$: the label of the selected series. If none, the value is an empty string.","required":false,"default":"","type":"URL","values":["$VALUE$","$ITEMLABEL$","$SERIESLABEL$"]},
 		{"name":"name","description":"Page variable name. String. Generates the graph as\n binary data and assigns it to the specified variable.\n Suppresses chart display. You can use the name value in\n the cffile tag to write the chart to a file.","required":false,"default":"","type":"string","values":[]},
 		{"name":"style","description":"CF7+ XML file or string to use to specify the style of the chart.","required":false,"default":"","type":"string","values":["beige","blue","default","red","silver","yellow"]},
-		{"name":"title","description":"CF7+ Title of the chart.","required":false,"default":"","type":"string","values":[]}
+		{"name":"title","description":"CF7+ Title of the chart.","required":false,"default":"","type":"string","values":[]},
+		{"name":"base64","description":"CF2018+ Can only be used for client side charts.","required":false,"default":"false","type":"boolean","values":["true","false"]}
 
 	],
 	"engines": {
