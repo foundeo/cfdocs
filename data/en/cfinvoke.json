@@ -14,7 +14,7 @@
 		{"name":"webservice","description":"The URL of the WSDL file for the web service.","required":false,"default":"","type":"URL","values":[]},
 		{"name":"timeout","description":"The timeout for the web service request, in seconds","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"proxyserver","description":"The proxy server required to access the webservice URL.","required":false,"default":"","type":"string","values":[]},
-		{"name":"proxyport","description":"The port to use on The proxy server.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"proxyport","description":"The port to use on the proxy server.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"proxyuser","description":"The user ID to send to the proxy server.","required":false,"default":"","type":"string","values":[]},
 		{"name":"proxypassword","description":"The user's password on the proxy server.","required":false,"default":"","type":"string","values":[]},
 		{"name":"serviceport","description":"CF7+ The port name for the web service. This value is\n case-sensitive and corresponds to the port element's\n name attribute under the service element. Specify this\n attribute if the web service contains multiple ports.\n Default: first port found in the WSDL.","required":false,"default":"","type":"string","values":[]},
