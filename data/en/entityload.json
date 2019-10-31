@@ -1,7 +1,7 @@
 {
 	"name":"entityLoad",
 	"type":"function",
-	"syntax":"EntityLoad(entityName [,id | Filter ,unique | Order ,options])",
+	"syntax":"entityLoad(entityName [,id | Filter ,unique | Order ,options])",
 	"returns":"any",
 	"related":["entitynew","entityget", "entityloadbypk","entityloadbyexample", "entityreload", "ormexecutequery"],
 	"description":"Loads and returns an array of entities of the specified entityname or an entity if unique=true or if a primary key id is passed in to filterCriteria.",
