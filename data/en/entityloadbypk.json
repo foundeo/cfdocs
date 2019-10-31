@@ -4,7 +4,7 @@
 	"syntax":"entityLoadByPK(entity, id)",
 	"returns":"any",
 	"related":["entityLoadByExample"],
-	"description":"Loads and returns an array of objects for given primary key.\bUse this function to avoid specifying the required boolean parameter in `EntityLoad()`.",
+	"description":"Loads and returns an array of objects for given primary key.\nUse this function to avoid specifying the required boolean parameter in `EntityLoad()`.",
 	"params": [
 		{"name":"entity","description":"Name of the entity to be loaded.","required":true,"default":"","type":"string","values":[]},
 		{"name":"id","description":"ID of the entity to be loaded.","required":true,"default":"","type":"string","values":[]},
