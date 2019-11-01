@@ -20,7 +20,7 @@
 	"examples": [
 		{
 			"title":"exponent of 1.13140211149",
-			"description":"The result could very depending on if the server is running windows or linux.  On a windows box the result will be round to 3.1",
+			"description":"The result could vary depending on if the server is running windows or linux.  On a windows box the result will be round to 3.1",
 			"code":"exp(1.13140211149)",
 			"result":"3.099999999997",
 			"runnable":true
