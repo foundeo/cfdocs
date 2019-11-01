@@ -254,7 +254,7 @@ Create the CFM page that accesses the {{filterArray()}}function with a closure w
 
 ### Other Closure Examples:
 
-Javascript example:
+JavaScript example:
 
     Function outerFunction() {
         var a = 3;
