@@ -1,12 +1,13 @@
 {
 	"name":"fileGetMimeType",
 	"type":"function",
-	"syntax":"fileGetMimeType(file, strict)",
+	"syntax":"fileGetMimeType(file | FilePath [, strict])",
 	"returns":"string",
 	"related":[],
 	"description":"Gets the MIME type for the file path/file object you have specified.",
 	"params": [
-		{"name":"file","description":"Name of the file object or full path on disk to the file if strict is set to true. If you do not specify the full path, the file is assumed to be present in the temp directory, as returned by the function getTempDirectory.","required":true,"default":"","type":"any","values":[]},
+		{"name":"file","description":"Name of the file object. If you do not specify the full path, the file is assumed to be present in the temp directory, as returned by the function `getTempDirectory`.","required":true,"default":"","type":"any","values":[]},
+		{"name":"FilePath","description":"Full path on disk to the file.","required":true,"default":"","type":"any","values":[]},
 		{"name":"strict","description":"If false, determines the file type by extension. The default value is true.","required":false,"default":"true","type":"boolean","values":[]}
 	],
 	"engines": {
