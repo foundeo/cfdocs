@@ -6,7 +6,7 @@
 	"related":["getpagecontext"],
 	"description":"Returns HTTP request headers and request body. The resulting structure contains the following keys:\n\t content (the request body),\n\t headers (a structure of request headers),\n\t method (same as cgi.request_method),\n\t protocol (same as cgi.server_protocol).",
 	"params": [
-		{"name":"includeBody", "description":"Whether return the body or not.\n\nNOTE: This can only be done once.\nIf you expect the body to contain content which causes an exception in coldfusion, set it to false as well and process it yourself.", "required":true, "default":"false", "type":"boolean", "values":["true", "false"]}
+		{"name":"includeBody", "description":"Whether return the body or not.\n\nNOTE: This can only be done once.\nIf you expect the body to contain content which causes an exception in ColdFusion, set it to false as well and process it yourself.", "required":true, "default":"false", "type":"boolean", "values":["true", "false"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/gethttprequestdata.html"},

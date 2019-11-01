@@ -8,7 +8,7 @@
 	"params":[
 		{"name":"algorithm", "description":"Hashing algorithm used for generating key", "required":true, "default":"", "type":"string", "values":["PBKDF2WithHmacSHA1","PBKDF2WithSHA1","PBKDF2WithSHA224","PBKDF2WithSHA256","PBKDF2WithSHA384","PBKDF2WithSHA512"]},
 		{"name":"passphrase", "description":"Passphrase used for the key. KEEP THIS SECRET.", "required":true, "default":"", "type":"string", "values":[]},
-		{"name":"salt", "description":"A string which will be added to the passphrase before encryption.\n The standard recommends a salt length of at least 64 bits (8 characters). The salt needs to be generated using a pseudo-random number generator (e.g SHA1PRNG)", "required":true, "default":"", "type":"string", "values":[]},
+		{"name":"salt", "description":"A string which will be added to the passphrase before encryption.\n The standard recommends a salt length of at least 64 bits (8 characters). The salt needs to be generated using a pseudo-random number generator (e.g. SHA1PRNG)", "required":true, "default":"", "type":"string", "values":[]},
 		{"name":"iterations", "description":"The number of PBKDEF iterations to perform. A minimum recommended value is 1000", "required":true, "default":"", "type":"numeric", "values":[]},
 		{"name":"keySize", "description":"The length in bytes of the key to generate", "required":true, "default":"", "type":"numeric", "values":["true", "false"]}
 	    ],
