@@ -6,7 +6,7 @@
 	"related":[],
 	"description":"Converts the data type of a CFML variable to pass as an argument to an overloaded method of a Java object.",
 	"params": [
-		{"name":"type","description":"The name of a java primative or a Java class name.","required":true,"default":"","type":"string","values":["boolean","double","float","int","long","string","null","byte","bigdecimal", "char", "short"]},
+		{"name":"type","description":"The name of a java primitive or a Java class name.","required":true,"default":"","type":"string","values":["boolean","double","float","int","long","string","null","byte","bigdecimal", "char", "short"]},
 		{"name":"variable","description":"A variable, java object or array.","required":true,"default":"","type":"string","values":[]}
 
 	],
@@ -21,7 +21,7 @@
 	],
 	"examples": [
 		{
-			"title":"Convert a ColdFusion Number to a Java double primative",
+			"title":"Convert a ColdFusion Number to a Java double primitive",
 			"description":"Converts the number 180.0 degrees to radians using Java method: Math.toRadians(double degrees)",
 			"code":"createObject(\"java\", \"java.lang.Math\").toRadians( javacast(\"double\", 180.0) )",
 			"result":"3.14159265359",
