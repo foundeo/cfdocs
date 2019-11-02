@@ -19,7 +19,7 @@
 	],
 	"examples": [
 		{
-			"title": "Seconds of a datatime object",
+			"title": "Seconds of a datetime object",
 			"description": "",
 			"code": "dt = createdatetime(2016,1,1,5,30,25);\ns = second( dt );\nwriteoutput( s );",
 			"result": "25"

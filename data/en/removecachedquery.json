@@ -7,7 +7,7 @@
 	"description":" Removes the query with the details you provide from query cache.",
 	"params": [
 		{"name":"SQL","description":"The Query SQL.","required":true,"default":"","type":"","values":[]},
-        {"name":"datasource","description":"The datasource you ran the query on..","required":true,"default":"","type":"","values":[]},
+        {"name":"datasource","description":"The datasource you ran the query on.","required":true,"default":"","type":"","values":[]},
         {"name":"params","description":" Array of parameter values passed to SQL.","required":false,"default":"","type":"","values":[]},
         {"name":"region","description":"Specifies the cache region where you can place the cache object.","required":false,"default":"","type":"","values":[]}
 	],
