@@ -6,8 +6,8 @@
 	"related":[],
 	"description":"Gets the MIME type for the file path/file object you have specified.",
 	"params": [
-		{"name":"file","description":"Name of the file object. If you do not specify the full path, the file is assumed to be present in the temp directory, as returned by the function `getTempDirectory`.","required":true,"default":"","type":"any","values":[]},
-		{"name":"FilePath","description":"Full path on disk to the file.","required":true,"default":"","type":"any","values":[]},
+		{"name":"file","description":"Name of the file object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"FilePath","description":"Full path on disk to the file. If you do not specify the full path, the file is assumed to be present in the temp directory, as returned by the function `getTempDirectory`.","required":true,"default":"","type":"string","values":[]},
 		{"name":"strict","description":"If false, determines the file type by extension. The default value is true.","required":false,"default":"true","type":"boolean","values":[]}
 	],
 	"engines": {
