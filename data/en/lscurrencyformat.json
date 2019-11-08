@@ -27,7 +27,7 @@
 		},
 		{
 			"title":"Script Example using specific locale",
-			"description":"lsNumberFormat returns a number value using the spezified locale.",
+			"description":"lsCurrencyFormat returns a currency value using the spezified locale.",
 			"code":"writeDump(lsCurrencyFormat(5, 'local', 'DE_at'));",
 			"result":"",
 			"runnable":true
