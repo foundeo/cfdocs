@@ -1,13 +1,14 @@
 {
 	"name":"lsNumberFormat",
 	"type":"function",
-	"syntax":"lsNumberFormat(number [, mask])",
+	"syntax":"lsNumberFormat(number [, mask, locale])",
 	"returns":"string",
 	"related":["numberFormat","decimalFormat"],
 	"description":"Formats a number in a locale-specific format.\n[mask - quicky]\n _,9 Digit placeholder; . decimal point; 0 Pads with zeros;\n ( ) less than zero, puts parentheses around the mask\n+ plus sign before positive number minus before negative\n- a space before positive minus sign before negative\n, Separates every third decimal place with a comma.\nL,C Left-justifies or center-justifies number\n$ dollar sign before formatted number.\n^ Separates left and right formatting.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"mask","description":"","required":false,"default":"","type":"string","values":[]}
+		{"name":"mask","description":"","required":false,"default":"","type":"string","values":[]},
+		{"name":"locale","description":"","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/lsnumberformat.html"},
@@ -21,6 +22,13 @@
 			"title":"Tag Example",
 			"description":"lsNumberFormat returns a number value using the locale convention. ",
 			"code":"<!--- loop through a list of locales and show number values --->\r\n<cfloop LIST = \"#Server.Coldfusion.SupportedLocales#\"\r\nindex = \"locale\" delimiters = \",\">\r\n<cfset oldlocale = setLocale(locale)>\r\n<cfoutput><p><b><i>#locale#</i></b><br />\r\n#lsNumberFormat(-1234.5678, \"_________\")#<br />\r\n#lsNumberFormat(-1234.5678, \"_________.___\")#<br />\r\n#lsNumberFormat(1234.5678, \"_________\")#<br />\r\n#lsNumberFormat(1234.5678, \"_________.___\")#<br />\r\n#lsNumberFormat(1234.5678, \"$_(_________.___)\")#<br />\r\n#lsNumberFormat(-1234.5678, \"$_(_________.___)\")#<br />\r\n#lsNumberFormat(1234.5678, \"+_________.___\")#<br />\r\n#lsNumberFormat(1234.5678, \"-_________.___\")#<br />\r\n</cfoutput>\r\n</cfloop>",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Script Example using specific locale",
+			"description":"lsNumberFormat returns a number value using the spezified locale.",
+			"code":"writeDump(lsNumberFormat(5, '.99', 'DE_at'));",
 			"result":"",
 			"runnable":true
 		}
