@@ -8,7 +8,7 @@
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"type","description":"","required":false,"default":"","type":"string","values":["local","international","none"]},
-		{"name":"locale","description":"","required":false,"default":"","type":"string","values":[]}
+		{"name":"locale","description":"Geographic/language locale value, where the format is a combination of an ISO 639-1 code and an optional ISO 3166-1 code separated by a dash or an underscore.","required":false,"default":"","type":"string","values":["en","de_DE","de_CH","..."]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/lscurrencyformat.html"},
@@ -28,7 +28,7 @@
 		{
 			"title":"Script Example using specific locale",
 			"description":"lsCurrencyFormat returns a currency value using the spezified locale.",
-			"code":"writeDump(lsCurrencyFormat(5, 'local', 'DE_at'));",
+			"code":"writeDump(lsCurrencyFormat(5, 'local', 'en_US'));",
 			"result":"",
 			"runnable":true
 		}
