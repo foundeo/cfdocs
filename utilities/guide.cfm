@@ -1,63 +1,63 @@
 <cfscript>
 	/* settings */
-	cfg = {
-		'dataDir': expandPath('../data/en'),
-		'guideDir': expandPath('../guides/en'),
-		'crlf': chr(13) & chr(10),
-		'engineMap': {	// copy from \views\doc.cfm
-			'coldfusion': 'Adobe ColdFusion',
-			'lucee': 'Lucee',
-			'openbd': 'OpenBD',
-			'railo': 'Railo'
-		},
-		'discouraged': {
-			'fileName': 'discouraged.md',
-			'fileHead': '## Discouraged'
-		},
-		'deprecated': {
-			'fileName': 'deprecated.md',
-			'fileHead': '## Deprecated'
-		},
-		'acfonly': {
-			'fileName': 'acf-only.md',
-			'fileHead': '## Adobe ColdFusion only'
-		},
-		'luceeonly': {
-			'fileName': 'lucee-only.md',
-			'fileHead': '## Lucee only'
-		}
+	dataDir = expandPath('../data/en');
+	guideDir = expandPath('../guides/en');
+	crlf = chr(13) & chr(10);
+
+	/* copy from \views\doc.cfm */
+	engineMap = {
+		'coldfusion': 'Adobe ColdFusion',
+		'lucee': 'Lucee',
+		'openbd': 'OpenBD',
+		'railo': 'Railo'
 	};
 
 	/* build discouraged filehead */
-	discouragedFileContent = cfg['discouraged']['fileHead'];
-	discouragedFileContent &= cfg['crlf'] & cfg['crlf'];
-	discouragedFileContent &= '####The following tags/functions are discouraged to use';
+	savecontent variable='discouragedFileContent' {
+		writeOutput(
+			'## Discouraged'
+			& crlf & crlf
+			& '####The following tags/functions are discouraged to use'
+		);
+	}
 
 	/* build deprecated filehead */
-	deprecatedFileContent = cfg['deprecated']['fileHead'];
-	deprecatedFileContent &= cfg['crlf'] & cfg['crlf'];
-	deprecatedFileContent &= '####The following tags/functions are deprecated';
+	savecontent variable='deprecatedFileContent' {
+		writeOutput(
+			'## Deprecated'
+			& crlf & crlf
+			& '####The following tags/functions are deprecated'
+		);
+	}
 
 	/* build acfonly filehead */
-	acfonlyFileContent = cfg['acfonly']['fileHead'];
-	acfonlyFileContent &= cfg['crlf'] & cfg['crlf'];
-	acfonlyFileContent &= '####The following tags/functions are Adobe ColdFusion only';
+	savecontent variable='acfonlyFileContent' {
+		writeOutput(
+			'## Adobe ColdFusion only'
+			& crlf & crlf
+			& '####The following tags/functions are Adobe ColdFusion only'
+		);
+	}
 
 	/* build luceeonly filehead */
-	luceeonlyFileContent = cfg['luceeonly']['fileHead'];
-	luceeonlyFileContent &= cfg['crlf'] & cfg['crlf'];
-	luceeonlyFileContent &= '####The following tags/functions are Lucee only';
+	savecontent variable='luceeonlyFileContent' {
+		writeOutput(
+			'## Lucee only'
+			& crlf & crlf
+			& '####The following tags/functions are Lucee only'
+		);
+	}
 
-	/* loopo all files from datadir */
-	for (file in directoryList(cfg['dataDir'])) {
+	/* loop all files from datadir */
+	for (file in directoryList(dataDir)) {
 		dataStruct = deserializeJSON(fileRead(file));
 
 		/* get files with discouraged tags/functions and append them to the file */
 		if (structKeyExists(dataStruct, 'discouraged')) {
-			discouragedFileContent &= cfg['crlf'] & cfg['crlf'];
+			discouragedFileContent &= crlf & crlf;
 			discouragedFileContent &= '###### `' & dataStruct['name'] & '`';
 
-			discouragedFileContent &= cfg['crlf'] & cfg['crlf'];
+			discouragedFileContent &= crlf & crlf;
 			discouragedFileContent &= dataStruct['discouraged'];
 		}
 
@@ -65,28 +65,46 @@
 		if (structCount(dataStruct['engines'] ?: {}) > 0) {
 			for (engine in dataStruct['engines']) {
 				if (structKeyExists(dataStruct['engines'][engine], 'deprecated')) {
-					writeDump(dataStruct['name']);
-					deprecatedFileContent &= cfg['crlf'] & cfg['crlf'];
+					deprecatedFileContent &= crlf & crlf;
 					deprecatedFileContent &= '###### `' & dataStruct['name'] & '`';
 
-					deprecatedFileContent &= cfg['crlf'] & cfg['crlf'];
-					deprecatedFileContent &= 'Deprecated as of ' & cfg['engineMap'][engine] & ' ' & dataStruct['engines'][engine]['deprecated'];
+					deprecatedFileContent &= crlf & crlf;
+					deprecatedFileContent &= 'Deprecated as of ' & engineMap[engine] & ' ' & dataStruct['engines'][engine]['deprecated'];
 				}
 			}
 		}
 
 		/* get files with server only tags/functions and append them to the file */
 		if (structCount(dataStruct['engines'] ?: {}) == 1) {
-			writeDump(dataStruct['engines']);
+			for (engine in dataStruct['engines']) {
+				if (engine == 'coldfusion') {
+					acfonlyFileContent &= crlf & crlf;
+					acfonlyFileContent &= '###### `' & dataStruct['name'] & '`';
+
+					if (dataStruct['engines'][engine]['minimum_version'] != '') {
+						acfonlyFileContent &= crlf & crlf;
+						acfonlyFileContent &= 'Minimum Version: ' & dataStruct['engines'][engine]['minimum_version'];
+					}
+				}
+				else if (engine == 'lucee') {
+					luceeonlyFileContent &= crlf & crlf;
+					luceeonlyFileContent &= '###### `' & dataStruct['name'] & '`';
+
+					if (dataStruct['engines'][engine]['minimum_version'] != '') {
+						luceeonlyFileContent &= crlf & crlf;
+						luceeonlyFileContent &= 'Minimum Version: ' & dataStruct['engines'][engine]['minimum_version'];
+					}
+				}
+			}
 		}
 	}
 
 	/* write all files */
-	fileWrite(cfg['guideDir'] & '\' & cfg['discouraged']['fileName'], discouragedFileContent);
+	fileWrite(guideDir & '\discouraged.md', discouragedFileContent);
 
-	fileWrite(cfg['guideDir'] & '\' & cfg['deprecated']['fileName'], deprecatedFileContent);
+	fileWrite(guideDir & '\deprecated.md', deprecatedFileContent);
 
-	fileWrite(cfg['guideDir'] & '\' & cfg['acfonly']['fileName'], acfonlyFileContent);
+	fileWrite(guideDir & '\acf-only.md', acfonlyFileContent);
 
-	fileWrite(cfg['guideDir'] & '\' & cfg['luceeonly']['fileName'], luceeonlyFileContent);
+	fileWrite(guideDir & '\lucee-only.md', luceeonlyFileContent);
 </cfscript>
