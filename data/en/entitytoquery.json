@@ -4,8 +4,7 @@
 	"syntax":"entityToQuery(entity [, name])",
 	"returns":"query",
 	"related":["entitySave","entityReload","entityMerge","entityDelete"],
-	"description":"Converts the input entity object or the input array of entity objects to a query object.\nThe following conditions apply for this function:\nIn the case of array input, all objects in the array must be of the same type.\nThe result query will not contain any relation data.
-",
+	"description":"Converts the input entity object or the input array of entity objects to a query object.\nThe following conditions apply for this function:\nIn the case of array input, all objects in the array must be of the same type.\nThe result query will not contain any relation data.",
 	"params": [
 		{"name":"entity","description":"Entity object or array of objects that needs to be converted to a query object.","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"name","description":"Name of the entity. Use this optional parameter to return the query of the given entity in the case of inheritance mapping.","required":false,"default":"","type":"string","values":[]}
