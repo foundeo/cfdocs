@@ -68,7 +68,6 @@
 					deprecatedFileContent &= crlf & crlf;
 					deprecatedFileContent &= '`' & dataStruct['name'] & '`';
 
-					//deprecatedFileContent &= crlf & crlf;
 					deprecatedFileContent &= ' - Deprecated as of ' & engineMap[engine] & ' ' & dataStruct['engines'][engine]['deprecated'];
 				}
 			}
@@ -82,7 +81,6 @@
 					acfonlyFileContent &= '`' & dataStruct['name'] & '`';
 
 					if (dataStruct['engines'][engine]['minimum_version'] != '') {
-						//acfonlyFileContent &= crlf & crlf;
 						acfonlyFileContent &= ' - Minimum Version: ' & dataStruct['engines'][engine]['minimum_version'];
 					}
 				}
@@ -91,7 +89,6 @@
 					luceeonlyFileContent &= '`' & dataStruct['name'] & '`';
 
 					if (dataStruct['engines'][engine]['minimum_version'] != '') {
-						//luceeonlyFileContent &= crlf & crlf;
 						luceeonlyFileContent &= ' - Minimum Version: ' & dataStruct['engines'][engine]['minimum_version'];
 					}
 				}
