@@ -27,7 +27,7 @@
 		{
 		"title": "Script syntax",
 		"description": "If you want to execute a script (.sh,.cmd,.bat), use bash (linux) or cmd.exe (windows) as the command and the script as argument for the shell interpreter.",
-		"code": "cfexecute( name=\"bash\" arguments=\"/opt/jq.sh #cmdArgs#\", variable=\"standardOut\" , errorVariable=\"errorOut\" , timeout=\"10\");",
+		"code": "cfexecute( name=\"bash\", arguments=\"/opt/jq.sh #cmdArgs#\", variable=\"standardOut\" , errorVariable=\"errorOut\" , timeout=\"10\");",
 		"runnable":false
 		},
 		{

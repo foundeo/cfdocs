@@ -1,14 +1,14 @@
 {
 	"name":"hmac",
 	"type":"function",
-	"syntax":"hmac(message, key, [, algorithm] [, encoding] )",
+	"syntax":"hmac(message, key [, algorithm] [, encoding] )",
 	"returns":"string",
 	"related":["hash"],
 	"description":"Creates a keyed-hash message authentication code (HMAC), which can be used to verify authenticity and integrity of a message by two parties that share the key.",
 	"params": [
-		{"name":"message","description":"The message or data to authenticate","required":true,"default":"","type":"string","values":[]},
-		{"name":"key","description":"The secret key.","required":true,"default":"","type":"string","values":[]},
-		{"name":"algorithm","description":"An algorithm supported by the java crypto provider, for example HMACSHA256", "required":false,"default":"HMACMD5","type":"string","values":["HMACMD5","HMACSHA1","HMACSHA256","HMACSHA384","HMACSHA512"]},
+		{"name":"message","description":"The message or data to authenticate. This can be a String or a byte array.","required":true,"default":"","type":"any","values":[]},
+		{"name":"key","description":"The secret key. The key can be a String or byte array.","required":true,"default":"","type":"any","values":[]},
+		{"name":"algorithm","description":"An algorithm supported by the java crypto provider.", "required":false,"default":"HMACMD5","type":"string","values":["HMACMD5","HMACSHA1","HMACSHA256","HMACSHA384","HMACSHA512"]},
 		{"name":"encoding","description":"The character encoding to use when converting the message to bytes. Must be a character encoding name recognized by the Java runtime.","required":false,"default":"utf-8","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 	],
 	"engines": {

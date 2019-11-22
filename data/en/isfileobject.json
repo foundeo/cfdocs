@@ -4,7 +4,7 @@
 	"syntax":"isFileObject(object);",
 	"returns":"boolean",
 	"related":["isPDFObject","isSpreadsheetObject","isObject"],
-	"description":"Checks if the given object is a filestream-object. A filestream-object you usally get, when calling fileOpen-function.",
+	"description":"Checks if the given object is a filestream-object. A filestream-object you usually get, when calling fileOpen-function.",
 	"params": [
 		{"name":"object","description":"The object you want to check, if it is a filestream-object.","required":true,"default":"","type":"","values":[]}
 	],

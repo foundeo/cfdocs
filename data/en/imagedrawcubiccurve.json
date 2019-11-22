@@ -36,7 +36,7 @@
 		},
 		{
 			"title":"Using drawCubicCurve member function",
-			"description":"CF11+ Lucee4.5+ Create an new image. With the new image draw a cubic curve, starting at top left (0,0) ending at bottom right (152,152) with 2 control points, 1 half way down the left side(0,71) and other at bottom left (0,152)",
+			"description":"CF11+ Lucee4.5+ Create a new image. With the new image draw a cubic curve, starting at top left (0,0) ending at bottom right (152,152) with 2 control points, 1 half way down the left side(0,71) and other at bottom left (0,152)",
 			"code":"imgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.drawCubicCurve(0,0,0,71,0,152,152,152);\r\ncfimage (action=\"writeToBrowser\", source=imgObj);",
 			"result":"",
 			"runnable":true

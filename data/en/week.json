@@ -19,7 +19,7 @@
 	],
 	"examples": [
 		{
-			"title": "Week of a datatime object",
+			"title": "Week of a datetime object",
 			"description": "",
 			"code": "dt = createdatetime(2016,1,1,5,30,25);\nw = week( dt );\nwriteoutput( w );",
 			"result": "1"

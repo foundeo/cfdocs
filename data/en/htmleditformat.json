@@ -16,7 +16,7 @@
     {
       "name": "version",
       "required": false,
-      "default": "",
+      "default": "2.0",
       "description": "HTML version to use; currently ignored.",
       "type": "numeric",
       "values": [ -1, 2.0, 3.2 ]
