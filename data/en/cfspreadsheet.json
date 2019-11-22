@@ -129,7 +129,7 @@
 		},
 		{
 			"title": "Read an Excel file as query (script syntax)",
-			"description": "Reads the Excel file in src into a coldfusion query variable provided in query using the first row as column names.",
+			"description": "Reads the Excel file in src into a ColdFusion query variable provided in query using the first row as column names.",
 			"code": "cfspreadsheet( action=\"read\", src=expandPath( 'example.xls' ), query=\"foo\", headerrow=1, excludeHeaderRow=true );",
 			"runnable": false
 		},

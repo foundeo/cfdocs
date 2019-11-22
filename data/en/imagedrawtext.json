@@ -33,7 +33,7 @@
 		},
 		{
 			"title":"Using drawText member function",
-			"description":"CF11+ Lucee4.5+ Create an new image. With the new image write \"CFDocs\" with the text characteristics specified ",
+			"description":"CF11+ Lucee4.5+ Create a new image. With the new image write \"CFDocs\" with the text characteristics specified ",
 			"code":"TextCharacteristics = { size=\"20\", style=\"bold\", strikethrough=\"false\", underline=\"false\"};\r\nimgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.drawText(\"CFDocs\",20,50,TextCharacteristics);\r\ncfimage (action=\"writeToBrowser\", source=imgObj);",
 			"result":"",
 			"runnable":true

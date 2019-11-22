@@ -14,7 +14,7 @@
 	"examples" : [
 		{
 			"title": "Simple Example",
-			"description":"Renders map of exception data, when trying to access a non-existent elemnent in an ArrayList.",
+			"description":"Renders map of exception data, when trying to access a non-existent element in an ArrayList.",
 			"code":"arrayList = createObject(\"JAVA\", \"java.util.ArrayList\").init();\r\ntry {writeDump(arrayList.get(2));}\r\ncatch(java.lang.IndexOutOfBoundsException _) {\r\n    writeDump(getException(arrayList));\r\n}",
 			"result":""
 		}

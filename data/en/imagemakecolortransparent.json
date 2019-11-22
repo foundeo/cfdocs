@@ -4,7 +4,7 @@
 	"syntax":"imageMakeColorTransparent(img, color__);",
 	"returns":"any",
 	"related":[],
-	"description":" Creates an image and sets a transparent color..",
+	"description":" Creates an image and sets a transparent color.",
 	"params": [
 		{"name":"img","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"","values":[]},
         	{"name":"color","description":"The transparent color: Hexadecimal, String value, Default is black.","required":true,"default":"","type":"","values":[]}

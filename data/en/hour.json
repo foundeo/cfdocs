@@ -19,7 +19,7 @@
 	],
 	"examples": [
 		{
-			"title": "Hour of a datatime object",
+			"title": "Hour of a datetime object",
 			"description": "",
 			"code": "dt = createdatetime(2016,1,1,5,30,25);\nh = hour( dt );\nwriteoutput( h );",
 			"result": "5"
