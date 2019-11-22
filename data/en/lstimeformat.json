@@ -8,8 +8,8 @@
 	"description":"Formats the time part of a date/time string into a string in a locale-specific format.\n [mask - quicky]\n h,hh,H,HH: Hours; m,mm: Minutes; s,ss: Seconds;\n l: Milliseconds; t: A or P; tt: AM or PM\n \"short\" = h:mm tt; \"medium\" = h:mm:ss tt",
 	"params": [
 		{"name":"time","description":"","required":true,"default":"","type":"date","values":[]},
-		{"name":"mask","description":"","required":false,"default":"","type":"string","values":["short","medium","long"]},
-		{"name":"locale","description":"Geographic/language locale value, where the format is a combination of an ISO 639-1 code and an optional ISO 3166-1 code separated by a dash or an underscore.","required":true,"default":"","type":"string","values":["en","de_DE","de_CH","..."]}
+		{"name":"mask","description":"","required":false,"default":"short","type":"string","values":["short","medium","long"]},
+		{"name":"locale","description":"Geographic/language locale value, where the format is a combination of an ISO 639-1 code and an optional ISO 3166-1 code separated by a dash or an underscore.","required":false,"default":"","type":"string","values":["en","de_DE","de_CH","..."]}
 
 	],
 	"engines": {

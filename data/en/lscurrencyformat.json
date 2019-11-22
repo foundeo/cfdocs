@@ -7,7 +7,7 @@
 	"description":"Formats a number in a locale-specific currency format. For countries that use the euro, the result depends on the JVM.\n [type - quicky]\n local: the currency format and currency symbol used locally.\n - With JDK 1.3, the default for Euro Zone: local currency.\n - With JDK 1.4, the default for Euro Zone: euro.\n international: the international standard currency format\n none: the local currency format; no currency symbol",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"type","description":"","required":false,"default":"","type":"string","values":["local","international","none"]},
+		{"name":"type","description":"","required":false,"default":"local","type":"string","values":["local","international","none"]},
 		{"name":"locale","description":"Geographic/language locale value, where the format is a combination of an ISO 639-1 code and an optional ISO 3166-1 code separated by a dash or an underscore.","required":false,"default":"","type":"string","values":["en","de_DE","de_CH","..."]}
 	],
 	"engines": {

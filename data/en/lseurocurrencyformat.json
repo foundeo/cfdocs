@@ -7,8 +7,8 @@
 	"description":"Formats a number in a locale-specific currency format.\n [type - quicky]\n local: the currency format used in the locale. (Default.)\n international: the international standard currency format\n none: the currency format used; no currency symbol",
 	"params": [
 		{"name":"currency","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"type","description":"","required":true,"default":"","type":"string","values":["local","international","none"]},
-		{"name":"locale","description":"Geographic/language locale value, where the format is a combination of an ISO 639-1 code and an optional ISO 3166-1 code separated by a dash or an underscore.","required":true,"default":"","type":"string","values":["en","de_DE","de_CH","..."]}
+		{"name":"type","description":"","required":false,"default":"local","type":"string","values":["local","international","none"]},
+		{"name":"locale","description":"Geographic/language locale value, where the format is a combination of an ISO 639-1 code and an optional ISO 3166-1 code separated by a dash or an underscore.","required":false,"default":"","type":"string","values":["en","de_DE","de_CH","..."]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/lseurocurrencyformat.html"},
