@@ -28,17 +28,17 @@ Use `true`/`false`
 ### Should I use implicit or explicit notation for arrays and structs?
 
 Example:
-```
-arr = []; // implicit
-// is the same as
-arr = arrayNew(1);
 
-unorderedStruct = {}:
-orderedStruct = [:];
-// is the same as
-unorderedStruct = structNew():
-orderedStruct = structNew('ordered');
-```
+	arr = []; // implicit
+	// is the same as
+	arr = arrayNew(1);
+
+	unorderedStruct = {};
+	orderedStruct = [:];
+	// is the same as
+	unorderedStruct = structNew();
+	orderedStruct = structNew('ordered');
+
 
 Use implicit.
 
