@@ -216,7 +216,7 @@
 		},
 		{
 			"name": "mask",
-			"description": "A mask pattern that controls the character pattern\n that the form displays or allows users to input and\n sends to ColdFusion.\n For currency type data, use currency symbol.\n For text or numeric type data use:\n - A = [A-Za-z]\n - X = [A-Za-z0-9]\n - 9 = [0-9]\n - ? = Any character\n - all other = the literal character\n For date type data use datetime masks.",
+			"description": "A mask pattern that controls the character pattern\n that the form displays or allows users to input and\n sends to ColdFusion.\n For currency type data, use currency symbol.\n For text or numeric type data use:\n - A = [A-Za-z]\n - X = [A-Za-z0-9]\n - 9 = [0-9]\n - ? = Any character\n - all other = the literal character\n For date type data use `Ext.Date` masks.",
 			"required": false,
 			"default": "",
 			"type": "string",
@@ -234,5 +234,11 @@
 	"engines": {
 		"coldfusion": { "minimum_version": "3", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfgridcolumn.html" }
 	},
-	"links": []
+	"links": [
+		{
+			"title":"Ext.Date Format Masks",
+			"description":"When using the `mask` attribute with a date these are the supported date/time mask characters.",
+			"url":"https://docs.sencha.com/extjs/6.5.0/modern/Ext.Date.html"
+		}
+	]
 }
