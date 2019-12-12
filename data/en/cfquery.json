@@ -31,8 +31,8 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfquery.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/query.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfquery"},
+		"lucee": {"minimum_version":"", "notes":"`cacheid` not supported by any versions", "docs":"https://docs.lucee.org/reference/tags/query.html"},
+		"railo": {"minimum_version":"", "notes":"`cacheid` not supported by any versions", "docs":"http://railodocs.org/index.cfm/tag/cfquery"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfquery"}
 	},
 	"links": [
