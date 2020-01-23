@@ -1,7 +1,7 @@
 {
   "name": "fileUploadAll",
   "type": "function",
-  "syntax": "fileUploadAll(destination [,mimeType [,strict]] [,onConflict] [,continueOnError [,errorVariable]])",
+  "syntax": "fileUploadAll(destination [,mimeType] [,onConflict] [,strict] [,continueOnError] [,errorVariable] [,allowedExtensions])",
   "returns": "array",
   "related": [
     "fileUpload"
@@ -59,6 +59,14 @@
       "required": false,
       "default": "cffile.uploadAllErrors",
       "type": "variableName",
+      "values": []
+    },
+    {
+      "name": "allowedExtensions",
+      "description": "CF2018+ A comma-separated list of file extensions, which will be allowed for upload. \n\nFor example, .png, .jpg, or, .jpeg. \n\nYou can use `*` (star) to allow all files, except where you specify the MIME type in the accept attribute. \n\nValues specified in the attribute allowedExtensions override the list of blocked extensions in the server or application settings.",
+      "required": false,
+      "default": "",
+      "type": "string",
       "values": []
     }
   ],
