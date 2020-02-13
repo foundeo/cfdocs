@@ -90,7 +90,7 @@ Historical information about ColdFusion Versions and releases.
 ## Adobe ColdFusion 2018 - July 2018 (_Aether_)
 
 * Semicolons optional
-* Asynchronous Programming [runAsnyc()](/runasync)
+* Asynchronous Programming [runAsync()](/runasync)
 * Typed Arrays `[type][element1,element2,etc]`
 * Array Negative Indices `lastItem = a[-1]`
 * Array Slices
