@@ -11,7 +11,7 @@
 		{"name":"unique","description":"Lucee4.5+ Specify whether you expect multiple or just one record.\nIf set to `true`, the entity is returned.\nIf set to `false` an array is returned to support multiple entities.\nIf set to `true` but multiple entities would be returned an error will be thrown.","required":false,"default":"","type":"boolean","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entityloadbypk.html"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entityloadbypk.html"},
 		"lucee": {"minimum_version":"", "notes":"Allows the optional `unique` parameter.", "docs":"https://docs.lucee.org/reference/functions/entityloadbypk.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entityloadbypk"}
 	},
