@@ -13,6 +13,7 @@
 		{"name":"maxThreads","description":"The number of threads to use when `parallel=true`","required":false,"default":"20","type":"boolean","values":[]}
 	],
 	"engines": {
+		"coldfusion":{"minimum_version":"2018,0,05", "notes":"Added in 2018 update 5", "docs":"https://helpx.adobe.com/uk/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayevery.html"},
 		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arrayevery.html"}
 	},
 	"links": [{
