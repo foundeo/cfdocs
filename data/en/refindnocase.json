@@ -27,6 +27,12 @@
 			"description": "",
 			"code": "reFindNoCase(\"E\", \"test 123!\")",
 			"result": "2"
+		},
+		{
+			"title": "Script Syntax",
+			"description": "CF2016+ example with all optional arguments",
+			"code": "reFindNoCase(\"E\", \"test 123!\", 1, true, \"ALL\")",
+			"result": "2"
 		}
 	]
 
