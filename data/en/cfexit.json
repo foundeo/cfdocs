@@ -2,6 +2,7 @@
 	"name":"cfexit",
 	"type":"tag",
 	"syntax":"<cfexit>",
+	"script":"exit;",
 	"related":["cfabort","cferror","cfthrow"],
 	"description":"This tag aborts processing of the currently executing CFML\n custom tag, exits the page within the currently executing CFML\n custom tag, or re-executes a section of code within the\n currently executing CFML custom tag.",
 	"params": [
