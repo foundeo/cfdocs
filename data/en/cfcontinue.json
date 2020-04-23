@@ -2,6 +2,7 @@
 	"name":"cfcontinue",
 	"type":"tag",
 	"syntax":"<cfcontinue>",
+	"script": "continue;"
 	"related":["cfloop","cfbreak"],
 	"description":"Used within a cfloop tag. Skips processing the remainder of the loop iteration, and continues on to the next iteration.",
 	"params": [],
