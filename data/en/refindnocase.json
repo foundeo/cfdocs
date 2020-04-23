@@ -31,8 +31,8 @@
 		{
 			"title": "Script Syntax",
 			"description": "CF2016+ example with all optional arguments",
-			"code": "reFindNoCase(\"E\", \"test 123!\", 1, true, \"ALL\")",
-			"result": "2"
+			"code": "serializeJSON(reFindNoCase(\"E\", \"test 123!\", 1, true, \"ALL\"))",
+			"result": "[{ \"len\":[1], \"match\":[\"e\"], \"pos\":[2]}]"
 		}
 	]
 
