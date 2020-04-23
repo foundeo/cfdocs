@@ -33,7 +33,7 @@
 		{
 			"title": "Script syntax with terminateOnTimeout",
 			"description": "Printing a PDF using lpr",
-			"code": "cfexecute(\r\n\tname=\"lpr\",\r\n\targuments=\"-P 'My Print Job Name' 'C:/Users/devguy/Documents/server/mynewfile.pdf'\",\r\n\tsuccess=\"\",\r\n\ttimeout=\"5\",\r\n\tterminateOnTimeout=\"true\"\r\n\t);",
+			"code": "cfexecute(\r\n\tname=\"lpr\",\r\n\targuments=\"-P 'My Print Job Name' 'C:/Users/devguy/Documents/server/mynewfile.pdf'\",\r\n\ttimeout=\"5\",\r\n\tterminateOnTimeout=\"true\"\r\n\t);",
 			"runnable":false
 		}
 	]
