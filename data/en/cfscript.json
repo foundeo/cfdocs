@@ -18,6 +18,13 @@
 			"description": "",
 			"code": "<cfscript> \r\n x = y = 1; \r\n writeDump(x); \r\n </cfscript>",
 			"result": ""
+		},
+		{
+			"title": "semi-colons are optional (CF2018+)",
+			"description": "CF2018+ Optional to use semicolons at the end of a statement.",
+			"code": "<cfscript> \n a = 5 \n b = 10 \n writeDump(a+b) \n </cfscript>",
+			"result": "15",
+			"runnable":true
 		}
 	]
 }
