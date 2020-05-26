@@ -2,6 +2,7 @@
 	"name":"replaceNoCase",
 	"type":"function",
 	"syntax":"replaceNoCase(String, substring1, substring2 [, scope])",
+	"member":"string.replaceNoCase(substring1, substring2[, scope])",
 	"returns":"string",
 	"related":[],
 	"description":" Replaces occurrences of substring1 with substring2, in the\n specified scope. The search is case-insensitive.",

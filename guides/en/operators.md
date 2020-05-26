@@ -59,6 +59,12 @@ The `EQ` `IS` and `==` operators are case insensitive, so `"PETE" IS "pete"` eva
 `<=` _Script_ ✓ _Tags_ ✖
 
 `CONTAINS` _Script_ ✓ _Tags_ ✓
+`DOES NOT CONTAIN` _Script_ ✓ _Tags_ ✓
+
+Lucee supports the following shorthand for the `CONTAINS` and `DOES NOT CONTAIN` operators.
+
+`CT` _Script_ ✓ _Tags_ ✓
+`NCT` _Script_ ✓ _Tags_ ✓
 
 ### Concatenation 
 

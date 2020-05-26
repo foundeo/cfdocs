@@ -10,7 +10,7 @@
 		{"name":"passphrase", "description":"Passphrase used for the key. KEEP THIS SECRET.", "required":true, "default":"", "type":"string", "values":[]},
 		{"name":"salt", "description":"A string which will be added to the passphrase before encryption.\n The standard recommends a salt length of at least 64 bits (8 characters). The salt needs to be generated using a pseudo-random number generator (e.g. SHA1PRNG)", "required":true, "default":"", "type":"string", "values":[]},
 		{"name":"iterations", "description":"The number of PBKDEF iterations to perform. A minimum recommended value is 1000", "required":true, "default":"", "type":"numeric", "values":[]},
-		{"name":"keySize", "description":"The length in bytes of the key to generate", "required":true, "default":"", "type":"numeric", "values":["true", "false"]}
+		{"name":"keySize", "description":"The length in bits of the key to generate", "required":true, "default":"", "type":"numeric", "values":[]}
 	    ],
 	"engines":{
 		"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/generatepbkdfkey.html","notes":"Adobe ColdFusion Enterprise includes a java crypto provider that implements these algorithms. These algorithms are available only in enterprise versions:\n\nPBKDF2WithSHA1\nPBKDF2WithSHA224\nPBKDF2WithSHA256\nPBKDF2WithSHA384\nPBKDF2WithSHA512\nPBKDF2WithSHA512-224\nPBKDF2WithSHA512-256"},

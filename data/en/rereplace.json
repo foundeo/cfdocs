@@ -2,6 +2,7 @@
 	"name":"reReplace",
 	"type":"function",
 	"syntax":"reReplace(string, regex, substring [, scope])",
+	"member":"string.reReplace(regex, substring[, scope])",
 	"returns":"string",
 	"related":["rereplacenocase","refind","refindnocase","replace","rematch","rematchnocase"],
 	"description":"Uses a regular expression (regex) to search a string for a string pattern and replace it with another. The search is case-sensitive.",
