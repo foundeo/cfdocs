@@ -26,17 +26,17 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "cfcookie(name=\"TimeVisited\", value=Now(), domain=\".local.com\", path=\"/coldfusion\" expires=30, httponly=\"yes\", encodedvalue=\"yes\" )\r\n"
+			"code": "cfcookie(name=\"TimeVisited\", value=Now(), domain=\".local.com\", path=\"/coldfusion\" expires=30, httponly=\"yes\", encodevalue=\"yes\" )\r\n"
 		},
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfcookie name=\"TimeVisited\" value=Now() domain=\".local.com\" path=\"/coldfusion\" expires=30 httponly=\"yes\" encodedvalue=\"yes\" />\r\n"
+			"code": "<cfcookie name=\"TimeVisited\" value=Now() domain=\".local.com\" path=\"/coldfusion\" expires=30 httponly=\"yes\" encodevalue=\"yes\" />\r\n"
 		},
 		{
 			"title": "Using Cookie Scope",
 			"description": "",
-			"code": "cookie.TimeVisited = { value=\"#Now()#\", domain=\".local.com\", path=\"/coldfusion\", expires=30, httponly=\"yes\", encodedvalue=\"yes\" }; \r\n "
+			"code": "cookie.TimeVisited = { value=\"#Now()#\", domain=\".local.com\", path=\"/coldfusion\", expires=30, httponly=\"yes\", encodevalue=\"yes\" }; \r\n "
 		},
 		{
 			"title": "Using CFHeader",
