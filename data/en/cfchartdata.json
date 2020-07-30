@@ -14,5 +14,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfchartdata"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfchartdata"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"CFML Markup",
+			"description":"A Simple bar chart with hard coded data.",
+			"code":"<cfchart xAxisTitle=\"Department\" yAxisTitle=\"Salary Average\">\r\n\t<cfchartseries type=\"bar\">\r\n\t\t<cfchartdata item=\"Finance\" value=\"75000\">\r\n\t\t<cfchartdata item=\"Sales\" value=\"120000\">\r\n\t\t<cfchartdata item=\"IT\" value=\"83000\">\r\n\t\t<cfchartdata item=\"Facilities\" value=\"45000\">\r\n\t</cfchartseries>\r\n</cfchart>",
+			"result":""
+		}
+		
+	]
 }

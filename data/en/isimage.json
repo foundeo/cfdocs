@@ -15,8 +15,16 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isimage"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isimage"}
 	},
-	"links": [
-
+	"links": [],
+	"examples": [
+		{
+			"title":"CFML Markup",
+			"description":"A Simple coldfusion image hard code .",
+			"code":"<cfset myImage  = ImageNew(\"./sample.png\")>\r\n<cfif IsImage(myImage)>\r\n\t<cfimage action=\"writeToBrowser\" source=\"#myImage#\">\r\n</cfif>",
+			"result":"",
+			"runnable":false
+		}
+		
 	]
 
 }

@@ -14,5 +14,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfexit"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfexit"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"CFML Markup",
+			"description":"A Simple Exapmle of exit tag.",
+			"code":"<cfset myString = \"String is above from cfexit tag\">\r\n<cfoutput>#myString#</cfoutput>\r\n<cfexit />\r\n<cfset MyInput = \"String is below from cfexit tag\">\r\n<cfoutput>#MyInput#</cfoutput>",
+			"result":""
+		}
+		
+	]
 }

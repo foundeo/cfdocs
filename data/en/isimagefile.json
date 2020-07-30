@@ -13,5 +13,15 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isimagefile.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isimagefile"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"CFML Markup",
+			"description":"A Simple coldfusion image hard code .",
+			"code":"<cfset myImage  = expandPath(\"./sample.png\")>\r\n<cfif IsImageFile(myImage)>\r\n\t<cfimage action=\"writeToBrowser\" source=\"#myImage#\">\r\n</cfif>",
+			"result":"",
+			"runnable":false
+		}
+		
+	]
 }
