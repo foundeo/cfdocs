@@ -25,7 +25,7 @@
 	"links": [],
 	"examples": [
 		{
-			"title":"CFML Markup",
+			"title":"A simple area chart",
 			"description":"A Simple area chart with hard coded data.",
 			"code":"<cfchart xAxisTitle=\"Subject\" yAxisTitle=\"Marks\">\r\n\t<cfchartseries type=\"area\" seriescolor =\"##ccc\">\r\n\t\t<cfchartdata item=\"Tamil\" value=\"80\">\r\n\t\t<cfchartdata item=\"English\" value=\"85\">\r\n\t\t<cfchartdata item=\"Maths\" value=\"95\">\r\n\t\t<cfchartdata item=\"Science\" value=\"88\">\r\n\t</cfchartseries>\r\n</cfchart>",
 			"result":""

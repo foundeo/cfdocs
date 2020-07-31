@@ -16,8 +16,8 @@
 	"links": [],
 	"examples": [
 		{
-			"title":"CFML Markup",
-			"description":"A Simple coldfusion image hard code .",
+			"title":"The simple isImageFile example",
+			"description":"Check the file is image or not.",
 			"code":"<cfset myImage  = expandPath(\"./sample.png\")>\r\n<cfif IsImageFile(myImage)>\r\n\t<cfimage action=\"writeToBrowser\" source=\"#myImage#\">\r\n</cfif>",
 			"result":"",
 			"runnable":false

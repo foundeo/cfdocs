@@ -101,8 +101,8 @@
 	"links": [],
 	"examples": [
 		{
-			"title":"CFML Markup",
-			"description":"A Simple add function hard code data.",
+			"title":"A simple CFMenu example",
+			"description":"The example about simple menu with menuItems.It is supported in cf 10,11 & 16.",
 			"code":"<cfmenu name='menu' type=\"horizontal\" fontsize=\"14\" bgcolor=\"##CCFFFF\">\r\n\t<cfmenuitem name=\"acrobat\" href=\"http://www.adobe.com/acrobat\" display=\"Acrobat\"/>\r\n\t<cfmenuitem name=\"aftereffects\" href=\"http://www.adobe.com/aftereffects\" display=\"After Effects\"/>\r\n</cfmenu>",
 			"result":"",
 			"runnable":false

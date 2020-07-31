@@ -17,10 +17,10 @@
 	},
 	"examples": [
 		{
-			"title":"CFML Markup",
-			"description":"A Simple area chart with hard coded data.",
-			"code":"<cfset list=\"Apple,Orange,Banana,Graphs\">\r\n<cfif listIndexExists(list,2)>\r\n\t<cfset list=listsetAt(list,2,\"Goa\")>\r\n\t<cfoutput>#list#</cfoutput>\r\n</cfif>",
-			"result":""
+			"title":"Simple listIndexExists",
+			"description":"Check whether the index is exists or not in list",
+			"code":"<cfset list=\"Apple,Orange,Banana,Graphs\">\r\n<cfif listIndexExists(list,2)>\r\n\t<cfset list=listsetAt(list,2,\"Goa\")>\r\n</cfif>\r\n<cfoutput>#list#</cfoutput>",
+			"result":"Apple,Goa,Banana,Graphs"
 		}
 	],
 	"links": []

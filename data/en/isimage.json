@@ -18,8 +18,8 @@
 	"links": [],
 	"examples": [
 		{
-			"title":"CFML Markup",
-			"description":"A Simple coldfusion image hard code .",
+			"title":"Simple Isimage Function",
+			"description":"Check the result is codfusion image or not",
 			"code":"<cfset myImage  = ImageNew(\"./sample.png\")>\r\n<cfif IsImage(myImage)>\r\n\t<cfimage action=\"writeToBrowser\" source=\"#myImage#\">\r\n</cfif>",
 			"result":"",
 			"runnable":false
