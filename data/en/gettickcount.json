@@ -12,5 +12,19 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/gettickcount"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/gettickcount"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"Simple GettickCount",
+			"description":"GettickCount function displays the system time in milliseconds",
+			"code":"<cfoutput>#getTickCount()#</cfoutput>",
+			"result":""
+		},
+		{
+			"title":"Get loading time using getTickCount",
+			"description":"Here, we have simple example or real time usage about getTickCount. We have a loop that over 10000 times & we are going to calculate the time about the loading time for that loop. So we have added the start time with some tickcount value before and after the loop we have end time. So the subtraction of end & start time is point out the loading time about the loop.",
+			"code":"<cfoutput>\r\n<cfset startTime = gettickCount()>\r\n<cfloop from=\"1\" to=\"10000\" index=\"i\">\r\n\t<!--- write some code here --->\r\n</cfloop>\r\n<cfset endTime = getTickCount()>\r\nStart time is:#startTime#<br>\r\nEnd time is:#endTime#<br>\r\nLoading Time is:#endTime-startTime# MilliSeconds\r\n</cfoutput>",
+			"result":""
+		}
+	]
 }
