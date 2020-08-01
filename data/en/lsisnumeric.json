@@ -17,6 +17,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Numeric lsisnumeric",
+			"description":"",
+			"code":"<cfoutput>\r\n\t#lsIsNumeric('467878')#\r\n</cfoutput>",
+			"result":"YES"
+		},
+		{
+			"title":"String lsisnumeric",
+			"description":"",
+			"code":"<cfoutput>\r\n\t#lsIsNumeric('Ten10')#\r\n</cfoutput>",
+			"result":"NO"
+		}
 	]
 
 }

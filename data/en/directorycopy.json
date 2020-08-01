@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Simple DirectoryCopy Example",
+			"description":"Copy directory from one place to another.",
+			"code":"<cfoutput>#directoryCopy(expandPath(\"./mySourceDirectory\"),expandPath(\"../MyDestinationDirectory\"))#</cfoutput>",
+			"result":"",
+			"runnable":false
+		}
 	]
 
 }
