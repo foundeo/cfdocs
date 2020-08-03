@@ -37,6 +37,29 @@
 	},
 	"links": [
 
+	],
+	"examples":[
+		{
+			"title":"The simple component file",
+			"description":"Here created the simple component with user defined function name as multiply.",
+			"code":"<cfcomponent>\r\n<cffunction name=\"multiply\" access=\"public\" returnType=\"numeric\">\r\n<cfargument name=\"FirstNum\" type=\"numeric\">\r\n<cfargument name=\"SecondNum\" type=\"numeric\">\r\n<cfretrun arguments.FirstNum * arguments.SecondNum>\r\n</cffunction>\r\n</cfcomponent>",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"The simple cfobject example",
+			"description":"Calling the above multiply function by using cfobject tag based code.",
+			"code":"<cfobject name=\"multiplyObj\" type=\"component\" component=\"multiply\">\r\n<cfoutput>\r\n#multiplyObj.multiply(1,2)#\r\n</cfoutput>",
+			"result":"2",
+			"runnable":false
+		},
+		{
+			"title":"The simple (cfobject) example",
+			"description":"Calling the above multiply function by using cfobject script based code.",
+			"code":"<cfscript>\r\ncfobject(name=\"multiplyNum\" type=\"component\" component=\"multiply\"){\r\nwriteOutput(multiplyNum.multiply(6,7));\r\n}\r\n</cfscript>",
+			"result":"42",
+			"runnable":false
+		}
 	]
 
 }
