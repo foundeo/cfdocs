@@ -14,6 +14,13 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/structkeytranslate.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"Simple structkeytranslate example",
+			"description":"Here we've example of structkeytranslate. It is supported only in lucee.",
+			"code":"var struct = {\"departments\":{\"John\":\"computer\",\"Ravi\":\"maths\"},\"Language.name\":\"lucee\",\"language.version\":\"5\"};\r\nwriteDump(label=\"Before translation\",var=struct);\r\nstructKeyTranslate(struct);\r\nwriteDump(label=\"After translation\",var = struct);\r\n",
+			"result":""
+		}
+	],
 	"links": []
 }

@@ -14,6 +14,13 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "deprecated": "4.5", "notes": "This function only exists for backward compatibility to Lucee 4.0 or older version that has produced an incorrect result for non us-ascii characters, Only use this function for backward compatibility.", "docs": "https://docs.lucee.org/reference/functions/hash40.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"Simple hash40 example",
+			"description":"Here we've example of hash40.I've encript the word \"password\" with use of sha-1 algorithm. It is supported only in lucee.",
+			"code":"hash40('password','SHA-1')",
+			"result":"5BAA61E4C9B93F3F0682250B6CF8331B7EE68FD8"
+		}
+	],
 	"links": []
 }

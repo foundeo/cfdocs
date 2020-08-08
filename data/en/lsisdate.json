@@ -17,6 +17,21 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "lsIsDate Example",
+			"description":"This example illustrates use of the lsIsDate function.",
+			"code":"lsIsDate(\"12/31/2008\")",
+			"result":"YES"
+		},
+		{
+			"title": "lsIsDate Example",
+			"description":"This example illustrates use of the lsIsDate function.",
+			"code":"lsIsDate(\"2. Januar 2018\")",
+			"result":"NO"
+		}
+
 	]
 
 }
