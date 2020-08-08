@@ -18,7 +18,20 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/listevery.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"Simple listevery example",
+			"description":"Here we've example about listevery function. It is supported only in Lucee.",
+			"code":"var fruits = \"Apple orange banana mango\";\r\nlistEvery(fruits,function(item){\r\n\twriteOutput(item & \" \");\r\n\treturn true;\r\n},\" \");",
+			"result":"Apple orange banana mango"
+		},
+		{
+			"title":"Simple listevery member function example",
+			"description":"Here we've example about listevery member function. It is supported only in Lucee.",
+			"code":"var fruits = \"Apple orange banana mango\";\r\nfruits.listEvery(function(item,index){\r\n\twriteOutput(item & \" \");\r\n\treturn false;\r\n},\" \");",
+			"result":"Apple"
+		}
+	],
 	"links": [{
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",

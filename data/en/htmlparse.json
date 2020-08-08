@@ -12,6 +12,11 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/htmlparse.html"}
 	},
-	"examples": [],
+	"examples": [{
+		"title": "Simple htmlParse Example",
+		"description": "Convert the HTML to Xml object. It is supported only in Lucee.",
+		"code": "HtmlContent = \"Hello <body><p>world</p></body>\";\nwriteDump(htmlParse(HtmlContent));\nwriteoutput(htmlParse('<html><body><p>This is example text</p></body></html>'));",
+		"result": ""
+	}],
 	"links": []
 }

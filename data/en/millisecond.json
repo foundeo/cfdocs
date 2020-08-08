@@ -13,6 +13,13 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/millisecond.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"millisecond Example",
+			"description":"It convert the referenced date to miliseconds. It is supported only in Lucee.",
+			"code":"millisecond(now())",
+			"result":""
+		}
+	],
 	"links": []
 }

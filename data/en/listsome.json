@@ -25,7 +25,20 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/listsome.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"Simple listsome example",
+			"description":"Here,we've example about listsome function. It is supported only in Lucee.",
+			"code":"var fruits = \"Apple,orange,banana,mango\";\r\nvar result = listsome(fruits,function(item){\r\n\treturn item IS \"Apple\";\r\n});\r\nwriteOutput(result);",
+			"result":"true"
+		},
+		{
+			"title":"Simple listsome member function example",
+			"description":"Here,we've example about listsome member function. It is supported only in Lucee.",
+			"code":"var fruits = \"Apple,orange,banana,mango\";\r\nvar result = fruits.some(function(item,index){\r\n\treturn index IS \"5\";\r\n});\r\nwriteOutput(result);",
+			"result":"false"
+		}
+	],
 	"links": [{
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",

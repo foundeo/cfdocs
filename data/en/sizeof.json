@@ -13,6 +13,13 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "","docs": "https://docs.lucee.org/reference/functions/sizeof.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"Simple sizeof example",
+			"description":"Here,we've example to get the structure size. It is supported only in Lucee.",
+			"code":"<cfset struct = {\"name\":\"Dhar\",\"age\":\"20\"}>\r\n<cfoutput>#sizeof(struct)#</cfoutput>",
+			"result":"36"
+		}
+	],
 	"links": []
 }
