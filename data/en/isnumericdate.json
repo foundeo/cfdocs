@@ -17,6 +17,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Simple example",
+			"description": "To determine whether a string can be converted to a date/time value.",
+			"code": "<cfset Date = isNumericDate(now()) >\r\n<cfoutput>#Date#</cfoutput>",
+			"result": "Yes"
+		},
+		{
+			"title": "Simple example",
+			"description": "To determine whether a string can be converted to a date/time value.",
+			"code": "<cfset result = isNumericDate(\"Monday\")>\r\n<cfoutput>#result#</cfoutput>",
+			"result": "No"
+		}
 	]
 
 }
