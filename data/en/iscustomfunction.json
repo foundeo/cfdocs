@@ -14,5 +14,19 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/iscustomfunction"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/iscustomfunction"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "isCustomFunction Example",
+			"description":"Here we've example to check the given variable is user defined function or not.",
+			"code":"function myfunc() {\n\rreturn 1;\n\r}\n\r writeDump( isCustomFunction(myfunc) );",
+			"result":"YES"
+		},
+		{
+			"title": "isCustomFunction Example",
+			"description":"Here we've example to check the given variable is user defined function or not.",
+			"code":"myfunc =\"2\";\n\r writeDump( isCustomFunction(myfunc) );",
+			"result":"NO"
+		}
+	]
 }
