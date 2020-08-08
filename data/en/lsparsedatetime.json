@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "lsParseDateTime Example",
+			"description":"This example illustrates use of the lsParseDateTime function.",
+			"code":"lsParseDateTime(\"01/08/2011\")",
+			"result":"{ts '2011-01-08 00:00:00'}"
+		}
 	]
 
 }
