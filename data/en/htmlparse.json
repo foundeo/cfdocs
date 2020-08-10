@@ -12,6 +12,17 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/htmlparse.html"}
 	},
-	"examples": [],
-	"links": []
+	"examples": [{
+		"title": "htmlParse Example",
+		"description": "Convert the HTML to Xml object.It supported in Lucee",
+		"code": "HtmlContent = \"Hello <body><p>world</p></body>\";\nwriteDump(htmlParse(HtmlContent));\nwriteoutput(htmlParse('<html><body><p>This is example text</p></body></html>'));",
+		"result": ""
+	}],
+	"links": [
+		{
+			"title":"Learning htmlParse by Ben Nadel",
+			"url":"https://www.bennadel.com/blog/3650-parsing-html-natively-with-htmlparse-in-lucee-5-3-2-77.htm",
+			"description":"Tutorial style article on using the htmlParse function in CFML."
+		}
+	]
 }

@@ -18,7 +18,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/replace"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/replace"}
 	},
-	"links": [],
+	"links": [
+		{
+		"title":"Regular expressions - practical examples",
+		"description":"There is find, replace and match functions with and without case sensitivity.",
+		"url":"https://coldfusion.adobe.com/2019/06/regular-expressions-practical-examples-get-started/"
+		}
+	],
 	"examples": [
 		{
 			"title": "Replace uppercase 'U' with lowercase 'u'",
