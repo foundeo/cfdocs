@@ -20,16 +20,16 @@
 	],
 	"examples": [
 		{
-			"title":"Numeric lsisnumeric",
-			"description":"",
-			"code":"<cfoutput>\r\n\t#lsIsNumeric('467878')#\r\n</cfoutput>",
-			"result":"YES"
+			"title":"Simple Lsisnumeric Example",
+			"description":"Check whether the string is number or not in locale",
+			"code":"lsIsNumeric('Ten')",
+			"result":"NO"
 		},
 		{
-			"title":"String lsisnumeric",
-			"description":"",
-			"code":"<cfoutput>\r\n\t#lsIsNumeric('Ten10')#\r\n</cfoutput>",
-			"result":"NO"
+			"title":"Simple Lsisnumeric Example",
+			"description":"Check whether the string is number or not in locale",
+			"code":"lsIsNumeric('4678')",
+			"result":"YES"
 		}
 	]
 

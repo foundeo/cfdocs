@@ -23,7 +23,7 @@
 		{
 			"title":"Simple DirectoryCopy Example",
 			"description":"Copy directory from one place to another.",
-			"code":"<cfoutput>#directoryCopy(expandPath(\"./mySourceDirectory\"),expandPath(\"../MyDestinationDirectory\"))#</cfoutput>",
+			"code":"directoryCopy(expandPath(\"./mySourceDirectory\"),expandPath(\"../MyDestinationDirectory\"))",
 			"result":"",
 			"runnable":false
 		}
