@@ -11,7 +11,15 @@
 	{"values":[],"default":"","description":"Comma-delimited column numbers where the page breaks will be applied.","name":"colbreaks","type":"string","required":"1"}
 ],
 "returns":"void",
-"examples":[],
+"examples": [
+	{
+		"title": "Simple spreadsheetAddPagebreaks Example",
+		"description": "CF11+ Here,we've example to break the excel using spreadsheetaddpagebreaks. It is supported only in adobe coldfusion.",
+		"code": "<cfset Detail=SpreadsheetNew(\"student\",false)>\r\n<cfset SpreadSheetAddRow(Detail,\"id,Name,Department,marks,average\")>\r\n<cfset SpreadSheetAddRow(Detail,\"1,Dhar,CS,500,50\")>\r\n<cfset SpreadSheetAddRow(Detail,\"2,DharC,EEE,600,85\")>\r\n<cfset SpreadSheetAddRow(Detail,\"3,DharCf,EC,700,90\")>\r\n<cfset spreadsheetAddPagebreaks(Detail,'1,2', '3,4')>\r\n<cfset SpreadsheetWrite(Detail,expandPath(\"./Detail.xls\"),true)>",
+		"result": "",
+		"runnable":false
+	}
+],
 "type":"function",
 "related":["SpreadsheetNew","SpreadsheetRead"]
 }

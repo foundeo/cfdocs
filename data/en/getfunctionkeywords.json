@@ -9,6 +9,13 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getfunctionkeywords.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title": "Simple getFunctionKeywords Example",
+			"description": "It returns all function keywords in array format. It is supported only in lucee.",
+			"code": "writeDump(getFunctionKeywords());",
+			"result": ""
+		}
+	],
 	"links": []
 }
