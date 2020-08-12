@@ -13,5 +13,14 @@
 		"lucee": {"minimum_version":"", "deprecated": "4", "notes":"", "docs":"https://docs.lucee.org/reference/functions/getmetricdata.html"},
 		"railo": {"minimum_version":"", "deprecated": "0", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getmetricdata"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"Simple GetMetricData example",
+			"description":"Here we've example of GetMetricData.It shows the output only enable the \"Enable Metrics Logging\" option in coldfusion administrator.",
+			"code":"pmData = GetMetricData( \"PERF_MONITOR\" );writeDump(pmData);",
+			"result":"",
+			"runnable":"false"
+		}
+	]
 }

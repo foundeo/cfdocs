@@ -15,6 +15,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Simple isDebugMode example",
+			"description":"Here we have simple example to check the debug mode is enable or not.If we enable the debug output in administrator it displays yes otherwise no.",
+			"code":"writeOutput(isDebugMode());",
+			"result":""
+		}
 	]
 
 }

@@ -17,6 +17,13 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "jsStringFormat Example",
+			"description":"This example illustrates use of the JSStringFormat function.",
+			"code":" string = \"An example string value with \"\"quoted\"\" 'text'\";\r\n writeOutput(JSStringFormat(string)) ;"
+		}
 	]
 
 }
