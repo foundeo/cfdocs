@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"isNumericDate(number)",
 	"returns":"boolean",
-	"related":[],
+	"related":["IsDate", "ParseDateTime"],
 	"description":"Evaluates whether a real number is a valid representation of a\n date (date/time object).\n\nSame as isValid(\"date\", date)",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}

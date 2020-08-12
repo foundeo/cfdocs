@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "htmlParse(html [, caseSensitive])",
 	"returns": "xml",
-	"related": [],
+	"related": ["DecodeForHtml","EncodeForHTML","EncodeForHTMLAttribute","HTMLCodeFormat","HTMLEditFormat"],
 	"description": "Parse the given HTML/XHTML and converts it to an xml object. Similar to xmlParse, but this function is very forgiving",
 	"params": [
 		{"name": "html", "description": "", "required": true, "default": "", "type": "string", "values": []},

@@ -4,7 +4,7 @@
 	"syntax":"structKeyList(structure [, delimiter])",
     "member":"someStruct.keyList([delimiter])",
 	"returns":"string",
-	"related":[],
+	"related":["structKeyArray"],
 	"description":" Extracts keys from a CFML structure.",
 	"params": [
 		{"name":"structure","description":"Structure from which to extract a list of keys","required":true,"default":"","type":"struct","values":[]},

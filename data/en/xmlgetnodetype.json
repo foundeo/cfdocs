@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"xmlGetNodeType(xmlNode)",
 	"returns":"string",
-	"related":[],
+	"related":["IsXmlAttribute", "IsXmlDoc", "IsXmlElem", "IsXmlNode", "IsXmlRoot", "XmlChildPos", "XmlValidate"],
 	"description":"Determines the type of an XML document object node.",
 	"params": [
 		{"name":"xmlNode","description":"An XML DOM object node.","required":true,"default":"","type":"xml","values":[]}
