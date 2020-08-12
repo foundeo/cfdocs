@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "lsParseCurrency Example",
+			"description":"LSParseCurrency coverts a locale-specific currency string to a number.",
+			"code":"lsParseCurrency(\"$120.5\")",
+			"result":"120.5"
+		}
 	]
 
 }

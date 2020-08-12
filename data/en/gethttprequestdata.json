@@ -20,5 +20,12 @@
 			"description": "Undocumented boolean argument omits the content from being returned if you only need the headers.",
 			"url":"http://www.bennadel.com/blog/2824-gethttprequestdata-may-break-your-request-in-coldfusion-but-gethttprequestdata-false-may-not.htm"
 		}
+	],
+	"examples": [
+		{
+			"title": "GetHttpRequestData Example",
+			"description":"Returns HTTP request headers and request body in structure format.",
+			"code":" writeDump(GetHttpRequestData());"
+		}
 	]
 }
