@@ -12,5 +12,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getlocalhostip"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getlocalhostip"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "getLocalhostIP Example",
+			"description":"Here we've example to get localhost ip address using getLocalhostIP()",
+			"code":" writeOutput(getLocalhostIP()) ;"
+		}
+	]
 }
