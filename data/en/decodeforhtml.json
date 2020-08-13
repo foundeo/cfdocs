@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"decodeForHTML(string);",
 	"returns":"string",
-	"related":[],
+	"related":["EncodeForHTML","EncodeForHTMLAttribute", "EncodeForJavaScript", "EncodeForCSS", "EncodeForURL"],
 	"description":" Decodes an HTML encoded string.",
 	"params": [
 		{"name":"string","description":"The encoded string to decode.","required":true,"default":"","type":"","values":[]}

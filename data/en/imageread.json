@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"imageRead(path)",
 	"returns":"any",
-	"related":[],
+	"related":["cfimage", "ImageNew", "ImageReadBase64", "ImageWrite", "IsImageFile"],
 	"description":" Reads the source pathname or URL and creates a ColdFusion image.",
 	"params": [
 		{"name":"path","description":"On-disk or in-memory pathname or URL of the source image.","required":true,"default":"","type":"string","values":[]}

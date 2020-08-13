@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"isLeapYear(year)",
 	"returns":"boolean",
-	"related":[],
+	"related":["DaysInYear"],
 	"description":" Determines whether a year is a leap year.",
 	"params": [
 		{"name":"year","description":"","required":true,"default":"","type":"numeric","values":[]}
