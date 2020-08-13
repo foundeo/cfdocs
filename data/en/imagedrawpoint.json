@@ -4,7 +4,7 @@
 	"syntax":"imageDrawPoint(name, x, y)",
 	"member":"someImage.drawPoint(x, y)",
 	"returns":"void",
-	"related":[],
+	"related":["ImageDrawLine", "ImageDrawLines", "ImageSetAntialiasing", "ImageSetDrawingColor", "ImageSetDrawingStroke"],
 	"description":" Draws a point at the specified (x,y) coordinate.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},

@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"imageReadBase64(string)",
 	"returns":"any",
-	"related":[],
+	"related":["ImageNew", "ImageRead", "ImageWrite", "ImageWriteBase64", "BinaryDecode", "BinaryEncode", "IsImageFile"],
 	"description":" Creates a ColdFusion image from a Base64 string.",
 	"params": [
 		{"name":"string","description":"a variable or Base64 string","required":true,"default":"","type":"string","values":[]}
@@ -16,7 +16,11 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagereadbase64"}
 	},
 	"links": [
-
+		{
+		"title":"Reading And Writing Images",
+		"description":"This Tutorial illustrate Image function",
+		"url":"https://www.bennadel.com/blog/766-learning-coldfusion-8-cfimage-part-i-reading-and-writing-images.htm"
+		}
 	],
 	"examples": [
 		{
