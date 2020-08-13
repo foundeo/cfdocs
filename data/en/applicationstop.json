@@ -11,5 +11,16 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/applicationstop.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/applicationstop"}
 	},
-	"links": []
+	"links": [
+		{
+			"title":"ApplicationStop",
+			"description":"",
+			"url":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/applicationstop.html"
+		},
+		{
+			"title":"Resetting Applications With ApplicationStop()",
+			"description":"",
+			"url":"https://www.bennadel.com/blog/1667-learning-coldfusion-9-resetting-applications-with-applicationstop.htm"
+		}
+	]
 }
