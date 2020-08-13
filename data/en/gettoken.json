@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"getToken(string, index [, delimiters])",
 	"returns":"string",
-	"related":[],
+	"related":["Left", "Right", "Mid", "SpanExcluding", "SpanIncluding"],
 	"description":" Determines whether a token of the list in the delimiters\n parameter is present in a string.\n Returns the token found at position index of the string, as a\n string. If index is greater than the number of tokens in the\n string, returns an empty string.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
@@ -16,7 +16,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/gettoken"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/gettoken"}
 	},
-	"links": [],
+	"links": [
+		{
+		"title":"Learning getToken by Ben Nadel",
+		"description":"This Tutorial illustrate getToken function",
+		"url":"https://www.bennadel.com/blog/784-coldfusion-listgetat-vs-gettoken.htm"
+		}
+	],
 	"examples": [
 		{
 			"title": "Tag Syntax",

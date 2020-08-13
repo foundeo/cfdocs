@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"ajaxLink(url)",
 	"returns":"void",
-	"related":[],
+	"related":["cfdiv", "cflayoutarea", "cfpod", "cfwindow"],
 	"description":" Causes an HTML href attribute to display link results in the current Ajax container.",
 	"params": [
 		{"name":"url","description":"The URL of the link.","required":true,"default":"","type":"string","values":[]}

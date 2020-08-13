@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"fileSetLastModified(filePath, date)",
 	"returns":"void",
-	"related":[],
+	"related":["FileCopy", "FileDelete", "FileExists", "FileMove", "FileSetAccessMode", "FileSetAttribute"],
 	"description":"Sets the date when an on-disk or in-memory file was most recently modified.",
 	"params": [
 		{"name":"filePath","description":"An absolute path to an on-disk or in-memory file on the server","required":true,"default":"","type":"string","values":[]},

@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"getEncoding(scope_name)",
 	"returns":"string",
-	"related":[],
+	"related":["cfcontent", "cfprocessingdirective", "URLDecode", "URLEncodedFormat"],
 	"description":" Returns the encoding (character set) of the Form or URL scope.",
 	"params": [
 		{"name":"scope_name","description":"","required":true,"default":"","type":"string","values":["form","url"]}

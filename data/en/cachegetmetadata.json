@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"cacheGetMetadata(id [, objectType] [, region])",
 	"returns":"struct",
-	"related":[],
+	"related":[ "cfcache","CachePut","CacheGet","CacheGetAllIds","CacheGetProperties","CacheRemove","CacheSetProperties"],
 	"description":"Gets the metadata values for a cached object.",
 	"params": [
 		{"name":"id","description":"The ID of the cached object.","required":true,"default":"","type":"string","values":[]},

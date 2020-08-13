@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"fileSkipBytes(file, skipCount)",
 	"returns":"void",
-	"related":[],
+	"related":["FileCopy", "FileDelete", "FileExists", "FileMove", "FileSetAccessMode", "FileSetAttribute", "FileSeek"],
 	"description":"Shifts the file pointer by the given number of bytes.",
 	"params": [
 		{"name":"file","description":"The file object","required":true,"default":"","type":"any","values":[]},
