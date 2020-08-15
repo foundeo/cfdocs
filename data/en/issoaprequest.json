@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"isSOAPRequest()",
 	"returns":"boolean",
-	"related":[],
+	"related":["AddSOAPRequestHeader", "AddSOAPResponseHeader", "GetSOAPRequest", "GetSOAPRequestHeader", "GetSOAPResponse"],
 	"description":" Determines whether a CFC is being called as a web service.",
 	"params": [
 	],

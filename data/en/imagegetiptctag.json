@@ -4,7 +4,7 @@
 	"syntax":"imageGetIPTCtag(name, tagName)",
 	"member":"someImage.getIPTCtag(tagName)",
 	"returns":"string",
-	"related":[],
+	"related":["cfimage","ImageGetBlob","ImageGetBufferedImage","ImageGetEXIFMetadata","ImageGetEXIFTag","ImageGetHeight","ImageGetIPTCMetadata","ImageGetWidth","ImageInfo","IsImage","IsImageFile"],
 	"description":" Retrieves the value of the IPTC tag for a ColdFusion image.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},

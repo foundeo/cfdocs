@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"isDebugMode()",
 	"returns":"boolean",
-	"related":[],
+	"related":["cfsetting"],
 	"description":"Determines whether debugging output is enabled.",
 	"params": [
 	],

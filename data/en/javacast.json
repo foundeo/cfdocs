@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"javacast(type, variable)",
 	"returns":"any",
-	"related":[],
+	"related":["CreateObject", "cfobject"],
 	"description":"Converts the data type of a CFML variable to pass as an argument to an overloaded method of a Java object.",
 	"params": [
 		{"name":"type","description":"The name of a java primitive or a Java class name.","required":true,"default":"","type":"string","values":["boolean","double","float","int","long","string","null","byte","bigdecimal", "char", "short"]},

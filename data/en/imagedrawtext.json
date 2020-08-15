@@ -4,7 +4,7 @@
 	"syntax":"imageDrawText(name, str, x, y, attributecollection)",
 	"member":"someImage.drawText(str, x, y, attributecollection)",
 	"returns":"void",
-	"related":[],
+	"related":["ImageDrawArc", "ImageDrawBeveledRect", "ImageDrawCubicCurve", "ImageDrawLine", "ImageDrawLines", "ImageDrawOval", "ImageDrawQuadraticCurve", "ImageDrawRect", "ImageDrawRoundRect", "ImageSetAntialiasing", "ImageSetDrawingColor", "ImageTranslateDrawingAxis", "IsImageFile"],
 	"description":" Draws a text string on a ColdFusion image with the baseline of the first character positioned at (x,y) in the image.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
