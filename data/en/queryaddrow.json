@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"queryAddRow(query [, number/row(s)])",
 	"returns":"numeric",
-	"related":[],
+	"related":["QueryAddColumn","QuerySetCell","QueryNew"],
 	"description":" Adds a specified number of empty rows to a query.",
 	"params": [
 		{"name":"query","description":"","required":true,"default":"","type":"query","values":[]},

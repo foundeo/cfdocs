@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"lsIsNumeric(String)",
 	"returns":"boolean",
-	"related":[],
+	"related":["GetLocale","SetLocale"],
 	"description":" Determines whether a string is a valid representation of a\n number in the current locale.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]}

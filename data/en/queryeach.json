@@ -4,7 +4,7 @@
 	"syntax": "queryEach(query, function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
 	"member": "query.each(function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
 	"returns": "void",
-	"related": [],
+	"related": ["QuerySort", "QueryFilter", "QueryKeyExists"],
 	"description": "Iterates over query rows and passes each row per iteration to a callback function",
 	"params": [
 		{"name": "query", "description": "query to loop over", "required": true, "default": "", "type": "query", "values": []},
