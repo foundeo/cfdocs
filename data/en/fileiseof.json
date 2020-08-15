@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"fileIsEOF(file)",
 	"returns":"boolean",
-	"related":[],
+	"related":["FileClose", "FileOpen", "FileRead", "FileReadLine"],
 	"description":"Determines whether ColdFusion has reached the end of the file while reading it.",
 	"params": [
 		{"name":"file","description":"The file object.","required":true,"default":"","type":"any","values":[]}

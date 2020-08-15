@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"getAuthUser()",
 	"returns":"string",
-	"related":[],
+	"related":["cflogin", "cfloginuser", "cflogout", "GetUserRoles", "IsUserInAnyRole", "IsUserInRole", "IsUserLoggedIn"],
 	"description":" Gets the name of an authenticated user.",
 	"params": [
 	],
