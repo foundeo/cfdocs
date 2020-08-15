@@ -2,7 +2,7 @@
 	"name":"cfselect",
 	"type":"tag",
 	"syntax":"<cfselect name=\"\">",
-	"related":[],
+	"related":["cfapplet", "cfcalendar", "cfform", "cfformgroup", "cfformitem", "cfgrid", "cfinput", "cfslider", "cftextarea", "cftree"],
 	"description":"Constructs a drop-down list box form control. Used within a\n cfform tag.\n\n You can populate the list from a query, or by using the HTML\n option tag.",
  	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html",
 	"params": [

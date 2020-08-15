@@ -2,7 +2,7 @@
 	"name":"cfsilent",
 	"type":"tag",
 	"syntax":"<cfsilent>",
-	"related":[],
+	"related":["cfcache", "cfflush", "cfheader", "cfhtmlhead", "cfinclude", "cfsetting"],
 	"description":"Suppresses output produced by CFML within the body of the tag.",
 	"params": [
 	],

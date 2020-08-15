@@ -2,7 +2,7 @@
 	"name":"cfproperty",
 	"type":"tag",
 	"syntax":"<cfproperty name=\"\">",
-	"related":[],
+	"related":["cfargument", "cfcomponent", "cffunction", "cfinvoke", "cfinvokeargument", "cfobject", "cfreturn"],
 	"description":"Defines properties of a CFML component (CFC). Used to\n create complex data types for web services. The attributes of\n this tag are exposed as component metadata and are subject to\n inheritance rules.",
 	"params": [
 		{"name":"name","description":"Specifies the name of the property.","required":true,"default":"","type":"string","values":[]},

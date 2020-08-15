@@ -4,7 +4,7 @@
 	"syntax":"imageDrawOval(name, x, y, width, height [, filled])",
 	"member":"someImage.drawOval(x, y, width, height [, filled])",
 	"returns":"void",
-	"related":[],
+	"related":["ImageDrawArc", "ImageDrawCubicCurve", "ImageDrawQuadraticCurve", "ImageDrawRoundRect", "ImageSetAntialiasing", "ImageSetDrawingColor", "ImageSetDrawingStroke", "IsImageFile"],
 	"description":" Draws an oval.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},

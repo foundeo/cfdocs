@@ -3,7 +3,7 @@
 	"type": "tag",
 	"syntax": "<cfsetting enablecfoutputonly=true|false>",
 	"script": "setting enablecfoutputonly=true|false;",
-	"related": [],
+	"related": ["cfcache", "cfflush", "cfheader", "cfhtmlhead", "cfinclude", "cfprocessingdirective", "cfsilent"],
 	"description": "Controls aspects of page processing, such as the output of content outside cfoutput tags.",
 	"params": [
 		{

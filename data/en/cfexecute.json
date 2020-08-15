@@ -2,7 +2,7 @@
 	"name":"cfexecute",
 	"type":"tag",
 	"syntax":"<cfexecute name=\"\">",
-	"related":[],
+	"related":["cfcollection", "cfindex", "cfobject", "cfreport", "cfsearch", "cfwddx"],
 	"description":"Executes a CFML developer-specified process on a server\n computer.",
 	"params": [
 		{"name":"name","description":"Absolute path of the application to execute.\n\n On Windows, you must specify an extension; for example,\n C:\\myapp.exe.","required":true,"default":"","type":"string","values":[]},

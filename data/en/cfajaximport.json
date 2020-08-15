@@ -2,7 +2,7 @@
 	"name": "cfajaximport",
 	"type": "tag",
 	"syntax": "<cfajaximport>",
-	"related": [],
+	"related": ["cfform", "cfgrid", "cfinput", "cflayout", "cfmenu", "cfpod", "cfsprydataset", "cftextarea", "cftooltip", "cftree", "cfwindow"],
 	"description": "Controls the JavaScript files that are imported for use on pages that use ColdFusion AJAX \n tags and features.",
 	"params": [
 		{
