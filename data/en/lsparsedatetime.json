@@ -11,12 +11,20 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/lsparsedatetime.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/lsparsedatetime.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/lsparsedatetime.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsparsedatetime"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsparsedatetime"}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "lsParseDateTime Example",
+			"description":"This example illustrates use of the lsParseDateTime function.",
+			"code":"lsParseDateTime(\"01/08/2011\")",
+			"result":"{ts '2011-01-08 00:00:00'}"
+		}
 	]
 
 }

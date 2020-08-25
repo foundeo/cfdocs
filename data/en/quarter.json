@@ -12,7 +12,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/quarter.html"},
-		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+.", "docs":"http://docs.lucee.org/reference/functions/quarter.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+.", "docs":"https://docs.lucee.org/reference/functions/quarter.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/quarter"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/quarter"}
 	},
@@ -20,7 +20,7 @@
 	],
 	"examples": [
 		{
-			"title": "Quarter of a datatime object",
+			"title": "Quarter of a datetime object",
 			"description": "",
 			"code": "dt = createdatetime(2016,1,1,5,30,25);\nq = quarter( dt );\nwriteoutput( q );",
 			"result": "1"

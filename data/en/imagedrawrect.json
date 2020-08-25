@@ -16,7 +16,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagedrawrect.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagedrawrect.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/imagedrawrect.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagedrawrect"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagedrawrect"}
 	},
@@ -31,7 +31,7 @@
 		},
 		{
 			"title":"Using drawRect member function",
-			"description":"CF11+ Lucee4.5+ Create an new image. With the new image draw filled rectangle (width=70, height=50) starting at point (x=40,y=50)",
+			"description":"CF11+ Lucee4.5+ Create a new image. With the new image draw filled rectangle (width=70, height=50) starting at point (x=40,y=50)",
 			"code":"imgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.drawRect(40,50,70,50,\"yes\");\r\ncfimage (action=\"writeToBrowser\", source=imgObj);",
 			"result":"",
 			"runnable":true

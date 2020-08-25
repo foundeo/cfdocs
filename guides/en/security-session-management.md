@@ -32,7 +32,7 @@ Depending on the application, you will want to adjust the timeout value to a num
 
 ### Session storage
 
-In our examples here we will be using the cache functions of CFML to store a sesion object (bean) for each logged in user to our system. This is arbitrary and you could just as easily use a database, in-memory database, virtual file system (e.g. RAM://), or flat file storage with XML or JSON - or some combination thereof, for example.
+In our examples here we will be using the cache functions of CFML to store a session object (bean) for each logged in user to our system. This is arbitrary and you could just as easily use a database, in-memory database, virtual file system (e.g. RAM://), or flat file storage with XML or JSON - or some combination thereof, for example.
 
 We have found, through trial and error, that using the cache functions is fast and allows us to use distributed caching in large enterprise applications without sticky sessions to maintain the session across clusters, and is our preferred way of storing session data. 
 
@@ -115,7 +115,7 @@ Now that we have a sesson object (bean) to check, we have to see if the user id 
             variables.fw.redirect( action = 'main.login', queryString = "msg=502" );            
         }
 
-In the above code we check if the user id is zero, which is specified as the default value in our bean's init() method upon creation. If it *is* zero, then the user does not have a valid session and is redirected back to the login page. If the user is is a non-zero value, then we know we now have a valid session and can proceed to operate on that session object to a) rotate the users session and b) update the users session with the last action datetime, as follows:
+In the above code we check if the user id is zero, which is specified as the default value in our bean's init() method upon creation. If it *is* zero, then the user does not have a valid session and is redirected back to the login page. If the user is a non-zero value, then we know we now have a valid session and can proceed to operate on that session object to a) rotate the users session and b) update the users session with the last action datetime, as follows:
 
         // lock the session and rotate the session id (for every request)
         lock scope='session' timeout='10' {
@@ -152,7 +152,7 @@ We then update the session's last action and save the session back into the cach
 
 This code first clears any existing session object from the cache, then updates the session object's (bean's) last action datetime, saves the user's session object (bean) back to the cache and returns the updated session object.
 
-We split this into two parts because session rotation can be tricky in some applications. For example, using the browsers 'back' function can (and will) cause the cookie being sent from the browser to be the formerly assigned cookie value which is no longer valid. For this reason and for some applications we simply comment out, or leave out compeltely, the session rotation.
+We split this into two parts because session rotation can be tricky in some applications. For example, using the browsers 'back' function can (and will) cause the cookie being sent from the browser to be the formerly assigned cookie value which is no longer valid. For this reason and for some applications we simply comment out, or leave out completely, the session rotation.
 
 Finally, we re-set the users cookie value with the new (rotated) and encrypted session id, as follows:
 

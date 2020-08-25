@@ -144,7 +144,7 @@
 			"name": "mimeattach",
 			"required": false,
 			"type": "string",
-			"description": "Path of file to attach to message. Attached file is MIME-encoded. CFML attempts to determine the MIME type of the file; use the cfmailparam tag to send an attachement and specify the MIME type.",
+			"description": "Path of file to attach to message. Attached file is MIME-encoded. CFML attempts to determine the MIME type of the file; use the cfmailparam tag to send an attachment and specify the MIME type.",
 			"default": "",
 			"values": []
 		},
@@ -348,7 +348,7 @@
 		"lucee": {
 			"minimum_version": "",
 			"notes": "",
-			"docs": "http://docs.lucee.org/reference/tags/mail.html"
+			"docs": "https://docs.lucee.org/reference/tags/mail.html"
 		},
 		"railo": {
 			"minimum_version": "",

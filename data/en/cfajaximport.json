@@ -7,7 +7,7 @@
 	"params": [
 		{
 			"name": "scriptsrc",
-			"description": "Specifies the URL, relative to the web root, of the \n directory that contains the JavaScript files used \n used by ColdFusion. When you use this attribute, \n the specified directory must have the same \n structure as the /CFIDE/scripts directory.",
+			"description": "Specifies the URL, relative to the web root, of the \n directory that contains the JavaScript files \n used by ColdFusion. When you use this attribute, \n the specified directory must have the same \n structure as the /CFIDE/scripts directory.",
 			"required": false,
 			"default": "",
 			"type": "string",
@@ -31,7 +31,7 @@
 		},
 		{
 			"name": "attributecollection",
-			"description": "You can specify this tag's attributes in an attributeCollection whose value is a \n structure. Specify the structure name in the attributeCollection and use the tag\u00e2\u20ac\u0161 \n attribute names as structure keys.",
+			"description": "You can specify this tag's attributes in an attributeCollection whose value is a \n structure. Specify the structure name in the attributeCollection and use the tag \n attribute names as structure keys.",
 			"required": false,
 			"default": "",
 			"type": "string",
@@ -47,7 +47,7 @@
 		"lucee": {
 			"minimum_version": "",
 			"notes": "",
-			"docs": "http://docs.lucee.org/reference/tags/ajaximport.html"
+			"docs": "https://docs.lucee.org/reference/tags/ajaximport.html"
 		},
 		"railo": {
 			"minimum_version": "",

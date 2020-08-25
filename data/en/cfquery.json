@@ -8,7 +8,7 @@
 	"params": [
 		{"name":"name","description":"Name of query. Used in page to reference query record set.\n Must begin with a letter. Can include letters, numbers,\n and underscores.","required":false,"default":"","type":"string","values":[]},
 		{"name":"datasource","description":"Name of data source from which query gets data. As of CF9+ you can specify a default datasource in Application.cfc using the variable this.datasource","required":false,"default":"","type":"string","values":[]},
-		{"name":"timezone","description":"Lucee4+ the timezone used to convert a date object to a timestamp (string), this value is needed when your database runs in another timezone and you are not using cfqueryparam to to insert dates.","required":false,"default":"","type":"string","values":[]},
+		{"name":"timezone","description":"Lucee4+ the timezone used to convert a date object to a timestamp (string), this value is needed when your database runs in another timezone and you are not using cfqueryparam to insert dates.","required":false,"default":"","type":"string","values":[]},
 		{"name":"dbtype","description":"Type of source query against which the SQL will be executed. Specify either dbtype or dataSource, not both.  Supports the following values: `query`: for querying an existing query object (i.e. Query of Queries); `hql`: for querying an ORM. NOTE: Supported SQL syntax varies depending on this value.","required":false,"default":"","type":"string","values":["query","hql"]},
 		{"name":"username","description":"Overrides username in data source setup.","required":false,"default":"","type":"string","values":[]},
 		{"name":"password","description":"Overrides password in data source setup.","required":false,"default":"","type":"string","values":[]},
@@ -31,7 +31,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfquery.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/query.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/query.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfquery"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfquery"}
 	},
@@ -63,7 +63,7 @@
 		},
 		{
 			"title": "Script Syntax using new Query()",
-			"description": "This syntax was implemented by script-based components in CF 9 & 10. It is superceded by queryExecute() in CF11.",
+			"description": "This syntax was implemented by script-based components in CF 9 & 10. It is superseded by queryExecute() in CF11.",
 			"code": "queryObj = new Query(\r\n name=\"qryDemo\",\r\n datasource=\"mydatasourcename\",\r\n sql = \"SELECT col1, col2\r\n FROM myTable\r\n WHERE id=:id\"\r\n); \r\nqueryObj.addParam(name=\"id\",value=arguments.id, cfsqltype=\"cf_sql_integer\");\r\nresultset=queryObj.execute().getResult();",
 			"result": ""
 		},
@@ -78,6 +78,11 @@
 			"description":"Lucee5+ Return a query object converted into a struct of structs. (Struct key is based on the \"columnkey\" parameter)",
 			"code":"<!--- create a dummy query using queryNew --->\n<cfset users = queryNew(\"id, firstname\", \"integer, varchar\", [{\"id\":1, \"firstname\":\"Han\"}])>\n<cfset writeDump(users)>\n\n<!--- run QofQ (query of query) --->\n<cfquery name=\"subUsers\" dbtype=\"query\" returntype=\"struct\" columnkey=\"id\">\n    SELECT * FROM users\n</cfquery>\n<cfset writeDump(subUsers)>",
 			"result":"{ 1: { id: 1, firstname: \"Han\" } }"
+		},
+		{
+			"title":"Insert a Record and Retrieve the Generated Key",
+			"description":"Inserts a new record into a table called myTable. The \"ID\" column is an auto-incremented primary key column.",
+			"code":"<!--- insert the new record --->\n<cfquery datasource=\"myDatasource\" result=\"result\">\nINSERT INTO myTable ( name, email ) VALUES ( 'Joe', 'joe@domain.com' )\n</cfquery>\n\n<!--- output the new primary key --->\n<cfdump var=\"#result.generatedKey#\" />"
 		}
 
 	]

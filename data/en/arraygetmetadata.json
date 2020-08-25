@@ -13,5 +13,18 @@
 		"coldfusion": {"minimum_version":"2016.0.2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraygetmetadata.html"}
 	},
   	"links": [],
-  	"examples": []
+	"examples": [
+		{
+			"title": "Simple Example",
+			"description": "",
+			"code": "// Create an array\narrayList = [\"apple\", \"pineapple\", \"mango\"];\n\n// Fetch meta data\ndata = arrayGetMetadata(arrayList);\n\n// Print array type\nwriteOutput(data.type);",
+			"result": "synchronized"
+		},
+		{
+			"title": "Member Function Example",
+			"description": "",
+			"code": "// Create an array\narrayList = [\"apple\", \"pineapple\", \"mango\"];\n\n// Fetch meta data\ndata = arrayList.getMetadata();\n\n// Print array type\nwriteOutput(data.type);",
+			"result": "synchronized"
+		}
+	]
 }

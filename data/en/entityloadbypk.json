@@ -1,19 +1,28 @@
 {
 	"name":"entityLoadByPK",
 	"type":"function",
-	"syntax":"entityLoadByPK(entityName, id)",
+	"syntax":"entityLoadByPK(entity, id)",
 	"returns":"any",
 	"related":["entityLoadByExample"],
-	"description":" Loads and returns an array of objects for given primary key.",
+	"description":"Loads and returns an array of objects for given primary key.\nUse this function to avoid specifying the required boolean parameter in `EntityLoad()`.",
 	"params": [
-		{"name":"entityName","description":"Name of the entity to be loaded","required":true,"default":"","type":"string","values":[]},
-		{"name":"id","description":"ID of the entity to be loaded","required":true,"default":"","type":"string","values":[]},
-		{"name":"unique","description":"Lucee4.5+ Specify whether you expect multiple or just one record\nIf set to `true`, the entity is returned\nIf set to `false` an array is returned to support multiple entities\nIf set to `true` but multiple entities would be returned an error will be thrown","required":false,"default":"","type":"boolean","values":[]}
+		{"name":"entity","description":"Name of the entity to be loaded.","required":true,"default":"","type":"string","values":[]},
+		{"name":"id","description":"ID of the entity to be loaded.","required":true,"default":"","type":"string","values":[]},
+		{"name":"unique","description":"Lucee4.5+ Specify whether you expect multiple or just one record.\nIf set to `true`, the entity is returned.\nIf set to `false` an array is returned to support multiple entities.\nIf set to `true` but multiple entities would be returned an error will be thrown.","required":false,"default":"","type":"boolean","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entityloadbypk.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/entityloadbypk.html"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entityloadbypk.html"},
+		"lucee": {"minimum_version":"", "notes":"Allows the optional `unique` parameter.", "docs":"https://docs.lucee.org/reference/functions/entityloadbypk.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entityloadbypk"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Load an existing User object",
+			"description": "",
+			"code": "user = entityLoadByPK(\"User\", userID);",
+			"result": "",
+			"runnable":false
+		}
+	]
 }

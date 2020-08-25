@@ -9,11 +9,12 @@
 	"params": [
 		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
 		{"name":"closure","description":"A function / closure with the signature: `boolean function (any item, [numeric index], [array array])`","required":true,"default":"","type":"function","values":[]},
-		{"name":"parallel","description":"When `true` the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[true, false]},
-		{"name":"maxThreads","description":"The number of threads to use when `parallel=true`","required":false,"default":"20","type":"boolean","values":[]}
+		{"name":"parallel","description":"Lucee4.5+ When `true` the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[]},
+		{"name":"maxThreads","description":"Lucee4.5+ The number of threads to use when `parallel=true`","required":false,"default":"20","type":"boolean","values":[]}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/arrayevery.html"}
+		"coldfusion":{"minimum_version":"2018.0.5", "notes":"", "docs":"https://helpx.adobe.com/uk/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayevery.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arrayevery.html"}
 	},
 	"links": [{
 		"title":"Map, Reduce and other Higher Order Functions",

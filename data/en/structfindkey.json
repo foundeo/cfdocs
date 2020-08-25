@@ -3,8 +3,9 @@
 	"type":"function",
 	"syntax":"structFindKey(top, value, scope)",
 	"returns":"array",
-	"related":[],
+	"related":["structFindValue"],
 	"description":" Searches recursively through a substructure of nested arrays,\n structures, and other elements, for structures whose keys\n match the search key in the value parameter.",
+	"member":"struct.findKey( value, scope )",
 	"params": [
 		{"name":"top","description":"CFML object (structure or array) from which to start\n search. This attribute requires an object, not a name of\n an object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"value","description":"String or a variable that contains one for which to search.","required":true,"default":"","type":"string","values":[]},
@@ -13,12 +14,29 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structfindkey.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/structfindkey.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/structfindkey.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structfindkey"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structfindkey"}
 	},
-	"links": [
-
+	"links": [],
+	"examples": [
+		{
+			"title": "Find first match for a nested struct key",
+			"description": "",
+			"code": "Beatles = {\n  person1: { id: 1, firstName: 'John', lastName: 'Lennon' },\n  person2: { id: 2, firstName: 'Paul', lastName: 'McCartney' },\n  person3: { id: 3, firstName: 'George', lastName: 'Harrison' },\n  person5: { id: 5, firstName: 'Abbey', lastName: 'Road' },\n  person4: { id: 4, firstName: 'Ringo', lastName: 'Starr' }\n};\nmyKey = structFindKey( Beatles, 'lastName', 'one' );\nwriteOutput( serializeJSON( myKey ) );",
+			"result": "[{\"path\":\".PERSON3.LASTNAME\",\"owner\":{\"LASTNAME\":\"Harrison\",\"FIRSTNAME\":\"George\",\"ID\":3},\"value\":\"Harrison\"}]"
+		},
+		{
+			"title": "Find all matches of a nested struct key",
+			"description": "",
+			"code": "Beatles = {\n  person1: { id: 1, firstName: 'John', lastName: 'Lennon' },\n  person2: { id: 2, firstName: 'Paul', lastName: 'McCartney' },\n  person3: { id: 3, firstName: 'George', lastName: 'Harrison' },\n  person4: { id: 4, firstName: 'Ringo', lastName: 'Starr' }\n};\nmyKey = structFindKey( Beatles, 'lastName', 'all' );\nwriteOutput( serializeJSON( myKey ) );",
+			"result": "[{\"path\":\".PERSON3.LASTNAME\",\"owner\":{\"LASTNAME\":\"Harrison\",\"FIRSTNAME\":\"George\",\"ID\":3},\"value\":\"Harrison\"},{\"path\":\".PERSON1.LASTNAME\",\"owner\":{\"LASTNAME\":\"Lennon\",\"FIRSTNAME\":\"John\",\"ID\":1},\"value\":\"Lennon\"},{\"path\":\".PERSON2.LASTNAME\",\"owner\":{\"LASTNAME\":\"McCartney\",\"FIRSTNAME\":\"Paul\",\"ID\":2},\"value\":\"McCartney\"},{\"path\":\".PERSON4.LASTNAME\",\"owner\":{\"LASTNAME\":\"Starr\",\"FIRSTNAME\":\"Ringo\",\"ID\":4},\"value\":\"Starr\"}]"
+		},
+		{
+			"title": "Find first match for a nested struct key using member function",
+			"description": "CF11+ calling the findKey member function on a struct.",
+			"code": "Beatles = {\n  person1: { id: 1, firstName: 'John', lastName: 'Lennon' },\n  person2: { id: 2, firstName: 'Paul', lastName: 'McCartney' },\n  person3: { id: 3, firstName: 'George', lastName: 'Harrison' },\n  person5: { id: 5, firstName: 'Abbey', lastName: 'Road' },\n  person4: { id: 4, firstName: 'Ringo', lastName: 'Starr' }\n};\nmyKey = Beatles.findKey( 'lastName', 'one' );\nwriteOutput( serializeJSON( myKey ) );",
+			"result": "[{\"path\":\".PERSON3.LASTNAME\",\"owner\":{\"LASTNAME\":\"Harrison\",\"FIRSTNAME\":\"George\",\"ID\":3},\"value\":\"Harrison\"}]"
+		}
 	]
-
 }

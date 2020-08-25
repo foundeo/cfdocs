@@ -8,7 +8,7 @@
 		{"name": "biography", "description": "Specifies the biography of the presenter.", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "name", "description": "Specifies the name of the presenter.", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "email", "description": "The name to use for the JavaScript proxy class.", "required": false, "default": "", "type": "string", "values": []},
-		{"name": "image", "description": "Specifies the path for the presenter's image in JPEG format.\n The JPG file must be relative to theCFM page.", "required": false, "default": "", "type": "string", "values": []},
+		{"name": "image", "description": "Specifies the path for the presenter's image in JPEG format.\n The JPG file must be relative to the CFM page.", "required": false, "default": "", "type": "string", "values": []},
 		{"name": "logo", "description": "Specifies the path for the presenter's logo or the logo of\n the presenters organization. The logo must be in JPEG format.\n The file must be relative to the CFM page.", "required": false, "default": "", "type": "string", "values": []},
 		{"name": "title", "description": "Specifies the title of the presenter.", "required": false, "default": "", "type": "string", "values": []}
 	],

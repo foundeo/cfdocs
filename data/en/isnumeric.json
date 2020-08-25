@@ -11,7 +11,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isnumeric.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/isnumeric.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isnumeric.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isnumeric"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isnumeric"}
 	},
@@ -34,7 +34,7 @@
 		{
 			"title":"Scientific Notation",
 			"description":"The number `5e2` is scientific notation for `5 x 10^2` aka `500`",
-			"code":"isNumeric(\"5e2\")",
+			"code":"isNumeric(5e2)",
 			"result":"YES"
 		}
 	]

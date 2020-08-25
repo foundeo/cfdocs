@@ -8,7 +8,7 @@
     "arrayDeleteAt",
     "arrayDeleteNoCase"
   ],
-  "description": "Deletes the first element in an array that matches the value of `value`.\nThe search is case sensitive.\nReturns `true` if the element was found and removed.\nThe array will be resized, so that the deleted element doesn't leave a gap.",
+  "description": "Deletes the first element in an array that matches the value of `value`.\nThe search is case-sensitive.\nReturns `true` if the element was found and removed.\nThe array will be resized, so that the deleted element doesn't leave a gap.",
   "params": [
     {
       "name": "array",
@@ -20,7 +20,7 @@
     },
     {
       "name": "value",
-      "description": "A value for which to search. Case sensitive.",
+      "description": "A value for which to search. Case-sensitive.",
       "required": true,
       "default": "",
       "type": "any",
@@ -47,7 +47,7 @@
     "lucee": {
       "minimum_version": "",
       "notes": "",
-      "docs": "http://docs.lucee.org/reference/functions/arraydelete.html"
+      "docs": "https://docs.lucee.org/reference/functions/arraydelete.html"
     }
   },
   "links": [],

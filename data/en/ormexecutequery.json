@@ -9,12 +9,12 @@
 		{"name":"hql","description":"A HQL query statement","required":true,"default":"","type":"string","values":[]},
 		{"name":"params","description":"A struct or array of query params.","required":false,"default":"","type":"any","values":[]},
 		{"name":"unique","description":"If true returns a single entity instead of an array.","required":false,"default":"","type":"boolean","values":[]},
-		{"name":"queryoptions","description":"A struct with possible keys: ignorecase, maxResults, cacheable, timeout, datasource","required":false,"default":"","type":"string","values":[]}
+		{"name":"queryoptions","description":"A struct with possible keys: ignorecase, maxResults, offset, cacheable, timeout, datasource","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormexecutequery.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/ormexecutequery.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/ormexecutequery.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ormexecutequery"}
 	},
 	"links": [

@@ -13,7 +13,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"CF11+ Added Application.cfc setting this.serialization.preserveCaseForStructKey which defaults to true, also added useCustomSerializer argument.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/serializejson.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/serializejson.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/serializejson.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/serializejson"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/serializejson"}
 	},
@@ -25,7 +25,7 @@
 		},
 		{
 			"title":"JSONUtil.cfc",
-			"description":"A CFC that provides JSON serialization and deserializtion. It is written in CFML so it works on versions prior to CF8. It may be useful if you are experiencing automatic type conversion issues with the builtin serializeJSON function.",
+			"description":"A CFC that provides JSON serialization and deserializtion. It is written in CFML so it works on versions prior to CF8. It may be useful if you are experiencing automatic type conversion issues with the built-in serializeJSON function.",
 			"url":"https://github.com/CFCommunity/jsonutil"
 		}
 	],
@@ -38,7 +38,7 @@
 		},
 		{
 			"title":"Lower Case Keys",
-			"description":"Same as above but they variable names are case sensitive by quoting them.",
+			"description":"Same as above but they variable names are case-sensitive by quoting them.",
 			"code":"person = {\"name\"=\"Pete Freitag\", \"company\"=\"Foundeo\"};\nwriteOutput( serializeJSON(person) );",
 			"result": "{\"company\":\"Foundeo\",\"name\":\"Pete Freitag\"}"
 		},

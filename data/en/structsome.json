@@ -1,21 +1,57 @@
 {
 	"name": "structSome",
 	"type": "function",
-	"syntax": "structSome(struct, closure [, parallel] [, maxThreads])",
-	"member": "struct.some(closure [, parallel] [, maxThreads])",
+	"syntax": "structSome(struct, function(key, value [,struct]){} [, parallel] [, maxThreads])",
+	"member": "struct.some(function(key, value [,struct]){} [, parallel] [, maxThreads])",
 	"returns": "boolean",
-	"related": [],
+	"related": ["structEach","structMap","structReduce","structFilter"],
 	"description": "This function calls a given closure/function with every element in a given struct and returns true, if one of the closure calls returns true",
 	"params": [
 		{"name": "struct", "description": "", "required": true, "default": "", "type": "struct", "values": []},
-		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "parallel", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "numeric", "values": []}
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
+			"callback_params": [
+			{
+				"values": [],
+				"default": "",
+				"description": "The key for the current iteration",
+				"name": "key",
+				"type": "string",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "The value for the current iteration",
+				"name": "value",
+				"type": "any",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "A reference of the original struct",
+				"name": "struct",
+				"type": "struct",
+				"required": false
+			}],"type":"boolean","required":"true","values":[],"default":""},
+		{"name":"parallel","description":"Lucee4.5+ true if the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[true, false]},
+		{"name":"maxThreads","description":"Lucee4.5+ the maximum number of threads to use when parallel = true","required":false,"default":"20","type":"numeric","values":[]}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/structsome.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/structsome.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"The simple StructSome example",
+			"description":"Here we have simple example about structsome function.",
+			"code":"<cfscript>\r\nvar struct={\"Name\":\"Raja\",\"age\":20,\"mark\":80};\r\nresult = structSome(struct,function(key,value){\r\n\treturn key IS \"Name\"\r\n});\r\nwriteOutput((result ? '' : 'No')& \" Key Exists.\")\r\n</cfscript>",
+			"result":"Key Exists."
+		},
+		{
+			"title":"The structSome member function example",
+			"description":"Here we have simple example about structsome as member function.",
+			"code":"<cfscript>\r\nvar struct={\"Name\":\"Raja\",\"age\":20,\"mark\":80};\r\nresult = struct.some(function(key,value){\r\n\treturn key IS \"average\"\r\n});\r\nwriteOutput((result ? '' : 'No')&\" Key Exists.\")\r\n</cfscript>",
+			"result":"No Key Exists."
+		}
+	],
 	"links": [{
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",

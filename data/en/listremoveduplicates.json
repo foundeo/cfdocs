@@ -12,11 +12,11 @@
     "engines": {
         "coldfusion": {"minimum_version":"10", "notes":"ColdFusion 10: Added this function", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listremoveduplicates.html"},
         "railo": {"minimum_version":"4.0", "notes":"", "docs":"http://www.getrailo.org/javadoc-4-0/railo/runtime/functions/list/ListRemoveDuplicates.html"},
-        "lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/listremoveduplicates.html"}
+        "lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/listremoveduplicates.html"}
     },
     "examples": [
         {
-            "title": "Basic usage (case sensitive)",
+            "title": "Basic usage (case-sensitive)",
             "description": "Basic usage. Optional arguments left as defaults.",
             "code": "listRemoveDuplicates(\"one,two,three,four,five,one,five,three\")",
             "result": "one,two,three,four,five"

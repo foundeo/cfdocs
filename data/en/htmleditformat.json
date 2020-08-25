@@ -16,7 +16,7 @@
     {
       "name": "version",
       "required": false,
-      "default": "",
+      "default": "2.0",
       "description": "HTML version to use; currently ignored.",
       "type": "numeric",
       "values": [ -1, 2.0, 3.2 ]
@@ -26,7 +26,7 @@
   "engines": {
     "coldfusion": { "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/htmleditformat.html",
       "minimum_version": "", "notes": "Use encodeForHTML, which can provide more protection from XSS.", "deprecated" : "11" },
-    "lucee":      { "docs": "http://docs.lucee.org/reference/functions/htmleditformat.html",
+    "lucee":      { "docs": "https://docs.lucee.org/reference/functions/htmleditformat.html",
       "minimum_version": "", "notes": "" },
     "openbd":     { "docs": "http://openbd.org/manual/?/function/htmleditformat",
       "minimum_version": "", "notes": "" },

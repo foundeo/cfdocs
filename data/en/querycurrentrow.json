@@ -10,8 +10,22 @@
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querycurrentrow.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querycurrentrow.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"Simple QueryCurrentRow Example",
+			"description":"Here we've example to get the currentRow number.",
+			"code":"<cfset myQuery = queryNew(\"id,name\",\"integer,varchar\",[[1,\"Rajesh\"],[2,\"Anil\"]])>\r\n<cfloop query=\"myQuery\">\r\n\t<cfif name Eq \"Anil\">\r\n\t\t<cfoutput>#queryCurrentRow(myQuery)#</cfoutput>\r\n\t</cfif>\r\n</cfloop>",
+			"result":"2"
+		},
+		{
+			"title":"Simple currentRow Example",
+			"description":"Here we've example to get the currentRow number from query using script syntax.",
+			"code":"<cfscript>\r\nvar myQuery = queryNew(\"id,title\",\"integer,varchar\",[[1,\"Charlottes Web\"],[3,\"The Outsiders\"],[4,\"Mieko and the Fifth Treasure\"]]);\r\ncfloop(query = \"myQuery\"){\r\n\tif (title Eq \"Mieko and the Fifth Treasure\"){\r\n\t\twriteOutput(myQuery.currentRow());\r\n\t}\r\n}\r\n</cfscript>",
+			"result":"3"
+		}
+	]
+	
 }

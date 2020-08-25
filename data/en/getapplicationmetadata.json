@@ -9,11 +9,17 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getapplicationmetadata.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/getapplicationmetadata.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/getapplicationmetadata.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getapplicationmetadata"}
 	},
-	"links": [
-
-	]
+	"examples" : [
+		{
+			"title": "Simple Example",
+			"description": "Prints the statements using application meta data.",
+			"code": "// Fetch application meta data\r\ndata = getApplicationMetadata();\r\n\r\n// Print application name\r\nwriteOutput(\"Application name is \" & (data.name.length() ? data.name : \"unspecified\") & \"<br>\");\r\n\r\n// Print session timeout\r\nwriteOutput(\"Session timeout is \" & data.sessionTimeout & \"<br>\");\r\n\r\n// Print session management\r\nwriteOutput(\"Session management is \" & (data.sessionManagement ? \"enabled\" : \"disabled\"));",
+			"result": ""
+		}
+	],
+	"links": []
 
 }

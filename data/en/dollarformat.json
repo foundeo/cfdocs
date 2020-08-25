@@ -10,7 +10,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"DollarFormat Rounding Bug CF-4199995 - Certain inputs do not cause dollarFormat to round up, for example 6.5850 results in $6.58, yet 6.585 results in $6.59. Consider using numberFormat as a workaround.\nhttps://tracker.adobe.com/#/view/CF-4199995", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/dollarformat.html"},
-		"lucee": {"minimum_version":"", "notes":"This bug mentioned for ACF also existed in Lucee 4.5, but seams to be fixed in Lucee 5.\nhttps://luceeserver.atlassian.net/browse/LDEV-574", "docs":"http://docs.lucee.org/reference/functions/dollarformat.html"},
+		"lucee": {"minimum_version":"", "notes":"This bug mentioned for ACF also existed in Lucee 4.5, but seems to be fixed in Lucee 5.\nhttps://luceeserver.atlassian.net/browse/LDEV-574", "docs":"https://docs.lucee.org/reference/functions/dollarformat.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/dollarformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dollarformat"}
 	},

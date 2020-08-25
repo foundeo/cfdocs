@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"rand([algorithm])",
 	"returns":"numeric",
-	"related":[],
+	"related":["Randomize", "RandRange"],
 	"description":" Generates a pseudo-random number in the range 0 - 1.",
 	"params": [
 		{"name":"algorithm","description":"The algorithm to use to generated the random number.","required":false,"default":"CFMX_COMPAT","type":"string","values":["CFMX_COMPAT","SHA1PRNG","IBMSecureRandom"]}
@@ -11,12 +11,16 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/rand.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/rand.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/rand.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/rand"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/rand"}
 	},
 	"links": [
-
+		{
+		"title":"Rand function",
+		"description":"To Generate Random Times In ColdFusion",
+		"url":"https://www.bennadel.com/blog/667-using-rand-to-generate-random-times-in-coldfusion.htm"
+		}
 	],
 	"examples": [
 		{

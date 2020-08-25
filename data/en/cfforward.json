@@ -1,0 +1,30 @@
+{
+	"name":"cfforward",
+	"type":"tag",
+	"syntax":"<cfforward template=\"page.cfm\">",
+	"script":"cfforward( \"page.cfm\" );",
+	"related":["cflocation"],
+	"description":"Leads the request to a different page. This tag acts like the tag cflocation except that the relocation is done directly on the server.",
+	"params": [
+		{"name":"template","description":"A logical path to a CFML page.","required":true,"type":"string","values":[]}
+	],
+	"engines": {
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/forward.html"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfforward"}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "",
+			"code": "\r\ncfforward( \"mypage.cfm\" );",
+			"result": ""
+		},
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cfforward template=\"mypage.cfm\">",
+			"result": ""
+		}
+	]
+}

@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"isNumericDate(number)",
 	"returns":"boolean",
-	"related":[],
+	"related":["IsDate", "ParseDateTime"],
 	"description":"Evaluates whether a real number is a valid representation of a\n date (date/time object).\n\nSame as isValid(\"date\", date)",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
@@ -11,12 +11,30 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isnumericdate.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/isnumericdate.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isnumericdate.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isnumericdate"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isnumericdate"}
 	},
 	"links": [
-
+		{
+			"title":"Learning IsNumericDate by Ben Nadel",
+			"url":"https://www.bennadel.com/blog/228-quick-note-on-isdate-vs-isnumericdate.htm",
+			"description":"Tutorial style article on using the IsNumericDate function in CFML."
+		}
+	],
+	"examples": [
+		{
+			"title": "Simple example",
+			"description": "To determine whether a string can be converted to a date/time value.",
+			"code": "<cfset Date = isNumericDate(now()) >\r\n<cfoutput>#Date#</cfoutput>",
+			"result": "Yes"
+		},
+		{
+			"title": "Simple example",
+			"description": "To determine whether a string can be converted to a date/time value.",
+			"code": "<cfset result = isNumericDate(\"Monday\")>\r\n<cfoutput>#result#</cfoutput>",
+			"result": "No"
+		}
 	]
 
 }

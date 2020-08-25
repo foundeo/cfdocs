@@ -12,8 +12,22 @@
 		{"name": "row_number", "description": "", "required": false, "default": "-9999", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/querygetcell.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querygetcell.html"}
 	},
-	"examples": [],
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"The simple querygetcell example",
+			"description":"Here we've example about querygetcell. We created query using queryNew() then we got the last title column value using querygetCell. If we give row number displays the particular row title value otherwise it displays last row value.",
+			"code":"<cfset myQuery = queryNew(\"id,name\",\"integer,varchar\",[[1,\"Rajesh\"],[2,\"Anil\"]])>\r\n<cfoutput>#querygetcell(myQuery,'name')#</cfoutput>",
+			"result":"Anil"
+		},
+		{
+			"title":"The simple querygetcell (getCell) script based example",
+			"description":"Here we've the example to get particular column(title) value in script syntax",
+			"code":"<cfscript>\r\nvar myQuery = queryNew(\"id,title\",\"integer,varchar\",[[1,\"Charlottes Web\"],[3,\"The Outsiders\"],[4,\"Mieko and the Fifth Treasure\"]]);\r\nwriteOutput(myQuery.getCell('title',2));\r\n</cfscript>",
+			"result":"The Outsiders"
+		}
+	]
+	
 }

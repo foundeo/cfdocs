@@ -4,14 +4,14 @@
 	"syntax":"formatBaseN(number, radix)",
 	"returns":"string",
 	"related":["parseNumber","inputBaseN","toString"],
-	"description":"String Converts number to a string, in the base specified by radix.",
+	"description":"Converts number to a string, in the base specified by radix.",
 	"params": [
 		{"name":"number","description":"The number to convert","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"radix","description":"The base radix to use","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/formatbasen.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/formatbasen.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/formatbasen.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/formatbasen"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/formatbasen"}
 	},

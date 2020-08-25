@@ -1,21 +1,58 @@
 {
 	"name": "arraySome",
 	"type": "function",
-	"syntax": "arraySome(array, closure [, parallel] [, maxThreads])",
-	"member": "array.some(closure [, parallel] [, maxThreads])",
+	"syntax":"arraySome(array, function(item [,index, array]){} [, parallel] [, maxThreads])",
+	"member":"someArray.some(function(item [,index, array]){} [, parallel] [, maxThreads])",
 	"returns": "boolean",
 	"related": ["arrayEvery"],
 	"description": "Calls a given closure/function with every element in a given array and returns true if one of the closure calls returns true",
 	"params": [
 		{"name": "array", "description": "Array to iterate", "required": true, "default": "", "type": "array", "values": []},
-		{"name": "closure", "description": "Function/closure that implements the following constructor [function(any value[,numeric index,array array]):boolean].", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "parallel", "description": "Execute closures parallel", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "Maximum number of threads executed, ignored when argument \"parallel\" is set to false", "required": false, "default": "20", "type": "numeric", "values": []}
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
+			"callback_params": [
+			{
+				"values": [],
+				"default": "",
+				"description": "The value for the current iteration",
+				"name": "value",
+				"type": "any",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "The current index for the iteration",
+				"name": "index",
+				"type": "numeric",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "A reference of the original array",
+				"name": "array",
+				"type": "array",
+				"required": false
+			}],"type":"boolean","required":"true","values":[],"default":""},
+		{"name": "parallel", "description": "Lucee4.5+ Execute closures parallel", "required": false, "default": "", "type": "boolean", "values": []},
+		{"name": "maxThreads", "description": "Lucee4.5+ Maximum number of threads executed, ignored when argument \"parallel\" is set to false", "required": false, "default": "20", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraysome.html"}
+		"coldfusion":{"minimum_version":"2018.0.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraysome.html"},
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/arraysome.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title": "Simple Example",
+			"description": "",
+			"code": "// Create an array\r\narrayList = [\"apple\", \"pineapple\", \"mango\", \"apricot\"];\r\n\r\n// Match some\r\nresult = arraySome(arrayList, function(fruit) {\r\n    return fruit.startsWith(\"a\");\r\n});\r\n\r\n// Print result\r\nwriteOutput((result ? \"Some\" : \"No\") & \" matches  were found!\");",
+			"result": "Some matches were found!"
+		},
+		{
+			"title": "Member Function Example",
+			"description": "",
+			"code": "// Create an array\r\narrayList = [\"apple\", \"pineapple\", \"mango\", \"apricot\"];\r\n\r\n// Match some\r\nresult = arrayList.some(function(fruit) {\r\n    return fruit.endsWith(\"a\");\r\n});\r\n\r\n// Print result\r\nwriteOutput((result ? \"Some\" : \"No\") & \" matches  were found!\");",
+			"result": "No matches were found!"
+		}
+	],
 	"links": [{
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",

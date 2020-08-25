@@ -4,14 +4,23 @@
 	"syntax":"entityDelete(entity)",
 	"returns":"void",
 	"related":["entitySave","entityReload","entityMerge","entityToQuery"],
-	"description":" Deletes the record from the database for the specified entity.\nentityDelete(entity)",
+	"description":"Deletes the record from the database for the specified entity. Depending on the cascade attribute specified in the mapping, it deletes the associated objects also.",
 	"params": [
 		{"name":"entity","description":"Name of the entity being deleted.","required":true,"default":"","type":"variableName","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entitydelete.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/entitydelete.html"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entitydelete.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/entitydelete.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entitydelete"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Delete an existing entity",
+			"description": "Loads an ORM entity from the database, then deletes it",
+			"code": "user = entityLoadByPK(\"User\", userID);\nentityDelete(user);",
+			"result": "",
+			"runnable": false
+		}
+	]
 }

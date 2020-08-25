@@ -10,8 +10,17 @@
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryrecordcount.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/queryrecordcount.html"},
+		"coldfusion":{"minimum_version":"2018.0.5", "notes":"New function in Update 5", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryrecordcount.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"Returns the record count of the query",
+			"description":"",
+			"code":"heroes = queryNew(\"id,Name\",\r\n            \"integer,varchar\",\r\n            [\r\n                {\"id\":1,\"Name\":\"Bruce Banner\"},\r\n                {\"id\":2,\"Name\":\"Tony Stark\"},\r\n                {\"id\":3,\"Name\":\"Bobby Drake\"},\r\n                {\"id\":4,\"Name\":\"Jean Grey\"}\r\n            ]\r\n            )\r\n    writeDump(heroes.recordCount());",
+			"result":"4",
+			"runnable":true
+		}
+	],
 	"links": []
 }

@@ -19,9 +19,25 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfdocumentsection.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/documentsection.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/documentsection.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdocumentsection"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdocumentsection"}
 	},
-	"links": []
+	"links": [],
+	"examples":[
+		{
+			"title":"A simple cfdocumentsection tag based example",
+			"description":"We've example to create pdf with documentsection in tag syntax",
+			"code":"<cfdocument format=\"pdf\" bookmark=\"yes\">\r\n<cfdocumentsection mimetype=\"text/html\">\r\n<table>\r\n<tr>\r\n<td>Coldfusuion</td>\r\n<td>java</td>\r\n</tr>\r\n</table>\r\n</cfdocumentsection>\r\n</cfdocument>",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"A simple cfdocumentsection in script based example",
+			"description":"We've example to create pdf with documentsection in script syntax and Used documentsection mime type as text/html.",
+			"code":"<cfscript>\r\ncfdocument (format=\"pdf\",bookmark=\"yes\"){\r\ncfdocumentsection(mimetype=\"text/html\"){\r\nwriteOutput(\"<table><tr><td>Coldfusuion</td><td>java</td></tr></table>\");\r\n}\r\n}\r\n</cfscript>",
+			"result":"",
+			"runnable":false
+		}
+	]
 }

@@ -7,22 +7,54 @@
 	"related": ["structSort","listSort","arraySort"],
 	"description": "Sorts a query.",
 	"params": [
-		{"name": "query", "description": "The query you want to sort", "required": true, "default": "", "type": "query", "values": []},
+		{"name": "query", "description": "The query to sort", "required": true, "default": "", "type": "query", "values": []},
 		{"name": "sortFunction", "description": "CF2016+ or Lucee5.1.0.13+ a function with two arguments each corresponding to a query row. The function returns -1 if first row is less than second, 0 if equal, or 1 if first row is greater than second. Lucee4.5+ accepts a column name to sort by instead of a function.", "required": true, "default": "", "type": "function", "values": []},
 		{"name": "direction", "description": "Lucee4.5+ Only supported on Lucee when second argument is a column name instead of a callback function.", "required": false, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querysort.html"},
-		"lucee": {"minimum_version": "", "notes": "Lucee also supports `querySort(query, column_name [, direction])` syntax. As of 5.1.0.13 it accepts a callback function. When called as a member function query.sort() is chainable.", "docs": "http://docs.lucee.org/reference/functions/querysort.html"}
+		"lucee": {"minimum_version": "", "notes": "Lucee also supports `querySort(query, column_name [, direction])` syntax. As of 5.1.0.13 it accepts a callback function. When called as a member function query.sort() is chainable.", "docs": "https://docs.lucee.org/reference/functions/querysort.html"}
 	},
 	"examples": [
 		{
-			"title":"Sorting a query using sort member function",
+			"title":"Sort a query using the querySort function on a column with date values in ascending order",
 			"description":"",
-			"code":"//build a query\r\nnews = queryNew(\"id,title\",\r\n    \"integer,varchar\",\r\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\r\n//sort it\r\nnews.sort(function(rowA, rowB) { return compare(rowA.title, rowB.title); });\r\n//dump it\r\nwriteDump(news);\r\n",
+			"code":"//build a query\r\nexampleQuery = queryNew(\r\n    \"id,createdDate\",\r\n    \"integer,timestamp\",\r\n    [\r\n        {id=1, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=2, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=3, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=4, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=5, createdDate=dateAdd(\"d\", randRange(-100, 100), now())}\r\n    ]\r\n);\r\n//sort it\r\nquerySort(exampleQuery, function(rowA, rowB) {\r\n    return dateCompare(rowA.createdDate, rowB.createdDate);\r\n});\r\n//dump it\r\nwriteDump(exampleQuery);\r\n",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Sort a query using a sort member function on a column with date values in descending order",
+			"description":"",
+			"code":"//build a query\r\nexampleQuery = queryNew(\r\n    \"id,createdDate\",\r\n    \"integer,timestamp\",\r\n    [\r\n        {id=1, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=2, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=3, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=4, createdDate=dateAdd(\"d\", randRange(-100, 100), now())},\r\n        {id=5, createdDate=dateAdd(\"d\", randRange(-100, 100), now())}\r\n    ]\r\n);\r\n//sort it\r\nexampleQuery.sort(function(rowA, rowB) {\r\n    return -(dateCompare(rowA.createdDate, rowB.createdDate));\r\n});\r\n//dump it\r\nwriteDump(exampleQuery);\r\n",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Sort a query using a sort member function on a column with string values in ascending order",
+			"description":"",
+			"code":"//build a query\r\nexampleQuery = queryNew(\r\n    \"id,description\",\r\n    \"integer,varchar\",\r\n    [\r\n        {id=1, description=\"dog\"},\r\n        {id=2, description=\"cat\"},\r\n        {id=3, description=\"bird\"},\r\n        {id=4, description=\"zebra\"},\r\n        {id=5, description=\"snake\"}\r\n    ]\r\n);\r\n//sort it\r\nexampleQuery.sort(function(rowA, rowB) {\r\n    return compare(rowA.description, rowB.description);\r\n});\r\n//dump it\r\nwriteDump(exampleQuery);\r\n",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Sort a query using the querySort function on a column with string values in descending order",
+			"description":"",
+			"code":"//build a query\r\nexampleQuery = queryNew(\r\n    \"id,description\",\r\n    \"integer,varchar\",\r\n    [\r\n        {id=1, description=\"dog\"},\r\n        {id=2, description=\"cat\"},\r\n        {id=3, description=\"bird\"},\r\n        {id=4, description=\"zebra\"},\r\n        {id=5, description=\"snake\"}\r\n    ]\r\n);\r\n//sort it\r\nquerySort(exampleQuery, function(rowA, rowB) {\r\n    return -(compare(rowA.description, rowB.description));\r\n});\r\n//dump it\r\nwriteDump(exampleQuery);\r\n",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Sort a query using the querySort function on a column with numeric values in ascending order",
+			"description":"",
+			"code":"//build a query\r\nexampleQuery = queryNew(\r\n    \"id,description\",\r\n    \"integer,varchar\",\r\n    [\r\n        {id=3, description=\"dog\"},\r\n        {id=5, description=\"cat\"},\r\n        {id=4, description=\"bird\"},\r\n        {id=1, description=\"zebra\"},\r\n        {id=2, description=\"snake\"}\r\n    ]\r\n);\r\n//sort it\r\nquerySort(exampleQuery, function(rowA, rowB) {\r\n    return val(rowA.id) < val(rowB.id) ? -1 : val(rowA.id) == val(rowB.id) ? 0 : 1;\r\n});\r\n//dump it\r\nwriteDump(exampleQuery);\r\n",
 			"result":"",
 			"runnable":true
 		}
 	],
-	"links": []
+	"links": [{
+		"title": "ColdFusion 2016: query iteration functions",
+		"description": "A look at the higher-order functions that queries have",
+		"url":"http://blog.adamcameron.me/2016/02/coldfusion-2016-query-iteration.html"
+	}]
 }

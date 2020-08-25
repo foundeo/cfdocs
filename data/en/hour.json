@@ -5,13 +5,13 @@
 	"member": "date.hour()",
 	"returns":"numeric",
 	"related":["minute","second","month","quarter","week","year"],
-	"description":" Extracts the hour of the day from a date/time object.\n Ordinal value of the hour, in the range 0 - 23.",
+	"description":"Extracts the hour of the day from a date/time object.\n Ordinal value of the hour, in the range 0 - 23.",
 	"params": [
-		{"name":"date","description":"","required":true,"default":"","type":"date","values":[]}
+		{"name":"date","description":"Date/time object, in the range 100 AD-9999 AD.\nNOTE: When passing a date/time value as a string, enclose it in quotation marks. Otherwise, it is interpreted as a number representation of a date/time object.","required":true,"default":"","type":"date","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/hour.html"},
-		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+.", "docs":"http://docs.lucee.org/reference/functions/hour.html"},
+		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+.", "docs":"https://docs.lucee.org/reference/functions/hour.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/hour"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/hour"}
 	},
@@ -19,7 +19,7 @@
 	],
 	"examples": [
 		{
-			"title": "Hour of a datatime object",
+			"title": "Hour of a datetime object",
 			"description": "",
 			"code": "dt = createdatetime(2016,1,1,5,30,25);\nh = hour( dt );\nwriteoutput( h );",
 			"result": "5"

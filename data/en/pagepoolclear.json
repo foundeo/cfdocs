@@ -7,8 +7,14 @@
 	"description": "clear pages in pools",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/pagepoolclear.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/pagepoolclear.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title": "pagePoolClear Example",
+			"description":"Clear out all the cfml code (cfm, cfcs) in the cache of compiled code. It is supported in lucee.",
+			"code":" writeDump(pagePoolClear());"
+		}
+	],
 	"links": []
 }

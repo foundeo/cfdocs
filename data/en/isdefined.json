@@ -4,7 +4,7 @@
 	"syntax": "isDefined(variable_name)",
 	"returns": "boolean",
 	"related": ["structKeyExists", "isEmpty", "ArrayIsDefined"],
-	"description": "Evaluates a string value to determine whether the variable named in it exists.\n NOTE: Passing an Array entry like `isDefined('thisArray[2]')` will error.Use `ArrayIsDefined()` instead. \n NOTE 2: If you are evaluating a variable inside a structure, you may get a slight performance boost using `StructKeyExists()`.",
+	"description": "Evaluates a string value to determine whether the variable named in it exists.\n NOTE: Passing an Array entry like `isDefined('thisArray[2]')` will error. Use `ArrayIsDefined()` instead. \n NOTE 2: If you are evaluating a variable inside a structure, you may get a slight performance boost using `StructKeyExists()`.",
 	"params": [{
 		"name": "variable_name",
 		"description": "The quoted string of the variable to test for existence. If `variable_name` is passed without quotes and the variable doesn't exist, an error will be thrown rather than returning `false`.",
@@ -22,7 +22,7 @@
 		"lucee": {
 			"minimum_version": "",
 			"notes": "",
-			"docs": "http://docs.lucee.org/reference/functions/isdefined.html"
+			"docs": "https://docs.lucee.org/reference/functions/isdefined.html"
 		},
 		"railo": {
 			"minimum_version": "",

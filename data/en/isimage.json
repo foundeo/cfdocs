@@ -11,12 +11,20 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isimage.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/isimage.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isimage.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isimage"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isimage"}
 	},
-	"links": [
-
+	"links": [],
+	"examples": [
+		{
+			"title":"Simple Isimage Function",
+			"description":"Check the result is codfusion image or not",
+			"code":"<cfset myImage  = ImageNew(\"./sample.png\")>\r\n<cfif IsImage(myImage)>\r\n\t<cfimage action=\"writeToBrowser\" source=\"#myImage#\">\r\n</cfif>",
+			"result":"",
+			"runnable":false
+		}
+		
 	]
 
 }

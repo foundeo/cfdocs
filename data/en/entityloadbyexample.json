@@ -1,17 +1,18 @@
 {
 	"name":"entityLoadByExample",
 	"type":"function",
-	"syntax":"entityLoadByExample(sampleEntity [, unique])",
+	"syntax":"entityLoadByExample(sampleEntity [, unique, matchCriteria])",
 	"returns":"any",
 	"related":["entityLoadByPK"],
-	"description":" Loads and returns an array of objects that match the sampleentity.\nentityLoadByExample(sampleEntity,[unique])",
+	"description":"Loads and returns an array of objects that match the `sampleEntity`.",
 	"params": [
 		{"name":"sampleEntity","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
-		{"name":"unique","description":"No Help Available","required":false,"default":"","type":"boolean","values":[]}
+		{"name":"unique","description":"When true a single entity is returned, otherwise an array is returned.\nIf you are sure only one record exists for the `Filter`, then you can specify `unique=true` to return a single entity instead of an array. If you set `unique=true` and multiple records are returned, then an exception occurs.","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"matchCriteria","description":"No Help Available","required":false,"default":"","type":"any","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entityloadbyexample.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/entityloadbyexample.html"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entityloadbyexample.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/entityloadbyexample.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entityloadbyexample"}
 	},
 	"links": [],

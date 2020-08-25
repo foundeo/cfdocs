@@ -2,12 +2,13 @@
 	"name":"cfcontinue",
 	"type":"tag",
 	"syntax":"<cfcontinue>",
+	"script": "continue;",
 	"related":["cfloop","cfbreak"],
-	"description":"Used within a cfloop tag. Skips processing the remainder of the loop interation, and continues on to the next iteration.",
+	"description":"Used within a cfloop tag. Skips processing the remainder of the loop iteration, and continues on to the next iteration.",
 	"params": [],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcontinue.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/continue.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/continue.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfcontinue"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcontinue"}
 	},

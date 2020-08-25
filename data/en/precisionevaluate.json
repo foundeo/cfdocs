@@ -4,14 +4,14 @@
 	"syntax":"precisionEvaluate(expressions)",
 	"returns":"numeric",
 	"related":["evaluate"],
-	"description":" Evaluates one or more string expressions using BigDecimal precision arithmetic.  If the results ends in a infinitely repeating decimal value only the first 20 digits of the decimal portion will be used.  BigDecimal precision results only work with addition, subtraction, multiplication and division.  The use of ^, MOD, % or \\ arithmetic operators will result in normal integer precision.",
+	"description":" Evaluates one or more string expressions using BigDecimal precision arithmetic. If the results ends in an infinitely repeating decimal value only the first 20 digits of the decimal portion will be used.  BigDecimal precision results only work with addition, subtraction, multiplication and division.  The use of ^, MOD, % or \\ arithmetic operators will result in normal integer precision.",
 	"params": [
 		{"name":"expressions","description":"Expressions to evaluate","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/precisionevaluate.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/precisionevaluate.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/precisionevaluate.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/precisionevaluate"}
 	},
 	"links": [

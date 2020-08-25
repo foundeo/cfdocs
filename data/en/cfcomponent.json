@@ -35,14 +35,14 @@
 		{"name":"discriminatorColumn","description":"CF9+ Use this attribute to define the discriminator column to be used in inheritance mapping","required":false,"default":"","type":"string","values":[]},
 		{"name":"discriminatorValue","description":"CF9+ Use this attribute to define the discriminator value to be used in inheritance mapping","required":false,"default":"","type":"string","values":[]},
 		{"name":"joinColumn","description":"CF9+ Use this attribute to define the join column for inheritance mapping.","required":false,"default":"","type":"string","values":[]},
-		{"name":"embedded","description":"CF9+ Marks CFC as embeded, used when a CFC has an embedded object which also needs to be persisted along with the parent's data","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"embedded","description":"CF9+ Marks CFC as embedded, used when a CFC has an embedded object which also needs to be persisted along with the parent's data","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"cacheUse","description":"CF9+ Use this value to specify the caching strategy to be used for caching this component's data in the secondary cache","required":false,"default":"","type":"string","values":["read-only","nonstrict-read-write","read-write","transactional"]},
 		{"name":"cacheName","description":"CF9+ Use this value to specify the name of the secondary cache.","required":false,"default":"","type":"string","values":[]},
 		{"name":"saveMapping","description":"CF9+ Specifies whether the generated Hibernate mapping file has to be saved to disk. If you set the value to true, the Hibernate mapping XML file is saved with the filename \"CFC name\".hbm.xml in the same directory as the CFC.","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"accessors","description":"CF9+ If set to false, ColdFusion ORM does not generate the implicit getters and setters.","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"serializable","description":"CF9+ Specifies whether this component can be serialized. If you set this value to false, the component and the data in the component‚ This and Variables scopes cannot be serialized, so they are not retained on session replication, and the component is in its default state.","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"attribute","description":"CF9+ If the attribute is set to false at the component level, then the implicit getters and setters for the individual properties are ignored.","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"mappedSuperClass","description":"CF9.0.1+ When true on a non persistant CFC, CFCs that extend this component can inherit properties.","required":false,"default":"false","type":"boolean","values":[true,false]},
+		{"name":"mappedSuperClass","description":"CF9.0.1+ When true on a non persistent CFC, CFCs that extend this component can inherit properties.","required":false,"default":"false","type":"boolean","values":[true,false]},
 		{"name":"rest","description":"CF10+ Enables/disables REST.\nrestPath must be specified to enable REST","required":false,"default":"false","type":"boolean","values":["true","false"]},
 		{"name":"restPath","description":"CF10+ Path to access the REST-API","required":false,"default":"","type":"string","values":["true","false"]},
 		{"name":"httpMethod","description":"CF10+","required":false,"default":"","type":"string","values":["GET","POST","PUT","DELETE","HEAD","OPTIONS"]},
@@ -51,11 +51,12 @@
 		{"name":"indexable","description":"CF10+ Enables/disables indexing for the component","required":false,"default":"false","type":"boolean","values":["true","false"]},
 		{"name":"indexLanguage","description":"CF10+ Set the language to be used to index and search","required":false,"default":"english","type":"string","values":[]},
 		{"name":"autoIndex","description":"CF10+ Enables/disables auto-indexing","required":false,"default":"true","type":"boolean","values":["true","false"]},
-		{"name":"wsVersion","description":"CF10+ Set the wsVersion of Axis engine","required":false,"default":"","type":"numeric","values":[1,2]}
+		{"name":"wsVersion","description":"CF10+ Set the wsVersion of Axis engine","required":false,"default":"","type":"numeric","values":[1,2]},
+		{"name":"invokeImplicitAccessor","description":"CF2016+ Get and set component properties using getter and setter methods defined in the component","required":false,"default":false,"type":"boolean","values":["true","false"]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"6", "notes":"CFCs Introduced including support for SOAP web services.\nCF9+ Hibernate ORM support and script based CFCs.\nCF10+ REST Services", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcomponent.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/component.html"},
+		"coldfusion": {"minimum_version":"6", "notes":"CFCs Introduced including support for SOAP web services.\nCF9+ Hibernate ORM support and script based CFCs.\nCF10+ REST Services. CF2016+ Added invokeImplicitAccessor.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcomponent.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/component.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfcomponent"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcomponent"}
 	},
@@ -74,6 +75,11 @@
 			"title":"ColdFusion ORM Book",
 			"description":"A must have book if you are planning on using ORM / Hibernate in CFML",
 			"url":"http://www.coldfusionormbook.com/"
+		},
+		{
+			"title":"CFC Implicit Notation",
+			"description":"ACF documentation on using implicit accessors",
+			"url":"https://helpx.adobe.com/coldfusion/developing-applications/building-blocks-of-coldfusion-applications/building-and-using-coldfusion-components/cfc-implicit-notation.html"
 		}
 	],
 	"examples": [

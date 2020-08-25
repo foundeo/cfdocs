@@ -90,7 +90,7 @@
       "name": "scale",
       "description": "Number of decimal places in parameter. Applies to `CF_SQL_NUMERIC` and `CF_SQL_DECIMAL`.",
       "required": false,
-      "default": "",
+      "default": "0",
       "type": "numeric",
       "values": []
     },
@@ -128,7 +128,7 @@
     "lucee": {
       "minimum_version": "",
       "notes": "Supports `int` and `cf_sql_int` for integer",
-      "docs": "http://docs.lucee.org/reference/tags/queryparam.html"
+      "docs": "https://docs.lucee.org/reference/tags/queryparam.html"
     },
     "railo": {
       "minimum_version": "",
@@ -153,7 +153,7 @@
     {
       "runnable": false,
       "title": "Using a list on an IN statement",
-      "description": "Assumes url.idList is a comma seperated list of integers, eg: 1,2,3",
+      "description": "Assumes url.idList is a comma separated list of integers, eg: 1,2,3",
       "code": "<cfquery name=\"news\">\n    SELECT id,title,story\n    FROM news\n    WHERE id IN (<cfqueryparam value=\"#url.idList#\" cfsqltype=\"cf_sql_integer\" list=\"true\">)\n</cfquery>",
       "result": ""
     },

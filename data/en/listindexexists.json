@@ -13,8 +13,15 @@
 		{"name": "includeEmptyFields", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/listindexexists.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/listindexexists.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"Simple listIndexExists",
+			"description":"Check whether the index is exists or not in list",
+			"code":"<cfset list=\"Apple,Orange,Banana,Graphs\">\r\n<cfif listIndexExists(list,2)>\r\n\t<cfset list=listsetAt(list,2,\"Goa\")>\r\n</cfif>\r\n<cfoutput>#list#</cfoutput>",
+			"result":"Apple,Goa,Banana,Graphs"
+		}
+	],
 	"links": []
 }

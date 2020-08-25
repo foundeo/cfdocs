@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"xmlGetNodeType(xmlNode)",
 	"returns":"string",
-	"related":[],
+	"related":["IsXmlAttribute", "IsXmlDoc", "IsXmlElem", "IsXmlNode", "IsXmlRoot", "XmlChildPos", "XmlValidate"],
 	"description":"Determines the type of an XML document object node.",
 	"params": [
 		{"name":"xmlNode","description":"An XML DOM object node.","required":true,"default":"","type":"xml","values":[]}
@@ -11,12 +11,22 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlgetnodetype.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/xmlgetnodetype.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/xmlgetnodetype.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/xmlgetnodetype"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/xmlgetnodetype"}
 	},
-	"links": [
-
+	"links": [{
+			"title":"W3Schools",
+			"description":"XPath tutorial",
+			"url":"https://www.w3schools.com/xml/xpath_nodes.asp"
+	}],
+	"examples": [
+		{
+			"title":"xmlGetNodeType Example",
+			"description":"A string identifying the XML node type.",
+			"code":"<cfxml variable=\"xmlobject1\">\n\t<notes>\n\t\t<note>\n\t\t\t<to>Alice</to>\n\t\t\t<from>Bob</from>\n\t\t\t<heading>Reminder</heading>\n\t\t\t<body>Here is the message you requested.</body>\n\t\t</note>\n\t\t<author>\n\t\t\t<first>John</first>\n\t\t\t<last>Doe</last>\n\t\t</author>\n\t</notes>\n</cfxml> \r\n<cfoutput>\n\t xmlobject:#XMLGetNodeType(xmlobject1)#\n\t xmlRoot:#XMLGetNodeType(xmlobject1.xmlRoot)#\n</cfoutput>",
+			"result":""
+		}
 	]
 
 }

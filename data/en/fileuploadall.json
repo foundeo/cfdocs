@@ -1,7 +1,7 @@
 {
   "name": "fileUploadAll",
   "type": "function",
-  "syntax": "fileUploadAll(destination,[mimeType,[onConflict]])",
+  "syntax": "fileUploadAll(destination [,mimeType] [,onConflict] [,strict] [,continueOnError] [,errorVariable] [,allowedExtensions])",
   "returns": "array",
   "related": [
     "fileUpload"
@@ -55,10 +55,18 @@
     },
     {
       "name": "errorVariable",
-      "description": "CF11+ The name of the variable in which the file upload errors will be stored.",
+      "description": "CF11+ The name of the variable in which the array of structs of file upload errors will be stored. \n\nThe upload failure information error structure contains the following fields:\n`REASON` - The reason for the failure\n`DETAIL` - File upload failure detail\nMESSAGE - A detailed message depicting the failure\nCLIENTFILE - Name of the file uploaded from the client's system\n`CLIENTFILEEXT` - Extension of the uploaded file on the client system (without a period)\n`CLIENTFILENAME` - Name of the uploaded file on the client system (without an extension)\n`INVALID_FILE_TYPE` - If the file mime type or extension is not in the specified accept attribute. If the reason is INVALID_FILE_TYPE, two additional keys will be available in the structure.\n --`ACCEPT`: list of mime types or file extensions given in the tag\n--`MIMETYPE`: mime type of the uploaded file\n`EMPTY_FILE` - If the uploaded file is an empty file\n`FILE_EXISTS` - If any file with the given name already exists in the destination and the overwritepolicy is error\n`DEST` - The destination where file is copied\n`FORM_FILE_NOT_FOUND` - If the uploaded file is not found on the server",
+      "required": false,
+      "default": "cffile.uploadAllErrors",
+      "type": "variableName",
+      "values": []
+    },
+    {
+      "name": "allowedExtensions",
+      "description": "CF2018+ A comma-separated list of file extensions, which will be allowed for upload. \n\nFor example, .png, .jpg, or, .jpeg. \n\nYou can use `*` (star) to allow all files, except where you specify the MIME type in the accept attribute. \n\nValues specified in the attribute allowedExtensions override the list of blocked extensions in the server or application settings.",
       "required": false,
       "default": "",
-      "type": "variableName",
+      "type": "string",
       "values": []
     }
   ],
@@ -71,7 +79,7 @@
     "lucee": {
       "minimum_version": "",
       "notes": "",
-      "docs": "http://docs.lucee.org/reference/functions/fileuploadall.html"
+      "docs": "https://docs.lucee.org/reference/functions/fileuploadall.html"
     },
     "openbd": {
       "minimum_version": "",

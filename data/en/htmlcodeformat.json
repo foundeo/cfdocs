@@ -1,18 +1,18 @@
 {
 	"name":"htmlCodeFormat",
 	"type":"function",
-	"syntax":"htmlCodeFormat(String [, version])",
+	"syntax":"htmlCodeFormat(string [, version])",
 	"returns":"string",
-	"related":[],
-	"description":" Replaces special characters in a string with their HTML-escaped\n equivalents and inserts &ltpre&gt; and &lt/pre&gt tags at the beginning\n and end of the string.\n [version]\n HTML version to use. currently ignored.\n -1: The latest implementation of HTML\n 2.0: HTML 2.0 (Default)\n 3.2: HTML 3.2",
+	"related":["htmlEditFormat"],
+	"description":"Replaces special characters in a string with their HTML-escaped equivalents and inserts &lt;pre&gt; and &lt;/pre&gt; tags at the beginning and end of the string.\nThe only difference between this function and `HTMLEditFormat` is that `HTMLEditFormat` doesn't surround the text in HTML `pre` tags.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"version","description":"","required":false,"default":"","type":"numeric","values":[-1,2.0,3.2]}
+		{"name":"string","description":"A String or variable that contains one.","required":true,"default":"","type":"string","values":[]},
+		{"name":"version","description":"HTML version to use. Currently ignored.\n -1: The latest implementation of HTML\n 2.0: HTML 2.0 (Default)\n 3.2: HTML 3.2","required":false,"default":"2.0","type":"numeric","values":[-1,2.0,3.2]}
 
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/htmlcodeformat.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/htmlcodeformat.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/htmlcodeformat.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/htmlcodeformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/htmlcodeformat"}
 	},

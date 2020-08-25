@@ -10,14 +10,14 @@
 		{"name": "array", "description": "", "required": true, "default": "", "type": "array", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraytostruct.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/arraytostruct.html"}
 	},
 	"examples": [{
-		"title":"Convert an array to a struct using arrayToStruct()",
-		"description":"",
-		"code":"arrayToStruct([\"a\",\"b\"]);",
-		"result":"",
-		"runnable":false
+		"title": "Convert an array to a struct using arrayToStruct()",
+		"description": "",
+		"code": "serializeJSON(arrayToStruct([\"a\",\"b\"]));",
+		"result": "{\"2\":\"b\",\"1\":\"a\"}",
+		"runnable": true
 	}],
 	"links": []
 }

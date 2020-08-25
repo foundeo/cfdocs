@@ -11,8 +11,21 @@
 		{"name": "rowNumber", "description": "", "required": true, "default": "", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/queryrowdata.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/queryrowdata.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"The simple queryGetRow example",
+			"description":"Here we've a example to get the particular row value from myquery.",
+			"code":"<cfset myQuery = queryNew(\"id,name,age\",\"integer,varchar,integer\",[[1,\"Dharshini\",20],[2,\"Subash\",18]])>\r\n<cfdump var=\"#queryGetRow(myQuery,2)#\" />",
+			"result":""
+		},
+		{
+			"title":"The simple getRow example",
+			"description":"We've example to get the particular row value from myquery using script syntax.",
+			"code":"<cfscript>\r\nvar myQuery = queryNew(\"id,title,author\",\"integer,varchar,varchar\",[[1,\"Charlottes Web\",\"E.B. White\"],[3,\"The Outsiders\",\"S.E. Hinton\"],[4,\"Mieko and the Fifth Treasure\",\"Eleanor Coerr\"]]);\r\nwriteDump(myQuery.getRow(3));\r\n</cfscript>",
+			"result":""
+		}
+	],
 	"links": []
 }

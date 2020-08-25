@@ -7,10 +7,10 @@
 	"description": "returns null",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/nullvalue.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/nullvalue.html"}
 	},
 	"examples": [{
-            "title":"Coldfusion polyfill",
+            "title":"ColdFusion polyfill",
             "description":"Using java data type null instead",
             "code":"nullValue = javacast('null','');\nwriteOutput(isNull(nullValue));",
             "result":"YES",

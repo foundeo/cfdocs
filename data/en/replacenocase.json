@@ -2,6 +2,7 @@
 	"name":"replaceNoCase",
 	"type":"function",
 	"syntax":"replaceNoCase(String, substring1, substring2 [, scope])",
+	"member":"string.replaceNoCase(substring1, substring2[, scope])",
 	"returns":"string",
 	"related":[],
 	"description":" Replaces occurrences of substring1 with substring2, in the\n specified scope. The search is case-insensitive.",
@@ -14,7 +15,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/replacenocase.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/replacenocase.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/replacenocase.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/replacenocase"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/replacenocase"}
 	},

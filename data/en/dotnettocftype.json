@@ -6,7 +6,7 @@
 	"related":[],
 	"description":"Explicitly converts a value returned by a .NET method to the corresponding ColdFusion data type.",
 	"params": [
-		{"name":"variableName","description":"Name of the .NET variable to convert.","required":true,"default":"","type":"Varible","values":[]}
+		{"name":"variableName","description":"Name of the .NET variable to convert.","required":true,"default":"","type":"any","values":[]}
 
 	],
 	"engines": {

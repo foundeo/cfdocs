@@ -12,7 +12,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imageinfo.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imageinfo.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/imageinfo.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imageinfo"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imageinfo"}
 	},
@@ -28,8 +28,8 @@
 		},
 		{
 			"title":"Using info member function",
-			"description":"CF11+ Lucee4.5+ Exract the image info",
-			"code":"imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\ninfo = imgObj.info();\r\nwriteDump(info);",
+			"description":"CF11+ Lucee4.5+ Extract the image info",
+			"code":"imgObj = imageRead(\"https://cfdocs.org/apple-touch-icon.png\");\r\ninfo = imgObj.info();\r\nwriteDump(info);",
 			"result":"",
 			"runnable":true
 		}

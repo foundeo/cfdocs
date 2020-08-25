@@ -2,14 +2,30 @@
 	"name":"cfreturn",
 	"type":"tag",
 	"syntax":"<cfreturn>",
+	"script":"return;",
 	"related":["cffunction"],
 	"description":"Returns result values from a component method. Contains an\n expression returned as result of the function.\n An expression; the result of the function from which this tag\n is called.",
 	"params": [],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfreturn.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/return.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/return.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfreturn"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfreturn"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"A simple cfreturn  example",
+			"description":"The function Department return the addition value of a & b. The below code is tag based code example ",
+			"code":"<cffunction name=\"Department\" access=\"public\" returnType=\"Numeric\">\r\n\t<cfargument name=\"a\" type=\"numeric\" >\r\n\t<cfargument name=\"b\" type=\"numeric\">\r\n\t<cfset c = arguments.a + arguments.b>\r\n\t<cfreturn c>\r\n</cffunction>\r\n<cfoutput>#Department(6,7)#</cfoutput>",
+			"result":"13"
+		},
+		{
+			"title":"A simple cfreturn ( return ) example",
+			"description":"The function Department return the subtraction value of a & b. The below code is script based code example",
+			"code":"<cfscript>\r\n\tpublic function Department(a,b){\r\n\t\tc = arguments.a - arguments.b;\r\n\t\treturn c;\r\n\t}\r\n</cfscript>\r\n<cfoutput>#Department(6,7)#</cfoutput>",
+			"result":"-1"
+		}
+		
+	]
 }

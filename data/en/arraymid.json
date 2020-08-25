@@ -12,7 +12,7 @@
 		{"name": "count", "description": "The number of elements to extract. If not set, all elements up to the end of the array will be returned.", "required": false, "default": "", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/arraymid.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/arraymid.html"}
 	},
 	"examples": [
 	  {

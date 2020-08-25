@@ -37,13 +37,13 @@
     "lucee": {
       "minimum_version": "",
       "notes": "",
-      "docs": "http://docs.lucee.org/guides/Various/cfadmin.html"
+      "docs": "https://docs.lucee.org/guides/Various/cfadmin.html"
     }
   },
   "links": [
     {
       "title": "Lucee Documentation",
-      "url": "http://docs.lucee.org/guides/Various/cfadmin.html",
+      "url": "https://docs.lucee.org/guides/Various/cfadmin.html",
       "description": "Lucee documentation for cfadmin tag."
     },
     {
@@ -594,7 +594,7 @@
       "code": "<cfadmin\n action=\"UpdateUpdate\"\n type=\"web|server\"\n password=\"password\"\n updateType=\"#form.type#\"\n updateLocation=\"#form.location#\"\n remoteClients=\"arrayOfClients\">"
     },
     {
-      "title": "Verfiy a datasource",
+      "title": "Verify a datasource",
       "description": "",
       "code": "<cfadmin\n action=\"verifyDatasource\"\n type=\"web|server\"\n password=\"password\"\n name=\"#data.names[idx]#\"\n dbusername=\"#data.usernames[idx]#\"\n dbpassword=\"#data.passwords[idx]#\">"
     },

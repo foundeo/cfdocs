@@ -10,8 +10,8 @@
 		{"name":"runonce","description":" CF10+ If set to true, the given template is not processed again for a given request if it has already been processed.","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"CF9: Added the script syntax: include.\nCF11: Changed behaviour such that only files with the extension cfm or cfml are compiled and executed by cfinclude (configurable in Application.cfc via this.compileextforinclude), all other files will be statically included.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfinclude.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/include.html"},
+		"coldfusion": {"minimum_version":"", "notes":"CF9: Added the script syntax: include.\nCF11: Changed behavior such that only files with the extension cfm or cfml are compiled and executed by cfinclude (configurable in Application.cfc via this.compileextforinclude), all other files will be statically included.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-i/cfinclude.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/include.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfinclude"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfinclude"}
 	},

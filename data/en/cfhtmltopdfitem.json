@@ -18,7 +18,7 @@
         "pagebreak"
       ],
       "default": "",
-      "description": "Specifies the action:\r\n\r\nheader: uses the text\/image specified between the <cfhtmltopdfitem> and <\/cfhtmltopdfitem> tags as the running header.\r\nfooter: uses the text\/image between the <cfhtmltopdfitem> and <\/cfhtmltopdfitem> tags as the the running footer.\r\npagebreak: can be used to insert a pagebreak in the generated PDF. When <cfhtmltopdf> is used as a service, pagebreak will not work. ",
+      "description": "Specifies the action:\r\n\r\nheader: uses the text\/image specified between the <cfhtmltopdfitem> and <\/cfhtmltopdfitem> tags as the running header.\r\nfooter: uses the text\/image between the <cfhtmltopdfitem> and <\/cfhtmltopdfitem> tags as the running footer.\r\npagebreak: can be used to insert a pagebreak in the generated PDF. When <cfhtmltopdf> is used as a service, pagebreak will not work. ",
       "name": "type",
       "type": "string",
       "required": "1"

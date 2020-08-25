@@ -6,11 +6,12 @@
 	"related":["getTimezone","setTimezone"],
 	"description":" Gets local time zone information for the computer on which it\n is called, relative to Universal Time Coordinated (UTC). UTC is\n the mean solar time of the meridian of Greenwich, England.",
 	"params": [
-		{"name":"text","description":"","required":true,"default":"","type":"string","values":[]}
+		{"name":"timezone","description":"Lucee Specify a timezone to return info from","required":true,"default":"","type":"string","values":[]},
+		{"name":"locale", "description":"Lucee Locale used to format the output","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/gettimezoneinfo.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/gettimezoneinfo.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/gettimezoneinfo.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/gettimezoneinfo"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/gettimezoneinfo"}
 	},
@@ -18,8 +19,14 @@
 	"examples": [
 		{
 			"title": "Output timezone information",
-			"description": "",
-			"code": "<h3>GetTimeZoneInfo Example</h3>\r\n<!--- This example shows the use of GetTimeZoneInfo --->\r\n<cfoutput>\r\nThe local date and time are #now()#.\r\n</cfoutput>\r\n<cfset info = GetTimeZoneInfo()>\r\n<cfoutput>\r\n<p>Total offset in seconds is #info.utcTotalOffset#.</p>\r\n<p>Offset in hours is #info.utcHourOffset#.</p>\r\n<p>Offset in minutes minus the offset in hours is #info.utcMinuteOffset#.</p>\r\n<p>Is Daylight Savings Time in effect? #info.isDSTOn#.</p>\r\n</cfoutput>",
+			"description": "This example shows the use of GetTimeZoneInfo",
+			"code": "<cfoutput>\r\nThe local date and time are #now()#.\r\n</cfoutput>\r\n<cfset info = GetTimeZoneInfo()>\r\n<cfoutput>\r\n<p>Total offset in seconds is #info.utcTotalOffset#.</p>\r\n<p>Offset in hours is #info.utcHourOffset#.</p>\r\n<p>Offset in minutes minus the offset in hours is #info.utcMinuteOffset#.</p>\r\n<p>Is Daylight Savings Time in effect? #info.isDSTOn#.</p>\r\n</cfoutput>",
+			"result": ""
+		},
+		{
+			"title": "Get Hawaii timezone information in German",
+			"description": "Shows the use of getTimeZoneInfo for a known / specific timezone with German locale. This syntax is only supported in Lucee.",
+			"code": "<cfscript>\r\nvar tz = getTimeZoneInfo(\"US/Hawaii\", \"de-DE\");\r\n</cfscript>",
 			"result": ""
 		}
 	]

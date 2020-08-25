@@ -1,18 +1,41 @@
 {
 	"name":"expandPath",
 	"type":"function",
-	"syntax":"expandPath(relative_path)",
+	"syntax":"expandPath(path)",
 	"returns":"string",
 	"related":["contractPath"],
-	"description":" Creates an absolute, platform-appropriate path that is\n equivalent to the value of relative_path, appended to the base\n path. This function (despite its name) can accept an absolute\n or relative path in the relative_path attribute",
+	"description":"Creates an absolute, platform-appropriate path that is equivalent to the value of 'path', appended to the base path. This function (despite its name) can accept an absolute or relative path in the 'path' attribute.",
 	"params": [
-		{"name":"relative_path","description":"","required":true,"default":"","type":"string","values":[]}
+		{"name":"path","description":"Relative or absolute directory reference or filename, within the current directory, (.\\ and ..\\) to convert to an absolute path. Can include forward or backward slashes.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/expandpath.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/expandpath.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/expandpath.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/expandpath"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/expandpath"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Expand the current path",
+			"description": "",
+			"code": "expandPath(\"./\")",
+			"result": "",
+			"runnable": false
+		},
+		{
+			"title": "Expand the parent folder path",
+			"description": "",
+			"code": "expandPath(\"../\")",
+			"result": "",
+			"runnable": false
+		},
+		{
+			"title": "Expand the path to a subfolder",
+			"description": "",
+			"code": "expandPath(\"path/to/subfolder\")",
+			"result": "",
+			"runnable": false
+		}
+	]
 }

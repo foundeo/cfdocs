@@ -18,10 +18,10 @@
 
 See the [`testbox.system.Expectation`](http://apidocs.ortussolutions.com/testbox/current/index.html?testbox/system/Expectation.html) class for a full list of expectations. The `message` argument is optional in all cases. Here are some common expectations:
 
-	//assert value==expected, not case sensitive
+	//assert value==expected, not case-sensitive
 	expect(value).toBe(expected, message);
 
-	//assert value==expected, case sensitive
+	//assert value==expected, case-sensitive
 	expect(value).toBeWithCase(expected, message);
 
 	//assert value is true
@@ -61,10 +61,10 @@ Here are some more:
 	//assert value is less than or equal to target
 	expect(value).toBeLTE(target, message);
 
-	//assert that the needle is included in string or array, not case sensitive
+	//assert that the needle is included in string or array, not case-sensitive
 	expect(value).toInclude(needle, message);
 
-	//assert that the needle is included in string or array, case sensitive
+	//assert that the needle is included in string or array, case-sensitive
 	expect(value).toIncludeWithCase(needle, message);
 
 	//assert value between min and max
@@ -79,7 +79,7 @@ Here are some more:
 	//assert value an instance of named object type.
 	expect(value).toBeInstanceOf(typeName, message);
 
-	//assert value to match regex, not case sensitive.
+	//assert value to match regex, not case-sensitive.
 	expect(value).toMatch(regex, message);
 
 	//assert function throws exception, optionally specify type or regex.

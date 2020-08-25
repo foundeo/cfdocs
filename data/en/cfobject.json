@@ -6,7 +6,7 @@
 	"description":"Creates a CFML object, of a specified type.\n\n The tag syntax depends on the object type. Some types use the\n type attribute; others do not.",
 	"params": [
 		{"name":"type","description":"The object type. You can omit this attribute or specify component. ColdFusion automatically sets the type to component.","required":false,"default":"","type":"string","values":["com","component","corba","java","dotnet","webservice"]},
-		{"name":"action","description":"* create: instantiates a COM object (typically, a DLL) before invoking methods or properties.\n * connect: ionnects to a COM object (typically, an EXE) running on server.","required":false,"default":"","type":"string","values":["create","connect"]},
+		{"name":"action","description":"* create: instantiates a COM object (typically, a DLL) before invoking methods or properties.\n * connect: connects to a COM object (typically, an EXE) running on server.","required":false,"default":"","type":"string","values":["create","connect"]},
 		{"name":"class","description":"Component ProgID for the object to invoke. When using Java stubs to connect to the COM object, the class must be the ProgID of the COM object.","required":false,"default":"","type":"string","values":[]},
 		{"name":"name","description":"name for the instantiated component.","required":true,"default":"","type":"string","values":[]},
 		{"name":"context","description":"* inproc\n * local\n * remote\n\nIn Windows, if not specified, uses Registry setting.","required":false,"default":"","type":"string","values":["inproc","local","remote","ior","nameservice"]},
@@ -31,12 +31,35 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfobject.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/object.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/object.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfobject"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfobject"}
 	},
 	"links": [
 
+	],
+	"examples":[
+		{
+			"title":"The simple component file",
+			"description":"Here created the simple component with user defined function name as multiply.",
+			"code":"<cfcomponent>\r\n<cffunction name=\"multiply\" access=\"public\" returnType=\"numeric\">\r\n<cfargument name=\"FirstNum\" type=\"numeric\">\r\n<cfargument name=\"SecondNum\" type=\"numeric\">\r\n<cfretrun arguments.FirstNum * arguments.SecondNum>\r\n</cffunction>\r\n</cfcomponent>",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"The simple cfobject example",
+			"description":"Calling the above multiply function by using cfobject tag based code.",
+			"code":"<cfobject name=\"multiplyObj\" type=\"component\" component=\"multiply\">\r\n<cfoutput>\r\n#multiplyObj.multiply(1,2)#\r\n</cfoutput>",
+			"result":"2",
+			"runnable":false
+		},
+		{
+			"title":"The simple (cfobject) example",
+			"description":"Calling the above multiply function by using cfobject script based code.",
+			"code":"<cfscript>\r\ncfobject(name=\"multiplyNum\" type=\"component\" component=\"multiply\"){\r\nwriteOutput(multiplyNum.multiply(6,7));\r\n}\r\n</cfscript>",
+			"result":"42",
+			"runnable":false
+		}
 	]
 
 }

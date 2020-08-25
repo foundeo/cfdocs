@@ -11,11 +11,11 @@
 		{"name":"default","description":"Value to set parameter to if it does not exist. Any\n expression used for the default attribute is evaluated,\n even if the parameter exists.\n The result is not assigned if the parameter exists,\n but if the expression has side effects, they still occur.","required":false,"default":"","type":"any","values":[]},
 		{"name":"max","description":"The maximum valid value; used only for range validation.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"min","description":"The minimum valid value; used only for range validation.","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"pattern","description":"A regular experession that the parameter must match;\n used only for regex or regular_expression validation.","required":false,"default":"","type":"string","values":[]}
+		{"name":"pattern","description":"A regular expression that the parameter must match;\n used only for regex or regular_expression validation.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfparam.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/param.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/param.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfparam"}
 	},

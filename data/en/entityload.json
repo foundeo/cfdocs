@@ -1,21 +1,21 @@
 {
 	"name":"entityLoad",
 	"type":"function",
-	"syntax":"entityLoad(entityName [, filterCriteria] [, unique])\n entityLoad(entityName [, filterCriteria] [, sortOrder] [, options])",
+	"syntax":"entityLoad(entityName [,id | Filter ,unique | Order ,options])",
 	"returns":"any",
 	"related":["entitynew","entityget", "entityloadbypk","entityloadbyexample", "entityreload", "ormexecutequery"],
 	"description":"Loads and returns an array of entities of the specified entityname or an entity if unique=true or if a primary key id is passed in to filterCriteria.",
 	"params": [
-		{"name":"entityName","description":"Name of CFC / Entity","required":true,"default":"","type":"string","values":[]},
-		{"name":"filterCriteria","description":"A struct of key value pairs, or a primary key value","required":false,"default":"","type":"any","values":[]},
-		{"name":"unique","description":"When true a single entity is returned, otherwise an array","required":false,"default":"","type":"boolean","values":[]},
-		{"name":"sortOrder","description":"Column name and direction list, eg: LastName ASC, FirstName ASC","required":false,"default":"","type":"string","values":[]},
-		{"name":"options","description":"A struct with possible keys: ignorecase, sortorder, offset, maxresults, cacheable, cachename, timeout","required":false,"default":"","type":"struct","values":[]}
-
+		{"name":"entityName","description":"Name of CFC / Entity to be loaded.","required":true,"default":"","type":"string","values":[]},
+		{"name":"id","description":"THIS PARAMETER IS MUTUALLY EXCLUSIVE WITH `Filter`.\n\nThe primary key value of the entity to be loaded. Or if the entity has a composite key, then this is specified as a ColdFusion struct (key-value pair).","required":false,"default":"","type":"any","values":[]},
+		{"name":"Filter","description":"THIS PARAMETER IS MUTUALLY EXCLUSIVE WITH `id`.\n\nThis is a ColdFusion struct (key-value pair) of property names and values. If there is more than one key-value pair, then use the `AND` keyword.","required":false,"default":"","type":"any","values":[]},
+		{"name":"unique","description":"THIS PARAMETER IS MUTUALLY EXCLUSIVE WITH `Order`.\n\nWhen true a single entity is returned, otherwise an array is returned.\nIf you are sure only one record exists for the `Filter`, then you can specify `unique=true` to return a single entity instead of an array. If you set `unique=true` and multiple records are returned, then an exception occurs.","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"Order","description":"THIS PARAMETER IS MUTUALLY EXCLUSIVE WITH `unique`.\n\nString used to specify the sort order of the entities that are returned.\nIf this is specified, the function returns an array of entities that satisfy the `Filter` and is sorted as specified by `Order`.\n\nUsage example: LastName ASC, FirstName ASC","required":false,"default":"","type":"string","values":[]},
+		{"name":"options","description":"A struct with possible keys:\nignorecase : Ignores the case of sort order when set to true. Use only if you've specified the `Order` parameter.\noffset : Specifies the position from which to retrieve the objects.\nmaxResults : Specifies the maximum number of objects to be retrieved.\ncacheable : Whether the result has to be cached in secondary cache. Default is `false`.\ncachename : Name of the cache in secondary cache.\ntimeout : Specified the timeout value (in seconds) for the query","required":false,"default":"","type":"struct","values":["ignorecase:,offset","maxresults","cacheable","cachename","timeout"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entityload.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/entityload.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/entityload.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entityload"}
 	},
 	"links": [
