@@ -29,14 +29,14 @@
 		{
 			"title": "Replace uppercase 'U' with lowercase 'u'",
 			"description": "Replace in Script Syntax",
-			"code": "getVal = replace(\"ColdFUsion\", \"U\", \"u\"); \r\n writeDump(getVal);",
-			"result": "Expected Result: ColdFusion"
+			"code": "getVal = replace(\"ColdFUsion\", \"U\", \"u\"); \r\nwriteDump(getVal);",
+			"result": "ColdFusion"
 		},
 		{
 			"title": "Replace uppercase 'O' with lowercase 'o', but only once",
 			"description": "Something similar in Tag Syntax",
-			"code": "getVal1 = replace(\"COldFusiOn\", \"O\", \"o\", \"ONE\"); \r\n writeDump(getVal1);",
-			"result": "Expected Result: ColdFusiOn"
+			"code": "<cfset getVal1 = replace(\"COldFusiOn\", \"O\", \"o\", \"ONE\") /> \r\n<cfdump var = #getVal1# />",
+			"result": "ColdFusiOn"
 		},
 		{
 			"title":"Example using Callback Function",
