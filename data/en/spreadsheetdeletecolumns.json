@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"spreadsheetDeleteColumns(spreadsheetObj, range)",
 	"returns":"void",
-	"related":[],
+	"related":["SpreadsheetDeleteColumn"],
 	"description":" Deletes the data from multiple columns of an Excel spreadsheet object. This function does not remove the columns.",
 	"params": [
 		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
