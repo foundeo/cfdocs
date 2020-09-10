@@ -18,7 +18,11 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/hash"}
 	},
 	"links": [
-
+		{
+			"title":"Hashing Byte Arrays",
+			"url":"https://www.bennadel.com/blog/2357-hashing-byte-arrays-binary-data-with-coldfusion-before-coldfusion-10.htm",
+			"description":"Tutorial style article on using the hash function in CFML."
+		}
 	],
 	"examples": [
 		{

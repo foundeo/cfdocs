@@ -10,5 +10,11 @@
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getclasspath.html"}
 	},
 	"links": [],
-	"examples": []
+	"examples": [
+		{
+			"title": "getClassPath Example",
+			"description":"It's containing the Java classPath of the current environment. It supported in Lucee.",
+			"code":" writeDump(getClassPath());"
+		}
+	]
 }

@@ -4,7 +4,7 @@
 	"syntax":"structKeyList(structure [, delimiter])",
     "member":"someStruct.keyList([delimiter])",
 	"returns":"string",
-	"related":[],
+	"related":["structKeyArray"],
 	"description":" Extracts keys from a CFML structure.",
 	"params": [
 		{"name":"structure","description":"Structure from which to extract a list of keys","required":true,"default":"","type":"struct","values":[]},
@@ -18,7 +18,11 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structkeylist"}
 	},
 	"links": [
-
+		{
+		"title":"Learning structKeyList by Ben Nadel",
+		"description":"",
+		"url":"https://www.bennadel.com/blog/1430-coldfusion-arguments-keys-always-exist-even-when-not-required.htm"
+		}
 	],
     "examples": [
         {

@@ -18,19 +18,25 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/replace"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/replace"}
 	},
-	"links": [],
+	"links": [
+		{
+		"title":"Regular expressions - practical examples",
+		"description":"There is find, replace and match functions with and without case sensitivity.",
+		"url":"https://coldfusion.adobe.com/2019/06/regular-expressions-practical-examples-get-started/"
+		}
+	],
 	"examples": [
 		{
 			"title": "Replace uppercase 'U' with lowercase 'u'",
 			"description": "Replace in Script Syntax",
-			"code": "getVal = replace(\"ColdFUsion\", \"U\", \"u\"); \r\n writeDump(getVal);",
-			"result": "Expected Result: ColdFusion"
+			"code": "getVal = replace(\"ColdFUsion\", \"U\", \"u\"); \r\nwriteDump(getVal);",
+			"result": "ColdFusion"
 		},
 		{
 			"title": "Replace uppercase 'O' with lowercase 'o', but only once",
 			"description": "Something similar in Tag Syntax",
-			"code": "getVal1 = replace(\"COldFusiOn\", \"O\", \"o\", \"ONE\"); \r\n writeDump(getVal1);",
-			"result": "Expected Result: ColdFusiOn"
+			"code": "<cfset getVal1 = replace(\"COldFusiOn\", \"O\", \"o\", \"ONE\") /> \r\n<cfdump var = #getVal1# />",
+			"result": "ColdFusiOn"
 		},
 		{
 			"title":"Example using Callback Function",
