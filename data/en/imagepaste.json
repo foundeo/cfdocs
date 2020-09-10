@@ -4,7 +4,7 @@
 	"syntax":"imagePaste(image1, image2, x, y)",
 	"member":"someImage.paste(image2, x, y)",
 	"returns":"void",
-	"related":[],
+	"related":["ImageCopy", "ImageOverlay", "ImageSetAntialiasing", "IsImageFile"],
 	"description":" Takes two images and an (x,y) coordinate and draws the second image over the first image with the upper-left corner at coordinate (x,y).",
 	"params": [
 		{"name":"image1","description":"The bottom image.","required":true,"default":"","type":"string","values":[]},
