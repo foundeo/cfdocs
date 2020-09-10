@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"querySetCell(query, column, value [, row])",
 	"returns":"boolean",
-	"related":[],
+	"related":["QueryAddColumn", "QueryAddRow", "QueryNew"],
 	"description":" Sets a cell to a value. If no row number is specified,\n the cell on the last row is set.",
 	"params": [
 		{"name":"query","description":"","required":true,"default":"","type":"query","values":[]},

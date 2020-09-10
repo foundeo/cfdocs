@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"toBinary(base64_or_object)",
 	"returns":"binary",
-	"related":[],
+	"related":["IsBinary","ToBase64","BinaryDecode"],
 	"description":" Calculates the binary representation of Base64-encoded data.",
 	"params": [
 		{"name":"base64_or_object","description":"A string or a variable that contains one:\n * In Base64 format to convert to binary\n * In binary format to test whether it is valid","required":true,"default":"","type":"any","values":[]}
@@ -16,7 +16,11 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/tobinary"}
 	},
 	"links": [
-
+		{
+		"title":"Converting Data Between String, Binary, Hex, And Base64 Format",
+		"description":"Tutorial showing how to convert the string to toBinary Value",
+		"url":"https://www.bennadel.com/blog/2414-converting-data-between-string-binary-hex-and-base64-format-in-coldfusion.htm"
+		}
 	]
 
 }

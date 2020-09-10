@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"parseDateTime(dt_string [, pop_conversion])",
 	"returns":"date",
-	"related":[],
+	"related":["IsDate", "IsNumericDate", "SetLocale"],
 	"description":" Parses a date/time string according to the English (U.S.)\n locale conventions. (To format a date/time string for other\n locales, use the LSParseDateTime function.)",
 	"params": [
 		{"name":"dt_string","description":"","required":true,"default":"","type":"string","values":[]},
@@ -15,7 +15,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/parsedatetime"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/parsedatetime"}
 	},
-	"links": [],
+	"links": [
+		{
+		"title":"Parsing Http Time Strings With ParseDateTime",
+		"description":"This Tutorial illustrate ParseDateTime function",
+		"url":"https://www.bennadel.com/blog/2667-parsing-http-time-strings-with-parsedatetime-in-coldfusion.htm"
+		}
+	],
 	"examples": [
 		{
 			"title":"Tag Example",

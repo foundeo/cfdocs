@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"repeatString(String, count)",
 	"returns":"string",
-	"related":[],
+	"related":["cjustify", "ljustify", "rjustify"],
 	"description":" Creates a string that contains a specified number of\n repetitions of the specified string.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
@@ -17,7 +17,11 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/repeatstring"}
 	},
 	"links": [
-
+		{
+		"title":"repeatString",
+		"description":"It describe the  how to use RepeatString function.",
+		"url":"https://coldfusion-example.blogspot.com/2008/12/repeatstring-function-example-how-to.html"
+		}
 	],
 	"examples": [
 		{

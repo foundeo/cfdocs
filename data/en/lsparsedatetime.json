@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"lsParseDateTime(dt_string)",
 	"returns":"date",
-	"related":[],
+	"related":["LSDateFormat", "ParseDateTime", "SetLocale", "GetLocale"],
 	"description":"Converts a string that is a valid date/time representation in the current locale into a date/time object.",
 	"params": [
 		{"name":"dt_string","description":"","required":true,"default":"","type":"string","values":[]}
@@ -17,14 +17,6 @@
 	},
 	"links": [
 
-	],
-	"examples": [
-		{
-			"title": "lsParseDateTime Example",
-			"description":"This example illustrates use of the lsParseDateTime function.",
-			"code":"lsParseDateTime(\"01/08/2011\")",
-			"result":"{ts '2011-01-08 00:00:00'}"
-		}
 	]
 
 }
