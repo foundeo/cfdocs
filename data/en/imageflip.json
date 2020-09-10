@@ -4,7 +4,7 @@
 	"syntax":"imageFlip(name, transpose)",
 	"member":"someImage.flip(transpose)",
 	"returns":"void",
-	"related":[],
+	"related":["ImageBlur", "ImageClearRec", "ImageNegative", "ImageNew", "ImageOverlay", "ImagePaste", "ImageResize", "ImageRotate", "ImageScaleToFit", "ImageSetAntialiasing", "ImageSharpen", "ImageShear", "ImageTranslate", "IsImageFile"],
 	"description":"Flips an image across an axis.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},

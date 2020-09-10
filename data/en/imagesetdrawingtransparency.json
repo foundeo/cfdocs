@@ -4,7 +4,7 @@
 	"syntax":"imageSetDrawingTransparency(name, percent)",
 	"member":"someImage.setDrawingTransparency(percent)",
 	"returns":"void",
-	"related":[],
+	"related":["ImageSetAntialiasing", "ImageSetBackgroundColor", "ImageSetDrawingColor", "ImageSetDrawingStroke", "IsImageFile"],
 	"description":" Specifies the degree of transparency of drawing functions.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"String","values":[]},
