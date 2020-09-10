@@ -4,7 +4,7 @@
 	"syntax":"imageDrawCubicCurve(name, ctrlx1, ctrly1, ctrlx2, ctrly2, x1, y1, x2, y2)",
 	"member":"someImage.drawCubicCurve(ctrlx1, ctrly1, ctrlx2, ctrly2, x1, y1, x2, y2)",
 	"returns":"void",
-	"related":[],
+	"related":["ImageDrawQuadraticCurve", "ImageDrawRect", "ImageDrawRoundRect", "ImageSetAntialiasing", "ImageSetDrawingColor", "ImageSetDrawingStroke", "IsImageFile"],
 	"description":" Draws a cubic curve.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"","values":[]},

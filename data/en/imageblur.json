@@ -4,7 +4,7 @@
 	"syntax":"imageBlur(name [, blurradius])",
 	"member":"someImage.blur(blurradius)",
 	"returns":"void",
-	"related":[],
+	"related":["ImageSharpen","IsImageFile"],
 	"description":" Smooths (blurs) the ColdFusion image.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
