@@ -4,7 +4,7 @@
 	"syntax":"imageAddBorder(name, thickness [, color] [, bordertype])",
 	"member":"someImage.addBorder(thickness [, color] [, bordertype])",
 	"returns":"void",
-	"related":[],
+	"related":["cfimage", "ImageDrawRect", "IsImageFile"],
 	"description":" Adds a rectangular border around the outside edge of a ColdFusion image.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},

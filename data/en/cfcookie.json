@@ -2,7 +2,7 @@
 	"name":"cfcookie",
 	"type":"tag",
 	"syntax":"<cfcookie name = \"cookie name\">",
-	"related":[],
+	"related":["cfdump", "cfparam", "cfregistry", "cfsavecontent", "cfschedule", "cfset"],
 	"description":"Defines web browser cookie variables, including expiration and\n security options.",
 	"params": [
 		{"name":"name","description":"Name of cookie variable. CFML converts cookie names\n to all-uppercase. Cookie names set using this tag can\n include any printable ASCII characters except commas,\n semicolons or white space characters.","required":true,"default":"","type":"string","values":[]},
@@ -22,7 +22,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfcookie"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcookie"}
 	},
-	"links": [],
+	"links": [
+		{
+		"title":"Cookies With CFCookie vs. Cookie Scope",
+		"description":"This Tutorial illustrate Cookie Scope",
+		"url":"https://www.bennadel.com/blog/1913-setting-coldfusion-cookies-with-cfcookie-vs-cookie-scope.htm"
+		}
+	],
 	"examples": [
 		{
 			"title": "Script Syntax",

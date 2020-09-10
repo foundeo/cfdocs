@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"getHTTPTimeString(DateTime)",
 	"returns":"string",
-	"related":[],
+	"related":["GetLocale", "GetTimeZoneInfo", "SetLocale"],
 	"description":" Gets the current time, in the Universal Time code (UTC).",
 	"params": [
 		{"name":"DateTime","description":"","required":false,"default":"now()","type":"date","values":[]}
@@ -14,7 +14,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/gethttptimestring"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/gethttptimestring"}
 	},
-	"links": [],
+	"links": [
+		{
+		"title":"Learning getHTTPTimeString by Ben Nadel",
+		"description":"This Tutorial illustrate getHTTPTimeString function",
+		"url":"https://www.bennadel.com/blog/1595-converting-to-gmt-and-from-gmt-in-coldfusion-for-use-with-http-time-stamps.htm"
+		}
+	],
 	"examples": [{
             "title": "Output UTC Date of 2017/8/8",
             "description": "",

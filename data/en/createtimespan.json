@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"createTimespan(days, hours, minutes, seconds)",
 	"returns":"numeric",
-	"related":[],
+	"related":["CreateDateTime","DateAdd","DateConvert"],
 	"description":"Returns a value that defines a time period, represented by a numeric (double) where 1 equals 1 day. You can add or subtract it from other date/time objects and use it with the cachedWithin attribute of cfquery.",
 	"params": [
 		{"name":"days","description":"The number of days ranging from 0 to 32768","required":true,"default":"","type":"numeric","values":[]},
@@ -18,7 +18,11 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createtimespan"}
 	},
 	"links": [
-
+		{
+		"title":"Using CreateTimeSpan",
+		"description":"This Tutorial illustrate createTimespan",
+		"url":"https://www.bennadel.com/blog/611-using-session-timeout-and-createtimespan-subtle-caveat.htm"
+		}
 	],
 	"examples": [
 		{
