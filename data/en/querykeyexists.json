@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"queryKeyExists(query, key)",
 	"returns":"boolean",
-	"related":[],
+	"related":["QuerySort", "QueryFilter", "QueryEach"],
 	"description":"Determines whether the specified column (key) is present in a query.",
 	"member":"query.keyExists(key)",
 	"params": [

@@ -4,7 +4,7 @@
 	"syntax": "queryReverse(query)",
 	"member": "query.reverse()",
 	"returns": "query",
-	"related": [],
+	"related": ["arrayReverse","reverse"],
 	"description": "Returns a reversed version of the query",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []}

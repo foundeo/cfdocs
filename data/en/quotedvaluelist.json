@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"quotedValueList(column [, delimiter])",
 	"returns":"string",
-	"related":[],
+	"related":["ValueList"],
 	"description":" Gets the values of each record returned from an executed query.\n CFML does not evaluate the arguments",
 	"params": [
 		{"name":"column","description":"","required":true,"default":"","type":"QueryColumn","values":[]},

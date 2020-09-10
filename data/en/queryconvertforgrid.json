@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"queryConvertForGrid(query, page, pageSize)",
 	"returns":"struct",
-	"related":[],
+	"related":["cfgrid"],
 	"description":" Converts query data to a structure that contains a paged subset of the query.",
 	"params": [
 		{"name":"query","description":"No Help Available","required":true,"default":"","type":"string","values":[]},

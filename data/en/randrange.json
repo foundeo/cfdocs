@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"randRange(number1, number2 [, algorithm])",
 	"returns":"numeric",
-	"related":[],
+	"related":["Rand", "Randomize"],
 	"description":"Generates a random integer between two specified numbers.\n Requests for random integers that are greater than 100,000,000\n result in non-random numbers, to prevent overflow during\n internal computations.",
 	"params": [
 		{"name":"number1","description":"","required":true,"default":"","type":"numeric","values":[]},
