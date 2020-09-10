@@ -15,7 +15,20 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/structevery.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"Simple structEvery example",
+			"description":"Here we have simple example about structevery function. It is supported only in Lucee.",
+			"code":"var struct = {\"Name\":\"Dhar\",\"Age\":\"20\",\"Country\":\"US\"};\r\nstructevery(struct,function(key,value){\r\n\twriteOutput(key & \":\" & value & \" \");\r\n\treturn true;\r\n});",
+			"result":"Country:US Name:Dhar Age:20"
+		},
+		{
+			"title":"Simple structEvery member function example",
+			"description":"Here we have simple example about structevery member function. It is supported only in Lucee.",
+			"code":"var struct = {\"Name\":\"Dhar\",\"Age\":\"20\",\"Country\":\"US\"};\r\nstruct.every(function(key,value){\r\n\twriteOutput(key & \":\" & value & \" \");\r\n\treturn false;\r\n});",
+			"result":"Country:US"
+		}
+	],
 	"links": [{
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
