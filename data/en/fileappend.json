@@ -1,7 +1,7 @@
 {
 	"name":"fileAppend",
 	"type":"function",
-	"syntax":"fileAppend(file, data [, charset])",
+	"syntax":"fileAppend(file, data [, charset] [, addNewLine])",
 	"returns":"void",
 	"related":["filewrite"],
 	"description":"Appends the data contents to the file.",
