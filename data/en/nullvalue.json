@@ -12,7 +12,7 @@
 	"examples": [{
             "title":"ColdFusion polyfill",
             "description":"Using java data type null instead",
-            "code":"nullValue = javacast('null','');\nwriteOutput(isNull(nullValue));",
+            "code":"writeOutput(isNull(nullValue()));",
             "result":"YES",
             "runnable":true
         }],
