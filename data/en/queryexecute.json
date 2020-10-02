@@ -1,7 +1,7 @@
 {
 	"name":"queryExecute",
 	"type":"function",
-	"syntax":"queryExecute(sql [, params, queryOptions])",
+	"syntax":"queryExecute(sql [, params, options])",
 	"returns":"query",
 	"description":"Executes a SQL query, returns the result.",
 	"related":["cfquery","cfqueryparam"],
@@ -13,7 +13,7 @@
 	"params":[
 		{"name":"sql","description":"SQL string to execute.","values":[],"default":"","type":"string","required":true},
 		{"name":"params","description":"Array or Struct of parameter values. When passing an array use ? as place holders. When passing a struct use :keyName where keyName is the name of the key in the structure corresponding to the parameter. The struct or array can be a struct with keys such as the following.","values":[],"default":"","type":"any","required":false},
-		{"name":"queryOptions","description":"Struct containing query options, all cfquery tag attributes are supported except the name attribute.","values":[],"default":"","type":"struct","required":false}
+		{"name":"options","description":"Struct containing query options, all cfquery tag attributes are supported except the name attribute.","values":[],"default":"","type":"struct","required":false}
 	],
 	"examples":[
 		{"title":"Simple Example", "description":"SQL Only Example. Assumes that a default datasource has been specified (by setting the variable this.datasource in Application.cfc)", "code":"qryResult = queryExecute(\"SELECT * FROM Employees\");", "result":""},
