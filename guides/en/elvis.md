@@ -33,6 +33,8 @@ Similarly, you can use this operator for Struct:
 
     securityNumber = securityStruct['Joe'] ?: "";
 
+NB: If the value tested === false, then the expression on the right will be evaluated.
+
 ## Examples
 
 Examples which are all the same:
