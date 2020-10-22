@@ -19,7 +19,7 @@
 	],
 	"examples": [
 		{
-			"title": "Year of a datatime object",
+			"title": "Year of a datetime object",
 			"description": "",
 			"code": "dt = createdatetime(2016,1,1,5,30,25);\ny = year( dt );\nwriteoutput( y );",
 			"result": "2016"

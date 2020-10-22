@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"imageCreateCaptcha (height, width, text [, difficulty, fonts, fontsize)",
 	"returns":"any",
-	"related":[],
+	"related":["cfimage"],
 	"description":" Create a Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) image, a distorted text image that is human-readable, but not machine-readable, used in a challenge-response test for preventing spam.",
 	"params": [
 		{"name":"height","description":"Height in pixels of the image.","required":true,"default":"","type":"","values":[]},

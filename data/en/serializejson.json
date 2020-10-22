@@ -25,7 +25,7 @@
 		},
 		{
 			"title":"JSONUtil.cfc",
-			"description":"A CFC that provides JSON serialization and deserializtion. It is written in CFML so it works on versions prior to CF8. It may be useful if you are experiencing automatic type conversion issues with the builtin serializeJSON function.",
+			"description":"A CFC that provides JSON serialization and deserializtion. It is written in CFML so it works on versions prior to CF8. It may be useful if you are experiencing automatic type conversion issues with the built-in serializeJSON function.",
 			"url":"https://github.com/CFCommunity/jsonutil"
 		}
 	],
@@ -38,7 +38,7 @@
 		},
 		{
 			"title":"Lower Case Keys",
-			"description":"Same as above but they variable names are case sensitive by quoting them.",
+			"description":"Same as above but they variable names are case-sensitive by quoting them.",
 			"code":"person = {\"name\"=\"Pete Freitag\", \"company\"=\"Foundeo\"};\nwriteOutput( serializeJSON(person) );",
 			"result": "{\"company\":\"Foundeo\",\"name\":\"Pete Freitag\"}"
 		},

@@ -4,7 +4,7 @@ Since ColdFusion 6, Java has been core to the CFML language. Your CFML code get 
 
 ## Using Java in CFML
 
-The Java Platform has several builtin classes that you can make use of in CFML (similar to how CFML has several builtin Functions and Tags that you can leverage). You can find detailed documentation of the Java Platform API [here](http://docs.oracle.com/javase/8/docs/api/index.html), there is quite a bit of useful API at your disposal.
+The Java Platform has several built-in classes that you can make use of in CFML (similar to how CFML has several built-in Functions and Tags that you can leverage). You can find detailed documentation of the Java Platform API [here](http://docs.oracle.com/javase/8/docs/api/index.html), there is quite a bit of useful API at your disposal.
 
 #### Using a Constructor
 

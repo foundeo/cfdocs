@@ -7,8 +7,8 @@
 	"description":"Different items are required based on loop type. Items listed\n as required may not be depending on your loop type.\n Loop forms:\n [query] [condition] [index + from + to ] [index + list]\n [collection + item ]",
 	"params": [
 		{"name":"index","description":"Index value. CFML sets it to from value and\n increments or decrements by step value, until it equals to\n value.","required":false,"default":"","type":"string","values":[]},
-		{"name":"to","description":"Beginning value of index.","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"from","description":"Ending value of index.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"from","description":"Beginning value of index.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"to","description":"Ending value of index.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"step","description":"Step by which to increment or decrement the index value.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"condition","description":"Condition that controls the loop.","required":false,"default":"","type":"string","values":[]},
 		{"name":"query","description":"Query that controls the loop.","required":false,"default":"","type":"query","values":[]},
@@ -19,7 +19,7 @@
 		{"name":"list","description":"The list attribute is used with the `index` (or `item` in Lucee or CF2016+) attribute to loop over a list, variable, or filename; contains a list","required":false,"default":"","type":"string","values":[]},
 		{"name":"delimiters","description":"Character(s) that separates items in list","required":false,"default":",","type":"string","values":[]},
 		{"name":"collection","description":"The collection attribute is used with the item attribute.\n often to loop over a structure","required":false,"default":"","type":"any","values":[]},
-		{"name":"item","description":"The item attribute is used with the collection attribute.\n often to loop over a structure\n\nNOTE: If you have item attribute without index, item represents the key. In Lucee4.5+ you can use item with index, but keep in mind, that item will represent the value whereas index will be the key now!","required":false,"default":"","type":"string","values":[]},
+		{"name":"item","description":"The item attribute is used with the collection attribute often to loop over a structure or array\n\nNOTE: If you have item attribute without index, item represents the key. In Lucee4.5+ you can use item with index, but keep in mind, that item will represent the value whereas index will be the key now!","required":false,"default":"","type":"string","values":[]},
 		{"name":"array","description":"CF8+ An array.","required":false,"default":"","type":"AnyValue","values":[]},
 		{"name":"characters","description":"CF8+ The number of characters to read during each iteration of the loop from the file specified in the file attribute. \nIf the value of the characters attribute is more than the number of characters in the file, \nColdFusion uses the number of characters in the file.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"file","description":"CF8+ The absolute path and filename of the text file to read, one line at a time. \nThis is helpful when reading large text files, because you can reuse the value of the index variable, \nwhich contains the current line of the file. \nWhen the loop completes, ColdFusion closes the file.","required":false,"default":"","type":"string","values":[]},
@@ -56,7 +56,7 @@
 		{
 			"title": "CFLoop over an Array",
 			"description": "Array Loop",
-			"code": "<cfset myArray = [\"a\", \"b\", \"c\"]> \r\n <!--- By index ---> \r\n <cfloop index=\"i\" from=\"1\" to=\"#arrayLen(myArray)#\"> \r\n <cfoutput>#myArray[i]#</cfoutput> \r\n </cfloop> \r\n <!--- By array ---> \r\n <cfloop index=\"currentIndex\" array=\"#myArray#\"> \r\n <cfoutput>#currentIndex#</cfoutput> \r\n </cfloop>",
+			"code": "<cfset myArray = [\"a\", \"b\", \"c\"]> \r\n <!--- By index ---> \r\n <cfloop index=\"i\" from=\"1\" to=\"#arrayLen(myArray)#\"> \r\n <cfoutput>#myArray[i]#</cfoutput> \r\n </cfloop> \r\n <!--- By array ---> \r\n <cfloop index=\"currentIndex\" item=\"currentItem\" array=\"#myArray#\"> \r\n <cfoutput>#currentIndex#</cfoutput> \r\n \r\n <cfoutput>#currentItem#</cfoutput> \r\n </cfloop>",
 			"result": ""
 		},
 	    	{

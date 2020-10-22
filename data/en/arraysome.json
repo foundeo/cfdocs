@@ -32,13 +32,27 @@
 				"type": "array",
 				"required": false
 			}],"type":"boolean","required":"true","values":[],"default":""},
-		{"name": "parallel", "description": "Execute closures parallel", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "Maximum number of threads executed, ignored when argument \"parallel\" is set to false", "required": false, "default": "20", "type": "numeric", "values": []}
+		{"name": "parallel", "description": "Lucee4.5+ Execute closures parallel", "required": false, "default": "", "type": "boolean", "values": []},
+		{"name": "maxThreads", "description": "Lucee4.5+ Maximum number of threads executed, ignored when argument \"parallel\" is set to false", "required": false, "default": "20", "type": "numeric", "values": []}
 	],
 	"engines": {
+		"coldfusion":{"minimum_version":"2018.0.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraysome.html"},
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/arraysome.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title": "Simple Example",
+			"description": "",
+			"code": "// Create an array\r\narrayList = [\"apple\", \"pineapple\", \"mango\", \"apricot\"];\r\n\r\n// Match some\r\nresult = arraySome(arrayList, function(fruit) {\r\n    return fruit.startsWith(\"a\");\r\n});\r\n\r\n// Print result\r\nwriteOutput((result ? \"Some\" : \"No\") & \" matches  were found!\");",
+			"result": "Some matches were found!"
+		},
+		{
+			"title": "Member Function Example",
+			"description": "",
+			"code": "// Create an array\r\narrayList = [\"apple\", \"pineapple\", \"mango\", \"apricot\"];\r\n\r\n// Match some\r\nresult = arrayList.some(function(fruit) {\r\n    return fruit.endsWith(\"a\");\r\n});\r\n\r\n// Print result\r\nwriteOutput((result ? \"Some\" : \"No\") & \" matches  were found!\");",
+			"result": "No matches were found!"
+		}
+	],
 	"links": [{
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",

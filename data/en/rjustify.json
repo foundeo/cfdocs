@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"rJustify(String, length)",
 	"returns":"string",
-	"related":[],
+	"related":["lJustify","cJustify"],
 	"description":" Right justifies characters of a string.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},

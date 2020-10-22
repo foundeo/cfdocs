@@ -8,7 +8,7 @@
 	"description":"Formats a time value using US English time formatting conventions. If no mask is specified, returns a time value using the hh:mm tt format. For international time formatting, see LSTimeFormat.",
 	"params": [
 		{"name":"time","description":"A date\/time value or string to convert","required":true,"default":"","type":"date","values":[]},
-		{"name":"mask","description":"Masking characters that determine the format.\n `h`,`hh`,`H`,`HH`: Hours\n `m`,`mm`: Minutes\n`s`,`ss`: Seconds\n `l`: Milliseconds\n`t`: A or P\n`tt`: AM or PM\n`z`: Time zone in literal format, for example GMT\n`Z`: Time zone in hours offset (RFC822), for example +0400\n`X`,`XX`,`XXX`: Time zone in hourse of offset in ISO 8601 format\n`\"short\"`: `h:mm tt`\n`\"medium\"`: `h:mm:ss tt`","required":false,"default":"hh:mm tt","type":"string","values":["short","medium","long","full"]}
+		{"name":"mask","description":"Masking characters that determine the format.\n `h`,`hh`: Hours in 12 hour format\n,`H`,`HH`: Hours in 24 hour format\n `m`,`mm`: Minutes\n`s`,`ss`: Seconds\n `l`: Milliseconds\n`t`: A or P\n`tt`: AM or PM\n`z`: Time zone in literal format, for example GMT\n`Z`: Time zone in hours offset (RFC822), for example +0400\n`X`,`XX`,`XXX`: Time zone in hours of offset in ISO 8601 format\n`\"short\"`: `h:mm tt`\n`\"medium\"`: `h:mm:ss tt`","required":false,"default":"hh:mm tt","type":"string","values":["short","medium","long","full"]}
 
 	],
 	"engines": {

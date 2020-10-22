@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"spreadsheetFormatColumns(spreadsheetObj, format, columns)",
 	"returns":"void",
-	"related":[],
+	"related":["SpreadsheetFormatColumn","SpreadsheetFormatCell"],
 	"description":"Formats the contents of a multiple columns of an Excel spreadsheet object.",
 	"params": [
 		{"name":"spreadsheetObj","description":"The spreadsheet object for which formatting will be applied","required":true,"default":"","type":"variableName","values":[]},

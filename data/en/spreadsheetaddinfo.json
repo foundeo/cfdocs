@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"spreadsheetAddInfo(spreadsheetObj, info)",
 	"returns":"void",
-	"related":[],
+	"related":["SpreadsheetAddColumn", "SpreadsheetAddImage", "SpreadsheetAddRow", "SpreadsheetDeleteRow", "SpreadsheetDeleteRows", "SpreadsheetFormatRow", "SpreadsheetFormatRows", "SpreadsheetShiftRows"],
 	"description":" Adds information to an Excel spreadsheet object.",
 	"params": [
 		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},

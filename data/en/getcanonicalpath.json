@@ -12,6 +12,12 @@
 		"coldfusion": {"minimum_version": "2016.0.7", "notes": "Added to ColdFusion 2018 update 1.", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getcanonicalpath.html"},
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getcanonicalpath.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title": "getCanonicalPath Example",
+			"description":" Returns the canonical path of the input path.",
+			"code":"writeOutput( getCanonicalPath(getBaseTemplatePath()) );"
+		}
+	],
 	"links": []
 }

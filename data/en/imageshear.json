@@ -4,7 +4,7 @@
 	"syntax":"imageShear(name, shear [, direction] [, interpolation])",
 	"member":"someImage.shear(shear [, direction] [, interpolation])",
 	"returns":"void",
-	"related":[],
+	"related":["ImageSetAntialiasing", "ImageShearDrawingAxis", "IsImageFile"],
 	"description":" Shears an image either horizontally or vertically.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},

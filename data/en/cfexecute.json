@@ -15,7 +15,7 @@
 		{"name":"terminateOnTimeout","description":"Lucee4.5+ Terminate the process after the specified timeout is reached. Ignored if timeout is not set or is 0.","required":false,"default":"false","type":"boolean","values":[true, false]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexecute.html"},
+		"coldfusion": {"minimum_version":"4.5", "notes":"terminateOnTimeout is not supported in Adobe ColdFusion", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexecute.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/execute.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfexecute"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfexecute"}
@@ -27,13 +27,13 @@
 		{
 		"title": "Script syntax",
 		"description": "If you want to execute a script (.sh,.cmd,.bat), use bash (linux) or cmd.exe (windows) as the command and the script as argument for the shell interpreter.",
-		"code": "cfexecute( name=\"bash\" arguments=\"/opt/jq.sh #cmdArgs#\", variable=\"standardOut\" , errorVariable=\"errorOut\" , timeout=\"10\");",
+		"code": "cfexecute( name=\"bash\", arguments=\"/opt/jq.sh #cmdArgs#\", variable=\"standardOut\" , errorVariable=\"errorOut\" , timeout=\"10\");",
 		"runnable":false
 		},
 		{
 			"title": "Script syntax with terminateOnTimeout",
 			"description": "Printing a PDF using lpr",
-			"code": "cfexecute(\r\n\tname=\"lpr\",\r\n\targuments=\"-P 'My Print Job Name' 'C:/Users/devguy/Documents/server/mynewfile.pdf'\",\r\n\tsuccess=\"\",\r\n\ttimeout=\"5\",\r\n\tterminateOnTimeout=\"true\"\r\n\t);",
+			"code": "cfexecute(\r\n\tname=\"lpr\",\r\n\targuments=\"-P 'My Print Job Name' 'C:/Users/devguy/Documents/server/mynewfile.pdf'\",\r\n\ttimeout=\"5\",\r\n\tterminateOnTimeout=\"true\"\r\n\t);",
 			"runnable":false
 		}
 	]

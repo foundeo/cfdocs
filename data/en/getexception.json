@@ -11,5 +11,13 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getexception.html"}
 	},
+	"examples" : [
+		{
+			"title": "Simple Example",
+			"description":"Renders map of exception data, when trying to access a non-existent element in an ArrayList.",
+			"code":"arrayList = createObject(\"JAVA\", \"java.util.ArrayList\").init();\r\ntry {writeDump(arrayList.get(2));}\r\ncatch(java.lang.IndexOutOfBoundsException _) {\r\n    writeDump(getException(arrayList));\r\n}",
+			"result":""
+		}
+	],
 	"links": []
 }

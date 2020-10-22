@@ -34,9 +34,6 @@
 				<cfif data.type IS "tag">
 					<cfif StructKeyExists(data, "script")>
 						<cfset data.scriptTitle = "Script Syntax">
-					<cfelseif ListFindNoCase("cfabort,cfbreak,cfcontinue,cfreturn,cfexit", data.name)>
-						<cfset data.scriptTitle = "Script Syntax">
-						<cfset data.script = replaceScript(name = data.name, mode = "cf") & ";">
 					<cfelseif NOT ListFindNoCase("cfif,cfset,cfelse,cfelseif,cfloop,cfinclude,cfparam,cfswitch,cfcase,cftry,cfthrow,cfrethrow,cfcatch,cffinally,cfmodule,cfcomponent,cfinterface,cfproperty,cffunction,cfimport,cftransaction,cftrace,cflock,cfthread,cfsavecontent,cflocation,cfargument,cfapplication,cfscript", data.name)>
 						<!--- add cfscript syntax --->
 						<cfset data.script = replaceScript(name = data.name, syntax = data.syntax, mode = "other")>
@@ -79,7 +76,7 @@
 						};
 						engine = structKeyList(data.engines);
 					</cfscript>
-					#engineMap[engine]#<cfif StructKeyExists(data.engines[engine], "minimum_version") AND Len(data.engines[engine])> #data.engines[engine].minimum_version# and up</cfif>.&nbsp;
+					#engineMap[engine]#<cfif StructKeyExists(data.engines[engine], "minimum_version") AND Len(data.engines[engine].minimum_version)> #data.engines[engine].minimum_version# and up</cfif>.&nbsp;
 					<em>Not supported on <cfif engine neq 'lucee'>Lucee, </cfif><cfif engine neq 'coldfusion'>Adobe ColdFusion, </cfif> etc.</em>
 				</div>
 			</cfif>

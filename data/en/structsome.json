@@ -38,7 +38,20 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/structsome.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"The simple StructSome example",
+			"description":"Here we have simple example about structsome function.",
+			"code":"<cfscript>\r\nvar struct={\"Name\":\"Raja\",\"age\":20,\"mark\":80};\r\nresult = structSome(struct,function(key,value){\r\n\treturn key IS \"Name\"\r\n});\r\nwriteOutput((result ? '' : 'No')& \" Key Exists.\")\r\n</cfscript>",
+			"result":"Key Exists."
+		},
+		{
+			"title":"The structSome member function example",
+			"description":"Here we have simple example about structsome as member function.",
+			"code":"<cfscript>\r\nvar struct={\"Name\":\"Raja\",\"age\":20,\"mark\":80};\r\nresult = struct.some(function(key,value){\r\n\treturn key IS \"average\"\r\n});\r\nwriteOutput((result ? '' : 'No')&\" Key Exists.\")\r\n</cfscript>",
+			"result":"No Key Exists."
+		}
+	],
 	"links": [{
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",

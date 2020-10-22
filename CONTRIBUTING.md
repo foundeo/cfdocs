@@ -9,7 +9,7 @@
 
 ### Where can I find documentation about the JSON file format used?
 
-It's documented in the [main README](/foundeo/cfdocs#json-file-documentation).
+It's documented in the [main README](https://github.com/foundeo/cfdocs#json-file-documentation).
 
 ### What version of CF should the cfdocs CFML code work on?
 
@@ -21,9 +21,26 @@ functions at this time.
 
 Tabs.
 
-### For boolean values should I use `yes`/`no` or `true`/`false`
+### For boolean values should I use `yes`/`no` or `true`/`false` or `1`/`0`?
 
 Use `true`/`false`
+
+### Should I use implicit or explicit notation for arrays and structs?
+
+Example:
+
+	arr = []; // implicit
+	// is the same as
+	arr = arrayNew(1);
+
+	unorderedStruct = {};
+	orderedStruct = [:];
+	// is the same as
+	unorderedStruct = structNew();
+	orderedStruct = structNew('ordered');
+
+
+Use implicit.
 
 ### How are my contributions licensed?
 

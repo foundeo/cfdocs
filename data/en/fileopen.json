@@ -1,7 +1,7 @@
 {
 	"name":"fileOpen",
 	"type":"function",
-	"syntax":"fileOpen(filePath [, mode [, charset]])",
+	"syntax":"fileOpen(filePath [, mode [, charset] [, seekable]])",
 	"returns":"any",
 	"related":["fileClose", "fileCopy", "fileReadBinary", "fileRead", "fileReadLine", "fileWrite"],
 	"description":"Opens a file",

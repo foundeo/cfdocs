@@ -594,7 +594,7 @@
       "code": "<cfadmin\n action=\"UpdateUpdate\"\n type=\"web|server\"\n password=\"password\"\n updateType=\"#form.type#\"\n updateLocation=\"#form.location#\"\n remoteClients=\"arrayOfClients\">"
     },
     {
-      "title": "Verfiy a datasource",
+      "title": "Verify a datasource",
       "description": "",
       "code": "<cfadmin\n action=\"verifyDatasource\"\n type=\"web|server\"\n password=\"password\"\n name=\"#data.names[idx]#\"\n dbusername=\"#data.usernames[idx]#\"\n dbpassword=\"#data.passwords[idx]#\">"
     },

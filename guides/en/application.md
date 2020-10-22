@@ -102,11 +102,11 @@ component {
 
 Since variables within the application scope can be accessed by multiple threads at once (simultaneous requests), you should consider if locking is necessary.
 
-In very early versions of ColdFusion (pre-CF6), locking was required when reading or writing to a shared scope, such as the application scope. In modern versions of ColdFusion or Lucee, in most cases locking is taken care of automatically and you do not need to use `cflock`.
+In very early versions of ColdFusion (pre-CF6), locking was required when reading or writing to a shared scope, such as the application scope. In modern versions of ColdFusion or Lucee, in most cases, locking is taken care of automatically and you do not need to use `cflock`.
 
 One case that does not require locking is if you set your `application` variables in `onApplicationStart` and do not modify them (i.e., they are only read, except in `onRequestStart`).
 
-You should take care not to lock unnecessarily, as it may create a performance bottle neck.
+You should take care not to lock unnecessarily, as it may create a performance bottleneck.
 
 One case where you _should_ use locking is when you are using the `application` scope on both sides of the assignment. For example:
 
@@ -122,4 +122,4 @@ lock scope="application" timeout="1" type="exclusive" { {
 }
 ```
 
-Keep in mind that, if the application scoped variable is written to at any time other than `onApplicationStart`, there is a possibility that the value of the application variable could change mid-request. If this is a problem, consider using `cflock` to ensure a consistant value. 
+Keep in mind that, if the application scoped variable is written to at any time other than `onApplicationStart`, there is a possibility that the value of the application variable could change mid-request. If this is a problem, consider using `cflock` to ensure a consistent value. 

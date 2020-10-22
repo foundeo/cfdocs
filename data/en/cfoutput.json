@@ -44,7 +44,7 @@
 	    },
 	    {
 	            "title": "Using the encodeFor attribute",
-	            "description": "CF2016+ Lucee5.1+ By specifying `encodefor=\"html\"` each varaible is encoded using the `encodeForHTML` function before it is output.",
+	            "description": "CF2016+ Lucee5.1+ By specifying `encodefor=\"html\"` each variable is encoded using the `encodeForHTML` function before it is output.",
 	            "code": "<cfoutput query=\"news\" encodefor=\"html\">\n    <h2>#news.headline#</h2>\n    <p>#news.byline#</p>\n</cfoutput>",
 	            "result": ""
 	    },

@@ -42,7 +42,7 @@ Historical information about ColdFusion Versions and releases.
 
 ## Macromedia ColdFusion 5 - June 2001
 
-* [ColdFusion 5 Release Notes](https://www.adobe.com/support/coldfusion/releasenotes/5/server/releasenotes_5.htm)
+* [ColdFusion 5 Release Notes](http://web.archive.org/web/20151001110848/www.adobe.com/support/coldfusion/releasenotes/5/server/releasenotes_5.htm)
 * [ColdFusion 5 Language Reference](http://download.macromedia.com/pub/documentation/en/coldfusion/5/cf5_cfml_ref.pdf)
 * UDF's / cfscript `function`
 * [ColdFusion 5 New Tags and Functions](/cf5) 
@@ -89,8 +89,8 @@ Historical information about ColdFusion Versions and releases.
 
 ## Adobe ColdFusion 2018 - July 2018 (_Aether_)
 
-* Semi-colins optional
-* Asynchronous Programming [runAsnyc()](/runasync)
+* Semicolons optional
+* Asynchronous Programming [runAsync()](/runasync)
 * Typed Arrays `[type][element1,element2,etc]`
 * Array Negative Indices `lastItem = a[-1]`
 * Array Slices

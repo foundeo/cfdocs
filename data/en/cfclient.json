@@ -15,7 +15,7 @@
 	"examples": [
 		{
 			"title": "Basic Example",
-			"description": "Very basic example. Please read the wikidoc entry at Adobe for futher usage scenarios.",
+			"description": "Very basic example. Please read the wikidoc entry at Adobe for further usage scenarios.",
 			"code": "<cfclient>\r\n <cfset myvar = \u201cHello World\u201d>\r\n <cfoutput>#myvar#</cfoutput>\r\n</cfclient>",
 			"result": ""
 		}

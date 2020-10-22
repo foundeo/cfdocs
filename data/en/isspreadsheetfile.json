@@ -11,5 +11,14 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isspreadsheetfile.html"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"Simple isSpreadsheetFile example",
+			"description":"Here we have simple example to check the given file is spreadsheet or not.",
+			"code":"<form method=\"post\" enctype=\"multipart/form-data\">\r\n\t<input type=\"file\" name=\"myfile\" />\r\n\t<input type=\"submit\" name=\"submit\" value=\"submit\">\r\n</form>\r\n<cfif structKeyExists(form, \"submit\")>\r\n<cfif isSpreadsheetFile(form.myfile)>\r\n\t<cffile action=\"upload\" destination=\"#getTempDirectory()#\" filefield=\"form.myfile\" nameconflict=\"makeunique\">\r\n</cfif></cfif>",
+			"result":"",
+			"runnable":false
+		}
+	]
 }

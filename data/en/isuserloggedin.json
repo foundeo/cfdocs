@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"isUserLoggedIn()",
 	"returns":"boolean",
-	"related":[],
+	"related":["cflogin", "cfloginuser", "GetAuthUser", "GetUserRoles", "IsUserInAnyRole", "IsUserInRole"],
 	"description":" Determines whether a user is logged in.",
 	"params": [
 	],

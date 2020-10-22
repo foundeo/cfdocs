@@ -1,25 +1,28 @@
 {
 	"name":"hash",
 	"type":"function",
-	"syntax":"hash(String [, algorithm] [, encoding] [, iterations])",
+	"syntax":"hash(string [, algorithm [, encoding]] [, additionalIterations])",
 	"returns":"string",
 	"related":[],
-	"description":"Converts a string into a fixed length hexadecimal string.",
+	"description":"Converts a string into a fixed length hexadecimal string.\n\nNOTE: The result is useful for comparision and validation, such as storing and validating a hashed password without exposing the original password.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"algorithm","description":"A supported algorithm such as MD5,SHA,SHA-256,SHA-384, or SHA-512. Of those listed SHA-512 is the strongest and generates a 128 character hex result. CF7+", "required":false,"default":"MD5","type":"string","values":["CFMX_COMPAT","MD5","SHA","SHA-256","SHA-384","SHA-512"]},
-		{"name":"encoding","description":"A string specifying the encoding to use when converting\n the string to byte data used by the hash algorithm.\n Must be a character encoding name recognized by the\n Java runtime. CF7+","required":false,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]},
-		{"name":"iterations", "description":"Iterates the number of times the hash is computed to create a more computationally intensive hash. Lucee and Adobe CF implement this differently (off by one), see compatibility notes below. CF10+", "default":"1", "required":false, "type":"numeric", "values":[]}
-
+		{"name":"string","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"algorithm","description":"CF7+ A supported algorithm such as MD5,SHA,SHA-256,SHA-384, or SHA-512. Of those listed SHA-512 is the strongest and generates a 128 character hex result.\n\nNOTE: The Enterprise Edition of ColdFusion installs the RSA BSafe Crypto-J library, which provides FIPS-140 Compliant Strong Cryptography. This includes additional algorithms. You can also install additional cryptography algorithms and use those hashing algorithms.", "required":false,"default":"MD5","type":"string","values":["CFMX_COMPAT","MD5","SHA","SHA-256","SHA-384","SHA-512"]},
+		{"name":"encoding","description":"CF7+ A string specifying the encoding to use when converting the string to byte data used by the hash algorithm.\nMust be a character encoding name recognized by the Java runtime.\n\nNOTE: The default is specified by the value of `defaultCharset` in the `neo-runtime.xml` file, which is normally `UTF-8`. \nNOTE: This is ignored when using the `CFMX_COMPAT` algorithm.","required":false,"default":"UTF-8","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]},
+		{"name":"additionalIterations", "description":"CF10+ Iterates the number of times the hash is computed to create a more computationally intensive hash. Lucee and Adobe CF implement this differently (off by one), see compatibility notes below.\n\nNOTE: This parameter appears to be ignored if the `CFMX_COMPAT` default algorithm is used.", "default":"0", "required":false, "type":"numeric", "values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4.5", "notes":"CF7 added additional algorithm support, CF10 added the iterations option.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/hash.html"},
-		"lucee": {"minimum_version":"", "notes":"The iterations value represents the total number of hashes on Lucee, in Adobe CF the value is the number of additional iterations.", "docs":"https://docs.lucee.org/reference/functions/hash.html"},
+		"coldfusion": {"minimum_version":"4.5", "notes":"CF7 added additional algorithm support, CF10 added the iterations option. CF2018 uses `additionalIterations` as the iterations param.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/hash.html"},
+		"lucee": {"minimum_version":"", "notes":"The iterations value represents the total number of hashes on Lucee, in Adobe CF the value is the number of additional iterations. In Lucee5+, the iterations param is `numIterations`.", "docs":"https://docs.lucee.org/reference/functions/hash.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/hash"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/hash"}
 	},
 	"links": [
-
+		{
+			"title":"Hashing Byte Arrays",
+			"url":"https://www.bennadel.com/blog/2357-hashing-byte-arrays-binary-data-with-coldfusion-before-coldfusion-10.htm",
+			"description":"Tutorial style article on using the hash function in CFML."
+		}
 	],
 	"examples": [
 		{

@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"location(url [, addtoken] [, statuscode])",
 	"returns":"void",
-	"related":[],
+	"related":["cfscript", "cflocation"],
 	"description":" Stops execution of the current page and opens a CFML page or HTML file.",
 	"params": [
 		{"name":"url","description":"URL of HTML file or CFML page to open.","required":true,"default":"","type":"string","values":[]},
@@ -17,6 +17,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/location"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/location"}
 	},
+	"examples": [
+		{
+			"title": "Simple Example",
+			"description": "Relocates to a different page if user is not logged in.",
+			"code": "if(!structKeyExists(session, \"userID\") {\n    location(\"login.cfm\");\n}",
+			"result": ""
+		}
+	],
 	"links": [
 
 	]

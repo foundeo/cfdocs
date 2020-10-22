@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"spreadsheetGetCellFormula(spreadsheetObj, row, column)",
 	"returns":"string",
-	"related":[],
+	"related":["SpreadsheetGetCellComment","SpreadsheetGetCellValue"],
 	"description":" Gets the formula for a for an Excel spreadsheet object cell, or all formulas for the object.",
 	"params": [
 		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},

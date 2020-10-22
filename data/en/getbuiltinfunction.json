@@ -4,7 +4,7 @@
 	"syntax": "getBuiltinFunction(name)",
 	"returns": "any",
 	"related": [],
-	"description": "Returns a object, which contains the description, parameters and return-type of the given function. Throws an exception when the function do not exists.",
+	"description": "Returns an object, which contains the description, parameters and return-type of the given function. Throws an exception when the function do not exists.",
 	"params": [
 		{"name": "name", "description": "Name of the function.", "required": true, "default": "", "type": "string", "values": []}
 	],

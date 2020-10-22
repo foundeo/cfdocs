@@ -17,7 +17,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structappend"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structappend"}
 	},
-	"links": [],
+	"links": [
+		{
+		"title":"Learning Built-In Functions And Member-Methods by Ben Nadel",
+		"description":"",
+		"url":"https://www.bennadel.com/blog/3813-built-in-functions-and-member-methods-return-different-data-types-in-lucee-cfml-5-3-5-92.htm"
+		}
+	],
 	"examples": [
 		{
 			"title":"Append options to config struct (without overwrite flag)",
@@ -49,7 +55,7 @@
 		},
 		{
 			"title": "Polyfill for earlier versions",
-			"description": "In older coldfusion version where this function is not supported yet, you can fall back to a native java method to achieve the same behavior except that it does not have the `overwriteFlag`.",
+			"description": "In older ColdFusion version where this function is not supported yet, you can fall back to a native java method to achieve the same behavior except that it does not have the `overwriteFlag`.",
 			"code":"config = {a:0, b:0};\noptions= {b:1, c:1};\nconfig.putAll(options);\nwriteOutput( serializeJSON( config ) );",
 			"result":"{\"A\":0,\"B\":0,\"C\":1}",
 			"runnable": true

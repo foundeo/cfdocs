@@ -4,7 +4,7 @@
 	"syntax":"imageDrawText(name, str, x, y, attributecollection)",
 	"member":"someImage.drawText(str, x, y, attributecollection)",
 	"returns":"void",
-	"related":[],
+	"related":["ImageDrawArc", "ImageDrawBeveledRect", "ImageDrawCubicCurve", "ImageDrawLine", "ImageDrawLines", "ImageDrawOval", "ImageDrawQuadraticCurve", "ImageDrawRect", "ImageDrawRoundRect", "ImageSetAntialiasing", "ImageSetDrawingColor", "ImageTranslateDrawingAxis", "IsImageFile"],
 	"description":" Draws a text string on a ColdFusion image with the baseline of the first character positioned at (x,y) in the image.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
@@ -33,7 +33,7 @@
 		},
 		{
 			"title":"Using drawText member function",
-			"description":"CF11+ Lucee4.5+ Create an new image. With the new image write \"CFDocs\" with the text characteristics specified ",
+			"description":"CF11+ Lucee4.5+ Create a new image. With the new image write \"CFDocs\" with the text characteristics specified ",
 			"code":"TextCharacteristics = { size=\"20\", style=\"bold\", strikethrough=\"false\", underline=\"false\"};\r\nimgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.drawText(\"CFDocs\",20,50,TextCharacteristics);\r\ncfimage (action=\"writeToBrowser\", source=imgObj);",
 			"result":"",
 			"runnable":true

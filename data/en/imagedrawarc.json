@@ -4,7 +4,7 @@
 	"syntax":"imageDrawArc(name, x, y, width, height, startAngle, archAngle [, filled])",
 	"member":"someImage.drawArc(x, y, width, height, startAngle, archAngle [, filled])",
 	"returns":"void",
-	"related":[],
+	"related":["ImageDrawCubicCurve", "ImageDrawOval", "ImageDrawQuadraticCurve", "ImageSetAntialiasing", "ImageSetDrawingColor", "ImageSetDrawingStroke", "IsImageFile"],
 	"description":" Draws a circular or elliptical arc.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},

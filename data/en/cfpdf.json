@@ -159,7 +159,7 @@
 		},
 		{
 			"name": "permissions",
-			"description": "Specify the type of permissions on the PDF document:\n AllowPrintHigh\n AllowPrintLow\n AllowModify\n AllowCopy\n AllowAdd\n AllowSecure\n AllowModifyAnnotations\n AllowExtract\n AllowFillIn\n all\n none\n Except for all or none, you can specify a\n commaseparated list of permissions. (optional)",
+			"description": "Specify the type of permissions on the PDF document:\n AllowPrintHigh\n AllowPrintLow\n AllowModify\n AllowCopy\n AllowAdd\n AllowSecure\n AllowModifyAnnotations\n AllowExtract\n AllowFillIn\n all\n none\n Except for all or none, you can specify a\n comma separated list of permissions. (optional)",
 			"required": false,
 			"default": "",
 			"type": "string",
@@ -215,7 +215,7 @@
 		},
 		{
 			"name": "transparent",
-			"description": "Specifies whether the image background is transparent or opaque: foormat=png only\n * yes: the background is transparent.\n * no: the background is opaque.",
+			"description": "Specifies whether the image background is transparent or opaque: format=png only\n * yes: the background is transparent.\n * no: the background is opaque.",
 			"required": false,
 			"default": false,
 			"type": "boolean",
@@ -559,5 +559,14 @@
 			"docs": "http://railodocs.org/index.cfm/tag/cfpdf"
 		}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Script Syntax - Create Thumbnail",
+			"description": "Creates a JPG thumbnail from a PDF file",
+			"code": "cfpdf(\r\n    action=\"thumbnail\",\r\n    source=expandPath( \"./myFile.pdf\" ),\r\n    destination=expandPath( \"./thumbnails/\"),\r\n    resolution=\"high\",\r\n    overwrite=\"yes\",\r\n    pages=\"1\",\r\n    scale=\"75\",\r\n    transparent=\"no\"\r\n);",
+			"runnable":false,
+			"result": "Creates a file called myFile_page_1.jpg in the /thumbnails/ directory"
+		}
+	]
 }

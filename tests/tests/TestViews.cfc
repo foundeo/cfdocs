@@ -1,7 +1,7 @@
 component extends="testbox.system.BaseSpec" {
 	function run(testResults, testBox) {
 		
-		baseURL = (cgi.https IS "on") ? "https://" : "http://";
+		var baseURL = (cgi.https IS "on") ? "https://" : "http://";
 		baseURL &= cgi.server_name & ":" & cgi.server_port & "/doc.cfm?name=";
 
 		describe("Test Doc Views", function() {

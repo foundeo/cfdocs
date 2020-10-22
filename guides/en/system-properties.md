@@ -24,7 +24,7 @@ Set this to `true` if you want to disable the RSA BSafe CryptoJ JCE (enterprise 
 
 ## `-Dcoldfusion.jsafe.defaultalgo`
 
-The setting contorls the default algorithm for random number generation in CF8+ Enterprise. It is set to `FIPS186Random`
+The setting controls the default algorithm for random number generation in CF8+ Enterprise. It is set to `FIPS186Random`
 
 ## `-Dcoldfusion.enablefipscrypto`
 

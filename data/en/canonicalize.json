@@ -48,7 +48,7 @@
             "result": "< < < < <\n<\n<"
         },
         {
-            "title": "Simple Javascript decoding",
+            "title": "Simple JavaScript decoding",
             "description": "http://www.planetpdf.com/codecuts/pdfs/tutorial/jsspec.pdf see section 2.7.5 for JS Encoding",
             "code": "<cfoutput>#canonicalize(\"\\\\U003C\",false,false)#</cfoutput><br/>\n<cfoutput>#canonicalize(\"\\\\X3C\",false,false)#</cfoutput>",
             "result": "<\n<"

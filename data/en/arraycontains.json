@@ -5,7 +5,7 @@
 	"member":"someArray.contains(value)",
 	"returns":"boolean",
 	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
-	"description":"Used to determine if a value is in the given array, case sensitive. Adobe CF and OpenBD return boolean. Lucee / Railo returns the numeric index if the value is found, 0 if not.",
+	"description":"Used to determine if a value is in the given array, case-sensitive. Adobe CF and OpenBD return boolean. Lucee / Railo returns the numeric index if the value is found, 0 if not.",
 	"params": [
 		{"name":"array","description":"The array in which to search.","required":true,"default":"","type":"array","values":[]},
 		{"name":"value","description":"The value to search for in the array.","required":true,"default":"","type":"any","values":[]},

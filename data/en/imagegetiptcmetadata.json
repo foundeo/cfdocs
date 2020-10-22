@@ -4,7 +4,7 @@
 	"syntax":"imageGetIPTCMetaData(name)",
 	"member":"someImage.getIPTCMetaData()",
 	"returns":"struct",
-	"related":[],
+	"related":["cfimage", "ImageGetBlob", "ImageGetBufferedImage", "ImageGetEXIFMetadata", "ImageGetEXIFTag", "ImageGetHeight","ImageGetWidth", "ImageGetIPTCTag", "ImageInfo", "IsImage", "IsImageFile"],
 	"description":" Retrieves the International Press Telecommunications Council (IPTC )headers in a ColdFusion image as a structure.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}

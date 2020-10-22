@@ -14,7 +14,7 @@
 		},
 		{
 			"name": "autosize",
-			"description": "CF11+ Toggles automatically ajusting the width of columns to accomodate their contents.",
+			"description": "CF11+ Toggles automatically adjusting the width of columns to accommodate their contents.",
 			"required": false,
 			"default": "true",
 			"type": "boolean"
@@ -27,7 +27,7 @@
 		},
 		{
 			"name": "columns",
-			"description": "Column number or range of columns. Specify a single number, a hypen-separated column range, a comma-separated list, or any combination of these; for example: 1,3-6,9.",
+			"description": "Column number or range of columns. Specify a single number, a hyphen-separated column range, a comma-separated list, or any combination of these; for example: 1,3-6,9.",
 			"required": false,
 			"type": "string"
 		},
@@ -85,7 +85,7 @@
 		},
 		{
 			"name": "rows",
-			"description": "The range of rows to read. Specify a single number, a hypen-separated row range, a comma-separated list, or any combination of these. For example: 1,3-6,9.",
+			"description": "The range of rows to read. Specify a single number, a hyphen-separated row range, a comma-separated list, or any combination of these. For example: 1,3-6,9.",
 			"required": false,
 			"type": "string"
 		},
@@ -129,7 +129,7 @@
 		},
 		{
 			"title": "Read an Excel file as query (script syntax)",
-			"description": "Reads the Excel file in src into a coldfusion query variable provided in query using the first row as column names.",
+			"description": "Reads the Excel file in src into a ColdFusion query variable provided in query using the first row as column names.",
 			"code": "cfspreadsheet( action=\"read\", src=expandPath( 'example.xls' ), query=\"foo\", headerrow=1, excludeHeaderRow=true );",
 			"runnable": false
 		},

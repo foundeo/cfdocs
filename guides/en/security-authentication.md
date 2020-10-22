@@ -4,15 +4,15 @@ If you missed our [Obfuscation](/security-obfuscation) or [Encryption](/security
 
 Authentication is the process by which you validate that a particular user is allowed to login to your application. This should not be confused with *access control*, which determines what parts of your application a user has access to. Authentication is merely the process of ensuring a user can login.
 
-Authentication has been around as long as computers have been around. The first widely used version of authentication for web applications was known as HTTP Basic Authentication and was widely used by everyone in the early days of web application development. Unfortunately, HTTP Basic Authentication has some caveats to it that make it a very insecure way of handling authentication in the modern world, not the least of which is the username and password being sent in clear-text on every single request made. This opened the door for MITM (Man In The Middle) attacks in the easrly 1990's and quickly fell out of favor with most web developers.
+Authentication has been around as long as computers have been around. The first widely used version of authentication for web applications was known as HTTP Basic Authentication and was widely used by everyone in the early days of web application development. Unfortunately, HTTP Basic Authentication has some caveats to it that make it a very insecure way of handling authentication in the modern world, not the least of which is the username and password being sent in clear-text on every single request made. This opened the door for MITM (Man In The Middle) attacks in the early 1990's and quickly fell out of favor with most web developers.
 
-Since then several 'flavors' of web application authentication have come along that aimed to address the various attack vectors exposed by preceeding authentication mechanisms. We will use many of these authentication mechanisms, layered upon one another, to build a highly secure authentication system that will provide a concise way for you to allow registered users to authenticate with your application.
+Since then several 'flavors' of web application authentication have come along that aimed to address the various attack vectors exposed by preceding authentication mechanisms. We will use many of these authentication mechanisms, layered upon one another, to build a highly secure authentication system that will provide a concise way for you to allow registered users to authenticate with your application.
 
 ### Federated Authentication
 
 Federated authentication was born to address the need to ensure that a user was logging in from your server and not from someone else's server. Federation helps prevent someone from generating a form on their site that then logs into your site, exposing your authentication to abuse by servers not under your control.
 
-The first step to federation is to ensure that the value of the referrerr HTTP header value matches that of your domain. While this is still a good practice, modern languages can easily fake the referrer in the HTTP header itself, so another method of federation needs to be layered upon this one - federated cookies.
+The first step to federation is to ensure that the value of the referrer HTTP header value matches that of your domain. While this is still a good practice, modern languages can easily fake the referrer in the HTTP header itself, so another method of federation needs to be layered upon this one - federated cookies.
 
 Federated cookies, when layered with the referrer check, provide a more secure login form by requiring that your domain specific cookie is provided to your server on the authentication request. While it is still feasible to provide this cookie from another server, it makes your authentication more robust and can help ward off those scripts that cannot, or does not, provide for these kinds of added protections. This is not a failsafe, it merely adds upon the layers your authentication requires, thus making it more difficult and time consuming to hack. 
 
@@ -44,7 +44,7 @@ Which might confuse the hacker into believing that this is a Google Analytics co
 
 ### The Login View (Page)
 
-We'll start exploring how to build a secure authentication mechanism by examining the login page you should use for your web application. This login page should take advantage of both federation and prevent against password disclosure. Our examples will, again, be using fw/1 to demonstrate ways of handling these tasks, but the same concepts are applicable accross all web applications (even non-CFML ones!).
+We'll start exploring how to build a secure authentication mechanism by examining the login page you should use for your web application. This login page should take advantage of both federation and prevent against password disclosure. Our examples will, again, be using fw/1 to demonstrate ways of handling these tasks, but the same concepts are applicable across all web applications (even non-CFML ones!).
 
 Let's start by looking at our login() controller. One of the first things we do is to set a zero-value session cookie when requesting the login form. This will be checked during authentication to ensure that our form is being posted from our own server:
 

@@ -15,5 +15,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/rematchnocase"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/rematchnocase"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "reMatchNoCase Example",
+			"description":"Uses a regular expression (RE) to search a string for a pattern.",
+			"code":" string = \"1234AbcacAcdd\";\r\n writeDump(reMatchNoCase(\"[A-Z]+\",string)) ;"
+		}
+	]
 }
