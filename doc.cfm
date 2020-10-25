@@ -3,18 +3,32 @@
 <cfif url.name IS "index">
 	<cfset data = {name="CFDocs", description="Ultra Fast CFML Documentation", type="index"}>
 <cfelseif FileExists(ExpandPath("./guides/en/#url.name#.md")) OR url.name is "how-to-contribute">
-	<cftry>
-		<!--- convert md to HTML --->
-		<cfset txtmark = createObject("java", "com.github.rjeschke.txtmark.Processor")>
-		<cfset path = (url.name is "how-to-contribute" ? 'CONTRIBUTING' : './guides/en/#url.name#')>
-		<cfset data = txtmark.process(createObject("java", "java.io.File").init(ExpandPath("#path#.md")), "utf-8")>
-		<cfset request.gitFilePath = "/tree/master/guides/en/"&(url.name is "how-to-contribute" ? 'CONTRIBUTING' : url.name)&".md">
-		<cfcatch>
-			<cfset data = "Error processing markdown: #encodeForHTML(cfcatch.message)# #encodeForHTML(cfcatch.detail)#">
-			<cfset data &= "Make sure you have installed the textMark jar file in the lib directory used to process the markup files.">
-			<cfset applicationStop()>
-		</cfcatch>
-	</cftry>
+	<!--- convert md to HTML --->
+	<cfscript>
+		try {
+			request.gitFilePath = "/tree/master/guides/en/"&(url.name is "how-to-contribute" ? 'CONTRIBUTING' : url.name)&".md";
+			path = (url.name is "how-to-contribute" ? 'CONTRIBUTING' : './guides/en/#url.name#');
+			md = fileRead(ExpandPath("#path#.md"), "UTF-8");
+
+			Parser = createObject("java", "com.vladsch.flexmark.parser.Parser");
+			HtmlRenderer = createObject("java", "com.vladsch.flexmark.html.HtmlRenderer");
+			TablesExtension = createObject("java", "com.vladsch.flexmark.ext.tables.TablesExtension");
+
+			options = createObject("java", "com.vladsch.flexmark.util.data.MutableDataSet").init();
+			options.set(Parser.EXTENSIONS, [TablesExtension.create()]);
+
+			parser = Parser.builder(options).build();
+			renderer = HtmlRenderer.builder(options).build();
+
+			document = parser.parse(md);
+			data = renderer.render(document);
+		}
+		catch (any e) {
+			data = "Error processing markdown: #encodeForHTML(e.message)# #encodeForHTML(e.detail)#";
+			data &= "<br/><br/>Make sure you have installed the correct .jar file(s) in the /lib directory.";
+			applicationStop();
+		}
+	</cfscript>
 <cfelseif FileExists(ExpandPath("./data/en/#url.name#.json"))>
 	<cfset data = DeserializeJSON( FileRead(ExpandPath("./data/en/#url.name#.json")))>
 	<cfset request.gitFilePath = "/edit/master/data/en/" & url.name & ".json">

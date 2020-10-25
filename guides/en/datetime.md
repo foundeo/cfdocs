@@ -1,4 +1,5 @@
 # Date Time Cheatsheet
+
 ## Formatting
 
 | Format | Notes                                                              |
@@ -7,7 +8,7 @@
 | dd     | Day of the month as digits; leading zero for single-digit days.    |
 | EEE    | Day of the week as a three-letter abbreviation.                    |
 | EEEE   | Day of the week as its full name.                                  |
-| m      | Month as digits; no leading zero for single-digit months. **CAUTION:** In `timeFormat()` "m" means "minutes"  |
+| m      | Month as digits; no leading zero for single-digit months. **CAUTION:** In `timeFormat()` "m" means "minutes"  |
 | mm     | Month as digits; leading zero for single-digit months.             |
 | mmm    | Month as a three-letter abbreviation.                              |
 | mmmm   | Month as its full name.                                            |
@@ -27,7 +28,7 @@
 | t      | one-character time marker string, such as A or P                   |
 | tt     | multiple-character time marker string, such as AM or PM            |
 
-### Shortcuts
+## Shortcuts
 
 | Shortcut | Format                              |
 |----------|-------------------------------------|
