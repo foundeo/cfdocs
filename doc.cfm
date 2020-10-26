@@ -22,6 +22,11 @@
 
 			document = parser.parse(md);
 			data = renderer.render(document);
+
+			// Add classes to generated html to employ styling for Bootswatch: Lumen Bootstrap theme
+			data = replaceNoCase(data, "<table>", "<table class=""table table-striped table-hover"">", "all");
+			data = replaceNoCase(data, "<ul>", "<ul class=""list-group"">", "all");
+			data = replaceNoCase(data, "<li>", "<li class=""list-group-item"">", "all");
 		}
 		catch (any e) {
 			data = "Error processing markdown: #encodeForHTML(e.message)# #encodeForHTML(e.detail)#";
