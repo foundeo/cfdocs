@@ -5,7 +5,7 @@
 	"member":"date.lsDateFormat([mask, locale])",
 	"returns":"string",
 	"related":["lsTimeFormat","dateFormat"],
-	"description":"Formats the date part of a date/time value in a locale-specific format.\n [mask - quicky]\n d,dd,ddd,dddd: Day of month / week\n m,mm,mmm,mmmm: Month\n y,yy,yyyy: Year\n gg: Period/era string\n short / medium / long / full",
+	"description":"Formats the date part of a date/time value in a locale-specific format.",
 	"params": [
 		{"name":"date","description":"The datetime object","required":true,"default":"","type":"date","values":[]},
 		{"name":"mask","description":"A keyword or custom combination of components","required":false,"default":"medium","type":"string","values":["short","medium","long","full"]},
@@ -17,7 +17,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsdateformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsdateformat"}
 	},
-	"links": [],
+	"links": [
+		{
+			"title":"Date/Time Mask Cheatsheet",
+			"description":"Shows masks and what they output.",
+			"url":"/datetime"
+		}
+	],
 	"examples": [
 		{
 			"title":"Tag Example",

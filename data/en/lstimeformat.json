@@ -5,7 +5,7 @@
 	"member":"time.lsTimeFormat([mask])",
 	"returns":"string",
 	"related":["lsDateFormat", "timeFormat"],
-	"description":"Formats the time part of a date/time string into a string in a locale-specific format.\n [mask - quicky]\n h,hh,H,HH: Hours; m,mm: Minutes; s,ss: Seconds;\n l: Milliseconds; t: A or P; tt: AM or PM\n \"short\" = h:mm tt; \"medium\" = h:mm:ss tt",
+	"description":"Formats the time part of a date/time string into a string in a locale-specific format.",
 	"params": [
 		{"name":"time","description":"","required":true,"default":"","type":"date","values":[]},
 		{"name":"mask","description":"","required":false,"default":"","type":"string","values":["short","medium","long"]}
@@ -18,7 +18,11 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lstimeformat"}
 	},
 	"links": [
-
+		{
+			"title":"Date/Time Mask Cheatsheet",
+			"description":"Shows masks and what they output.",
+			"url":"/datetime"
+		}
 	],
 	"examples": [
 		{

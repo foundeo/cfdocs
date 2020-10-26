@@ -1,6 +1,6 @@
-# Date Time Cheatsheet
+# Date/Time Mask Cheatsheet
 
-## Formatting
+## Format Masks
 
 | Format | Notes                                                                                                         |
 | :----- | :------------------------------------------------------------------------------------------------------------ |
@@ -45,8 +45,12 @@
 | long     | mmmm dd, yyyy h:nn:ss tt UTC        |
 | full     | EEEE, mmmm dd, yyyy h:nn:ss tt UTC  |
 
-## Date functions
+## Date and Time functions
 
-* dateTimeFormat
+* lsDateFormat
 * lsDateTimeFormat
-* date-and-time-functions
+* lsTimeFormat
+* dateFormat
+* dateTimeFormat
+* timeFormat
+
