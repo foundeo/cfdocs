@@ -33,7 +33,7 @@
       "values": []
     },
     {
-      "name": "onConflict",
+      "name": "nameConflict",
       "description": "Action to take if file has the same name of a file in the directory.",
       "required": false,
       "default": "error",
