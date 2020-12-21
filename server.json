@@ -11,6 +11,10 @@
         }
     },
     "app":{
-        "cfengine":"adobe@2016"
+        "cfengine":"lucee-light@5.3.7+47"
+    },
+    "JVM":{
+        "minHeapSize":"48m",
+        "heapSize":"64m"
     }
 }
