@@ -5,6 +5,10 @@
         <to>/trycf.cfm?name=$1&amp;index=$2</to>
     </rule>
     <rule>
+        <from>^/([^./]*[A-Z][^./]+)$</from>
+        <to>/ucase.cfm?uri=$1</to>
+    </rule>
+    <rule>
         <from>^/([^./]+)$</from>
         <to>/doc.cfm?name=$1</to>
     </rule>
@@ -23,6 +27,14 @@
     <rule>
         <from>^/application.cfc$</from>
         <to type="redirect">/application-cfc</to>
+    </rule>
+    <rule>
+        <from>^/try/([^./]+)/?$</from>
+        <to>/trycf.cfm?name=$1</to>
+    </rule>
+    <rule>
+        <from>^/assets/v-[A-Za-z0-9-]+/([a-zA-Z0-9/._-]+)$</from>
+        <to>/assets/$1</to>
     </rule>
 
 </urlrewrite>
