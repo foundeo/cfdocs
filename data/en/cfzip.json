@@ -38,6 +38,19 @@
 			"description":"Uses `action=\"unzip\"` in the cfzip tag to unzip into the temp directory.",
 			"code":"<cfzip action=\"unzip\" destination=\"#getTempDirectory()#\" file=\"#zipFilePath#\">",
 			"runnable":false
+		},
+		{
+			"title":"Extract / Unzip a zip file into a folder (Script Syntax)",
+			"description":"Uses `action=\"unzip\"` in the cfzip tag to unzip into the temp directory.",
+			"code":"cfzip(action="unzip", file="zipFileName", destination=getTempDirectory());",
+			"runnable":false
+		},
+		{
+			"title":"List contents of a zip folder (Script Syntax)",
+			"description":"Uses `action=\"list\"` in the cfzip tag to list the zip contents.",
+			"code":"cfzip(action="list", file="zipFileName", name="zipList");",
+			"runnable":false
 		}
+		
 	]
 }
