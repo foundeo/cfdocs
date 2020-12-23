@@ -33,6 +33,8 @@ Similarly, you can use this operator for Struct:
 
     securityNumber = securityStruct['Joe'] ?: "";
 
+NB: In CF if the value tested === false, then the expression on the right will be evaluated. https://tracker.adobe.com/#/view/CF-4198933 Lucee behaves as expected.
+
 ## Examples
 
 Examples which are all the same:
