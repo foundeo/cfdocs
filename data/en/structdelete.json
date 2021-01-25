@@ -2,6 +2,7 @@
 	"name":"structDelete",
 	"type":"function",
 	"syntax":"structDelete(structure, key [, indicateNotExisting])",
+	"member": "someStruct.delete(key)",
 	"returns":"boolean",
 	"related":["structclear"],
 	"description":"Removes an element from a structure.",
@@ -22,8 +23,16 @@
 		{
 			"title": "Remove a key from a struct",
 			"description": "Creates a struct then removes a key",
-			"code": "someStruct = {a=1,b=2};\nstructDelete(someStruct, \"a\");\nwriteDump(someStruct);",
-			"result": ""
-		}
+			"code": "someStruct = {a=1,b=2};\nstructDelete(someStruct, \"a\");\n\nwriteDump(someStruct);",
+			"result": "true",
+			"runnable": true
+		},
+	    {
+	    	"title": "Remove a key from a struct using the member function",
+	    	"description": "CF11+ Lucee4.5+ Invoking the delete function on a struct is the same as running structDelete.",
+	    	"code": "someStruct = {a=1, b=2};\nsomeStruct.delete('a');\n\nwriteDump(someStruct);",
+	    	"result": "true",
+	    	"runnable": true
+	    }
 	]
 }
