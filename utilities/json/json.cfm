@@ -9,7 +9,7 @@
 	<cfparam name="form.description" default="">
 	<cfparam name="form.result" default="">
 	<cfparam name="form.runnable" default="1">
-
+	<cfparam name="form.engine" default="acf2018">
 <cfoutput>
 <cfsavecontent variable="json">
 {
@@ -17,7 +17,8 @@
 	"description":#serializeJSON(form.description)#,
 	"code":#serializeJSON(form.code)#,
 	"result":#serializeJSON(form.result)#,
-	"runnable":<cfif isBoolean(form.runnable) AND form.runnable>true<cfelse>false</cfif>
+	"runnable":<cfif isBoolean(form.runnable) AND form.runnable>true<cfelse>false</cfif>,
+	"engine":#serializeJson(form.engine)#
 }
 </cfsavecontent>
 </cfoutput>
