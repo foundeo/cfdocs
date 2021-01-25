@@ -9,6 +9,7 @@
     <cfelse>
         <cfset data={title="404"}>
     </cfif>
+    <cfset url.engine = listFindNoCase('acf,acf11,acf2016,acf2018,acf2021,lucee,lucee5,railo', url.engine)? lCase(url.engine) : 'acf2018'>
     <cfif structKeyExists(data.engines, "lucee") AND NOT structKeyExists(data.engines, "coldfusion")>
         <cfset url.engine = "lucee5">
     </cfif>
