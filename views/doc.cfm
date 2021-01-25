@@ -288,7 +288,7 @@
 						<div class="panel-body">
 							<cfif NOT structKeyExists(ex, "runnable") OR ex.runnable>
 								<div class="pull-right">
-									<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
+									<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#" data-engine="#encodeForHTMLAttribute(LCase(ex?.engine))#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
 								</div>
 							</cfif>
 							<p class="clearfix">#autoLink(ex.description)#</p>

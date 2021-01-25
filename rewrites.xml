@@ -5,6 +5,10 @@
         <to>/trycf.cfm?name=$1&amp;index=$2</to>
     </rule>
     <rule>
+        <from>^/try/([^./]+)/([0-9]+)/([acefiloru0-9]{3,10})?$</from>
+        <to>/trycf.cfm?name=$1&amp;index=$2&amp;engine=$3</to>
+    </rule>
+    <rule>
         <from>^/([^./]+)$</from>
         <to>/doc.cfm?name=$1</to>
     </rule>
