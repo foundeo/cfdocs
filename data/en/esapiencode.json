@@ -10,6 +10,6 @@
         {"name":"string","description":"String to encode.","required":true,"type":"string"}
     ],
     "engines": {
-        "lucee": {"minimum_version":"4.5", "deprecated":"5", "notes":"Warning: esapiEncode() is deprecated, use encodeForHTML() instead!", "docs":"https://docs.lucee.org/reference/functions/esapiencode.html"}
+        "lucee": {"minimum_version":"4.5", "deprecated":"5", "notes":"Warning: esapiEncode is deprecated, use encodeForHTML or any of the many other encodefor functions instead!", "docs":"https://docs.lucee.org/reference/functions/esapiencode.html"}
     }
 }
