@@ -18,8 +18,9 @@
         <!--- todo --->
     </cfif>
     <cfif is_function OR is_tag>
-        <cfif FileExists(ExpandPath("../data/en/#text#.json"))>
-            <cfset data = DeserializeJSON( FileRead(ExpandPath("../data/en/#text#.json")))>
+        <cfset file_path = application.data_path & "en/#text#.json">
+        <cfif FileExists(file_path)>
+            <cfset data = DeserializeJSON( FileRead(file_path))>
             <cfset response = { "response_type": "in_channel", "blocks": [] }>
             <cfif data.keyExists("name") AND len(data.name)>
                 <cfset arrayAppend(response.blocks, buildBlock(type="header", text=data.name, text_type="plain_text"))>

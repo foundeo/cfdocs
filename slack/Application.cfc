@@ -3,7 +3,8 @@ component {
     this.sessionManagement = false;
     
     public function onApplicationStart() {
-        application.index = DeserializeJSON( FileRead(ExpandPath("../data/en/index.json")));
+        application.data_path = replace(getDirectoryFromPath(getCurrentTemplatePath()), "/slack/", "/data/");
+        application.index = DeserializeJSON( FileRead(application.data_path & "en/index.json"));
     }
 
 }
