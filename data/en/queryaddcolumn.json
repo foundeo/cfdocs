@@ -8,7 +8,8 @@
 	"params": [
 		{"name":"query","description":"","required":true,"default":"","type":"query","values":[]},
 		{"name":"column_name","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"datatype","description":"Column data type.","required":false,"default":"","type":"string","values":["Integer","Bigint","Double","Decimal","Varchar","Binary","Bit","Time","Date"]},
+		{"name":"datatype","description":"Column data type.","required":false,"default":"","type":"string","values":["Integer","Bigint","Double","Decimal","Varchar","Binary","Bit","Time",
+"Date","Timestamp"]},
 		{"name":"array_name","description":"","required":true,"default":"","type":"array","values":[]}
 
 	],
