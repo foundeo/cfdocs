@@ -1,7 +1,7 @@
 {
 	"name": "queryReduce",
 	"type": "function",
-    "syntax": "queryReduce(struct, function(result, row [, currentRow] [, query]){} [, initialVal])",
+    "syntax": "queryReduce(query, function(result, row [, currentRow] [, query]){} [, initialVal])",
 	"script": "query.reduce(function(result, [, currentRow] [, query]){} [, initialVal])",
 	"returns": "any",
 	"related": ["querymap", "queryfilter"],
@@ -34,7 +34,7 @@
 			},{
 				"values": [],
 				"default": "",
-				"description": "A reference of the original struct",
+				"description": "A reference of the original query",
 				"name": "query",
 				"type": "query",
 				"required": false
