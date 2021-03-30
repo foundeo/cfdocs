@@ -6,7 +6,7 @@
 	"type":"function",
 	"related":["hash", "encrypt","decrypt","generateSecretKey"],
 	"params":[
-		{"name":"algorithm", "description":"Hashing algorithm used for generating key", "required":true, "default":"", "type":"string", "values":["PBKDF2WithHmacSHA1","PBKDF2WithSHA1","PBKDF2WithSHA224","PBKDF2WithSHA256","PBKDF2WithSHA384","PBKDF2WithSHA512"]},
+		{"name":"algorithm", "description":"Hashing algorithm used for generating key", "required":true, "default":"", "type":"string", "values":["PBKDF2WithHmacSHA1","PBKDF2WithSHA1","PBKDF2WithSHA224","PBKDF2WithSHA256","PBKDF2WithSHA384","PBKDF2WithSHA512","PBKDF2WithHmacSHA256","PBKDF2WithHmacSHA384","PBKDF2WithHmacSHA512"]},
 		{"name":"passphrase", "description":"Passphrase used for the key. KEEP THIS SECRET.", "required":true, "default":"", "type":"string", "values":[]},
 		{"name":"salt", "description":"A string which will be added to the passphrase before encryption.\n The standard recommends a salt length of at least 64 bits (8 characters). The salt needs to be generated using a pseudo-random number generator (e.g. SHA1PRNG)", "required":true, "default":"", "type":"string", "values":[]},
 		{"name":"iterations", "description":"The number of PBKDEF iterations to perform. A minimum recommended value is 1000", "required":true, "default":"", "type":"numeric", "values":[]},
@@ -14,7 +14,7 @@
 	    ],
 	"engines":{
 		"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/generatepbkdfkey.html","notes":"Adobe ColdFusion Enterprise includes a java crypto provider that implements these algorithms. These algorithms are available only in enterprise versions:\n\nPBKDF2WithSHA1\nPBKDF2WithSHA224\nPBKDF2WithSHA256\nPBKDF2WithSHA384\nPBKDF2WithSHA512\nPBKDF2WithSHA512-224\nPBKDF2WithSHA512-256"},
-		"lucee":{"minimum_version":"5","docs":"https://docs.lucee.org/reference/functions/generatepbkdfkey.html","notes":"For Lucee it is up to the provider that you have installed, if using the default java crypto provider it only supports \"PBKDF2WithHmacSHA1\" on Java 1.7 for example. If you are using Java 8 it supports more algorithms.\n\n`iterations` and `keySize` parameters are optional in Lucee."}
+		"lucee":{"minimum_version":"5","docs":"https://docs.lucee.org/reference/functions/generatepbkdfkey.html","notes":"For Lucee it is up to the provider that you have installed, if using the default java crypto provider it only supports \"PBKDF2WithHmacSHA1\" on Java 1.7 for example. If you are using Java 8 it supports more algorithms (such as `PBKDF2WithHmacSHA512`) .\n\n`iterations` and `keySize` parameters are optional in Lucee."}
 	},
 	"links":[
 		{"title":"PBKDF2 Wikipedia","description":"Information on what PBKDF2 is all about","url":"http:\/\/en.wikipedia.org\/wiki\/PBKDF2"},
@@ -23,7 +23,7 @@
 	"examples":[
 		{
 			"title":"Example PBKDF2 With HMAC SHA1",
-			"description":"",
+			"description":"The `PBKDF2WithHmacSHA1` algorithm will work on older JVMs, or older versions of CF",
 			"code":"generatePBKDFKey(\"PBKDF2WithHmacSHA1\", \"secret\", \"salty\", 5000, 128)",
 			"result":"Y0MCpCe3zb0CNJvyXNUWEQ=="
 		},{
