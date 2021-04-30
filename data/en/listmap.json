@@ -29,6 +29,6 @@
 	 "examples":[{
 		"title": "Script Syntax",
 		"description": "",
-		"code": "Rainbow = \"Whero, Karaka, Kowhai, Kakariki, Kikorangi, Tawatawa, Mawhero\";\r\nexternalList = \"\";\r\nreverseRainbow = listMap( rainbow, function(v,i,l) {\r\n\tvar newValue = \"#i#:#v.reverse()#\";\r\n\texternalList = externalList.append(newValue);\r\n\treturn newValue;\r\n});\r\nwriteDump([{rainbow=rainbow},{reverseRainbow=reverseRainbow},{externalList=externalList}]);\r\n"
+		"code": "Rainbow = \"Whero, Karaka, Kowhai, Kakariki, Kikorangi, Tawatawa, Mawhero\";\r\nexternalList = \"\";\r\nreverseRainbow = listMap( rainbow, function(v,i,l) {\r\n\tvar newValue = \"#i#:#v.reverse()#\";\r\n\texternalList = externalList.listAppend(newValue);\r\n\treturn newValue;\r\n});\r\nwriteDump([{rainbow=rainbow},{reverseRainbow=reverseRainbow},{externalList=externalList}]);\r\n"
 	}]
 }
