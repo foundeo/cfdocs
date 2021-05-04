@@ -2,6 +2,7 @@
 	"name":"queryAddRow",
 	"type":"function",
 	"syntax":"queryAddRow(query [, number/row(s)])",
+	"member":"someQuery.addRow([number/row(s)])",
 	"returns":"numeric",
 	"related":["QueryAddColumn", "QuerySetCell", "QueryNew"],
 	"description":" Adds a specified number of empty rows to a query.",
@@ -21,6 +22,13 @@
 			"title":"Builds a simple query using queryNew and queryAddRow",
 			"description":"CF10+ Pass in row data directly to queryAddRow argument.",
 			"code":"news = queryNew(\"id,title\", \"integer,varchar\");\nqueryAddRow(news, {\"id\"=1,\"title\"=\"Dewey defeats Truman\"});\nwriteDump(news);",
+			"result":""
+
+		},
+		{
+			"title":"Builds a simple query using queryNew and queryAddRow member syntax",
+			"description":"CF10+ Pass in row data directly to queryAddRow argument.",
+			"code":"news = queryNew(\"id,title\", \"integer,varchar\");\nnews.addRow({\"id\"=1,\"title\"=\"Dewey defeats Truman\"});\nwriteDump(news);",
 			"result":""
 
 		},
