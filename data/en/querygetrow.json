@@ -2,6 +2,7 @@
 	"name":"queryGetRow",
 	"type":"function",
 	"syntax":"queryGetRow( query, rowNumber );",
+	"member":"someQuery.getRow(rowNumber)",
 	"returns":"struct",
 	"related":["queryColumnData"],
 	"description":"Returns a struct having all the columns as keys and their corresponding values.",
@@ -22,6 +23,13 @@
 			"title":"Use queryGetRow to return a struct",
 			"description":"",
 			"code":"news = queryNew(\"id,title\",\r\n    \"integer,varchar\",\r\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\r\nwriteOutput( serializeJSON( queryGetRow(news, 1) ) );",
+			"result":"{\"title\":\"Dewey defeats Truman\",\"id\":1}",
+			"runnable":true
+		},
+		{
+			"title":"Use queryGetRow member syntax to return a struct",
+			"description":"",
+			"code":"news = queryNew(\"id,title\",\r\n    \"integer,varchar\",\r\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\r\nwriteOutput( serializeJSON( news.getRow(1) ) );",
 			"result":"{\"title\":\"Dewey defeats Truman\",\"id\":1}",
 			"runnable":true
 		}
