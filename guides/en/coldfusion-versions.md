@@ -67,6 +67,7 @@ Historical information about ColdFusion Versions and releases.
 ## Adobe ColdFusion 9 - October 2009 (_Centaur_)
 
 * Added Script Components
+* Added `local` scope and `var` no longer needs to be at top of function
 * Added ORM via Hibernate
 * [ColdFusion 9 New Tags and Functions](/cf9) 
 
