@@ -101,5 +101,12 @@ Historical information about ColdFusion Versions and releases.
 * Lockdown Installer
 * [ColdFusion 2018 New Tags and Functions](/cf2018) 
 
+## Adobe ColdFusion 2021 - November 2020 (_Stratus_)
+
+* Added Package Manager (cfpm)
+* Cloud Abstraction Functions for Azure and AWS
+* NoSQL Support - DynamoDB and MongoDB
+* [ColdFusion 2021 What's New](https://community.adobe.com/t5/coldfusion/introducing-adobe-coldfusion-2021-release/m-p/11585468)
+* [ColdFusion 2021 New Tags and Functions](/cf2021) 
 
 Lots of additional historical and version information can be found on the [ColdFusion Wikipedia Page](https://en.wikipedia.org/wiki/Adobe_ColdFusion)
