@@ -1,0 +1,30 @@
+{
+	"name":"arrayShift",
+	"type":"function",
+	"syntax":"arrayShift(array)",
+	"member":"someArray.shift()",
+	"returns":"any",
+	"related":["arrayUnshift"],
+	"description":"Removes the first element from an array and returns the removed element. This method changes the length of the array.",
+	"params": [
+		{"name":"array","description":"An array of elements from which the first will be removed and returned","required":true,"default":"","type":"array","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayshift.html"}
+	},
+	"links":[],
+	"examples": [
+		{
+			"title": "Example with simple values",
+			"description": "Take an array of numbers and shift the first one off.",
+			"code": "arr = [ 1, 2, 3 ];\r\nel = arrayShift(arr);\r\n\r\nwriteOutput( el );",
+			"result": "1"
+		},
+		{
+			"title": "Using a member function",
+			"description": "This is the same example as above, but using a member function on the array instead of a standalone function.",
+			"code": "arr = [ 1, 2, 3 ];\r\nel = arr.shift();\r\n\r\nwriteOutput( el );",
+			"result": "1"
+		}
+	]
+}
