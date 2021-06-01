@@ -36,7 +36,7 @@
 			"runnable":true
 		},
 		{
-			"title":"member syntax example".
+			"title":"member syntax example",
 			"description":"add a column to a query using member syntax",
 			"code":"books = queryNew(\"id,title\", \"integer,varchar\");\nbooks.addRow(\"author\", \"varchar\");\nwriteDump(books);",
 			"result":"",
