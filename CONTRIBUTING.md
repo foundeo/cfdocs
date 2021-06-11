@@ -11,11 +11,21 @@
 
 It's documented in the [main README](https://github.com/foundeo/cfdocs#json-file-documentation).
 
+### How do I add a new tag or function
+
+All of the tags and functions are defined in a JSON file located in the [data/en](https://github.com/foundeo/cfdocs/tree/master/data/en) folder. 
+
+1. Check the [data/en](https://github.com/foundeo/cfdocs/tree/master/data/en) folder to make sure no one else has already added it
+2. Check the open [Pull Requests](https://github.com/foundeo/cfdocs/pulls) to make sure someone else has not already submitted it.
+3. Create a new json file, take a look at an existing [function](https://github.com/foundeo/cfdocs/edit/master/data/en/arraylen.json) or [tag](https://github.com/foundeo/cfdocs/edit/master/data/en/cfcase.json) and use the [JSON format documentation](https://github.com/foundeo/cfdocs#json-file-documentation) for reference. Make sure there are links to offical documentation (if there is no official documentation, explain this in the pull request comment)
+4. Name it in all lowercase (eg `awesomefunction.json` or `cfawesome.json`) 
+5. Locate the new file in the [data/en](https://github.com/foundeo/cfdocs/tree/master/data/en) folder
+6. Create a pull request 
+
 ### What version of CF should the cfdocs CFML code work on?
 
-It should run on Adobe ColdFusion 10+ or Lucee 4.5+ please make sure any changes 
-made to the codebase work on these platforms. Sadly that means you can't use member
-functions at this time.
+It should run on Adobe ColdFusion 2016+ or Lucee 5+ please make sure any changes 
+made to the codebase work on these platforms.
 
 ### Should I use tabs or spaces?
 
