@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"fileSeek(file, position)",
 	"returns":"void",
-	"related":[],
+	"related":["FileCopy", "FileDelete", "FileExists", "FileMove", "FileSetAccessMode", "FileSetAttribute", "FileSkipBytes"],
 	"description":"Shifts the file pointer to the given position. The file must be opened with seekable option",
 	"params": [
 		{"name":"file","description":"The file object","required":true,"default":"","type":"any","values":[]},

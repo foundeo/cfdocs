@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"ajaxOnLoad(functionName)",
 	"returns":"void",
-	"related":[],
+	"related":["cfdiv", "cflayoutarea", "cfpod", "cfwindow"],
 	"description":" Causes the specified JavaScript function to run when the page loads.",
 	"params": [
 		{"name":"functionName","description":"The name of the function to run when the page loads.","required":true,"default":"","type":"string","values":[]}

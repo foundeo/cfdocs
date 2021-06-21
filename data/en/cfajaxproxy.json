@@ -2,7 +2,7 @@
 	"name":"cfajaxproxy",
 	"type":"tag",
 	"syntax":"<cfajaxproxy>",
-	"related":[],
+	"related":["DeserializeJSON", "IsJSON", "SerializeJSON"],
 	"description":"Creates a JavaScript proxy for a ColdFusion component, for use in an AJAX client.",
 	"params": [
 		{"name":"cfc","description":"The CFC for which to create a proxy. You must specify a dot-delimited path to the CFC.\n The path can be absolute or relative to location of the CFML page.\n For example, if the myCFC CFC is in the cfcs subdirectory of the ColdFusion page, specify cfcs.myCFC.\n On UNIX based systems, the tag searches first for a file who's name or path corresponds to the specified name or path, but is in all lower case.\n If it does not find it, ColdFusion then searches for a file name or path that corresponds to the attribute value exactly, with identical character casing. (required)","required":false,"default":"","type":"string","values":[]},

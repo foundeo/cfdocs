@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"fileSetAccessMode(filePath, mode)",
 	"returns":"void",
-	"related":[],
+	"related":["FileCopy", "FileDelete", "FileExists", "FileMove"],
 	"description":"Sets the attributes of an on-disk file on UNIX or Linux. This function does not work with in-memory files.",
 	"params": [
 		{"name":"filePath","description":"Path to file","required":true,"default":"","type":"string","values":[]},
