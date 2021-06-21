@@ -20,7 +20,6 @@
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<cfset listCategories = listSort(StructKeyList(application.categories),"text")>
-		<cfset listGuides = listSort(StructKeyList(application.guides),"text")>
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -61,7 +60,7 @@
 						<a href="##" class="dropdown-toggle" data-toggle="dropdown">Guides <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="#linkTo("application-cfc")#">Application.cfc</a></li>
-						<cfloop list="#listGuides#" index="guide">
+						<cfloop collection="#application.guides#" item="guide">
 							<li><a href="#linkTo(guide)#">#application.guides[guide]#</a></li>
 						</cfloop>
 						</ul>

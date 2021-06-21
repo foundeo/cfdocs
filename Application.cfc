@@ -20,7 +20,8 @@
 					<cfset application.categories[local.cat].items = local.catData.related>
 				</cfif>
 			</cfloop>
-			<cfset application.guides = {}>
+			<cfset var _guides = {}>
+			<cfset application.guides = structNew('ordered')>
 			<cfloop array="#application.index.guides#" index="local.guide">
 				<cfset local.fileObj = fileOpen(ExpandPath("./guides/en/#local.guide#.md"),"read")>
 				<cfset local.title = fileReadLine(local.fileObj)>
@@ -30,9 +31,11 @@
 				<cfelse>
 					<cfset local.title = local.guide>
 				</cfif>
-				<cfset application.guides[local.guide] = local.title>
+				<cfset local._guides[local.guide] = local.title>
 			</cfloop>
-
+			<cfloop array="#structSort(local._guides, "textnocase", "asc")#" index="local.guide">
+				<cfset application.guides[local.guide] = local._guides[local.guide]>
+			</cfloop>
 		</cfif>
 		<cfset request.content = "">
 		<!--- cache for one day --->
