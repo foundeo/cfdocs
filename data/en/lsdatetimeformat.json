@@ -2,6 +2,7 @@
 	"name":"lsDateTimeFormat",
 	"type":"function",
 	"syntax":"lsDateTimeFormat(date [, mask, locale, [timeZone]]);",
+	"member":"date.lsDateTimeFormat([mask, locale, [timeZone]])",
 	"returns":"string",
 	"related":["dateTimeFormat"],
 	"description":" Formats date and time values using locale-specific date and time formatting conventions.",
@@ -17,6 +18,11 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsDateTimeFormat"}
 	},
 	"links": [
+		{
+			"title":"Date/Time Mask Cheatsheet",
+			"description":"Shows masks and what they output.",
+			"url":"/datetime"
+		},
 		{
 			"title":"SimpleDateFormat",
 			"description":"This function accepts the mask values documented here.",
