@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Simple tobinary example",
+			"description":"convert base64 to binary",
+			"code":"<cfset Input = tobase64(8)>\r\n<cfdump var=\"#tobinary(Input)#\">",
+			"result":""
+		}
 	]
 
 }

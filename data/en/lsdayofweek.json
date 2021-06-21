@@ -39,6 +39,13 @@
 			"docs": "https://docs.lucee.org/reference/functions/lsdayofweek.html"
 		}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"A simple isdayofweek example",
+			"description":"Display the day of the week using locale date/time in particular date",
+			"code":"<cfoutput>\r\n<cfset date=createDate(\"2020\",\"07\",\"31\")>\r\n#lsDayOfWeek(date)#\r\n</cfoutput>",
+			"result":"6"
+		}
+	],
 	"links": []
 }

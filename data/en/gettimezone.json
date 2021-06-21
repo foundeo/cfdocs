@@ -10,5 +10,12 @@
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/gettimezone.html"}
 	},
 	"links": [],
-	"examples": []
+	"examples": [
+		{
+			"title":"Example for GettimeZone function",
+			"description":"Get the time zone like Etc/UTC",
+			"code":"<cfoutput>#gettimeZone()#</cfoutput>",
+			"result":"Etc/UTC"
+		}
+	]
 }
