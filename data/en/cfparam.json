@@ -34,6 +34,13 @@
 				"result":""
 		},
 		{
+				"title":"Cfscript cfqueryparam struct notation with QueryExectute",
+				"description":"Example of queryExecute cfscript with cfqueryparam in struct notation.",
+				"code":" exampleData = queryNew(\"id,title\",\"integer,varchar\",[{\"id\":1,\"title\":\"Dewey defeats Truman\"},{\"id\":2,\"title\":\"Man walks on Moon\"}]);\r\n    \r\n    sql = \"SELECT title FROM exampleData WHERE 1=1\";\r\n    params = {};\r\n    params.id = {value=2, cfsqltype=\"cf_sql_integer\"};\r\n    sql &= \" AND id=:id\"\r\n\r\n    result = queryExecute(sql, params, { dbtype=\"query\" });\r\n    writeOutput( result.title[1] );",
+				"result":"Man walks on Moon",
+				"runnable":true
+		},
+		{
 				"title":"Tag syntax using a regex",
 				"description": "Throws an error if the value is not one of a list of possible values",
 				"code":"<cfparam name=\"sortdir\" default=\"ASC\" type=\"regex\" pattern=\"ASC|DESC\"/>",
