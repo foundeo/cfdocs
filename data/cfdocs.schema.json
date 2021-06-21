@@ -398,6 +398,11 @@
             "title": "Runnable",
             "description": "Whether the code is runnable",
             "type": "boolean"
+          },
+          "engine": {
+            "title": "Engine",
+            "description": "The default engine to use in the cftry modal",
+            "type": "string"
           }
         },
         "required": [

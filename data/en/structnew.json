@@ -77,25 +77,29 @@
       "title": "New case-sensitive struct using function",
       "description": "CF2021+ Creates a case-sensitive struct.",
       "code": "casesensitive = structNew( \"casesensitive\" );\r\ncasesensitive.a = 1;\r\ncasesensitive.B = 2;\r\ncasesensitive.c = 3;\r\nwriteDump( casesensitive );",
-      "result": ""
+      "result": "",
+      "engine": "acf2021"
     },
     {
       "title": "New case-sensitive struct using literal notation",
       "description": "CF2021+ Creates a case-sensitive struct.",
       "code": "casesensitive = ${a=1, B=2, c=3};\r\nwriteDump( casesensitive );",
-      "result": ""
+      "result": "",
+      "engine": "acf2021"
     },
     {
       "title": "New ordered and case-sensitive struct using function",
       "description": "CF2021+ Creates a case-sensitive struct.",
       "code": "someStruct = structNew( \"ordered-casesensitive\" );\r\nsomeStruct.c = 3;\r\nsomeStruct.B = 2;\r\nsomeStruct.a = 1;\r\nwriteDump( someStruct );",
-      "result": ""
+      "result": "",
+      "engine": "acf2021"
     },
     {
       "title": "New ordered and case-sensitive struct using literal notation",
       "description": "CF2021+ Creates an ordered and case-sensitive struct.",
       "code": "someStruct = $[c=3, B=2, a=1];\r\nwriteDump( someStruct );",
-      "result": ""
+      "result": "",
+      "engine": "acf2021"
     }
   ]
 }

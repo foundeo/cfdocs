@@ -1,6 +1,7 @@
 <cfparam name="url.name" default="rereplace">
 <cfparam name="url.index" default="1" type="numeric">
 <cfparam name="url.engine" default="acf2018" type="variablename">
+
 <cfsilent>
     <cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL")>
     <cfif FileExists(ExpandPath("./data/en/#url.name#.json"))>
@@ -8,6 +9,7 @@
     <cfelse>
         <cfset data={title="404"}>
     </cfif>
+    <cfset url.engine = listFindNoCase('acf,acf11,acf2016,acf2018,acf2021,lucee,lucee5,railo', url.engine)? lCase(url.engine) : 'acf2018'>
     <cfif structKeyExists(data.engines, "lucee") AND NOT structKeyExists(data.engines, "coldfusion")>
         <cfset url.engine = "lucee5">
     </cfif>

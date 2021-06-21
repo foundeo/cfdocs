@@ -37,6 +37,18 @@
 				<option value="1" selected="selected">Yes - Show Run Code Button</option>
 			</select>
 			<br>
+
+			<select name="engine" class="form-control">
+				<option value="lucee5">Lucee 5.LATEST</option>
+				<option value="lucee">Lucee 4.5.LATEST</option>
+				<option value="railo">Railo 4.2</option>
+				<option value="acf2021">Adobe ColsFusion 2021</option>
+				<option value="acf2018" selected="selected">Adobe ColdFusion 2018</option>
+				<option value="acf2016">Adobe ColdFusion 2016</option>
+				<option value="acf11">Adobe ColdFusion 11</option>
+				<option value="acf">Adobe ColdFusion 10</option>
+			</select>
+			<br>
 			<input type="submit" value="To JSON" class="btn btn-primary">
 		</form>
 

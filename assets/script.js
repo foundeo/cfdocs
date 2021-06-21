@@ -44,7 +44,8 @@ $(document).ready(function() {
 	  $('.example-btn').click(function() {
 	      var name = $(this).attr('data-name');
 	      var index = $(this).attr('data-index');
-	      $('#example-modal-content').html('<iframe width="100%" height="450" border="0" src="/try/' + name + '/' + index + '">');
+	      var engine = $(this).attr('data-engine');
+	      $('#example-modal-content').html('<iframe width="100%" height="450" border="0" src="/try/' + name + '/' + index + '/' + engine +'">');
 	      $('.example-modal').modal();      
 	  });
 
