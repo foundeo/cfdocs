@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"sendGatewayMessage(gatewayID, data)",
 	"returns":"string",
-	"related":[],
+	"related":["GetGatewayHelper"],
 	"description":" Sends an outgoing message through a ColdFusion MX event gateway.",
 	"params": [
 		{"name":"gatewayID","description":"Identifier of the gateway to send the message.","required":true,"default":"","type":"string","values":[]},

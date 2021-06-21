@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"spreadsheetFormatCellRange (spreadsheetObj, format, startRow, startColumn, endRow, endColumn)",
 	"returns":"void",
-	"related":[],
+	"related":["SpreadsheetFormatCell", "SpreadsheetFormatColumns", "SpreadsheetFormatRow", "SpreadsheetFormatRows"],
 	"description":"Formats the cells within the given range.",
 	"params": [
 		{"name":"spreadsheetObj","description":"The Excel spreadsheet object for which you want to format the cells.","required":true,"default":"","type":"any","values":[]},

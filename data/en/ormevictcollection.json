@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"ormEvictCollection(componentName, relationName [, id])",
 	"returns":"void",
-	"related":[],
+	"related":["ORMEvictEntity", "ORMEvictQueries"],
 	"description":"This will remove all the entries with the specified relation/collection name in the specified component. \normEvictCollection(componentName,relationName,[id])",
 	"params": [
 		{"name":"componentName","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
