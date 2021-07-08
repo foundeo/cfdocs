@@ -2,280 +2,264 @@
 
 ##The following tags/functions are Lucee only
 
-### `applicationStartTime`
+`applicationStartTime`
 
-### `array`
+`array`
 
-### `arrayEvery`
+`arrayEvery` - Minimum Version: 4.5
 
-Minimum Version: 4.5
+`arrayIndexExists`
 
-### `arrayIndexExists`
+`arrayMedian`
 
-### `arrayMedian`
+`arrayMerge`
 
-### `arrayMerge`
+`arrayMid`
 
-### `arrayMid`
+`arrayReverse`
 
-### `arrayReverse`
+`arraySome`
 
-### `arraySome`
+`arrayToStruct`
 
-### `arrayToStruct`
+`beat`
 
-### `beat`
+`bundleInfo` - Minimum Version: 5
 
-### `bundleInfo`
+`cacheClear`
 
-Minimum Version: 5
+`cacheCount`
 
-### `cacheClear`
+`cacheDelete`
 
-### `cacheCount`
+`cacheGetAll`
 
-### `cacheDelete`
+`cacheGetDefaultCacheName`
 
-### `cacheGetAll`
+`cacheKeyExists`
 
-### `cacheGetDefaultCacheName`
+`cfadmin`
 
-### `cacheKeyExists`
+`cfpageencoding`
 
-### `cfadmin`
+`cfretry`
 
-### `cfpageencoding`
+`cfsleep`
 
-### `cfretry`
+`cfstopwatch`
 
-### `cfsleep`
+`cfusion_Decrypt`
 
-### `cfstopwatch`
+`cfusion_Encrypt`
 
-### `cfusion_Decrypt`
+`cfwhile`
 
-### `cfusion_Encrypt`
+`collectionEach`
 
-### `cfwhile`
+`collectionEvery`
 
-### `collectionEach`
+`collectionFilter`
 
-### `collectionEvery`
+`collectionMap`
 
-### `collectionFilter`
+`collectionReduce`
 
-### `collectionMap`
+`collectionSome`
 
-### `collectionReduce`
+`componentCacheClear`
 
-### `collectionSome`
+`componentCacheList`
 
-### `componentCacheClear`
+`componentInfo`
 
-### `componentCacheList`
+`compress`
 
-### `componentInfo`
+`contractPath`
 
-### `compress`
+`createGUID`
 
-### `contractPath`
+`createUniqueID`
 
-### `createGUID`
+`ctCacheClear`
 
-### `createUniqueID`
+`ctCacheList`
 
-### `ctCacheClear`
+`dayOfWeekShortAsString`
 
-### `ctCacheList`
+`each`
 
-### `dayOfWeekShortAsString`
+`echo`
 
-### `each`
+`empty`
 
-### `echo`
+`entityNameArray`
 
-### `empty`
+`entityNameList`
 
-### `entityNameArray`
+`esapiDecode`
 
-### `entityNameList`
+`esapiEncode` - Minimum Version: 4.5
 
-### `esapiDecode`
+`extract`
 
-### `esapiEncode`
+`getApplicationSettings`
 
-Minimum Version: 4.5
+`getBuiltinFunction`
 
-### `extract`
+`getClassPath`
 
-### `getApplicationSettings`
+`getCurrentContext`
 
-### `getBuiltinFunction`
+`getFunctionData`
 
-### `getClassPath`
+`getFunctionKeywords`
 
-### `getCurrentContext`
+`getLocaleCountry`
 
-### `getFunctionData`
+`getLocaleInfo` - Minimum Version: 5
 
-### `getFunctionKeywords`
+`getLocaleLanguage`
 
-### `getLocaleCountry`
+`getLuceeID`
 
-### `getLocaleInfo`
+`getMemoryUsage`
 
-Minimum Version: 5
+`getTagData`
 
-### `getLocaleLanguage`
+`getTagList`
 
-### `getLuceeID`
+`getTimezone`
 
-### `getMemoryUsage`
+`getVariable`
 
-### `getTagData`
+`hash40`
 
-### `getTagList`
+`htmlParse`
 
-### `getTimezone`
+`imageDrawImage` - Minimum Version: 4.5
 
-### `getVariable`
+`imageFilter`
 
-### `hash40`
+`imageFilterColorMap`
 
-### `htmlParse`
+`imageFilterCurves`
 
-### `imageDrawImage`
+`imageFilterKernel`
 
-Minimum Version: 4.5
+`imageFilterWarpGrid`
 
-### `imageFilter`
+`imageFonts`
 
-### `imageFilterColorMap`
+`imageFormats`
 
-### `imageFilterCurves`
+`imageSetDrawingAlpha`
 
-### `imageFilterKernel`
+`isEmpty`
 
-### `imageFilterWarpGrid`
+`isIPInRange`
 
-### `imageFonts`
+`isNotMap`
 
-### `imageFormats`
+`isVideoFile`
 
-### `imageSetDrawingAlpha`
+`isZipFile`
 
-### `isEmpty`
+`listAvg`
 
-### `isIPInRange`
+`listCompact`
 
-### `isNotMap`
+`listEvery`
 
-### `isVideoFile`
+`listIndexExists`
 
-### `isZipFile`
+`listItemTrim`
 
-### `listAvg`
+`listSome`
 
-### `listCompact`
+`listTrim`
 
-### `listEvery`
+`lsDayOfWeek`
 
-### `listIndexExists`
+`lsWeek`
 
-### `listItemTrim`
+`manifestRead` - Minimum Version: 5
 
-### `listSome`
+`metaphone`
 
-### `listTrim`
+`millisecond`
 
-### `lsDayOfWeek`
+`monthShortAsString`
 
-### `lsWeek`
+`newLine`
 
-### `manifestRead`
+`nowServer`
 
-Minimum Version: 5
+`nullValue`
 
-### `metaphone`
+`pagePoolClear`
 
-### `millisecond`
+`pagePoolList`
 
-### `monthShortAsString`
+`parseNumber`
 
-### `newLine`
+`query`
 
-### `nowServer`
+`queryColumnArray`
 
-### `nullValue`
+`queryColumnCount`
 
-### `pagePoolClear`
+`queryColumnData`
 
-### `pagePoolList`
+`queryColumnExists`
 
-### `parseNumber`
+`queryColumnList`
 
-### `query`
+`queryCurrentRow`
 
-### `queryColumnArray`
+`queryEvery`
 
-### `queryColumnCount`
+`queryGetCell`
 
-### `queryColumnData`
+`queryRowData`
 
-### `queryColumnExists`
+`querySlice`
 
-### `queryColumnList`
+`querySome`
 
-### `queryCurrentRow`
+`render` - Minimum Version: 5
 
-### `queryEvery`
+`sessionstartTime`
 
-### `queryGetCell`
+`setTimezone`
 
-### `queryRowData`
+`sizeOf`
 
-### `querySlice`
+`soundEx`
 
-### `querySome`
+`sslCertificateInstall`
 
-### `render`
+`sslCertificateList`
 
-Minimum Version: 5
+`stringLen`
 
-### `sessionstartTime`
+`structEvery`
 
-### `setTimezone`
+`structKeyTranslate`
 
-### `sizeOf`
+`structSome`
 
-### `soundEx`
+`systemCacheClear`
 
-### `sslCertificateInstall`
+`systemOutput`
 
-### `sslCertificateList`
+`toNumeric`
 
-### `stringLen`
+`trueFalseFormat`
 
-### `structEvery`
+`ucFirst`
 
-### `structKeyTranslate`
+`unserializeJava`
 
-### `structSome`
+`urlEncode`
 
-### `systemCacheClear`
-
-### `systemOutput`
-
-### `toNumeric`
-
-### `trueFalseFormat`
-
-### `ucFirst`
-
-### `unserializeJava`
-
-### `urlEncode`
-
-### `webserviceNew`
-
-Minimum Version: 5
+`webserviceNew` - Minimum Version: 5
