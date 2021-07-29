@@ -20,8 +20,8 @@
 	"examples": [
 		{
 		"title":"Simple Example",
-		"description":"Return the first instance position of 'foo'",
-		"code":"listContains(\"sheep,goat,foo,bar,foo\", \"foo\")",
+		"description":"Return the first instance of an item containing 'oo'",
+		"code":"listContains(\"sheep,goat,foo,bar,goo\", \"oo\")",
 		"result":3,
 		"runnable":true
 		}
