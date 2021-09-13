@@ -15,6 +15,7 @@
     },
     "JVM":{
         "minHeapSize":"48m",
-        "heapSize":"96m"
+        "heapSize":"96m",
+        "args":"-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/cfdocs_heap_dump.hprof"
     }
 }
