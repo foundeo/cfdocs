@@ -21,21 +21,29 @@ For instance, this is valid:
 
 Now, you can treat the built-in CFML functions  like ucase() as objects, being able to assign them to variables, and pass them as arguments.
 
-Another example, this is where lcase and ucase are being returned from a function:
+Another example, this is where lcase and ucase are being returned from a function" (NOTE: This example only works with CF11-CF2021.)
 
+    <cfscript>
     function convertArray(array array, string caseTo){
         caseConverterFunction = getConvertFunction(caseTo);
-        for (var i=1, I <= arrayLen(array); i++){
-            array[i] = caseConverterFunction{array[i]);
+        for (var i=1; i <= arrayLen(array); i++){
+            array[i] = caseConverterFunction(array[i]);
         }
+        return array;
     }
     
-    function getConvertFunction (String caseType){
-        if (caseType == ‘lower’) return lcase; else return ucase;
+    function getConvertFunction(string caseType){
+        if (caseType == 'lower') return lcase;
+        return ucase;
     }
     
-    resultArray_lower = convertArray([‘One’, ‘Two’, ‘Three’], ‘lower’);
-    resultArray_upper = convertArray([‘One’, ‘Two’, ‘Three’], ‘upper’);
+    results = {
+        "lower" = convertArray(['One', 'Two', 'Three'], 'lower'),
+        "upper" = convertArray(['One', 'Two', 'Three'], 'upper')
+    };
+    
+    writedump(results);
+    </cfscript>
 
 _lower array: one, two, three
 _upper array: ONE, TWO, THREE
