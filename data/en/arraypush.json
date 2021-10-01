@@ -1,0 +1,33 @@
+{
+	"name":"arrayPush",
+	"type":"function",
+	"syntax":"arrayPush(array, value)",
+	"member":"someArray.push(value)",
+	"returns":"numeric",
+	"related":["arrayPop"],
+	"description":"Adds an element or an object to the end of an array, then returns the size of the modified array.",
+	"params": [
+		{"name":"array","description":"Array to which a value or object is to be added.","required":true,"default":"","type":"array","values":[]},
+		{"name":"value","description":"The value or object to be added to the array.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"The full function was added in ACF 2021, but the member function appears to work in ACF 2018 (likely using Java).", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraypush.html"},
+		"lucee": {"minimum_version":"5", "notes":"Added in Lucee 5. The member function does not work in earlier versions.", "docs":"https://docs.lucee.org/reference/functions/arraypush.html"},
+		"openbd": {"minimum_version":"", "notes":"", "docs":""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Push a value onto an array",
+			"description": "This is the full function version of arrayPush to push a value onto the end of the array.",
+			"code": "arr=[1,2,3] ;\nArrayPush(array=arr,value=42) ;\nWriteOutput('This array has ' & arrayLen(arr) & ' elements.') ;",
+			"result": "This array has 4 elements."
+		},
+		{
+			"title": "Member function version.",
+			"description": "Using the member function. This version also works in ACF2018.",
+			"code": "arr=[1,2,3];\nal=arr.push(42);\nWriteOutput('This array has ' & al & ' elements.');",
+			"result": "This array has 4 elements."
+		}
+	]
+}
