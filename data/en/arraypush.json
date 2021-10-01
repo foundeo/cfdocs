@@ -2,7 +2,7 @@
 	"name":"arrayPush",
 	"type":"function",
 	"syntax":"arrayPush(array, value)",
-	"member":"someArray.push(value)",
+	"member":"array.push(value)",
 	"returns":"numeric",
 	"related":["arrayPop"],
 	"description":"Adds an element or an object to the end of an array, then returns the size of the modified array.",

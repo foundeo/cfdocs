@@ -7,6 +7,7 @@
 	"description": "Returns the timezone for the current request.",
 	"params": [],
 	"engines": {
+		"coldfusion": {"minimum_version": "2021", "notes": "", "docs": ""},
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/gettimezone.html"}
 	},
 	"links": [],

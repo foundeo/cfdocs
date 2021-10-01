@@ -1,0 +1,73 @@
+{
+	"name":"arrayReduceRight",
+	"type":"function",
+	"syntax":"arrayReduceRight()",
+	"member":"someArray.reduceRight()",
+	"returns":"any",
+	"related": ["ArrayReduce"],
+	"description":"PLACEHOLDER",
+	"params":[
+		{"name":"array", "description":"the input array", "default":"","type":"array","required":true, "values":[]},
+		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
+			"callback_params": [
+			{
+				"values": [],
+				"default": "",
+				"description": "The result of the reduce operation after the previous iteration",
+				"name": "result",
+				"type": "any",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "The value for the current iteration",
+				"name": "value",
+				"type": "any",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "The current index for the iteration",
+				"name": "index",
+				"type": "numeric",
+				"required": false
+			},{
+				"values": [],
+				"default": "",
+				"description": "A reference of the original array",
+				"name": "array",
+				"type": "array",
+				"required": false
+			}],"type":"any","required":"true","values":[],"default":""},
+
+		{"name":"initialValue", "description":"Initial value which will be used for the reduce operation.", "default":"","type":"any","required":false, "values":[]}
+	],
+	"engines":{
+			"coldfusion":{"minimum_version":"11","notes":"","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayreduceright.html"},
+			"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arrayreduceright.html"}
+		},
+	"links":[
+		{
+			"title":"Practical uses for reduce functions",
+			"description":"Blog entry by John Whish covering some practical uses for reduce functions in CFML.",
+			"url":"https://coldfusion.adobe.com/2019/02/practical-uses-reduce-functions/"
+		},
+		{
+			"title":"Map, Reduce and other Higher Order Functions",
+			"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
+			"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+		},
+		{
+			"title": "ColdFusion 11: .map() and .reduce()",
+			"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
+			"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
+		}],
+	"examples":[
+        {
+			"title": "Simple arrayReduce Example",
+			"description": "Sum each `a` element in the array",
+			"code": "complexData = [ {a: 4}, {a: 18}, {a: 51} ];sum = arrayReduce( complexData, function(prev, element){\n\treturn prev + element.a;\n}, 0 );\nwriteOutput(sum);",
+			"result": "73"
+		}
+    ]
+}
