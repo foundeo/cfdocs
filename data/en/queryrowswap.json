@@ -19,8 +19,8 @@
 	"links": [],
     "examples": [
         {
-            "title": "Example1",
-            "description": "This is Example1",
+            "title": "Swap Query Rows",
+            "description": "This example shows how you can use this function to swap two rows in a query.",
             "code": "qry=queryNew(\"rowid,name\", \"integer,varchar\",[ [1, \"Bob\"],[2, \"Theodore\"],[3, \"Jay\"],[4, \"William\"] ]);\rswap1=QueryRowSwap(qry,1,4);\rWriteDump(swap1);",
             "result": ""
         },
