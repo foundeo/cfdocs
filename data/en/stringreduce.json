@@ -1,0 +1,28 @@
+{
+	"name":"StringReduce",
+	"type":"function",
+	"syntax":"StringReduce()",
+	"member":"inputString.reduce()",
+	"returns":"string",
+	"related":[],
+	"description":"PLACEHOLDER",
+	"params": [
+		
+		{"name":"inputString","description":"","required":true,"default":"","type":"string","values":[]}
+		
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":""},
+		"lucee": {"minimum_version":"", "notes":"", "docs":""},
+		"openbd": {"minimum_version":"", "notes":"", "docs":""}
+	},
+	"links": [],
+	"examples": [
+		{
+		    "title": "",
+		    "description": "",
+		    "code": "",
+		    "result": ""
+		}
+	]
+}

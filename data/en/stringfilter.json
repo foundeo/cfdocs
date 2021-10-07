@@ -1,0 +1,28 @@
+{
+	"name":"StringFilter",
+	"type":"function",
+	"syntax":"StringFilter()",
+	"member":"inputString.filter()",
+	"returns":"string",
+	"related":[],
+	"description":"PLACEHOLDER",
+	"params": [
+		
+		{"name":"inputString","description":"","required":true,"default":"","type":"string","values":[]}
+		
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":""},
+		"lucee": {"minimum_version":"", "notes":"", "docs":""},
+		"openbd": {"minimum_version":"", "notes":"", "docs":""}
+	},
+	"links": [],
+	"examples": [
+		{
+		    "title": "",
+		    "description": "",
+		    "code": "",
+		    "result": ""
+		}
+	]
+}
