@@ -25,7 +25,7 @@
 		{
 			"title": "Using a member function",
 			"description": "This is the same example as above, but using a member function on the array instead of a standalone function.",
-			"code": "arr = [ 1, 2, 3 ];\r\nel = arr.shift();\r\n\r\nwriteOutput( el );",
+			"code": "arr = [ 1, 2, 3 ];\r\nel = arr.shift();\r\nwriteOutput( el );",
 			"result": "1",
             "runnable":true
 		}
