@@ -32,14 +32,14 @@
 		{
 			"title": "Full function",
 			"description": "Do all letters in the string meet the callback condition?",
-			"code": "letters=\"ZZazz\";\ncallback=function(inp){inp==\"z\";}\nallZs = StringEvery(letters,callback);\nwriteOutput(allZs)",
+			"code": "letters=\"ZZazz\";\ncallback=function(inp){return inp==\"z\";}\nallZs = StringEvery(letters,callback);\nwriteOutput(allZs)",
 			"result": "NO",
 			"runnable": true
 		},
 		{
 			"title": "Member function",
 			"description": "Do all letters in the string meet the callback condition?",
-			"code": "letters=\"zzZZz\";\nletters.every(function(inp){inp==\"z\";});",
+			"code": "letters=\"zzZZz\";\nletters.every(function(inp){return inp==\"z\";});",
 			"result": "YES",
 			"runnable": true
 		}
