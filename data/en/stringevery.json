@@ -8,7 +8,7 @@
 	"description":"Determines if all elements of a string satisfy a given condition. Will return `TRUE` is all elements meet the condition, else `FALSE`.",
 	"params": [
 		{"name":"string","description":"Original input string to search.","required":true,"default":"","type":"string","values":[]},
-		{"name":"callback","description":"The closure function that is executed for each element in the string. The syntax is `callback(element,index,string)`.","required":true,"default":"","type":"string","values":[]}
+		{"name":"callback","description":"The closure function that is executed for each element in the string. The syntax is `callback(element,index,string)`.","required":true,"default":"","type":"any","values":[]}
 		
 	],
 	"engines": {
