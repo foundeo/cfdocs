@@ -8,7 +8,7 @@
 	"description":"This function uses the callback to filter the elements in a string.",
 	"params": [
 		{"name":"string","description":"Original input string to search.","required":true,"default":"","type":"string","values":[]},
-		{"name":"callback","description":"The closure function that is executed for each element in the string.","required":true,"default":"","type":"string","values":[]}
+		{"name":"callback","description":"The closure function that is executed for each element in the string.","required":true,"default":"","type":"any","values":[]}
 		
 	],
 	"engines": {
