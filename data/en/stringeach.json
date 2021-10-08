@@ -9,7 +9,7 @@
 	"params": [
 		
 		{"name":"string","description":"The input string.","required":true,"default":"","type":"string","values":[]},
-		{"name":"callback","description":"The closure function that is executed for each element in the string. The syntax is `callback(element,index,string)`.","required":true,"default":"","type":"string","values":[]}
+		{"name":"callback","description":"The closure function that is executed for each element in the string. The syntax is `callback(element,index,string)`.","required":true,"default":"","type":"any","values":[]}
 		
 	],
 	"engines": {
