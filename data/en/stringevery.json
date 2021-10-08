@@ -39,7 +39,7 @@
 		{
 			"title": "Member function",
 			"description": "Do all letters in the string meet the callback condition?",
-			"code": "letters=\"zzZZz\";\nletters.every(function(inp){return inp==\"z\";});",
+			"code": "letters=\"zzZZz\";\ncallback=function(inp){return inp==\"z\";}\nallZs = letters.every(callback);\nwriteOutput(allZs)",
 			"result": "YES",
 			"runnable": true
 		}
