@@ -32,14 +32,14 @@
 		{
 			"title": "Full function",
 			"description": "",
-			"code": "letters=\"ahqwz\";\ncallback=function(letters){ writeoutput(letters == \"q\");}\nStringEach(letters,callback);",
+			"code": "letters=\"ahqwz\";\ncallback=function(inp){ writeoutput(inp == \"q\");}\nStringEach(letters,callback);",
 			"result": "NONOYESNONO",
 			"runnable": true
 		},
 		{
 			"title": "Member function",
 			"description": "",
-			"code": "letters=\"ahqwz\";\nletters.each(function(letters){writeoutput(letters == \"q\");});",
+			"code": "letters=\"ahqwz\";\nletters.each(function(inp){writeoutput(inp == \"q\");});",
 			"result": "NONOYESNONO",
 			"runnable": true
 		}
