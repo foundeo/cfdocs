@@ -20,11 +20,13 @@
     "openbd": { "minimum_version":"","notes":"","docs": "http://openbd.org/manual/?/function/structnew"}    
 	},
   "links": [
-    "title":"Structures",
-	  "description":"A description of CFML Structures from Ortus' Learn Modern ColdFusion <CFML> in 100 Minutes.",
-    "url":"https://modern-cfml.ortusbooks.com/cfml-language/structures"
-  ],
-  "examples": [
+	  {
+		  "title":"Structures",
+		  "description":"A description of CFML Structures from Ortus' Learn Modern ColdFusion <CFML> in 100 Minutes.",
+		  "url":"https://modern-cfml.ortusbooks.com/cfml-language/structures"
+	  }
+  ], 
+	"examples": [
     {
       "title": "New struct using literal notation",
       "description": "Creates an unordered struct.",
