@@ -7,7 +7,7 @@
 	"description":"Converts binary data to a string.",
 	"params": [
 		{"name":"binaryData","description":"A string containing encoded binary data.","required":true,"default":"","type":"binary","values":[]},
-		{"name":"encoding","description":"A string specifying the encoding method to use to represent\n the data; one of the following:\n - hex: use characters 0-9 and A-F represent the hexadecimal value\n of each byte; for example, 3A.\n - UU: use the UNIX UUencode algorithm to convert the data.\n - base64: use the Base64 algorithm to convert the data.\n - base64URL: modification of the main Base64 standard, which uses the encoding result as filename or URL address.","required":true,"default":"","type":"string","values":["hex","uu","base64"]}
+		{"name":"encoding","description":"A string specifying the encoding method to use to represent\n the data; one of the following:\n - hex: use characters 0-9 and A-F represent the hexadecimal value\n of each byte; for example, 3A.\n - UU: use the UNIX UUencode algorithm to convert the data.\n - base64: use the Base64 algorithm to convert the data.\n - base64URL: modification of the main Base64 standard, which uses the encoding result as filename or URL address.","required":true,"default":"","type":"string","values":["hex","uu","base64","base64URL"]}
 
 	],
 	"engines": {
