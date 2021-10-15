@@ -19,5 +19,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfzipparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfzipparam"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"Add a series of files to a zip file",
+			"description":"Adding the contents of a folder to a zip",
+			"code":"var fileList = directoryList(expandPath('/'), false, 'path', '*.jpg');\n\ncfzip( file = 'allJPGs.zip' ) {\n  fileList.each((zipFile)=>{\n    cfzipparam( source = zipFile );\n  })\n}",
+			"runnable":false
+		}		
+	]
 }
