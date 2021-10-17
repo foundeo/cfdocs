@@ -5,10 +5,10 @@
 	"member":"someArray.reduceRight(function(result, item [,index, [array]]){} [, initialValue])",
 	"returns":"any",
 	"related": ["ArrayReduce","ArrayMap"],
-	"description":"This function iterates over every element of the array and calls the closure to work on that element. This function will reduce the array to a single value, from the right to the left, and will return the value.",
+	"description":"This function iterates over every element of the array and calls the closure to work on that element. It will reduce the array to a single value, from the right to the left, and return it.\nNOTE:This function is not available in Lucee 5.x or lower. Potentially use `reverse()` instead.",
 	"params":[
 		{"name":"array", "description":"The input array.", "default":"","type":"array","required":true, "values":[]},
-		{"name":"callback","description":"Closure or a function reference that will be called for each iteration.","default":"","type":"any","required":"true","values":[],
+		{"name":"callback","description":"Closure or a function reference that will be called for each iteration.","default":"","type":"any","required":true,"values":[],
 			"callback_params": [
 				{
 					"name": "result",
@@ -44,8 +44,7 @@
 		{"name":"initialValue", "description":"Initial value which will be used for the reduce operation.", "default":"","type":"any","required":false, "values":[]}
 	],
 	"engines":{
-		"coldfusion":{"minimum_version":"2021","notes":"","https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayreduceright.html"},
-		"lucee": {"minimum_version":"", "notes":"This function is not available in Lucee. Potentially use `reverse()` instead.", "docs":""}
+		"coldfusion":{"minimum_version":"2021","notes":"","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayreduceright.html"}
 	},
 	"links":[
 		{
@@ -70,13 +69,12 @@
 		}
 	],
 	"examples":[
-        	{
+		{
 			"title": "Simple arrayReduceRight Example",
 			"description": "Demonstrate how the function works from right to left.",
-			"code": "myArray=[\"a\",\"b\",\"c\",\"d\"];\nnewArray=arrayReduceRight(myArray,function(prev,next,idx,arr){ return prev & next & idx },"")\nwritedump(newArray);",
+			"code": "myArray=[\"a\",\"b\",\"c\",\"d\"];\nnewArray=arrayReduceRight(myArray,function(prev,next,idx,arr){ return prev & next & idx },\"\");\nwritedump(newArray);",
 			"result": "d4c3b2a1",
 			"runnable": true
 		}
 	]
 }
-

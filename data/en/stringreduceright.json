@@ -5,7 +5,7 @@
 	"member":"string.reduceRight(callback, initialValue)",
 	"returns":"any",
 	"related": ["StringReduce","StringMap","StringFilter","reverse"],
-	"description":"This function iterates over every element of the string and calls the closure to work on that element. This function will reduce the string to a single value, from the right to the left, and will return the value.",
+	"description":"This function iterates over every element of the string and calls the closure to work on that element. This function will reduce the string to a single value, from the right to the left, and will return the value.\nNOTE: This function is not available in Lucee 5.x or lower. Potentially use `reverse()` instead.",
 	"params":[
 		{"name":"string", "description":"The input string.", "default":"","type":"string","required":true, "values":[]},
 		{"name":"callback","description":"Closure or a function reference that will be called for each iteration.","default":"","type":"any","required":"true","values":[],
@@ -44,8 +44,7 @@
 		{"name":"initialValue", "description":"Initial value which will be used for the reduce operation.", "default":"","type":"any","required":true, "values":[]}
 	],
 	"engines":{
-		"coldfusion":{"minimum_version":"2021","notes":"","https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/stringreduceright.html"},
-		"lucee": {"minimum_version":"", "notes":"This function is not available in Lucee. Potentially use `reverse()` instead.", "docs":""}
+		"coldfusion":{"minimum_version":"2021","notes":"","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/stringreduceright.html"}
 	},
 	"links":[
 		{
@@ -70,12 +69,20 @@
 		}
 	],
 	"examples":[
-        	{
+        {
 			"title": "Simple stringReduceRight Example",
 			"description": "Demonstrate how the function works from right to left.",
-			"code": "myString=[\"abcd\"];\nnewString=stringReduceRight(myString,function(prev,next,idx,arr){ return prev & next & idx },"")\nwritedump(newString);",
+			"code": "myString=\"abcd\";\nnewString=stringReduceRight(myString,function(prev,next,idx,arr){ return prev & next & idx },\"\")\nwritedump(newString);",
 			"result": "d4c3b2a1",
 			"runnable": true
+		},
+		{
+			"title": "How Do You Do This In Lucee?",
+			"description": "This function will be added to Lucee in Version 6. But if you need to reverse a string now, use the `reverse()` function.",
+			"code": "myString=\"abcd\";\nnewString=myString.reverse();\nwritedump(newString);",
+			"result": "dcba",
+			"runnable": true
 		}
+
 	]
 }
