@@ -8,10 +8,9 @@
 	"params":[
 		{"name":"plaintext", "description":"The unhashed string to compare.", "required":true, "default":"", "type":"string", "values":[]},
 		{"name":"hashedstring", "description":"The hashed string to compare.", "required":true, "default":"", "type":"string", "values":[]}
-	    ],
+	],
 	"engines":{
-		"coldfusion":{"minimum_version":"2021","notes":"","docs":"https://helpx.adobe.com/ca/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/verifybcrypthash.html"},
-		"lucee":{"minimum_version":"","notes":"","docs":""}
+		"coldfusion":{"minimum_version":"2021","notes":"","docs":"https://helpx.adobe.com/ca/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/verifybcrypthash.html"}
 	},
 	"links":[
 		{"title":"OWASP Password Storage Cheat Sheet","description":"General advice from OWASP about how to work with passwords.","url":"https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"},
