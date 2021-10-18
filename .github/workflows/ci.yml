@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+env:
+  TEST_RUNNER_URI: /tests/run.cfm?reporter=text
+
+jobs:
+  
+  cfmatrix:
+    runs-on: ubuntu-latest
+    permissions: 
+      contents: read
+      
+    #setup the matrix of CF Engines
+    strategy:
+      matrix:
+        cfengine: ["lucee@5", "adobe@2018"]
+    env:
+      CFENGINE: ${{ matrix.cfengine }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Clone cfmatrix
+        run: git clone --depth 1 https://github.com/foundeo/cfmatrix.git cfmatrix
+
+      - name: Install cfmatrix
+        run: bash ./cfmatrix/install.sh
+        
+      - name: Run Tests
+        run: bash ./cfmatrix/run.sh
+
+  valid-json:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install JSON Validator
+        run: npm install -g ajv-cli
+      - name: Run JSON Validator
+        run: ajv validate -s data/cfdocs.schema.json -d "data/en/*.json" --use-defaults --errors=text
+
