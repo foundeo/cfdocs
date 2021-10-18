@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
     "engineDetail": {
       "title": "Engine Detail",
@@ -122,7 +122,7 @@
           "default": {
             "title": "Default",
             "description": "The default value of the parameter when not provided",
-            "type": "string",
+            "type": ["string", "boolean", "number"],
             "default": ""
           },
           "values": {
@@ -133,7 +133,7 @@
             "items": {
               "title": "Value",
               "description": "One of the enumerated values for the parameter",
-              "type": "string"
+              "type": ["string", "boolean", "number"]
             },
             "default": []
           },
@@ -168,9 +168,9 @@
   "properties": {
     "name": {
       "title": "Name",
-      "description": "The name of the tag or function. Start with lowercase.",
+      "description": "The name of the tag or function. Start with lowercase, except Application.cfc.",
       "type": "string",
-      "pattern": "^[a-z]\\w+$"
+      "pattern": "^([a-zA-Z0-9 -]+|Application\\.cfc)$"
     },
     "description": {
       "title": "Description",
@@ -392,12 +392,19 @@
           "result": {
             "title": "Result",
             "description": "The expected output of the code example",
-            "type": "string"
+            "type": ["string", "boolean", "number"]
           },
           "runnable": {
             "title": "Runnable",
-            "description": "Whether the code is runnable",
-            "type": "boolean"
+            "description": "Whether the code is runnable (in trycf for example)",
+            "type": "boolean",
+            "default": true
+          },
+          "testable": {
+            "title":"Testable",
+            "description": "If the example can be tested. May need to set to false if there is a bug on certain engines.",
+            "type": "boolean",
+            "default": true
           }
         },
         "required": [
