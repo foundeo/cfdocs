@@ -45,5 +45,5 @@ jobs:
       - name: Install JSON Validator
         run: npm install -g ajv-cli
       - name: Run JSON Validator
-        run: ajv validate -s data/cfdocs.schema.json -d "data/en/*.json" --use-defaults --errors=text
+        run: ajv validate -s data/cfdocs.schema.json -d "data/en/*.json" --use-defaults --errors=text --strict=log
 
