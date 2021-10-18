@@ -1,0 +1,47 @@
+{
+	"name":"stringMap",
+	"type":"function",
+	"syntax":"stringMap(string,callback)",
+	"member":"string.map(callback)",
+	"returns":"string",
+	"related":["StringFilter","StringReduce"],
+	"description":"This functions executes the callback function for each element in the string.",
+	"params": [
+		{"name":"string","description":"Original input string.","required":true,"default":"","type":"string","values":[]},
+		{"name":"callback","description":"The closure function that is executed for each element in the string.","required":false,"default":"","type":"any","values":[]}
+		
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/stringmap.html"},
+		"lucee": {"minimum_version":"6", "notes":"This function is being added in Lucee 6. It is similar to other map functions, like `arrayMap()`.", "docs":""},
+		"openbd": {"minimum_version":"", "notes":"", "docs":""}
+	},
+	"links": [
+		{
+			"title":"Hidden Gems In ColdFusion 2021",
+			"description":"Presentation by Charlie Arehart",
+			"url":"https://www.carehart.org/presentations/Hidden%20gems%20in%20CF2021.pdf"
+		},
+		{
+			"title":"Lucee - LDEV-3178 Ticket to add stringMap",
+			"description":"Lucee ticket to add function in Lucee 6.",
+			"url":"https://luceeserver.atlassian.net/browse/LDEV-3178"
+		}
+	],
+	"examples": [
+		{
+			"title": "Full function",
+			"description": "Map each element of the string to a new value.",
+			"code": "letters=\"abcdefg\";\nclosure=function(inp){return chr(asc(inp)+7);}\nwriteOutput(StringMap(letters,closure));",
+			"result": "hijklmn",
+			"runnable": true
+		},
+		{
+			"title": "Member function",
+			"description": "Map each element of the string to a new value.",
+			"code": "letters=\"abcdefg\";\nclosure=function(inp){return chr(asc(inp)+7);}\nwriteOutput(letters.map(closure));",
+			"result": "hijklmn",
+			"runnable": true
+		}
+	]
+}

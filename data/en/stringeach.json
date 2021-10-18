@@ -1,0 +1,47 @@
+{
+	"name":"stringEach",
+	"type":"function",
+	"syntax":"stringEach(string,callback)",
+	"member":"string.each(callback)",
+	"returns":"void",
+	"related":[],
+	"description":"Iterates over a string and runs the closure function for each element in the string.",
+	"params": [
+		
+		{"name":"string","description":"The input string.","required":true,"default":"","type":"string","values":[]},
+		{"name":"callback","description":"The closure function that is executed for each element in the string. The syntax is `callback(element,index,string)`.","required":true,"default":"","type":"any","values":[]}
+		
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/stringeach.html"},
+		"lucee": {"minimum_version":"6", "notes":"Lucee doesn't have a specific `stringEach` function yet, but their `Each()` function is similar, though deprecated.", "docs":"https://docs.lucee.org/reference/functions/each.html"}
+	},
+	"links": [
+		{
+			"title":"Hidden Gems In ColdFusion 2021",
+			"description":"Presentation by Charlie Arehart",
+			"url":"https://www.carehart.org/presentations/Hidden%20gems%20in%20CF2021.pdf"
+		},
+		{
+			"title":"Lucee - LDEV-3181 Ticket to add stringEach",
+			"description":"Lucee ticket to add function in Lucee 6.",
+			"url":"https://luceeserver.atlassian.net/browse/LDEV-3181"
+		}
+	],
+	"examples": [
+		{
+			"title": "Full function",
+			"description": "",
+			"code": "letters=\"ahqwz\";\ncallback=function(inp){ writeoutput(inp == \"q\");}\nStringEach(letters,callback);",
+			"result": "NONOYESNONO",
+			"runnable": true
+		},
+		{
+			"title": "Member function",
+			"description": "",
+			"code": "letters=\"ahqwz\";\nletters.each(function(inp){writeoutput(inp == \"q\");});",
+			"result": "NONOYESNONO",
+			"runnable": true
+		}
+	]
+}
