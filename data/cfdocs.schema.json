@@ -396,8 +396,15 @@
           },
           "runnable": {
             "title": "Runnable",
-            "description": "Whether the code is runnable",
-            "type": "boolean"
+            "description": "Whether the code is runnable (in trycf for example)",
+            "type": "boolean",
+            "default": true
+          },
+          "testable": {
+            "title":"Testable",
+            "description": "If the example can be tested. May need to set to false if there is a bug on certain engines.",
+            "type": "boolean",
+            "default": true
           }
         },
         "required": [
