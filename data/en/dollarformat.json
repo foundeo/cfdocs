@@ -14,7 +14,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/dollarformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dollarformat"}
 	},
-	"links": [],
+	"links": [
+		{
+			"title":"Negative number bug: LDEV-3743",
+			"url": "https://luceeserver.atlassian.net/browse/LDEV-3743",
+			"description": "Lucee on Java 11 will format negative values as -$x.yy"
+		}
+	],
 	"examples": [
 		{
 			"title":"Format Positive Numbers",
@@ -25,10 +31,11 @@
 		},
 		{
 			"title":"Format Negative Numbers",
-			"description":"Negative numbers appear with parentheses.",
+			"description":"Negative numbers appear with parentheses. May cause issues due to LDEV-3743",
 			"code":"dollarFormat(-11.34)",
 			"result":"($11.34)",
-			"runnable":true
+			"runnable":true,
+			"testable":false
 		}
 	]
 }
