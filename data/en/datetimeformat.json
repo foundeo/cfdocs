@@ -27,9 +27,10 @@
 	"examples": [
 		{
 			"title": "Mask = Short Example",
-			"description":"",
+			"description":"Possible on Lucee LDEV-3744",
 			"code":"dateTimeFormat(\"2015-04-11 19:02\", \"short\")",
-			"result":"4/11/15 7:02 PM"
+			"result":"4/11/15 7:02 PM",
+			"testable":false
 		},
 		{
 			"title": "Mask = Medium Example",
