@@ -16,7 +16,7 @@
 		{"name":"value","description":"For action=\"set\", object which needs to be stored","required":false,"default":"","type":"string","values":[]},
 		{"name":"metadata","description":"Name of the struct variable","required":false,"default":"","type":"string","values":[]},
 		{"name":"stripwhitespace","description":"Reduces whitespace","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"throwonerror","description":"A Boolean value specifying whether to throw an error if the\nflush action encounters an error. Otherwise the action does not\ngenerate an error if it fails. If this attribute is 'true' you can handle the\nerror in a cfcatch block, for example, if a specified id value is invalid","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"throwonerror","description":"A Boolean value specifying whether to throw an error if the\nflush action encounters an error. Otherwise the action does not\ngenerate an error if it fails. If this attribute is 'true' you can handle the\nerror in a cfcatch block, for example, if a specified id value is invalid","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"id","description":"Id of the cached object","required":false,"default":"","type":"string","values":[]},
 		{"name":"key","description":"key to access cache","required":false,"default":"","type":"string","values":[]},
 		{"name":"usecache","description":"to use cache or not (if false it will process the content each time)","required":false,"default":true,"type":"boolean","values":[true,false]},

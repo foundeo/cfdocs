@@ -12,7 +12,7 @@
 		{"name":"y","description":"The y coordinate of the upper left corner of the oval to draw.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"width","description":"The width of the oval to draw.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"height","description":"The height of the oval to draw.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"filled","description":"Specify whether the oval is filled","required":false,"default":"false","type":"boolean","values":[]}
+		{"name":"filled","description":"Specify whether the oval is filled","required":false,"default":"false","type":"boolean","values":[true,false]}
 
 	],
 	"engines": {

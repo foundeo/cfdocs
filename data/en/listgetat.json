@@ -9,7 +9,7 @@
 		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"position","description":"","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]},
-		{"name":"includeEmptyValues","description":"","required":false,"default":"false","type":"boolean","values":[]}
+		{"name":"includeEmptyValues","description":"","required":false,"default":"false","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listgetat.html"},

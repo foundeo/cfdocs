@@ -8,7 +8,7 @@
 	"params": [
 		{"name":"text","description":"Message to log. The date / time will be logged automatically for you.","required":true,"default":"","type":"string","values":[]},
 		{"name":"type","description":"Type or severity of the log message","required":false,"default":"","type":"string","values":["information","warning","error","fatal"]},
-		{"name":"application","description":"Logs the application name, if it is specified in Application.cfc or a cfapplication tag.","required":false,"default":"true","type":"boolean","values":[]},
+		{"name":"application","description":"Logs the application name, if it is specified in Application.cfc or a cfapplication tag.","required":false,"default":"true","type":"boolean","values":[true,false]},
 		{"name":"file","description":"The file name to log to. You cannot specify a directory path or file extension (extension will be `.log`). If the file does not exist, it is created automatically. The log file will be located in your CF server logs directory.","required":false,"default":"","type":"string","values":[]},
 		{"name":"log","description":"If you omit the file attribute, writes messages to standard\n log file. Ignored, if you specify file attribute.\n\n Application: writes to Application.log, normally used for\n application-specific messages.\n Scheduler: writes to Scheduler.log, normally used to log\n the execution of scheduled tasks.","required":false,"default":"","type":"string","values":["Application","Scheduler"]}
 	],

@@ -10,8 +10,8 @@
 		{"name":"data","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
 		{"name":"startrow","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"startcolumn","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"insert","description":"No Help Available","required":true,"default":"","type":"boolean","values":[]},
-		{"name":"insert","description":"No Help Available","required":false,"default":"","type":"boolean","values":[]}
+		{"name":"insert","description":"No Help Available","required":true,"default":"","type":"boolean","values":[true,false]},
+		{"name":"insert","description":"No Help Available","required":false,"default":"","type":"boolean","values":[true,false]}
 
 	],
 	"engines": {

@@ -14,7 +14,7 @@
 		{"name":"height","description":"The height of the rectangle.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"arcwidth","description":"The horizontal diameter of the arc at the four corners.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"archeight","description":"The vertical diameter of the arc at the four corners.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"filled","description":"Specify whether the rectangle is filled","required":false,"default":"false","type":"boolean","values":[]}
+		{"name":"filled","description":"Specify whether the rectangle is filled","required":false,"default":"false","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagedrawroundrect.html"},

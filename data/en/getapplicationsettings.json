@@ -6,7 +6,7 @@
 	"related":["getApplicationMetadata"],
 	"description":"return all data from this scope, when using a application.cfc or all setting defined in tag cfapplication",
 	"params": [
-		{"name":"suppressFunction","description":"if true only data members from this scope are returned (no functions), default is false","required":true,"default":"false","type":"boolean","values":[]}
+		{"name":"suppressFunction","description":"if true only data members from this scope are returned (no functions), default is false","required":true,"default":"false","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/getapplicationsettings.html"}

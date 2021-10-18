@@ -12,7 +12,7 @@
 		{"name":"column","description":"The column number to start, all columns to the left will be empty.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"insert","description":"When true appends the row `data` to the `spreadsheetObj`. When `false` attempts to update the spreadsheet object rows.","required":false,"default":"true","type":"boolean","values":[true,false]},
 		{"name":"datatype","description":"CF11+ An array of datatype expressions with values `STRING` `NUMERIC` or `DATE`. For example use `DATE:1;NUMERIC:2-2;STRING","required":false,"default":"","type":"array","values":[]},
-		{"name":"includeColumnNames","description":"CF2016+ When `true` writes column names as headers in the spreadsheet.","required":false,"default":"false","type":"boolean","values":[]}
+		{"name":"includeColumnNames","description":"CF2016+ When `true` writes column names as headers in the spreadsheet.","required":false,"default":"false","type":"boolean","values":[true,false]}
 
 	],
 	"engines": {

@@ -10,7 +10,7 @@
 		{"name":"variable","description":"Name of variable to contain the text for htmlbody.","required":false,"default":"","type":"string","values":[]},
 		{"name":"id","description":"ID of the snippet that is added, used to ensure that the same snippet will not be added more than once.","required":false,"default":"","type":"string","values":[]},
 		{"name":"text","description":"The text to add to the 'body' area of an HTML page. Alternatively if a closing tag is used then the body between the tags is used.","required":false,"default":"","type":"string","values":[]},
-		{"name":"force","description":"if set to true, it works even within a silent block","required":false,"default":"","type":"boolean","values":[]}
+		{"name":"force","description":"if set to true, it works even within a silent block","required":false,"default":"","type":"boolean","values":[true,false]}
 
 	],
 	"engines": {

@@ -14,7 +14,7 @@
 		{"name":"starttime","description":"Time at which to run the scheduled of task starts.","required":false,"default":"","type":"string","values":[]},
 		{"name":"URL","description":"URL of the page to execute.","required":false,"default":"","type":"URL","values":[]},
 		{"name":"port","description":"Port to use on the server that is specified by the url\n parameter. If resolveURL = \"yes\", retrieved document URLs\n that specify a port number are automatically resolved, to\n preserve links in the retrieved document. A port value in\n the url attribute overrides this value.","required":false,"default":80,"type":"numeric","values":[]},
-		{"name":"publish","description":"Yes: save the result to a file\n No: does not","required":false,"default":false,"type":"boolean","values":[]},
+		{"name":"publish","description":"Yes: save the result to a file\n No: does not","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"endDate","description":"Date when scheduled task ends.","required":false,"default":"","type":"string","values":[]},
 		{"name":"endTime","description":"Time when scheduled task ends (seconds).","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"interval","description":"Interval at which task is scheduled.\n * number of seconds (minimum is 60)\n * once\n * daily\n * weekly\n * monthly","required":false,"default":"","type":"string","values":["once","daily","weekly","monthly"]},
@@ -25,7 +25,7 @@
 		{"name":"proxyport","description":"Port number to use on the proxy server.","required":false,"default":80,"type":"numeric","values":[]},
 		{"name":"proxyuser","description":"User name to provide to the proxy server.","required":false,"default":"","type":"string","values":[]},
 		{"name":"proxypassword","description":"Password to provide to the proxy server.","required":false,"default":"","type":"string","values":[]},
-		{"name":"resolveurl","description":"Yes: resolve links in the output page to absolute\n references\n No: does not","required":false,"default":false,"type":"boolean","values":[]},
+		{"name":"resolveurl","description":"Yes: resolve links in the output page to absolute\n references\n No: does not","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"group","description":"CF11+ The group to which the scheduled task belongs.","required":false,"default":"default","type":"string"},
 		{"name":"mode","description":"CF10+ If the task is server-specific or application specific.","required":false,"default":"server","type":"string","values":["application","server"]},
 		{"name":"result (CF10+)/returnvariable (lucee)","description":"Name for the query in which cfschedule returns the result variables.","required":"For the list action","default":"","type":"query"},
@@ -40,9 +40,9 @@
 		{"name":"exclude","description":"CF10+ Comma-separated list of dates or date range on which to not execute the scheduled task.","required":false,"default":"","type":"string"},
 		{"name":"cluster","description":"CF10+ If yes, the task can be executed in a cluster setup.\n Note: CF 2018 Enterprise Required; not supported in Standard Edition","required":false,"default":"no","type":"boolean"},
 		{"name":"overwrite","description":"CF10+ Specify whether to overwrite the output files on task execution (if true) or create new output files (if false).","required":false,"default":"true","type":"boolean"},
-		{"name":"unique","description":"lucee4.5+ If true, the scheduled task is only executed once at time. If a task is still running from previous round no new task is started.","required":false,"default":"","type":"boolean","values":[]},
-		{"name":"autodelete","description":"lucee4.5+ If set to true, the scheduled task will be deleted when there is no possible future execution.","required":false,"default":"","type":"boolean","values":[]},
-		{"name":"readonly","description":"lucee4.5+ If true, the scheduled task can not be modified or deleted in the Lucee Administrator.","required":false,"default":"","type":"boolean","values":[]}
+		{"name":"unique","description":"lucee4.5+ If true, the scheduled task is only executed once at time. If a task is still running from previous round no new task is started.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"autodelete","description":"lucee4.5+ If set to true, the scheduled task will be deleted when there is no possible future execution.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"readonly","description":"lucee4.5+ If true, the scheduled task can not be modified or deleted in the Lucee Administrator.","required":false,"default":"","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfschedule.html"},

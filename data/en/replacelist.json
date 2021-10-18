@@ -12,7 +12,7 @@
 		{"name":"delimiter","description":"Common delimiter for both search and replacement.","required":false,"default":",","type":"string","values":[]},
 		{"name":"delimiterList1","description":"Delimiter for search.","required":false,"default":",","type":"string","values":[]},
 		{"name":"delimiterList2","description":"Delimiter for replacement.","required":false,"default":",","type":"string","values":[]},
-		{"name":"includeEmptyFields","description":"When true, zero-length list elements are preserved.","required":false,"default":"false","type":"boolean","values":[]}
+		{"name":"includeEmptyFields","description":"When true, zero-length list elements are preserved.","required":false,"default":"false","type":"boolean","values":[true,false]}
 
 	],
 	"engines": {

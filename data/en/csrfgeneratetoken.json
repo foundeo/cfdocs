@@ -7,7 +7,7 @@
 	"description":"Generates a random token and stores it in the session to protect against Cross-Site Request Forgery (CSRF) attacks. You can optionally provide a specific key to store in the session, and optionally force the generation of a new token.",
 	"params": [
 		{"name":"key","description":"A random token is generated based on the key provided. This key is stored in the session.","required":false,"default":"","type":"string","values":[]},
-		{"name":"forceNew","description":"If set to true, a new token is generated every time the method is called. If false, and in the case where a token already exists [for the key], the same key is returned.","required":false,"default":"false","type":"boolean","values":[]}
+		{"name":"forceNew","description":"If set to true, a new token is generated every time the method is called. If false, and in the case where a token already exists [for the key], the same key is returned.","required":false,"default":"false","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CSRFGenerateToken.html"},

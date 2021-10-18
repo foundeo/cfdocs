@@ -9,7 +9,7 @@
 		{"name":"namespace","description":"A webservice object as returned from the cfobject tag or the createobject function","required":true,"default":"","type":"string","values":[]},
 		{"name":"name","description":"Name of the SOAP header","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"Value of the SOAP header","required":true,"default":"","type":"string","values":[]},
-		{"name":"mustUnderstand","description":"The mustUnderstand attribute indicates whether processing of the header is optional or mandatory.\nThis basically translates to the node trying to find an appropriate handler that matches the header\nand proceed with processing the message in a manner consistent with its specification. If it can't find an appropriate handler\nit must return an error and stop further processing. If mustUnderstand is set to `true`\nthe node is not allowed to ignore it.","required":false,"default":"","type":"boolean","values":[]}
+		{"name":"mustUnderstand","description":"The mustUnderstand attribute indicates whether processing of the header is optional or mandatory.\nThis basically translates to the node trying to find an appropriate handler that matches the header\nand proceed with processing the message in a manner consistent with its specification. If it can't find an appropriate handler\nit must return an error and stop further processing. If mustUnderstand is set to `true`\nthe node is not allowed to ignore it.","required":false,"default":"","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/addsoapresponseheader.html"},

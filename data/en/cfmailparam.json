@@ -12,7 +12,7 @@
 		{"name":"contentID","description":"The Identifier for the attached file. This ID should\n be globally unique and is used to identify the file in\n an IMG or other tag in the mail body that references\n the file content.","required":false,"default":"","type":"string","values":[]},
 		{"name":"disposition","description":"How the attached file is to be handled. Can be one\n of the following:\n - attachment: present the file as an attachment\n - inline: display the file contents in the message","required":false,"default":"attachment","type":"string","values":["attachment","inline"]},
 		{"name":"content","description":"Lets you send the contents of a\nColdFusion variable as an attachment","required":false,"default":"","type":"string","values":[]},
-		{"name":"remove","description":"Tells ColdFusion to remove any attachments after successful mail delivery.","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"remove","description":"Tells ColdFusion to remove any attachments after successful mail delivery.","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"filename","description":"CF2016+ Lucee5.1.0.17+ The file name of the attachment as seen by the recipient.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {

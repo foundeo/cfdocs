@@ -7,7 +7,7 @@
 	"description":"Loads and returns an array of objects that match the `sampleEntity`.",
 	"params": [
 		{"name":"sampleEntity","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
-		{"name":"unique","description":"When true a single entity is returned, otherwise an array is returned.\nIf you are sure only one record exists for the `Filter`, then you can specify `unique=true` to return a single entity instead of an array. If you set `unique=true` and multiple records are returned, then an exception occurs.","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"unique","description":"When true a single entity is returned, otherwise an array is returned.\nIf you are sure only one record exists for the `Filter`, then you can specify `unique=true` to return a single entity instead of an array. If you set `unique=true` and multiple records are returned, then an exception occurs.","required":false,"default":"","type":"boolean","values":[true,false]},
 		{"name":"matchCriteria","description":"No Help Available","required":false,"default":"","type":"any","values":[]}
 	],
 	"engines": {

@@ -9,7 +9,7 @@
 		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"fileName","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
 		{"name":"password","description":"No Help Available","required":false,"default":"","type":"string","values":[]},
-		{"name":"overwrite","description":"No Help Available","required":false,"default":"","type":"boolean","values":[]}
+		{"name":"overwrite","description":"No Help Available","required":false,"default":"","type":"boolean","values":[true,false]}
 
 	],
 	"engines": {

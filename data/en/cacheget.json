@@ -9,7 +9,7 @@
 		{"name":"id","description":"The ID value assigned to the cache object when it was created","required":true,"default":"","type":"string","values":[]},
 		{"name":"region","description":"CF10+ The name of the cache region where the object was stored. Applies only to ACF.","required":false,"default":"","type":"string","values":[]},
 		{"name":"cacheName","description":"Lucee4.5+ The name of the cache where the object was stored. Applies only to Lucee.","required":false,"default":"","type":"string","values":[]},
-		{"name":"throwWhenNotExist","description":"Lucee4.5+ Enable/Disable throwing an error if element not exists","required":false,"default":"false","type":"boolean","values":[]}
+		{"name":"throwWhenNotExist","description":"Lucee4.5+ Enable/Disable throwing an error if element not exists","required":false,"default":"false","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheGet.html"},

@@ -8,7 +8,7 @@
 	"params": [
 		{"name":"region","description":"Name of the new cache region to be created.","required":true,"default":"","type":"string","values":[]},
 		{"name":"properties","description":"Struct that contains the cache region properties.","required":false,"default":"","type":"struct","values":[]},
-		{"name":"throwOnError","description":"A Boolean value specifying if to throw an exception if the cache region name you specify already exists.","required":false,"default":"true","type":"boolean","values":[]},
+		{"name":"throwOnError","description":"A Boolean value specifying if to throw an exception if the cache region name you specify already exists.","required":false,"default":"true","type":"boolean","values":[true,false]},
 		{"name":"password ","description":"Lucee5+ The password for the web administrator is required to interact with Cache Connections.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {

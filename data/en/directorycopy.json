@@ -8,9 +8,9 @@
 	"params": [
 		{"name":"source","description":"Absolute pathname of directory from which you copy content.","required":true,"default":"","type":"string","values":[]},
                 {"name":"destination","description":"Path of the destination directory. If not an absolute path, it is relative to the source directory.","required":true,"default":"","type":"string","values":[]},
-                {"name":"recurse","description":"If true, copies the subdirectories, otherwise only the files in the source directory.","required":false,"default":"false","type":"boolean","values":[]},
+                {"name":"recurse","description":"If true, copies the subdirectories, otherwise only the files in the source directory.","required":false,"default":"false","type":"boolean","values":[true,false]},
                 {"name":"filter","description":"File extension filter applied, for example, *.cfm. Filter to be used to filter the data copied: - A string that uses \"*\" as a wildcard, for example, \"*.cfm\" - a UDF (User defined Function) using the following pattern \"functioname(String path):boolean\", the function is run for every single file, if the function returns true, then the file is will be added to the list otherwise it will be omitted.","required":false,"default":"","type":"any","values":[]},
-                {"name":"createPath","description":"Lucee4.5+ If set to false, expects all parent directories to exist. If set to true, it will generate necessary directories.","required":false,"default":"true","type":"boolean","values":[]}
+                {"name":"createPath","description":"Lucee4.5+ If set to false, expects all parent directories to exist. If set to true, it will generate necessary directories.","required":false,"default":"true","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DirectoryCopy.html"},

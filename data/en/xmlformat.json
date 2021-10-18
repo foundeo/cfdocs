@@ -8,7 +8,7 @@
 	"discouraged":"Adobe recommends using encodeForXML instead of xmlFormat.",
 	"params": [
 		{"name":"String","description":"The string to escape","required":true,"default":"","type":"string","values":[]},
-		{"name":"escapeChars","description":"When true escapes restricted characters according to the W3C XML standard.","required":false,"default":"","type":"boolean","values":[]}
+		{"name":"escapeChars","description":"When true escapes restricted characters according to the W3C XML standard.","required":false,"default":"","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlformat.html"},

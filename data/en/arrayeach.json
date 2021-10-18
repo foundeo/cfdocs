@@ -32,7 +32,7 @@
 				"type": "array",
 				"required": false
 			}],"type":"","required":"true","values":[],"default":""},
-		{"name":"parallel","description":"Lucee4.5+ Specifies whether the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[]},
+		{"name":"parallel","description":"Lucee4.5+ Specifies whether the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[true,false]},
 		{"name":"maxThreads","description":"Lucee4.5+ The maximum number of threads to use when parallel = true","required":false,"default":"20","type":"numeric","values":[]}
 	],
 	"engines": {

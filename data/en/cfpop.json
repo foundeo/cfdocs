@@ -18,7 +18,7 @@
 		{"name":"maxrows","description":"Number of messages to return or delete, starting with the\n number in startRow. Ignored if messageNumber or uid is\n specified.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"startrow","description":"First row number to get or delete. Ignored if messageNumber\n or uid is specified.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"generateUniqueFileNames","description":"Yes: Generate unique filenames for files attached to an\n e-mail message, to avoid naming conflicts when files are\n saved","required":false,"default":"","type":"boolean","values":[true,false]},
-		{"name":"secure","description":"CF10+ Enables SSL for pop requests.","required":false,"default":"false","type":"boolean","values":[]},
+		{"name":"secure","description":"CF10+ Enables SSL for pop requests.","required":false,"default":"false","type":"boolean","values":[true,false]},
 		{"name":"delimiter","description":"CF11+ The value of the uid attribute can be a comma-separated\n list of UIDs. If the delimiter attribute is specified, the value\n of delimiter will be used as a delimiter instead of comma.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
