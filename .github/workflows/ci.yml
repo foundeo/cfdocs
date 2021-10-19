@@ -49,7 +49,7 @@ jobs:
       - name: Copy files
         run: cp -r ./data/en/*.json /tmp/cfdocs/
       - name: Exclude index.json
-        run: rm -f /tmp/cfdocs/index.js
+        run: rm -f /tmp/cfdocs/index.json
       - name: Run JSON Validator
         run: ajv validate -s data/cfdocs.schema.json -d "/tmp/cfdocs/*.json" --use-defaults --errors=text --strict=log
 
