@@ -5,8 +5,7 @@ CFDocs is a community maintained CFML reference tool available at [cfdocs.org](h
 * Easy to use urls like: [cfdocs.org/hash](http:cfdocs.org/hash) just hit /tag-name or /function-name.
 * Publicly maintained on [GitHub](http://github.com/foundeo/cfdocs)
 
-[![Build Status](https://travis-ci.org/foundeo/cfdocs.svg?branch=master)](https://travis-ci.org/foundeo/cfdocs)
-
+[![CI](https://github.com/foundeo/cfdocs/actions/workflows/ci.yml/badge.svg)](https://github.com/foundeo/cfdocs/actions/workflows/ci.yml)
 
 ## How reference data is structured
 
