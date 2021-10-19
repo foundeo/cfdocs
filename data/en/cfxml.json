@@ -14,5 +14,13 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfxml"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfxml"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "Creates a new CFML XML document object.",
+			"code": "cfxml( variable=\"myXml\" ) {\r\n writeOutput( '<?xml version=\"1.0\"?><catalog><song id=\"1\"><artist>Astley, Rick</artist><title>Never Gonna Give You Up</title></song></catalog>' );\r\n } \r\n writeDump( myXml );",
+			"result": ""
+		}
+	]
 }
