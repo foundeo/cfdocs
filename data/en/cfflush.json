@@ -14,8 +14,22 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfflush"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfflush"}
 	},
-	"links": [
-
+	"links": [],
+	"examples": [
+		{
+			"title": "Simple Script Example",
+			"description": "Outputs 'foo' to the browser approximately 1 second before 'bar'",
+			"code": "writeOutput( \"<div>foo</div>\" ); \n cfflush(); \n sleep( 1000 ); \n writeOutput( \"<div>bar</div>\" );",
+			"result": "",
+			"testable": false
+		},
+		{
+			"title": "Simple Tag Example",
+			"description": "Outputs 'foo' to the browser approximately 1 second before 'bar'",
+			"code": "<div>foo</div> \n <cfflush /> <cfsleep time="1000" /> \n <div>bar</div>",
+			"result": "",
+			"testable": false
+		}
 	]
 
 }
