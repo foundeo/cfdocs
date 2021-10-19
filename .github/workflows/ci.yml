@@ -44,6 +44,12 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install JSON Validator
         run: npm install -g ajv-cli
+      - name: Make temp dir with files to check
+        run: mkdir -p /tmp/cfdocs/
+      - name: Copy files
+        run: cp -r ./data/en/*.json /tmp/cfdocs/
+      - name: Exclude index.json
+        run: rm -f /tmp/cfdocs/index.js
       - name: Run JSON Validator
-        run: ajv validate -s data/cfdocs.schema.json -d "data/en/*.json" --use-defaults --errors=text --strict=log
+        run: ajv validate -s data/cfdocs.schema.json -d "/tmp/cfdocs/*.json" --use-defaults --errors=text --strict=log
 
