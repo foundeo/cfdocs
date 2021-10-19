@@ -18,6 +18,6 @@
 		"description": "",
 		"code": "news = queryNew(\"id,title\",\n\t\"integer,varchar\", [{\n\t\t\"id\": 1,\n\t\t\"title\": \"Dewey defeats Truman\"\n\t}, {\n\t\t\"id\": 2,\n\t\t\"title\": \"Man walks on Moon\"\n\t}]\n);\ndump(queryColumnArray(news));",
 		"result": "",
-		"runnable": "true"
+		"runnable": true
 	}]
 }

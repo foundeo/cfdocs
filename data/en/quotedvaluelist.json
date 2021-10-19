@@ -6,7 +6,7 @@
 	"related":["ValueList"],
 	"description":" Gets the values of each record returned from an executed query.\n CFML does not evaluate the arguments",
 	"params": [
-		{"name":"column","description":"","required":true,"default":"","type":"QueryColumn","values":[]},
+		{"name":"column","description":"Name of an executed query and column. Separate query name\n and column name with a period.","required":true,"default":"","type":"query","values":[]},
 		{"name":"delimiter","description":"","required":false,"default":",","type":"string","values":[]}
 
 	],

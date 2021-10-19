@@ -6,7 +6,7 @@
 	"related":[],
 	"description":"Returns an array of struct with clientID and subscriberInfo as the keys.",
 	"params": [
-		{"name":"channel","description":"Channel whose list of subscribers you wish to retrieve.","required":true,"default":"","type":"","values":[]}
+		{"name":"channel","description":"Channel whose list of subscribers you wish to retrieve.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/wsgetsubscribers.html"}

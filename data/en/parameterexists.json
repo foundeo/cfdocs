@@ -6,7 +6,7 @@
 	"related":[],
 	"description":"Determines whether a parameter exists. ColdFusion does not evaluate the argument.",
 	"params": [
-		{"name":"parameter","description":"A syntactically valid parameter name.","required":true,"default":"","type":"","values":[]}
+		{"name":"parameter","description":"A syntactically valid parameter name.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"This function is deprecated, but is still available for backward compatibility. Use StructKeyExists() or IsDefined() functions instead.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/parameterexists.html", "deprecated":"6"}

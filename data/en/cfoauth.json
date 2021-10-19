@@ -11,7 +11,7 @@
       "description": "Currently supported values are Facebook and Google. Implicitly supports the authentication workflow of Facebook and Google.",
       "name": "Type",
       "type": "string",
-      "required": "1"
+      "required": true
     },
     {
       "values": [],
@@ -19,7 +19,7 @@
       "description": "Unique ID generated while registering your application with the Oauth provider.",
       "name": "clientid",
       "type": "string",
-      "required": "1"
+      "required": true
     },
     {
       "values": [],
@@ -27,7 +27,7 @@
       "description": "Scopes are the permissions that a developer seeks from the users. These are usually comma separated values of permissions.\r\nRefer to the Oauth provider's documentations for more information.\r\nFor example, after Facebook authentication, if a developer wants to access an email address and then the friend lists of a user, the developer will use:\r\nscope=email,read_friendlists.\r\nNote: The scope name varies for different Oauth providers.",
       "name": "scope",
       "type": "string",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -35,7 +35,7 @@
       "description": "The state variable is used to pass back any information to your web application after the authentication and redirection are completed. Any value passed to this attribute is returned to the web application after authentication. This is useful for CSRF (Cross-site request forgery) protection. You can use ColdFusion\u2019s security-related CSRF functions for this attribute.",
       "name": "state",
       "type": "string",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -43,7 +43,7 @@
       "description": "If type is not specified, this will be used as endpoint URL to be invoked for user authentication.",
       "name": "authendpoint",
       "type": "string",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -51,7 +51,7 @@
       "description": " If type is not specified this will be used as end point URL to be invoked for app authentication.",
       "name": "accesstokenendpoint",
       "type": "string",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -59,7 +59,7 @@
       "description": "Parameter is the App Secret as displayed in your social media app's settings.",
       "name": "secretkey",
       "type": "string",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -67,7 +67,7 @@
       "description": "A struct which will have login info of the user including login success\/failure, failure reason, user name, user id.",
       "name": "result",
       "type": "variableName",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -75,7 +75,7 @@
       "description": "This will default to the URL which is executing the code. So if in oauth settings user has given app URL as : http:\/\/domainname\/appname And the file executing the code is : http:\/\/domainname\/appname\/login.cfm The redirect URI will be : http:\/\/domainname\/appname\/login.cfm",
       "name": "redirecturi",
       "type": "string",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -83,7 +83,7 @@
       "description": "Extra options which will be passed as URL query string to authendpoint.",
       "name": "urlparams",
       "type": "string",
-      "required": "0"
+      "required": false
     }
   ],
   "engines": {

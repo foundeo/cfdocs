@@ -7,7 +7,7 @@
 	"params": [
 		{"name":"action","description":"* cache: server-side and client-side caching.\n * flush: refresh cached page(s).\n * clientcache: browser-side caching only. To cache a personalized page, use this option.\n * servercache: server-side caching only. Not recommended.\n * optimal: same as \"cache\".","required":false,"default":"","type":"string","values":["cache","flush","clientcache","servercache","optimal","get","put"]},
 		{"name":"directory","description":"Absolute path of cache directory.","required":false,"default":"","type":"string","values":[]},
-		{"name":"timespan","description":"The interval until the page is flushed from the cache.","required":false,"default":"","type":"Timespan","values":[]},
+		{"name":"timespan","description":"The interval until the page is flushed from the cache.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"expireurl","description":"Used with action = \"flush\". A URL reference. CFML\n matches it against the mappings in the specified cache\n directory. Can include wildcards. For example:\n \"*\/view.cfm?id=*\".","required":false,"default":"","type":"string","values":[]},
 		{"name":"username","description":"A username","required":false,"default":"","type":"string","values":[]},
 		{"name":"password","description":"A password","required":false,"default":"","type":"string","values":[]},

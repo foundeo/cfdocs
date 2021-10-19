@@ -38,7 +38,7 @@
 				"name": "query",
 				"type": "query",
 				"required": false
-			}],"type":"any","required":"true","values":[],"default":""},
+			}],"type":"any","required":true,"values":[],"default":""},
 		{"name": "initialValue", "description": "inital value passed as part of the first closure call", "required": false, "default": "", "type": "any", "values": []}
 	],
 	"engines": {

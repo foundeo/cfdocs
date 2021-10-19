@@ -6,7 +6,7 @@
 	"related":["cftimer"],
 	"description":"Causes the current thread to stop processing for a specified period of time.",
 	"params": [
-		{"name":"duration","description":"Time, in milliseconds, to stop processing the current thread","required":true,"default":"","type":"","values":[]}
+		{"name":"duration","description":"Time, in milliseconds, to stop processing the current thread","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/sleep.html"},

@@ -38,7 +38,7 @@
 				"name": "array",
 				"type": "array",
 				"required": false
-			}],"type":"any","required":"true","values":[],"default":""},
+			}],"type":"any","required":true,"values":[],"default":""},
 
 		{"name":"initialValue", "description":"Initial value which will be used for the reduce operation.", "default":"","type":"any","required":false, "values":[]}
 	],
