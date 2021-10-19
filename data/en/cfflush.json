@@ -26,7 +26,7 @@
 		{
 			"title": "Simple Tag Example",
 			"description": "Outputs 'foo' to the browser approximately 1 second before 'bar'",
-			"code": "<div>foo</div> \n <cfflush /> <cfsleep time="1000" /> \n <div>bar</div>",
+			"code": "<div>foo</div> \n <cfflush /> <cfsleep time=\"1000\" /> \n <div>bar</div>",
 			"result": "",
 			"testable": false
 		}
