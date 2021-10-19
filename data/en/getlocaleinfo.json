@@ -34,8 +34,8 @@
 		}, {
 				"title": "Output page's locale in a divergent language",
 				"description": "Outputs the locale of the page in French.",
-				"code": "getLocaleInfo(dspLocale='French').display.country",
-				"result": "Etats-Unis",
+				"code": "getLocaleInfo(dspLocale='German').display.country",
+				"result": "Vereinigte Staaten von Amerika",
 				"runnable": true
 		}, {
 				"title": "Output German locale in a page's language",
