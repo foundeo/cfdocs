@@ -8,7 +8,7 @@
 	"description":"This function iterates over every element of the string and calls the closure to work on that element. This function will reduce the string to a single value, from the right to the left, and will return the value.\nNOTE: This function is not available in Lucee 5.x or lower. Potentially use `reverse()` instead.",
 	"params":[
 		{"name":"string", "description":"The input string.", "default":"","type":"string","required":true, "values":[]},
-		{"name":"callback","description":"Closure or a function reference that will be called for each iteration.","default":"","type":"any","required":"true","values":[],
+		{"name":"callback","description":"Closure or a function reference that will be called for each iteration.","default":"","type":"any","required":true,"values":[],
 			"callback_params": [
 				{
 					"name": "result",

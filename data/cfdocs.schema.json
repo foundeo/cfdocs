@@ -170,7 +170,7 @@
       "title": "Name",
       "description": "The name of the tag or function. Start with lowercase, except Application.cfc.",
       "type": "string",
-      "pattern": "^([a-zA-Z0-9 -]+|Application\\.cfc)$"
+      "pattern": "^([a-zA-Z0-9 \\./_-]+)$"
     },
     "description": {
       "title": "Description",
@@ -184,7 +184,8 @@
       "enum": [
         "function",
         "tag",
-        "listing"
+        "listing",
+        "component"
       ]
     },
     "syntax": {

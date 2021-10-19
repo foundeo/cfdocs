@@ -2,7 +2,7 @@
 	"name":"Application.cfc",
 	"type":"component",
 	"syntax":"component { this.name=\"myApp\"; }",
-	"returns":"",
+	"returns":"void",
 	"related":["cfapplication","onapplicationstart","onapplicationend","onsessionstart","onsessionend","onrequest","onrequeststart","onrequestend","onerror","onmissingtemplate","onserverstart"],
 	"description":"Defines application level variables and event handlers (functions invoked at various application lifecycle events).",
 	"params": [
@@ -12,8 +12,8 @@
 		{"name":"this.clientStorage","description":"How client variables are stored\n * datasource_name: in ODBC or native data source.\n You must create storage repository in the\n Administrator.\n * registry: in the system registry.\n * cookie: on client computer in a cookie. Scalable.\n If client disables cookies in the browser, client\n variables do not work","required":false,"default":"registry","type":"string","values":["cookie","registry","datasource_name"]},
 		{"name":"this.setClientCookies","description":"No: CFML does not automatically send CFID and CFTOKEN\n cookies to client browser; you must manually code CFID and\n CFTOKEN on the URL for every page that uses Session or\n Client variables","required":false,"default":true,"type":"boolean","values":[true,false]},
 		{"name":"this.sessionManagement","description":"Enables session variables","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"this.sessionTimeout","description":"Lifespan of session variables. CreateTimeSpan function and\n values in days, hours, minutes, and seconds, separated by\n commas","required":false,"default":"","type":"Timespan","values":[]},
-		{"name":"this.applicationTimeout","description":"Lifespan of application variables. CreateTimeSpan function\n and values in days, hours, minutes, and seconds, separated\n by commas.","required":false,"default":"","type":"Timespan","values":[]},
+		{"name":"this.sessionTimeout","description":"Lifespan of session variables. CreateTimeSpan function and\n values in days, hours, minutes, and seconds, separated by\n commas","required":false,"default":"","type":"function","values":[]},
+		{"name":"this.applicationTimeout","description":"Lifespan of application variables. CreateTimeSpan function\n and values in days, hours, minutes, and seconds, separated\n by commas.","required":false,"default":"","type":"function","values":[]},
 		{"name":"this.setDomainCookies","description":"Yes: Sets CFID and CFTOKEN cookies for a domain (not a host)\n Required, for applications running on clusters.","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"this.scriptProtect","description":"Specifies whether to attempt to protect variables from cross-site scripting attacks.\n - none: do not protect variables\n - all: protect Form, URL, CGI, and Cookie variables\n - comma-delimited list of ColdFusion scopes: protect variables in the specified scopes","required":false,"default":"","type":"string","values":["none","all","form","url","cookie","cgi","form,url","form,url,cookie","form,url,cookie,cgi"]},
 		{"name":"this.secureJSONPrefix","description":"CF8+ The security prefix to put in front of the value that a ColdFusion function returns in JSON-format \n\t\t\t\tin response to a remote call if the secureJSON setting is true.","required":false,"default":"","type":"string","values":[]},
@@ -60,7 +60,7 @@
 		{"name":"this.compression","description":"Lucee4+ Enables Gzip compression on the HTTP response when true","required":false,"default":"false","type":"boolean","values":[]},
 		{"name":"this.passArrayByReference","description":"CF2016+ `true`: Arrays will be passed by reference instead of by value for this application.","required":false,"default":"false","type":"boolean","values":[true,false]},
 		{"name":"this.searchImplicitScopes","description":"CF2016+ Defines the way non-scoped variables are found.\n`false`: Only the variables, local and arguments scopes are searched.\n`true`: Default and &lt; CF2016 behavior. All scopes are searched in the following order: local, arguments, thread local, query, thread, variables, cgi, cffile, url, form, cookie, client.","required":false,"default":"true","type":"boolean","values":[true,false]},
-		{"name":"this.blockedExtForFileUpload","description":"CF2018.0.3+ CF2016.0.10+ CF11.0.18+ Lucee5.2.9.36+ Lucee5.3.3.1+ 0 A comma delimited list of file extensions to be blocked from upload via cffile, fileUpload or fileUploadAll. You can specify `*` (not yet supported on Lucee) to block all extensions or use an empty string to allow all (previous behavior). If not specified the values specified in ColdFusion Administrator take precedence.", "required":"false", "default":"", "type":"string", "values":[]}
+		{"name":"this.blockedExtForFileUpload","description":"CF2018.0.3+ CF2016.0.10+ CF11.0.18+ Lucee5.2.9.36+ Lucee5.3.3.1+ 0 A comma delimited list of file extensions to be blocked from upload via cffile, fileUpload or fileUploadAll. You can specify `*` (not yet supported on Lucee) to block all extensions or use an empty string to allow all (previous behavior). If not specified the values specified in ColdFusion Administrator take precedence.", "required":false, "default":"", "type":"string", "values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/application-cfc-reference.html"},
