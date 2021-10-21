@@ -48,7 +48,7 @@
 		},
 		{
 			"title":"Creating and populating a query with an array of structs",
-			"description":"CF2018+ Directly assigns columns and values with an array of structs.",
+			"description":"CF2018u5+ Directly assigns columns and values with an array of structs.",
 			"code":"news = queryNew([\n    {\"id\":1,\"title\":\"Dewey defeats Truman\"},\n    {\"id\":2,\"title\":\"Man walks on Moon\"}\n]);\nwriteDump(news);",
 			"result":""
 		}
