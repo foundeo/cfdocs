@@ -62,6 +62,7 @@ jobs:
       image: ghcr.io/foundeo/cfml-ci-tools/cfml-ci-tools:latest
     
     steps:
+    - uses: actions/checkout@v2
     - name: Run Fixinator
       run: box fixinator confidence=high
       env:
