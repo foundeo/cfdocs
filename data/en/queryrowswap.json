@@ -12,7 +12,23 @@
 		{"name":"destinationRow","description":"The row to be swapped with.","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"2018.0.05", "notes":"Added in CF2018 Update 5", "docs":"https://helpx.adobe.com/in/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryrowswap.html"},
-		"lucee": {"minimum_version":"6.0", "notes":"Will be added into Lucee 6.", "docs":"https://luceeserver.atlassian.net/browse/LDEV-2495"}
-	}
+		"coldfusion": {"minimum_version":"2018", "notes":"Added in CF2018 Update 5", "docs":"https://helpx.adobe.com/in/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryrowswap.html"}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Example1",
+			"description": "This is Example1",
+			"code": "qry=queryNew(\"rowid,name\", \"integer,varchar\",[ [1, \"Bob\"],[2, \"Theodore\"],[3, \"Jay\"],[4, \"William\"] ]);\rswap1=QueryRowSwap(qry,1,4);\rWriteDump(swap1);",
+			"result": "",
+			"runnable":true
+		},
+		{
+			"title": "Member function version.",
+			"description": "Using the member function.",
+			"code": "qry=queryNew(\"rowid,name\", \"integer,varchar\",[ [1, \"Bob\"],[2, \"Theodore\"],[3, \"Jay\"],[4, \"William\"] ]);\rswap2=qry.rowswap(1,4);\rWriteDump(swap2);",
+			"result": "",
+			"runnable":true
+		}
+	]
 }
