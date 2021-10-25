@@ -19,7 +19,7 @@
 		{
 			"title": "Example1",
 			"description": "This is Example1",
-			"code": "qry=queryNew(\"rowid,name\", \"integer,varchar\",[ [1, \"Jay\"],[2, \"Bob\"],[3, \"Theodore\"],[4, \"William\"] ]);\nrufus=QueryNew(\"rowid,name\",\"integer,varchar\",[[42,\"Rufus\"]]);\queryInsertAt(qry,rufus,3);\nWriteDump(qry);",
+			"code": "qry=queryNew(\"rowid,name\", \"integer,varchar\",[ [1, \"Jay\"],[2, \"Bob\"],[3, \"Theodore\"],[4, \"William\"] ]);\nrufus=QueryNew(\"rowid,name\",\"integer,varchar\",[[42,\"Rufus\"]]);\nqueryInsertAt(qry,rufus,3);\nWriteDump(qry);",
 			"result": "",
 			"runnable":true
 		},
