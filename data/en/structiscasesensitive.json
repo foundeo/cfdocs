@@ -1,0 +1,47 @@
+{
+	"name":"structIsCaseSensitive",
+	"type":"function",
+	"syntax":"structIsCaseSensitive(inputStruct)",
+	"member":"inputStruct.isCaseSensitive",
+	"returns":"boolean",
+	"related":[],
+	"description":"Determines whether a struct is case-sensitive.",
+	"params": [		
+		{"name":"inputStruct","description":"The struct that needs to be checked for case sensitivity.","required":true,"default":"","type":"struct","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structiscasesensitive.html"}
+	},
+	"links": [
+		{
+			"title":"Struct Key casesensitive",
+			"description":"Lucee Dev discussion about case-sensitive structs.",
+			"url":"https://dev.lucee.org/t/struct-key-casesensitive/8264"
+		},
+		{
+			"title":"ACF2021 - Case Sensitive structs",
+			"description":"Lucee Dev ticket about case-sensitive structs.",
+			"url":"https://luceeserver.atlassian.net/browse/LDEV-3133"
+		}
+	],
+	"examples": [
+		{
+			"title": "Full Function with Explicit CaseSensitive",
+			"description": "Show when the struct is explicitly set to casesensitive.",
+			"code": "myStruct1=StructNew(\"casesensitive\");\nmyStruct1.elem1=\"elEmOne\";\nmyStruct1.elEm2=\"eLemtwO\";\nmyStruct1.elem3=\"elemthree\";\nwriteOutPut(StructIsCaseSensitive(myStruct1));",
+			"result": "YES"
+		},
+		{
+			"title": "Member Function with Explicit CaseSensitive",
+			"description": "Show when the struct is explicitly set to casesensitive.",
+			"code": "myStruct1=StructNew(\"casesensitive\");\nmyStruct1.elem1=\"elEmOne\";\nmyStruct1.elEm2=\"eLemtwO\";\nmyStruct1.elem3=\"elemthree\";\nwriteOutPut(myStruct1.isCaseSensitive());",
+			"result": "YES"
+		},
+		{
+			"title": "Full Function with Implicit Struct Creation and Default Case Sensitivity",
+			"description": "Show when the struct is implicitly created.",
+			"code": "myStruct4 = {\"elem1\":\"elEmOne\",\"elEm2\":\"eLemtwO\",\"elem3\":\"elemthree\"}\nwriteOutPut(StructIsCaseSensitive(myStruct4));",
+			"result": "NO"
+		}
+	]
+}

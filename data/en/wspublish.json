@@ -6,9 +6,9 @@
 	"related":[],
 	"description":" Sends messages to a specific channel based on the filter criteria (which is a struct).",
 	"params": [
-		{"name":"channel","description":"Specific channel to which the server publishes its response.","required":true,"default":"","type":"","values":[]},
-        {"name":"message","description":"Response sent by the server to all clients subscribed to a specific channel.","required":true,"default":"","type":"","values":[]},
-        {"name":"filterCriteria","description":"Conditions to filter eligible clients that need to be notified for a given channel.","required":false,"default":"","type":"","values":[]}
+		{"name":"channel","description":"Specific channel to which the server publishes its response.","required":true,"default":"","type":"string","values":[]},
+        {"name":"message","description":"Response sent by the server to all clients subscribed to a specific channel.","required":true,"default":"","type":"any","values":[]},
+        {"name":"filterCriteria","description":"Conditions to filter eligible clients that need to be notified for a given channel.","required":false,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/wspublish.html"}

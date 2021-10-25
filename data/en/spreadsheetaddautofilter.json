@@ -6,8 +6,8 @@
 "name":"spreadsheetAddAutoFilter",
 "links":[],
 "params":[
-	{"values":[],"default":"","description":"Excel spreadsheet object","name":"spreadsheetObj","type":"any","required":"1"},
-	{"values":[],"default":"","description":"The Excel filter that needs to be applied to the sheet. Note that the vale should not contain spaces or invalid characters.","name":"autofilter","type":"string","required":"1"}
+	{"values":[],"default":"","description":"Excel spreadsheet object","name":"spreadsheetObj","type":"any","required":true},
+	{"values":[],"default":"","description":"The Excel filter that needs to be applied to the sheet. Note that the vale should not contain spaces or invalid characters.","name":"autofilter","type":"string","required":true}
 ],
 "returns":"void",
 "examples":[],

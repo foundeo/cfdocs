@@ -1,0 +1,47 @@
+{
+	"name":"stringReduce",
+	"type":"function",
+	"syntax":"stringReduce(string,callback,initialValue)",
+	"member":"string.reduce(callback, initialValue)",
+	"returns":"string",
+	"related":["StringMap","StringFilter"],
+	"description":"This function iterates over every character in the string and executes the callback function to reduce the string to a single value.",
+	"params": [
+		{"name":"string","description":"Original input string.","required":true,"default":"","type":"string","values":[]},
+		{"name":"callback","description":"Closure or a function reference.","required":true,"default":"","type":"any","values":[]},
+		{"name":"initialVal","description":"Initial value for the reduce operation.","required":false,"default":"","type":"any","values":[]}
+		
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/stringreduce.html"},
+		"lucee": {"minimum_version":"6", "notes":"This function will be added in Lucee 6. It is similar to other reduce functions, like `arrayReduce()`.", "docs":"https://luceeserver.atlassian.net/browse/LDEV-3160"}
+	},
+	"links": [
+		{
+			"title":"Hidden Gems In ColdFusion 2021",
+			"description":"Presentation by Charlie Arehart",
+			"url":"https://www.carehart.org/presentations/Hidden%20gems%20in%20CF2021.pdf"
+		},
+		{
+			"title":"Lucee - LDEV-3160 Ticket to add stringReduce",
+			"description":"Lucee ticket to add function in Lucee 6.",
+			"url":"https://luceeserver.atlassian.net/browse/LDEV-3160"
+		}
+	],
+	"examples": [
+		{
+			"title": "Full function",
+			"description": "Reduce the string to a single value.",
+			"code": "letters=\"abcdef\";\nclosure=function(inp1,inp2){return inp1 & inp2;}\nwriteOutput( StringReduce(letters,closure,\"z\") );",
+			"result": "zabcdef",
+			"runnable": true
+		},
+		{
+			"title": "Member function",
+			"description": "Reduce the string to a single value.",
+			"code": "letters=\"abcdef\";\nclosure=function(inp1,inp2){return inp1 & inp2;}\nwriteOutput( letters.reduce(closure,\"z\") );",
+			"result": "zabcdef",
+			"runnable": true
+		}
+	]
+}

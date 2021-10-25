@@ -17,14 +17,19 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/xmlvalidate"}
 	},
 	"links": [
-
+		{
+			"title":"XMLValidate Error on Lucee: LDEV-2909",
+			"url": "https://luceeserver.atlassian.net/browse/LDEV-2909",
+			"description":"Some xml which would be valid on ACF is marked as not valid on Lucee."
+		}
 	],
 	"examples": [
 		{
 			"title":"Validate against an XML Schema",
-			"description": "Validates that note.xml is valid according to the schema note.xsd",
+			"description": "Validates that note.xml is valid according to the schema note.xsd. Not currently working on Lucee, see: LDEV-2909",
 			"code": "xmlValidate(\"https://www.w3schools.com/xml/note.xml\", \"https://www.w3schools.com/xml/note.xsd\").status",
-			"result":"true"
+			"result":"true",
+			"testable":false
 		}
 
 	]

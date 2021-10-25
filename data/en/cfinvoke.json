@@ -11,7 +11,7 @@
 		{"name":"argumentcollection","description":"Name of a structure; associative array of arguments to pass\n to the method.","required":false,"default":"","type":"string","values":[]},
 		{"name":"username","description":"Overrides username specified in Administrator > Web Services","required":false,"default":"","type":"string","values":[]},
 		{"name":"password","description":"Overrides password specified in Administrator > Web Services","required":false,"default":"","type":"string","values":[]},
-		{"name":"webservice","description":"The URL of the WSDL file for the web service.","required":false,"default":"","type":"URL","values":[]},
+		{"name":"webservice","description":"The URL of the WSDL file for the web service.","required":false,"default":"","type":"string","values":[]},
 		{"name":"timeout","description":"The timeout for the web service request, in seconds","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"proxyserver","description":"The proxy server required to access the webservice URL.","required":false,"default":"","type":"string","values":[]},
 		{"name":"proxyport","description":"The port to use on the proxy server.","required":false,"default":"","type":"numeric","values":[]},

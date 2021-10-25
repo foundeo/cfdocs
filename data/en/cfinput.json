@@ -188,7 +188,7 @@
       "description": "JavaScript regular expression pattern to validate input. ColdFusion uses this attribute only if you specify regex in the validate attribute. Omit leading and trailing slashes.",
       "required": false,
       "default": "",
-      "type": "regex",
+      "type": "string",
       "values": []
     },
     {

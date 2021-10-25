@@ -1,22 +1,23 @@
 {
-	"name": "setTimezone",
+	"name": "setTimeZone",
 	"type": "function",
 	"syntax": "setTimezone(timezone)",
 	"returns": "string",
 	"related": ["getTimezone","getTimezoneInfo","setLocale"],
 	"description": "Change the timezone definition for the current request",
 	"params": [
-		{"name": "timezone", "description": "", "required": true, "default": "", "type": "string", "values": []}
+		{"name": "timezone", "description": "The timezone to set to.", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/settimezone.html"},
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/settimezone.html"}
 	},
 	"links": [],
 	"examples": [{
-		"title": "Change Timezone from UTC to CET",
+		"title": "Set the current Timezone to CET",
 		"description": "",
-		"code": "writeOutput(toString(getTimezoneInfo().id));\nsetTimezone(\"CET\");\nwriteOutput(\"→ \"&toString(getTimezoneInfo().id));",
-		"result": "Etc/UTC→ CET",
+		"code": "setTimezone(\"CET\");\nwriteoutput(getTimezoneInfo().timezone);",
+		"result": "CET",
 		"runnable": true
 	}]
 }

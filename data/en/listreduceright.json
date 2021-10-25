@@ -1,0 +1,96 @@
+{
+	"name":"listReduceRight",
+	"type":"function",
+	"syntax":"listReduceRight(list, callback, initialValue[, delimiter][, includeEmptyFields])",
+	"member":"list.listReduceRight(callback, initialValue[, delimiter][, includeEmptyFields])",
+	"returns":"any",
+	"related": ["ListReduce","StringMap","StringFilter","reverse"],
+	"description":"This function iterates over every element of the list and calls the closure to work on that element. This function will reduce the list to a single value, from the right to the left, and will return the value.\nNOTE: Use caution if using the member function. `list.reduceRight` and `list.listReduceRight` may behave differently.\nNOTE:This function is not available in Lucee 5.x or lower. Potentially use `reverse()` instead.",
+	"params":[
+		{"name":"list", "description":"The input list.", "default":"","type":"string","required":true, "values":[]},
+		{"name":"callback","description":"Closure or a function reference that will be called for each iteration.","default":"","type":"any","required":true,"values":[],
+			"callback_params": [
+				{
+					"name": "result",
+					"type": "any",
+					"description": "The result of the reduce operation after the previous iteration.",
+					"values": [],
+					"default": "",
+					"required": true
+				},{
+					"name": "item",
+					"type": "any",
+					"description": "The value for the current iteration's item.",
+					"values": [],
+					"default": "",
+					"required": true
+				},{
+					"name": "index",
+					"type": "numeric",
+					"description": "The current index for the iteration.",
+					"values": [],
+					"default": "",
+					"required": false
+				},{
+					"name": "list",
+					"type": "string",
+					"description": "A reference of the original list.",
+					"values": [],
+					"default": "",
+					"required": false
+				}
+			]
+		},
+		{"name":"initialValue", "description":"Initial value which will be used for the reduce operation.", "default":"","type":"any","required":true, "values":[]},
+		{"name":"delimiter", "description":"The list delimiter", "default":",","type":"string","required":false, "values":[]},
+		{"name":"includeEmptyFields", "description":"Include empty values?", "default":"false","type":"boolean","required":false, "values":[true,false]}
+	],
+	"engines":{
+		"coldfusion":{"minimum_version":"2021","notes":"","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/stringreduceright.html"}
+	},
+	"links":[
+		{
+			"title":"One last one! CFML higher-order functions compared to tag-based code: reduceRight",
+			"description":"Blog entry by Adam Cameron covering the reduceRight function in CFML.",
+			"url":"https://coldfusion.adobe.com/2019/02/practical-uses-reduce-functions/"
+		},
+		{
+			"title":"Practical uses for reduce functions",
+			"description":"Blog entry by John Whish covering some practical uses for reduce functions in CFML.",
+			"url":"https://coldfusion.adobe.com/2019/02/practical-uses-reduce-functions/"
+		},
+		{
+			"title":"Map, Reduce and other Higher Order Functions",
+			"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
+			"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+		},
+		{
+			"title": "ColdFusion 11: .map() and .reduce()",
+			"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
+			"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
+		}
+	],
+	"examples":[
+		{
+			"title": "Simple listReduceRight Example",
+			"description": "Demonstrate how the function works from right to left.",
+			"code": "myList=\"a,b,c,d\";\nnewList=listReduceRight(myList,function(prev,next,idx,arr){ return prev & next & idx },\"\");\nwritedump(newList);",
+			"result": "d4c3b2a1",
+			"runnable": true
+		},
+		{
+			"title": "listReduceRight as a Member Function",
+			"description": "Demonstrate the member function.",
+			"code": "myList=\"a,b,c,d\";\nnewList=myList.listReduceRight(function(prev,next,idx,arr){ return prev & next & idx },\"\");\nwritedump(newList);",
+			"result": "d4c3b2a1",
+			"runnable": true
+		},
+		{
+			"title": "Empty Elements",
+			"description": "Demonstrate the behavior when there is an empty element.",
+			"code": "myList=\"a,,,,,b,,,c,,,d\";\nnewList=myList.listReduceRight(function(prev,next,idx){ return prev & next & idx },\"\");\nwritedump(newList);",
+			"result": "d4c3b2a1",
+			"runnable": true
+		}
+	]
+}
