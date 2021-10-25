@@ -1,7 +1,7 @@
 {
 	"name":"queryRowSwap",
 	"type":"function",
-	"syntax":"queryRowSwap(query, sourceRow, destinationRow )",
+	"syntax":"queryRowSwap(query, sourceRow, destinationRow)",
 	"member":"query.rowswap(sourceRow,destinationRow)",
 	"returns":"query",
 	"related":["QuerySlice"],
