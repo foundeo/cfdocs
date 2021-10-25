@@ -5,8 +5,7 @@ CFDocs is a community maintained CFML reference tool available at [cfdocs.org](h
 * Easy to use urls like: [cfdocs.org/hash](http:cfdocs.org/hash) just hit /tag-name or /function-name.
 * Publicly maintained on [GitHub](http://github.com/foundeo/cfdocs)
 
-[![Build Status](https://travis-ci.org/foundeo/cfdocs.svg?branch=master)](https://travis-ci.org/foundeo/cfdocs)
-
+[![CI](https://github.com/foundeo/cfdocs/actions/workflows/ci.yml/badge.svg)](https://github.com/foundeo/cfdocs/actions/workflows/ci.yml)
 
 ## How reference data is structured
 
@@ -22,14 +21,17 @@ This makes the documentation super easy to edit and allows developers to run a l
 The cfdocs.org site can run locally very easily thanks to CommandBox.
 
 1. Go download [CommandBox](https://www.ortussolutions.com/products/commandbox) if you do not have it already.
-2. Download this repository and extract it to a folder, or clone it from this repository. If you are going to be making changes to the docs I would suggest you fork it, see Adam Tuttle's guide: [GitHub tip for your first pull request](https://adamtuttle.codes/your-first-github-pull-request/)
-3. Run `box server start` from Command Prompt or Terminal in the root directory.
+2. Download this repository and extract it to a folder, or clone it from this repository. 
+3. Make a copy of `.env.example` and name it `.env`. This contains required environment variables. [learn more](https://github.com/commandbox-modules/commandbox-dotenv)
+4. Run `box server start` from Command Prompt or Terminal in the root directory.
 
 CommandBox will start an embedded CFML server on port 8411, and you can browse to [http://localhost:8411/](http://localhost:8411/) to view the docs.
 
 If you don't want to go the commandbox route you can simply download it and unzip it to a web root and try it out (requires CF10+ or Lucee 4.5+), but you will probably spend more time trying to get it working than the 1-2 minutes it will take to download and learn how to use commandbox.
 
 ## How to contribute
+
+If you are interested in contributing going I suggest you fork it, see Adam Tuttle's guide: [GitHub tip for your first pull request](https://adamtuttle.codes/your-first-github-pull-request/)
 
 If you are interested in helping you can just copy a tag or function and write up some documentation. The documentation doesn't need to be super wordy and should not be a copy of Adobe's documentation word for word.
 

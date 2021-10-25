@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" No Help Available",
 	"params": [
-		{"name":"Param1","description":"New instance of the CFC on the client.","required":true,"default":"","type":"","values":[]},
-		{"name":"Param2","description":"Original instance of the CFC.","required":true,"default":"","type":"","values":[]}
+		{"name":"Param1","description":"New instance of the CFC on the client.","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"Param2","description":"Original instance of the CFC.","required":true,"default":"","type":"variableName","values":[]}
 
 	],
 	"engines": {

@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Unregisters the directory path if it is already registered.",
 	"params": [
-		{"name":"dirPath","description":"Path to the directory to be unregistered. If the path is not valid, it results in an error.","required":true,"default":"","type":"","values":[]}
+		{"name":"dirPath","description":"Path to the directory to be unregistered. If the path is not valid, it results in an error.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/restdeleteapplication.html"},

@@ -7,8 +7,8 @@
 	"related":["ImageClearRect", "ImageSetAntialiasing", "IsImageFile"],
 	"description":" Sets the background color for the ColdFusion image. The background color is used for clearing a region. Setting the background color only affects the subsequent imageClearRect calls",
 	"params": [
-		{"name":"name","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"","values":[]},
-		{"name":"color","description":"Background color","required":true,"default":"black","type":"","values":["Hexadecimal value of RGB color. For example, specify the color white as ##FFFFFF or FFFFFF.","String value of color (for example, 'black'', 'red'', 'green').","List of three numbers for (R,G,B) values. Each value must be in the range 0–255."]}
+		{"name":"name","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"color","description":"Background color","required":true,"default":"black","type":"string","values":["Hexadecimal value of RGB color. For example, specify the color white as ##FFFFFF or FFFFFF.","String value of color (for example, 'black'', 'red'', 'green').","List of three numbers for (R,G,B) values. Each value must be in the range 0–255."]}
 
 	],
 	"engines": {

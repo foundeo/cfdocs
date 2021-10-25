@@ -7,7 +7,7 @@
 	"related":["ImageDrawQuadraticCurve", "ImageDrawRect", "ImageDrawRoundRect", "ImageSetAntialiasing", "ImageSetDrawingColor", "ImageSetDrawingStroke", "IsImageFile"],
 	"description":" Draws a cubic curve.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"","values":[]},
+		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
 		{"name":"ctrlx1","description":"The x coordinate of the start point of the cubic curve segment.","required":true,"default":"","type":"string","values":[]},
 		{"name":"ctrly1","description":"The y coordinate of the start point of the cubic curve segment.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"ctrlx2","description":"The x coordinate of the first control point of the cubic curve segment.","required":true,"default":"","type":"numeric","values":[]},

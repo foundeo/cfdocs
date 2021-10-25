@@ -23,25 +23,25 @@
 			"title": "Tag wrap",
 			"description": "Lucee tag wrap",
 			"code": "<cfhtmlbody><h1>Hello World</h1></cfhtmlbody>",
-			"runnable": "false"
+			"runnable": false
 		},
 		{
 			"title": "Attribute version",
 			"description": "",
 			"code": "<cfhtmlbody text='<h1>Hello World</h1>' />'>",
-			"runnable": "false"
+			"runnable": false
 		},
 		{
 			"title": "Using cfhtmlbody in cfscript",
 			"description": "",
 			"code": "cfhtmlbody( text='<h1>Hello World</h1>');",
-			"runnable": "false"
+			"runnable": false
 		},
 		{
 			"title": "Other actions",
 			"description": "Overwriting, reading, flushing",
 			"code": "<cfhtmlbody action=\"write\"><h1>Overwrite Body Buffer</h1></cfhtmlbody>\n<cfhtmlbody action=\"read\" variable=\"body\"></cfhtmlbody>\n<cfoutput><b>#body#</b></cfoutput>\n<cfhtmlbody action=\"reset\" />\n<cfhtmlbody><h1>New Body</h1></cfhtmlbody>\n<cfhtmlbody action=\"flush\" />\n",
-			"runnable": "false"
+			"runnable": false
 		}
 	]
 }

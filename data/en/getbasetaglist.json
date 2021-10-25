@@ -6,7 +6,7 @@
 	"related":["getBaseTagData"],
 	"description":"Gets a comma-delimited list of uppercase ancestor tag names, as a string. The first list element is the current tag. If the current tag is nested, the next element is the parent tag. If the function is called for a top-level tag, it returns an empty string.",
 	"params": [
-		{"name":"caller", "description":"Adobe only. Not aliased in Lucee", "required":false, "default":"", "type":"", "values":[]}
+		{"name":"caller", "description":"Adobe only. Not aliased in Lucee", "required":false, "default":"", "type":"any", "values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"ACF behavavior is different from Lucee.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getbasetaglist.html"},

@@ -27,6 +27,11 @@ component extends="testbox.system.BaseSpec" {
 										//skip because it is not supported by current engine
 										continue;
 									}
+									if (e.keyExists("testable") && isBoolean(e.testable)) {
+										if (!e.testable) {
+											continue;
+										}
+									}
 									if (!find("<cf", e.code) && !find(";", e.code) && !find("{", e.code)) {
 										var actualResult = "";
 										local.examplePath = "#getTempDirectory()#cfdoc-example-#createUUID()#.cfm";

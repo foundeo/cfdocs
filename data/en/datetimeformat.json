@@ -27,34 +27,39 @@
 	"examples": [
 		{
 			"title": "Mask = Short Example",
-			"description":"",
+			"description":"On Lucee with Java 11 adds a comma after year bug: LDEV-3744",
 			"code":"dateTimeFormat(\"2015-04-11 19:02\", \"short\")",
-			"result":"4/11/15 7:02 PM"
+			"result":"4/11/15 7:02 PM",
+			"testable":false
 		},
 		{
 			"title": "Mask = Medium Example",
-			"description":"",
+			"description":"On Lucee with Java 11 adds a comma after year bug: LDEV-3744",
 			"code":"dateTimeFormat(\"2015-04-11 19:02\", \"medium\")",
-			"result":"Apr 11, 2015 7:02:00 PM"
+			"result":"Apr 11, 2015 7:02:00 PM",
+			"testable":false
 		},
 		{
 			"title": "Mask = Long Example",
-			"description":"",
+			"description":"On Lucee with Java 11 adds at before the time bug: LDEV-3744",
 			"code":"dateTimeFormat(\"2015-04-11 19:02\", \"long\")",
-			"result":"April 11, 2015 7:02:00 PM UTC"
+			"result":"April 11, 2015 7:02:00 PM UTC",
+			"testable":false
 		},
 		{
 			"title": "Mask = Full Example",
-			"description":"",
+			"description":"On Lucee with Java 11 adds at before the time bug: LDEV-3744",
 			"code":"dateTimeFormat(\"2015-04-11 19:02\", \"full\")",
-			"result":"Saturday, April 11, 2015 7:02:00 PM UTC"
+			"result":"Saturday, April 11, 2015 7:02:00 PM UTC",
+			"testable":false
 		},
 		{
 			"title":"Date Time Format in ISO 8601",
-			"description":"Uses the ACF2016+ `iso` or the Lucee4.5+ `iso8601` format depending on the engine",
+			"description":"Uses the ACF2016+ `iso` or the Lucee4.5+ `iso8601` format depending on the engine. Note the depending on Java version the timezone format may differ (on Lucee at least, possible due to LDEV-3744)",
 			"code":"dateTimeFormat(\"2015-04-11 19:02\", (server.keyExists(\"lucee\")) ? \"iso8601\" : \"iso\" )",
 			"result":"2015-04-11T19:02:00+0000",
-			"runnable":true
+			"runnable":true,
+			"testable":false
 		}
 	]
 }

@@ -1,0 +1,47 @@
+{
+	"name":"stringSome",
+	"type":"function",
+	"syntax":"stringSome(inputString,callback)",
+	"member":"inputString.some(callback)",
+	"returns":"boolean",
+	"related":["StringEvery"],
+	"description":"This function calls a given closure/function with every element in a given string and returns true as soon as the callback condition is met.",
+	"params": [
+		{"name":"inputString","description":"Original input string to search.","required":true,"default":"","type":"string","values":[]},
+		{"name":"callback","description":"The closure function that is executed for each element in the string.","required":false,"default":"","type":"function","values":[]}
+		
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/stringsome.html"},
+		"lucee": {"minimum_version":"6", "notes":"This function is being added in Lucee 6. It is similar to other `some()` functions.", "docs":""},
+		"openbd": {"minimum_version":"", "notes":"", "docs":""}
+	},
+	"links": [
+		{
+			"title":"Hidden Gems In ColdFusion 2021",
+			"description":"Presentation by Charlie Arehart",
+			"url":"https://www.carehart.org/presentations/Hidden%20gems%20in%20CF2021.pdf"
+		},
+		{
+			"title":"Lucee - LDEV-3154 Ticket to add stringSome",
+			"description":"Lucee ticket to add function in Lucee 6.",
+			"url":"https://luceeserver.atlassian.net/browse/LDEV-3154"
+		}
+	],
+	"examples": [
+		{
+			"title": "Full function",
+			"description": "Are any of the characters in the string greater than our condition?",
+			"code": "instring=\"abcdefg\";\ncallback=function(inp){return inp > \"f\"}\nwriteoutput(StringSome(instring,callback));",
+			"result": "YES",
+			"runnable": true
+		},
+		{
+			"title": "Member function",
+			"description": "Are any of the characters in the string greater than our condition?",
+			"code": "instring=\"abcdefg\";\ncallback=function(inp){return inp > \"f\"}\nwriteoutput(instring.some(callback));",
+			"result": "YES",
+			"runnable": true
+		}
+	]
+}

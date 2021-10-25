@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Create a new translucent image with given percentage of translucence.",
 	"params": [
-		{"name":"img","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"","values":[]},
-        	{"name":"percentage","description":"The percent of translucence: 0 = opaque, 100=transparent. Decimal values are supported","required":true,"default":"","type":"","values":[]}
+		{"name":"img","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+        	{"name":"percentage","description":"The percent of translucence: 0 = opaque, 100=transparent. Decimal values are supported","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagemaketranslucent.html"}
