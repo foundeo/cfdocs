@@ -7,10 +7,10 @@
   "description": "Creates a new, empty structure. The shorthand syntax for an unordered struct is \"{}\". The shorthand syntax for an ordered struct is \"[:]\" or \"[=]\". You can also use the syntax \"{\"key\":\"value\".\nNOTE: To preserve the case of the struct key, place quotes around it, otherwise it will be converted to uppercase.",
   "params": [
     {"name": "type","description": "CF2016+ Lucee4.5+ If set to `ordered` the order in which elements are added to the structure will be maintained. In Lucee `linked` can be used in place of `ordered`.\r\nCF2021+ If set to `casesensitive` the keys will remain case-sensitive. Additionally, `ordered-casesensitive` can be used to create an ordered case-sensitive struct.","required":false,"default":"","type":"string","values":["","ordered","casesensitive","ordered-casesensitive"]},
-    {"name":"sortType","description":"Sort types are text or numeric.","required":"false","default":"","type":"string","values":["text","numeric"]},
-    {"name":"sortOrder","description":"The order of the sort (ascending or descending).","required":"false","default":"asc","type":"string","values":["asc","desc"]},
-    {"name":"localeSensitive","description":"Will the sort order be affected by localization?","required":"false","default":"false","type":"boolean","values":["true","false"]},
-    {"name":"callback","description":"A comparator function used to sort new data entered into the structure. Returns 1,0 or -1.","required":"false","default":"","type":"function","values":[]}
+    {"name":"sortType","description":"Sort types are text or numeric.","required":false,"default":"","type":"string","values":["text","numeric"]},
+    {"name":"sortOrder","description":"The order of the sort (ascending or descending).","required":false,"default":"asc","type":"string","values":["asc","desc"]},
+    {"name":"localeSensitive","description":"Will the sort order be affected by localization?","required":false,"default":"false","type":"boolean","values":["true","false"]},
+    {"name":"callback","description":"A comparator function used to sort new data entered into the structure. Returns 1,0 or -1.","required":false,"default":"","type":"function","values":[]}
     
   ],
   "engines": {
