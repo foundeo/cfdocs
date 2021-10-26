@@ -22,7 +22,7 @@
 			"runnable": true
 		},
 		{
-			"title": :"Example of ExtensionExists() Using Version Attribute",
+			"title": "Example of ExtensionExists() Using Version Attribute",
 			"description": "This example was created by Michael Born to verify that a specific version of an Extension exists.",
 			"code": "dump(extensionExists(\"99A4EF8D-F2FD-40C8-8FB8C2E67A4EEEB6\",\"7.2.2.jre8\"));",
 			"result": "",
