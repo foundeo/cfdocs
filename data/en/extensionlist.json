@@ -21,7 +21,7 @@
 		{
 			"title": "Complex ExtensionList() Example",
 			"description": "This example was created by Michael Born to check the version of an installed extension.",
-			"code": "var extension = extensionList().filter( ( extension ) => extension.name == \"Hibernate ORM Engine\" );\nif ( !extension.recordCount ){\n\tthrow( \"Hibernate extension is not installed; please install it now\" );\n} else {\n\tvar installedExtensionVersion = extension.version;\n\twriteOutput( \"You have the Hibernate extension version #installedExtensionVersion# installed.\" );}",
+			"code": "var extension = extensionList().filter( ( extension ) => extension.name == \"Hibernate ORM Engine\" );\nif ( !extension.recordCount ){\nthrow( \"Hibernate extension is not installed; please install it now\" );\n} else {\nvar installedExtensionVersion = extension.version;\nwriteOutput( \"You have the Hibernate extension version #installedExtensionVersion# installed.\" );}",
 			"result": "",
 			"runnable": false
 		}
