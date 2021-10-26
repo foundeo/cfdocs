@@ -1,7 +1,7 @@
 {
 	"name":"extensionExists",
 	"type":"function",
-	"syntax":"extensionExists(id, version)"
+	"syntax":"extensionExists(id, version)",
 	"returns":"boolean",
 	"related": ["ExtensionList"],
 	"description":"This function checks if a specific extension exists.",
