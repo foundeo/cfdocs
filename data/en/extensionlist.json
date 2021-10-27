@@ -1,0 +1,29 @@
+{
+	"name":"extensionList",
+	"type":"function",
+	"syntax":"extensionList()",
+	"returns":"query",
+	"related":["ExtensionExists"],
+	"description":"This function returns a query object containing a list of installed extensions. It takes no arguments.",
+	"params":[],
+	"engines":{
+		"lucee": {"minimum_version":"5.3", "notes":"This function was added as part of the Admin Interface improvement.", "docs":"https://docs.lucee.org/reference/functions/extensionlist.html"}
+	},
+	"links":[],
+	"examples":[
+        	{
+			"title": "Simple ExtensionList() Example",
+			"description": "This example shows a very basic usage of the function to get a list of available extensions.",
+			"code": "dump(extensionList());",
+			"result": "",
+			"runnable": false
+		},
+		{
+			"title": "Complex ExtensionList() Example",
+			"description": "This example was created by Michael Born to check the version of an installed extension.",
+			"code": "var extension = extensionList().filter( ( extension ) => extension.name == \"Hibernate ORM Engine\" );\nif ( !extension.recordCount ){\nthrow( \"Hibernate extension is not installed; please install it now.\" );\n} else {\nvar installedExtensionVersion = extension.version;\nwriteOutput( \"You have the Hibernate extension version \" & installedExtensionVersion & \" installed.\" );\n}",
+			"result": "",
+			"runnable": false
+		}
+	]
+}
