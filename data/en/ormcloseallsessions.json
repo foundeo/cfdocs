@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"ormCloseAllSessions();",
 	"returns":"void",
-	"related":[],
+	"related":["ORMGetSession", "ORMClearSession", "ORMFlush", "ORMGetSessionFactory", "ORMCloseSession"],
 	"description":" Closes all Hibernate sessions in the request.",
 	"params": [
 		{"name":"region","description":"Name of the cache region.","required":true,"default":"","type":"string","values":[]}

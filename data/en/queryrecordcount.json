@@ -4,7 +4,7 @@
 	"syntax": "queryRecordCount(query)",
 	"member": "query.recordCount()",
 	"returns": "numeric",
-	"related": [],
+	"related": ["QueryNew"],
 	"description": "Returns the number of rows given in the query object result set",
 	"params": [
 		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []}

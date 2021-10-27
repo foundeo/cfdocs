@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"removeChars(String, start, count)",
 	"returns":"string",
-	"related":[],
+	"related":["Insert", "Len"],
 	"description":" Removes characters from a string.",
 	"params": [
 		{"name":"String","description":"The string or variable containing a string to process.","required":true,"default":"","type":"string","values":[]},

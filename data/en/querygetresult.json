@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"queryGetResult(query)",
 	"returns":"struct",
-	"related":[],
+	"related":["QueryMap", "QueryReduce", "QueryEach"],
 	"description":" Returns the metadata of a query.",
 	"params": [
 		{"name":"query","description":"The query whose metadata is to be returned.","required":true,"default":"","type":"query","values":[]}
