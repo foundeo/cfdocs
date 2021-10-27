@@ -1,0 +1,32 @@
+{
+	"name":"extensionExists",
+	"type":"function",
+	"syntax":"extensionExists(id, version)",
+	"returns":"boolean",
+	"related": ["ExtensionList"],
+	"description":"This function checks if a specific extension exists.",
+	"params":[
+		{"name":"id","description":"UUID of the Extension.","required":true,"default":"","type":"string","values":[]},
+		{"name":"version","description":"Version of the Extension.","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines":{
+		"lucee": {"minimum_version":"5.3", "notes":"This function was added as part of the Admin Interface improvement.", "docs":"https://docs.lucee.org/reference/functions/extensionexists.html"}
+	},
+	"links":[],
+	"examples":[
+        	{
+			"title": "Simple ExtensionExists() Example",
+			"description": "This example shows a very basic usage of the function to determine if a function exists.",
+			"code": "dump(extensionExists(\"99A4EF8D-F2FD-40C8-8FB8C2E67A4EEEB6\"));",
+			"result": "",
+			"runnable": true
+		},
+		{
+			"title": "Example of ExtensionExists() Using Version Attribute",
+			"description": "This example was created by Michael Born to verify that a specific version of an Extension exists.",
+			"code": "dump(extensionExists(\"99A4EF8D-F2FD-40C8-8FB8C2E67A4EEEB6\",\"7.2.2.jre8\"));",
+			"result": "",
+			"runnable": true
+		}
+	]
+}
