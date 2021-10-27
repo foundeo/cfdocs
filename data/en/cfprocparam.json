@@ -2,26 +2,38 @@
 	"name":"cfprocparam",
 	"type":"tag",
 	"syntax":"<cfprocparam cfsqltype=\"CF_SQL_BIGINT\">",
-	"related":["cfstoredproc","cfprocresult"],
-	"description":"Defines stored procedure parameters. This tag is nested within\n a cfstoredproc tag.",
+	"related":["cfstoredproc","cfprocresult","cfqueryparam"],
+	"description":"Defines stored procedure parameters.\nThis tag is nested within a `cfstoredproc` tag.\nThis tag does not have a body.",
 	"params": [
-		{"name":"type","description":"in: The parameter is used to send data to the database\n system only. Passes the parameter by value.\n out: The parameter is used to receive data from the\n database system only. Passes the parameter as a bound\n variable.\n inout: The parameter is used to send and receive data.\n Passes the parameter as a bound variable.","required":false,"default":"in","type":"string","values":["in","out","inout"]},
-		{"name":"variable","description":"CFML variable name; references the value that the\n output parameter has after the stored procedure is called.","required":false,"default":"","type":"string","values":[]},
-		{"name":"value","description":"Value that CFML passes to the stored procedure.","required":false,"default":"","type":"string","values":[]},
-		{"name":"cfsqltype","description":"SQL type to which the parameter (any type) is bound.\n CFML supports the following values, where the last\n element of the name corresponds to the SQL data type.\n Different database systems might support different subsets\n of this list. See your DBMS documentation for information\n on supported parameter types.","required":true,"default":"","type":"string","values":["CF_SQL_BIGINT","CF_SQL_BIT","CF_SQL_CHAR","CF_SQL_BLOB","CF_SQL_CLOB","CF_SQL_DATE","CF_SQL_DECIMAL","CF_SQL_DOUBLE","CF_SQL_FLOAT","CF_SQL_IDSTAMP","CF_SQL_INTEGER","CF_SQL_LONGVARCHAR","CF_SQL_MONEY","CF_SQL_MONEY4","CF_SQL_NUMERIC","CF_SQL_REAL","CF_SQL_REFCURSOR","CF_SQL_SMALLINT","CF_SQL_TIME","CF_SQL_TIMESTAMP","CF_SQL_TINYINT","CF_SQL_VARCHAR"]},
-		{"name":"maxlength","description":"Maximum length of a string or character IN or INOUT value\n attribute. A maxLength of 0 allows any length. The\n maxLength attribute is not required when specifying\n type=out.","required":false,"default":0,"type":"numeric","values":[]},
-		{"name":"scale","description":"Number of decimal places in numeric parameter. A scale of 0\n allows any number of decimal places.","required":false,"default":0,"type":"numeric","values":[]},
-		{"name":"null","description":"Whether the parameter is passed in as a null value. Not\n used with OUT type parameters.","required":false,"default":false,"type":"boolean","values":[true,false]},
+		{"name":"type","description":"This attribute indicates whether the passed variable is an input, output, or input/output.\n`in`: The parameter is used to send data to the database system only. Passes the parameter by value.\n`out`: The parameter is used to receive data from the database system only. Passes the parameter as a bound variable.\n`inout`: The parameter is used to send and receive data. Passes the parameter as a bound variable.","required":false,"default":"in","type":"string","values":["in","out","inout"]},
+		{"name":"variable","description":"The name of the variable that references the value of the output parameter after the stored procedure is called.\nOnly valid when `type` attribute is `OUT` or `INOUT`.","required":false,"default":"","type":"string","values":[]},
+		{"name":"value","description":"The actual value that is passed to the stored procedure.","required":false,"default":"","type":"string","values":[]},
+		{"name":"cfsqltype","description":"SQL type to which the parameter (any type) is bound.\n CFML supports the following values, where the last element of the name corresponds to the SQL data type. Different database systems might support different subsets of this list. See your DBMS documentation for information on supported parameter types.\nRefer to https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfqueryparam.html for how the types are mapped.","required":true,"default":"","type":"string","values":["CF_SQL_BIGINT","CF_SQL_BIT","CF_SQL_CHAR","CF_SQL_BLOB","CF_SQL_CLOB","CF_SQL_DATE","CF_SQL_DECIMAL","CF_SQL_DOUBLE","CF_SQL_FLOAT","CF_SQL_IDSTAMP","CF_SQL_INTEGER","CF_SQL_LONGVARCHAR","CF_SQL_MONEY","CF_SQL_MONEY4","CF_SQL_NUMERIC","CF_SQL_REAL","CF_SQL_REFCURSOR","CF_SQL_SMALLINT","CF_SQL_TIME","CF_SQL_TIMESTAMP","CF_SQL_TINYINT","CF_SQL_VARCHAR"]},
+		{"name":"maxlength","description":"Maximum length of a string or character IN or INOUT value attribute. A maxLength of `0` allows any length. The maxLength attribute is not required when specifying type=out.","required":false,"default":0,"type":"numeric","values":[]},
+		{"name":"scale","description":"Number of decimal places in a numeric parameter. A scale of `0` allows any number of decimal places.","required":false,"default":0,"type":"numeric","values":[]},
+		{"name":"null","description":"Whether the parameter is passed in as a null value. Not used with "OUT" `type` parameters.","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"dbVarName","description":"This attribute is used to specify named parameters when calling a stored procedure. If used, this attribute should be present with each cfprocparam tag of the stored procedure.\nThis attribute was previously deprecated then reintroduced in CF11\nDatabases need a variable prefix for named parameters:\n`:` for Oracle\n'@` for SQL Server.\nSee the following blog post for more information: https://coldfusion.adobe.com/2015/07/coldfusion-11-and-dbvarname-attribute/.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfprocparam.html"},
+		"coldfusion": {"minimum_version":"4", "notes":"ColdFusion 11 Update 3: Restored the previously ignored dbvarname attribute.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfprocparam.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/procparam.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfprocparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfprocparam"}
 	},
 	"links": [
+		{
+			"title": "ColdFusion 11 and dbvarname attribute ",
+			"description": "",
+			"url": "https://coldfusion.adobe.com/2015/07/coldfusion-11-and-dbvarname-attribute"
+		}
 
+	],
+	"examples": [
+		{
+			"title": "Basic Example",
+			"description": "",
+			"code": "<cfstoredproc procedure = \"foo_proc\" dataSource = \"MY_SYBASE_TEST\" username = \"sa\" password = \"mygoodpw\" dbServer = \"scup\" dbName = \"pubs2\" returnCode = \"Yes\" debug = \"Yes\">\n<cfprocresult name = RS1> \n<cfprocresult name = RS3 resultSet = 3> \n<cfprocparam type = \"IN\" CFSQLType = \"CF_SQL_INTEGER\" value = \"1\" dbVarName = @param1> \n<cfprocparam type = \"OUT\" CFSQLType = \"CF_SQL_DATE\" variable = \"FOO\" dbVarName = @param2>\n</cfstoredproc>",
+			"result": ""
+		}
 	]
-
 }
