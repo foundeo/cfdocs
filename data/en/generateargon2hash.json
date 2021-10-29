@@ -13,7 +13,7 @@
 		{"name": "iterations", "description": "A number between 1 and 20.", "required": false, "default": "1", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "5.3.8.43", "notes": "", "docs": "https://docs.lucee.org/reference/functions/generateargon2hash.html"}
+		"lucee": {"minimum_version": "5.3.8", "notes": "", "docs": "https://docs.lucee.org/reference/functions/generateargon2hash.html"}
 	},
 	"examples": [{
 		"title":"Generate and verify an Argon2 hash",
