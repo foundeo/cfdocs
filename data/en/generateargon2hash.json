@@ -1,0 +1,31 @@
+{
+	"name": "generateArgon2Hash",
+	"type": "function",
+	"syntax": "generateArgon2Hash(string [, variant] [, parallelismFactor] [, memoryCost] [, iterations])",
+	"returns": "string",
+	"related": [],
+	"description": "Generates and returns an Argon2 hash of the input.",
+	"params": [
+		{"name": "input", "description": "", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "variant", "description": "", "required": false, "default": "Argon2i", "type": "string", "values": ["Argon2i", "Argon2d", "Argon2id"]},
+		{"name": "parallelismFactor", "description": "Degrees of parallelism, a number between 1 and 10.", "required": false, "default": "1", "type": "numeric", "values": []},
+		{"name": "memoryCost", "description": "A number between 8 and 100000.", "required": false, "default": "8", "type": "numeric", "values": []},
+		{"name": "iterations", "description": "A number between 1 and 20.", "required": false, "default": "1", "type": "numeric", "values": []}
+	],
+	"engines": {
+		"lucee": {"minimum_version": "5.3.8", "notes": "", "docs": "https://docs.lucee.org/reference/functions/generateargon2hash.html"}
+	},
+	"examples": [{
+		"title":"Generate and verify an Argon2 hash",
+		"description":"",
+		"code":"hashedValue = GenerateArgon2Hash(\"CFDocs.org\");\ndump(hashedValue);\ncheck = Argon2CheckHash( \"CFDocs.org\", hashedValue);\ndump(check);"
+	}
+    	],
+	"links": [
+		{
+			"title":"Using Argon2 in Lucee CFML",
+			"url":"https://www.andrewdixon.co.uk/2020/09/19/using-argon2-in-lucee-cfml/",
+			"description":"Tutorial style article introducing Argon2 hashing in Lucee."
+		}
+	]
+}
