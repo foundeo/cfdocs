@@ -103,14 +103,31 @@ OR for CF11+
     cfloop(query=q, group="fk"){
         writeOutput("<strong>#fk#</strong>");
     }
+
+### Break / Continue    
+
+    for (row in q) {
+        if (row.skip) {
+	    continue;
+	}
+	//do stuff...
+    }
+    
+    for (row in q) {
+        if (row.currentrow > 5) {
+	    break;
+	}
+	//process rows 1-5
+    }
     
 
-<strong>Resources:</strong>
-Tony Junkes GitHub: https://github.com/tonyjunkes/cfml-tags-to-cfscript/blob/master/README.md#general
-Adam Cameron GitHub: https://github.com/adamcameron/cfscript/blob/master/cfscript.md#database
-Pete Freitag Cheat sheet: http://www.petefreitag.com/cheatsheets/coldfusion/cfscript/
-Steve Walker CF Tag and Script Equivilents: http://www.cfuser.com/cf-tag-and-script-equivalents/
+## Resources
 
+* Tony Junkes GitHub: https://github.com/tonyjunkes/cfml-tags-to-cfscript/blob/master/README.md#general
+* Adam Cameron GitHub: https://github.com/adamcameron/cfscript/blob/master/cfscript.md#database
+* Pete Freitag Cheat sheet: https://www.petefreitag.com/cheatsheets/coldfusion/cfscript/
+* Steve Walker CF Tag and Script Equivilents: https://web.archive.org/web/20151202091752/http://www.cfuser.com/cf-tag-and-script-equivalents/
+* CFScript.me - tool to convert CFML tags to cfscript: https://cfscript.me/
 
 
 
