@@ -65,7 +65,7 @@
         ,
 		{
 			"title":"Script Syntax (CF11+)",
-			"description":"This is a script representation of the the same code above. <br/><br/>Note that the writeoutput is indeed necessary for any body content in a script-based cfdocument--even if no CFML variables or expressions exist in the string. (This is true also for other script-based tags that may have bodies, including cfdocumentitem and cfdocumentsection, as well as cfhtmltopdf, cfsavecontent, etc.)",
+			"description":"This is a script representation of the the same code above. \n\nNote that the writeoutput is indeed necessary for any body content in a script-based cfdocument--even if no CFML variables or expressions exist in the string. (This is true also for other script-based tags that may have bodies, including cfdocumentitem and cfdocumentsection, as well as cfhtmltopdf, cfsavecontent, etc.)",
 			"code":"<cfscript>\ncfcontent( type=\"application/pdf\" );\ncfheader( name=\"Content-Disposition\", value=\"attachment;filename=example.pdf\" );\ncfdocument (format=\"pdf\"){\nwriteoutput(\"\n    <h1>Hello ColdFusion</h1>\n    <p>This is <strong>PDF</strong> example document.</p>\n    <p>Generated at: <cfoutput>#TimeFormat(Now())# on #DateFormat(Now())#</cfoutput></p>\n    \");\n}\n</cfscript>",
 			"result":""
 		}	]
