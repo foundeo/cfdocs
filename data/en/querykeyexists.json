@@ -12,7 +12,8 @@
 
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querykeyexists.html"}
+		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querykeyexists.html"},
+		"lucee":{"minimum_version":"5.1", "docs":"https://docs.lucee.org/reference/functions/querykeyexists.html","notes":""}
 
 	},
 	"links": [
