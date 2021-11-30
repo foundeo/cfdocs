@@ -1,15 +1,41 @@
 {
-	"name":"cacheGetAllIds",
-	"type":"function",
-	"syntax":"cacheGetAllIds()",
-	"returns":"array",
-	"related":["cacheGet","cacheGetAll"],
-	"description":" Gets the IDs of all objects stored in the cache.",
-	"params": [],
+	"name": "cacheGetAllIds",
+	"type": "function",
+	"syntax": "cacheGetAllIds()",
+	"returns": "array",
+	"related": ["cacheGet", "cacheGetAll"],
+	"description": "This function return an array containing all keys inside the cache.",
+	"params": [{
+		"name": "filter",
+		"description": "Key filter for the elements, the filter follow the same rules as for cfdirectory-filter.",
+		"required": false,
+		"default": "",
+		"type": "string",
+		"values": []
+	}, {
+		"name": "cacheName",
+		"description": "The cache region to use or the default object cache",
+		"required": false,
+		"default": "ObjectCache",
+		"type": "string",
+		"values": []
+	}],
 	"engines": {
-		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheGetAllIds.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/cachegetallids.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cachegetallids"}
+		"coldfusion": {
+			"minimum_version": "9",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheGetAllIds.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/cachegetallids.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/cachegetallids"
+		}
 	},
 	"links": [],
 	"examples": []
