@@ -36,11 +36,11 @@ The use of tags generating UI is generally discouraged by the CFML community. Se
 
 ### `cflayout`
 
-The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfpod/index.html
+The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cflayout-tabs/index.html
 
 ### `cflayoutarea`
 
-The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfpod/index.html
+The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cflayout-tabs/index.html
 
 ### `cfmap`
 
@@ -68,7 +68,7 @@ The use of tags generating UI is generally discouraged by the CFML community. Se
 
 ### `cfselect`
 
-The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfpod/index.html
+The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfselect-chained/index.html
 
 ### `cftable`
 
