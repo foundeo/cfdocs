@@ -7,7 +7,7 @@
 	"description": "Evaluates a string value to determine whether the variable named in it exists.",
 	"params": [{
 		"name": "variable_name",
-		"description": "A string expression containing the name of a the variable to check the existence of. Only simple dotted notation is supported (for example myVar, arguments.myArg, myStruct.key). Square bracket notation to reference array elements or struct keys is not supported.",
+		"description": "A string expression containing the name of a variable to check the existence of. Only simple dotted notation is supported (for example myVar, arguments.myArg, myStruct.key). Square bracket notation to reference array elements or struct keys is not supported.",
 		"required": true,
 		"default": "",
 		"type": "string",
