@@ -12,7 +12,7 @@ Use Application.cfc instead of Application.cfm files. The Application component 
 
 ### `cfcol`
 
-The use of tags that generate client side UI code is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cftable/index.html
+The use of tags that generate client side UI code is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cftable/index.html
 
 ### `cfdiv`
 
@@ -36,11 +36,11 @@ The use of tags generating UI is generally discouraged by the CFML community. Se
 
 ### `cflayout`
 
-The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html
+The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cflayout-tabs/index.html
 
 ### `cflayoutarea`
 
-The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html
+The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cflayout-tabs/index.html
 
 ### `cfmap`
 
@@ -60,7 +60,7 @@ The use of tags generating UI is generally discouraged by the CFML community. Se
 
 ### `cfpod`
 
-The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html
+The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfpod/index.html
 
 ### `cfprogressbar`
 
@@ -68,11 +68,11 @@ The use of tags generating UI is generally discouraged by the CFML community. Se
 
 ### `cfselect`
 
-The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html
+The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfselect-chained/index.html
 
 ### `cftable`
 
-The use of tags that generate client side UI code is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cftable/index.html 
+The use of tags that generate client side UI code is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cftable/index.html 
 
 ### `cftooltip`
 
