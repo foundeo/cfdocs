@@ -10,7 +10,8 @@
 		{"name":"String","description":"String to search","required":true,"default":"","type":"string","values":[]},
         	{"name":"substring1","description":"Substring to find within string","required":true,"default":"","type":"string","values":[]},
         	{"name":"substring2","description":"Substring to replace substring1 with. As of CF2016+ you can also pass a callback function in this argument `function(pattern, position, originalString)`.","required":true,"default":"","type":"string","values":[]},
-		{"name":"scope","description":"* one: replace the first occurrence\n * all: replace all occurrences","required":false,"default":"one","type":"string","values":["one","all"]}
+		{"name":"scope","description":"* one: replace the first occurrence\n * all: replace all occurrences","required":false,"default":"one","type":"string","values":["one","all"]},
+		{"name":"start","description":"CF2021+ Position to start searching in the string.","required":false,"default":"1","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/replace.html"},
@@ -43,6 +44,13 @@
 			"description":"In CF2016+ you can pass in a callback function to the third argument of the `replace` function",
 			"code":"public function upCase(pattern, position, orig) {\r\n    return uCase(pattern);\r\n}\r\nresult = replace(\"A man a plan a canal.\",\"an\", upCase , \"ALL\");\r\nwriteOutput(result);",
 			"result":"A mAN a plAN a cANal.",
+			"runnable":true
+		},
+		{
+			"title":"Example with start argument (Replace lowercase 'o' with uppercase 'O' from the third position)",
+			"description":"In CF2021+ you can pass position to start searching in the string",
+			"code":"getRes = replace(\"Love ColdFusion\", \"o\", \"O\",\"ALL\",\"3\"); \r\nwriteDump(getRes);",
+			"result":"Love COldFusiOn",
 			"runnable":true
 		}
 	]
