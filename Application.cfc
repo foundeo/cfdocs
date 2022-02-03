@@ -45,7 +45,7 @@
 
 		<cfsavecontent variable="request.content"><cfinclude template="#arguments.targetPage#"></cfsavecontent>
 		<cfparam name="request.cacheControlMaxAge" default="604800" type="integer">
-		<cfheader name="Cache-Control" value="max-age=#Int(request.cacheControlMaxAge)#">
+		<cfheader name="Cache-Control" value="public, max-age=#Int(request.cacheControlMaxAge)#">
 		<cfif len(showError)><cfoutput>#showError#</cfoutput><cfflush></cfif>
 		<cfcontent reset="true" type="text/html"><cfinclude template="views/layout.cfm">
 	</cffunction>
