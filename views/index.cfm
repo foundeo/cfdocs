@@ -15,7 +15,7 @@ qPeople = oLeader.get();
   <div class="row">
     <div class="col-lg-4">
       <h2><span class="glyphicon glyphicon-cloud-download"></span> &nbsp; CDN Hosted</h2>
-      <p>Hosted on Amazon CloudFront CDN for ultra fast response around the globe. Sponsored by <a href="https://foundeo.com/">Foundeo Inc.</a></p>
+      <p>Hosted on a CDN for ultra fast response around the globe. Sponsored by <a href="https://foundeo.com/">Foundeo Inc.</a></p>
     </div>
     <div class="col-lg-4">
       <h2><span class="glyphicon glyphicon-thumbs-up"></span> &nbsp; Handy</h2>
@@ -26,12 +26,12 @@ qPeople = oLeader.get();
       <p>All data is hosted on GitHub, don't like what you see, fork it and send a pull request. See a list of people who have contributed below.</p>
     </div>
   </div>
-  <br><hr><br>
-  <h2 class="text-center"><cfoutput>#qPeople.recordCount#</cfoutput> Awesome Contributors <br><small>The Leader Board</small></h2>
-  <div class="row">
-
-  <cfoutput>
   <cfif qPeople.recordCount>
+    <br><hr><br>
+    <h2 class="text-center"><cfoutput>#qPeople.recordCount#</cfoutput> Awesome Contributors <br><small>The Leader Board</small></h2>
+    <div class="row">
+
+    <cfoutput>
     <cfloop query="qPeople">
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="contributor row">
@@ -50,10 +50,11 @@ qPeople = oLeader.get();
     </cfloop>
     <!--- cache for 1 day --->
     <cfset request.cacheControlMaxAge = 86400>
+  
+    </cfoutput>
+    </div>
   <cfelse>
     <!--- error connecting to github so tell CDN to only cache for 30 seconds --->
     <cfset request.cacheControlMaxAge = 30>
   </cfif>
-  </cfoutput>
-  </div>
 </div>
