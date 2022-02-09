@@ -12,5 +12,13 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/sleep.html"}
 	},
 	"links": [],
-	"examples": []
+	"examples": [
+		{
+			"title": "Tag Syntax",
+			"description": "Dump the current time using a loop, delay 2 seconds each iteration.",
+			"code": "<cfloop index='i' from='1' to='3'>\r\n  <cfdump var='#timeFormat(now(), \"HH:mm:ss\")#'/>\r\n  <cfsleep time='2000'/>\r\n</cfloop>",
+			"runnable": true,
+			"result": ""
+		}
+	]
 }
