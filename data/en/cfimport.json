@@ -2,7 +2,7 @@
 	"name":"cfimport",
 	"type":"tag",
 	"syntax":"<cfimport>",
-	"related":[],
+	"related":["cfmodule"],
 	"description":"You can use the cfimport tag to import either of the following:\n\n * All CFML pages in a directory, as a tag custom tag\n library.\n * A Java Server Page (JSP) tag library. A JSP tag library is a\n packaged set of tag handlers that conform to the JSP 1.1 tag\n extension API.",
 	"params": [
 		{"name":"taglib","description":"Tag library URI. The path must be relative to the web root\n (and start with \/), the current page location, or a\n directory specified in the Administrator CFML\n mappings page.\n\n A directory in which custom CFML tags are stored. In\n this case, all the cfm pages in this directory are treated\n as custom tags in a tag library.\n A path to a JAR in a web-application; for example,\n \"\/WEB-INF\/lib\/sometags.jar\"\n A path to a tag library descriptor; for example,\n \"\/sometags.tld\"\n Note: You must put JSP custom tag libraries in the\n \/WEB-IN\/lib directory. This limitation does not apply to\n CFML pages.","required":false,"default":"","type":"string","values":[]},
@@ -16,8 +16,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfimport"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfimport"}
 	},
-	"links": [
-
-	]
+	"links": [],
+	"examples": [
+		{
+			"title": "Tag Syntax - CFML Custom Tags with Prefix",
+			"description": "Import custom tags and include one using the prefix:tagName syntax.",
+			"code": "<cfimport taglib=\"/relative/path/customTags\" prefix=\"tags\"/>\n\r<tags:myCustomTag></tags:myCustomTag>",
+			"result": "",
+			"runnable": false
+		}]
 
 }
