@@ -11,7 +11,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayshift.html"},
-		"lucee": {"minimum_version":"5", "notes":"Lucee allows an additional parameter, `defaultValue` of type `any`, that is returned if the array is empty.", "docs":"https://docs.lucee.org/reference/functions/arrayshift.html"}		
+		"lucee": {"minimum_version":"5.3.8", "notes":"Lucee allows an additional parameter, `defaultValue` of type `any`, that is returned if the array is empty.", "docs":"https://docs.lucee.org/reference/functions/arrayshift.html"}		
 	},
 	"links":[],
 	"examples": [
