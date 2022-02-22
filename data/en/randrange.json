@@ -38,7 +38,7 @@
 		{
 			"title":"Tag Example",
 			"description":"The following example calls the Randomize function to seed the random number generator and generates 10 random numbers.  ",
-			"code":"<cfset r = randomize(7, \"SHA1PRNG\")> \r\n <cfset local.myInt = 1 /> \r\n <cfset local.myInt2 = 999 /> \r\n<!--- Generate and display the random number. ---> \r\n <cfoutput><p><b> \r\n RandRange returned: #randRange(local.myInt, local.myInt2, \"SHA1PRNG\")# \r\n </cfoutput></b></p> \r\n </cfif>  ",
+			"code":"<cfset r = randomize(7, \"SHA1PRNG\")> \r\n <cfset local.myInt = 1 /> \r\n <cfset local.myInt2 = 999 /> \r\n<!--- Generate and display the random number. ---> \r\n <cfoutput><p><b> \r\n RandRange returned: #randRange(local.myInt, local.myInt2, \"SHA1PRNG\")# \r\n </cfoutput></b></p>  ",
 			"result":"",
 			"runnable":true
 		},
