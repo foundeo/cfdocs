@@ -166,7 +166,7 @@
     {
       "title": "cfscript equivalent of cfqueryparam",
       "description": "CF11+ script syntax using queryExecute and struct notation for multiple parameters",
-      "code": "qryResult = queryExecute(\"SELECT * FROM exampleData WHERE id = :id AND title = :title\", {title={value=\"Man walks on Moon\", cfsqltype=\"cf_sql_varchar\"}, id={value=2, cfsqltype=\"cf_sql_integer\"}});",
+      "code": "exampleData = queryNew(\"id,title\",\"integer,varchar\",[{\"id\":1,\"title\":\"Dewey defeats Truman\"},{\"id\":2,\"title\":\"Man walks on Moon\"}]);\r\n\r\nresult = queryExecute(\r\n \"SELECT * FROM exampleData WHERE id = :id AND title = :title\", \r\n { \r\n title={value=\"Man walks on Moon\", cfsqltype=\"cf_sql_varchar\"}, id={value=2, cfsqltype=\"cf_sql_integer\"} \r\n } \r\n); \r\n\r\nwriteOutput(result.title[1]);",
       "result": "Man walks on Moon"
     },
     {
