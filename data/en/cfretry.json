@@ -22,7 +22,7 @@
 		    "runnable": true,
 		    "title": "Script Syntax - basic example",
 		    "description": "Throw an error and retry within catch until the iteration counter is equal to 3.",
-		    "code": "<cfscript>\r\niterations = 1;\r\nlimit = 3;\r\n\r\ntry {\r\n\tif (iterations == limit) {\r\n\t\twriteOutput('Done!');\r\n\t} else {\r\n\t\tthrow(message='Too soon. ');\r\n\t}\r\n}\r\ncatch(any e) {\r\n\twriteOutput('#cfcatch.message#');\r\n\r\n\titerations += 1;\r\n\tif (iterations LE limit) {\r\n\t\tretry;\r\n\t}\r\n}\r\n</cfscript>",
+		    "code": "iterations = 1;\r\nlimit = 3;\r\n\r\ntry {\r\n\tif (iterations == limit) {\r\n\t\twriteOutput('Done!');\r\n\t} else {\r\n\t\tthrow(message='Too soon. ');\r\n\t}\r\n}\r\ncatch(any e) {\r\n\twriteOutput('#cfcatch.message#');\r\n\r\n\titerations += 1;\r\n\tif (iterations <= limit) {\r\n\t\tretry;\r\n\t}\r\n}",
 		    "result": "Too soon. Too soon. Done!"
 		}
 	]
