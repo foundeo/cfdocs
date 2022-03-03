@@ -33,9 +33,16 @@ The above outputs `AB`
 	
 The above example would output `FordDodge`
 
-Lists are not supported by default. If you have a list instead of an array, you have to use a basic for loop or you can simply convert the list to an array using `listToArray()`.
-
 For in support for native java arrays was added in CF10+
+
+### For In Loop (over a list)
+
+	fruits = "apple,orange,banana";
+	for (fruit in fruits) {
+		writeOutput(fruit);
+	}
+	
+The above example would output `appleorangebanana`
 
 ### For In Loop (over a query) CF10+
 
