@@ -35,7 +35,7 @@ The above example would output `FordDodge`
 
 For in support for native java arrays was added in CF10+
 
-### For In Loop (over a list)
+### For In Loop (over a list) CF10+
 
 	fruits = "apple,orange,banana";
 	for (fruit in fruits) {
