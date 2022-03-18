@@ -16,7 +16,7 @@ Entire books have been written about server security and will generally include 
 
 [ColdFusion 2016 Lockdown Guide (PDF)](http://adobe.ly/1ZIK4zi)
 
-[ColdFusion 2018 Lockdown Guide (PDF)](https://www.adobe.com/content/dam/acom/en/products/coldfusion/pdfs/coldfusion-2018-lockdown-guide.pdf)
+[ColdFusion 2018 Lockdown Guide (PDF)](https://www.adobe.com/content/dam/cc/us/en/products/coldfusion/pdfs/cf-starter-kits/coldfusion-2018-lockdown-guide.pdf)
 
 There has been some attempt made at putting together a Lucee lockdown guide, but it is incomplete. A Google search for 'Lucee lockdown guide' provides useful links to blog posts and the following start to a guide:
 
