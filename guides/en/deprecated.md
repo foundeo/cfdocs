@@ -2,178 +2,90 @@
 
 ##The following tags/functions are deprecated
 
-### `cacheKeyExists`
+`cfmenu` - Deprecated as of Adobe ColdFusion 2016
 
-Deprecated as of Lucee 4.5
+`empty` - Deprecated as of Lucee 4.5
 
-### `cacheRegionExists`
+`cftreeitem` - Deprecated as of Adobe ColdFusion 11
 
-Deprecated as of Lucee 5
+`cftable` - Deprecated as of Adobe ColdFusion 2016
 
-### `cacheRegionNew`
+`esapiDecode` - Deprecated as of Lucee 5
 
-Deprecated as of Lucee 5
+`cfmenuitem` - Deprecated as of Adobe ColdFusion 2016
 
-### `cacheRegionRemove`
+`getMetricData` - Deprecated as of Lucee 4
 
-Deprecated as of Lucee 5
+`getMetricData` - Deprecated as of Railo 0
 
-### `cacheSetProperties`
+`isK2ServerOnline` - Deprecated as of Adobe ColdFusion 6.1
 
-Deprecated as of Lucee 4.5
+`listTrim` - Deprecated as of Lucee 4
 
-### `cfapplet`
+`parameterExists` - Deprecated as of Adobe ColdFusion 6
 
-Deprecated as of Adobe ColdFusion 11
+`cfsprydataset` - Deprecated as of Adobe ColdFusion 11
 
-### `cfcalendar`
+`cacheRegionNew` - Deprecated as of Lucee 5
 
-Deprecated as of Adobe ColdFusion 2016
+`esapiEncode` - Deprecated as of Lucee 5
 
-### `cffileupload`
+`getK2ServerDocCountLimit` - Deprecated as of Adobe ColdFusion 6.1
 
-Deprecated as of Adobe ColdFusion 2016
+`cftree` - Deprecated as of Adobe ColdFusion 11
 
-### `cfmediaplayer`
+`cacheSetProperties` - Deprecated as of Lucee 4.5
 
-Deprecated as of Adobe ColdFusion 2016
+`imageDrawImage` - Deprecated as of Lucee 5
 
-### `cfmenu`
+`createObject` - Deprecated as of Lucee 5
 
-Deprecated as of Adobe ColdFusion 2016
+`getTemplatePath` - Deprecated as of Adobe ColdFusion 6
 
-### `cfmenuitem`
+`getTemplatePath` - Deprecated as of Lucee 4.5
 
-Deprecated as of Adobe ColdFusion 2016
+`cfcalendar` - Deprecated as of Adobe ColdFusion 2016
 
-### `cfservlet`
+`cfmediaplayer` - Deprecated as of Adobe ColdFusion 2016
 
-Deprecated as of Adobe ColdFusion 6
+`cacheRegionExists` - Deprecated as of Lucee 5
 
-### `cfservletparam`
+`htmlEditFormat` - Deprecated as of Adobe ColdFusion 11
 
-Deprecated as of Adobe ColdFusion 6
+`isK2ServerABroker` - Deprecated as of Adobe ColdFusion 6.1
 
-### `cfslider`
+`hash40` - Deprecated as of Lucee 4.5
 
-Deprecated as of Adobe ColdFusion 11
+`cffileupload` - Deprecated as of Adobe ColdFusion 2016
 
-### `cfsprydataset`
+`cftextinput` - Deprecated as of Adobe ColdFusion 7
 
-Deprecated as of Adobe ColdFusion 11
+`cfservlet` - Deprecated as of Adobe ColdFusion 6
 
-### `cftable`
+`nowServer` - Deprecated as of Lucee 4.5
 
-Deprecated as of Adobe ColdFusion 2016
+`isK2ServerDocCountExceeded` - Deprecated as of Adobe ColdFusion 6.1
 
-### `cftextinput`
+`cfservletparam` - Deprecated as of Adobe ColdFusion 6
 
-Deprecated as of Adobe ColdFusion 7
+`componentInfo` - Deprecated as of Lucee 4.5
 
-### `cftree`
+`cacheRegionRemove` - Deprecated as of Lucee 5
 
-Deprecated as of Adobe ColdFusion 11
+`cfslider` - Deprecated as of Adobe ColdFusion 11
 
-### `cftreeitem`
+`getLocale` - Deprecated as of Lucee 5
 
-Deprecated as of Adobe ColdFusion 11
+`getLocaleLanguage` - Deprecated as of Lucee 5.0
 
-### `componentInfo`
+`cfapplet` - Deprecated as of Adobe ColdFusion 11
 
-Deprecated as of Lucee 4.5
+`cacheKeyExists` - Deprecated as of Lucee 4.5
 
-### `createObject`
+`getK2ServerDocCount` - Deprecated as of Adobe ColdFusion 6.1
 
-Deprecated as of Lucee 5
+`getLocaleCountry` - Deprecated as of Lucee 5.0
 
-### `empty`
+`getLocaleDisplayName` - Deprecated as of Lucee 5
 
-Deprecated as of Lucee 4.5
-
-### `esapiDecode`
-
-Deprecated as of Lucee 5
-
-### `esapiEncode`
-
-Deprecated as of Lucee 5
-
-### `getCurrentContext`
-
-Deprecated as of Lucee 5
-
-### `getK2ServerDocCount`
-
-Deprecated as of Adobe ColdFusion 6.1
-
-### `getK2ServerDocCountLimit`
-
-Deprecated as of Adobe ColdFusion 6.1
-
-### `getLocale`
-
-Deprecated as of Lucee 5
-
-### `getLocaleCountry`
-
-Deprecated as of Lucee 5.0
-
-### `getLocaleDisplayName`
-
-Deprecated as of Lucee 5
-
-### `getLocaleLanguage`
-
-Deprecated as of Lucee 5.0
-
-### `getMetricData`
-
-Deprecated as of Lucee 4
-
-### `getMetricData`
-
-Deprecated as of Railo 0
-
-### `getTemplatePath`
-
-Deprecated as of Adobe ColdFusion 6
-
-### `getTemplatePath`
-
-Deprecated as of Lucee 4.5
-
-### `hash40`
-
-Deprecated as of Lucee 4.5
-
-### `htmlEditFormat`
-
-Deprecated as of Adobe ColdFusion 11
-
-### `imageDrawImage`
-
-Deprecated as of Lucee 5
-
-### `isK2ServerABroker`
-
-Deprecated as of Adobe ColdFusion 6.1
-
-### `isK2ServerDocCountExceeded`
-
-Deprecated as of Adobe ColdFusion 6.1
-
-### `isK2ServerOnline`
-
-Deprecated as of Adobe ColdFusion 6.1
-
-### `listTrim`
-
-Deprecated as of Lucee 4
-
-### `nowServer`
-
-Deprecated as of Lucee 4.5
-
-### `parameterExists`
-
-Deprecated as of Adobe ColdFusion 6
+`getCurrentContext` - Deprecated as of Lucee 5
