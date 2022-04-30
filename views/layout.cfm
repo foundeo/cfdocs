@@ -16,6 +16,14 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
+	<cfoutput>
+		<meta property="og:title" content="#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation">
+		<meta property="og:site_name" content="CF Docs">
+		<meta property="og:url" content="https://cfdocs/#(data.name ?: '')#">
+		<meta property="og:description" content="#(data.description ?: 'UltraFast CFML Documentation Reference')#">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="/utilities/openimage.cfm?name=#data.name ?: ''#">
+</cfoutput>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -74,6 +82,7 @@
 							<li><a href="/reports/missing-descriptions.cfm">Missing Descriptions</a></li>
 							<li><a href="/reports/missing-examples.cfm">Missing Examples</a></li>
 							<li><a href="/reports/missing-related.cfm">Missing Related Links</a></li>--->
+							<li><a href="/utilities/json/">Add an Example</a></li>
 							<li><a href="https://github.com/foundeo/cfdocs/issues">More...</a></li>
 						</ul>
 					</li>
