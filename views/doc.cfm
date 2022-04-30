@@ -266,11 +266,14 @@
 				</cfloop>
 			</ul>
 		</cfif>
-
-		<h2 id="examples">Examples 
-			<button type="button" style="margin-left:5px" class="btn btn-primary" data-toggle="modal" data-target=".add-example-modal-lg"><span class="glyphicon glyphicon-plus"></span> Add An Example</button>
-			<div><small>sample code <cfif data.type IS "function">invoking<cfelse>using</cfif> the #data.name# <cfif data.type IS "tag">tag<cfelse>function</cfif></small>
-			</div></h2>
+		<cfif StructKeyExists(request,'gitFilePath')>
+			<h2 id="examples">
+				Examples 
+				<button type="button" style="margin-left:5px" class="btn btn-primary" data-toggle="modal" data-target=".add-example-modal-lg"><span class="glyphicon glyphicon-plus"></span> Add An Example</button>
+				<div>
+					<small>sample code <cfif data.type IS "function">invoking<cfelse>using</cfif> the #data.name# <cfif data.type IS "tag">tag<cfelse>function</cfif></small>
+				</div>
+			</h2>
 			
 
 			<div class="modal fade add-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -316,7 +319,7 @@
 				</div>
 				</div>
 			</div>	
-			
+		</cfif>
 		<cfif StructKeyExists(data, "examples") AND IsArray(data.examples) AND ArrayLen(data.examples)>
 			<cfset request.hasExamples = true>
 			<cfset example_index = 0>
