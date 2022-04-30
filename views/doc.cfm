@@ -289,7 +289,7 @@
 								</div>
 							</cfif>
 								<div class="pull-right" style="margin-right:10px">
-									<button class="copy-btn btn btn-default" onclick="copyTextToClipboard('#encodeForHTML(ex.code)#')" ><span class="glyphicon glyphicon-duplicate"></span>&nbsp; Copy Code</button>
+									<button class="copy-btn btn btn-default" onclick="copyTextToClipboard('#encodeForHTML(ex.code)#')" ><span class="glyphicon glyphicon-copy"></span>&nbsp; Copy Code</button>
 								</div>
 							<p class="clearfix">#autoLink(ex.description)#</p>
 							<pre class="prettyprint"><code>#encodeForHTML(ex.code)#</code></pre>
