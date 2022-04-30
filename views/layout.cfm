@@ -17,12 +17,16 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
 	<cfoutput>
+		<cfset ogname = "">
+		<cfset ogdescription = "UltraFast CFML Documentation Reference">
+		<cfif isStruct(data) && structkeyExists(data,'name')><cfset ogname = data.name></cfif>
+		<cfif  isStruct(data) && structkeyExists(data,'description')><cfset ogdescription = data.description></cfif>
 		<meta property="og:title" content="#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation">
 		<meta property="og:site_name" content="CF Docs">
-		<meta property="og:url" content="https://cfdocs/#(data.name ?: '')#">
-		<meta property="og:description" content="#(data.description ?: 'UltraFast CFML Documentation Reference')#">
+		<meta property="og:url" content="https://cfdocs/#EncodeForHTMLAttribute(ogname)#">
+		<meta property="og:description" content="#EncodeForHTMLAttribute(ogdescription)#">
 		<meta property="og:type" content="website">
-		<meta property="og:image" content="/utilities/openimage.cfm?name=#data.name ?: ''#">
+		<meta property="og:image" content="/utilities/openimage.cfm?name=#EncodeForHTMLAttribute(ogname)#">
 </cfoutput>
 </head>
 <body>
