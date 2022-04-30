@@ -2,7 +2,7 @@
 	"name":"cfmodule",
 	"type":"tag",
 	"syntax":"<cfmodule>",
-	"script":"cfmodule(template=\"nameoftemplate.cfm\",attributeCollection{});",
+	"script":"cfmodule(template=\"nameoftemplate.cfm\",attributeCollection={});",
 	"script": "module name=\"cached\" {};",
 	"related":["cfassociate"],
 	"description":"Invokes a custom tag for use in CFML application pages.\n This tag processes custom tag name conflicts.",
