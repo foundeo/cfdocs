@@ -6,6 +6,30 @@ $(document).ready(function() {
 		});
 	}
 
+	// Recent Items
+	//store last 10 visited pages in a dropdown for easy access
+	recentplaces = localStorage.getItem('recentplaces') || '[]';
+	recentplaces = JSON.parse(recentplaces);
+	pagetitle = $('#docname').text();
+	pagepath = location.pathname;
+	recentplaces = recentplaces.reduce(function(acc,x,i,a) {
+		if(acc.length < 10 && x.path != pagepath) acc.push(x);
+		return acc;
+	},[]);
+
+	recentplaces.unshift({'title': pagetitle, 'path': pagepath });
+	localStorage.setItem('recentplaces',JSON.stringify(recentplaces));
+	var cList = $('ul#recentitems')
+	$.each(recentplaces, function(i)
+	{
+		var li = $('<li/>')
+			.appendTo(cList);
+		var aaa = $('<a/>')
+			.attr('href',recentplaces[i].path)
+			.text(recentplaces[i].title)
+			.appendTo(li);
+	});
+
 	// Search
 	var tags_fns = new Bloodhound({
 	    datumTokenizer: function(d) {

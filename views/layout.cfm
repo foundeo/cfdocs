@@ -67,6 +67,11 @@
 						</ul>
 					</li>
 					<li class="dropdown">
+						<a href="##" class="dropdown-toggle" data-toggle="dropdown">Recent <b class="caret"></b></a>
+						<ul class="dropdown-menu" id="recentitems">
+						</ul>
+					</li>
+					<li class="dropdown">
 						<a href="##" class="dropdown-toggle" data-toggle="dropdown">Contribute <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="/how-to-contribute">How to</a></li>
