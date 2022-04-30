@@ -267,12 +267,10 @@
 			</ul>
 		</cfif>
 
-		<cfif StructKeyExists(data, "examples") AND IsArray(data.examples) AND ArrayLen(data.examples)>
-			<cfset request.hasExamples = true>
-			<h2 id="examples">Examples 
-				<button type="button" style="margin-left:5px" class="btn btn-primary" data-toggle="modal" data-target=".add-example-modal-lg">Add An Example</button>
-				<div><small>sample code <cfif data.type IS "function">invoking<cfelse>using</cfif> the #data.name# <cfif data.type IS "tag">tag<cfelse>function</cfif></small>
-				</div></h2>
+		<h2 id="examples">Examples 
+			<button type="button" style="margin-left:5px" class="btn btn-primary" data-toggle="modal" data-target=".add-example-modal-lg"><span class="glyphicon glyphicon-plus"></span> Add An Example</button>
+			<div><small>sample code <cfif data.type IS "function">invoking<cfelse>using</cfif> the #data.name# <cfif data.type IS "tag">tag<cfelse>function</cfif></small>
+			</div></h2>
 			
 
 			<div class="modal fade add-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -280,7 +278,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="gridSystemModalLabel">Add an Example</h4>
+						<h4 class="modal-title" id="gridSystemModalLabel">Add an Example for: #data.name#</h4>
 						<div>Use this form to create the Serialized JSON string needed to add an example into the docs.</div>
 						
 					  </div>
@@ -305,13 +303,13 @@
 							</div>
 							
 							<div class="col-md-5">
-								<ol>
+								<ol style="margin-left: -21px;">
 								<li>Copy the generated code below	</li>				
-								<li><a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="label label-danger">Click Here to edit doc</a></li>
+								<li><a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="label label-danger">Click Here to edit doc for: #data.name#</a></li>
 								<li> Update doc by adding the example in the examples section</li>
 								<li> Scroll to the bottom and click "Propose Change"</li>
 							</ol>
-								<textarea rows="15" id="example-form-output" class="form-control" ></textarea>
+								<textarea rows="14" id="example-form-output" class="form-control" ></textarea>
 							</div>
 					</div>
 					</div>
@@ -319,6 +317,8 @@
 				</div>
 			</div>	
 			
+		<cfif StructKeyExists(data, "examples") AND IsArray(data.examples) AND ArrayLen(data.examples)>
+			<cfset request.hasExamples = true>
 			<cfset example_index = 0>
 			<cfloop array="#data.examples#" index="ex">
 				<cfset example_index = example_index + 1>
