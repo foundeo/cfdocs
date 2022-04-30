@@ -2,6 +2,7 @@
 	"name":"cfmodule",
 	"type":"tag",
 	"syntax":"<cfmodule>",
+	"script":"cfmodule(template=\"nameoftemplate.cfm\",attributeCollection{});",
 	"script": "module name=\"cached\" {};",
 	"related":["cfassociate"],
 	"description":"Invokes a custom tag for use in CFML application pages.\n This tag processes custom tag name conflicts.",
@@ -11,8 +12,8 @@
 		{"name":"attributecollection","description":"A collection of key-value pairs that represent\n attribute names and values. You can specify multiple\n key-value pairs. You can specify this attribute only\n once.","required":false,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmodule.html"},
-		"lucee": {"minimum_version":"", "notes":"Script syntax is only supported by Lucee", "docs":"https://docs.lucee.org/reference/tags/module.html"},
+		"coldfusion": {"minimum_version":"3", "notes":"script syntax is supported", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmodule.html"},
+		"lucee": {"minimum_version":"", "docs":"https://docs.lucee.org/reference/tags/module.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmodule"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmodule"}
 	},
@@ -59,6 +60,13 @@
 			"code": "<cfmodule template=\"\\layout\\super-duper-formater.cfm\">\n   <p>Some content the module will format</p>\n</cfmodule>",
 			"result": "",
 			"runnable" : false
+		},
+		{
+			"title": "Using cfscript with attribute collection",
+			"description": "In this example shows how to invoke using cfscript.",
+			"code": "<cfscript>attrs = {theme = \"default\", pageTitle = \"Welcome!\"}>\ncfmodule(template=\"myTemplate.cfm\",attributeCollection=\"#attrCollection1#\")</cfscript>",
+			"result": "",
+			"runnable" : false			
 		}
 	]
 }
