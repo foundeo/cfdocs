@@ -288,6 +288,9 @@
 									<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
 								</div>
 							</cfif>
+								<div class="pull-right" style="margin-right:10px">
+									<button class="copy-btn btn btn-default" onclick="copyTextToClipboard('#encodeForHTML(ex.code)#')" ><span class="glyphicon glyphicon-copy"></span>&nbsp; Copy Code</button>
+								</div>
 							<p class="clearfix">#autoLink(ex.description)#</p>
 							<pre class="prettyprint"><code>#encodeForHTML(ex.code)#</code></pre>
 							<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
