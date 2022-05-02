@@ -19,8 +19,10 @@
 	<cfoutput>
 		<cfset ogname = "">
 		<cfset ogdescription = "UltraFast CFML Documentation Reference">
-		<cfif isStruct(data) && structkeyExists(data,'name')><cfset ogname = data.name></cfif>
-		<cfif  isStruct(data) && structkeyExists(data,'description')><cfset ogdescription = data.description></cfif>
+		<cfif isDefined("data") && isStruct(data)>
+			<cfif structkeyExists(data,'name')><cfset ogname = data.name></cfif>
+			<cfif structkeyExists(data,'description')><cfset ogdescription = data.description></cfif>
+		</cfif> 
 		<meta property="og:title" content="#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation">
 		<meta property="og:site_name" content="CF Docs">
 		<meta property="og:url" content="https://cfdocs/#EncodeForHTMLAttribute(ogname)#">
