@@ -34,6 +34,7 @@
     maxlength = 60;
 
 	img=imageNew("",512,256,"RGB","##fafafa");
+	img.setAntialiasing("on");
 
 	//Write Tag/Function Name
 	style={size="35", font="SansSerif.bold"};
