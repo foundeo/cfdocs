@@ -47,7 +47,7 @@ $(document).ready(function() {
 	      $('#example-modal-content').html('<iframe width="100%" height="450" border="0" src="/try/' + name + '/' + index + '">');
 	      $('.example-modal').modal();      
 	  });
-
+	  if(!$("pre").hasClass('prettyprint')) $("pre").addClass('prettyprint');
 	  if ($('.prettyprint').length != 0 && typeof(prettyPrint) == "function") {
 	      prettyPrint();
 	  }
