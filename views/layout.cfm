@@ -25,7 +25,7 @@
 		</cfif> 
 		<meta property="og:title" content="#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation">
 		<meta property="og:site_name" content="CF Docs">
-		<meta property="og:url" content="https://cfdocs/#EncodeForHTMLAttribute(ogname)#">
+		<meta property="og:url" content="https://cfdocs.org/#EncodeForHTMLAttribute(ogname)#">
 		<meta property="og:description" content="#EncodeForHTMLAttribute(ogdescription)#">
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="https://cfdocs.org/utilities/openimage.cfm?name=#EncodeForHTMLAttribute(ogname)#">
@@ -33,7 +33,7 @@
 		<meta property="og:image:width" content="512" />
 		<meta property="og:image:height" content="256" />
 		
-		<meta name="twitter:image:src" content="https://cfdocs/utilities/openimage.cfm?name=#EncodeForHTMLAttribute(ogname)#" />
+		<meta name="twitter:image:src" content="https://cfdocs.org/utilities/openimage.cfm?name=#EncodeForHTMLAttribute(ogname)#" />
 		<meta name="twitter:site" content="CF Docs" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation" />

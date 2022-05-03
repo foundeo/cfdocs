@@ -11,7 +11,7 @@
 		engines:{}
 		
 	}
-	url.name = ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL");
+	url.name = lcase(ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL"));
 	if(FileExists(ExpandPath("../data/en/#url.name#.json"))){
 		docsData = DeserializeJSON( FileRead(ExpandPath("../data/en/#url.name#.json")));
 		filename = "#url.name#.jpg";
