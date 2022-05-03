@@ -28,7 +28,7 @@
 		<meta property="og:url" content="https://cfdocs/#EncodeForHTMLAttribute(ogname)#">
 		<meta property="og:description" content="#EncodeForHTMLAttribute(ogdescription)#">
 		<meta property="og:type" content="website">
-		<meta property="og:image" content="https://cfdocs/utilities/openimage.cfm?name=#EncodeForHTMLAttribute(ogname)#">
+		<meta property="og:image" content="https://cfdocs.org/utilities/openimage.cfm?name=#EncodeForHTMLAttribute(ogname)#">
 		<meta property="og:image:alt" content="#EncodeForHTMLAttribute(ogdescription)#" />
 		<meta property="og:image:width" content="512" />
 		<meta property="og:image:height" content="256" />
