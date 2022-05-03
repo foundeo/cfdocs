@@ -16,6 +16,29 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
+	<cfoutput>
+		<cfset ogname = "">
+		<cfset ogdescription = "UltraFast CFML Documentation Reference">
+		<cfif isDefined("data") && isStruct(data)>
+			<cfif structkeyExists(data,'name')><cfset ogname = data.name></cfif>
+			<cfif structkeyExists(data,'description')><cfset ogdescription = data.description></cfif>
+		</cfif> 
+		<meta property="og:title" content="#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation">
+		<meta property="og:site_name" content="CF Docs">
+		<meta property="og:url" content="https://cfdocs/#EncodeForHTMLAttribute(ogname)#">
+		<meta property="og:description" content="#EncodeForHTMLAttribute(ogdescription)#">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://cfdocs/utilities/openimage.cfm?name=#EncodeForHTMLAttribute(ogname)#">
+		<meta property="og:image:alt" content="#EncodeForHTMLAttribute(ogdescription)#" />
+		<meta property="og:image:width" content="512" />
+		<meta property="og:image:height" content="256" />
+		
+		<meta name="twitter:image:src" content="https://cfdocs/utilities/openimage.cfm?name=#EncodeForHTMLAttribute(ogname)#" />
+		<meta name="twitter:site" content="CF Docs" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation" />
+		<meta name="twitter:description" content="#EncodeForHTMLAttribute(ogdescription)#" />
+</cfoutput>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -73,6 +96,7 @@
 							<li><a href="/reports/missing-descriptions.cfm">Missing Descriptions</a></li>
 							<li><a href="/reports/missing-examples.cfm">Missing Examples</a></li>
 							<li><a href="/reports/missing-related.cfm">Missing Related Links</a></li>--->
+							<li><a href="/utilities/json/">Add an Example</a></li>
 							<li><a href="https://github.com/foundeo/cfdocs/issues">More...</a></li>
 						</ul>
 					</li>
