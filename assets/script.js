@@ -60,7 +60,12 @@ $(document).ready(function() {
 	  }
 	  
 	  //Generate JSON needed for adding an example to a doc
-	  updateGenExample = function () {
+	$('#example-form-title').keyup(updateGenExample);
+	$('#example-form-description').keyup(updateGenExample);
+	$('#example-form-code').keyup(updateGenExample);
+	$('#example-form-result').keyup(updateGenExample);
+	$('#example-form-runnable').change(updateGenExample);
+	function updateGenExample() {
 		var title = $('#example-form-title').val();
 		var description = $('#example-form-description').val();
 		var code = $('#example-form-code').val();

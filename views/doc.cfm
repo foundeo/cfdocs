@@ -289,17 +289,17 @@
 						<div class="row form">
 							<div class="col-md-7">
 						
-								<input onkeyup="updateGenExample()" type="text" id="example-form-title" class="form-control" value="" placeholder="Title">
+								<input type="text" id="example-form-title" class="form-control" value="" placeholder="Title">
 								<br> 
-								<input onkeyup="updateGenExample()" type="text" id="example-form-description" class="form-control" value="" placeholder="Description">
+								<input  type="text" id="example-form-description" class="form-control" value="" placeholder="Description">
 								<br> 
 					
-								<textarea onkeyup="updateGenExample()" id="example-form-code" placeholder="Code" class="form-control" rows="8"></textarea>
+								<textarea  id="example-form-code" placeholder="Code" class="form-control" rows="8"></textarea>
 								<br>
 					
-								<input onkeyup="updateGenExample()" type="text" id="example-form-result" class="form-control" value="" placeholder="Expected Result or Output of the Code Example">
+								<input  type="text" id="example-form-result" class="form-control" value="" placeholder="Expected Result or Output of the Code Example">
 								<br> 
-								<select onchange="updateGenExample()" id="example-form-runnable" class="form-control">
+								<select id="example-form-runnable" class="form-control">
 									<option value="0">No - Do not show Run Code Button</option>
 									<option value="1" selected="selected">Yes - Show Run Code Button</option>
 								</select>
@@ -364,7 +364,6 @@
 		</cfif>
 	</div>
 </cfoutput>
-<script src="#request.assetBaseURL#trycf.js"></script>
 <!--- // TryCF Editor Scripts --->
 <cffunction name="replaceScript">
 	<cfargument name="name" type="string" required="true">
