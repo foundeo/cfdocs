@@ -58,6 +58,29 @@ $(document).ready(function() {
 		$('#foundeo')[(top > 100) ? 'addClass' : 'removeClass']('foundeoAppear');
 	    });
 	  }
+	  
+	  //Generate JSON needed for adding an example to a doc
+	$('#example-form-title').keyup(updateGenExample);
+	$('#example-form-description').keyup(updateGenExample);
+	$('#example-form-code').keyup(updateGenExample);
+	$('#example-form-result').keyup(updateGenExample);
+	$('#example-form-runnable').change(updateGenExample);
+	function updateGenExample() {
+		var title = $('#example-form-title').val();
+		var description = $('#example-form-description').val();
+		var code = $('#example-form-code').val();
+		var result = $('#example-form-result').val();
+		var runnable = $('#example-form-runnable').val();
+		
+		var outputString = {
+			"title":title,
+			"description":description,
+			"code":code,
+			"result":result,
+			"runnable":runnable
+		};
+		$('#example-form-output').val(JSON.stringify(outputString, null, "\t"));
+	}
 
 });
 //copy to clipboard
