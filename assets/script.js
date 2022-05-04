@@ -103,7 +103,7 @@ $(document).ready(function() {
 			"description":description,
 			"code":code,
 			"result":result,
-			"runnable":runnable
+			"runnable":(runnable == 1)
 		};
 		$('#example-form-output').val(JSON.stringify(outputString, null, "\t"));
 	}
