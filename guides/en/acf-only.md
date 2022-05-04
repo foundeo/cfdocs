@@ -2,8 +2,6 @@
 
 ## The following tags/functions are Adobe ColdFusion only
 
-`arrayDeleteNoCase` - Minimum Version: 2016
-
 `arrayGetMetadata` - Minimum Version: 2016.0.2
 
 `arrayReduceRight` - Minimum Version: 2021
