@@ -1,6 +1,15 @@
  <cfscript>
 	param name="url.name" default="";
 	filepath = "/assets/img/opengraph/";
+
+	if(url.keyExists("clearcache")){
+		DirectoryDelete(ExpandPath(filepath),true);
+	}
+
+	if(url.keyExists("showfonts")){
+		writeDump(var=imageFonts(), abort=true); 
+	}
+
 	data = {
 		name:"CF Docs",
 		type:"All",
