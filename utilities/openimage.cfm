@@ -1,4 +1,5 @@
  <cfscript>
+	param name="url.name" default="";
 	filepath = "/assets/img/opengraph/";
 	data = {
 		name:"CF Docs",
@@ -10,7 +11,8 @@
 		engines:{}
 		
 	}
-	if(url.keyExists('name') && FileExists(ExpandPath("../data/en/#url.name#.json"))){
+	url.name = ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL");
+	if(FileExists(ExpandPath("../data/en/#url.name#.json"))){
 		docsData = DeserializeJSON( FileRead(ExpandPath("../data/en/#url.name#.json")));
 		filename = "#url.name#.jpg";
 		//dump(docsData);
