@@ -17,7 +17,7 @@
 		writeOutput(
 			'## Discouraged'
 			& crlf & crlf
-			& '####The following tags/functions are discouraged to use'
+			& '#### The following tags/functions are discouraged to use'
 		);
 	}
 
@@ -26,7 +26,7 @@
 		writeOutput(
 			'## Deprecated'
 			& crlf & crlf
-			& '####The following tags/functions are deprecated'
+			& '#### The following tags/functions are deprecated'
 		);
 	}
 
@@ -35,7 +35,7 @@
 		writeOutput(
 			'## Adobe ColdFusion only'
 			& crlf & crlf
-			& '####The following tags/functions are Adobe ColdFusion only'
+			& '#### The following tags/functions are Adobe ColdFusion only'
 		);
 	}
 
@@ -44,12 +44,12 @@
 		writeOutput(
 			'## Lucee only'
 			& crlf & crlf
-			& '####The following tags/functions are Lucee only'
+			& '#### The following tags/functions are Lucee only'
 		);
 	}
 
 	/* loop all files from datadir */
-	for (file in directoryList(dataDir)) {
+	for (file in directoryList(path=dataDir, sort="Name")) {
 		dataStruct = deserializeJSON(fileRead(file));
 
 		/* get files with discouraged tags/functions and append them to the file */
