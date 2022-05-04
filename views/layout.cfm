@@ -89,6 +89,11 @@
 						</ul>
 					</li>
 					<li class="dropdown">
+						<a href="##" class="dropdown-toggle" data-toggle="dropdown">Recently Viewed <b class="caret"></b></a>
+						<ul class="dropdown-menu" id="recentitems">
+						</ul>
+					</li>
+					<li class="dropdown">
 						<a href="##" class="dropdown-toggle" data-toggle="dropdown">Contribute <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="/how-to-contribute">How to</a></li>
@@ -117,19 +122,7 @@
 		</div>
 	</nav>
 
-	<nav class="navbar navbar-dark navbar-mini">
-		<div class="container-fluid">
-			<div class="navbar-header">
-					<div class="navbar-brand" >Recently Viewed</div>
-					<div class="">
-						<ul class="nav navbar-nav"  id="recentitems">
-						
-						</ul>
-					</div>
-			</div>
-			
-		</div>
-	</nav>
+	
 	<cfoutput>#request.content#</cfoutput>
 
 	<hr>
