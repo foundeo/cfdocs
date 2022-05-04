@@ -23,9 +23,9 @@
 		filename = "defaultimage.jpg";
 	}
 
-	// if(FileExists( ExpandPath(filepath & filename) )){
-	// 	location(url=filepath & filename, addtoken=false);
-	// } 
+	if(FileExists( ExpandPath(filepath & filename) )){
+		location(url=filepath & filename, addtoken=false);
+	} 
 
     vPos = 55;
     hPos = 30;
@@ -114,10 +114,11 @@
 	if(data.engines.keyExists('coldfusion')){
 		cfversion =  data.engines.coldfusion.minimum_version;
 		img.setDrawingColor("##006699");
-		cfengineboxsize = ((len(cfversion) + 1)* 10) + 22;
+		if (len(cfversion)) { cfversion &= "+" }
+		cfengineboxsize = ((len(cfversion))* 7) + 22;
 		img.drawRect(432,15,cfengineboxsize,16,true);
 		img.setDrawingColor("##ffffff")
-		img.DrawText("CF10+",436,27,style3);
+		img.DrawText("CF" & cfversion,436,27,style3);
 	}
 
 	//Draw bottom green border
