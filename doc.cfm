@@ -5,9 +5,9 @@
 <cfelseif FileExists(ExpandPath("./guides/en/#url.name#.md")) OR url.name is "how-to-contribute">
 	<cftry>
 		<!--- convert md to HTML --->
-		<cfset txtmark = createObject("java", "com.github.rjeschke.txtmark.Processor")>
+		<cfset flexmark = new lib.Processor() >
 		<cfset path = (url.name is "how-to-contribute" ? 'CONTRIBUTING' : './guides/en/#url.name#')>
-		<cfset data = txtmark.process(createObject("java", "java.io.File").init(ExpandPath("#path#.md")), "utf-8")>
+		<cfset data = flexmark.toHTML(FileRead(ExpandPath("#path#.md")))>
 		<cfset request.gitFilePath = "/tree/master/guides/en/"&(url.name is "how-to-contribute" ? 'CONTRIBUTING' : url.name)&".md">
 		<cfcatch>
 			<cfset data = "Error processing markdown: #encodeForHTML(cfcatch.message)# #encodeForHTML(cfcatch.detail)#">
