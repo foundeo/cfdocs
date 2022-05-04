@@ -266,7 +266,7 @@
 				</cfloop>
 			</ul>
 		</cfif>
-		<cfif StructKeyExists(request,'gitFilePath')>
+		<cfif StructKeyExists(request,'gitFilePath') and StructKeyExists(data, "type") and (data.type is "tag" or data.type is "function")>
 			<h2 id="examples">
 				Examples 
 				<button type="button" style="margin-left:5px" class="btn btn-primary" data-toggle="modal" data-target=".add-example-modal-lg"><span class="glyphicon glyphicon-plus"></span> Add An Example</button>
@@ -308,7 +308,7 @@
 							<div class="col-md-5">
 								<ol style="margin-left: -21px;">
 								<li>Copy the generated code below	</li>				
-								<li><a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="label label-danger">Click Here to edit doc for: #data.name#</a></li>
+								<li><a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" target="_blank" rel="nofollow" class="label label-danger">Click Here to edit doc for: #data.name#</a></li>
 								<li> Update doc by adding the example in the examples section</li>
 								<li> Scroll to the bottom and click "Propose Change"</li>
 							</ol>
