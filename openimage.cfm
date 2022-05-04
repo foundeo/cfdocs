@@ -97,30 +97,28 @@
 	//Blue Dragon Engine Support
 	if(data.engines.keyExists('openbd')){
 		img.setDrawingColor("##2fa5d7");
-		img.drawRect(380,15,23,16,true);
+		img.drawRect(360,15,23,16,true);
 		img.setDrawingColor("##ffffff")
-		img.DrawText("BD",385,27,style3);
+		img.DrawText("BD",365,27,style3);
 	}
 	
 	//Lucee Engine Support
 	if(data.engines.keyExists('lucee')){
 		img.setDrawingColor("##449caf");
-		img.drawRect(408,15,38,16,true);
+		img.drawRect(388,15,38,16,true);
 		img.setDrawingColor("##ffffff")
-		img.DrawText("Lucee",413,27,style3);
+		img.DrawText("Lucee",393,27,style3);
 	}
 	
 	//ColdFusion Engine Support
 	if(data.engines.keyExists('coldfusion')){
 		cfversion =  data.engines.coldfusion.minimum_version;
 		img.setDrawingColor("##006699");
-		if(len(cfversion)){
-			img.drawRect(452,15,35,16,true);
-		} else {
-			img.drawRect(452,15,22,16,true);
-		}
+		if (len(cfversion)) { cfversion &= "+" }
+		cfengineboxsize = ((len(cfversion))* 7) + 22;
+		img.drawRect(432,15,cfengineboxsize,16,true);
 		img.setDrawingColor("##ffffff")
-		img.DrawText("CF" & cfversion,456,27,style3);
+		img.DrawText("CF" & cfversion,436,27,style3);
 	}
 
 	//Draw bottom green border
