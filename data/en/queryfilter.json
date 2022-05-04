@@ -8,40 +8,45 @@
 	"description": "Filters query rows specified in filter criteria",
 	"params": [{
 			"name": "query",
-			"description": "query to filter entries from",
 			"description": "The query to filter",
 			"required": true,
 			"default": "",
 			"type": "query",
 			"values": []
 		},
-		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration. Returns true if the row should be included in the filtered query.",
+		{
+			"name": "callback",
+			"description": "Closure or a function reference that will be called for each of the iteration. Returns true if the row should be included in the filtered query.",
 			"callback_params": [
 			{
-				"values": [],
-				"default": "",
-				"description": "A struct with all of the columns for the current iteration",
 				"name": "row",
+				"description": "A struct with all of the columns for the current iteration",
+				"required": false,
+				"default": "",
 				"type": "struct",
-				"required": false
+				"values": []
 			},{
-				"values": [],
-				"default": "",
-				"description": "The value for the current iteration",
 				"name": "currentRow",
-				"type": "numeric",
-				"required": false
-			},{
-				"values": [],
+				"description": "The row number for the current iteration",
+				"required": false,
 				"default": "",
-				"description": "A reference of the original struct",
+				"type": "numeric",
+				"values": []
+			},{
 				"name": "query",
+				"description": "A reference of the original query",
+				"required": false,
+				"default": "",
 				"type": "query",
-				"required": false
-			}],"type":"boolean","required":true,"values":[],"default":""},
+				"values": []
+			}],
+			"type": "boolean",
+			"required": true,
+			"default": "",
+			"values": []
+		},
 		{"name":"parallel","description":"Lucee4.5+ true if the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[true, false]},
 		{"name":"maxThreads","description":"Lucee4.5+ the maximum number of threads to use when parallel = true","required":false,"default":"20","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"lucee": {
@@ -58,13 +63,13 @@
 	"examples": [{
 		"title": "Filter a query",
 		"description": "",
-		"code": "<cfscript>\r\n    news = queryNew(\"id,type,title\", \"integer,varchar,varchar\");\r\n    queryAddRow(news,[{\r\n        id: 1,\r\n        type: \"book\",\r\n        title: \"Cloud Atlas\"\r\n    },{\r\n        id: 2,\r\n        type: \"book\",\r\n        title: \"Lord of The Rings\"\r\n    },{\r\n        id: 3,\r\n        type: \"film\",\r\n        title: \"Men in Black\"\r\n    }]);\r\n    books = QueryFilter(news,function(_news) {\r\n        return _news.type is 'book';\r\n    });\r\n    writeDump(ValueList(books.title,', '));\r\n</cfscript>",
+		"code": "news = queryNew(\"id,type,title\", \"integer,varchar,varchar\");\r\n    queryAddRow(news,[{\r\n        id: 1,\r\n        type: \"book\",\r\n        title: \"Cloud Atlas\"\r\n    },{\r\n        id: 2,\r\n        type: \"book\",\r\n        title: \"Lord of The Rings\"\r\n    },{\r\n        id: 3,\r\n        type: \"film\",\r\n        title: \"Men in Black\"\r\n    }]);\r\n    books = QueryFilter(news,function(_news) {\r\n        return _news.type is 'book';\r\n    });\r\n    writeDump(ValueList(books.title,', '));",
 		"result": "Cloud Atlas, Lord of The Rings",
 		"runnable": true
 	}, {
 		"title": "Filter a query as member function",
 		"description": "",
-		"code": "<cfscript>\r\n    news = queryNew(\"id,type,title\", \"integer,varchar,varchar\");\r\n    queryAddRow(news,[{\r\n        id: 1,\r\n        type: \"book\",\r\n        title: \"Cloud Atlas\"\r\n    },{\r\n        id: 2,\r\n        type: \"book\",\r\n        title: \"Lord of The Rings\"\r\n    },{\r\n        id: 3,\r\n        type: \"film\",\r\n        title: \"Men in Black\"\r\n    }]);\r\n    books = news.filter(function(_news) {\r\n        return _news.type is 'book';\r\n    });\r\n    writeDump(ValueList(books.title,', '));\r\n</cfscript>",
+		"code": "news = queryNew(\"id,type,title\", \"integer,varchar,varchar\");\r\n    queryAddRow(news,[{\r\n        id: 1,\r\n        type: \"book\",\r\n        title: \"Cloud Atlas\"\r\n    },{\r\n        id: 2,\r\n        type: \"book\",\r\n        title: \"Lord of The Rings\"\r\n    },{\r\n        id: 3,\r\n        type: \"film\",\r\n        title: \"Men in Black\"\r\n    }]);\r\n    books = news.filter(function(_news) {\r\n        return _news.type is 'book';\r\n    });\r\n    writeDump(ValueList(books.title,', '));",
 		"result": "Cloud Atlas, Lord of The Rings",
 		"runnable": true
 	}],

@@ -11,9 +11,9 @@
 		engines:{}
 		
 	}
-	url.name = ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL");
-	if(FileExists(ExpandPath("../data/en/#url.name#.json"))){
-		docsData = DeserializeJSON( FileRead(ExpandPath("../data/en/#url.name#.json")));
+	url.name = lcase(ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL"));
+	if(FileExists(ExpandPath("./data/en/#url.name#.json"))){
+		docsData = DeserializeJSON( FileRead(ExpandPath("./data/en/#url.name#.json")));
 		filename = "#url.name#.jpg";
 		//dump(docsData);
 		structAppend(data,docsData,true);
@@ -32,6 +32,7 @@
     maxlength = 60;
 
 	img=imageNew("",512,256,"RGB","##fafafa");
+	img.setAntialiasing("on");
 
 	//Write Tag/Function Name
 	style={size="35", font="DejaVu Sans"};
