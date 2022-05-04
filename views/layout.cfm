@@ -67,11 +67,6 @@
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="##" class="dropdown-toggle" data-toggle="dropdown">Recent <b class="caret"></b></a>
-						<ul class="dropdown-menu" id="recentitems">
-						</ul>
-					</li>
-					<li class="dropdown">
 						<a href="##" class="dropdown-toggle" data-toggle="dropdown">Contribute <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="/how-to-contribute">How to</a></li>
@@ -86,17 +81,32 @@
 				</ul>
 				<form class="navbar-form navbar-left hidden-sm" id="search">
 					<div class="form-group">
-						<input type="text" placeholder="Tag or Function..." id="lookup-box" class="form-control">
+						<div class="input-group">
+							<input type="text" style="width:100%" placeholder="Tag or Function..." id="lookup-box" class="form-control">
+							<div class="input-group-btn">
+								<button type="submit" class="btn btn-primary" style="    margin-top: -4px;">Go</button>
+							</div>
+						</div>
 					</div>
-					<button type="submit" class="btn btn-primary">Go</button>
 				</form>
-				<ul class="nav navbar-nav navbar-right hidden-sm">
-					<li><a href="https://foundeo.com/" id="foundeo"><img src="/assets/img/foundeo.png"></a></li>
-				</ul>
+				<a href="https://foundeo.com/" class="visible-md visible-lg" id="foundeo"><img src="/assets/img/foundeo.png"></a>
 			</div><!--/.navbar-collapse -->
 		</div>
 	</nav>
 
+	<nav class="navbar navbar-dark navbar-mini">
+		<div class="container-fluid">
+			<div class="navbar-header">
+					<div class="navbar-brand" >Recently Viewed</div>
+					<div class="">
+						<ul class="nav navbar-nav"  id="recentitems">
+						
+						</ul>
+					</div>
+			</div>
+			
+		</div>
+	</nav>
 	<cfoutput>#request.content#</cfoutput>
 
 	<hr>

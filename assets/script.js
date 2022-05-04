@@ -10,7 +10,7 @@ $(document).ready(function() {
 	//store last 10 visited pages in a dropdown for easy access
 	recentplaces = localStorage.getItem('recentplaces') || '[]';
 	recentplaces = JSON.parse(recentplaces);
-	pagetitle = $('#docname').text();
+	pagetitle = $('#docname').text() || $('h1').text();
 	pagepath = location.pathname;
 	recentplaces = recentplaces.reduce(function(acc,x,i,a) {
 		if(acc.length < 10 && x.path != pagepath) acc.push(x);
@@ -75,13 +75,13 @@ $(document).ready(function() {
 	  if ($('.prettyprint').length != 0 && typeof(prettyPrint) == "function") {
 	      prettyPrint();
 	  }
-	  if (window.innerWidth > 780) {
-	    $( window ).scroll(function(e) {
-		var top  = window.pageYOffset || document.documentElement.scrollTop;
-		//show/hide
-		$('#foundeo')[(top > 100) ? 'addClass' : 'removeClass']('foundeoAppear');
-	    });
-	  }
+	//   if (window.innerWidth > 780) {
+	//     $( window ).scroll(function(e) {
+	// 	var top  = window.pageYOffset || document.documentElement.scrollTop;
+	// 	//show/hide
+	// 	$('#foundeo')[(top > 100) ? 'addClass' : 'removeClass']('foundeoAppear');
+	//     });
+	//   }
 
 });
 //search submit
