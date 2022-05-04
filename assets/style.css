@@ -1,6 +1,7 @@
 body {
   padding-top: 50px;
   padding-bottom: 20px;
+  font-size: 16px;
 }
 
 div.listing > h2 > a.btn { text-transform: none; }
@@ -40,26 +41,76 @@ h2 { text-transform: uppercase; }
     letter-spacing: -0.6px;
     word-spacing: 1px;
 }
+.twitter-typeahead {
+  width:100%
+}
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
   margin-bottom: 0;
 }
 
 #foundeo {
-  opacity:0;
   margin-left: 100px;
 }
 #foundeo img {
   width: 70px; height:20px;
 }
 
-#foundeo.foundeoAppear {
-  opacity:1;
-
+#foundeo {
   transition: all 2.5s ease-in-out;
 }
 
+#foundeo {
+  position: absolute;
+  top: 15px;
+  right: 14px;
+}
+nav.navbar.navbar-mini {
+  min-height: 40px;
+  margin-bottom: 0;
+  border: none;
+}
+nav.navbar.navbar-mini ul  {
+  white-space:nowrap;
+  overflow: auto;
+    overflow-y: hidden;
+  margin: 0;
+  float: none;
+}
+nav.navbar.navbar-mini ul::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+nav.navbar.navbar-mini ul {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+nav.navbar.navbar-mini ul li a {
+  padding: 13px 12px 9px 12px;
+    margin-bottom: -3px;
+}
+nav.navbar.navbar-mini .navbar-header {
+  width: 100%;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+nav.navbar.navbar-mini .navbar-brand {
+  padding: 0px 10px 0px 7px;
+  height: 24px;
+  border-right: 1px solid #ccc;
+  margin: 13px 0 0;
+}
+nav.navbar.navbar-mini	.navbar-nav>li {
+  float: none !important;
+  display: inline-block !important;
+}
+.navbar-collapse.in {
+  overflow-y: visible;
+}
+
 .tt-menu {
+  width: 100%;
   min-width: 160px;
   margin-top: 2px;
   padding: 5px 0;
@@ -156,6 +207,8 @@ iframe { border:0px;}
 pre.prettyprint {
 	padding: 5px 8px !important;
 	border: 1px solid #CCC !important;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .alert-danger h4 { line-height: 1.5; }
