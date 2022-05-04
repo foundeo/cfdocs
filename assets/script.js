@@ -133,7 +133,9 @@ function fallbackCopyTextToClipboard(text) {
   
 	document.body.removeChild(textArea);
   }
-  function copyTextToClipboard(text) {
+
+  function copyTextToClipboard(eleID) {
+	  var text = document.getElementById(eleID).innerText;
 	if (!navigator.clipboard) {
 	  fallbackCopyTextToClipboard(text);
 	  return;

@@ -341,10 +341,10 @@
 								</div>
 							</cfif>
 								<div class="pull-right" style="margin-right:10px">
-									<button class="copy-btn btn btn-default" onclick="copyTextToClipboard('#encodeForHTML(ex.code)#')" ><span class="glyphicon glyphicon-copy"></span>&nbsp; Copy Code</button>
+									<button class="copy-btn btn btn-default" onclick="copyTextToClipboard('code#example_index#')" ><span class="glyphicon glyphicon-copy"></span>&nbsp; Copy Code</button>
 								</div>
 							<p class="clearfix">#autoLink(ex.description)#</p>
-							<pre class="prettyprint"><code>#encodeForHTML(ex.code)#</code></pre>
+							<pre class="prettyprint"><code id="code#example_index#">#encodeForHTML(ex.code)#</code></pre>
 							<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
 								<p><strong>Expected Result: </strong> #encodeForHTML(ex.result)#</p>
 							</cfif>
