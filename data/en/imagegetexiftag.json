@@ -4,7 +4,7 @@
 	"syntax":"imageGetEXIFTag(name, tagName)",
 	"member":"someImage.getEXIFTag(tagName)",
 	"returns":"string",
-	"related":["imageGetExifMetaData"],
+	"related":["imageGetEXIFMetadata"],
 	"description":" Retrieves the specified EXIF tag in an image.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},

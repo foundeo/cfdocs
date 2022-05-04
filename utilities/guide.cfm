@@ -17,7 +17,7 @@
 		writeOutput(
 			'## Discouraged'
 			& crlf & crlf
-			& '####The following tags/functions are discouraged to use'
+			& '#### The following tags/functions are discouraged to use'
 		);
 	}
 
@@ -26,7 +26,7 @@
 		writeOutput(
 			'## Deprecated'
 			& crlf & crlf
-			& '####The following tags/functions are deprecated'
+			& '#### The following tags/functions are deprecated'
 		);
 	}
 
@@ -35,7 +35,7 @@
 		writeOutput(
 			'## Adobe ColdFusion only'
 			& crlf & crlf
-			& '####The following tags/functions are Adobe ColdFusion only'
+			& '#### The following tags/functions are Adobe ColdFusion only'
 		);
 	}
 
@@ -44,18 +44,18 @@
 		writeOutput(
 			'## Lucee only'
 			& crlf & crlf
-			& '####The following tags/functions are Lucee only'
+			& '#### The following tags/functions are Lucee only'
 		);
 	}
 
 	/* loop all files from datadir */
-	for (file in directoryList(dataDir)) {
+	for (file in directoryList(path=dataDir, sort="Name")) {
 		dataStruct = deserializeJSON(fileRead(file));
 
 		/* get files with discouraged tags/functions and append them to the file */
 		if (structKeyExists(dataStruct, 'discouraged')) {
 			discouragedFileContent &= crlf & crlf;
-			discouragedFileContent &= '###### `' & dataStruct['name'] & '`';
+			discouragedFileContent &= '`' & dataStruct['name'] & '`';
 
 			discouragedFileContent &= crlf & crlf;
 			discouragedFileContent &= dataStruct['discouraged'];
@@ -66,10 +66,9 @@
 			for (engine in dataStruct['engines']) {
 				if (structKeyExists(dataStruct['engines'][engine], 'deprecated')) {
 					deprecatedFileContent &= crlf & crlf;
-					deprecatedFileContent &= '###### `' & dataStruct['name'] & '`';
+					deprecatedFileContent &= '`' & dataStruct['name'] & '`';
 
-					deprecatedFileContent &= crlf & crlf;
-					deprecatedFileContent &= 'Deprecated as of ' & engineMap[engine] & ' ' & dataStruct['engines'][engine]['deprecated'];
+					deprecatedFileContent &= ' - Deprecated as of ' & engineMap[engine] & ' ' & dataStruct['engines'][engine]['deprecated'];
 				}
 			}
 		}
@@ -79,20 +78,18 @@
 			for (engine in dataStruct['engines']) {
 				if (engine == 'coldfusion') {
 					acfonlyFileContent &= crlf & crlf;
-					acfonlyFileContent &= '###### `' & dataStruct['name'] & '`';
+					acfonlyFileContent &= '`' & dataStruct['name'] & '`';
 
 					if (dataStruct['engines'][engine]['minimum_version'] != '') {
-						acfonlyFileContent &= crlf & crlf;
-						acfonlyFileContent &= 'Minimum Version: ' & dataStruct['engines'][engine]['minimum_version'];
+						acfonlyFileContent &= ' - Minimum Version: ' & dataStruct['engines'][engine]['minimum_version'];
 					}
 				}
 				else if (engine == 'lucee') {
 					luceeonlyFileContent &= crlf & crlf;
-					luceeonlyFileContent &= '###### `' & dataStruct['name'] & '`';
+					luceeonlyFileContent &= '`' & dataStruct['name'] & '`';
 
 					if (dataStruct['engines'][engine]['minimum_version'] != '') {
-						luceeonlyFileContent &= crlf & crlf;
-						luceeonlyFileContent &= 'Minimum Version: ' & dataStruct['engines'][engine]['minimum_version'];
+						luceeonlyFileContent &= ' - Minimum Version: ' & dataStruct['engines'][engine]['minimum_version'];
 					}
 				}
 			}

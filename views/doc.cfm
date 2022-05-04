@@ -266,10 +266,62 @@
 				</cfloop>
 			</ul>
 		</cfif>
+		<cfif StructKeyExists(request,'gitFilePath') and StructKeyExists(data, "type") and (data.type is "tag" or data.type is "function")>
+			<h2 id="examples">
+				Examples 
+				<button type="button" style="margin-left:5px" class="btn btn-primary" data-toggle="modal" data-target=".add-example-modal-lg"><span class="glyphicon glyphicon-plus"></span> Add An Example</button>
+				<div>
+					<small>sample code <cfif data.type IS "function">invoking<cfelse>using</cfif> the #data.name# <cfif data.type IS "tag">tag<cfelse>function</cfif></small>
+				</div>
+			</h2>
+			
 
+			<div class="modal fade add-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="gridSystemModalLabel">Add an Example for: #data.name#</h4>
+						<div>Use this form to create the Serialized JSON string needed to add an example into the docs.</div>
+						
+					  </div>
+					  <div class="modal-body">
+						<div class="row form">
+							<div class="col-md-7">
+						
+								<input type="text" id="example-form-title" class="form-control" value="" placeholder="Title">
+								<br> 
+								<input  type="text" id="example-form-description" class="form-control" value="" placeholder="Description">
+								<br> 
+					
+								<textarea  id="example-form-code" placeholder="Code" class="form-control" rows="8"></textarea>
+								<br>
+					
+								<input  type="text" id="example-form-result" class="form-control" value="" placeholder="Expected Result or Output of the Code Example">
+								<br> 
+								<select id="example-form-runnable" class="form-control">
+									<option value="0">No - Do not show Run Code Button</option>
+									<option value="1" selected="selected">Yes - Show Run Code Button</option>
+								</select>
+							</div>
+							
+							<div class="col-md-5">
+								<ol style="margin-left: -21px;">
+								<li>Copy the generated code below	</li>				
+								<li><a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" target="_blank" rel="nofollow" class="label label-danger">Click Here to edit doc for: #data.name#</a></li>
+								<li> Update doc by adding the example in the examples section</li>
+								<li> Scroll to the bottom and click "Propose Change"</li>
+							</ol>
+								<textarea rows="14" id="example-form-output" class="form-control" ></textarea>
+							</div>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>	
+		</cfif>
 		<cfif StructKeyExists(data, "examples") AND IsArray(data.examples) AND ArrayLen(data.examples)>
 			<cfset request.hasExamples = true>
-			<h2 id="examples">Examples <small>sample code <cfif data.type IS "function">invoking<cfelse>using</cfif> the #data.name# <cfif data.type IS "tag">tag<cfelse>function</cfif></small></h2>
 			<cfset example_index = 0>
 			<cfloop array="#data.examples#" index="ex">
 				<cfset example_index = example_index + 1>
@@ -288,6 +340,9 @@
 									<button class="example-btn btn btn-default" data-name="#encodeForHTMLAttribute(LCase(data.name))#" data-index="#example_index#"><span class="glyphicon glyphicon-play-circle"></span>&nbsp; Run Code</button>
 								</div>
 							</cfif>
+								<div class="pull-right" style="margin-right:10px">
+									<button class="copy-btn btn btn-default" onclick="copyTextToClipboard('#encodeForHTML(ex.code)#')" ><span class="glyphicon glyphicon-copy"></span>&nbsp; Copy Code</button>
+								</div>
 							<p class="clearfix">#autoLink(ex.description)#</p>
 							<pre class="prettyprint"><code>#encodeForHTML(ex.code)#</code></pre>
 							<cfif StructKeyExists(ex, "result") AND Len(ex.result)>
@@ -312,6 +367,7 @@
 		</cfif>
 	</div>
 </cfoutput>
+<!--- // TryCF Editor Scripts --->
 <cffunction name="replaceScript">
 	<cfargument name="name" type="string" required="true">
 	<cfargument name="mode" type="string" required="true">

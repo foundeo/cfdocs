@@ -71,11 +71,12 @@ $(document).ready(function() {
 	      $('#example-modal-content').html('<iframe width="100%" height="450" border="0" src="/try/' + name + '/' + index + '">');
 	      $('.example-modal').modal();      
 	  });
-
+	  if(!$("pre").hasClass('prettyprint')) $("pre").addClass('prettyprint');
 	  if ($('.prettyprint').length != 0 && typeof(prettyPrint) == "function") {
 	      prettyPrint();
 	  }
-	//   if (window.innerWidth > 780) {
+
+	  //   if (window.innerWidth > 780) {
 	//     $( window ).scroll(function(e) {
 	// 	var top  = window.pageYOffset || document.documentElement.scrollTop;
 	// 	//show/hide
@@ -83,7 +84,67 @@ $(document).ready(function() {
 	//     });
 	//   }
 
+	  
+	  //Generate JSON needed for adding an example to a doc
+	$('#example-form-title').keyup(updateGenExample);
+	$('#example-form-description').keyup(updateGenExample);
+	$('#example-form-code').keyup(updateGenExample);
+	$('#example-form-result').keyup(updateGenExample);
+	$('#example-form-runnable').change(updateGenExample);
+	function updateGenExample() {
+		var title = $('#example-form-title').val();
+		var description = $('#example-form-description').val();
+		var code = $('#example-form-code').val();
+		var result = $('#example-form-result').val();
+		var runnable = $('#example-form-runnable').val();
+		
+		var outputString = {
+			"title":title,
+			"description":description,
+			"code":code,
+			"result":result,
+			"runnable":runnable
+		};
+		$('#example-form-output').val(JSON.stringify(outputString, null, "\t"));
+	}
+
 });
+//copy to clipboard
+function fallbackCopyTextToClipboard(text) {
+	var textArea = document.createElement("textarea");
+	textArea.value = text;
+	
+	// Avoid scrolling to bottom
+	textArea.style.top = "0";
+	textArea.style.left = "0";
+	textArea.style.position = "fixed";
+  
+	document.body.appendChild(textArea);
+	textArea.focus();
+	textArea.select();
+  
+	try {
+	  var successful = document.execCommand('copy');
+	  var msg = successful ? 'successful' : 'unsuccessful';
+	  console.log('Fallback: Copying text command was ' + msg);
+	} catch (err) {
+	  console.error('Fallback: Oops, unable to copy', err);
+	}
+  
+	document.body.removeChild(textArea);
+  }
+  function copyTextToClipboard(text) {
+	if (!navigator.clipboard) {
+	  fallbackCopyTextToClipboard(text);
+	  return;
+	}
+	navigator.clipboard.writeText(text).then(function() {
+	  console.log('Async: Copying to clipboard was successful!');
+	}, function(err) {
+	  console.error('Async: Could not copy text: ', err);
+	});
+  }
+
 //search submit
 function submitSearch(e) {
 	e.preventDefault();
