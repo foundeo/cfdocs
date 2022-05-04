@@ -3,6 +3,8 @@
 <cfif url.name IS "index">
 	<cfset data = {name="CFDocs", description="Ultra Fast CFML Documentation", type="index"}>
 <cfelseif FileExists(ExpandPath("./guides/en/#url.name#.md")) OR url.name is "how-to-contribute">
+
+	<cfset request.hasExamples = true>
 	<cftry>
 		<!--- convert md to HTML --->
 		<cfset flexmark = new lib.Processor() >
