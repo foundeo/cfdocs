@@ -1,255 +1,255 @@
 # Lucee only
 
-##The following tags/functions are Lucee only
-
-`componentCacheClear`
-
-`listItemTrim`
-
-`getLuceeID`
-
-`entityNameArray`
-
-`cfusion_Decrypt`
-
-`empty`
-
-`imageFonts`
-
-`collectionEvery`
-
-`esapiDecode`
-
-`isNotMap`
-
-`queryColumnArray`
-
-`imageFilterCurves`
-
-`systemCacheClear`
-
-`structKeyTranslate`
-
-`echo`
-
-`pagePoolList`
-
-`listTrim`
-
-`createUniqueID`
-
-`extensionExists` - Minimum Version: 5.3
-
-`render` - Minimum Version: 5
-
-`contractPath`
-
-`cacheClear`
-
-`pagePoolClear`
-
-`collectionEach`
-
-`sizeOf`
-
-`arrayMid`
-
-`esapiEncode` - Minimum Version: 4.5
-
-`array`
-
-`query`
-
-`createGUID`
-
-`cfretry`
-
-`argon2CheckHash` - Minimum Version: 5.3.8
-
-`nullValue`
-
-`cacheGetAll`
-
-`generateArgon2Hash` - Minimum Version: 5.3.8
-
-`queryGetCell`
-
-`dayOfWeekShortAsString`
-
-`ctCacheClear`
-
-`arrayToStruct`
-
-`imageFilterWarpGrid`
-
-`listEvery`
-
-`compress`
-
-`systemOutput`
-
-`imageFormats`
-
-`imageFilterKernel`
-
-`htmlParse`
-
-`imageFilterColorMap`
-
-`webserviceNew` - Minimum Version: 5
-
-`cfwhile`
-
-`parseNumber`
-
-`cfadmin`
-
-`ucFirst`
-
-`getFunctionKeywords`
-
-`newLine`
-
-`cacheGetDefaultCacheName`
-
-`isIPInRange`
-
-`listAvg`
-
-`sessionstartTime`
-
-`urlEncode`
-
-`collectionMap`
-
-`getBuiltinFunction`
-
-`imageDrawImage` - Minimum Version: 4.5
-
-`componentCacheList`
-
-`cfstopwatch`
-
-`queryColumnExists`
-
-`collectionFilter`
-
-`getApplicationSettings`
-
-`imageSetDrawingAlpha`
+## The following tags/functions are Lucee only
 
 `applicationStartTime`
 
-`cfusion_Encrypt`
+`argon2CheckHash` - Minimum Version: 5.3.8
 
-`collectionSome`
-
-`arrayMedian`
-
-`entityNameList`
-
-`getTagData`
-
-`sslCertificateList`
-
-`isVideoFile`
-
-`soundEx`
-
-`bundleInfo` - Minimum Version: 5
-
-`imageFilter`
-
-`getTagList`
-
-`beat`
-
-`hash40`
-
-`getLocaleInfo` - Minimum Version: 5
-
-`ctCacheList`
-
-`nowServer`
-
-`cfpageencoding`
-
-`lsDayOfWeek`
-
-`queryRowData`
-
-`isEmpty`
-
-`extensionList` - Minimum Version: 5.3
-
-`arrayReverse`
-
-`isZipFile`
-
-`sslCertificateInstall`
-
-`manifestRead` - Minimum Version: 5
-
-`listCompact`
-
-`queryColumnData`
-
-`queryCurrentRow`
-
-`getVariable`
-
-`componentInfo`
-
-`getMemoryUsage`
-
-`queryColumnCount`
-
-`metaphone`
-
-`cacheDelete`
-
-`toNumeric`
-
-`getLocaleLanguage`
+`array`
 
 `arrayIndexExists`
 
-`extract`
+`arrayMedian`
 
 `arrayMerge`
 
-`listIndexExists`
+`arrayMid`
 
-`getFunctionData`
+`arrayReverse`
 
-`monthShortAsString`
+`arrayToStruct`
 
-`unserializeJava`
+`beat`
 
-`collectionReduce`
+`bundleInfo` - Minimum Version: 5
+
+`cacheClear`
 
 `cacheCount`
 
+`cacheDelete`
+
+`cacheGetAll`
+
+`cacheGetDefaultCacheName`
+
 `cacheKeyExists`
 
-`getClassPath`
+`cfadmin`
 
-`stringLen`
+`cfpageencoding`
 
-`getLocaleCountry`
-
-`trueFalseFormat`
-
-`lsWeek`
+`cfretry`
 
 `cfsleep`
 
-`queryColumnList`
+`cfstopwatch`
 
-`listSome`
+`cfusion_Decrypt`
 
-`millisecond`
+`cfusion_Encrypt`
+
+`cfwhile`
+
+`collectionEach`
+
+`collectionEvery`
+
+`collectionFilter`
+
+`collectionMap`
+
+`collectionReduce`
+
+`collectionSome`
+
+`componentCacheClear`
+
+`componentCacheList`
+
+`componentInfo`
+
+`compress`
+
+`contractPath`
+
+`createGUID`
+
+`createUniqueID`
+
+`ctCacheClear`
+
+`ctCacheList`
+
+`dayOfWeekShortAsString`
+
+`each`
+
+`echo`
+
+`empty`
+
+`entityNameArray`
+
+`entityNameList`
+
+`esapiDecode`
+
+`esapiEncode` - Minimum Version: 4.5
+
+`extensionExists` - Minimum Version: 5.3
+
+`extensionList` - Minimum Version: 5.3
+
+`extract`
+
+`generateArgon2Hash` - Minimum Version: 5.3.8
+
+`getApplicationSettings`
+
+`getBuiltinFunction`
+
+`getClassPath`
 
 `getCurrentContext`
 
-`each`
+`getFunctionData`
+
+`getFunctionKeywords`
+
+`getLocaleCountry`
+
+`getLocaleInfo` - Minimum Version: 5
+
+`getLocaleLanguage`
+
+`getLuceeID`
+
+`getMemoryUsage`
+
+`getTagData`
+
+`getTagList`
+
+`getVariable`
+
+`hash40`
+
+`htmlParse`
+
+`imageDrawImage` - Minimum Version: 4.5
+
+`imageFilter`
+
+`imageFilterColorMap`
+
+`imageFilterCurves`
+
+`imageFilterKernel`
+
+`imageFilterWarpGrid`
+
+`imageFonts`
+
+`imageFormats`
+
+`imageSetDrawingAlpha`
+
+`isEmpty`
+
+`isIPInRange`
+
+`isNotMap`
+
+`isVideoFile`
+
+`isZipFile`
+
+`listAvg`
+
+`listCompact`
+
+`listEvery`
+
+`listIndexExists`
+
+`listItemTrim`
+
+`listSome`
+
+`listTrim`
+
+`lsDayOfWeek`
+
+`lsWeek`
+
+`manifestRead` - Minimum Version: 5
+
+`metaphone`
+
+`millisecond`
+
+`monthShortAsString`
+
+`newLine`
+
+`nowServer`
+
+`nullValue`
+
+`pagePoolClear`
+
+`pagePoolList`
+
+`parseNumber`
+
+`query`
+
+`queryColumnArray`
+
+`queryColumnCount`
+
+`queryColumnData`
+
+`queryColumnExists`
+
+`queryColumnList`
+
+`queryCurrentRow`
+
+`queryGetCell`
+
+`queryRowData`
+
+`render` - Minimum Version: 5
+
+`sessionstartTime`
+
+`sizeOf`
+
+`soundEx`
+
+`sslCertificateInstall`
+
+`sslCertificateList`
+
+`stringLen`
+
+`structKeyTranslate`
+
+`systemCacheClear`
+
+`systemOutput`
+
+`toNumeric`
+
+`trueFalseFormat`
+
+`ucFirst`
+
+`unserializeJava`
+
+`urlEncode`
+
+`webserviceNew` - Minimum Version: 5
