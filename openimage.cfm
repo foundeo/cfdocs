@@ -23,8 +23,6 @@
 		filename = "defaultimage.jpg";
 	}
 
-	//writeDump(imageFonts());
-
 	if(FileExists( ExpandPath(filepath & filename) )){
 		location(url=filepath & filename, addtoken=false);
 	} 
@@ -37,9 +35,9 @@
 	img.setAntialiasing("on");
 
 	//Write Tag/Function Name
-	style={size="35", font="SansSerif.bold"};
-	style2={size="15", font="SansSerif.bold"};
-	style4={size="12", font="SansSerif.bold"};
+	style={size="35", font="DejaVu Sans"};
+	style2={size="15", font="DejaVu Sans"};
+	style4={size="12", font="DejaVu Sans"};
 	img.setDrawingColor("##333333")
 	img.DrawText(data.name,hPos,vPos,style);
 	vPos += 20;
