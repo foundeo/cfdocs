@@ -40,11 +40,11 @@ component accessors=true singleton {
 			// Set the anchor id but also the name
 			achorSetName             : true,
 			// Do we create the anchor for the full header or just before it. True is wrap, false is just create anchor tag
-			anchorWrapText           : false,
+			anchorWrapText           : true,
 			// The class(es) to apply to the anchor
-			anchorClass              : "anchor",
+			anchorClass              : "headinglink",
 			// raw html prefix. Added before heading text, wrapped or unwrapped
-			anchorPrefix             : "",
+			anchorPrefix             : " ",
 			// raw html suffix. Added before heading text, wrapped or unwrapped
 			anchorSuffix             : "",
 			// Enable youtube embedded link transformer
