@@ -109,6 +109,24 @@ nav.navbar.navbar-mini	.navbar-nav>li {
   overflow-y: visible;
 }
 
+.headinglink {
+  color: #333333;
+  position: relative;
+}
+.headinglink:hover  {
+  color: #333333;
+  text-decoration: none;
+}
+.headinglink:hover::before  {
+  content: "\e144";
+  font-family: "Glyphicons Halflings";
+  color: #333333;
+  width: 0;
+  position: absolute;
+  left: -20px;
+  font-size: 56%;
+  line-height: 200%;
+}
 .tt-menu {
   width: 100%;
   min-width: 160px;
