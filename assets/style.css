@@ -16,7 +16,6 @@ h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier Ne
 .p-desc { padding: 8px; margin: 0 5%; }
 .listing a { margin-right: 15px; margin-bottom: 15px; font-size: larger }
 .listing h2 { margin: inherit; font-size: inherit; padding: inherit; border: none; display: inline }
-h2 { text-transform: uppercase; }
 .listing { text-align: center; }
 #syntax { font-weight:bold; }
 #syntax > code { white-space: pre; padding: 0; }
@@ -70,7 +69,7 @@ nav.navbar.navbar-mini {
   margin-bottom: 0;
   border: none;
 }
-nav.navbar.navbar-mini ul  {
+nav.navbar.navbar-mini ul {
   white-space:nowrap;
   overflow: auto;
     overflow-y: hidden;
@@ -88,7 +87,7 @@ nav.navbar.navbar-mini ul {
 }
 nav.navbar.navbar-mini ul li a {
   padding: 13px 12px 9px 12px;
-    margin-bottom: -3px;
+  margin-bottom: -3px;
 }
 nav.navbar.navbar-mini .navbar-header {
   width: 100%;
@@ -171,7 +170,7 @@ nav.navbar.navbar-mini	.navbar-nav>li {
     border: 1px solid transparent;
     color:#ccc;
 }
-.breadcrumb li.pull-right:before { content: " ";}
+.breadcrumb li.pull-right:before { content: " "; }
 .breadcrumb li.divider:before { content: "|"; padding-right:0px; padding-left:8px; }
 .breadcrumb hr { margin:3px; }
 footer { text-align: center; margin-top: 10px; font-size:smaller; }
@@ -207,24 +206,24 @@ footer { text-align: center; margin-top: 10px; font-size:smaller; }
   color: #fff;
 }
 /* for use in page anchor - moves -100px to allow space for toolbar */
-.page-anchor{
+.page-anchor {
   position:absolute;
   margin-top:-80px;
 }
 /* normal placement in examples */
-p.clearfix .page-anchor{
+p.clearfix .page-anchor {
   position:absolute;
   margin-top:-100px;
 }
 
-iframe { border:0px;}
+iframe { border:0px; }
 
 .contributor { background-color: #f1f1f1; border-radius: 7px; margin: 5px 0; padding:15px 10px; }
 .contributor img { width: 75px; height: 75px; display: block; margin: 0 auto; }
 
 pre.prettyprint {
-	padding: 5px 8px !important;
-	border: 1px solid #CCC !important;
+  padding: 5px 8px !important;
+  border: 1px solid #CCC !important;
   font-size: 14px;
   line-height: 21px;
 }
@@ -237,31 +236,31 @@ pre.prettyprint {
 }
 
 .issuecount {
-	padding: 2px 5px;
+  padding: 2px 5px;
 }
 
 .issuebutton {
-	color: white;
-	padding-left: 2px;
-	padding-right: 5px;
+  color: white;
+  padding-left: 2px;
+  padding-right: 5px;
 }
 
 :target::before {
-	content: "";
-	display: block;
-	margin-top: -55px;
-	height: 55px;
-	width: 1px
+  content: "";
+  display: block;
+  margin-top: -55px;
+  height: 55px;
+  width: 1px
 }
 
 .dropdown-menu.scrollable-menu {
-	max-height: 300px;
-	overflow-x: hidden;
+  max-height: 300px;
+  overflow-x: hidden;
 }
 
 .related .label { margin-right: 4px; }
 
-nav.navbar ul.dropdown-menu{
+nav.navbar ul.dropdown-menu {
   max-height: 80vh;
   overflow-y: auto;
 }
