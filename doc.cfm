@@ -13,7 +13,7 @@
 		<cfset request.gitFilePath = "/tree/master/guides/en/"&(url.name is "how-to-contribute" ? 'CONTRIBUTING' : url.name)&".md">
 		<cfcatch>
 			<cfset data = "Error processing markdown: #encodeForHTML(cfcatch.message)# #encodeForHTML(cfcatch.detail)#">
-			<cfset data &= "Make sure you have installed the textMark jar file in the lib directory used to process the markup files.">
+			<cfset data &= "Make sure you have installed the flexmark jar file in the lib directory used to process the markup files.">
 			<cfset applicationStop()>
 		</cfcatch>
 	</cftry>
