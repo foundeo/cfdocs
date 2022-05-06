@@ -1,67 +1,67 @@
 # Application.cfc
 
 ## Example: Full Application/Request Lifecycle Methods
+
 This shows all of the built-in Application.cfc methods.
 [Application variables](https://helpx.adobe.com/coldfusion/cfml-reference/application-cfc-reference/application-variables.html) are explained in Adobe's Application.cfc documentation.
 
-```cfc
+```cfml
 component {
-	this.name = "YourAppName" & hash(getCurrentTemplatePath()); 
-	this.applicationTimeout = createTimeSpan(1,0,0,0); 
-	this.sessionTimeout = createTimeSpan(1,0,0,0); 
-	this.sessionManagement = true; 
-	this.setClientCookies = false; 
+    this.name = "YourAppName" & hash(getCurrentTemplatePath());
+    this.applicationTimeout = createTimeSpan(1,0,0,0);
+    this.sessionTimeout = createTimeSpan(1,0,0,0);
+    this.sessionManagement = true;
+    this.setClientCookies = false;
 
-	public boolean function onApplicationStart() { 
-		return true; 
-	} 
+    public boolean function onApplicationStart() {
+        return true;
+    }
 
-	public void function onApplicationEnd(struct applicationScope={}) { 
-		return; 
-	} 
+    public void function onApplicationEnd(struct applicationScope={}) {
+        return;
+    }
 
-	public void function onSessionStart() { 
-		return; 
-	} 
+    public void function onSessionStart() {
+        return;
+    } 
 
-	public void function onSessionEnd(required struct sessionScope, struct applicationScope={}) { 
-		return; 
-	} 
+    public void function onSessionEnd(required struct sessionScope, struct applicationScope={}) {
+        return;
+    }
 
-	public boolean function onRequestStart(required string targetPage) { 
-		return true; 
-	} 
+    public boolean function onRequestStart(required string targetPage) {
+        return true;
+    }
 
-	public void function onRequest(required string targetPage) { 
-		include arguments.targetPage; 
-		return; 
-	} 
+    public void function onRequest(required string targetPage) {
+        include arguments.targetPage;
+        return;
+    }
 
-	public void function onCFCRequest(string cfcname, string method, struct args) { 
-		return; 
-	} 
+    public void function onCFCRequest(string cfcname, string method, struct args) {
+        return;
+    }
 
-	public void function onRequestEnd() { 
-		return; 
-	} 
+    public void function onRequestEnd() {
+        return;
+    }
 
-	public void function onAbort(required string targetPage) { 
-		return; 
-	} 
+    public void function onAbort(required string targetPage) {
+        return;
+    }
 
-	public void function onError(required any exception, required string eventName) { 
-		return; 
-	} 
+    public void function onError(required any exception, required string eventName) {
+        return;
+    }
 
-	public boolean function onMissingTemplate(required string targetPage) { 
-		return true; 
-	} 
+    public boolean function onMissingTemplate(required string targetPage) {
+        return true;
+    }
 }
 ```
 
-
-	
 ## Lifecycle Methods explained
+
 | Method             | Description                                                          |
 |--------------------|----------------------------------------------------------------------|
 | onApplicationStart | First function run when ColdFusion receives the first request for a page in the application.  |
@@ -78,23 +78,22 @@ component {
 
 ## APPLICATION Scope
 
-The `APPLICATION` scope is used for setting the information at application level, i.e. 
+The `APPLICATION` scope is used for setting the information at application level, i.e.
 
-* Application variables are usually set when the application starts, for example with the onApplicationStart event. 
+* Application variables are usually set when the application starts, for example with the onApplicationStart event.
 * Information stored in an application variable is available from anywhere within the application (any URI requested under the given Application.cfc or Application.cfm)
 * The values of variables declared in `application` scope typically do not changes throughout the lifecycle of the application.
 * The default timeout of an application scope is 2 days, but can be changed in the Administrator or by setting `this.applicationTimeout` in the Application.cfc file.
 
+### Example using onApplicationStart
 
-### Example using onApplicationStart:
-
-```cfc
+```cfml
 component {
-	this.name = "myApplication";
+    this.name = "myApplication";
 
-	function onApplicationStart() {
-		application.something = "otherthing";
-	}
+    function onApplicationStart() {
+        application.something = "otherthing";
+    }
 }
 ```
 
@@ -110,16 +109,16 @@ You should take care not to lock unnecessarily, as it may create a performance b
 
 One case where you _should_ use locking is when you are using the `application` scope on both sides of the assignment. For example:
 
-```cfc
-application.counter = application.counter + 1;
+```cfml
+application.counter += 1;
 ```
 
 The above example requires locking to ensure that a concurrent thread does not corrupt the value of the counter.
 
-```cfc
-lock scope="application" timeout="1" type="exclusive" { {
-	application.counter = application.counter + 1;
+```cfml
+lock scope="application" timeout="1" type="exclusive" {
+    application.counter += 1;
 }
 ```
 
-Keep in mind that, if the application scoped variable is written to at any time other than `onApplicationStart`, there is a possibility that the value of the application variable could change mid-request. If this is a problem, consider using `cflock` to ensure a consistent value. 
+Keep in mind that, if the application scoped variable is written to at any time other than `onApplicationStart`, there is a possibility that the value of the application variable could change mid-request. If this is a problem, consider using `cflock` to ensure a consistent value.
