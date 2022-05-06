@@ -6,38 +6,31 @@
 	<cfif NOT FindNoCase("cfdocs.org", cgi.server_name)><meta name="ROBOTS" content="NOINDEX, NOFOLLOW"></cfif>
 	<cfparam name="request.title" default="">
 	<cfparam name="request.assetBaseURL" default="/assets/">
+	<cfparam name="request.description" default="CFML Documentation Reference: #request.title#">
+	<cfparam name="request.ogname" default="">
 	<title><cfoutput>#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation</cfoutput></title>
 	<link href="https://cdn.jsdelivr.net/npm/bootswatch@3.3.7/lumen/bootstrap.min.css" rel="stylesheet">
 	<cfparam name="request.hasExamples" default="false">
 	<cfif request.hasExamples><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-themes-for-google-code-prettify@2.0.4/dist/themes/tomorrow-night-bright.min.css" /></cfif>
 	<cfoutput><link href="#request.assetBaseURL#style.css" rel="stylesheet"></cfoutput>
 	<link rel="search" type="application/opensearchdescription+xml" title="Search CFML Documentation" href="/opensearch.xml" />
-	<!--[if lt IE 9]>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"></script>
-	<![endif]-->
 	<cfoutput>
-		<cfset ogname = "">
-		<cfset ogdescription = "UltraFast CFML Documentation Reference">
-		<cfif isDefined("data") && isStruct(data)>
-			<cfif structkeyExists(data,'name')><cfset ogname = data.name></cfif>
-			<cfif structkeyExists(data,'description')><cfset ogdescription = data.description></cfif>
-		</cfif> 
+		<meta name="description" content="#encodeForHTMLAttribute(request.description)#">
 		<meta property="og:title" content="#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation">
 		<meta property="og:site_name" content="CF Docs">
-		<meta property="og:url" content="https://cfdocs.org/#EncodeForHTMLAttribute(lcase(ogname))#">
-		<meta property="og:description" content="#EncodeForHTMLAttribute(ogdescription)#">
+		<meta property="og:url" content="https://cfdocs.org/#EncodeForHTMLAttribute(lcase(request.ogname))#">
+		<meta property="og:description" content="#EncodeForHTMLAttribute(request.description)#">
 		<meta property="og:type" content="website">
-		<meta property="og:image" content="https://cfdocs.org/openimage.cfm?name=#EncodeForHTMLAttribute(lcase(ogname))#">
-		<meta property="og:image:alt" content="#EncodeForHTMLAttribute(ogdescription)#" />
+		<meta property="og:image" content="https://cfdocs.org/openimage.cfm?name=#EncodeForHTMLAttribute(lcase(request.ogname))#">
+		<meta property="og:image:alt" content="#EncodeForHTMLAttribute(request.description)#" />
 		<meta property="og:image:width" content="512" />
 		<meta property="og:image:height" content="256" />
 		
-		<meta name="twitter:image:src" content="https://cfdocs.org/openimage.cfm?name=#EncodeForHTMLAttribute(lcase(ogname))#" />
+		<meta name="twitter:image:src" content="https://cfdocs.org/openimage.cfm?name=#EncodeForHTMLAttribute(lcase(request.ogname))#" />
 		<meta name="twitter:site" content="CF Docs" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation" />
-		<meta name="twitter:description" content="#EncodeForHTMLAttribute(ogdescription)#" />
+		<meta name="twitter:description" content="#EncodeForHTMLAttribute(request.description)#" />
 </cfoutput>
 </head>
 <body>

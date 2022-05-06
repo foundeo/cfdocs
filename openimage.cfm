@@ -18,9 +18,19 @@
 		//dump(docsData);
 		structAppend(data,docsData,true);
 		urlPath = '/' &  url.name;
+	} else if (FileExists(ExpandPath("./guides/en/#url.name#.md"))) {
+		filename = "#url.name#.jpg";
+		urlPath = '/' &  url.name;
+		md = listFirst(trim(fileRead(ExpandPath("./guides/en/#url.name#.md"))), chr(13)&chr(10));
+		if (left(md, 1) == "##") {
+			data.name = trim(replace(md, "##", "", "ALL"));
+		} else {
+			data.name = replace(url.name, "-", " ", "ALL") & " Guide";
+		}
+		data.description = "CFML Reference Guide";
 	} else {
-		urlPath = "";
-		filename = "defaultimage.jpg";
+		location(url="/assets/img/cfdocs-default-og.jpg", addtoken=false);
+		abort;
 	}
 
 	if(FileExists( ExpandPath(filepath & filename) )){

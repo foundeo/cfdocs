@@ -3,7 +3,7 @@
 <cfif url.name IS "index">
 	<cfset data = {name="CFDocs", description="Ultra Fast CFML Documentation", type="index"}>
 <cfelseif FileExists(ExpandPath("./guides/en/#url.name#.md")) OR url.name is "how-to-contribute">
-
+	<cfset request.ogname = url.name>
 	<cfset request.hasExamples = true>
 	<cftry>
 		<!--- convert md to HTML --->
@@ -19,6 +19,7 @@
 	</cftry>
 <cfelseif FileExists(ExpandPath("./data/en/#url.name#.json"))>
 	<cfset data = DeserializeJSON( FileRead(ExpandPath("./data/en/#url.name#.json")))>
+	<cfset request.ogname = url.name>
 	<cfset request.gitFilePath = "/edit/master/data/en/" & url.name & ".json">
 <cfelse>
 	<cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9._-]", "", "ALL")>
@@ -46,6 +47,9 @@
 	<cfset request.title = data.name>
 	<cfif structKeyExists(data, "examples") AND arrayLen(data.examples) GT 0>
 		<cfset request.title = request.title & " Code Examples and">
+	</cfif>
+	<cfif data.keyExists("description")>
+		<cfset request.description = data.description>
 	</cfif>
 	<cfinclude template="views/doc.cfm">
 <cfelse>
