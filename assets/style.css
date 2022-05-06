@@ -260,3 +260,8 @@ pre.prettyprint {
 }
 
 .related .label { margin-right: 4px; }
+
+nav.navbar ul.dropdown-menu{
+  max-height: 80vh;
+  overflow-y: auto;
+}
