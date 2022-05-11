@@ -1,15 +1,19 @@
 {
 	"name":"listSort",
 	"type":"function",
-	"syntax":"listSort(list, sort_type [, sort_order] [, delimiters])",
+	"syntax":"listSort(list, sortType [, sortOrder] [, delimiters] [, includeEmptyFields] [, localeSensitive])\nor\nlistSort(list, callback)",
+	"member":"list.listSort(sortType [, sortOrder])",
 	"returns":"string",
 	"related":["structSort","arraySort","querySort"],
-	"description":" Sorts list elements according to a sort type and sort order.\n Returns a sorted copy of the list.\n [sort_type - quicky]\n numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n - aabzABZ, if sort_order = \"asc\"\n - ZBAzbaa, if sort_order = \"desc\"\n textnocase: sorts text alphabetically, without regard to case\n - aAaBbBzzZ, in an asc sort;\n - ZzzBbBaAa, in a desc sort;",
+	"description":"Sorts list elements according to a sort type and sort order. Returns a sorted copy of the list.\n [sortType - description]\n numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n - aabzABZ, if sort_order = \"asc\"\n - ZBAzbaa, if sort_order = \"desc\"\n textnocase: sorts text alphabetically, without regard to case\n - aAaBbBzzZ, in an asc sort;\n - ZzzBbBaAa, in a desc sort;",
 	"params": [
 		{"name":"list","description":"A list or variable name","required":true,"default":"","type":"string","values":[]},
-		{"name":"sort_type","description":"numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n (also known as case-sensitive).\n - aabzABZ for ascending sort(sort_order = \"asc\")\n - ZBAzbaa for descending sort(sort_order = \"desc\")\n\n textnocase: sorts text alphabetically, without regard to\n case (also known as case-insensitive).\n - aAaBbBzzZ for ascending sort(sort_order = \"asc\")\n - ZzzBbBaAa for descending sort(sort_order = \"desc\")","required":true,"default":"","type":"string","values":[]},
-		{"name":"sort_order","description":"","required":false,"default":"asc","type":"string","values":["asc: ascending (a to z) sort order.","desc: descending (z to a) sort order" ]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]}
+		{"name":"sortType","description":"numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n (also known as case-sensitive).\n - aabzABZ for ascending sort(sort_order = \"asc\")\n - ZBAzbaa for descending sort(sort_order = \"desc\")\n\n textnocase: sorts text alphabetically, without regard to\n case (also known as case-insensitive).\n - aAaBbBzzZ for ascending sort(sort_order = \"asc\")\n - ZzzBbBaAa for descending sort(sort_order = \"desc\")","required":true,"default":"","type":"string","values":["numeric","text","aabzABZ","ZBAzbaa","textnocase","aAaBbBzzZ","ZzzBbBaAa"]},
+		{"name":"sortOrder","description":"- asc: ascending sort order\n- desc: descending sort order","required":false,"default":"asc","type":"string","values":["asc","desc"]},
+		{"name":"delimiters","description":"Characters that separate the list elements. The default value is comma. If this parameter contains more than one character, ColdFusion uses the first character in the string as the delimiter in the output list.","required":false,"default":",","type":"string","values":[]},
+		{"name":"includeEmptyFields","description":"Set to true to include empty fields.","required":false,"default":"false","type":"boolean","values":[]},
+		{"name":"callback","description":"CF2016+ A function that uses two elements of a list. `function(element1, element2)`. Returns whether the first is less than (-1), equal to (0) or greater than (1) the second one (like the compare functions).","required":false,"default":"","type":"function","values":[]},
+		{"name":"localeSensitive","description":"CF10+ Specify if you wish to do a locale sensitive sorting.","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listsort.html"},
@@ -20,22 +24,22 @@
 	"links": [],
 	"examples": [
 		{
-		    "title": "Simple example for listSort function",
-		    "description": "Uses the listSort() function to get the list which sorted by type text(case-sensitive)",
-		    "code": "list = \"COLDFUSION,coldfusion,adobe,LucEE,RAILO\";\nsortList = listSort(list, \"Text\", \"desc\");\nwriteOutput(sortList);",
-		    "result": "coldfusion,adobe,RAILO,LucEE,COLDFUSION "
+			"title": "Simple example for listSort function",
+			"description": "Uses the listSort() function to get the list which sorted by type text(case-sensitive)",
+			"code": "list = \"COLDFUSION,coldfusion,adobe,LucEE,RAILO\";\nsortList = listSort(list, \"Text\", \"desc\");\nwriteOutput(sortList);",
+			"result": "coldfusion,adobe,RAILO,LucEE,COLDFUSION "
 		},
 		{
-		    "title": "Example for listSort function with delimiters",
-		    "description": "Uses the listSort() function with delimiters to get the list which sorted by type numeric",
-		    "code": "list = \"10;20;-99;46;50\";\nsortList = listSort(list, \"Numeric\", \"asc\", \";\");\nwriteOutput(sortList);",
-		    "result": "-99;10;20;46;50"
+			"title": "Example for listSort function with delimiters",
+			"description": "Uses the listSort() function with delimiters to get the list which sorted by type numeric",
+			"code": "list = \"10;20;-99;46;50\";\nsortList = listSort(list, \"Numeric\", \"asc\", \";\");\nwriteOutput(sortList);",
+			"result": "-99;10;20;46;50"
 		},
 		{
-		    "title": "Simple Example for listSort function using sort_type(textnocase)",
-		    "description": "Uses the listSort() function with delimiters to get the list which sorted by type textnocase(case-insensitive)",
-		    "code": "list = \"10|RED|yeLLow|-246|green|ORange\";\nsortList = listSort(list, \"TextNoCase\", \"asc\", \"|\");\nwriteOutput(sortList);",
-		    "result": "-246|10|green|ORange|RED|yeLLow"
+			"title": "Simple Example for listSort function using sortType(textnocase)",
+			"description": "Uses the listSort() function with delimiters to get the list which sorted by type textnocase(case-insensitive)",
+			"code": "list = \"10|RED|yeLLow|-246|green|ORange\";\nsortList = listSort(list, \"TextNoCase\", \"asc\", \"|\");\nwriteOutput(sortList);",
+			"result": "-246|10|green|ORange|RED|yeLLow"
 		}
 	]
 }

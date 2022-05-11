@@ -1,15 +1,15 @@
 {
 	"name":"replace",
 	"type":"function",
-	"syntax":"replace(String, substring1, substring2 [, scope])",
-	"member":"string.replace(substring1, substring2[, scope])",
+	"syntax":"replace(string, substring1, obj [, scope])",
+	"member":"string.replace(substring1, obj[, scope])",
 	"returns":"string",
-	"related":["replaceNoCase","replaceList","REReplace"],
-	"description":"Replaces occurrences of substring1 in a string with substring2,\n in a specified scope. The search is case-sensitive. Function returns original string with replacements made.",
+	"related":["replaceNoCase","replaceList","reReplace"],
+	"description":"Replaces occurrences of substring1 in a string with obj, in a specified scope. The search is case-sensitive. Function returns original string with replacements made.",
 	"params": [
-		{"name":"String","description":"String to search","required":true,"default":"","type":"string","values":[]},
-        	{"name":"substring1","description":"Substring to find within string","required":true,"default":"","type":"string","values":[]},
-        	{"name":"substring2","description":"Substring to replace substring1 with. As of CF2016+ you can also pass a callback function in this argument `function(pattern, position, originalString)`.","required":true,"default":"","type":"string","values":[]},
+		{"name":"string","description":"String to search","required":true,"default":"","type":"string","values":[]},
+		{"name":"substring1","description":"Substring to find within string","required":true,"default":"","type":"string","values":[]},
+		{"name":"obj","description":"String to replace substring1 with. As of CF2016+ you can also pass a callback function in this argument `function(transform, position, original)`.","required":true,"default":"","type":"any","values":[]},
 		{"name":"scope","description":"* one: replace the first occurrence\n * all: replace all occurrences","required":false,"default":"one","type":"string","values":["one","all"]},
 		{"name":"start","description":"CF2021+ Position to start searching in the string.","required":false,"default":"1","type":"numeric","values":[]}
 	],
@@ -21,35 +21,35 @@
 	},
 	"links": [
 		{
-		"title":"Regular expressions - practical examples",
-		"description":"There is find, replace and match functions with and without case sensitivity.",
-		"url":"https://coldfusion.adobe.com/2019/06/regular-expressions-practical-examples-get-started/"
+			"title":"Regular expressions - practical examples",
+			"description":"There is find, replace and match functions with and without case sensitivity.",
+			"url":"https://coldfusion.adobe.com/2019/06/regular-expressions-practical-examples-get-started/"
 		}
 	],
 	"examples": [
 		{
 			"title": "Replace uppercase 'U' with lowercase 'u'",
 			"description": "Replace in Script Syntax",
-			"code": "getVal = replace(\"ColdFUsion\", \"U\", \"u\"); \r\nwriteDump(getVal);",
+			"code": "getVal = replace(\"ColdFUsion\", \"U\", \"u\");\nwriteDump(getVal);",
 			"result": "ColdFusion"
 		},
 		{
 			"title": "Replace uppercase 'O' with lowercase 'o', but only once",
 			"description": "Something similar in Tag Syntax",
-			"code": "<cfset getVal1 = replace(\"COldFusiOn\", \"O\", \"o\", \"ONE\") /> \r\n<cfdump var = #getVal1# />",
+			"code": "<cfset getVal1 = replace(\"COldFusiOn\", \"O\", \"o\", \"ONE\") />\n<cfdump var = #getVal1# />",
 			"result": "ColdFusiOn"
 		},
 		{
 			"title":"Example using Callback Function",
 			"description":"In CF2016+ you can pass in a callback function to the third argument of the `replace` function",
-			"code":"public function upCase(pattern, position, orig) {\r\n    return uCase(pattern);\r\n}\r\nresult = replace(\"A man a plan a canal.\",\"an\", upCase , \"ALL\");\r\nwriteOutput(result);",
+			"code":"public function upCase(pattern, position, orig) {\n    return uCase(pattern);\n}\nresult = replace(\"A man a plan a canal.\",\"an\", upCase , \"ALL\");\nwriteOutput(result);",
 			"result":"A mAN a plAN a cANal.",
 			"runnable":true
 		},
 		{
 			"title":"Example with start argument (Replace lowercase 'o' with uppercase 'O' from the third position)",
 			"description":"In CF2021+ you can pass position to start searching in the string",
-			"code":"getRes = replace(\"Love ColdFusion\", \"o\", \"O\",\"ALL\",\"3\"); \r\nwriteDump(getRes);",
+			"code":"getRes = replace(\"Love ColdFusion\", \"o\", \"O\",\"ALL\",\"3\");\nwriteOutput(getRes);",
 			"result":"Love COldFusiOn",
 			"runnable":true
 		}

@@ -12,7 +12,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2021", "notes":"The full function was added in ACF 2021, but the member function appears to work in ACF 2018 (likely using Java).", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayunshift.html"},
-		"lucee": {"minimum_version":"5", "notes":"Implemented in 5.3.8.104-SNAPSHOT", "docs":"https://docs.lucee.org/reference/functions/arrayunshift.html"}
+		"lucee": {"minimum_version":"5.3.8", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arrayunshift.html"}
 	},
 	"links":[
 		{
@@ -23,24 +23,23 @@
 			{
 			"title":"LDEV-3137 - ACF2021 - add function ArrayUnShift",
 			"description":"Lucee Bug Report to add ACF function to Lucee.",
-"url":"https://luceeserver.atlassian.net/browse/LDEV-3137"
+			"url":"https://luceeserver.atlassian.net/browse/LDEV-3137"
 		}
-
 	],
 	"examples": [
 		{
 			"title": "Example with simple values",
 			"description": "Add a new element to an array.",
-			"code": "arr=[1,2,3];\nnewArrLen=arrayUnshift(arr,0);\nwriteOutput(newArrLen);",	
+			"code": "arr=[1,2,3];\nnewArrLen=arrayUnshift(arr,0);\nwriteOutput(newArrLen);",
 			"result": "4",
-            "runnable":true
+			"runnable":true
 		},
 		{
 			"title": "Using a member function",
 			"description": "This is the same example as above, but using a member function on the array instead of a standalone function.",
 			"code": "arr=[1,2,3];\nnewArrLen=arr.unshift(0);\nwriteOutput(newArrLen);",
 			"result": "4",
-            "runnable":true
+			"runnable":true
 		}
 	]
 }
