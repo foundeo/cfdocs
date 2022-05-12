@@ -186,7 +186,7 @@
 
 `queryReverse` - Minimum Version: 2018.0.5
 
-`queryRowSwap` - Minimum Version: 2018
+`queryRowSwap` - Minimum Version: 2018.0.5
 
 `removeCachedQuery` - Minimum Version: 10
 
