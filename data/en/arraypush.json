@@ -12,7 +12,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2021", "notes":"The full function was added in ACF 2021, but the member function appears to work in ACF 2018 (likely using Java).", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraypush.html"},
-		"lucee": {"minimum_version":"5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arraypush.html"}
+		"lucee": {"minimum_version":"5.3.8", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arraypush.html"}
 	},
 	"links": [
 		{
@@ -25,23 +25,23 @@
 		{
 			"title": "Push a value onto an array",
 			"description": "This is the full function version of arrayPush to push a value onto the end of the array.",
-			"code": "arr=[1,2,3] ;\nArrayPush(array=arr,value=42) ;\nWriteOutput('This array has ' & arrayLen(arr) & ' elements.') ;",
+			"code": "arr=[1,2,3];\narrayPush(array=arr,value=42);\nwriteOutput('This array has ' & arrayLen(arr) & ' elements.');",
 			"result": "This array has 4 elements.",
-            "runnable":true
+			"runnable":true
 		},
 		{
 			"title": "Member function version.",
 			"description": "Using the member function. This version also works in ACF2018.",
-			"code": "arr=[1,2,3];\nal=arr.push(42);\nWriteOutput('This array has ' & al & ' elements.');",
+			"code": "arr=[1,2,3];\nal=arr.push(42);\nwriteOutput('This array has ' & al & ' elements.');",
 			"result": "This array has 4 elements.",
-            "runnable":true
+			"runnable":true
 		},
 		{
 			"title": "Push an object onto an array.",
 			"description": "This demonstrates pushing an object onto an array.",
-			"code": "arr=[ [1],['two'],[{a:3}]];\nal=arr.push([42]);\nWriteOutput('This array has ' & al & ' elements.');",
+			"code": "arr=[ [1],['two'],[{a:3}]];\nal=arr.push([42]);\nwriteOutput('This array has ' & al & ' elements.');",
 			"result": "This array has 4 elements.",
-            "runnable":true
+			"runnable":true
 		}
 	]
 }

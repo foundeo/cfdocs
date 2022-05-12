@@ -13,7 +13,7 @@
 | mmm    | Month as a three-letter abbreviation.                                     |
 | mmmm   | Month as its full name.                                                   |
 | M      | Month in year.                                                            |
-| D      | Day in year.                                                              |
+| D      | Day in year. (Depends on `-Dcoldfusion.datemask.useDasdayofmonth` after CF2021U1) |
 | yy     | Year as last two digits; leading zero for years less than 10.             |
 | yyyy   | Year represented by four digits.                                          |
 | Y      | Week year                                                                 |

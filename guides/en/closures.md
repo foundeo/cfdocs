@@ -289,6 +289,7 @@ https://web.archive.org/web/20170508020042/taha-sh.com/blog/understanding-closur
 * [arrayFindAll](/arrayfindall)
 * [arrayFindAllNoCase](/arrayfindallnocase)
 * [arrayFindNoCase](/arrayfindnocase)
+* [arraySort](/arraysort)
 
 ### CF11 Closure Functions
 
@@ -308,7 +309,10 @@ https://web.archive.org/web/20170508020042/taha-sh.com/blog/understanding-closur
 * [queryMap](/querymap)
 * [structNew](/structnew) (Update 3)
 * [queryReduce](/queryreduce)
+* [replace](/replace)
+* [listSort](/listsort)
 * [querySort](/querysort)
+* [structSort](/structsort)
 * [structToSorted](/structtosorted) (Update 3)
 
 ### CF2018 Closure Functions
@@ -316,6 +320,7 @@ https://web.archive.org/web/20170508020042/taha-sh.com/blog/understanding-closur
 * [arrayEvery](/arrayevery)
 * [queryEvery](/queryevery)
 * [structEvery](/structevery)
+* [replaceNoCase](/replacenocase)
 * [arraySome](/arraysome)
 * [querySome](/querysome)
 * [structSome](/structsome)
@@ -331,5 +336,4 @@ https://web.archive.org/web/20170508020042/taha-sh.com/blog/understanding-closur
 * [arrayReduceRight](/arrayreduceright)
 * [listReduceRight](/listreduceright)
 * [stringReduceRight](/stringreduceright)
-* [replace](/replace)
 * [stringSome](/stringsome)
