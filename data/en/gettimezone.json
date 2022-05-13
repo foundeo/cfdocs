@@ -4,20 +4,20 @@
 	"syntax": "getTimeZone()",
 	"returns": "string",
 	"related": ["getTimeZoneInfo","setTimeZone","getLocale, clearTimeZone"],
-	"description": "Returns the timezone for the current request.",
+	"description": "Returns the time zone for the current request.",
 	"params": [],
 	"engines": {
-		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://helpx.adobe.com/uk/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/gettimezone.html"},
+		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/gettimezone.html"},
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/gettimezone.html"}
 	},
 	"links": [],
 	"examples": [
 		{
-			"title": "What is the current timezone that's set?",
-			"description": "Set the timezone, then retrieve it.",
-			"code": "setTimeZone(\"Etc/UTC\");\nwriteoutput(getTimeZone().timezone);",
+			"title": "What is the current time zone that's set?",
+			"description": "Set the time zone, then retrieve it.",
+			"code": "setTimeZone(\"Etc/UTC\");\nwriteOutput(getTimeZone().timezone);",
 			"result": "Etc/UTC",
-            "runnable":true
+			"runnable":true
 		}
 	]
 }
