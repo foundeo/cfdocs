@@ -9,9 +9,9 @@
             {"name":"text","description":"Text in the image captcha.","values":[],"default":"","type":"string","required":true},
             {"name":"height","description":"Height of the image captcha.","values":[],"default":"","type":"numeric","required":true},
             {"name":"width","description":"Width of the image captcha.","values":[],"default":"","type":"numeric","required":true},
-            {"name":"difficulty","description":"Width of the image captcha.","values":[],"default":"medium","type":"string","required":false},
+            {"name":"difficulty","description":"Complexity of the image captcha.","values":[],"default":"low","type":"string","required":false},
             {"name":"fonts","description":"One or more fonts for the CAPTCHA text, as an array or as string list (separated by commas). Lucee supports the system fonts recognized by JDK only.","values":[],"default":"arial","type":"any","required":false},
-            {"name":"fontsize","description":"Font size for text of the image captcha.","values":[],"default":"24","type":"any","required":false},
+            {"name":"fontsize","description":"Font size for text of the image captcha.","values":[],"default":"24","type":"numeric","required":false},
             {"name":"fontcolor","description":"Font color for text of the image captcha.","values":[],"default":"black","type":"string","required":false}
   ],
 	"engines": {
