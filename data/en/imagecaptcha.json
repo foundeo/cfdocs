@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "imageCaptcha()",
 	"returns": "any",
-	"related": ["imageWriteToBrowser"],
+	"related": ["imagewritetobrowser"],
 	"description": "Provides information about the time when the current application scope was created.",
 	"params": [
             {"name":"text","description":"Text in the image captcha.","values":[],"default":"","type":"string","required":true},
@@ -17,8 +17,12 @@
 	"engines": {
 		"lucee": {"minimum_version": "5", "notes": "", "docs": "https://docs.lucee.org/reference/functions/imagecaptcha.html"}
 	},
-	"examples": [
-    
-  ],
+	"examples": [{
+		"title":"Script Syntax",
+		"description":"",
+		"code":"imagewritetobrowser(imagecaptcha( "abcxyz", 100, 300, "medium"));",
+		"result":"An 300px by 100px image captcha with the letters 'abcxyz'",
+		"runnable":false
+	}],
 	"links": []
 }
