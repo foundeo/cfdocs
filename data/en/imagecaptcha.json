@@ -20,7 +20,7 @@
 	"examples": [{
 		"title":"Script Syntax",
 		"description":"",
-		"code":"imagewritetobrowser(imagecaptcha( "abcxyz", 100, 300, "medium"));",
+		"code":"imagewritetobrowser(imagecaptcha( 'abcxyz', 100, 300, 'medium'));",
 		"result":"An 300px by 100px image captcha with the letters 'abcxyz'",
 		"runnable":false
 	}],
