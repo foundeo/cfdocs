@@ -25,14 +25,14 @@
 			"title": "Remove the last value from an array",
 			"description": "This is the full function version of arrayPop to remove the last value of an array.",
 			"code": "arr=[1,2,42];\np=arrayPop(array=arr);\nwriteOutput(p);",
-			"result": "3",
+			"result": "42",
 			"runnable": true
 		},
 		{
 			"title": "Member function version.",
 			"description": "Using the member function. This version also works in ACF2018.",
 			"code": "arr=[1,2,42];\np=arr.pop();\nwriteOutput(p);",
-			"result": "3",
+			"result": "42",
 			"runnable":true
 		}
 	]
