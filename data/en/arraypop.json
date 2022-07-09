@@ -5,7 +5,7 @@
 	"member":"array.pop()",
 	"returns":"any",
 	"related":["arrayPush"],
-	"description":"Removes the last element from an array. This will cause an exception on an empty array.",
+	"description":"Removes the last element from an array and returns the removed element. This will cause an exception on an empty array.",
 	"params": [
 		{"name":"array","description":"The array whose last element is removed.","required":true,"default":"","type":"array","values":[]}
 	],
