@@ -35,8 +35,8 @@
 	"examples": [{
 		"title": "Clear the timezone",
 		"description": "Set the timezone and then clear it.",
-		"code": "setTimeZone(\"CET\");\nwriteOutput(getTimeZone().timezone)&\"→ \");\nclearTimeZone();\nwriteOutput(getTimezoneInfo().timezone);",
-		"result": "Etc/UTC→ CET",
+		"code": "setTimeZone(\"CET\");\nwriteOutput(getTimezoneInfo().timezone & \"→ \");\nclearTimeZone();\nwriteOutput(getTimezoneInfo().timezone);",
+		"result": "CET→ Etc/UTC",
 		"runnable": true
 	}]
 }
