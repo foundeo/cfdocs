@@ -1,17 +1,18 @@
 {
 	"name":"structSort",
 	"type":"function",
-	"syntax":"structSort(base, sorttype, sortorder, pathtosubelement, localeSensitive)\nstructSort(base, callback)",
+	"syntax":"structSort(struct [, sortType, sortOrder, path, localeSensitive])\nstructSort(struct, callback)",
+	"member":"struct.sort([sortType, sortOrder, path, localeSensitive])",
 	"returns":"array",
 	"related":["arraySort","listSort","querySort"],
-	"description":" Returns a sorted array of the top level keys in a structure.\n Sorts using alphabetic or numeric sorting, and can sort based\n on the values of any structure element.",
+	"description":"Returns a sorted array of the top level keys in a structure. Sorts using alphabetic or numeric sorting, and can sort based on the values of any structure element.",
 	"params": [
-		{"name":"base","description":"","required":true,"default":"","type":"struct","values":[]},
-		{"name":"sorttype","description":"* numeric\n* text: case-sensitive\n* textnocase","required":false,"default":"text","type":"string","values":["numeric","text","textnocase"]},
-		{"name":"sortorder","description":"* asc: ascending (a to z) sort order.\n* desc: descending (z to a) sort order","required":false,"default":"ASC","type":"string","values":["asc","desc"]},
-		{"name":"pathtosubelement","description":"Top level key path; String or a variable that contains one","required":false,"default":"","type":"string","values":[]},
-		{"name":"localeSensitive","description":"CF10+ Respect locale-specific characters (including support for umlaut characters) while sorting/n(Applies to type\"text\" and \"textnocase\".","required":false,"default":false,"type":"boolean","values":[]},
-		{"name":"callback","description":"Using a closure for sorting. Inside compare function can be used (compare, compareNoCase, dateCompare or custom).","required":false,"default":"","type":"function","values":[]}
+		{"name":"struct","description":"A ColdFusion structure","required":true,"default":"","type":"struct","values":[]},
+		{"name":"sortType","description":"* numeric\n* text: case-sensitive\n* textnocase","required":false,"default":"text","type":"string","values":["numeric","text","textnocase"]},
+		{"name":"sortOrder","description":"* asc: ascending (a to z) sort order.\n* desc: descending (z to a) sort order","required":false,"default":"asc","type":"string","values":["asc","desc"]},
+		{"name":"path","description":"Top-level key path; String or a variable that contains one","required":false,"default":"","type":"string","values":[]},
+		{"name":"localeSensitive","description":"CF10+ Respect locale-specific characters (including support for umlaut characters) while sorting\n(Applies to type\"text\" and \"textnocase\".","required":false,"default":false,"type":"boolean","values":[]},
+		{"name":"callback","description":"CF2016+ A closure for sorting which takes two keys of the struct and returns whether the first value is greater than, equal to, or less than the second value. Inside compare function can be used (compare, compareNoCase, dateCompare or custom). `function(key1, key2)`","required":false,"default":"","type":"function","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"CF10+ Added support for locale-specific characters", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structsort.html"},
@@ -21,23 +22,23 @@
 	},
 	"links": [],
 	"examples": [
-        {
-            "title": "Numeric sorting",
-            "description": "",
-            "code": "SomeStruct = {red=93,yellow=90,green=94};\nresult = structSort(SomeStruct, \"numeric\", \"desc\");\nwriteOutput( lcase(serializeJSON(result)) );",
-            "result": "[\"green\", \"red\", \"yellow\"]"
-        },
-        {
-            "title": "Sort by subelement",
-            "description": "",
-            "code": "somestruct = {};\nsomeStruct.scott = {age=26, department=\"General\"};\nsomeStruct.glan = {age=29, department=\"computer\"};\nsomeStruct.george = {age=31, department=\"Physical\"};\nresult = structSort(somestruct, \"textnocase\", \"asc\", \"department\");\nwriteOutput( lcase(serializeJSON(result)) );",
-            "result": "[\"glan\",\"scott\",\"george\"]"
-        },
-        {
-            "title": "Date sorting using callback",
-            "description": "Compare values via dateCompare",
-            "code": "birthdays = {\n\t'Jim': '1982/12/5',\n\t'Anne': '1968/9/13',\n\t'Thomas': '1975/3/28'\n};\n\nsorted = structSort(birthdays,function(e1,e2) {\n\treturn dateCompare(e1,e2);\n});\n\nfor(birthday in sorted) {\n\twriteOutput(birthday&' ('&dateDiff('yyyy',birthdays[birthday],now())&'), ');\n}",
-            "result": "Anne (49), Thomas (42), Jim (35),"
-        }
-    ]
+		{
+			"title": "Numeric sorting",
+			"description": "",
+			"code": "someStruct = {red=93,yellow=90,green=94};\nresult = structSort(someStruct, \"numeric\", \"desc\");\nwriteOutput( lcase(serializeJSON(result)) );",
+			"result": "[\"green\", \"red\", \"yellow\"]"
+		},
+		{
+			"title": "Sort by subelement",
+			"description": "",
+			"code": "someStruct = {};\nsomeStruct.scott = {age=26, department=\"General\"};\nsomeStruct.glan = {age=29, department=\"computer\"};\nsomeStruct.george = {age=31, department=\"Physical\"};\nresult = structSort(someStruct, \"textnocase\", \"asc\", \"department\");\nwriteOutput( lcase(serializeJSON(result)) );",
+			"result": "[\"glan\",\"scott\",\"george\"]"
+		},
+		{
+			"title": "Date sorting using callback",
+			"description": "Compare values via dateCompare",
+			"code": "birthdays = {\n\t'Jim': '1982/12/5',\n\t'Anne': '1968/9/13',\n\t'Thomas': '1975/3/28'\n};\n\nsorted = structSort(birthdays,function(e1,e2) {\n\treturn dateCompare(e1,e2);\n});\n\nfor(birthday in sorted) {\n\twriteOutput(birthday&' ('&dateDiff('yyyy',birthdays[birthday],now())&'), ');\n}",
+			"result": "Anne (49), Thomas (42), Jim (35),"
+		}
+	]
 }

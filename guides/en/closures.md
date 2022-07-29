@@ -2,23 +2,21 @@
 
 CF10+ A closure is an inner function. The inner function can access the variables in the outer function. You can access the inner function by accessing the outer function. See the example below.
 
-    <cfscript>
-        function helloTranslator(String helloWord) {
-            return function(String name) {
-                return "#helloWord#, #name#";
-            };
-        }
+    function helloTranslator(String helloWord) {
+        return function(String name) {
+            return "#helloWord#, #name#";
+        };
+    }
 
-        helloInHindi=helloTranslator("Namaste");
-        helloInFrench=helloTranslator("Bonjour");
-        writeOutput(helloInHindi("Anna"));
+    helloInHindi = helloTranslator("Namaste");
+    helloInFrench = helloTranslator("Bonjour");
+    writeOutput(helloInHindi("Anna"));
 
-        //closure is formed.
-        //Prints Namaste, Anna.
-        writeOutput("<br>");
-        writeOutput(helloInFrench("John"));
-        //Prints Bonjour, John.
-    </cfscript>
+    //closure is formed.
+    //Prints Namaste, Anna.
+    writeOutput("<br>");
+    writeOutput(helloInFrench("John"));
+    //Prints Bonjour, John.
 
 In the above example, the outer function returns a closure. Using the helloHindi variable, the outer function is accessed. It sets the helloWord argument.
 
@@ -42,33 +40,30 @@ A closure can be of the following categories:
 
 #### ColdFusion Example
 
-    <cfscript>
-        function operation(string operator) {
-            return function(numeric x, numeric y) {
-                if(operator eq "add") {
-                    return x + y;
-                }
-                else if(operator eq "subtract") {
-                    return x - y;
-                }
-            };
-        }
+    function operation(string operator) {
+        return function(numeric x, numeric y) {
+            if (operator == "add") {
+                return x + y;
+            }
+            else if (operator == "subtract") {
+                return x - y;
+            }
+        };
+    }
 
-        myval_addition=operation("add");
-        myval_substraction=operation("subtract");
-        writeOutput(myval_addition(10,20));
-        writeOutput("<br>");
-        writeOutput(myval_substraction(10,20));
-    </cfscript>
+    myval_addition = operation("add");
+    myval_subtraction = operation("subtract");
+    writeOutput(myval_addition(10,20));
+    writeOutput("<br>");
+    writeOutput(myval_subtraction(10,20));
 
-In the above example, the outer function sets the operator. myval_addition and myval_substraction are two closures. They process the data based on the condition sets by the outer function.
+In the above example, the outer function sets the operator. myval_addition and myval_subtraction are two closures. They process the data based on the condition sets by the outer function.
 
 #### Defined inline as a function and tag argument
 
-    <cfscript>
     function operation(numeric x, numeric y, function logic)
     {
-        var result=logic(x,y);
+        var result = logic(x,y);
         return result;
     }
     add = operation(10,20, function(numeric N1, numeric N2)
@@ -77,15 +72,14 @@ In the above example, the outer function sets the operator. myval_addition and m
     });
     subtract = operation(10,20, function(numeric N1, numeric N2)
     {
-    return N1-N2;
+        return N1-N2;
     });
-    </cfscript>
-    <cfdump var="#add#">
-    <cfdump var="#substract#">
+    writeDump(add);
+    writeDump(subtract);
 
 In the above example, the function operation has an argument logic, which is a closure. While calling operation, an inline closure is passed as an argument. This anonymous closure contains the logic to process the numbers - addition or subtraction. In this case, the logic is dynamic and passed as a closure to the function.
 
-#### You can assign a closure to a variable.
+#### You can assign a closure to a variable
 
     var c2 = function () {..}
 
@@ -97,7 +91,7 @@ Note: As a best practice, if the return type is a closure, provide the Function 
 
 Example
 
-    Function function exampleClosure(arg1) {
+    function function exampleClosure(arg1) {
         function exampleReturned(innerArg) {
             return innerArg + arg1;
         }
@@ -113,7 +107,7 @@ Example
 #### Closure can be assigned to a variable outside function
 
     hello = function (arg1) {
-        writeoutput("Hello " & arg1);
+        writeOutput("Hello " & arg1);
     };
     hello("Mark");
 
@@ -121,8 +115,8 @@ Example
 
     var c2 = function(arg1, arg1) {..}
     argsColl = structNew();
-    argsColl.arg1= 1;
-    argsColl.arg2= 3;
+    argsColl.arg1 = 1;
+    argsColl.arg2 = 3;
     c2(argumentCollection = argsColl);
 
 ### Closures and functions
@@ -133,15 +127,15 @@ The following details the scope of closure based on the way they are defined:
 
 #### Scenario where closure is defined
 
-_In a CFC function_
+##### In a CFC function
 
 Closure argument scope, enclosing function local scope and argument scope, this scope, variable scope, and super
 
-_In a CFM function_
+##### In a CFM function
 
 Closure argument scope, enclosing function local scope and argument scope, this scope, variable scope, and super
 
-_As function argument_
+##### As function argument
 
 Closure argument scope, variable scope, and this scope and super scope (if defined in CFC component).
 
@@ -176,11 +170,11 @@ The following example filters employees based on location, age, and designation.
 Create the `employee.cfc` file that defines the variables.
 
     /**
-    * @name employee
-    * @displayname ColdFusion Closure Example
-    * @output false
-    * @accessors true
-    */
+     * @name employee
+     * @displayname ColdFusion Closure Example
+     * @output false
+     * @accessors true
+     */
     component
     {
         property string Name;
@@ -190,28 +184,28 @@ Create the `employee.cfc` file that defines the variables.
         property string status;
     }
 
-Create the employee array. This CFC also contains the filterArray() }}function. A closure, {{filter, is an argument of the function. While accessing this function, the filtering logic is passed as a closure.
+Create the employee array. This CFC also contains the `filterArray()` function. A closure, `filter`, is an argument of the function. While accessing this function, the filtering logic is passed as a closure.
 
-    <!---filter.cfc--->
+    // filter.cfc
     component {
         //Filter the array based on the logic provided by the closure.
-        function filterArray(Array a, function filter) {
-            resultarray = arraynew(1);
-            for(i=1;i<=ArrayLen(a);i++) {
-                if(filter(a[i]))
-                    ArrayAppend(resultarray,a[i]);
+        function filterArray(array a, function filter) {
+            resultArray = arrayNew(1);
+            for (i=1; i <= arrayLen(a); i++) {
+                if (filter(a[i]))
+                    arrayAppend(resultArray,a[i]);
             }
-            return resultarray;
+            return resultArray;
         }
 
         function getEmployee() {
             //Create the employee array.
-            empArray = Arraynew(1);
-            ArrayAppend(empArray,new employee(Name="Ryan", Age=24, designation="Manager", location="US"));
-            ArrayAppend(empArray,new employee(Name="Ben", Age=34, designation="Sr Manager", location="US"));
-            ArrayAppend(empArray,new employee(Name="Den", Age=24, designation="Software Engineer", location="US"));
-            ArrayAppend(empArray,new employee(Name="Ran", Age=28, designation="Manager", location="IND"));
-            ArrayAppend(empArray,new employee(Name="Ramesh", Age=31, designation="Software Engineer", location="IND"));
+            empArray = arrayNew(1);
+            arrayAppend(empArray,new employee(Name="Ryan", Age=24, designation="Manager", location="US"));
+            arrayAppend(empArray,new employee(Name="Ben", Age=34, designation="Sr Manager", location="US"));
+            arrayAppend(empArray,new employee(Name="Den", Age=24, designation="Software Engineer", location="US"));
+            arrayAppend(empArray,new employee(Name="Ran", Age=28, designation="Manager", location="IND"));
+            arrayAppend(empArray,new employee(Name="Ramesh", Age=31, designation="Software Engineer", location="IND"));
             return empArray;
         }
     }
@@ -219,46 +213,52 @@ Create the employee array. This CFC also contains the filterArray() }}function. 
 Create the CFM page that accesses the {{filterArray()}}function with a closure which provides the filtering logic. The {{filterArray()}}function is used to filter the employee data in three ways: location, age, and designation. Each time the function is accessed, the filtering logic is changed in the closure.
 
     <!---arrayFilter.cfm--->
-    <cfset filteredArray = arraynew(1)>
+    <cfset filteredArray = arrayNew(1)>
     <cfset componentArray = [3,6,8,2,4,7,9]>
     <cfscript>
-    obj = CreateObject("component", "filter");
+    obj = createObject("component", "filter");
     // Filters employees from India
     filteredArray = obj.filterArray(obj.getEmployee(), function(a)
     {
-        if(a.getLocation()=="IND")
+        if (a.getLocation() == "IND") {
             return 1;
-        else
-        return 0;
+        }
+        else {
+            return 0;
+        }
     });
-    writedump(filteredArray);
-    //Filters employees from india whos age is above thirty
+    writeDump(filteredArray);
+    //Filters employees from India whose age is above thirty
     filteredArray = obj.filterArray(obj.getEmployee(), closure(a)
     {
-        if((a.getLocation()=="IND") && (a.getAge()>30))
+        if ((a.getLocation() == "IND") && (a.getAge() > 30)) {
             return 1;
-        else
-        return 0;
+        }
+        else {
+            return 0;
+        }
     });
-    writedump(filteredArray);
+    writeDump(filteredArray);
     // Filters employees who are managers
     filteredArray = obj.filterArray( obj.getEmployee(), function(a)
     {
-        if((a.getdesignation() contains "Manager"))
+        if ((a.getdesignation() contains "Manager")) {
             return 1;
-        else
-        return 0;
+        }
+        else {
+            return 0;
+        }
     });
-    writedump(filteredArray);
+    writeDump(filteredArray);
     </cfscript>
 
-### Other Closure Examples:
+### Other Closure Examples
 
 JavaScript example:
 
-    Function outerFunction() {
+    function outerFunction() {
         var a = 3;
-        return function innerFunction(b){
+        return function innerFunction(b) {
             var c = a + b;
             return c;
         }
@@ -266,43 +266,74 @@ JavaScript example:
 
 (1) `var foo = outerFunction()`
 (2) `var result = foo(2);`
-(3) `Console.log(result); //5`
+(3) `console.log(result); //5`
 
-We have an outer function with a nested function which accepts a parameter b
+We have an outer function with a nested function which accepts a parameter `b`
 
 (1) When you invoke the outer you get the inner returned later.
 (2) Notice the outer function was called but the a still has its value and is used in the return function (innerFunction).
 (3) That is why the result Is 5!
 
-http://taha-sh.com/blog/understanding-closures-in-javascript
+https://web.archive.org/web/20170508020042/taha-sh.com/blog/understanding-closures-in-javascript
 
-## ColdFusion built in Functions that use Closures:
+## ColdFusion built in Functions that use Closures
 
 ### CF10 Closure Functions
 
-* [ArrayEach](/arrayeach)
-* [StructEach](/structeach)
-* [ArrayFilter](/arrayfilter)
-* [StructFilter](/structfilter)
-* [ListFilter](/listfilter)
-* [ArrayFindAll ](/arrayfindall)
-* [ArrayFindAllNoCase](/arrayfindallnocase)
+* [arrayEach](/arrayeach)
+* [structEach](/structeach)
+* [arrayFilter](/arrayfilter)
+* [structFilter](/structfilter)
+* [listFilter](/listfilter)
+* [arrayFind](/arrayfind)
+* [arrayFindAll](/arrayfindall)
+* [arrayFindAllNoCase](/arrayfindallnocase)
+* [arrayFindNoCase](/arrayfindnocase)
+* [arraySort](/arraysort)
 
 ### CF11 Closure Functions
 
 * [isClosure](/isclosure)
-* [ListEach](/listeach)
-* [ArrayReduce](/arrayreduce)
-* [StructReduce](/structreduce)
-* [ListReduce](/listreduce)
-* [ArrayMap](/arraymap)
-* [StructMap](/structmap)
-* [ListMap](/listmap)
+* [listEach](/listeach)
+* [arrayReduce](/arrayreduce)
+* [structReduce](/structreduce)
+* [listReduce](/listreduce)
+* [arrayMap](/arraymap)
+* [structMap](/structmap)
+* [listMap](/listmap)
 
 ### CF2016 Closure Functions
 
-* [QueryEach](/queryeach)
-* [QueryFilter](/queryfilter)
-* [QueryMap](/querymap)
-* [QueryReduce](/queryreduce)
-* [QuerySort](/querysort)
+* [queryEach](/queryeach)
+* [queryFilter](/queryfilter)
+* [queryMap](/querymap)
+* [structNew](/structnew) (Update 3)
+* [queryReduce](/queryreduce)
+* [replace](/replace)
+* [listSort](/listsort)
+* [querySort](/querysort)
+* [structSort](/structsort)
+* [structToSorted](/structtosorted) (Update 3)
+
+### CF2018 Closure Functions
+
+* [arrayEvery](/arrayevery)
+* [queryEvery](/queryevery)
+* [structEvery](/structevery)
+* [replaceNoCase](/replacenocase)
+* [arraySome](/arraysome)
+* [querySome](/querysome)
+* [structSome](/structsome)
+* [runAsync](/runasync)
+
+### CF2021 Closure Functions
+
+* [stringEach](/stringeach)
+* [stringEvery](/stringevery)
+* [stringFilter](/stringfilter)
+* [stringMap](/stringmap)
+* [stringReduce](/stringreduce)
+* [arrayReduceRight](/arrayreduceright)
+* [listReduceRight](/listreduceright)
+* [stringReduceRight](/stringreduceright)
+* [stringSome](/stringsome)

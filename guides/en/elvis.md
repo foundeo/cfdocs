@@ -12,7 +12,7 @@ The way it works is that the condition is evaluated. If it is true, then the tru
 
 ## Elvis Operator
 
-Before Elvis we had isDefined(), structKeyExists()  and IF statements to do these kind of evaluations.
+Before Elvis we had `isDefined()`, `structKeyExists()`, and `if` statements to do these kind of evaluations.
 
 The Elvis operator is primarily used to assign the ‘right default’ for a variable or an expression
 Or it is a short-hand way to do parameterization. It will allow us to set a value if the variable is Null
@@ -33,26 +33,26 @@ Similarly, you can use this operator for Struct:
 
     securityNumber = securityStruct['Joe'] ?: "";
 
-NB: In CF if the value tested === false, then the expression on the right will be evaluated. https://tracker.adobe.com/#/view/CF-4198933 Lucee behaves as expected.
+NB: In CF if the value tested === false, then the expression on the right will be evaluated. [See Adobe bug](https://tracker.adobe.com/#/view/CF-4198933). Lucee behaves as expected.
 
 ## Examples
 
 Examples which are all the same:
 
-    if (not isNull(local.testVar)){
-    value = local.newTest;
+    if (!isNull(local.testVar)) {
+        value = local.newTest;
     } else {
-    value = "test Item";
+        value = "test Item";
     }
 
     value = (local.testVar ?: "test Item");
 
-    value = (not isNull(local.testVar) ? local.newTest : "test Item");
+    value = (!isNull(local.testVar) ? local.newTest : "test Item");
 
 Three types of usage for the Elvis Operator:
 
     result = firstOperand ?: secondOperand; // binary
-    result= (local.myVar ?: "default value");
+    result = (local.myVar ?: "default value");
 
 OR
 
@@ -64,8 +64,8 @@ OR
     result = firstOperand ? secondOperand : thirdOperand; // ternary
     result = isNumeric("nineteen") ? "it's numeric" : "no it isn't"; // "no it isn't"
 
-Nesting examples for if/elseif/else. Note: It's not advisable to nest it because of poor readability, but useful in some rare situations.
+Nesting examples for `if`/`elseif`/`else`. Note: It's not advisable to nest it because of poor readability, but useful in some rare situations.
 
-    result = stage1.firstOperand ? stage1.SecondOperand : stage2.firstOperand ? stage2.SecondOperand : Stage1.thirdOperand
-    value = "nineteen"
-    result = isNumeric(value) ? "it's numeric" : (REFIND("[A-Za-z]",value) > 0) ? "it's alphabetic" : "it's neither"; // "it's alphabetic"
+    result = stage1.firstOperand ? stage1.secondOperand : stage2.firstOperand ? stage2.secondOperand : stage1.thirdOperand;
+    value = "nineteen";
+    result = isNumeric(value) ? "it's numeric" : (reFind("[A-Za-z]",value) > 0) ? "it's alphabetic" : "it's neither"; // "it's alphabetic"

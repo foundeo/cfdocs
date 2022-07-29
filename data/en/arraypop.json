@@ -11,7 +11,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2021", "notes":"The full function was added in ACF 2021, but the member function appears to work in ACF 2018 (likely using Java).", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraypop.html"},
-		"lucee": {"minimum_version":"5", "notes":"Lucee allows a second, optional argument `defaultValue` of `any` type that allows you to enter a default value to return if the array is empty.", "docs":"https://docs.lucee.org/reference/functions/arraypop.html"}
+		"lucee": {"minimum_version":"5.3.8", "notes":"Lucee allows a second, optional argument `defaultValue` of `any` type that allows you to enter a default value to return if the array is empty.", "docs":"https://docs.lucee.org/reference/functions/arraypop.html"}
 	},
 	"links": [
 		{
@@ -24,15 +24,16 @@
 		{
 			"title": "Remove the last value from an array",
 			"description": "This is the full function version of arrayPop to remove the last value of an array.",
-			"code": "arr=[1,2,42] ;\np=ArrayPop(array=arr);\nWriteOutput(p);",
-			"result": "3", 
+			"code": "arr=[1,2,42];\np=arrayPop(array=arr);\nwriteOutput(p);",
+			"result": "3",
 			"runnable": true
 		},
 		{
 			"title": "Member function version.",
 			"description": "Using the member function. This version also works in ACF2018.",
-			"code": "arr=[1,2,42] ;\np=arr.pop();\nWriteOutput(p);",
+			"code": "arr=[1,2,42];\np=arr.pop();\nwriteOutput(p);",
 			"result": "3",
-            "runnable":true		}
+			"runnable":true
+		}
 	]
 }

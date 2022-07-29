@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cfexecute name=\"\">",
 	"related":[],
-	"description":"Executes a CFML developer-specified process on a server\n computer.",
+	"description":"Executes a CFML developer-specified process on a server computer.",
 	"params": [
 		{"name":"name","description":"Absolute path of the application to execute.\n\n On Windows, you must specify an extension; for example,\n C:\\myapp.exe.","required":true,"default":"","type":"string","values":[]},
 		{"name":"arguments","description":"Command-line variables passed to application. If specified\n as string, it is processed as follows:\n * Windows: passed to process control subsystem for parsing.\n * UNIX: tokenized into an array of arguments. The default\n token separator is a space; you can delimit arguments\n that have embedded spaces with double quotation marks.\n If passed as array, it is processed as follows:\n * Windows: elements are concatenated into a string of\n tokens, separated by spaces. Passed to process control\n subsystem for parsing.\n * UNIX: elements are copied into an array of exec()\n arguments","required":false,"default":"","type":"any","values":[]},
@@ -12,7 +12,8 @@
 		{"name":"timeout","description":"Length of time, in seconds, that CFML waits for\n output from the spawned program.","required":false,"default":0,"type":"numeric","values":[]},
 		{"name":"errorVariable","description":"The name of a variable in which to save the error stream output.","required":false,"default":"","type":"string","values":[]},
 		{"name":"errorFile","description":"The pathname of a file in which to save the error stream output. If not an\nabsolute path (starting a with a drive letter and a colon, or a forward or backward slash), it is\nrelative to the ColdFusion temporary directory, which is returned by the GetTempDirectory\nfunction.","required":false,"default":"","type":"string","values":[]},
-		{"name":"terminateOnTimeout","description":"Lucee4.5+ Terminate the process after the specified timeout is reached. Ignored if timeout is not set or is 0.","required":false,"default":"false","type":"boolean","values":[true, false]}
+		{"name":"terminateOnTimeout","description":"Lucee4.5+ Terminate the process after the specified timeout is reached. Ignored if timeout is not set or is 0.","required":false,"default":"false","type":"boolean","values":[]},
+		{"name":"directory","description":"Lucee5.3.8+ The working directory in which to execute the command","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4.5", "notes":"terminateOnTimeout is not supported in Adobe ColdFusion", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexecute.html"},
@@ -20,9 +21,7 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfexecute"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfexecute"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 		"title": "Script syntax",
@@ -37,5 +36,4 @@
 			"runnable":false
 		}
 	]
-
 }

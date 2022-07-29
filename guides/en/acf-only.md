@@ -1,355 +1,233 @@
 # Adobe ColdFusion only
 
-##The following tags/functions are Adobe ColdFusion only
+## The following tags/functions are Adobe ColdFusion only
 
-### `arrayDeleteNoCase`
+`arrayGetMetadata` - Minimum Version: 2016.0.2
 
-Minimum Version: 2016
+`arrayReduceRight` - Minimum Version: 2021
 
-### `arrayGetMetadata`
+`arraySetMetadata` - Minimum Version: 2016.0.2
 
-Minimum Version: 2016.0.2
+`arraySplice` - Minimum Version: 2018.0.5
 
-### `arraySetMetadata`
+`cacheGetEngineProperties` - Minimum Version: 2018
 
-Minimum Version: 2016.0.2
+`cacheGetSession` - Minimum Version: 9.0.1
 
-### `arraySplice`
+`cf_socialplugin` - Minimum Version: 11
 
-Minimum Version: 2018.0.5
+`cfcalendar`
 
-### `cacheGetEngineProperties`
+`cfclient` - Minimum Version: 11
 
-Minimum Version: 2018
+`cfclientsettings` - Minimum Version: 11
 
-### `cacheGetSession`
+`cfexchangecalendar`
 
-Minimum Version: 9.0.1
+`cfexchangeconnection`
 
-### `cfcalendar`
+`cfexchangecontact`
 
-### `cfclient`
+`cfexchangefilter`
 
-Minimum Version: 11
+`cfexchangemail`
 
-### `cfclientsettings`
+`cfexchangetask`
 
-Minimum Version: 11
+`cffileupload`
 
-### `cfexchangecalendar`
+`cfformgroup`
 
-### `cfexchangeconnection`
+`cfformitem`
 
-### `cfexchangecontact`
+`cfgrid` - Minimum Version: 3
 
-### `cfexchangefilter`
+`cfgridcolumn` - Minimum Version: 3
 
-### `cfexchangemail`
+`cfgridrow` - Minimum Version: 3
 
-### `cfexchangetask`
+`cfgridupdate` - Minimum Version: 3
 
-### `cffileupload`
+`cfhtmltopdf` - Minimum Version: 11
 
-### `cfformgroup`
+`cfhtmltopdfitem` - Minimum Version: 11
 
-### `cfformitem`
+`cfimapfilter` - Minimum Version: 11
 
-### `cfgrid`
+`cflayout`
 
-Minimum Version: 3
+`cflayoutarea`
 
-### `cfgridcolumn`
+`cfmap`
 
-Minimum Version: 3
+`cfmapitem`
 
-### `cfgridrow`
+`cfmediaplayer`
 
-Minimum Version: 3
+`cfmenu`
 
-### `cfgridupdate`
+`cfmenuitem`
 
-Minimum Version: 3
+`cfmessagebox`
 
-### `cfhtmltopdf`
+`cfntauthenticate` - Minimum Version: 4
 
-Minimum Version: 11
+`cfoauth` - Minimum Version: 11
 
-### `cfhtmltopdfitem`
+`cfpdfform`
 
-Minimum Version: 11
+`cfpdfformparam`
 
-### `cfimapfilter`
+`cfpdfsubform`
 
-Minimum Version: 11
+`cfpod`
 
-### `cflayout`
+`cfpresentation`
 
-### `cflayoutarea`
+`cfpresentationslide`
 
-### `cfmap`
+`cfpresenter`
 
-### `cfmapitem`
+`cfprint`
 
-### `cfmediaplayer`
+`cfprogressbar`
 
-### `cfmenu`
+`cfreport` - Minimum Version: 2
 
-### `cfmenuitem`
+`cfreportparam`
 
-### `cfmessagebox`
+`cfservlet` - Minimum Version: 4.5
 
-### `cfntauthenticate`
+`cfservletparam` - Minimum Version: 4.5
 
-Minimum Version: 4
+`cfsharepoint`
 
-### `cfoauth`
+`cfsprydataset` - Minimum Version: 8
 
-Minimum Version: 11
+`cftooltip`
 
-### `cfpdfform`
+`cfwebsocket` - Minimum Version: 10
 
-### `cfpdfformparam`
+`cfwindow`
 
-### `cfpdfsubform`
+`deserialize` - Minimum Version: 11
 
-### `cfpod`
+`deserializeXML` - Minimum Version: 11
 
-### `cfpresentation`
+`dotnetToCFType` - Minimum Version: 8
 
-### `cfpresentationslide`
+`encodeFor` - Minimum Version: 2016
 
-### `cfpresenter`
+`generateBCryptHash` - Minimum Version: 2021
 
-### `cfprint`
+`generateSCryptHash` - Minimum Version: 2021
 
-### `cfprogressbar`
+`getException`
 
-### `cfreport`
+`getGatewayHelper`
 
-Minimum Version: 2
+`getPrinterInfo`
 
-### `cfreportparam`
+`getSafeHTML` - Minimum Version: 11
 
-### `cfservlet`
+`imageCreateCaptcha` - Minimum Version: 10
 
-Minimum Version: 4.5
+`imageGetIPTCMetadata` - Minimum Version: 8
 
-### `cfservletparam`
+`imageGetMetadata` - Minimum Version: 11
 
-Minimum Version: 4.5
+`imageMakeColorTransparent` - Minimum Version: 10
 
-### `cfsharepoint`
+`imageMakeTranslucent` - Minimum Version: 10
 
-### `cfsprydataset`
+`invalidateOauthAccesstoken` - Minimum Version: 11
 
-Minimum Version: 8
+`isDDX`
 
-### `cftooltip`
+`isFileObject` - Minimum Version: 11
 
-### `cfwebsocket`
+`isPDFArchive` - Minimum Version: 2016
 
-Minimum Version: 10
+`isPDFFile` - Minimum Version: 8
 
-### `cfwindow`
+`isSafeHTML` - Minimum Version: 11
 
-### `cf_socialplugin`
+`isSpreadsheetFile`
 
-Minimum Version: 11
+`isValidOauthAccesstoken` - Minimum Version: 11
 
-### `deserialize`
+`listReduce` - Minimum Version: 11
 
-Minimum Version: 11
+`listReduceRight` - Minimum Version: 2021
 
-### `deserializeXML`
+`onServerStart` - Minimum Version: 9
 
-Minimum Version: 11
+`ormFlushAll` - Minimum Version: 9.0.1
 
-### `dotnetToCFType`
+`ormIndex` - Minimum Version: 10
 
-Minimum Version: 8
+`ormIndexPurge` - Minimum Version: 10
 
-### `encodeFor`
+`ormSearch` - Minimum Version: 10
 
-Minimum Version: 2016
+`ormSearchOffline` - Minimum Version: 10
 
-### `getException`
+`parameterExists`
 
-### `getGatewayHelper`
+`queryAppend` - Minimum Version: 2018.0.5
 
-### `getPrinterInfo`
+`queryClear` - Minimum Version: 2018.0.5
 
-### `getSafeHTML`
+`queryGetResult` - Minimum Version: 2016.3
 
-Minimum Version: 11
+`queryInsertAt` - Minimum Version: 2018
 
-### `imageCreateCaptcha`
+`queryPrepend` - Minimum Version: 2018.0.5
 
-Minimum Version: 10
+`queryReverse` - Minimum Version: 2018.0.5
 
-### `imageGetIPTCMetaData`
+`queryRowSwap` - Minimum Version: 2018.0.5
 
-Minimum Version: 8
+`removeCachedQuery` - Minimum Version: 10
 
-### `imageGetMetadata`
+`serializeXML` - Minimum Version: 11
 
-Minimum Version: 11
+`sessionGetMetadata` - Minimum Version: 10
 
-### `imageMakeColorTransparent`
+`spreadsheetAddAutoFilter` - Minimum Version: 11
 
-Minimum Version: 10
+`spreadsheetAddPagebreaks` - Minimum Version: 11
 
-### `imageMakeTranslucent`
+`spreadsheetFormatCellRange` - Minimum Version: 9.0.1
 
-Minimum Version: 10
+`spreadsheetGetColumnCount` - Minimum Version: 2016
 
-### `invalidateOauthAccesstoken`
+`spreadsheetRemoveSheet` - Minimum Version: 9.0.1
 
-Minimum Version: 11
+`spreadsheetSetRowHeight`
 
-### `isDDX`
+`stringReduceRight` - Minimum Version: 2021
 
-### `isFileObject`
+`structGetMetadata` - Minimum Version: 2016.0.2
 
-Minimum Version: 11
+`structIsCaseSensitive` - Minimum Version: 2021
 
-### `isPDFArchive`
+`structIsOrdered` - Minimum Version: 2018
 
-Minimum Version: 2016
+`structSetMetadata` - Minimum Version: 2016.0.2
 
-### `isPDFFile`
+`structToSorted` - Minimum Version: 2016.0.3
 
-Minimum Version: 8
+`verifyBCryptHash` - Minimum Version: 2021
 
-### `isSafeHTML`
+`verifySCryptHash` - Minimum Version: 2021
 
-Minimum Version: 11
+`writeBody`
 
-### `isSpreadsheetFile`
+`wsGetAllChannels` - Minimum Version: 10
 
-### `isValidOauthAccesstoken`
+`wsGetSubscribers` - Minimum Version: 10
 
-Minimum Version: 11
+`wsPublish` - Minimum Version: 10
 
-### `listReduce`
-
-Minimum Version: 11
-
-### `onServerStart`
-
-Minimum Version: 9
-
-### `ormFlushAll`
-
-Minimum Version: 9.0.1
-
-### `ormIndex`
-
-Minimum Version: 10
-
-### `ormIndexPurge`
-
-Minimum Version: 10
-
-### `ormSearch`
-
-Minimum Version: 10
-
-### `ormSearchOffline`
-
-Minimum Version: 10
-
-### `parameterExists`
-
-### `queryAppend`
-
-Minimum Version: 2018.0.5
-
-### `queryClear`
-
-Minimum Version: 2018.0.5
-
-### `queryGetResult`
-
-Minimum Version: 2016.3
-
-### `queryKeyExists`
-
-Minimum Version: 2016
-
-### `queryPrepend`
-
-Minimum Version: 2018.0.5
-
-### `queryReverse`
-
-Minimum Version: 2018.0.5
-
-### `removeCachedQuery`
-
-Minimum Version: 10
-
-### `replaceListNoCase`
-
-Minimum Version: 2016
-
-### `serializeXML`
-
-Minimum Version: 11
-
-### `sessionGetMetadata`
-
-Minimum Version: 10
-
-### `spreadsheetAddAutoFilter`
-
-Minimum Version: 11
-
-### `spreadsheetAddPagebreaks`
-
-Minimum Version: 11
-
-### `spreadsheetFormatCellRange`
-
-Minimum Version: 9.0.1
-
-### `spreadsheetGetColumnCount`
-
-Minimum Version: 2016
-
-### `spreadsheetRemoveSheet`
-
-Minimum Version: 9.0.1
-
-### `spreadsheetSetRowHeight`
-
-### `structGetMetadata`
-
-Minimum Version: 2016.0.2
-
-### `structIsOrdered`
-
-Minimum Version: 2018
-
-### `structSetMetadata`
-
-Minimum Version: 2016.0.2
-
-### `structToSorted`
-
-Minimum Version: 2016.0.3
-
-### `wsGetAllChannels`
-
-Minimum Version: 10
-
-### `wsGetSubscribers`
-
-Minimum Version: 10
-
-### `wsPublish`
-
-Minimum Version: 10
-
-### `wsSendMessage`
-
-Minimum Version: 10
+`wsSendMessage` - Minimum Version: 10

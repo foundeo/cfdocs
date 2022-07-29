@@ -21,17 +21,17 @@
 	],
 	"examples": [
 		{
-			"title":"Dump MetaData of CFC Instance",
+			"title":"Dump Metadata of CFC Instance",
 			"description":"CF9+",
-			"code":"writeDump(getMetaData(new Query()));",
+			"code":"writeDump(getMetadata(new Query()));",
 			"result":""
 		},
 		{
-			"title":"Dump MetaData of Array",
+			"title":"Dump Metadata of Array",
 			"description":"CF2018+ Struct has a new key called <i>dimensions</i> and can also have a defined datatype. Supported datatypes are String, Numeric, Boolean, Date, Array, Struct, Query, Component, Binary, and Function.",
 			"code":"arr = arrayNew['String'](1);\nwriteDump(arr.getMetadata());",
 			"result":""
-		}		
+		}
 	]
 
 }

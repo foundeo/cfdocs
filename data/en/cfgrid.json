@@ -554,5 +554,14 @@
 	"engines": {
 		"coldfusion": { "minimum_version": "3", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfgrid.html" }
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+	"title": "Most basic cfgrid, without using a query",
+	"description": "The CFgrid and related tags offer a LOT of capability and many options, but if you just need a very simple demonstration of a working grid, here you go.",
+	"code": "<cfform>\n                <cfgrid name=\"grid1\" format=\"html\" >\n                                <cfgridcolumn name=\"col1\">\n                                <cfgridrow data=\"xxx\">\n                </cfgrid>\n</cfform>",
+	"result": "A single-column grid",
+	"runnable": true
+}
+		]
 }

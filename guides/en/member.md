@@ -5,34 +5,32 @@ The use of member functions often lead to more concise and readable code.
 
 For instance, consider the following headless function:
 
-    ArrayAppend(empArr, emp)
+    arrayAppend(empArr, emp)
 
 Using a member function it can be written as:
 
     empArr.append(emp)
 
-Where `empArr` is a reference to an instance of a CFArray class (possibly a variable created with arrayNew). 
+Where `empArr` is a reference to an instance of a CFArray class (possibly a variable created with arrayNew).
 
 The following example depicts the new usage of member functions:
 
-    <cfscript>
-        //The old way
-        var myArray = ArrayNew(1);
-        ArrayAppend(myArray, "objec_new");
-        ArraySort(myArray, "ASC");
+    // The standard way
+    var myArray = arrayNew(1);
+    arrayAppend(myArray, "objec_new");
+    arraySort(myArray, "ASC");
 
-        // The new way
-        myArray.append("objec_new");
-        myArray.sort("ASC");
+    // The member way
+    myArray.append("objec_new");
+    myArray.sort("ASC");
 
-        // The new way
-        var myProductObject = createObject("java", "myJavaclass");
-        myjavaList = myProductObject.getProductList();
-        myjavaList.add("newProduct"); // Java API
+    // The member way
+    var myProductObject = createObject("java", "myJavaclass");
+    myjavaList = myProductObject.getProductList();
+    myjavaList.add("newProduct"); // Java API
 
-        myjavaList.append("newProduct"); // CF API
-        myjavaList.sort("ASC");
-    </cfscript>
+    myjavaList.append("newProduct"); // CF API
+    myjavaList.sort("ASC");
 
 Member functions for the following data types are supported:
 
@@ -52,364 +50,367 @@ CF 2016 changed the return type for append member functions:
 
 ## Array member functions
 
-- ArrayAppend : `someVar.append()` 
-- ArrayAvg : `someVar.avg()` 
-- ArrayClear : `someVar.clear()` 
-- ArrayContains : `someVar.contains()` 
-- ArrayContainsNoCase : `someVar.containsNoCase()` 
-- ArrayDelete : `someVar.delete()` 
-- ArrayDeleteAt : `someVar.deleteAt()` 
-- ArrayDeleteNoCase : `someVar.deleteNoCase()` 
-- ArrayEach : `someVar.each()` 
-- ArrayEvery : `someVar.every()` 
-- ArrayFilter : `someVar.filter()` 
-- ArrayFind : `someVar.find()` 
-- ArrayFindAll : `someVar.findAll()` 
-- ArrayFindAllNoCase : `someVar.findAllNoCase()` 
-- ArrayFindNoCase : `someVar.findNoCase()` 
-- ArrayFirst : `someVar.first()` 
-- ArrayGetMetaData : `someVar.getMetaData()` 
-- ArrayInsertAt : `someVar.insertAt()` 
-- ArrayIsDefined : `someVar.isDefined()` 
-- ArrayIsEmpty : `someVar.isEmpty()` 
-- ArrayLast : `someVar.last()` 
-- ArrayLen : `someVar.len()` 
-- ArrayMap : `someVar.map()` 
-- ArrayMax : `someVar.max()` 
-- ArrayMin : `someVar.min()` 
-- ArrayPrepend : `someVar.prepend()` 
-- ArrayReduce : `someVar.reduce()` 
-- ArrayReduceRight : `someVar.reduceRight()` 
-- ArrayResize : `someVar.resize()` 
-- ArraySet : `someVar.set()` 
-- ArraySlice : `someVar.slice()` 
-- ArraySome : `someVar.some()` 
-- ArraySort : `someVar.sort()` 
-- ArraySplice : `someVar.splice()` 
-- ArraySum : `someVar.sum()` 
-- ArraySwap : `someVar.swap()` 
-- ArrayToList : `someVar.toList()` 
+- arrayAppend : `someVar.append()`
+- arrayAvg : `someVar.avg()`
+- arrayClear : `someVar.clear()`
+- arrayContains : `someVar.contains()`
+- arrayContainsNoCase : `someVar.containsNoCase()`
+- arrayDelete : `someVar.delete()`
+- arrayDeleteAt : `someVar.deleteAt()`
+- arrayDeleteNoCase : `someVar.deleteNoCase()`
+- arrayEach : `someVar.each()`
+- arrayEvery : `someVar.every()`
+- arrayFilter : `someVar.filter()`
+- arrayFind : `someVar.find()`
+- arrayFindAll : `someVar.findAll()`
+- arrayFindAllNoCase : `someVar.findAllNoCase()`
+- arrayFindNoCase : `someVar.findNoCase()`
+- arrayFirst : `someVar.first()`
+- arrayGetMetaData : `someVar.getMetaData()`
+- arrayInsertAt : `someVar.insertAt()`
+- arrayIsDefined : `someVar.isDefined()`
+- arrayIsEmpty : `someVar.isEmpty()`
+- arrayLast : `someVar.last()`
+- arrayLen : `someVar.len()`
+- arrayMap : `someVar.map()`
+- arrayMax : `someVar.max()`
+- arrayMin : `someVar.min()`
+- arrayPrepend : `someVar.prepend()`
+- arrayReduce : `someVar.reduce()`
+- arrayReduceRight : `someVar.reduceRight()`
+- arrayResize : `someVar.resize()`
+- arraySet : `someVar.set()`
+- arraySlice : `someVar.slice()`
+- arraySome : `someVar.some()`
+- arraySort : `someVar.sort()`
+- arraySplice : `someVar.splice()`
+- arraySum : `someVar.sum()`
+- arraySwap : `someVar.swap()`
+- arrayToList : `someVar.toList()`
+- serializeJSON : `someVar.toJSON()`
 
 ## String member functions
 
-- BinaryDecode : `someVar.binaryDecode()` 
-- BinaryEncode : `someVar.binaryEnecode()` 
-- Canonicalize : `someVar.canonicalize()` 
-- CharsetDecode : `someVar.charsetDecode()` 
-- CharsetEncode : `someVar.charsetEncode()` 
-- CJustify : `someVar.cJustify()` 
-- Compare : `someVar.compare()` 
-- CompareNoCase : `someVar.compareNocase()` 
-- decodeForHTML : `someVar.decodeForHTML()` 
-- decodeFromURL : `someVar.decodeFromURL()` 
-- Decrypt : `someVar.decrypt()` 
-- EncodeForCSS : `someVar.encodeforCSS()` 
-- EncodeForHTML : `someVar.encodeforHTML()` 
-- EncodeForHTMLAttribute : `someVar.encodeforHTMLAttribute()` 
-- EncodeForJavaScript : `someVar.encodeforJavaScript()` 
-- EncodeForURL : `someVar.encodeforURL()` 
-- EncodeForXML : `someVar.encodeforXML()` 
-- EncodeForXMLAttribute : `someVar.encodeforXMLAttribute()` 
-- EncodeForXPath : `someVar.encodeforXPath()` 
-- Encrypt : `someVar.encrypt()` 
-- Find : `someVar.find()` 
-- FindNoCase : `someVar.findNoCase()` 
-- FindOneOf : `someVar.findOneOf()` 
-- FormatBaseN : `someVar.formatBaseN()` 
-- GenerateSecretKey : `someVar.generateSecretKey()` 
-- getSafeHTML : `someVar.getSafeHTML()` 
-- GetToken : `someVar.getToken()` 
-- Hash : `someVar.hash()` 
-- HTMLCodeFormat : `someVar.htmlCodeFormat()` 
-- HTMLEditFormat : `someVar.htmlEditFormat()` 
-- Insert : `someVar.insert()` 
-- isSafeHTML : `someVar.isSafeHTML()` 
-- JSStringFormat : `someVar.jssStringFormat()` 
-- LCase : `someVar.lCase()` 
-- Left : `someVar.left()` 
-- Len : `someVar.len()` 
-- LJustify : `someVar.lJustify()` 
-- LSIsCurrency : `someVar.lsIsCurrency()` 
-- LSIsDate : `someVar.lsIsDate()` 
-- LSIsNumeric : `someVar.lsIsNumeric()` 
-- LSParseCurrency : `someVar.lsParseCurrency()` 
-- LSParseDateTime : `someVar.lsParseDateTime()` 
-- LSParseEuroCurrency : `someVar.lsParseEuroCurrency()` 
-- LSParseNumber : `someVar.lsParseNumber()` 
-- Mid : `someVar.mid()` 
-- ParagraphFormat : `someVar.paragraphFormat()` 
-- ParseDateTime : `someVar.parseDateTime()` 
-- REFind : `someVar.reFind()` 
-- REFindNoCase : `someVar.reFindNoCase()` 
-- REMatch : `someVar.reMatch()` 
-- REMatchNoCase : `someVar.reMatchNoCase()` 
-- RemoveChars : `someVar.removeChars()` 
-- RepeatString : `someVar.repeatString()` 
-- Replace : `someVar.replace()` 
-- ReplaceList : `someVar.replaceList()` 
-- ReplaceListNoCase : `someVar.replaceListNocase()` 
-- ReplaceNoCase : `someVar.replaceNocase()` 
-- REReplace : `someVar.reReplace()` 
-- REReplaceNoCase : `someVar.reReplaceNoCase()` 
-- Reverse : `someVar.reverse()` 
-- Right : `someVar.right()` 
-- RJustify : `someVar.rJustify()` 
-- RTrim : `someVar.trim()` 
-- SpanExcluding : `someVar.spanExcluding()` 
-- SpanIncluding : `someVar.spanIncluding()` 
-- StringEach : `someVar.each()` 
-- StringEvery : `someVar.every()` 
-- StringFilter : `somevar.filter()` 
-- StringMap : `someVar.map()` 
-- StringReduce : `somevar.reduce()` 
-- StringReduceRight : `someVar.reduceRight()` 
-- StringSome : `someVar.some()` 
-- StringSort : `someVar.sort()` 
-- StripCR : `someVar.stripCR()` 
-- ToBase64 : `someVar.toBase64()` 
-- ToBinary : `someVar.toBinary()` 
-- ToString : `someVar.toString()` 
-- Trim : `someVar.trim()` 
-- UCase : `someVar.uCase()` 
-- urlDecode : `someVar.urlDecode()` 
-- urlEncodedFormat : `someVar.urlEncodedFormat()` 
-- Val : `someVar.val()` 
-- Wrap : `someVar.wrap()` 
-- XmlFormat : `someVar.xmlFormat()` 
+- binaryDecode : `someVar.binaryDecode()`
+- binaryEncode : `someVar.binaryEncode()`
+- canonicalize : `someVar.canonicalize()`
+- charsetDecode : `someVar.charsetDecode()`
+- charsetEncode : `someVar.charsetEncode()`
+- cJustify : `someVar.cJustify()`
+- compare : `someVar.compare()`
+- compareNoCase : `someVar.compareNoCase()`
+- decodeForHTML : `someVar.decodeForHTML()`
+- decodeFromURL : `someVar.decodeFromURL()`
+- decrypt : `someVar.decrypt()`
+- encodeForCSS : `someVar.encodeForCSS()`
+- encodeForHTML : `someVar.encodeForHTML()`
+- encodeForHTMLAttribute : `someVar.encodeForHTMLAttribute()`
+- encodeForJavaScript : `someVar.encodeForJavaScript()`
+- encodeForURL : `someVar.encodeForURL()`
+- encodeForXML : `someVar.encodeForXML()`
+- encodeForXMLAttribute : `someVar.encodeForXMLAttribute()`
+- encodeForXPath : `someVar.encodeForXPath()`
+- encrypt : `someVar.encrypt()`
+- find : `someVar.find()`
+- findNoCase : `someVar.findNoCase()`
+- findOneOf : `someVar.findOneOf()`
+- formatBaseN : `someVar.formatBaseN()`
+- generateSecretKey : `someVar.generateSecretKey()`
+- getSafeHTML : `someVar.getSafeHTML()`
+- getToken : `someVar.getToken()`
+- hash : `someVar.hash()`
+- htmlCodeFormat : `someVar.htmlCodeFormat()`
+- htmlEditFormat : `someVar.htmlEditFormat()`
+- insert : `someVar.insert()`
+- isSafeHTML : `someVar.isSafeHTML()`
+- jsStringFormat : `someVar.jsStringFormat()`
+- lCase : `someVar.lCase()`
+- left : `someVar.left()`
+- len : `someVar.len()`
+- lJustify : `someVar.lJustify()`
+- lsIsCurrency : `someVar.lsIsCurrency()`
+- lsIsDate : `someVar.lsIsDate()`
+- lsIsNumeric : `someVar.lsIsNumeric()`
+- lsParseCurrency : `someVar.lsParseCurrency()`
+- lsParseDateTime : `someVar.lsParseDateTime()`
+- lsParseEuroCurrency : `someVar.lsParseEuroCurrency()`
+- lsParseNumber : `someVar.lsParseNumber()`
+- mid : `someVar.mid()`
+- paragraphFormat : `someVar.paragraphFormat()`
+- parseDateTime : `someVar.parseDateTime()`
+- reFind : `someVar.reFind()`
+- reFindNoCase : `someVar.reFindNoCase()`
+- reMatch : `someVar.reMatch()`
+- reMatchNoCase : `someVar.reMatchNoCase()`
+- removeChars : `someVar.removeChars()`
+- repeatString : `someVar.repeatString()`
+- replace : `someVar.replace()`
+- replaceList : `someVar.replaceList()`
+- replaceListNoCase : `someVar.replaceListNoCase()`
+- replaceNoCase : `someVar.replaceNoCase()`
+- reReplace : `someVar.reReplace()`
+- reReplaceNoCase : `someVar.reReplaceNoCase()`
+- reverse : `someVar.reverse()`
+- right : `someVar.right()`
+- rJustify : `someVar.rJustify()`
+- rTrim : `someVar.trim()`
+- serializeJSON : `someVar.toJSON()`
+- spanExcluding : `someVar.spanExcluding()`
+- spanIncluding : `someVar.spanIncluding()`
+- stringEach : `someVar.each()`
+- stringEvery : `someVar.every()`
+- stringFilter : `someVar.filter()`
+- stringMap : `someVar.map()`
+- stringReduce : `someVar.reduce()`
+- stringReduceRight : `someVar.reduceRight()`
+- stringSome : `someVar.some()`
+- stringSort : `someVar.sort()`
+- stripCR : `someVar.stripCR()`
+- toBase64 : `someVar.toBase64()`
+- toBinary : `someVar.toBinary()`
+- toString : `someVar.toString()`
+- trim : `someVar.trim()`
+- uCase : `someVar.uCase()`
+- urlDecode : `someVar.urlDecode()`
+- urlEncodedFormat : `someVar.urlEncodedFormat()`
+- val : `someVar.val()`
+- wrap : `someVar.wrap()`
+- xmlFormat : `someVar.xmlFormat()`
 
 ## List member functions
 
-- ListAppend : `someVar.listAppend()` 
-- ListChangeDelims : `someVar.listChangeDelims()` 
-- ListContains : `someVar.listContains()` 
-- ListContainsNoCase : `someVar.listContainsNoCase()` 
-- ListDeleteAt : `someVar.listDeleteAt()` 
-- ListEach : `someVar.listEach()` 
-- ListFind : `someVar.listFind()` 
-- ListFindNoCase : `someVar.listFindNoCase()` 
-- ListFirst : `someVar.listFirst()` 
-- ListGetAt : `someVar.listGetAt()` 
-- ListInsertAt : `someVar.listInsertAt()` 
-- ListLast : `someVar.listLast()` 
-- ListLen : `someVar.listLen()` 
-- ListMap : `someVar.listMap()` 
-- ListPrepend : `someVar.listPrepend()` 
-- ListQualify : `someVar.listQualify()` 
-- ListReduce : `someVar.listReduce()` 
-- ListReduceRight : `someVar.listReduceRight()` 
-- ListRemoveDuplicates : `someVar.listRemoveDuplicates()` 
-- ListRest : `someVar.listRest()` 
-- ListSetAt : `someVar.listSetAt()` 
-- ListSort : `someVar.listSort()` 
-- ListToArray : `someVar.listToArray()` 
-- ListValueCount : `someVar.listValueCount()` 
-- ListValueCountNoCase : `someVar.listValueCountNoCase()` 
-- ToJSON : `someVar.toJSON()` 
+- listAppend : `someVar.listAppend()`
+- listChangeDelims : `someVar.listChangeDelims()`
+- listContains : `someVar.listContains()`
+- listContainsNoCase : `someVar.listContainsNoCase()`
+- listDeleteAt : `someVar.listDeleteAt()`
+- listEach : `someVar.listEach()`
+- listFind : `someVar.listFind()`
+- listFindNoCase : `someVar.listFindNoCase()`
+- listFirst : `someVar.listFirst()`
+- listGetAt : `someVar.listGetAt()`
+- listInsertAt : `someVar.listInsertAt()`
+- listLast : `someVar.listLast()`
+- listLen : `someVar.listLen()`
+- listMap : `someVar.listMap()`
+- listPrepend : `someVar.listPrepend()`
+- listQualify : `someVar.listQualify()`
+- listReduce : `someVar.listReduce()`
+- listReduceRight : `someVar.listReduceRight()`
+- listRemoveDuplicates : `someVar.listRemoveDuplicates()`
+- listRest : `someVar.listRest()`
+- listSetAt : `someVar.listSetAt()`
+- listSort : `someVar.listSort()`
+- listToArray : `someVar.listToArray()`
+- listValueCount : `someVar.listValueCount()`
+- listValueCountNoCase : `someVar.listValueCountNoCase()`
+- serializeJSON : `someVar.toJSON()`
 
 ## Struct member functions
 
-- StructAppend : `someVar.append()` 
-- StructClear : `someVar.clear()` 
-- StructCopy : `someVar.copy()` 
-- StructCount : `someVar.count()` 
-- StructDelete : `someVar.delete()` 
-- StructEach : `someVar.each()` 
-- StructEvery : `someVar.every()` 
-- StructFilter : `someVar.filter()` 
-- StructFind : `someVar.find()` 
-- StructFindKey : `someVar.findkey()` 
-- StructFindValue : `someVar.findValue()` 
-- StructGet : `someVar.get()` 
-- StructGetMetadata : `someVar.getMetadata()` 
-- StructInsert : `someVar.insert()` 
-- StructIsCaseSensitive : `someVar.isCaseSensitive()` 
-- StructIsEmpty : `someVar.isEmpty()` 
-- StructIsOrdered : `someVar.isOrdered()`
-- StructKeyArray : `someVar.keyArray()` 
-- StructKeyExists : `someVar.keyExists()` 
-- StructKeyList : `someVar.keyList()` 
-- StructMap : `someVar.map()` 
-- StructReduce : `someVar.reduce()` 
-- StructSetMetadata : `someVar.setMetadata()` 
-- StructSome : `someVar.some()` 
-- StructSort : `someVar.sort()` 
-- StructToSorted : `someVar.tosorted()` 
-- StructUpdate : `someVar.update()` 
+- serializeJSON : `someVar.toJSON()`
+- structAppend : `someVar.append()`
+- structClear : `someVar.clear()`
+- structCopy : `someVar.copy()`
+- structCount : `someVar.count()`
+- structDelete : `someVar.delete()`
+- structEach : `someVar.each()`
+- structEvery : `someVar.every()`
+- structFilter : `someVar.filter()`
+- structFind : `someVar.find()`
+- structFindKey : `someVar.findKey()`
+- structFindValue : `someVar.findValue()`
+- structGet : `someVar.get()`
+- structGetMetadata : `someVar.getMetadata()`
+- structInsert : `someVar.insert()`
+- structIsCaseSensitive : `someVar.isCaseSensitive()`
+- structIsEmpty : `someVar.isEmpty()`
+- structIsOrdered : `someVar.isOrdered()`
+- structKeyArray : `someVar.keyArray()`
+- structKeyExists : `someVar.keyExists()`
+- structKeyList : `someVar.keyList()`
+- structMap : `someVar.map()`
+- structReduce : `someVar.reduce()`
+- structSetMetadata : `someVar.setMetadata()`
+- structSome : `someVar.some()`
+- structSort : `someVar.sort()`
+- structToSorted : `someVar.toSorted()`
+- structUpdate : `someVar.update()`
 
 ## Date member functions
 
-- CreateODBCDate : `someVar.createODBCDate()` 
-- CreateODBCDateTime : `someVar.createODBCDateTime()` 
-- CreateODBCTime : `someVar.createODBCTime()` 
-- DateAdd : `someVar.add()` 
-- DateConvert : `someVar.convert()` 
-- DateDiff : `someVar.diff()` 
-- DateFormat : `someVar.dateFormat()` 
-- DatePart : `someVar.datepart()` 
-- DateTimeFormat : `someVar.dateTimeFormat()` 
-- Day : `someVar.day()` 
-- DayOfWeek : `someVar.dayOfweek()` 
-- DayOfYear : `someVar.dayOfYear()` 
-- DaysInMonth : `someVar.daysInMonth()` 
-- DaysInYear : `someVar.daysIn` 
-- FirstDayOfMonth : `someVar.firstDayOfMonth()` 
-- Format : `someVar.format()` 
-- Hour : `someVar.hour()` 
-- LSDateFormat : `someVar.lsDateFormat()` 
-- LSTimeFormat : `someVar.lsTimeFormat()` 
-- Minute : `someVar.minute()` 
-- Month : `someVar.month()` 
-- Quarter : `someVar.quarter()` 
-- Second : `someVar.second()` 
-- setDay : `<DateObject>.setDay(day)` 
-- setHour : `<DateObject>.setHour(hour)` 
-- setMinute : `<DateObject>.setMinute(minute)` 
-- setMonth : `<DateObject>.setMonth(month)` 
-- setSecond : `<DateObject>.setSecond(second)` 
-- setYear : `<DateObject>.setYear(year)` 
-- TimeFormat : `someVar.timeFormat()` 
-- Week : `someVar.week()` 
-- Year : `someVar.year()` 
-
+- createODBCDate : `someVar.createODBCDate()`
+- createODBCDateTime : `someVar.createODBCDateTime()`
+- createODBCTime : `someVar.createODBCTime()`
+- dateAdd : `someVar.add()`
+- dateConvert : `someVar.convert()`
+- dateDiff : `someVar.diff()`
+- dateFormat : `someVar.dateFormat()`
+- datePart : `someVar.datePart()`
+- dateTimeFormat : `someVar.dateTimeFormat()`
+- day : `someVar.day()`
+- dayOfWeek : `someVar.dayOfWeek()`
+- dayOfYear : `someVar.dayOfYear()`
+- daysInMonth : `someVar.daysInMonth()`
+- daysInYear : `someVar.daysIn`
+- firstDayOfMonth : `someVar.firstDayOfMonth()`
+- format : `someVar.format()`
+- hour : `someVar.hour()`
+- lsDateFormat : `someVar.lsDateFormat()`
+- lsTimeFormat : `someVar.lsTimeFormat()`
+- minute : `someVar.minute()`
+- month : `someVar.month()`
+- quarter : `someVar.quarter()`
+- second : `someVar.second()`
+- setDay : `<DateObject>.setDay(day)`
+- setHour : `<DateObject>.setHour(hour)`
+- setMinute : `<DateObject>.setMinute(minute)`
+- setMonth : `<DateObject>.setMonth(month)`
+- setSecond : `<DateObject>.setSecond(second)`
+- setYear : `<DateObject>.setYear(year)`
+- timeFormat : `someVar.timeFormat()`
+- week : `someVar.week()`
+- year : `someVar.year()`
 
 ## Image member functions
 
-- ImageAddBorder : `someVar.addBorder()` 
-- ImageBlur : `someVar.blur()` 
-- ImageClearRect : `someVar.clearRect()` 
-- ImageCopy : `someVar.copy()` 
-- ImageCrop : `someVar.crop()` 
-- ImageDrawArc : `someVar.drawArc()` 
-- ImageDrawBeveledRect : `someVar.drawBeveledRect()` 
-- ImageDrawCubicCurve : `someVar.drawCubicCurve()` 
-- ImageDrawLine : `someVar.drawLine()` 
-- ImageDrawLines : `someVar.drawLines()` 
-- ImageDrawOval : `someVar.drawOval()` 
-- ImageDrawPoint : `someVar.drawPoint()` 
-- ImageDrawQuadraticCurve : `someVar.drawQuadraticCurve()` 
-- ImageDrawRect : `someVar.drawRect()` 
-- ImageDrawRoundRect : `someVar.drawRoundRect()  ` 
-- ImageDrawText : `someVar.drawText()` 
-- ImageFlip : `someVar.flip()` 
-- ImageGetBlob : `someVar.getBlob()` 
-- ImageGetBufferedImage : `someVar.getBufferedImage()` 
-- ImageGetExifMetadata : `someVar.getExifMetadata()` 
-- ImageGetEXIFTag : `someVar.getEXIFTag()` 
-- ImageGetHeight : `someVar.getHeight()` 
-- ImageGetIptcMetadata : `someVar.getIptcMetadata()` 
-- ImageGetIPTCTag : `someVar.getIPTCTag()` 
-- ImageGetWidth : `someVar.getWidth()` 
-- ImageGrayscale : `someVar.grayscale()` 
-- ImageInfo : `someVar.info()` 
-- ImageNegative : `someVar.negative()` 
-- ImageOverlay : `someVar.overlay()` 
-- ImagePaste : `someVar.paste()` 
-- ImageResize : `someVar.resize()` 
-- ImageRotate : `someVar.rotate()` 
-- ImageRotateDrawingAxis : `someVar.rotateDrawingAxis()` 
-- ImageScaleToFit : `someVar.scaleToFit()` 
-- ImageSetAntialiasing : `someVar.setAntialiasing()` 
-- ImageSetBackgroundColor : `someVar.setBackgroundColor()` 
-- ImageSetDrawingColor : `someVar.setDrawingColor()` 
-- ImageSetDrawingStroke : `someVar.setDrawingStroke()` 
-- ImageSetDrawingTransparency : `someVar.setDrawingTransparency()` 
-- ImageSharpen : `someVar.sharpen()` 
-- ImageShear : `someVar.shear()` 
-- ImageShearDrawingAxis : `someVar.shearDrawingAxis()` 
-- ImageTranslate : `someVar.translate()` 
-- ImageTranslateDrawingAxis : `someVar.translateDrawingAxis()` 
-- ImageWrite : `someVar.write()` 
-- ImageWriteBase64 : `someVar.writeBase64()` 
-- ImageXORDrawingMode : `someVar.xorDrawingMode()` 
+- imageAddBorder : `someVar.addBorder()`
+- imageBlur : `someVar.blur()`
+- imageClearRect : `someVar.clearRect()`
+- imageCopy : `someVar.copy()`
+- imageCrop : `someVar.crop()`
+- imageDrawArc : `someVar.drawArc()`
+- imageDrawBeveledRect : `someVar.drawBeveledRect()`
+- imageDrawCubicCurve : `someVar.drawCubicCurve()`
+- imageDrawLine : `someVar.drawLine()`
+- imageDrawLines : `someVar.drawLines()`
+- imageDrawOval : `someVar.drawOval()`
+- imageDrawPoint : `someVar.drawPoint()`
+- imageDrawQuadraticCurve : `someVar.drawQuadraticCurve()`
+- imageDrawRect : `someVar.drawRect()`
+- imageDrawRoundRect : `someVar.drawRoundRect()`
+- imageDrawText : `someVar.drawText()`
+- imageFlip : `someVar.flip()`
+- imageGetBlob : `someVar.getBlob()`
+- imageGetBufferedImage : `someVar.getBufferedImage()`
+- imageGetExifMetadata : `someVar.getExifMetadata()`
+- imageGetEXIFTag : `someVar.getEXIFTag()`
+- imageGetHeight : `someVar.getHeight()`
+- imageGetIptcMetadata : `someVar.getIptcMetadata()`
+- imageGetIPTCTag : `someVar.getIPTCTag()`
+- imageGetWidth : `someVar.getWidth()`
+- imageGrayscale : `someVar.grayscale()`
+- imageInfo : `someVar.info()`
+- imageNegative : `someVar.negative()`
+- imageOverlay : `someVar.overlay()`
+- imagePaste : `someVar.paste()`
+- imageResize : `someVar.resize()`
+- imageRotate : `someVar.rotate()`
+- imageRotateDrawingAxis : `someVar.rotateDrawingAxis()`
+- imageScaleToFit : `someVar.scaleToFit()`
+- imageSetAntialiasing : `someVar.setAntialiasing()`
+- imageSetBackgroundColor : `someVar.setBackgroundColor()`
+- imageSetDrawingColor : `someVar.setDrawingColor()`
+- imageSetDrawingStroke : `someVar.setDrawingStroke()`
+- imageSetDrawingTransparency : `someVar.setDrawingTransparency()`
+- imageSharpen : `someVar.sharpen()`
+- imageShear : `someVar.shear()`
+- imageShearDrawingAxis : `someVar.shearDrawingAxis()`
+- imageTranslate : `someVar.translate()`
+- imageTranslateDrawingAxis : `someVar.translateDrawingAxis()`
+- imageWrite : `someVar.write()`
+- imageWriteBase64 : `someVar.writeBase64()`
+- imageXORDrawingMode : `someVar.xorDrawingMode()`
 
 ## Spreadsheet member functions
 
-- SpreadsheetAddAutoFilter : `someVar.addAutoFilter()` 
-- SpreadsheetAddColumn : `someVar.addColumn()` 
-- SpreadsheetAddFreezePane : `someVar.addFreezePane()` 
-- SpreadsheetAddImage : `someVar.addImage()` 
-- SpreadsheetAddInfo : `someVar.addInfo()` 
-- SpreadsheetAddPageBreaks : `someVar.addPageBreaks()` 
-- SpreadsheetAddRow : `someVar.addRow()` 
-- SpreadsheetAddRows : `someVar.addRows()` 
-- SpreadsheetAddSplitPane : `someVar.addSplitPane()` 
-- SpreadsheetCreateSheet : `someVar.createSheet()` 
-- SpreadsheetDeleteColumn : `someVar.deleteColumn()` 
-- SpreadsheetDeleteColumns : `someVar.deleteColumns()` 
-- SpreadsheetDeleteRow : `someVar.deleteRow()` 
-- SpreadsheetDeleteRows : `someVar.deleteRows()` 
-- SpreadsheetFormatCell : `someVar.formatCell()` 
-- SpreadsheetFormatCellRange : `someVar.formatCellRange()` 
-- SpreadsheetFormatColumn : `someVar.formatColumn()` 
-- SpreadsheetFormatColumns : `someVar.formatColumns()` 
-- SpreadsheetFormatRow : `someVar.formatRow()` 
-- SpreadsheetFormatRows : `someVar.formatRows()` 
-- SpreadsheetGetCellComment : `someVar.getCellComment()` 
-- SpreadsheetGetCellFormula : `someVar.getCellFormula()` 
-- SpreadsheetGetCellValue : `someVar.getCellValue()` 
-- SpreadsheetGetColumnCount : `someVar.getColumnCount()` 
-- SpreadsheetInfo : `someVar.info()` 
-- SpreadsheetMergeCells : `someVar.mergeCells()` 
-- SpreadsheetReadBinary : `someVar.readBinary()` 
-- SpreadsheetRemoveSheet : `someVar.removeSheet()` 
-- SpreadsheetSetActiveSheet : `someVar.setActiveSheet()` 
-- SpreadsheetSetActiveSheetNumber : `someVar.setActiveSheetNumber()` 
-- SpreadsheetSetCellComment : `someVar.setCellComment()` 
-- SpreadsheetSetCellFormula : `someVar.setCellFormula()` 
-- SpreadsheetSetCellValue : `someVar.setCellValue()` 
-- SpreadsheetSetColumnWidth : `someVar.setColumnWidth()` 
-- SpreadsheetSetFooter : `someVar.setFooter()` 
-- SpreadsheetSetHeader : `someVar.setHeader()` 
-- SpreadsheetSetRowHeight : `someVar.setRowHeight()` 
-- SpreadsheetShiftColumns : `someVar.shiftColumns()` 
-- SpreadsheetShiftRows : `someVar.shiftRows()` 
-- SpreadsheetWrite : `someVar.write()` 
+- spreadsheetAddAutoFilter : `someVar.addAutoFilter()`
+- spreadsheetAddColumn : `someVar.addColumn()`
+- spreadsheetAddFreezePane : `someVar.addFreezePane()`
+- spreadsheetAddImage : `someVar.addImage()`
+- spreadsheetAddInfo : `someVar.addInfo()`
+- spreadsheetAddPageBreaks : `someVar.addPageBreaks()`
+- spreadsheetAddRow : `someVar.addRow()`
+- spreadsheetAddRows : `someVar.addRows()`
+- spreadsheetAddSplitPane : `someVar.addSplitPane()`
+- spreadsheetCreateSheet : `someVar.createSheet()`
+- spreadsheetDeleteColumn : `someVar.deleteColumn()`
+- spreadsheetDeleteColumns : `someVar.deleteColumns()`
+- spreadsheetDeleteRow : `someVar.deleteRow()`
+- spreadsheetDeleteRows : `someVar.deleteRows()`
+- spreadsheetFormatCell : `someVar.formatCell()`
+- spreadsheetFormatCellRange : `someVar.formatCellRange()`
+- spreadsheetFormatColumn : `someVar.formatColumn()`
+- spreadsheetFormatColumns : `someVar.formatColumns()`
+- spreadsheetFormatRow : `someVar.formatRow()`
+- spreadsheetFormatRows : `someVar.formatRows()`
+- spreadsheetGetCellComment : `someVar.getCellComment()`
+- spreadsheetGetCellFormula : `someVar.getCellFormula()`
+- spreadsheetGetCellValue : `someVar.getCellValue()`
+- spreadsheetGetColumnCount : `someVar.getColumnCount()`
+- spreadsheetInfo : `someVar.info()`
+- spreadsheetMergeCells : `someVar.mergeCells()`
+- spreadsheetReadBinary : `someVar.readBinary()`
+- spreadsheetRemoveSheet : `someVar.removeSheet()`
+- spreadsheetSetActiveSheet : `someVar.setActiveSheet()`
+- spreadsheetSetActiveSheetNumber : `someVar.setActiveSheetNumber()`
+- spreadsheetSetCellComment : `someVar.setCellComment()`
+- spreadsheetSetCellFormula : `someVar.setCellFormula()`
+- spreadsheetSetCellValue : `someVar.setCellValue()`
+- spreadsheetSetColumnWidth : `someVar.setColumnWidth()`
+- spreadsheetSetFooter : `someVar.setFooter()`
+- spreadsheetSetHeader : `someVar.setHeader()`
+- spreadsheetSetRowHeight : `someVar.setRowHeight()`
+- spreadsheetShiftColumns : `someVar.shiftColumns()`
+- spreadsheetShiftRows : `someVar.shiftRows()`
+- spreadsheetWrite : `someVar.write()`
 
 ## XML member functions
 
-- Duplicate : `someVar.duplicate()` 
-- ToString : `someVar.toString()` 
-- XmlAppend : `someVar.append()` 
-- XmlChildPos : `someVar.childPos()` 
-- XmlCount : `someVar.count()` 
-- XmlElemNew : `someVar.elemNew()` 
-- XmlGetNodeType : `someVar.getNodeType()` 
-- XmlHasChild : `someVar.hasChild()` 
-- XmlKeyArray : `someVar.keyArray()` 
-- XmlKeyList : `someVar.keyList()` 
-- XmlLen : `someVar.len()` 
-- XmlSearch : `someVar.search()` 
-- XmlTransform : `someVar.transform()` 
-- XmlUpdate : `someVar.update()` 
+- duplicate : `someVar.duplicate()`
+- toString : `someVar.toString()`
+- xmlAppend : `someVar.append()`
+- xmlChildPos : `someVar.childPos()`
+- xmlCount : `someVar.count()`
+- xmlElemNew : `someVar.elemNew()`
+- xmlGetNodeType : `someVar.getNodeType()`
+- xmlHasChild : `someVar.hasChild()`
+- xmlKeyArray : `someVar.keyArray()`
+- xmlKeyList : `someVar.keyList()`
+- xmlLen : `someVar.len()`
+- xmlSearch : `someVar.search()`
+- xmlTransform : `someVar.transform()`
+- xmlUpdate : `someVar.update()`
 
 ## Query member functions
 
-- Len : `someVar.len()` 
-- QueryAddColumn : ` someVar.addColumn()` 
-- QueryAddRow : `someVar.addRow()` 
-- QueryAppend : `someVar.append()` 
-- QueryClear : `someVar.clear()` 
-- QueryConvertForGrid : `someVar.convertForGrid()` 
-- QueryDeleteAt : `someVar.deleteAt()` 
-- QueryDeleteColumn : `someVar.deleteColumn()` 
-- QueryDeleteRow : `someVar.deleteRow()` 
-- QueryEach : `someVar.Each()` 
-- QueryEvery : `someVar.every()` 
-- QueryFilter : `someVar.Filter()` 
-- QueryGetResult : `someVar.getResult()` 
-- QueryGetRow : `someVar.getRow()` 
-- QueryInsertAt : `someVar.insertAt()` 
-- QueryKeyExists : `someVar.keyExists()` 
-- QueryMap : `someVar.Map()` 
-- QueryPrepend : `someVar.prepend()` 
-- QueryRecordCount : `someVar.recordCount()` 
-- QueryReduce : `someVar.Reduce()` 
-- QueryRowSwap : `someVar.rowswap()` 
-- QuerySetCell : `someVar.setCell()` 
-- QuerySlice : `someVar.slice()` 
-- QuerySome : `someVar.some()` 
-- QuerySort : `someVar.Sort()` 
-- ValueArray : `someVar.valueArray()` 
+- len : `someVar.len()`
+- queryAddColumn : `someVar.addColumn()`
+- queryAddRow : `someVar.addRow()`
+- queryAppend : `someVar.append()`
+- queryClear : `someVar.clear()`
+- queryConvertForGrid : `someVar.convertForGrid()`
+- queryDeleteAt : `someVar.deleteAt()`
+- queryDeleteColumn : `someVar.deleteColumn()`
+- queryDeleteRow : `someVar.deleteRow()`
+- queryEach : `someVar.each()`
+- queryEvery : `someVar.every()`
+- queryFilter : `someVar.filter()`
+- queryGetResult : `someVar.getResult()`
+- queryGetRow : `someVar.getRow()`
+- queryInsertAt : `someVar.insertAt()`
+- queryKeyExists : `someVar.keyExists()`
+- queryMap : `someVar.map()`
+- queryPrepend : `someVar.prepend()`
+- queryRecordCount : `someVar.recordCount()`
+- queryReduce : `someVar.reduce()`
+- queryRowSwap : `someVar.rowSwap()`
+- querySetCell : `someVar.setCell()`
+- querySlice : `someVar.slice()`
+- querySome : `someVar.some()`
+- querySort : `someVar.sort()`
+- serializeJSON : `someVar.toJSON()`
+- valueArray : `someVar.valueArray()`
 
 When using Query.cfc, you get your results from the execution by using:
 
@@ -417,45 +418,45 @@ When using Query.cfc, you get your results from the execution by using:
 
 ## Display and Formatting member functions
 
-- BooleanFormat : `someVal.booleanFormat()`
-- YesNoFormat : `someVal.yesNoFormat()`
+- booleanFormat : `someVal.booleanFormat()`
+- yesNoFormat : `someVal.yesNoFormat()`
 
 ## Numeric member functions
 
-- Abs : `someVar.abs()`
-- ACos : `someVar.aCos()`
-- ASin : `someVar.aSin()`
-- Atn : `someVar.atn()`
-- BitAnd : `someVar.bitAnd(number2)`
-- BitMaskClear : `someVar.bitMaskClear(start, length)`
-- BitMaskRead : `someVar.bitMaskRead(start, length)`
-- BitMaskSet : `someVar.bitMaskSet(mask, start, length)`
-- BitNOT : `someVar.bitNot()`
-- BitOR : `someVar.bitOr(number2)`
-- BitSHLN : `someVar.bitSHLN(count)`
-- BitSHRN : `someVar.bitSHRN(count)`
-- BitXOR : `someVar.bitXor(number2)`
-- Ceiling : `someVar.ceiling()`
-- Cos : `someVar.cos()`
-- DecrementValue : `someVar.decrementValue()`
-- Exp : `someVar.exp()`
-- Fix : `someVar.fix()`
-- Floor : `someVar.floor()`
-- FormatBaseN : `someVar.formatBaseN(radix)`
-- IncrementValue : `someVar.incrementValue()`
-- InputBaseN : `someVar.inputbasen()`
-- Log : `someVar.log()`
-- Log10 : `someVar.log10()`
-- Max : `someVar.max(number2)`
-- Min : `someVar.min(number2)`
-- PrecisionEvaluate : `someVar.precisionEvaluate()`
-- Randomize : `someVar.randomize([algorithm])`
-- RandRange : `someVar.randRange(number2[, algorithm])`
-- Round : `someVar.round()`
-- Sgn : `someVar.sgn()`
-- Sin : `someVar.sin()`
-- Sqr : `someVar.sqr()`
-- Tan : `someVar.tan()`
+- abs : `someVar.abs()`
+- aCos : `someVar.aCos()`
+- aSin : `someVar.aSin()`
+- atn : `someVar.atn()`
+- bitAnd : `someVar.bitAnd(number2)`
+- bitMaskClear : `someVar.bitMaskClear(start, length)`
+- bitMaskRead : `someVar.bitMaskRead(start, length)`
+- bitMaskSet : `someVar.bitMaskSet(mask, start, length)`
+- bitNOT : `someVar.bitNot()`
+- bitOR : `someVar.bitOr(number2)`
+- bitSHLN : `someVar.bitSHLN(count)`
+- bitSHRN : `someVar.bitSHRN(count)`
+- bitXOR : `someVar.bitXor(number2)`
+- ceiling : `someVar.ceiling()`
+- cos : `someVar.cos()`
+- decrementValue : `someVar.decrementValue()`
+- exp : `someVar.exp()`
+- fix : `someVar.fix()`
+- floor : `someVar.floor()`
+- formatBaseN : `someVar.formatBaseN(radix)`
+- incrementValue : `someVar.incrementValue()`
+- inputBaseN : `someVar.inputBaseN()`
+- log : `someVar.log()`
+- log10 : `someVar.log10()`
+- max : `someVar.max(number2)`
+- min : `someVar.min(number2)`
+- precisionEvaluate : `someVar.precisionEvaluate()`
+- randomize : `someVar.randomize([algorithm])`
+- randRange : `someVar.randRange(number2[, algorithm])`
+- round : `someVar.round()`
+- sgn : `someVar.sgn()`
+- sin : `someVar.sin()`
+- sqr : `someVar.sqr()`
+- tan : `someVar.tan()`
 
 ## Future member functions
 
@@ -478,19 +479,18 @@ When using Query.cfc, you get your results from the execution by using:
 - isCancelled : `EmptyFutureObject.isCancelled()`
 - isDone : `EmptyFutureObject.isDone()`
 
-
 Member Functions can also be chained (on Lucee or CF2018+), for example:
 
-    s="the";
+    s = "the";
     s = s.listAppend("quick brown fox", " ")
          .listAppend("jumps over the lazy dog", " ")
-         .ucase()
+         .uCase()
          .reverse();
 
 result: `GOD YZAL EHT REVO SPMUJ XOF NWORB KCIUQ EHT`
 
-# Important Note on a potential Member Function Gotcha
+## Important Note on a potential Member Function Gotcha
 
 Some member functions [might fall into underlying Java methods][note] if the strict ColdFusion syntax is not followed.
 
-[note]: https://bugbase.adobe.com/index.cfm?event=bug&id=3753710
+[note]: https://tracker.adobe.com/#/view/CF-3753710
