@@ -47,7 +47,7 @@ The above example would output `appleorangebanana`
 ### For In Loop (over a query) CF10+
 
     for (row in query) {
-        writeOutput(query.currentrow);
+        writeOutput(query.currentRow);
         writeOutput(row.columnName); 
     }
 
