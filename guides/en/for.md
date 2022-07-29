@@ -48,6 +48,7 @@ The above example would output `appleorangebanana`
 
 	for (row in query) {
 		writeOutput(query.currentrow);
+		writeOutput(row.columnName);
 	}
 
 ### Query Loop (with grouping) CF10+
