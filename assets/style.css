@@ -1,6 +1,7 @@
 body {
   padding-top: 50px;
   padding-bottom: 20px;
+  font-size: 16px;
 }
 
 div.listing > h2 > a.btn { text-transform: none; }
@@ -15,7 +16,6 @@ h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier Ne
 .p-desc { padding: 8px; margin: 0 5%; }
 .listing a { margin-right: 15px; margin-bottom: 15px; font-size: larger }
 .listing h2 { margin: inherit; font-size: inherit; padding: inherit; border: none; display: inline }
-h2 { text-transform: uppercase; }
 .listing { text-align: center; }
 #syntax { font-weight:bold; }
 #syntax > code { white-space: pre; padding: 0; }
@@ -40,26 +40,94 @@ h2 { text-transform: uppercase; }
     letter-spacing: -0.6px;
     word-spacing: 1px;
 }
+.twitter-typeahead {
+  width:100%
+}
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
   margin-bottom: 0;
 }
 
 #foundeo {
-  opacity:0;
   margin-left: 100px;
 }
 #foundeo img {
   width: 70px; height:20px;
 }
 
-#foundeo.foundeoAppear {
-  opacity:1;
-
+#foundeo {
   transition: all 2.5s ease-in-out;
 }
 
+#foundeo {
+  position: absolute;
+  top: 15px;
+  right: 14px;
+}
+nav.navbar.navbar-mini {
+  min-height: 40px;
+  margin-bottom: 0;
+  border: none;
+}
+nav.navbar.navbar-mini ul {
+  white-space:nowrap;
+  overflow: auto;
+    overflow-y: hidden;
+  margin: 0;
+  float: none;
+}
+nav.navbar.navbar-mini ul::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+nav.navbar.navbar-mini ul {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+nav.navbar.navbar-mini ul li a {
+  padding: 13px 12px 9px 12px;
+  margin-bottom: -3px;
+}
+nav.navbar.navbar-mini .navbar-header {
+  width: 100%;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+nav.navbar.navbar-mini .navbar-brand {
+  padding: 0px 10px 0px 7px;
+  height: 24px;
+  border-right: 1px solid #ccc;
+  margin: 13px 0 0;
+}
+nav.navbar.navbar-mini	.navbar-nav>li {
+  float: none !important;
+  display: inline-block !important;
+}
+.navbar-collapse.in {
+  overflow-y: visible;
+}
+
+.headinglink {
+  color: #333333;
+  position: relative;
+}
+.headinglink:hover  {
+  color: #333333;
+  text-decoration: none;
+}
+.headinglink:hover::before  {
+  content: "\e144";
+  font-family: "Glyphicons Halflings";
+  color: #333333;
+  width: 0;
+  position: absolute;
+  left: -20px;
+  font-size: 56%;
+  line-height: 200%;
+}
 .tt-menu {
+  width: 100%;
   min-width: 160px;
   margin-top: 2px;
   padding: 5px 0;
@@ -102,7 +170,7 @@ h2 { text-transform: uppercase; }
     border: 1px solid transparent;
     color:#ccc;
 }
-.breadcrumb li.pull-right:before { content: " ";}
+.breadcrumb li.pull-right:before { content: " "; }
 .breadcrumb li.divider:before { content: "|"; padding-right:0px; padding-left:8px; }
 .breadcrumb hr { margin:3px; }
 footer { text-align: center; margin-top: 10px; font-size:smaller; }
@@ -138,24 +206,26 @@ footer { text-align: center; margin-top: 10px; font-size:smaller; }
   color: #fff;
 }
 /* for use in page anchor - moves -100px to allow space for toolbar */
-.page-anchor{
+.page-anchor {
   position:absolute;
   margin-top:-80px;
 }
 /* normal placement in examples */
-p.clearfix .page-anchor{
+p.clearfix .page-anchor {
   position:absolute;
   margin-top:-100px;
 }
 
-iframe { border:0px;}
+iframe { border:0px; }
 
 .contributor { background-color: #f1f1f1; border-radius: 7px; margin: 5px 0; padding:15px 10px; }
 .contributor img { width: 75px; height: 75px; display: block; margin: 0 auto; }
 
 pre.prettyprint {
-	padding: 5px 8px !important;
-	border: 1px solid #CCC !important;
+  padding: 5px 8px !important;
+  border: 1px solid #CCC !important;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .alert-danger h4 { line-height: 1.5; }
@@ -166,26 +236,31 @@ pre.prettyprint {
 }
 
 .issuecount {
-	padding: 2px 5px;
+  padding: 2px 5px;
 }
 
 .issuebutton {
-	color: white;
-	padding-left: 2px;
-	padding-right: 5px;
+  color: white;
+  padding-left: 2px;
+  padding-right: 5px;
 }
 
 :target::before {
-	content: "";
-	display: block;
-	margin-top: -55px;
-	height: 55px;
-	width: 1px
+  content: "";
+  display: block;
+  margin-top: -55px;
+  height: 55px;
+  width: 1px
 }
 
 .dropdown-menu.scrollable-menu {
-	max-height: 300px;
-	overflow-x: hidden;
+  max-height: 300px;
+  overflow-x: hidden;
 }
 
 .related .label { margin-right: 4px; }
+
+nav.navbar ul.dropdown-menu {
+  max-height: 80vh;
+  overflow-y: auto;
+}

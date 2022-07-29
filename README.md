@@ -1,9 +1,9 @@
 # CFDocs
 
-CFDocs is a community maintained CFML reference tool available at [cfdocs.org](http://cfdocs.org). It features:
+CFDocs is a community maintained CFML reference tool available at [cfdocs.org](https://cfdocs.org). It features:
 * Hosting on Amazon CloudFront CDN for fast responses around the globe. Sponsored by [Foundeo Inc.](http://foundeo.com).
-* Easy to use urls like: [cfdocs.org/hash](http:cfdocs.org/hash) just hit /tag-name or /function-name.
-* Publicly maintained on [GitHub](http://github.com/foundeo/cfdocs)
+* Easy to use urls like: [cfdocs.org/hash](https://cfdocs.org/hash) just hit /tag-name or /function-name.
+* Publicly maintained on [GitHub](https://github.com/foundeo/cfdocs)
 
 [![CI](https://github.com/foundeo/cfdocs/actions/workflows/ci.yml/badge.svg)](https://github.com/foundeo/cfdocs/actions/workflows/ci.yml)
 
@@ -55,10 +55,10 @@ CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. att
 
 We need help expanding existing tag and function documentation. Look through the reference pages till you find one needing more definitions or examples. Also see:
 
-* [Missing Descriptions](http://cfdocs.org/reports/missing-descriptions.cfm)
-* [Missing Examples](http://cfdocs.org/reports/missing-examples.cfm)
-* [Missing Related Links](http://cfdocs.org/reports/missing-related.cfm)
-* [Missing Functions](http://cfdocs.org/reports/todo.cfm)
+* [Missing Descriptions](https://cfdocs.org/reports/missing-descriptions.cfm)
+* [Missing Examples](https://cfdocs.org/reports/missing-examples.cfm)
+* [Missing Related Links](https://cfdocs.org/reports/missing-related.cfm)
+* [Missing Functions](https://cfdocs.org/reports/todo.cfm)
 
 ### JSON File Documentation
 
@@ -154,7 +154,7 @@ Use this to link to blog entries or other useful related content.
 
 Show example code. It is very helpful to readers to use the `result` to show the expected result of the code sample when applicable. This has to be JSON, so  you can to do `\n` for newline, double quotes must be escaped `\"`. The `runnable` is a boolean that determines if the _Run Code_ button shows up next to the example.
 
-We have an [example JSON utility](http://cfdocs.org/utilities/json/) that can be used to create the JSON by filling out a form.
+We have an [example JSON utility](https://cfdocs.org/utilities/json/) that can be used to create the JSON by filling out a form.
 
 Please see the [cfdocs contributor guide](CONTRIBUTING.md) for frequently asked questions.
 

@@ -1,136 +1,136 @@
 # Discouraged
 
-##The following tags/functions are discouraged to use
+## The following tags/functions are discouraged to use
 
-### `array`
+`array`
 
 Lucee recommends to use the inline array notation.
 
-### `cfapplication`
+`cfapplication`
 
 Use Application.cfc instead of Application.cfm files. The Application component provides better organization and additional features. Note that if you are using Application.cfm it should contain a cfapplication tag.
 
-### `cfcol`
+`cfcol`
 
-The use of tags that generate client side UI code is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cftable/index.html
+The use of tags that generate client side UI code is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cftable/index.html
 
-### `cfdiv`
+`cfdiv`
 
 The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfdiv/index.html
 
-### `cfgrid`
+`cfgrid`
 
 The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfgrid/index.html
 
-### `cfgridcolumn`
+`cfgridcolumn`
 
 The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfgrid/index.html
 
-### `cfgridrow`
+`cfgridrow`
 
 The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfgrid/index.html
 
-### `cfgridupdate`
+`cfgridupdate`
 
 The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfgrid/index.html
 
-### `cflayout`
+`cflayout`
 
-The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cflayout-tabs/index.html
+The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html
 
-### `cflayoutarea`
+`cflayoutarea`
 
-The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cflayout-tabs/index.html
+The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html
 
-### `cfmap`
+`cfmap`
 
 The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfmap/index.html
 
-### `cfmapitem`
+`cfmapitem`
 
 The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfmap/index.html
 
-### `cfmenu`
+`cfmenu`
 
 The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfmenu/index.html
 
-### `cfmenuitem`
+`cfmenuitem`
 
 The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfmenu/index.html
 
-### `cfpod`
+`cfpod`
 
-The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfpod/index.html
+The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html
 
-### `cfprogressbar`
+`cfprogressbar`
 
 The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfprogressbar/index.html
 
-### `cfselect`
+`cfselect`
 
-The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfselect-chained/index.html
+The use of tags generating UI is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cfpod/index.html
 
-### `cftable`
+`cftable`
 
-The use of tags that generate client side UI code is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cftable/index.html 
+The use of tags that generate client side UI code is generally discouraged by the CFML community. See: http://static.raymondcamden.com/cfuitherightway/cftable/index.html 
 
-### `cftooltip`
+`cftooltip`
 
 The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cftooltip/index.html
 
-### `cftree`
+`cftree`
 
 The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cftree/index.html
 
-### `cftreeitem`
+`cftreeitem`
 
 The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cftree/index.html
 
-### `cfusion_Decrypt`
+`cfusion_Decrypt`
 
 The use of this function is discouraged. It is an internal function, call decrypt(string,key,"cfmx_compat","hex") instead.
 
-### `cfusion_Encrypt`
+`cfusion_Encrypt`
 
 The use of this function is discouraged. It is an internal function, call encrypt(string,key,"cfmx_compat","hex") instead.
 
-### `cfwindow`
+`cfwindow`
 
 The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfwindow/index.html
 
-### `evaluate`
+`evaluate`
 
 In almost all cases evaluate is unnecessary (use bracket notation instead). Use of evaluate can lead to performance and security issues.
 
-### `iIf`
+`iIf`
 
 Use the ternary operator CF9+ instead because it does not evaluate.
 Example ternary operator: `( (condition) ? valueIfTrue : valueIfFalse )`
 
-### `lsParseEuroCurrency`
+`lsParseEuroCurrency`
 
 Use LSParseCurrency instead
 
-### `preserveSingleQuotes`
+`preserveSingleQuotes`
 
 The use of preserveSingleQuotes often (but not always) results in code that will be vulnerable to SQL Injection. Use the cfqueryparam tag instead, and you will not need to worry about single quotes.
 
-### `setVariable`
+`setVariable`
 
 This function is no longer required in well-formed CFML pages
 
-### `sizeOf`
+`sizeOf`
 
 This function is in an early state. Do not use in production!
 
-### `urlEncodedFormat`
+`urlEncodedFormat`
 
 The continued use of this function is discouraged. It is recommended that you use EncodeForURL for all new applications.
 
-### `urlSessionFormat`
+`urlSessionFormat`
 
 Putting session identifiers in the URL may lead to session hijacking.
 
-### `xmlFormat`
+`xmlFormat`
 
 Adobe recommends using encodeForXML instead of xmlFormat.

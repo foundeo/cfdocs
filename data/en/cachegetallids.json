@@ -7,17 +7,24 @@
 	"description": "This function return an array containing all keys inside the cache.",
 	"params": [{
 		"name": "filter",
-		"description": "Key filter for the elements, the filter follow the same rules as for cfdirectory-filter.",
+		"description": "Lucee4.5+ Key filter for the elements, the filter follow the same rules as for cfdirectory-filter.",
 		"required": false,
 		"default": "",
 		"type": "string",
 		"values": []
 	}, {
 		"name": "cacheName",
-		"description": "The cache region to use or the default object cache",
+		"description": "CF10+ The cache region to use or the default object cache",
 		"required": false,
 		"default": "ObjectCache",
 		"type": "string",
+		"values": []
+	}, {
+		"name": "isAccurate",
+		"description": "CF11+ When set to false, function will return the result faster. However, the result may not be accurate. If you need only the IDs of valid (unexpired) objects from the cache, set accurate to true. If you set accurate to false, the IDs of all the objects in the cache will be returned.",
+		"required": false,
+		"default": "true",
+		"type": "boolean",
 		"values": []
 	}],
 	"engines": {
