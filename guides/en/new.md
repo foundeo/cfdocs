@@ -50,3 +50,14 @@ The path and component can also be a variable. Notice the use of quotes around t
     pet = new "#path2component#"( breed="pitbull", name="hank" );
 
 Any of the script functions implemented as a cfc can be instantiate using the new operator.
+
+CF2018 New Operator Additions
+
+CF2018+ Added support for creating Java objects using the `new` keyword, as well as components by path. 
+
+    pet = new component("node.animals.Dog");
+    
+To create a new instance of a Java object in CF2018+ you can use:
+
+    map = new java("java.util.HashMap");
+
