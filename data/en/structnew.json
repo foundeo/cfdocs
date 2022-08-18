@@ -4,7 +4,7 @@
   "syntax": "structNew([type[[,sortType][,sortOrder][,localeSensitive]|[,callback]]])",
   "returns": "struct",
   "related": ["struct-functions"],
-  "description": "Creates a new, empty structure. The shorthand syntax for an empty unordered struct is `{}`. You can also use the syntax `{\"key\":\"value\"}` to initialize it with values. The shorthand syntax for an ordered struct is `[:]` or `[=]`. The shorthand for a case-sensitive struct is `${}`.\nNOTE: To preserve the case of the struct key, place quotes around it, otherwise it will be converted to uppercase.",
+  "description": "Creates a new, empty structure. The shorthand syntax for an empty unordered struct is `{}`. You can also use the syntax `{\"key\":\"value\"}` to initialize it with values. The shorthand syntax for an ordered struct is `[:]` or `[=]`. The shorthand for a case-sensitive struct is `${}`.The shorthand for a ordered and casesensitive struct is `$[=]`.\nNOTE: To preserve the case of the struct key, place quotes around it, otherwise it will be converted to uppercase.",
   "params": [
     {"name": "type","description": "CF2016+ Lucee4.5+ If set to `ordered` the order in which elements are added to the structure will be maintained. In Lucee `linked` can be used in place of `ordered`.\r\nCF2021+ If set to `casesensitive` the keys will remain case-sensitive. Additionally, `ordered-casesensitive` can be used to create an ordered case-sensitive struct.","required":false,"default":"","type":"string","values":["","ordered","casesensitive","ordered-casesensitive"]},
     {"name":"sortType","description":"CF2016u3+ Sort types are text or numeric.","required":false,"default":"","type":"string","values":["text","numeric"]},
