@@ -166,9 +166,9 @@
 		<cfif StructKeyExists(data, "params") AND ArrayLen(data.params)>
 			<h2>
 				<cfif data.type IS "tag">
-					#encodeForHTML(data.name)# Attribute Reference
+					Attribute Reference
 				<cfelseif data.type IS "function">
-					#encodeForHTML(data.name)# Argument Reference
+					Argument Reference
 				<cfelse>
 					<span class="item-name">#encodeForHTML(data.name)#</span>
 				</cfif>
@@ -181,7 +181,7 @@
 						<cfif structKeyExists(p, "type") and len( p.type )><em><span class="text-muted">#encodeForHTML(p.type)#</span></em></cfif>
 						<cfif isBoolean(p.required) AND p.required><div class="pull-right"><span class="label label-danger">Required</span></div></cfif>
 						<cfif structKeyExists(p, "default") and len( trim( p.default ) )>
-								<div class="p-default pull-right"><span class="text-muted">Default:</span> <code>#encodeForHTML(p.default)#</code></div>
+							<div class="p-default pull-right"><span class="text-muted">Default:</span> <code>#encodeForHTML(p.default)#</code></div>
 						</cfif>
 					</h4>
 					<div class="p-desc">
