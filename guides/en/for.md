@@ -46,8 +46,14 @@ The above example would output `appleorangebanana`
 
 ### For In Loop (over a query) CF10+
 
+    query = queryNew("name", "varchar", [
+        ["apple"],
+        ["banana"],
+        ["orange"]
+    ]); 
+
     for (row in query) {
-        writeOutput(query.currentRow);
+        writeOutput("#query.currentRow# - #row.name#<br>");
     }
 
 ### Query Loop (with grouping) CF10+

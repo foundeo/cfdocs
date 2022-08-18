@@ -226,6 +226,8 @@
 
 `render` - Minimum Version: 5
 
+`sanitizeHtml`
+
 `sessionstartTime`
 
 `sizeOf`
