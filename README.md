@@ -9,7 +9,7 @@ CFDocs is a community maintained CFML reference tool available at [cfdocs.org](h
 
 ## How reference data is structured
 
-All of the tag and function documentation are defined in json files under [*data/en/functionname.json*](https://github.com/foundeo/cfdocs/tree/master/data/en)  [function example](https://github.com/foundeo/cfdocs/blob/master/data/en/sessioninvalidate.json) [tag example](https://github.com/foundeo/cfdocs/blob/master/data/en/cfhtmltopdf.json).
+All of the tag and function documentation are defined in JSON files under [*data/en/functionname.json*](https://github.com/foundeo/cfdocs/tree/master/data/en)  [function example](https://github.com/foundeo/cfdocs/blob/master/data/en/sessioninvalidate.json) [tag example](https://github.com/foundeo/cfdocs/blob/master/data/en/cfhtmltopdf.json).
 
 This makes the documentation super easy to edit and allows developers to run a local version of the site "out of the box" since no database setup is required.
 
