@@ -18,7 +18,7 @@
         {
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<CFIF parameterExists(FORM.myString)> \r\n <P>Using parameterExists, we have shown that the FORM field 'myString' now exists. \r\n </CFIF> \r\n",
+			"code": "<cfif parameterExists(FORM.myString)> \r\n <P>Using parameterExists, we have shown that the FORM field 'myString' now exists. \r\n </cfif> \r\n",
 			"result": ""
 		}
 	]
