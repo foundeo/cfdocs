@@ -512,7 +512,7 @@ angular.module('code.editor', [])
 									html = '<div class="alert alert-warning">'+
 											data.html +
 											'</div>';
-								// runtime error occured when running user's code
+								// runtime error occurred when running user's code
 								}else{
 								  	html = '<div class="alert alert-danger"><strong><i class="icon-bug"></i> Error:</strong><br/>'+
 											data.error +

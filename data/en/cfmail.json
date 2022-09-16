@@ -387,7 +387,7 @@
 		{
 			"title": "Send email messages using a query",
 			"description": "Loop through database records and sends one email per row.",
-			"code": "<cfset myQuery = queryNew( \"recipient,lastname,firstname\" )>\n<cfset queryAddRow( myQuery, { receipient = \"receipient@example.com\", lastname = \"Doe\", firstname = \"John\" }) />\n\n<cfmail to=\"#recipient#\" from=\"sender@example.com\" subject=\"Example email\" query=\"myQuery\">\n  Dear #lastname#,\n\n  Text here, containing any variable in the myQuery scope.\n</cfmail>"
+			"code": "<cfset myQuery = queryNew( \"recipient,lastname,firstname\" )>\n<cfset queryAddRow( myQuery, { recipient = \"recipient@example.com\", lastname = \"Doe\", firstname = \"John\" }) />\n\n<cfmail to=\"#recipient#\" from=\"sender@example.com\" subject=\"Example email\" query=\"myQuery\">\n  Dear #lastname#,\n\n  Text here, containing any variable in the myQuery scope.\n</cfmail>"
 		},
 		{
 			"title": "Script syntax using new mail()",

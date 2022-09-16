@@ -4,7 +4,7 @@
 	"syntax":"encrypt(string, key [, algorithm [, encoding] [, iv | salt [, iterations]]])",
 	"returns":"string",
 	"related":["decrypt","GenerateSecretKey"],
-	"description":" Encrypts a string, using a symmetric key-based algorithm, in which the same key is used to encrypt and decrypt a string. The security of the encrypted string depends on maintaining the secrecy of the key, and the algoirthm choice. Algorithm support is determined by the installed default JCE provider in Lucee or ColdFusion Standard. On ColdFusion Enterprise the algorithms are provided by the FIPS certified RSA BSafe Crypto-J JCE provider.",
+	"description":" Encrypts a string, using a symmetric key-based algorithm, in which the same key is used to encrypt and decrypt a string. The security of the encrypted string depends on maintaining the secrecy of the key, and the algorithm choice. Algorithm support is determined by the installed default JCE provider in Lucee or ColdFusion Standard. On ColdFusion Enterprise the algorithms are provided by the FIPS certified RSA BSafe Crypto-J JCE provider.",
 	"params": [
 		{"name":"string","description":"String to encrypt.","required":true,"default":"","type":"string","values":[]},
 		{"name":"key","description":"Key or seed used to encrypt the string.\n* For the `CFMX_COMPAT` algorithm, any combination of any number of characters; used as a seed used to generate a 32-bit encryption key.\n* For all other algorithms, a key in the format used by the algorithm. For these algorithms, use the `GenerateSecretKey` function to generate the key.","required":true,"default":"","type":"string","values":[]},

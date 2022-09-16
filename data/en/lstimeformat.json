@@ -31,7 +31,7 @@
 		},
 		{
 			"title":"Script Example using specific locale",
-			"description":"lsTimeFormat returns a time value using the spezified locale.",
+			"description":"lsTimeFormat returns a time value using the specified locale.",
 			"code":"writeDump(lsTimeFormat(now(), 'short', 'en_US'));",
 			"result":"",
 			"runnable":true

@@ -4,7 +4,7 @@
 	"syntax":"hash(string [, algorithm [, encoding]] [, additionalIterations])",
 	"returns":"string",
 	"related":[],
-	"description":"Converts a string into a fixed length hexadecimal string.\n\nNOTE: The result is useful for comparision and validation, such as storing and validating a hashed password without exposing the original password.",
+	"description":"Converts a string into a fixed length hexadecimal string.\n\nNOTE: The result is useful for comparison and validation, such as storing and validating a hashed password without exposing the original password.",
 	"params": [
 		{"name":"string","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"algorithm","description":"CF7+ A supported algorithm such as MD5,SHA,SHA-256,SHA-384, or SHA-512. Of those listed SHA-512 is the strongest and generates a 128 character hex result.\n\nNOTE: The Enterprise Edition of ColdFusion installs the RSA BSafe Crypto-J library, which provides FIPS-140 Compliant Strong Cryptography. This includes additional algorithms. You can also install additional cryptography algorithms and use those hashing algorithms.", "required":false,"default":"MD5","type":"string","values":["CFMX_COMPAT","MD5","SHA","SHA-256","SHA-384","SHA-512"]},

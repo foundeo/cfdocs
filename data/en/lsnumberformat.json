@@ -27,7 +27,7 @@
 		},
 		{
 			"title":"Script Example using specific locale",
-			"description":"lsNumberFormat returns a number value using the spezified locale.",
+			"description":"lsNumberFormat returns a number value using the specified locale.",
 			"code":"writeDump(lsNumberFormat(5, '.99', 'en_US'));",
 			"result":"",
 			"runnable":true
