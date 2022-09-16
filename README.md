@@ -27,7 +27,7 @@ The cfdocs.org site can run locally very easily thanks to CommandBox.
 
 CommandBox will start an embedded CFML server on port 8411, and you can browse to [http://localhost:8411/](http://localhost:8411/) to view the docs.
 
-If you don't want to go the commandbox route you can simply download it and unzip it to a web root and try it out (requires CF10+ or Lucee 4.5+), but you will probably spend more time trying to get it working than the 1-2 minutes it will take to download and learn how to use commandbox.
+If you don't want to go the CommandBox route you can simply download it and unzip it to a web root and try it out (requires CF10+ or Lucee 4.5+), but you will probably spend more time trying to get it working than the 1-2 minutes it will take to download and learn how to use CommandBox.
 
 ## How to contribute
 
@@ -39,7 +39,7 @@ CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. att
 
 #### The easy way to edit the docs
 
-1. Browse the [data/en/](https://github.com/foundeo/cfdocs/tree/master/data/en) folder of this repository on github and find the tag or function you want to edit.
+1. Browse the [data/en/](https://github.com/foundeo/cfdocs/tree/master/data/en) folder of this repository on GitHub and find the tag or function you want to edit.
 2. Click the edit button (pencil)
 3. Commit / Send a pull request.
 
@@ -48,7 +48,7 @@ CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. att
 1. fork the project to your GitHub account *need help? read this: [GitHub tip for your first pull request](https://adamtuttle.codes/blog/2014/your-first-github-pull-request/)*
 2. clone it locally
 3. make your changes
-4. test it locally using commandbox (see above)
+4. test it locally using CommandBox (see above)
 4. once you are done you can send a pull request, and I'll merge it into the main repository.
 
 ### Not sure what you can contribute?

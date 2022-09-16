@@ -54,7 +54,7 @@ qPeople = oLeader.get();
     </cfoutput>
     </div>
   <cfelse>
-    <!--- error connecting to github so tell CDN to only cache for 30 seconds --->
+    <!--- error connecting to GitHub so tell CDN to only cache for 30 seconds --->
     <cfset request.cacheControlMaxAge = 30>
   </cfif>
 </div>

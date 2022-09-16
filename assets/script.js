@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	//github api requests
+	//GitHub api requests
 	if(!!$('.issuecount').length && !!$('#docname').length) {
 		$.getJSON('https://api.github.com/search/issues?q=is:open+is:issue+repo:foundeo/cfdocs+' + $('#docname').text(),function(res) {
 			$('.issuecount').html(res.total_count);
