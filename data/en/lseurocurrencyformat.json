@@ -27,7 +27,7 @@
 		},
 		{
 			"title":"Script Example using specific locale",
-			"description":"lsEuroCurrencyFormat returns a currency value using the spezified locale.",
+			"description":"lsEuroCurrencyFormat returns a currency value using the specified locale.",
 			"code":"writeDump(lsEuroCurrencyFormat(5, 'local', 'de_DE'));",
 			"result":"",
 			"runnable":true

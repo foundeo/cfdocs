@@ -18,7 +18,7 @@
 	"examples": [
 		{
 			"title": "Reload ORM by calling ormReload onRequestStart",
-			"description": "Reloads the ORM of an application when ?ORMReload is in the URL.  This is recommeded ONLY for development and should be removed from production.",
+			"description": "Reloads the ORM of an application when ?ORMReload is in the URL.  This is recommended ONLY for development and should be removed from production.",
 			"code": "component { \r\n\tthis.name = hash(getCurrentTemplatePath()); \r\n\tthis.datasource = \"somedatasourceORM\"; \r\n\t// turn on ORM for this application\r\n\tthis.ormenabled = true; \r\n\tpublic boolean function onRequestStart(required string targetPage) {\r\n\t\t//if ormreload is in the URL, then reload ORM\r\n\t\tif (structKeyExists(url,\"ormreload\")){\r\n\t\t\tORMReload()\r\n\t\t}\r\n\t\treturn true;\r\n\t}\r\n}",
 			"result": "string"
 		}
