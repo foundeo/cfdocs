@@ -2,7 +2,7 @@
 	"name":"queryPrepend",
 	"type":"function",
 	"syntax":"queryPrepend(query1, query2)",
-    "member":"qry.queryPrepend(query2)",
+    "member":"qry.prepend(query2)",
 	"returns":"query",
 	"related":["queryAppend"],
 	"description":" Adds a query to the beginning of the current query.",
