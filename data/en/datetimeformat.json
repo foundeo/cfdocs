@@ -60,6 +60,14 @@
 			"result":"2015-04-11T19:02:00+0000",
 			"runnable":true,
 			"testable":false
+		},
+		{
+			"title":"Date Time Format member function syntax",
+			"description":"Simple date/time formatting using the member function syntax",
+			"code":"createDateTime( 2022, 10, 1, 9, 30, 0 ).dateTimeFormat( 'mm/dd/yyyy hh:nn:ss tt' )",
+			"result":"10/01/2022 09:30:00 AM",
+			"runnable":true,
+			"testable":true
 		}
 	]
 }
