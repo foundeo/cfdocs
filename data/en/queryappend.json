@@ -2,7 +2,7 @@
 	"name":"queryAppend",
 	"type":"function",
 	"syntax":"queryAppend(query1, query2)",
-    "member":"qry.queryAppend(query2)",
+    "member":"qry.append(query2)",
 	"returns":"query",
 	"related":["queryPrepend"],
 	"description":" Adds a query to the end of the current query.",
