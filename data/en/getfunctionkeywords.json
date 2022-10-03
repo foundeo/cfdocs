@@ -12,7 +12,7 @@
 	"examples": [
 		{
 			"title": "Simple getFunctionKeywords Example",
-			"description": "It returns all function keywords in array format. It is supported only in lucee.",
+			"description": "It returns all function keywords in array format. It is supported only in Lucee.",
 			"code": "writeDump(getFunctionKeywords());",
 			"result": ""
 		}

@@ -10,7 +10,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/booleanformat.html"},
-		"lucee": {"minimum_version":"5.1.0", "notes":"Due to lucee's strict typing, the return value is NOT considered as a boolean", "docs": "https://docs.lucee.org/reference/functions/booleanformat.html"}
+		"lucee": {"minimum_version":"5.1.0", "notes":"Due to Lucee's strict typing, the return value is NOT considered as a boolean", "docs": "https://docs.lucee.org/reference/functions/booleanformat.html"}
 	},
 	"links": [],
 	"examples": [

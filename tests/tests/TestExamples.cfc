@@ -16,7 +16,7 @@ component extends="testbox.system.BaseSpec" {
 						json = deserializeJSON(json);
 						if (json.keyExists("examples") && isArray(json.examples) && arrayLen(json.examples)) {
 							if (structKeyExists(server, "lucee") AND NOT structKeyExists(json.engines, "lucee")) {
-								//skip this test because it does not run on lucee, ACF specific tag or function
+								//skip this test because it does not run on Lucee, ACF specific tag or function
 								continue;
 							}
 							var idx=0;

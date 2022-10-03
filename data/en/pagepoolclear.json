@@ -12,7 +12,7 @@
 	"examples": [
 		{
 			"title": "pagePoolClear Example",
-			"description":"Clear out all the CFML code (cfm, cfcs) in the cache of compiled code. It is supported in lucee.",
+			"description":"Clear out all the CFML code (cfm, cfcs) in the cache of compiled code. It is supported in Lucee.",
 			"code":" writeDump(pagePoolClear());"
 		}
 	],

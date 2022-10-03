@@ -29,11 +29,11 @@ Lucee5+ CF2018+ A struct containing Java system properties.
 
 ### `server.lucee`
 
-Lucee4.5+ Info specific to lucee, e.g. `server.lucee.version` - useful for checking if you are running on lucee:
+Lucee4.5+ Info specific to Lucee, e.g. `server.lucee.version` - useful for checking if you are running on Lucee:
 
 ```cfml
 if ( server.keyExists("lucee") ) {
-    //you are on lucee
+    //you are on Lucee
 }
 ```
 
