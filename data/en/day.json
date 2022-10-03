@@ -25,6 +25,12 @@
 			"description": "Uses the day function to determine the day of the month",
 			"code": "<cfset Date = CreateDate(2010, 09, 08)>\r\n<cfset result = day(Date)>\r\n<cfoutput>#result#</cfoutput>",
 			"result": "8"
+		},
+		{
+			"title": "Day using member syntax",
+			"description": "Returns the day from a datetime object",
+			"code": "createDate( 2022, 10, 1 ).day();",
+			"result": "1"
 		}
 	]
 
