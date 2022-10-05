@@ -1,6 +1,6 @@
 {
 	"name":"Query Manipulation Functions",
 	"type":"listing",
-	"related":["entityToQuery","isQuery","ORMExecuteQuery","query","queryAddColumn","queryAddRow","queryAppend","queryclear","queryColumnArray","queryColumnCount","queryColumnData","queryColumnExists","queryColumnList","queryConvertForGrid","queryCurrentRow","queryDeleteColumn","queryDeleteRow","queryEach","queryEvery","queryExecute","queryFilter","queryGetCell","queryGetResult","queryGetRow","queryInsertAt","queryMap","queryNew","queryPrepend","queryRecordCount","queryReduce","queryReverse","queryRowData","queryRowSwap","querySetCell","querySlice","querySome","querySort","quotedValueList","valueArray","valueList"],
+	"related":["entityToQuery","isQuery","ORMExecuteQuery","query","queryAddColumn","queryAddRow","queryAppend","queryclear","queryColumnArray","queryColumnCount","queryColumnData","queryColumnExists","queryColumnList","queryConvertForGrid","queryCurrentRow","queryDeleteColumn","queryDeleteRow","queryEach","queryEvery","queryExecute","queryFilter","queryGetCell","queryGetResult","queryGetRow","queryInsertAt","queryKeyExists","queryMap","queryNew","queryPrepend","queryRecordCount","queryReduce","queryReverse","queryRowData","queryRowSwap","querySetCell","querySlice","querySome","querySort","quotedValueList","valueArray","valueList"],
 	"description":"A listing of CFML Query Manipulation Functions."
 }
