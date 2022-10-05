@@ -41,7 +41,8 @@ CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. att
 
 1. Browse the [data/en/](https://github.com/foundeo/cfdocs/tree/master/data/en) folder of this repository on GitHub and find the tag or function you want to edit.
 2. Click the edit button (pencil)
-3. Commit / Send a pull request.
+3. Commit 
+4. Send a pull request to merge your change with this repository.
 
 #### The better way to edit the docs
 
