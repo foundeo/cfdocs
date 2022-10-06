@@ -14,7 +14,7 @@ This is an incomplete / work in progress guide to operators in CFML.
         return "mooo!";
     }
 
-The `EQ` `IS` and `==` operators are case insensitive, so `"PETE" IS "pete"` evaluates `true`
+The `EQ`, `IS`, and `==` operators are case insensitive, so `"PETE" IS "pete"` evaluates to `true`.
 
 ### Inequality
 
@@ -80,4 +80,4 @@ Both code examples are equivalent.
 
 ## Compatibility Notes
 
-The operators `==` `!=` `<` `<=` `>` `>=` do not work in tags such as cfif or cfset in Adobe ColdFusion (as of Version 2016). However the `==` `!=` `<` `<=` operators work from tags on Lucee, but `>` `>=` do not.
+The operators `==`, `!=`, `<`, `<=`, `>`, and `>=` do not work in tags such as cfif or cfset in Adobe ColdFusion (as of Version 2016). However the `==`, `!=`, `<`, and `<=` operators work from tags on Lucee, but `>` and `>=` do not.
