@@ -1,9 +1,9 @@
 {
 	"name":"onRequest",
 	"type":"function",
-	"syntax":"onRequestStart(string targetPage) { include arguments.targetPage; }",
+	"syntax":"onRequest(string targetPage) { include arguments.targetPage; }",
 	"returns":"void",
-	"related":["application-cfc", "onrequeststart"],
+	"related":["application-cfc", "onrequeststart", "onrequestend"],
 	"description":"Defined in Application.cfc, invoked when the request starts after onRequestStart.",
 	"params": [
 		{"name":"targetPage","description":"Requested template path relative to the webroot","required":true,"default":"","type":"string","values":[]}
