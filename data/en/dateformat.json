@@ -55,6 +55,12 @@
 			"description":"",
 			"code":"dateFormat(\"2015-04-11\", \"full\")",
 			"result":"Saturday, April 11, 2015"
+		},
+		{
+			"title":"Using the member function",
+			"description":"",
+			"code":"createDate( 2022, 10, 1 ).dateFormat( 'mm/dd/yyyy' )",
+			"result":"10/01/2022"
 		}
 	]
 }
