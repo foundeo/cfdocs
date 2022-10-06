@@ -1,6 +1,6 @@
 {
 	"name":"ORM Functions",
 	"type":"listing",
-	"related":["entityDelete","entityLoad","entityLoadByExample","entityLoadByPK","entityMerge","entityNameArray","entityNameList","entityNew","entityReload","entitySave","entityToQuery","ORMClearSession","ORMCloseSession","ORMEvictCollection","ORMEvictEntity","ORMEvictQueries","ORMExecuteQuery","ORMFlush","ORMGetSession","ORMGetSessionFactory","ORMReload"],
+	"related":["entityDelete","entityLoad","entityLoadByExample","entityLoadByPK","entityMerge","entityNameArray","entityNameList","entityNew","entityReload","entitySave","entityToQuery","ORMClearSession","ORMCloseAllSessions","ORMCloseSession","ORMEvictCollection","ORMEvictEntity","ORMEvictQueries","ORMExecuteQuery","ORMFlush","ORMFlushAll","ORMGetSession","ORMGetSessionFactory","ORMReload"],
 	"description":"A listing of CFML ORM / Hibernate Functions."
 }
