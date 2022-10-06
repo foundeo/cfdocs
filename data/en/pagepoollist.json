@@ -12,7 +12,7 @@
 	"examples": [
 		{
 			"title": "pagePoolList Example",
-			"description":"Lists all the CFML code (cfm, cfcs) in the cache of compiled code. It is supported in lucee.",
+			"description":"Lists all the CFML code (cfm, cfcs) in the cache of compiled code. It is supported in Lucee.",
 			"code":" writeDump(pagePoolList());"
 		}
 	],

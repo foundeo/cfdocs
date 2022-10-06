@@ -4,7 +4,7 @@
 	"syntax": "getCanonicalPath(path)",
 	"returns": "string",
 	"related": ["getCurrentTemplatePath","getBaseTemplatePath","expandPath"],
-	"description": "Returns the canonical path of the input path. If a directory a trailing slash is used on lucee, but not on ACF.",
+	"description": "Returns the canonical path of the input path. If a directory a trailing slash is used on Lucee, but not on ACF.",
 	"params": [
 		{"name": "path", "description": "", "required": true, "default": "", "type": "string", "values": []}
 	],

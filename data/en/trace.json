@@ -15,7 +15,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"As of CF11 parameters must be comma separated.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/trace.html"},
-		"lucee": {"minimum_version":"", "notes":"On lucee the caller scope must be passed in as the first argument.", "docs":"https://docs.lucee.org/reference/functions/trace.html"},
+		"lucee": {"minimum_version":"", "notes":"On Lucee the caller scope must be passed in as the first argument.", "docs":"https://docs.lucee.org/reference/functions/trace.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/trace"}
 	},
 	"links": []
