@@ -62,7 +62,7 @@
 		},
 		{
 			"title": "Using cfscript with attribute collection",
-			"description": "In this example shows how to invoke using cfscript.",
+			"description": "In this example, show how to invoke using cfscript.",
 			"code": "<cfscript>attrs = {theme = \"default\", pageTitle = \"Welcome!\"}>\ncfmodule(template=\"myTemplate.cfm\",attributeCollection=\"#attrCollection1#\")</cfscript>",
 			"result": "",
 			"runnable" : false			
