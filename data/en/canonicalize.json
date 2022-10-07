@@ -18,8 +18,8 @@
     },
     "examples": [
         {
-            "title": "Canonicalize the simple html entity encoded string",
-            "description": "Canonicalize the simple html entity encoded string.",
+            "title": "Canonicalize the simple HTML entity encoded string",
+            "description": "Canonicalize the simple HTML entity encoded string.",
             "code": "<cfoutput>#canonicalize(\"&lt;\",false,false)#</cfoutput>",
             "result": "<"
         },
