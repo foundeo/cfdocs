@@ -4,7 +4,7 @@
 	"syntax":"isArray(value [, number])",
 	"returns":"boolean",
 	"related":["isStruct","arrayIsEmpty"],
-	"description":" Determines whether a value is an array.\n True, if value is an array, a query column object, or xml.\n also number = Dimension; function tests whether the array has\n exactly this dimension",
+	"description":" Determines whether a value is an array.\n True, if value is an array, a query column object, or XML.\n also number = Dimension; function tests whether the array has\n exactly this dimension",
 	"params": [
 		{"name":"value","description":"The array in which to check.","required":true,"default":"","type":"any","values":[]},
 		{"name":"number","description":"Dimension of the array.","required":false,"default":"","type":"numeric","values":[]}

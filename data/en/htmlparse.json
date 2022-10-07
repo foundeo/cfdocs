@@ -4,7 +4,7 @@
 	"syntax": "htmlParse(html [, caseSensitive])",
 	"returns": "xml",
 	"related": ["DecodeForHtml","EncodeForHTML","EncodeForHTMLAttribute","HTMLCodeFormat","HTMLEditFormat"],
-	"description": "Parse the given HTML/XHTML and converts it to an xml object. Similar to xmlParse, but this function is very forgiving",
+	"description": "Parse the given HTML/XHTML and converts it to an XML object. Similar to xmlParse, but this function is very forgiving",
 	"params": [
 		{"name": "html", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "caseSensitive", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
