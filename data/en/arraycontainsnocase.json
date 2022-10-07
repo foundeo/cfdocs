@@ -56,7 +56,7 @@
     },
     {
       "title": "Member function syntax",
-      "description":"Lucee4+",
+      "description":"Lucee4+ CF2021+",
       "code": "arrayWithStrings = [\"first\", \"SECOND\"];\nwriteOutput(arrayWithStrings.containsNoCase(\"FIrst\"));",
       "runnable": true
     }
