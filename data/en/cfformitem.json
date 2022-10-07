@@ -15,7 +15,7 @@
 		},
 		{
 			"name": "style",
-			"description": "Flash: Must be a style specification in CSS format.\n Ignored if the type attribute is html or text.\n XML: ColdFusion passes the style attribute to the XML.\n ColdFusion skins include the style attribute to the\n generated HTML.",
+			"description": "Flash: Must be a style specification in CSS format.\n Ignored if the type attribute is HTML or text.\n XML: ColdFusion passes the style attribute to the XML.\n ColdFusion skins include the style attribute to the\n generated HTML.",
 			"required": false,
 			"default": "",
 			"type": "string",

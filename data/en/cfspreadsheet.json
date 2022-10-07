@@ -60,7 +60,7 @@
 		},
 		{
 			"name": "name",
-			"description": "`action=\"read\"` The variable in which to store the spreadsheet file data. You must specify name or query. If format=\"csv\" then name will contain csv variable.\nif format=\"html\" then name will contain html content.\n`action=\"write|update\"` A variable containing CSV-format data or an ColdFusion spreadsheet object containing the data to write. You must specify name or query.",
+			"description": "`action=\"read\"` The variable in which to store the spreadsheet file data. You must specify name or query. If format=\"csv\" then name will contain csv variable.\nif format=\"html\" then name will contain HTML content.\n`action=\"write|update\"` A variable containing CSV-format data or an ColdFusion spreadsheet object containing the data to write. You must specify name or query.",
 			"required": false,
 			"type": "string"
 		},

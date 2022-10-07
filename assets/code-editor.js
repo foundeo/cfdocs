@@ -162,7 +162,7 @@ angular.module('code.editor', [])
 		// 	var elementText  = tElement.text();
 		// 	tAttrs.code = elementText || tAttrs.code;
 
-		// 	// Inject the rendered template html into the template element (tElement)
+		// 	// Inject the rendered template HTML into the template element (tElement)
 		// 	tElement.html(editorTemplate);
 
 		// 	// The return of a compile function is a link function (containing the compiled "scope") which Angular will fire
@@ -300,7 +300,7 @@ angular.module('code.editor', [])
 				aceEditor.on('change',function(e){
 					// When the scope changes, we need to update the form field and the
 					// ace editor manually because the bidirectional binding doesn't
-					// play well with unsafe html
+					// play well with unsafe HTML
 
 					scope.code = session.getValue();
 					$('#code',codeForm).val(scope.code);

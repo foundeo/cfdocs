@@ -6,8 +6,8 @@
 	"related":["cfhtmlhead"],
 	"description":"Writes the text specified in the text attribute to the 'body' section of a generated HTML page. The cfhtmlbody tag can be useful for embedding JavaScript code, or placing other HTML tags that should go at the bottom of the page just before the closing body tag.",
 	"params": [
-		{"name":"action","description":"possible actions are: \n append (default): append text to the html body \n read: return the text already set to html body \n reset: reset/remove text already set to html body \n write: write text to html body, overwrite already existing text in html head \n flush: writes the buffer in the html head to the response stream","required":false,"default":"append","type":"string","values":["append","read","reset","write","flush"]},
-		{"name":"variable","description":"Name of variable to contain the text for htmlbody.","required":false,"default":"","type":"string","values":[]},
+		{"name":"action","description":"possible actions are: \n append (default): append text to the HTML body \n read: return the text already set to HTML body \n reset: reset/remove text already set to HTML body \n write: write text to HTML body, overwrite already existing text in HTML head \n flush: writes the buffer in the HTML head to the response stream","required":false,"default":"append","type":"string","values":["append","read","reset","write","flush"]},
+		{"name":"variable","description":"Name of variable to contain the text for HTML body.","required":false,"default":"","type":"string","values":[]},
 		{"name":"id","description":"ID of the snippet that is added, used to ensure that the same snippet will not be added more than once.","required":false,"default":"","type":"string","values":[]},
 		{"name":"text","description":"The text to add to the 'body' area of an HTML page. Alternatively if a closing tag is used then the body between the tags is used.","required":false,"default":"","type":"string","values":[]},
 		{"name":"force","description":"if set to true, it works even within a silent block","required":false,"default":"","type":"boolean","values":[]}

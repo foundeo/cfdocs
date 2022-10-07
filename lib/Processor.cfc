@@ -43,9 +43,9 @@ component accessors=true singleton {
 			anchorWrapText           : true,
 			// The class(es) to apply to the anchor
 			anchorClass              : "headinglink",
-			// raw html prefix. Added before heading text, wrapped or unwrapped
+			// raw HTML prefix. Added before heading text, wrapped or unwrapped
 			anchorPrefix             : " ",
-			// raw html suffix. Added before heading text, wrapped or unwrapped
+			// raw HTML suffix. Added before heading text, wrapped or unwrapped
 			anchorSuffix             : "",
 			// Enable youtube embedded link transformer
 			enableYouTubeTransformer : false,
