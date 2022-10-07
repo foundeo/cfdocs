@@ -1,0 +1,28 @@
+{
+	"name": "imageCaptcha",
+	"type": "function",
+	"syntax": "imageCaptcha()",
+	"returns": "any",
+	"related": ["imagecreatecaptcha", "imagewritetobrowser"],
+	"description": "Provides information about the time when the current application scope was created.",
+	"params": [
+            {"name":"text","description":"Text in the image captcha.","values":[],"default":"","type":"string","required":true},
+            {"name":"height","description":"Height of the image in pixels.","values":[],"default":"","type":"numeric","required":true},
+            {"name":"width","description":"Width of the image in pixels.","values":[],"default":"","type":"numeric","required":true},
+            {"name":"difficulty","description":"Complexity of the image.","values":["low","medium","high"],"default":"low","type":"string","required":false},
+            {"name":"fonts","description":"One or more fonts for the CAPTCHA text, as an array or as string list (separated by commas). Lucee supports the system fonts recognized by JDK only.","values":[],"default":"arial","type":"any","required":false},
+            {"name":"fontsize","description":"Font size for text of the image.","values":[],"default":"24","type":"numeric","required":false},
+            {"name":"fontcolor","description":"Font color for text of the image.","values":[],"default":"black","type":"string","required":false}
+  ],
+	"engines": {
+		"lucee": {"minimum_version": "5", "notes": "", "docs": "https://docs.lucee.org/reference/functions/imagecaptcha.html"}
+	},
+	"examples": [{
+		"title":"Script Syntax",
+		"description":"A 300px by 100px image captcha at medium difficulty.",
+		"code":"\nimagewritetobrowser(imagecaptcha( 'abcxyz', 100, 300, 'medium'));\n",
+		"result":"An 300px by 100px image captcha with the letters 'abcxyz'",
+		"runnable":true
+	}],
+	"links": []
+}
