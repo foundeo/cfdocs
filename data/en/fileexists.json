@@ -6,7 +6,7 @@
 	"related":["fileWrite","fileDelete","directoryExists"],
 	"description":"Determines whether a file exists",
 	"params": [
-		{"name":"filePath","description":"","required":true,"default":"","type":"string","values":[]}
+		{"name":"filePath","description":"A absolute file system path string.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileexists.html"},
@@ -19,8 +19,9 @@
 		{
 			"title": "Checks if file at the given path exists.",
 			"description": "",
-			"code": "var myFile = \"/path/to/the/file.jpg\";\r\nif(fileExists(myFile)) {\r\n\twriteOutput(myFile & 'exists!');\r\n}",
-			"result": ""
+			"code": "var myFile = \"/path/to/the/file.jpg\";\r\nif(fileExists(expandPath(myFile))) {\r\n\twriteOutput(myFile & 'exists!');\r\n}",
+			"result": "",
+			"runnable": false
 		}
 	]
 }
