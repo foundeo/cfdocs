@@ -20,25 +20,50 @@ h2 .item-name { font-weight:bold; font-family: Menlo,Monaco,Consolas,"Courier Ne
 #syntax { font-weight:bold; }
 #syntax > code { white-space: pre; padding: 0; }
 #forkme {
-    background-color: #e3e3e3;
-    height: 30px;
-    display: inline-block;
-    position: absolute;
-    top: 35px;
-    right: -35px;
-    border: 0;
-    z-index: 9999;
-    width: 200px;
-    color: #484848;
-    font-weight: bold;
-    transform: rotate(45deg);
-    transform-origin: initial;
-    text-align: center;
-    border-top: 1.5px dashed #c2c2c2;
-    border-bottom: 1.5px dashed #c2c2c2;
-    line-height: 25px;
-    letter-spacing: -0.6px;
-    word-spacing: 1px;
+  width: 12em;
+  height: 12em;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  pointer-events: none;
+  text-decoration: none;
+  text-indent: -999999px;
+}
+#forkme::before {
+  content: "";
+  background-color: #e3e3e3;
+  border-top: 1.5px dashed #c2c2c2;
+  border-bottom: 1.5px dashed #c2c2c2;
+  pointer-events: auto;
+  display: block;
+  position: absolute;
+  width: 15em;
+  height: 1.7em;
+  top: 3em;
+  right: -3.5em;
+  box-sizing: content-box;
+  transform: rotate(45deg);
+}
+#forkme::after {
+  content: "Fork me on GitHub";
+  color: #484848;
+  text-decoration: none;
+  text-align: center;
+  text-indent: 0;
+  line-height: 25px;
+  letter-spacing: -0.6px;
+  word-spacing: 1px;
+  font-weight: 700;
+  position: absolute;
+  display: block;
+  width: 15em;
+  height: 1.7em;
+  top: 3em;
+  right: -3.5em;
+  box-sizing: content-box;
+  transform: rotate(45deg);
 }
 .twitter-typeahead {
   width:100%
