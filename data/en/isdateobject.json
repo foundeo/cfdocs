@@ -4,9 +4,9 @@
 	"syntax":"isDateObject(value)",
 	"returns":"boolean",
 	"related":["isDate","isObject"],
-	"description":"Checks if the given value is a date/time objec. The difference between isDateObject and isDate, latter returns true for date/time objects as well as date/time strings.",
+	"description":"Checks if the given value is a date / time object. The difference between isDateObject and isDate, latter returns true for date / time objects as well as date / time strings.",
 	"params": [
-		{"value":"object","description":"A value, usually the name of a variable","required":true,"default":"","type":"variableName","values":[]}
+		{"name":"value","description":"A value, usually the name of a variable","required":true,"default":"","type":"variableName","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2016 Update 3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isdateobject.html"}
