@@ -18,5 +18,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfwddx"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfwddx"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Convert cron job file to cfml",
+			"description": "Reads instance's scheduled tasks file and converts it into CFML collection",
+			"code": "<cfset local.FileContents = FileRead(\"D:/ColdFusion/#Instance#/lib/neo-cron.xml\") />\n\t\t\t\t\t\t<cfwddx action=\"wddx2cfml\" input=\"#local.FileContents#\" output=\"local.structFileContents\" />\n<cfdump var=\"local.structFileContents\"",
+			"result": "Dump of the Scheduled Tasks cron file stored in the local.structFileContents variable",
+			"runnable": false
+		}
+	]
 }
