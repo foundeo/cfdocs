@@ -9,7 +9,7 @@
 		{"name":"dateObject","description":"A value, usually the name of a variable","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isdateobject.html"}
+		"coldfusion": {"minimum_version":"2016.0.3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isdateobject.html"}
 	},
 	"links": []
 }
