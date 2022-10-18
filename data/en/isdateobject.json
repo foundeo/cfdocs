@@ -4,7 +4,7 @@
 	"syntax":"isDateObject(value)",
 	"returns":"boolean",
 	"related":["isDate","isObject"],
-	"description":"Checks if the given value is a date / time object. The difference between isDateObject and isDate, latter returns true for date / time objects as well as date / time strings.",
+	"description":"Checks if the given value is a date / time object. The difference between isDateObject and isDate is that the latter returns true for date / time objects as well as date / time strings.",
 	"params": [
 		{"name":"dateObject","description":"A value, usually the name of a variable","required":true,"default":"","type":"any","values":[]}
 	],
