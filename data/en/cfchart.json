@@ -5,7 +5,7 @@
 	"related":["cfchartseries","cfchartdata"],
 	"description":"Generates and displays a chart.",
 	"params": [
-		{"name":"format","description":"File format in which to save graph. `format=flash` has been deprecated in CF2016+","required":false,"default":false,"type":"string","values":["flash","jpg","png"]},
+		{"name":"format","description":"File format in which to save graph.\n`format=flash` has been deprecated in CF2016+\nFor Lucee the default value is `png` and the format `html` is not supported.","required":false,"default":"html","type":"string","values":["html","flash","jpg","png"]},
 		{"name":"chartheight","description":"Chart height; integer number of pixels","required":false,"default":240,"type":"numeric","values":[]},
 		{"name":"chartwidth","description":"Chart width; integer number of pixels","required":false,"default":320,"type":"numeric","values":[]},
 		{"name":"scalefrom","description":"Y-axis minimum value; integer","required":false,"default":"","type":"numeric","values":[]},
