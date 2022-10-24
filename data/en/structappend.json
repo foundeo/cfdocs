@@ -4,6 +4,7 @@
 	"syntax":"structAppend(destStruct, sourceStruct [, overwriteFlag])",
 	"member": "destStruct.append(sourceStruct [, overwriteFlag])",
 	"returns":"boolean",
+	"memberReturns":"struct",
 	"related":[],
 	"description":"Appends one structure to another.",
 	"params": [
