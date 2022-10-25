@@ -48,8 +48,8 @@
 						<h4><em>Member Function Syntax</em></h4>
 						<p id="member-syntax">
 							<code>#encodeForHTML(data.member)#</code>
-							<cfif StructKeyExists(data, "memberReturns") AND Len(data.memberReturns)>
-								<code><em>&##8594; returns #encodeForHTML(data.memberReturns)#</em></code>
+							<cfif StructKeyExists(data, "member_details") AND StructKeyExists(data.member_details, "returns") && Len(data.member_details.returns)>
+								<code><em>&##8594; returns #encodeForHTML(data.member_details.returns)#</em></code>
 							</cfif>
 						</p>
 					</cfif>
