@@ -18,13 +18,13 @@
 	"examples": [
 		{
 			"title": "Create a query with 4 rows and return a new query containing the 2nd and 3rd rows of the first",
-			"code": "data = [\n\t[ 1,'James' ],\n\t[ 2,'Alfred' ],\n\t[ 3,'Amisha' ],\n\t[ 4,'Terri' ]\n];\nmyQuery = QueryNew( 'ID,name','int,varchar',data );\nresult = QuerySlice( myQuery,2,2 );\nDump( var='#result#' );",
+			"code": "data = [\n\t[ 1,'James' ],\n\t[ 2,'Alfred' ],\n\t[ 3,'Amisha' ],\n\t[ 4,'Terri' ]\n];\nmyQuery = QueryNew( 'ID,name','integer,varchar',data );\nresult = QuerySlice( myQuery,2,2 );\nwriteDump( var='#result#' );",
 			"description":"",
 			"runnable":true
 		},
 		{
 			"title": "Using a member function",
-			"code": "data = [\n\t[ 1,'James' ],\n\t[ 2,'Alfred' ],\n\t[ 3,'Amisha' ],\n\t[ 4,'Terri' ]\n];\nmyQuery = QueryNew( 'ID,name','int,varchar',data );\nresult = myQuery.slice( 2,2 );\nDump( var='#result#' );",
+			"code": "data = [\n\t[ 1,'James' ],\n\t[ 2,'Alfred' ],\n\t[ 3,'Amisha' ],\n\t[ 4,'Terri' ]\n];\nmyQuery = QueryNew( 'ID,name','integer,varchar',data );\nresult = myQuery.slice( 2,2 );\nwriteDump( var='#result#' );",
 			"description":"",
 			"runnable":true
 		}
