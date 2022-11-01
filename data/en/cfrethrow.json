@@ -11,5 +11,12 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfrethrow"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfrethrow"}
 	},
-	"links": []
+	"links": [],
+	"example":[{
+	"title": "Using rethrow to dump a file's contents",
+	"description": "uses a try/catch to read a file,  recreates it if it does not exist, then tries again with rethrow",
+	"code": "<cfscript>\npath=\"test.txt\";\ntry {\n\tdump(fileRead(path));\n}\ncatch(e) {\n\tif(!fileExists(path)) {\n\t\tfileWrite(path,\"content of the file\");\n\t\tretry;\n\t}\n\techo(e);\n}\nif(fileExists(path)) fileDelete(path);\n</cfscript>",
+	"result": "Dump of \"content of the file\"",
+	"runnable": false
+}]
 }
