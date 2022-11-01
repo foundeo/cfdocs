@@ -56,6 +56,13 @@
 	],
 	"examples": [
 		{
+	"title": "Generate and Save a PDF to a file",
+	"description": "Use the cfdocument tag to generate a file on the server either to save to a folder or to attach to an email",
+	"code": "<cfdocument format=\"pdf\" filename=\"#getTempDirectory()#mydoc.pdf\">\n    <h1>Hello ColdFusion</h1>\n    <p>This is <strong>PDF</strong> example document.</p>\n    <p>Generated at: <cfoutput>#TimeFormat(Now())# on #DateFormat(Now())#</cfoutput></p>\n</cfdocument>",
+	"result": "A saved Hello ColdFusion PDF to a temporary directory",
+	"runnable": false
+},
+		{
 			"title":"Dynamic PDF Served to Browser",
 			"description":"PDF is sent back to the browser instead of saving to a file. The cfheader tag is used to suggest a file name to the browser. The cfcontent tag is used to set the Content-Type response header (that could also be done using cfheader) which tells the browser that it is a PDF file.",
 			"code":"<cfcontent type=\"application/pdf\">\n<cfheader name=\"Content-Disposition\" value=\"attachment;filename=example.pdf\">\n<cfdocument format=\"pdf\">\n    <h1>Hello ColdFusion</h1>\n    <p>This is <strong>PDF</strong> example document.</p>\n    <p>Generated at: <cfoutput>#TimeFormat(Now())# on #DateFormat(Now())#</cfoutput></p>\n</cfdocument>",
@@ -68,6 +75,13 @@
 			"description":"This is a script representation of the the same code above. \n\nNote that the writeoutput is indeed necessary for any body content in a script-based cfdocument--even if no CFML variables or expressions exist in the string. (This is true also for other script-based tags that may have bodies, including cfdocumentitem and cfdocumentsection, as well as cfhtmltopdf, cfsavecontent, etc.)",
 			"code":"<cfscript>\ncfcontent( type=\"application/pdf\" );\ncfheader( name=\"Content-Disposition\", value=\"attachment;filename=example.pdf\" );\ncfdocument (format=\"pdf\"){\nwriteoutput(\"\n    <h1>Hello ColdFusion</h1>\n    <p>This is <strong>PDF</strong> example document.</p>\n    <p>Generated at: <cfoutput>#TimeFormat(Now())# on #DateFormat(Now())#</cfoutput></p>\n    \");\n}\n</cfscript>",
 			"result":""
-		}	]
+		},
+	{
+	"title": "Print header and footer items with page numbering",
+	"description": "must use  evalatprint=\"true\" in order to get current page numbering on the header/footer sections",
+	"code": "<cfdocument format=\"pdf\"> \n<cfdocumentitem type=\"header\" evalatprint=\"true\" > \n<cfif (cfdocument.currentpagenumber mod 2) is 0> \n<cfoutput>#cfdocument.totalpagecount#</cfoutput> \n<cfelse> \n<cfoutput>#cfdocument.currentpagenumber#</cfoutput> \n</cfif> \n<cfoutput>cfdocument.currentpagenumber :#cfdocument.currentpagenumber#</cfoutput> \n<cfoutput>cfdocument.totalpagecount :#cfdocument.totalpagecount#</cfoutput> \n<cfoutput>cfdocument.totalsectionpagecount :#cfdocument.totalsectionpagecount#</cfoutput> \n<cfoutput>cfdocument.currentsectionpagenumber :#cfdocument.currentsectionpagenumber#</cfoutput> \n</cfdocumentitem> \n<cfdocumentitem type=\"footer\" evalatprint=\"true\" > \n<cfif ! (cfdocument.currentpagenumber mod 2) is 0> \n<cfoutput>if#cfdocument.totalpagecount#</cfoutput> \n<cfelse> \n<cfoutput>else#cfdocument.currentpagenumber#</cfoutput>\n</cfif> \n</cfdocumentitem> \n<cfdocumentsection >Example Text \n</cfdocumentsection> \n</cfdocument>",
+	"result": "A PDF with Header & Footer elements",
+	"runnable": false
+}]
 
 }

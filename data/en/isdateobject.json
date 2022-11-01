@@ -11,5 +11,12 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"2016.0.3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isdateobject.html"}
 	},
-	"links": []
+	"links": [],
+	"examples":[{
+	"title": "Check if date is a date OBJECT, not just a date string",
+	"description": "",
+	"code": "<cfscript>\n    date = IsDateObject(now());\n    writeOutput(\"Can string be converted to a date/time value : \" & date);\n</cfscript>",
+	"result": "Can string be converted to a date/time value : YES",
+	"runnable": true
+}]
 }
