@@ -68,6 +68,13 @@
 			"description":"This is a script representation of the the same code above. \n\nNote that the writeoutput is indeed necessary for any body content in a script-based cfdocument--even if no CFML variables or expressions exist in the string. (This is true also for other script-based tags that may have bodies, including cfdocumentitem and cfdocumentsection, as well as cfhtmltopdf, cfsavecontent, etc.)",
 			"code":"<cfscript>\ncfcontent( type=\"application/pdf\" );\ncfheader( name=\"Content-Disposition\", value=\"attachment;filename=example.pdf\" );\ncfdocument (format=\"pdf\"){\nwriteoutput(\"\n    <h1>Hello ColdFusion</h1>\n    <p>This is <strong>PDF</strong> example document.</p>\n    <p>Generated at: <cfoutput>#TimeFormat(Now())# on #DateFormat(Now())#</cfoutput></p>\n    \");\n}\n</cfscript>",
 			"result":""
-		}	]
+		},
+	{
+	"title": "Print header and footer items with page numbering",
+	"description": "must use  evalatprint=\"true\" in order to get current page numbering on the header/footer sections",
+	"code": "<cfdocument format=\"pdf\"> \n<cfdocumentitem type=\"header\" evalatprint=\"true\" > \n<cfif (cfdocument.currentpagenumber mod 2) is 0> \n<cfoutput>#cfdocument.totalpagecount#</cfoutput> \n<cfelse> \n<cfoutput>#cfdocument.currentpagenumber#</cfoutput> \n</cfif> \n<cfoutput>cfdocument.currentpagenumber :#cfdocument.currentpagenumber#</cfoutput> \n<cfoutput>cfdocument.totalpagecount :#cfdocument.totalpagecount#</cfoutput> \n<cfoutput>cfdocument.totalsectionpagecount :#cfdocument.totalsectionpagecount#</cfoutput> \n<cfoutput>cfdocument.currentsectionpagenumber :#cfdocument.currentsectionpagenumber#</cfoutput> \n</cfdocumentitem> \n<cfdocumentitem type=\"footer\" evalatprint=\"true\" > \n<cfif ! (cfdocument.currentpagenumber mod 2) is 0> \n<cfoutput>if#cfdocument.totalpagecount#</cfoutput> \n<cfelse> \n<cfoutput>else#cfdocument.currentpagenumber#</cfoutput>\n</cfif> \n</cfdocumentitem> \n<cfdocumentsection >Example Text \n</cfdocumentsection> \n</cfdocument>",
+	"result": "A PDF with Header & Footer elements",
+	"runnable": false
+}]
 
 }
