@@ -56,6 +56,13 @@
 	],
 	"examples": [
 		{
+	"title": "Generate and Save a PDF to a file",
+	"description": "Use the cfdocument tag to generate a file on the server either to save to a folder or to attach to an email",
+	"code": "<cfdocument format=\"pdf\" filename=\"#getTempDirectory()#mydoc.pdf\">\n    <h1>Hello ColdFusion</h1>\n    <p>This is <strong>PDF</strong> example document.</p>\n    <p>Generated at: <cfoutput>#TimeFormat(Now())# on #DateFormat(Now())#</cfoutput></p>\n</cfdocument>",
+	"result": "A saved Hello ColdFusion PDF to a temporary directory",
+	"runnable": false
+},
+		{
 			"title":"Dynamic PDF Served to Browser",
 			"description":"PDF is sent back to the browser instead of saving to a file. The cfheader tag is used to suggest a file name to the browser. The cfcontent tag is used to set the Content-Type response header (that could also be done using cfheader) which tells the browser that it is a PDF file.",
 			"code":"<cfcontent type=\"application/pdf\">\n<cfheader name=\"Content-Disposition\" value=\"attachment;filename=example.pdf\">\n<cfdocument format=\"pdf\">\n    <h1>Hello ColdFusion</h1>\n    <p>This is <strong>PDF</strong> example document.</p>\n    <p>Generated at: <cfoutput>#TimeFormat(Now())# on #DateFormat(Now())#</cfoutput></p>\n</cfdocument>",
