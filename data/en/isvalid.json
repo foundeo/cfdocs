@@ -6,7 +6,7 @@
 	"related":["isarray", "issimplevalue","isnumeric","isboolean","isdate","cfparam"],
 	"description":"Tests whether a value meets a validation or data type rule.",
 	"params": [
-		{"name":"type","description":"The valid format for the data.","required":true,"default":"","type":"string","values":["Any","Array","Binary","boolean","creditcard","date","time","email","eurodate","float","Numeric","guid","integer","Query","range","Regex","regular_expression","ssn","social_security_number","String","Struct","telephone","URL","UUID","usdate","variablename","xml","zipcode","component"]},
+		{"name":"type","description":"The valid format for the data.","required":true,"default":"","type":"string","values":["Any","Array","Binary","boolean","creditcard","component","date","time","email","eurodate","float","guid","integer","Numeric","Query","range","Regex","regular_expression","ssn","social_security_number","String","Struct","telephone","time","URL","UUID","usdate","variablename","xml","zipcode"]},
 		{"name":"value","description":"The value to test.","required":true,"default":"","type":"any","values":[]},
 		{"name":"min","description":"The minimum valid value; used only for range validation.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"max","description":"The maximum valid value; used only for range validation.","required":true,"default":"","type":"numeric","values":[]},
