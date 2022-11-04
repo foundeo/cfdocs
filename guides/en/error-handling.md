@@ -117,26 +117,24 @@ catch (any e) {
 A finally clause in a try/catch block will run whether an error is thrown or not. This is useful for cleaning things up, especially when using file handles.
 
 ```cfml
-// Open File
+
 var fileObject = fileOpen("/path/to/file.txt");
 
-// Perform Actions
 try
 {
     while (!fileIsEOF(fileObj)) {
-        lineContent = fileReadLine(fileObj);
-        // do something with content of each line
+        line = fileReadLine(fileObj);
+        // logic for each line
     }
 }
 
-catch(any ex)
+catch(any e)
 {
     // raise some sort of flag but don't throw!
 }
 
 finally
 {
-    // Close File
     fileClose(fileObject);
 }
 ```
