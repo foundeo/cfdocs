@@ -79,6 +79,21 @@ throw(
 
 You can then use your application.onError to deserialize this field and handle the result.
 
+## Try / Catch / Finally
+
+Where a function is likely to be error prone, such as an http connection, you should wrap it in a try-catch-block.
+
+The catch method will run if an error is thrown. Note that cfhttp requires a setting to throw an error if it fails, otherwise the status code can be inspected and errors thrown manually.
+
+```cfml
+try {
+    cfhttp(url=webaddr,throwonerror=1,result=myres);
+}
+catch (any e) {
+   // handle likely connection issue.
+}
+```
+
 ### Rethrowing an error
 
 Often after checking the details of an error you will want to pass it back to the error handling system. This is known as "rethrowing" an error. In cfscript, you use the `object` argument to do this:
@@ -94,21 +109,6 @@ catch (any e) {
     else {
         throw(object=e);
     }
-}
-```
-
-## Try / Catch / Finally
-
-Where a function is likely to be error prone, such as an http connection, you should wrap it in a try-catch-block.
-
-The catch method will run if an error is thrown. Note that cfhttp requires a setting to throw an error if it fails, otherwise the status code can be inspected and errors thrown manually.
-
-```cfml
-try {
-    cfhttp(url=webaddr,throwonerror=1,result=myres);
-}
-catch (any e) {
-   // handle likely connection issue.
 }
 ```
 
