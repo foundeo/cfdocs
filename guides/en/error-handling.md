@@ -4,7 +4,7 @@
 
 Your application's onError function can be defined to handle errors gracefully and to log/alert important ones. The method is called when an error is thrown.
 
-```
+```cfml
 // log to a folder defined e.g. in onApplicationStart
 void function onError(e) {
     local.id = CreateUUID();
@@ -18,7 +18,7 @@ void function onError(e) {
 
 Using an onError handler will stop the application setting a 500 status code that is normally sent with a system error. Sometimes you will still want to set these status codes, in which case you will need to use 
 
-```
+```cfml
 cfheader(statuscode = 500);
 ```
 
@@ -30,7 +30,7 @@ There is a function cferror that allows you to set custom templates for differen
 
 A missing page error has an error type of `missinginclude`.
 
-```
+```cfml
 switch(e.type) {
     case "missingInclude":
         cfheader(statuscode = 404);
@@ -45,11 +45,9 @@ switch(e.type) {
 
 You might want to do a redirect here instead, in which case you would use `location`, usually with a 301 status to indicate the page has permanently moved.
 
-```
+```cfml
 location("mypage.cfm", "false", "301");
 ```
-
-
 
 ## Throwing errors
 
@@ -85,7 +83,7 @@ You can then use your application.onError to deserialize this field and handle t
 
 Often after checking the details of an error you will want to pass it back to the error handling system. This is known as "rethrowing" an error. In cfscript, you use the `object` argument to do this:
 
-```
+```cfml
 try {
     // something
 }
@@ -101,11 +99,11 @@ catch (any e) {
 
 ## Try / Catch / Finally
 
-Where a function is likely to be error prone, such as an http connection, you should wrap it in a try / catch clause.
+Where a function is likely to be error prone, such as an http connection, you should wrap it in a try-catch-block.
 
 The catch method will run if an error is thrown. Note that cfhttp requires a setting to throw an error if it fails, otherwise the status code can be inspected and errors thrown manually.
 
-```
+```cfml
 try {
     cfhttp(url=webaddr,throwonerror=1,result=myres);
 }
@@ -147,7 +145,7 @@ finally
 
 In the age of REST-API usage error responses need to be returned in JSON format. A typical response would include an http status and details of the error.
 
-```
+```cfml
 errors = [];
 if (!isValid("integer", Form.age)) {
     arrayAppend(errors,'Your value for "age" must be numeric!');
@@ -173,7 +171,7 @@ A logic clause in your application.onError can be used to determine whether a re
 
 When using this approach, you can use the status code to indicate a range of client errors such as 401 to indicate a login is required or 400 to indicate a validation failure as in the last example.
 
-```
+```cfml
 if (request.prc.isAjaxRequest) {
      local.statuscode = e.type eq "validation" ? 400 : 500;
      cfheader(statuscode = local.statuscode);
