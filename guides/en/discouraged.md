@@ -102,6 +102,9 @@ The use of tags generating UI is generally discouraged by the CFML community. Se
 
 In almost all cases evaluate is unnecessary (use bracket notation instead). Use of evaluate can lead to performance and security issues.
 
+`int`
+Adobe recommends that you use the Floor function, instead of the Int function, in all new applications.See: https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/int.html
+
 `iIf`
 
 Use the ternary operator CF9+ instead because it does not evaluate.
