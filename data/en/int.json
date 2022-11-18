@@ -5,6 +5,7 @@
 	"returns":"numeric",
 	"related":["round","floor","ceiling"],
 	"description":" Calculates the closest integer that is smaller than number.",
+	"discouraged": "In new applications, use the Floor function instead of the Int function.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}
 	],
