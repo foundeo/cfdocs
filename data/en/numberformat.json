@@ -7,7 +7,7 @@
 	"description":"Creates a custom-formatted number value. For international\nnumber formatting use LSNumberFormat.\nThe mask is made up of:\n_,9 Digit placeholder; . decimal point; 0 Pads with zeros;\n( ) less than zero, puts parentheses around the mask\n+ plus sign before positive number minus before negative\n- a space before positive minus sign before negative\n, Separates every third decimal place with a comma.\nL,C Left-justifies or center-justifies number\n$ dollar sign before formatted number.\n^ Separates left and right formatting.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"mask","description":"","required":false,"default":"","type":"string","values":[]}
+		{"name":"mask","description":"_ : (underscore): Optional. Digit placeholder.\n9 : Optional. Digit placeholder. (Shows decimal places more clearly than _.). Note that when ‘9’ or ‘_’  is used after the decimal place, 0 will be padded, if required. \n. : Location of a mandatory decimal point.\n0 : Located to the left or right of a mandatory decimal point. Pads with zeros.\n( ) : If number is less than zero, puts parentheses around the mask.\n+ : Puts plus sign before positive number; minus sign before negative number.\n- : Puts a space before positive number; minus sign before negative number.\n, : Separates every third decimal place with a comma.\nL,C : Left-justifies or center-justifies number within width of mask column. First character of mask must be L or C. The default value is right-justified.\n$ : Puts a dollar sign before formatted number. First character of mask must be the dollar sign ($).\n^ : Separates left and right formatting.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/numberformat.html"},
@@ -22,6 +22,47 @@
 	}],
 	"examples": [
 		{
+			"title": "Format to 2 decimal places ",
+			"description": "",
+			"code": "<cfoutput>1.234 ('__.00') -> #numberFormat(1.234,'__.00')#<br/> <!--- 1.23 --->\n1234 ('__.00') -> #numberFormat(1234,'__.00')#<br/> <!--- 1234.00 ---></cfoutput>",
+			"result": "",
+			"runnable": true
+		},
+		{
+			"title": "0 and 9 mask ",
+			"description": "",
+			"code": "<cfoutput>\n123 ('00000') -> #numberFormat(123,'00000')#<br/>\n123 ('99999') -> #numberFormat(123,'99999')#<br/>\n123 ('99.99999') -> #numberFormat(123.12,'99.99999')#<br/>\n</cfoutput>",
+			"result": "",
+			"runnable": true
+		},
+		{
+			"title": "_ mask",
+			"description": "",
+			"code": "<cfoutput>\n123 ('_____') -> #numberFormat(123,'_____')#<br/>\n123 ('_.___') -> #numberFormat(123,'_.___')#<br/>\n11.10 ('__.000') -> #numberFormat(11.10,'__.000')#<br/>\n</cfoutput>",
+			"result": "",
+			"runnable": true
+		},
+		{
+			"title": "   + & - mask ",
+			"description": "",
+			"code": "<cfoutput>\n123 ('+') -> #numberFormat(123,'+')#<br/>\n-123 ('-') -> #numberFormat(-123,'-')#<br/>\n</cfoutput>",
+			"result": "",
+			"runnable": true
+		},
+		{
+			"title": ", comma",
+			"description": "",
+			"code": "<cfoutput>\n123 (',') -> #numberFormat(123,',')#<br/>\n123456 (',') -> #numberFormat(123456,',')#<br/>\n</cfoutput>",
+			"result": "",
+			"runnable": true
+		},
+		{
+			"title": "L,C mask",
+			"description": "",
+			"code": "<cfoutput>\n1 (\"L999\") -> #NumberFormat( 1, \"L999\" )#<br/>\n1 (\"C000\") -> #NumberFormat( 1, \"C000\" )#<br/>\n</cfoutput>",
+			"result": "",
+			"runnable": true
+		},{
 			"title":"Two decimal places, decimal input",
 			"description":"",
 			"code":"numberFormat(1.23,'__.00')",
