@@ -16,10 +16,10 @@
 	},
 	"links": [],
 	"examples": [{
-            "title": "Output UTC Date of 2017/8/8",
+            "title": "Output UTC Date of 2017/8/8 14:12:10",
             "description": "",
-            "code": "getHTTPTimeString(\"2017/8/8\")",
-            "result": "Tue, 08 Aug 2017 00:00:00 GMT",
+            "code": "getHTTPTimeString(\"2017/8/8 14:12:10\")",
+            "result": "Tue, 08 Aug 2017 14:12:10 GMT",
             "runnable": true
 	}]
 }
