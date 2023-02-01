@@ -5,11 +5,11 @@
   "related": [
     "cfquery","queryExecute"
   ],
-  "description": "Verifies the data type of a query parameter and, for DBMSs that\n support bind variables, enables CFML to use bind variables\n in the SQL statement. Bind variable usage enhances performance\n when executing a cfquery statement multiple times.\n\n This tag is nested within a cfquery tag, embedded in a query SQL\n statement. If you specify optional parameters, this tag performs\n data validation.\n\nNOTE: Due to security it's highly recommended to use this tag for any user input or non-static value used in a query to prevent code injections and the like.",
+  "description": "Verifies the data type of a query parameter and, for DBMSs that support bind variables, enables CFML to use bind variables in the SQL statement. Bind variable usage enhances performance when executing a cfquery statement multiple times.\n\n This tag is nested within a cfquery tag, embedded in a query SQL statement. If you specify optional parameters, this tag performs data validation.\n\nNOTE: Due to security it's highly recommended to use this tag for any user input or non-static value used in a query to prevent code injections and the like.",
   "params": [
     {
       "name": "value",
-      "description": "Value that CFML passes to the right of the comparison\n operator in a where clause.\n\n If CFSQLType is a date or time option, ensure that the date\n value uses your DBMS-specific date format. Use the\n CreateODBCDateTime or DateFormat and TimeFormat functions\n to format the date value.",
+      "description": "Value that CFML passes to the right of the comparison operator in a where clause.\n\n If CFSQLType is a date or time option, ensure that the date value uses your DBMS-specific date format. Use the CreateODBCDateTime or DateFormat and TimeFormat functions to format the date value.",
       "required": false,
       "default": "",
       "type": "string",
