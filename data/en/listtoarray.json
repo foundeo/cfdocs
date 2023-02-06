@@ -2,6 +2,7 @@
 	"name":"listToArray",
 	"type":"function",
 	"syntax":"listToArray(list [, delimiters] [, includeEmptyFields] [, multiCharacterDelimiter])",
+	"member":"str.listToArray([delimiters] [, includeEmptyFields] [, multiCharacterDelimiter])",
 	"returns":"array",
 	"related":["ArrayToList"],
 	"description":" Copies the elements of a list to an array.",
