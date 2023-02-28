@@ -15,10 +15,11 @@
 		"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
 	}],
 	"params":[
-		{"values":[],"default":"","description":"Input list","name":"list","type":"string","required":"1"},
-		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: value\r\nindex : current index for the iteration\r\nlist : reference of the original list","name":"function","type":"any","required":"1"},
-		{"values":[],"default":"","description":"Initial value which will be used for the reduce operation. The type is any.","name":"intialValue","type":"any","required":"0"},
-		{"values":[],"default":"comma","description":"The list delimiter.","name":"delimiter","type":"string","required":"0"},{"values":[],"default":"false","description":"Include empty values.","name":"includeEmptyFields","type":"boolean","required":"0"}
+		{"values":[],"default":"","description":"Input list","name":"list","type":"string","required":true},
+		{"values":[],"default":"","description":"Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are\r\n\r\nitem: value\r\nindex : current index for the iteration\r\nlist : reference of the original list","name":"function","type":"any","required":true},
+		{"values":[],"default":"","description":"Initial value which will be used for the reduce operation. The type is any.","name":"intialValue","type":"any","required":false},
+		{"values":[],"default":"comma","description":"The list delimiter.","name":"delimiter","type":"string","required":false},
+		{"values":[],"default":"false","description":"Include empty values.","name":"includeEmptyFields","type":"boolean","required":false}
 	],
 	"returns":"any",
 	"examples":[{

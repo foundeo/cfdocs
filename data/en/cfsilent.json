@@ -14,6 +14,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Example for cfsilent tag",
+			"description": "Content within cfsilent tag will not be displayed",
+			"code": " <cfset a = 10> \n <cfset b = 5> \n <cfsilent> \n    <cfoutput> This is from inside cfsilent #a+b# </cfoutput> \n </cfsilent> \n <cfoutput>This is from outside cfsilent #a-b#</cfoutput> ",
+			"result": "This is from outside cfsilent 5",
+			"runnable":true
+		}
 	]
 
 }

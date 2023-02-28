@@ -6,12 +6,22 @@
 	"related":["isPDFFile"],
 	"description":"Verifies whether an image file is valid.",
 	"params": [
-		{"name":"path","description":"Pathname to a image file.","required":true,"default":"","type":"string","values":[]}
+		{"name":"path","description":"Pathname to an image file.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isimagefile.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isimagefile.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isimagefile"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"The simple isImageFile example",
+			"description":"Check the file is image or not.",
+			"code":"<cfset myImage  = expandPath(\"./sample.png\")>\r\n<cfif IsImageFile(myImage)>\r\n\t<cfimage action=\"writeToBrowser\" source=\"#myImage#\">\r\n</cfif>",
+			"result":"",
+			"runnable":false
+		}
+		
+	]
 }

@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"isLocalhost(ipaddress)",
 	"returns":"boolean",
-	"related":[],
+	"related":["GetLocalHostIP"],
 	"description":" Determines whether the specified IP address is the localhost.",
 	"params": [
 		{"name":"ipaddress","description":"Valid IP address.","required":true,"default":"","type":"string","values":[]}

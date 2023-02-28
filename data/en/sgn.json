@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"sgn(number)",
 	"returns":"numeric",
-	"related":[],
+	"related":["abs"],
 	"description":" Determines the sign of a number.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}

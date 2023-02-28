@@ -11,5 +11,19 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/applicationstop.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/applicationstop"}
 	},
-	"links": []
+	"links": [
+		{
+			"title":"Resetting Applications With ApplicationStop()",
+			"description":"",
+			"url":"https://www.bennadel.com/blog/1667-learning-coldfusion-9-resetting-applications-with-applicationstop.htm"
+		}
+	],
+	"examples": [
+		{
+			"title": "Basic applicationStop usage.",
+			"description": "Halt the application.",
+			"code": "var applicationRequiresHalt = true;\nif(applicationRequiresHalt) applicationStop();\nwriteOutput(\"Still Running\");",
+			"result": "// We don't expect anything to happen after the application has been stopped."
+		}
+	]
 }

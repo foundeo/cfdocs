@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"cJustify(string, length)",
 	"returns":"string",
-	"related":[],
+	"related":["lJustify","rJustify"],
 	"description":"Centers a string in a given field length by adding spaces to either side.",
 	"params": [
 		{"name":"string","description":"The string that is to be centered","required":true,"default":"","type":"string","values":[]},

@@ -26,6 +26,12 @@
 			"description": "",
 			"code": "<cfset fruit = \"\"> \r\n<cfswitch expression=\"#fruit#\"> \r\n    <cfcase value=\"Apple\">I like apples!</cfcase>\r\n    <cfcase value=\"Orange,Citrus\">I like oranges!</cfcase> \r\n    <cfcase value=\"Kiwi\">I like kiwi!</cfcase>\r\n    <cfdefaultcase>Fruit, what fruit?</cfdefaultcase> \r\n</cfswitch>",
 			"result": "Fruit, what fruit?"
+		},
+		{
+			"title": "Dynamic switch case",
+			"description": "CF2021+ switch cases are support dynamic value",
+			"code": "num = 10;\r\nswitch(0) {\r\n case num % 2:\r\n      writeOutput(\"Even number\");\r\n      break; \r\ndefault: \r\n     writeOutput(\"Odd number\"); \r\nbreak; \r\n }",
+			"result": "Even number"
 		}
 	]
 }

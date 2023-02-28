@@ -16,7 +16,7 @@
     },
     "examples": [
         {
-            "title": "Basic usage (case sensitive)",
+            "title": "Basic usage (case-sensitive)",
             "description": "Basic usage. Optional arguments left as defaults.",
             "code": "listRemoveDuplicates(\"one,two,three,four,five,one,five,three\")",
             "result": "one,two,three,four,five"

@@ -33,9 +33,9 @@
 				"runnable": false
 		}, {
 				"title": "Output page's locale in a divergent language",
-				"description": "Outputs the locale of the page in French.",
-				"code": "getLocaleInfo(dspLocale='French').display.country",
-				"result": "Etats-Unis",
+				"description": "Outputs the language locale of the page in German.",
+				"code": "getLocaleInfo(dspLocale='German').display.language",
+				"result": "Englisch",
 				"runnable": true
 		}, {
 				"title": "Output German locale in a page's language",

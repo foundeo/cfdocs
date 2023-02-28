@@ -26,13 +26,17 @@
 		},
 		{
 			"title":"Binary Object Example",
-			"description":"Converts a Image Binary to a Base64-String.",
+			"description":"Converts an Image Binary to a Base64-String.",
 			"code":"ToBase64(ToBinary(ImageRead(\"example.jpg\")))",
 			"runnable":false
 		}
 	],
 	"links": [
-
+		{
+			"title":"URL Safe Base64 UDF",
+			"url":"https://www.petefreitag.com/item/917.cfm",
+			"description":"A UDF to encode / decode using URL Safe Base64. Uses native Java API (requires Java 8+)" 
+		}
 	]
 
 }

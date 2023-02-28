@@ -24,5 +24,10 @@
         <from>^/application.cfc$</from>
         <to type="redirect">/application-cfc</to>
     </rule>
+    <rule>
+        <from>^/try/([^./]+)/?$</from>
+        <to>/trycf.cfm?name=$1</to>
+    </rule>
+    
 
 </urlrewrite>

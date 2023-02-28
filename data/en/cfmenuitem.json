@@ -82,5 +82,15 @@
 	"engines": {
 		"coldfusion": { "minimum_version": "", "notes": "", "deprecated":"2016", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmenuitem.html" }
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"MenuItem with example",
+			"description":"Here, We have created simple menu items. The main menu having two submenu items such as My account, Project display.It is supported in cf 10,11 & 16.",
+			"code":"<cfmenu name='menu' type=\"horizontal\" fontsize=\"14\" bgcolor=\"##CCFFFF\">\r\n\t<cfmenuitem name=\"Home\" display=\"Home\"/>\r\n\t<cfmenuitem name=\"Main\" display=\"Main\">\r\n\t\t<cfmenuitem name=\"MyAccount\" display=\"My Account\"/>\r\n\t\t<cfmenuitem name=\"ProjectDisplay\" display=\"Project Displaay\"/>\r\n\t</cfmenuitem>\r\n</cfmenu>",
+			"result":"",
+			"runnable":false
+		}
+		
+	]
 }

@@ -11,6 +11,11 @@
         }
     },
     "app":{
-        "cfengine":"adobe@2016"
+        "cfengine":"lucee-light@5.3.7+47"
+    },
+    "JVM":{
+        "minHeapSize":"96m",
+        "heapSize":"196m",
+        "args":"-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/cfdocs_heap_dump.hprof"
     }
 }

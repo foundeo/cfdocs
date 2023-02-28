@@ -6,7 +6,7 @@
 	"related": ["esapiEncode"],
 	"description": "Decodes a string that has been encoded with ESAPIEncode.",
 	"params": [
-		{"name": "decodeFrom", "description": "given value is encoded as:\n\n* Lucee4, Lucee5+ url\n* Lucee5+ html", "required": true, "default": "", "type": "string", "values": []},
+		{"name": "decodeFrom", "description": "given value is encoded as:\n\n* Lucee4, Lucee5+ url\n* Lucee5+ HTML", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "string", "description": "string to encode", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {

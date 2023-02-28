@@ -30,5 +30,13 @@
 		"title":"Map, Reduce and other Higher Order Functions",
 		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
 		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
-	}]
+	}],
+	"examples": [
+		{
+			"title": "List contains some.",
+			"description": "Take a string list and see if some elements match a given predicate.",
+			"code": "var fruitList = arrayToList([\"apple\", \"mango\", \"orange\", \"pear\"], \",\");\nwriteOutput(listSome(fruitList, function(fruit) {\n\treturn findNoCase(\"n\", fruit);\n}, \",\"));",
+			"result": "true"
+		}
+	]
 }

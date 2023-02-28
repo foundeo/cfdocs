@@ -1,0 +1,47 @@
+{
+	"name":"generateBCryptHash",
+	"syntax":"generateBCryptHash(plaintext,options);",
+	"returns":"string",
+	"description":"It is a password-hashing cryptographic function that takes an input and hashes it into a fixed size output./nNOTE: BCrypt input is limited to 72 bytes.",
+	"type":"function",
+	"related":["verifyBCryptHash","generateSCryptHash","verifySCryptHash","hash", "encrypt","decrypt","generateSecretKey"],
+	"params":[
+		{"name":"plaintext", "description":"The input string to hash.", "required":true, "default":"", "type":"string", "values":[]},
+		{"name":"options", "description":"A struct containing the optional values:\n--version - Version of BCrypt hash to generate ($2a,$2y or $2b). (Default is \"$2a\". The most current version is \"$2b\")\n--rounds - Number of rounds to run the hash functions. (Default is 10.)", "required":false, "default":"{\"version\":\"$2a\",\"rounds\":10}", "type":"struct", "values":["version","rounds"]}
+	],
+	"engines":{
+		"coldfusion":{"minimum_version":"2021","notes":"","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/generatebcrypthash.html"}
+	},
+	"links":[
+		{"title":"OWASP Password Storage Cheat Sheet","description":"General advice from OWASP about how to work with passwords.","url":"https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"},
+		{"title":"Using Password4j And The BCrypt, SCrypt, And Argon2 Password Hashing Algorithms In Lucee CFML 5.3.7.47","description":"Blog by Ben Nadel about using hashing algorithms.","url":"https://www.bennadel.com/blog/4056-using-password4j-and-the-bcrypt-scrypt-and-argon2-password-hashing-algorithms-in-lucee-cfml-5-3-7-47.htm"},
+		{"title":"Best practices for password hashing and storage","description":"IETF info on password hasing best practices.","url":"https://tools.ietf.org/id/draft-whited-kitten-password-storage-02.html"},
+		{"title":"Hashing Passwords: One-Way Road to Security","description":"Blog by Dan Arias on password hashing strategies.","url":"https://auth0.com/blog/hashing-passwords-one-way-road-to-security/"},
+		{"title":"bcrypt","description":"Wikipedia article about BCrypt.","url":"https://en.wikipedia.org/wiki/Bcrypt"},
+		{"title":"Using BCrypt in Lucee","description":"As of Lucee 5, this function has not been added yet. But this is a discussion of how to implement BCrypt in Lucee.","url":"https://dev.lucee.org/t/using-bcrypt-in-lucee/9031"},
+		{"title":"CFPASSPhrase","description":"Related project to help other engines utilize hashing functions.","url":"https://docs.sorcerersisle.com/cfpassphrase/"}
+	],
+	"examples":[
+		{
+			"title":"Example of BCrypt Hashing - No Options",
+			"description":"This is an example of using the function with no options.",
+			"code":"secretMsg=generateBCryptHash(\"My voice is my passport. Verify me.\");writeDump(secretMsg)",
+			"result":"$2a$10$.jQX1KnwPzhvVet0vEENnOlO8C70oM8GQhu0MQnCgcIlWhguWb3q.",
+			"runnable":false
+		},
+		{
+			"title":"Example of BCrypt Hashing - With Version Option",
+			"description":"This is an example of using the function with optional version specified.",
+			"code":"secretMsg=generateBCryptHash(\"My voice is my passport. Verify me.\",{\"version\":\"$2b\"});\nwriteDump(secretMsg)",
+			"result":"$2b$10$wkfNE0B2hP/GMqQPWRvTte87F/PlEZwetaDPnVwW5OjBRAPiGKZp.",
+			"runnable":false
+		},
+		{
+			"title":"Example of BCrypt Hashing - With Rounds Option",
+			"description":"This is an example of using the function with optional rounds specified.",
+			"code":"secretMsg=generateBCryptHash(\"Setec Astronomy\",{\"rounds\":15});writeDump(secretMsg)",
+			"result":"$2a$15$yBUewN8dYFd9QawytI5SO.MIq0hO65TXEoVyUAZRlK.oTHZ4Dwa0i",
+			"runnable":false
+		}
+	]
+}

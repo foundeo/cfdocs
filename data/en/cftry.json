@@ -22,6 +22,12 @@
 			"description":"Create a divide by zero error and then catch it.",
 			"code":"try {\n    x = 5/0;\n}\ncatch (any e) {\n    writeOutput(\"Error: \" & e.message);\n}",
 			"result":"Error: Division by zero."
+		},
+		{
+			"title": "A simple try/catch tag based example",
+			"description":"Create a divide by zero error and then catch it.",
+			"code":"<cftry>\n    <cfset x = 5/0 />\n    <cfcatch type=\"any\">\n        Error: <cfoutput>#cfcatch.message#</cfoutput>\n    </cfcatch>\n</cftry>",
+			"result":"Error: Division by zero."
 		}
 	]
 

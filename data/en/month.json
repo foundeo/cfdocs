@@ -20,10 +20,16 @@
 	],
 	"examples": [
 		{
-			"title": "Month of a datatime object",
+			"title": "Month of a datetime object",
 			"description": "",
 			"code": "dt = createdatetime(2016,1,1,5,30,25);\nm = month( dt );\nwriteoutput( m );",
 			"result": "1"
+		},
+		{
+			"title": "Month using member syntax",
+			"description": "Returns the month from a datetime object",
+			"code": "createDate( 2022, 10, 1 ).month();",
+			"result": "10"
 		}
 	]
 }

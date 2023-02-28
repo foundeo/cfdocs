@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"releaseCOMObject(objectName)",
 	"returns":"void",
-	"related":[],
+	"related":["CreateObject", "cfobject"],
 	"description":" Releases a COM Object and frees up resources that it used.",
 	"params": [
 		{"name":"objectName","description":"","required":true,"default":"","type":"any","values":[]}

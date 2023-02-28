@@ -1,34 +1,31 @@
 {
 	"name":"replaceListNoCase",
 	"type":"function",
-	"syntax":"replaceListNoCase(String, list1, list2, includeEmptyFields)\nreplaceListNoCase(String, list1, list2, delimiter, includeEmptyFields)\nreplaceListNoCase(String, list1, list2, delimiterList1, delimiterList2, includeEmptyFields)",
+	"syntax":"replaceListNoCase(string, list1, list2, includeEmptyFields)\nreplaceListNoCase(string, list1, list2, delimiter, includeEmptyFields)\nreplaceListNoCase(string, list1, list2, delimiterList1, delimiterList2, includeEmptyFields)",
 	"returns":"string",
 	"related":["replaceList"],
-	"description":"Replaces occurrences of the elements from a delimited list\n in a string with corresponding elements from another delimited\n list. The search is case-insensitive.",
+	"description":"Replaces occurrences of the elements from a delimited list in a string with corresponding elements from another delimited list. The search is case-insensitive.",
 	"params": [
-		{"name":"String","description":"A string, or a variable that contains one, within which to replace substring","required":true,"default":"","type":"string","values":[]},
+		{"name":"string","description":"A string, or a variable that contains one, within which to replace substring","required":true,"default":"","type":"string","values":[]},
 		{"name":"list1","description":"List of substrings for which to search","required":true,"default":"","type":"string","values":[]},
 		{"name":"list2","description":"List of replacement substrings","required":true,"default":"","type":"string","values":[]},
 		{"name":"delimiter","description":"Common delimiter for both search and replacement.","required":false,"default":",","type":"string","values":[]},
 		{"name":"delimiterList1","description":"Delimiter for search.","required":false,"default":",","type":"string","values":[]},
 		{"name":"delimiterList2","description":"Delimiter for replacement.","required":false,"default":",","type":"string","values":[]},
 		{"name":"includeEmptyFields","description":"When true, zero-length list elements are preserved.","required":false,"default":"false","type":"boolean","values":[]}
-
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/replacelistnocase.html"}
+		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/replacelistnocase.html"},
+		"lucee": {"minimum_version":"5.1.0", "notes":"", "docs":"https://docs.lucee.org/reference/functions/replacelistnocase.html"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Tag Example",
-			"description":" ",
-			"code":"<cfset local.myString = \"My test string\" /> \r\n <cfset local.MySubstring1 = \"Test, String\" /> \r\n <cfset local.mySubString2 = \"Replaced, Sentence\" /> \r\n <p>The result: <cfoutput>#replaceListNoCase(local.myString, local.MySubstring1, local.mySubString2)#</cfoutput> ",
-			"result":"",
+			"description":"",
+			"code":"<cfset myString = \"My test string\" />\r\n<cfset mySubstring1 = \"Test, String\" />\r\n<cfset mySubString2 = \"Replaced, Sentence\" />\r\n<cfoutput>#replaceListNoCase(myString, mySubstring1, mySubString2)#</cfoutput>",
+			"result":"My Replaced Sentence",
 			"runnable":true
 		}
 	]
-
 }

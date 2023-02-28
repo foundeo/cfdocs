@@ -5,10 +5,10 @@ ColdFusion uses these settings to configure ORM. All settings are optional.
 
 ## Example
 
-	this.ORMSettings = {
-		datasource = "foo",
-		dbcreate = "dropcreate"
-	};
+    this.ORMSettings = {
+        datasource = "foo",
+        dbcreate = "dropcreate"
+    };
 
 ## Options
 
@@ -16,7 +16,7 @@ ColdFusion uses these settings to configure ORM. All settings are optional.
 
 Default: `true`
 
-Specifies whether ColdFusion should automatically generate mapping for the persistent CFCs. If `false` the mappings should be provided in the form of `.hbmxml` files (see the Hibernate documentation at http://hibernate.org/orm).
+Specifies whether ColdFusion should automatically generate mapping for the persistent CFCs. If `false` the mappings should be provided in the form of `.hbmxml` files (see the Hibernate documentation at https://hibernate.org/orm/).
 
 ### `boolean autoManageSession`
 
@@ -111,12 +111,12 @@ Specifies whether the SQL queries that are executed by ORM will be logged. When 
 Defines database standard and naming convention.
 
 * default: This strategy uses the logical table or column name as it is.
-* smart: This strategy changes the logical table or column name to uppercase. Also, if the logical table or column name is in camel case, this strategy breaks the camelcased name and separates the broken words using underscore. For example, for a CFC named "OrderProduct", this strategy changes the table name as "ORDER_PRODUCT".
-* your own cfc : You can get complete control of the naming strategy by providing your own implementation. You need to specify the fully qualified name of the CFC as the value for naming strategy. This CFC must implement cfide.orm.INamingStrategy interface.
+* smart: This strategy changes the logical table or column name to uppercase. Also, if the logical table or column name is in camel case, this strategy breaks the camel cased name and separates the broken words using underscore. For example, for a CFC named "OrderProduct", this strategy changes the table name as "ORDER_PRODUCT".
+* your own cfc : You can get complete control of the naming strategy by providing your own implementation. You need to specify the fully qualified name of the CFC as the value for naming strategy. This CFC must implement `cfide.orm.INamingStrategy` interface.
 
 ### `string ORMConfig`
 
-A Hibernate configuration file, see http://www.tutorialspoint.com/hibernate/hibernate_configuration.htm
+A Hibernate configuration file, see https://www.tutorialspoint.com/hibernate/hibernate_configuration.htm
 
 ### `boolean saveMapping`
 

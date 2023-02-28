@@ -20,7 +20,7 @@
  		{
 			"title":"onMissingMethod Example",
 			"description":"Creates helper function getPropertyNameForHTML() which calls getPropertyName() and wraps it with the encodeForHTML function.",
-			"code":"public function onMissingMethod(missingMethodName, missingMethodArguments) {\r\n    if (reFindNoCase(\"^get[a-zA-Z0-9]+ForHTML$\", arguments.missingMethodName) {\r\n        local.getter = this[replaceNoCase(arguments.missingMethodName, \"ForHTML\", \"\")];\r\n        return encodeForHTML(local.getter());\r\n    } else {\r\n        throw (message=\"Method #encodeForHTML(arguments.missingMethodName)# was not found in the component #encodeForHTML(GetMetaData(this).name)#\");\r\n    }\r\n}",
+			"code":"public function onMissingMethod(missingMethodName, missingMethodArguments) {\r\n    if (reFindNoCase(\"^get[a-zA-Z0-9]+ForHTML$\", arguments.missingMethodName) {\r\n        local.getter = this[replaceNoCase(arguments.missingMethodName, \"ForHTML\", \"\")];\r\n        return encodeForHTML(local.getter());\r\n    } else {\r\n        throw (message=\"Method #encodeForHTML(arguments.missingMethodName)# was not found in the component #encodeForHTML(getMetadata(this).name)#\");\r\n    }\r\n}",
 			"result":"",
 			"runnable":false
 		}

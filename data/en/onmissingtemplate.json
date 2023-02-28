@@ -4,7 +4,7 @@
  	"syntax":"function onMissingTemplate(string targetPage) { return true; }",
  	"returns":"boolean",
  	"related":["application-cfc"],
- 	"description":"Defined in Application.cfc, invoked when a request is made for a cfml template that does not exist.",
+ 	"description":"Defined in Application.cfc, invoked when a request is made for a CFML template that does not exist.",
  	"params": [
  		{"name":"targetPage","description":"Requested template path relative to the webroot","required":true,"default":"","type":"string","values":[]}
  	],

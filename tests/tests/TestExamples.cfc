@@ -3,8 +3,8 @@ component extends="testbox.system.BaseSpec" {
 	variables.supportedFunctions = structKeyList(getFunctionList());
 
 	function run(testResults, testBox) {
-		dataDir = ExpandPath("../data/en");
-		files = directoryList(dataDir, false, "array");
+		var dataDir = ExpandPath("../data/en");
+		var files = directoryList(dataDir, false, "array");
 
 		describe("Test Examples", function() {
 			it("should match the expected result", function() {
@@ -16,16 +16,21 @@ component extends="testbox.system.BaseSpec" {
 						json = deserializeJSON(json);
 						if (json.keyExists("examples") && isArray(json.examples) && arrayLen(json.examples)) {
 							if (structKeyExists(server, "lucee") AND NOT structKeyExists(json.engines, "lucee")) {
-								//skip this test because it does not run on lucee, ACF specific tag or function
+								//skip this test because it does not run on Lucee, ACF specific tag or function
 								continue;
 							}
-              				var idx=0;
+							var idx=0;
 							for (var e in json.examples) {
-                				idx++;
+								idx++;
 								if (e.keyExists("code") && e.keyExists("result") && Len(e.result)) {
 									if (json.type == "function" && !listFindNoCase(variables.supportedFunctions, json.name)) {
 										//skip because it is not supported by current engine
 										continue;
+									}
+									if (e.keyExists("testable") && isBoolean(e.testable)) {
+										if (!e.testable) {
+											continue;
+										}
 									}
 									if (!find("<cf", e.code) && !find(";", e.code) && !find("{", e.code)) {
 										var actualResult = "";

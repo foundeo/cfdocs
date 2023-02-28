@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"abs(number)",
 	"returns":"numeric",
-	"related":[],
+	"related":["sgn"],
 	"description":" Absolute-value function. The absolute value of a number is\n the number without its sign.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]}

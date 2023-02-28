@@ -6,8 +6,8 @@
 	"related":["cfinvoke"],
 	"description":"Invokes an object method and returns the result of the invoked method.",
 	"params": [
-		{"name":"instance","description":"Name or instance of a CFC or an instance of a Java, .NET, COM or CORBA object","required":true,"default":"","type":"string","values":[]},
-		{"name":"methodname","description":"The name of the method to invoke.","required":true,"default":"","type":"string","values":[]},
+		{"name":"instance","description":"Name or instance of a CFC or an instance of a Java, .NET, COM or CORBA object to instantiate. For a CFC, it can be an empty string when invoking a method within the same ColdFusion page or component.","required":true,"default":"","type":"string","values":[]},
+		{"name":"methodname","description":"The name of the method (or operation for webservice) to invoke.","required":true,"default":"","type":"string","values":[]},
 		{"name":"arguments","description":"An array of positional arguments or a struct of named arguments to pass into the method.","required":false,"default":"","type":"any","values":[]}
 	],
 	"engines": {

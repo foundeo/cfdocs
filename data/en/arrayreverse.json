@@ -4,7 +4,7 @@
 	"syntax": "arrayReverse(array)",
 	"member": "array.reverse()",
 	"returns": "array",
-	"related": [],
+	"related": ["reverse","queryReverse"],
 	"description":"Returns an array with all of the elements reversed. The value in [0] within the input array will then exist in [n] in the output array, where n is the amount of elements in the array minus one.",
         "params": [
                 {"name":"array","description":"The array to reverse","required":true,"default":"","type":"array","values":[]}

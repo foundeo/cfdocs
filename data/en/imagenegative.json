@@ -4,7 +4,7 @@
 	"syntax":"imageNegative(name)",
 	"member":"someImage.negative()",
 	"returns":"void",
-	"related":[],
+	"related":["ImageBlur", "ImageGrayscale", "ImageSetAntialiasing", "ImageSharpen", "IsImageFile"],
 	"description":"Inverts the pixel values of a ColdFusion image.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}

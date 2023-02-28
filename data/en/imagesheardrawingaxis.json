@@ -4,12 +4,12 @@
 	"syntax":"imageShearDrawingAxis(name, shrx, shry)",
 	"member":"someImage.shearDrawingAxis(shrx, shry)",
 	"returns":"void",
-	"related":[],
+	"related":["ImageRotateDrawingAxis", "ImageSetAntialiasing", "ImageShear", "IsImageFile"],
 	"description":" Shears the drawing canvas.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
 		{"name":"shrx","description":"The multiplier by which coordinates are shifted in the positive x axis direction as a function of the y coordinate.e","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"shry","description":"the multiplier by which coordinates are shifted in the positive y axis direction as a function of the x coordinate.","required":true,"default":"","type":"numeric","values":[]}
+		{"name":"shry","description":"The multiplier by which coordinates are shifted in the positive y axis direction as a function of the x coordinate.","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

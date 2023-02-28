@@ -4,7 +4,7 @@
     "syntax":"manifestRead(path)",
     "member":"",
     "script":"",
-    "returns":"structure",
+    "returns":"struct",
     "related":["manifestRead"],
     "description":"reads a manifest file and returns the content as struct",
     "params":[

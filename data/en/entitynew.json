@@ -1,16 +1,17 @@
 {
 	"name":"entityNew",
 	"type":"function",
-	"syntax":"entityNew(entityName)",
+	"syntax":"entityNew(entityName [,properties [,ignoreExtras]])",
 	"returns":"any",
 	"related":["entityDelete"],
-	"description":" Creates a new instance of the persistent CFC with the entity name that you provide.",
+	"description":"Creates a new instance of the persistent CFC with the entity name that you provide.",
 	"params": [
 		{"name":"entityName","description":"Entity name of the persistent CFC.","required":true,"default":"","type":"string","values":[]},
-		{"name":"properties","description":"Struct of data to populate new entity","required":false,"default":"","type":"struct","values":[]}
+		{"name":"properties","description":"Key-value pair (CF struct) of property names and values.","required":false,"default":"","type":"struct","values":[]},
+		{"name":"ignoreExtras","description":"No Help Available","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entitynew.html"},
+		"coldfusion": {"minimum_version":"9", "notes":"This function has been enhanced in ColdFusion 9.0.1 to support multiple data sources in the same application.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entitynew.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/entitynew.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entitynew"}
 	},

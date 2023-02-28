@@ -1,0 +1,42 @@
+{
+	"name": "clearTimeZone",
+	"type": "function",
+	"syntax": "clearTimeZone()",
+	"returns": "void",
+	"related": ["getTimezone","getTimezoneInfo","setLocale"],
+	"description": "Clears the timezone that was set.",
+	"params": [],
+	"engines": {
+		"coldfusion": {"minimum_version": "2021", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/cleartimezone.html"},
+		"lucee": {"minimum_version": "5.3.8", "notes": "", "docs": "https://docs.lucee.org/reference/functions/cleartimezone.html"}
+	},
+	"links":[
+		{
+			"title":"Datetime Timezone Handling in Lucee CFML",
+			"description":"",
+			"url":"https://www.andrewdixon.co.uk/2019/05/25/datetime-timezone-handling-in-lucee-cfml/"
+		},
+		{
+			"title":"Timezone Handling",
+			"description":"",
+			"url":"https://www.youtube.com/watch?v=aIggbT8f3ls&feature=emb_title"
+		},
+		{
+			"title":"LDEV-3147 Lucee - Add ACF2021 Functions",
+			"description":"",
+			"url":"https://luceeserver.atlassian.net/browse/LDEV-3147"
+		},
+		{
+			"title":"Configuring Regional Settings (Lucee)",
+			"description":"",
+			"url":"https://docs.lucee.org/guides/deploying-lucee-server-apps/configuring-regional-settings.html"
+		}
+	],
+	"examples": [{
+		"title": "Clear the timezone",
+		"description": "Set the timezone and then clear it.",
+		"code": "setTimeZone(\"CET\");\nwriteOutput(getTimezoneInfo().timezone & \"→ \");\nclearTimeZone();\nwriteOutput(getTimezoneInfo().timezone);",
+		"result": "CET→ Etc/UTC",
+		"runnable": true
+	}]
+}

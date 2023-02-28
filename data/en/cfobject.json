@@ -13,7 +13,7 @@
 		{"name":"server","description":"Server name, using Universal Naming Convention (UNC) or Domain Name Serve (DNS) convention, in one of these forms:\n\n * \\\\lanserver\n * lanserver\n * http:\/\/www.servername.com\n * www.servername.com\n * 127.0.0.1","required":false,"default":"","type":"string","values":[]},
 		{"name":"component","description":"Name of component to instantiate.","required":false,"default":"","type":"string","values":[]},
 		{"name":"locale","description":"Sets arguments for a call to init_orb. Use this attribute only for VisiBroker ORBs. It is available on C++, Version 3.2. The value must be in the form:\nlocale = \" -ORBagentAddr 199.99.129.33 -ORBagentPort 19000\"\n\nEach type-value pair must start with a hyphen.","required":false,"default":"","type":"string","values":[]},
-		{"name":"webservice","description":"One of the following:\n\n * The absolute URL of the web service.\n * The name (string) assigned in the ColdFusion Administrator to the web service.","required":false,"default":"","type":"URL","values":[]},
+		{"name":"webservice","description":"One of the following:\n\n * The absolute URL of the web service.\n * The name (string) assigned in the ColdFusion Administrator to the web service.","required":false,"default":"","type":"string","values":[]},
 		{"name":"password","description":"The password to use to access the web service. If the webservice attribute specifies a web service name configured in the ColdFusion Administrator, overrides any password specified in the Administrator entry.","required":false,"default":"","type":"string","values":[]},
 		{"name":"secure","description":"Whether to secure communications with the .NET-side agent. If true, ColdFusion uses SSL to communicate with .NET.","required":false,"default":false,"type":"boolean","values":[true,false]},
 		{"name":"protocol","description":"Protocol to use to use for communication between ColdFusion and .NET. Must be one of the following values:\n * http: Use HTTP\/SOAP communication protocol. This option is slower than tcp, but might be required for access through a firewall.\n * tcp: Use binary TCP\/IP protocol. This method is more efficient than HTTP.","required":false,"default":"tcp","type":"string","values":["tcp","http"]},
@@ -37,6 +37,29 @@
 	},
 	"links": [
 
+	],
+	"examples":[
+		{
+			"title":"The simple component file",
+			"description":"Here created the simple component with user defined function name as multiply.",
+			"code":"<cfcomponent>\r\n<cffunction name=\"multiply\" access=\"public\" returnType=\"numeric\">\r\n<cfargument name=\"FirstNum\" type=\"numeric\">\r\n<cfargument name=\"SecondNum\" type=\"numeric\">\r\n<cfretrun arguments.FirstNum * arguments.SecondNum>\r\n</cffunction>\r\n</cfcomponent>",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"The simple cfobject example",
+			"description":"Calling the above multiply function by using cfobject tag based code.",
+			"code":"<cfobject name=\"multiplyObj\" type=\"component\" component=\"multiply\">\r\n<cfoutput>\r\n#multiplyObj.multiply(1,2)#\r\n</cfoutput>",
+			"result":"2",
+			"runnable":false
+		},
+		{
+			"title":"The simple (cfobject) example",
+			"description":"Calling the above multiply function by using cfobject script based code.",
+			"code":"<cfscript>\r\ncfobject(name=\"multiplyNum\" type=\"component\" component=\"multiply\"){\r\nwriteOutput(multiplyNum.multiply(6,7));\r\n}\r\n</cfscript>",
+			"result":"42",
+			"runnable":false
+		}
 	]
 
 }

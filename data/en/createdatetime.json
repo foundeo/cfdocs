@@ -12,8 +12,8 @@
 		{"name":"hour","description":"Hour of the day in 24-hour notation (0-23).","required":true,"default":"0","type":"numeric","values":[]},
 		{"name":"minute","description":"Minute within the hour.","required":true,"default":"0","type":"numeric","values":[]},
 		{"name":"second","description":"Second within the minute.","required":true,"default":"0","type":"numeric","values":[]},
-		{"name":"millisecond","description":"","required":false,"default":"0","type":"numeric","values":[]},
-		{"name":"timezone","description":"","required":false,"default":"","type":"numeric","values":[]}
+		{"name":"millisecond","description":"CF2021+ or Lucee4.5+ Only","required":false,"default":"0","type":"numeric","values":[]},
+		{"name":"timezone","description":"Lucee4.5+","required":false,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"6", "notes":"Since CF2016+ month, day, hour, minute are second are optional", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateDateTime.html"},

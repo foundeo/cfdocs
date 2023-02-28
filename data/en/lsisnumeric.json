@@ -17,6 +17,20 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Simple Lsisnumeric Example",
+			"description":"Check whether the string is number or not in locale",
+			"code":"lsIsNumeric('Ten')",
+			"result":"NO"
+		},
+		{
+			"title":"Simple Lsisnumeric Example",
+			"description":"Check whether the string is number or not in locale",
+			"code":"lsIsNumeric('4678')",
+			"result":"YES"
+		}
 	]
 
 }

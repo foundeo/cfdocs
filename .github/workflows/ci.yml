@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+env:
+  TEST_RUNNER_URI: /tests/run.cfm?reporter=text
+
+jobs:
+  
+  cfmatrix:
+    runs-on: ubuntu-latest
+    permissions: 
+      contents: read
+      
+    #setup the matrix of CF Engines
+    strategy:
+      matrix:
+        cfengine: ["lucee@5", "adobe@2018"]
+    env:
+      CFENGINE: ${{ matrix.cfengine }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Clone cfmatrix
+        run: git clone --depth 1 https://github.com/foundeo/cfmatrix.git cfmatrix
+
+      - name: Install cfmatrix
+        run: bash ./cfmatrix/install.sh
+        
+      - name: Run Tests
+        run: bash ./cfmatrix/run.sh
+
+  valid-json:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install JSON Validator
+        run: npm install -g ajv-cli
+      - name: Make temp dir with files to check
+        run: mkdir -p /tmp/cfdocs/
+      - name: Copy files
+        run: cp -r ./data/en/*.json /tmp/cfdocs/
+      - name: Exclude index.json
+        run: rm -f /tmp/cfdocs/index.json
+      - name: Run JSON Validator
+        run: ajv validate -s data/cfdocs.schema.json -d "/tmp/cfdocs/*.json" --use-defaults --errors=text --strict=log
+        
+  fixinator:
+    needs: valid-json
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    container:
+      image: ghcr.io/foundeo/cfml-ci-tools/cfml-ci-tools:latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run Fixinator
+      run: box fixinator confidence=high
+      env:
+        FIXINATOR_API_KEY: ${{ secrets.FIXINATOR_API_KEY }}
+

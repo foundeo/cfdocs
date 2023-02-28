@@ -18,10 +18,10 @@
         "pagebreak"
       ],
       "default": "",
-      "description": "Specifies the action:\r\n\r\nheader: uses the text\/image specified between the <cfhtmltopdfitem> and <\/cfhtmltopdfitem> tags as the running header.\r\nfooter: uses the text\/image between the <cfhtmltopdfitem> and <\/cfhtmltopdfitem> tags as the the running footer.\r\npagebreak: can be used to insert a pagebreak in the generated PDF. When <cfhtmltopdf> is used as a service, pagebreak will not work. ",
+      "description": "Specifies the action:\r\n\r\nheader: uses the text\/image specified between the <cfhtmltopdfitem> and <\/cfhtmltopdfitem> tags as the running header.\r\nfooter: uses the text\/image between the <cfhtmltopdfitem> and <\/cfhtmltopdfitem> tags as the running footer.\r\npagebreak: can be used to insert a pagebreak in the generated PDF. When <cfhtmltopdf> is used as a service, pagebreak will not work. ",
       "name": "type",
       "type": "string",
-      "required": "1"
+      "required": true
     },
     {
       "values": [],
@@ -29,7 +29,7 @@
       "description": "Use this only when the image attribute is given a base64 image string",
       "name": "isBase64",
       "type": "boolean",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -37,7 +37,7 @@
       "description": "The image file name or object to be used as header or footer.\r\n\r\nThe following parameters are supported:\r\n\r\nA path to the image file\r\nA Base-64 string\r\nA byte array\r\nA <cfimage> object",
       "name": "image",
       "type": "string",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -45,7 +45,7 @@
       "description": "Opacity of the header\/footer. Specify a valid number. A number between 1 and 10.",
       "name": "opacity",
       "type": "numeric",
-      "required": "0"
+      "required": false
     },
     {
       "values": [
@@ -57,7 +57,7 @@
       "description": "The page number format to be used. ",
       "name": "numberformat",
       "type": "string",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -65,7 +65,7 @@
       "description": "Show or hide header\/footer when the document is printed.",
       "name": "showonprint",
       "type": "boolean",
-      "required": "0"
+      "required": false
     },
     {
       "values": [
@@ -77,7 +77,7 @@
       "description": "Alignment of the text. Left, Right, or Center.",
       "name": "align",
       "type": "string",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -85,7 +85,7 @@
       "description": "Left margin in inches (default) or centimeters. To specify the left margin in centimeters, include the unit=cm attribute.",
       "name": "leftmargin",
       "type": "numeric",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -93,7 +93,7 @@
       "description": "Right margin in inches (default) or centimeters. To specify the left margin in centimeters, include the unit=cm attribute.",
       "name": "rightmargin",
       "type": "numeric",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -101,7 +101,7 @@
       "description": "Top margin in inches (default) or centimeters. To specify the left margin in centimeters, include the unit=cm attribute.",
       "name": "topmargin",
       "type": "numeric",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -109,7 +109,7 @@
       "description": "Bottom margin in inches (default) or centimeters. To specify the bottom margin in centimeters, include the unit=cm attribute.",
       "name": "bottommargin",
       "type": "numeric",
-      "required": "0"
+      "required": false
     }
   ],
   "examples": [

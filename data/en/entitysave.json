@@ -4,10 +4,10 @@
 	"syntax":"entitySave(entity [, forceInsert])",
 	"returns":"void",
 	"related":["entityToQuery","entityReload","entityMerge","entityDelete"],
-	"description":" Saves or updates data of the entity and all related entities to the database.",
+	"description":"Saves or updates data of the entity and all related entities to the database.",
 	"params": [
 		{"name":"entity","description":"Name of the entity that must be saved in the database.","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"forceInsert","description":"If true, then ColdFusion always tries to insert the entity as a new record.","required":false,"default":"","type":"boolean","values":[]}
+		{"name":"forceInsert","description":"If true, then ColdFusion always tries to insert the entity as a new record.","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entitysave.html"},

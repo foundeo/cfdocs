@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"listChangeDelims(list, new_delimiter [, delimiters, [includeEmptyValues]])",
 	"returns":"string",
-	"related":[],
+	"related":["ListFirst, ListQualify"],
 	"description":" Changes a list delimiter.\n Returns a copy of the list, with each delimiter character\n replaced by new_delimiter.",
 	"params": [
 		{"name":"list","description":"A list or a variable that contains one.","required":true,"default":"","type":"string","values":[]},

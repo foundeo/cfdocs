@@ -1,0 +1,22 @@
+{
+	"name":"isDateObject",
+	"type":"function",
+	"syntax":"isDateObject(value)",
+	"returns":"boolean",
+	"related":["isDate","isObject"],
+	"description":"Checks if the given value is a date / time object. The difference between isDateObject and isDate is that the latter returns true for date / time objects as well as date / time strings.",
+	"params": [
+		{"name":"value","description":"A value to test whether it's a date object","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2016.0.3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isdateobject.html"}
+	},
+	"links": [],
+	"examples":[{
+	"title": "Check if date is a date OBJECT, not just a date string",
+	"description": "",
+	"code": "<cfscript>\n    date = IsDateObject(now());\n    writeOutput(\"Can string be converted to a date/time value : \" & date);\n</cfscript>",
+	"result": "Can string be converted to a date/time value : YES",
+	"runnable": true
+}]
+}

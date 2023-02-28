@@ -12,5 +12,22 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/gettickcount"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/gettickcount"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "Outputs the current value of the internal millisecond timer",
+			"code": "writeOutput( getTickCount() )",
+			"result": "",
+			"testable": false
+		},
+		{
+			"title": "A simple timer",
+			"description": "Outputs the millisecond difference between a starting point and end point",
+			"code": "start = getTickCount(); \n sleep( 1000 ); \n writeOutput( getTickCount() - start );",
+			"result": "1000 (note: may be off by a few ms depending on the environment)",
+			"testable": false
+
+		}
+	]
 }

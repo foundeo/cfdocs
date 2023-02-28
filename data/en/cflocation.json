@@ -12,7 +12,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cflocation.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/location.html"},
+		"lucee": {"minimum_version":"", "notes":"Lucee automatically URL encodes the url by default. See ticket LDEV-2164.", "docs":"https://docs.lucee.org/reference/tags/location.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflocation"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflocation"}
 	},

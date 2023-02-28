@@ -15,8 +15,13 @@
 	},
 	"links": [
 		{
+			"title":"sessionInvalidate for J2EE Sessions",
+			"description":"Code example for invalidating the j2ee session using the Java Servlet API.",
+			"url":"https://www.petefreitag.com/item/913.cfm"
+		},
+		{
 			"title":"sessionInvalidate Backport",
-			"description":"This backport allows you to invalidate sessions on older versions of CF",
+			"description":"This backport allows you to invalidate sessions on older versions of CF (CF9 and below)",
 			"url":"http://misterdai.yougeezer.co.uk/blog/project/2012-03-12/"
 		}
 	]

@@ -4,7 +4,7 @@
 	"syntax": "queryDeleteColumn(query, column)",
 	"member": "query.deleteColumn(column)",
 	"returns": "array",
-	"related": [],
+	"related": ["queryAddColumn","queryAddRow","queryDeleteRow"],
 	"description": "Deletes a column within a query object.",
 	"params": [
 		{"name": "query", "description": "Query to modify", "required": true, "default": "", "type": "query", "values": []},

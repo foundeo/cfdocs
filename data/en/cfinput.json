@@ -188,7 +188,7 @@
       "description": "JavaScript regular expression pattern to validate input. ColdFusion uses this attribute only if you specify regex in the validate attribute. Omit leading and trailing slashes.",
       "required": false,
       "default": "",
-      "type": "regex",
+      "type": "string",
       "values": []
     },
     {
@@ -244,7 +244,7 @@
     },
     {
       "name": "disabled",
-      "description": "Disables user input, making the control read-only.",
+      "description": "Disables user input, making the control read-only.\nHTML: Passes the attribute directly to the HTML. To enable the input you need to omit this attribute. It does not respect the attribute-value.\nFlash: Disables the input when the attribute is set without attribute-value or when the attribute-value is an positive boolean value.",
       "required": false,
       "default": false,
       "type": "boolean",

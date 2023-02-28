@@ -19,6 +19,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Simple xmlelemnew Example",
+			"description":"Here, we've created myXml with root and child nodes using xmlelemnew().",
+			"code":"<cfset myXml = xmlNew()>\r\n<cfset myXml.XmlRoot = xmlelemnew(myXml,\"sampleXml\")>\r\n<cfset myXml.sampleXml.XmlText = \"This is Root node text\">\r\n<cfloop from=\"1\" to=\"3\" index=\"i\">\r\n\t<cfset myXml.sampleXml.XmlChildren[i] = xmlelemnew(myXml,\"childNode#i#\")>\r\n\t<cfset myXml.sampleXml.XmlChildren[i].XmlText = \"This is Child node#i# text\">\r\n</cfloop>\r\n<cfdump var=\"#myXml#\">",
+			"result":""
+		}
 	]
 
 }

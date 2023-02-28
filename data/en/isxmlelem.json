@@ -16,7 +16,7 @@
 	},
 	"links": [],
 	"examples": [{
-		"title": "Check if given path is an xml element",
+		"title": "Check if given path is an XML element",
 		"description": "",
 		"code": "<cfxml variable=\"example\">\n\t<coldfusionengines>\n\t\t<engine>\n\t\t\t<name>Adobe ColdFusion</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Lucee</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Railo</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Open BlueDragon</name>\n\t\t</engine>\n\t</coldfusionengines>\n</cfxml>\n<cfscript>\n\twriteOutput(isXMLElem(example.coldfusionengines));\n</cfscript>",
 		"result": "YES",

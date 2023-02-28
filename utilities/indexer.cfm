@@ -5,8 +5,8 @@
 <cfset guides = []>
 <cfset all = []>
 <cfset categories = []>
-<cfset versions = {4=[], "4.5"=[],5=[],6=[],7=[],8=[],9=[],10=[],11=[],2016=[],2018=[]}>
-<cfset lucee_versions = {5=[]}>
+<cfset versions = {4=[], "4.5"=[],5=[],6=[],7=[],8=[],9=[],10=[],11=[],2016=[],2018=[],2021=[]}>
+<cfset lucee_versions = {5=[],6=[]}>
 <cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
 	<cfset json = fileRead(filePath,"utf-8")>
 	<cftry>
@@ -27,7 +27,7 @@
 				<cfif isNumeric(data.engines.coldfusion.minimum_version)>
 					<cfset minimum_version = data.engines.coldfusion.minimum_version>
 				<cfelseif reFind('^[0-9]{2,4}\.[0-9]\.[0-9]+$', data.engines.coldfusion.minimum_version)>
-					<cfset minimum_version = reFind( '^([0-9]{2,4})', data.engines.coldfusion.minimum_version, 1, true ).match[1]>
+					<cfset minimum_version = listFirst(data.engines.coldfusion.minimum_version, ".")>
 				<cfelse>
 					<cfset minimum_version = ''>
 				</cfif>
@@ -98,12 +98,14 @@
 
 <cfloop array="#structKeyArray(versions)#" index="v">
 	<cfset vData = {"name"="ColdFusion #v# New Functions and Tags","type"="listing","description"="List of tags and functions added in ColdFusion #v#", "related"=versions[v]}>
+	<cfset arraySort(vData.related, "text")>
 	<cfset fileWrite(dataDir & "/cf#reReplace(v, "[^0-9]", "", "ALL")#.json", prettyJSON(serializeJSON(vData), "utf-8"))>
 	<p>Wrote cf<cfoutput>#v#</cfoutput>.json</p>
 </cfloop>
 
 <cfloop array="#structKeyArray(lucee_versions)#" index="v">
 	<cfset vData = {"name"="Lucee #v# New Functions and Tags","type"="listing","description"="List of tags and functions added in Lucee #v#", "related"=lucee_versions[v]}>
+	<cfset arraySort(vData.related, "text")>
 	<cfset fileWrite(dataDir & "/lucee#reReplace(v, "[^0-9]", "", "ALL")#.json", prettyJSON(serializeJSON(vData), "utf-8"))>
 	<p>Wrote lucee<cfoutput>#v#</cfoutput>.json</p>
 </cfloop>

@@ -3,15 +3,15 @@
 	"type":"function",
 	"syntax":"imageCreateCaptcha (height, width, text [, difficulty, fonts, fontsize)",
 	"returns":"any",
-	"related":[],
+	"related":["cfimage"],
 	"description":" Create a Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) image, a distorted text image that is human-readable, but not machine-readable, used in a challenge-response test for preventing spam.",
 	"params": [
-		{"name":"height","description":"Height in pixels of the image.","required":true,"default":"","type":"","values":[]},
-        {"name":"width","description":"Width in pixels of the image.","required":true,"default":"","type":"","values":[]},
-        {"name":"text","description":"Text string displayed in the CAPTCHA image. Use capital letters for better readability. Do not include spaces because users cannot detect them in the resulting CAPTCHA image..","required":true,"default":"","type":"","values":[]},
-        {"name":"difficulty","description":"Level of complexity of the CAPTCHA text. Specify one of the following levels of text distortion: low, medium, and high","required":false,"default":"","type":"","values":[]},
-        {"name":"font","description":"One or more valid fonts to use for the CAPTCHA text. Separate multiple fonts with commas. ColdFusion supports only the system fonts that the JDK can recognize. For example, TTF fonts in the Windows directory are supported on Windows.","required":false,"default":"","type":"","values":[]},
-        {"name":"fontsize","description":"Font size of the text in the CAPTCHA image. The value must be an integer.","required":false,"default":"","type":"","values":[]}
+		{"name":"height","description":"Height in pixels of the image.","required":true,"default":"","type":"numeric","values":[]},
+        {"name":"width","description":"Width in pixels of the image.","required":true,"default":"","type":"numeric","values":[]},
+        {"name":"text","description":"Text string displayed in the CAPTCHA image. Use capital letters for better readability. Do not include spaces because users cannot detect them in the resulting CAPTCHA image..","required":true,"default":"","type":"string","values":[]},
+        {"name":"difficulty","description":"Level of complexity of the CAPTCHA text. Specify one of the following levels of text distortion: low, medium, and high","required":false,"default":"","type":"string","values":[]},
+        {"name":"font","description":"One or more valid fonts to use for the CAPTCHA text. Separate multiple fonts with commas. ColdFusion supports only the system fonts that the JDK can recognize. For example, TTF fonts in the Windows directory are supported on Windows.","required":false,"default":"","type":"string","values":[]},
+        {"name":"fontsize","description":"Font size of the text in the CAPTCHA image. The value must be an integer.","required":false,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagecreatecaptcha.html"}

@@ -1,10 +1,10 @@
 {
-	"name":"imageGetIPTCMetaData",
+	"name":"imageGetIPTCMetadata",
 	"type":"function",
-	"syntax":"imageGetIPTCMetaData(name)",
-	"member":"someImage.getIPTCMetaData()",
+	"syntax":"imageGetIPTCMetadata(name)",
+	"member":"someImage.getIPTCMetadata()",
 	"returns":"struct",
-	"related":[],
+	"related":["cfimage", "ImageGetBlob", "ImageGetBufferedImage", "ImageGetEXIFMetadata", "ImageGetEXIFTag", "ImageGetHeight","ImageGetWidth", "ImageGetIPTCTag", "ImageInfo", "IsImage", "IsImageFile"],
 	"description":" Retrieves the International Press Telecommunications Council (IPTC )headers in a ColdFusion image as a structure.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}
@@ -18,9 +18,9 @@
 	],
 	"examples": [
 		{
-			"title":"Using getIPTCMetaData member function",
+			"title":"Using getIPTCMetadata member function",
 			"description":"CF11+ Extract the IPTC meta data from IPTC image (https://code.google.com/p/metadata-extractor/wiki/SampleOutput)",
-			"code":"imgObj = imageRead(\"http://sample-images.metadata-extractor.googlecode.com/git/FujiFilm%20FinePixS1Pro%20(1).jpg\");\r\nx = imgObj.getIPTCMetaData();\r\nwriteDump(x);",
+			"code":"imgObj = imageRead(\"http://sample-images.metadata-extractor.googlecode.com/git/FujiFilm%20FinePixS1Pro%20(1).jpg\");\r\nx = imgObj.getIPTCMetadata();\r\nwriteDump(x);",
 			"result":"",
 			"runnable":true
 		}

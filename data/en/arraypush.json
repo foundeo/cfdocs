@@ -1,0 +1,47 @@
+{
+	"name":"arrayPush",
+	"type":"function",
+	"syntax":"arrayPush(array, value)",
+	"member":"array.push(value)",
+	"returns":"numeric",
+	"related":["ArrayPop"],
+	"description":"Adds an element or an object to the end of an array, then returns the size of the modified array.",
+	"params": [
+		{"name":"array","description":"Array to which a value or object is to be added.","required":true,"default":"","type":"array","values":[]},
+		{"name":"value","description":"The value or object to be added to the array.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"The full function was added in ACF 2021, but the member function appears to work in ACF 2018 (likely using Java).", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraypush.html"},
+		"lucee": {"minimum_version":"5.3.8", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arraypush.html"}
+	},
+	"links": [
+		{
+			"title":"ArrayPop(), ArrayShift(), And ArraySliceSafe() In Lucee CFML 5.3.6.61",
+			"description":"Blog post from Ben Nadel detailing new Array functions in Lucee.",
+			"url":"https://www.bennadel.com/blog/3898-arraypop-arrayshift-and-arrayslicesafe-in-lucee-cfml-5-3-6-61.htm"
+		}
+	],
+	"examples": [
+		{
+			"title": "Push a value onto an array",
+			"description": "This is the full function version of arrayPush to push a value onto the end of the array.",
+			"code": "arr=[1,2,3];\narrayPush(array=arr,value=42);\nwriteOutput('This array has ' & arrayLen(arr) & ' elements.');",
+			"result": "This array has 4 elements.",
+			"runnable":true
+		},
+		{
+			"title": "Member function version.",
+			"description": "Using the member function. This version also works in ACF2018.",
+			"code": "arr=[1,2,3];\nal=arr.push(42);\nwriteOutput('This array has ' & al & ' elements.');",
+			"result": "This array has 4 elements.",
+			"runnable":true
+		},
+		{
+			"title": "Push an object onto an array.",
+			"description": "This demonstrates pushing an object onto an array.",
+			"code": "arr=[ [1],['two'],[{a:3}]];\nal=arr.push([42]);\nwriteOutput('This array has ' & al & ' elements.');",
+			"result": "This array has 4 elements.",
+			"runnable":true
+		}
+	]
+}

@@ -6,7 +6,7 @@
 	"related":["getSystemFreeMemory","getMemoryUsage","getCpuUsage"],
 	"description":" Gets details of the memory that is available for the operating system, in bytes.",
 	"params": [
-		{"name":"region","description":"Indicates the cache region from which to remove the stored objects. If no value is specified, default cache region is considered by default.","required":false,"default":"","type":"","values":[]}
+		{"name":"region","description":"Indicates the cache region from which to remove the stored objects. If no value is specified, default cache region is considered by default.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getsystemtotalmemory.html"},

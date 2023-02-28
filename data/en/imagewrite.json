@@ -4,7 +4,7 @@
 	"syntax":"imageWrite(name [, destination] [, quality] [, overwrite])",
 	"member":"someImage.write([destination] [, quality] [, overwrite])",
 	"returns":"void",
-	"related":[],
+	"related":["cfimage", "GetWriteableImageFormats", "ImageNew", "ImageRead", "IsImageFile"],
 	"description":" Writes a ColdFusion image to the specified filename or destination.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},

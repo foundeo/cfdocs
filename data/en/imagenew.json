@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"imageNew([source] [, width] [, height] [, imagetype] [, canvascolor])",
 	"returns":"any",
-	"related":[],
+	"related":["cfimage", "ImageCopy", "ImageRead", "ImageReadBase64", "ImageSetDrawingColor", "IsImageFile"],
 	"description":" Creates a ColdFusion image.",
 	"params": [
 		{"name":"source","description":"The source image path, URL, a variable that is read into the new image, or a Java buffered image.","required":false,"default":"","type":"string","values":[]},

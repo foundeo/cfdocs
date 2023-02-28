@@ -4,7 +4,7 @@
 	"syntax":"imageSetDrawingStroke(name [, attributecollection])",
 	"member":"someImage.setDrawingStroke(attributecollection)",
 	"returns":"void",
-	"related":[],
+	"related":["ImageDrawText", "ImageSetAntialiasing", "ImageSetBackgroundColor", "ImageSetDrawingColor", "ImageSetDrawingTransparency", "IsImageFile"],
 	"description":" Sets the drawing stroke for points and lines in subsequent ColdFusion images.",
 	"params": [
 		{"name":"name","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
@@ -29,7 +29,7 @@
 		},
 		{
 			"title":"Using setDrawingStroke member function",
-			"description":"CF11+ Lucee4.5+ Create an new image. With the new image draw a 'W' with a dashed line stroke ",
+			"description":"CF11+ Lucee4.5+ Create a new image. With the new image draw a 'W' with a dashed line stroke ",
 			"code":"lineAttributes = { width=\"2\", endcaps=\"round\", dashArray=[8,4]};\r\nimgObj = imageNew(\"\",152,152,\"rgb\",\"149c82\");\r\nimgObj.setDrawingStroke(lineAttributes);\r\nimgObj.drawLines([0,38,76,114,152],[0,152,0,152,0],\"no\",\"no\");\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
 			"result":"",
 			"runnable":true

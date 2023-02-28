@@ -1,0 +1,40 @@
+{
+	"name":"verifySCryptHash",
+	"syntax":"verifySCryptHash(plaintext,hashedstring);",
+	"returns":"boolean",
+	"description":"This function compares a plaintext entry to the hashed string.\nNOTE 1:Hashing is one-way, so you can't \"decrypt\" a hashed value. You have to hash the value you want to check and then compare that to the saved hash.",
+	"type":"function",
+	"related":["generateSCryptHash","generateBCryptHash","verifyBCryptHash","hash", "encrypt","decrypt","generateSecretKey"],
+	"params":[
+		{"name":"plaintext", "description":"The unhashed string to compare.", "required":true, "default":"", "type":"string", "values":[]},
+		{"name":"hashedString", "description":"The hashed string to compare.", "required":true, "default":"", "type":"string", "values":[]},
+		{"name":"options", "description":"A struct containing the optional values:\n--memorycost - Default is 8.\n--CpuCost - CPU cost of the algorithm (as defined in scrypt, this is `N`) that must be a power of 2 and greater than 1. Default is currently 16,348 or 2^14.\n--Parallel - the parallelization of the algorithm (as defined in scrypt, this is `P`). Default is currently 1.\n--Keylength - key length for the algorithm (as defined in scrypt, this is `dkLen`). Default is currently 32.\n--saltLength - length of the salt to use. Default is 8.", "required":false, "default":"{\"memorycost\":8,\"CpuCost\":16348,\"Parallel\":1,\"KeyLength\":32,\"saltLength\":8}", "type":"struct", "values":[]}
+	],
+	"engines":{
+		"coldfusion":{"minimum_version":"2021","notes":"","docs":"https://helpx.adobe.com/ca/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/verifyscrypthash.html"}
+	},
+	"links":[
+		{"title":"OWASP Password Storage Cheat Sheet","description":"General advice from OWASP about how to work with passwords.","url":"https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"},
+		{"title":"Using Password4j And The BCrypt, SCrypt, And Argon2 Password Hashing Algorithms In Lucee CFML 5.3.7.47","description":"Blog by Ben Nadel about using hashing algorithms.","url":"https://www.bennadel.com/blog/4056-using-password4j-and-the-bcrypt-scrypt-and-argon2-password-hashing-algorithms-in-lucee-cfml-5-3-7-47.htm"},
+		{"title":"Best practices for password hashing and storage","description":"IETF info on password hasing best practices.","url":"https://tools.ietf.org/id/draft-whited-kitten-password-storage-02.html"},
+		{"title":"Hashing Passwords: One-Way Road to Security","description":"Blog by Dan Arias on password hashing strategies.","url":"https://auth0.com/blog/hashing-passwords-one-way-road-to-security/"},
+		{"title":"scrypt","description":"Wikipedia article about SCrypt.","url":"https://en.wikipedia.org/wiki/Scrypt"},
+		{"title":"CFPASSPhrase","description":"Related project to help other engines utilize hashing functions.","url":"https://docs.sorcerersisle.com/cfpassphrase/"}
+	],
+	"examples":[
+		{
+			"title":"Example of Verifying the SCrypt Hash",
+			"description":"This is an example of using the function to check against a hashed value.",
+			"code":"secretMsg=\"$e0801$21aGCy86deU=$Yp2UaxwONLNgp0kUaBwuXAqsnFaAjOAUislNejW6Bjs=\";\ncheckMe=\"My voice is my passport. Verify me.\"\nwriteOutput(verifySCryptHash(checkMe,secretMsg);",
+			"result":"YES",
+			"runnable":true
+		},
+		{
+			"title":"Example of Verifying the SCrypt Hash With Options Set On Hash",
+			"description":"This is an example of using the function to check against a hashed value when the options were previously set.",
+			"code":"secretMsg=\"$c0401$Eg7sS/HsxhHTWA==$sejraZ7kZZ82adEz8uHHUz51Hk36YkkJ4KZk3w==\";\ncheckMe=\"Setec Astronomy\"\nwriteOutput(verifySCryptHash(checkMe,secretMsg);",
+			"result":"YES",
+			"runnable":true
+		}
+	]
+}

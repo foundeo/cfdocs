@@ -2,6 +2,7 @@
 	"name":"cfexit",
 	"type":"tag",
 	"syntax":"<cfexit>",
+	"script":"exit;",
 	"related":["cfabort","cferror","cfthrow"],
 	"description":"This tag aborts processing of the currently executing CFML\n custom tag, exits the page within the currently executing CFML\n custom tag, or re-executes a section of code within the\n currently executing CFML custom tag.",
 	"params": [
@@ -13,5 +14,14 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfexit"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfexit"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title":"Simple cfexit example",
+			"description":"Here the loop over the 5 number. When it's meet the condition as true then the block of code get exit.",
+			"code":"<cfoutput>\r\n<cfloop from=\"1\" to=\"5\" index = \"i\">\r\n<cfif i EQ 3>\r\n\t<cfexit>\r\n<cfelse>\r\n\t#i#\r\n</cfif>\r\n</cfloop>\r\n</cfoutput>",
+			"result":"1 2"
+		}
+		
+	]
 }

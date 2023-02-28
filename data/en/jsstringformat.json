@@ -16,7 +16,18 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/jsstringformat"}
 	},
 	"links": [
-
+		{
+		"title":"Learning jsStringFormat by Ben Nadel",
+		"description":"Tutorial showing how to use jsStringFormat",
+		"url":"https://www.bennadel.com/blog/2570-for-better-security-use-htmleditformat-in-conjunction-with-jsstringformat-in-coldfusion.htm"
+		}
+	],
+	"examples": [
+		{
+			"title": "jsStringFormat Example",
+			"description":"This example illustrates use of the JSStringFormat function.",
+			"code":" string = \"An example string value with \"\"quoted\"\" 'text'\";\r\n writeOutput(JSStringFormat(string)) ;"
+		}
 	]
 
 }

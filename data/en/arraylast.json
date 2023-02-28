@@ -17,8 +17,8 @@
 		{
 			"title": "Show the last element of an array",
 			"description": "Uses the arrayLast function to retrieve the last element of an array",
-			"code": "someArray = [1,2,3];\nlastOne=arrayLast(someArray);\nwriteOutput(lastOne);",
-			"result": "3"
+			"code": "someArray = [\"first\", \"second\", \"third\"];\nlastOne=arrayLast(someArray);\nwriteOutput(lastOne);",
+			"result": "\"third\""
 		}
 	],
 	"links": []

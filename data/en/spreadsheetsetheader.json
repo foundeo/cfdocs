@@ -18,6 +18,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Simple spreadsheetSetHeader Example",
+			"description": "Here,we've example to set the header for excel file.",
+			"code": "<cfset bookDetail=SpreadsheetNew(\"student\",false)>\r\n<cfset SpreadSheetAddRow(bookDetail,\"id,BookTitle,author\")>\r\n<cfset SpreadSheetAddRow(bookDetail,\"1,Charlottes Web,E.B. White\")>\r\n<cfset spreadsheetSetHeader(bookDetail,\"leftHeader\",\"centerHeader\",\"rightHeader\")>\r\n<cfset SpreadsheetWrite(bookDetail,expandPath(\"./bookDetail.xls\"),true)>",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

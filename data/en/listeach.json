@@ -6,10 +6,10 @@
 	"related":["arrayEach","structEach","queryEach"],
 	"description":"Iterates over every element of a List object and can call a UDF function, passed as the second argument.",
 	"params": [
-		{"name":"str","description":"An input list object.","required":true,"default":"","type":"","values":[]},
-        	{"name":"function","description":"UDF or closure object.","required":true,"default":"","type":"","values":[]},
-		{"name":"delim","description":"A list delimiter to be used. The default value is comma (,).","required":true,"default":"","type":"","values":[]},
-        	{"name":"includeEmptyFields","description":"Boolean. Whether to allow empty fields. Default is false.","required":false,"default":"","type":"","values":[]}
+		{"name":"str","description":"An input list object.","required":true,"default":"","type":"string","values":[]},
+        	{"name":"function","description":"UDF or closure object.","required":true,"default":"","type":"function","values":[]},
+		{"name":"delim","description":"A list delimiter to be used. The default value is comma (,).","required":true,"default":"","type":"string","values":[]},
+        	{"name":"includeEmptyFields","description":"Boolean. Whether to allow empty fields. Default is false.","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"11", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listeach.html"},

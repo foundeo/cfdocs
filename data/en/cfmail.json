@@ -363,8 +363,14 @@
 	},
 	"links": [
 		{
-			"title": "More information on character encodings",
-			"url": "http://www.w3.org/International/O-charset.html"
+			"title": "Handling character encodings in HTML and CSS",			
+			"description": "",			
+			"url": "https://www.w3.org/International/tutorials/tutorial-char-enc/"
+		},
+		{
+			"title": "Declaring character encodings in HTML",			
+			"description": "",			
+			"url": "https://www.w3.org/International/questions/qa-html-encoding-declarations"
 		}
 	],
 	"examples": [
@@ -381,7 +387,7 @@
 		{
 			"title": "Send email messages using a query",
 			"description": "Loop through database records and sends one email per row.",
-			"code": "<cfset myQuery = queryNew( \"recipient,lastname,firstname\" )>\n<cfset queryAddRow( myQuery, { receipient = \"receipient@example.com\", lastname = \"Doe\", firstname = \"John\" }) />\n\n<cfmail to=\"#recipient#\" from=\"sender@example.com\" subject=\"Example email\" query=\"myQuery\">\n  Dear #lastname#,\n\n  Text here, containing any variable in the myQuery scope.\n</cfmail>"
+			"code": "<cfset myQuery = queryNew( \"recipient,lastname,firstname\" )>\n<cfset queryAddRow( myQuery, { recipient = \"recipient@example.com\", lastname = \"Doe\", firstname = \"John\" }) />\n\n<cfmail to=\"#recipient#\" from=\"sender@example.com\" subject=\"Example email\" query=\"myQuery\">\n  Dear #lastname#,\n\n  Text here, containing any variable in the myQuery scope.\n</cfmail>"
 		},
 		{
 			"title": "Script syntax using new mail()",
@@ -392,6 +398,11 @@
 			"title": "Script syntax using function call",
 			"description": "CF11+ Send basic email using function call.",
 			"code": "cfmail( to = \"recipient@example.com\", from = \"sender@example.com\", subject = \"Example email\" ) { WriteOutput( \"Your Email Message!!\" ); }"
+		},
+		{
+			"title": "Script syntax: Lucee",
+			"description": "Lucee Send basic email",
+			"code": "mail\n  to=\"recipient@example.com\"\n  from=\"sender@example.com\"\n  subject=\"Your Order\" {\n    writeOutput('Hi there,');\n    writeOutput('This mail is sent to confirm that we have received your order.');\n};"
 		}
 	]
 }

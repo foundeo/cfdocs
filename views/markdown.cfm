@@ -1,6 +1,8 @@
 <cfif structKeyExists(variables, "data")>
-	<cfif find("<h1>", variables.data)>
-		<cfset request.title = reReplace(variables.data, ".*<h1>([^<]+)<.+", "\1", "ONE")>
+	<cfif find("<h1", variables.data)>
+		<cfset request.title = trim(reReplace(variables.data, ".*<h1[^>]+><a[^>]+>([^<]+)<.+", "\1", "ONE"))>
+	<cfelse>
+		<cfset request.title = encodeForHTML(url.name) & " Guide">
 	</cfif>	
 	<br><br>
 	<div class="container">

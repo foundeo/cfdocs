@@ -28,15 +28,15 @@
       "description": "String to be sanitized",
       "name": "inputString",
       "type": "string",
-      "required": "1"
+      "required": true
     },
     {
       "values": [],
       "default": "",
-      "description": "File path for custom antisamy policy file. Can be defined in the application scope or if not defined will use Coldfusion  server default",
+      "description": "File path for custom antisamy policy file. Can be defined in the application scope or if not defined will use ColdFusion server default",
       "name": "PolicyFile",
       "type": "string",
-      "required": "0"
+      "required": false
     },
     {
       "values": [],
@@ -44,7 +44,7 @@
       "description": "If true will throw error else empty string will be returned",
       "name": "throwOnError",
       "type": "boolean",
-      "required": "0"
+      "required": false
     }
   ],
   "returns": "any",

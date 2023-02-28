@@ -41,7 +41,8 @@
 	"examples":[
 		{"title":"Add Days to a Date", "description":"Add 30 days to August 3rd, 2014.", "code":"dateAdd('d', 30, '8/3/2014')", "result":"{ts '2014-09-02 00:00:00'}"},
 		{"title":"Subtract Days from a Date", "description":"Subtract 30 days from August 3rd, 2014.", "code":"dateAdd('d', -30, '8/3/2014')", "result":"{ts '2014-07-04 00:00:00'}"},
-		{"title":"Add Weeks to a Date", "description":"Here we're adding 8 weeks to the date August 3rd, 2014.", "code":"dateAdd('ww', 8, '8/3/2014')", "result":"{ts '2014-09-28 00:00:00'}"}
+		{"title":"Add Weeks to a Date", "description":"Here we're adding 8 weeks to the date August 3rd, 2014.", "code":"dateAdd('ww', 8, '8/3/2014')", "result":"{ts '2014-09-28 00:00:00'}"},
+		{"title":"Add Days to a Date (Member Function)", "description":"Here we're adding 1 day to the current date/time.", "code":"createDate( 2022, 10, 1 ).add( 'd', 1 )", "result":"{ts '2022-10-02 00:00:00'}"}
 	],
 	"links": [
 

@@ -4,7 +4,7 @@
 	"syntax":"imageTranslate(name, xTrans, yTrans [, interpolation])",
 	"member":"someImage.translate(xTrans, yTrans [, interpolation])",
 	"returns":"void",
-	"related":[],
+	"related":["ImageSetAntialiasing","ImageShear", "ImageTranslateDrawingAxis", "IsImageFile"],
 	"description":" Copies an image to a new location on the plane.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},

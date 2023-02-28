@@ -4,7 +4,7 @@
 	"syntax":"webserviceNew(url)",
 	"member":"",
 	"script":"",
-	"returns":"webserviceProxy",
+	"returns":"function",
 	"related":[],
 	"description":"Creates a web service proxy object, a reference to a remote webservice. This function is a replacement for `createObject(\"webservice\",...)`.",
 	"params": [

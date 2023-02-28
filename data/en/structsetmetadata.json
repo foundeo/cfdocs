@@ -18,7 +18,7 @@
 		{
 			"title":"Add metadata to a struct",
 			"description":"Add metadata to a struct and serialze to a json.\nIt is changing the keyname and convert a string (\"20\") to a number.",
-			"code":"testStruct = structNew(\"ordered\");\ntestStruct.testdata = \"example\";\ntestStruct.testdata2 = \"20\";\nmetadata = {\n    testdata: {type: \"string\", name: \"td1\" },\n    testdata2: {type: \"numeric\", name: \"td2\" }\n};\nStructSetMetaData(testStruct,metadata);\nwriteoutput(SerializeJSON(testStruct));",
+			"code":"testStruct = structNew(\"ordered\");\ntestStruct.testdata = \"example\";\ntestStruct.testdata2 = \"20\";\nmetadata = {\n    testdata: {type: \"string\", name: \"td1\" },\n    testdata2: {type: \"numeric\", name: \"td2\" }\n};\nStructSetMetadata(testStruct,metadata);\nwriteoutput(SerializeJSON(testStruct));",
 			"result":"{\"td1\":\"example\", \"td2\":20.0}",
 			"runnable": true
 		},

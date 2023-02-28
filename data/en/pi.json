@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"pi()",
 	"returns":"numeric",
-	"related":[],
+	"related":["ASin", "Cos", "Sin", "Tan"],
 	"description":"Gets the mathematical constant p, accurate to 15 digits\n, but only shows 11 when simply outputted.",
 	"params": [],
 	"engines": {

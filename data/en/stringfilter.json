@@ -1,0 +1,46 @@
+{
+	"name":"stringFilter",
+	"type":"function",
+	"syntax":"stringFilter(string,callback)",
+	"member":"string.filter(callback)",
+	"returns":"string",
+	"related":["StringEach","StringEvery","StringMap","StringReduce"],
+	"description":"This function uses the callback to filter the elements in a string.",
+	"params": [
+		{"name":"string","description":"Original input string to search.","required":true,"default":"","type":"string","values":[]},
+		{"name":"callback","description":"The closure function that is executed for each element in the string.","required":true,"default":"","type":"any","values":[]}
+		
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/stringfilter.html"},
+		"lucee": {"minimum_version":"6", "notes":"This function is being added in Lucee 6. It is similar to the other Lucee `.filter()` functions.", "docs":""}
+	},
+	"links": [
+		{
+			"title":"Hidden Gems In ColdFusion 2021",
+			"description":"Presentation by Charlie Arehart",
+			"url":"https://www.carehart.org/presentations/Hidden%20gems%20in%20CF2021.pdf"
+		},
+		{
+			"title":"Lucee - LDEV-3179 Ticket to add stringFilter",
+			"description":"Lucee ticket to add function in Lucee 6.",
+			"url":"https://luceeserver.atlassian.net/browse/LDEV-3179"
+		}
+	],
+	"examples": [
+		{
+			"title": "Full function",
+			"description": "Return only the letters in the string that meet the callback condition.",
+			"code": "letters=\"zzQQZ\";\ncallback=function(inp){return inp==\"z\";}\nonlyZs = StringFilter(letters,callback);\nwriteOutput(onlyZs);",
+			"result": "zzZ",
+			"runnable": true
+		},
+		{
+			"title": "Member function",
+			"description": "Return only the letters in the string that meet the callback condition.",
+			"code": "letters=\"zzQQZ\";\ncallback=function(inp){return inp==\"z\";}\nonlyZs = letters.filter(callback);\nwriteOutput(onlyZs);",
+			"result": "zzZ",
+			"runnable": true
+		}
+	]
+}

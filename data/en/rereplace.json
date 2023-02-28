@@ -2,12 +2,13 @@
 	"name":"reReplace",
 	"type":"function",
 	"syntax":"reReplace(string, regex, substring [, scope])",
+	"member":"string.reReplace(regex, substring[, scope])",
 	"returns":"string",
 	"related":["rereplacenocase","refind","refindnocase","replace","rematch","rematchnocase"],
 	"description":"Uses a regular expression (regex) to search a string for a string pattern and replace it with another. The search is case-sensitive.",
 	"params": [
 		{"name":"string","description":"A string or a variable that contains one","required":true,"default":"","type":"string","values":[]},
-		{"name":"regex","description":"Regular expression to replace.","required":true,"default":"","type":"Regex","values":[]},
+		{"name":"regex","description":"Regular expression to replace.","required":true,"default":"","type":"string","values":[]},
 		{"name":"substring","description":"A string or a variable that contains one. Replaces substring with the regex match","required":true,"default":"","type":"string","values":[]},
 		{"name":"scope","description":"* one: Replace the first occurrence of the regular\n expression. Default.\n * all: Replace all occurrences of the regular expression.","required":false,"default":"one","type":"string","values":["one","all"]}
 	],

@@ -2,6 +2,7 @@
 	"name":"cfabort",
 	"type":"tag",
 	"syntax":"<cfabort>",
+	"script":"abort;",
 	"related":["cferror","cfthrow","cfexit"],
 	"description":"Stops the processing of a CFML page at the tag location.\n CFML returns everything that was processed before the\n tag. The tag is often used with conditional logic to stop\n processing a page when a condition occurs.",
 	"params": [

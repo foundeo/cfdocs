@@ -6,7 +6,7 @@
 	"related":[],
 	"description":" Sends messages to a specific client that invokes the method. This can be included as a part of the function that is called by the invoke WebSocket JavaScript method.",
 	"params": [
-		{"name":"message","description":"The message object. This can be of type Any.","required":true,"default":"","type":"","values":[]}
+		{"name":"message","description":"The message object. This can be of type Any.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/wssendmessage.html"}

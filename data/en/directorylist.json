@@ -49,7 +49,7 @@
 		},
 		{
 			"name": "sort",
-			"description": "Columns by which to sort. e.g. `Directory, Size DESC, DateLastModified`. To qualify a column, use `asc` (ascending sort a-z) or `dec` (descending sort z-a).",
+			"description": "Columns by which to sort. e.g. `Directory, Size DESC, DateLastModified`. To qualify a column, use `asc` (ascending sort a-z) or `desc` (descending sort z-a).",
 			"required": false,
 			"default": "",
 			"type": "string",

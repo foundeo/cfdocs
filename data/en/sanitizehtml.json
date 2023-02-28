@@ -1,0 +1,46 @@
+{
+    "name":"sanitizeHtml",
+    "type":"function",
+    "syntax":"sanitizeHtml(string [, policy ])",
+    "member":"string.sanitizeHTML( policy )",
+    "returns":"string",
+    "related":["getSafeHtml"],
+    "description":"Sanitizes unsafe HTML to protect against XSS attacks",
+    "params":[
+        {"name":"string", "description":"The string to sanitize", "required":true, "default":"", "type":"string", "values":[]},
+        {"name":"policy", "description":"Either a org.owasp.html.PolicyFactory or a list of built in policies which allow and sanitize the named element types (see list below).  If omitted then all of the built-in policies are applied.", "required":false, "default":"", "type":"string", "values":["BLOCKS","FORMATTING","IMAGES","LINKS","STYLES","TABLES"]}
+    ],
+    "engines":{
+        "lucee":{"minimum_version":"5", "notes":"requires ESAPI extension version >= 2.2.4.5-SNAPSHOT", "docs":"https://docs.lucee.org/reference/functions/sanitizehtml.html"}
+    },
+    "links": [
+        {
+            "title": "New ESAPI function sanitizeHTML() ESAPI 2.2.4.5-SNAPSHOT",
+            "description":"",
+            "url": "https:\/\/dev.lucee.org\/t\/new-esapi-function-sanitizehtml-esapi-2-2-4-5-snapshot\/9937"
+        }
+    ],
+    "examples":[
+        {
+            "title":"Using default built-in policies",
+            "description":"Sanitize a string using built-in policies",
+            "code":"unsafe = '<p>a <strong>link</strong> <a href=\"https://www.example.com\" onClick=\"doSomethingBad()\">test</a></p>';\nresult = sanitizeHtml( unsafe );\ndump(result);",
+            "result":"",
+            "runnable":true
+        },
+        {
+            "title":"Specifying a list of built-in policies to exclude certain elements",
+            "description":"Only allow sanitized link and block elements",
+            "code":"unsafe = '<p>a <strong>link</strong> <a href=\"https://www.example.com\" onClick=\"doSomethingBad()\">test</a></p>';\nresult = sanitizeHtml( unsafe,\"LINKS,BLOCKS\" );\ndump(result);",
+            "result":"",
+            "runnable":true
+        },
+        {
+            "title":"Member function version",
+            "description":"Only allow sanitized link and block elements",
+            "code":"unsafe = '<p>a <strong>link</strong> <a href=\"https://www.example.com\" onClick=\"doSomethingBad()\">test</a></p>';\nresult = unsafe.sanitizeHtml( \"LINKS,BLOCKS\" );\ndump(result);",
+            "result":"",
+            "runnable":true
+        }
+    ]
+}

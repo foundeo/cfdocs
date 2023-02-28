@@ -4,7 +4,7 @@
 	"syntax":"imageCopy(name, x, y, width, height [, dx] [, dy])",
 	"member":"someImage.copy(x, y, width, height [, dx] [, dy])",
 	"returns":"any",
-	"related":[],
+	"related":["ImageNew", "ImagePaste", "IsImageFile"],
 	"description":" Copies a rectangular area of an image.",
 	"params": [
 		{"name":"name","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},

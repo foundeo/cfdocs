@@ -6,7 +6,7 @@
 	"related":["reFind","reReplace","reMatch"],
 	"description":"Escapes regular expression control characters within a string.",
 	"params": [
-		{"name":"string","description":"The string you that to escape.","required":true,"default":"","type":"","values":[]}
+		{"name":"string","description":"The string you that to escape.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/reescape.html"},

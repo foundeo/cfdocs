@@ -19,6 +19,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Simple urlEncodedFormat Example",
+			"description": "It returns url encoded string.",
+			"code": "writeOutput(URLEncodedFormat('This is a string with special character.'));",
+			"result": "This%20is%20string%20with%20special%20character%2E"
+		}
 	]
 
 }

@@ -6,7 +6,7 @@
 	"related":["getSystemTotalMemory"],
 	"description":" Returns the total disk space or in-memory space available for an application.",
 	"params": [
-		{"name":"path","description":"path to the hard drive or for in memory file system.","required":true,"default":"","type":"","values":[]}
+		{"name":"path","description":"path to the hard drive or for in memory file system.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/gettotalspace.html"},

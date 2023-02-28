@@ -4,7 +4,7 @@
 	"syntax":"imageGetBufferedImage(name)",
 	"member":"someImage.getBufferedImage()",
 	"returns":"any",
-	"related":[],
+	"related":["cfimage", "ImageGetBlob", "ImageGetEXIFTag", "ImageGetHeight", "ImageGetIPTCTag", "ImageGetWidth", "ImageInfo", "IsImage", "IsImageFile"],
 	"description":" Returns the java.awt.BufferedImage object underlying the current ColdFusion image.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}

@@ -11,6 +11,13 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/monthshortasstring.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title": "Script Syntax",
+			"description": "Returns the string for the given month in short format. It supported in Lucee",
+			"code": "getVal = monthShortAsString(3); \r\n writeOutput(getVal);",
+			"result": "Mar"
+		}
+	],
 	"links": []
 }

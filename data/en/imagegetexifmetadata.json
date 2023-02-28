@@ -1,8 +1,8 @@
 {
-	"name":"imageGetExifMetaData",
+	"name":"imageGetEXIFMetadata",
 	"type":"function",
-	"syntax":"imageGetExifMetaData(name)",
-	"member":"someImage.getExifMetaData()",
+	"syntax":"imageGetEXIFMetadata(name)",
+	"member":"someImage.getEXIFMetadata()",
 	"returns":"struct",
 	"related":["imageGetEXIFTag"],
 	"description":"Retrieves the Exchangeable Image File Format (EXIF) headers in an image as a CFML structure.",
@@ -18,9 +18,9 @@
 	"links": [],
 	"examples": [
 		{
-			"title":"Using getExifMetaData member function",
+			"title":"Using getEXIFMetadata member function",
 			"description":"CF11+ Lucee4.5+ Extract the EXIF meta data from exiv sample page (http://www.exiv2.org/sample.html)",
-			"code":"imgObj = imageRead(\"http://www.exiv2.org/include/img_1771.jpg\");\r\nx = imgObj.getExifMetaData();\r\nwriteDump(x);",
+			"code":"imgObj = imageRead(\"http://www.exiv2.org/include/img_1771.jpg\");\r\nx = imgObj.getEXIFMetadata();\r\nwriteDump(x);",
 			"result":"",
 			"runnable":true
 		}

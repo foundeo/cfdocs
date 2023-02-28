@@ -31,7 +31,7 @@
 				"name": "array",
 				"type": "array",
 				"required": false
-			}],"type":"boolean","required":"true","values":[],"default":""},
+			}],"type":"boolean","required":true,"values":[],"default":""},
 		{"name":"parallel","description":"Lucee4.5+ true if the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[true, false]},
 		{"name":"maxThreads","description":"Lucee4.5+ the maximum number of threads to use when parallel = true","required":false,"default":"20","type":"numeric","values":[]}
 	],

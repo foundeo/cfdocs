@@ -4,7 +4,7 @@
 	"syntax":"imageGrayScale(name)",
 	"member":"someImage.grayScale()",
 	"returns":"void",
-	"related":[],
+	"related":["ImageBlur","ImageNegative","ImageSetAntialiasing","ImageSharpen","IsImageFile"],
 	"description":" Converts a ColdFusion image to grayscale.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}

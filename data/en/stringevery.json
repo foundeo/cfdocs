@@ -1,0 +1,46 @@
+{
+	"name":"stringEvery",
+	"type":"function",
+	"syntax":"stringEvery(string,callback)",
+	"member":"string.every(callback)",
+	"returns":"boolean",
+	"related":["StringEach"],
+	"description":"Determines if all elements of a string satisfy a given condition. Will return `TRUE` is all elements meet the condition, else `FALSE`.",
+	"params": [
+		{"name":"string","description":"Original input string to search.","required":true,"default":"","type":"string","values":[]},
+		{"name":"callback","description":"The closure function that is executed for each element in the string. The syntax is `callback(element,index,string)`.","required":true,"default":"","type":"any","values":[]}
+		
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/stringevery.html"},
+		"lucee": {"minimum_version":"6", "notes":"This function is being added in Lucee 6. Similar to `structEvery()` and `arrayEvery()`.", "docs":""}
+	},
+	"links": [
+		{
+			"title":"Hidden Gems In ColdFusion 2021",
+			"description":"Presentation by Charlie Arehart",
+			"url":"https://www.carehart.org/presentations/Hidden%20gems%20in%20CF2021.pdf"
+		},
+		{
+			"title":"Lucee - LDEV-3180 Ticket to add stringEvery",
+			"description":"Lucee ticket to add function in Lucee 6.",
+			"url":"https://luceeserver.atlassian.net/browse/LDEV-3180"
+		}
+	],
+	"examples": [
+		{
+			"title": "Full function",
+			"description": "Do all letters in the string meet the callback condition?",
+			"code": "letters=\"ZZazz\";\ncallback=function(inp){return inp==\"z\";}\nallZs = StringEvery(letters,callback);\nwriteOutput(allZs)",
+			"result": "NO",
+			"runnable": true
+		},
+		{
+			"title": "Member function",
+			"description": "Do all letters in the string meet the callback condition?",
+			"code": "letters=\"zzZZz\";\ncallback=function(inp){return inp==\"z\";}\nallZs = letters.every(callback);\nwriteOutput(allZs)",
+			"result": "YES",
+			"runnable": true
+		}
+	]
+}

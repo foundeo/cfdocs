@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"spreadsheetDeleteRows(spreadsheetObj, range)",
 	"returns":"void",
-	"related":[],
+	"related":["SpreadsheetDeleteRow"],
 	"description":" Deletes all data from multiple rows of an Excel spreadsheet object. It does not delete the row.",
 	"params": [
 		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},

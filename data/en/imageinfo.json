@@ -28,7 +28,7 @@
 		},
 		{
 			"title":"Using info member function",
-			"description":"CF11+ Lucee4.5+ Exract the image info",
+			"description":"CF11+ Lucee4.5+ Extract the image info",
 			"code":"imgObj = imageRead(\"https://cfdocs.org/apple-touch-icon.png\");\r\ninfo = imgObj.info();\r\nwriteDump(info);",
 			"result":"",
 			"runnable":true

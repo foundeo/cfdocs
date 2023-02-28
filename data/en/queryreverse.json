@@ -1,0 +1,25 @@
+{
+	"name": "queryReverse",
+	"type": "function",
+	"syntax": "queryReverse(query)",
+	"member": "query.reverse()",
+	"returns": "query",
+	"related": ["arrayReverse","reverse"],
+	"description": "Returns a reversed version of the query",
+	"params": [
+		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []}
+	],
+	"engines": {
+		"coldfusion":{"minimum_version":"2018.0.5", "notes":"New function in Update 5", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryreverse.html"}
+	},
+	"examples": [
+		{
+            "title":"Reverses a queries results",
+            "description":"",
+            "code":"heroes = queryNew(\r\n            \"id,Name\",\r\n            \"integer,varchar\",\r\n            [\r\n                {\"id\":1,\"Name\":\"Bruce Banner\"},\r\n                {\"id\":2,\"Name\":\"Tony Stark\"},\r\n                {\"id\":3,\"Name\":\"Bobby Drake\"},\r\n                {\"id\":4,\"Name\":\"Jean Grey\"}\r\n            ]\r\n        )\r\nwriteOutput(\"The query:<br />\");\r\nwriteDump(heroes);\r\nwriteOutput(\"The reversed query:<br />\");\r\nwriteDump(heroes.reverse());",
+            "result":"",
+            "runnable":true
+        }
+	],
+	"links": []
+}

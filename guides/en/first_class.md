@@ -4,38 +4,42 @@ The ColdFusion built-in functions will be treated as ‘first-class’ functions
 
 For instance, this is valid:
 
-    <cfscript>
-    function convertCaseForArray(Array array, function convertor)
+    function convertCaseForArray(array array, function convertor)
     {
-        for (var i=1; i <= arrayLen(array); i++){
+        for (var i=1; i <= arrayLen(array); i++) {
             array[i] = convertor(array[i]);
         } 
         return array;
     }
 
-    // lcase built-in function is being passed as callback.
-    resultantArray = convertCaseForArray(['One', 'Two','Three'], lcase); 
+    // lCase built-in function is being passed as callback.
+    resultantArray = convertCaseForArray(['One', 'Two','Three'], lCase);
 
-    writedump(resultantArray);
-    </cfscript>
+    writeDump(resultantArray);
 
-Now, you can treat the built-in CFML functions  like ucase() as objects, being able to assign them to variables, and pass them as arguments.
+Now, you can treat the built-in CFML functions  like uCase() as objects, being able to assign them to variables, and pass them as arguments.
 
-Another example, this is where lcase and ucase are being returned from a function:
+Another example, this is where `lCase` and `uCase` are being returned from a function" (NOTE: This example only works with CF11-CF2021.)
 
-    function convertArray(array array, string caseTo){
+    function convertArray(array array, string caseTo) {
         caseConverterFunction = getConvertFunction(caseTo);
-        for (var i=1, I <= arrayLen(array); i++){
-            array[i] = caseConverterFunction{array[i]);
+        for (var i=1; i <= arrayLen(array); i++) {
+            array[i] = caseConverterFunction(array[i]);
         }
+        return array;
     }
     
-    function getConvertFunction (String caseType){
-        if (caseType == ‘lower’) return lcase; else return ucase;
+    function getConvertFunction(string caseType) {
+        if (caseType == 'lower') return lCase;
+        return uCase;
     }
     
-    resultArray_lower = convertArray([‘One’, ‘Two’, ‘Three’], ‘lower’);
-    resultArray_upper = convertArray([‘One’, ‘Two’, ‘Three’], ‘upper’);
+    results = {
+        "lower" = convertArray(['One', 'Two', 'Three'], 'lower'),
+        "upper" = convertArray(['One', 'Two', 'Three'], 'upper')
+    };
+    
+    writeDump(results);
 
 _lower array: one, two, three
 _upper array: ONE, TWO, THREE

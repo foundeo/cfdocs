@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"randomize(number [, algorithm])",
 	"returns":"numeric",
-	"related":[],
+	"related":["Rand", "RandRange"],
 	"description":" Seeds the pseudo-random number generator with an\n integer number, ensuring repeatable number patterns.",
 	"params": [
 		{"name":"number","description":"","required":true,"default":"","type":"numeric","values":[]},

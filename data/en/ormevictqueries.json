@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"ormEvictQueries([cacheName])",
 	"returns":"void",
-	"related":[],
+	"related":["ORMEvictEntity", "ORMEvictCollection"],
 	"description":"This will remove all the queries from the named query cache. \nIf name is not specified, all queries from default cache will be removed.\normEvictQueries([cacheName])",
 	"params": [
 		{"name":"cacheName","description":"No Help Available","required":false,"default":"","type":"string","values":[]}

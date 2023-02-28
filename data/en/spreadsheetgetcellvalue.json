@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"spreadsheetGetCellValue(spreadsheetObj, row, column)",
 	"returns":"string",
-	"related":[],
+	"related":["SpreadsheetGetCellComment","SpreadsheetGetCellFormula"],
 	"description":" Gets the Value for a for an Excel spreadsheet object cell.",
 	"params": [
 		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},

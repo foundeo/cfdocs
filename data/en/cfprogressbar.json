@@ -64,7 +64,7 @@
 		},
 		{
 			"name": "style",
-			"description": "The following are the supported styles:\u00e2\u20ac\u0161\u00c3\u201e\u00c2\u00a2\nbgcolor: The background color for the progress bar. A hexadecimal value without \u00e2\u20ac\u0161\u00c3\u201e\u00c3\u00ba#\u00e2\u20ac\u0161\u00c3\u201e\u00c3\u00b9 prefixed.\ntextcolor: Text color on progress bar.\nprogresscolor: Color used to indicate the progress",
+			"description": "The following are the supported styles: \nbgcolor: The background color for the progress bar. A hexadecimal value without # prefixed.\ntextcolor: Text color on progress bar.\nprogresscolor: Color used to indicate the progress",
 			"required": false,
 			"default": "",
 			"type": "string",

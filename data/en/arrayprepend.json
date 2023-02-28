@@ -25,7 +25,7 @@
 		},
 		{
 			"title": "Prepend a value to an array using the Array member function",
-			"description": "CF11+ Lucee4.5+ Invoking the the prepend function on an array is the same as running arrayPrepend.",
+			"description": "CF11+ Lucee4.5+ Invoking the prepend function on an array is the same as running arrayPrepend.",
 			"code": "doctorArray = ['Eccleston','Tennant','Smith','Capaldi'];\ndoctorArray.prepend('Hurt');\nwriteDump(doctorArray);",
 			"result": "['Hurt','Eccleston','Tennant','Smith','Capaldi']"
 		}

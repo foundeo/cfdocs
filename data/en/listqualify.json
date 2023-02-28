@@ -8,8 +8,8 @@
 	"params": [
 		{"name":"list","description":"A list or variable name","required":true,"default":"","type":"string","values":[]},
 		{"name":"qualifier","description":"A string or character in which to insert before and after the list elements","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]},
-		{"name":"elements","description":"","required":false,"default":"all","type":"string","values":["all","char"]},
+		{"name":"delimiters","description":"Characters that separate list elements. The default value is comma. If this parameter contains more than one character, ColdFusion uses the first character as the delimiter and ignores the remaining characters.","required":false,"default":",","type":"string","values":[]},
+		{"name":"elements","description":"all -all elements; char -elements that are composed of alphabetic characters","required":false,"default":"all","type":"string","values":["all","char"]},
 		{"name":"includeEmptyFields","description":"If includeEmptyFields is true, empty value add in list elements","required":false,"default":"","type":"boolean","values":[true,false]}
 	],
 	"engines": {

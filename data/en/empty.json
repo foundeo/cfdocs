@@ -11,6 +11,13 @@
 	"engines": {
 		"lucee": {"minimum_version": "", "deprecated": "4.5", "notes": "Use IsEmpty() instead.", "docs": "https://docs.lucee.org/reference/functions/empty.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title":"A Simple Empty Example",
+			"description":"Check whether the variable is empty or not",
+			"code":"<cfoutput>\r\n\t<cfset Language = \"Coldfusion\">\r\n\t#empty(Language)#\r\n\t<cfset MyInput = \"\">\r\n\t#empty(MyInput)#\r\n</cfoutput>",
+			"result":"false,true"
+		}
+	],
 	"links": []
 }

@@ -63,7 +63,7 @@
 		},
 		{
 			"name": "maxUploadSize",
-			"description": "The maximum file size, in mega bytes, allowed for the upload. Default 10MB.",
+			"description": "The maximum file size, in megabytes, allowed for the upload. Default 10MB.",
 			"required": false,
 			"default": "",
 			"type": "numeric",

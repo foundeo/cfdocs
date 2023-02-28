@@ -4,7 +4,7 @@
 	"syntax":"formatBaseN(number, radix)",
 	"returns":"string",
 	"related":["parseNumber","inputBaseN","toString"],
-	"description":"String Converts number to a string, in the base specified by radix.",
+	"description":"Converts number to a string, in the base specified by radix.",
 	"params": [
 		{"name":"number","description":"The number to convert","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"radix","description":"The base radix to use","required":true,"default":"","type":"numeric","values":[]}

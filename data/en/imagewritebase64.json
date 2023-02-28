@@ -4,7 +4,7 @@
 	"syntax":"imageWriteBase64(name, destination, format [, inHTMLFormat] [, overwrite])",
 	"member":"someImage.writeBase64(destination, format [, inHTMLFormat] [, overwrite])",
 	"returns":"void",
-	"related":[],
+	"related":["cfimage", "ImageReadBase64", "IsImageFile"],
 	"description":" Writes Base64 images to the specified filename and destination.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},

@@ -2,12 +2,13 @@
 	"name":"queryAddRow",
 	"type":"function",
 	"syntax":"queryAddRow(query [, number/row(s)])",
+	"member":"someQuery.addRow([number/row(s)])",
 	"returns":"numeric",
-	"related":[],
+	"related":["QueryAddColumn", "QuerySetCell", "QueryNew"],
 	"description":" Adds a specified number of empty rows to a query.",
 	"params": [
 		{"name":"query","description":"","required":true,"default":"","type":"query","values":[]},
-		{"name":"number/row(s)","description":"As of CF10+ you can pass a Structure whose keys map to the query column names to insert a row of data; or an Array of those Structures to insert multiple rows at once.","required":false,"default":"","type":"Numeric / Array / Struct","values":[]}
+		{"name":"number/row(s)","description":"As of CF10+ you can pass a Structure whose keys map to the query column names to insert a row of data; or an Array of those Structures to insert multiple rows at once.","required":false,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryaddrow.html"},
@@ -21,6 +22,13 @@
 			"title":"Builds a simple query using queryNew and queryAddRow",
 			"description":"CF10+ Pass in row data directly to queryAddRow argument.",
 			"code":"news = queryNew(\"id,title\", \"integer,varchar\");\nqueryAddRow(news, {\"id\"=1,\"title\"=\"Dewey defeats Truman\"});\nwriteDump(news);",
+			"result":""
+
+		},
+		{
+			"title":"Builds a simple query using queryNew and queryAddRow member syntax",
+			"description":"CF10+ Pass in row data directly to queryAddRow argument.",
+			"code":"news = queryNew(\"id,title\", \"integer,varchar\");\nnews.addRow({\"id\"=1,\"title\"=\"Dewey defeats Truman\"});\nwriteDump(news);",
 			"result":""
 
 		},

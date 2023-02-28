@@ -19,10 +19,11 @@
 	"links": [],
 	"examples": [
 		{
-			"title": "Script Syntax",
+			"title": "Base64 value to binary to string",
 			"description": "",
-			"code": "base64Value = toBase64( \"stringValue\" );\r\nbinaryValue = toBinary( base64Value );\r\nstringValue = toString( binaryValue );\r\nwriteDump(stringValue);",
-			"result": "Expected Result: stringValue"
+			"code": "base64Value = toBase64( \"stringValue\" );\r\nbinaryValue = toBinary( base64Value );\r\nstringValue = toString( binaryValue );\r\nwriteOutput(stringValue);",
+			"result": "Expected Result: stringValue",
+			"runnable":true
 		},{
 			"title": "Structure to String",
 			"description": "",
@@ -31,10 +32,9 @@
 			"runnable":true
         	},{
 			"title": "Member syntax",
-			"description": "toString as a method",
+			"description": "CF number toString as a method\nCAUTION: While CF returns an integer (42), Lucee returns a double (42.0), that's because while CF stores the value as `java.lang.Integer` (CF2018+) resp. `java.lang.String` (CF2016+), Lucee calls this method on `java.lang.Double`.",
 			"code": "num = 42;\nwriteOutput(num.toString());",
-			"result": "{a={1},b={2}}",
-			"runnable":true
+			"result": "42"
         	}
 	]
 }
