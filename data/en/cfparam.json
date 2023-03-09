@@ -38,6 +38,13 @@
 				"description": "Throws an error if the value is not one of a list of possible values",
 				"code":"<cfparam name=\"sortdir\" default=\"ASC\" type=\"regex\" pattern=\"ASC|DESC\"/>",
 				"result":""
+		},
+		{
+				"title": "param shorthand in cfscript",
+				"description": "Three ways to use the param shorthand inside of a cfscript tag",
+				"code": "param someVar; //declare the param\nparam someVar=5; //declare the param with a default value\nparam numeric someVar=3.1415; //declare the param with adefault value and set the type",
+				"result": "",
+				"runnable": true
 		}
 	]
 }
