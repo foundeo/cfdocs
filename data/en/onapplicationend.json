@@ -14,6 +14,14 @@
 	},
 	"links": [
 
+	], 
+	"examples": [
+		{
+		"title": "Write to log when onApplicationEnd is triggered",
+		"description": "Write to the log that application has ended. In the example below, text 'myApp ended on {current date/time}' gets added to D:\\CF\\logs\\myApp.log file. Note: Application has already ended, but we can use ApplicationScope argument to access any Application scope variables.",
+		"code": "public void function onApplicationEnd(struct ApplicationScope){\n\n\t\twriteLog(text = \"#arguments.ApplicationScope.name# ended on: #now()#\");\n\t\treturn true;\n\t}",
+		"result": "",
+		"runnable": false
+		}
 	]
-
 }
