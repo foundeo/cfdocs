@@ -3,7 +3,7 @@
 	"type": "tag",
 	"syntax": "<cfpresentationslide>",
 	"related": ["cfpresentation","cfpresenter"],
-	"description": "Creates a slide dynamically from an HTML source file,\n HTML and CFML code, or an SWF source file.\n If you do not specify a source file, you must include the HMTL or CFML code for\n the body of the slide within the cfpresentationslide tag. The cfpresentationslide\n is the child tag of the cfpresentation tag.",
+	"description": "Creates a slide dynamically from an HTML source file,\n HTML and CFML code, or an SWF source file.\n If you do not specify a source file, you must include the HTML or CFML code for\n the body of the slide within the cfpresentationslide tag. The cfpresentationslide\n is the child tag of the cfpresentation tag.",
 	"params": [
 		{"name": "title", "description": "Specifies the title of the slide.", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "audio", "description": "Specifies the path of the audio file relative to the CFM page.\n The audio file must be an MP3 file.\n A slide cannot have both audio and video specified", "required": false, "default": "", "type": "string", "values": []},
