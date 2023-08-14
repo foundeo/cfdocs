@@ -9,9 +9,9 @@
 	<cfparam name="request.description" default="CFML Documentation Reference: #request.title#">
 	<cfparam name="request.ogname" default="">
 	<title><cfoutput>#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation</cfoutput></title>
-	<link href="https://cdn.jsdelivr.net/npm/bootswatch@3.4.1/lumen/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootswatch@3.4.1/lumen/bootstrap.min.css" rel="stylesheet" integrity="sha256-Tg2t3ds9B3CEkYurKyNc2E8wV5IoJjPgo0pq7meOeHE=" crossorigin="anonymous">
 	<cfparam name="request.hasExamples" default="false">
-	<cfif request.hasExamples><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-themes-for-google-code-prettify@2.0.4/dist/themes/tomorrow-night-bright.min.css" /></cfif>
+	<cfif request.hasExamples><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-themes-for-google-code-prettify@2.0.4/dist/themes/tomorrow-night-bright.min.css" integrity="sha256-gLthyoOIaqxAddr/iijlwkUkgioUdF0FB39xaMdblzY=" crossorigin="anonymous" /></cfif>
 	<cfoutput><link href="#request.assetBaseURL#style.css" rel="stylesheet"></cfoutput>
 	<link rel="search" type="application/opensearchdescription+xml" title="Search CFML Documentation" href="/opensearch.xml" />
 	<cfoutput>
@@ -110,7 +110,7 @@
 						</div>
 					</div>
 				</form>
-				<a href="https://foundeo.com/" class="visible-md visible-lg" id="foundeo"><img src="/assets/img/foundeo.png"></a>
+				<a href="https://foundeo.com/" rel="noopener" class="visible-md visible-lg" id="foundeo"><img src="/assets/img/foundeo.png"></a>
 			</div><!--/.navbar-collapse -->
 		</div>
 	</nav>
@@ -122,18 +122,18 @@
 
 	<footer>
 		<div class="container">
-			<p>Built &amp; Hosted by <a href="https://foundeo.com/">Foundeo Inc.</a> | ColdFusion is a trademark of Adobe Systems Incorporated.</p>
+			<p>Built &amp; Hosted by <a href="https://foundeo.com/" rel="noopener">Foundeo Inc.</a> | ColdFusion is a trademark of Adobe Systems Incorporated.</p>
 		</div>
 	</footer>
 </div> <!-- /container -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js" integrity="sha256-RWiU4omUU7tQ2M3wmRQNW9UL50MB4CucbRPCbsQv+X0=" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <cfoutput><script src="#request.assetBaseURL#script.js"></script></cfoutput>
 <cfparam name="request.gitFilePath" default="/">
-<cfoutput><a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow" class="visible-lg visible-md"><span id="forkme">Fork me on GitHub</span></a></cfoutput>
-<cfif request.hasExamples><script src="https://cdn.jsdelivr.net/npm/code-prettify@0.1.0/loader/prettify.js"></script></cfif>
+<cfoutput><a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" rel="nofollow noopener" class="visible-lg visible-md"><span id="forkme">Fork me on GitHub</span></a></cfoutput>
+<cfif request.hasExamples><script src="https://cdn.jsdelivr.net/npm/code-prettify@0.1.0/loader/prettify.js" integrity="sha256-RBziwa17lG5sX8W6h1PxFJnp3nG2GDPYfTFRCK2kjyI=" crossorigin="anonymous" referrerpolicy="no-referrer"></script></cfif>
 </body>
 </html>
 </cfif>
