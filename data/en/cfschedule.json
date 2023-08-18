@@ -33,7 +33,7 @@
 		{"name":"onException","description":"CF10+ Specify the action to take if a task results in error.\n Note: CF 2018 Enterprise Required; not supported in Standard Edition","required":false,"default":"invokeHandler, if eventHandler is specified","type":"string","values":["refire","pause","invokeHandler"]},
 		{"name":"onComplete","description":"CF10+ The action or task to perform after completion of the current task. Can be used to chain dependent tasks by executing a task after this task completes.\n Note: CF 2018 Enterprise Required; not supported in Standard Edition","required":false,"default":"invokeHandler","type":"string","values":[]},
 		{"name":"onMisfire","description":"CF10+ Specify what to do if a task misfires. If unspecified, then no action is taken.\n Note: CF 2018 Enterprise Required; not supported in Standard Edition","required":false,"default":"invokeHandler if eventHandler is specified","type":"string","values":["fire_now","invokeHandler"]},
-		{"name":"cronTime","description":"CF10+ Schedule the task time in cron job syntax.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"cronTime","description":"CF10+ Schedule the task time in quartz cron expression format (6 or 7 space-seperated values). Format is: second, minute, hour, day of month, month, day of week, year. Second value is required, as are the rest, but year is optional.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"repeat","description":"CF10+ Specify the number of times a given schedule has to repeat.","required":false,"default":"-1","type":"string","values":[]},
 		{"name":"retryCount","description":"CF10+ Specify the number of times to retry the task if the task fails. Must be between 0 and 3, inclusive.","required":false,"default":"3","type":"numeric","values":[0,1,2,3]},
 		{"name":"priority","description":"CF10+ Set the priority of this task.","required":false,"default":"5","type":"numeric","values":[]},
@@ -50,7 +50,11 @@
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfschedule"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfschedule"}
 	},
-	"links": [],
+	"links": [{
+		"title":"More about the cronTime param",
+		"description":"Learn more about the Quartz standard used in CF10+",
+		"url":"http://www.quartz-scheduler.org/documentation/quartz-2.2.2/tutorials/crontrigger.html"
+	}],
 	"examples": [
 		{
 			"title": "Create or update a task",
