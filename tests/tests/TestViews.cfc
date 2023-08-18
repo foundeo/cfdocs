@@ -6,21 +6,21 @@ component extends="testbox.system.BaseSpec" {
 
 		describe("Test Doc Views", function() {
 			it("should load a tag page: ", function() {
-				cfhttp(url="#baseURL#cfhttp", method="get", result="local.result");
+				cfhttp(url="#baseURL#cfhttp", method="get", result="local.result", timeout="5");
 				expect( left( local.result.statusCode, 3 ) ).toBe(200);
 			});
 			it("should load a function page: ", function() {
-				cfhttp(url="#baseURL#isdefined", method="get", result="local.result");
+				cfhttp(url="#baseURL#isdefined", method="get", result="local.result", timeout="5");
 				expect( left( local.result.statusCode, 3 ) ).toBe(200);
 			});
 
 			it("should load a guide page: ", function() {
-				cfhttp(url="#baseURL#cgi-scope", method="get", result="local.result");
+				cfhttp(url="#baseURL#cgi-scope", method="get", result="local.result", timeout="5");
 				expect( left( local.result.statusCode, 3 ) ).toBe(200);
 			});
 
 			it("should 404 a made up page: ", function() {
-				cfhttp(url="#baseURL#does-not-exist", method="get", result="local.result");
+				cfhttp(url="#baseURL#does-not-exist", method="get", result="local.result", timeout="5");
 				expect( left( local.result.statusCode, 3 ) ).toBe(404);
 			});
 		});
