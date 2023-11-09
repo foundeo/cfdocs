@@ -20,10 +20,18 @@
 	"links": [],
 	"examples": [
 		{
-	            "title": "Sending an Excel xls file back to the client",
-	            "description": "",
-	            "code": "<cfcontent type=\"application/vnd.ms-excel\" file=\"c:/temp/acmesales03.xls\"> ",
-	            "result": ""
-	        }
+			"title": "Sending an Excel xls file back to the client",
+			"description": "",
+			"code": "<cfcontent type=\"application/vnd.ms-excel\" file=\"c:/temp/acmesales03.xls\"> ",
+			"result": "",
+			"runnable": false
+	        },
+		{
+			"title": "Sending an Excel xls file back to the client using cfscript",
+			"description": "",
+			"code": "cfcontent(type=\"application/vnd.ms-excel\", file=\"c:/temp/acmesales03.xls\");",
+			"result": "",
+			"runnable": false
+		}
 	]
 }
