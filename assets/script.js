@@ -154,11 +154,12 @@ function submitSearch(e) {
 	document.location = '/' + encodeURIComponent((newLocation.length && newLocation[0] == '/') ? newLocation.slice(1) : newLocation);
 }
 //google analytics
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-82573-18']);
-_gaq.push(['_trackPageview']);
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-N089DE0FJ1');
 (function() {
   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-N089DE0FJ1';
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
