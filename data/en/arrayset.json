@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arraySet(array, start, end, value)",
 	"member":"someArray.set(start, end, value)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"set"
+	},
 	"returns":"boolean",
 	"related":["arrayInsertAt"],
 	"description":"In a one-dimensional array, sets the elements in a specified\n index range to a value. Useful for initializing an array after\n a call to arrayNew.",

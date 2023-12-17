@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"queryRowSwap(query, sourceRow, destinationRow )",
 	"member":"query.rowSwap(sourceRow, destinationRow)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"query",
+   		 "name":"rowSwap"
+	},
 	"returns":"query",
 	"related":["querySlice"],
 	"description":"In a query object, swap the record in the sourceRow with the record from the destinationRow.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"structGetMetadata(struct)",
 	"member":"someStruct.getMetadata()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"struct",
+   		 "name":"getMetadata"
+	},
 	"returns":"struct",
 	"related":["arraySetMetadata","arrayGetMetadata","structSetMetadata"],
 	"description":"Gets metadata for keys in a struct and indicates if it is an ordered struct.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageDrawLine(name, x1, y1, x2, y2)",
 	"member":"someImage.drawLine(x1, y1, x2, y2)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"drawLine"
+	},
 	"returns":"void",
 	"related":["imageDrawLines"],
 	"description":"Draws a single line defined by two sets of x and y coordinates on a ColdFusion image.",

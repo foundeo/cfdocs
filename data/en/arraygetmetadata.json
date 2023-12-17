@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayGetMetadata(array)",
 	"member":"someArray.getMetadata()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"getMetadata"
+	},
 	"returns":"struct",
 	"related":["arraySetMetadata","structGetMetadata","structSetMetadata"],
 	"description":"Gets metadata for items of an array and indicates the array type.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayReduceRight(array, function(result, item [,index, [array]]){} [, initialValue])",
 	"member":"someArray.reduceRight(function(result, item [,index, [array]]){} [, initialValue])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"reduceRight"
+	},
 	"returns":"any",
 	"related": ["ArrayReduce","ArrayMap"],
 	"description":"This function iterates over every element of the array and calls the closure to work on that element. It will reduce the array to a single value, from the right to the left, and return it.\nNOTE:This function is not available in Lucee 5.x or lower. Potentially use `reverse()` instead.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"listFind(list, value [, delimiters, includeEmptyValues])",
 	"member":"list.listFind(value [, delimiters, includeEmptyValues])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"listFind"
+	},
 	"returns":"numeric",
 	"related":["listFindNoCase","arrayFind"],
 	"description":"Determines the index of the first list element in which a specified value occurs. Returns 0 if not found. Case-sensitive",

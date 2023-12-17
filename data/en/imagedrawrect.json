@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageDrawRect(name, x, y, width, height [, filled])",
 	"member":"someImage.drawRect(x, y, width, height [, filled])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"drawRect"
+	},
 	"returns":"void",
 	"related":["imageDrawBeveledRect","imageClearRect","imageDrawRoundRect"],
 	"description":"Draws a rectangle.",

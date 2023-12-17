@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageSetDrawingColor(name, color)",
 	"member":"someImage.setDrawingColor(color)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"setDrawingColor"
+	},
 	"returns":"void",
 	"related":["ImageSetAntialiasing", "ImageSetBackgroundColor", "ImageSetDrawingStroke", "ImageSetDrawingTransparency", "IsImageFile"],
 	"description":" Sets the current drawing color for ColdFusion images. All subsequent graphics operations use the specified color.",

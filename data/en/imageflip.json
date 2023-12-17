@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageFlip(name, transpose)",
 	"member":"someImage.flip(transpose)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"flip"
+	},
 	"returns":"void",
 	"related":["ImageBlur", "ImageClearRec", "ImageNegative", "ImageNew", "ImageOverlay", "ImagePaste", "ImageResize", "ImageRotate", "ImageScaleToFit", "ImageSetAntialiasing", "ImageSharpen", "ImageShear", "ImageTranslate", "IsImageFile"],
 	"description":"Flips an image across an axis.",

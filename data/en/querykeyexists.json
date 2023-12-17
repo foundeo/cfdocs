@@ -6,6 +6,13 @@
 	"related":["QuerySort", "QueryFilter", "QueryEach"],
 	"description":"Determines whether the specified column (key) is present in a query.",
 	"member":"query.keyExists(key)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"query",
+   		 "name":"keyExists"
+	},
 	"params": [
 		{"name":"query","description":"Query Object to test.","required":true,"default":"","type":"query","values":[]},
 		{"name":"key","description":"Key to test","required":true,"default":"","type":"string","values":[]}

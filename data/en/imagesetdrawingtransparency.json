@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageSetDrawingTransparency(name, percent)",
 	"member":"someImage.setDrawingTransparency(percent)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"setDrawingTransparency"
+	},
 	"returns":"void",
 	"related":["ImageSetAntialiasing", "ImageSetBackgroundColor", "ImageSetDrawingColor", "ImageSetDrawingStroke", "IsImageFile"],
 	"description":" Specifies the degree of transparency of drawing functions.",

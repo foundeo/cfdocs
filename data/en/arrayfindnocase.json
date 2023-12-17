@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayFindNoCase(array, value or callback)",
 	"member":"someArray.findNoCase(value or callback)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"findNoCase"
+	},
 	"returns":"numeric",
 	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
 	"description":"These functions performs a case-insensitive search in the array for the specified value. Returns the array index of the first match; 0 if not found.",

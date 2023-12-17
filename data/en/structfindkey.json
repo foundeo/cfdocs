@@ -6,6 +6,13 @@
 	"related":["structFindValue"],
 	"description":" Searches recursively through a substructure of nested arrays,\n structures, and other elements, for structures whose keys\n match the search key in the value parameter.",
 	"member":"struct.findKey( value, scope )",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"struct",
+   		 "name":"findKey"
+	},
 	"params": [
 		{"name":"top","description":"CFML object (structure or array) from which to start\n search. This attribute requires an object, not a name of\n an object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"value","description":"String or a variable that contains one for which to search.","required":true,"default":"","type":"string","values":[]},

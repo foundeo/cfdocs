@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"datePart(datepart, date [,timezone])",
 	"member":"date.datePart(datepart)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"date",
+   		 "name":"datePart"
+	},
 	"returns":"numeric",
 	"related":["year", "quarter", "month", "dayOfYear", "day", "dayOfWeek", "week", "hour", "minute", "second"],
 	"description":"Extracts a part from a datetime value as a numeric.",

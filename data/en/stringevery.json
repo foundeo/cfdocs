@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"stringEvery(string,callback)",
 	"member":"string.every(callback)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"every"
+	},
 	"returns":"boolean",
 	"related":["StringEach"],
 	"description":"Determines if all elements of a string satisfy a given condition. Will return `TRUE` is all elements meet the condition, else `FALSE`.",

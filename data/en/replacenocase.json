@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"replaceNoCase(string, substring1, callback [, scope])",
 	"member":"string.replaceNoCase(substring1, callback[, scope])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"replaceNoCase"
+	},
 	"returns":"string",
 	"related":["replace", "replaceList", "reReplace","reReplaceNoCase"],
 	"description":"Replaces occurrences of substring1 with callback, in the specified scope. The search is case-insensitive.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayUnshift(array,object)",
 	"member":"array.unshift(object)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"unshift"
+	},
 	"returns":"numeric",
 	"related":["arrayShift"],
 	"description":"This function adds one or more elements to the beginning of the original array and returns the length of the modified array.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayEvery(array array, function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
 	"member":"someArray.every(function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"every"
+	},
 	"returns":"boolean",
 	"related":["arraySome", "arrayEach"],
 	"description":"returns true if every closure returns true, otherwise false",

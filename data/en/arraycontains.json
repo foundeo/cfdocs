@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayContains(array, value)",
 	"member":"someArray.contains(value)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"contains"
+	},
 	"returns":"boolean",
 	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
 	"description":"Used to determine if a value is in the given array, case-sensitive. Adobe CF and OpenBD return boolean. Lucee / Railo returns the numeric index if the value is found, 0 if not.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"dayOfWeek(date)",
 	"member":"date.dayOfWeek()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"date",
+   		 "name":"dayOfWeek"
+	},
 	"returns":"numeric",
 	"related":["day", "dayOfWeekAsString", "dayOfYear", "daysInMonth", "daysInYear", "firstDayOfMonth"],
 	"description":"Determines the day of the week from a date. Returns the ordinal for the day of the week, as an integer in the range 1 (Sunday) to 7 (Saturday).",

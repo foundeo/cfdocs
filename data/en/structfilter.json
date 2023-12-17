@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"structFilter(struct,function(key, value [,struct]){} [, parallel] [, maxThreads])",
 	"member":"someStruct.filter(function(key, value [,struct]){} [, parallel] [, maxThreads])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"struct",
+   		 "name":"filter"
+	},
 	"returns":"struct",
 	"related":["structEach","structSome","structMap","structReduce"],
 	"description":"Used to filter the key-value pairs in a structure.",

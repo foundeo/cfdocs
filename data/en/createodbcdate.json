@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"createODBCDate(date)",
 	"member":"date.createODBCDate()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"date",
+   		 "name":"createODBCDate"
+	},
 	"returns":"date",
 	"related":["createDate","createODBCDateTime"],
 	"description":"Creates an ODBC date object.",

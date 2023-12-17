@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayIsEmpty(array)",
 	"member":"someArray.isEmpty()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"isEmpty"
+	},
 	"returns":"boolean",
 	"related":["ArrayIsDefined"],
 	"description":"Determines whether an array is empty. Equivalent to arrayLen().\n Calling this function on an array with 10 undefined elements\n will return false.\n CF MX: this function can be used on XML objects.",

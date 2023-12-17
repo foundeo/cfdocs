@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayIsDefined(array, index)",
 	"member":"someArray.isDefined(index)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"isDefined"
+	},
 	"returns":"boolean",
 	"related":["ArrayIsEmpty"],
 	"description":"Determines whether an array element is defined in a given index.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"second(date)",
 	"member":"date.second()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"date",
+   		 "name":"second"
+	},
 	"returns":"numeric",
 	"related":["hour","minute","month","quarter","week","year"],
 	"description":" Extracts the ordinal for the second from a date/time object.",

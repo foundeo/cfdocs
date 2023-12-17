@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayLen(array)",
 	"member":"someArray.len()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"len"
+	},
 	"returns":"numeric",
 	"related":["arrayAvg"],
 	"description":"Determines the number of elements in an array.\n CF MX: this function can be used on child XML objects.",

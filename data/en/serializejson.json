@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"serializeJSON(var[, serializeQueryByColumns[, useSecureJSONPrefix[, useCustomSerializer]]])",
 	"member":"someVar.toJSON([serializeQueryByColumns[, useSecureJSONPrefix[, useCustomSerializer]]])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"toJSON"
+	},
 	"returns":"string",
 	"related":["deserializeJSON", "structSetMetadata"],
 	"description":"Converts a ColdFusion variable into a JSON (JavaScript Object Notation) string.",

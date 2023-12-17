@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayAvg(array)",
 	"member":"someArray.avg()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"avg"
+	},
 	"returns":"numeric",
 	"related":["listAvg","arrayReduce"],
 	"description":" Calculates the average of the values in an array.\n All elements in the array must contain values that can be\n automatically converted to numeric.",

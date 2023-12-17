@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"queryInsertAt(query,value,position)",
 	"member":"query.InsertAt(value,position)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"query",
+   		 "name":"InsertAt"
+	},
 	"returns":"query",
 	"related":["QueryNew"],
 	"description":"Inserts an element into a query at the indicate position. Elements with equal or greater positions are incremented by one.\nReturns the updated query with the element inserted.",

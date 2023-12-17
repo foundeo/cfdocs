@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageCrop(name, x, y, width, height)",
 	"member":"someImage.crop(x, y, width, height)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"crop"
+	},
 	"returns":"void",
 	"related":["imageResize"],
 	"description":"Crops a ColdFusion image to a specified rectangular area.",

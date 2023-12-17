@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageSetDrawingStroke(name [, attributecollection])",
 	"member":"someImage.setDrawingStroke(attributecollection)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"setDrawingStroke"
+	},
 	"returns":"void",
 	"related":["ImageDrawText", "ImageSetAntialiasing", "ImageSetBackgroundColor", "ImageSetDrawingColor", "ImageSetDrawingTransparency", "IsImageFile"],
 	"description":" Sets the drawing stroke for points and lines in subsequent ColdFusion images.",

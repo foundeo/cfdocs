@@ -5,6 +5,13 @@
 	"returns":"string",
 	"related":["right","mid"],
 	"member":"string.left(count)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"left"
+	},
 	"description":" Returns the leftmost count characters in a string.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},

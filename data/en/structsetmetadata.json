@@ -5,6 +5,13 @@
 	"returns":"void",
 	"related":["arraySetMetadata","arrayGetMetadata","structGetMetadata"],
 	"member":"inputStruct.setMetadata(metaStruct)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"struct",
+   		 "name":"setMetadata"
+	},
 	"description":"Sets metadata for a key in a struct. When you want to SerializeJSON, the key and the value will be display as you defined in the metadata.",
 	"params": [
 		{"name":"inputStruct","description":"The struct in which you want to add the metadata.","required":true,"default":"","type":"struct","values":[]},

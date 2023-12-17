@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"queryPrepend(query1, query2)",
     "member":"qry.prepend(query2)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"query",
+   		 "name":"prepend"
+	},
 	"returns":"query",
 	"related":["queryAppend"],
 	"description":" Adds a query to the beginning of the current query.",

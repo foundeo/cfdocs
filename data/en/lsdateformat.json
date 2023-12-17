@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"lsDateFormat(date [, mask, locale])",
 	"member":"date.lsDateFormat([mask, locale])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"lsDateFormat"
+	},
 	"returns":"string",
 	"related":["lsTimeFormat","dateFormat"],
 	"description":"Formats the date part of a date/time value in a locale-specific format.\n [mask - quicky]\n d,dd,ddd,dddd: Day of month / week\n m,mm,mmm,mmmm: Month\n y,yy,yyyy: Year\n gg: Period/era string\n short / medium / long / full",

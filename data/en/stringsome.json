@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"stringSome(inputString,callback)",
 	"member":"inputString.some(callback)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"some"
+	},
 	"returns":"boolean",
 	"related":["StringEvery"],
 	"description":"This function calls a given closure/function with every element in a given string and returns true as soon as the callback condition is met.",

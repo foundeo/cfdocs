@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageGetHeight(name)",
 	"member":"someImage.getHeight()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"getHeight"
+	},
 	"returns":"numeric",
 	"related":["imageGetWidth"],
 	"description":"Retrieves the height of the ColdFusion image in pixels.",

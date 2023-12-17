@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"week(date)",
 	"member":"date.week()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"date",
+   		 "name":"week"
+	},
 	"returns":"numeric",
 	"related":["hour","minute","second","month","quarter","year"],
 	"description":" From a date/time object, determines the week number within\n the year. An integer in the range 1-53; the ordinal of the\n week, within the year.",

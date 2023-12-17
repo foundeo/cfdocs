@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageDrawBeveledRect(name, x, y, width, height, raised [, filled])",
 	"member":"someImage.drawBeveledRect(x, y, width, height, raised [, filled])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"drawBeveledRect"
+	},
 	"returns":"void",
 	"related":["imageClearRect","imageDrawRect","imageDrawRoundRect"],
 	"description":"Draws a rectangle with beveled edges.",

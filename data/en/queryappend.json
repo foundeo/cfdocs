@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"queryAppend(query1, query2)",
     "member":"qry.append(query2)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"query",
+   		 "name":"append"
+	},
 	"returns":"query",
 	"related":["queryPrepend"],
 	"description":" Adds a query to the end of the current query.",

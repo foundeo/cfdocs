@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"queryAddColumn(query, column_name [, datatype], array_name)",
 	"member":"someQuery.addColumn(column_name [, datatype], array_name)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"query",
+   		 "name":"addColumn"
+	},
 	"returns":"numeric",
 	"related":["QueryNew", "QueryAddRow", "QuerySetCell"],
 	"description":" Adds a column to a query and populates its rows with the\n contents of a one-dimensional array. Pads query columns,\n if necessary, to ensure that all columns have the same number\n of rows.",

@@ -3,6 +3,13 @@
     "type":"function",
     "syntax":"sanitizeHtml(string [, policy ])",
     "member":"string.sanitizeHTML( policy )",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"sanitizeHTML"
+	},
     "returns":"string",
     "related":["getSafeHtml"],
     "description":"Sanitizes unsafe HTML to protect against XSS attacks",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arraySort(array, sortType [, sortOrder [, localeSensitive ]])\nor\narraySort(array, callback)",
 	"member":"someArray.sort(sortType [, sortOrder, localeSensitive ])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"sort"
+	},
 	"returns":"boolean",
 	"related":["structSort","listSort","querySort"],
 	"description":"Sorts array elements.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"dateDiff(datepart, date1, date2)",
 	"member":"date2.diff(datepart, date1)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"date",
+   		 "name":"diff"
+	},
 	"returns":"numeric",
 	"related":["dateadd","dateformat"],
 	"description":"Determines the integer number of datepart units by which date1 is less than date2.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageTranslateDrawingAxis(name, x, y)",
 	"member":"someImage.translateDrawingAxis(x, y)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"translateDrawingAxis"
+	},
 	"returns":"void",
 	"related":["ImageSetAntialiasing", "ImageSetDrawingColor", "ImageSetDrawingStroke", "ImageSetDrawingTransparency", "ImageShearDrawingAxis", "ImageTranslate", "IsImageFile"],
 	"description":" Translates the origin of the image context to the point (x,y) in the current coordinate system. Modifies the image context so that its new origin corresponds to the point (x,y) in the image's original coordinate system.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imagePaste(image1, image2, x, y)",
 	"member":"someImage.paste(image2, x, y)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"paste"
+	},
 	"returns":"void",
 	"related":["ImageCopy", "ImageOverlay", "ImageSetAntialiasing", "IsImageFile"],
 	"description":" Takes two images and an (x,y) coordinate and draws the second image over the first image with the upper-left corner at coordinate (x,y).",

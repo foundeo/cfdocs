@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"listSort(list, sortType [, sortOrder] [, delimiters] [, includeEmptyFields] [, localeSensitive])\nor\nlistSort(list, callback)",
 	"member":"list.listSort(sortType [, sortOrder])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"listSort"
+	},
 	"returns":"string",
 	"related":["structSort","arraySort","querySort"],
 	"description":"Sorts list elements according to a sort type and sort order. Returns a sorted copy of the list.\n [sortType - description]\n numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n - aabzABZ, if sort_order = \"asc\"\n - ZBAzbaa, if sort_order = \"desc\"\n textnocase: sorts text alphabetically, without regard to case\n - aAaBbBzzZ, in an asc sort;\n - ZzzBbBaAa, in a desc sort;",

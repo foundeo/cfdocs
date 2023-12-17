@@ -3,6 +3,13 @@
     "type":"function",
     "syntax":"queryClear(query)",
     "member":"query.clear()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"query",
+   		 "name":"clear"
+	},
     "returns":"query",
     "description":"This function takes a query, removes all the rows, then returns a query object with no records",
     "params": [

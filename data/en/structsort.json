@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"structSort(struct [, sortType, sortOrder, path, localeSensitive])\nstructSort(struct, callback)",
 	"member":"struct.sort([sortType, sortOrder, path, localeSensitive])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"struct",
+   		 "name":"sort"
+	},
 	"returns":"array",
 	"related":["arraySort","listSort","querySort"],
 	"description":"Returns a sorted array of the top level keys in a structure. Sorts using alphabetic or numeric sorting, and can sort based on the values of any structure element.",
