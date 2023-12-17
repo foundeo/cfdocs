@@ -1,15 +1,8 @@
 <!--- Run once utility to automate creation of "member_details" where it doesn't already exist --->
 <cfset jsonPrinter = createObject("component","JSONPrinter").init() />
-
 <cfset dataDir = ExpandPath("../data/en")>
-<cfset tags = []>
 <cfset type = "string">
-<cfset functions = []>
-<cfset guides = []>
-<cfset all = []>
-<cfset categories = []>
-<cfset versions = {4=[], "4.5"=[],5=[],6=[],7=[],8=[],9=[],10=[],11=[],2016=[],2018=[],2021=[]}>
-<cfset lucee_versions = {5=[],6=[]}>
+
 <cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
 	<cfset json = fileRead(filePath,"utf-8")>
 	<cftry>
@@ -68,30 +61,6 @@
 					<cfset fileWrite(filePath, json)>
 
 				</cfif>
-				<!--- <cfset arrayAppend(functions, nameKey)>
-				<cfset arrayAppend(all, nameKey)>
-				
-				<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "coldfusion") AND structKeyExists(data.engines.coldfusion, "minimum_version")>
-					<cfif isNumeric(data.engines.coldfusion.minimum_version)>
-						<cfset minimum_version = data.engines.coldfusion.minimum_version>
-					<cfelseif reFind('^[0-9]{2,4}\.[0-9]\.[0-9]+$', data.engines.coldfusion.minimum_version)>
-						<cfset minimum_version = listFirst(data.engines.coldfusion.minimum_version, ".")>
-					<cfelse>
-						<cfset minimum_version = ''>
-					</cfif>
-					<cfif structKeyExists(versions, val(minimum_version))>
-						<cfset arrayAppend(versions[val(minimum_version)], data.name)>
-					</cfif>
-				</cfif>
-
-				<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "lucee") AND structKeyExists(data.engines.lucee, "minimum_version") AND isNumeric(data.engines.lucee.minimum_version)>
-
-					<cfif structKeyExists(lucee_versions, val(data.engines.lucee.minimum_version))>
-						<cfset arrayAppend(lucee_versions[val(data.engines.lucee.minimum_version)], data.name)>
-					</cfif>
-
-				</cfif> --->
-				
 			</cfif>
 		</cfif>
 		
