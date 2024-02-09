@@ -15,6 +15,14 @@
             "code":"writeOutput(isNull(nullValue()));",
             "result":"YES",
             "runnable":true
-        }],
+        },
+	{
+	"title": "Use with SQL queries",
+	"description": "Set a database column to null when a submitted form does not contain the field",
+	"code": "queryExecute(\"\n    update foo set\n    staff_group_id = isDefined('form.staff_group')?form.staff_group:nullValue()\n    where bar='baz'\n\")",
+	"result": "",
+	"runnable": false
+        }
+	],
 	"links": []
 }
