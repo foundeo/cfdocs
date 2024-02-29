@@ -2,6 +2,7 @@
 	"name":"dateCompare",
 	"type":"function",
 	"syntax":"dateCompare(date1, date2 [, datePart])",
+	"member":"date1.compare(date2 [, datePart])",
 	"returns":"numeric",
 	"related":["compare","compareNoCase","dateDiff"],
 	"description":"Performs a full date/time comparison of two dates.\n `-1` if date1 is less than date2\n `0` if date1 is equal to date2\n `1` if date1 is greater than date2\n [DatePart] `yyyy`: Year; `m`: Month; `d`: Day; `h`: Hour; `n`: Minute; `s`: Second",
@@ -29,6 +30,12 @@
 			"description": "Returns 1 because date1 is greater than date 2",
 			"code": "dateCompare('12/30/2015', '12/02/2015', 'd')",
 			"result": "1"
+		},
+		{
+			"title": "Member function example",
+			"description": "",
+			"code": "d1 = createDate(\"2024\",\"01\",\"01\");\nd2 = createDate(\"2024\",\"02\",\"14\");\nd1.compare(d2)",
+			"result": "-1"
 		}
 	]
 }
