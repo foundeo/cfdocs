@@ -22,7 +22,7 @@
 		{
 			"title": "Is the current date in a leap year?",
 			"description": "",
-			"code": "date = now();\nisLeapYear = isLeapYear(date);\nwriteOutput(isLeapYear);",
+			"code": "date = now();\nisLeapYear = isLeapYear(year(date));\nwriteOutput(isLeapYear);",
 			"result": "",
 			"runnable":true
 		}
