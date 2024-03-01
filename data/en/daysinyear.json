@@ -23,7 +23,7 @@
 		{
 			"title": "Simple example",
 			"description": "Uses the daysInYear function to determine the number of days in a year",
-			"code": "<cfset result = daysInYear(now())>\n<cfoutput>#result#</cfoutput>",
+			"code": "<cfset Date = CreateDate(2023, 06, 18)>\r\n<cfset result = daysInYear(Date)>\r\n<cfoutput>#result#</cfoutput>",
 			"result": "365"
 		},
 		{
