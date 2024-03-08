@@ -113,4 +113,17 @@ Historical information about ColdFusion Versions and releases.
 * [ColdFusion 2021 What's New](https://community.adobe.com/t5/coldfusion/introducing-adobe-coldfusion-2021-release/m-p/11585468)
 * [ColdFusion 2021 New Tags and Functions](/cf2021)
 
+## Adobe ColdFusion 2023 - May 2023 (_Fortuna_)
+
+* Google Cloud Platform (GCP) - Storage, Pub/Sub, FireStore
+* Central Configuration Server (CCS)
+* SSO CF Admin Integration (SAML/LDAP) including CF Admin API updates
+* JSON Web Tokens
+* Avro & Protocal Buffer Serialization
+* New PDF Engine
+* Library Updates (Java, Solr, Hibernate)
+* Native GraphQL Query support
+* [ColdFusion 2023 What's New](https://community.adobe.com/t5/coldfusion-discussions/live-introducing-the-2023-release-of-adobe-coldfusion/td-p/13797706)
+* [ColdFusion 2023 New Tags and Functions](/cf2023)
+
 Lots of additional historical and version information can be found on the [ColdFusion Wikipedia Page](https://en.wikipedia.org/wiki/Adobe_ColdFusion)

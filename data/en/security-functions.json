@@ -1,6 +1,6 @@
 {
 	"name":"Security Functions",
 	"type":"listing",
-	"related":["binaryDecode","binaryEncode","CSRFGenerateToken","CSRFVerifyToken","decrypt","decryptBinary","encodeFor","encodeForCSS","encodeForDN","encodeForHTML","encodeForHTMLAttribute","encodeForJavaScript","encodeForLDAP","encodeForURL","encodeForXML","encodeForXMLAttribute","encodeForXPath","encrypt","encryptBinary","generatePBKDFKey","generateSecretKey","getAuthUser","getTempDirectory","getTempFile","getUserRoles","hash","hmac","isUserInAnyRole","isUserInRole","isUserLoggedIn","SSLCertificateInstall","SSLCertificateList","verifyClient"],
+	"related":["binaryDecode","binaryEncode","createEncryptedJWT","createSignedJWT","csrfGenerateToken","csrfVerifyToken","decrypt","decryptBinary","encodeFor","encodeForCSS","encodeForDN","encodeForHTML","encodeForHTMLAttribute","encodeForJavaScript","encodeForLDAP","encodeForURL","encodeForXML","encodeForXMLAttribute","encodeForXPath","encrypt","encryptBinary","generatePBKDFKey","generateSecretKey","getAuthUser","getTempDirectory","getTempFile","getUserRoles","hash","hmac","isUserInAnyRole","isUserInRole","isUserLoggedIn","SSLCertificateInstall","SSLCertificateList","verifyClient","verifyEncryptedJWT","verifySignedJWT"],
 	"description":"A listing of CFML Security Functions."
 }

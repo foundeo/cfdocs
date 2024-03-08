@@ -1,19 +1,19 @@
-<cfset dataDir = ExpandPath("../data/en")>
-<cfset guideDir = ExpandPath("../guides/en")>
+<cfset dataDir = expandPath("../data/en")>
+<cfset guideDir = expandPath("../guides/en")>
 <cfset tags = []>
 <cfset functions = []>
 <cfset guides = []>
 <cfset all = []>
 <cfset categories = []>
-<cfset versions = {4=[], "4.5"=[],5=[],6=[],7=[],8=[],9=[],10=[],11=[],2016=[],2018=[],2021=[]}>
-<cfset lucee_versions = {5=[],6=[]}>
+<cfset versions = {"4"=[], "4.5"=[],"5"=[],"6"=[],"7"=[],"8"=[],"9"=[],"10"=[],"11"=[],"2016"=[],"2018"=[],"2021"=[],"2023"=[]}>
+<cfset lucee_versions = {"5"=[],"6"=[]}>
 <cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
 	<cfset json = fileRead(filePath,"utf-8")>
 	<cftry>
 		<cfset data = deserializeJSON(json)>
 		<cfset nameKey = getFileFromPath(filePath)>
-		<cfset nameKey = LCase(Replace(nameKey, ".json", ""))>
-		<cfif StructKeyExists(data, "type")>
+		<cfset nameKey = lCase(replace(nameKey, ".json", ""))>
+		<cfif structKeyExists(data, "type")>
 			<cfif data.type IS "tag">
 				<cfset arrayAppend(tags, nameKey)>
 				<cfset arrayAppend(all, nameKey)>
@@ -54,7 +54,7 @@
 	<cfset nameKey = getFileFromPath(filePath)>
 	<cfif listLast(nameKey,".") IS "md">
 		<cftry>
-			<cfset nameKey = LCase(Replace(nameKey, ".md", ""))>
+			<cfset nameKey = lCase(replace(nameKey, ".md", ""))>
 			<cfset arrayAppend(guides, nameKey)>
 		<cfcatch>
 			<cfoutput><h2>Error Parsing File: #filePath#</h2></cfoutput>
@@ -114,9 +114,11 @@
 <p>Stopped application so it can reinit</p>
 
 <cffunction name="prettyJSON" returntype="string" output="false">
-	<cfargument name="json" type="string">
+	<cfargument name="json" type="string" required="true">
+
 	<cfset arguments.json = replace(arguments.json, "],", "],#chr(10)##chr(9)#", "all")>
 	<cfset arguments.json = replace(arguments.json, "{", "{#chr(10)##chr(9)#", "all")>
 	<cfset arguments.json = replace(arguments.json, "}", "#chr(10)#}", "all")>
+
 	<cfreturn arguments.json>
 </cffunction>
