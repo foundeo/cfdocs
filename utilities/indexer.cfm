@@ -7,23 +7,6 @@
 <cfset categories = []>
 <cfset versions = {"4"=[], "4.5"=[],"5"=[],"6"=[],"7"=[],"8"=[],"9"=[],"10"=[],"11"=[],"2016"=[],"2018"=[],"2021"=[],"2023"=[]}>
 <cfset lucee_versions = {"5"=[],"6"=[]}>
-
-<cfloop array="#structKeyArray(versions)#" index="v">
-	<cfset vData = {"name"="ColdFusion #v# New Functions and Tags","type"="listing","description"="List of tags and functions added in ColdFusion #v#", "related"=versions[v]}>
-	<cfset arraySort(vData.related, "text")>
-	<cfset fileName = "cf#reReplace(v, "[^0-9]", "", "ALL")#.json">
-	<cfset fileWrite("#dataDir#/#fileName#", prettyJSON(serializeJSON(vData), "utf-8"))>
-	<p>Wrote <cfoutput>#fileName#</cfoutput></p>
-</cfloop>
-
-<cfloop array="#structKeyArray(lucee_versions)#" index="v">
-	<cfset vData = {"name"="Lucee #v# New Functions and Tags","type"="listing","description"="List of tags and functions added in Lucee #v#", "related"=lucee_versions[v]}>
-	<cfset arraySort(vData.related, "text")>
-	<cfset fileName = "lucee#reReplace(v, "[^0-9]", "", "ALL")#.json">
-	<cfset fileWrite("#dataDir#/#fileName#", prettyJSON(serializeJSON(vData), "utf-8"))>
-	<p>Wrote <cfoutput>#fileName#</cfoutput></p>
-</cfloop>
-
 <cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
 	<cfset json = fileRead(filePath,"utf-8")>
 	<cftry>
@@ -112,6 +95,22 @@
 <cfset gData.related = guides>
 <cfset fileWrite(dataDir & "/guides.json", prettyJSON(serializeJSON(gData), "utf-8"))>
 <p>Wrote guides.json</p>
+
+<cfloop array="#structKeyArray(versions)#" index="v">
+	<cfset vData = {"name"="ColdFusion #v# New Functions and Tags","type"="listing","description"="List of tags and functions added in ColdFusion #v#", "related"=versions[v]}>
+	<cfset arraySort(vData.related, "text")>
+	<cfset fileName = "cf#reReplace(v, "[^0-9]", "", "ALL")#.json">
+	<cfset fileWrite("#dataDir#/#fileName#", prettyJSON(serializeJSON(vData), "utf-8"))>
+	<p>Wrote <cfoutput>#fileName#</cfoutput></p>
+</cfloop>
+
+<cfloop array="#structKeyArray(lucee_versions)#" index="v">
+	<cfset vData = {"name"="Lucee #v# New Functions and Tags","type"="listing","description"="List of tags and functions added in Lucee #v#", "related"=lucee_versions[v]}>
+	<cfset arraySort(vData.related, "text")>
+	<cfset fileName = "lucee#reReplace(v, "[^0-9]", "", "ALL")#.json">
+	<cfset fileWrite("#dataDir#/#fileName#", prettyJSON(serializeJSON(vData), "utf-8"))>
+	<p>Wrote <cfoutput>#fileName#</cfoutput></p>
+</cfloop>
 
 <cfset applicationStop()>
 <p>Stopped application so it can reinit</p>
