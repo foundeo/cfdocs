@@ -110,7 +110,15 @@
 
 `cfwindow`
 
+`createEncryptedJWT` - Minimum Version: 2023
+
+`createSignedJWT` - Minimum Version: 2023
+
 `deserialize` - Minimum Version: 11
+
+`deserializeAvro` - Minimum Version: 2023
+
+`deserializeProtobuf` - Minimum Version: 2023
 
 `deserializeXML` - Minimum Version: 11
 
@@ -120,11 +128,15 @@
 
 `generateBCryptHash` - Minimum Version: 2021
 
+`generateGraphQLModels` - Minimum Version: 2023
+
 `generateSCryptHash` - Minimum Version: 2021
 
 `getException`
 
 `getGatewayHelper`
+
+`getGraphQLClient` - Minimum Version: 2023
 
 `getPrinterInfo`
 
@@ -190,6 +202,10 @@
 
 `removeCachedQuery` - Minimum Version: 10
 
+`serializeAvro` - Minimum Version: 2023
+
+`serializeProtobuf` - Minimum Version: 2023
+
 `serializeXML` - Minimum Version: 11
 
 `sessionGetMetadata` - Minimum Version: 10
@@ -220,7 +236,11 @@
 
 `verifyBCryptHash` - Minimum Version: 2021
 
+`verifyEncryptedJWT` - Minimum Version: 2023
+
 `verifySCryptHash` - Minimum Version: 2021
+
+`verifySignedJWT` - Minimum Version: 2023
 
 `writeBody`
 
@@ -231,3 +251,11 @@
 `wsPublish` - Minimum Version: 10
 
 `wsSendMessage` - Minimum Version: 10
+
+`xmlClear` - Minimum Version: 2023
+
+`xmlDeleteAt` - Minimum Version: 2023
+
+`xmlHasChild` - Minimum Version: 2023
+
+`xmlUpdate` - Minimum Version: 2023
