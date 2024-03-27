@@ -14,6 +14,13 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arraynew.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraynew"}
 	},
+	"links": [
+		{
+			"title":"Adobe CF2016 Performance Whitepaper",
+			"url":"https://web.archive.org/web/20211021051748/http://wwwimages.adobe.com/content/dam/acom/en/products/coldfusion/pdfs/cf2016/CF2016_Performance.pdf",
+			"description":"According to this document: Unsynchronized arrays are about 93% faster due to lock avoidance"
+		}
+	],
 	"examples": [
 		{
 			"title": "Create the One dimensional array",
