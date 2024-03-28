@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arraySplice(array, index[, elementCountForRemoval, replacements])",
 	"member":"someArray.splice(index[, elementCountForRemoval, replacements])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"splice"
+	},
 	"returns":"array",
 	"related":[],
 	"description":"Modifies an array by removing elements and adding new elements. It starts from the index, removes as many elements as specified by elementCountForRemoval, and puts the replacements starting from index position.",

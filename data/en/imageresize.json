@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageResize(name, width, height, interpolation, blurfactor)",
 	"member":"someImage.resize(width, height, interpolation, blurfactor)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"resize"
+	},
 	"returns":"void",
 	"related":["imageCrop","imageScaleTofit"],
 	"description":" Resizes a ColdFusion image.",

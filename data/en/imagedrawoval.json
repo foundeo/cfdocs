@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageDrawOval(name, x, y, width, height [, filled])",
 	"member":"someImage.drawOval(x, y, width, height [, filled])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"drawOval"
+	},
 	"returns":"void",
 	"related":[],
 	"description":" Draws an oval.",

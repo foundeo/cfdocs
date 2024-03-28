@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageScaleTofit(name, fitWidth, fitHeight [, interpolation] [, blurFactor])",
 	"member":"someImage.scaleTofit(fitWidth, fitHeight [, interpolation] [, blurFactor])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"scaleTofit"
+	},
 	"returns":"void",
 	"related":["imageResize"],
 	"description":"Creates a resized image with the aspect ratio maintained.",

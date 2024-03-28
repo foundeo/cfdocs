@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"reReplaceNoCase(String, reg_expression, substring[, scope])",
 	"member":"string.reReplaceNoCase(reg_expression, substring[, scope])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"reReplaceNoCase"
+	},
 	"returns":"string",
 	"related":["Replace", "ReplaceList","ReplaceNoCase","REReplace"],
 	"description":"Uses a regular expression to search a string for a string\n pattern and replace it with another. The search is\n case-insensitive.",

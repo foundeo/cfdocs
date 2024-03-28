@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayFilter(array, function(item [,index, array]){} [, parallel] [, maxThreads])",
 	"member":"someArray.filter(function(item [,index, array]){} [, parallel] [, maxThreads])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"filter"
+	},
 	"returns":"array",
 	"related":["arrayEach", "arraySome","ArrayMap","arrayReduce"],
 	"description":"Used to filter an array to items for which the closure function returns true.",

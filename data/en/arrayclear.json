@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayClear(array)",
 	"member":"someArray.clear()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"clear"
+	},
 	"returns":"boolean",
 	"related":["ArrayDelete","ArrayDeleteAt"],
 	"description":" Removes all elements from an array.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageWriteBase64(name, destination, format [, inHTMLFormat] [, overwrite])",
 	"member":"someImage.writeBase64(destination, format [, inHTMLFormat] [, overwrite])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"writeBase64"
+	},
 	"returns":"void",
 	"related":["cfimage", "ImageReadBase64", "IsImageFile"],
 	"description":" Writes Base64 images to the specified filename and destination.",

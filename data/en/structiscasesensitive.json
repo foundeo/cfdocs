@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"structIsCaseSensitive(inputStruct)",
 	"member":"inputStruct.isCaseSensitive",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"struct",
+   		 "name":"isCaseSensitive"
+	},
 	"returns":"boolean",
 	"related":[],
 	"description":"Determines whether a struct is case-sensitive.",

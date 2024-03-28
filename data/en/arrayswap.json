@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arraySwap(array, position1, position2)",
 	"member":"someArray.swap(position1, position2)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"swap"
+	},
 	"returns":"boolean",
 	"related":["arraySet","arrayInsertAt","arrayReverse"],
 	"description":"Swaps array values of an array at specified positions. This function is more efficient than multiple cfset tags",

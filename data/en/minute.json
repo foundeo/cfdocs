@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"minute(date)",
 	"member":"date.minute()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"date",
+   		 "name":"minute"
+	},
 	"returns":"numeric",
 	"related":["hour","second","month","quarter","week","year"],
 	"description":" Extracts the minute value from a date/time object.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageRotateDrawingAxis(name, angle [, x] [, y])",
 	"member":"someImage.rotateDrawingAxis(angle [, x] [, y])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"rotateDrawingAxis"
+	},
 	"returns":"void",
 	"related":[],
 	"description":" Rotates all subsequent drawing on a ColdFusion image at a specified point by a specified angle.",

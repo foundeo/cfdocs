@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"dateConvert(conversionType, date)",
 	"member":"date.convert(conversionType)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"date",
+   		 "name":"convert"
+	},
 	"returns":"date",
 	"related":["getTimeZoneInfo","createDateTime"],
 	"description":"Converts local time to Coordinated Universal Time (UTC), or UTC to local time. The function uses the daylight savings settings in the executing computer to compute daylight savings time, if required.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageAddBorder(name, thickness [, color] [, bordertype])",
 	"member":"someImage.addBorder(thickness [, color] [, bordertype])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"addBorder"
+	},
 	"returns":"void",
 	"related":[],
 	"description":" Adds a rectangular border around the outside edge of a ColdFusion image.",

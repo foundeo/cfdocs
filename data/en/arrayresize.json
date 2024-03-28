@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayResize(array, size)",
 	"member":"someArray.resize(size)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"resize"
+	},
 	"returns":"boolean",
 	"related":[],
 	"description":"Resets an array to a specified minimum number of elements.\n This can improve performance, if used to size an array to its\n expected maximum. For more than 500 elements, use arrayResize\n immediately after using the ArrayNew tag.",

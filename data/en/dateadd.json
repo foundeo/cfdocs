@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"dateAdd(datepart, number, date)",
 	"member":"date.add(datepart, number)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"date",
+   		 "name":"add"
+	},
 	"returns":"date",
 	"related":["dateConvert","datePart","createTimeSpan","createDate", "dateDiff"],
 	"description":"Adds units of time to a date.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"queryAddRow(query [, number/row(s)])",
 	"member":"someQuery.addRow([number/row(s)])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"query",
+   		 "name":"addRow"
+	},
 	"returns":"numeric",
 	"related":["QueryAddColumn", "QuerySetCell", "QueryNew"],
 	"description":" Adds a specified number of empty rows to a query.",

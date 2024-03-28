@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayAppend(array, value [, merge])",
 	"member":"someArray.append(value [, merge])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"append"
+	},
 	"returns":"boolean",
 	"related":["arrayprepend"],
 	"description":"Appends an element to the end of an array.",

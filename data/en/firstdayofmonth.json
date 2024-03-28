@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"firstDayOfMonth(date)",
 	"member":"date.firstDayOfMonth()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"date",
+   		 "name":"firstDayOfMonth"
+	},
 	"returns":"numeric",
 	"related":["day", "dayOfWeek", "dayOfWeekAsString", "dayOfYear", "daysInMonth", "daysInYear"],
 	"description":"Determines the ordinal (day number, in the year) of the first day of the month in which a given date falls.",

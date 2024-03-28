@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"replace(string, substring1, obj [, scope])",
 	"member":"string.replace(substring1, obj[, scope])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"replace"
+	},
 	"returns":"string",
 	"related":["replaceNoCase","replaceList","reReplace"],
 	"description":"Replaces occurrences of substring1 in a string with obj, in a specified scope. The search is case-sensitive. Function returns original string with replacements made.",

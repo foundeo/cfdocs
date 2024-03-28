@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageDrawLines(name, xcords, ycords [, isPolygon] [, filled])",
 	"member":"someImage.drawLines(xcords, ycords [, isPolygon] [, filled])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"drawLines"
+	},
 	"returns":"void",
 	"related":["imageDrawLine"],
 	"description":"Draws a sequence of connected lines defined by arrays of x and y coordinates.",

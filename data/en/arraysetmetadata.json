@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arraySetMetadata(array, metadata)",
 	"member":"someArray.setMetadata(metadata)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"setMetadata"
+	},
 	"returns":"void",
 	"related":["arrayGetMetadata","structGetMetadata","structSetMetadata"],
 	"description":"Sets metadata for items of an array. Useful when using serializeJSON with ambiguous data.",

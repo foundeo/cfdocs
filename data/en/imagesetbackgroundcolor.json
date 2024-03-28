@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageSetBackgroundColor(name, color)",
 	"member":"someImage.setBackgroundColor(color)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"setBackgroundColor"
+	},
 	"returns":"void",
 	"related":["ImageClearRect", "ImageSetAntialiasing", "IsImageFile"],
 	"description":" Sets the background color for the ColdFusion image. The background color is used for clearing a region. Setting the background color only affects the subsequent imageClearRect calls",

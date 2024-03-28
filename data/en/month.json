@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"month(date)",
 	"member":"date.month()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"date",
+   		 "name":"month"
+	},
 	"returns":"numeric",
 	"related":["hour","minute","second","quarter","week","year"],
 	"description":" Extracts the month value from a date/time object.",

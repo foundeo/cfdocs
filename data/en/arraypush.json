@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayPush(array, value)",
 	"member":"array.push(value)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"push"
+	},
 	"returns":"numeric",
 	"related":["ArrayPop"],
 	"description":"Adds an element or an object to the end of an array, then returns the size of the modified array.",

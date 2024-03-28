@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayMap(array, function(item [,index, array]){} [, parallel] [, maxThreads])",
 	"member":"someArray.map(function(item [,index, array]){} [, parallel] [, maxThreads])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"map"
+	},
 	"returns":"array",
 	"related":["arrayReduce"],
 	"description":"Iterates over every entry of the array and calls the closure function to work on the element of the array. The returned value will be set at the same index in a new array and the new array will be returned",

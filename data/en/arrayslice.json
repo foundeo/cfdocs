@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arraySlice(array, offset, length)",
 	"member":"someArray.slice(offset, length)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"slice"
+	},
 	"returns":"array",
 	"related":["ArrayFind","ArrayFindNoCase","ArrayMap","ArrayReduce","ArrayResize","ArraySort","ArraySwap","ArrayToList"],
 	"description":"Returns a new array, from the start position up to the count of elements.",

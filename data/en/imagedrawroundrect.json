@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageDrawRoundRect(name, x, y, width, height, arcwidth, archeight [, filled])",
 	"member":"someImage.drawRoundRect(x, y, width, height, arcwidth, archeight [, filled])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"drawRoundRect"
+	},
 	"returns":"void",
 	"related":["imageDrawBeveledRect","imageDrawRect","imageClearRect"],
 	"description":" Draws a rectangle with rounded corners.",

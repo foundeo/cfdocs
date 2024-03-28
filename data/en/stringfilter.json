@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"stringFilter(string,callback)",
 	"member":"string.filter(callback)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"filter"
+	},
 	"returns":"string",
 	"related":["StringEach","StringEvery","StringMap","StringReduce"],
 	"description":"This function uses the callback to filter the elements in a string.",

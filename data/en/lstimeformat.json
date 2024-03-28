@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"lsTimeFormat(time [, mask, locale])",
 	"member":"time.lsTimeFormat([mask])",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"lsTimeFormat"
+	},
 	"returns":"string",
 	"related":["lsDateFormat", "timeFormat"],
 	"description":"Formats the time part of a date/time string into a string in a locale-specific format.\n [mask - quicky]\n h,hh,H,HH: Hours; m,mm: Minutes; s,ss: Seconds;\n l: Milliseconds; t: A or P; tt: AM or PM\n \"short\" = h:mm tt; \"medium\" = h:mm:ss tt",

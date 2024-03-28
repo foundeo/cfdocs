@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"daysInMonth(date)",
 	"member":"date.daysInMonth()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"date",
+   		 "name":"daysInMonth"
+	},
 	"returns":"numeric",
 	"related":["day", "dayOfWeek", "dayOfWeekAsString", "dayOfYear", "daysInYear", "firstDayOfMonth"],
 	"description":" Determines the number of days in a month.",

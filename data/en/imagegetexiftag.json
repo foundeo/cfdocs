@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageGetEXIFTag(name, tagName)",
 	"member":"someImage.getEXIFTag(tagName)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"getEXIFTag"
+	},
 	"returns":"string",
 	"related":["imageGetEXIFMetadata"],
 	"description":" Retrieves the specified EXIF tag in an image.",

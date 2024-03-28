@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayFindAllNoCase(array, value or callback)",
 	"member":"someArray.findAllNoCase(value or callback)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"findAllNoCase"
+	},
 	"returns":"array",
 	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
 	"description":"Searches an array for all positions of a specified value. The function searches for simple values such as strings and numbers or for complex objects such as structures. When the second parameter is a simple value, string searches are case-sensitive",

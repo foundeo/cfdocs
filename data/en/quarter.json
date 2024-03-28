@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"quarter(date)",
 	"member":"date.quarter()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"date",
+   		 "name":"quarter"
+	},
 	"returns":"numeric",
 	"related":["hour","minute","second","month","week","year"],
 	"description":" Calculates the quarter of the year in which a date falls.",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"querySetRow(query, [rowNumber,] rowData)",
 	"member":"someQuery.setRow([rowNumber,] rowData)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"query",
+   		 "name":"setRow"
+	},
 	"returns":"boolean",
 	"related":["queryAddRow", "querySetCell", "queryNew"],
 	"description":"Adds a row to a query, either by struct or array",

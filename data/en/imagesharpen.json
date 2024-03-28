@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageSharpen(name [, gain])",
 	"member":"someImage.sharpen(gain)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"sharpen"
+	},
 	"returns":"void",
 	"related":["ImageBlur", "ImageSetAntialiasing", "IsImageFile"],
 	"description":" Sharpens a ColdFusion image by using the unsharp mask filter.",

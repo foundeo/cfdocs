@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageGetBlob(source)",
 	"member":"someImage.getBlob()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"getBlob"
+	},
 	"returns":"binary",
 	"related":["cfimage", "ImageGetBufferedImage", "ImageGetEXIFTag", "ImageGetHeight", "ImageGetIPTCTag", "ImageGetWidth", "ImageInfo", "IsImage"],
 	"description":"Retrieves the bytes of the underlying image. The bytes are in the same image format as the source image.",

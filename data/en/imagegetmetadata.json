@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageGetMetadata(image)",
 	"member":"someImage.getMetadata()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"getMetadata"
+	},
 	"returns":"struct",
 	"related":[],
 	"description":"A structure containing information about the image.",

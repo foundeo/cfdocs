@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayInsertAt(array, position, value)",
 	"member":"someArray.insertAt(position, value)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"insertAt"
+	},
 	"returns":"boolean",
 	"related":["arrayappend","arrayprepend","arraydelete","arraydeleteat","arrayset"],
 	"description":"Inserts a value at the specified position in the array. If the element is inserted before the end of the array, ColdFusion shifts the positions of all elements with a higher index to make room.",

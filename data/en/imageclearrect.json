@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageClearRect(name, x, y, width, height)",
 	"member":"someImage.clearRect(x, y, width, height)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"clearRect"
+	},
 	"returns":"void",
 	"related":["imageDrawBeveledRect","imageDrawRect","imageDrawRoundRect"],
 	"description":" Clears the specified rectangle by filling it with the background color of the current drawing surface.",

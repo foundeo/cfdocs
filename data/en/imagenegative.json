@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageNegative(name)",
 	"member":"someImage.negative()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"negative"
+	},
 	"returns":"void",
 	"related":["ImageBlur", "ImageGrayscale", "ImageSetAntialiasing", "ImageSharpen", "IsImageFile"],
 	"description":"Inverts the pixel values of a ColdFusion image.",
