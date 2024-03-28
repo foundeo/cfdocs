@@ -11,7 +11,7 @@
 		{"name":"value","description":"The filter value for all filters that do not take a date or time range.\n Cannot be used with the from and to attributes.\n If the name attribute requires this attribute, ColdFusion generates an error\n if it has an empty or null value. (optional)","required":false,"default":"","type":"any","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexchangefilter.html"}
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexchangefilter.html"}
 	},
 	"links": []
 }

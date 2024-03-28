@@ -16,29 +16,33 @@
 
 `cf_socialplugin` - Minimum Version: 11
 
-`cfcalendar`
+`cfcalendar` - Minimum Version: 7
 
 `cfclient` - Minimum Version: 11
 
 `cfclientsettings` - Minimum Version: 11
 
-`cfexchangecalendar`
+`cfexchangecalendar` - Minimum Version: 8
 
-`cfexchangeconnection`
+`cfexchangeconnection` - Minimum Version: 8
 
-`cfexchangecontact`
+`cfexchangecontact` - Minimum Version: 8
 
-`cfexchangefilter`
+`cfexchangeconversation` - Minimum Version: 10
 
-`cfexchangemail`
+`cfexchangefilter` - Minimum Version: 8
 
-`cfexchangetask`
+`cfexchangefolder` - Minimum Version: 10
 
-`cffileupload`
+`cfexchangemail` - Minimum Version: 8
 
-`cfformgroup`
+`cfexchangetask` - Minimum Version: 8
 
-`cfformitem`
+`cffileupload` - Minimum Version: 9
+
+`cfformgroup` - Minimum Version: 7
+
+`cfformitem` - Minimum Version: 7
 
 `cfgrid` - Minimum Version: 3
 
@@ -54,61 +58,63 @@
 
 `cfimapfilter` - Minimum Version: 11
 
-`cflayout`
+`cfjava` - Minimum Version: 2021
 
-`cflayoutarea`
+`cflayout` - Minimum Version: 8
 
-`cfmap`
+`cflayoutarea` - Minimum Version: 8
 
-`cfmapitem`
+`cfmap` - Minimum Version: 9
 
-`cfmediaplayer`
+`cfmapitem` - Minimum Version: 9
 
-`cfmenu`
+`cfmediaplayer` - Minimum Version: 9
 
-`cfmenuitem`
+`cfmenu` - Minimum Version: 8
 
-`cfmessagebox`
+`cfmenuitem` - Minimum Version: 8
 
-`cfntauthenticate` - Minimum Version: 4
+`cfmessagebox` - Minimum Version: 9
+
+`cfntauthenticate` - Minimum Version: 7
 
 `cfoauth` - Minimum Version: 11
 
-`cfpdfform`
+`cfpdfform` - Minimum Version: 8
 
-`cfpdfformparam`
+`cfpdfformparam` - Minimum Version: 8
 
-`cfpdfsubform`
+`cfpdfsubform` - Minimum Version: 8
 
-`cfpod`
+`cfpod` - Minimum Version: 8
 
-`cfpresentation`
+`cfpresentation` - Minimum Version: 8
 
-`cfpresentationslide`
+`cfpresentationslide` - Minimum Version: 8
 
-`cfpresenter`
+`cfpresenter` - Minimum Version: 8
 
-`cfprint`
+`cfprint` - Minimum Version: 8
 
-`cfprogressbar`
+`cfprogressbar` - Minimum Version: 9
 
 `cfreport` - Minimum Version: 2
 
-`cfreportparam`
+`cfreportparam` - Minimum Version: 7
 
 `cfservlet` - Minimum Version: 4.5
 
 `cfservletparam` - Minimum Version: 4.5
 
-`cfsharepoint`
+`cfsharepoint` - Minimum Version: 9
 
 `cfsprydataset` - Minimum Version: 8
 
-`cftooltip`
+`cftooltip` - Minimum Version: 8
 
 `cfwebsocket` - Minimum Version: 10
 
-`cfwindow`
+`cfwindow` - Minimum Version: 8
 
 `createEncryptedJWT` - Minimum Version: 2023
 

@@ -86,3 +86,4 @@ Most JEE/CFML servers also are configured to pick up any jar files placed in `WE
 
 * [Enhanced Java Integration in ColdFusion 10](https://help.adobe.com/en_US/ColdFusion/10.0/Developing/WSe61e35da8d318518-106e125d1353e804331-8000.html)
 * [JavaLoader - dynamic classloader for CFML](https://github.com/markmandel/JavaLoader)
+* [Java integration in ColdFusion](https://helpx.adobe.com/coldfusion/using/java-integration-coldfusion.html)

@@ -10,7 +10,7 @@
 		{"name":"roles","description":"A comma-delimited list of role identifiers.\n\n CFML processes spaces in a list element as part of\n the element.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cfloginuser.html"},
+		"coldfusion": {"minimum_version":"6", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cfloginuser.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/loginuser.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfloginuser"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfloginuser"}

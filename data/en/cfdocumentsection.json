@@ -18,7 +18,7 @@
 		{"name":"useragent","description":"Text to put in the HTTP User-Agent request header field. Used to identify the request client software.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfdocumentsection.html"},
+		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfdocumentsection.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/documentsection.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdocumentsection"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdocumentsection"}
