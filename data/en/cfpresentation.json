@@ -33,7 +33,7 @@
 		{"name": "format", "description": "Specifies file format for conversion. The `flashpaper` format has been deprecated since CF11+", "required": false, "default": "", "type": "string", "values": ["html", "ppt"]}
 	],
 	"engines": {
-		"coldfusion": { "minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpresentation.html" }
+		"coldfusion": { "minimum_version": "8", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpresentation.html" }
 	},
 	"links": [],
 	"example": [{
