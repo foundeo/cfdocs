@@ -4,16 +4,12 @@
 	"syntax":"getWriteableImageFormats()",
 	"returns":"string",
 	"related":[],
-	"description":" No Help Available",
-	"params": [
-	],
+	"description":"Returns a list of image formats that ColdFusion can write on the operating system where ColdFusion is deployed.",
+	"params": [],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getwriteableimageformats.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getwriteableimageformats.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/getwriteableimageformats.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getwriteableimageformats"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

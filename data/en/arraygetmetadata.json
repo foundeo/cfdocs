@@ -12,7 +12,7 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"2016.0.2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraygetmetadata.html"}
 	},
-  	"links": [],
+	"links": [],
 	"examples": [
 		{
 			"title": "Simple Example",
@@ -25,6 +25,13 @@
 			"description": "",
 			"code": "// Create an array\narrayList = [\"apple\", \"pineapple\", \"mango\"];\n\n// Fetch meta data\ndata = arrayList.getMetadata();\n\n// Print array type\nwriteOutput(data.type);",
 			"result": "synchronized"
+		},
+		{
+			"title":"Dump Metadata of Typed Array (Member syntax)",
+			"description":"CF2018+ Return struct has a new key called `dimensions` and can also have a defined datatype. Supported datatypes are String, Numeric, Boolean, Date, Array, Struct, Query, Component, [Component name], Binary, and Function.",
+			"code":"arr = arrayNew['String'](1);\nwriteOutput(serializeJson(arr.getMetadata()));",
+			"result":"{\"dimensions\":1,\"datatype\":\"String\",\"type\":\"synchronized\"}",
+			"runnable": true
 		}
 	]
 }

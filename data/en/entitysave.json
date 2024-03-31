@@ -10,7 +10,7 @@
 		{"name":"forceInsert","description":"If true, then ColdFusion always tries to insert the entity as a new record.","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entitysave.html"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entitysave.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/entitysave.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entitysave"}
 	},
@@ -19,7 +19,7 @@
 		{
 			"title":"Save a new ORM entity",
 			"description":"Use entitySave to save a newly created entity.",
-			"code":"var company = entityNew(\"Company\");\r\ncompany.setName(form.companyName);\r\ncompany.setIndustry(form.industry);\r\ncompany.setEmployees(form.employeeCount);\r\ncompany.setWebsite(form.companyWebsite);\r\nentitySave(company);",
+			"code":"var company = entityNew(\"Company\");\ncompany.setName(form.companyName);\ncompany.setIndustry(form.industry);\ncompany.setEmployees(form.employeeCount);\ncompany.setWebsite(form.companyWebsite);\nentitySave(company);",
 			"result":"",
 			"runnable":false
 		}

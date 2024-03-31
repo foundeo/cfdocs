@@ -1,25 +1,26 @@
 {
 	"name":"isIPV6",
 	"type":"function",
-	"syntax":"isIPV6(IP)",
+	"syntax":"isIPV6(value)",
 	"returns":"boolean",
 	"related":["isIPInRange","getLocalhostIP"],
-	"description":" checks if given IP is of IPV6 format",
+	"description":"Checks if given IP is of IPV6 format",
 	"params": [
-		{"name":"IP","description":"ip address to check","required":true,"default":"","type":"string","values":[]}
+		{"name":"value","description":"IP address to check","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isipv6.html"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isipv6.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isipv6.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isipv6"}
 	},
 	"links": [],
 	"examples": [
 		{
-			"title": "isIPV6 Example",
+			"title":"isIPV6 Example",
 			"description":"",
-			"code":" Address = \"127.0.0.1\";\r\n writeOutput(isIPV6(Address)) ;",
-			"result":"YES"
+			"code":"isIPV6(\"127.0.0.1\");",
+			"result":true,
+			"runnable":true
 		}
 	]
 }
