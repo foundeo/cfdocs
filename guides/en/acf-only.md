@@ -140,11 +140,11 @@
 
 `getException`
 
-`getGatewayHelper`
+`getGatewayHelper` - Minimum Version: 7
 
 `getGraphQLClient` - Minimum Version: 2023
 
-`getPrinterInfo`
+`getPrinterInfo` - Minimum Version: 8
 
 `getSafeHTML` - Minimum Version: 11
 
@@ -160,7 +160,9 @@
 
 `invalidateOauthAccesstoken` - Minimum Version: 11
 
-`isDDX`
+`isDateObject` - Minimum Version: 2016.0.3
+
+`isDDX` - Minimum Version: 8
 
 `isFileObject` - Minimum Version: 11
 
@@ -170,7 +172,7 @@
 
 `isSafeHTML` - Minimum Version: 11
 
-`isSpreadsheetFile`
+`isSpreadsheetFile` - Minimum Version: 9
 
 `isValidOauthAccesstoken` - Minimum Version: 11
 
