@@ -58,3 +58,8 @@ Introduced with ColdFusion 2021. It defaults to `false` but when set to `true` t
 ## `-Dcoldfusion.datemask.useDasdayofmonth`
 
 Introduced with ColdFusion 2021 Update 1. It defaults to `false` but when set to `true` and the mask contains `D` (uppercase D), the mask treats the value as `d` (lowercase d), day of the month. Hence, `dateformat(now(), "mm-D-yyyy")` is the same as `dateformat(now(), "mm-d-yyyy")` when flag is set to `true`. See [Adobe article](https://helpx.adobe.com/coldfusion/kb/dateformat-function-coldfusion-2021.html) for more details.
+
+## `-Dcoldfusion.searchimplicitscopes`
+
+Introduced in March 2024 via ColdFusion 2021 Update 13 and ColdFusion 2023 Update 7, and on these versions defaults to `false`. When set to `true` unscoped variable resolution will traverse through all the implicit scopes such as `form`, `url`, `cgi`, `cookie`, when `false` the scope needs to be specified. This change was introduced as part of a security hotfix: [APSB24-14](https://helpx.adobe.com/security/products/coldfusion/apsb24-14.html) and Adobe recommends keeping it to `false`. More [info about searchImplicitScopes here](https://www.petefreitag.com/blog/cf-searchimplicitscopes/)
+
