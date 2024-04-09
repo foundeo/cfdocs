@@ -63,3 +63,9 @@ Introduced with ColdFusion 2021 Update 1. It defaults to `false` but when set to
 
 Introduced in March 2024 via ColdFusion 2021 Update 13 and ColdFusion 2023 Update 7, and on these versions defaults to `false`. When set to `true` unscoped variable resolution will traverse through all the implicit scopes such as `form`, `url`, `cgi`, `cookie`, when `false` the scope needs to be specified. This change was introduced as part of a security hotfix: [APSB24-14](https://helpx.adobe.com/security/products/coldfusion/apsb24-14.html) and Adobe recommends keeping it to `false`. More [info about searchImplicitScopes here](https://www.petefreitag.com/blog/cf-searchimplicitscopes/)
 
+# Standard Java System Properties
+
+The following system properties apply to the java runtime:
+
+* [Java Networking System Properties](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/doc-files/net-properties.html)
+* [Java Crypto Related System and Security Properties](https://www.java.com/en/configure_crypto.html) 
