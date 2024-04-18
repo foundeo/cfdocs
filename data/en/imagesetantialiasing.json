@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageSetAntialiasing(image [, antialias])",
 	"member":"someImage.setAntialiasing(antialias)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"void",
+   		 "type":"image",
+   		 "name":"setAntialiasing"
+	},
 	"returns":"void",
 	"related":["imageRotateDrawingAxis", "imageSetBackgroundColor", "imageSetDrawingColor", "imageSetDrawingStroke", "imageSetDrawingTransparency", "isImageFile"],
 	"description":"Switches antialiasing on or off in rendered graphics.",

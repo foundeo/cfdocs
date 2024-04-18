@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"structToSorted(structure, callback)\nstructToSorted(structure, sorttype, sortorder, localeSensitive)",
 	"member":"structure.toSorted(callback)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"struct",
+   		 "name":"toSorted"
+	},
 	"returns": "struct",
 	"related":["structSort"],
 	"description":"Converts a struct to an ordered one",

@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayShift(array)",
 	"member":"array.shift()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"shift"
+	},
 	"returns":"any",
 	"related":["arrayUnshift"],
 	"description":"Removes the first element from an array and returns the removed element. This method changes the length of the array. If used on an empty array, an exception will be thrown.",
