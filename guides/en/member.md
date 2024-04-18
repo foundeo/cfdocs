@@ -25,28 +25,40 @@ The following example depicts the new usage of member functions:
     myArray.sort("ASC");
 
     // The member way
-    var myProductObject = createObject("java", "myJavaclass");
-    myjavaList = myProductObject.getProductList();
-    myjavaList.add("newProduct"); // Java API
+    var myProductObject = createObject("java", "myJavaClass");
+    myJavaList = myProductObject.getProductList();
+    myJavaList.add("newProduct"); // Java API
 
-    myjavaList.append("newProduct"); // CF API
-    myjavaList.sort("ASC");
+    myJavaList.append("newProduct"); // CF API
+    myJavaList.sort("ASC");
+
+Member Functions can also be chained (on Lucee or CF2018+), for example:
+
+    s = "the";
+    s = s.listAppend("quick brown fox", " ")
+         .listAppend("jumps over the lazy dog", " ")
+         .uCase()
+         .reverse();
+
+result: `GOD YZAL EHT REVO SPMUJ XOF NWORB KCIUQ EHT`
 
 Member functions for the following data types are supported:
 
-- Array
-- String
-- List
-- Struct
-- Date
-- Spreadsheet
-- XML
-- Query
-- Image
+- [Array](#array-member-functions)
+- [String](#string-member-functions)
+- [List](#list-member-functions)
+- [Struct](#struct-member-functions)
+- [Date](#date-member-functions)
+- [Image](#image-member-functions)
+- [Spreadsheet](#spreadsheet-member-functions)
+- [XML](#xml-member-functions)
+- [Query](#query-member-functions)
+- [Numeric](#numeric-member-functions)
 
 CF 2016 changed the return type for append member functions:
-`anystruct.append()` returns the appended structure
-`anyarray.append()` returns the appended array
+
+- `someArray.append()` now returns the appended array
+- `someStruct.append()` now returns the appended structure
 
 ## Array member functions
 
@@ -258,6 +270,7 @@ CF 2016 changed the return type for append member functions:
 - hour : `someVar.hour()`
 - lsDateFormat : `someVar.lsDateFormat()`
 - lsTimeFormat : `someVar.lsTimeFormat()`
+- millisecond : `someVar.millisecond()`
 - minute : `someVar.minute()`
 - month : `someVar.month()`
 - quarter : `someVar.quarter()`
@@ -416,49 +429,53 @@ When using Query.cfc, you get your results from the execution by using:
 
 - `someVar.getResult()`
 
-## Display and Formatting member functions
-
-- booleanFormat : `someVal.booleanFormat()`
-- yesNoFormat : `someVal.yesNoFormat()`
-
 ## Numeric member functions
 
 - abs : `someVar.abs()`
-- aCos : `someVar.aCos()`
-- aSin : `someVar.aSin()`
+- acos : `someVar.aCos()`
+- asin : `someVar.aSin()`
 - atn : `someVar.atn()`
-- bitAnd : `someVar.bitAnd(number2)`
-- bitMaskClear : `someVar.bitMaskClear(start, length)`
-- bitMaskRead : `someVar.bitMaskRead(start, length)`
-- bitMaskSet : `someVar.bitMaskSet(mask, start, length)`
+- bitAnd : `someVar.bitAnd()`
+- bitMaskClear : `someVar.bitMaskClear()`
+- bitMaskRead : `someVar.bitMaskRead()`
+- bitMaskSet : `someVar.bitMaskSet()`
 - bitNOT : `someVar.bitNot()`
-- bitOR : `someVar.bitOr(number2)`
-- bitSHLN : `someVar.bitSHLN(count)`
-- bitSHRN : `someVar.bitSHRN(count)`
-- bitXOR : `someVar.bitXor(number2)`
+- bitOR : `someVar.bitOr()`
+- bitSHLN : `someVar.bitSHLN()`
+- bitSHRN : `someVar.bitSHRN()`
+- bitXOR : `someVar.bitXor()`
 - ceiling : `someVar.ceiling()`
 - cos : `someVar.cos()`
 - decrementValue : `someVar.decrementValue()`
 - exp : `someVar.exp()`
 - fix : `someVar.fix()`
 - floor : `someVar.floor()`
-- formatBaseN : `someVar.formatBaseN(radix)`
+- formatBaseN : `someVar.formatBaseN()`
 - incrementValue : `someVar.incrementValue()`
 - inputBaseN : `someVar.inputBaseN()`
 - log : `someVar.log()`
 - log10 : `someVar.log10()`
-- max : `someVar.max(number2)`
-- min : `someVar.min(number2)`
+- max : `someVar.max()`
+- min : `someVar.min()`
 - precisionEvaluate : `someVar.precisionEvaluate()`
-- randomize : `someVar.randomize([algorithm])`
-- randRange : `someVar.randRange(number2[, algorithm])`
+- randomize : `someVar.randomize()`
+- randRange : `someVar.randRange()`
 - round : `someVar.round()`
 - sgn : `someVar.sgn()`
 - sin : `someVar.sin()`
 - sqr : `someVar.sqr()`
 - tan : `someVar.tan()`
 
+## Display and Formatting member functions
+
+- booleanFormat : `someVal.booleanFormat()`
+- yesNoFormat : `someVal.yesNoFormat()`
+
 ## Future member functions
+
+These are exclusively member functions and have no headless equivalent. You use them on the Future returned by `runAsync`.
+
+### Standard Future member functions
 
 - cancel : `FutureObject.cancel()`
 - error : `FutureObject.error(UDFMethod method)`
@@ -471,23 +488,13 @@ When using Query.cfc, you get your results from the execution by using:
 - then : `FutureObject.then(UDFMethod method)`
 - then : `FutureObject.then((UDFMethod method, long timeout)`
 
-## Empty Future member functions
+### Empty Future member functions
 
 - cancel : `EmptyFutureObject.cancel()`
 - complete : `EmptyFutureObject.complete(Object val)`
 - get : `EmptyFutureObject.get()`
 - isCancelled : `EmptyFutureObject.isCancelled()`
 - isDone : `EmptyFutureObject.isDone()`
-
-Member Functions can also be chained (on Lucee or CF2018+), for example:
-
-    s = "the";
-    s = s.listAppend("quick brown fox", " ")
-         .listAppend("jumps over the lazy dog", " ")
-         .uCase()
-         .reverse();
-
-result: `GOD YZAL EHT REVO SPMUJ XOF NWORB KCIUQ EHT`
 
 ## Important Note on a potential Member Function Gotcha
 

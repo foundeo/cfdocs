@@ -1,13 +1,16 @@
 {
 	"name":"getLocaleDisplayName",
 	"type":"function",
-	"syntax":"getLocaleDisplayName()",
+	"syntax":"getLocaleDisplayName([locale, inLocale])",
 	"returns":"string",
 	"related":["getLocale","getLocaleInfo","getLocaleCountry","getLocaleLanguage"],
-	"description":" Gets a locale value and displays the name in a manner\n that is appropriate to a specific locale. By default,\n gets the current locale in the current locale's language.",
-	"params": [],
+	"description":"Gets a locale value and displays the name in a manner that is appropriate to a specific locale. By default, gets the current locale in the current locale's language.",
+	"params": [
+		{"name":"locale","description":"The locale whose name you want. The default is the current ColdFusion locale, or if no ColdFusion locale has been set, the JVM locale.","required":false,"default":"","type":"string","values":[]},
+		{"name":"inLocale","description":"The locale in which to return the name. The default is the current ColdFusion locale, or if no ColdFusion locale has been set, the JVM locale.","required":false,"default":"","type":"string","values":[]}
+	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getlocaledisplayname.html"},
+		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getlocaledisplayname.html"},
 		"lucee": {"minimum_version":"", "deprecated":"5", "notes":"Lucee5+ Deprecated in favor of getLocaleInfo()", "docs":"https://docs.lucee.org/reference/functions/getlocaledisplayname.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getlocaledisplayname"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getlocaledisplayname"}
@@ -16,7 +19,7 @@
 	"examples": [{
 		"title":"Output current Locale's display name than set it to swiss locale",
 		"description":"",
-		"code":"writeOutput(getLocaleDisplayName());\r\nwriteOutput(' → ');\r\nsetLocale('de_ch');\r\nwriteOutput(getLocaleDisplayName());",
+		"code":"writeOutput(getLocaleDisplayName());\nwriteOutput(' → ');\nsetLocale('de_ch');\nwriteOutput(getLocaleDisplayName());",
 		"result":"English (United States) → Deutsch (Schweiz)",
 		"runnable":true
 	}]

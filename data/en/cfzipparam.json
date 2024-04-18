@@ -14,7 +14,7 @@
 		{"name":"source","description":"Source directory or file.\n\nUsed only when cfzip action=\"zip\".\n Specified file(s) are added to the ZIP or JAR file:\n If you specify source attribute for the cfzip tag, the\n cfzipparam source is relative to it.\n If you do not specify a source attribute for the cfzip\n tag, the cfzipparam source must be an absolute path.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfzipparam.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfzipparam.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/zipparam.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfzipparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfzipparam"}
@@ -26,6 +26,6 @@
 			"description":"Adding the contents of a folder to a zip",
 			"code":"var fileList = directoryList(expandPath('/'), false, 'path', '*.jpg');\n\ncfzip( file = 'allJPGs.zip' ) {\n  fileList.each((zipFile)=>{\n    cfzipparam( source = zipFile );\n  })\n}",
 			"runnable":false
-		}		
+		}
 	]
 }

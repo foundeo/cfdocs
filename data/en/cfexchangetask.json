@@ -15,7 +15,7 @@
 		{"name":"result","description":"The name of a variable that contains the UID of the task that is created. You use this value in the uid attribute of other actions to identify the task to be acted on.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexchangetask.html"}
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexchangetask.html"}
 	},
 	"links": []
 }

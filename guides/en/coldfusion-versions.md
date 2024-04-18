@@ -67,6 +67,7 @@ Historical information about ColdFusion Versions and releases.
 
 * Implicit array and structs, e.g. `x = [1,2,3]`
 * [ColdFusion 8 New Tags and Functions](/cf8)
+* EOL: Core Support Ended 7/31/2012, Extended Support Ended	7/31/2014
 
 ## Adobe ColdFusion 9 - October 2009 (_Centaur_)
 
@@ -74,23 +75,33 @@ Historical information about ColdFusion Versions and releases.
 * Added `local` scope and `var` no longer needs to be at top of function
 * Added ORM via Hibernate
 * [ColdFusion 9 New Tags and Functions](/cf9)
+* EOL: Core Support Ended 12/31/2014, Extended Support Ended 12/31/2016
+
 
 ## Adobe ColdFusion 10 - May 2012 (_Zeus_)
 
 * Ditched JRun, Moved to Tomcat
+* [ColdFusion 10 Updates & Hotfixes](https://helpx.adobe.com/coldfusion/kb/coldfusion-10-updates.html)
 * [ColdFusion 10 New Tags and Functions](/cf10)
+* EOL: Core Support Ended 5/16/2017, Extended Support Ended	5/16/2019
+
 
 ## Adobe ColdFusion 11 - April 2014 (_Splendor_)
 
 * Member functions e.g. `structName.keyExists("k")` instead of `structKeyExists(structName, "k")`
 * Full script support for all tags e.g. `cftagName(attribute=value)`
+* [ColdFusion 11 Updates & Hotfixes](https://helpx.adobe.com/coldfusion/kb/coldfusion-11-updates.html)
 * [ColdFusion 11 New Tags and Functions](/cf11)
+* EOL: Core Support Ended 4/30/2019, Extended Support Ended	4/30/2021
+
 
 ## Adobe ColdFusion 2016 - February 2016 (_Raijin_)
 
 * Security Analyzer
 * API Manager
+* [ColdFusion 2016 Updates & Hotfixes](https://helpx.adobe.com/coldfusion/kb/coldfusion-2016-updates.html)
 * [ColdFusion 2016 New Tags and Functions](/cf2016)
+* EOL: Core Support Ended 2/17/2021, Extended Support Ended	2/17/2022
 
 ## Adobe ColdFusion 2018 - July 2018 (_Aether_)
 
@@ -103,14 +114,31 @@ Historical information about ColdFusion Versions and releases.
 * Component Enhancements: Abstract, Final, Default Functions, Covariance
 * Performance Monitoring Toolset
 * Lockdown Installer
+* [ColdFusion 2018 Updates & Hotfixes](https://helpx.adobe.com/coldfusion/kb/coldfusion-2018-updates.html)
 * [ColdFusion 2018 New Tags and Functions](/cf2018)
+* EOL: Core Support Ended 7/13/2023, Extended Support Ends 7/13/2024
 
 ## Adobe ColdFusion 2021 - November 2020 (_Stratus_)
 
 * Added Package Manager (cfpm)
 * Cloud Abstraction Functions for Azure and AWS
 * NoSQL Support - DynamoDB and MongoDB
+* [ColdFusion 2021 Updates & Hotfixes](https://helpx.adobe.com/coldfusion/kb/coldfusion-2021-updates.html)
 * [ColdFusion 2021 What's New](https://community.adobe.com/t5/coldfusion/introducing-adobe-coldfusion-2021-release/m-p/11585468)
 * [ColdFusion 2021 New Tags and Functions](/cf2021)
+
+## Adobe ColdFusion 2023 - May 2023 (_Fortuna_)
+
+* Google Cloud Platform (GCP) - Storage, Pub/Sub, FireStore
+* Central Configuration Server (CCS)
+* SSO CF Admin Integration (SAML/LDAP) including CF Admin API updates
+* JSON Web Tokens
+* Avro & Protocal Buffer Serialization
+* New PDF Engine
+* Library Updates (Java, Solr, Hibernate)
+* Native GraphQL Query support
+* [ColdFusion 2023 Updates & Hotfixes](https://helpx.adobe.com/coldfusion/kb/coldfusion-2023-updates.html)
+* [ColdFusion 2023 What's New](https://community.adobe.com/t5/coldfusion-discussions/live-introducing-the-2023-release-of-adobe-coldfusion/td-p/13797706)
+* [ColdFusion 2023 New Tags and Functions](/cf2023)
 
 Lots of additional historical and version information can be found on the [ColdFusion Wikipedia Page](https://en.wikipedia.org/wiki/Adobe_ColdFusion)

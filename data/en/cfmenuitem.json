@@ -80,7 +80,7 @@
 		}
 	],
 	"engines": {
-		"coldfusion": { "minimum_version": "", "notes": "", "deprecated":"2016", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmenuitem.html" }
+		"coldfusion": { "minimum_version": "8", "notes": "", "deprecated":"2016", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmenuitem.html" }
 	},
 	"links": [],
 	"examples": [
@@ -91,6 +91,5 @@
 			"result":"",
 			"runnable":false
 		}
-		
 	]
 }
