@@ -17,7 +17,7 @@
 		{"name":"datalabelstyle","description":"Specifies the way in which the color is applied to the\n item in the series:\n - None = nothing is printed (default)\n - Value = the value of the datapoint\n - Rowlabel = the row's label\n - Columnlabel = the column's label\n - Pattern","required":false,"default":"","type":"string","values":["none","value","rowlabel","columnlabel","pattern"]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfchartseries.html"},
+		"coldfusion": {"minimum_version":"6", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfchartseries.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/chartseries.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfchartseries"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfchartseries"}

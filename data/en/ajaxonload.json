@@ -4,18 +4,14 @@
 	"syntax":"ajaxOnLoad(functionName)",
 	"returns":"void",
 	"related":[],
-	"description":" Causes the specified JavaScript function to run when the page loads.",
+	"description":"Causes the specified JavaScript function to run when the page loads.",
 	"params": [
 		{"name":"functionName","description":"The name of the function to run when the page loads.","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/ajaxonload.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/ajaxonload.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/ajaxonload.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ajaxonload"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

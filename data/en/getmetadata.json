@@ -1,37 +1,27 @@
 {
 	"name":"getMetadata",
 	"type":"function",
-	"syntax":"getMetadata(Object)",
-	"member":"arr.getMetadata()",
+	"syntax":"getMetadata(value)",
 	"returns":"any",
 	"related":["getFunctionData","getTagData","arrayGetMetadata"],
-	"description":" Gets metadata (the methods, properties, and parameters of a\n component) associated with an object that is deployed on the\n CFML server.",
+	"description":"Gets metadata (the methods, properties, and parameters of a component) associated with an object that is deployed on the CFML server.",
 	"params": [
-		{"name":"Object","description":"","required":true,"default":"","type":"any","values":[]}
-
+		{"name":"value","description":"A ColdFusion component, user-defined function, or ColdFusion query. Within a CFC, the parameter can also specify the `this` scope.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getmetadata.html"},
+		"coldfusion": {"minimum_version":"6", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getmetadata.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/getmetadata.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getmetadata"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getmetadata"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Dump Metadata of CFC Instance",
 			"description":"CF9+",
 			"code":"writeDump(getMetadata(new Query()));",
-			"result":""
-		},
-		{
-			"title":"Dump Metadata of Array",
-			"description":"CF2018+ Struct has a new key called <i>dimensions</i> and can also have a defined datatype. Supported datatypes are String, Numeric, Boolean, Date, Array, Struct, Query, Component, Binary, and Function.",
-			"code":"arr = arrayNew['String'](1);\nwriteDump(arr.getMetadata());",
-			"result":""
+			"result":"",
+			"runnable": true
 		}
 	]
-
 }

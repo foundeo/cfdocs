@@ -2,7 +2,7 @@
 	"name":"cfzip",
 	"type":"tag",
 	"syntax":"<cfzip>",
-	"related":["compress"],
+	"related":["compress", "cfzipparam"],
 	"description":"Manipulates ZIP and JavaTM Archive (JAR) files.\n In addition to the basic zip and unzip functions, use the cfzip tag to delete\n entries from an archive, filter files, read files in binary format, list the\n contents of an archive, and specify an entrypath used in an executable JAR file.",
 	"params": [
 		{"name":"action","description":"The action to take. Must be one of the following:\n delete\n list\n read\n readBinary\n unzip\n zip\n If you do not specify an action, ColdFusion\n applies the default action, zip. (optional)","required":false,"default":"zip","type":"string","values":["delete","list","read","readBinary","unzip","zip"]},
@@ -22,7 +22,7 @@
 		{"name":"variable","description":"Variable in which the read content is stored. (required)","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfzip.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfzip.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/zip.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfzip"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfzip"}
@@ -51,6 +51,6 @@
 			"code":"cfzip(action=\"list\", file=\"zipFileName\", name=\"zipList\");",
 			"runnable":false
 		}
-		
+
 	]
 }

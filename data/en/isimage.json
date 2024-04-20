@@ -1,16 +1,15 @@
 {
 	"name":"isImage",
 	"type":"function",
-	"syntax":"isImage(name)",
+	"syntax":"isImage(value)",
 	"returns":"boolean",
-	"related":["cfimage", "ImageGetBlob", "ImageInfo", "ImageNew"],
-	"description":" Determines whether a variable returns a ColdFusion image.",
+	"related":["cfimage", "imageGetBlob", "imageInfo", "imageNew"],
+	"description":"Determines whether a variable returns a ColdFusion image.",
 	"params": [
-		{"name":"name","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
-
+		{"name":"value","description":"The value that is checked.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isimage.html"},
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isimage.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isimage.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isimage"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isimage"}
@@ -18,13 +17,18 @@
 	"links": [],
 	"examples": [
 		{
-			"title":"Simple Isimage Function",
-			"description":"Check the result is codfusion image or not",
-			"code":"<cfset myImage  = ImageNew(\"./sample.png\")>\r\n<cfif IsImage(myImage)>\r\n\t<cfimage action=\"writeToBrowser\" source=\"#myImage#\">\r\n</cfif>",
+			"title":"Check local file image (Tag)",
+			"description":"If the local file is an image, write it to the browser",
+			"code":"<cfset myImage = imageNew(\"./sample.png\")>\n<cfif isImage(myImage)>\n\t<cfimage action=\"writeToBrowser\" source=\"#myImage#\">\n</cfif>",
 			"result":"",
 			"runnable":false
+		},
+		{
+			"title":"Check online image (Script)",
+			"description":"Output whether the online file is an image",
+			"code":"isImage(imageRead(\"https://cfdocs.org/apple-touch-icon.png\");",
+			"result":true,
+			"runnable":true
 		}
-		
 	]
-
 }

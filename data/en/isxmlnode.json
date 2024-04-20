@@ -4,12 +4,12 @@
 	"syntax":"isXMLNode(value)",
 	"returns":"boolean",
 	"related":["isXML","isXMLDoc","isXMLElem"],
-	"description":" Determines whether the function parameter is\n an XML document object node.",
+	"description":"Determines whether the function parameter is an XML document object node.",
 	"params": [
 		{"name":"value","description":"XML document object node.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isxmlnode.html"},
+		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isxmlnode.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isxmlnode.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isxmlnode"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isxmlnode"}

@@ -3,17 +3,13 @@
 	"type":"function",
 	"syntax":"isDDX(path)",
 	"returns":"boolean",
-	"related":["IsPDFObject", "IsPDFFile", "cfpdf"],
-	"description":" Determines whether a DDX file exists and is valid, or if a string contains valid DDX instructions.",
+	"related":["isPDFObject", "isPDFFile", "cfpdf"],
+	"description":"Determines whether a DDX file exists and is valid, or if a string contains valid DDX instructions.",
 	"params": [
 		{"name":"path","description":"Pathname to the DDX file or a string of DDX instructions.","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isddx.html"}
+		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isddx.html"}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

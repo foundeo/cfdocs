@@ -4,10 +4,10 @@
 	"syntax":"getContextRoot()",
 	"returns":"string",
 	"related":["getCurrentContext"],
-	"description":" Returns path to the J2EE server context root for the current request.",
+	"description":"Returns path to the J2EE server context root for the current request.",
 	"params": [],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getcontextroot.html"},
+		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getcontextroot.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/getcontextroot.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getcontextroot"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getcontextroot"}

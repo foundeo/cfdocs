@@ -118,7 +118,21 @@
 	
 	<cfoutput>#request.content#</cfoutput>
 
-	<hr>
+	<div class="jumbotron" id="cfbreak">
+		<div class="container">
+			<p>Signup for <a href="https://cfbreak.com/"><code>cfbreak</code></a> to stay updated on the latest news from the ColdFusion / CFML community. One email, every friday.</p>
+			<form class="row newsletter" action="https://cfbreak.com/subscribe/" method="POST">
+				<input type="hidden" name="referrer" id="referrer" value="https://cfdocs.org/">
+				<div class="col-sm-6">
+					<input type="email" name="email" id="email" required="required" placeholder="you@example.com" required="required" class="form-control">
+				</div>
+				<div class="col-sm-4">
+					<button type="submit" class="btn btn-secondary">&#10004; Get It</button>
+				</div>
+		  </form>
+		</div>
+	</div>	
+
 
 	<footer>
 		<div class="container">
