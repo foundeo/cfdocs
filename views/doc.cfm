@@ -112,11 +112,6 @@
 					<a href="#data.engines.lucee.docs#" title="Official Lucee Docs" class="label label-lucee">Lucee<cfif StructKeyExists(data.engines.lucee, "minimum_version") AND Len(data.engines.lucee.minimum_version)>#encodeForHTML(data.engines.lucee.minimum_version)#+</cfif></a>
 				</li>
 			</cfif>
-			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "openbd") AND StructKeyExists(data.engines.openbd, "docs") AND Len(data.engines.openbd.docs)>
-				<li class="pull-right">
-					<a href="#data.engines.openbd.docs#" title="Official OpenBD Docs" class="label label-openbd">BD</a>
-				</li>
-			</cfif>
 			<cfif structKeyExists(data, "engines") AND NOT structIsEmpty(data.engines)>
 				<li role="separator" class="pull-right divider"></li>
 			</cfif>
