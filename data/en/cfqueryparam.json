@@ -141,7 +141,13 @@
       "docs": "http://openbd.org/manual/?/tag/cfqueryparam"
     }
   },
-  "links": [],
+  "links": [
+    {
+      "title":"Mastering cfqueryparam",
+      "description":"A guide to understanding all the ins and outs of using cfqueryparam.",
+      "url":"https://www.petefreitag.com/blog/mastering-cfqueryparam/"
+    }
+  ],
   "examples": [
     {
       "runnable": false,
