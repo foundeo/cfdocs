@@ -25,7 +25,7 @@ jobs:
     env:
       CFENGINE: ${{ matrix.cfengine }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Clone cfmatrix
         run: git clone --depth 1 https://github.com/foundeo/cfmatrix.git cfmatrix
@@ -41,7 +41,7 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Install JSON Validator
         run: npm install -g ajv-cli
       - name: Make temp dir with files to check
@@ -62,7 +62,7 @@ jobs:
       image: ghcr.io/foundeo/cfml-ci-tools/cfml-ci-tools:latest
     
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Run Fixinator
       run: box fixinator confidence=high
       env:
