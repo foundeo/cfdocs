@@ -164,6 +164,13 @@
       "result": ""
     },
     {
+    	"title": "Using an expressions to controll null values",
+    	"description": "Shows a basic example of using an expression to control whether null is passed to the queryparam",
+    	"code": "<cfquery name=\"test\">\n      INSERT into test ( key, value )\n      VALUES(\n            <cfqueyparam value=\"#key#\" cfsqltype=\"cf_sql_varchar\" null=\"#isNumeric(Key) EQ false#\">\n            <cfqueryparam value=\"#value#\" cfsqltype=\"cf_sql_varchar\" null=\"#value EQ ''#\">\n      )\n</cfquery>",
+    	"result": "",
+    	"runnable": false
+    },
+    {
       "title": "cfscript equivalent of cfqueryparam",
       "description": "CF11+ script syntax using queryExecute and struct notation",
       "code": "exampleData = queryNew(\"id,title\",\"integer,varchar\",[{\"id\":1,\"title\":\"Dewey defeats Truman\"},{\"id\":2,\"title\":\"Man walks on Moon\"}]);\r\n\r\nresult = queryExecute(\r\n  \"SELECT title FROM exampleData WHERE id = :id\", \r\n  { id = 2 },\r\n  { dbtype=\"query\" }\r\n);\r\n\r\nwriteOutput( result.title[1] );",
