@@ -28,7 +28,7 @@
 		{
 			"title": "How old are they?",
 			"description": "Calculates a persons age based on a variable birthDate which contains a date. Uses the now function to get current date.",
-			"code": "dateDiff(\"yyyy\", birthDate, now())"
+			"code": "birthDate = createDate( 1972, 5, 20 );\nage = dateDiff('yyyy', birthDate, now());\nwriteoutput( age );"
 		},
 		{
 			"title": "dateDiff member function",
