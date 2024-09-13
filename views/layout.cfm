@@ -31,6 +31,9 @@
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation" />
 		<meta name="twitter:description" content="#EncodeForHTMLAttribute(request.description)#" />
+		<cfif request.keyExists("canonical_url")>
+			<link rel="canonical" href="#reReplace(lcase(request.canonical_url), "[^a-z:/-]", "", "ALL")#">
+		</cfif>
 </cfoutput>
 </head>
 <body>

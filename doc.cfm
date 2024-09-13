@@ -1,10 +1,12 @@
 <cfparam name="url.name" default="cfquery">
+<cfset request.unsafe_name = url.name>
 <cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL")>
 <cfif url.name IS "index">
-	<cfset data = {name="CFDocs", description="Ultra Fast CFML Documentation", type="index"}>
+	<cfset data = {name="CFDocs", description="Ultra Fast CFML / ColdFusion Documentation", type="index"}>
 <cfelseif FileExists(ExpandPath("./guides/en/#url.name#.md")) OR url.name is "how-to-contribute">
 	<cfset request.ogname = url.name>
 	<cfset request.hasExamples = true>
+	<cfset request.canonical_url = "https://cfdocs.org/#lcase(url.name)#">
 	<cftry>
 		<!--- convert md to HTML --->
 		<cfset flexmark = new lib.Processor() >
@@ -21,6 +23,7 @@
 	<cfset data = DeserializeJSON( FileRead(ExpandPath("./data/en/#url.name#.json")))>
 	<cfset request.ogname = url.name>
 	<cfset request.gitFilePath = "/edit/master/data/en/" & url.name & ".json">
+	<cfset request.canonical_url = "https://cfdocs.org/#lcase(url.name)#">
 <cfelse>
 	<cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9._-]", "", "ALL")>
 	<cfset possible = []>
@@ -42,6 +45,10 @@
 		related = possible
 	}>
 	<cfheader statuscode="404" statustext="Not Found">
+</cfif>
+<cfif request.keyExists("canonical_url") AND request.unsafe_name IS NOT url.name>
+	<!--- there was a stripped char in url, redirect --->
+	<cflocation url="#request.canonical_url#" addtoken="false" statuscode="301">
 </cfif>
 <cfif isStruct(data)>
 	<cfset request.title = data.name>
