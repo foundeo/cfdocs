@@ -25,7 +25,12 @@
 	<cfset request.gitFilePath = "/edit/master/data/en/" & url.name & ".json">
 	<cfset request.canonical_url = "https://cfdocs.org/#lcase(url.name)#">
 <cfelse>
-	<cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9._-]", "", "ALL")>
+	<cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL")>
+	<cfif reFind("[A-Z]", url.name)>
+		<cfif FileExists(ExpandPath("./data/en/#lCase(url.name)#.json")) OR FileExists(ExpandPath("./guides/en/#lCase(url.name)#.md"))>
+			<cflocation url="https://cfdocs.org/#lcase(url.name)#" addtoken="false" statuscode="301">
+		</cfif>
+	</cfif>
 	<cfset possible = []>
 	<cfloop array="#application.index.functions#" index="i">
 		<cfif Len(url.name) LTE 3>
@@ -40,7 +45,7 @@
 	</cfloop>
 	<cfset data = {
 		name = url.name,
-		description = "Sorry we don't have any docs matching that name. If we should have a doc for this, please log an <a href=""https://github.com/foundeo/cfdocs/issues/new"">Issue</a> so we can look into it. You can easily access functions and tags using an url like <a href=""http://cfdocs.org/hash"">cfdocs.org/hash</a>. Just hit <code>/tag-name</code> or <code>/function-name</code> or use the search box above.",
+		description = "Sorry we don't have any docs matching that name. If we should have a doc for this, please log an <a href=""https://github.com/foundeo/cfdocs/issues/new"">Issue</a> so we can look into it. You can easily access functions and tags using an url like <a href=""https://cfdocs.org/hash"">cfdocs.org/hash</a>. Just hit <code>/tag-name</code> or <code>/function-name</code> or use the search box above.",
 		type = "404",
 		related = possible
 	}>
