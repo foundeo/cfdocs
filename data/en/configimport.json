@@ -2,8 +2,7 @@
     "name":"configImport",
     "type":"function",
     "syntax":"configImport(path path, [, type] [, password], [, params], [, charset])",
-   
-    "returns":"Struct",
+    "returns":"struct",
     "related":["configTranslate"],
     "description":"Imports a configuration based on the CFConfig format.",
     "params": [
