@@ -2,6 +2,7 @@
 	"name":"cfswitch",
 	"type":"tag",
 	"syntax":"<cfswitch expression=\"\">",
+	"script":"switch (expression) { }",
 	"related":["cfcase","cfdefaultcase"],
 	"description":"Evaluates a passed expression and passes control to the cfcase tag that matches the expression result. You can, optionally, code a cfdefaultcase tag, which receives control if there is no matching cfcase tag value. Note the difference in the tag and script syntax when providing multiple values for a case.",
 	"params": [
