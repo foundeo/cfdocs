@@ -63,9 +63,14 @@ Introduced with ColdFusion 2021 Update 1. It defaults to `false` but when set to
 
 Introduced in March 2024 via ColdFusion 2021 Update 13 and ColdFusion 2023 Update 7, and on these versions defaults to `false`. When set to `true` unscoped variable resolution will traverse through all the implicit scopes such as `form`, `url`, `cgi`, `cookie`, when `false` the scope needs to be specified. This change was introduced as part of a security hotfix: [APSB24-14](https://helpx.adobe.com/security/products/coldfusion/apsb24-14.html) and Adobe recommends keeping it to `false`. More [info about searchImplicitScopes here](https://www.petefreitag.com/blog/cf-searchimplicitscopes/)
 
+## `-Dcoldfusion.encryption.useCFMX_COMPATAsDefault`
+
+Added in June 2024 via ColdFusion 2021 Update 14 and CF2023 update 8. Defaults to `false`, when `true` it uses `CFMX_COMPAT` as the default algorithm for the `encrypt()` `decrypt()` and `hash()` (uses MD5) functions.
+
 # Standard Java System Properties
 
 The following system properties apply to the java runtime:
 
 * [Java Networking System Properties](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/doc-files/net-properties.html)
 * [Java Crypto Related System and Security Properties](https://www.java.com/en/configure_crypto.html) 
+* [Java System Property Reference Guide](https://system-properties.com/)

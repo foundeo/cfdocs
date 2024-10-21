@@ -19,7 +19,11 @@
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/iif"}
 	},
 	"links": [
-
+		{
+			"title": "ColdFusion IIF Security Guide",
+			"description": "Learn how to avoid RCE with the IIF function.",
+			"url": "https://foundeo.com/security/guide/iif/"
+		}
 	],
     "examples": [
 		{
