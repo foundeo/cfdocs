@@ -37,6 +37,13 @@
 			"description": "Uses the callback function",
 			"code": "someArray = [\n    {name=\"testemployee\", age=\"32\"},\n    {name=\"employeetest\", age=\"36\"}\n];\narraySort(\n    someArray,\n    function (e1, e2){\n        return compare(e1.name, e2.name);\n    }\n);\nwriteOutput( serializeJSON(someArray) );",
 			"result": "[{\"NAME\":\"employeetest\",\"AGE\":\"36\"},{\"NAME\":\"testemployee\",\"AGE\":\"32\"}] "
+		},
+		{
+			"title": "Script member syntax: sort array of structs by multiple keys",
+			"description": "Takes an array of structs and sorts by multiple different keys, similar to the way a query allows.",
+			"code": "arrayOfStructs = [\n\t{\n\t\t\"userId\": 1,\n\t\t\"firstName\": \"John\",\n\t\t\"lastName\": \"Doe\",\n\t\t\"departmentName\": \"Sales\",\n\t\t\"active\": 1\n\t},\n\t{\n\t\t\"userId\": 2,\n\t\t\"firstName\": \"Jane\",\n\t\t\"lastName\": \"Smith\",\n\t\t\"departmentName\": \"Marketing\",\n\t\t\"active\": 1\n\t},\n\t{\n\t\t\"userId\": 3,\n\t\t\"firstName\": \"Alice\",\n\t\t\"lastName\": \"Johnson\",\n\t\t\"departmentName\": \"Sales\",\n\t\t\"active\": 0\n\t},\n\t{\n\t\t\"userId\": 4,\n\t\t\"firstName\": \"Bob\",\n\t\t\"lastName\": \"Brown\",\n\t\t\"departmentName\": \"Sales\",\n\t\t\"active\": 1\n\t},\n\t{\n\t\t\"userId\": 5,\n\t\t\"firstName\": \"Charlie\",\n\t\t\"lastName\": \"Davis\",\n\t\t\"departmentName\": \"Marketing\",\n\t\t\"active\": 0\n\t}\n];\narrayOfStructs.sort((user1,user2) => {\n\tif (user1.active != user2.active) {\n\t\treturn user2.active - user1.active;\n\t}\n\tif (user1.departmentName == user2.departmentName || user1.active == 0) {\n\t\tif (user1.lastName == user2.lastName) {\n\t\t\treturn user1.firstName.compare(user2.firstName);\n\t\t}\n\t\treturn user1.lastName.compare(user2.lastName);\n\t}\n\treturn user1.departmentName.compare(user2.departmentName);\n});\nwriteDump(arrayOfStructs);",
+			"result": "Sorts by active employees, then by their last name and finally by their first name",
+			"runnable": true
 		}
 	]
 }
