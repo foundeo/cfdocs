@@ -62,6 +62,7 @@ $(document).ready(function() {
 	  });
 	  $('.tt-hint').addClass('form-control');
 	  $('#search').submit(submitSearch);
+	  $('#search2').submit(submitSearch);
 	  $('#lookup-box').on('typeahead:selected', submitSearch);
 	  $('#lookup-box').focus();
 
@@ -150,7 +151,7 @@ function fallbackCopyTextToClipboard(text) {
 //search submit
 function submitSearch(e) {
 	e.preventDefault();
-	var newLocation = $('#lookup-box').val().toLowerCase();
+	var newLocation = $(this).find('#lookup-box').val().toLowerCase();
 	document.location = '/' + encodeURIComponent((newLocation.length && newLocation[0] == '/') ? newLocation.slice(1) : newLocation);
 }
 //google analytics
