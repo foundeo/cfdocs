@@ -17,7 +17,8 @@
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfzipparam.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/zipparam.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfzipparam"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfzipparam"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfzipparam"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:zip>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/zip/zip"}
 	},
 	"links": [],
 	"examples": [

@@ -14,7 +14,8 @@
 		"coldfusion": {"minimum_version":"9", "notes":"CF10+ Added support for closure instead of value", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayfind.html"},
 		"lucee": {"minimum_version":"", "notes":"Lucee4.5+ Added support for closure instead of value", "docs":"https://docs.lucee.org/reference/functions/arrayfind.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/arrayfind"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayfind"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayfind"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arrayfind"}
 	},
 	"links": [],
 	"examples": [

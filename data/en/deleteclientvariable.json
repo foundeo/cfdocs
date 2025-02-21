@@ -12,7 +12,8 @@
 		"coldfusion": {"minimum_version":"", "notes":"ColdFusion MX: Changed behavior: if the variable is not present, this function now returns False. (In earlier releases, it threw an error.)", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DeleteClientVariable.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/deleteclientvariable.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/deleteclientvariable"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/deleteclientvariable"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/deleteclientvariable"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/struct/deleteclientvariable"}
 	},
 	"links": []
 }

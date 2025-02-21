@@ -25,7 +25,8 @@
 		"coldfusion": {"minimum_version":"2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-a-b/cfapplication.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/application.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfapplication"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfapplication"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfapplication"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:application>` in BoxLang files.", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/application#component-signature"}
 	},
 	"links": []
 }

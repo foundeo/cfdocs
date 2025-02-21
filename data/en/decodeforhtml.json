@@ -13,7 +13,8 @@
 		"lucee": {
 			"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/decodeforhtml.html"
 		},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/decodeforhtml"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/decodeforhtml"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-esapi` module", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/esapi"}
 	},
 	"links": [
 

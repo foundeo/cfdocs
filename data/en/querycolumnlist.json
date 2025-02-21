@@ -11,7 +11,8 @@
 		{"name": "delimiter", "description": "", "required": false, "default": ",", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querycolumnlist.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querycolumnlist.html"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumnlist"}
 	},
 	"examples": [
 		{

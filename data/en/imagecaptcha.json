@@ -15,7 +15,8 @@
             {"name":"fontcolor","description":"Font color for text of the image.","values":[],"default":"black","type":"string","required":false}
   ],
 	"engines": {
-		"lucee": {"minimum_version": "5", "notes": "", "docs": "https://docs.lucee.org/reference/functions/imagecaptcha.html"}
+		"lucee": {"minimum_version": "5", "notes": "", "docs": "https://docs.lucee.org/reference/functions/imagecaptcha.html"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-image` module.", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"}
 	},
 	"examples": [{
 		"title":"Script Syntax",

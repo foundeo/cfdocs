@@ -359,17 +359,22 @@
 			"minimum_version": "",
 			"notes": "",
 			"docs": "http://openbd.org/manual/?/tag/cfmail"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Requires the `bx-mail` module.",
+			"docs": "https://github.com/ortus-boxlang/bx-mail"
 		}
 	},
 	"links": [
 		{
-			"title": "Handling character encodings in HTML and CSS",			
-			"description": "",			
+			"title": "Handling character encodings in HTML and CSS",
+			"description": "",
 			"url": "https://www.w3.org/International/tutorials/tutorial-char-enc/"
 		},
 		{
-			"title": "Declaring character encodings in HTML",			
-			"description": "",			
+			"title": "Declaring character encodings in HTML",
+			"description": "",
 			"url": "https://www.w3.org/International/questions/qa-html-encoding-declarations"
 		}
 	],

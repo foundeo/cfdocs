@@ -58,7 +58,8 @@
 			"minimum_version": "2016",
 			"notes": "queryFilter mutated the original query in CF2016 and 2018 (bug report: https://tracker.adobe.com/#/view/CF-4203366)",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryfilter.html"
-		}
+		},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/queryfilter"}
 	},
 	"examples": [{
 		"title": "Filter a query",

@@ -33,7 +33,8 @@
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfquery.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/query.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfquery"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfquery"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfquery"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:query>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/jdbc/query"}
 	},
 	"links": [
 		{

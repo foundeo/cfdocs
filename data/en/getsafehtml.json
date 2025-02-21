@@ -65,5 +65,8 @@
   "type": "function",
   "related": [
     "isSafeHTML"
-  ]
+  ],
+  "engines": {
+    "boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-esapi` module.", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/esapi"}
+	},
 }
