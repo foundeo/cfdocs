@@ -141,4 +141,44 @@ Historical information about ColdFusion Versions and releases.
 * [ColdFusion 2023 What's New](https://community.adobe.com/t5/coldfusion-discussions/live-introducing-the-2023-release-of-adobe-coldfusion/td-p/13797706)
 * [ColdFusion 2023 New Tags and Functions](/cf2023)
 
+## Adobe ColdFusion 2025 - February 2025 (_Project CFNext_) 
+
+* New licensing and activation changes (requires annual subscription)
+* New spreadsheet and CSV functions
+* [Language enhancements](https://helpx.adobe.com/coldfusion/using/whats-new.html#other-language)
+* [Charting enhancements](https://helpx.adobe.com/coldfusion/using/whats-new.html#other-language)
+* [Deprecations and removals](https://helpx.adobe.com/coldfusion/deprecated-features.html)
+* Destructuring changes
+* Support for final static methods
+* Bitwise Operator Support in Query of Queries
+* Modulus operator in Query of Queries
+* Case-sensitive deserialization
+* Changes in Hash function
+* Support for compound assignment operators in expressions
+* Support for multi-dimensional arrays in JavaCast function
+* ArrayInsertAt enhancements
+* Password protection in cfspreadsheet
+* Changes to scriptProtect property
+* Changes to JEE configuration deployment
+* Thread management enhancements
+* cfthread tag "action" changes
+* New attribute cacheMaxIdleTime in cfquery
+* FileUpload changes (continueOnError)
+* Spreadsheet visibility
+* Support for Content-Security-Policy (CSP) in ColdFusion tags
+* DirectoryList function enhancements
+* getTimeZoneInfo enhancements
+* Null coalescing operator
+* Multiple exception handling in catch statements
+* Trailing comma on last element in arrays
+* Deepcopy parameter in the duplicate function
+* ListSort function changes
+* Additional information on cfdump output of a Java class
+* Deserialize JSON to query
+* Changes to createObject function and cfobject tag
+* Default value of cfproperty can be valid CFML expressions
+* cfoauth changes
+* cfexchangeconnection changes
+* Microsoft Graph: User Store in ColdFusion
+
 Lots of additional historical and version information can be found on the [ColdFusion Wikipedia Page](https://en.wikipedia.org/wiki/Adobe_ColdFusion)
