@@ -7,10 +7,10 @@
 	"description":" Gets a specified number of characters from a string,\n beginning at the right.",
 	"params": [
 		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"count","description":"A positive integer or a variable that contains one.\n Number of characters to return.","required":true,"default":"","type":"numeric","values":[]}
+		{"name":"count","description":"An integer or a variable that contains one.\n Number of characters to return.","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/right.html"},
+		"coldfusion": {"minimum_version":"", "notes":"The count can be a negative integer as of CF2018+", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/right.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/right.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/right"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/right"}
@@ -22,6 +22,13 @@
 			"description": "In this example we'll use right() to return part of a string.",
 			"code": "writeOutput( right( 'The quick brown fox jumped over the lazy dog', 8 ) );",
 			"result": "lazy dog",
+			"runnable":true
+		},
+		{
+			"title": "Using right() with a negative count on a string",
+			"description": "In this example we'll use a negative count right() to return part of a string. CF2018+",
+			"code": "writeOutput( right( 'The quick brown fox jumped over the lazy dog', -32 ) );",
+			"result": "the lazy dog",
 			"runnable":true
 		},
 		{

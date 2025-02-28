@@ -25,12 +25,15 @@
 		<meta property="og:image:alt" content="#EncodeForHTMLAttribute(request.description)#" />
 		<meta property="og:image:width" content="512" />
 		<meta property="og:image:height" content="256" />
-		
+
 		<meta name="twitter:image:src" content="https://cfdocs.org/openimage.cfm?name=#EncodeForHTMLAttribute(lcase(request.ogname))#" />
 		<meta name="twitter:site" content="CF Docs" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation" />
 		<meta name="twitter:description" content="#EncodeForHTMLAttribute(request.description)#" />
+		<cfif request.keyExists("canonical_url")>
+			<link rel="canonical" href="#reReplace(lcase(request.canonical_url), "[^a-z:./-]", "", "ALL")#">
+		</cfif>
 </cfoutput>
 </head>
 <body>
@@ -100,7 +103,7 @@
 					</li>
 				</cfoutput>
 				</ul>
-				<form class="navbar-form navbar-left hidden-sm" id="search">
+				<form class="navbar-form navbar-left hidden-sm hidden-xs" id="search">
 					<div class="form-group">
 						<div class="input-group">
 							<input type="text" style="width:100%" placeholder="Tag or Function..." id="lookup-box" class="form-control">
@@ -115,7 +118,6 @@
 		</div>
 	</nav>
 
-	
 	<cfoutput>#request.content#</cfoutput>
 
 	<div class="jumbotron" id="cfbreak">
@@ -131,7 +133,7 @@
 				</div>
 		  </form>
 		</div>
-	</div>	
+	</div>
 
 
 	<footer>

@@ -141,7 +141,13 @@
       "docs": "http://openbd.org/manual/?/tag/cfqueryparam"
     }
   },
-  "links": [],
+  "links": [
+    {
+      "title":"Mastering cfqueryparam",
+      "description":"A guide to understanding all the ins and outs of using cfqueryparam.",
+      "url":"https://www.petefreitag.com/blog/mastering-cfqueryparam/"
+    }
+  ],
   "examples": [
     {
       "runnable": false,
@@ -156,6 +162,13 @@
       "description": "Assumes url.idList is a comma separated list of integers, eg: 1,2,3",
       "code": "<cfquery name=\"news\">\n    SELECT id,title,story\n    FROM news\n    WHERE id IN (<cfqueryparam value=\"#url.idList#\" cfsqltype=\"cf_sql_integer\" list=\"true\">)\n</cfquery>",
       "result": ""
+    },
+    {
+    	"title": "Using an expressions to controll null values",
+    	"description": "Shows a basic example of using an expression to control whether null is passed to the queryparam",
+    	"code": "<cfquery name=\"test\">\n      INSERT into test ( key, value )\n      VALUES(\n            <cfqueyparam value=\"#key#\" cfsqltype=\"cf_sql_varchar\" null=\"#isNumeric(Key) EQ false#\">\n            <cfqueryparam value=\"#value#\" cfsqltype=\"cf_sql_varchar\" null=\"#value EQ ''#\">\n      )\n</cfquery>",
+    	"result": "",
+    	"runnable": false
     },
     {
       "title": "cfscript equivalent of cfqueryparam",

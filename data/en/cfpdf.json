@@ -567,6 +567,13 @@
 			"code": "cfpdf(\r\n    action=\"thumbnail\",\r\n    source=expandPath( \"./myFile.pdf\" ),\r\n    destination=expandPath( \"./thumbnails/\"),\r\n    resolution=\"high\",\r\n    overwrite=\"yes\",\r\n    pages=\"1\",\r\n    scale=\"75\",\r\n    transparent=\"no\"\r\n);",
 			"runnable":false,
 			"result": "Creates a file called myFile_page_1.jpg in the /thumbnails/ directory"
+		},
+		{
+			"title": "Add Watermark text",
+			"description": "Adds watermark text to the PDF, rotated by 45 degrees, sets flag to print the watermark",
+			"code": "<cfpdf action=\"addwatermark\" position=\"57,0\" text=\"TEST - DO NOT SEND!_\" source=\"local.tempPdf\" rotation=\"45\" foreground=\"true\" showonprint=\"true\">",
+			"result": "PDF has watermark with text: TEST - DO NOT SEND!",
+			"runnable": true
 		}
 	]
 }

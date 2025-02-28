@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "each(collection, closure [, parallel] [, maxThreads])",
 	"returns": "void",
-	"related": ["collectionEach"],
+	"related": ["collectionEach","arrayEach","queryEach","structEach"],
 	"description": "Function that will call the given UDF/Closure with every entry (key/value) in the given collection.",
 	"params": [
 		{"name": "collection", "description": "Collection to take values from.", "required": true, "default": "", "type": "any", "values": []},

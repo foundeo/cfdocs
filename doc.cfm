@@ -1,10 +1,12 @@
 <cfparam name="url.name" default="cfquery">
+<cfset request.unsafe_name = url.name>
 <cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL")>
 <cfif url.name IS "index">
-	<cfset data = {name="CFDocs", description="Ultra Fast CFML Documentation", type="index"}>
+	<cfset data = {name="CFDocs", description="Ultra Fast CFML / ColdFusion Documentation", type="index"}>
 <cfelseif FileExists(ExpandPath("./guides/en/#url.name#.md")) OR url.name is "how-to-contribute">
 	<cfset request.ogname = url.name>
 	<cfset request.hasExamples = true>
+	<cfset request.canonical_url = "https://cfdocs.org/#lcase(url.name)#">
 	<cftry>
 		<!--- convert md to HTML --->
 		<cfset flexmark = new lib.Processor() >
@@ -21,8 +23,14 @@
 	<cfset data = DeserializeJSON( FileRead(ExpandPath("./data/en/#url.name#.json")))>
 	<cfset request.ogname = url.name>
 	<cfset request.gitFilePath = "/edit/master/data/en/" & url.name & ".json">
+	<cfset request.canonical_url = "https://cfdocs.org/#lcase(url.name)#">
 <cfelse>
-	<cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9._-]", "", "ALL")>
+	<cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL")>
+	<cfif reFind("[A-Z]", url.name)>
+		<cfif FileExists(ExpandPath("./data/en/#lCase(url.name)#.json")) OR FileExists(ExpandPath("./guides/en/#lCase(url.name)#.md"))>
+			<cflocation url="https://cfdocs.org/#lcase(url.name)#" addtoken="false" statuscode="301">
+		</cfif>
+	</cfif>
 	<cfset possible = []>
 	<cfloop array="#application.index.functions#" index="i">
 		<cfif Len(url.name) LTE 3>
@@ -37,11 +45,15 @@
 	</cfloop>
 	<cfset data = {
 		name = url.name,
-		description = "Sorry we don't have any docs matching that name. If we should have a doc for this, please log an <a href=""https://github.com/foundeo/cfdocs/issues/new"">Issue</a> so we can look into it. You can easily access functions and tags using an url like <a href=""http://cfdocs.org/hash"">cfdocs.org/hash</a>. Just hit <code>/tag-name</code> or <code>/function-name</code> or use the search box above.",
+		description = "Sorry we don't have any docs matching that name. If we should have a doc for this, please log an <a href=""https://github.com/foundeo/cfdocs/issues/new"">Issue</a> so we can look into it. You can easily access functions and tags using an url like <a href=""https://cfdocs.org/hash"">cfdocs.org/hash</a>. Just hit <code>/tag-name</code> or <code>/function-name</code> or use the search box above.",
 		type = "404",
 		related = possible
 	}>
 	<cfheader statuscode="404" statustext="Not Found">
+</cfif>
+<cfif request.keyExists("canonical_url") AND request.unsafe_name IS NOT url.name>
+	<!--- there was a stripped char in url, redirect --->
+	<cflocation url="#request.canonical_url#" addtoken="false" statuscode="301">
 </cfif>
 <cfif isStruct(data)>
 	<cfset request.title = data.name>

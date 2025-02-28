@@ -66,19 +66,19 @@
 		<cfif NOT len(arguments.exclude) AND structKeyExists(url, "name")>
 			<cfset arguments.exclude = url.name>
 		</cfif>
-		<cfif ReFindNoCase("[^""]https?://", arguments.content)>
+		<cfif find("://", arguments.content) AND ReFindNoCase("[^""]https?://", arguments.content)>
 			<cfset arguments.content = ReReplaceNoCase(arguments.content, "([^""])(https?://[a-zA-Z0-9._/=&%?##+-]+)", "\1<a href=""\2"">\2</a>", "ALL")>
 		</cfif>
-		<cfif ReFindNoCase("\bApplication\.cfc\b", arguments.content)>
+		<cfif findNoCase("Application", arguments.content) AND ReFindNoCase("\bApplication\.cfc\b", arguments.content)>
 			<cfset arguments.content = ReReplaceNoCase(arguments.content, "\bApplication\.cfc\b", "<a href=""#linkTo('application-cfc')#"">Application.cfc</a>", "ALL")>
 		</cfif>
 		<cfloop array="#application.index.tags#" index="i">
-			<cfif i IS NOT arguments.exclude>
+			<cfif findNoCase(i, arguments.content) AND i IS NOT arguments.exclude>
 				<cfset arguments.content = ReReplaceNoCase(arguments.content, "[ ](#i#)([ .!,])", " <a href=""#linkTo(i)#"">\1</a>\2", "all")>
 			</cfif>
 		</cfloop>
 		<cfloop array="#application.index.functions#" index="i">
-			<cfif i IS NOT arguments.exclude AND NOT ListFindNoCase("insert,include,now,invoke,array,query,each,second", i)>
+			<cfif findNoCase(i, arguments.content) AND i IS NOT arguments.exclude AND NOT ListFindNoCase("insert,include,now,invoke,array,query,each,second", i)>
 				<cfset arguments.content = ReReplaceNoCase(arguments.content, "([ >])(#i#)([< .!,])", "\1<a href=""#linkTo(i)#"">\2</a>\3", "all")>
 			</cfif>
 		</cfloop>
@@ -87,7 +87,7 @@
 			<cfset arguments.content = ReReplace(arguments.content, "CF([0-9.]+\+)", "<span class=""label label-acf"" title=""Requires ColdFusion \1"">CF \1</span>", "ALL")>
 		</cfif>
 		<!--- add Luceex+ badge --->
-		<cfif REFind("Lucee[0-9.]+\+", arguments.content)>
+		<cfif findNoCase("lucee", arguments.content) AND REFind("Lucee[0-9.]+\+", arguments.content)>
 			<cfset arguments.content = ReReplace(arguments.content, "Lucee([0-9.]+\+)", "<span class=""label label-lucee"" title=""Requires Lucee \1"">Lucee \1</span>", "ALL")>
 		</cfif>
 		<!--- replace \n with br tags --->
@@ -96,7 +96,9 @@
 		</cfif>
 		<!--- replace backticks with code tag block --->
 		<cfset arguments.content = replace(arguments.content, "&##x60;", "`", "ALL")>
-		<cfset arguments.content = ReReplace(arguments.content, "`([^`]+)`", "<code>\1</code>", "ALL")>
+		<cfif find("`", arguments.content)>
+			<cfset arguments.content = ReReplace(arguments.content, "`([^`]+)`", "<code>\1</code>", "ALL")>
+		</cfif>
 		<cfreturn arguments.content>
 	</cffunction>
 

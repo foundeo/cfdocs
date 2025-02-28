@@ -8,6 +8,16 @@ qPeople = oLeader.get();
   <div class="container">
     <h1>CFDocs</h1>
     <p>UltraFast CFML Documentation Reference.</p>
+    <form class="hidden-md hidden-lg" id="search2">
+      <div class="form-group">
+        <div class="input-group">
+          <input type="text" style="width:100%" placeholder="Tag or Function..." id="lookup-box" class="form-control">
+          <div class="input-group-btn">
+            <button type="submit" class="btn btn-primary" style="    margin-top: -4px;">Go</button>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
 
@@ -19,7 +29,7 @@ qPeople = oLeader.get();
     </div>
     <div class="col-lg-4">
       <h2><span class="glyphicon glyphicon-thumbs-up"></span> &nbsp; Handy</h2>
-      <p>Easy urls like: <a href="/hash">cfdocs.org/hash</a> just hit <code>/tag-name</code> or <code>/function-name</code>.</p>
+      <p>Easy urls like: <a href="/cfquery">cfdocs.org/cfquery</a> just hit <code>/tag-name</code> or <code>/function-name</code>.</p>
     </div>
     <div class="col-lg-4">
       <h2><span class="glyphicon glyphicon-cutlery"></span> &nbsp; Forkable</h2>
@@ -50,7 +60,7 @@ qPeople = oLeader.get();
     </cfloop>
     <!--- cache for 1 day --->
     <cfset request.cacheControlMaxAge = 86400>
-  
+
     </cfoutput>
     </div>
   <cfelse>
