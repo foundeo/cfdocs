@@ -141,4 +141,13 @@ Historical information about ColdFusion Versions and releases.
 * [ColdFusion 2023 What's New](https://community.adobe.com/t5/coldfusion-discussions/live-introducing-the-2023-release-of-adobe-coldfusion/td-p/13797706)
 * [ColdFusion 2023 New Tags and Functions](/cf2023)
 
+## Adobe ColdFusion 2025 - February 2025 (_CFNext_)
+
+* New licensing and activation changes
+* New spreadsheet and CSV functions
+* Charting enhancements - new chart types, `cfchartset` tag, themes
+* Removal of deprecated features
+* [ColdFusion 2025 What's New](https://helpx.adobe.com/coldfusion/using/whats-new.html)
+* [ColdFusion 2025 Release Notes](https://helpx.adobe.com/coldfusion/release-note/coldfusion-2025-release-notes.html) 
+
 Lots of additional historical and version information can be found on the [ColdFusion Wikipedia Page](https://en.wikipedia.org/wiki/Adobe_ColdFusion)
