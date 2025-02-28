@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageXORDrawingMode(image, color)",
 	"member":"someImage.xorDrawingMode(color)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"void",
+   		 "type":"image",
+   		 "name":"xorDrawingMode"
+	},
 	"returns":"void",
 	"related":[],
 	"description":"Sets the paint mode of the image to alternate between the image's current color and the new specified color.",

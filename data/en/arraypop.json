@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"arrayPop(array)",
 	"member":"array.pop()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"array",
+   		 "name":"pop"
+	},
 	"returns":"any",
 	"related":["arrayPush"],
 	"description":"Removes the last element from an array and returns the removed element. This will cause an exception on an empty array.",

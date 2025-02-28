@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"stringReduceRight(string, callback, initialValue)",
 	"member":"string.reduceRight(callback, initialValue)",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"reduceRight"
+	},
 	"returns":"any",
 	"related": ["StringReduce","StringMap","StringFilter","reverse"],
 	"description":"This function iterates over every element of the string and calls the closure to work on that element. This function will reduce the string to a single value, from the right to the left, and will return the value.\nNOTE: This function is not available in Lucee 5.x or lower. Potentially use `reverse()` instead.",

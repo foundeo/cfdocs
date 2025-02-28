@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"imageGetBufferedImage(name)",
 	"member":"someImage.getBufferedImage()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"image",
+   		 "name":"getBufferedImage"
+	},
 	"returns":"any",
 	"related":["cfimage", "ImageGetBlob", "ImageGetEXIFTag", "ImageGetHeight", "ImageGetIPTCTag", "ImageGetWidth", "ImageInfo", "IsImage", "IsImageFile"],
 	"description":" Returns the java.awt.BufferedImage object underlying the current ColdFusion image.",

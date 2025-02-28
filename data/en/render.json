@@ -3,6 +3,13 @@
 	"type":"function",
 	"syntax":"render(CFML[, dialect ])",
 	"member":"",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":""
+	},
 	"script":"",
 	"returns":"void",
 	"related":["evaluate"],

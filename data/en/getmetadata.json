@@ -2,6 +2,14 @@
 	"name":"getMetadata",
 	"type":"function",
 	"syntax":"getMetadata(value)",
+	"member":"arr.getMetadata()",
+	"member_details":{
+   		 "engines":{},
+   		 "base_param_index":"1",
+   		 "returns":"any",
+   		 "type":"string",
+   		 "name":"getMetadata"
+	},
 	"returns":"any",
 	"related":["getFunctionData","getTagData","arrayGetMetadata"],
 	"description":"Gets metadata (the methods, properties, and parameters of a component) associated with an object that is deployed on the CFML server.",
