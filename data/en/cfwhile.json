@@ -10,7 +10,8 @@
 		{"name":"label","description":"Used to address loop from `break` or `continue` statement instead of innermost loop.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/while.html"}
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/while.html"},
+		"coldfusion": {"minimum_version":"9", "notes":"Script only. Tag is not supported currently.", "docs":"https://helpx.adobe.com/coldfusion/developing-applications/the-cfml-programming-language/extending-coldfusion-pages-with-cfml-scripting/using-cfscript-statements.html#Usingwhileloops"}
 	},
 	"links": [],
 	"examples": [
@@ -26,6 +27,13 @@
 			"description": "An outer while loop can be broken from inside a nested loop if the correct label name is passed within the break tag.",
 			"code": "<cfset row = 0/>\r\n<cfwhile condition=\"#row LT 5#\" label=\"outerLoop\">\r\n    <cfset col = 0/>\r\n    <cfwhile condition=\"#col LT 5#\" label=\"innerLoop\">\r\n\r\n        <cfif col EQ 3>\r\n            <cfbreak/>\r\n        <cfelseif row EQ 1>\r\n            <cfbreak outerLoop/>\r\n        </cfif>\r\n\r\n        <cfoutput>[#row#, #col#]</cfoutput>\r\n\r\n        <cfset col = col + 1/>\r\n    </cfwhile>\r\n    <cfset row = row + 1/>\r\n</cfwhile>",
 			"result": "[0, 0] [0, 1] [0, 2]",
+			"runnable": true
+		},
+		{
+			"title": "Script syntax with break",
+			"description": "A while loop from 1 to 10 that breaks once the variable reaches 5",
+			"code": "i = 1;\nwhile (i <= 10) {\n    writeDump(i);\n    if (i == 5) {\n        break;\n    }\n    i++;\n}",
+			"result": "12345",
 			"runnable": true
 		}
 	]
