@@ -10,8 +10,7 @@
 		{"name":"label","description":"Used to address loop from `break` or `continue` statement instead of innermost loop.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/while.html"},
-		"coldfusion": {"minimum_version":"9", "notes":"Script only. Tag is not supported currently.", "docs":"https://helpx.adobe.com/coldfusion/developing-applications/the-cfml-programming-language/extending-coldfusion-pages-with-cfml-scripting/using-cfscript-statements.html#Usingwhileloops"}
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/while.html"}
 	},
 	"links": [],
 	"examples": [
@@ -31,7 +30,7 @@
 		},
 		{
 			"title": "Script syntax with break",
-			"description": "A while loop from 1 to 10 that breaks once the variable reaches 5",
+			"description": "A while loop from 1 to 10 that breaks once the variable reaches 5. Note that Script syntax is valid in ColdFusion even though the tag syntax is not.",
 			"code": "i = 1;\nwhile (i <= 10) {\n    writeDump(i);\n    if (i == 5) {\n        break;\n    }\n    i++;\n}",
 			"result": "12345",
 			"runnable": true
