@@ -176,7 +176,7 @@ angular.module('code.editor', [])
 				scope.setupCodeGist = attrs.setupCodeGist;
 				scope.asserts = attrs.asserts;
 				scope.fullscreen = attrs.fullscreen;
-				scope.engines = {'acf2023':'Adobe ColdFusion 2023','acf2021':'Adobe ColdFusion 2021','acf2018':'Adobe ColdFusion 2018','acf2016':'Adobe ColdFusion 2016','acf11':'Adobe ColdFusion 11', 'acf':'Adobe ColdFusion 10', 'railo':'Railo 4.2', 'lucee':'Lucee 4.5', 'lucee5':'Lucee 5', 'lucee5.0.0.45':'Lucee 5.0.0.45'};
+				scope.engines = {'acf2023':'Adobe ColdFusion 2023','acf2021':'Adobe ColdFusion 2021','acf2018':'Adobe ColdFusion 2018','acf2016':'Adobe ColdFusion 2016','acf11':'Adobe ColdFusion 11', 'acf':'Adobe ColdFusion 10', 'railo':'Railo 4.2', 'lucee':'Lucee 4.5', 'lucee5':'Lucee 5', 'lucee6':'Lucee 6', 'lucee5.0.0.45':'Lucee 5.0.0.45'};
 				scope.engine = attrs.engine || 'lucee';
 				scope.basepath = attrs.basepath || '/gist/';
 
@@ -207,19 +207,20 @@ angular.module('code.editor', [])
 					asserts = attrs.asserts || "",
 					showOptions = typeof attrs.showOptions !== 'undefined' ? attrs.showOptions === "true" || attrs.showOptions === "1" : true,
 					showResults = typeof attrs.showResults !== 'undefined' ? attrs.showResults === "true" || attrs.showResults === "1" : true,
-                    urlPool = {
-                    	"railo" : [ "https://railo-sbx.trycf.com/getremote.cfm" ],
-				    	"lucee" : [ "https://lucee4-sbx.trycf.com/lucee4/getremote.cfm" ],
-				    	"lucee5" : [ "https://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
-				    	"lucee5.0.0.45" : [ "https://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
-		                "acf" : [ "https://acf10-sbx.trycf.com/cfusion/getremote.cfm" ],
+					urlPool = {
+						"railo" : [ "https://railo-sbx.trycf.com/getremote.cfm" ],
+						"lucee" : [ "https://lucee4-sbx.trycf.com/lucee4/getremote.cfm" ],
+						"lucee5" : [ "https://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
+						"lucee6" : [ "https://lucee6-sbx.trycf.com/getremote.cfm" ],
+						"lucee5.0.0.45" : [ "https://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
+						"acf" : [ "https://acf10-sbx.trycf.com/cfusion/getremote.cfm" ],
 						"acf11" : [ "https://acf11-sbx.trycf.com/cfusion/getremote.cfm" ],
 						"acf2016" : [ "https://acf12-sbx.trycf.com/getremote.cfm" ],
 						"acf2018" : [ "https://acf13-sbx.trycf.com/getremote.cfm" ],
 						"acf2021" : [ "https://acf14-sbx.trycf.com/getremote.cfm" ],
 						"acf2023" : [ "https://acf2023-sbx.trycf.com/getremote.cfm" ]
-                    },
-                    url = attrs.url || urlPool[scope.engine][Math.floor(Math.random()*urlPool[scope.engine].length)];
+					},
+					url = attrs.url || urlPool[scope.engine][Math.floor(Math.random()*urlPool[scope.engine].length)];
 
 				displayEngine();
 				theme = theme.toLowerCase();
