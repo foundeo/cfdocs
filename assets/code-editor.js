@@ -106,6 +106,7 @@ angular.module('code.editor', [])
 	'			<label class="control-label">Change CFML Engine</label>'+
 	'		        <div>'+
 	'		         <select id="engine" class="form-control">'+
+	'		             	<option value="lucee6">Lucee 6.LATEST</option>'+
 	'		             	<option value="lucee5">Lucee 5.LATEST</option>'+
 	'		             	<option value="lucee">Lucee 4.5.LATEST</option>'+
 	'		             	<option value="railo">Railo 4.2</option>'+
