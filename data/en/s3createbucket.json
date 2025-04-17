@@ -1,5 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3CreateBucket.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/S3CreateBucket.html",
+        "minimum_version": ""
+    }},
     "name": "S3CreateBucket",
     "description": "Creates a bucket on S3.",
     "syntax": "S3CreateBucket( bucketName )",

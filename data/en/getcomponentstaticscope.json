@@ -1,5 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/GetComponentStaticScope.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/GetComponentStaticScope.html",
+        "minimum_version": ""
+    }},
     "name": "GetComponentStaticScope",
     "description": "returns the static scope of a specific component, of course access rules apply.",
     "syntax": "GetComponentStaticScope( component )",

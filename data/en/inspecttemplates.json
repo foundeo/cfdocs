@@ -6,7 +6,7 @@
     }},
     "name": "inspectTemplates",
     "description": "Flag all the cfml code (cfm, cfcs) in the cache of compiled code (aka the Page Pool) to be checked once for any changes.",
-    "syntax": "inspectTemplates(  )",
+    "syntax": "inspectTemplates()",
     "returns": "boolean",
     "type": "function",
     "params": []

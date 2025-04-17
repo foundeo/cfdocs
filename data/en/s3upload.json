@@ -1,5 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3Upload.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/S3Upload.html",
+        "minimum_version": ""
+    }},
     "name": "S3Upload",
     "description": "Uploads a file to S3.",
     "syntax": "S3Upload( bucketName, objectName, source )",

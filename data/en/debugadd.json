@@ -1,5 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/debugAdd.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/debugAdd.html",
+        "minimum_version": ""
+    }},
     "name": "debugAdd",
     "description": "Adding data to debug output.",
     "syntax": "debugAdd( category, data )",

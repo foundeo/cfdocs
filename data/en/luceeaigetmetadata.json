@@ -1,5 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/luceeaigetmetadata.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/luceeaigetmetadata.html",
+        "minimum_version": ""
+    }},
     "name": "luceeaigetmetadata",
     "description": "Retrieves metadata about a configured AI endpoint. \nReturns information about the endpoint's configuration, \nand optionally detailed information about available models and associated files.",
     "syntax": "luceeaigetmetadata( name )",

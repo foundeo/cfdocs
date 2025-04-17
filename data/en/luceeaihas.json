@@ -1,5 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/luceeaihas.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/luceeaihas.html",
+        "minimum_version": ""
+    }},
     "name": "luceeaihas",
     "description": "Checks whether a specific AI endpoint is configured and available for use.",
     "syntax": "luceeaihas( name )",

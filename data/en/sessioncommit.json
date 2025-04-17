@@ -5,7 +5,7 @@
     }},
     "name": "SessionCommit",
     "description": "Force saving the session to storage, useful when sessionCluster is enabled.",
-    "syntax": "SessionCommit(  )",
+    "syntax": "SessionCommit()",
     "returns": "void",
     "type": "function",
     "params": []

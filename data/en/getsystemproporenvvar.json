@@ -5,7 +5,7 @@
     }},
     "name": "GetSystemPropOrEnvVar",
     "description": "Return the list of supported system properties or env vars Lucee supports.",
-    "syntax": "GetSystemPropOrEnvVar(  )",
+    "syntax": "GetSystemPropOrEnvVar()",
     "returns": "any",
     "type": "function",
     "params": [{

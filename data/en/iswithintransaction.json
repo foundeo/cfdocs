@@ -5,7 +5,7 @@
     }},
     "name": "isWithinTransaction",
     "description": "Determines whether the current thread is within a transaction block or not.",
-    "syntax": "isWithinTransaction(  )",
+    "syntax": "isWithinTransaction()",
     "returns": "boolean",
     "type": "function",
     "params": []

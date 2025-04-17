@@ -1,5 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/CreateAISession.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/CreateAISession.html",
+        "minimum_version": ""
+    }},
     "name": "CreateAISession",
     "description": "Creates a new AI session for interaction with Large Language Models (LLMs). \nThe session maintains conversation history and context between interactions. \nEach session can be configured with different parameters to optimize for specific use cases like code analysis, content generation, or data processing.\nCommon usage patterns:\n- Exception analysis and debugging assistance\n- Code documentation generation\n- Query optimization suggestions\n- Security review assistance\n- Performance optimization recommendations\nThe session persists until explicitly terminated or the application restarts.",
     "syntax": "CreateAISession( name )",

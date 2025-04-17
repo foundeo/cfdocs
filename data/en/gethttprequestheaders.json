@@ -5,7 +5,7 @@
     }},
     "name": "getHTTPRequestHeaders",
     "description": "Returns a Struct with HTTP Request Headers",
-    "syntax": "getHTTPRequestHeaders(  )",
+    "syntax": "getHTTPRequestHeaders()",
     "returns": "struct",
     "type": "function",
     "params": []

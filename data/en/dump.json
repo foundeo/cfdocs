@@ -1,8 +1,11 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/dump.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/dump.html",
+        "minimum_version": ""
+    }},
     "name": "dump",
     "description": "Outputs the elements, variables and values of most kinds of CFML objects. Useful for debugging. You can display the contents of simple and complex variables, objects, components, user-defined functions, and other elements.",
-    "syntax": "dump(  )",
+    "syntax": "dump()",
     "returns": "void",
     "type": "function",
     "params": [

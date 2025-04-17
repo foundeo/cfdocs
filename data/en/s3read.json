@@ -1,5 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3Read.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/S3Read.html",
+        "minimum_version": ""
+    }},
     "name": "S3Read",
     "description": "Reads an object from S3 as a string.",
     "syntax": "S3Read( bucketName, objectName )",

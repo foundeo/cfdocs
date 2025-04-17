@@ -1,5 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/ImageCoderInfo.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/ImageCoderInfo.html",
+        "minimum_version": ""
+    }},
     "name": "ImageCoderInfo",
     "description": "Gives detailed information about all coder used by the image extension.",
     "syntax": "ImageCoderInfo( image )",

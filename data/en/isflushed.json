@@ -5,7 +5,7 @@
     }},
     "name": "IsFlushed",
     "description": "returns true if the response stream was already flushed.",
-    "syntax": "IsFlushed(  )",
+    "syntax": "IsFlushed()",
     "returns": "boolean",
     "type": "function",
     "params": []

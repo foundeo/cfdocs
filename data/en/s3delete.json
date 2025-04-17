@@ -1,5 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3Delete.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/S3Delete.html",
+        "minimum_version": ""
+    }},
     "name": "S3Delete",
     "description": "deletes a bucket or an object within a bucket.",
     "syntax": "S3Delete( bucketName )",

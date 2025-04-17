@@ -1,5 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/fileTouch.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/fileTouch.html",
+        "minimum_version": ""
+    }},
     "name": "fileTouch",
     "description": "Touches given file, creates the file if not already exists.",
     "syntax": "fileTouch( file )",

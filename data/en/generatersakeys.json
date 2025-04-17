@@ -1,8 +1,11 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/GenerateRSAKeys.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/GenerateRSAKeys.html",
+        "minimum_version": ""
+    }},
     "name": "GenerateRSAKeys",
     "description": "Generates a secure keys (private and public) for use in the encrypt function with the RSA algorithm.",
-    "syntax": "GenerateRSAKeys(  )",
+    "syntax": "GenerateRSAKeys()",
     "returns": "struct",
     "type": "function",
     "params": [{

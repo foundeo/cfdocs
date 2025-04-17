@@ -1,5 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/ImageWriteToBrowser.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/ImageWriteToBrowser.html",
+        "minimum_version": ""
+    }},
     "name": "ImageWriteToBrowser",
     "description": "Writes image to browser.",
     "syntax": "ImageWriteToBrowser( image )",

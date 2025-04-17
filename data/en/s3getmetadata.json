@@ -1,5 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3GetMetaData.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/S3GetMetaData.html",
+        "minimum_version": ""
+    }},
     "name": "S3GetMetaData",
     "description": "Returns the metadata related to the object or bucket. You can provide the endpoint as a bucket/object definition (S3GetMetaData(bucket:\"mybucket\",object:\"myobject.txt\") ) or as a virtual filesystem path (S3GetMetaData(path:\"s3://mybucket/myobject.txt\") ).",
     "syntax": "S3GetMetaData( bucketNameOrPath )",

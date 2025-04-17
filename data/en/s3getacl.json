@@ -1,5 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3GetACL.html"}},
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/S3GetACL.html",
+        "minimum_version": ""
+    }},
     "name": "S3GetACL",
     "description": "Returns an array of structures, with each structure representing an ACL (Access Control List) grant. You can provide the endpoint as a bucket/object definition (S3GetACL(bucket:\"mybucket\",object:\"myobject.txt\") ) or as a virtual filesystem path (S3GetACL(path:\"s3://mybucket/myobject.txt\") ).",
     "syntax": "S3GetACL( bucketNameOrPath )",
