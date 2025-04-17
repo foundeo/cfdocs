@@ -1,9 +1,0 @@
-{
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/logout.html"}},
-    "name": "logout",
-    "description": "Logs the current user out. Removes knowledge of the user ID, password, and roles from the server.\nIf you do not use this tag, the user is automatically logged out when the session ends.",
-    "syntax": "<logout/>",
-    "returns": "void",
-    "type": "tag",
-    "params": []
-}

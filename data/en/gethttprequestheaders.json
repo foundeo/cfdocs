@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/gethttprequestheaders.html",
+        "docs": "https://docs.lucee.org/reference/functions/getHTTPRequestHeaders.html",
         "minimum_version": "5.3"
     }},
-    "name": "gethttprequestheaders",
+    "name": "getHTTPRequestHeaders",
     "description": "Returns a Struct with HTTP Request Headers",
-    "syntax": "gethttprequestheaders(  )",
+    "syntax": "getHTTPRequestHeaders(  )",
     "returns": "struct",
     "type": "function",
     "params": []

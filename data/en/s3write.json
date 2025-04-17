@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3write.html"}},
-    "name": "s3write",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3Write.html"}},
+    "name": "S3Write",
     "description": "Writes a value to S3.",
-    "syntax": "s3write( bucketName, objectName, value )",
+    "syntax": "S3Write( bucketName, objectName, value )",
     "returns": "void",
     "type": "function",
     "params": [

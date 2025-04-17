@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/configtranslate.html",
+        "docs": "https://docs.lucee.org/reference/functions/ConfigTranslate.html",
         "minimum_version": "6.0"
     }},
-    "name": "configtranslate",
+    "name": "ConfigTranslate",
     "description": "translate an old Lucee XML configuration to the new CFConfig.json configuration",
-    "syntax": "configtranslate( source )",
+    "syntax": "ConfigTranslate( source )",
     "returns": "struct",
     "type": "function",
     "params": [

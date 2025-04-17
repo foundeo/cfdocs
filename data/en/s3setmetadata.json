@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3setmetadata.html"}},
-    "name": "s3setmetadata",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3SetMetaData.html"}},
+    "name": "S3SetMetaData",
     "description": "Sets the metadata on bucket or object. You can provide the endpoint as a bucket/object definition (S3SetMetaData(bucket:\"mybucket\",object:\"myobject.txt\",metadata:data) ) or as a virtual filesystem path (S3SetMetaData(path:\"s3://mybucket/myobject.txt\",metadata:data) ).",
-    "syntax": "s3setmetadata( bucketNameOrPath, metadata )",
+    "syntax": "S3SetMetaData( bucketNameOrPath, metadata )",
     "returns": "void",
     "type": "function",
     "params": [

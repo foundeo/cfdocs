@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/directoryinfo.html",
+        "docs": "https://docs.lucee.org/reference/functions/DirectoryInfo.html",
         "minimum_version": "6.0"
     }},
-    "name": "directoryinfo",
+    "name": "DirectoryInfo",
     "description": "returns detailed info about the given directory.",
-    "syntax": "directoryinfo( source )",
+    "syntax": "DirectoryInfo( source )",
     "returns": "struct",
     "type": "function",
     "params": [{

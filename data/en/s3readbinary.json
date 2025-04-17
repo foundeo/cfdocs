@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3readbinary.html"}},
-    "name": "s3readbinary",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3ReadBinary.html"}},
+    "name": "S3ReadBinary",
     "description": "Reads an object from S3 as a binary.",
-    "syntax": "s3readbinary( bucketName, objectName )",
+    "syntax": "S3ReadBinary( bucketName, objectName )",
     "returns": "binary",
     "type": "function",
     "params": [

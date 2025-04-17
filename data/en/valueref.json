@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/valueref.html",
+        "docs": "https://docs.lucee.org/reference/functions/ValueRef.html",
         "minimum_version": "6.1"
     }},
-    "name": "valueref",
+    "name": "ValueRef",
     "description": "creates a reference to a UDF that acts like a simple value.",
-    "syntax": "valueref( ref )",
+    "syntax": "ValueRef( ref )",
     "returns": "any",
     "type": "function",
     "params": [{

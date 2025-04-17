@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/filemodetosymbolic.html",
+        "docs": "https://docs.lucee.org/reference/functions/FileModeToSymbolic.html",
         "minimum_version": "7.0"
     }},
-    "name": "filemodetosymbolic",
+    "name": "FileModeToSymbolic",
     "description": "Converts a mode mask to it's symbolic representation.",
-    "syntax": "filemodetosymbolic( mode )",
+    "syntax": "FileModeToSymbolic( mode )",
     "returns": "string",
     "type": "function",
     "params": [{

@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/markdowntohtml.html",
+        "docs": "https://docs.lucee.org/reference/functions/MarkdownToHTML.html",
         "minimum_version": "6.0"
     }},
-    "name": "markdowntohtml",
+    "name": "MarkdownToHTML",
     "description": "Transforms Markdown formatted String into HTML.",
-    "syntax": "markdowntohtml( string )",
+    "syntax": "MarkdownToHTML( string )",
     "returns": "string",
     "type": "function",
     "params": [

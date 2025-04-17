@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/queryrowdatabyindex.html",
+        "docs": "https://docs.lucee.org/reference/functions/queryRowDataByIndex.html",
         "minimum_version": "5.3"
     }},
-    "name": "queryrowdatabyindex",
+    "name": "queryRowDataByIndex",
     "description": "",
-    "syntax": "queryrowdatabyindex( query, index )",
+    "syntax": "queryRowDataByIndex( query, index )",
     "returns": "struct",
     "type": "function",
     "params": [

@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3download.html"}},
-    "name": "s3download",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3Download.html"}},
+    "name": "S3Download",
     "description": "Downloads an object from an S3 bucket. \nIt can save the object to a specified path, return its content directly, or process the content in parts through a provided closure or UDF (User-Defined Function).",
-    "syntax": "s3download( bucketName, objectName )",
+    "syntax": "S3Download( bucketName, objectName )",
     "returns": "any",
     "type": "function",
     "params": [

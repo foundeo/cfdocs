@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/getpropertyfile.html",
+        "docs": "https://docs.lucee.org/reference/functions/getPropertyFile.html",
         "minimum_version": "7.0"
     }},
-    "name": "getpropertyfile",
+    "name": "getPropertyFile",
     "description": "Read the properties from a properties file.",
-    "syntax": "getpropertyfile( filePath )",
+    "syntax": "getPropertyFile( filePath )",
     "returns": "struct",
     "type": "function",
     "params": [

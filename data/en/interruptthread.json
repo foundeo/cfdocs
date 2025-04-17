@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/interruptthread.html"}},
-    "name": "interruptthread",
-    "description": "Interrupts a specified thread by setting its interrupt status flag.\nThis function sets the interrupt status flag on a CFThread. The behavior depends on the thread's current state:\n- If the thread is blocked in a ThreadJoin or sleep method call: its interrupt status will be cleared and it will \nreceive an InterruptedException\n- If the thread is executing a long-running operation with interrupt checks: the operation may terminate early\n- If the thread is not alive: the interrupt request may have no effect",
-    "syntax": "interruptthread(  )",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/interruptThread.html"}},
+    "name": "interruptThread",
+    "description": "Interrupts a specified thread by setting its interrupt status flag.\r\nThis function sets the interrupt status flag on a CFThread. The behavior depends on the thread's current state:\r\n- If the thread is blocked in a ThreadJoin or sleep method call: its interrupt status will be cleared and it will \r\nreceive an InterruptedException\r\n- If the thread is executing a long-running operation with interrupt checks: the operation may terminate early\r\n- If the thread is not alive: the interrupt request may have no effect",
+    "syntax": "interruptThread(  )",
     "returns": "any",
     "type": "function",
     "params": [{

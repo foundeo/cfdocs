@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/fileinfo.html",
+        "docs": "https://docs.lucee.org/reference/functions/FileInfo.html",
         "minimum_version": "5.0"
     }},
-    "name": "fileinfo",
+    "name": "FileInfo",
     "description": "returns detailed info about the given file.",
-    "syntax": "fileinfo( file )",
+    "syntax": "FileInfo( file )",
     "returns": "struct",
     "type": "function",
     "params": [{

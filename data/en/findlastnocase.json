@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/findlastnocase.html",
+        "docs": "https://docs.lucee.org/reference/functions/findLastNoCase.html",
         "minimum_version": "5.3"
     }},
-    "name": "findlastnocase",
+    "name": "findLastNoCase",
     "description": "Finds the last occurrence of a substring in a string, from a\nspecified start position. If substring is not in string,\nreturns zero. The search is case-insensitive.",
-    "syntax": "findlastnocase( substring, string )",
+    "syntax": "findLastNoCase( substring, string )",
     "returns": "number",
     "type": "function",
     "params": [

@@ -1,12 +1,12 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/inspecttemplates.html",
+        "docs": "https://docs.lucee.org/reference/functions/inspectTemplates.html",
         "minimum_version": "5.3",
         "notes": "This only clears the cache for the **current** Application, plus all Server and Web Context mappings. \n\nOther per Application mappings are not affected\n"
     }},
-    "name": "inspecttemplates",
+    "name": "inspectTemplates",
     "description": "Flag all the cfml code (cfm, cfcs) in the cache of compiled code (aka the Page Pool) to be checked once for any changes.",
-    "syntax": "inspecttemplates(  )",
+    "syntax": "inspectTemplates(  )",
     "returns": "boolean",
     "type": "function",
     "params": []

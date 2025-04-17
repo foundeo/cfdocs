@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/arrayremoveduplicates.html",
+        "docs": "https://docs.lucee.org/reference/functions/ArrayRemoveDuplicates.html",
         "minimum_version": "6.0"
     }},
-    "name": "arrayremoveduplicates",
+    "name": "ArrayRemoveDuplicates",
     "description": "Removes duplicate values from array.",
-    "syntax": "arrayremoveduplicates( array )",
+    "syntax": "ArrayRemoveDuplicates( array )",
     "returns": "array",
     "type": "function",
     "params": [

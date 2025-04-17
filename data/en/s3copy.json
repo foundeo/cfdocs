@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3copy.html"}},
-    "name": "s3copy",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3Copy.html"}},
+    "name": "S3Copy",
     "description": "Copies an object in S3 from one bucket to an other.",
-    "syntax": "s3copy( srcBucketName, srcObjectName, trgBucketName )",
+    "syntax": "S3Copy( srcBucketName, srcObjectName, trgBucketName )",
     "returns": "void",
     "type": "function",
     "params": [

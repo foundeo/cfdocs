@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/lsucase.html",
+        "docs": "https://docs.lucee.org/reference/functions/lSUCase.html",
         "minimum_version": "6.1"
     }},
-    "name": "lsucase",
+    "name": "lSUCase",
     "description": "Converts the alphabetic characters in a specified string to uppercase, respecting locale-specific casing rules",
-    "syntax": "lsucase( string )",
+    "syntax": "lSUCase( string )",
     "returns": "string",
     "type": "function",
     "params": [

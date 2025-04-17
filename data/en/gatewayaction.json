@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/gatewayaction.html",
+        "docs": "https://docs.lucee.org/reference/functions/GatewayAction.html",
         "minimum_version": "6.2"
     }},
-    "name": "gatewayaction",
+    "name": "GatewayAction",
     "description": "Executes a specifc action for a gateway instance.",
-    "syntax": "gatewayaction( gatewayID, action )",
+    "syntax": "GatewayAction( gatewayID, action )",
     "returns": "string",
     "type": "function",
     "params": [

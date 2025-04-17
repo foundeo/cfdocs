@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/listqualifiedtoarray.html",
+        "docs": "https://docs.lucee.org/reference/functions/ListQualifiedToArray.html",
         "minimum_version": "5.3"
     }},
-    "name": "listqualifiedtoarray",
+    "name": "ListQualifiedToArray",
     "description": "Copies the elements of a list to an array.",
-    "syntax": "listqualifiedtoarray( list )",
+    "syntax": "ListQualifiedToArray( list )",
     "returns": "array",
     "type": "function",
     "params": [

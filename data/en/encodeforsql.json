@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/encodeforsql.html"}},
-    "name": "encodeforsql",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/encodeForSQL.html"}},
+    "name": "encodeForSQL",
     "description": "Encodes the given string for safe output in a query to reduce the risk of SQL Injection attacks. _This method is not recommended_ - the use of query parameters are strongly encouraged as a stronger alternative.",
-    "syntax": "encodeforsql( string, dialect )",
+    "syntax": "encodeForSQL( string, dialect )",
     "returns": "string",
     "type": "function",
     "params": [

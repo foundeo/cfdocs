@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3deletebucket.html"}},
-    "name": "s3deletebucket",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3DeleteBucket.html"}},
+    "name": "S3DeleteBucket",
     "description": "deletes a bucket, this function is deprecated, use instead S3Delete.",
-    "syntax": "s3deletebucket( bucketName )",
+    "syntax": "S3DeleteBucket( bucketName )",
     "returns": "query",
     "type": "function",
     "params": [

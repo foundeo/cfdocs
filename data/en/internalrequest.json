@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/internalrequest.html",
+        "docs": "https://docs.lucee.org/reference/functions/InternalRequest.html",
         "minimum_version": "6.0"
     }},
-    "name": "internalrequest",
+    "name": "InternalRequest",
     "description": "Makes a request to the CFML Engine internally.",
-    "syntax": "internalrequest( template )",
+    "syntax": "InternalRequest( template )",
     "returns": "struct",
     "type": "function",
     "params": [

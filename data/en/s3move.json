@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3move.html"}},
-    "name": "s3move",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3Move.html"}},
+    "name": "S3Move",
     "description": "Moves an object in S3 from one bucket to an other.",
-    "syntax": "s3move( srcBucketName, srcObjectName, trgBucketName )",
+    "syntax": "S3Move( srcBucketName, srcObjectName, trgBucketName )",
     "returns": "void",
     "type": "function",
     "params": [

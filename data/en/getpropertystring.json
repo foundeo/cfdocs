@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/getpropertystring.html",
+        "docs": "https://docs.lucee.org/reference/functions/getPropertyString.html",
         "minimum_version": "7.0"
     }},
-    "name": "getpropertystring",
+    "name": "getPropertyString",
     "description": "Sets the value of a property entry in a properties file.",
-    "syntax": "getpropertystring( filePath, key )",
+    "syntax": "getPropertyString( filePath, key )",
     "returns": "string",
     "type": "function",
     "params": [

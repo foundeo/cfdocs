@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3upload.html"}},
-    "name": "s3upload",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3Upload.html"}},
+    "name": "S3Upload",
     "description": "Uploads a file to S3.",
-    "syntax": "s3upload( bucketName, objectName, source )",
+    "syntax": "S3Upload( bucketName, objectName, source )",
     "returns": "void",
     "type": "function",
     "params": [

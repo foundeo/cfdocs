@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/querygetcellbyindex.html",
+        "docs": "https://docs.lucee.org/reference/functions/queryGetCellByIndex.html",
         "minimum_version": "5.3"
     }},
-    "name": "querygetcellbyindex",
+    "name": "queryGetCellByIndex",
     "description": "return the value of a specific query cell",
-    "syntax": "querygetcellbyindex( query, column_name, index )",
+    "syntax": "queryGetCellByIndex( query, column_name, index )",
     "returns": "any",
     "type": "function",
     "params": [

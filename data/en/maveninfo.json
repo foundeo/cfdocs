@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/maveninfo.html",
+        "docs": "https://docs.lucee.org/reference/functions/MavenInfo.html",
         "minimum_version": "7.0"
     }},
-    "name": "maveninfo",
+    "name": "MavenInfo",
     "description": "Retrieves information about a Maven artifact and its dependencies.\nThis function allows you to query details about a specific Maven artifact by providing its coordinates (groupId, artifactId, and optionally version). \nIt returns a query containing information about the artifact itself and all of its dependencies based on the specified scope.\nThe returned query includes columns for:\n- **groupId**: The group identifier of the artifact\n- **artifactId**: The artifact identifier\n- **version**: The version of the artifact\n- **scope**: The scope of the dependency (compile, provided, runtime, test, system)\n- **optional**: Whether the dependency is optional\n- **checksum**: Checksum information\n- **url**: URL where the artifact can be found\n- **path**: Local file path to the artifact\nThis function is useful for debugging classloading issues, understanding dependency trees, or gathering information about the libraries your application depends on.",
-    "syntax": "maveninfo( groupId, artifactId, version )",
+    "syntax": "MavenInfo( groupId, artifactId, version )",
     "returns": "query",
     "type": "function",
     "params": [

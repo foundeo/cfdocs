@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3clearbucket.html"}},
-    "name": "s3clearbucket",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3ClearBucket.html"}},
+    "name": "S3ClearBucket",
     "description": "Removes all objects from a bucket, unless maxage is set, in that case only objects that are older than maxage are removed.",
-    "syntax": "s3clearbucket( bucketName )",
+    "syntax": "S3ClearBucket( bucketName )",
     "returns": "void",
     "type": "function",
     "params": [

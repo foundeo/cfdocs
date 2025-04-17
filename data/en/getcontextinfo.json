@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/getcontextinfo.html",
+        "docs": "https://docs.lucee.org/reference/functions/getContextInfo.html",
         "minimum_version": "5.3"
     }},
-    "name": "getcontextinfo",
+    "name": "getContextInfo",
     "description": "Returns information about the current context.",
-    "syntax": "getcontextinfo(  )",
+    "syntax": "getContextInfo(  )",
     "returns": "struct",
     "type": "function",
     "params": []

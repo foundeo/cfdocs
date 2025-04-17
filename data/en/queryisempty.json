@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/queryisempty.html",
+        "docs": "https://docs.lucee.org/reference/functions/QueryIsEmpty.html",
         "minimum_version": "6.0"
     }},
-    "name": "queryisempty",
+    "name": "QueryIsEmpty",
     "description": "returns query empty or not",
-    "syntax": "queryisempty( query )",
+    "syntax": "QueryIsEmpty( query )",
     "returns": "boolean",
     "type": "function",
     "params": [{

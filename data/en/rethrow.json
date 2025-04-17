@@ -1,9 +1,0 @@
-{
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/rethrow.html"}},
-    "name": "rethrow",
-    "description": "Rethrows the currently active exception. Preserves the exception's cfcatch.type and cfcatch.\nagContext information.",
-    "syntax": "<rethrow/>",
-    "returns": "void",
-    "type": "tag",
-    "params": []
-}

@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/createulid.html",
+        "docs": "https://docs.lucee.org/reference/functions/createULID.html",
         "minimum_version": "6.0"
     }},
-    "name": "createulid",
+    "name": "createULID",
     "description": "Generates a ULID (Universally Unique Lexicographically Sortable Identifier)",
-    "syntax": "createulid(  )",
+    "syntax": "createULID(  )",
     "returns": "string",
     "type": "function",
     "params": [

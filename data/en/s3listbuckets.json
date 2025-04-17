@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3listbuckets.html"}},
-    "name": "s3listbuckets",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3ListBuckets.html"}},
+    "name": "S3ListBuckets",
     "description": "List all buckets",
-    "syntax": "s3listbuckets(  )",
+    "syntax": "S3ListBuckets(  )",
     "returns": "query",
     "type": "function",
     "params": [

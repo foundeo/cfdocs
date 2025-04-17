@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/querytostruct.html",
+        "docs": "https://docs.lucee.org/reference/functions/queryToStruct.html",
         "minimum_version": "6.0"
     }},
-    "name": "querytostruct",
+    "name": "queryToStruct",
     "description": "Copy the query columns data to struct by using the columnKey argument",
-    "syntax": "querytostruct( query, columnKey )",
+    "syntax": "queryToStruct( query, columnKey )",
     "returns": "struct",
     "type": "function",
     "params": [

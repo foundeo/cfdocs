@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/logallthreads.html",
+        "docs": "https://docs.lucee.org/reference/functions/LogAllThreads.html",
         "minimum_version": "6.2"
     }},
-    "name": "logallthreads",
+    "name": "LogAllThreads",
     "description": "Creates detailed thread stack trace logs in JSONL format for performance analysis and debugging.\nThis function captures stack traces from all running threads at specified intervals for a given duration.\nIt executes asynchronously, returning immediately after starting the logging process, making it ideal\nfor analyzing specific code segments by initiating logging just before the target code execution.\nThe output format is JSONL (JSON Lines), where each line represents a separate JSON object containing:\n- Timestamp offset in milliseconds from 1/1/1970 00:00:00 UTC (Unix 0)\n- Complete stack trace of each thread's current location\nThis data can be used for:\n- Performance bottleneck identification\n- Thread behavior analysis\n- Deadlock detection\n- Resource usage patterns",
-    "syntax": "logallthreads( path )",
+    "syntax": "LogAllThreads( path )",
     "returns": "void",
     "type": "function",
     "params": [

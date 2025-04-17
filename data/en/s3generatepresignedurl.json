@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3generatepresignedurl.html"}},
-    "name": "s3generatepresignedurl",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3GeneratePresignedURL.html"}},
+    "name": "S3GeneratePresignedURL",
     "description": "Generates a presigned URL pointing to the object given. You can provide the endpoint as a bucket/object definition (S3AddACL(bucket:\"mybucket\",object:\"myobject.txt\") ) or as a virtual filesystem path (S3AddACL(path:\"s3://mybucket/myobject.txt\") ).",
-    "syntax": "s3generatepresignedurl( bucketNameOrPath )",
+    "syntax": "S3GeneratePresignedURL( bucketNameOrPath )",
     "returns": "string",
     "type": "function",
     "params": [

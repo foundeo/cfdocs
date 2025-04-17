@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3exists.html"}},
-    "name": "s3exists",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3Exists.html"}},
+    "name": "S3Exists",
     "description": "Checks if given object exists in",
-    "syntax": "s3exists( bucketName )",
+    "syntax": "S3Exists( bucketName )",
     "returns": "boolean",
     "type": "function",
     "params": [

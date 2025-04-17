@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/queryrowbyindex.html",
+        "docs": "https://docs.lucee.org/reference/functions/queryRowByIndex.html",
         "minimum_version": "5.3"
     }},
-    "name": "queryrowbyindex",
+    "name": "queryRowByIndex",
     "description": "",
-    "syntax": "queryrowbyindex( query, index )",
+    "syntax": "queryRowByIndex( query, index )",
     "returns": "numeric",
     "type": "function",
     "params": [

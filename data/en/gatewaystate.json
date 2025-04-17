@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/gatewaystate.html",
+        "docs": "https://docs.lucee.org/reference/functions/GatewayState.html",
         "minimum_version": "6.2"
     }},
-    "name": "gatewaystate",
+    "name": "GatewayState",
     "description": "Return the current state for the given gateway id.",
-    "syntax": "gatewaystate( gatewayID )",
+    "syntax": "GatewayState( gatewayID )",
     "returns": "string",
     "type": "function",
     "params": [{

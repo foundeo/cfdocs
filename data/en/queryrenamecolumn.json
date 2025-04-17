@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/queryrenamecolumn.html",
+        "docs": "https://docs.lucee.org/reference/functions/queryRenameColumn.html",
         "minimum_version": "6.0"
     }},
-    "name": "queryrenamecolumn",
+    "name": "queryRenameColumn",
     "description": "Rename a column",
-    "syntax": "queryrenamecolumn( query, column, newColumnName )",
+    "syntax": "queryRenameColumn( query, column, newColumnName )",
     "returns": "void",
     "type": "function",
     "params": [

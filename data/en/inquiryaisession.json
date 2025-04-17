@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/inquiryaisession.html"}},
-    "name": "inquiryaisession",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/InquiryAISession.html"}},
+    "name": "InquiryAISession",
     "description": "Sends a question/message to an AI session and returns the response. The function maintains conversation context from previous interactions within the same session.\nThe response can either be returned as a complete string or streamed in chunks to a listener function for real-time processing.",
-    "syntax": "inquiryaisession( session, question )",
+    "syntax": "InquiryAISession( session, question )",
     "returns": "string",
     "type": "function",
     "params": [

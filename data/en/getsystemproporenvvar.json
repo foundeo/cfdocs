@@ -1,11 +1,11 @@
 {
     "engines": {"lucee": {
-        "docs": "https://docs.lucee.org/reference/functions/getsystemproporenvvar.html",
+        "docs": "https://docs.lucee.org/reference/functions/GetSystemPropOrEnvVar.html",
         "minimum_version": "6.2"
     }},
-    "name": "getsystemproporenvvar",
+    "name": "GetSystemPropOrEnvVar",
     "description": "Return the list of supported system properties or env vars Lucee supports.",
-    "syntax": "getsystemproporenvvar(  )",
+    "syntax": "GetSystemPropOrEnvVar(  )",
     "returns": "any",
     "type": "function",
     "params": [{

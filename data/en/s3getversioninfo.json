@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3getversioninfo.html"}},
-    "name": "s3getversioninfo",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3GetVersionInfo.html"}},
+    "name": "S3GetVersionInfo",
     "description": "Returns version information as a query for a specific object or bucket.",
-    "syntax": "s3getversioninfo( bucketName )",
+    "syntax": "S3GetVersionInfo( bucketName )",
     "returns": "query",
     "type": "function",
     "params": [

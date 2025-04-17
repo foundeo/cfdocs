@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/serializeaisession.html"}},
-    "name": "serializeaisession",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/SerializeAISession.html"}},
+    "name": "SerializeAISession",
     "description": "Serializes an AI session to a JSON string that includes its configuration and conversation history. The serialized content includes:\n- Configuration settings (temperature, limits, timeouts, system message)\n- Complete conversation history with questions and answers\nThis function is useful for:\n- Persisting AI sessions\n- Debugging AI conversations\n- Sharing or transferring AI session data\n- Storing AI conversation history\nUse `LoadAISession()` to restore a serialized session.",
-    "syntax": "serializeaisession( session )",
+    "syntax": "SerializeAISession( session )",
     "returns": "String",
     "type": "function",
     "params": [
@@ -12,6 +12,13 @@
             "aliases": "aiSession",
             "type": "any",
             "required": true
+        },
+        {
+            "name": "maxlength",
+            "description": "Specifies the maximum number of conversation exchanges to retain in the serialized output. \nWhen specified, the function preserves the most recent exchanges up to this limit, truncating older exchanges while maintaining the session configuration. \nThis helps control memory usage and storage requirements for long-running conversations without losing recent context. \nWhen used with condense=true, maxlength is applied before condensation. If not specified, all conversation history is retained.",
+            "aliases": "length",
+            "type": "numeric",
+            "required": false
         },
         {
             "name": "condense",

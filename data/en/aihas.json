@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/aihas.html"}},
-    "name": "aihas",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/AIHas.html"}},
+    "name": "AIHas",
     "description": "Checks whether a specific AI endpoint is configured and available for use.",
-    "syntax": "aihas( name )",
+    "syntax": "AIHas( name )",
     "returns": "boolean",
     "type": "function",
     "params": [{

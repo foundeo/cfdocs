@@ -1,8 +1,8 @@
 {
-    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3addacl.html"}},
-    "name": "s3addacl",
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/S3AddACL.html"}},
+    "name": "S3AddACL",
     "description": "Adds ACL to existing ACL for object or bucket. You can provide the endpoint as a bucket/object definition (S3AddACL(bucket:\"mybucket\",object:\"myobject.txt\",acl:data) ) or as a virtual filesystem path (S3AddACL(path:\"s3://mybucket/myobject.txt\",acl:data) ).",
-    "syntax": "s3addacl( bucketNameOrPath, aclObject )",
+    "syntax": "S3AddACL( bucketNameOrPath, aclObject )",
     "returns": "void",
     "type": "function",
     "params": [
