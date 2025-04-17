@@ -1,0 +1,12 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/applicationpathcacheclear.html",
+        "minimum_version": "5.3"
+    }},
+    "name": "applicationpathcacheclear",
+    "description": "flush the application.[cfc|cfm] path cache",
+    "syntax": "applicationpathcacheclear(  )",
+    "returns": "void",
+    "type": "function",
+    "params": []
+}

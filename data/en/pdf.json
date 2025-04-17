@@ -1,0 +1,325 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/pdf.html"}},
+    "name": "pdf",
+    "description": "Manipulates existing PDF documents.",
+    "syntax": "<pdf/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "action",
+            "description": "- addHeader\n- addFooter\n- addWatermark\n- deletePages\n- extractText\n- getInfo\n- merge\n- open\n- removePassword\n- protect\n- read\n- removeWatermark\n- setInfo\n- thumbnail \n- write\n\n**Note:**  action \"thumbnail\" was implemented from PDF Extension version - 1.1.0.8",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "ascending",
+            "description": "Order in which the PDF files are sorted",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "type",
+            "description": "used for action \"extractText\", defines the format type of the extraction, valid values are: string,xml",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "copyfrom",
+            "description": "Pathname of the PDF document from which to use the first page as a watermark",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "ddxfile",
+            "description": "Pathname of the DDX file, or a string with DDX instructions",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "destination",
+            "description": "Pathname of the modified PDF document. If the destination file exists, you must set the overwrite attribute to yes. If the destination file does not exist, CFML creates the file, if the parent directory exists.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "directory",
+            "description": "Directory of the PDF documents to merge. You must specify either the directory attribute or the source attribute. If you specify the directory attribute, CFML orders the documents by filename in descending order, by default. To change the order of the files, use the order attribute.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "encrypt",
+            "description": "Encryption type for the PDF output file",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "flatten",
+            "description": "Applies to forms created in Acrobat only (not forms created in LiveCycle); specifies whether interactivity is turned off",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "foreground",
+            "description": "Placement of the watermark on the page",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "format",
+            "description": "File type of thumbnail image output",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "image",
+            "description": "Image used as a watermark. You can specify a pathname, a variable that contains an image file, or an image variable",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "imageprefix",
+            "description": "prefix used for each image thumbnail file generated. The image filenames use the format: imagePrefix_page_n.format.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "filter",
+            "description": "file filter, used with attribute directory",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "info",
+            "description": "Structure variable for relevant information",
+            "default": false,
+            "type": "struct",
+            "required": false
+        },
+        {
+            "name": "inputfiles",
+            "description": "Structure that maps the PDF source files to the input variables in the DDX file, or a string of elements and their pathname.",
+            "default": false,
+            "type": "struct",
+            "required": false
+        },
+        {
+            "name": "isbase64",
+            "description": "Valid only when the image attribute is specified. Specifies whether the image used as a watermark is in Base64 format",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "keepbookmark",
+            "description": "Specifies whether bookmarks from the source PDF documents are retained in the merged document",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "PDF document variable name",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "newownerpassword",
+            "description": "Password used to set permissions on a PDF document",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "newuserpassword",
+            "description": "Password used to open PDF document",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "opacity",
+            "description": "Opacity of the watermark. Valid values are integers in the range 0 (transparent) through 10 (opaque).",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "order",
+            "description": "Order in which the PDF documents in the directory are merged",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "outputfiles",
+            "description": "Structure that contains the output files in the DDX file or string as keys and the pathname to the result file as the value.",
+            "default": false,
+            "type": "struct",
+            "required": false
+        },
+        {
+            "name": "overwrite",
+            "description": "Specifies whether PDF output overwrites the destination file",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "pages",
+            "description": "Page or pages in the source PDF document on which to perform the action. You can specify multiple pages and page ranges as follows: \"1,6-9,56-89,100, 110-120\".",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "password",
+            "description": "Owner or user password of the source PDF document, if the document is password-protected.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "permissions",
+            "description": "type of permissions on the PDF document",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "position",
+            "description": "Position on the page where the watermark is placed. The position represents the top-left corner of the watermark. Specify the x and y coordinates; for example \"50,30\".",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "resolution",
+            "description": "Image quality used to generate thumbnail images",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "rotation",
+            "description": "Degree of rotation of the watermark image on the page.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "saveoption",
+            "description": "Save options for the PDF output",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "scale",
+            "description": "Size of the thumbnail relative to the source page. The value represents a percentage from 1 through 100.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "showonprint",
+            "description": "Specify whether to print the watermark with the PDF document",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "source",
+            "description": "PDF document used as the source.",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "stoponerror",
+            "description": "Valid only if the directory attribute is specified. If the specified directory contains files other then readable PDF files, Lucee either stops merge process or continues.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "transparent",
+            "description": "(format=\"png\" only) Specifies whether the image background is transparent or opaque",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "version",
+            "description": "Version of the PDF used to write the document",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "text",
+            "description": "text for header or footer, you can add the following place holders within the text:\n\n- _PAGELABEL: add current page label\n- _LASTPAGELABEL: add last page label\n- _PAGENUMBER: add current page number\n- _LASTPAGENUMBER: add last page number",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "numberformat",
+            "description": "Specify the numbering format for PDF pages in the header/footer.\npossible values are:\n\n- LOWERCASEROMAN\n- UPPERCASEROMAN\n- NUMERIC",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "align",
+            "description": "Aligns the header and footer in PDF:\n\n- left\n- right\n- center",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "leftmargin",
+            "description": "left margin of the text in header/footer",
+            "default": false,
+            "type": "numeric",
+            "required": false
+        },
+        {
+            "name": "rightmargin",
+            "description": "right margin of the text in header/footer",
+            "default": false,
+            "type": "numeric",
+            "required": false
+        },
+        {
+            "name": "topmargin",
+            "description": "top margin of the text in header",
+            "default": false,
+            "type": "numeric",
+            "required": false
+        },
+        {
+            "name": "bottommargin",
+            "description": "bottom margin of the text in footer",
+            "default": false,
+            "type": "numeric",
+            "required": false
+        }
+    ]
+}

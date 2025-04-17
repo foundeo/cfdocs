@@ -1,0 +1,150 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/function.html"}},
+    "name": "function",
+    "description": "Defines a function within a CFML component that can accept arguments and return a value.",
+    "syntax": "<function name=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "name",
+            "description": "A string; a component method that is used within the cfcomponent tag.",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "returntype",
+            "description": "String; a type name; data type of the function return value",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "bufferoutput",
+            "description": "This attribute is only used when output of the function is set to false. If this attribute is set to true (default) the output written to the body of the function is buffered and in case of an exception also outputted.\n\nIf set to false the content to body is ignored and not disabled when a failure in the body of the tag occur.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "roles",
+            "description": "This attribute is used only for a component. If this attribute is omitted, all roles can invoke the method.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "access",
+            "description": "This attribute is used only within a component.\nThe client security context from which the method can be invoked\n\n- remote\n- public\n- package\n- private\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "output",
+            "description": "This attribute is used only for a component.\n\n- yes: the function is processed as if it were within a [[tag-output]] tag\n- no: the function is processed as if it were within a [[tag-silent]] tag",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "displayname",
+            "description": "Display Name of the Function",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "hint",
+            "description": "Hint of the Function",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "abstract",
+            "description": "is the function abstract or not, abstract functions are only allowed inside interface or component tags",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "description",
+            "description": "Supplies a short text description of the function.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "returnformat",
+            "description": "The format in which to return values to a remote caller.\n\nSupported values are \n\n- [wddx] \n- json \n- plain (text) \n- serialize (cfml, cfm) \n- xml\n- java",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "securejson",
+            "description": "A Boolean value that specifies whether to add a security prefix in front of any value that the function returns in JSON-format in response to a remote call.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "verifyclient",
+            "description": "A Boolean value that specifies whether to require remote function calls to include an encrypted security token. For use with AJAX applications only.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "localmode",
+            "description": "Defines how the local scope of this function is invoked when a variable with no scope definition is used.  Accepted values include:\n\n- classic (default): The local scope is only invoked when the key already exists in it (also aliased as `false`).\n- modern: The local scope is always invoked (also aliased as `true`).\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "cachedwithin",
+            "description": "possible values are:\n\n- String \"request\": If original content was created within the current request, cached content data is used.\n- a timespan (created with [[function-createtimespan]]): If original content date falls within the time span, cached content data is used.\n\nTo use cached data, the function must be called with the exact same arguments (part of the cache key is a hash of the arguments)\n",
+            "default": false,
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "modifier",
+            "description": "Use modifier to denote a function as abstract, static or final.\n\n- abstract: implementation must be defined in extended component.\n- final: implementation cannot be extended.\n- static: does not access instance variables in the component.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "consumes",
+            "description": "A comma-separated list of acceptable MIME types that the function can accept or consume. If no value is specified, all MIME types are consumed by default. Use this attribute to control the types of content the function can handle. This attribute overrides the `consumes` attribute at the component level.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "produces",
+            "description": "A comma-separated list of MIME types that the function can produce. The function will respond with the most acceptable media type as declared by the client. This attribute overrides the `produces` attribute at the component level.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "httpmethod",
+            "description": "Specifies the HTTP method to use when calling the function as part of a RESTful service. Accepted values include:\n\n- `GET`: Requests information from the server.\n- `POST`: Sends information to the server for processing.\n- `PUT`: Requests the server to store the message body at the specified URL.\n- `DELETE`: Requests the server to delete the specified URL.\n- `HEAD`: Similar to GET but without a response body.\n- `OPTIONS`: Requests information about the communication options available for the server or the specified URL.\n\nIf not specified, the `GET` method is used by default.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "restpath",
+            "description": "Defines a sub-resource path for the function when used as part of a RESTful web service. The path is case-sensitive and should avoid special characters. Regular expressions can be included in the path.",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/finally.html"}},
+    "name": "finally",
+    "description": "Used inside a cftry tag.\nCode in the cffinally block is processed after the main cftry code and, if an exception occurs, the cfcatch code.\nThe cffinally block code always executes, whether or not there is an exception.",
+    "syntax": "<finally/>",
+    "returns": "void",
+    "type": "tag",
+    "params": []
+}

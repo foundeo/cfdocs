@@ -1,0 +1,45 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/objectcache.html"}},
+    "name": "objectcache",
+    "description": "Flushes an object cache or returns the current size.",
+    "syntax": "<objectcache/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "action",
+            "description": "- clear\n- size\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "type",
+            "description": "cache type to manipulate\n\n- function\n- include\n- object\n- query\n- resource\n- template\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "filter",
+            "description": "filter for the elements to delete",
+            "default": false,
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "filterignorecase",
+            "description": "filter for the elements to delete",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "result",
+            "description": "name for variables for action size",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

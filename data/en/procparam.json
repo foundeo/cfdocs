@@ -1,0 +1,73 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/procparam.html"}},
+    "name": "procparam",
+    "description": "Specifies parameter information, including type, name, value, and length. The cfprocparam tag\nis nested within a cfstoredproc tag.",
+    "syntax": "<procparam/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "type",
+            "description": "Indicates whether the passed variable is an input, output or input/output variable. Default is IN.\n\tThe value IN passes the parameter by value. Values OUT and INOUT pass parameters as bound variables.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "variable",
+            "description": "The variable name that you use to reference the value that the output parameter\n\trepresents after the call is made to the stored procedure.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "dbvarname",
+            "description": "This attribute has been deprecated and is non-functional.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "value",
+            "description": "Corresponds to the actual value that Lucee passes to the stored procedure.",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "sqltype",
+            "description": "The SQL type that the parameter (any type) will be bound to.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "cfsqltype",
+            "description": "This attribute has been deprecated, use instead the attribute \"sqltype\" that has exact the same functionality.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "maxlength",
+            "description": "Maximum length of the parameter.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "scale",
+            "description": "Number of decimal places of the parameter.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "null",
+            "description": "Indicates whether the parameter is passed as a null. If you specify Yes, the tag ignores\n\tthe value attribute.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

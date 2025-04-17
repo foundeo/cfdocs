@@ -1,0 +1,31 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/login.html"}},
+    "name": "login",
+    "description": "A container for user login and authentication code.",
+    "syntax": "<login/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "idletimeout",
+            "description": "Time interval, in seconds, after which Lucee logs off the user.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "applicationtoken",
+            "description": "The login that applies to the application. To let users log in to only one application, specify a unique value for that application. To let users log in to multiple applications, specify the same value for those applications. If you do not set a value for the applicationtoken attribute, the default value is CFAUTHORIZATION_applicationname.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "cookiedomain",
+            "description": "Domain of the cookie that is used to mark a user as logged in. Use this attribute to enable a user login cookie to work with multiple clustered servers in the same domain.",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

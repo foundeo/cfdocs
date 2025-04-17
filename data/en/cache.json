@@ -1,0 +1,136 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/cache.html"}},
+    "name": "cache",
+    "description": "Speeds up page rendering when dynamic content ",
+    "syntax": "<cache/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "action",
+            "description": "- cache (default): server-side and client-side template caching.\n- flush: refresh cached pages (template caching).\n- clientcache: browser-side caching only. To cache a personalized page, use this option.\n- servercache: server-side caching only. Not recommended.\n- optimal: same as \"cache\".\n- content: same as cache, but cache only the body of the tag, not the complete template (template caching).\n- put: adds a key value pair to object cache (see function cachePut for more details)\n- get: gets value matching given key from object cache (see function cacheGet for more details)",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "key",
+            "description": "key to access cache",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "id",
+            "description": "Id of the cached object",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "throwonerror",
+            "description": "A Boolean value specifying whether t throw an error if the flush action encounters an error.\n\nOtherwise the action does not generate an error if it fails.\n\nIf this attribute is true you can handle the error in a cfcatch block, for example, if a specified id value is invalid",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "name of return variable, valid with action=\"get\"",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "metadata",
+            "description": "Name of the struct variable",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "value",
+            "description": "For action=\"set\", object which needs to be stored",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "cachename",
+            "description": "definition of the cache used by name, when not set the \"default Object Cache\" defined in Lucee Administrator is used instead.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "username",
+            "description": "When required for basic authentication, a valid username.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "password",
+            "description": "When required for basic authentication, a valid password.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "protocol",
+            "description": "Specifies the protocol used to create pages from cache. Either http:// or https://. The default\nis http://.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "timespan",
+            "description": "The interval until the item is flushed from the cache.\n\nA decimal number of days, for example:\n\n- .25, for one-fourth day (6 hours)\n- 1, for one day\n- 1.5, for one and one half days\n\nA return value from the CreateTimeSpan function, for example, \"#CreateTimeSpan(0,6,0,0)#\".\n\nThe default action is to flush the item when it is idle for the time specified by the idleTime attribute, or cfcache action=\"flush\" executes.",
+            "default": false,
+            "type": "timespan",
+            "required": false
+        },
+        {
+            "name": "idletime",
+            "description": "Flushes the cached item if it is not accessed for the specified time span:\nA decimal number of days, for example:\n\n- .25, for one-fourth day (6 hours)\n- 1, for one day\n- 1.5, for one and one half days\n\nA return value from the CreateTimeSpan function, for example, \"#CreateTimeSpan(0,6,0,0)#\".",
+            "default": false,
+            "type": "timespan",
+            "required": false
+        },
+        {
+            "name": "directory",
+            "description": "Absolute path of cache directory.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "cachedirectory",
+            "description": "Absolute path of cache directory (alias for directory).",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "timeout",
+            "description": "This attribute has been deprecated and is non-functional.",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "expireurl",
+            "description": "A URL reference.\n\nCan include wildcards, for example: \"*/view.cfm?id=*\".\n\nLucee flushes, from the cache, pages that match the specified URL or pattern.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "port",
+            "description": "Port number of the web server from which the URL for the cached page is requested.\n\nIn the internal call from cfcache to cfhttp, Lucee resolves each URL variable in the page; this ensures that links in the page remain functional.",
+            "default": false,
+            "type": "number",
+            "required": false
+        }
+    ]
+}

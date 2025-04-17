@@ -1,0 +1,15 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/silent.html"}},
+    "name": "silent",
+    "description": "Suppresses all output that is produced by the CFML within the tag's scope.",
+    "syntax": "<silent/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [{
+        "name": "bufferoutput",
+        "description": "if set to true (default) the output written to the body of the tag is buffered and in case of an exception also outputted.\n\nif set to false the content to body is ignored and not disabled when a failure in the body of the tag occur.",
+        "default": false,
+        "type": "boolean",
+        "required": false
+    }]
+}

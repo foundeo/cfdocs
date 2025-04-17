@@ -1,0 +1,52 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3getversioninfo.html"}},
+    "name": "s3getversioninfo",
+    "description": "Returns version information as a query for a specific object or bucket.",
+    "syntax": "s3getversioninfo( bucketName )",
+    "returns": "query",
+    "type": "function",
+    "params": [
+        {
+            "name": "bucketName",
+            "description": "Name of the bucket to get info for.",
+            "aliases": "bucket",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "objectName",
+            "description": "Name of the object (path) within the bucket to get info for. If not defined, info of the bucket is returned.",
+            "aliases": "object,path",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "accessKeyId",
+            "description": "S3 accessKeyId. If not defined, checks the system property/environment variable for [lucee.s3.accesskeyid].",
+            "aliases": "accessKey,awsAccessKeyId,awsAccessKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "secretAccessKey",
+            "description": "S3 secretAccessKey. If not defined, checks the system property/environment variable for [lucee.s3.secretaccesskey].",
+            "aliases": "secretKey,awsSecretKey,awsSecretAccessKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "host",
+            "description": "The provider to connect to. If not set, Amazon AWS is used.",
+            "aliases": "provider,server",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "timeout",
+            "description": "Timeout for this execution (in milliseconds).",
+            "default": "10000",
+            "type": "number",
+            "required": false
+        }
+    ]
+}

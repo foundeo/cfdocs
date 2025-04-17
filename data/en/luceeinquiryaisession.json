@@ -1,0 +1,30 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/luceeinquiryaisession.html"}},
+    "name": "luceeinquiryaisession",
+    "description": "Sends a question/message to an AI session and returns the response. The function maintains conversation context from previous interactions within the same session.\nThe response can either be returned as a complete string or streamed in chunks to a listener function for real-time processing.",
+    "syntax": "luceeinquiryaisession( session, question )",
+    "returns": "string",
+    "type": "function",
+    "params": [
+        {
+            "name": "session",
+            "description": "The AI session object returned by LuceeCreateAISession(). This session maintains the conversation history and configuration settings like temperature and system message.",
+            "aliases": "aiSession",
+            "type": "any",
+            "required": true
+        },
+        {
+            "name": "question",
+            "description": "The question or message to send to the AI. This can be plain text or structured data (like JSON) depending on how the session was configured in its system message.\nThe question becomes part of the conversation history and provides context for future interactions within the same session.",
+            "aliases": "message",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "listener",
+            "description": "A user-defined function that receives the response in chunks as they arrive from the AI. This enables real-time processing or display of the response.\nThe listener function should accept a single argument which will contain the response chunk.\nWhen a listener is provided, the function still returns the complete response as a string, but also streams each chunk to the listener as it arrives.",
+            "type": "function",
+            "required": false
+        }
+    ]
+}

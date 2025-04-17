@@ -1,0 +1,24 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/transaction.html"}},
+    "name": "transaction",
+    "description": "Groups multiple queries into a single unit. The cftransaction\ntag provides commit and rollback processing.",
+    "syntax": "<transaction/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "action",
+            "description": "- begin: The start of the block of code to execute.\n- commit: Commits a pending transaction.\n- rollback: Rolls back a pending transaction.\n- setsavepoint: Saves a specific state within a transaction",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "isolation",
+            "description": "Database lock type.\n\n- read_uncommitted\n- read_committed\n- repeatable_read\n- serializable\n- none\n\n<https://en.wikipedia.org/wiki/Isolation_(database_systems)>",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

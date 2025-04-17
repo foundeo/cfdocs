@@ -1,0 +1,15 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/imagewritetobrowser.html"}},
+    "name": "imagewritetobrowser",
+    "description": "Writes image to browser.",
+    "syntax": "imagewritetobrowser( image )",
+    "returns": "void",
+    "type": "function",
+    "params": [{
+        "name": "image",
+        "description": "The image on which this operation is performed.",
+        "aliases": "name",
+        "type": "any",
+        "required": true
+    }]
+}

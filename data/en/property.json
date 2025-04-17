@@ -1,0 +1,73 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/property.html"}},
+    "name": "property",
+    "description": "Defines properties within components that can be used for web services, ORM mapping, and accessor method generation. Properties are exposed as component metadata and follow component inheritance rules.",
+    "syntax": "<property name=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "name",
+            "description": "A string; a property name. Must be a static value.",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "type",
+            "description": "A string; a property type name; data type.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "required",
+            "description": "Whether the parameter is required",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "default",
+            "description": "This sets the default value on the property when the object is created.",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "displayname",
+            "description": "A value to be displayed when using introspection to show\ninformation about the CFC. The value appears in parentheses\nfollowing the property name.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "hint",
+            "description": "Text to be displayed when using introspection to show\ninformation about the CFC. This attribute can be useful\nfor describing the purpose of the parameter.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "access",
+            "description": "The client security context from which the method can be invoked",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "getter",
+            "description": "Specifies whether to generate getter methods or not",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "setter",
+            "description": "Specifies whether to generate setter methods or not",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

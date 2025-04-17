@@ -1,0 +1,276 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/document.html"}},
+    "name": "document",
+    "description": "Creates a PDF document from a text block containing CFML and HTML.",
+    "syntax": "<document/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "backgroundvisible",
+            "description": "Specifies whether the background prints when the user prints the document",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "encryption",
+            "description": "define if the output should be encrypted and how deep",
+            "default": false,
+            "type": "String",
+            "required": false
+        },
+        {
+            "name": "filename",
+            "description": "name for output file, if not defined output will be written to response stream",
+            "default": false,
+            "type": "String",
+            "required": false
+        },
+        {
+            "name": "fontembed",
+            "description": "define if fonts will embedded with the file",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "fontdirectory",
+            "description": "directory that contains additional font files (.ttf) and a pd4fonts.properties to describe them.\n\n**Note**: Classic engine works using the font-family-name from pd4fonts.properties file. Modern (Flying saucer) engine works using the font-family-name from the .ttf file with the same case.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "format",
+            "description": "format of the created file",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "page",
+            "description": "Specifies the page info in a struct like this {width:10, height:5, type:A4}",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "margin",
+            "description": "Specifies the margin in inches (default), centimeters or points. The attribute unit controls the type.\npossible values is a number, so margin is the same all around, or a struct like this {top:1,bottom:1,left:2,right:2}",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "marginbottom",
+            "description": "Specifies the bottom margin in inches (default) or\ncentimeters. To specify bottom margin in\ncentimeters, include the unit=cm attribute.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "marginleft",
+            "description": "Specifies the left margin in inches (default) or\ncentimeters. To specify left margin in centimeters,\ninclude the unit=cm attribute.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "marginright",
+            "description": "Specifies the right margin in inches (default) or\ncentimeters. To specify right margin in centimeters,\ninclude the unit=cm attribute.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "margintop",
+            "description": "Specifies the top margin in inches (default) or\ncentimeters. To specify top margin in centimeters,\ninclude the unit=cm attribute.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "mimetype",
+            "description": "mimetype of the source (when attribute src or srcfile are defined)",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "name of a variable to store the output in it",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "orientation",
+            "description": "Page orientation. Can be \"landscape\" or \"portrait\". Defaults to \"portrait\".\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "overwrite",
+            "description": "define if an existing file will be overwritten or not",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "ownerpassword",
+            "description": "Specifies an owner password (format=\"PDF\" only).",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "pageheight",
+            "description": "used when pagetype is custom",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "pagewidth",
+            "description": "used when pagetype is custom",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "pagetype",
+            "description": "defined the used format for the page (,legal,letter,A4,A5,B4,B5,B4-JIS,B5-JIS and custom)",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "permissions",
+            "description": "Sets the permissions for the document\n\n- AllowPrinting\n- AllowModifyContents\n- AllowCopy\n- AllowModifyAnnotations\n- AllowFillIn\n- AllowScreenReaders\n- AllowAssembly\n- AllowDegradedPrinting\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "scale",
+            "description": "Define a scale factor as a percentage. This option is used to reduce the size of the HTML output so that it fits on that paper. Define a number less than 100.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "src",
+            "description": "define a url or a relative path on the local system to a file that should be transferred to a pdf",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "srcfile",
+            "description": "define an absolute path to a file that should be transferred to a pdf",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "type",
+            "description": "Specifies which engine should be used to render the document.\n\nOptions are:\n\n- classic\n- modern (Available since PDF Extension version 1.0.0.92)\n \nDefaults to the Application's `this.pdf.type` setting (which defaults to \"modern\").\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "unit",
+            "description": "set the unit for pageheight, pagewidth, and margin...",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "userpassword",
+            "description": "Specifies a user password (format=\"PDF\" only). Defaults to \"empty\" if is not set, and encryption is set to 40 bit or 128 bit.\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "proxyhost",
+            "description": "alias for proxyHost",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "proxyport",
+            "description": "The port number on the proxy server from which the object is requested. Default is 80. When\n\tused with resolveURL, the URLs of retrieved documents that specify a port number are automatically\n\tresolved to preserve links in the retrieved document.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "proxyuser",
+            "description": "When required by a proxy server, a valid username.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "proxypassword",
+            "description": "When required by a proxy server, a valid password.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "bookmark",
+            "description": "Specifies whether bookmarks are created in the document",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "htmlbookmark",
+            "description": "If true, it is possible to convert outlines to a list of named anchors (`<a name=\"anchor_id\">label<\/a>`) or a headings structure (`<h1>`...`<h6>`). Transforming of HTML hyperlinks to PDF hyperlinks (if not explicitly disabled). Hyperlink jumps within the same document are supported as well",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "localurl",
+            "description": "Specifies whether to retrieve image files directly from the local drive",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "authuser",
+            "description": "User name sent to the target URL for Basic Authentication. Combined with password to form a base64 encoded string that is passed in the Authenticate header. Does not provide support for Integrated Windows, NTLM, or Kerberos authentication.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "authpassword",
+            "description": "Password sent to the target URL for Basic Authentication. Combined with username to form a base64 encoded string that is passed in the Authenticate header. Does not provide support for Integrated Windows, NTLM, or Kerberos authentication.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "useragent",
+            "description": "Text to put in the HTTP User-Agent request header field. Used to identify the request client software.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "saveasname",
+            "description": "(format=\"PDF\" only) The filename that appears in the SaveAs dialog when a user saves a PDF file written to the browser.",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

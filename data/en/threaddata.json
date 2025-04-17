@@ -1,0 +1,12 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/threaddata.html",
+        "minimum_version": "5.3"
+    }},
+    "name": "threaddata",
+    "description": "returns the root cfthread scope.",
+    "syntax": "threaddata(  )",
+    "returns": "struct",
+    "type": "function",
+    "params": []
+}

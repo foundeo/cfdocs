@@ -1,0 +1,24 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/serializeaisession.html"}},
+    "name": "serializeaisession",
+    "description": "Serializes an AI session to a JSON string that includes its configuration and conversation history. The serialized content includes:\n- Configuration settings (temperature, limits, timeouts, system message)\n- Complete conversation history with questions and answers\nThis function is useful for:\n- Persisting AI sessions\n- Debugging AI conversations\n- Sharing or transferring AI session data\n- Storing AI conversation history\nUse `LoadAISession()` to restore a serialized session.",
+    "syntax": "serializeaisession( session )",
+    "returns": "String",
+    "type": "function",
+    "params": [
+        {
+            "name": "session",
+            "description": "The AI session object returned by LuceeCreateAISession(). This session maintains the conversation history and configuration settings like temperature and system message.",
+            "aliases": "aiSession",
+            "type": "any",
+            "required": true
+        },
+        {
+            "name": "condense",
+            "description": "Controls whether the conversation history should be condensed before serialization. When set to true, the function will intelligently summarize older parts of the conversation while preserving essential context. This reduces the overall token count and storage requirements while maintaining the important elements of the conversation history. Default is false, which preserves the complete conversation history.",
+            "aliases": "summarize",
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

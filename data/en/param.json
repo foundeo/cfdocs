@@ -1,0 +1,59 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/param.html"}},
+    "name": "param",
+    "description": "Tests for a parameter's existence, tests its data type, and provides a default value if one\nis not assigned.",
+    "syntax": "<param name=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "name",
+            "description": "The name of the parameter to test, such as Client.Email or Cookie.BackgroundColor. If\nyou omit the DEFAULT attribute, an error occurs if the specified parameter does not exist",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "type",
+            "description": "The type of parameter that is required. The default is 'any' and valid values are:\n\n- any: any type of value\n- array: an array of values\n- binary: a binary value\n- boolean: a Boolean value\n- creditcard: a 13-16 digit number conforming to the mod10 algorithm\n- date or time: a date-time value\n- email: a valid e-mail address\n- eurodate: a date-time value. Any date part must be in the format dd/mm/yy. The format can use /, -, or . characters as delimiters\n- float or numeric: a numeric value\n- guid: a Universally Unique Identifier of the form \"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX\" where X is a hexadecimal number\n- integer: an integer\n- query: a query object\n- range: a numeric range, specified by the min and max attributes\n- regex or regular_expression: matches input against pattern attribute\n- ssn or social_security_number: a U.S. social security number\n- string: a string value or single character\n- struct: a structure\n- telephone: a standard U.S. telephone number\n- url: an http, https, ftp, file, mailto, or news URL\n- uuid: a ColdFusion Universally Unique Identifier, formatted XXXXXXXX-XXXX-XXXX-XXXXXXXXXXXXXXX, where X is a hexadecimal number. See CreateUUID\n- usdate: a U.S. date of the format mm/dd/yy, with 1-2 digit days and months, 1-4 digit years\n- variableName: a string formatted according to ColdFusion variable naming conventions\n- xml: XML objects and XML strings\n- zipcode: U.S., 5- or 9-digit format ZIP codes",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "default",
+            "description": "Default value to set the parameter to if it does not exist.",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "min",
+            "description": "define the smallest size of a numeric value, used for type range",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "max",
+            "description": "define the biggest size of a numeric value, used for type range",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "pattern",
+            "description": "define a regular expression pattern, to check value against",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "maxlength",
+            "description": "define the maxlength of a value for this types: email, url and string",
+            "default": false,
+            "type": "int",
+            "required": false
+        }
+    ]
+}

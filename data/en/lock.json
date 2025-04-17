@@ -1,0 +1,52 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/lock.html"}},
+    "name": "lock",
+    "description": "Provides two types of locks to ensure the integrity of shared data: Exclusive lock and Read-only lock.",
+    "syntax": "<lock/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "timeout",
+            "description": "Specifies the maximum amount of time, in seconds, to wait to obtain a lock.\n\nIf a lock can be obtained within the specified period, execution continues inside the body of the tag. Otherwise, the behavior depends on the value of the throwOnTimeout attribute.",
+            "default": false,
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "scope",
+            "description": "Specifies the scope as one of the following: Application, Server, or Session.\n\nThis attribute is mutually exclusive with the name attribute.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "Specifies the name of the lock.\n\nOnly one request can execute inside a cflock tag with a given name. Therefore, providing the name attribute allows for synchronizing access to resources from \tdifferent parts of an application. Lock names are global to a server. They are shared between applications and user sessions, but not across clustered servers.\n\nThis attribute is mutually exclusive with the scope attribute. Therefore, do not specify the scope attribute and the name attribute in a tag. The value of name cannot be an empty string.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "throwontimeout",
+            "description": "Yes or No. Specifies how timeout conditions are handled.\n\nIf the value is Yes, an exception is generated to provide notification of the timeout.\n\nIf the value is No, execution continues past the cfclock tag. Default is Yes.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "type",
+            "description": "readOnly or Exclusive. Specifies the type of lock: read-only or exclusive. Default is Exclusive.\n\nA read-only lock allows more than one request to read shared data. An exclusive lock allows only one request to read or write to shared data.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "result",
+            "description": "Specifies a name for the structure in which cflock returns the `statusCode` and `ExecutionTime` variables.\n\nDefault variable is \"cflock\".\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

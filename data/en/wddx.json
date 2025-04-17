@@ -1,0 +1,59 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/wddx.html"}},
+    "name": "wddx",
+    "description": "Serializes and de-serializes CFML data structures to the XML-based WDDX format.",
+    "syntax": "<wddx action=\"\", input=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "action",
+            "description": "Specifies the action taken by the cfwddx tag.\n\n- cfml2wddx\n- wddx2cfml\n- cfml2js\n- wddx2js",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "input",
+            "description": "The value to be processed.",
+            "default": false,
+            "type": "any",
+            "required": true
+        },
+        {
+            "name": "output",
+            "description": "The name of the variable to hold the output of the operation. This attribute is required for\naction = 'WDDX2CFML'. For all other actions, if this attribute is not provided, the result of the\nWDDX processing is outputted in the HTML stream.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "toplevelvariable",
+            "description": "The name of the top-level JavaScript object created by the deserialization process. The object\ncreated is an instance of the WddxRecordset object, explained in WddxRecordset Object.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "usetimezoneinfo",
+            "description": "Indicates whether to output time-zone information when serializing CFML to WDDX. If time-zone\ninformation is taken into account, the hour-minute offset, as represented in the ISO8601 format, is\ncalculated in the date-time output. If time-zone information is not taken into account, the local\ntime is output. The default is Yes.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "validate",
+            "description": "Applies if action = \"wddx2cfml\" or \"wddx2js\".\n\n- Yes: validates WDDX input with an XML parser using\nWDDX DTD. If parser processes input without error,\npacket is deserialized. Otherwise, an error is\nthrown.\n- No: no input validation",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "xmlconform",
+            "description": "if set to true generate valid XML, if set to false (default) the XML generated is compatible to other engines, but not valid XML (use for example single quotes for attribute values)",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/servletparam.html"}},
+    "name": "servletparam",
+    "description": "This tag has been deprecated and is non-functional.",
+    "syntax": "<servletparam name=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "name",
+            "description": "This attribute has been deprecated and is non-functional.",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "value",
+            "description": "This attribute has been deprecated and is non-functional.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "variable",
+            "description": "This attribute has been deprecated and is non-functional.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "type",
+            "description": "This attribute has been deprecated and is non-functional.",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

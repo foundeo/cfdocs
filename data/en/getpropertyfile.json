@@ -1,0 +1,26 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/getpropertyfile.html",
+        "minimum_version": "7.0"
+    }},
+    "name": "getpropertyfile",
+    "description": "Read the properties from a properties file.",
+    "syntax": "getpropertyfile( filePath )",
+    "returns": "struct",
+    "type": "function",
+    "params": [
+        {
+            "name": "filePath",
+            "description": "Path of the properties initialization file",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "encoding",
+            "description": "Encoding for the properties file",
+            "default": "UTF-8",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

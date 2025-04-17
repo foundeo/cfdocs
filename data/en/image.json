@@ -1,0 +1,157 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/image.html"}},
+    "name": "image",
+    "description": "Lets you resize and add labels to GIF and JPEG format images.",
+    "syntax": "<image/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "action",
+            "description": "Action to execute.\n\n- border [[function-ImageAddBorder]]\n- captcha [[function-ImageCaptcha]]\n- convert\n- writetobrowser [[function-ImageWriteToBrowser]]\n- write [[function-ImageWrite]]\n- rotate [[function-ImageRotate]]\n- resize [[function-imageResize]]\n- read [[function-imageRead]]\n- info [[function-imageInfo]]",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "angle",
+            "description": "Angle in degrees to rotate the image.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "passthrough",
+            "description": "HTML attributes that are not explicitly supported by cfimage.\n\nIf you specify an attribute and value,\nthey are passed to the tag \"img\".",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "color",
+            "description": "Border color. Hexadecimal value or supported named color.\n\nFor a hexadecimal value, use the form \"#xxxxxx\" or \"xxxxxx\", where x = 0-9 or A-F; use two number signs or none.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "destination",
+            "description": "Absolute or relative pathname where the image output is written.\n\nThe image format is determined by the file extension.\n\nThe convert and write actions require a destination attribute.\n\nThe border, captcha, resize, and rotate actions require a name attribute or a destination attribute.\n\nYou can specify both.\n\nIf you do not enter a destination,\nthe CAPTCHA image is placed inline in the HTML output and displayed in the web browser.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "difficulty",
+            "description": "Level of complexity of the CAPTCHA text.\n\nSpecify one of the following levels of text distortion:\nlow, medium, high",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "fonts",
+            "description": "One or more valid fonts to use for the CAPTCHA text. Separate multiple fonts with commas.\n\nLucee supports only the system fonts that the JDK can recognize. For example, TTF fonts in the Windows directory are supported on Windows.",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "fontsize",
+            "description": "font size of the text in the CAPTCHA image.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "format",
+            "description": "Format of the image displayed in the browser.\n\nIf you do not specify a format, the image is displayed in PNG format.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "height",
+            "description": "Height in pixels of the image.\n\nFor the resize attribute, you also can specify the height as a percentage.\n\nWhen you resize an image, if you specify a value for the width.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "isbase64",
+            "description": "Specifies whether the source is a Base64 string",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "Name of the image variable to create.\n\nThe read action requires a name attribute.\n\nThe border, resize, and rotate actions require a name attribute or a destination attribute.\n\nYou can specify both.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "overwrite",
+            "description": "If the destination file already exists, Lucee generates an error if the overwrite action is not set to yes.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "quality",
+            "description": "Quality of the JPEG destination file. Applies only to files with an extension of JPG or JPEG.\n\nValid values are fractions that range from 0 through 1 (the lower the number, the lower the quality).",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "source",
+            "description": "source file",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "structname",
+            "description": "Name of the structure to be created.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "text",
+            "description": "Text string displayed in the CAPTCHA image. Use capital letters for better readability.\n\nDo not include spaces because users cannot detect them in the resulting CAPTCHA image.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "thickness",
+            "description": "Border thickness in pixels. The border is added to the outside edge of the source image, increasing the image area accordingly.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "width",
+            "description": "Width in pixels of the image.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "base64",
+            "description": "should action \"writetobrowser\" embed the source of the image as base64 encoded string, default is false.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "nometadata",
+            "description": "only used for action \"write\", if set to true, the meta data from a source image are NOT written to the destination image.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

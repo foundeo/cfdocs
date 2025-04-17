@@ -1,0 +1,52 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/s3readbinary.html"}},
+    "name": "s3readbinary",
+    "description": "Reads an object from S3 as a binary.",
+    "syntax": "s3readbinary( bucketName, objectName )",
+    "returns": "binary",
+    "type": "function",
+    "params": [
+        {
+            "name": "bucketName",
+            "description": "Name of the bucket of your object to read",
+            "aliases": "bucket",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "objectName",
+            "description": "Name of the object (path) within the bucket of your object to read",
+            "aliases": "object,path",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "accessKeyId",
+            "description": "S3 accessKeyId, if not defined it checks the system property/environment variable for [lucee.s3.accesskeyid].\n",
+            "aliases": "accessKey,awsAccessKeyId,awsAccessKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "secretAccessKey",
+            "description": "S3 secretAccessKey, if not defined it checks the system property/environment variable for [lucee.s3.secretaccesskey].\n",
+            "aliases": "secretkey,awsSecretkey,awsSecretAccessKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "host",
+            "description": "the provider to connect, if not set Amazon AWS is used.",
+            "aliases": "provider,server",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "timeout",
+            "description": "timeout for this execution",
+            "default": "10000",
+            "type": "number",
+            "required": false
+        }
+    ]
+}

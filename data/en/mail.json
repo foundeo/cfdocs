@@ -1,0 +1,248 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/mail.html"}},
+    "name": "mail",
+    "description": "Sends e-mail messages by an SMTP server.",
+    "syntax": "<mail from=\"\", to=\"\", subject=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "from",
+            "description": "The sender of the e-mail message.",
+            "default": false,
+            "type": "object",
+            "required": true
+        },
+        {
+            "name": "to",
+            "description": "The name of the e-mail message recipient.",
+            "default": false,
+            "type": "object",
+            "required": true
+        },
+        {
+            "name": "cc",
+            "description": "Indicates addresses to copy the e-mail message to; \"cc\" stands for \"carbon copy.\"",
+            "default": false,
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "bcc",
+            "description": "Indicates addresses to copy the e-mail message to, without listing them in the message header.\n\n\"bcc\" stands for \"blind carbon copy.\"",
+            "default": false,
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "replyto",
+            "description": "Address(es) to which the recipient is directed to send replies.",
+            "default": false,
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "failto",
+            "description": "Address to which mailing systems should send delivery failure notifications. Sets the mail envelope Return-Path value.\n",
+            "default": false,
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "subject",
+            "description": "The subject of the mail message. This field may be driven dynamically on\na message-by-message basis",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "type",
+            "description": "Specifies extended type attributes for the message.\n\n- text\n- plain\n- html\n- text/plain\n- text/html",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "maxrows",
+            "description": "Specifies the maximum number of e-mail messages to send.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "mimeattach",
+            "description": "Specifies the path of the file to be attached to the e-mail message. An attached file\nis MIME-encoded.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "listener",
+            "description": "Listener for the mail. the listener can have 2 (optional) functions, \"before\" and \"after\" that get triggered before and after sending the mail.\n\nThe functions get all data about the mail.\n\nListener is only used when `async` (spoolEnable) is set to true.\n\nThis attribute overwrites any mail listener defined in the `application.cfc/cfapplication`.\n\nThe \"before\" function can also modify some data, by returning a struct containing the following keys:\n\n`[ from, to, bcc, cc, replyTo, failTo, subject, charset]`\n\nthe listener can be a component looking like this:\n\n```\ncomponent {\n    function before( lastExecution, nextExecution, created, id, type, detail,\n        tries, remainingTries, closed, caller, advanced ){}\n    function after( lastExecution, nextExecution, created, id, type, detail, tries,\n        remainingTries, closed, caller, advanced, passed, exception ){}\n}\n```\n\na struct looking like this:\n\n`component {before:function(...){}, after:function(...){}}`",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "query",
+            "description": "The name of the cfquery from which to draw data for message(s) to send. Specify this\nattribute to send more than one mail message, or to send the results of a query within a message.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "group",
+            "description": "Specifies the query column to use when you group sets of records together to send as an e-mail\nmessage. For example, if you send a set of billing statements to customers, you might group on\n\"Customer_ID.\" The group attribute, which is case sensitive, eliminates adjacent duplicates when the\ndata is sorted by the specified field. See the Usage section for exceptions.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "groupcasesensitive",
+            "description": "Boolean indicating whether to group with regard to case or not. The default value is NO;\ncase is considered while grouping. If the query attribute specifies a query object that was generated\nby a case-insensitive SQL query, set the groupCaseSensitive attribute to NO to keep the recordset\nintact.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "startrow",
+            "description": "Specifies the row in the query to start from.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "server",
+            "description": "The address of the SMTP server to use for sending messages. If no server is specified, the\nserver name specified in the Lucee Administrator is used.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "port",
+            "description": "The TCP/IP port on which the SMTP server listens for requests. This is normally 25.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "mailerid",
+            "description": "Specifies a mailer ID to be passed in the X-Mailer SMTP header, which identifies the mailer\napplication.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "timeout",
+            "description": "The number of seconds to wait before timing out the connection to the SMTP server.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "username",
+            "description": "A user name to send to SMTP servers that require authentication. Requires a password attribute.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "password",
+            "description": "A password to send to SMTP servers that require authentication. Requires a username attribute.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "wraptext",
+            "description": "Specifies the maximum line length, in characters of the mail text. If a line has more than the specified number of characters, replaces the last white space character, such as a tab or space, preceding the specified position with a line break. If there are no white space characters, inserts a line break at the specified position. A common value for this attribute is 72.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "charset",
+            "description": "Character encoding of the mail message",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "async",
+            "description": "if set to true, the mail is sent asynchronously by the Lucee Task manager (with multiple tries),\nif set to false the mail is sent in the same thread that executes the request, which is useful for troubleshooting because you get an error message if there is one.\n\nThis setting overrides the setting with the same name in the Lucee Administrator.\n\nThis attribute replaces the old \"spoolenable\" attribute which is still supported as an alias.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "usetls",
+            "description": "Whether to use Transport Level Security.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "priority",
+            "description": "The message priority level. Can be one of the following values:\n\n* An integer in the range 1-5; 1 represents the highest priority.\n* One of the following string values, which correspond to the numeric values: highest or urgent, high, normal, low, and lowest or non-urgent.",
+            "default": false,
+            "type": "String",
+            "required": false
+        },
+        {
+            "name": "usessl",
+            "description": "Whether to use Secure Sockets Layer.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "proxyserver",
+            "description": "Host name or IP address of a proxy server.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "proxyport",
+            "description": "The port number on the proxy server from which the object is requested. Default is 80. When\nused with resolveURL, the URLs of retrieved documents that specify a port number are automatically\nresolved to preserve links in the retrieved document.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "proxyuser",
+            "description": "When required by a proxy server, a valid username.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "proxypassword",
+            "description": "When required by a proxy server, a valid password.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "remove",
+            "description": "remove all attachments from filesystem after the mail is successfully sent",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "sendtime",
+            "description": "Set a future date time to send an email in the future via the spooler.",
+            "default": false,
+            "type": "datetime",
+            "required": false
+        },
+        {
+            "name": "debug",
+            "description": "Whether to enable detailed logging to console.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

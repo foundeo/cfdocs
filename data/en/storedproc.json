@@ -1,0 +1,94 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/storedproc.html"}},
+    "name": "storedproc",
+    "description": "Executes stored procedures by an ODBC or native connection to a server database. It specifies database connection\ninformation and identifies the stored procedure.",
+    "syntax": "<storedproc procedure=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "procedure",
+            "description": "The name of the stored procedure on the database server.",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "timeout",
+            "description": "timeout for the stored procedure.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "datasource",
+            "description": "The name data source that points to the database that contains the stored\nprocedure.",
+            "default": false,
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "username",
+            "description": "If specified, username overrides the username value specified in the data source setup.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "password",
+            "description": "If specified, password overrides the password value specified in the data source setup.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "blockfactor",
+            "description": "Specifies the maximum number of rows to fetch at a time from the server. The range is 1\nwhich is the default to 100. The ODBC driver may dynamically reduce the block factor at runtime.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "debug",
+            "description": "Yes or No. Specifies whether debug info will be listed on each statement. Default is No.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "returncode",
+            "description": "Yes or No. Specifies whether the tag populates cfstoredproc.statusCode with the status code\nreturned by the stored procedure. Default is No.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "result",
+            "description": "Specifies a name for the structure in which cfstoredproc returns the statusCode and ExecutionTime variables.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "cachedafter",
+            "description": "This is the age of which the query data can be",
+            "default": false,
+            "type": "datetime",
+            "required": false
+        },
+        {
+            "name": "cachedwithin",
+            "description": "possible values are:\nString \"request\": If original query was created within the current request, cached query data is used.\na timespan (created with function CreateTimeSpan): If original query date falls within the time span, cached query data is used.\n\nTo use cached data, the current query must use the same SQL statement, data source, query name, user name, and password.",
+            "default": false,
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "cachename",
+            "description": "This attribute has been deprecated and is non-functional.",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

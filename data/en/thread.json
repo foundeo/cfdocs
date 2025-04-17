@@ -1,0 +1,67 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/thread.html"}},
+    "name": "thread",
+    "description": "The cfthread tag enables you to create threads, independent streams of code execution, in your application.",
+    "syntax": "<thread/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "action",
+            "description": "Specifies the operation to perform on the thread. Options include:\n                        \n* **run** (default): Creates a new thread and begins execution immediately. The thread executes the code contained within the tag body.\n\n* **join**: Synchronizes the current thread with one or more target threads, pausing execution until the specified threads complete or a timeout occurs. This enables coordinated workflows where operations depend on the results of multiple threads.\n\n* **sleep**: Temporarily suspends the current thread's execution for the specified duration in milliseconds. This action is useful for rate-limiting, implementing delays, or yielding processing time to other threads without creating full thread dependencies.\n\n* **terminate**: Forcibly stops the specified thread's execution immediately. This is a non-cooperative shutdown that may leave resources in an inconsistent state. When terminated, the thread scope will include an `ERROR` metadata structure with termination details.\n\n* **interrupt**: Sets the interrupt status flag on the specified thread, requesting cooperative termination. If the thread is blocked in a `ThreadJoin`, `sleep`, or I/O operation, it will receive an `InterruptedException` and its interrupt status will be cleared. The thread can then perform cleanup operations before stopping, making this safer than `terminate` for most scenarios. (**Introduced**: 7.0.0.120)\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "type",
+            "description": "Defines the thread execution model:\n \t\t\t\t\n* **daemon** (default): Executes as a daemon thread of the current thread. Daemon threads do not prevent the application from shutting down when all non-daemon threads have completed.\n\n* **task**: Executed by the Lucee task manager, which provides additional robustness features like retry mechanisms. Task threads are ideal for asynchronous operations that should continue even if the user request completes.\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "retryinterval",
+            "description": "When `type=\"task\"`, this attribute defines an execution plan for automatic retry attempts when thread execution fails. You can specify either a single retry rule or multiple rules as an array.\n \t\t\t\t\nA single rule specifies the interval between retries and the number of retry attempts with a structure containing `interval` and `tries` keys. The `interval` is a timespan value defining the waiting period between retries, and `tries` is the number of retry attempts.\n\nExample:\n\n```luceescript\n#{interval:createTimeSpan(0,0,0,5),tries:5}#\n```\n\nMultiple rules can be defined as an array of structures, each containing `interval` and `tries` keys. This allows for implementing progressive retry strategies with different intervals for different phases of the retry process.\n\nExample:\n\n```luceescript\n#[{interval:createTimeSpan(0,0,0,5),tries:5},{interval:createTimeSpan(0,0,0,10),tries:5}]#\n```",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "duration",
+            "description": "The number of milliseconds to suspend thread processing when using `action=\"sleep\"`. This parameter is required for the sleep action.\n \t\t\t\t\nTypical use cases include adding delays between operations, implementing rate limiting or throttling, and simulating latency for testing purposes.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "Specifies the target thread identifier(s). The usage depends on the `action` attribute:\n \t\t\t\t\n* With `action=\"run\"`: Defines the name to identify the new thread being created. This name becomes the key in the `thread` scope and must be unique within the application.\n\n* With `action=\"join\"`: Specifies which thread(s) the current thread should wait for. To join multiple threads, provide a comma-delimited list of thread names.\n\n* With `action=\"terminate\"` or `action=\"interrupt\"`: Identifies the thread(s) to stop or interrupt.\n\nThread names should be descriptive of their purpose and follow a consistent naming convention for maintainability.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "priority",
+            "description": "Sets the execution priority level for the thread when using `action=\"run\"`. Valid values are:\n \t\t\t\t\n* **HIGH**: Thread receives more CPU time, suitable for critical operations\n* **NORMAL**: Standard priority level (default)\n* **LOW**: Thread receives less CPU time, suitable for background operations\n\nPriority affects thread scheduling by the JVM but does not guarantee execution order. Higher priority threads generally get more processing time than lower priority ones, but this depends on the JVM implementation and system load.\n\nNote that page-level code (outside of `cfthread` tags) always executes at `NORMAL` priority.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "timeout",
+            "description": "When using `action=\"join\"`, specifies the maximum time in milliseconds that the current thread will wait for the joined thread(s) to complete.\n            \n* If set to `0` (default): The current thread will wait indefinitely until all joining threads finish.\n* If set to any positive number: The current thread will resume after the specified timeout, even if joined threads haven't completed.\n\nThis attribute prevents deadlocks and allows for graceful timeout handling in multi-threaded operations. When the current thread is the page thread, the page continues waiting until either the threads complete or the timeout expires, regardless of page timeout settings.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "throwonerror",
+            "description": "Only applicable with `action=\"join\"`. Determines whether exceptions thrown in joined threads should propagate to the joining thread.\n \t\t\t\t\n* When `true`: If any of the joined threads have encountered errors, the first error found will be thrown as an exception in the current thread. This allows for easier error detection by propagating errors up the call stack.\n\n* When `false` (default): Errors in joined threads remain isolated in their respective thread scopes and won't affect the current thread's execution. You must explicitly check the thread status to identify errors.\n    \nThis attribute is useful for implementing fail-fast behavior in situations where thread errors should immediately stop dependent operations.\n",
+            "minimum_version": "boo",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/aigetmetadata.html"}},
+    "name": "aigetmetadata",
+    "description": "Retrieves metadata about a configured AI endpoint. \nReturns information about the endpoint's configuration, \nand optionally detailed information about available models and associated files.",
+    "syntax": "aigetmetadata( name )",
+    "returns": "struct",
+    "type": "function",
+    "params": [
+        {
+            "name": "name",
+            "description": "The name of the AI endpoint to get metadata for. Can be either:\n\n1. A direct endpoint name as configured in the Lucee Administrator\n2. A default reference (e.g., \"default:exception\") which will resolve to the configured default endpoint for that category\n3. A AI session object from which to retrieve and analyze AI endpoint metadata",
+            "aliases": "aiName,nameAI,session",
+            "type": "any",
+            "required": true
+        },
+        {
+            "name": "detailed",
+            "description": "When true, includes additional detailed information:\n\n- Models: List of available models with their names, labels, descriptions, and custom settings\n- Files: For file-capable engines, lists associated files with their IDs, purposes, sizes, creation dates, and status information",
+            "default": "false",
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

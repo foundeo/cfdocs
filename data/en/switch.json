@@ -1,0 +1,15 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/switch.html"}},
+    "name": "switch",
+    "description": "Used with cfcase and cfdefaultcase. Evaluates a passed expression and passes control to the\ncfcase tag that matches the expression result. You can optionally code a cfdefaultcase tag, which\nreceives control if there is no matching cfcase tag value.",
+    "syntax": "<switch expression=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [{
+        "name": "expression",
+        "description": "Any CFML expression that yields a scalar value. CFML converts integers, real numbers,\nBooleans, and dates to numeric values.",
+        "default": false,
+        "type": "string",
+        "required": true
+    }]
+}

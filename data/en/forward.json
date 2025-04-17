@@ -1,0 +1,15 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/forward.html"}},
+    "name": "forward",
+    "description": "Leads the request to a different page.\nThis tag acts like the tag cflocation except that the relocation is done directly on the server.",
+    "syntax": "<forward template=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [{
+        "name": "template",
+        "description": "template path to forward to",
+        "default": false,
+        "type": "string",
+        "required": true
+    }]
+}

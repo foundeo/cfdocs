@@ -1,0 +1,14 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/generate3deskey.html"}},
+    "name": "generate3deskey",
+    "description": "Generates a secure key value for use in the encrypt function with the 3DES algorithm.",
+    "syntax": "generate3deskey(  )",
+    "returns": "string",
+    "type": "function",
+    "params": [{
+        "name": "input",
+        "description": "A string input off of which the key will be based",
+        "type": "string",
+        "required": false
+    }]
+}

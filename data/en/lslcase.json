@@ -1,0 +1,25 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/lslcase.html",
+        "minimum_version": "6.1"
+    }},
+    "name": "lslcase",
+    "description": "Converts the alphabetic characters in a specified string to lowercase, respecting locale-specific casing rules. This is particularly important for languages where the standard lowercase conversion rules do not apply, ensuring accurate and culturally correct text processing. The function defaults to the current page's locale if no locale is specified.",
+    "syntax": "lslcase( string )",
+    "returns": "string",
+    "type": "function",
+    "params": [
+        {
+            "name": "string",
+            "description": "The string to be converted to lowercase. This parameter can accept either a string literal or a variable that holds the string content.",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "locale",
+            "description": "Optional. Allows specifying a different locale for the conversion, superseding the page's default locale. This argument accepts a locale identifier, such as \"fr-CA\" for Canadian French or \"de-DE\" for German in Germany.",
+            "type": "locale",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/maveninfo.html",
+        "minimum_version": "7.0"
+    }},
+    "name": "maveninfo",
+    "description": "Retrieves information about a Maven artifact and its dependencies.\nThis function allows you to query details about a specific Maven artifact by providing its coordinates (groupId, artifactId, and optionally version). \nIt returns a query containing information about the artifact itself and all of its dependencies based on the specified scope.\nThe returned query includes columns for:\n- **groupId**: The group identifier of the artifact\n- **artifactId**: The artifact identifier\n- **version**: The version of the artifact\n- **scope**: The scope of the dependency (compile, provided, runtime, test, system)\n- **optional**: Whether the dependency is optional\n- **checksum**: Checksum information\n- **url**: URL where the artifact can be found\n- **path**: Local file path to the artifact\nThis function is useful for debugging classloading issues, understanding dependency trees, or gathering information about the libraries your application depends on.",
+    "syntax": "maveninfo( groupId, artifactId, version )",
+    "returns": "query",
+    "type": "function",
+    "params": [
+        {
+            "name": "groupId",
+            "description": "The Maven group identifier that specifies the namespace for the artifact.",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "artifactId",
+            "description": "The Maven artifact identifier that specifies the name of the artifact.",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "version",
+            "description": "The specific version of the Maven artifact to query.",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "scopes",
+            "description": "The dependency scopes to consider when retrieving dependencies. this is an array containing all scopes you wanna include in the resulting query.\n\nValid values are:\n\n- compile\n- provided\n- runtime\n- test\n- system\n\nDefault are all scopes excluding test.",
+            "type": "array",
+            "required": false
+        },
+        {
+            "name": "includeOptional",
+            "description": "If true, includes optional dependencies in the results. If false, excludes dependencies marked as optional from the query results.",
+            "default": "true",
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "validateURL",
+            "description": "A Maven artifact can be provided from different repositories, not all repositories provide all artifacts. if set to false, Lucee simply picks the most likely repository. \nIf set to true, Lucee checks all possibilities, what can take a while, so only set to true, if really neded.",
+            "default": "false",
+            "aliases": "validate",
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

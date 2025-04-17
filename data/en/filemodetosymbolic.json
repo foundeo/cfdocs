@@ -1,0 +1,17 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/filemodetosymbolic.html",
+        "minimum_version": "7.0"
+    }},
+    "name": "filemodetosymbolic",
+    "description": "Converts a mode mask to it's symbolic representation.",
+    "syntax": "filemodetosymbolic( mode )",
+    "returns": "string",
+    "type": "function",
+    "params": [{
+        "name": "mode",
+        "description": "A three-digit value, in which each digit specifies the file access for individuals and groups:\n\n- The first digit represents the owner.\n- The second digit represents a group.\n- The third digit represents anyone.\n\nEach digit of this code sets permissions for the appropriate individual or group:\n\n- 4 specifies read permission.\n- 2 specifies write permission.\n- 1 specifies execute permission.\n\nYou use the sums of these numbers to indicate combinations of the permissions:\n\n- 3 specifies write and execute permission.\n- 5 specifies read and execute permission.\n- 6 indicates read and write permission.\n- 7 indicates read, write, and execute permission.\n\nFor example, 400 specifies that only the owner can read the file; 004 specifies that anyone can read the file.",
+        "type": "string",
+        "required": true
+    }]
+}

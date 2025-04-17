@@ -1,0 +1,31 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/invokeargument.html"}},
+    "name": "invokeargument",
+    "description": "Argument for the Invoke Tag",
+    "syntax": "<invokeargument name=\"\", value=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "name",
+            "description": "name of the argument",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "value",
+            "description": "value of the argument",
+            "default": false,
+            "type": "any",
+            "required": true
+        },
+        {
+            "name": "omit",
+            "description": "Enables you to omit a parameter when invoking a web service",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

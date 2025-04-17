@@ -1,0 +1,45 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/header.html"}},
+    "name": "header",
+    "description": "Generates custom HTTP response headers to return to the client.",
+    "syntax": "<header/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "name",
+            "description": "A name for the header.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "value",
+            "description": "A value for the HTTP header. This attribute is used in conjunction with the name attribute.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "statuscode",
+            "description": "A number that sets the HTTP status code.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "charset",
+            "description": "The character encoding in which to encode the header value.\n\nFor more information on character encodings, see: <https://www.w3.org/International/questions/qa-html-encoding-declarations>.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "statustext",
+            "description": "Text that explains the status code. This attribute is used in conjunction with the\n\tstatusCode attribute.",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

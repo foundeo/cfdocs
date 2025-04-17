@@ -1,0 +1,18 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/mavenload.html",
+        "minimum_version": "6.2"
+    }},
+    "name": "mavenload",
+    "description": "Loads all JAR files from one or more Maven endpoints and makes them available for use within the Lucee server environment. \nThis function can be used to load dependencies, including transitive ones, for example at server startup.\n### Example Usage of MavenLoad Function\nThe `MavenLoad` function allows you to load JAR files from Maven repositories, including all transitive dependencies. \nThis is particularly useful during server startup to ensure that all required libraries are available.\n#### Example Input as an Array of Structs:\n```cfml\nmavenLoad([\n{\n\"groupId\": \"org.slf4j\",\n\"artifactId\": \"slf4j-api\",\n\"version\": \"1.7.32\"\n}\n]);\n```",
+    "syntax": "mavenload( input )",
+    "returns": "array",
+    "type": "function",
+    "params": [{
+        "name": "input",
+        "description": "A struct or an array of structs specifying the Maven coordinates, including groupId, artifactId, and version.",
+        "aliases": "data,endpoint",
+        "type": "any",
+        "required": true
+    }]
+}

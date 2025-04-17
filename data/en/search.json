@@ -1,0 +1,136 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/search.html"}},
+    "name": "search",
+    "description": "Executes searches against data indexed",
+    "syntax": "<search name=\"\", collection=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "name",
+            "description": "A name for the search query.",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "collection",
+            "description": "The logical collection name that is the target of the search operation or an external collection\nwith fully qualified path.",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "type",
+            "description": "Specifies the criteria type for the search.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "criteria",
+            "description": "Specifies the criteria for the search following the syntactic rules specified by type.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "maxrows",
+            "description": "Specifies the maximum number of entries for index queries. If omitted, all rows are returned.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "startrow",
+            "description": "Specifies the first row number to be retrieved. Default is 1.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "external",
+            "description": "This attribute has been deprecated and is non-functional.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "language",
+            "description": "Deprecated. This attribute is now ignored and the language of the collection is used to perform the search.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "category",
+            "description": "A list of categories, separated by commas, to which\nthe search is limited. If specified, and the collection\ndoes not have categories enabled, Lucee throws an exception.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "categorytree",
+            "description": "The location in a hierarchical category tree at which\nto start the search. Lucee searches at and\nbelow this level. If specified, and the collection does\nnot have categories enabled, Lucee throws an\nexception. Can be used in addition to category\nattribute.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "status",
+            "description": "Specifies the name of the structure variable into\nwhich Lucee places search information, including\nalternative criteria suggestions (spelling corrections).",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "suggestions",
+            "description": "Specifies whether Lucene returns spelling suggestions\nfor possibly misspelled words.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "contextpassages",
+            "description": "The number of passages/sentences Lucene returns in\nthe context summary (that is, the context column of\nthe results).\nDefault: 3",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "contextpassagelength",
+            "description": "Used as a guide for splitting the text into paragraphs. The splitter tries to keep paragraphs close to this length \nwhile maintaining natural text boundaries. Note that paragraphs may exceed this length if no suitable break point is found.\nDefault: 150",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "contextbytes",
+            "description": "The maximum number of bytes Lucene returns in the\ncontext summary.\nDefault: 300",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "contexthighlightbegin",
+            "description": "The HTML to prepend to search terms in the context\nsummary. Use this attribute in conjunction with\ncontextHighlightEnd to highlight search terms in the\ncontext summary.\nDefault: <b>",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "contexthighlightend",
+            "description": "The HTML to prepend to search terms in the context\nsummary. Use this attribute in conjunction with\ncontextHighlightEnd to highlight search terms in the\ncontext summary.\nDefault: <\/b>",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "previouscriteria",
+            "description": "The name of a result set from an existing set of search\nresults. Lucene searches the result set for criteria\nwithout regard to the previous search score or rank.\nUse this attribute to implement searching within result\nsets.",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

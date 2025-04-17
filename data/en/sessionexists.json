@@ -1,0 +1,12 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/sessionexists.html",
+        "minimum_version": "6.2"
+    }},
+    "name": "sessionexists",
+    "description": "Returns a boolean indicating if a session has been already created / exists.",
+    "syntax": "sessionexists(  )",
+    "returns": "boolean",
+    "type": "function",
+    "params": []
+}

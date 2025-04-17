@@ -1,0 +1,34 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/createulid.html",
+        "minimum_version": "6.0"
+    }},
+    "name": "createulid",
+    "description": "Generates a ULID (Universally Unique Lexicographically Sortable Identifier)",
+    "syntax": "createulid(  )",
+    "returns": "string",
+    "type": "function",
+    "params": [
+        {
+            "name": "type",
+            "description": "Specifies the generation mode of the ULID. If not defined, a standard ULID is generated.\n\n-  `monotonic` ensures ULIDs increase monotonically, suitable for ensuring order in rapid generation scenarios. \n- `hash` mode generates a ULID based on hashing the provided inputs, useful for creating deterministic identifiers.",
+            "default": "",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "input1",
+            "description": "Used in conjunction with the `hash` type, this numeric input contributes to the generation of a deterministic ULID by influencing its random component.\n\nonly used for hash",
+            "default": "",
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "input2",
+            "description": "Similar to `input1`, this string input is utilized only in the `hash` mode to further seed the ULID's random component, enabling the creation of a deterministic ULID based on the hash of the inputs.",
+            "default": "",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

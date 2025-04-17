@@ -1,0 +1,15 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/getcomponentstaticscope.html"}},
+    "name": "getcomponentstaticscope",
+    "description": "returns the static scope of a specific component, of course access rules apply.",
+    "syntax": "getcomponentstaticscope( component )",
+    "returns": "struct",
+    "type": "function",
+    "params": [{
+        "name": "component",
+        "description": "name of the component to get static scope, for example \"org.lucee.cfml.Query\".",
+        "aliases": "name,componentName,cfc",
+        "type": "string",
+        "required": true
+    }]
+}

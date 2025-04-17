@@ -1,0 +1,17 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/queryclose.html",
+        "minimum_version": "5.3"
+    }},
+    "name": "queryclose",
+    "description": "When using lazy=\"true\", it is important to close the resultSet during a request or it will continue to use heap memory.",
+    "syntax": "queryclose( query )",
+    "returns": "boolean",
+    "type": "function",
+    "params": [{
+        "name": "query",
+        "description": "Query object to close.",
+        "type": "query",
+        "required": true
+    }]
+}

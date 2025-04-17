@@ -1,0 +1,15 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/set.html"}},
+    "name": "set",
+    "description": "Define a CFML variable. If the variable exists, cfset resets it to the specified value.",
+    "syntax": "<set/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [{
+        "name": "noname",
+        "description": "Content of the tag set",
+        "default": false,
+        "type": "any",
+        "required": false
+    }]
+}

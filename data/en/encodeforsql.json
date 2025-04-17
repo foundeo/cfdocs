@@ -1,0 +1,30 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/encodeforsql.html"}},
+    "name": "encodeforsql",
+    "description": "Encodes the given string for safe output in a query to reduce the risk of SQL Injection attacks. _This method is not recommended_ - the use of query parameters are strongly encouraged as a stronger alternative.",
+    "syntax": "encodeforsql( string, dialect )",
+    "returns": "string",
+    "type": "function",
+    "params": [
+        {
+            "name": "string",
+            "description": "string to encode",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "dialect",
+            "description": "SQL dialect used to encode, possible values are:\n\t\t\t\t* db2\n\t\t\t\t* mysql_ansi\n\t\t\t\t* mysql\n\t\t\t\t* oracle",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "canonicalize",
+            "description": "If set to true, canonicalization happens before encoding. If set to false, the given input string will just be encoded. The default value for canonicalize is false. When this parameter is not specified, canonicalization will not happen. By default, when canonicalization is performed, both mixed and multiple encodings will be allowed. To use any other combinations you should canonicalize using canonicalize method and then do encoding.",
+            "minimum_version": "boo",
+            "default": "false",
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

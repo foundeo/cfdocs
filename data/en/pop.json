@@ -1,0 +1,129 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/pop.html"}},
+    "name": "pop",
+    "description": "Retrieves and deletes e-mail messages from a POP mail server.",
+    "syntax": "<pop/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "connection",
+            "description": "label for a connection.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "server",
+            "description": "Host name biff.upperlip.com or IP address 192.1.2.225 of the POP server.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "uid",
+            "description": "UID or a comma-delimited list of UIDs to get or delete.\nInvalid UIDs are ignored.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "port",
+            "description": "Defaults to the standard POP port, 110.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "username",
+            "description": "If no user name is specified, the POP connection is anonymous.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "password",
+            "description": "Password that corresponds to user name.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "secure",
+            "description": "enables SSL for pop requests",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "action",
+            "description": "Specifies the mail action.\n\n- getHeaderOnly: returns message header information only\n- getAll: returns message header information, message text, and attachments if attachmentPath is specified\n- delete: deletes messages on POP server\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "Name for the index query.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "messagenumber",
+            "description": "Can be a comma-separated list of the message ids",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "attachmentpath",
+            "description": "Allows attachments to be written to the specified directory when action = \"getAll\". If an\ninvalid attachmentPath is specified, no attachment files are written to the server.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "timeout",
+            "description": "Specifies the maximum time, in seconds, to wait for mail processing. Defaults is 60 seconds.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "debug",
+            "description": "this attribute is deprecated and ignored, log control happens via the logging framework directly.\n",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "maxrows",
+            "description": "Sets the number of messages returned, starting with the number in the startRow attribute.\nThis attribute is ignored if messageNumber is specified.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "startrow",
+            "description": "Specifies the first row number to be retrieved. Default is 1. This attribute is ignored if\nmessageNumber is specified.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "generateuniquefilenames",
+            "description": "Boolean indicating whether to generate unique filenames for the files attached to an e-mail\nmessage to avoid naming conflicts when the files are saved. Default is NO.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "delimiter",
+            "description": "Character that separates uid list, The default value is comma(,).",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

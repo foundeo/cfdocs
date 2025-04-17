@@ -1,0 +1,31 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/interface.html"}},
+    "name": "interface",
+    "description": "Defines an interface that consists of a set of signatures for functions.",
+    "syntax": "<interface/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "displayname",
+            "description": "A value to be displayed when using introspection to show a descriptive name for the interface.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "extends",
+            "description": "A comma-delimited list of one or more interfaces that this interface extends.\n\nAny CFC that implements an interface must also implement all the functions in the interfaces specified by this property.\n\nIf an interface extends another interface, and the child interface specifies a function with the same name as one in the parent interface, both functions must have the same attributes; otherwise it generates an error.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "hint",
+            "description": "Text to be displayed when using introspection to show information about the interface.\n\nThe hint attribute value follows the syntax line in the function description.",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

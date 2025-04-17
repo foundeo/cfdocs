@@ -1,0 +1,31 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/mailpart.html"}},
+    "name": "mailpart",
+    "description": "Specifies one part of a multipart e-mail message. Can only be used in the cfmail tag. You can use more than one cfmailpart tag within a cfmail tag",
+    "syntax": "<mailpart type=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "type",
+            "description": "The MIME media type of the part",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "wraptext",
+            "description": "Specifies the maximum line length, in characters of the mail text",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "charset",
+            "description": "The character encoding in which the part text is encoded",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

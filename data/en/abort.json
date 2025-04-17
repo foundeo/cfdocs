@@ -1,0 +1,27 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/abort.html",
+        "notes": "Since 5.3, by default output from [[tag-function|functions]] are no longer buffered when `output=false` is set, as a result, an abort inside a function will no longer work.\n\nYou can re-enable this application wide using `this.bufferOutput=true` in your [[tag-application|Application.cfc]], or server wide via the Lucee Administrator, via the Output settings page."
+    }},
+    "name": "abort",
+    "description": "**Stops processing of a page at the tag location.** CFML returns everything that was processed before the cfabort tag. The cfabort tag is often used with conditional logic to stop processing a page when a condition occurs.",
+    "syntax": "<abort/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "showerror",
+            "description": "The error to display when cfabort executes.\nThe error message displays in the standard CFML error page.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "type",
+            "description": "Define the abort type.\n\nAllowed Values:\n\n* **request** (default): abort the entire request\n* **page**: abort the current page execution\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/elseif.html"}},
+    "name": "elseif",
+    "description": "Used with cfelse and cfelseif,\ncfif lets you create simple and compound conditional statements\nin CFML. The value in the cfif tag can be any expression.",
+    "syntax": "<elseif/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [{
+        "name": "condition",
+        "description": "Expression condition",
+        "default": false,
+        "type": "boolean",
+        "required": false
+    }]
+}

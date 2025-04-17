@@ -1,0 +1,38 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/col.html"}},
+    "name": "col",
+    "description": "Defines table column header, width, alignment, and text. Used only inside a cftable.",
+    "syntax": "<col header=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "header",
+            "description": "The text for the column's header.",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "width",
+            "description": "The width of the column in characters (the default is 20). If the length of the data displayed exceeds the width value,\nthe data is truncated to fit.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "align",
+            "description": "Column alignment, Left, Right, or Center.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "text",
+            "description": "Double-quote delimited text that determines what displays in the column. The rules for the text\nattribute are identical to the rules for cfoutput sections; it can consist of a combination of\nliteral text, HTML tags, and query record set field references. You can embed hyperlinks, image\nreferences, and input controls in columns.",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

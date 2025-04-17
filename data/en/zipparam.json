@@ -1,0 +1,80 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/zipparam.html"}},
+    "name": "zipparam",
+    "description": "The cfzipparam tag is always a child tag of the cfzip tag. see tag zip for more details.",
+    "syntax": "<zipparam/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "charset",
+            "description": "Converts string content into binary data before putting it into a ZIP or JAR file.\n\nUsed only when cfzip action=\"zip\" and the cfzipparam content is a string.\n\nExamples of character sets are:\n\n-             JIS\n-             RFC1345\n-             UTF-16 (optional, default=encoding of the host machine)",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "content",
+            "description": "Content written to the ZIP or JAR entry. Used only when cfzip action=\"zip\".\n\nValid content data types are binary and string.\n\nIf you specify the content attribute, you must specify the entrypath attribute.",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "entrypath",
+            "description": "Pathname used:\n\n- For cfzip action=\"zip\", it is the entrypath used. This is valid only when the source is a file. The entrypath creates a subdirectory within the ZIP or JAR file.\n- For cfzip action=\"unzip\", it is the pathname to unzip.\n- For cfzip action=\"delete\", it is the pathname to delete from the ZIP or JAR file.\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "filter",
+            "description": "Optional filter. Can be either a wildcard filter,\ne.g. \"m*\", or a UDF/Closure which accepts the file/directory name and returns a boolean value to indicate\nwhether that item should be included in the result or not.",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "filterdelimiters",
+            "description": "Optional when passing a filter pattern. This value is used as a delimiter for the patterns.\nDefault is the pipe \"|\" character.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "prefix",
+            "description": "String added as a prefix to the ZIP or JAR entry.\n\nUsed only when cfzip action=\"zip\".",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "source",
+            "description": "Source directory or file. Used only when cfzip action=\"zip\".\n\nSpecified file(s) are added to the ZIP or JAR file:\n\n- If you specify source attribute for the cfzip tag, the cfzipparam source is relative to it.\n- If you do not specify a source attribute for the cfzip tag, the cfzipparam source must be an absolute path.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "recurse",
+            "description": "Recurse the directory to be zipped, unzipped, or deleted,\nas specified by the cfzip parent tag. (optional, default=yes)",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "password",
+            "description": "Password for the file(s) added via cfzipparam",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "encryptionalgorithm",
+            "description": "Supported algorithms are:\n\n- aes(=aes256)\n- aes128\n- standard",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

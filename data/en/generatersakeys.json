@@ -1,0 +1,16 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/generatersakeys.html"}},
+    "name": "generatersakeys",
+    "description": "Generates a secure keys (private and public) for use in the encrypt function with the RSA algorithm.",
+    "syntax": "generatersakeys(  )",
+    "returns": "struct",
+    "type": "function",
+    "params": [{
+        "name": "key_size",
+        "description": "Number of bits to use for the generated Keys.",
+        "minimum_version": "num",
+        "default": "1024",
+        "type": "number",
+        "required": false
+    }]
+}

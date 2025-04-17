@@ -1,0 +1,45 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/htmlhead.html"}},
+    "name": "htmlhead",
+    "description": "Writes the text specified in the text attribute to the 'head' section of a generated HTML page.\nThe cfhtmlhead tag can be useful for embedding JavaScript code, or placing other HTML tags such, as\nMETA, LINK, TITLE, or BASE in an HTML page header.",
+    "syntax": "<htmlhead/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "text",
+            "description": "The text to add to the 'head' area of an HTML page. Everything inside the quotation marks is\nplaced in the 'head' section",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "force",
+            "description": "if set to true, it works even within a silent block",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "variable",
+            "description": "Name of variable to contain the text for htmlhead.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "id",
+            "description": "ID of the snippet that is added, used to ensure that the same snippet will not be added more than once.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "action",
+            "description": "possible actions are:\n\n- append (default): append text to the HTML head\n- read: return the text already set to HTML head\n- reset: reset/remove text already set to HTML head\n- write: write text to HTML head, overwrite already existing text in HTML head\n- flush: writes the buffer in the HTML head to the response stream\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/authenticate.html"}},
+    "name": "authenticate",
+    "description": "Authenticates a user, setting a security context for the application.\nFor more information, see the descriptions of IsAuthenticated and AuthenticatedContext.",
+    "syntax": "<authenticate/>",
+    "returns": "void",
+    "type": "tag",
+    "params": []
+}

@@ -1,0 +1,178 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/loop.html"}},
+    "name": "loop",
+    "description": "Looping is a very powerful programming technique that lets you repeat a set of instructions or\ndisplay output repeatedly until one or more conditions are met. cfloop supports five types of loops.",
+    "syntax": "<loop/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "index",
+            "description": "Index value. Lucee sets it to from value and increments or decrements by step value, until it equals to value.\n\nWhen looping over a Struct/Collection:\n\n- When the Item attribute is also defined, the variable assigned to the Index attribute will contain the value of the Struct's Key/Value pair (otherwise, it will always contain the Key value)\n- When only the Index or Item attribute is defined, the variable will always contain the Key value.\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "from",
+            "description": "Beginning value of index.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "to",
+            "description": "Ending value of index.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "step",
+            "description": "Step by which to increment or decrement the index value.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "condition",
+            "description": "Condition that controls the loop.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "query",
+            "description": "Query that controls the loop. This can be a variable name or the query itself.",
+            "default": false,
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "startrow",
+            "description": "First row of query that is included in the loop.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "endrow",
+            "description": "Last row of query that is included in the loop. You cannot use this attribute together with the attribute maxRows.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "maxrows",
+            "description": "Specifies the maximum number of rows to display in the output section. You cannot use this attribute together with the attribute endrow.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "list",
+            "description": "A list, variable, or file name; contains a list. Used with the index attribute.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "array",
+            "description": "An array.",
+            "default": false,
+            "type": "array",
+            "required": false
+        },
+        {
+            "name": "delimiters",
+            "description": "Character(s) that separates items in list",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "collection",
+            "description": "Collection to loop over. Used with the item attribute.",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "struct",
+            "description": "struct to loop over",
+            "default": false,
+            "type": "struct",
+            "required": false
+        },
+        {
+            "name": "item",
+            "description": "Key for the collection",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "file",
+            "description": "file path",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "characters",
+            "description": "The number of characters to read during each iteration of the loop from the file specified in the file attribute.\nIf the value of the characters attribute is more than the number of characters in the file,\nLucee uses the number of characters in the file.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "startline",
+            "description": "start line",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "endline",
+            "description": "end line",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "charset",
+            "description": "charset for read the file",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "group",
+            "description": "Specifies the query column to use when you group sets of records together to send as an e-mail\nmessage. For example, if you send a set of billing statements to customers, you might group on\n\"Customer_ID.\" The group attribute, which is case sensitive, eliminates adjacent duplicates when the\ndata is sorted by the specified field. See the Usage section for exceptions.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "groupcasesensitive",
+            "description": "Boolean indicating whether to group with regard to case or not. The default value is NO;\ncase is considered while grouping. If the query attribute specifies a query object that was generated\nby a case-insensitive SQL query, set the groupCaseSensitive attribute to NO to keep the recordset\nintact.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "label",
+            "description": "used to address this loop from a \"break\" or \"continue\" statement (instead of the nearest one).",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "times",
+            "description": "used for a simple loop that is looping n times",
+            "default": false,
+            "type": "numeric",
+            "required": false
+        }
+    ]
+}

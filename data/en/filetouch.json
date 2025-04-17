@@ -1,0 +1,22 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/filetouch.html"}},
+    "name": "filetouch",
+    "description": "Touches given file, creates the file if not already exists.",
+    "syntax": "filetouch( file )",
+    "returns": "void",
+    "type": "function",
+    "params": [
+        {
+            "name": "file",
+            "description": "file to touch.",
+            "type": "any",
+            "required": true
+        },
+        {
+            "name": "createPath",
+            "description": "if set to false, expects all parent directories to exist, true (default) will generate necessary directories",
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

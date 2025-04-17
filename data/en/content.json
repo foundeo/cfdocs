@@ -1,0 +1,59 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/content.html"}},
+    "name": "content",
+    "description": "Defines the MIME type returned by the current page. Optionally, lets you specify the name of a file\nto be returned with the page.",
+    "syntax": "<content/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "type",
+            "description": "Defines the File/ MIME content type returned by the current page.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "deletefile",
+            "description": "Yes or No. Yes deletes the file after the download operation. Defaults to No.\n\nThis attribute applies only if you specify a file with the file attribute.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "range",
+            "description": "Yes or No. Yes allows download ranges, no forbids download range, default let it open for client.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "file",
+            "description": "The full path to the file that should be sent to the client\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "content",
+            "description": "this attribute is deprecated, use variable instead",
+            "default": false,
+            "type": "binary",
+            "required": false
+        },
+        {
+            "name": "variable",
+            "description": "the variable name to the content to output as binary",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "reset",
+            "description": "Yes or No. Yes discards output that precedes the call to cfcontent.\n\nNo preserves the output that precedes the call. Defaults to Yes.\n\nThe reset and file attributes are mutually exclusive.\n\nIf you specify a file, the reset attribute has no effect.\n",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

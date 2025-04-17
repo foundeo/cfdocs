@@ -1,0 +1,12 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/isflushed.html",
+        "minimum_version": "6.1"
+    }},
+    "name": "isflushed",
+    "description": "returns true if the response stream was already flushed.",
+    "syntax": "isflushed(  )",
+    "returns": "boolean",
+    "type": "function",
+    "params": []
+}

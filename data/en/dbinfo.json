@@ -1,0 +1,81 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/dbinfo.html"}},
+    "name": "dbinfo",
+    "description": "Lets you retrieve information about a data source, including details about the database, tables, queries, procedures, foreign keys, indexes, and version information about the database, driver, and JDBC. This tag supports only JDBC drivers, and does not support ODBC-based drivers, including the Microsoft Access driver.",
+    "syntax": "<dbinfo name=\"\", type=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "datasource",
+            "description": "Datasource to use to connect to the database.",
+            "default": false,
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "Name to use to refer to the result.",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "type",
+            "description": "Type of information to get:\n\n* dbnames: database name and type\n* tables: information to all tables\n* columns: column information to a single table/view\n* version: version information of the database\n* procedures: information to all procedures\n* procedure_columns: column information to a single procedure\n* foreignkeys: information to all foreignkeys\n* index: information to all indexes\n",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "procedure",
+            "description": "Name of the procedure from which you retrieve information.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "dbname",
+            "description": "Name of the database",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "password",
+            "description": "Password to connect to the database.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "pattern",
+            "description": "Specifies a filter to retrieve information about specific tables, columns, or stored procedures",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "table",
+            "description": "Name of the table from which you retrieve information.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "username",
+            "description": "User name to connect to the database.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "filter",
+            "description": "Filter for type=\"tables\" with a wildcard, defaults to all types when empty.\n\n- \"TABLE\"\n- \"VIEW\"\n- \"SYSTEM TABLE\"\n- \"GLOBAL TEMPORARY\"\n- \"LOCAL TEMPORARY\"\n- \"ALIAS\"\n- \"SYNONYM\"\n\nNote: Each Database implementation has it's own supported types\n\n**Introduced: Lucee 6.0.0.76**",
+            "minimum_version": "str",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

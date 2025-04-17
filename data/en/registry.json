@@ -1,0 +1,66 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/registry.html"}},
+    "name": "registry",
+    "description": "Reads, writes, and deletes keys and values in the system registry. The cfregistry tag is supported\non all platforms, including Linux, Solaris, and HP-UX.",
+    "syntax": "<registry action=\"\", branch=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "action",
+            "description": "action to the registry",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "branch",
+            "description": "Name of a registry branch.",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "type",
+            "description": "string: return string values\ndWord: return DWord values\nkey: return keys\nany: return keys and values",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "Name of record set to contain returned keys and values.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "sort",
+            "description": "Sorts query column data (case-insensitive). Sorts on Entry, Type, and Value columns as text. Specify a combination of columns from query output, in a comma-delimited list. For example:\nsort = \"value desc, entry asc\"\n\nasc: ascending (a to z) sort order\ndesc: descending (z to a) sort order",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "entry",
+            "description": "Registry value to access.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "variable",
+            "description": "Variable into which to put value.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "value",
+            "description": "Value data to set. If you omit this attribute, cfregistry creates default value, as follows:\n\nstring: creates an empty string: \"\"\ndWord: creates a value of 0 (zero)",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/xml.html"}},
+    "name": "xml",
+    "description": "Creates a CFML XML document object that contains the markup in the tag body. This tag can include XML and CFML tags.\nLucee processes the CFML code in the tag body, then assigns the resulting text to an XML document object variable.",
+    "syntax": "<xml variable=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "variable",
+            "description": "name of an XML variable",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "casesensitive",
+            "description": "if set to true maintains the case of document elements and attributes",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "validator",
+            "description": "Any of the following:\n\n- A string containing a DTD or Schema\n- The name of a DTD or Schema file\n- The URL of a DTD or Schema file; valid protocol identifiers include http, https, ftp, and file",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "lenient",
+            "description": "if set to true, the parser is more lenient and forgives invalid XML and does the best to interpret it.",
+            "minimum_version": "boo",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

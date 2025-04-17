@@ -1,0 +1,31 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/pdfparam.html"}},
+    "name": "pdfparam",
+    "description": "Provides additional information for the cfpdf tag. The cfpdfparam tag applies only to the merge action of the cfpdf tag and is always a child tag of the cfpdf tag.",
+    "syntax": "<pdfparam source=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "pages",
+            "description": "Page number or Pages of the PDF source file to merge.\n\nYou can specify a range of pages, for example\n\n- \"1\"\n- \"1-5\"\n- a comma-separated list of pages, for example, \"1-5,9-10,18\"\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "password",
+            "description": "User or owner password, if the source PDF file is password-protected.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "source",
+            "description": "Source PDF file to merge.\n\nYou can specify\n\n- a PDF variable\n- a cfdocument variable\n- a url to a PDF document\n- or the pathname to a file\n",
+            "default": false,
+            "type": "any",
+            "required": true
+        }
+    ]
+}

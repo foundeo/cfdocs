@@ -1,0 +1,9 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/retry.html"}},
+    "name": "retry",
+    "description": "used to jump from a catch block, back to the beginning of the try block.",
+    "syntax": "<retry/>",
+    "returns": "void",
+    "type": "tag",
+    "params": []
+}

@@ -1,0 +1,73 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/mailparam.html"}},
+    "name": "mailparam",
+    "description": "Can either attach a file or add a header to a message. It is nested within a cfmail tag. You can\nuse more than one cfmailparam tag within a cfmail tag.",
+    "syntax": "<mailparam/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "file",
+            "description": "Attaches the specified file to the message. This attribute is mutually exclusive with the\nname attribute.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "filename",
+            "description": "file name used for the file attached with the attribute \"file\", if not set the name of the file itself is used.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "Specifies the name of the header. Header names are case insensitive. This attribute is mutually\nexclusive with the file attribute.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "value",
+            "description": "Indicates the value of the header.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "type",
+            "description": "The MIME media type of the part.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "disposition",
+            "description": "How the attached file is to be handled. Can be one of the following:\n\n- attachment: presents the file as an attachment.\n- inline: displays the file contents in the message.\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "contentid",
+            "description": "The Identifier for the attached file. This ID should be globally unique and is used to identify the file in an IMG or other tag in the mail body that references the file content.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "remove",
+            "description": "remove attachment from filesystem after the mail is successfully sent",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "content",
+            "description": "send given value as attachment",
+            "default": false,
+            "type": "any",
+            "required": false
+        }
+    ]
+}

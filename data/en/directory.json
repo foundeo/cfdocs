@@ -1,0 +1,132 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/directory.html",
+        "notes": "For ACF compatibility, on Unix Systems, the `mode` column is currently not populated for `action=\"list\"`\n\n<https://luceeserver.atlassian.net/browse/LDEV-2118>"
+    }},
+    "name": "directory",
+    "description": "Handles interactions with directories.",
+    "syntax": "<directory directory=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "action",
+            "description": "Defines the action to be taken with directory(ies) specified in directory.\n\n- list [[function-directorylist]]\n- create [[function-directorycreate]]\n- delete [[function-directorydelete]]\n- rename [[function-directoryrename]]\n- copy [[function-directorycopy]]\n- forcedelete",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "listinfo",
+            "description": "- **all:** includes all information in the result set.\n- **name:** includes only filenames in the result set.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "storeacl",
+            "description": "An array of struct where each struct represents a permission or grant.\n\nExample:\n[{email=\"xxx@yyy.com\", permission=\"full_control\"}, {group=\"all\", permission=\"read\"}]",
+            "default": false,
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "storelocation",
+            "description": "Only used for S3 Resources.\n\nThe location of the created bucket/object. The location can either be EU,US or US-WEST.\n\nThe default location is US.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "type",
+            "description": "- **file:** includes only filenames.\n- **dir:** includes only directory names.\n- **all:** includes both filenames and directory names.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "serverpassword",
+            "description": "Allow you to access filesystem, also when access is denied for your context",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "directory",
+            "description": "The name of the directory to perform the action against.",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "name",
+            "description": "Required for action = \"list\". Ignored by all other actions. Name of output query for directory\nlisting.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "filter",
+            "description": "Optional for action = \"list\". Ignored by all other actions.\n\nCan be either:\n\n- a wildcard filter,e.g. \"m*\"\n- or a UDF/Closure which accepts the file/directory name and returns a Boolean value to indicate\nwhether that item should be included in the result or not.",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "filterdelimiters",
+            "description": "Optional when passing a filter pattern. This value is used as a delimiter for the patterns.\nDefault is the pipe \"|\" character.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "mode",
+            "description": "Used with action = \"Create\" to define the permissions for a directory on UNIX and Linux\nplatforms. Ignored on Windows.\n\nOptions correspond to the octal values of the UNIX chmod command. From\nleft to right, permissions are assigned for owner, group, and other.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "sort",
+            "description": "Optional for action = \"list\". Ignored by all other actions.\n\nThe query columns by which to sort the directory listing. Any combination of columns from query output can be specified in comma-separated list.\n\nYou can specify ASC (ascending) or DESC (descending) as qualifiers for column names. ASC is the default",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "newdirectory",
+            "description": "Required for action = \"rename\". Ignored by all other actions.\n\nThe new name of the directory specified in the directory attribute.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "destination",
+            "description": "Required for action = \"copy\". Ignored by all other actions.\n\nPath of the destination directory. If not an absolute path, it is relative to the source directory.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "recurse",
+            "description": "Whether or not to include the content of any sub-directories",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "nameconflict",
+            "description": "When used with action=\"copy\" the possible values are:\n\n- Overwrite\n- Error\n\nWhen used with action=\"create\" the possible values are:\n\n- Error\n- Skip\n\nIgnored for all other actions.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "createpath",
+            "description": "- true (default), automatically create any parent directories which don't exist\n- false, all the parent directories must already exist or an error will be thrown\n",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

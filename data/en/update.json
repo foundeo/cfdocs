@@ -1,0 +1,59 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/update.html"}},
+    "name": "update",
+    "description": "Updates existing records in data sources.",
+    "syntax": "<update tablename=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "datasource",
+            "description": "Name of the data source that contains a table.",
+            "default": false,
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "tablename",
+            "description": "Name of the table you want to update.",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "tableowner",
+            "description": "For data sources that support table ownership, for example, SQL Server, Oracle, and Sybase\nSQL Anywhere, use this field to specify the owner of the table.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "tablequalifier",
+            "description": "For data sources that support table qualifiers, use this field to specify the qualifier for the\ntable. The purpose of table qualifiers varies across drivers. For SQL Server and Oracle, the qualifier\nrefers to the name of the database that contains the table. For the Intersolv dBase driver, the\nqualifier refers to the directory where the DBF files are located.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "username",
+            "description": "If specified, username overrides the username value specified in the ODBC setup.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "password",
+            "description": "If specified, password overrides the password value specified in the ODBC setup.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "formfields",
+            "description": "A comma-separated list of form fields to update. If this attribute is not specified, all fields\nin the form are included in the operation.",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

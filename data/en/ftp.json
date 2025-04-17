@@ -1,0 +1,227 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/ftp.html"}},
+    "name": "ftp",
+    "description": "Lets users implement File Transfer Protocol (FTP) operations.",
+    "syntax": "<ftp action=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "action",
+            "description": "the FTP action to be executed\n\n- open\n- close\n- listDir\n- createDir\n- removeDir\n- changeDir\n- getCurrentDir\n- getCurrentURL\n- existsFile\n- existsDir\n- exists\n- getFile\n- putFile\n- rename\n- remove\n",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "username",
+            "description": "The Username for the connection",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "password",
+            "description": "The Password for the connection",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "server",
+            "description": "The Server to connect",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "timeout",
+            "description": "timeout for the connection",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "port",
+            "description": "server port of the connection",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "connection",
+            "description": "the name for the connection, used to cache the connection",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "proxyserver",
+            "description": "Host name or IP address of a proxy server.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "proxyport",
+            "description": "The port number on the proxy server from which the object is requested. Default is 80. When\n\tused with resolveURL, the URLs of retrieved documents that specify a port number are automatically\n\tresolved to preserve links in the retrieved document.",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "proxyuser",
+            "description": "When required by a proxy server, a valid username.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "proxypassword",
+            "description": "When required by a proxy server, a valid password.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "retrycount",
+            "description": "retry count",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "stoponerror",
+            "description": "define if execution halt on error or not",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "passive",
+            "description": "enable passive mode",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "name of the query for list directory",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "directory",
+            "description": "remote directory to list",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "asciiextensionlist",
+            "description": "Delimited list of file extensions that force ASCII transfer mode, if transferMode = \"auto\".",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "transfermode",
+            "description": "- ASCII\n- binary \n- auto (default)\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "remotefile",
+            "description": "File on the Server",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "localfile",
+            "description": "File on the current machine",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "failifexists",
+            "description": "throw an error if local file already exist or overwrite it",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "existing",
+            "description": "source or existing file or directory to rename",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "new",
+            "description": "new name for file or directory",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "item",
+            "description": "item on the server",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "result",
+            "description": "Name of the result value (default:cfftp)",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "fingerprint",
+            "description": "the ssh fingerprint",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "secure",
+            "description": "Secure connection (sftp|shh) or not.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "recurse",
+            "description": "delete content of the directory",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "key",
+            "description": "the ssh private key",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "passphrase",
+            "description": "the passphrase that protects ssh private key",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "actionparam",
+            "description": "used with action=\"quote\" to execute custom ftp commands",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

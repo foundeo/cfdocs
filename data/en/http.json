@@ -1,0 +1,284 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/http.html",
+        "notes": "For multipart with quoted boundary response, `filecontent` will be an array, see [LDEV-3545](https://luceeserver.atlassian.net/browse/LDEV-3545)"
+    }},
+    "name": "http",
+    "description": "Lets you execute HTTP POST and GET operations on files.",
+    "syntax": "<http url=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "url",
+            "description": "Full URL of the host name or IP address of the server on which the file resides.\n\nThe URL must be an absolute URL, including the protocol (http or https) and hostname.\n\nIt may optionally contain a port number. Port numbers specified in the url attribute override the port attribute.\n",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "encodeurl",
+            "description": "if set to true (default value) URL encodes the value of the attribute \"URL\" if necessary (no double encoding is happening).\n\nThis setting has no influence on the values from httpparam type=\"url\", for this use the attribute \"encoded\" from httpparam\n\n**Try disabling this (i.e. false) if you are getting strange errors with API requests**\n",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "compression",
+            "description": "Informs the target webserver to disable compression for the response. Possible values are:\n\n- true (default): compression enabled\n- false: compression disabled\n- none (deprecated): use \"false\" instead",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "result",
+            "description": "return variable name, default \"cfhttp\"\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "addtoken",
+            "description": "if yes add urltoken as cookie",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "port",
+            "description": "The port number on the server from which the object is requested.\n\nDefault is 80.\n\nWhen used with resolveURL, the URLs of retrieved documents that specify a port number are automatically resolved to preserve links in the retrieved document.\n\nIf a port number is specified in the url attribute, the port value overrides the value of the port attribute.\n",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "method",
+            "description": "Supported methods\n\n- GET (default)\n- POST\n- HEAD\n- PUT\n- DELETE\n- OPTIONS\n- TRACE\n- PATCH\n\nUse GET to download a text or binary file or to create a query from the contents of a text file.\n\nUse POST to send information to a server page or a CGI program for processing.\n\nPOST requires the use of a [[tag-httpparam]] tag.\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "username",
+            "description": "When required by a server, a valid `username`.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "password",
+            "description": "When required by a server, a valid password.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "preauth",
+            "description": "If set to true (default), Lucee sends the basic authentication (username password) always (Preemptive Basic Authentication)\n\nIf set to false the authentication is only send when the server ask for it (status code 401).\n",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "multipart",
+            "description": "Tells Lucee to send all data specified by cfhttpparam type=\"formField\" tags as multipart form data, with a `Content-Type` of `multipart/form-data`.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "multiparttype",
+            "description": "This attribute has been deprecated, use instead the attribute \"multipart\".",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "getasbinary",
+            "description": "- false: If CFML does not recognize the response body type as text, convert it to a CFML object.\n- auto: If CFML does not recognize the response body type as text, convert it to CFML Binary type data.\n- true: always convert the response body content into CFML Binary type data, even if CFML recognizes the response body type as text.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "name",
+            "description": "The name to assign to a query if the a query is constructed from a file.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "columns",
+            "description": "Specifies the column names for a query when creating a query as a result of a cfhttp GET.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "path",
+            "description": "The path to the directory in which a file is to be stored.\n\nIf a path is not specified in a POST or GET operation, a variable is created (cfhttp.fileContent) that you can use to display the results of the POST operation in a cfoutput.\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "file",
+            "description": "The filename to be used for the file that is accessed.\n\nFor GET operations, defaults to the name specified in url.\n\nEnter path information in the path attribute.\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "delimiter",
+            "description": "Used only when creating a query from an http request that returns data in a CSV format.\n\nThis value specifies the Field delimiter for the CSV data.\n\nOnly the first character is used.\n\nDefault is a comma.\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "textqualifier",
+            "description": "Required for creating a query.\n\nIndicates the start and finish of a column.\n\nShould be appropriately escaped when embedded in a column.\n\nFor example, if the qualifier is a double quotation mark, it should be escaped as \"\"\"\".\n\nIf there is no text qualifier in the file, specify it as \" \".\n\nDefault is the double quotation mark (\").\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "resolveurl",
+            "description": "Yes or No.\n\nDefault is No.\n\nFor GET and POST operations, if Yes, page reference returned into the fileContent internal variable has its internal URLs fully resolved, including port number, so that links remain intact.\n",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "proxyserver",
+            "description": "Host name or IP address of a proxy server.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "proxyport",
+            "description": "The port number on the proxy server from which the object is requested.\n\nDefault is 80.\n\nWhen used with resolveURL, the URLs of retrieved documents that specify a port number are automatically resolved to preserve links in the retrieved document.\n",
+            "default": false,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "proxyuser",
+            "description": "When required by a proxy server, a valid username.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "proxypassword",
+            "description": "When required by a proxy server, a valid password.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "useragent",
+            "description": "Use a custom `User-Agent` request header.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "throwonerror",
+            "description": "Boolean indicating whether to throw an exception that can be caught by using the [[tag-try]] and [[tag-catch]] tags.\n\nErrors include \n\n- a connection/response timeout\n- a http response status code which isn't between 200 and 299\n- a connection failure\n- unable to resolve hostname (i.e. DNS)\n- TLS/SSL problems\n\nThe default is YES.\n",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "redirect",
+            "description": "Boolean indicating whether to redirect execution or stop execution.\n\nThe default is Yes.\n\nIf set to No and throwOnError = \"yes\", execution stops if cfhttp fails, and the status code and associated error message are returned in the variable cfhttp.statuscode.\n\nTo see where execution would have been redirected, use the variable cfhttp.responseHeader[LOCATION]. The key LOCATION identifies the path of redirection.\n\nLucee will follow up to five redirections on a request. If this limit is exceeded, Lucee behaves as if redirect = \"no\".\n",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "timeout",
+            "description": "A value, in seconds.\n\nWhen a URL timeout is specified in the browser, the timeout attribute setting takes precedence over the Lucee Administrator timeout.\n\nThe server then uses the lesser of the URL timeout and the timeout passed in the timeout attribute, so that the request always times out before or at the same time as the page times out.\n\nIf there is no URL timeout specified, Lucee takes the lesser of the Lucee Administrator timeout and the timeout passed in the timeout attribute.\n\nIf there is no timeout set on the URL in the browser, no timeout set in the Lucee Administrator, and no timeout set with the timeout attribute, Lucee waits indefinitely for the cfhttp request to process.\n",
+            "default": false,
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "charset",
+            "description": "Sets the charset for the call.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "firstrowasheaders",
+            "description": "sets if first row of csv is file",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "authtype",
+            "description": "Authentication type for a request with username and password, valid values are \"BASIC\" (default) and \"NTLM\"",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "workstation",
+            "description": "The workstation the authentication request is originating from.\n\nEssentially, the computer name for this machine. This attribute is only used when authentication type is \"NTLM\"\n",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "domain",
+            "description": "The domain to authenticate within. This attribute is only used when authentication type is \"NTLM\"",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "clientcert",
+            "description": "The full path to a PKCS12 format file that contains the client certificate for the request.",
+            "minimum_version": "str",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "clientcertpassword",
+            "description": "Password used to decrypt the client certificate.",
+            "minimum_version": "str",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "pooling",
+            "description": "Flag allowing to disable connection reuse on one off requests.",
+            "minimum_version": "boo",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "cachedwithin",
+            "description": "Supported values are:\n\n- String \"request\" (If original content was created within the current request, cached content data is used.)\n- a timespan (created with function CreateTimeSpan)\n\nTo use cached data, the tag must be called with the exact same arguments.\n",
+            "minimum_version": "obj",
+            "default": false,
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "autocert",
+            "description": "When set to true, this attribute enables the automatic installation of SSL certificates for HTTPS connections, \nensuring the request can proceed without SSL certificate errors. \nThis is particularly useful for environments where certificates may not be pre-installed or are dynamically updated.",
+            "minimum_version": "boo",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

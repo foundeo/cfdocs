@@ -1,0 +1,15 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/exit.html"}},
+    "name": "exit",
+    "description": "Used to: Abort the processing of the currently executing CFML custom tag, exit the template\nwithin the currently executing CFML custom tag and re-execute a section of code within the currently\nexecuting CFML custom tag",
+    "syntax": "<exit/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [{
+        "name": "method",
+        "description": "Allowed values:\n\n* **exittag**: aborts processing of currently executing tag\n* **exittemplate**: exits page of currently executing tag\n* **loop**: reexecutes body of currently executing tag\n",
+        "default": false,
+        "type": "string",
+        "required": false
+    }]
+}

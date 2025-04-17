@@ -1,0 +1,9 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/module.html"}},
+    "name": "module",
+    "description": "Invokes a custom tag for use in cfml templates. The cfmodule tag can help deal with\ncustom tag name conflicts. Use the template attribute to name a template that contains the custom\ntag definition, including its path..",
+    "syntax": "<module/>",
+    "returns": "void",
+    "type": "tag",
+    "params": []
+}

@@ -1,0 +1,38 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/processingdirective.html"}},
+    "name": "processingdirective",
+    "description": "Sets compiler directives that affect the entire template. Unlike most CFML tags, cfprocessingdirective is processed at compile time and must be placed at the root level of your template.",
+    "syntax": "<processingdirective/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "suppresswhitespace",
+            "description": "When set to true, removes unnecessary whitespace from the generated HTML output, reducing the file size and potentially improving page load times.\n\nThis includes: \n\n    -spaces\n    -tabs\n    -line breaks between HTML elements. \nExample: suppressWhiteSpace=\"true\"",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "executionlog",
+            "description": "Controls whether execution time logging is enabled for this template. When set to true, Lucee will log performance metrics for this template, which can be valuable for debugging and optimization. \n\nExample: executionLog=\"true\"",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "pageencoding",
+            "description": "Specifies the character encoding used for the current template file. This must be a string literal corresponding to a valid character encoding (not a dynamic expression).\n\nCommon values: \n\n    -UTF-8 (Unicode, recommended for most applications)\n    -ISO-8859-1 (Latin-1)\n    -Windows-1252 (Windows Western European). \nExample: pageEncoding=\"UTF-8\"",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "preservecase",
+            "description": "Controls how variable keys defined using dot notation are handled:\n\t\n\tWhen preserveCase=\"false\" (default): All struct keys defined with dot notation are converted to uppercase.\n\tExample: sct.dotNotation becomes key \"DOTNOTATION\" while sct[\"bracketNotation\"] remains \"bracketNotation\"\n\t\n\tWhen preserveCase=\"true\": Struct keys defined with dot notation maintain their original case.\n\tExample: sct.dotNotation remains key \"dotNotation\" and sct[\"bracketNotation\"] remains \"bracketNotation\"\n\t\n\tThis setting affects all dot notation usage throughout the template.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,136 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/component.html"}},
+    "name": "component",
+    "description": "Creates and defines a component object",
+    "syntax": "<component/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "accessors",
+            "description": "If set to true, enables implicit getters and setters for the component's properties. For persistent CFCs, accessors are always enabled.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "synchronized",
+            "description": "If set to true all calls to an instance of a component are synchronized. This setting allows a method to be executed only by one single thread at a time.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "persistent",
+            "description": "Specifies CFC is persistent or not",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "extends",
+            "description": "Name of parent component from which to inherit methods and properties.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "implements",
+            "description": "Lists the interfaces that the component implements, specifying the set of functions that the component must provide.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "modifier",
+            "description": "Defines the type of component: `none` for a regular component, `abstract` for a component that cannot be instantiated directly and must be extended, or `final` for a component that cannot be extended by other components.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "displayname",
+            "description": "A string to be displayed when using introspection to show\ninformation about the CFC. The information appears on the\nheading, following the component name.\nIf the style attribute is set to document, the displayname\nattribute is used as the name of the service element in the WSDL.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "hint",
+            "description": "Text that displays when you use introspection to show information about the CFC. The hint attribute value appears below the component name heading. Use this attribute to describe the purpose of the component.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "output",
+            "description": "- true: permits component method output\n- false: suppresses component method output",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "style",
+            "description": "Specifies whether a CFC used for web services uses RPC-encoded style or document-literal style",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "namespace",
+            "description": "Specifies the namespace used in the WSDL when\nusing the CFC as a document-literal style web service.\nIf you don't specify this attribute, Lucee\nderives the namespace from the CFC class name.\nThis attribute applies only when style=\"document\".",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "serviceportname",
+            "description": "Specifies the name of the port element in the WSDL.\nThis attribute applies only when style=\"document\".",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "serviceaddress",
+            "description": "Specifies the SOAP URL of the web service. If you don't specify this attribute, Lucee uses the URL of the CFC in the WSDL service description.\nUse this attribute to specify the protocol, for example, by specifying a URL that starts with https://. This attribute applies only for web services.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "porttypename",
+            "description": "Specifies the name of the porttype element in the WSDL.\nThis attribute applies only when style=\"document\".",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "bindingname",
+            "description": "Specifies the name of the binding element in the WSDL.\nThis attribute applies only when style=\"document\".",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "wsdlfile",
+            "description": "A properly formatted WSDL file to be used instead of\nWSDL generated by Lucee.\nThis attribute applies only when style=\"document\".",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "alias",
+            "description": "Defines an alternative name or alias for the component, providing flexibility in referencing the component in different contexts.",
+            "default": false,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "mappedsuperclass",
+            "description": "Indicates whether the component acts as a mapped superclass. A mapped superclass serves as a base class for other components to extend but does not itself represent a database entity.",
+            "default": false,
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

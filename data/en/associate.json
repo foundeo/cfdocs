@@ -1,0 +1,24 @@
+{
+    "engines": {"lucee": {"docs": "https://docs.lucee.org/reference/functions/associate.html"}},
+    "name": "associate",
+    "description": "Allows subtag data to be saved with the base tag. Applies only to custom tags.",
+    "syntax": "<associate basetag=\"\"/>",
+    "returns": "void",
+    "type": "tag",
+    "params": [
+        {
+            "name": "basetag",
+            "description": "The name of the base tag.",
+            "default": false,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "datacollection",
+            "description": "The name of the structure in which the base tag stores subtag data.",
+            "default": false,
+            "type": "string",
+            "required": false
+        }
+    ]
+}

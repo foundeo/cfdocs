@@ -1,0 +1,38 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/querygetcellbyindex.html",
+        "minimum_version": "5.3"
+    }},
+    "name": "querygetcellbyindex",
+    "description": "return the value of a specific query cell",
+    "syntax": "querygetcellbyindex( query, column_name, index )",
+    "returns": "any",
+    "type": "function",
+    "params": [
+        {
+            "name": "query",
+            "description": "query to get cell value from",
+            "type": "query",
+            "required": true
+        },
+        {
+            "name": "column_name",
+            "description": "name of the column",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "index",
+            "description": "Name of the index.",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "defaultValue",
+            "description": "In case no matching index was found, this value is returned by the function, in case it is not set, the function will throw an exception.",
+            "minimum_version": "any",
+            "type": "any",
+            "required": false
+        }
+    ]
+}

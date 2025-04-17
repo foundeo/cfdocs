@@ -1,0 +1,49 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/listqualifiedtoarray.html",
+        "minimum_version": "5.3"
+    }},
+    "name": "listqualifiedtoarray",
+    "description": "Copies the elements of a list to an array.",
+    "syntax": "listqualifiedtoarray( list )",
+    "returns": "array",
+    "type": "function",
+    "params": [
+        {
+            "name": "list",
+            "description": "a string list",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "delimiter",
+            "description": "a single character that separate list elements.",
+            "default": ",",
+            "aliases": "delimiters",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "qualifier",
+            "description": "a single character before and after the list elements.",
+            "default": "\"",
+            "aliases": "qualifiers",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "qualifierRequired",
+            "description": "if set to true, all values need to have qualifier (quotes) around them.",
+            "default": "false",
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "includeEmptyFields",
+            "description": "if set to true, empty values are included as well",
+            "default": "false",
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}
