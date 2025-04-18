@@ -25,7 +25,7 @@
 
   "engines": {
     "coldfusion": { "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/htmleditformat.html",
-      "minimum_version": "", "notes": "Use encodeForHTML, which can provide more protection from XSS.", "deprecated" : "11" },
+      "minimum_version": "", "notes": "Use encodeForHTML, which can provide more protection from XSS.", "deprecated" : "11" , "removed":"2025"},
     "lucee":      { "docs": "https://docs.lucee.org/reference/functions/htmleditformat.html",
       "minimum_version": "", "notes": "" },
     "openbd":     { "docs": "http://openbd.org/manual/?/function/htmleditformat",

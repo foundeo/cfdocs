@@ -55,7 +55,7 @@
 			"result":""
 		},
 		{
-			"title": "Alternate Script Syntax (CF9+)",
+			"title": "Alternate Script Syntax (CF9+). Removed in ColdFusion 2025.",
 			"description": "",
 			"code": "httpService = new http(method = \"GET\", charset = \"utf-8\", url = \"https://www.google.com/\");\r\nhttpService.addParam(name = \"q\", type = \"url\", value = \"cfml\");\r\nresult = httpService.send().getPrefix();\r\nwriteDump(result);",
 			"result": ""
