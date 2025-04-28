@@ -1,0 +1,25 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/debugAdd.html",
+        "minimum_version": ""
+    }},
+    "name": "debugAdd",
+    "description": "Adding data to debug output.",
+    "syntax": "debugAdd( category, data )",
+    "returns": "void",
+    "type": "function",
+    "params": [
+        {
+            "name": "category",
+            "description": "category name for the data passed in.",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "data",
+            "description": "struct containing data to add to debug output.",
+            "type": "struct",
+            "required": true
+        }
+    ]
+}

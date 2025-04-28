@@ -1,0 +1,35 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/MarkdownToHTML.html",
+        "minimum_version": "6.0"
+    }},
+    "name": "MarkdownToHTML",
+    "description": "Transforms Markdown formatted String into HTML.",
+    "syntax": "MarkdownToHTML( string )",
+    "returns": "string",
+    "type": "function",
+    "params": [
+        {
+            "name": "string",
+            "description": "A Markdown formatted string or a path to a file containf a markdown formatted string to convert to HTML",
+            "aliases": "markdown",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "safeMode",
+            "description": "If set to true it does escape unsafe HTML tags",
+            "default": "false",
+            "aliases": "safe",
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "encoding",
+            "description": "Charset, only used in case the argument markdown contains a file path",
+            "aliases": "charset",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

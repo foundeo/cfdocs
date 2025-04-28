@@ -1,0 +1,32 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/getPropertyString.html",
+        "minimum_version": "7.0"
+    }},
+    "name": "getPropertyString",
+    "description": "Sets the value of a property entry in a properties file.",
+    "syntax": "getPropertyString( filePath, key )",
+    "returns": "string",
+    "type": "function",
+    "params": [
+        {
+            "name": "filePath",
+            "description": "Path of the properties file",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "key",
+            "description": "Name of the key to return",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "encoding",
+            "description": "Encoding for the properties file",
+            "default": "UTF-8",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

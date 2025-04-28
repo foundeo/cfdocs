@@ -1,0 +1,33 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/LogAllThreads.html",
+        "minimum_version": "6.2"
+    }},
+    "name": "LogAllThreads",
+    "description": "Creates detailed thread stack trace logs in JSONL format for performance analysis and debugging.\nThis function captures stack traces from all running threads at specified intervals for a given duration.\nIt executes asynchronously, returning immediately after starting the logging process, making it ideal\nfor analyzing specific code segments by initiating logging just before the target code execution.\nThe output format is JSONL (JSON Lines), where each line represents a separate JSON object containing:\n- Timestamp offset in milliseconds from 1/1/1970 00:00:00 UTC (Unix 0)\n- Complete stack trace of each thread's current location\nThis data can be used for:\n- Performance bottleneck identification\n- Thread behavior analysis\n- Deadlock detection\n- Resource usage patterns",
+    "syntax": "LogAllThreads( path )",
+    "returns": "void",
+    "type": "function",
+    "params": [
+        {
+            "name": "path",
+            "description": "Full file path where the log will be written. The file should have a `.jsonl` extension\nfor proper identification as a JSON Lines format file. The function will create the file\nif it doesn't exist, or append to it if it does.\n\nExample: `/var/log/lucee/thread_analysis.jsonl`",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "interval",
+            "description": "The time interval (in milliseconds) between stack trace captures. Lower values provide\nmore detailed analysis but generate larger log files and may impact performance.\n\nRecommended ranges:\n\n- 1-10ms: Very detailed analysis, higher overhead\n- 10-100ms: Balanced detail and performance\n- 100ms+: Lower detail, minimal performance impact",
+            "default": "0",
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "duration",
+            "description": "Total duration (in milliseconds) for which the function will collect thread data.\n\nAfter this period, logging automatically stops.\n\nCommon durations:\n\n- 1000-5000ms: Quick snapshots\n- 10000ms: Standard analysis period\n- 30000ms+: Extended analysis for complex operations",
+            "default": "10000",
+            "type": "number",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/ArrayRemoveDuplicates.html",
+        "minimum_version": "6.0"
+    }},
+    "name": "ArrayRemoveDuplicates",
+    "description": "Removes duplicate values from array.",
+    "syntax": "ArrayRemoveDuplicates( array )",
+    "returns": "array",
+    "type": "function",
+    "params": [
+        {
+            "name": "array",
+            "description": "A array to Removes duplicate",
+            "type": "array",
+            "required": true
+        },
+        {
+            "name": "ignoreCase",
+            "description": "if set to true, the duplicate value will not be case sensitive",
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

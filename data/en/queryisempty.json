@@ -1,0 +1,17 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/QueryIsEmpty.html",
+        "minimum_version": "6.0"
+    }},
+    "name": "QueryIsEmpty",
+    "description": "returns query empty or not",
+    "syntax": "QueryIsEmpty( query )",
+    "returns": "boolean",
+    "type": "function",
+    "params": [{
+        "name": "query",
+        "description": "Query object to check.",
+        "type": "query",
+        "required": true
+    }]
+}

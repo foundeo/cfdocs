@@ -1,0 +1,28 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/sanitize.html",
+        "minimum_version": ""
+    }},
+    "name": "sanitize",
+    "description": "Detects and masks sensitive information (such as passwords, API keys, tokens, etc.) from a given string. \nThe function identifies patterns commonly used for sensitive data and replaces them with a mask.",
+    "syntax": "sanitize( text )",
+    "returns": "string",
+    "type": "function",
+    "params": [
+        {
+            "name": "text",
+            "description": "The input string to be sanitized.",
+            "aliases": "string",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "replacement",
+            "description": "The replacement string to use as a mask for sensitive data. If not specified, defaults to \"****\".",
+            "default": "****",
+            "aliases": "mask",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

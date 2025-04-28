@@ -1,0 +1,12 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/SessionCommit.html",
+        "minimum_version": "6.2"
+    }},
+    "name": "SessionCommit",
+    "description": "Force saving the session to storage, useful when sessionCluster is enabled.",
+    "syntax": "SessionCommit()",
+    "returns": "void",
+    "type": "function",
+    "params": []
+}

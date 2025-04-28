@@ -1,0 +1,18 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/ComponentListPackage.html",
+        "minimum_version": ""
+    }},
+    "name": "ComponentListPackage",
+    "description": "List all components in a certain package, throws an application exception if package does not exist.",
+    "syntax": "ComponentListPackage( package )",
+    "returns": "array",
+    "type": "function",
+    "params": [{
+        "name": "package",
+        "description": "name of the package to list",
+        "aliases": "packageName,name",
+        "type": "string",
+        "required": true
+    }]
+}

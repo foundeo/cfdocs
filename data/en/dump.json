@@ -1,0 +1,91 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/dump.html",
+        "minimum_version": ""
+    }},
+    "name": "dump",
+    "description": "Outputs the elements, variables and values of most kinds of CFML objects. Useful for debugging. You can display the contents of simple and complex variables, objects, components, user-defined functions, and other elements.",
+    "syntax": "dump()",
+    "returns": "void",
+    "type": "function",
+    "params": [
+        {
+            "name": "var",
+            "description": "Variable to display.",
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "expand",
+            "description": "expands views",
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "format",
+            "description": "specify the output format of the dump, the following formats are supported:\n\n- simple: - a simple HTML output (no JavaScript or CSS)\n- text (default output=\"console\"): plain text output (no HTML)\n- html (default output=\"browser\"): regular output with HTML/CSS/JavaScript\n- classic: classic view with HTML/CSS/JavaScript",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "hide",
+            "description": "hide column or keys.",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "keys",
+            "description": "For a structure, number of keys to display.",
+            "type": "numeric",
+            "required": false
+        },
+        {
+            "name": "label",
+            "description": "header for the dump output.",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "metainfo",
+            "description": "Includes information about the query in the cfdump results.",
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "output",
+            "description": "Where to send the results:\n\n- console: the result is written to the console (System.out).\n- browser (default): the result is written to the browser response stream.",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "show",
+            "description": "show column or keys.",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "showUDFs",
+            "description": "show UDFs in cfdump output.",
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "top",
+            "description": "The number of rows to display.",
+            "type": "numeric",
+            "required": false
+        },
+        {
+            "name": "abort",
+            "description": "stops further processing of the request.",
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "eval",
+            "description": "name of the variable to display, also used as label, when no label defined.",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

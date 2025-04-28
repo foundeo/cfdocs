@@ -1,0 +1,90 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/S3Write.html",
+        "minimum_version": ""
+    }},
+    "name": "S3Write",
+    "description": "Writes a value to S3.",
+    "syntax": "S3Write( bucketName, objectName, value )",
+    "returns": "void",
+    "type": "function",
+    "params": [
+        {
+            "name": "bucketName",
+            "description": "Name of the bucket of your object to read",
+            "aliases": "bucket",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "objectName",
+            "description": "Name of the object (path) within the bucket of your object to read",
+            "aliases": "object,path",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "value",
+            "description": "value to store on S3.",
+            "aliases": "content",
+            "type": "object",
+            "required": true
+        },
+        {
+            "name": "charset",
+            "description": "charset to use to store the content.",
+            "default": "UTF-8",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "mimeType",
+            "description": "MimeType of the value you are storing.",
+            "default": "UTF-8",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "acl",
+            "description": "an array of struct where each struct represents an ACL grant",
+            "aliases": "aclObject",
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "location",
+            "description": "location of the S3 storage.",
+            "aliases": "region",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "accessKeyId",
+            "description": "S3 accessKeyId, if not defined it checks the system property/environment variable for [lucee.s3.accesskeyid].\n",
+            "aliases": "accessKey,awsAccessKeyId,awsAccessKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "secretAccessKey",
+            "description": "S3 secretAccessKey, if not defined it checks the system property/environment variable for [lucee.s3.secretaccesskey].\n",
+            "aliases": "secretkey,awsSecretkey,awsSecretAccessKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "host",
+            "description": "the provider to connect, if not set Amazon AWS is used.",
+            "aliases": "provider,server",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "timeout",
+            "description": "timeout for this execution",
+            "default": "10000",
+            "type": "number",
+            "required": false
+        }
+    ]
+}

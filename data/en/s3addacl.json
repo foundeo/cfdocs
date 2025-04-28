@@ -1,0 +1,63 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/S3AddACL.html",
+        "minimum_version": ""
+    }},
+    "name": "S3AddACL",
+    "description": "Adds ACL to existing ACL for object or bucket. You can provide the endpoint as a bucket/object definition (S3AddACL(bucket:\"mybucket\",object:\"myobject.txt\",acl:data) ) or as a virtual filesystem path (S3AddACL(path:\"s3://mybucket/myobject.txt\",acl:data) ).",
+    "syntax": "S3AddACL( bucketNameOrPath, aclObject )",
+    "returns": "void",
+    "type": "function",
+    "params": [
+        {
+            "name": "bucketNameOrPath",
+            "description": "This can be the bucketname or a virtual filesystem path for a file/directory (example \"s3://mybucket/myobject.txt\").",
+            "aliases": "bucket,bucketName,path",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "objectName",
+            "description": "Name of the object (path) within the bucket of your object to read. In case you have defined a bucket with the first argument.",
+            "default": "",
+            "aliases": "object,path",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "aclObject",
+            "description": "an array of struct where each struct represents an ACL grant",
+            "aliases": "acl",
+            "type": "object",
+            "required": true
+        },
+        {
+            "name": "accessKeyId",
+            "description": "S3 accessKeyId, if not defined it checks the system property/environment variable for [lucee.s3.accesskeyid].",
+            "aliases": "accessKey,awsAccessKeyId,awsAccessKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "secretAccessKey",
+            "description": "S3 secretAccessKey, if not defined it checks the system property/environment variable for [lucee.s3.secretaccesskey].",
+            "aliases": "secretkey,awsSecretkey,awsSecretAccessKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "host",
+            "description": "the provider to connect, if not set Amazon AWS is used.",
+            "aliases": "provider,server",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "timeout",
+            "description": "timeout for this execution",
+            "default": "10000",
+            "type": "number",
+            "required": false
+        }
+    ]
+}

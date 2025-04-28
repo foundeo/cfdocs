@@ -1,0 +1,42 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/luceecreateaisession.html",
+        "minimum_version": ""
+    }},
+    "name": "luceecreateaisession",
+    "description": "Creates a new AI session for interaction with Large Language Models (LLMs). \nThe session maintains conversation history and context between interactions. \nEach session can be configured with different parameters to optimize for specific use cases like code analysis, content generation, or data processing.\nCommon usage patterns:\n- Exception analysis and debugging assistance\n- Code documentation generation\n- Query optimization suggestions\n- Security review assistance\n- Performance optimization recommendations\nThe session persists until explicitly terminated or the application restarts.",
+    "syntax": "luceecreateaisession( name )",
+    "returns": "object",
+    "type": "function",
+    "params": [
+        {
+            "name": "name",
+            "description": "Specifies which AI endpoint configuration to use. Can be provided in two formats:\n\n1. Direct endpoint name:\nThe name of an endpoint as defined in the Lucee Administrator (similar to how datasource names work)\n2. Default reference:\nUsing the format \"default:category\" to use the endpoint configured as the default for that specific category in the Lucee Administrator.\n\nCurrently supported default categories:\n\n- exception: For exception analysis\n- documentation: For documentation tasks\n\nThe endpoint configurations and their default category assignments are managed in the Lucee Administrator.",
+            "aliases": "aiName,nameAI",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "systemMessage",
+            "description": "Initial instruction set that defines the AI's behavior and expertise for this session. This message sets the context and rules for all subsequent interactions.\n\nBest practices:\n\n- Be specific about the AI's role and expertise\n- Define output format requirements clearly\n- Include any necessary constraints or rules\n- Specify error handling preferences\n- Define response structure expectations\n\nThe system message persists throughout the session and influences all responses.",
+            "aliases": "initalMesssage,message",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "limit",
+            "description": "Maximum number of question-answer pairs to keep in the conversation history. Once reached, older messages will be removed.\nConsider:\n\n- Higher limits provide more context but consume more memory\n- Lower limits are more memory efficient but may lose important context\n- For complex analysis tasks, consider limits of 10-20\n- For simple Q&A, limits of 5-10 may suffice",
+            "default": "50",
+            "aliases": "conversationHistoryLimit",
+            "type": "numeric",
+            "required": false
+        },
+        {
+            "name": "temperature",
+            "description": "Controls response randomness (0.0 to 1.0). Lower values make responses more focused and deterministic, higher values make them more creative and varied.\n\nRecommended settings:\n\n- 0.0-0.3: Technical analysis, debugging, code review\n- 0.3-0.5: Documentation generation, error explanations\n- 0.5-0.7: General purpose interactions\n- 0.7-1.0: Creative content generation\n\nFor exception analysis and debugging, lower temperatures (0.2-0.3) are recommended for more consistent and precise responses.",
+            "default": "0.7",
+            "type": "numeric",
+            "required": false
+        }
+    ]
+}

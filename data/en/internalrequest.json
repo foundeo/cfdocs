@@ -1,0 +1,80 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/InternalRequest.html",
+        "minimum_version": "6.0"
+    }},
+    "name": "InternalRequest",
+    "description": "Makes a request to the CFML Engine internally.",
+    "syntax": "InternalRequest( template )",
+    "returns": "struct",
+    "type": "function",
+    "params": [
+        {
+            "name": "template",
+            "description": "Template path (script name) for the request (example:/test/index.cfm).",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "method",
+            "description": "method of the request (GET,POST,PUT,DELETE ...)",
+            "default": "get",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "urls",
+            "description": "URL scope passed to the request (query string). This can be a struct or a string following this format [name1=value1&name2=value2].",
+            "aliases": "url",
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "forms",
+            "description": "FORM scope passed to the request.This can be a struct or a string following this format [name1=value1&name2=value2].",
+            "aliases": "form",
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "cookies",
+            "description": "Cookie scope passed to the request",
+            "aliases": "cookie",
+            "type": "struct",
+            "required": false
+        },
+        {
+            "name": "headers",
+            "description": "Request header entries passed to the request",
+            "aliases": "header",
+            "type": "struct",
+            "required": false
+        },
+        {
+            "name": "body",
+            "description": "body to send with the request",
+            "type": "any",
+            "required": false
+        },
+        {
+            "name": "charset",
+            "description": "charset used for the request, if not set the web charset is used.",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "addToken",
+            "description": "if yes add urlToken as cookie",
+            "default": "false",
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "throwonerror",
+            "description": "if true (default) and the called page throws an exception, that exception is also thrown within the caller request. If false it is catched and only reported in the resulting struct.",
+            "default": "true",
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

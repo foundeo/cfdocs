@@ -1,0 +1,18 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/luceeaihas.html",
+        "minimum_version": ""
+    }},
+    "name": "luceeaihas",
+    "description": "Checks whether a specific AI endpoint is configured and available for use.",
+    "syntax": "luceeaihas( name )",
+    "returns": "boolean",
+    "type": "function",
+    "params": [{
+        "name": "name",
+        "description": "The name of the AI endpoint to check. Can be either:\n\n1. A direct endpoint name as configured in the Lucee Administrator\n2. A default reference (e.g., \"default:exception\") which will check if a default endpoint is configured for that category",
+        "aliases": "aiName,nameAI",
+        "type": "string",
+        "required": true
+    }]
+}

@@ -1,0 +1,46 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/ConfigTranslate.html",
+        "minimum_version": "6.0"
+    }},
+    "name": "ConfigTranslate",
+    "description": "translate an old Lucee XML configuration to the new CFConfig.json configuration",
+    "syntax": "ConfigTranslate( source )",
+    "returns": "struct",
+    "type": "function",
+    "params": [
+        {
+            "name": "source",
+            "description": "Path to the Lucee XML file (lucee-server.xml or lucee-web.xml.cfm) file or the data itself as a String.",
+            "aliases": "data,input",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "target",
+            "description": "Path to the Lucee XML file (lucee-server.xml or lucee-web.xml.cfm) file or the data itself as a String.",
+            "aliases": "output",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "type",
+            "description": "Config Context to manipulate, server or web context.",
+            "default": "server",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "mode",
+            "description": "Only used when type is set to [server], should be the resulting json set for single or multi mode.",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "charset",
+            "description": "charset to use to read the XML file, if not defined, Lucee will use the default resource charset.",
+            "type": "string",
+            "required": false
+        }
+    ]
+}

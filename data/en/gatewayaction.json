@@ -1,0 +1,38 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/GatewayAction.html",
+        "minimum_version": "6.2"
+    }},
+    "name": "GatewayAction",
+    "description": "Executes a specifc action for a gateway instance.",
+    "syntax": "GatewayAction( gatewayID, action )",
+    "returns": "string",
+    "type": "function",
+    "params": [
+        {
+            "name": "gatewayID",
+            "description": "Identifier of the gateway to do the action on.",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "action",
+            "description": "action to execute, possible values are [start,stop and restart]",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "waitForIt",
+            "description": "Wait for the process to end (starting, stopping or restarting)",
+            "default": "true",
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "timeout",
+            "description": "in case `waitForIt` is set to `true`, this defines how long we wait for the process to end, default is one second.",
+            "type": "timespan",
+            "required": false
+        }
+    ]
+}

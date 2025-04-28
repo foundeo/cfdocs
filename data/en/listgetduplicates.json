@@ -1,0 +1,40 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/ListGetDuplicates.html",
+        "minimum_version": "7.0"
+    }},
+    "name": "ListGetDuplicates",
+    "description": "Removes duplicate values from list.",
+    "syntax": "ListGetDuplicates( list )",
+    "returns": "string",
+    "type": "function",
+    "params": [
+        {
+            "name": "list",
+            "description": "a string list",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "delimiters",
+            "description": "Characters that separate list elements. The default value is comma.",
+            "default": ",",
+            "aliases": "delimiter",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "ignoreCase",
+            "description": "if set to true, the duplicate value test will not be case sensitive",
+            "default": "false",
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "includeEmptyFields",
+            "description": "if set to true, empty values are included as well",
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}

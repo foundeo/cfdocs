@@ -1,0 +1,71 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/S3GenerateURI.html",
+        "minimum_version": ""
+    }},
+    "name": "S3GenerateURI",
+    "description": "Generates a URI endpoint pointing to the object given. You can provide the endpoint as a bucket/object definition (S3AddACL(bucket:\"mybucket\",object:\"myobject.txt\") ) or as a virtual filesystem path (S3AddACL(path:\"s3://mybucket/myobject.txt\") ).",
+    "syntax": "S3GenerateURI( bucketNameOrPath )",
+    "returns": "string",
+    "type": "function",
+    "params": [
+        {
+            "name": "bucketNameOrPath",
+            "description": "This can be the bucketname or simple the virtual filesystem point for the file (if object name is no defined)",
+            "aliases": "bucket,bucketName,path",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "objectName",
+            "description": "Name of the object (path) within the bucket of your object to read",
+            "aliases": "object,path",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "type",
+            "description": "Defines the style/type created, possible values are:\n\n- virtualhost\n- path\n- arn\n- s3\n\nFor more details, please see:\n\n[Methods for accessing a bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-bucket-intro.html)\n[Amazon Resource Names (ARNs)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)",
+            "default": "virtualhost",
+            "aliases": "style",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "secure",
+            "description": "Should a secure URL (https) be created or not. Only applies to type virtualhost and path.",
+            "default": "true",
+            "aliases": "secured",
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "accessKeyId",
+            "description": "S3 accessKeyId, if not defined it checks the system property/environment variable for [lucee.s3.accesskeyid].",
+            "aliases": "accessKey,awsAccessKeyId,awsAccessKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "secretAccessKey",
+            "description": "S3 secretAccessKey, if not defined it checks the system property/environment variable for [lucee.s3.secretaccesskey].",
+            "aliases": "secretkey,awsSecretkey,awsSecretAccessKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "host",
+            "description": "the provider to connect, if not set Amazon AWS is used.",
+            "aliases": "provider,server",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "timeout",
+            "description": "timeout for this execution",
+            "default": "10000",
+            "type": "number",
+            "required": false
+        }
+    ]
+}

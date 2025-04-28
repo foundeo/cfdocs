@@ -1,0 +1,17 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/ExtensionInfo.html",
+        "minimum_version": "6.0"
+    }},
+    "name": "ExtensionInfo",
+    "description": "Returns the detailed info about the extension.",
+    "syntax": "ExtensionInfo( id )",
+    "returns": "struct",
+    "type": "function",
+    "params": [{
+        "name": "id",
+        "description": "Id of the extension",
+        "type": "string",
+        "required": true
+    }]
+}

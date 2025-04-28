@@ -1,0 +1,83 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/S3Move.html",
+        "minimum_version": ""
+    }},
+    "name": "S3Move",
+    "description": "Moves an object in S3 from one bucket to an other.",
+    "syntax": "S3Move( srcBucketName, srcObjectName, trgBucketName )",
+    "returns": "void",
+    "type": "function",
+    "params": [
+        {
+            "name": "srcBucketName",
+            "description": "Name of the source bucket of your object to move.",
+            "aliases": "srcBucket,sourceBucketName,sourceBucket",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "srcObjectName",
+            "description": "Name of the source object (path) within the bucket of your object to move.",
+            "aliases": "sourceObjectName,srcObject,sourceObject",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "trgBucketName",
+            "description": "Name of the target bucket of your object to move",
+            "aliases": "trgBucket,targetBucketName,targetBucket",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "trgObjectName",
+            "description": "Name of the target object (path)for the target bucket. If not defined the source object name is used.",
+            "aliases": "targetObjectName,trgObject,targetObject",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "acl",
+            "description": "an array of struct where each struct represents an ACL grant",
+            "aliases": "aclObject",
+            "type": "object",
+            "required": false
+        },
+        {
+            "name": "location",
+            "description": "location of the S3 storage.",
+            "aliases": "region",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "accessKeyId",
+            "description": "S3 accessKeyId, if not defined it checks the system property/environment variable for [lucee.s3.accesskeyid].",
+            "aliases": "accessKey,awsAccessKeyId,awsAccessKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "secretAccessKey",
+            "description": "S3 secretAccessKey, if not defined it checks the system property/environment variable for [lucee.s3.secretaccesskey].",
+            "aliases": "secretkey,awsSecretkey,awsSecretAccessKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "host",
+            "description": "the provider to connect, if not set Amazon AWS is used.",
+            "aliases": "provider,server",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "timeout",
+            "description": "timeout for this execution",
+            "default": "10000",
+            "type": "number",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/ImageWriteToBrowser.html",
+        "minimum_version": ""
+    }},
+    "name": "ImageWriteToBrowser",
+    "description": "Writes image to browser.",
+    "syntax": "ImageWriteToBrowser( image )",
+    "returns": "void",
+    "type": "function",
+    "params": [{
+        "name": "image",
+        "description": "The image on which this operation is performed.",
+        "aliases": "name",
+        "type": "any",
+        "required": true
+    }]
+}

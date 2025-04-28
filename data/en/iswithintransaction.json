@@ -1,0 +1,12 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/isWithinTransaction.html",
+        "minimum_version": "5.3"
+    }},
+    "name": "isWithinTransaction",
+    "description": "Determines whether the current thread is within a transaction block or not.",
+    "syntax": "isWithinTransaction()",
+    "returns": "boolean",
+    "type": "function",
+    "params": []
+}

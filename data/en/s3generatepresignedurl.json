@@ -1,0 +1,132 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/S3GeneratePresignedURL.html",
+        "minimum_version": ""
+    }},
+    "name": "S3GeneratePresignedURL",
+    "description": "Generates a presigned URL pointing to the object given. You can provide the endpoint as a bucket/object definition (S3AddACL(bucket:\"mybucket\",object:\"myobject.txt\") ) or as a virtual filesystem path (S3AddACL(path:\"s3://mybucket/myobject.txt\") ).",
+    "syntax": "S3GeneratePresignedURL( bucketNameOrPath )",
+    "returns": "string",
+    "type": "function",
+    "params": [
+        {
+            "name": "bucketNameOrPath",
+            "description": "This can be the bucketname or simple the virtual filesystem point for the file (if object name is no defined)",
+            "aliases": "bucket,bucketName,path",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "objectName",
+            "description": "Name of the object (path) within the bucket of your object to read",
+            "aliases": "object,path",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "expireDate",
+            "description": "Date time when the URL should expire.",
+            "aliases": "expire",
+            "type": "datetime",
+            "required": false
+        },
+        {
+            "name": "httpMethod",
+            "description": "The desired HTTP method (e.g., GET, PUT). Defaults to GET.",
+            "aliases": "method",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "sseAlgorithm",
+            "description": "The desired server-side encryption algorithm, valid values are AES256 or KMS.",
+            "aliases": "algorithm",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "sseCustomerKey",
+            "description": "The server-side encryption customer-provided key.",
+            "aliases": "customerKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "checksum",
+            "description": "The base64 encoded MD5 checksum of the object's content.",
+            "aliases": "contentMd5",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "type",
+            "description": "The MIME type of the object (e.g., \"text/plain\").",
+            "aliases": "contentType",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "disposition",
+            "description": "Specifies presentational information for the object, like \"attachment; filename=\\\"filename.pdf\\\"\".",
+            "aliases": "contentDisposition",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "encoding",
+            "description": "Specifies content encodings applied to the object, like gzip.",
+            "aliases": "contentEncoding",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "version",
+            "description": "The version ID of the object if versioning is enabled.",
+            "aliases": "versionId",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "zeroByte",
+            "description": "A flag to specify if the object has zero-byte content.",
+            "aliases": "zeroByteContent",
+            "type": "boolean",
+            "required": false
+        },
+        {
+            "name": "responseHeaders",
+            "description": "Struct of custom response headers for custom metadata prefixed with \"x-amz-meta-\" (prefix is optional, function will add it if missed).",
+            "aliases": "customResponseHeaders",
+            "type": "struct",
+            "required": false
+        },
+        {
+            "name": "accessKeyId",
+            "description": "S3 accessKeyId, if not defined it checks the system property/environment variable for [lucee.s3.accesskeyid].",
+            "aliases": "accessKey,awsAccessKeyId,awsAccessKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "secretAccessKey",
+            "description": "S3 secretAccessKey, if not defined it checks the system property/environment variable for [lucee.s3.secretaccesskey].",
+            "aliases": "secretkey,awsSecretkey,awsSecretAccessKey",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "host",
+            "description": "the provider to connect, if not set Amazon AWS is used.",
+            "aliases": "provider,server",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "timeout",
+            "description": "timeout for this execution",
+            "default": "10000",
+            "type": "number",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "engines": {"lucee": {
+        "docs": "https://docs.lucee.org/reference/functions/queryRowDataByIndex.html",
+        "minimum_version": "5.3"
+    }},
+    "name": "queryRowDataByIndex",
+    "description": "",
+    "syntax": "queryRowDataByIndex( query, index )",
+    "returns": "struct",
+    "type": "function",
+    "params": [
+        {
+            "name": "query",
+            "description": "query object do get data from",
+            "type": "query",
+            "required": true
+        },
+        {
+            "name": "index",
+            "description": "Name of the index",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "defaultValue",
+            "description": "In case no matching index was found, this value is returned by the function, in case it is not set, the function will throw an exception.",
+            "type": "struct",
+            "required": false
+        }
+    ]
+}
