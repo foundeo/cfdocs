@@ -6,7 +6,8 @@
       "minimum_version": "11",
       "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getsafehtml.html",
       "notes": ""
-    }
+    },
+    "boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-esapi` module.", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/esapi"}
   },
   "name": "getSafeHTML",
   "links": [
@@ -65,8 +66,5 @@
   "type": "function",
   "related": [
     "isSafeHTML"
-  ],
-  "engines": {
-    "boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-esapi` module.", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/esapi"}
-	},
+  ]
 }
