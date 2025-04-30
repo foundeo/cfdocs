@@ -14,16 +14,17 @@
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structisempty.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/structisempty.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structisempty"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structisempty"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structisempty"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/structisempty"}
 	},
-	"examples": [ 
+	"examples": [
 		{
 			"title":"Test to see if a struct is empty",
 			"description":"",
 			"code":"myStruct={};\r\nwriteOutput( structIsEmpty(myStruct) );",
 			"result":"true",
 			"runnable":true
-		}, 
+		},
 		{
 			"title":"Test to see if a struct contains something",
 			"description":"",

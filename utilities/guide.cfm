@@ -9,7 +9,8 @@
 		'coldfusion': 'Adobe ColdFusion',
 		'lucee': 'Lucee',
 		'openbd': 'OpenBD',
-		'railo': 'Railo'
+		'railo': 'Railo',
+		'boxlang': 'BoxLang'
 	};
 
 	/* build discouraged filehead */

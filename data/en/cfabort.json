@@ -13,7 +13,8 @@
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-a-b/cfabort.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/abort.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfabort"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfabort"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfabort"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:abort>` in BoxLang files.", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/abort"}
 	},
 	"links": [],
 	"examples": [

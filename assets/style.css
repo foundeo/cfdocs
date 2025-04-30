@@ -222,6 +222,13 @@ footer { text-align: center; margin-top: 10px; font-size:smaller; }
 .label-openbd:focus {
     background-color: #1b6c8f;
 }
+.label-boxlang {
+  background-color: #04CD70;
+}
+.label-boxlang:hover,
+.label-boxlang:focus {
+  background-color: #08834C;
+}
 .syntax-highlight {
   color: #c7254e;
   font-weight:bold;

@@ -21,7 +21,8 @@
 		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfdirectory.html"},
 		"lucee": {"minimum_version":"", "notes":"In Lucee the filter param can be a closure as well where the path is passed in.\n\nIt seems that there is no way to access the file query. If a directory returns false in recursive mode the contained files are processed anyways", "docs":"https://docs.lucee.org/reference/tags/directory.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdirectory"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdirectory"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdirectory"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:directory>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/io/directory"}
 	},
 	"links": [
 		{

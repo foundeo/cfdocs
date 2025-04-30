@@ -11,7 +11,8 @@
         {"name":"policy", "description":"Either a org.owasp.html.PolicyFactory or a list of built in policies which allow and sanitize the named element types (see list below).  If omitted then all of the built-in policies are applied.", "required":false, "default":"", "type":"string", "values":["BLOCKS","FORMATTING","IMAGES","LINKS","STYLES","TABLES"]}
     ],
     "engines":{
-        "lucee":{"minimum_version":"5", "notes":"requires ESAPI extension version >= 2.2.4.5-SNAPSHOT", "docs":"https://docs.lucee.org/reference/functions/sanitizehtml.html"}
+        "lucee":{"minimum_version":"5", "notes":"requires ESAPI extension version >= 2.2.4.5-SNAPSHOT", "docs":"https://docs.lucee.org/reference/functions/sanitizehtml.html"},
+        "boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-esapi` module.", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/esapi"}
     },
     "links": [
         {

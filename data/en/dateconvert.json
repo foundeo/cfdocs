@@ -21,7 +21,8 @@
 		"coldfusion": {"minimum_version":"4", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateConvert.html"},
 		"lucee": {"minimum_version":"", "notes":"Member function is not available.", "docs":"https://docs.lucee.org/reference/functions/dateconvert.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/dateconvert"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dateconvert"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/dateconvert"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/temporal/dateconvert"}
 	},
 	"examples":[
 		{"title":"Converting Local to UTC", "description":"", "code":"utc_datetime = dateConvert('local2Utc', now());", "result":""},
