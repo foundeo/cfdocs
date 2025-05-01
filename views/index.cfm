@@ -46,7 +46,7 @@ qPeople = oLeader.get();
         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="contributor row">
             <div class="col-xs-5 text-center">
-              <a href="#encodeForHTMLAttribute(qPeople.link)#" rel="nofollow"><img src="#encodeForHTMLAttribute(qPeople.avator)#" class="img-rounded" /></a>
+              <a href="#encodeForHTMLAttribute(qPeople.link)#" rel="nofollow"><img src="#encodeForHTMLAttribute(qPeople.avatar)#" class="img-rounded" /></a>
               <div class="text-muted"><strong>#encodeForHTML(qPeople.name)#</strong></div>
             </div>
             <div class="col-xs-7">

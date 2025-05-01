@@ -316,7 +316,7 @@ Note: A remote instance and a local instance cannot have the same JVM route if t
 
 Note: To enable this feature, install admin component on the remote host.
 
-    a. In the remote host, open the ColdFusion_installtion\cfusion\jetty\etc\jetty.xml.
+    a. In the remote host, open the ColdFusion_installation\cfusion\jetty\etc\jetty.xml.
     b. Search for the string, org.mortbay.jetty.bio.SocketConnector.
     c. Update the host with the IP address of the remote host.
     d. Restart the jetty server.
