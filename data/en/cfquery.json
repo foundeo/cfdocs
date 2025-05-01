@@ -33,7 +33,8 @@
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfquery.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/query.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfquery"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfquery"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfquery"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:query>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/jdbc/query"}
 	},
 	"links": [
 		{
@@ -63,7 +64,7 @@
 		},
 		{
 			"title": "Script Syntax using new Query()",
-			"description": "This syntax was implemented by script-based components in CF 9 & 10. It is superseded by queryExecute() in CF11.",
+			"description": "This syntax was implemented by script-based components in CF 9 & 10. Deprecated in ColdFusion 2018. Removed in ColdFusion 2025. It is superseded by queryExecute() in CF11.",
 			"code": "queryObj = new Query(\r\n name=\"qryDemo\",\r\n datasource=\"mydatasourcename\",\r\n sql = \"SELECT col1, col2\r\n FROM myTable\r\n WHERE id=:id\"\r\n); \r\nqueryObj.addParam(name=\"id\",value=arguments.id, cfsqltype=\"cf_sql_integer\");\r\nresultset=queryObj.execute().getResult();",
 			"result": ""
 		},

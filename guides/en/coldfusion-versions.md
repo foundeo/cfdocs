@@ -141,6 +141,7 @@ Historical information about ColdFusion Versions and releases.
 * [ColdFusion 2023 What's New](https://community.adobe.com/t5/coldfusion-discussions/live-introducing-the-2023-release-of-adobe-coldfusion/td-p/13797706)
 * [ColdFusion 2023 New Tags and Functions](/cf2023)
 
+
 ## Adobe ColdFusion 2025 - February 2025 (_Project CFNext_) 
 
 * New licensing and activation changes (requires annual subscription)
@@ -148,6 +149,7 @@ Historical information about ColdFusion Versions and releases.
 * [Language enhancements](https://helpx.adobe.com/coldfusion/using/whats-new.html#other-language)
 * [Charting enhancements](https://helpx.adobe.com/coldfusion/using/whats-new.html#other-language)
 * [Deprecations and removals](https://helpx.adobe.com/coldfusion/deprecated-features.html)
+* [Release Notes](https://helpx.adobe.com/coldfusion/release-note/coldfusion-2025-release-notes.html) 
 * Destructuring changes
 * Support for final static methods
 * Bitwise Operator Support in Query of Queries

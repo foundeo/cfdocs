@@ -10,7 +10,8 @@
 		{"name": "radix", "description": "The base of the value.", "required": false, "default": "10", "type": "any", "values": ["2", "...", "36", "bin", "oct", "dec", "hex"]}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/tonumeric.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/tonumeric.html"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/conversion/tonumeric"}
 	},
 	"links": [],
 	"examples": [{

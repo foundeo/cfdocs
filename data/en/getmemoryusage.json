@@ -9,7 +9,8 @@
 		{"name": "type", "description": "Specify the type of memory information to return. If not specified, both types are returned.", "required": false, "default": "", "type": "string", "values": ["heap","non_heap"]}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getmemoryusage.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getmemoryusage.html"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-oshi` module", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/hardware-and-system-info"}
 	},
 	"links": [],
 	"examples": [{

@@ -9,7 +9,7 @@
 		member:"",
 		script:"",
 		engines:{}
-		
+
 	}
 	url.name = lcase(ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL"));
 	if(FileExists(ExpandPath("./data/en/#url.name#.json"))){
@@ -35,7 +35,7 @@
 
 	if(FileExists( ExpandPath(filepath & filename) )){
 		location(url=filepath & filename, addtoken=false);
-	} 
+	}
 
     vPos = 55;
     hPos = 30;
@@ -107,11 +107,19 @@
 	//Blue Dragon Engine Support
 	if(data.engines.keyExists('openbd')){
 		img.setDrawingColor("##2fa5d7");
-		img.drawRect(360,15,23,16,true);
+		img.drawRect(300,15,23,16,true);
 		img.setDrawingColor("##ffffff")
-		img.DrawText("BD",365,27,style3);
+		img.DrawText("BD",305,27,style3);
 	}
-	
+
+	//BoxLang Engine Support
+	if(data.engines.keyExists('boxlang')){
+		img.setDrawingColor("##04CD70");
+		img.drawRect(330,15,52,16,true);
+		img.setDrawingColor("##ffffff")
+		img.DrawText("BoxLang",335,27,style3);
+	}
+
 	//Lucee Engine Support
 	if(data.engines.keyExists('lucee')){
 		img.setDrawingColor("##449caf");
@@ -119,7 +127,7 @@
 		img.setDrawingColor("##ffffff")
 		img.DrawText("Lucee",393,27,style3);
 	}
-	
+
 	//ColdFusion Engine Support
 	if(data.engines.keyExists('coldfusion')){
 		cfversion =  data.engines.coldfusion.minimum_version;
@@ -137,4 +145,4 @@
 	if(!DirectoryExists(ExpandPath(filepath))) DirectoryCreate(ExpandPath(filepath));
 	ImageWrite(img,ExpandPath(filepath & filename));
 	cfcontent( reset="true", variable="#toBinary(toBase64(img))#", type="image/jpg");
-</cfscript> 
+</cfscript>

@@ -69,6 +69,12 @@
           "description": "Engine details for OpenBD",
           "type": "object",
           "$ref": "#/definitions/engineDetail"
+        },
+        "boxlang": {
+          "title": "BoxLang",
+          "description": "Engine details for BoxLang",
+          "type": "object",
+          "$ref": "#/definitions/engineDetail"
         }
       }
     },

@@ -3,7 +3,7 @@
     "type": "function",
     "syntax": "querylazy()",
     "returns": "void",
-    "description": "Executes a SQL query without loading the data entierly to memory. Instead it calls the given Function with every single row",
+    "description": "Executes a SQL query without loading the data entirely to memory. Instead it calls the given Function with every single row",
     "params": [
         {
             "default": "",
@@ -50,7 +50,7 @@
             "title": "QueryLazy Example",
             "description": "This example demonstrates how to use the querylazy function to execute a query without loading the data entirely to memory.",
             "code": "records = 0\n queryLazy(\n sql=\"SELECT * FROM users;\",\n listener=function(row){\n // Do something with a query row\n records++;\n },\n options={\n datasource:\"MyDatasource\"\n }\n );\n echo(\"Records: #records#\");",
-            "result": "Recrods: 10"
+            "result": "Records: 10"
         }
     ]
 }

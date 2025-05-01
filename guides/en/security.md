@@ -36,7 +36,7 @@ If you are running Adobe ColdFusion versions prior to 2021 (e.g. CF2018, 2016, 1
 
 It is also important to note that Adobe, and Lucee, regularly release security patches for those application servers and you should regularly ensure that your server is on the latest security point release to avoid being the target of potential hackers. Likewise, much of the underlying infrastructure of these application servers, including Java, Tomcat, Apache, nginx, etc. also have security releases and it is important to keep these underlying services up to date with the latest security point release.
 
-You can use tools such as [HackMyCF's ColdFusion server security scanner](https://foundeo.com/hack-my-cf/) to continiously monitor the version of ColdFusion, Lucee, Tomcat and Java that you are running to make sure it is up to date with the latest security patches.
+You can use tools such as [HackMyCF's ColdFusion server security scanner](https://foundeo.com/hack-my-cf/) to continuously monitor the version of ColdFusion, Lucee, Tomcat and Java that you are running to make sure it is up to date with the latest security patches.
 
 ## Network Security
 
