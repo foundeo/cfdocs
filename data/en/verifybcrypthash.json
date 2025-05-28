@@ -32,7 +32,7 @@
 		{
 			"title":"Example of Verifying the BCrypt Hash With Options Set On Hash",
 			"description":"This is an example of using the function to check against a hashed value when the options were previously set.",
-			"code":"secretMsg=\"$2b$05$Cf4c5OFks8s8QKrByuEA7OHQDKSKPs5217L0H1DowfFLY3RLbFi4a\";\ncheckMe=\"Setec Astronomy\"\nwriteOutput(verifyBCryptHash(checkMe,secretMsg);",
+			"code":"secretMsg=\"$2b$05$Cf4c5OFks8s8QKrByuEA7OHQDKSKPs5217L0H1DowfFLY3RLbFi4a\";\ncheckMe=\"Setec Astronomy\"\nwriteOutput(verifyBCryptHash(checkMe,secretMsg));",
 			"result":"YES",
 			"runnable":true
 		}
