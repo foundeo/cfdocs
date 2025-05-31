@@ -4,7 +4,7 @@
 	"syntax":"writeLog(text [, type] [, application] [, file] [, log] )",
 	"returns":"void",
 	"related":["cflog"],
-	"description":"Writes a message to a log file.",
+	"description":"Writes a message to a log file. Note in Lucee 6.2 or later the default log level is ERROR, so no messages will appear by default.",
 	"params": [
 		{"name":"text","description":"Message to log. The date / time will be logged automatically for you.","required":true,"default":"","type":"string","values":[]},
 		{"name":"type","description":"Type or severity of the log message","required":false,"default":"","type":"string","values":["information","warning","error","fatal"]},
