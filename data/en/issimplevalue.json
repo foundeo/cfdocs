@@ -23,22 +23,34 @@
 		"result": true,
 		"runnable": true
 	},{
-		"title": "A string is a simple value as well",
+		"title": "A string is a simple value",
 		"description": "",
 		"code": "isSimpleValue(\"Hello world\")",
 		"result": true,
 		"runnable": true
 	},{
+		"title": "Null is a complex value",
+		"description": "For engines that support null, such as Lucee and Railo, `null` is considered a complex value.",
+		"code": "isSimpleValue(nullvalue())",
+		"result": false,
+		"runnable": true
+	},{
 		"title": "A structure is a complex value",
-		"description": "So it can't a be simple value",
-		"code": "isSimpleValue(structNew())",
+		"description": "",
+		"code": "isSimpleValue({})",
 		"result": false,
 		"runnable": true
 	},{
 		"title": "An array is a complex value",
 		"description": "",
-		"code": "isSimpleValue(arrayNew(1))",
+		"code": "isSimpleValue([])",
 		"result": false,
+		"runnable": true
+	},{
+		"title": "A list is a simple value",
+		"description": "As lists are just strings with delimiters, they are simple values.",
+		"code": "isSimpleValue(arrayToList([]))",
+		"result": true,
 		"runnable": true
 	}]
 }
