@@ -5,9 +5,9 @@
 	"member":"someArray.len()",
 	"returns":"numeric",
 	"related":["arrayAvg"],
-	"description":"Determines the number of elements in an array.\n CF MX: this function can be used on child XML objects.",
+	"description":"Determines the largest index in an array.\nFor dense arrays, this corresponds to the number of elements in the array.\n CF MX: this function can be used on child XML objects.",
 	"params": [
-		{"name":"array","description":"An array which to determine length","required":true,"default":"","type":"array","values":[]}
+		{"name":"array","description":"An array from which to get the final index.","required":true,"default":"","type":"array","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"3", "notes":"The member function cannot be called on literals", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraylen.html"},
@@ -23,16 +23,22 @@
     	],
 	"examples": [
 		{
-			"title": "Simple example for arrayLen function",
-			"description": "Uses the arrayLen function to get the total length of an array",
+			"title": "Using arrayLen to get the length of a dense array",
+			"description": "Uses the arrayLen function to get the total length of a dense array",
 			"code": "numberArray = [1,2,3,4];\nwriteOutput(arrayLen(numberArray));",
 			"result": "4"
 		},
 		{
-			"title": "Total length of an array using the member function",
-			"description": "CF11+ Lucee4.5+ Uses the len member function is the same as running arrayLen.",
+			"title": "Using member function to get the length of a dense array",
+			"description": "CF11+ Lucee4.5+ Using the len member function is the same as running arrayLen.",
 			"code": "colorArray = ['Green','red','blue'];\nwriteOutput(colorArray.len());",
 			"result": "3"
+		},
+		{
+			"title": "Using arrayLen on a sparse array",
+			"description": "Uses the arrayLen function to get the largest index of a spare array",
+			"code": "sparseArray = [];\nsparseArray[42] = 42;\nwriteOutput(arrayLen(sparseArray));",
+			"result": "42"
 		}
 	]
 }
