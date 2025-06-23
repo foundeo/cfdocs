@@ -143,7 +143,7 @@ component {
 				var person = getPerson( stat.author.url, stat.author.login );
 
 				person['link']   = stat.author.html_url;
-				person['avator'] = len(stat.author.gravatar_id) ? stat.author.gravatar_id : stat.author.avatar_url;
+				person['avatar'] = len(stat.author.gravatar_id) ? stat.author.gravatar_id : stat.author.avatar_url;
 
 				structAppend( person, calcStatistics( stat.weeks ) );
 				addRow( qContributors, person );
@@ -208,7 +208,7 @@ component {
  * purpose:                                                                         *
  * *********************************************************************************/
 	private query function createQuery(){
-		var columns = "name,link,avator,lines,commits,effort,lastcommit,weeksago";
+		var columns = "name,link,avatar,lines,commits,effort,lastcommit,weeksago";
 		var dbtypes = "varchar,varchar,varchar,integer,integer,integer,date,integer";
 
 		return queryNew( columns, dbtypes );
