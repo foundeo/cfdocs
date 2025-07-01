@@ -4,5 +4,5 @@
 - cfflush [cfflush](../tags/cfflush.md)
 - cflog [cflog](../tags/cflog.md)
 - cfsavecontent [cfsavecontent](../tags/cfsavecontent.md)
-- getHTTPRequestData [getHTTPRequestData](../functions/getHTTPRequestData.md)
-- isCustomFunction [isCustomFunction](../functions/isCustomFunction.md)
+- getHTTPRequestData [getHTTPRequestData](../functions/gethttprequestdata.md)
+- isCustomFunction [isCustomFunction](../functions/iscustomfunction.md)
