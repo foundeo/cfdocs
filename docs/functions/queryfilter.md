@@ -28,9 +28,9 @@ query.filter(function(row [, currentRow] [, query] ){} [, parallel] [, maxThread
 ### callback ( callback arguments )
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| row | struct | No | A struct with all of the columns for the current iteration
-| currentRow | numeric | No | The row number for the current iteration
-| query | query | No | A reference of the original query
+| row | struct | No | A struct with all of the columns for the current iteration |
+| currentRow | numeric | No | The row number for the current iteration |
+| query | query | No | A reference of the original query |
 
 ## Filter a query
 

@@ -21,10 +21,10 @@ returns any
 ### callback ( callback arguments )
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| result | any | No | The result of the reduce operation after the previous iteration
-| row | struct | No | A struct with all of the columns for the current iteration
-| currentRow | numeric | No | The value for the current iteration
-| query | query | No | A reference of the original query
+| result | any | No | The result of the reduce operation after the previous iteration |
+| row | struct | No | A struct with all of the columns for the current iteration |
+| currentRow | numeric | No | The value for the current iteration |
+| query | query | No | A reference of the original query |
 
 ## Reduce column to total
 

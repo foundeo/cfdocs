@@ -226,7 +226,7 @@
                                         <cfif structKeyExists(i, 'description') AND Len(Trim(i.description))>
                                             <cfset tempCallbackDescription = "#Trim(i.description)#">
                                         </cfif>
-                                        <cfset fileAppend(relMD, "| #tempCallbackName# | #tempCallbackType# | #tempCallbackRequired# | #tempCallbackDescription#", "UTF-8", true) />
+                                        <cfset fileAppend(relMD, "| #tempCallbackName# | #tempCallbackType# | #tempCallbackRequired# | #tempCallbackDescription# |", "UTF-8", true) />
                                     </cfloop>
                                 </cfif>
 

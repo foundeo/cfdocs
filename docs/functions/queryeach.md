@@ -29,9 +29,9 @@ If `parallel` argument is set to false it will be ignored |
 ### callback ( callback arguments )
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| row | struct | No | A struct with all of the columns for the current iteration
-| currentRow | numeric | No | The value for the current iteration
-| query | query | No | A reference of the original struct
+| row | struct | No | A struct with all of the columns for the current iteration |
+| currentRow | numeric | No | The value for the current iteration |
+| query | query | No | A reference of the original struct |
 
 ## Iterate over query rows instead of cfloop()
 

@@ -27,9 +27,9 @@ list : reference of the original list |
 ### function ( callback arguments )
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| item | string | No | value
-| index | numeric | No | current index for the iteration
-| list | string | No | reference of the original list
+| item | string | No | value |
+| index | numeric | No | current index for the iteration |
+| list | string | No | reference of the original list |
 
 ## Script Syntax
 

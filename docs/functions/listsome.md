@@ -35,10 +35,10 @@ Alias: function, callback, udf |
 ### closure ( callback arguments )
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| value | any | No | current value from the list
-| index | numeric | No | position in the list
-| list | string | No | string list to iterate
-| delimiter | string | No | delimiter used to separate the string list
+| value | any | No | current value from the list |
+| index | numeric | No | position in the list |
+| list | string | No | string list to iterate |
+| delimiter | string | No | delimiter used to separate the string list |
 
 ## List contains some.
 

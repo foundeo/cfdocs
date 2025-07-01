@@ -27,10 +27,10 @@ someArray.reduce(function(result, item [,index, array]){} [, initialValue])
 ### callback ( callback arguments )
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| result | any | No | The result of the reduce operation after the previous iteration
-| value | any | No | The value for the current iteration
-| index | numeric | No | The current index for the iteration
-| array | array | No | A reference of the original array
+| result | any | No | The result of the reduce operation after the previous iteration |
+| value | any | No | The value for the current iteration |
+| index | numeric | No | The current index for the iteration |
+| array | array | No | A reference of the original array |
 
 ## Simple arrayReduce Example
 

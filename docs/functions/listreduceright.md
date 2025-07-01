@@ -31,10 +31,10 @@ list.listReduceRight(callback, initialValue[, delimiter][, includeEmptyFields])
 ### callback ( callback arguments )
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| result | any | No | The result of the reduce operation after the previous iteration.
-| item | any | No | The value for the current iteration's item.
-| index | numeric | No | The current index for the iteration.
-| list | string | No | A reference of the original list.
+| result | any | No | The result of the reduce operation after the previous iteration. |
+| item | any | No | The value for the current iteration's item. |
+| index | numeric | No | The current index for the iteration. |
+| list | string | No | A reference of the original list. |
 
 ## Simple listReduceRight Example
 
