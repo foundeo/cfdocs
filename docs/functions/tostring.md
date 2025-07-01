@@ -23,9 +23,7 @@ any_value.toString()
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
 | any_value | any | Yes |  | Value to convert to a string |  |
-| encoding | string | No |  | The character encoding (character set) of the string.
-
-The default value is the encoding of the page on which the function is called. | /Users/garethedwards/development/github/cfdocs/docs/functions/tostring.md|utf-16 |
+| encoding | string | No |  | The character encoding (character set) of the string.<br /><br />The default value is the encoding of the page on which the function is called. | /Users/garethedwards/development/github/cfdocs/docs/functions/tostring.md|utf-16 |
 
 ## Base64 value to binary to string
 

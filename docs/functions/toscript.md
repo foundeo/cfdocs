@@ -19,17 +19,10 @@ returns string
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| cfvar | any | Yes |  | A ColdFusion variable. This can contain one of the following:
- String, Number, Array, Structure or Query. |
-| javascriptvar | string | Yes |  | A string that specifies the name of the JavaScript variable
- that the toScript function creates. |
-| outputformat | boolean | No | YES | A Boolean value that determines whether to create
- WDDX (JavaScript) or ActionScript style output for
- structures and queries.
- Default: true |
-| asformat | boolean | No | NO | A Boolean value that specifies whether to use
- ActionScript shortcuts in the script.
- Default: false |
+| cfvar | any | Yes |  | A ColdFusion variable. This can contain one of the following:<br /> String, Number, Array, Structure or Query. |
+| javascriptvar | string | Yes |  | A string that specifies the name of the JavaScript variable<br /> that the toScript function creates. |
+| outputformat | boolean | No | YES | A Boolean value that determines whether to create<br /> WDDX (JavaScript) or ActionScript style output for<br /> structures and queries.<br /> Default: true |
+| asformat | boolean | No | NO | A Boolean value that specifies whether to use<br /> ActionScript shortcuts in the script.<br /> Default: false |
 
 ## Multiple to Script Examples
 

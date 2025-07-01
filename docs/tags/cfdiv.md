@@ -19,25 +19,8 @@ cfdiv();
 
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
-| id | string | No |  | The HTML ID attribute value to assign to the 
- generated container tag. |  |
-| onBindError | string | No |  | The name of a JavaScript function to execute if 
- evaluating a bind expression results in an error. The 
- function must take two attributes: an HTTP status 
- code and a message. 
- If you omit this attribute, and have specified a 
- global error handler (by using the 
- ColdFusion.setGlobalErrorHandler function), it 
- displays the error message; otherwise a default 
- error pop-up displays. |  |
-| bind | string | No |  | A bind expression that returns the container 
- contents. 
- Note: If a CFML page specified in this attribute 
- contains tags that use AJAX features, such as 
- cfform, cfgrid, and cfwindow, you must use a 
- tag on the page with the tag. 
- For more information, see cfajaximport. |  |
+| id | string | No |  | The HTML ID attribute value to assign to the <br /> generated container tag. |  |
+| onBindError | string | No |  | The name of a JavaScript function to execute if <br /> evaluating a bind expression results in an error. The <br /> function must take two attributes: an HTTP status <br /> code and a message. <br /> If you omit this attribute, and have specified a <br /> global error handler (by using the <br /> ColdFusion.setGlobalErrorHandler function), it <br /> displays the error message; otherwise a default <br /> error pop-up displays. |  |
+| bind | string | No |  | A bind expression that returns the container <br /> contents. <br /> Note: If a CFML page specified in this attribute <br /> contains tags that use AJAX features, such as <br /> cfform, cfgrid, and cfwindow, you must use a <br /> tag on the page with the tag. <br /> For more information, see cfajaximport. |  |
 | tagName | string | No | div | The HTML container tag to create. | /Users/garethedwards/development/github/cfdocs/docs/tags/cfdiv.md|span |
-| bindonload | boolean | No | YES | * true: executes the bind attribute expression when first loading the tag.
- * false: does not execute the bind attribute expression until the first bound event .
-To use this attribute, you must also specify a bind attribute. | /Users/garethedwards/development/github/cfdocs/docs/tags/cfdiv.md|YES |
+| bindonload | boolean | No | YES | * true: executes the bind attribute expression when first loading the tag.<br /> * false: does not execute the bind attribute expression until the first bound event .<br />To use this attribute, you must also specify a bind attribute. | /Users/garethedwards/development/github/cfdocs/docs/tags/cfdiv.md|YES |

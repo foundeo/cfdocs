@@ -25,9 +25,7 @@ cfexchangeconversation(action="", connection="", folderID="", name="");
 | UID | string | No |  | A case-sensitive Exchange UID value that uniquely identifies the conversation. |  |
 | isRead | boolean | No |  | (setReadState) Indicates the status of the conversation, if read or not. |  |
 | destinationFolderID | string | No |  | (copy/move) A case-sensitive Exchange UID value that uniquely identifies the destination folder. |  |
-| deleteType | string | No | moveToDeletedItems | (delete) - hardDelete: Removes a folder permanently from the store.
-- softDelete: Removes a folder to the dumpster, if dumpster is enabled.
-- moveToDeletedItems: Moves a folder to the deleted items folder. | /Users/garethedwards/development/github/cfdocs/docs/tags/cfexchangeconversation.md|moveToDeletedItems |
+| deleteType | string | No | moveToDeletedItems | (delete) - hardDelete: Removes a folder permanently from the store.<br />- softDelete: Removes a folder to the dumpster, if dumpster is enabled.<br />- moveToDeletedItems: Moves a folder to the deleted items folder. | /Users/garethedwards/development/github/cfdocs/docs/tags/cfexchangeconversation.md|moveToDeletedItems |
 
 ## Get conversations
 

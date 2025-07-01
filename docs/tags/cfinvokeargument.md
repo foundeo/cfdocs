@@ -20,11 +20,7 @@ cfinvokeargument(name="", value="");
 | --- | --- | --- | --- | --- |
 | name | string | Yes |  | The argument name |
 | value | string | Yes |  | The argument value |
-| omit | boolean | No | NO | Enables you to omit a parameter when invoking a web service.
- It is an error to specify omit="true" if the cfinvoke
- webservice attribute is not specified.
- - true: omit this parameter when invoking a web service.
- - false: do not omit this parameter when invoking a web service. |
+| omit | boolean | No | NO | Enables you to omit a parameter when invoking a web service.<br /> It is an error to specify omit="true" if the cfinvoke<br /> webservice attribute is not specified.<br /> - true: omit this parameter when invoking a web service.<br /> - false: do not omit this parameter when invoking a web service. |
 
 ## Invoke a SOAP webservice and passing arguments using cfinvokeargument
 

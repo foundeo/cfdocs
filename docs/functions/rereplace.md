@@ -23,9 +23,7 @@ string.reReplace(regex, substring[, scope])
 | string | string | Yes |  | A string or a variable that contains one |  |
 | regex | string | Yes |  | Regular expression to replace. |  |
 | substring | string | Yes |  | A string or a variable that contains one. Replaces substring with the regex match |  |
-| scope | string | No | one | * one: Replace the first occurrence of the regular
- expression. Default.
- * all: Replace all occurrences of the regular expression. | /Users/garethedwards/development/github/cfdocs/docs/functions/rereplace.md|all |
+| scope | string | No | one | * one: Replace the first occurrence of the regular<br /> expression. Default.<br /> * all: Replace all occurrences of the regular expression. | /Users/garethedwards/development/github/cfdocs/docs/functions/rereplace.md|all |
 
 ## Strip Characters Using reReplace
 

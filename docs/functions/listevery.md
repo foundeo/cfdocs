@@ -21,12 +21,7 @@ list.listEvery(closure [, delimiter] [, includeEmptyFields] [, multiCharacterDel
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | list | string | Yes |  | List to iterate. |
-| closure | function | Yes |  | Callback function that is called for every item of the list and returns a boolean value. The arguments passed to the callback are
-
-value: Current list item
-index: Index of the list item within the list
-list: List as defined in the 'list' parameter
-delimiter: Delimiter as defined in the 'delimiter' parameter |
+| closure | function | Yes |  | Callback function that is called for every item of the list and returns a boolean value. The arguments passed to the callback are<br /><br />value: Current list item<br />index: Index of the list item within the list<br />list: List as defined in the 'list' parameter<br />delimiter: Delimiter as defined in the 'delimiter' parameter |
 | delimiter | string | No | , | Delimiter used to separate the string list. |
 | includeEmptyFields | boolean | No | false | Specifies whether to include empty fields or not. |
 | multiCharacterDelimiter | boolean | No | true | Specifies whether the 'delimiter' parameter specifies a multi-character delimiter. If it is set to `true`, all characters are considered as one delimiter; otherwise each character is a delimiter on its own. |

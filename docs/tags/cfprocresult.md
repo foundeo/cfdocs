@@ -22,6 +22,5 @@ cfprocresult(name="");
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | name | string | Yes |  | Name for the query result set. |
-| resultset | numeric | No |  | Names one result set, if stored procedure returns more than
- one. |
+| resultset | numeric | No |  | Names one result set, if stored procedure returns more than<br /> one. |
 | maxrows | numeric | No |  | Maximum number of rows returned in result set. |

@@ -19,12 +19,7 @@ cfdocumentitem(type="pagebreak");
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| type | string | Yes |  | Specifies the action:
- - pagebreak: start a new page at the location of the tag.
- - header: use the text between the <cfdocumentitem>
- and </cfdocumentitem> tags as the running header.
- - footer: use the text between the <cfdocumentitem>
- and </cfdocumentitem> tags as the running footer. |
+| type | string | Yes |  | Specifies the action:<br /> - pagebreak: start a new page at the location of the tag.<br /> - header: use the text between the <cfdocumentitem><br /> and </cfdocumentitem> tags as the running header.<br /> - footer: use the text between the <cfdocumentitem><br /> and </cfdocumentitem> tags as the running footer. |
 | evalAtPrint | boolean | No |  | Specifies whether to evaluate expressions inside cfdocumentitem tag at runtime. |
 
 ## Pagebreak (Script Syntax)

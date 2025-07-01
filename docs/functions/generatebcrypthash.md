@@ -15,9 +15,7 @@ returns string
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
 | plaintext | string | Yes |  | The input string to hash. |  |
-| options | struct | No | {"version":"$2a","rounds":10} | A struct containing the optional values:
---version - Version of BCrypt hash to generate ($2a,$2y or $2b). (Default is "$2a". The most current version is "$2b")
---rounds - Number of rounds to run the hash functions. (Default is 10.) | /Users/garethedwards/development/github/cfdocs/docs/functions/generatebcrypthash.md|rounds |
+| options | struct | No | {"version":"$2a","rounds":10} | A struct containing the optional values:<br />--version - Version of BCrypt hash to generate ($2a,$2y or $2b). (Default is "$2a". The most current version is "$2b")<br />--rounds - Number of rounds to run the hash functions. (Default is 10.) | /Users/garethedwards/development/github/cfdocs/docs/functions/generatebcrypthash.md|rounds |
 
 ## Example of BCrypt Hashing - No Options
 

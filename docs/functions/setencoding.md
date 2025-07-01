@@ -18,8 +18,7 @@ returns void
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
 | scope_name | string | Yes |  |  |  |
-| charset | string | Yes |  | The character encoding in which text in the scope
- variables is encoded. | /Users/garethedwards/development/github/cfdocs/docs/functions/setencoding.md|utf-16 |
+| charset | string | Yes |  | The character encoding in which text in the scope<br /> variables is encoded. | /Users/garethedwards/development/github/cfdocs/docs/functions/setencoding.md|utf-16 |
 
 ## Script Example
 

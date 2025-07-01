@@ -14,8 +14,7 @@ returns void
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| var | variableName | Yes |  | Variable to display. Enclose a variable name in pound
- signs. |
+| var | variableName | Yes |  | Variable to display. Enclose a variable name in pound<br /> signs. |
 | output | string | No | browser | Where to send the results of cfdump. |
 | format | string | No | text | specify whether to save the results of a cfdump to a file in text or HTML format |
 | abort | boolean | No | NO | Boolean value to immediately abort after displaying the dump. |

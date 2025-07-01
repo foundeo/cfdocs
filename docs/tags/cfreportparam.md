@@ -19,9 +19,7 @@ cfreportparam();
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| name | string | No |  | Variable name for data that is passed. The ColdFusion
- Report Builder report definition must include an input
- parameter that matches this name. |
+| name | string | No |  | Variable name for data that is passed. The ColdFusion<br /> Report Builder report definition must include an input<br /> parameter that matches this name. |
 | value | string | No |  | Value of the data that is sent. |
 | chart | string | No |  | Name of the chart contained in a report or subreport. The value of this attribute must match Name property of a chart defined in the Report Builder report. |
 | query | query | No |  | Query value to pass to a subreport or chart. The ColdFusion query must contain at least all of the columns included in the Report Builder query. |

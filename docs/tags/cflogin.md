@@ -22,13 +22,9 @@ cflogin();
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| idletimeout | numeric | No |  | Time interval with no keyboard activity after which
- CFML logs the user off. Seconds. |
-| applicationtoken | string | No |  | Unique application identifier. Limits the login validity to
- one application, as specified by the cfapplication tag. |
-| cookiedomain | string | No |  | Domain of the cookie that is used to mark a user as logged
- in. Use this attribute to enable a user login cookie to
- work with multiple clustered servers in the same domain. |
+| idletimeout | numeric | No |  | Time interval with no keyboard activity after which<br /> CFML logs the user off. Seconds. |
+| applicationtoken | string | No |  | Unique application identifier. Limits the login validity to<br /> one application, as specified by the cfapplication tag. |
+| cookiedomain | string | No |  | Domain of the cookie that is used to mark a user as logged<br /> in. Use this attribute to enable a user login cookie to<br /> work with multiple clustered servers in the same domain. |
 
 ## CFSCRIPT Example
 

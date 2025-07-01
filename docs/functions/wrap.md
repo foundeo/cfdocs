@@ -16,11 +16,8 @@ returns string
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | String | string | Yes |  | String or variable that contains one. The text to wrap. |
-| limit | numeric | Yes |  | Positive integer maximum number of characters to allow on
- a line. |
-| strip | boolean | No | NO | Whether to remove all existing newline and carriage return
- characters in the input string with spaces before wrapping
- the text. Default: False. |
+| limit | numeric | Yes |  | Positive integer maximum number of characters to allow on<br /> a line. |
+| strip | boolean | No | NO | Whether to remove all existing newline and carriage return<br /> characters in the input string with spaces before wrapping<br /> the text. Default: False. |
 
 ## Script Syntax
 

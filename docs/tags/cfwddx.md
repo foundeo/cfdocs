@@ -27,28 +27,12 @@ cfwddx(action="cfml2wddx", input="");
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| action | string | Yes |  | cfml2wddx: serialize CFML to WDDX
- wddx2cfml: deserialize WDDX to CFML
- cfml2js: serialize CFML to JavaScript
- wddx2js: deserialize WDDX to JavaScript |
+| action | string | Yes |  | cfml2wddx: serialize CFML to WDDX<br /> wddx2cfml: deserialize WDDX to CFML<br /> cfml2js: serialize CFML to JavaScript<br /> wddx2js: deserialize WDDX to JavaScript |
 | input | string | Yes |  | A value to process |
-| output | variableName | No |  | Name of variable for output. If action = "WDDX2JS" or
- "CFML2JS", and this attribute is omitted, result is output
- in HTML stream. |
-| toplevelvariable | string | No |  | Name of top-level JavaScript object created by
- deserialization. The object is an instance of the
- WddxRecordset object. |
-| usetimezoneinfo | boolean | No | YES | Whether to output time-zone information when serializing
- CFML to WDDX.
- - Yes: the hour-minute offset, represented in ISO8601
- format, is output.
- - No: the local time is output. |
-| validate | boolean | No | NO | Applies if action = "wddx2cfml" or "wddx2js".
- - Yes: validates WDDX input with an XML parser using
- WDDX DTD. If parser processes input without error,
- packet is deserialized. Otherwise, an error is
- thrown.
- - No: no input validation |
+| output | variableName | No |  | Name of variable for output. If action = "WDDX2JS" or<br /> "CFML2JS", and this attribute is omitted, result is output<br /> in HTML stream. |
+| toplevelvariable | string | No |  | Name of top-level JavaScript object created by<br /> deserialization. The object is an instance of the<br /> WddxRecordset object. |
+| usetimezoneinfo | boolean | No | YES | Whether to output time-zone information when serializing<br /> CFML to WDDX.<br /> - Yes: the hour-minute offset, represented in ISO8601<br /> format, is output.<br /> - No: the local time is output. |
+| validate | boolean | No | NO | Applies if action = "wddx2cfml" or "wddx2js".<br /> - Yes: validates WDDX input with an XML parser using<br /> WDDX DTD. If parser processes input without error,<br /> packet is deserialized. Otherwise, an error is<br /> thrown.<br /> - No: no input validation |
 
 ## Convert cron job file to cfml
 

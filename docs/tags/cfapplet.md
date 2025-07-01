@@ -31,6 +31,4 @@ cfapplet(appletsource="", name="");
 | vspace | numeric | No |  | Vertical margin above and below control, in pixels. |
 | hspace | numeric | No |  | Horizontal spacing to left and right of control, in pixels. |
 | align | string | No |  | Alignment |
-| notsupported | string | No | <b>Browser must support Java to <br>view ColdFusion Java Applets!</b> | Text to display if a page that contains a Java applet-based
- cfform control is opened by a browser that does not
- support Java or has Java support disabled. |
+| notsupported | string | No | <b>Browser must support Java to <br>view ColdFusion Java Applets!</b> | Text to display if a page that contains a Java applet-based<br /> cfform control is opened by a browser that does not<br /> support Java or has Java support disabled. |

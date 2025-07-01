@@ -19,15 +19,9 @@ writeOutput()
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
 | query | query | No |  | Name of cfquery from which to draw data for output section. |  |
-| group | string | No |  | Query column to use to group sets of records. Eliminates
- adjacent duplicate rows when data is sorted. Use if you
- retrieved a record set ordered on one or more a query
- columns. For example, if a record set is ordered on
- "Customer_ID" in the cfquery tag, you can group the output
- on "Customer_ID." |  |
+| group | string | No |  | Query column to use to group sets of records. Eliminates<br /> adjacent duplicate rows when data is sorted. Use if you<br /> retrieved a record set ordered on one or more a query<br /> columns. For example, if a record set is ordered on<br /> "Customer_ID" in the cfquery tag, you can group the output<br /> on "Customer_ID." |  |
 | groupcasesensitive | boolean | No |  | Whether to consider the case in grouping rows. |  |
-| startrow | numeric | No |  | Row from which to start output. Only considered when the query attribute is set.
-This attribute in combination with maxrows can be used to create some paging. |  |
+| startrow | numeric | No |  | Row from which to start output. Only considered when the query attribute is set.<br />This attribute in combination with maxrows can be used to create some paging. |  |
 | maxrows | numeric | No |  | Maximum number of rows to display. Only considered when the query attribute is set. |  |
 | encodefor | string | No |  | CF2016+ Lucee5.1+ When set applies an encoder to all variables to prevent XSS. For example if you specify `html` each variable will be wrapped by a call to the `encodeForHTML` function. | /Users/garethedwards/development/github/cfdocs/docs/tags/cfoutput.md|dn |
 

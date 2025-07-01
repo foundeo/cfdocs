@@ -31,18 +31,8 @@ list.listSort(sortType [, sortOrder])
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | list | string | Yes |  | A list or variable name |
-| sortType | string | Yes |  | numeric: sorts numbers
- text: sorts text alphabetically, taking case into account
- (also known as case-sensitive).
- - aabzABZ for ascending sort(sort_order = "asc")
- - ZBAzbaa for descending sort(sort_order = "desc")
-
- textnocase: sorts text alphabetically, without regard to
- case (also known as case-insensitive).
- - aAaBbBzzZ for ascending sort(sort_order = "asc")
- - ZzzBbBaAa for descending sort(sort_order = "desc") |
-| sortOrder | string | No | asc | - asc: ascending sort order
-- desc: descending sort order |
+| sortType | string | Yes |  | numeric: sorts numbers<br /> text: sorts text alphabetically, taking case into account<br /> (also known as case-sensitive).<br /> - aabzABZ for ascending sort(sort_order = "asc")<br /> - ZBAzbaa for descending sort(sort_order = "desc")<br /><br /> textnocase: sorts text alphabetically, without regard to<br /> case (also known as case-insensitive).<br /> - aAaBbBzzZ for ascending sort(sort_order = "asc")<br /> - ZzzBbBaAa for descending sort(sort_order = "desc") |
+| sortOrder | string | No | asc | - asc: ascending sort order<br />- desc: descending sort order |
 | delimiters | string | No | , | Characters that separate the list elements. The default value is comma. If this parameter contains more than one character, ColdFusion uses the first character in the string as the delimiter in the output list. |
 | includeEmptyFields | boolean | No | false | Set to true to include empty fields. |
 | callback | function | No |  | CF2016+ A function that uses two elements of a list. `function(element1, element2)`. Returns whether the first is less than (-1), equal to (0) or greater than (1) the second one (like the compare functions). |

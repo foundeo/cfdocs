@@ -21,10 +21,7 @@ cfloginuser(name="", password="", roles="");
 | --- | --- | --- | --- | --- |
 | name | string | Yes |  | A username. |
 | password | string | Yes |  | A user password. |
-| roles | string | Yes |  | A comma-delimited list of role identifiers.
-
- CFML processes spaces in a list element as part of
- the element. |
+| roles | string | Yes |  | A comma-delimited list of role identifiers.<br /><br /> CFML processes spaces in a list element as part of<br /> the element. |
 
 ## CFSCRIPT Example
 

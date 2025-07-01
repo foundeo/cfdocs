@@ -26,17 +26,10 @@ cfcache();
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| action | string | No |  | * cache: server-side and client-side caching.
- * flush: refresh cached page(s).
- * clientcache: browser-side caching only. To cache a personalized page, use this option.
- * servercache: server-side caching only. Not recommended.
- * optimal: same as "cache". |
+| action | string | No |  | * cache: server-side and client-side caching.<br /> * flush: refresh cached page(s).<br /> * clientcache: browser-side caching only. To cache a personalized page, use this option.<br /> * servercache: server-side caching only. Not recommended.<br /> * optimal: same as "cache". |
 | directory | string | No |  | Absolute path of cache directory. |
 | timespan | numeric | No |  | The interval until the page is flushed from the cache. |
-| expireurl | string | No |  | Used with action = "flush". A URL reference. CFML
- matches it against the mappings in the specified cache
- directory. Can include wildcards. For example:
- "*/view.cfm?id=*". |
+| expireurl | string | No |  | Used with action = "flush". A URL reference. CFML<br /> matches it against the mappings in the specified cache<br /> directory. Can include wildcards. For example:<br /> "*/view.cfm?id=*". |
 | username | string | No |  | A username |
 | password | string | No |  | A password |
 | port | numeric | No |  | Remote port to which to connect |
@@ -44,10 +37,7 @@ cfcache();
 | value | string | No |  | For action="set", object which needs to be stored |
 | metadata | string | No |  | Name of the struct variable |
 | stripwhitespace | boolean | No | NO | Reduces whitespace |
-| throwonerror | boolean | No |  | A Boolean value specifying whether to throw an error if the
-flush action encounters an error. Otherwise the action does not
-generate an error if it fails. If this attribute is 'true' you can handle the
-error in a cfcatch block, for example, if a specified id value is invalid |
+| throwonerror | boolean | No |  | A Boolean value specifying whether to throw an error if the<br />flush action encounters an error. Otherwise the action does not<br />generate an error if it fails. If this attribute is 'true' you can handle the<br />error in a cfcatch block, for example, if a specified id value is invalid |
 | id | string | No |  | Id of the cached object |
 | key | string | No |  | key to access cache |
 | usecache | boolean | No | YES | to use cache or not (if false it will process the content each time) |

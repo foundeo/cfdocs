@@ -19,27 +19,10 @@ cftooltip();
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| preventoverlap | string | No | YES | A Boolean value specifying whether to prevent the 
- tooltip from overlapping the component that it 
- describes. |
-| autodismissdelay | string | No |  | The number of milliseconds between the time 
- when the user moves the mouse pointer over the 
- component (and leaves it there) and when the 
- tooltip disappears. |
-| hidedelay | string | No |  | The number of milliseconds to delay between the 
- time when the user moves the mouse pointer away 
- from the component and when the tooltip 
- disappears. |
-| showdelay | string | No |  | The number of milliseconds to delay between the 
- time when the user moves the mouse over the 
- component and when the tooltip appears. |
-| sourcefortooltip | string | No |  | The URL of a page with the tool tip contents. The 
- page can include HTML markup to control the 
- format, and the tip can include images. 
- If you specify this attribute, an animated icon 
- appears with the text "Loading..." while the tip is 
- being loaded. |
-| tooltip | string | No |  | Tip text to display. The text can include HTML 
- formatting. 
- Ignored if you specify a sourceForTooltip attribute |
+| preventoverlap | string | No | YES | A Boolean value specifying whether to prevent the <br /> tooltip from overlapping the component that it <br /> describes. |
+| autodismissdelay | string | No |  | The number of milliseconds between the time <br /> when the user moves the mouse pointer over the <br /> component (and leaves it there) and when the <br /> tooltip disappears. |
+| hidedelay | string | No |  | The number of milliseconds to delay between the <br /> time when the user moves the mouse pointer away <br /> from the component and when the tooltip <br /> disappears. |
+| showdelay | string | No |  | The number of milliseconds to delay between the <br /> time when the user moves the mouse over the <br /> component and when the tooltip appears. |
+| sourcefortooltip | string | No |  | The URL of a page with the tool tip contents. The <br /> page can include HTML markup to control the <br /> format, and the tip can include images. <br /> If you specify this attribute, an animated icon <br /> appears with the text "Loading..." while the tip is <br /> being loaded. |
+| tooltip | string | No |  | Tip text to display. The text can include HTML <br /> formatting. <br /> Ignored if you specify a sourceForTooltip attribute |
 | style | string | No |  |  |

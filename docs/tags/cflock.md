@@ -22,20 +22,11 @@ lock name="lockName" timeout="3" { }
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| timeout | numeric | Yes |  | Maximum length of time, in seconds, to wait to obtain a
- lock. If lock is obtained, tag execution continues.
- Otherwise, behavior depends on throwOnTimeout attribute
- value. |
-| scope | string | No |  | Lock scope. Mutually exclusive with the name attribute.
- Lock name. Only one request in the specified scope can
- execute the code within this tag (or within any other
- cflock tag with the same lock scope scope) at a time. |
-| name | string | No |  | Lock name. Mutually exclusive with the scope attribute.
- Only one request can execute the code within a cflock tag
- with a given name at a time. Cannot be an empty string. |
+| timeout | numeric | Yes |  | Maximum length of time, in seconds, to wait to obtain a<br /> lock. If lock is obtained, tag execution continues.<br /> Otherwise, behavior depends on throwOnTimeout attribute<br /> value. |
+| scope | string | No |  | Lock scope. Mutually exclusive with the name attribute.<br /> Lock name. Only one request in the specified scope can<br /> execute the code within this tag (or within any other<br /> cflock tag with the same lock scope scope) at a time. |
+| name | string | No |  | Lock name. Mutually exclusive with the scope attribute.<br /> Only one request can execute the code within a cflock tag<br /> with a given name at a time. Cannot be an empty string. |
 | throwontimeout | boolean | No | YES | How timeout conditions are handled. |
-| type | string | No | exclusive | readOnly: lets more than one request read shared data.
- exclusive: lets one request read or write shared data. |
+| type | string | No | exclusive | readOnly: lets more than one request read shared data.<br /> exclusive: lets one request read or write shared data. |
 | result | string | No | cflock | Lucee4+ Specifies a name for the structure in which cflock returns the statusCode and ExecutionTime variables. Default variable is "cflock". |
 
 ## Script Syntax

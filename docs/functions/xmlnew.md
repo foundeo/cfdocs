@@ -14,8 +14,7 @@ returns xml
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| casesensitive | boolean | No | NO | Maintains the case of document elements and attributes.
- Default: false |
+| casesensitive | boolean | No | NO | Maintains the case of document elements and attributes.<br /> Default: false |
 
 ## The simple xmlnew example
 

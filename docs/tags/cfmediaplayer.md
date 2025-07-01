@@ -27,8 +27,7 @@ cfmediaplayer(source="");
 | onload | string | No |  | Custom JavaScript function to run on loading the player component. |
 | bgcolor | string | No |  | The background color of the media player specified as a Hexadecimal value without a "#" |
 | source | string | Yes |  | The URL to the FLV file. |
-| name | string | No |  | Name of the media player.
-The name attribute is required when you invoke JavaScript functions. |
+| name | string | No |  | Name of the media player.<br />The name attribute is required when you invoke JavaScript functions. |
 | quality | string | No |  | The quality of the media playback |
 | hideTitle | boolean | No |  | A Boolean value that specifies if you want to hide title for the media player panel |
 | oncomplete | string | No |  | Custom JavaScript function to run when the FLV file has finished playing. |

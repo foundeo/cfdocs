@@ -23,8 +23,7 @@ query.each(function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads]
 | query | query | Yes |  | query to loop over |
 | callback | any | Yes |  | Closure or a function reference that will be called for each of the iteration. |
 | parallel | boolean | No |  | Lucee4.5+ Executes closures parallel |
-| maxThreads | numeric | No | 20 | Lucee4.5+ Maximum number of threads executed
-If `parallel` argument is set to false it will be ignored |
+| maxThreads | numeric | No | 20 | Lucee4.5+ Maximum number of threads executed<br />If `parallel` argument is set to false it will be ignored |
 
 ### callback ( callback arguments )
 | Name | Type | Required | Description |

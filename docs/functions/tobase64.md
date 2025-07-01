@@ -18,8 +18,7 @@ returns string
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
 | string_or_object | any | Yes |  | A string, the name of a string, or a binary object. |  |
-| encoding | string | No |  | For a string, defines how characters are represented in a
- byte array. | /Users/garethedwards/development/github/cfdocs/docs/functions/tobase64.md|utf-16 |
+| encoding | string | No |  | For a string, defines how characters are represented in a<br /> byte array. | /Users/garethedwards/development/github/cfdocs/docs/functions/tobase64.md|utf-16 |
 
 ## String Example
 

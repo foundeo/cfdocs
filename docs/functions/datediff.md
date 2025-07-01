@@ -20,20 +20,9 @@ date2.diff(datepart, date1)
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| datepart | string | Yes |  | yyyy: Year
- q: Quarter
- m: Month
- y: Day of year
- d: Day
- w: Week (Weekday cf2018+)
- ww: Week
- h: Hour
- n: Minute
- s: Second |
-| date1 | date | Yes |  | The smaller date to diff
-Can be either a string or a date object whereas member function only accept the latter |
-| date2 | date | Yes |  | The bigger date to diff
-Can be either a string or a date object whereas member function only accept the latter |
+| datepart | string | Yes |  | yyyy: Year<br /> q: Quarter<br /> m: Month<br /> y: Day of year<br /> d: Day<br /> w: Week (Weekday cf2018+)<br /> ww: Week<br /> h: Hour<br /> n: Minute<br /> s: Second |
+| date1 | date | Yes |  | The smaller date to diff<br />Can be either a string or a date object whereas member function only accept the latter |
+| date2 | date | Yes |  | The bigger date to diff<br />Can be either a string or a date object whereas member function only accept the latter |
 
 ## dateDiff Example
 

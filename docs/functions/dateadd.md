@@ -20,22 +20,9 @@ date.add(datepart, number)
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| datepart | string | Yes |  | `yyyy` - Year
-`q` - Quarter
-`m` - Month
-`y` - Day of year
-`d` - Day
-`w` - Week day
-`ww` - Week
-`h` - Hour
-`n` - Minute
-`s` - Second
-`l` - Millisecond |
-| number | numeric | Yes |  | The number of datepart units to add to the provided date.
- Number must be an integer.
- Negative integers move the date into the past, positive into the future. |
-| date | date | Yes |  | A datetime object in the range of 100AD-9999AD.
- NOTE: When passing a datetime object as a string, enclose it in quotation marks. Otherwise, it is interpreted as a numeric representation of a datetime object. |
+| datepart | string | Yes |  | `yyyy` - Year<br />`q` - Quarter<br />`m` - Month<br />`y` - Day of year<br />`d` - Day<br />`w` - Week day<br />`ww` - Week<br />`h` - Hour<br />`n` - Minute<br />`s` - Second<br />`l` - Millisecond |
+| number | numeric | Yes |  | The number of datepart units to add to the provided date.<br /> Number must be an integer.<br /> Negative integers move the date into the past, positive into the future. |
+| date | date | Yes |  | A datetime object in the range of 100AD-9999AD.<br /> NOTE: When passing a datetime object as a string, enclose it in quotation marks. Otherwise, it is interpreted as a numeric representation of a datetime object. |
 
 ## Add Days to a Date
 

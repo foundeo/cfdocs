@@ -20,6 +20,5 @@ cfgridrow(data="");
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| data | string | Yes |  | Delimited list of column values. If a value contains a
- comma, it must be escaped with another comma |
+| data | string | Yes |  | Delimited list of column values. If a value contains a<br /> comma, it must be escaped with another comma |
 | delimiter | string | No |  | Delimiter to be used for data |

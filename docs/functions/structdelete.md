@@ -20,8 +20,7 @@ someStruct.delete(key)
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| structure | string | Yes |  | Structure or a variable that contains one. Contains element
- to remove |
+| structure | string | Yes |  | Structure or a variable that contains one. Contains element<br /> to remove |
 | key | string | Yes |  | Element to remove |
 | indicateNotExisting | boolean | No | NO | When true this function will return true only if the key that was deleted existed. When false (default) this function will return true if the key is successfully removed. |
 

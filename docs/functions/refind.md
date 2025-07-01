@@ -17,22 +17,10 @@ returns any
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
 | reg_expression | string | Yes |  |  |  |
-| string | string | Yes |  | A string or a variable that contains one. String in which
- to search. |  |
+| string | string | Yes |  | A string or a variable that contains one. String in which<br /> to search. |  |
 | start | numeric | No | 1 |  |  |
-| returnsubexpressions | boolean | No | NO | True: if the regular expression is found, the first array
- element contains the length and position, respectively,
- of the first match.
- If the regular expression contains parentheses that
- group subexpressions, each subsequent array element
- contains the length and position, respectively, of
- the first occurrence of each group.
- If the regular expression is not found, the arrays each
- contain one element with the value 0.
- False: the function returns the position in the string
- where the match begins. Default. |  |
-| scope | string | No | one | CF2016+ * one: returns the first value that matches the regex.
- * all: returns all values that match the regex. | /Users/garethedwards/development/github/cfdocs/docs/functions/refind.md|all |
+| returnsubexpressions | boolean | No | NO | True: if the regular expression is found, the first array<br /> element contains the length and position, respectively,<br /> of the first match.<br /> If the regular expression contains parentheses that<br /> group subexpressions, each subsequent array element<br /> contains the length and position, respectively, of<br /> the first occurrence of each group.<br /> If the regular expression is not found, the arrays each<br /> contain one element with the value 0.<br /> False: the function returns the position in the string<br /> where the match begins. Default. |  |
+| scope | string | No | one | CF2016+ * one: returns the first value that matches the regex.<br /> * all: returns all values that match the regex. | /Users/garethedwards/development/github/cfdocs/docs/functions/refind.md|all |
 
 ## Find an integer in a string
 

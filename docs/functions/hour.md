@@ -21,8 +21,7 @@ date.hour()
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| date | date | Yes |  | Date/time object, in the range 100 AD-9999 AD.
-NOTE: When passing a date/time value as a string, enclose it in quotation marks. Otherwise, it is interpreted as a number representation of a date/time object. |
+| date | date | Yes |  | Date/time object, in the range 100 AD-9999 AD.<br />NOTE: When passing a date/time value as a string, enclose it in quotation marks. Otherwise, it is interpreted as a number representation of a date/time object. |
 
 ## Hour of a datetime object
 

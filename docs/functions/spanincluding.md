@@ -17,8 +17,7 @@ returns string
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | String | string | Yes |  |  |
-| set | string | Yes |  | A string or a variable that contains a set of characters.
- Must contain one or more characters |
+| set | string | Yes |  | A string or a variable that contains a set of characters.<br /> Must contain one or more characters |
 
 ## Tag Example
 

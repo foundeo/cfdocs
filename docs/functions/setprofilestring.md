@@ -15,7 +15,6 @@ returns string
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | inipath | string | Yes |  | Absolute path of initialization file |
-| section | string | Yes |  | Section of the initialization file in which the entry is
- to be set |
+| section | string | Yes |  | Section of the initialization file in which the entry is<br /> to be set |
 | entry | string | Yes |  | Name of the entry to set |
 | value | string | Yes |  | Value to which to set the entry |

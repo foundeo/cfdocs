@@ -15,8 +15,7 @@ returns string
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| column | query | Yes |  | Name of an executed query and column. Separate query name
- and column name with a period. |
+| column | query | Yes |  | Name of an executed query and column. Separate query name<br /> and column name with a period. |
 | delimiter | string | No | , |  |
 
 ## Tag Example

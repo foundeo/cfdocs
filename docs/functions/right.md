@@ -16,8 +16,7 @@ returns string
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | String | string | Yes |  |  |
-| count | numeric | Yes |  | An integer or a variable that contains one.
- Number of characters to return. |
+| count | numeric | Yes |  | An integer or a variable that contains one.<br /> Number of characters to return. |
 
 ## Using right() on a string
 

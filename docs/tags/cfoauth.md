@@ -22,11 +22,7 @@ cfoauth();
 | --- | --- | --- | --- | --- |
 | Type | string | Yes |  | Currently supported values are Facebook and Google. Implicitly supports the authentication workflow of Facebook and Google. |
 | clientid | string | Yes |  | Unique ID generated while registering your application with the Oauth provider. |
-| scope | string | No |  | Scopes are the permissions that a developer seeks from the users. These are usually comma separated values of permissions.
-Refer to the Oauth provider's documentations for more information.
-For example, after Facebook authentication, if a developer wants to access an email address and then the friend lists of a user, the developer will use:
-scope=email,read_friendlists.
-Note: The scope name varies for different Oauth providers. |
+| scope | string | No |  | Scopes are the permissions that a developer seeks from the users. These are usually comma separated values of permissions.<br />Refer to the Oauth provider's documentations for more information.<br />For example, after Facebook authentication, if a developer wants to access an email address and then the friend lists of a user, the developer will use:<br />scope=email,read_friendlists.<br />Note: The scope name varies for different Oauth providers. |
 | state | string | No |  | The state variable is used to pass back any information to your web application after the authentication and redirection are completed. Any value passed to this attribute is returned to the web application after authentication. This is useful for CSRF (Cross-site request forgery) protection. You can use ColdFusion’s security-related CSRF functions for this attribute. |
 | authendpoint | string | No |  | If type is not specified, this will be used as endpoint URL to be invoked for user authentication. |
 | accesstokenendpoint | string | No |  | If type is not specified this will be used as end point URL to be invoked for app authentication. |

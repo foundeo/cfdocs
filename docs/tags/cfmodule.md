@@ -19,27 +19,9 @@ cfmodule(template="nameoftemplate.cfm",attributeCollection={});
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| template | string | No |  | Mutually exclusive with the name attribute. A path to the
- page that implements the tag.
-
- Relative path: expanded from the current page
- Absolute path: expanded using CFML mapping
- A physical path is not valid. |
-| name | string | No |  | Mutually exclusive with the template attribute. A custom
- tag name, in the form "Name.Name.Name..." Identifies
- subdirectory, under the CFML tag root directory,
- that contains custom tag page. 
-For example (Windows format):
-
- `cfmodule name = "superduper.Forums40.GetUserOptions"` 
-
- This identifies the page GetUserOptions.cfm in the
- directory CustomTags\superduper\Forums40 under the
- CFML root directory. |
-| attributecollection | struct | No |  | A collection of key-value pairs that represent
- attribute names and values. You can specify multiple
- key-value pairs. You can specify this attribute only
- once. |
+| template | string | No |  | Mutually exclusive with the name attribute. A path to the<br /> page that implements the tag.<br /><br /> Relative path: expanded from the current page<br /> Absolute path: expanded using CFML mapping<br /> A physical path is not valid. |
+| name | string | No |  | Mutually exclusive with the template attribute. A custom<br /> tag name, in the form "Name.Name.Name..." Identifies<br /> subdirectory, under the CFML tag root directory,<br /> that contains custom tag page. <br />For example (Windows format):<br /><br /> `cfmodule name = "superduper.Forums40.GetUserOptions"` <br /><br /> This identifies the page GetUserOptions.cfm in the<br /> directory CustomTags\superduper\Forums40 under the<br /> CFML root directory. |
+| attributecollection | struct | No |  | A collection of key-value pairs that represent<br /> attribute names and values. You can specify multiple<br /> key-value pairs. You can specify this attribute only<br /> once. |
 
 ## Using the template attribute with an absolute template path
 

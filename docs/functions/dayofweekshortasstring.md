@@ -14,8 +14,7 @@ returns string
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| day_of_week | numeric | Yes |  | Only values from 1 to 7 are valid.
-Week starting with 1 for Sunday and ends with 7 for Saturday. |
+| day_of_week | numeric | Yes |  | Only values from 1 to 7 are valid.<br />Week starting with 1 for Sunday and ends with 7 for Saturday. |
 | locale | string | No |  |  |
 
 ## Get Sunday

@@ -17,8 +17,7 @@ returns string
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | column | query | Yes |  | Name of an executed query and column. Separate query name and column name with a period. |
-| delimiter | string | No | , | A delimiter character to separate column data items.
- Default: comma (,). |
+| delimiter | string | No | , | A delimiter character to separate column data items.<br /> Default: comma (,). |
 
 ## Simple Example
 

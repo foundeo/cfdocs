@@ -21,9 +21,7 @@ someArray.insertAt(position, value)
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | array | array | Yes |  | The array which will have the new element inserted. |
-| position | numeric | Yes |  | The numerical index in the array where the new element will be inserted.
- Must be less than or equal to the length of the array.
- Remember ColdFusion arrays start at 1 not 0. |
+| position | numeric | Yes |  | The numerical index in the array where the new element will be inserted.<br /> Must be less than or equal to the length of the array.<br /> Remember ColdFusion arrays start at 1 not 0. |
 | value | any | Yes |  | The new element to insert. |
 
 ## Insert an Item in an Array at Position 2

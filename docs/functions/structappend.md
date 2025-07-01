@@ -26,8 +26,7 @@ returns struct
 | --- | --- | --- | --- | --- |
 | destStruct | struct | Yes |  | Structure to append. |
 | sourceStruct | struct | Yes |  | Structure that contains the data to append to destStruct |
-| overwriteFlag | boolean | No | YES | Whether values in sourceStruct should overwrite corresponding values in
- destStruct or not. |
+| overwriteFlag | boolean | No | YES | Whether values in sourceStruct should overwrite corresponding values in<br /> destStruct or not. |
 
 ## Append options to config struct (without overwrite flag)
 

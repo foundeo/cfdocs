@@ -15,8 +15,7 @@ returns struct
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| type | string | No |  | CF2016+ Lucee4.5+ If set to `ordered` the order in which elements are added to the structure will be maintained. In Lucee `linked` can be used in place of `ordered`.
-CF2021+ If set to `casesensitive` the keys will remain case-sensitive. Additionally, `ordered-casesensitive` can be used to create an ordered case-sensitive struct. |
+| type | string | No |  | CF2016+ Lucee4.5+ If set to `ordered` the order in which elements are added to the structure will be maintained. In Lucee `linked` can be used in place of `ordered`.<br />CF2021+ If set to `casesensitive` the keys will remain case-sensitive. Additionally, `ordered-casesensitive` can be used to create an ordered case-sensitive struct. |
 | sortType | string | No |  | CF2016u3+ Sort types are text or numeric. |
 | sortOrder | string | No | asc | CF2016u3+ The order of the sort (ascending or descending). |
 | localeSensitive | boolean | No | false | CF2016u3+ Specify if you wish to do a locale sensitive sorting. |

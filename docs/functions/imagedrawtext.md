@@ -24,12 +24,7 @@ someImage.drawText(str, x, y, attributecollection)
 | str | string | Yes |  | The text to draw. |
 | x | numeric | Yes |  | The x coordinate for the start point of the string. |
 | y | numeric | Yes |  | The y coordinate for the start point of the string. |
-| attributecollection | struct | No |  | A structure used to specify the text characteristics. the following keys are supported: 
-font: The name of the font used to draw the text string. If you do not specify the font attribute, the text is drawn in the default system font. 
-size: The font size for the text string. The default value is 10 points. 
-style: The style to apply to the font ( bold,italic,boldItalic,plain (default) ). 
-strikethrough: a boolean that specify whether strikethrough is applied to the text image, default is false. 
-underline: a boolean that specify whether underline is applied to the text image, default is false. |
+| attributecollection | struct | No |  | A structure used to specify the text characteristics. the following keys are supported: <br />font: The name of the font used to draw the text string. If you do not specify the font attribute, the text is drawn in the default system font. <br />size: The font size for the text string. The default value is 10 points. <br />style: The style to apply to the font ( bold,italic,boldItalic,plain (default) ). <br />strikethrough: a boolean that specify whether strikethrough is applied to the text image, default is false. <br />underline: a boolean that specify whether underline is applied to the text image, default is false. |
 
 ## Tag Syntax
 

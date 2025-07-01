@@ -14,8 +14,7 @@ returns query
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| columnList | string | Yes |  | A string or a variable that contains one. Delimited list
- of column names, or an empty string. |
+| columnList | string | Yes |  | A string or a variable that contains one. Delimited list<br /> of column names, or an empty string. |
 | columnTypeList | string | No |  | CF7+ Comma-delimited list specifying column data types. |
 | rowData | any | No |  | CF10+ Data to populate the query. Can be a struct (with keys matching column names), an array of structs, or an array of arrays (in same order as columnList) |
 

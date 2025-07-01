@@ -18,5 +18,4 @@ cfobjectcache(action="clear");
 
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
-| action | string | Yes | clear | clear: Clears queries from the cache in the Application
- scope | /Users/garethedwards/development/github/cfdocs/docs/tags/cfobjectcache.md|clear |
+| action | string | Yes | clear | clear: Clears queries from the cache in the Application<br /> scope | /Users/garethedwards/development/github/cfdocs/docs/tags/cfobjectcache.md|clear |

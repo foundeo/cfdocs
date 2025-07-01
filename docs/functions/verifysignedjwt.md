@@ -16,6 +16,4 @@ returns struct
 | --- | --- | --- | --- | --- |
 | token | string | Yes |  | A signed JWT |
 | signOptions | struct | Yes |  | The signature uses the key information from the given struct |
-| config | struct | Yes |  | A struct with the following values:
-- clockSkew : time in seconds to account for difference between the systems generating and processing the JWT
-- returntype : plaintext/struct |
+| config | struct | Yes |  | A struct with the following values:<br />- clockSkew : time in seconds to account for difference between the systems generating and processing the JWT<br />- returntype : plaintext/struct |

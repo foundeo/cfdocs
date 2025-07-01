@@ -16,5 +16,4 @@ returns any
 | --- | --- | --- | --- | --- |
 | namespace | string | Yes |  | A String that is the namespace for the header |
 | name | string | Yes |  | A String that is the name of the header |
-| asXML | boolean | No | NO | If True, the header is returned as a CFML XML object;
- if false (default), the header is returned as a Java object. |
+| asXML | boolean | No | NO | If True, the header is returned as a CFML XML object;<br /> if false (default), the header is returned as a Java object. |

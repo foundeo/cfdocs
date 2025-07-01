@@ -21,19 +21,7 @@ someImage.setDrawingStroke(attributecollection)
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | name | string | Yes |  | The ColdFusion image on which this operation is performed. |
-| attributecollection | struct | No |  | The structure used to specify the line attributes
-
-width: Pen width, which is measured perpendicularly to the pen trajectory.
-
-endcaps: Decoration applied to the ends of unclosed subpaths and dash segments. Subpaths that start and end on the same point are considered unclosed if they do not have a close segment: (butt,round,square)
-
-lineJoins: Type of line joins: (bevel,miter,join)
-
-miterLimit: The limit to trim a line join that has a mitered join decoration. (Use only when lineJoins = 'miter'.) A line join is trimmed when the ratio of miter length to stroke width is greater than the miterLimit value. The miter length is the diagonal length of the miter, which is the distance between the inside corner and the outside corner of the intersection. The smaller the angle formed by two line segments, the longer the miter length and the sharper the angle of intersection. The default value is 10.0, which trims all angles less than 11 degrees. Trimming miters converts the decoration of the line join to bevel.
-
-dashArray: An array of numbers that indicates the dash pattern. For example. if dashArray is (8,4), the dash pattern is 8 pixels solid, 4 pixels blank, 8 pixels solid, 4 pixels blank, and so on.
-
-dash_phases: An offset into the dash pattern. For example, a dash_phase of 2, and a dashArray of (8,4) produces the dash pattern of 6 pixels solid, 4 pixels blank, 8 pixels solid, 4 pixels blank, and so on. |
+| attributecollection | struct | No |  | The structure used to specify the line attributes<br /><br />width: Pen width, which is measured perpendicularly to the pen trajectory.<br /><br />endcaps: Decoration applied to the ends of unclosed subpaths and dash segments. Subpaths that start and end on the same point are considered unclosed if they do not have a close segment: (butt,round,square)<br /><br />lineJoins: Type of line joins: (bevel,miter,join)<br /><br />miterLimit: The limit to trim a line join that has a mitered join decoration. (Use only when lineJoins = 'miter'.) A line join is trimmed when the ratio of miter length to stroke width is greater than the miterLimit value. The miter length is the diagonal length of the miter, which is the distance between the inside corner and the outside corner of the intersection. The smaller the angle formed by two line segments, the longer the miter length and the sharper the angle of intersection. The default value is 10.0, which trims all angles less than 11 degrees. Trimming miters converts the decoration of the line join to bevel.<br /><br />dashArray: An array of numbers that indicates the dash pattern. For example. if dashArray is (8,4), the dash pattern is 8 pixels solid, 4 pixels blank, 8 pixels solid, 4 pixels blank, and so on.<br /><br />dash_phases: An offset into the dash pattern. For example, a dash_phase of 2, and a dashArray of (8,4) produces the dash pattern of 6 pixels solid, 4 pixels blank, 8 pixels solid, 4 pixels blank, and so on. |
 
 ## Tag Syntax
 

@@ -18,9 +18,7 @@ cfspreadsheet();
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| action | string | Yes |  | read - Reads the contents of an XLS format file.
-update - Adds a new sheet to an existing XLS file. You cannot use the update action to change a sheet in an existing file.
-write - Writes a new XLS format file or overwrites an existing file. |
+| action | string | Yes |  | read - Reads the contents of an XLS format file.<br />update - Adds a new sheet to an existing XLS file. You cannot use the update action to change a sheet in an existing file.<br />write - Writes a new XLS format file or overwrites an existing file. |
 | autosize | boolean | No | true | CF11+ Toggles automatically adjusting the width of columns to accommodate their contents. |
 | columnnames | string | No |  | Comma-separated column names. |
 | columns | string | No |  | Column number or range of columns. Specify a single number, a hyphen-separated column range, a comma-separated list, or any combination of these; for example: 1,3-6,9. |
@@ -28,13 +26,10 @@ write - Writes a new XLS format file or overwrites an existing file. |
 | filename | string | No |  | The pathname of the file that is written. |
 | format | string | No |  | Format of the data represented by the name variable. |
 | headerrow | numeric | No |  | Row number that contains column names. |
-| name | string | No |  | `action="read"` The variable in which to store the spreadsheet file data. You must specify name or query. If format="csv" then name will contain csv variable.
-if format="html" then name will contain HTML content.
-`action="write|update"` A variable containing CSV-format data or an ColdFusion spreadsheet object containing the data to write. You must specify name or query. |
+| name | string | No |  | `action="read"` The variable in which to store the spreadsheet file data. You must specify name or query. If format="csv" then name will contain csv variable.<br />if format="html" then name will contain HTML content.<br />`action="write|update"` A variable containing CSV-format data or an ColdFusion spreadsheet object containing the data to write. You must specify name or query. |
 | overwrite | boolean | No |  | A Boolean value specifying whether to overwrite an existing file. |
 | password | string | No |  | Set a password for modifying the sheet. |
-| query | string | No |  | `action="read"` The query in which to store the converted spreadsheet file. You must specify format, name, or query.
-`action="write|update"` A query variable containing the data to write. You must specify name or query. |
+| query | string | No |  | `action="read"` The query in which to store the converted spreadsheet file. You must specify format, name, or query.<br />`action="write|update"` A query variable containing the data to write. You must specify name or query. |
 | rows | string | No |  | The range of rows to read. Specify a single number, a hyphen-separated row range, a comma-separated list, or any combination of these. For example: 1,3-6,9. |
 | sheet | numeric | No |  | Number of the sheet. |
 | sheetname | string | No |  | Name of the sheet. |

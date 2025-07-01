@@ -16,10 +16,7 @@ returns string
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
 | string | string | Yes |  | A String or variable that contains one. |  |
-| version | numeric | No | 2.0 | HTML version to use. Currently ignored.
- -1: The latest implementation of HTML
- 2.0: HTML 2.0 (Default)
- 3.2: HTML 3.2 | /Users/garethedwards/development/github/cfdocs/docs/functions/htmlcodeformat.md|3.2 |
+| version | numeric | No | 2.0 | HTML version to use. Currently ignored.<br /> -1: The latest implementation of HTML<br /> 2.0: HTML 2.0 (Default)<br /> 3.2: HTML 3.2 | /Users/garethedwards/development/github/cfdocs/docs/functions/htmlcodeformat.md|3.2 |
 
 ## Tag Syntax
 

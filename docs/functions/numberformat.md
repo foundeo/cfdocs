@@ -25,17 +25,7 @@ returns string
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | number | numeric | Yes |  |  |
-| mask | string | No |  | _ : (underscore): Optional. Digit placeholder.
-9 : Optional. Digit placeholder. (Shows decimal places more clearly than _.). Note that when ‘9’ or ‘_’  is used after the decimal place, 0 will be padded, if required. 
-. : Location of a mandatory decimal point.
-0 : Located to the left or right of a mandatory decimal point. Pads with zeros.
-( ) : If number is less than zero, puts parentheses around the mask.
-+ : Puts plus sign before positive number; minus sign before negative number.
-- : Puts a space before positive number; minus sign before negative number.
-, : Separates every third decimal place with a comma.
-L,C : Left-justifies or center-justifies number within width of mask column. First character of mask must be L or C. The default value is right-justified.
-$ : Puts a dollar sign before formatted number. First character of mask must be the dollar sign ($).
-^ : Separates left and right formatting. |
+| mask | string | No |  | _ : (underscore): Optional. Digit placeholder.<br />9 : Optional. Digit placeholder. (Shows decimal places more clearly than _.). Note that when ‘9’ or ‘_’  is used after the decimal place, 0 will be padded, if required. <br />. : Location of a mandatory decimal point.<br />0 : Located to the left or right of a mandatory decimal point. Pads with zeros.<br />( ) : If number is less than zero, puts parentheses around the mask.<br />+ : Puts plus sign before positive number; minus sign before negative number.<br />- : Puts a space before positive number; minus sign before negative number.<br />, : Separates every third decimal place with a comma.<br />L,C : Left-justifies or center-justifies number within width of mask column. First character of mask must be L or C. The default value is right-justified.<br />$ : Puts a dollar sign before formatted number. First character of mask must be the dollar sign ($).<br />^ : Separates left and right formatting. |
 
 ## Format to 2 decimal places
 

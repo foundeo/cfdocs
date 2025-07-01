@@ -21,30 +21,10 @@ cfformitem(type="html");
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | type | string | Yes |  | Form item type. See docs for more details. |
-| style | string | No |  | Flash: Must be a style specification in CSS format.
- Ignored if the type attribute is HTML or text.
- XML: ColdFusion passes the style attribute to the XML.
- ColdFusion skins include the style attribute to the
- generated HTML. |
-| width | numeric | No |  | Width of the item, in pixels. If you omit this attribute, Flash
- automatically sizes the width. In ColdFusion XSL skins,
- use the style attribute, instead. |
-| height | numeric | No |  | Height of the item, in pixels. If you omit this attribute,
- Flash automatically sizes the width. In ColdFusion XSL
- skins, use the style attribute, instead. |
-| enabled | boolean | No | YES | Boolean value specifying whether the control is enabled.
- Disabled text appear in light gray. Has no effect on
- spacers and rules.
- Default: true |
-| visible | boolean | No | YES | Boolean value specifying whether to show the control.
- Space that would be occupied by an invisible control is
- blank. Has no effect on spacers.
- Default: true |
-| tooltip | string | No |  | Text to display when the mouse pointer hovers over the
- control. Has no effect on spacers. |
-| bind | string | No |  | A Flash bind expression that populates the field with
- information from other form fields. If you use this
- attribute, ColdFusion MX ignores any text that you
- specify in the body of the cftextitem tag. This attribute
- can be useful if the cfformitem tag is in a cfformgroup
- type="repeater" tag. |
+| style | string | No |  | Flash: Must be a style specification in CSS format.<br /> Ignored if the type attribute is HTML or text.<br /> XML: ColdFusion passes the style attribute to the XML.<br /> ColdFusion skins include the style attribute to the<br /> generated HTML. |
+| width | numeric | No |  | Width of the item, in pixels. If you omit this attribute, Flash<br /> automatically sizes the width. In ColdFusion XSL skins,<br /> use the style attribute, instead. |
+| height | numeric | No |  | Height of the item, in pixels. If you omit this attribute,<br /> Flash automatically sizes the width. In ColdFusion XSL<br /> skins, use the style attribute, instead. |
+| enabled | boolean | No | YES | Boolean value specifying whether the control is enabled.<br /> Disabled text appear in light gray. Has no effect on<br /> spacers and rules.<br /> Default: true |
+| visible | boolean | No | YES | Boolean value specifying whether to show the control.<br /> Space that would be occupied by an invisible control is<br /> blank. Has no effect on spacers.<br /> Default: true |
+| tooltip | string | No |  | Text to display when the mouse pointer hovers over the<br /> control. Has no effect on spacers. |
+| bind | string | No |  | A Flash bind expression that populates the field with<br /> information from other form fields. If you use this<br /> attribute, ColdFusion MX ignores any text that you<br /> specify in the body of the cftextitem tag. This attribute<br /> can be useful if the cfformitem tag is in a cfformgroup<br /> type="repeater" tag. |

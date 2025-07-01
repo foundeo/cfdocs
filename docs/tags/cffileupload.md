@@ -21,8 +21,7 @@ cffileupload(url="");
 | url | string | Yes |  | The URL to the server where the files are uploaded. |
 | width | string | No |  | Width of the file upload control, in pixels. |
 | title | string | No |  | Title for the upload dialog. |
-| extensionfilter | string | No |  | Use this attribute to specify the type of file that you will allow to be uploaded. 
-For example, to let only image files to be uploaded, you can specify file extensions like .jpg, .jpeg, or .png |
+| extensionfilter | string | No |  | Use this attribute to specify the type of file that you will allow to be uploaded. <br />For example, to let only image files to be uploaded, you can specify file extensions like .jpg, .jpeg, or .png |
 | uploadbuttonlabel | string | No |  | Label of the Upload button. |
 | progressbar | boolean | No |  | Whether to display Progress Bar or not. Default true |
 | height | string | No |  | Height of the file upload control, in pixels. |
@@ -38,7 +37,6 @@ For example, to let only image files to be uploaded, you can specify file extens
 | deleteButtonLabel | string | No |  | Label of the Delete button |
 | align | string | No |  | Specifies the default alignment |
 | wmode | string | No |  | Specifies the absolute positioning and layering capabilities in your browser: |
-| stopOnError | boolean | No |  | Specifies whether or not to ignore the exceptions for this operation. When the value is
-true, it stops uploading, displays an appropriate error |
+| stopOnError | boolean | No |  | Specifies whether or not to ignore the exceptions for this operation. When the value is<br />true, it stops uploading, displays an appropriate error |
 | hideUploadButton | boolean | No |  | A Boolean value that specifies if the Upload button should appear in the media player |
 | onUploadComplete | string | No |  | The JavaScript function to run after the all uploads have completed |

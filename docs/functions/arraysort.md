@@ -23,29 +23,8 @@ someArray.sort(sortType [, sortOrder, localeSensitive ])
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | array | array | Yes |  | Name of an array |
-| sortType | string | Yes |  | numeric: sorts numbers
- text: sorts text alphabetically, taking case into account
- (also known as case-sensitive). All letters of one case
- precede the first letter of the other case:
- - aabzABZ, if sort_order = "asc" (ascending sort)
- - ZBAzbaa, if sort_order = "desc" (descending sort)
-
- textnocase: sorts text alphabetically, without regard to
- case (also known as case-insensitive). A letter in varying
- cases precedes the next letter:
- - aAaBbBzzZ, in an ascending sort; preserves original
- intra-letter order
- - ZzzBbBaAa, in a descending sort; reverses original
- intra-letter order |
-| sortOrder | string | No | asc | asc: ascending sort order. Default.
- - aabzABZ or aAaBbBzzZ, depending on value of sort_type,
- for letters
- - from smaller to larger, for numbers
-
- desc: descending sort order.
- - ZBAzbaa or ZzzBbBaAa, depending on value of sort_type,
- for letters
- - from larger to smaller, for numbers |
+| sortType | string | Yes |  | numeric: sorts numbers<br /> text: sorts text alphabetically, taking case into account<br /> (also known as case-sensitive). All letters of one case<br /> precede the first letter of the other case:<br /> - aabzABZ, if sort_order = "asc" (ascending sort)<br /> - ZBAzbaa, if sort_order = "desc" (descending sort)<br /><br /> textnocase: sorts text alphabetically, without regard to<br /> case (also known as case-insensitive). A letter in varying<br /> cases precedes the next letter:<br /> - aAaBbBzzZ, in an ascending sort; preserves original<br /> intra-letter order<br /> - ZzzBbBaAa, in a descending sort; reverses original<br /> intra-letter order |
+| sortOrder | string | No | asc | asc: ascending sort order. Default.<br /> - aabzABZ or aAaBbBzzZ, depending on value of sort_type,<br /> for letters<br /> - from smaller to larger, for numbers<br /><br /> desc: descending sort order.<br /> - ZBAzbaa or ZzzBbBaAa, depending on value of sort_type,<br /> for letters<br /> - from larger to smaller, for numbers |
 | callback | function | No |  | CF10+ A function that uses two elements of an array. `function(element1, element2)`. Returns whether the first is less than (-1), equal to (0) or greater than (1) the second one (like the compare functions). |
 | localeSensitive | boolean | No | false | CF10+ Specify if you wish to do a locale sensitive sorting. |
 

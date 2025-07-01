@@ -15,11 +15,7 @@ returns string
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | list | string | Yes |  | The input list. |
-| function | any | Yes |  | Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are
-
-item: value
-index : current index for the iteration
-list : reference of the original list |
+| function | any | Yes |  | Closure or a function reference that will be called for each of the iteration. The arguments passed to the callback are<br /><br />item: value<br />index : current index for the iteration<br />list : reference of the original list |
 | intialValue | any | No |  | Initial value which will be used for the reduce operation. |
 | delimiter | string | No | , | The list delimiter. |
 | includeEmptyFields | boolean | No | false | Include empty values |

@@ -20,8 +20,7 @@ date.convert(conversionType)
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| conversionType | string | Yes |  | `local2Utc` : Converts local time to UTC time.
-`utc2Local` : Converts UTC time to local time. |
+| conversionType | string | Yes |  | `local2Utc` : Converts local time to UTC time.<br />`utc2Local` : Converts UTC time to local time. |
 | date | date | Yes |  |  |
 
 ## Converting Local to UTC
