@@ -9,3 +9,9 @@ writeBody(value);
 ```javascript
 returns boolean
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| value | string | Yes |  | A string or any variable that can evaluate to a string. |

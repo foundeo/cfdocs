@@ -9,3 +9,9 @@ getBaseTemplatePath()
 ```javascript
 returns string
 ```
+
+## Basic Example
+
+```javascript
+getBaseTemplatePath()
+```

@@ -9,3 +9,19 @@ getNumericDate(arg1)
 ```javascript
 returns numeric
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| arg1 | any | Yes |  | A datetime object or a date-parsable String. |
+
+## Convert a date string to a numeric date - Tag Syntax
+
+This numeric date represents the number of days between December 30, 1899 and January 1, 2008.
+
+```javascript
+getNumericDate('2018-01-01')
+```
+
+### Expected Result: 43101

@@ -9,8 +9,21 @@ bundleInfo(obj)
 ```javascript
 returns struct
 ```
-### Member Function Syntax
+
+## Member Function Syntax
 
 ```javascript
 
+```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| obj | any | Yes |  | Object from bundle |
+
+## Dump info to a bundle
+
+```javascript
+dump(bundleInfo(obj));
 ```

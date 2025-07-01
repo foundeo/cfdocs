@@ -9,3 +9,9 @@ getComponentMetadata(path)
 ```javascript
 returns struct
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| path | string | Yes |  | The dot-delimited path of the interface or CFC definition. |

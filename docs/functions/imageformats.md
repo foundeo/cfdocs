@@ -9,3 +9,11 @@ imageFormats()
 ```javascript
 returns struct
 ```
+
+## Simple example
+
+Calls the function and dumps the structure of image formats it returns
+
+```javascript
+writeDump(imageFormats());
+```

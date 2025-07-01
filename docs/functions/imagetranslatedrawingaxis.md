@@ -9,8 +9,28 @@ imageTranslateDrawingAxis(name, x, y)
 ```javascript
 returns void
 ```
-### Member Function Syntax
+
+## Member Function Syntax
 
 ```javascript
 someImage.translateDrawingAxis(x, y)
+```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| name | string | Yes |  | The image on which this operation is performed. |
+| x | numeric | Yes |  | x coordinate |
+| y | numeric | Yes |  | y coordinate |
+
+## Using translateDrawingAxis member function
+
+CF11+ Draw a rectangle after the drawing axis has been moved
+
+```javascript
+imgObj = imageNew("",152,152,"rgb","149c82");
+imgObj.translateDrawingAxis(50,50);
+imgObj.drawRect(40,50,70,50,"yes");
+cfimage(action="writeToBrowser", source=imgObj);
 ```

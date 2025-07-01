@@ -9,3 +9,17 @@ getDirectoryFromPath(path)
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| path | string | Yes |  |  |
+
+## Basic Example
+
+```javascript
+getDirectoryFromPath("C:\temp\file.txt")
+```
+
+### Expected Result: C:\temp\

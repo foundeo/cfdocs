@@ -9,3 +9,9 @@ lsParseEuroCurrency(currency_string)
 ```javascript
 returns numeric
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| currency_string | string | Yes |  |  |

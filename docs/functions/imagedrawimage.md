@@ -9,3 +9,12 @@ imageDrawImage(name, image, x, y)
 ```javascript
 returns void
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| name | any | Yes |  |  |
+| image | any | Yes |  |  |
+| x | numeric | Yes |  |  |
+| y | numeric | Yes |  |  |

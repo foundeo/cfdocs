@@ -9,3 +9,17 @@ de(String)
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| String | string | Yes |  |  |
+
+## Simple Example
+
+```javascript
+de("pete")
+```
+
+### Expected Result: "pete"

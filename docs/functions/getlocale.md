@@ -12,3 +12,14 @@ getLocale()
 ```javascript
 returns string
 ```
+
+## Output current Locale than set it to swiss locale
+
+```javascript
+writeOutput(getlocale());
+writeOutput(' → ');
+setLocale('de_ch');
+writeOutput(getlocale());
+```
+
+### Expected Result: english (us) → german (swiss)

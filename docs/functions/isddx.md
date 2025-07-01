@@ -9,3 +9,9 @@ isDDX(path)
 ```javascript
 returns boolean
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| path | string | Yes |  | Pathname to the DDX file or a string of DDX instructions. |

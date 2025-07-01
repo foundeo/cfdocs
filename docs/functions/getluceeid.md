@@ -9,3 +9,11 @@ getLuceeID()
 ```javascript
 returns struct
 ```
+
+## Dump getLuceeID
+
+Display ID, ApiKey and SecurityKey for the Server and Web-Context.
+
+```javascript
+dump( getLuceeID() )
+```

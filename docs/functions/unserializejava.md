@@ -9,3 +9,9 @@ unserializeJava(string)
 ```javascript
 returns any
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| string | string | Yes |  |  |

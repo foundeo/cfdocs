@@ -9,3 +9,9 @@ createUniqueID()
 ```javascript
 returns string
 ```
+
+## Creates a Unique Identifier. Each identifier will be unique
+
+```javascript
+createUniqueID()
+```

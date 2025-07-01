@@ -9,3 +9,9 @@ isXMLAttribute(value)
 ```javascript
 returns boolean
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| value | any | Yes |  | Name of an XML attribute. |

@@ -9,3 +9,9 @@ getGatewayHelper(gatewayID)
 ```javascript
 returns any
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| gatewayID | string | Yes |  | Identifier of the gateway that provides the GatewayHelper object. |

@@ -13,3 +13,23 @@ replaceList(String, list1, list2, delimiterList1, delimiterList2 [, includeEmpty
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| String | string | Yes |  | A string, or a variable that contains one, within which to replace substring |
+| list1 | string | Yes |  | List of substrings for which to search |
+| list2 | string | Yes |  | List of replacement substrings |
+| delimiter | string | No | , | Common delimiter for both search and replacement. |
+| delimiterList1 | string | No | , | Delimiter for search. |
+| delimiterList2 | string | No | , | Delimiter for replacement. |
+| includeEmptyFields | boolean | No | false | When true, zero-length list elements are preserved. |
+
+## Tag Example
+
+```javascript
+<cfoutput>#replaceList("My Test String", "Test, String", "Replaced, Sentence")#</cfoutput>
+```
+
+### Expected Result: My Replaced Sentence

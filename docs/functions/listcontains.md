@@ -12,3 +12,21 @@ listContains(list, substring [, delimiters])
 ```javascript
 returns numeric
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| list | string | Yes |  |  |
+| substring | string | Yes |  |  |
+| delimiters | string | No | , |  |
+
+## Simple Example
+
+Return the first instance of an item containing 'oo'
+
+```javascript
+listContains("sheep,goat,foo,bar,goo", "oo")
+```
+
+### Expected Result: 3

@@ -13,3 +13,11 @@ getTempDirectory()
 ```javascript
 returns string
 ```
+
+## Show temp directory path
+
+File system path where temporary files are stored
+
+```javascript
+getTempDirectory()
+```

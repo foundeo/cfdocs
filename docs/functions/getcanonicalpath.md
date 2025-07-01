@@ -9,3 +9,17 @@ getCanonicalPath(path)
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| path | string | Yes |  |  |
+
+## getCanonicalPath Example
+
+Returns the canonical path of the input path.
+
+```javascript
+writeOutput( getCanonicalPath(getBaseTemplatePath()) );
+```

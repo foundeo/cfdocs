@@ -12,3 +12,10 @@ entityToQuery(entity [, name])
 ```javascript
 returns query
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| entity | variableName | Yes |  | Entity object or array of objects that needs to be converted to a query object. |
+| name | string | No |  | Name of the entity. Use this optional parameter to return the query of the given entity in the case of inheritance mapping. |

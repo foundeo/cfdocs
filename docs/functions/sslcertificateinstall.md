@@ -9,3 +9,10 @@ sslCertificateInstall(host [, port])
 ```javascript
 returns void
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| host | string | Yes |  |  |
+| port | numeric | No | 443 |  |

@@ -5,7 +5,7 @@ Part of the new CF11 mobile development features. This tag is similar to cfproce
 ### Syntax
 
 ```html
- <cfclientsettings enableDeviceAPI = "true|false" detectDevice = "true|false" deviceTimeout = Number > 
+<cfclientsettings enableDeviceAPI = "true|false" detectDevice = "true|false" deviceTimeout = Number >
 ```
 
 ### Script Syntax ACF11+, Lucee, Railo 4.2+
@@ -13,3 +13,11 @@ Part of the new CF11 mobile development features. This tag is similar to cfproce
 ```javascript
  cfclientsettings(enableDeviceAPI = "true|false", detectDevice = "true|false", deviceTimeout = Number); 
 ```
+
+## Attribute Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| enableDeviceAPI | boolean | No | false | Enable/disable the device API |
+| detectDevice | boolean | No | false | Enable/disable the device detection plugin. |
+| deviceTimeout | numeric | No | 10 | The timeout for loading the plugins (in seconds). |

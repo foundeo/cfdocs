@@ -10,3 +10,16 @@ entityLoadByPK(entity, id)
 ```javascript
 returns any
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| entity | string | Yes |  | Name of the entity to be loaded. |
+| id | string | Yes |  | ID of the entity to be loaded. |
+
+## Load an existing User object
+
+```javascript
+user = entityLoadByPK("User", userID);
+```

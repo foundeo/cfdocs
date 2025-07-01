@@ -9,8 +9,15 @@ structGetMetadata(struct)
 ```javascript
 returns struct
 ```
-### Member Function Syntax
+
+## Member Function Syntax
 
 ```javascript
 someStruct.getMetadata()
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| struct | struct | Yes |  | The struct in which you want to add the metadata. |

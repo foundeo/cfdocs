@@ -9,3 +9,14 @@ createSignedJWT(payload, signOptions, config)
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| payload | any | Yes |  | The payload as a string or struct. |
+| signOptions | struct | Yes |  | Create the signature using the key information from the given struct |
+| config | struct | Yes |  | A struct with the following values:
+- algorithm : algorithm used for signing.
+- generateIssuedAt : boolean to indicate whether to generate "iat" field
+- generateJti : boolean to indicate whether to generate "jti" field |

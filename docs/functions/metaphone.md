@@ -9,3 +9,37 @@ metaphone(str)
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| str | string | Yes |  |  |
+
+## Metaphone long words
+
+This compound word is the longest word published with 79 letters according to the 1996 Guinness Book of World Records
+
+```javascript
+Metaphone("Donaudampfschiffahrtsgesellschaftskapitän")
+```
+
+### Expected Result: TNTM
+
+## Different words with the same metaphone
+
+```javascript
+Metaphone("Truck")&"/"&Metaphone("Trek")
+```
+
+### Expected Result: TRK/TRK
+
+## Metaphone of a word and then same word with prefix
+
+Adding a word changes the whole metaphone
+
+```javascript
+Metaphone("Trek")&"/"&Metaphone("Star Trek")
+```
+
+### Expected Result: TRK/STRT

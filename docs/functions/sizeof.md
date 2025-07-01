@@ -9,3 +9,10 @@ sizeOf(obj [, complex])
 ```javascript
 returns any
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| obj | any | Yes |  |  |
+| complex | boolean | No |  |  |

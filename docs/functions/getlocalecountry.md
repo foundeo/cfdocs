@@ -9,3 +9,12 @@ getLocaleCountry()
 ```javascript
 returns string
 ```
+
+## Output current Locale's display name than set it to swiss locale
+
+```javascript
+writeOutput(getLocaleCountry());
+writeOutput(' → ');
+setLocale('de_ch');
+writeOutput(getLocaleCountry());
+```

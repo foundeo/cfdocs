@@ -12,3 +12,10 @@ getProfileSections(path [,encoding])
 ```javascript
 returns struct
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description | Values |
+| --- | --- | --- | --- | --- | --- |
+| path | string | Yes |  | Absolute path of initialization file |  |
+| encoding | string | No |  | CF11+ Encoding of the initialization (ini) file | /Users/garethedwards/development/github/cfdocs/docs/functions/getprofilesections.md|utf-16 |

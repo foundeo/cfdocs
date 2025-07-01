@@ -11,3 +11,10 @@ contractPath(path [, placeholder])
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| path_absolute | string | Yes |  | The absolute path |
+| placeholder | boolean | No | false | A boolean indicating whether Lucee placeholder names should be prefixed to the path. |

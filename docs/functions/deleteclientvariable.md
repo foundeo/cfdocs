@@ -10,3 +10,9 @@ deleteClientVariable(name)
 ```javascript
 returns boolean
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| name | string | Yes |  | The name of a client variable to delete, surrounded by double-quotation marks. |

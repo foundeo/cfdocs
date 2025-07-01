@@ -15,3 +15,12 @@ Populates a subform within the cfpdfform tag.
 ```javascript
 cfpdfsubform(name="");
 ```
+
+## Attribute Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| index | numeric | No |  | Index associated with the field name.
+ If multiple fields have the same name, ColdFusion
+ uses the index value is to locate one of them. (optional, default=1) |
+| name | string | Yes |  | Name of the subform corresponding to subform name in the PDF form. (required) |

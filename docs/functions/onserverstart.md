@@ -9,3 +9,11 @@ function onServerStart() { }
 ```javascript
 returns void
 ```
+
+## Specify environment variables
+
+Setting server specific variables
+
+```javascript
+<cfcomponent>    <cffunction name="onServerStart">        <cfset server.environment = "Dev-Server">        <cfset server.tech_support = "joe.bloggs@example.com">    </cffunction></cfcomponent>
+```

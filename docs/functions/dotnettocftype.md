@@ -9,3 +9,9 @@ dotnetToCFType(variableName)
 ```javascript
 returns any
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| variableName | any | Yes |  | Name of the .NET variable to convert. |

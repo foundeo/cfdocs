@@ -9,3 +9,18 @@ entityDelete(entity)
 ```javascript
 returns void
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| entity | variableName | Yes |  | Name of the entity being deleted. |
+
+## Delete an existing entity
+
+Loads an ORM entity from the database, then deletes it
+
+```javascript
+user = entityLoadByPK("User", userID);
+entityDelete(user);
+```

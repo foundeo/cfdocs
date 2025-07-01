@@ -9,3 +9,9 @@ entityNameArray()
 ```javascript
 returns array
 ```
+
+## Dump an array of entities currently loaded
+
+```javascript
+dump(entityNameArray());
+```
