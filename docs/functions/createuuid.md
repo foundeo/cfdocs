@@ -11,3 +11,9 @@ createUUID()
 ```javascript
 returns uuid
 ```
+
+## Creates a Universally Unique Identifier (UUID). Each UUID will be unique
+
+```javascript
+createUUID()
+```

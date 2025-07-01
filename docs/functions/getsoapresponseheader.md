@@ -9,3 +9,13 @@ getSOAPResponseHeader(webservice, namespace, name [, asXML])
 ```javascript
 returns any
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| webservice | any | Yes |  | A webservice object as returned from the cfobject tag or the createObject function. |
+| namespace | string | Yes |  | A String that is the namespace for the header. |
+| name | string | Yes |  | A String that is the name of the SOAP header. |
+| asXML | boolean | No | NO | If True, the header is returned as a CFML XML object;
+ if false (default), the header is returned as a Java object. |

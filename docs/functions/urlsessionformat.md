@@ -9,3 +9,9 @@ urlSessionFormat(requesturl)
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description | Values |
+| --- | --- | --- | --- | --- | --- |
+| requesturl | string | Yes |  | URL of a CFML page | /Users/garethedwards/development/github/cfdocs/docs/functions/urlsessionformat.md|cgi.script_name |

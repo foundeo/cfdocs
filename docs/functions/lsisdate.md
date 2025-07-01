@@ -9,3 +9,9 @@ lsIsDate(String)
 ```javascript
 returns boolean
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| String | string | Yes |  |  |

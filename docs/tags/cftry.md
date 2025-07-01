@@ -17,3 +17,33 @@ Used with one or more cfcatch tags. Together, they catch and
 ```javascript
 try { } catch (any e) {}
 ```
+
+## A simple try/catch script based example
+
+Create a divide by zero error and then catch it.
+
+```html
+try {
+    x = 5/0;
+}
+catch (any e) {
+    writeOutput("Error: " & e.message);
+}
+```
+
+### Expected Result: Error: Division by zero.
+
+## A simple try/catch tag based example
+
+Create a divide by zero error and then catch it.
+
+```html
+<cftry>
+    <cfset x = 5/0 />
+    <cfcatch type="any">
+        Error: <cfoutput>#cfcatch.message#</cfoutput>
+    </cfcatch>
+</cftry>
+```
+
+### Expected Result: Error: Division by zero.

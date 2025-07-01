@@ -9,3 +9,9 @@ ajaxLink(url)
 ```javascript
 returns void
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| url | string | Yes |  | The URL of the link. |

@@ -9,3 +9,16 @@ invalidateOauthAccesstoken(token,type);
 ```javascript
 returns void
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| token | string | Yes |  | The access token to invalidate. |
+| type | string | Yes |  | The type of the OAUTH server (facebook/google). |
+
+## Tag Syntax
+
+```javascript
+invalidateOauthAccesstoken("any_token_value","facebook")
+```

@@ -15,3 +15,29 @@ Builds a table in a CFML page. This tag renders data as preformatted text, or, w
 ```javascript
 cftable(query="");
 ```
+
+## Attribute Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| query | query | Yes |  | Name of cfquery from which to draw data. |
+| maxrows | numeric | No |  | Maximum number of rows to display in the table. |
+| colSpacing | numeric | No |  | Number of spaces between columns |
+| headerLines | numeric | No |  | Number of lines to use for table header (the default leaves
+ one line between header and first row of table). |
+| htmltable | any | No |  | Renders data in an HTML 3.0 table.
+
+ If you use this attribute (regardless of its value),
+ CFML renders data in an HTML table. |
+| border | any | No |  | Displays border around table.
+
+ If you use this attribute (regardless of its value),
+ CFML displays a border around the table.
+
+ Use this only if you use the HTMLTable attribute. |
+| colheaders | any | No |  | Displays column heads. If you use this attribute, you must
+ also use the cfcol tag header attribute to define them.
+
+ If you use this attribute (regardless of its value),
+ CFML displays column heads. |
+| startrow | numeric | No |  | The query result row to put in the first table row. |

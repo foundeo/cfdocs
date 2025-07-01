@@ -9,8 +9,28 @@ arrayFindAllNoCase(array, value or callback)
 ```javascript
 returns array
 ```
-### Member Function Syntax
+
+## Member Function Syntax
 
 ```javascript
 someArray.findAllNoCase(value or callback)
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| array | array | Yes |  | The source array to search through |
+| value or callback | variableName | Yes |  | If string, case insensitive value to search for; if callback, use signature function (item, index, array) : boolean |
+
+## Script Syntax
+
+Find the positions of a given string within a provided array regardless of case.
+
+```javascript
+var fruitArray = ['apple','banana','apple','orange','kiwi'];
+var applePositions = arrayFindAllNoCase(fruitArray, 'APPLE');
+writeDump(applePositions);
+```
+
+### Expected Result: [1,3].

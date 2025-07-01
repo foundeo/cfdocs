@@ -9,3 +9,9 @@ nowServer()
 ```javascript
 returns date
 ```
+
+## Get current server time
+
+```javascript
+nowServer()
+```

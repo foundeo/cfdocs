@@ -15,3 +15,34 @@ Used only inside the cfswitch tag body. Contains code to
 ```javascript
 cfdefaultcase();
 ```
+
+## Script Syntax
+
+```html
+vegetable = "";
+switch(vegetable) {
+    case "carrot":
+        writeOutput("Carrots are orange.");
+        break;
+    default:
+        writeOutput("You don't have any vegetables!");
+        break;
+}
+```
+
+### Expected Result: You don't have any vegetables!
+
+## Tag Syntax
+
+```html
+<cfset vegetable = "" /><cfswitch expression="#vegetable#">
+    <cfcase value="carrot">
+        Carrots are orange.
+    </cfcase>
+    <cfdefaultcase>
+        You don't have any vegetables!
+    </cfdefaultcase>
+</cfswitch>
+```
+
+### Expected Result: You don't have any vegetables!

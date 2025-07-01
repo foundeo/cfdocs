@@ -9,3 +9,10 @@ imageSetDrawingAlpha(name, alpha)
 ```javascript
 returns void
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| name | any | Yes |  |  |
+| alpha | numeric | Yes |  |  |

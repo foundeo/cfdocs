@@ -9,3 +9,11 @@ ormCloseAllSessions();
 ```javascript
 returns void
 ```
+
+## Tag Syntax
+
+Example 2
+
+```javascript
+ormCloseAllSessions()
+```

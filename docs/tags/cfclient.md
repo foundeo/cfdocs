@@ -13,3 +13,14 @@ Part of the CF11 mobile features for client side (JS) development. Enables outpu
 ```javascript
 cfclient(); ...output... /cfclient>
 ```
+
+## Basic Example
+
+Very basic example. Please read the wikidoc entry at Adobe for further usage scenarios.
+
+```html
+<cfclient>
+ <cfset myvar = “Hello World”>
+ <cfoutput>#myvar#</cfoutput>
+</cfclient>
+```

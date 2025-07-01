@@ -14,3 +14,10 @@ Allows subtag data to be saved with a base tag. Applies only
 ```javascript
 cfassociate(basetag="");
 ```
+
+## Attribute Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| basetag | string | Yes |  | Base tag name |
+| datacollection | string | No |  | Structure in which base tag stores subtag data |

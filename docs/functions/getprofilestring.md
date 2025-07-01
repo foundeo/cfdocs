@@ -10,3 +10,19 @@ getProfileString(inipath, section, entry)
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| inipath | string | Yes |  |  |
+| section | string | Yes |  |  |
+| entry | string | Yes |  |  |
+
+## Tag Syntax
+
+```javascript
+<cfset IniPath = "c:\myboot.ini"> 
+ <cfset Section = "boot loader"> 
+ <cfset timeout = getProfileString(IniPath, Section, "timeout")>
+```

@@ -9,3 +9,17 @@ lCase(String)
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| String | string | Yes |  |  |
+
+## lowercase CFDocs Rock
+
+```javascript
+lCase('CFDocs Rock')
+```
+
+### Expected Result: cfdocs rock

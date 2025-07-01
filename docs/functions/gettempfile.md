@@ -10,3 +10,18 @@ getTempFile(dir, prefix)
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| dir | string | Yes |  |  |
+| prefix | string | Yes |  |  |
+
+## Create temp file in temp dir
+
+Returns path of file created
+
+```javascript
+getTempFile(getTempDirectory(),"testFile")
+```

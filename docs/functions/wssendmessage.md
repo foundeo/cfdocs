@@ -9,3 +9,9 @@ wsSendMessage(message);
 ```javascript
 returns void
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| message | any | Yes |  | The message object. This can be of type Any. |

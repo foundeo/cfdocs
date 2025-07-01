@@ -12,8 +12,25 @@ arrayResize(array, size)
 ```javascript
 returns boolean
 ```
-### Member Function Syntax
+
+## Member Function Syntax
 
 ```javascript
 someArray.resize(size)
+```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| array | array | Yes |  |  |
+| size | numeric | Yes |  |  |
+
+## Tag Syntax
+
+```javascript
+<cfset MyArray = arrayNew(1)> 
+ <!--- Resize that array to the number of records in the query. ---> 
+ <cfset temp = arrayResize(MyArray, 8)> 
+  <cfdump var="#MyArray#" />
 ```

@@ -9,8 +9,23 @@ arrayToStruct(array)
 ```javascript
 returns struct
 ```
-### Member Function Syntax
+
+## Member Function Syntax
 
 ```javascript
 array.toStruct()
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| array | array | Yes |  |  |
+
+## Convert an array to a struct using arrayToStruct()
+
+```javascript
+serializeJSON(arrayToStruct(["a","b"]));
+```
+
+### Expected Result: {"2":"b","1":"a"}

@@ -9,3 +9,15 @@ ormCloseSession([datasource])
 ```javascript
 returns void
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| datasource | string | No |  | Name of the datasource for the ORM session |
+
+## Closes the Hibernate session associated with the datasource from the application.
+
+```javascript
+ormCloseSession();
+```

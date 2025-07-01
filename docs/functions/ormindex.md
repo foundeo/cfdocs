@@ -9,3 +9,12 @@ ormIndex(); ormIndex('entity_name'); ormIndex('entity_list'); ormIndex('entityOb
 ```javascript
 returns void
 ```
+
+## Script Syntax
+
+```javascript
+EmpOBJs = entityLoad('employee', {lastname='Bond'}); 
+ for(EmpObj in EmpObjs) 
+ { 
+ ormIndex(empObj); ]r]n }
+```

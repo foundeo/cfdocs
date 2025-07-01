@@ -9,3 +9,10 @@ listTrim(list [, delimiters])
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| list | string | Yes |  | a string list |
+| delimiters | string | No | , | characters that separate list elements |

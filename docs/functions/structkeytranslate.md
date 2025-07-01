@@ -9,8 +9,17 @@ structKeyTranslate(structure [, deepTranslation] [, leaveOriginalKey])
 ```javascript
 returns numeric
 ```
-### Member Function Syntax
+
+## Member Function Syntax
 
 ```javascript
 structure.keyTranslate([deepTranslation] [, leaveOriginalKey])
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| structure | struct | Yes |  |  |
+| deepTranslation | boolean | No |  |  |
+| leaveOriginalKey | boolean | No |  |  |

@@ -9,3 +9,11 @@ getLocalhostIP()
 ```javascript
 returns string
 ```
+
+## getLocalhostIP Example
+
+Here we've example to get localhost ip address using getLocalhostIP()
+
+```javascript
+writeOutput(getLocalhostIP());
+```

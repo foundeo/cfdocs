@@ -9,3 +9,10 @@ cfusion_Encrypt(string, key)
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| string | string | Yes |  |  |
+| key | string | Yes |  |  |

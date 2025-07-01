@@ -12,3 +12,11 @@ xmlChildPos(elem, childname, n)
 ```javascript
 returns numeric
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| elem | xml | Yes |  | XML element within which to search |
+| childname | string | Yes |  | XML child element for which to search |
+| n | numeric | Yes |  | Index of XML child element for which to search |

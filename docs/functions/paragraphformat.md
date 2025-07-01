@@ -11,3 +11,9 @@ paragraphFormat(String)
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| String | string | Yes |  |  |

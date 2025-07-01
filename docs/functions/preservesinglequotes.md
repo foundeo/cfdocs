@@ -9,3 +9,9 @@ preserveSingleQuotes(variable)
 ```javascript
 returns void
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| variable | string | Yes |  | Variable that contains a string in which to preserve single quotation marks. |

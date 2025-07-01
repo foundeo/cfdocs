@@ -11,3 +11,11 @@ imageFilterKernel(width, height, data)
 ```javascript
 returns any
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| width | numeric | Yes |  |  |
+| height | numeric | Yes |  |  |
+| data | any | Yes |  |  |

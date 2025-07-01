@@ -13,3 +13,10 @@ Flushes the query cache.
 ```javascript
 cfobjectcache(action="clear");
 ```
+
+## Attribute Reference
+
+| Name | Type | Required | Default | Description | Values |
+| --- | --- | --- | --- | --- | --- |
+| action | string | Yes | clear | clear: Clears queries from the cache in the Application
+ scope | /Users/garethedwards/development/github/cfdocs/docs/tags/cfobjectcache.md|clear |

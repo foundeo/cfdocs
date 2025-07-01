@@ -13,3 +13,19 @@ soundEx(str)
 ```javascript
 returns string
 ```
+
+## Argument Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| str | string | Yes |  |  |
+
+## Get Soundexes of "Robert", "Rupert" and "Rubin"
+
+Both "Robert" and "Rupert" return the same string "R163" while "Rubin" yields "R150"
+
+```javascript
+soundEx("Robert")&"/"&soundEx("Rupert")&"/"&soundEx("Rubin")
+```
+
+### Expected Result: R163/R163/R150

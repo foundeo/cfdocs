@@ -9,3 +9,19 @@ query()
 ```javascript
 returns query
 ```
+
+## Empty query
+
+Create an empty query object
+
+```javascript
+<cfscript>myQuery = query();</cfscript>
+```
+
+## Query with some data
+
+Create query object with some initial data
+
+```javascript
+<cfscript>myQuery = query(foo: [1,2,3], bar: ['a','b','c']);</cfscript>
+```

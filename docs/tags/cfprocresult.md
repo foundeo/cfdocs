@@ -16,3 +16,12 @@ Associates a query object with a result set returned by a
 ```javascript
 cfprocresult(name="");
 ```
+
+## Attribute Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| name | string | Yes |  | Name for the query result set. |
+| resultset | numeric | No |  | Names one result set, if stored procedure returns more than
+ one. |
+| maxrows | numeric | No |  | Maximum number of rows returned in result set. |
