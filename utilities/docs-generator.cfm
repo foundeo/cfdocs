@@ -35,14 +35,14 @@
 <cfset categories = {} />
 <cfloop array="#index.categories#" index="cat">
     <cfset catFile = "#dataPath#/en/#cat#.json" />
-    <cfset catMD = "#docsCategoriesPath#/#cat#.md" />
+    <cfset catMD = "#docsCategoriesPath#/#LCase(cat)#.md" />
     <cfif fileExists(catFile)>
         <cfset categories[cat] = {name="", items=[]}>
         <cfset catData = DeserializeJSON( FileRead(catFile))>
         <cfset categories[cat].name = catData.name>
         <cfset categories[cat].items = catData.related>
 
-        <cfset fileAppend(indexMD, "- #catData.name# [#cat#](categories/#cat#.md)", "UTF-8", true) />
+        <cfset fileAppend(indexMD, "- #catData.name# [#cat#](categories/#LCase(cat)#.md)", "UTF-8", true) />
         <cfset fileAppend(catMD, "## #catData.name#", "UTF-8", true) />
 
         <cfset fileAppend(catMD, "", "UTF-8", true) />
@@ -52,7 +52,7 @@
                 <cfset relContent = FileRead(relFile)>
                 <cfset relData = DeserializeJSON(relContent)>
                 <cfset relMD = "#docsPath#/#LCase(relData.type)#s/#rel#.md" />
-                <cfset fileAppend(catMD, "- #relData.name# [#rel#](../#LCase(relData.type)#s/#rel#.md)", "UTF-8", true) />
+                <cfset fileAppend(catMD, "- #relData.name# [#rel#](../#LCase(relData.type)#s/#LCase(rel)#.md)", "UTF-8", true) />
 
                 <cfif NOT FileExists(relMD)>
                     <cfset fileAppend(relMD, "## #relData.name#", "UTF-8", true) />
@@ -127,7 +127,7 @@
 
 <cfloop array="#index.guides#" index="guide">
     <cfset guideFile = "#guidesPath#/en/#guide#.md" />
-    <cfset guideMD = "#docsGuidesPath#/#guide#.md" />
+    <cfset guideMD = "#docsGuidesPath#/#LCase(guide)#.md" />
     <cfif fileExists(guideFile)>
        <cfset fileObj = fileOpen("#guideFile#","read")>
         <cfset title = fileReadLine(fileObj)>
@@ -137,7 +137,7 @@
         <cfelse>
             <cfset title = guide>
         </cfif>
-        <cfset fileAppend(indexMD, "- #title# [#guide#](../guides/#guide#.md)", "UTF-8", true) />
+        <cfset fileAppend(indexMD, "- #title# [#guide#](../guides/#LCase(guide)#.md)", "UTF-8", true) />
         <cfset fileCopy(guideFile, guideMD) />
         <cfset guides[guide] = title>
     </cfif>
