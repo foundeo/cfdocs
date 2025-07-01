@@ -1,6 +1,6 @@
 <cfset dataPath = ExpandPath("../data") />
 <cfset guidesPath = ExpandPath("../guides") />
-<cfset docsPath = ExpandPath("../markdown") />
+<cfset docsPath = ExpandPath("../docs") />
 <cfset docsFunctionsPath = "#docsPath#/functions" />
 <cfset docsTagsPath = "#docsPath#/tags" />
 <cfset docsCategoriesPath = "#docsPath#/categories" />
