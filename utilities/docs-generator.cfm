@@ -432,7 +432,7 @@
         <cfelse>
             <cfset title = guide>
         </cfif>
-        <cfset fileAppend(indexMD, "- #title# [#guide#](../guides/#LCase(guide)#.md)", "UTF-8", true) />
+        <cfset fileAppend(indexMD, "- #title# [#guide#](./guides/#LCase(guide)#.md)", "UTF-8", true) />
         <cfset fileCopy(guideFile, guideMD) />
         <cfset guides[guide] = title>
     </cfif>
