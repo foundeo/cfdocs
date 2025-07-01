@@ -52,7 +52,7 @@
                 <cfset relContent = FileRead(relFile)>
                 <cfset relData = DeserializeJSON(relContent)>
                 <cfset relMD = "#docsPath#/#LCase(relData.type)#s/#rel#.md" />
-                <cfset fileAppend(catMD, "- #relData.name# [#rel#](#LCase(relData.type)#s/#rel#.md)", "UTF-8", true) />
+                <cfset fileAppend(catMD, "- #relData.name# [#rel#](../#LCase(relData.type)#s/#rel#.md)", "UTF-8", true) />
 
                 <cfif NOT FileExists(relMD)>
                     <cfset fileAppend(relMD, "## #relData.name#", "UTF-8", true) />
@@ -137,7 +137,7 @@
         <cfelse>
             <cfset title = guide>
         </cfif>
-        <cfset fileAppend(indexMD, "- #title# [#guide#](guides/#guide#.md)", "UTF-8", true) />
+        <cfset fileAppend(indexMD, "- #title# [#guide#](../guides/#guide#.md)", "UTF-8", true) />
         <cfset fileCopy(guideFile, guideMD) />
         <cfset guides[guide] = title>
     </cfif>
