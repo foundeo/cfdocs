@@ -28,9 +28,9 @@ query.some(function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads]
 ### callback ( callback arguments )
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| row | struct | No | A struct with all of the columns for the current iteration |
-| currentRow | numeric | No | The value for the current iteration |
-| query | query | No | A reference of the original struct |
+| row | struct | No | A struct with all of the columns for the current iteration
+| currentRow | numeric | No | The value for the current iteration
+| query | query | No | A reference of the original struct
 
 ## The simple Querysome example
 

@@ -21,8 +21,7 @@ returns function
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | url | string | Yes |  | URL of the Webservice |
-| arguments | struct | No |  | Additional arguments
-(URL params are not allowed in url itself and must be set here) |
+| arguments | struct | No |  | Additional arguments<br />(URL params are not allowed in url itself and must be set here) |
 
 ## Get country data from a webspace
 

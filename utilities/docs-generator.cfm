@@ -191,9 +191,9 @@
                             </cfif>
 
                             <cfif hasValues>
-                                <cfset fileAppend(relMD, "| #tempName# | #tempType# | #tempRequired# | #tempDefault# | #tempDescription# | #tempValues# |", "UTF-8", true) />
+                                <cfset fileAppend(relMD, "| #EncodeForMarkdownCell(tempName)# | #EncodeForMarkdownCell(tempType)# | #EncodeForMarkdownCell(tempRequired)# | #EncodeForMarkdownCell(tempDefault)# | #EncodeForMarkdownCell(tempDescription)# | #tempValues# |", "UTF-8", true) />
                             <cfelse>
-                                <cfset fileAppend(relMD, "| #tempName# | #tempType# | #tempRequired# | #tempDefault# | #tempDescription# |", "UTF-8", true) />
+                                <cfset fileAppend(relMD, "| #EncodeForMarkdownCell(tempName)# | #EncodeForMarkdownCell(tempType)# | #EncodeForMarkdownCell(tempRequired)# | #EncodeForMarkdownCell(tempDefault)# | #EncodeForMarkdownCell(tempDescription)# |", "UTF-8", true) />
                             </cfif>
                             
                             
@@ -226,7 +226,7 @@
                                         <cfif structKeyExists(i, 'description') AND Len(Trim(i.description))>
                                             <cfset tempCallbackDescription = "#Trim(i.description)#">
                                         </cfif>
-                                        <cfset fileAppend(relMD, "| #tempCallbackName# | #tempCallbackType# | #tempCallbackRequired# | #tempCallbackDescription# |", "UTF-8", true) />
+                                        <cfset fileAppend(relMD, "| #EncodeForMarkdownCell(tempCallbackName)# | #EncodeForMarkdownCell(tempCallbackType)# | #EncodeForMarkdownCell(tempCallbackRequired)# | #EncodeForMarkdownCell(tempCallbackDescription)#", "UTF-8", true) />
                                     </cfloop>
                                 </cfif>
 
@@ -437,6 +437,17 @@
         <cfset guides[guide] = title>
     </cfif>
 </cfloop>
+
+<!--- // TryCF Editor Scripts --->
+<cffunction name="EncodeForMarkdownCell" output="false">
+	<cfargument name="value" type="string" required="true">
+
+	<cfset var result = ARGUMENTS.value>
+
+	<cfset result = ReReplace(result, "\n", "<br />", "ALL")>
+	
+	<cfreturn result>
+</cffunction>
 
 <!--- // TryCF Editor Scripts --->
 <cffunction name="replaceScript" output="false">

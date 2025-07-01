@@ -29,16 +29,9 @@ cfmessagebox(type="alert", message="", name="");
 | multiline | boolean | No | NO | Applies for prompt action only. Signify whether prompt is textarea(multiliner) or oneliner(textField)Default=false |
 | name | string | Yes |  | Name of the messageBox |
 | bodyStyle | string | No |  | A CSS style specification for the body of the message box. As a general rule, use this attribute to set color and font styles |
-| buttonType | string | No |  | Applies to the control type - confirm
-The buttons to display on the message box |
-| icon | string | No |  | Specifies the following CSS classes
-error: Provides the error icon. You can use this icon when displaying error messages.
-info: Provides the info icon. You can use this icon when displaying any information.
-question: Provides the question icon. You can use this icon in a confirmation message box that prompts a user response.
-warning: Provides the warning icon. You can use this icon when displaying a warning message |
+| buttonType | string | No |  | Applies to the control type - confirm<br />The buttons to display on the message box |
+| icon | string | No |  | Specifies the following CSS classes<br />error: Provides the error icon. You can use this icon when displaying error messages.<br />info: Provides the info icon. You can use this icon when displaying any information.<br />question: Provides the question icon. You can use this icon in a confirmation message box that prompts a user response.<br />warning: Provides the warning icon. You can use this icon when displaying a warning message |
 | modal | boolean | No |  | A Boolean value that specifies if the message box should be a modal window |
 | width | numeric | No |  | Width of the message box in pixels. |
-| x | numeric | No |  | The X (horizontal) coordinate of the upper-left corner of the message box .
-ColdFusion ignores this attribute if you do not set the y attribute. |
-| y | numeric | No |  | The Y (vertical) coordinate of the upper-left corner of the message box.
-ColdFusion ignores this attribute if you do not set the x attribute. |
+| x | numeric | No |  | The X (horizontal) coordinate of the upper-left corner of the message box .<br />ColdFusion ignores this attribute if you do not set the y attribute. |
+| y | numeric | No |  | The Y (vertical) coordinate of the upper-left corner of the message box.<br />ColdFusion ignores this attribute if you do not set the x attribute. |

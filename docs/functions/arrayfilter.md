@@ -28,9 +28,9 @@ someArray.filter(function(item [,index, array]){} [, parallel] [, maxThreads])
 ### callback ( callback arguments )
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| value | any | No | The value for the current iteration |
-| index | numeric | No | The current index for the iteration |
-| array | array | No | A reference of the original array |
+| value | any | No | The value for the current iteration
+| index | numeric | No | The current index for the iteration
+| array | array | No | A reference of the original array
 
 ## Simple numeric comparison
 

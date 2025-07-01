@@ -20,19 +20,8 @@ cftimer() {}
 
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
-| label | string | No |  | Label to display with timing information.
- Default: " " |  |
-| type | string | No | debug | - inline: displays timing information inline, following the
- resulting HTML.
- - outline: displays timing information and also displays a line
- around the output produced by the timed code. The browser
- must support the FIELDSET tag to display the outline.
- - comment: displays timing information in an HTML comment
- in the format <!-- label: elapsed-time ms -->. The default label
- is cftimer.
- - debug: displays timing information in the debug output
- under the heading CFTimer Times.
- Default: debug | /Users/garethedwards/development/github/cfdocs/docs/tags/cftimer.md|debug |
+| label | string | No |  | Label to display with timing information.<br /> Default: " " |  |
+| type | string | No | debug | - inline: displays timing information inline, following the<br /> resulting HTML.<br /> - outline: displays timing information and also displays a line<br /> around the output produced by the timed code. The browser<br /> must support the FIELDSET tag to display the outline.<br /> - comment: displays timing information in an HTML comment<br /> in the format <!-- label: elapsed-time ms -->. The default label<br /> is cftimer.<br /> - debug: displays timing information in the debug output<br /> under the heading CFTimer Times.<br /> Default: debug | /Users/garethedwards/development/github/cfdocs/docs/tags/cftimer.md|debug |
 
 ## Tag version
 

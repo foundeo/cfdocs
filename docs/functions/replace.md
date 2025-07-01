@@ -23,8 +23,7 @@ string.replace(substring1, obj[, scope])
 | string | string | Yes |  | String to search |
 | substring1 | string | Yes |  | Substring to find within string |
 | obj | any | Yes |  | String to replace substring1 with. As of CF2016+ you can also pass a callback function in this argument `function(transform, position, original)`. |
-| scope | string | No | one | * one: replace the first occurrence
- * all: replace all occurrences |
+| scope | string | No | one | * one: replace the first occurrence<br /> * all: replace all occurrences |
 | start | numeric | No | 1 | CF2021+ Position to start searching in the string. |
 
 ## Replace uppercase 'U' with lowercase 'u'

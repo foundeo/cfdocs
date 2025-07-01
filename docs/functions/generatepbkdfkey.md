@@ -16,8 +16,7 @@ returns string
 | --- | --- | --- | --- | --- |
 | algorithm | string | Yes |  | Hashing algorithm used for generating key |
 | passphrase | string | Yes |  | Passphrase used for the key. KEEP THIS SECRET. |
-| salt | string | Yes |  | A string which will be added to the passphrase before encryption.
- The standard recommends a salt length of at least 64 bits (8 characters). The salt needs to be generated using a pseudo-random number generator (e.g. SHA1PRNG) |
+| salt | string | Yes |  | A string which will be added to the passphrase before encryption.<br /> The standard recommends a salt length of at least 64 bits (8 characters). The salt needs to be generated using a pseudo-random number generator (e.g. SHA1PRNG) |
 | iterations | numeric | Yes |  | The number of PBKDEF iterations to perform. A minimum recommended value is 1000 |
 | keySize | numeric | Yes |  | The length in bits of the key to generate |
 

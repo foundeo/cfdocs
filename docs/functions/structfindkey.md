@@ -22,12 +22,9 @@ struct.findKey( value, scope )
 
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
-| top | any | Yes |  | CFML object (structure or array) from which to start
- search. This attribute requires an object, not a name of
- an object. |  |
+| top | any | Yes |  | CFML object (structure or array) from which to start<br /> search. This attribute requires an object, not a name of<br /> an object. |  |
 | value | string | Yes |  | String or a variable that contains one for which to search. |  |
-| scope | string | Yes |  | * one: returns one matching key. Default.
- * all: returns all matching keys | /Users/garethedwards/development/github/cfdocs/docs/functions/structfindkey.md|all |
+| scope | string | Yes |  | * one: returns one matching key. Default.<br /> * all: returns all matching keys | /Users/garethedwards/development/github/cfdocs/docs/functions/structfindkey.md|all |
 
 ## Find first match for a nested struct key
 

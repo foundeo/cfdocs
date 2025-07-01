@@ -17,11 +17,7 @@ returns boolean
 | namespace | string | Yes |  | A webservice object as returned from the cfobject tag or the createobject function |
 | name | string | Yes |  | Name of the SOAP header |
 | value | string | Yes |  | Value of the SOAP header |
-| mustUnderstand | boolean | No |  | The mustUnderstand attribute indicates whether processing of the header is optional or mandatory.
-This basically translates to the node trying to find an appropriate handler that matches the header
-and proceed with processing the message in a manner consistent with its specification. If it can't find an appropriate handler
-it must return an error and stop further processing. If mustUnderstand is set to `true`
-the node is not allowed to ignore it. |
+| mustUnderstand | boolean | No |  | The mustUnderstand attribute indicates whether processing of the header is optional or mandatory.<br />This basically translates to the node trying to find an appropriate handler that matches the header<br />and proceed with processing the message in a manner consistent with its specification. If it can't find an appropriate handler<br />it must return an error and stop further processing. If mustUnderstand is set to `true`<br />the node is not allowed to ignore it. |
 
 ## Set the username header as a string and get the first header as an object (string) and as XML
 

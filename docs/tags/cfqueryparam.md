@@ -22,19 +22,12 @@ cfqueryparam();
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| value | string | No |  | Value that CFML passes to the right of the comparison operator in a where clause.
-
- If CFSQLType is a date or time option, ensure that the date value uses your DBMS-specific date format. Use the CreateODBCDateTime or DateFormat and TimeFormat functions to format the date value. |
-| cfsqltype | string | No |  | SQL type that parameter (any type) is bound to. As of CF11+ or Lucee4.5+ you can omit the `cf_sql_` prefix. 
-See [CFSqlType Cheatsheet](https://cfdocs.org/cfsqltype-cheatsheet) for a mapping of CFSQL data types to DBMS data types. |
+| value | string | No |  | Value that CFML passes to the right of the comparison operator in a where clause.<br /><br /> If CFSQLType is a date or time option, ensure that the date value uses your DBMS-specific date format. Use the CreateODBCDateTime or DateFormat and TimeFormat functions to format the date value. |
+| cfsqltype | string | No |  | SQL type that parameter (any type) is bound to. As of CF11+ or Lucee4.5+ you can omit the `cf_sql_` prefix. <br />See [CFSqlType Cheatsheet](https://cfdocs.org/cfsqltype-cheatsheet) for a mapping of CFSQL data types to DBMS data types. |
 | maxlength | numeric | No |  | Maximum length of parameter. |
 | scale | numeric | No | 0 | Number of decimal places in parameter. Applies to `CF_SQL_NUMERIC` and `CF_SQL_DECIMAL`. |
-| null | boolean | No |  | Whether parameter is passed as a `NULL` value.
-
- Yes: ignores the `value` attribute and passes `NULL`
- No: passes the `value` attribute |
-| list | boolean | No |  | Yes: The value attribute value is a delimited list
- No: it is not |
+| null | boolean | No |  | Whether parameter is passed as a `NULL` value.<br /><br /> Yes: ignores the `value` attribute and passes `NULL`<br /> No: passes the `value` attribute |
+| list | boolean | No |  | Yes: The value attribute value is a delimited list<br /> No: it is not |
 | separator | string | No |  | Character that separates values in list, in value attribute. |
 
 ## Basic example

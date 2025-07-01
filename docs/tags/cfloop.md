@@ -22,9 +22,7 @@ for (i = 1; i <= 10; i++) { }
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| index | string | No |  | Index value. CFML sets it to from value and
- increments or decrements by step value, until it equals to
- value. |
+| index | string | No |  | Index value. CFML sets it to from value and<br /> increments or decrements by step value, until it equals to<br /> value. |
 | from | numeric | No |  | Beginning value of index. |
 | to | numeric | No |  | Ending value of index. |
 | step | numeric | No |  | Step by which to increment or decrement the index value. |
@@ -36,19 +34,11 @@ for (i = 1; i <= 10; i++) { }
 | endrow | numeric | No |  | Last row of query that is included in the loop. |
 | list | string | No |  | The list attribute is used with the `index` (or `item` in Lucee or CF2016+) attribute to loop over a list, variable, or filename; contains a list |
 | delimiters | string | No | , | Character(s) that separates items in list |
-| collection | any | No |  | The collection attribute is used with the item attribute.
- often to loop over a structure |
-| item | string | No |  | The item attribute is used with the collection attribute often to loop over a structure or array
-
-NOTE: If you have item attribute without index, item represents the key. In Lucee4.5+ you can use item with index, but keep in mind, that item will represent the value whereas index will be the key now! |
+| collection | any | No |  | The collection attribute is used with the item attribute.<br /> often to loop over a structure |
+| item | string | No |  | The item attribute is used with the collection attribute often to loop over a structure or array<br /><br />NOTE: If you have item attribute without index, item represents the key. In Lucee4.5+ you can use item with index, but keep in mind, that item will represent the value whereas index will be the key now! |
 | array | array | No |  | CF8+ An array. |
-| characters | numeric | No |  | CF8+ The number of characters to read during each iteration of the loop from the file specified in the file attribute. 
-If the value of the characters attribute is more than the number of characters in the file, 
-ColdFusion uses the number of characters in the file. |
-| file | string | No |  | CF8+ The absolute path and filename of the text file to read, one line at a time. 
-This is helpful when reading large text files, because you can reuse the value of the index variable, 
-which contains the current line of the file. 
-When the loop completes, ColdFusion closes the file. |
+| characters | numeric | No |  | CF8+ The number of characters to read during each iteration of the loop from the file specified in the file attribute. <br />If the value of the characters attribute is more than the number of characters in the file, <br />ColdFusion uses the number of characters in the file. |
+| file | string | No |  | CF8+ The absolute path and filename of the text file to read, one line at a time. <br />This is helpful when reading large text files, because you can reuse the value of the index variable, <br />which contains the current line of the file. <br />When the loop completes, ColdFusion closes the file. |
 | times | numeric | No |  | Lucee5+ If you want to have a specific iterations you can simply use `times` param instead of `from` and `to` |
 
 ## For Loop (Script Syntax)

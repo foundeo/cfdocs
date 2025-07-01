@@ -18,10 +18,7 @@ returns struct
 
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
-| includeBody | boolean | Yes | false | Whether return the body or not.
-
-NOTE: This can only be done once.
-If you expect the body to contain content which causes an exception in ColdFusion, set it to false as well and process it yourself. | /Users/garethedwards/development/github/cfdocs/docs/functions/gethttprequestdata.md|false |
+| includeBody | boolean | Yes | false | Whether return the body or not.<br /><br />NOTE: This can only be done once.<br />If you expect the body to contain content which causes an exception in ColdFusion, set it to false as well and process it yourself. | /Users/garethedwards/development/github/cfdocs/docs/functions/gethttprequestdata.md|false |
 
 ## GetHttpRequestData Example
 

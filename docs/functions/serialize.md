@@ -16,9 +16,7 @@ returns string
 | --- | --- | --- | --- | --- |
 | object | any | Yes |  | An object to be serialized. |
 | type | string | Yes |  | A type to which the object will be serialized. ColdFusion, by default supports XML and JSON formats. You can also implement support for other types in the CustomSerializer CFC. |
-| useCustomSerializer | boolean | No | YES | Whether to use the custom serializer or not. The custom serializer will be always used for XML deserialization.
-If false, the XML/JSON deserialization will be done using the default ColdFusion behavior.
-If any other type is passed with useCustomSerializer as false, then TypeNotSupportedException will be thrown. |
+| useCustomSerializer | boolean | No | YES | Whether to use the custom serializer or not. The custom serializer will be always used for XML deserialization.<br />If false, the XML/JSON deserialization will be done using the default ColdFusion behavior.<br />If any other type is passed with useCustomSerializer as false, then TypeNotSupportedException will be thrown. |
 
 ## Serialize with Lucee's default serializer (Script syntax)
 

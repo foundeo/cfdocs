@@ -21,8 +21,7 @@ date.day()
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| date | date | Yes |  | Date or datetime object (100AD-9999AD).
-When passing a datetime object as a string, enclose it in quotation marks. Otherwise, it is interpreted as a numeric representation of a datetime object. |
+| date | date | Yes |  | Date or datetime object (100AD-9999AD).<br />When passing a datetime object as a string, enclose it in quotation marks. Otherwise, it is interpreted as a numeric representation of a datetime object. |
 
 ## Determines the day of the month
 

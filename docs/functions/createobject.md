@@ -28,12 +28,7 @@ returns any
 | servername | string | Yes |  |  |
 | component_name | string | Yes |  |  |
 | urltowsdl | string | Yes |  | WSDL file URL; location of web service |
-| portname | string | No |  | The port name for the web service. This value is case-sensitive
- and corresponds to the port element's name attribute under the
- service element.
- Specify this parameter if the web service contains multiple ports.
- If no port name is specified, ColdFusion uses the first port found
- in the WSDL. |
+| portname | string | No |  | The port name for the web service. This value is case-sensitive<br /> and corresponds to the port element's name attribute under the<br /> service element.<br /> Specify this parameter if the web service contains multiple ports.<br /> If no port name is specified, ColdFusion uses the first port found<br /> in the WSDL. |
 | bundleName | string | No |  | Bundle where the object has to be located |
 | bundleVersion | string | No |  | Specific version to |
 

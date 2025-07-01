@@ -24,16 +24,9 @@ interface displayname="My Interface" {
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| displayName | string | No |  | A value to be displayed when using introspection to
- show a descriptive name for the interface. (optional) |
-| extends | string | No |  | A comma delimited list of one or more interfaces that this interface extends.
- Any CFC that implements an interface must also implement all the functions
- in the interfaces specified by this property.
- If an interface extends another interface, and the child interface specifies
- a function with the same name as one in the parent interface, both functions
- must have the same attributes; otherwise ColdFusion generates an error. (optional) |
-| hint | string | No |  | Text to be displayed when using introspection to show information about the interface.
- The hint attribute value follows the syntax line in the function description. (optional) |
+| displayName | string | No |  | A value to be displayed when using introspection to<br /> show a descriptive name for the interface. (optional) |
+| extends | string | No |  | A comma delimited list of one or more interfaces that this interface extends.<br /> Any CFC that implements an interface must also implement all the functions<br /> in the interfaces specified by this property.<br /> If an interface extends another interface, and the child interface specifies<br /> a function with the same name as one in the parent interface, both functions<br /> must have the same attributes; otherwise ColdFusion generates an error. (optional) |
+| hint | string | No |  | Text to be displayed when using introspection to show information about the interface.<br /> The hint attribute value follows the syntax line in the function description. (optional) |
 
 ## Script Syntax
 

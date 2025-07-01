@@ -16,11 +16,7 @@ returns void
 | --- | --- | --- | --- | --- |
 | sql | string | Yes |  | SQL to execute |
 | listener | function | Yes |  | listener function that will be called with the data of every single row. if returns false, execution is stopped. |
-| params | any | No |  | Array or Struct of parameter values. 
-    			When passing an array use ? as place holders. 
-    			When passing a struct use :keyName where keyName is the name of the key in the structure corresponding to
-    			the parameter. 
-    			The struct or array can be a struct with keys such as the following: cfsqltype, list |
+| params | any | No |  | Array or Struct of parameter values. <br />    			When passing an array use ? as place holders. <br />    			When passing a struct use :keyName where keyName is the name of the key in the structure corresponding to<br />    			the parameter. <br />    			The struct or array can be a struct with keys such as the following: cfsqltype, list |
 | options | struct | No |  | Struct containing query options, all cfquery tag attributes are supported except the name attribute. |
 
 ## QueryLazy Example

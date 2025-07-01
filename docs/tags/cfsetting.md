@@ -18,15 +18,9 @@ setting enablecfoutputonly=true|false;
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| enablecfoutputonly | boolean | No | false | true: Blocks output of content that is outside cfoutput tags.
-false: Displays content that is outside cfoutput tags. |
-| showdebugoutput | boolean | No | true | true: If debugging is enabled in the Administrator, displays
- debugging information
- false: suppresses debugging information that would otherwise
- display at end of generated page. |
-| requesttimeout | numeric | No |  | Integer; number of seconds. Time limit, after which
- CFML processes the page as an unresponsive thread.
- Overrides the timeout set in the CFML Administrator. |
+| enablecfoutputonly | boolean | No | false | true: Blocks output of content that is outside cfoutput tags.<br />false: Displays content that is outside cfoutput tags. |
+| showdebugoutput | boolean | No | true | true: If debugging is enabled in the Administrator, displays<br /> debugging information<br /> false: suppresses debugging information that would otherwise<br /> display at end of generated page. |
+| requesttimeout | numeric | No |  | Integer; number of seconds. Time limit, after which<br /> CFML processes the page as an unresponsive thread.<br /> Overrides the timeout set in the CFML Administrator. |
 
 ## Script Syntax
 

@@ -20,32 +20,7 @@ cferror(type="exception", template="");
 
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
-| type | string | Yes |  | Type of error that the custom error page handles. The type
- also determines how CFML handles the error page. For
- more information, see Specifying a custom error page in
- Developing CFML MX Applications.
-
- exception: a exception of the type specified by the
- exception attribute.
- validation: errors recognized by sever-side type
- validation.
- request: any encountered error.
- monitor: deprecated. | /Users/garethedwards/development/github/cfdocs/docs/tags/cferror.md|monitor |
-| template | string | Yes |  | Relative path to the custom error page.
- (A CFML page was formerly called a template.) |  |
-| mailto | string | No |  | An E-mail address. This attribute is available on the
- error page as the variable error.mailto. CFML does
- not automatically send anything to this address. |  |
-| exception | string | No | any | Type of exception that the tag handles:
-
- application: application exceptions
- database: database exceptions
- template: CFML page exceptions
- security: security exceptions
- object: object exceptions
- missingInclude: missing include file exceptions
- expression: expression exceptions
- lock: lock exceptions
- custom_type: developer-defined exceptions, defined in the
- cfthrow tag
- any: all exception types | /Users/garethedwards/development/github/cfdocs/docs/tags/cferror.md|custom_type |
+| type | string | Yes |  | Type of error that the custom error page handles. The type<br /> also determines how CFML handles the error page. For<br /> more information, see Specifying a custom error page in<br /> Developing CFML MX Applications.<br /><br /> exception: a exception of the type specified by the<br /> exception attribute.<br /> validation: errors recognized by sever-side type<br /> validation.<br /> request: any encountered error.<br /> monitor: deprecated. | /Users/garethedwards/development/github/cfdocs/docs/tags/cferror.md|monitor |
+| template | string | Yes |  | Relative path to the custom error page.<br /> (A CFML page was formerly called a template.) |  |
+| mailto | string | No |  | An E-mail address. This attribute is available on the<br /> error page as the variable error.mailto. CFML does<br /> not automatically send anything to this address. |  |
+| exception | string | No | any | Type of exception that the tag handles:<br /><br /> application: application exceptions<br /> database: database exceptions<br /> template: CFML page exceptions<br /> security: security exceptions<br /> object: object exceptions<br /> missingInclude: missing include file exceptions<br /> expression: expression exceptions<br /> lock: lock exceptions<br /> custom_type: developer-defined exceptions, defined in the<br /> cfthrow tag<br /> any: all exception types | /Users/garethedwards/development/github/cfdocs/docs/tags/cferror.md|custom_type |

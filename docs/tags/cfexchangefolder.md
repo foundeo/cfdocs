@@ -28,9 +28,7 @@ cfexchangefolder(action="", folderID="", connection="", name="");
 | result | variableName | No |  | (create/copy/move) The name of a query variable that contains the result returned from the exchange server when one of the action is performed. |
 | destinationFolderID | string | No |  | (copy/move) A case-sensitive Exchange UID value that uniquely identifies the destination folder. |
 | sourceFolderID | string | No |  | (copy/move) The UID that is used to identify the folder from which you copy or move folders to the destination folder. |
-| deleteType | string | No | moveToDeletedItems | (delete/move) - hardDelete: Removes a folder permanently from the Exchange server.
-- softDelete: Moves a folder to the dumpster in Exchange server, if dumpster is enabled.
-- moveToDeletedItems: Moves a folder to the deleted items folder. |
+| deleteType | string | No | moveToDeletedItems | (delete/move) - hardDelete: Removes a folder permanently from the Exchange server.<br />- softDelete: Moves a folder to the dumpster in Exchange server, if dumpster is enabled.<br />- moveToDeletedItems: Moves a folder to the deleted items folder. |
 | deleteSubFolders | boolean | No | NO | (empty) If true, deletes the subfolder. |
 | folder | string | No |  | (create/modify) A struct that contains the required information of the folder that has to be created or modified, such as display name and folder class. |
 

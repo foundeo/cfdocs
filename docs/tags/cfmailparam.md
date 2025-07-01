@@ -20,24 +20,13 @@ cfmailparam();
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| file | string | No |  | Attaches file to a message. Mutually exclusive with name
- attribute. The file is MIME encoded before sending. |
-| type | string | No |  | The MIME media type of the part. Can be a can be valid MIME
- media type |
-| name | string | No |  | Name of header. Case-insensitive. Mutually exclusive with
- file attribute.
- The values listed are from rfc2822 |
+| file | string | No |  | Attaches file to a message. Mutually exclusive with name<br /> attribute. The file is MIME encoded before sending. |
+| type | string | No |  | The MIME media type of the part. Can be a can be valid MIME<br /> media type |
+| name | string | No |  | Name of header. Case-insensitive. Mutually exclusive with<br /> file attribute.<br /> The values listed are from rfc2822 |
 | value | string | No |  | Value of the header. |
-| contentID | string | No |  | The Identifier for the attached file. This ID should
- be globally unique and is used to identify the file in
- an IMG or other tag in the mail body that references
- the file content. |
-| disposition | string | No | attachment | How the attached file is to be handled. Can be one
- of the following:
- - attachment: present the file as an attachment
- - inline: display the file contents in the message |
-| content | string | No |  | Lets you send the contents of a
-ColdFusion variable as an attachment |
+| contentID | string | No |  | The Identifier for the attached file. This ID should<br /> be globally unique and is used to identify the file in<br /> an IMG or other tag in the mail body that references<br /> the file content. |
+| disposition | string | No | attachment | How the attached file is to be handled. Can be one<br /> of the following:<br /> - attachment: present the file as an attachment<br /> - inline: display the file contents in the message |
+| content | string | No |  | Lets you send the contents of a<br />ColdFusion variable as an attachment |
 | remove | boolean | No |  | Tells ColdFusion to remove any attachments after successful mail delivery. |
 | filename | string | No |  | CF2016+ Lucee5.1.0.17+ The file name of the attachment as seen by the recipient. |
 

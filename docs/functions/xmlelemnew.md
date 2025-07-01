@@ -16,8 +16,7 @@ returns xml
 | --- | --- | --- | --- | --- |
 | xmlobj | xml | Yes |  | The name of an XML object. An XML document or an element. |
 | namespace | string | No |  | URI of the namespace to which this element belongs. |
-| childname | string | Yes |  | The name of the element to create. This element becomes a
- child element of xmlObj in the tree. |
+| childname | string | Yes |  | The name of the element to create. This element becomes a<br /> child element of xmlObj in the tree. |
 
 ## Simple xmlelemnew Example
 

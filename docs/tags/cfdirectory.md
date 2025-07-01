@@ -21,12 +21,9 @@ directoryList(".", false, " ");
 | action | string | No | list | Action to perform | /Users/garethedwards/development/github/cfdocs/docs/tags/cfdirectory.md|rename |
 | directory | string | Yes |  | Absolute pathname of directory against which to perform action. |  |
 | name | string | No |  | Name for output record set. |  |
-| filter | string | No |  | Filter applied to returned names. For example: *.cfm
-You can use a pipe ("|") delimiter to specify multiple filters. For example: *.cfm|*.cfc
-Filter pattern matches are case-sensitive on UNIX and Linux. |  |
+| filter | string | No |  | Filter applied to returned names. For example: *.cfm<br />You can use a pipe ("|") delimiter to specify multiple filters. For example: *.cfm|*.cfc<br />Filter pattern matches are case-sensitive on UNIX and Linux. |  |
 | mode | string | No |  | Applies only to UNIX and Linux. Permissions. Octal values of Unix chmod command. Assigned to owner, group, and other, respectively. |  |
-| sort | string | No | asc | Query column(s) by which to sort directory listing.
- Delimited list of columns from query output. | /Users/garethedwards/development/github/cfdocs/docs/tags/cfdirectory.md|desc |
+| sort | string | No | asc | Query column(s) by which to sort directory listing.<br /> Delimited list of columns from query output. | /Users/garethedwards/development/github/cfdocs/docs/tags/cfdirectory.md|desc |
 | newdirectory | string | No |  | New name for directory. |  |
 | recurse | boolean | No | NO | Whether ColdFusion performs the action on subdirectories. |  |
 | type | string | No | all |  | /Users/garethedwards/development/github/cfdocs/docs/tags/cfdirectory.md|all |

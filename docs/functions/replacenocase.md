@@ -23,8 +23,7 @@ string.replaceNoCase(substring1, callback[, scope])
 | string | string | Yes |  | A string (or variable that contains one) within which to replace substring |
 | substring1 | string | Yes |  | A string (or variable that contains one) to replace, if found. |
 | callback | any | Yes |  | String to replace substring1 with. As of CF2018+ you can also pass a callback function in this argument `function(transform, position, original)`. |
-| scope | string | No |  | * one: Replace the first occurrence (default)
- * all: Replace all occurrences |
+| scope | string | No |  | * one: Replace the first occurrence (default)<br /> * all: Replace all occurrences |
 | start | numeric | No | 1 | CF2021+ Position to start searching in the string. |
 
 ## Script Syntax

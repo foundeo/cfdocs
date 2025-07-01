@@ -21,10 +21,7 @@ transaction { }
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| action | string | No | begin | `begin`: the start of the block of code to execute
-`commit`: commits a pending transaction
-`rollback`: rolls back a pending transaction
-`setsavepoint`: Marks a place within the transaction as a savepoint. |
+| action | string | No | begin | `begin`: the start of the block of code to execute<br />`commit`: commits a pending transaction<br />`rollback`: rolls back a pending transaction<br />`setsavepoint`: Marks a place within the transaction as a savepoint. |
 | isolation | string | No |  | ODBC lock type. |
 | savepoint | string | No |  | The name of the savepoint in the transaction. Used with `action="setsavepoint"` or `action="rollback"` |
 | nested | boolean | No |  | specifies whether transaction is nested or not |

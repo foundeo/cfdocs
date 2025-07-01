@@ -14,8 +14,7 @@ returns string
 
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
-| algorithm | string | No |  | The encryption algorithm used to generate the key. 
-NOTE: You cannot use `generateSecretKey()` to create a key for the `CFMX_COMPAT` default algorithm in `encrypt()` and `decrypt()` functions. | /Users/garethedwards/development/github/cfdocs/docs/functions/generatesecretkey.md|DESEDE |
+| algorithm | string | No |  | The encryption algorithm used to generate the key. <br />NOTE: You cannot use `generateSecretKey()` to create a key for the `CFMX_COMPAT` default algorithm in `encrypt()` and `decrypt()` functions. | /Users/garethedwards/development/github/cfdocs/docs/functions/generatesecretkey.md|DESEDE |
 | keysize | numeric | No | 128 | Number of bits requested in the key for the specified algorithm (when allowed by JDK). | /Users/garethedwards/development/github/cfdocs/docs/functions/generatesecretkey.md|512 |
 
 ## Generate an AES 128 bit Key

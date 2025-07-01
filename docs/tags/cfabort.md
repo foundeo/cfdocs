@@ -21,11 +21,8 @@ abort;
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| showerror | string | No |  | Error to display, in a standard CFML error page,
- when tag executes |
-| attributecollection | string | No |  | You can specify this tag's attributes in an attributeCollection whose value is a 
- structure. Specify the structure name in the attributeCollection and use the tag‚ 
- attribute names as structure keys. |
+| showerror | string | No |  | Error to display, in a standard CFML error page,<br /> when tag executes |
+| attributecollection | string | No |  | You can specify this tag's attributes in an attributeCollection whose value is a <br /> structure. Specify the structure name in the attributeCollection and use the tag‚ <br /> attribute names as structure keys. |
 
 ## Example of using abort() to stop processing after an error occurs
 

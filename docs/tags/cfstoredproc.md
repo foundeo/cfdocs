@@ -21,21 +21,13 @@ cfstoredproc(procedure="");
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | procedure | string | Yes |  | Name of stored procedure on database server. |
-| datasource | string | No |  | Name of data source that points to database that contains
- stored procedure. |
+| datasource | string | No |  | Name of data source that points to database that contains<br /> stored procedure. |
 | username | string | No |  | Overrides username in data source setup. |
 | password | string | No |  | Overrides password in data source setup. |
-| blockfactor | numeric | No |  | Maximum number of rows to get at a time from server.
- Range is 1 to 100. |
-| debug | boolean | No | NO | Yes: Lists debug information on each statement
- No: does not |
-| returncode | boolean | No | NO | Yes: Tag populates cfstoredproc.statusCode with status
- code returned by stored procedure.
- No: does not |
-| result | variableName | No |  | Specifies a name for the structure in which cfstoredproc
- returns the statusCode and ExecutionTime variables. If
- set, this value replaces cfstoredproc as the prefix to
- use when accessing those variables. |
+| blockfactor | numeric | No |  | Maximum number of rows to get at a time from server.<br /> Range is 1 to 100. |
+| debug | boolean | No | NO | Yes: Lists debug information on each statement<br /> No: does not |
+| returncode | boolean | No | NO | Yes: Tag populates cfstoredproc.statusCode with status<br /> code returned by stored procedure.<br /> No: does not |
+| result | variableName | No |  | Specifies a name for the structure in which cfstoredproc<br /> returns the statusCode and ExecutionTime variables. If<br /> set, this value replaces cfstoredproc as the prefix to<br /> use when accessing those variables. |
 
 ## Tag Syntax
 

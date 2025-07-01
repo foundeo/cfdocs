@@ -18,8 +18,7 @@ returns boolean
 | value | any | Yes |  | The value to test. |
 | min | numeric | No |  | The minimum valid value; used only for range validation. |
 | max | numeric | No |  | The maximum valid value; used only for range validation. |
-| pattern | string | No |  | A regular expression that the parameter must match;
- used only for regex or regular_expression validation. |
+| pattern | string | No |  | A regular expression that the parameter must match;<br /> used only for regex or regular_expression validation. |
 
 ## Check to see if a 235 is an integer
 

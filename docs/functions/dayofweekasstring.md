@@ -14,15 +14,7 @@ returns string
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| dayOfWeek | numeric | Yes |  | Only values from 1 to 7 are valid.
-Week starting with 1 for Sunday and ends with 7 for Saturday:
-	- 1 = Sunday 
-	- 2 = Monday 
-	- 3 = Tuesday 
-	- 4 = Wednesday 
-	- 5 = Thursday 
-	- 6 = Friday 
-	- 7 = Saturday |
+| dayOfWeek | numeric | Yes |  | Only values from 1 to 7 are valid.<br />Week starting with 1 for Sunday and ends with 7 for Saturday:<br />	- 1 = Sunday <br />	- 2 = Monday <br />	- 3 = Tuesday <br />	- 4 = Wednesday <br />	- 5 = Thursday <br />	- 6 = Friday <br />	- 7 = Saturday |
 | locale | string | No | Default JVM Locale | Locale to use instead of the default JVM locale. |
 
 ## Get Sunday

@@ -18,10 +18,7 @@ cfflush();
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| interval | numeric | No |  | Flushes output each time this number of bytes becomes
- available. HTML headers, and data that is already
- available when the tag is executed, are omitted from the
- count. |
+| interval | numeric | No |  | Flushes output each time this number of bytes becomes<br /> available. HTML headers, and data that is already<br /> available when the tag is executed, are omitted from the<br /> count. |
 
 ## Simple Script Example
 

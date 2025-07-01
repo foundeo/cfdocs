@@ -44,7 +44,6 @@ cfmap();
 | markerWindowContent | string | No |  | Static inner HTML markup to be displayed in the infowindow opened when the marker is clicked. This is mutually exclusive with the markerbind attribute |
 | markerIcon | string | No |  | Location of the icon to use for the marker. |
 | markerColor | string | No |  | marker color in hexadecimal value. |
-| onError | string | No |  | The JavaScript function to run when there is a Google map API error.
-The JavaScript function is passed with two parameters, Google map status code and error message. |
+| onError | string | No |  | The JavaScript function to run when there is a Google map API error.<br />The JavaScript function is passed with two parameters, Google map status code and error message. |
 | showCenterMarker | boolean | No | YES | Whether to display the marker icon that identifies the map center |
 | showScale | boolean | No | YES | Whether to show scale control |

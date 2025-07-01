@@ -14,12 +14,7 @@ returns void
 
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
-| cacheName | string | No |  | Name of the cache you want to clear. If not specified it will clear all caches.
- Some cachenames are aliases:
-page = template
-cfc, class = component
-ct = customtag
-object = query | /Users/garethedwards/development/github/cfdocs/docs/functions/systemcacheclear.md|function |
+| cacheName | string | No |  | Name of the cache you want to clear. If not specified it will clear all caches.<br /> Some cachenames are aliases:<br />page = template<br />cfc, class = component<br />ct = customtag<br />object = query | /Users/garethedwards/development/github/cfdocs/docs/functions/systemcacheclear.md|function |
 
 ## Clear all caches
 

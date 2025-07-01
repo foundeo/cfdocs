@@ -18,11 +18,7 @@ returns any
 | width | numeric | No |  | The width of the new image. Valid when the height is specified and the source is not. |
 | height | numeric | No |  | The height of the new image. Valid when the width is specified and the source is not. |
 | imagetype | string | No |  | The type of the image to create (Valid only when width and height are specified), |
-| canvascolor | string | No | black | Color of the image canvas. Possible values are:
-
-Hexadecimal value of RGB color. For example, specify the color white as ##FFFFFF or FFFFFF.
-String value of color (for example, 'black', 'red', 'green').
-List of three numbers for (R,G,B) values. Each value must be in the range 0-255. |
+| canvascolor | string | No | black | Color of the image canvas. Possible values are:<br /><br />Hexadecimal value of RGB color. For example, specify the color white as ##FFFFFF or FFFFFF.<br />String value of color (for example, 'black', 'red', 'green').<br />List of three numbers for (R,G,B) values. Each value must be in the range 0-255. |
 
 ## Tag Syntax
 

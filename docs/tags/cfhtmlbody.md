@@ -18,12 +18,7 @@ cfhtmlbody() {}
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| action | string | No | append | possible actions are: 
- append (default): append text to the HTML body 
- read: return the text already set to HTML body 
- reset: reset/remove text already set to HTML body 
- write: write text to HTML body, overwrite already existing text in HTML head 
- flush: writes the buffer in the HTML head to the response stream |
+| action | string | No | append | possible actions are: <br /> append (default): append text to the HTML body <br /> read: return the text already set to HTML body <br /> reset: reset/remove text already set to HTML body <br /> write: write text to HTML body, overwrite already existing text in HTML head <br /> flush: writes the buffer in the HTML head to the response stream |
 | variable | string | No |  | Name of variable to contain the text for HTML body. |
 | id | string | No |  | ID of the snippet that is added, used to ensure that the same snippet will not be added more than once. |
 | text | string | No |  | The text to add to the 'body' area of an HTML page. Alternatively if a closing tag is used then the body between the tags is used. |

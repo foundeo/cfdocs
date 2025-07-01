@@ -16,12 +16,7 @@ returns string
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | plaintext | string | Yes |  | The input string to hash. |
-| options | struct | No | {"memorycost":8,"CpuCost":16348,"Parallel":1,"KeyLength":32,"saltLength":8} | A struct containing the optional values:
-- memorycost - Default is 8.
-- CpuCost - CPU cost of the algorithm (as defined in scrypt, this is `N`) that must be a power of 2 and greater than 1. Default is currently 16,348 or 2^14.
-- Parallel - the parallelization of the algorithm (as defined in scrypt, this is `P`). Default is currently 1.
-- Keylength - key length for the algorithm (as defined in scrypt, this is `dkLen`). Default is currently 32.
-- saltLength - length of the salt to use. Default is 8. |
+| options | struct | No | {"memorycost":8,"CpuCost":16348,"Parallel":1,"KeyLength":32,"saltLength":8} | A struct containing the optional values:<br />- memorycost - Default is 8.<br />- CpuCost - CPU cost of the algorithm (as defined in scrypt, this is `N`) that must be a power of 2 and greater than 1. Default is currently 16,348 or 2^14.<br />- Parallel - the parallelization of the algorithm (as defined in scrypt, this is `P`). Default is currently 1.<br />- Keylength - key length for the algorithm (as defined in scrypt, this is `dkLen`). Default is currently 32.<br />- saltLength - length of the salt to use. Default is 8. |
 
 ## Example of SCrypt Hashing - No Options
 

@@ -24,106 +24,41 @@ cfpdf();
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | action | string | Yes |  | The action to take. |
-| ascending | boolean | No | no | Order in which the PDF files are sorted:
- yes: files are sorted in ascending order
- no: files are sorted in descending order |
+| ascending | boolean | No | no | Order in which the PDF files are sorted:<br /> yes: files are sorted in ascending order<br /> no: files are sorted in descending order |
 | copyfrom | string | No |  | The filename of the PDF document from which to copy the watermark |
-| destination | string | No |  | The pathname of the modified PDF document.
- If the destination file exists, you must set the overwrite attribute to yes.
- If the destination file does not exist, ColdFusion creates it as long as
- the parent directory exists. (optional) |
-| directory | string | No |  | Specify the directory of the PDF documents to merge.
- You must specify either the directory or the source.
- If you specify the directory, you must also specify the order. |
+| destination | string | No |  | The pathname of the modified PDF document.<br /> If the destination file exists, you must set the overwrite attribute to yes.<br /> If the destination file does not exist, ColdFusion creates it as long as<br /> the parent directory exists. (optional) |
+| directory | string | No |  | Specify the directory of the PDF documents to merge.<br /> You must specify either the directory or the source.<br /> If you specify the directory, you must also specify the order. |
 | encrypt | string | No |  | Specify the type of encryption used on the source PDF document |
-| flatten | boolean | No | no | Specify whether the output file is flattened:
- yes: the formatting is removed and the file is flattened
- no: the format of the source PDF is maintained in the output file. |
-| foreground | boolean | No | no | Specify whether the watermark is placed in the foreground of the PDF document:
- yes: the watermark appears in the foreground
- no: the watermark appears in the background |
-| image | string | No |  | Specify the image used as a watermark.
- You can specify a filename or a ColdFusion image variable. |
-| info | string | Yes |  | Specify the structure variable for relevant information, for example, #infoStruct#.
- ColdFusion ignores read only information, such as the creation date, application used to create
- the PDF document, and encryption parameters. |
-| isBase64 | boolean | No | no | Specify whether the image used a watermark is in Base64 format:
- yes: the image is in Base64 format
- no: the image is not in Base64 format |
-| keepbookmark | boolean | No | NO | Specify whether bookmarks from the source PDF
- documents are retained in the merged document:
- yes: the bookmarks are retained
- no: the bookmarks are removed |
-| name | string | No |  | Specify the PDF document variable name, for example, myPDFdoc.
- If the source is a PDF document variable, you cannot specify the
- name attribute again; you can write the modified PDF document
- to the destination. |
+| flatten | boolean | No | no | Specify whether the output file is flattened:<br /> yes: the formatting is removed and the file is flattened<br /> no: the format of the source PDF is maintained in the output file. |
+| foreground | boolean | No | no | Specify whether the watermark is placed in the foreground of the PDF document:<br /> yes: the watermark appears in the foreground<br /> no: the watermark appears in the background |
+| image | string | No |  | Specify the image used as a watermark.<br /> You can specify a filename or a ColdFusion image variable. |
+| info | string | Yes |  | Specify the structure variable for relevant information, for example, #infoStruct#.<br /> ColdFusion ignores read only information, such as the creation date, application used to create<br /> the PDF document, and encryption parameters. |
+| isBase64 | boolean | No | no | Specify whether the image used a watermark is in Base64 format:<br /> yes: the image is in Base64 format<br /> no: the image is not in Base64 format |
+| keepbookmark | boolean | No | NO | Specify whether bookmarks from the source PDF<br /> documents are retained in the merged document:<br /> yes: the bookmarks are retained<br /> no: the bookmarks are removed |
+| name | string | No |  | Specify the PDF document variable name, for example, myPDFdoc.<br /> If the source is a PDF document variable, you cannot specify the<br /> name attribute again; you can write the modified PDF document<br /> to the destination. |
 | newOwnerPassword | string | No |  | Specify the password for the owner of the PDF document. |
 | newUserPassword | string | No |  | Specify the password for the user of the PDF document. |
-| opacity | string | No | 3 | Specify the opacity of the watermark.
- Valid values are integers in the range 0 (transparent)
- through 10 (opaque). |
-| order | string | Yes |  | Specify the order in which the PDF documents
- in the directory are merged:
- name: orders the documents alphabetically
- time: orders the documents by timestamp |
-| overwrite | string | No |  | Specify whether to overwrite the destination file:
- yes: overwrites the destination file
- no: does not overwrite the destination file |
+| opacity | string | No | 3 | Specify the opacity of the watermark.<br /> Valid values are integers in the range 0 (transparent)<br /> through 10 (opaque). |
+| order | string | Yes |  | Specify the order in which the PDF documents<br /> in the directory are merged:<br /> name: orders the documents alphabetically<br /> time: orders the documents by timestamp |
+| overwrite | string | No |  | Specify whether to overwrite the destination file:<br /> yes: overwrites the destination file<br /> no: does not overwrite the destination file |
 | password | string | No |  | Specify the owner or user password of the source PDF document, if it exists. |
-| permissions | string | No |  | Specify the type of permissions on the PDF document:
- AllowPrintHigh
- AllowPrintLow
- AllowModify
- AllowCopy
- AllowAdd
- AllowSecure
- AllowModifyAnnotations
- AllowExtract
- AllowFillIn
- all
- none
- Except for all or none, you can specify a
- comma separated list of permissions. (optional) |
-| position | string | No |  | Specify the position on the page where
- the watermark is placed. The position represents the
- top-left corner of the watermark.
- Specify the x and y coordinates; for example 50,30. |
-| rotation | numeric | No |  | Specify the degree of rotation of
- the watermark image on the page; for example, 30. |
-| showonprint | string | No |  | Specify whether the watermark is printed with
- the PDF document:
- yes: the watermark is printed with the PDF document
- no: the watermark is not printed with the PDF document |
-| source | string | Yes |  | Specify the source. The source can be:
- The pathname to a PDF document; for example, c:\work\myPDF.pdf
- A PDF document variable in memory that is generated by the
- cfdocument tag or the cfpdf tag; for example, #myPDFdoc#
- The binary content of PDF document variable. |
-| type | string | No |  | Specify the type to remove from the source PDF document:
- attachment
- bookmark
- watermark |
+| permissions | string | No |  | Specify the type of permissions on the PDF document:<br /> AllowPrintHigh<br /> AllowPrintLow<br /> AllowModify<br /> AllowCopy<br /> AllowAdd<br /> AllowSecure<br /> AllowModifyAnnotations<br /> AllowExtract<br /> AllowFillIn<br /> all<br /> none<br /> Except for all or none, you can specify a<br /> comma separated list of permissions. (optional) |
+| position | string | No |  | Specify the position on the page where<br /> the watermark is placed. The position represents the<br /> top-left corner of the watermark.<br /> Specify the x and y coordinates; for example 50,30. |
+| rotation | numeric | No |  | Specify the degree of rotation of<br /> the watermark image on the page; for example, 30. |
+| showonprint | string | No |  | Specify whether the watermark is printed with<br /> the PDF document:<br /> yes: the watermark is printed with the PDF document<br /> no: the watermark is not printed with the PDF document |
+| source | string | Yes |  | Specify the source. The source can be:<br /> The pathname to a PDF document; for example, c:\work\myPDF.pdf<br /> A PDF document variable in memory that is generated by the<br /> cfdocument tag or the cfpdf tag; for example, #myPDFdoc#<br /> The binary content of PDF document variable. |
+| type | string | No |  | Specify the type to remove from the source PDF document:<br /> attachment<br /> bookmark<br /> watermark |
 | version | string | No |  | (write) Specify the version of the PDF document to write. |
-| transparent | boolean | No | NO | Specifies whether the image background is transparent or opaque: format=png only
- * yes: the background is transparent.
- * no: the background is opaque. |
-| resolution | string | No |  | Image quality used to generate thumbnail images:
- * high: use high resolution (uses more memory).
- * low: use low resolution. |
-| stoponerror | boolean | No | NO | Valid only if the directory attribute is specified. If the specified directory contains files other then ColdFusion-readable PDF files, ColdFusion either stops merge process or continues.
- * yes: stops the merge process if invalid PDF files exist in the specified directory.
- * no: continues the merge process even if invalid files exist in the specified directory. |
+| transparent | boolean | No | NO | Specifies whether the image background is transparent or opaque: format=png only<br /> * yes: the background is transparent.<br /> * no: the background is opaque. |
+| resolution | string | No |  | Image quality used to generate thumbnail images:<br /> * high: use high resolution (uses more memory).<br /> * low: use low resolution. |
+| stoponerror | boolean | No | NO | Valid only if the directory attribute is specified. If the specified directory contains files other then ColdFusion-readable PDF files, ColdFusion either stops merge process or continues.<br /> * yes: stops the merge process if invalid PDF files exist in the specified directory.<br /> * no: continues the merge process even if invalid files exist in the specified directory. |
 | inputfiles | struct | No |  | Structure that maps the PDF source files to the input variables in the DDX file, or a string of elements and their pathname. |
 | scale | numeric | No |  | Size of the thumbnail relative to the source page. The value represents a percentage from 1 through 100. |
 | imageprefix | string | No |  | Prefix used for each image thumbnail file generated. The image filenames use the format: imagePrefix_page_n.format. |
 | outputfiles | struct | No |  | Structure that contains the output files in the DDX file or string as keys and the pathname to the result file as the value. |
 | pages | string | No |  | Page or pages in the source PDF document on which to perform the action. You can specify multiple pages and page ranges as follows: "1,6-9,56-89,100, 110-120". |
 | ddxfile | string | No |  | Owner or user password of the source PDF document, if the document is password-protected. |
-| saveoption | string | No | full | Save options for the PDF output:
- * full: normal save (default)
- * incremental: required to save modifications to a signed PDF document.
- * linear: for faster display. |
+| saveoption | string | No | full | Save options for the PDF output:<br /> * full: normal save (default)<br /> * incremental: required to save modifications to a signed PDF document.<br /> * linear: for faster display. |
 | format | string | No | jpg | File type of thumbnail image output |
 | hires | boolean | No |  | Sets a high resolution for the thumbnail if set to yes. |
 | maxScale | numeric | No |  | Specifies the maximum scale of the thumbnail |

@@ -22,43 +22,20 @@ fileRead(path);
 | --- | --- | --- | --- | --- |
 | action | string | Yes |  | Type of file manipulation that the tag performs. |
 | file | string | No |  | Pathname of the file. |
-| mode | string | No |  | Applies only to UNIX and Linux. Permissions. Octal values
- of Unix chmod command. Assigned to owner, group, and
- other, respectively. |
+| mode | string | No |  | Applies only to UNIX and Linux. Permissions. Octal values<br /> of Unix chmod command. Assigned to owner, group, and<br /> other, respectively. |
 | output | string | No |  | String to add to the file |
 | addnewline | boolean | No | YES | Yes: appends newline character to text written to file |
-| attributes | string | No |  | Applies to Windows. A comma-delimited list of attributes
- to set on the file.
-
- If omitted, the file's attributes are maintained. |
-| charset | string | No |  | The character encoding in which the file contents is
- encoded.
-
- For more information on character encodings, see:
- www.w3.org/International/O-charset.html. |
+| attributes | string | No |  | Applies to Windows. A comma-delimited list of attributes<br /> to set on the file.<br /><br /> If omitted, the file's attributes are maintained. |
+| charset | string | No |  | The character encoding in which the file contents is<br /> encoded.<br /><br /> For more information on character encodings, see:<br /> www.w3.org/International/O-charset.html. |
 | source | string | No |  | Pathname of the file (during copy). |
-| destination | string | No |  | Pathname of a directory or file on web server
- (during copy). |
+| destination | string | No |  | Pathname of a directory or file on web server<br /> (during copy). |
 | variable | string | No |  | Name of variable to contain contents of text file. |
-| filefield | string | No |  | Name of form field used to select the file.
-
- Do not use pound signs (#) to specify the field name. |
-| nameconflict | string | No |  | Action to take if filename is the same as that of a file
- in the directory. |
-| accept | string | No |  | Limits the MIME types to accept. Comma-delimited list. For
- example, to permit JPG and Microsoft Word file uploads:
-
- accept = "image/jpg, application/msword" |
-| result | variableName | No | cffile | Allows you to specify a name for the variable in which cffile
- returns the result (or status) parameters. If you do not specify
- a value for this attribute, cffile uses the prefix "cffile". |
-| fixnewline | string | No | NO | * Yes: changes embedded line-ending characters in string
- variables to operating-system specific line endings
- * No: (default) do not change embedded line-ending
- characters in string variables. |
-| cachedwithin | numeric | No |  | Lucee5+ Timespan, using the CreateTimeSpan function. If original
- file date falls within the time span, cached file data is
- used. CreateTimeSpan defines a period from the present, back. |
+| filefield | string | No |  | Name of form field used to select the file.<br /><br /> Do not use pound signs (#) to specify the field name. |
+| nameconflict | string | No |  | Action to take if filename is the same as that of a file<br /> in the directory. |
+| accept | string | No |  | Limits the MIME types to accept. Comma-delimited list. For<br /> example, to permit JPG and Microsoft Word file uploads:<br /><br /> accept = "image/jpg, application/msword" |
+| result | variableName | No | cffile | Allows you to specify a name for the variable in which cffile<br /> returns the result (or status) parameters. If you do not specify<br /> a value for this attribute, cffile uses the prefix "cffile". |
+| fixnewline | string | No | NO | * Yes: changes embedded line-ending characters in string<br /> variables to operating-system specific line endings<br /> * No: (default) do not change embedded line-ending<br /> characters in string variables. |
+| cachedwithin | numeric | No |  | Lucee5+ Timespan, using the CreateTimeSpan function. If original<br /> file date falls within the time span, cached file data is<br /> used. CreateTimeSpan defines a period from the present, back. |
 
 ## Script Syntax - Write
 

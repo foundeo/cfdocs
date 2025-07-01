@@ -17,13 +17,7 @@ returns binary
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
 | string | string | Yes |  | A string containing encoded binary data. |  |
-| encoding | string | Yes |  | A string specifying the algorithm used to encode the original
- binary data into a string; must be one of the following:
- - hex: characters 0-9 and A-F represent the hexadecimal value
- of each byte; for example, 3A.
- - UU: data is encoded using the UNIX UUencode algorithm.
- - base64: data is encoded using the Base64 algorithm.
- - base64URL: modification of the main Base64 standard, which uses the encoding result as filename or URL address. | /Users/garethedwards/development/github/cfdocs/docs/functions/binarydecode.md|base64URL |
+| encoding | string | Yes |  | A string specifying the algorithm used to encode the original<br /> binary data into a string; must be one of the following:<br /> - hex: characters 0-9 and A-F represent the hexadecimal value<br /> of each byte; for example, 3A.<br /> - UU: data is encoded using the UNIX UUencode algorithm.<br /> - base64: data is encoded using the Base64 algorithm.<br /> - base64URL: modification of the main Base64 standard, which uses the encoding result as filename or URL address. | /Users/garethedwards/development/github/cfdocs/docs/functions/binarydecode.md|base64URL |
 
 ## Decode a string using hex back into binary encoding of the string
 

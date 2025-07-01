@@ -22,14 +22,9 @@ struct.findValue( value, scope )
 
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
-| top | any | Yes |  | CFML object (a structure or an array) from which to
- start search. This attribute requires an object, not a
- name of an object. |  |
-| value | string | Yes |  | String or a variable that contains one for which to search.
- The type must be a simple object. Arrays and structures
- are not supported. |  |
-| scope | string | No |  | one: function returns one matching key (default)
- all: function returns all matching keys | /Users/garethedwards/development/github/cfdocs/docs/functions/structfindvalue.md|all |
+| top | any | Yes |  | CFML object (a structure or an array) from which to<br /> start search. This attribute requires an object, not a<br /> name of an object. |  |
+| value | string | Yes |  | String or a variable that contains one for which to search.<br /> The type must be a simple object. Arrays and structures<br /> are not supported. |  |
+| scope | string | No |  | one: function returns one matching key (default)<br /> all: function returns all matching keys | /Users/garethedwards/development/github/cfdocs/docs/functions/structfindvalue.md|all |
 
 ## Find first match for a nested struct value
 

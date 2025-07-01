@@ -24,11 +24,8 @@ string.reReplaceNoCase(reg_expression, substring[, scope])
 | --- | --- | --- | --- | --- | --- |
 | String | string | Yes |  | A string or a variable that contains one |  |
 | reg_expression | string | Yes |  | Regular expression to replace. |  |
-| substring | string | Yes |  | A string or a variable that contains one. Replaces
- reg_expression |  |
-| scope | string | No |  | * one: Replace the first occurrence of the regular
- expression. Default.
- * all: Replace all occurrences of the regular expression. | /Users/garethedwards/development/github/cfdocs/docs/functions/rereplacenocase.md|all |
+| substring | string | Yes |  | A string or a variable that contains one. Replaces<br /> reg_expression |  |
+| scope | string | No |  | * one: Replace the first occurrence of the regular<br /> expression. Default.<br /> * all: Replace all occurrences of the regular expression. | /Users/garethedwards/development/github/cfdocs/docs/functions/rereplacenocase.md|all |
 
 ## Strip Characters Using ReReplace
 

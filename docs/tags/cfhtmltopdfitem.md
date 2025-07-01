@@ -23,20 +23,9 @@ cfhtmltopdfitem();
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| type | string | Yes |  | Specifies the action:
-
-header: uses the text/image specified between the <cfhtmltopdfitem> and </cfhtmltopdfitem> tags as the running header.
-footer: uses the text/image between the <cfhtmltopdfitem> and </cfhtmltopdfitem> tags as the running footer.
-pagebreak: can be used to insert a pagebreak in the generated PDF. When <cfhtmltopdf> is used as a service, pagebreak will not work. |
+| type | string | Yes |  | Specifies the action:<br /><br />header: uses the text/image specified between the <cfhtmltopdfitem> and </cfhtmltopdfitem> tags as the running header.<br />footer: uses the text/image between the <cfhtmltopdfitem> and </cfhtmltopdfitem> tags as the running footer.<br />pagebreak: can be used to insert a pagebreak in the generated PDF. When <cfhtmltopdf> is used as a service, pagebreak will not work. |
 | isBase64 | boolean | No |  | Use this only when the image attribute is given a base64 image string |
-| image | string | No |  | The image file name or object to be used as header or footer.
-
-The following parameters are supported:
-
-A path to the image file
-A Base-64 string
-A byte array
-A <cfimage> object |
+| image | string | No |  | The image file name or object to be used as header or footer.<br /><br />The following parameters are supported:<br /><br />A path to the image file<br />A Base-64 string<br />A byte array<br />A <cfimage> object |
 | opacity | numeric | No | 10 | Opacity of the header/footer. Specify a valid number. A number between 1 and 10. |
 | numberformat | string | No | Numeric | The page number format to be used. |
 | showonprint | boolean | No |  | Show or hide header/footer when the document is printed. |

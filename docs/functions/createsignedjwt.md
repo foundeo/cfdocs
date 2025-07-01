@@ -16,7 +16,4 @@ returns string
 | --- | --- | --- | --- | --- |
 | payload | any | Yes |  | The payload as a string or struct. |
 | signOptions | struct | Yes |  | Create the signature using the key information from the given struct |
-| config | struct | Yes |  | A struct with the following values:
-- algorithm : algorithm used for signing.
-- generateIssuedAt : boolean to indicate whether to generate "iat" field
-- generateJti : boolean to indicate whether to generate "jti" field |
+| config | struct | Yes |  | A struct with the following values:<br />- algorithm : algorithm used for signing.<br />- generateIssuedAt : boolean to indicate whether to generate "iat" field<br />- generateJti : boolean to indicate whether to generate "jti" field |

@@ -21,9 +21,7 @@ exit;
 
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
-| method | string | No |  | exittag: aborts processing of currently executing tag
- exittemplate: exits page of currently executing tag
- loop: reexecutes body of currently executing tag | /Users/garethedwards/development/github/cfdocs/docs/tags/cfexit.md|loop |
+| method | string | No |  | exittag: aborts processing of currently executing tag<br /> exittemplate: exits page of currently executing tag<br /> loop: reexecutes body of currently executing tag | /Users/garethedwards/development/github/cfdocs/docs/tags/cfexit.md|loop |
 
 ## Simple cfexit example
 

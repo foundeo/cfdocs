@@ -20,12 +20,8 @@ list.listSome(closure [, delimiter] [, includeEmptyFields] [, multiCharacterDeli
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| list | string | Yes |  | string list to iterate
-
-Alias: string |
-| closure | function | Yes |  | function/closure that implements the following constructor [function(any value, numeric index,string list, string delimiter):boolean].
-
-Alias: function, callback, udf |
+| list | string | Yes |  | string list to iterate<br /><br />Alias: string |
+| closure | function | Yes |  | function/closure that implements the following constructor [function(any value, numeric index,string list, string delimiter):boolean].<br /><br />Alias: function, callback, udf |
 | delimiter | string | No | , | delimiter used to separate the string list |
 | includeEmptyFields | boolean | No | false | include empty fields or not |
 | multiCharacterDelimiter | boolean | No | true | specifying whether the delimiters parameter specifies a multi-character delimiter. If this parameter is true, the delimiters parameter must specify a single delimiter consisting of multiple characters. This parameter enables the ListToArray function to convert a list to an array of color names |
@@ -35,10 +31,10 @@ Alias: function, callback, udf |
 ### closure ( callback arguments )
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| value | any | No | current value from the list |
-| index | numeric | No | position in the list |
-| list | string | No | string list to iterate |
-| delimiter | string | No | delimiter used to separate the string list |
+| value | any | No | current value from the list
+| index | numeric | No | position in the list
+| list | string | No | string list to iterate
+| delimiter | string | No | delimiter used to separate the string list
 
 ## List contains some.
 

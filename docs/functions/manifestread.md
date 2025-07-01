@@ -20,11 +20,7 @@ returns struct
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| path | string | Yes |  | Path to
-— a jar file containing a "MANIFEST.MF" file in the directory "/META-INF/"
-— a Manifest file
-
-or the content of a Manifest File |
+| path | string | Yes |  | Path to<br />— a jar file containing a "MANIFEST.MF" file in the directory "/META-INF/"<br />— a Manifest file<br /><br />or the content of a Manifest File |
 
 ## Dump manifest of a bundle
 

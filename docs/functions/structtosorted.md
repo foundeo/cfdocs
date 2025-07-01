@@ -24,17 +24,16 @@ structure.toSorted(callback)
 | structure | struct | Yes |  | Structure or a variable that contains one. |
 | callback | function | No |  | Closure or function reference that will be called for each iteration. Should return -1, 0 or 1. |
 | sorttype | string | No | text |  |
-| sortorder | string | No | asc | * asc: ascending (a to z) sort order.
-* desc: descending (z to a) sort order |
+| sortorder | string | No | asc | * asc: ascending (a to z) sort order.<br />* desc: descending (z to a) sort order |
 | localeSensitive | boolean | No | NO | Respect locale-specific characters (including support for umlaut characters) while sorting (applies to type"text"). |
 
 ### callback ( callback arguments )
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| value1 | any | No | The value of the first key/value pair |
-| value2 | any | No | The value of the second key/value pair |
-| key1 | string | No | The key name of the first key/value pair |
-| key2 | string | No | The key name of the second key/value pair |
+| value1 | any | No | The value of the first key/value pair
+| value2 | any | No | The value of the second key/value pair
+| key1 | string | No | The key name of the first key/value pair
+| key2 | string | No | The key name of the second key/value pair
 
 ## structToSorted  with an inline function sorting by key value
 

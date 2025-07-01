@@ -21,10 +21,7 @@ someImage.xorDrawingMode(color)
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | image | string | Yes |  | The image on which this operation is performed. |
-| color | string | Yes | black | XOR alternation color. The values can be:
-- Hexadecimal value of the RGB color. For example, specify the color white as `##FFFFFF` or `FFFFFF`.
-- String value of color (for example, `black`, `red`, `green`).
-- List of three numbers for (R,G,B) values. Each value must be in the range 0-255. |
+| color | string | Yes | black | XOR alternation color. The values can be:<br />- Hexadecimal value of the RGB color. For example, specify the color white as `##FFFFFF` or `FFFFFF`.<br />- String value of color (for example, `black`, `red`, `green`).<br />- List of three numbers for (R,G,B) values. Each value must be in the range 0-255. |
 
 ## Using xorDrawingMode member function
 

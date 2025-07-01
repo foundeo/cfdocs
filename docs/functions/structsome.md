@@ -28,9 +28,9 @@ struct.some(function(key, value [,struct]){} [, parallel] [, maxThreads])
 ### callback ( callback arguments )
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| key | string | No | The key for the current iteration |
-| value | any | No | The value for the current iteration |
-| struct | struct | No | A reference of the original struct |
+| key | string | No | The key for the current iteration
+| value | any | No | The value for the current iteration
+| struct | struct | No | A reference of the original struct
 
 ## The simple StructSome example
 

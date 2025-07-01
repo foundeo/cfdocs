@@ -14,11 +14,4 @@ returns array
 
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
-| region | string | No |  | Lucee4.5+ CF10+ Properties to get information for
-
-"" or not set - information to all default caches
-object - information to "Default Object" Cache
-template - information to "Default Template" Cache
-query - information to "Default Query" Cache
-resource - information to "Default Resource" Cache
-{cache name} - information to a specific cache | /Users/garethedwards/development/github/cfdocs/docs/functions/cachegetproperties.md|query |
+| region | string | No |  | Lucee4.5+ CF10+ Properties to get information for<br /><br />"" or not set - information to all default caches<br />object - information to "Default Object" Cache<br />template - information to "Default Template" Cache<br />query - information to "Default Query" Cache<br />resource - information to "Default Resource" Cache<br />{cache name} - information to a specific cache | /Users/garethedwards/development/github/cfdocs/docs/functions/cachegetproperties.md|query |

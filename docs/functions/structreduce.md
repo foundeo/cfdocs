@@ -27,10 +27,10 @@ someStruct.reduce(function(result, key, value [,struct]){} [, initialVal])
 ### callback ( callback arguments )
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| result | any | No | The result of the reduce operation after the previous iteration |
-| key | string | No | The key for the current iteration |
-| value | any | No | The value for the current iteration |
-| struct | struct | No | A reference of the original struct |
+| result | any | No | The result of the reduce operation after the previous iteration
+| key | string | No | The key for the current iteration
+| value | any | No | The value for the current iteration
+| struct | struct | No | A reference of the original struct
 
 ## Script Syntax
 

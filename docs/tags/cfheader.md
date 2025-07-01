@@ -18,15 +18,10 @@ cfheader();
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| name | string | No |  | Header name
- Required if statusCode not specified |
+| name | string | No |  | Header name<br /> Required if statusCode not specified |
 | value | string | No |  | HTTP header value |
-| charset | string | No |  | The character encoding in which to encode the header value.
-
- For more information on character encodings, see:
- www.w3.org/International/O-charset.html. |
-| statuscode | numeric | No |  | HTTP status code
- Required if name not specified |
+| charset | string | No |  | The character encoding in which to encode the header value.<br /><br /> For more information on character encodings, see:<br /> www.w3.org/International/O-charset.html. |
+| statuscode | numeric | No |  | HTTP status code<br /> Required if name not specified |
 | statustext | string | No |  | Explains status code |
 
 ## Set a HTTP Response Header

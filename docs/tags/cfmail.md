@@ -22,11 +22,9 @@ cfmail(to="", from="", subject="");
 | bcc | string | No |  | Email address(es) to which to copy the message, without listing them in the message header. |
 | cc | string | No |  | Email address(es) to which to copy the message |
 | charset | string | No |  | The character encoding in which the text part is encoded. |
-| debug | boolean | No | false | true: sends debugging output to standard output. By default, if the console window is unavailable, ColdFusion sends output to cf_root\runtime\logs\coldfusion-out.log on server configurations. On J2EE configurations, with JRun, the default location is jrun_home/logs/servername-out.log.
-false: does not generate debugging output. |
+| debug | boolean | No | false | true: sends debugging output to standard output. By default, if the console window is unavailable, ColdFusion sends output to cf_root\runtime\logs\coldfusion-out.log on server configurations. On J2EE configurations, with JRun, the default location is jrun_home/logs/servername-out.log.<br />false: does not generate debugging output. |
 | encrypt | boolean | No | false | CF11+ Toggles email message encryption |
-| encryptionalgorithm | string | No |  | CF11+ Algorithm to use when encrypt=true
-Encryption support is provided through S/MIME. |
+| encryptionalgorithm | string | No |  | CF11+ Algorithm to use when encrypt=true<br />Encryption support is provided through S/MIME. |
 | failto | string | No |  | Email address to which mailing systems should send delivery failure notifications. Sets the mail envelope reverse-path value. |
 | from | string | Yes |  | Message sender email address. |
 | group | string | No |  | Query column to use when you group sets of records to send as a message. For example, to send a set of billing statements to a customer, group on "Customer_ID." Case-sensitive. Eliminates adjacent duplicates when data is sorted by the specified field. |

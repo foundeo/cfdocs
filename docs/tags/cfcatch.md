@@ -22,18 +22,7 @@ catch (any e) { }
 
 | Name | Type | Required | Default | Description | Values |
 | --- | --- | --- | --- | --- | --- |
-| type | string | No | any | `application`: catches application exceptions
-`database`: catches database exceptions
-`template`: catches ColdFusion page exceptions
-`security`: catches security exceptions
-`object`: catches object exceptions
-`missingInclude`: catches missing include file exceptions
-`expression`: catches expression exceptions
-`lock`: catches lock exceptions
-`custom_type`: catches the specified custom exception type that is defined in a cfthrow tag
- `java.lang.Exception`: catches Java object exceptions
- `searchengine`: catches Verity search engine exceptions
- `any`: catches all exception types | /Users/garethedwards/development/github/cfdocs/docs/tags/cfcatch.md|any |
+| type | string | No | any | `application`: catches application exceptions<br />`database`: catches database exceptions<br />`template`: catches ColdFusion page exceptions<br />`security`: catches security exceptions<br />`object`: catches object exceptions<br />`missingInclude`: catches missing include file exceptions<br />`expression`: catches expression exceptions<br />`lock`: catches lock exceptions<br />`custom_type`: catches the specified custom exception type that is defined in a cfthrow tag<br /> `java.lang.Exception`: catches Java object exceptions<br /> `searchengine`: catches Verity search engine exceptions<br /> `any`: catches all exception types | /Users/garethedwards/development/github/cfdocs/docs/tags/cfcatch.md|any |
 
 ## A simple try/catch script based example
 

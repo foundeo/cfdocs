@@ -22,14 +22,10 @@ struct.sort([sortType, sortOrder, path, localeSensitive])
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | struct | struct | Yes |  | A ColdFusion structure |
-| sortType | string | No | text | * numeric
-* text: case-sensitive
-* textnocase |
-| sortOrder | string | No | asc | * asc: ascending (a to z) sort order.
-* desc: descending (z to a) sort order |
+| sortType | string | No | text | * numeric<br />* text: case-sensitive<br />* textnocase |
+| sortOrder | string | No | asc | * asc: ascending (a to z) sort order.<br />* desc: descending (z to a) sort order |
 | path | string | No |  | Top-level key path; String or a variable that contains one |
-| localeSensitive | boolean | No | NO | CF10+ Respect locale-specific characters (including support for umlaut characters) while sorting
-(Applies to type"text" and "textnocase". |
+| localeSensitive | boolean | No | NO | CF10+ Respect locale-specific characters (including support for umlaut characters) while sorting<br />(Applies to type"text" and "textnocase". |
 | callback | function | No |  | CF2016+ A closure for sorting which takes two keys of the struct and returns whether the first value is greater than, equal to, or less than the second value. Inside compare function can be used (compare, compareNoCase, dateCompare or custom). `function(key1, key2)` |
 
 ## Numeric sorting
