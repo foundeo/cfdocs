@@ -1,5 +1,7 @@
 # CFDocs
 
+## Markdown Version of [CFDocs](https://cfmleditor.github.io/cfdocs/)
+
 CFDocs is a community maintained CFML reference tool available at [cfdocs.org](https://cfdocs.org). It features:
 * Hosting on Amazon CloudFront CDN for fast responses around the globe. Sponsored by [Foundeo Inc.](http://foundeo.com).
 * Easy to use urls like: [cfdocs.org/hash](https://cfdocs.org/hash) just hit /tag-name or /function-name.
