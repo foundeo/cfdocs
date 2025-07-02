@@ -1,24 +1,49 @@
 {
-	"name":"createODBCTime",
-	"type":"function",
-	"syntax":"createODBCTime(date)",
-	"member":"date.createODBCTime()",
-	"returns":"date",
-	"related":["createODBCDateTime", "createTime"],
-	"description":"Creates an ODBC time object.",
+	"name": "createODBCTime",
+	"type": "function",
+	"syntax": "createODBCTime(date)",
+	"member": "date.createODBCTime()",
+	"returns": "date",
+	"related": ["createODBCDateTime", "createTime"],
+	"description": "Creates an ODBC time object.",
 	"params": [
-		{"name":"date","description":"Date or date/time object.","required":true,"default":"","type":"date","values":[]}
+		{
+			"name": "date",
+			"description": "Date or date/time object.",
+			"required": true,
+			"default": "",
+			"type": "date",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateODBCTime.html"},
-		"lucee": {"minimum_version":"", "notes":"Member function is not available.", "docs":"https://docs.lucee.org/reference/functions/createodbctime.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/createodbctime"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/createodbctime"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/temporal/createodbctime"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "Member function is available in CF11+.",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateODBCTime.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "Member function is not available.",
+			"docs": "https://docs.lucee.org/reference/functions/createodbctime.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/createodbctime"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/createodbctime"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/temporal/createodbctime"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Creates an ODBC time object",
@@ -27,5 +52,4 @@
 			"result": "{t '12:12:12'}"
 		}
 	]
-
 }

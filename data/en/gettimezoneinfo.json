@@ -1,20 +1,54 @@
 {
-	"name":"getTimezoneInfo",
-	"type":"function",
-	"syntax":"getTimezoneInfo(text)",
-	"returns":"any",
-	"related":["getTimezone","setTimezone"],
-	"description":" Gets local time zone information for the computer on which it\n is called, relative to Universal Time Coordinated (UTC). UTC is\n the mean solar time of the meridian of Greenwich, England.",
+	"name": "getTimezoneInfo",
+	"type": "function",
+	"syntax": "getTimezoneInfo(text)",
+	"returns": "any",
+	"related": ["getTimezone", "setTimezone"],
+	"description": "Gets local time zone information for the computer on which it\n is called, relative to Universal Time Coordinated (UTC). UTC is\n the mean solar time of the meridian of Greenwich, England.",
 	"params": [
-		{"name":"timezone","description":"Lucee Specify a timezone to return info from","required":true,"default":"","type":"string","values":[]},
-		{"name":"locale", "description":"Lucee Locale used to format the output","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "timezone",
+			"description": "Lucee Specify a timezone to return info from",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "locale",
+			"description": "Lucee Locale used to format the output",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/gettimezoneinfo.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/gettimezoneinfo.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/gettimezoneinfo"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/gettimezoneinfo"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/temporal/gettimezoneinfo"}
+		"coldfusion": {
+			"minimum_version": "4",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/gettimezoneinfo.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/gettimezoneinfo.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/gettimezoneinfo"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/gettimezoneinfo"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/temporal/gettimezoneinfo"
+		}
 	},
 	"links": [],
 	"examples": [

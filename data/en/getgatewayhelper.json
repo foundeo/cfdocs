@@ -1,15 +1,26 @@
 {
-	"name":"getGatewayHelper",
-	"type":"function",
-	"syntax":"getGatewayHelper(gatewayID)",
-	"returns":"any",
-	"related":[],
-	"description":"Gets a Java GatewayHelper object that provides methods and properties for use with a ColdFusion event gateway.",
+	"name": "getGatewayHelper",
+	"type": "function",
+	"syntax": "getGatewayHelper(gatewayID)",
+	"returns": "any",
+	"related": [],
+	"description": "Gets a Java GatewayHelper object that provides methods and properties for use with a ColdFusion event gateway.",
 	"params": [
-		{"name":"gatewayID","description":"Identifier of the gateway that provides the GatewayHelper object.","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "gatewayID",
+			"description": "Identifier of the gateway that provides the GatewayHelper object.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getgatewayhelper.html"}
+		"coldfusion": {
+			"minimum_version": "7",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getgatewayhelper.html"
+		}
 	},
 	"links": []
 }

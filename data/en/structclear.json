@@ -1,20 +1,46 @@
 {
-	"name":"structClear",
-	"type":"function",
-	"syntax":"structClear(structure)",
-	"returns":"boolean",
-	"related":[],
-	"description":" Removes all data from a structure.",
+	"name": "structClear",
+	"type": "function",
+	"syntax": "structClear(structure)",
+	"returns": "boolean",
+	"related": [],
+	"description": "Removes all data from a structure.",
 	"params": [
-		{"name":"structure","description":"Structure to clear","required":true,"default":"","type":"struct","values":[]}
-
+		{
+			"name": "structure",
+			"description": "Structure to clear",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structclear.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/structclear.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structclear"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structclear"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structclear"}
+		"coldfusion": {
+			"minimum_version": "4",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structclear.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/structclear.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/structclear"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/structclear"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structclear"
+		}
 	},
 	"examples": [
 		{
@@ -30,8 +56,5 @@
 			"result": "An empty struct"
 		}
 	],
-	"links": [
-
-	]
-
+	"links": []
 }

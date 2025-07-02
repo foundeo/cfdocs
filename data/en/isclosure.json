@@ -1,31 +1,50 @@
 {
-	"name":"isClosure",
-	"type":"function",
-	"syntax":"isClosure(object)",
-	"returns":"boolean",
-	"description":"Checks if a given object is a closure.",
+	"name": "isClosure",
+	"type": "function",
+	"syntax": "isClosure(object)",
+	"returns": "boolean",
+	"description": "Checks if a given object is a closure.",
 	"related": ["isCustomFunction"],
 	"params": [
-		{"name":"object","description":"The object to check if it is a closure.","required":true,"default":"","type":"any","values":[]}
+		{
+			"name": "object",
+			"description": "The object to check if it is a closure.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isclosure.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isclosure.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isclosure"}
+		"coldfusion": {
+			"minimum_version": "10",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isclosure.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isclosure.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isclosure"
+		}
 	},
 	"links": [],
-    	"examples": [
-        {
-            "title": "Returns true if the object is a closure",
-            "description": "",
-            "code": "square = function(x) {\n    return x * x;\n};\n\nwriteDump(isClosure(square));",
-            "result": "TRUE"
-        },
-        {
-            "title": "Returns false if the object is not a closure",
-            "description": "",
-            "code": "square = function(x) {\n    return x * x;\n};\n\nsquared = square(5);\n\nwriteDump(isClosure(squared));",
-            "result": "FALSE"
-        }
-    ]
+	"examples": [
+		{
+			"title": "Returns true if the object is a closure",
+			"description": "",
+			"code": "square = function(x) {\n    return x * x;\n};\n\nwriteDump(isClosure(square));",
+			"result": "TRUE"
+		},
+		{
+			"title": "Returns false if the object is not a closure",
+			"description": "",
+			"code": "square = function(x) {\n    return x * x;\n};\n\nsquared = square(5);\n\nwriteDump(isClosure(squared));",
+			"result": "FALSE"
+		}
+	]
 }

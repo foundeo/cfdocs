@@ -1,22 +1,70 @@
 {
-	"name":"listGetAt",
-	"type":"function",
-	"syntax":"listGetAt(list, position [, delimiters [, includeEmptyValues]])",
-	"returns":"string",
-	"related":["listDeleteAt","listInsertAt","listSetAt"],
-	"description":"Gets a list element at a specified position.",
+	"name": "listGetAt",
+	"type": "function",
+	"syntax": "listGetAt(list, position [, delimiters [, includeEmptyValues]])",
+	"returns": "string",
+	"related": ["listDeleteAt", "listInsertAt", "listSetAt"],
+	"description": "Gets a list element at a specified position.",
 	"params": [
-		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"position","description":"","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"delimiter","description":"","required":false,"default":",","type":"string","values":[]},
-		{"name":"includeEmptyValues","description":"","required":false,"default":"false","type":"boolean","values":[]}
+		{
+			"name": "list",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "position",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "delimiter",
+			"description": "",
+			"required": false,
+			"default": ",",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "includeEmptyValues",
+			"description": "",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listgetat.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/listgetat.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listgetat"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listgetat"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listgetat"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listgetat.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/listgetat.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/listgetat"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/listgetat"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listgetat"
+		}
 	},
 	"links": [],
 	"examples": [
@@ -25,21 +73,21 @@
 			"description": "Returns the 2nd element in the list",
 			"code": "listGetAt(\"foo,bar,lorem,ipsum\", 2)",
 			"result": "bar",
-			"runnable":true
+			"runnable": true
 		},
 		{
 			"title": "Example with Delimiter",
 			"description": "Returns the 3rd element in the list using a custom delimiter",
 			"code": "listGetAt(\"foo,bar|lorem,ipsum|me|something\", 3, \"|\")",
 			"result": "me",
-			"runnable":true
+			"runnable": true
 		},
 		{
 			"title": "Example with IncludeEmptyValues",
 			"description": "Returns the 4th element in the list, treating the empty element as a value",
 			"code": "listGetAt(\"foo,bar,,lorem,ipsum\", 4, \",\", true)",
 			"result": "lorem",
-			"runnable":true
+			"runnable": true
 		}
 	]
 }

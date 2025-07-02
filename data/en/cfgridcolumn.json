@@ -2,7 +2,7 @@
 	"name": "cfgridcolumn",
 	"type": "tag",
 	"syntax": "<cfgridcolumn name=\"\">",
-	"related": ["cfgrid","cfgridrow","cfgridupdate"],
+	"related": ["cfgrid", "cfgridrow", "cfgridupdate"],
 	"description": "Used with the cfgrid tag in a cfform. Use this tag to specify\n column data in a cfgrid control. The font and alignment\n attributes used in cfgridcolumn override global font or\n alignment settings defined in cfgrid.",
 	"discouraged": "The use of tags generating UI is generally discouraged by the CFML community. See: https://static.raymondcamden.com/cfuitherightway/cfgrid/index.html",
 	"params": [
@@ -68,7 +68,19 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["black", "red", "blue", "magenta", "cyan", "orange", "darkgray", "pink", "white", "lightgray", "yellow"]
+			"values": [
+				"black",
+				"red",
+				"blue",
+				"magenta",
+				"cyan",
+				"orange",
+				"darkgray",
+				"pink",
+				"white",
+				"lightgray",
+				"yellow"
+			]
 		},
 		{
 			"name": "textcolor",
@@ -76,7 +88,19 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["black", "red", "blue", "magenta", "cyan", "orange", "darkgray", "pink", "white", "lightgray", "yellow"]
+			"values": [
+				"black",
+				"red",
+				"blue",
+				"magenta",
+				"cyan",
+				"orange",
+				"darkgray",
+				"pink",
+				"white",
+				"lightgray",
+				"yellow"
+			]
 		},
 		{
 			"name": "href",
@@ -124,7 +148,14 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["string_noCase", "Boolean", "numeric", "date", "combobox", "image"]
+			"values": [
+				"string_noCase",
+				"Boolean",
+				"numeric",
+				"date",
+				"combobox",
+				"image"
+			]
 		},
 		{
 			"name": "headerfont",
@@ -164,7 +195,19 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["black", "red", "blue", "magenta", "cyan", "orange", "darkgray", "pink", "white", "lightgray", "yellow"]
+			"values": [
+				"black",
+				"red",
+				"blue",
+				"magenta",
+				"cyan",
+				"orange",
+				"darkgray",
+				"pink",
+				"white",
+				"lightgray",
+				"yellow"
+			]
 		},
 		{
 			"name": "dataalign",
@@ -232,13 +275,17 @@
 		}
 	],
 	"engines": {
-		"coldfusion": { "minimum_version": "3", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfgridcolumn.html" }
+		"coldfusion": {
+			"minimum_version": "3",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfgridcolumn.html"
+		}
 	},
 	"links": [
 		{
-			"title":"Ext.Date Format Masks",
-			"description":"When using the `mask` attribute with a date these are the supported date/time mask characters.",
-			"url":"https://docs.sencha.com/extjs/6.5.0/modern/Ext.Date.html"
+			"title": "Ext.Date Format Masks",
+			"description": "When using the `mask` attribute with a date these are the supported date/time mask characters.",
+			"url": "https://docs.sencha.com/extjs/6.5.0/modern/Ext.Date.html"
 		}
 	]
 }

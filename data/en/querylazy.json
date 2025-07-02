@@ -1,56 +1,56 @@
 {
-    "name": "querylazy",
-    "type": "function",
-    "syntax": "querylazy()",
-    "returns": "void",
-    "description": "Executes a SQL query without loading the data entirely to memory. Instead it calls the given Function with every single row",
-    "params": [
-        {
-            "default": "",
-            "required": true,
-            "values": [],
-            "name": "sql",
-            "type": "string",
-            "description": "SQL to execute"
-        },
-        {
-            "default": "",
-            "required": true,
-            "values": [],
-            "name": "listener",
-            "type": "function",
-            "description": "listener function that will be called with the data of every single row. if returns false, execution is stopped."
-        },
-        {
-            "default": "",
-            "required": false,
-            "values": [],
-            "name": "params",
-            "type": "any",
-            "description": "Array or Struct of parameter values. \n    \t\t\tWhen passing an array use ? as place holders. \n    \t\t\tWhen passing a struct use :keyName where keyName is the name of the key in the structure corresponding to\n    \t\t\tthe parameter. \n    \t\t\tThe struct or array can be a struct with keys such as the following: cfsqltype, list"
-        },
-        {
-            "default": "",
-            "required": false,
-            "values": [],
-            "name": "options",
-            "type": "struct",
-            "description": "Struct containing query options, all cfquery tag attributes are supported except the name attribute."
-        }
-    ],
-    "engines": {
-        "lucee": {
-            "notes": "",
-            "minimum_version": "5.3.6",
-            "docs": "https://docs.lucee.org/reference/functions/querylazy.html"
-        }
-    },
-    "examples": [
-        {
-            "title": "QueryLazy Example",
-            "description": "This example demonstrates how to use the querylazy function to execute a query without loading the data entirely to memory.",
-            "code": "records = 0\n queryLazy(\n sql=\"SELECT * FROM users;\",\n listener=function(row){\n // Do something with a query row\n records++;\n },\n options={\n datasource:\"MyDatasource\"\n }\n );\n echo(\"Records: #records#\");",
-            "result": "Records: 10"
-        }
-    ]
+	"name": "querylazy",
+	"type": "function",
+	"syntax": "querylazy()",
+	"returns": "void",
+	"description": "Executes a SQL query without loading the data entirely to memory. Instead it calls the given Function with every single row",
+	"params": [
+		{
+			"default": "",
+			"required": true,
+			"values": [],
+			"name": "sql",
+			"type": "string",
+			"description": "SQL to execute"
+		},
+		{
+			"default": "",
+			"required": true,
+			"values": [],
+			"name": "listener",
+			"type": "function",
+			"description": "listener function that will be called with the data of every single row. if returns false, execution is stopped."
+		},
+		{
+			"default": "",
+			"required": false,
+			"values": [],
+			"name": "params",
+			"type": "any",
+			"description": "Array or Struct of parameter values. \n    \t\t\tWhen passing an array use ? as place holders. \n    \t\t\tWhen passing a struct use :keyName where keyName is the name of the key in the structure corresponding to\n    \t\t\tthe parameter. \n    \t\t\tThe struct or array can be a struct with keys such as the following: cfsqltype, list"
+		},
+		{
+			"default": "",
+			"required": false,
+			"values": [],
+			"name": "options",
+			"type": "struct",
+			"description": "Struct containing query options, all cfquery tag attributes are supported except the name attribute."
+		}
+	],
+	"engines": {
+		"lucee": {
+			"notes": "",
+			"minimum_version": "5.3.6",
+			"docs": "https://docs.lucee.org/reference/functions/querylazy.html"
+		}
+	},
+	"examples": [
+		{
+			"title": "QueryLazy Example",
+			"description": "This example demonstrates how to use the querylazy function to execute a query without loading the data entirely to memory.",
+			"code": "records = 0\n queryLazy(\n sql=\"SELECT * FROM users;\",\n listener=function(row){\n // Do something with a query row\n records++;\n },\n options={\n datasource:\"MyDatasource\"\n }\n );\n echo(\"Records: #records#\");",
+			"result": "Records: 10"
+		}
+	]
 }

@@ -1,68 +1,70 @@
 {
-    "name":"configImport",
-    "type":"function",
-    "syntax":"configImport(path path, [, type] [, password], [, params], [, charset])",
-    "returns":"struct",
-    "related":["configTranslate"],
-    "description":"Imports a configuration based on the CFConfig format.",
-    "params": [
-       
-            {
-                "name":"path",
-                "description":"Path to the .CFConfig.json file or the data itself as a Struct.",
-                "required":true,
-                "default":"false",
-                "type":"any",
-                "values":[]
-            },
-        
-            {
-                "name":"type",
-                "description":"Config Context to manipulate, server or web context.",
-                "required":false,
-                "default":"server",
-                "type":"string",
-                "values":["web", "server"]
-            },
-        
-            {
-                "name":"password",
-                "description":"password to access the configuration, depending on the value set for the attribute type.",
-                "required":false,
-                "default":"false",
-                "type":"string",
-                "values":[]
-            },
-        
-            {
-                "name":"params",
-                "description":"placeholder parameters to use as actual data for the placeholders inside the configuration.",
-                "required":false,
-                "default":"false",
-                "type":"struct",
-                "values":[]
-            },
-        
-            {
-                "name":"charset",
-                "description":"charset to use to read the .CFConfig file, if not defined, Lucee will use the default resource charset.",
-                "required":false,
-                "default":"false",
-                "type":"string",
-                "values":[]
-            }
-        
-    ],
-    "engines": {
-        "lucee": {"minimum_version":"5.3.8", "notes":"Added in 5.3.8.207", "docs":"https://docs.lucee.org/reference/functions/configimport.html"}
-    },
-    "links": [],
-    "examples": [
-        {
-            "title": "Example for importing a configuration",
-            "description": "Imports a configuration based on the CFConfig format from a file using a password stored in an environment variable.",
-            "code": "configImport(\n\tpath: expandPath('/config/config.json'),\n\ttype: 'server',\n\tpassword: SERVER.system.environment.PASSWORD\n);",
-            "runnable":false
-        }
-    ]
+	"name": "configImport",
+	"type": "function",
+	"syntax": "configImport(path path, [, type] [, password], [, params], [, charset])",
+	"returns": "struct",
+	"related": ["configTranslate"],
+	"description": "Imports a configuration based on the CFConfig format.",
+	"params": [
+		{
+			"name": "path",
+			"description": "Path to the .CFConfig.json file or the data itself as a Struct.",
+			"required": true,
+			"default": "false",
+			"type": "any",
+			"values": []
+		},
+
+		{
+			"name": "type",
+			"description": "Config Context to manipulate, server or web context.",
+			"required": false,
+			"default": "server",
+			"type": "string",
+			"values": ["web", "server"]
+		},
+
+		{
+			"name": "password",
+			"description": "password to access the configuration, depending on the value set for the attribute type.",
+			"required": false,
+			"default": "false",
+			"type": "string",
+			"values": []
+		},
+
+		{
+			"name": "params",
+			"description": "placeholder parameters to use as actual data for the placeholders inside the configuration.",
+			"required": false,
+			"default": "false",
+			"type": "struct",
+			"values": []
+		},
+
+		{
+			"name": "charset",
+			"description": "charset to use to read the .CFConfig file, if not defined, Lucee will use the default resource charset.",
+			"required": false,
+			"default": "false",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "5.3.8",
+			"notes": "Added in 5.3.8.207",
+			"docs": "https://docs.lucee.org/reference/functions/configimport.html"
+		}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Example for importing a configuration",
+			"description": "Imports a configuration based on the CFConfig format from a file using a password stored in an environment variable.",
+			"code": "configImport(\n\tpath: expandPath('/config/config.json'),\n\ttype: 'server',\n\tpassword: SERVER.system.environment.PASSWORD\n);",
+			"runnable": false
+		}
+	]
 }

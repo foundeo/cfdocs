@@ -51,7 +51,14 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["entry asc", "entry desc", "type asc", "type desc", "value asc", "value desc"]
+			"values": [
+				"entry asc",
+				"entry desc",
+				"type asc",
+				"type desc",
+				"value asc",
+				"value desc"
+			]
 		},
 		{
 			"name": "directory",

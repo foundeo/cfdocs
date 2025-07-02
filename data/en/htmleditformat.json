@@ -1,52 +1,68 @@
 {
-  "name": "htmlEditFormat",
-  "type": "function",
-  "returns": "string",
-  "syntax": "htmlEditFormat( string [, version] )",
-  "description": "Replaces special characters in a string with their HTML-escaped equivalents.",
-  "params": [
-    {
-      "name": "string",
-      "required": true,
-      "default": "",
-      "description": "A string or a variable that contains one.",
-      "type": "string",
-      "values": []
-    },
-    {
-      "name": "version",
-      "required": false,
-      "default": "2.0",
-      "description": "HTML version to use; currently ignored.",
-      "type": "numeric",
-      "values": [ -1, 2.0, 3.2 ]
-    }
-  ],
+	"name": "htmlEditFormat",
+	"type": "function",
+	"returns": "string",
+	"syntax": "htmlEditFormat( string [, version] )",
+	"description": "Replaces special characters in a string with their HTML-escaped equivalents.",
+	"params": [
+		{
+			"name": "string",
+			"required": true,
+			"default": "",
+			"description": "A string or a variable that contains one.",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "version",
+			"required": false,
+			"default": "2.0",
+			"description": "HTML version to use; currently ignored.",
+			"type": "numeric",
+			"values": [-1, 2.0, 3.2]
+		}
+	],
 
-  "engines": {
-    "coldfusion": { "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/htmleditformat.html",
-      "minimum_version": "", "notes": "Use encodeForHTML, which can provide more protection from XSS.", "deprecated" : "11" , "removed":"2025"},
-    "lucee":      { "docs": "https://docs.lucee.org/reference/functions/htmleditformat.html",
-      "minimum_version": "", "notes": "" },
-    "openbd":     { "docs": "http://openbd.org/manual/?/function/htmleditformat",
-      "minimum_version": "", "notes": "" },
-    "railo":      { "docs": "http://railodocs.org/index.cfm/function/htmleditformat",
-      "minimum_version": "", "notes": "" },
-      "boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/htmleditformat"}
-  },
+	"engines": {
+		"coldfusion": {
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/htmleditformat.html",
+			"minimum_version": "",
+			"notes": "Use encodeForHTML, which can provide more protection from XSS.",
+			"deprecated": "11",
+			"removed": "2025"
+		},
+		"lucee": {
+			"docs": "https://docs.lucee.org/reference/functions/htmleditformat.html",
+			"minimum_version": "",
+			"notes": ""
+		},
+		"openbd": {
+			"docs": "http://openbd.org/manual/?/function/htmleditformat",
+			"minimum_version": "",
+			"notes": ""
+		},
+		"railo": {
+			"docs": "http://railodocs.org/index.cfm/function/htmleditformat",
+			"minimum_version": "",
+			"notes": ""
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/htmleditformat"
+		}
+	},
 
-  "examples": [
-    {
-      "title": "Escapes the HTML characters",
-      "description": "",
-      "code": "htmlEditFormat( \"This is a test & this is another <This text is in angle brackets> Previous line was blank!!!\" )",
-      "result": "This is a test &amp; this is another &lt;This text is in angle brackets&gt; Previous line was blank!!!",
-      "runnable": true
-    }
-  ],
+	"examples": [
+		{
+			"title": "Escapes the HTML characters",
+			"description": "",
+			"code": "htmlEditFormat( \"This is a test & this is another <This text is in angle brackets> Previous line was blank!!!\" )",
+			"result": "This is a test &amp; this is another &lt;This text is in angle brackets&gt; Previous line was blank!!!",
+			"runnable": true
+		}
+	],
 
-  "links": [],
-  "related": [
-    "encodeForHTML"
-  ]
+	"links": [],
+	"related": ["encodeForHTML"]
 }

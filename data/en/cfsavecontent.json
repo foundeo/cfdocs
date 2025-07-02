@@ -1,19 +1,46 @@
 {
-	"name":"cfsavecontent",
-	"type":"tag",
-	"syntax":"<cfsavecontent variable=\"\">",
-	"script":"savecontent variable=\"\" {};",
-	"related":["cfset"],
-	"description":"Saves the generated content of the cfsavecontent tag, including the results of evaluating expressions and executing custom tags, in the specified variable.",
+	"name": "cfsavecontent",
+	"type": "tag",
+	"syntax": "<cfsavecontent variable=\"\">",
+	"script": "savecontent variable=\"\" {};",
+	"related": ["cfset"],
+	"description": "Saves the generated content of the cfsavecontent tag, including the results of evaluating expressions and executing custom tags, in the specified variable.",
 	"params": [
-		{"name":"variable","description":"Name of the variable in which to save the generated content of the tag.","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "variable",
+			"description": "Name of the variable in which to save the generated content of the tag.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfsavecontent.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/savecontent.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfsavecontent"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfsavecontent"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:savecontent>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/jdbc/queryparam"}
+		"coldfusion": {
+			"minimum_version": "5",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfsavecontent.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/tags/savecontent.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/tag/cfsavecontent"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/tag/cfsavecontent"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "`<bx:savecontent>` in BoxLang",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/components/jdbc/queryparam"
+		}
 	},
 	"links": [],
 	"examples": [
@@ -23,11 +50,11 @@
 			"code": "savecontent variable=\"myContent\" {\r\n writeOutput(\"Somecontent.\");\r\n}",
 			"result": ""
 		},
-	        {
+		{
 			"title": "Tag Syntax",
 			"description": "",
 			"code": "<cfsavecontent variable=\"myContent\">\r\n<cfoutput>Some content.</cfoutput>\r\n</cfsavecontent>",
 			"result": ""
-	        }
+		}
 	]
 }

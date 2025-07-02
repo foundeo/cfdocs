@@ -1,28 +1,43 @@
 {
-	"name":"structIsCaseSensitive",
-	"type":"function",
-	"syntax":"structIsCaseSensitive(inputStruct)",
-	"member":"inputStruct.isCaseSensitive",
-	"returns":"boolean",
-	"related":[],
-	"description":"Determines whether a struct is case-sensitive.",
+	"name": "structIsCaseSensitive",
+	"type": "function",
+	"syntax": "structIsCaseSensitive(inputStruct)",
+	"member": "inputStruct.isCaseSensitive",
+	"returns": "boolean",
+	"related": [],
+	"description": "Determines whether a struct is case-sensitive.",
 	"params": [
-		{"name":"inputStruct","description":"The struct that needs to be checked for case sensitivity.","required":true,"default":"","type":"struct","values":[]}
+		{
+			"name": "inputStruct",
+			"description": "The struct that needs to be checked for case sensitivity.",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structiscasesensitive.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structiscasesensitive"}
+		"coldfusion": {
+			"minimum_version": "2021",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structiscasesensitive.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structiscasesensitive"
+		}
 	},
 	"links": [
 		{
-			"title":"Struct Key casesensitive",
-			"description":"Lucee Dev discussion about case-sensitive structs.",
-			"url":"https://dev.lucee.org/t/struct-key-casesensitive/8264"
+			"title": "Struct Key casesensitive",
+			"description": "Lucee Dev discussion about case-sensitive structs.",
+			"url": "https://dev.lucee.org/t/struct-key-casesensitive/8264"
 		},
 		{
-			"title":"ACF2021 - Case Sensitive structs",
-			"description":"Lucee Dev ticket about case-sensitive structs.",
-			"url":"https://luceeserver.atlassian.net/browse/LDEV-3133"
+			"title": "ACF2021 - Case Sensitive structs",
+			"description": "Lucee Dev ticket about case-sensitive structs.",
+			"url": "https://luceeserver.atlassian.net/browse/LDEV-3133"
 		}
 	],
 	"examples": [

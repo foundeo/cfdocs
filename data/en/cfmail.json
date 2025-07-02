@@ -2,7 +2,7 @@
 	"name": "cfmail",
 	"type": "tag",
 	"syntax": "<cfmail to=\"\" from=\"\" subject=\"\">",
-	"related": ["cfmailpart", "cfmailparam", "cfpop","cfimap"],
+	"related": ["cfmailpart", "cfmailparam", "cfpop", "cfimap"],
 	"description": "Sends an email message that optionally contains query output, using an SMTP server.",
 	"params": [
 		{
@@ -11,7 +11,7 @@
 			"type": "boolean",
 			"description": "Lucee4.5+ Specifies the mail is sent asynchronously by the Lucee Task manager (with multiple tries), if set to false the mail is sent in the same thread that executes the request, which is useful for troubleshooting because you get an error message if there is one. This setting overrides the setting with the same name in the Lucee Administrator. This attribute replaces the old 'spoolenable' attribute which is still supported as an alias.",
 			"default": "",
-			"values": [ true, false ]
+			"values": [true, false]
 		},
 		{
 			"name": "bcc",
@@ -35,7 +35,19 @@
 			"type": "string",
 			"description": "The character encoding in which the text part is encoded.",
 			"default": "",
-			"values": [ "utf-8", "iso-8859-1", "windows-1252", "us-ascii", "shift_jis", "iso-2022-jp", "euc-jp", "euc-kr", "big5", "euc-cn", "utf-16" ]
+			"values": [
+				"utf-8",
+				"iso-8859-1",
+				"windows-1252",
+				"us-ascii",
+				"shift_jis",
+				"iso-2022-jp",
+				"euc-jp",
+				"euc-kr",
+				"big5",
+				"euc-cn",
+				"utf-16"
+			]
 		},
 		{
 			"name": "debug",
@@ -43,7 +55,7 @@
 			"type": "boolean",
 			"description": "true: sends debugging output to standard output. By default, if the console window is unavailable, ColdFusion sends output to cf_root\\runtime\\logs\\coldfusion-out.log on server configurations. On J2EE configurations, with JRun, the default location is jrun_home/logs/servername-out.log.\nfalse: does not generate debugging output.",
 			"default": "false",
-			"values": [ true, false ]
+			"values": [true, false]
 		},
 		{
 			"name": "encrypt",
@@ -51,14 +63,20 @@
 			"type": "boolean",
 			"description": "CF11+ Toggles email message encryption",
 			"default": "false",
-			"values": [ true, false ]
+			"values": [true, false]
 		},
 		{
 			"name": "encryptionalgorithm",
 			"required": false,
 			"type": "string",
 			"description": "CF11+ Algorithm to use when encrypt=true\nEncryption support is provided through S/MIME.",
-			"values": [ "DES_EDE3_CBC", "RC2_CBC", "AES128_CBC", "AES192_CBC", "AES256_CBC" ]
+			"values": [
+				"DES_EDE3_CBC",
+				"RC2_CBC",
+				"AES128_CBC",
+				"AES192_CBC",
+				"AES256_CBC"
+			]
 		},
 		{
 			"name": "failto",
@@ -90,7 +108,7 @@
 			"type": "boolean",
 			"description": "Whether to consider case when using the group attribute. To group on case-sensitive records, set this attribute to Yes.",
 			"default": "",
-			"values": [ true, false ]
+			"values": [true, false]
 		},
 		{
 			"name": "keyalias",
@@ -170,7 +188,15 @@
 			"type": "string",
 			"description": "The message priority level. Can be an integer in the range 1-5; 1 represents the highest priority, or one of the following string values, which correspond to the numeric values",
 			"default": "normal",
-			"values": [ "highest", "urgent", "high", "normal", "low", "lowest", "non-urgent" ]
+			"values": [
+				"highest",
+				"urgent",
+				"high",
+				"normal",
+				"low",
+				"lowest",
+				"non-urgent"
+			]
 		},
 		{
 			"name": "proxyserver",
@@ -264,7 +290,7 @@
 			"type": "boolean",
 			"description": "Specifies whether to spool mail or always send it Immediately. Overrides the CFML MX Administrator Spool mail messages to disk for delivery setting.",
 			"default": "",
-			"values": [ true, false ]
+			"values": [true, false]
 		},
 		{
 			"name": "startrow",
@@ -304,7 +330,7 @@
 			"type": "string",
 			"description": "The MIME media type of the part. Can be a can be valid MIME media type",
 			"default": "text/plain",
-			"values": [ "plain", "html", "text", "text/html", "text/plain" ]
+			"values": ["plain", "html", "text", "text/html", "text/plain"]
 		},
 		{
 			"name": "username",
@@ -320,7 +346,7 @@
 			"type": "boolean",
 			"description": "Whether to use Secure Sockets Layer.",
 			"default": "",
-			"values": [ true, false ]
+			"values": [true, false]
 		},
 		{
 			"name": "usetls",
@@ -328,7 +354,7 @@
 			"type": "boolean",
 			"description": "Whether to use Transport Level Security.",
 			"default": "",
-			"values": [ true, false ]
+			"values": [true, false]
 		},
 		{
 			"name": "wraptext",

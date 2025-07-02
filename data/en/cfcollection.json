@@ -1,43 +1,112 @@
 {
-	"name":"cfcollection",
-	"type":"tag",
-	"syntax":"<cfcollection action=\"categorylist\">",
-	"related":[],
-	"description":"Creates, registers, and administers Verity search engine\n collections.\n\n A collection that is created with the cfcollection tag is\n internal. A collection created any other way is external.\n\n A collection that is registered with CFML using the\n cfcollection tag or registered with the K2 Server by editing\n the k2server.ini file is registered. Other collections are\n unregistered.",
+	"name": "cfcollection",
+	"type": "tag",
+	"syntax": "<cfcollection action=\"categorylist\">",
+	"related": [],
+	"description": "Creates, registers, and administers Verity search engine\n collections.\n\n A collection that is created with the cfcollection tag is\n internal. A collection created any other way is external.\n\n A collection that is registered with CFML using the\n cfcollection tag or registered with the K2 Server by editing\n the k2server.ini file is registered. Other collections are\n unregistered.",
 	"params": [
-		{"name":"action","description":"categorylist: retrieves categories from the collection and\n indicates how many documents are in each one. Returns\n a structure of structures in which the category\n representing each substructure is associated with a\n number of documents. For a category in a category tree,\n the number of documents is the number at or below that\n level in the tree.\n create: registers the collection with CFML.\n - If the collection is present: creates a map to it\n - If the collection is not present: creates it\n delete: unregisters a collection.\n - If the collection was registered with action = create:\n deletes its directories\n - If the collection was registered and mapped: does not\n delete collection directories\n optimize: optimizes the structure and contents of the\n collection for searching; recovers space.\n list: returns a query result set, named from the name\n attribute value, of the attributes of the collections\n that are registered by CFML and K2 Server.\n map: creates a map to the collection. It is not necessary\n to specify this value. Deprecated in CF7.\n repair: fixes data corruption in a collection. Deprecated in CF7.","required":true,"default":"list","type":"string","values":["categorylist","create","delete","optimize","list","map","repair"]},
-		{"name":"collection","description":"A collection name. The name can include spaces","required":false,"default":"","type":"string","values":[]},
-		{"name":"path","description":"Absolute path to a Verity\/Lucene\/SOLR collection.","required":false,"default":"","type":"string","values":[]},
-		{"name":"language","description":"Options are listed in Usage section. Requires the\n appropriate (European or Asian) Verity Locales language\n pack.","required":false,"default":"english","type":"string","values":[]},
-		{"name":"name","description":"Name for the query results returned by the list action.","required":false,"default":"","type":"string","values":[]},
-		{"name":"categories","description":"Used only for creating a collection:\n - true: This collection includes support for categories.\n - false: This collection does not support categories. Default.","required":false,"default":false,"type":"boolean","values":[true,false]},
-		{"name":"engine","description":"Search engine","required":false,"default":"verity","type":"string","values":["verity","solr"]}
-
-	],
-	"engines": {
-		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcollection.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/collection.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfcollection"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcollection"}
-	},
-	"links": [
-
-	],
-	"examples": [
 		{
-			"title":"Example of using the cfcollection function to create a collection",
-			"description":"In this example we demonstrate using the cfcollection function to build a function which first checks if a collection already exists (and has records), and if not, creates the collection.",
-			"code":"public boolean function createCollection( required string collectionName ) {\r\n\t// var scope a variable to check if the collection already exists\r\n\tvar collectionExists = '';\r\n\r\n\t// use cfcollection to get a list of documents from the passed in collection\r\n\tcfcollection( action = 'list', collection = arguments.collectionName, name = 'collectionExists' );\r\n\r\n\t// see if the collection has any records\r\n\tif( !collectionExists.recordCount ) {\r\n\t\t// it does not, but wrap create in a try in case it exists but is merely empty\r\n\t\ttry {\r\n\t\t\t// use cfcollection to create a new collection\r\n\t\t\tcfcollection( action = 'create', collection = arguments.collectionName );\r\n\t\t// catch if this collection already exists\r\n\t\t} catch (any e) {\r\n\t\t\t// it does, return false\r\n\t\t\treturn false;\r\n\t\t}\r\n\t// otherwise\r\n\t} else {\r\n\t\t// collection already has records (and thus exists), return false\r\n\t\treturn false;\r\n\t}\r\n\r\n\t// the collection was successfully created, return true\r\n\treturn true;\r\n}",
-			"result":"True, if the collection was created; False, if the collection already exists",
-			"runnable":false
+			"name": "action",
+			"description": "categorylist: retrieves categories from the collection and\n indicates how many documents are in each one. Returns\n a structure of structures in which the category\n representing each substructure is associated with a\n number of documents. For a category in a category tree,\n the number of documents is the number at or below that\n level in the tree.\n create: registers the collection with CFML.\n - If the collection is present: creates a map to it\n - If the collection is not present: creates it\n delete: unregisters a collection.\n - If the collection was registered with action = create:\n deletes its directories\n - If the collection was registered and mapped: does not\n delete collection directories\n optimize: optimizes the structure and contents of the\n collection for searching; recovers space.\n list: returns a query result set, named from the name\n attribute value, of the attributes of the collections\n that are registered by CFML and K2 Server.\n map: creates a map to the collection. It is not necessary\n to specify this value. Deprecated in CF7.\n repair: fixes data corruption in a collection. Deprecated in CF7.",
+			"required": true,
+			"default": "list",
+			"type": "string",
+			"values": [
+				"categorylist",
+				"create",
+				"delete",
+				"optimize",
+				"list",
+				"map",
+				"repair"
+			]
 		},
 		{
-			"title":"Example of using the <cfcollection> tag to create a collection",
-			"description":"In this example we demonstrate using the &lt;cfcollection&gt; tag to build a function which first checks if a collection already exists (and has records), and if not, creates the collection.",
-			"code":"<cffunction access=\"public\" returntype=\"boolean\" name=\"createCollection\">\r\n\t<cfargument name=\"collectionName\" type=\"string\" required=\"true\" />\r\n\r\n\t<!--- var scope a variable to check if the collection already exists --->\r\n\t<cfset var collectionExists = \"\"; />\r\n\r\n\t<!--- use cfcollection to get a list of documents from the passed in collection --->\r\n\t<cfcollection action=\"list\" collection=\"#arguments.collectionName#\" name=\"collectionExists\" />\r\n\r\n\t<!--- see if the collection has any records --->\r\n\t<cfif NOT collectionExists.recordCount>\r\n\t\t<!--- it doesn't, but wrap create in a try in case it exists but is merely empty --->\r\n\t\t<cftry>\r\n\t\t\t<!--- use cfcollection to create a new collection --->\r\n\t\t\t<cfcollection action=\"create\" collection=\"#arguments.collectionName#\" />\r\n\t\t<!--- catch if this collection already exists --->\r\n\t\t<cfcatch type=\"any\">\r\n\t\t\t<!--- it does, return false --->\r\n\t\t\t<cfreturn false />\r\n\t\t</cfcatch>\r\n\t\t</cftry>\r\n\t<!--- otherwise --->\r\n\t<cfelse>\r\n\t\t<!--- collection already has records (and thus exists), return false --->\r\n\t\t<cfreturn false />\r\n\t</cfif>\r\n\r\n\t<!--- the collection was successfully created, return true --->\r\n\t<cfreturn true />\r\n</cffunction>",
-			"result":"True, if the collection was created; False, if the collection already exists",
-			"runnable":false
+			"name": "collection",
+			"description": "A collection name. The name can include spaces",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "path",
+			"description": "Absolute path to a Verity/Lucene/SOLR collection.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "language",
+			"description": "Options are listed in Usage section. Requires the\n appropriate (European or Asian) Verity Locales language\n pack.",
+			"required": false,
+			"default": "english",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "name",
+			"description": "Name for the query results returned by the list action.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "categories",
+			"description": "Used only for creating a collection:\n - true: This collection includes support for categories.\n - false: This collection does not support categories. Default.",
+			"required": false,
+			"default": false,
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "engine",
+			"description": "Search engine",
+			"required": false,
+			"default": "verity",
+			"type": "string",
+			"values": ["verity", "solr"]
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "4",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcollection.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/tags/collection.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/tag/cfcollection"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/tag/cfcollection"
+		}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Example of using the cfcollection function to create a collection",
+			"description": "In this example we demonstrate using the cfcollection function to build a function which first checks if a collection already exists (and has records), and if not, creates the collection.",
+			"code": "public boolean function createCollection( required string collectionName ) {\r\n\t// var scope a variable to check if the collection already exists\r\n\tvar collectionExists = '';\r\n\r\n\t// use cfcollection to get a list of documents from the passed in collection\r\n\tcfcollection( action = 'list', collection = arguments.collectionName, name = 'collectionExists' );\r\n\r\n\t// see if the collection has any records\r\n\tif( !collectionExists.recordCount ) {\r\n\t\t// it does not, but wrap create in a try in case it exists but is merely empty\r\n\t\ttry {\r\n\t\t\t// use cfcollection to create a new collection\r\n\t\t\tcfcollection( action = 'create', collection = arguments.collectionName );\r\n\t\t// catch if this collection already exists\r\n\t\t} catch (any e) {\r\n\t\t\t// it does, return false\r\n\t\t\treturn false;\r\n\t\t}\r\n\t// otherwise\r\n\t} else {\r\n\t\t// collection already has records (and thus exists), return false\r\n\t\treturn false;\r\n\t}\r\n\r\n\t// the collection was successfully created, return true\r\n\treturn true;\r\n}",
+			"result": "True, if the collection was created; False, if the collection already exists",
+			"runnable": false
+		},
+		{
+			"title": "Example of using the <cfcollection> tag to create a collection",
+			"description": "In this example we demonstrate using the &lt;cfcollection&gt; tag to build a function which first checks if a collection already exists (and has records), and if not, creates the collection.",
+			"code": "<cffunction access=\"public\" returntype=\"boolean\" name=\"createCollection\">\r\n\t<cfargument name=\"collectionName\" type=\"string\" required=\"true\" />\r\n\r\n\t<!--- var scope a variable to check if the collection already exists --->\r\n\t<cfset var collectionExists = \"\"; />\r\n\r\n\t<!--- use cfcollection to get a list of documents from the passed in collection --->\r\n\t<cfcollection action=\"list\" collection=\"#arguments.collectionName#\" name=\"collectionExists\" />\r\n\r\n\t<!--- see if the collection has any records --->\r\n\t<cfif NOT collectionExists.recordCount>\r\n\t\t<!--- it doesn't, but wrap create in a try in case it exists but is merely empty --->\r\n\t\t<cftry>\r\n\t\t\t<!--- use cfcollection to create a new collection --->\r\n\t\t\t<cfcollection action=\"create\" collection=\"#arguments.collectionName#\" />\r\n\t\t<!--- catch if this collection already exists --->\r\n\t\t<cfcatch type=\"any\">\r\n\t\t\t<!--- it does, return false --->\r\n\t\t\t<cfreturn false />\r\n\t\t</cfcatch>\r\n\t\t</cftry>\r\n\t<!--- otherwise --->\r\n\t<cfelse>\r\n\t\t<!--- collection already has records (and thus exists), return false --->\r\n\t\t<cfreturn false />\r\n\t</cfif>\r\n\r\n\t<!--- the collection was successfully created, return true --->\r\n\t<cfreturn true />\r\n</cffunction>",
+			"result": "True, if the collection was created; False, if the collection already exists",
+			"runnable": false
 		}
 	]
-
 }

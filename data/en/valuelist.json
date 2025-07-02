@@ -1,31 +1,63 @@
 {
-	"name":"valueList",
-	"type":"function",
-	"syntax":"valueList(column [, delimiter])",
-	"returns":"string",
-	"related":["valueArray"],
-	"description":"Returns each value from a column of an executed query.\n CFML does not evaluate the arguments.\n A delimited list of the values of each record returned from an executed query column",
+	"name": "valueList",
+	"type": "function",
+	"syntax": "valueList(column [, delimiter])",
+	"returns": "string",
+	"related": ["valueArray"],
+	"description": "Returns each value from a column of an executed query.\n CFML does not evaluate the arguments.\n A delimited list of the values of each record returned from an executed query column",
 	"params": [
-		{"name":"column","description":"Name of an executed query and column. Separate query name and column name with a period.","required":true,"default":"","type":"query","values":[]},
-		{"name":"delimiter","description":"A delimiter character to separate column data items.\n Default: comma (,).","required":false,"default":",","type":"string","values":[]}
+		{
+			"name": "column",
+			"description": "Name of an executed query and column. Separate query name and column name with a period.",
+			"required": true,
+			"default": "",
+			"type": "query",
+			"values": []
+		},
+		{
+			"name": "delimiter",
+			"description": "A delimiter character to separate column data items.\n Default: comma (,).",
+			"required": false,
+			"default": ",",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/valuelist.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/valuelist.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/valuelist"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/valuelist"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Transplies to `queryColumnData().toList( delimiter )` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumndata"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/valuelist.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/valuelist.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/valuelist"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/valuelist"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Transplies to `queryColumnData().toList( delimiter )` in BoxLang",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumndata"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Simple Example",
 			"description": "Retrieve column results",
 			"code": "news = queryNew(\"id,title\",\r\n    \"integer,varchar\",\r\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\r\nwriteOutput( valueList(news.id) );",
-			"result":"1,2",
-			"runnable":true
+			"result": "1,2",
+			"runnable": true
 		}
 	]
 }

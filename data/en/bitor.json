@@ -1,29 +1,63 @@
 {
-	"name":"bitOr",
-	"type":"function",
-	"syntax":"bitOr(number1, number2)",
-	"returns":"numeric",
-	"related":["bitAnd","bitXor"],
-	"description":"Performs a bitwise logical OR operation.",
+	"name": "bitOr",
+	"type": "function",
+	"syntax": "bitOr(number1, number2)",
+	"returns": "numeric",
+	"related": ["bitAnd", "bitXor"],
+	"description": "Performs a bitwise logical OR operation.",
 	"params": [
-		{"name":"number1","description":"Integer","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"number2","description":"Integer","required":true,"default":"","type":"numeric","values":[]}
+		{
+			"name": "number1",
+			"description": "Integer",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "number2",
+			"description": "Integer",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/bitor.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/bitor.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/bitor"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/bitor"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/binary/bitor"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/bitor.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/bitor.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/bitor"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/bitor"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/binary/bitor"
+		}
 	},
 	"links": [],
 	"examples": [
 		{
-			"title":"Calculate bitwise logical OR",
-			"description":"Uses the bitOr function to perform the logical OR operation on each pair of the corresponding bits",
-			"code":"bitOr(5,3)",
-			"result":7,
-			"runnable":true
+			"title": "Calculate bitwise logical OR",
+			"description": "Uses the bitOr function to perform the logical OR operation on each pair of the corresponding bits",
+			"code": "bitOr(5,3)",
+			"result": 7,
+			"runnable": true
 		}
 	]
 }

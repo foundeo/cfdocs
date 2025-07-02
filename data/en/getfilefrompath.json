@@ -1,28 +1,55 @@
 {
-	"name":"getFileFromPath",
-	"type":"function",
-	"syntax":"getFileFromPath(path)",
-	"returns":"string",
-	"related":["getDirectoryFromPath"],
-	"description":" Extracts a filename from an absolute path.",
+	"name": "getFileFromPath",
+	"type": "function",
+	"syntax": "getFileFromPath(path)",
+	"returns": "string",
+	"related": ["getDirectoryFromPath"],
+	"description": "Extracts a filename from an absolute path.",
 	"params": [
-		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "path",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getfilefrompath.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/getfilefrompath.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getfilefrompath"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getfilefrompath"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/getfilefrompath"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getfilefrompath.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/getfilefrompath.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/getfilefrompath"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/getfilefrompath"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/getfilefrompath"
+		}
 	},
 	"links": [],
-	"examples" : [
+	"examples": [
 		{
-			"title":"Basic Example",
-			"description":"",
-			"code":"getFileFromPath(\"C:\\temp\\file.txt\")",
-			"result":"file.txt",
-			"runnable":true
+			"title": "Basic Example",
+			"description": "",
+			"code": "getFileFromPath(\"C:\\temp\\file.txt\")",
+			"result": "file.txt",
+			"runnable": true
 		}
 	]
 }

@@ -8,7 +8,7 @@ Authentication has been around as long as computers have been around. The first 
 
 Since then several 'flavors' of web application authentication have come along that aimed to address the various attack vectors exposed by preceding authentication mechanisms. We will use many of these authentication mechanisms, layered upon one another, to build a highly secure authentication system that will provide a concise way for you to allow registered users to authenticate with your application.
 
-### Federated Authentication
+## Federated Authentication
 
 Federated authentication was born to address the need to ensure that a user was logging in from your server and not from someone else's server. Federation helps prevent someone from generating a form on their site that then logs into your site, exposing your authentication to abuse by servers not under your control.
 
@@ -16,7 +16,7 @@ The first step to federation is to ensure that the value of the referrer HTTP he
 
 Federated cookies, when layered with the referrer check, provide a more secure login form by requiring that your domain specific cookie is provided to your server on the authentication request. While it is still feasible to provide this cookie from another server, it makes your authentication more robust and can help ward off those scripts that cannot, or does not, provide for these kinds of added protections. This is not a failsafe, it merely adds upon the layers your authentication requires, thus making it more difficult and time consuming to hack.
 
-### Disclosure Prevention
+## Disclosure Prevention
 
 One of the drawbacks of authenticating with web applications is that the username and password still need to be sent to the server for authentication. In most cases, this information is still sent in clear-text on the initial request. While this alleviates one of the problems with HTTP Basic Authentication - the need to send the username and password in clear-text on **every** request, it still presents an opportunity for a MITM attack to see the username and password being passed in.
 
@@ -26,7 +26,7 @@ Passwords on the other hand, are always (or should always) be unique to each sys
 
 For this reason, steps should be taken to ensure that the plain-text passwords of your users are not sent to the server so that such a password disclosure doesn't lead to a user having all of their accounts exposed and attacked. We will look at one effective way of doing this using hashing in this guide.
 
-### Session Cookies
+## Session Cookies
 
 CFML can provide the *cftoken* session cookie management features out of the box and, by default, these are usually turned on in older CFML engines, with CF10+ allowing for greater control over how those session cookies are managed. You can, and should, however utilize your own session cookie to manage sessions to achieve greater control over the session as well as eliminate a common attack vector against CFML - anyone who has used CFML understands that the *cftoken* cookie is used for session management, and thus understands this is the attack vector to exploit. If you instead utilize your own session cookie, it can help avoid script kiddie utilities designed to attack the specific *cftoken* cookie provided by CFML. We'll start by defining the name of our session cookie within the *application* scope of your *Application.cfc*, as follows:
 
@@ -41,7 +41,7 @@ Which might confuse the hacker into believing that this is a Google Analytics co
 
     __#hash( 'some_cookie_name', 'SHA-256', 'UTF-8', 25 )#
 
-### The Login View (Page)
+## The Login View (Page)
 
 We'll start exploring how to build a secure authentication mechanism by examining the login page you should use for your web application. This login page should take advantage of both federation and prevent against password disclosure. Our examples will, again, be using fw/1 to demonstrate ways of handling these tasks, but the same concepts are applicable across all web applications (even non-CFML ones!).
 
@@ -118,7 +118,7 @@ In doing so, we have obfuscated the users password and prevented disclosure from
 
 In just a few simple lines of code (which are spelled out here to show the process more thoroughly and could be truncated to further obscure what the JavaScript is intended to do), we have a) federated our login form with a cookie, b) eliminated any lingering session values for that session, c) ensured that the users password is protected from disclosure when being sent to the server from the browser and d) helped protect against CSRF attacks by generating a token.
 
-### Authentication
+## Authentication
 
 Once the user has entered their username and password, and clicked your 'login' button, their data is sent to your server to be processed. The first thing we want to do is ensure that the page is being submitted to your server from your server, which we do both by checking the referrer, as follows:
 

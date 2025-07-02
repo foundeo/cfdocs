@@ -1,47 +1,104 @@
 {
-	"name":"queryAddColumn",
-	"type":"function",
-	"syntax":"queryAddColumn(query, column_name [, datatype], array_name)",
-	"member":"someQuery.addColumn(column_name [, datatype], array_name)",
-	"returns":"numeric",
-	"related":["QueryNew", "QueryAddRow", "QuerySetCell"],
-	"description":" Adds a column to a query and populates its rows with the\n contents of a one-dimensional array. Pads query columns,\n if necessary, to ensure that all columns have the same number\n of rows.",
+	"name": "queryAddColumn",
+	"type": "function",
+	"syntax": "queryAddColumn(query, column_name [, datatype], array_name)",
+	"member": "someQuery.addColumn(column_name [, datatype], array_name)",
+	"returns": "numeric",
+	"related": ["QueryNew", "QueryAddRow", "QuerySetCell"],
+	"description": "Adds a column to a query and populates its rows with the\n contents of a one-dimensional array. Pads query columns,\n if necessary, to ensure that all columns have the same number\n of rows.",
 	"params": [
-		{"name":"query","description":"","required":true,"default":"","type":"query","values":[]},
-		{"name":"column_name","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"datatype","description":"Column data type.","required":false,"default":"","type":"string","values":["Integer","Bigint","Double","Decimal","Varchar","Binary","Bit","Time",
-"Date","Timestamp"]},
-		{"name":"array_name","description":"","required":true,"default":"","type":"array","values":[]}
+		{
+			"name": "query",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "query",
+			"values": []
+		},
+		{
+			"name": "column_name",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "datatype",
+			"description": "Column data type.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": [
+				"Integer",
+				"Bigint",
+				"Double",
+				"Decimal",
+				"Varchar",
+				"Binary",
+				"Bit",
+				"Time",
+				"Date",
+				"Timestamp"
+			]
+		},
+		{
+			"name": "array_name",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "array",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryaddcolumn.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/queryaddcolumn.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/queryaddcolumn"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/queryaddcolumn"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/queryaddcolumn"}
+		"coldfusion": {
+			"minimum_version": "4",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryaddcolumn.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/queryaddcolumn.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/queryaddcolumn"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/queryaddcolumn"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/queryaddcolumn"
+		}
 	},
 	"links": [
 		{
-			"title":"Adding A Column From Second Query To First Query",
-			"url":"https://www.bennadel.com/blog/674-ask-ben-adding-a-column-from-second-query-to-first-query.htm#main-content",
-			"description":""
+			"title": "Adding A Column From Second Query To First Query",
+			"url": "https://www.bennadel.com/blog/674-ask-ben-adding-a-column-from-second-query-to-first-query.htm#main-content",
+			"description": ""
 		}
 	],
 	"examples": [
 		{
-			"title":"Tag Example",
-			"description":" ",
-			"code":"<!--- Make a query. ---> \r\n <cfset myQuery = queryNew(\"\")> \r\n  <!--- Create an array. ---> \r\n <cfset FastFoodArray = arrayNew(1)> \r\n <cfset FastFoodArray[1] = \"French Fries\"> \r\n <cfset FastFoodArray[2] = \"Hot Dogs\"> \r\n <cfset FastFoodArray[3] = \"Fried Clams\"> \r\n <cfset FastFoodArray[4] = \"Thick Shakes\"> \r\n <!--- Use the array to add a column to the query. ---> \r\n <cfset nColumnNumber = queryAddColumn(myQuery, \"FastFood\", \"VarChar\", FastFoodArray)> \r\n <cfdump var=\"#myQuery#\" /> ",
-			"result":"",
-			"runnable":true
+			"title": "Tag Example",
+			"description": "",
+			"code": "<!--- Make a query. ---> \r\n <cfset myQuery = queryNew(\"\")> \r\n  <!--- Create an array. ---> \r\n <cfset FastFoodArray = arrayNew(1)> \r\n <cfset FastFoodArray[1] = \"French Fries\"> \r\n <cfset FastFoodArray[2] = \"Hot Dogs\"> \r\n <cfset FastFoodArray[3] = \"Fried Clams\"> \r\n <cfset FastFoodArray[4] = \"Thick Shakes\"> \r\n <!--- Use the array to add a column to the query. ---> \r\n <cfset nColumnNumber = queryAddColumn(myQuery, \"FastFood\", \"VarChar\", FastFoodArray)> \r\n <cfdump var=\"#myQuery#\" /> ",
+			"result": "",
+			"runnable": true
 		},
 		{
-			"title":"member syntax example",
-			"description":"add a column to a query using member syntax",
-			"code":"books = queryNew(\"id,title\", \"integer,varchar\");\nbooks.addColumn(\"author\", \"varchar\", []);\nwriteDump(books);",
-			"result":"",
-			"runnable":true
+			"title": "member syntax example",
+			"description": "add a column to a query using member syntax",
+			"code": "books = queryNew(\"id,title\", \"integer,varchar\");\nbooks.addColumn(\"author\", \"varchar\", []);\nwriteDump(books);",
+			"result": "",
+			"runnable": true
 		}
 	]
-
 }

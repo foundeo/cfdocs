@@ -1,26 +1,53 @@
 {
-	"name":"evaluate",
-	"type":"function",
-	"syntax":"evaluate(expression)",
-	"returns":"any",
-	"related":["de","render"],
-	"description":"Evaluates one or more string expressions, dynamically, from left to right. (The results of an evaluation on the left can have meaning in an expression to the right.) Returns the result of evaluating the rightmost expression.",
-	"discouraged":"In almost all cases evaluate is unnecessary (use bracket notation instead). Use of evaluate can lead to performance and security issues.",
+	"name": "evaluate",
+	"type": "function",
+	"syntax": "evaluate(expression)",
+	"returns": "any",
+	"related": ["de", "render"],
+	"description": "Evaluates one or more string expressions, dynamically, from left to right. (The results of an evaluation on the left can have meaning in an expression to the right.) Returns the result of evaluating the rightmost expression.",
+	"discouraged": "In almost all cases evaluate is unnecessary (use bracket notation instead). Use of evaluate can lead to performance and security issues.",
 	"params": [
-		{"name":"expression","description":"Expression to evaluate. String expressions can be complex. If a string expression contains a single- or double-quotation mark, the mark must be escaped. This function is useful for forming one variable from multiple variables.","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "expression",
+			"description": "Expression to evaluate. String expressions can be complex. If a string expression contains a single- or double-quotation mark, the mark must be escaped. This function is useful for forming one variable from multiple variables.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/evaluate.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/evaluate.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/evaluate"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/evaluate"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-unsafe-evaluate` module", "docs":"https://github.com/ortus-boxlang/bx-unsafe-evaluate"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/evaluate.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/evaluate.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/evaluate"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/evaluate"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Requires the `bx-unsafe-evaluate` module",
+			"docs": "https://github.com/ortus-boxlang/bx-unsafe-evaluate"
+		}
 	},
 	"links": [
 		{
-			"title":"Avoiding the Evaluate Function",
-			"description":"Adobe Document discouraging use of Evaluate.",
-			"url":"https://helpx.adobe.com/coldfusion/developing-applications/the-cfml-programming-language/using-expressions-and-number-signs/dynamic-expressions-and-dynamic-variables.html#AvoidingtheEvaluatefunction"
+			"title": "Avoiding the Evaluate Function",
+			"description": "Adobe Document discouraging use of Evaluate.",
+			"url": "https://helpx.adobe.com/coldfusion/developing-applications/the-cfml-programming-language/using-expressions-and-number-signs/dynamic-expressions-and-dynamic-variables.html#AvoidingtheEvaluatefunction"
 		}
 	],
 	"examples": [

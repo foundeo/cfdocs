@@ -3,23 +3,54 @@
 	"type": "function",
 	"syntax": "getTagData(nameSpaceWithSeperator, tagName)",
 	"returns": "struct",
-	"related": ["getMetadata","getFunctionData"],
+	"related": ["getMetadata", "getFunctionData"],
 	"description": "Return information to a Tag as Struct",
 	"params": [
-		{"name": "nameSpaceWithSeperator", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "tagName", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "dialect", "description": "Define the dialect you want details for", "required": false, "default": "current template's dialect", "type": "string", "values": ["CFML","Lucee"]}
+		{
+			"name": "nameSpaceWithSeperator",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "tagName",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "dialect",
+			"description": "Define the dialect you want details for",
+			"required": false,
+			"default": "current template's dialect",
+			"type": "string",
+			"values": ["CFML", "Lucee"]
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/gettagdata.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/system/gettagdata"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/gettagdata.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/system/gettagdata"
+		}
 	},
-	"examples": [{
-		"title": "Output information about a tag",
-		"description": "Returns a structure storing information about &lt;cfmail&gt;",
-		"code": "getTagData('cf','mail')",
-		"result": "",
-		"runnable":false
-        }],
+	"examples": [
+		{
+			"title": "Output information about a tag",
+			"description": "Returns a structure storing information about &lt;cfmail&gt;",
+			"code": "getTagData('cf','mail')",
+			"result": "",
+			"runnable": false
+		}
+	],
 	"links": []
 }

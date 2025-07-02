@@ -67,7 +67,14 @@
 			"required": false,
 			"default": "MM/DD/YYYY",
 			"type": "string",
-			"values": ["MM/DD/YYYY", "DD/MM/YYYY", "MM/YYYY", "MM/YY", "YYYY-MM-DD", "EEE DD. MMM YYYY"]
+			"values": [
+				"MM/DD/YYYY",
+				"DD/MM/YYYY",
+				"MM/YYYY",
+				"MM/YY",
+				"YYYY-MM-DD",
+				"EEE DD. MMM YYYY"
+			]
 		},
 		{
 			"name": "firstdayofweek",
@@ -83,7 +90,11 @@
 			"required": false,
 			"default": "S,M,T,W,Th,F,S",
 			"type": "string",
-			"values": ["S,  M,  T,  W,  Th,  F,  S", "Sunday,  Monday,  Tuesday,  Wednesday,  Thursday,  Friday,  Saturday", "Sun,  Mon,  Tue,  Wed,  Thu,  Fri,  Sat"]
+			"values": [
+				"S,  M,  T,  W,  Th,  F,  S",
+				"Sunday,  Monday,  Tuesday,  Wednesday,  Thursday,  Friday,  Saturday",
+				"Sun,  Mon,  Tue,  Wed,  Thu,  Fri,  Sat"
+			]
 		},
 		{
 			"name": "monthnames",
@@ -91,7 +102,10 @@
 			"required": false,
 			"default": "January,February,March,April,May,June,July,August,September,October,November,December",
 			"type": "string",
-			"values": ["January,  February,  March,  April,  May,  June,  July,  August,  September,  October,  November,  December", "Jan,  Feb,  Mar,  Apr,  May,  Jun,  Jul,  Aug,  Sep,  Oct,  Nov,  Dec"]
+			"values": [
+				"January,  February,  March,  April,  May,  June,  July,  August,  September,  October,  November,  December",
+				"Jan,  Feb,  Mar,  Apr,  May,  Jun,  Jul,  Aug,  Sep,  Oct,  Nov,  Dec"
+			]
 		},
 		{
 			"name": "enabled",
@@ -155,8 +169,7 @@
 			"minimum_version": "7",
 			"notes": "",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcalendar.html",
-			"deprecated":"2016"
-
+			"deprecated": "2016"
 		}
 	},
 	"links": []

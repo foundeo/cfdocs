@@ -1,25 +1,87 @@
 {
-	"name":"structSort",
-	"type":"function",
-	"syntax":"structSort(struct [, sortType, sortOrder, path, localeSensitive])\nstructSort(struct, callback)",
-	"member":"struct.sort([sortType, sortOrder, path, localeSensitive])",
-	"returns":"array",
-	"related":["arraySort","listSort","querySort"],
-	"description":"Returns a sorted array of the top level keys in a structure. Sorts using alphabetic or numeric sorting, and can sort based on the values of any structure element.",
+	"name": "structSort",
+	"type": "function",
+	"syntax": "structSort(struct [, sortType, sortOrder, path, localeSensitive])\nstructSort(struct, callback)",
+	"member": "struct.sort([sortType, sortOrder, path, localeSensitive])",
+	"returns": "array",
+	"related": ["arraySort", "listSort", "querySort"],
+	"description": "Returns a sorted array of the top level keys in a structure. Sorts using alphabetic or numeric sorting, and can sort based on the values of any structure element.",
 	"params": [
-		{"name":"struct","description":"A ColdFusion structure","required":true,"default":"","type":"struct","values":[]},
-		{"name":"sortType","description":"* numeric\n* text: case-sensitive\n* textnocase","required":false,"default":"text","type":"string","values":["numeric","text","textnocase"]},
-		{"name":"sortOrder","description":"* asc: ascending (a to z) sort order.\n* desc: descending (z to a) sort order","required":false,"default":"asc","type":"string","values":["asc","desc"]},
-		{"name":"path","description":"Top-level key path; String or a variable that contains one","required":false,"default":"","type":"string","values":[]},
-		{"name":"localeSensitive","description":"CF10+ Respect locale-specific characters (including support for umlaut characters) while sorting\n(Applies to type\"text\" and \"textnocase\".","required":false,"default":false,"type":"boolean","values":[]},
-		{"name":"callback","description":"CF2016+ A closure for sorting which takes two keys of the struct and returns whether the first value is greater than, equal to, or less than the second value. Inside compare function can be used (compare, compareNoCase, dateCompare or custom). `function(key1, key2)`","required":false,"default":"","type":"function","values":[]}
+		{
+			"name": "struct",
+			"description": "A ColdFusion structure",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "sortType",
+			"description": "* numeric\n* text: case-sensitive\n* textnocase",
+			"required": false,
+			"default": "text",
+			"type": "string",
+			"values": ["numeric", "text", "textnocase"]
+		},
+		{
+			"name": "sortOrder",
+			"description": "* asc: ascending (a to z) sort order.\n* desc: descending (z to a) sort order",
+			"required": false,
+			"default": "asc",
+			"type": "string",
+			"values": ["asc", "desc"]
+		},
+		{
+			"name": "path",
+			"description": "Top-level key path; String or a variable that contains one",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "localeSensitive",
+			"description": "CF10+ Respect locale-specific characters (including support for umlaut characters) while sorting\n(Applies to type\"text\" and \"textnocase\".",
+			"required": false,
+			"default": false,
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "callback",
+			"description": "CF2016+ A closure for sorting which takes two keys of the struct and returns whether the first value is greater than, equal to, or less than the second value. Inside compare function can be used (compare, compareNoCase, dateCompare or custom). `function(key1, key2)`",
+			"required": false,
+			"default": "",
+			"type": "function",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"CF10+ Added support for locale-specific characters", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structsort.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/structsort.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structsort"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structsort"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structsort"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "CF10+ Added support for locale-specific characters",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structsort.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/structsort.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/structsort"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/structsort"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structsort"
+		}
 	},
 	"links": [],
 	"examples": [

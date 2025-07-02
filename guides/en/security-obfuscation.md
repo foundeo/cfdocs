@@ -38,4 +38,4 @@ Note that I've switched from 'v' as my starting variable name to 'ff' for 'formf
 
 'Wait.' You say… 'The value of the URL and form fields are still "911", so this is still not very secure'. Right you are, my friend. And thus, we need to introduce our next concept on the road to true security enlightenment… encryption.
 
-[Click Here](/security-encryption) to learn how encrypting your data will help protect you from parameter tampering or information disclosure.
+[Security Encryption](/security-encryption) to learn how encrypting your data will help protect you from parameter tampering or information disclosure.

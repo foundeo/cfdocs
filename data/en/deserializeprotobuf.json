@@ -1,77 +1,81 @@
 {
-  "name": "deserializeProtobuf",
-  "type": "function",
-  "syntax": "serializeProtobuf(data, schema [, messageType, queryFormat, useCustomSerialization, protoPath])",
-  "returns": "any",
-  "related": [ "serializeProtobuf" ],
-  "description": "Converts a Protobuf data representation into CFML data.",
-  "params": [
-    {
-      "name": "data",
-      "description": "Protobuf serialized data",
-      "required": true,
-      "default": "",
-      "type": "any",
-      "values": []
-    },
-    {
-      "name": "schema",
-      "description": "The Protobuf schema as a string or the absolute path to the schema",
-      "required": true,
-      "default": "",
-      "type": "string",
-      "values": []
-    },
-    {
-      "name": "messageType",
-      "description": "A message type from given schema as string. This is optional if schema contains one and only one message type.",
-      "required": false,
-      "default": "",
-      "type": "string",
-      "values": []
-    },
-    {
-      "name": "strictMapping",
-      "description": "Specifies whether to convert the Protobuf strictly. If true, converts the Protobuf binary to matching ColdFusion data types.",
-      "required": false,
-      "default": true,
-      "type": "boolean",
-      "values": []
-    },
-    {
-      "name": "useCustomSerialization",
-      "description": "Whether to use the customSerializer",
-      "required": false,
-      "default": true,
-      "type": "boolean",
-      "values": []
-    },
-    {
-      "name": "protoPath",
-      "description": "Specifies a directory in which the compiler looks for imported files defined in the schema. By default, it will be the current schema's parent path.",
-      "required": false,
-      "default": "",
-      "type": "string",
-      "values": []
-    }
-  ],
-  "engines": {
-    "coldfusion": {"minimum_version":"2023", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/deserializeprotobuf.html"}
-  },
-  "links": [
+	"name": "deserializeProtobuf",
+	"type": "function",
+	"syntax": "serializeProtobuf(data, schema [, messageType, queryFormat, useCustomSerialization, protoPath])",
+	"returns": "any",
+	"related": ["serializeProtobuf"],
+	"description": "Converts a Protobuf data representation into CFML data.",
+	"params": [
+		{
+			"name": "data",
+			"description": "Protobuf serialized data",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "schema",
+			"description": "The Protobuf schema as a string or the absolute path to the schema",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "messageType",
+			"description": "A message type from given schema as string. This is optional if schema contains one and only one message type.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "strictMapping",
+			"description": "Specifies whether to convert the Protobuf strictly. If true, converts the Protobuf binary to matching ColdFusion data types.",
+			"required": false,
+			"default": true,
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "useCustomSerialization",
+			"description": "Whether to use the customSerializer",
+			"required": false,
+			"default": true,
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "protoPath",
+			"description": "Specifies a directory in which the compiler looks for imported files defined in the schema. By default, it will be the current schema's parent path.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2023",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/deserializeprotobuf.html"
+		}
+	},
+	"links": [
 		{
 			"title": "Avro and Protocol Buffer in ColdFusion",
 			"description": "Overview of Avro and Protobuf, including how to use them in ColdFusion",
 			"url": "https://helpx.adobe.com/coldfusion/using/avro-protobuf-coldfusion.html"
 		}
 	],
-  "examples": [
-    {
-      "title": "Deserialize a Protobuf serialized query (Script syntax)",
-      "description": "",
-      "code": "news = queryNew(\"id,title\",\n    \"integer,varchar\",\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nnewsSchema = 'syntax = \"proto3\";\nmessage News { int32 id = 1; string title = 2; }';\nprotobuf = serializeProtobuf(news, newsSchema);\nwriteDump(deserializeProtobuf(protobuf, newsSchema));",
-      "runnable": false,
-      "result": ""
-    }
-  ]
+	"examples": [
+		{
+			"title": "Deserialize a Protobuf serialized query (Script syntax)",
+			"description": "",
+			"code": "news = queryNew(\"id,title\",\n    \"integer,varchar\",\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nnewsSchema = 'syntax = \"proto3\";\nmessage News { int32 id = 1; string title = 2; }';\nprotobuf = serializeProtobuf(news, newsSchema);\nwriteDump(deserializeProtobuf(protobuf, newsSchema));",
+			"runnable": false,
+			"result": ""
+		}
+	]
 }

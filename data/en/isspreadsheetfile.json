@@ -1,24 +1,35 @@
 {
-	"name":"isSpreadsheetFile",
-	"type":"function",
-	"syntax":"isSpreadsheetFile(value)",
-	"returns":"boolean",
-	"related":["isPDFFile","isPDFObject","isSpreadsheetObject"],
-	"description":"Checks if the input is a spreadsheet file or not",
+	"name": "isSpreadsheetFile",
+	"type": "function",
+	"syntax": "isSpreadsheetFile(value)",
+	"returns": "boolean",
+	"related": ["isPDFFile", "isPDFObject", "isSpreadsheetObject"],
+	"description": "Checks if the input is a spreadsheet file or not",
 	"params": [
-		{"name":"value","description":"A file path","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "value",
+			"description": "A file path",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isspreadsheetfile.html"}
+		"coldfusion": {
+			"minimum_version": "9",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isspreadsheetfile.html"
+		}
 	},
 	"links": [],
 	"examples": [
 		{
-			"title":"Simple isSpreadsheetFile example",
-			"description":"Here we have simple example to check if the given file is a spreadsheet or not.",
-			"code":"<form method=\"post\" enctype=\"multipart/form-data\">\n\t<input type=\"file\" name=\"myfile\" />\n\t<input type=\"submit\" name=\"submit\" value=\"submit\">\n</form>\n<cfif structKeyExists(form, \"submit\")>\n\t<cfif isSpreadsheetFile(form.myfile)>\n\t\t<cffile action=\"upload\" destination=\"#getTempDirectory()#\" filefield=\"form.myfile\" nameconflict=\"makeunique\">\n\t</cfif>\n</cfif>",
-			"result":"",
-			"runnable":false
+			"title": "Simple isSpreadsheetFile example",
+			"description": "Here we have simple example to check if the given file is a spreadsheet or not.",
+			"code": "<form method=\"post\" enctype=\"multipart/form-data\">\n\t<input type=\"file\" name=\"myfile\" />\n\t<input type=\"submit\" name=\"submit\" value=\"submit\">\n</form>\n<cfif structKeyExists(form, \"submit\")>\n\t<cfif isSpreadsheetFile(form.myfile)>\n\t\t<cffile action=\"upload\" destination=\"#getTempDirectory()#\" filefield=\"form.myfile\" nameconflict=\"makeunique\">\n\t</cfif>\n</cfif>",
+			"result": "",
+			"runnable": false
 		}
 	]
 }

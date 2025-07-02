@@ -3,12 +3,20 @@
 	"type": "function",
 	"syntax": "applicationStartTime()",
 	"returns": "date",
-	"related": ["applicationStop","onApplicationStart","application-cfc"],
+	"related": ["applicationStop", "onApplicationStart", "application-cfc"],
 	"description": "Provides information about the time when the current application scope was created.",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/applicationstarttime.html"},
-		"boxlang": {"minimum_version": "1.0.0", "notes": "", "docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/applicationstarttime"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/applicationstarttime.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/applicationstarttime"
+		}
 	},
 	"examples": [],
 	"links": []

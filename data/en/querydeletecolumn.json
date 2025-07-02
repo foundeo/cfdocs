@@ -4,23 +4,49 @@
 	"syntax": "queryDeleteColumn(query, column)",
 	"member": "query.deleteColumn(column)",
 	"returns": "array",
-	"related": ["queryAddColumn","queryAddRow","queryDeleteRow"],
+	"related": ["queryAddColumn", "queryAddRow", "queryDeleteRow"],
 	"description": "Deletes a column within a query object.",
 	"params": [
-		{"name": "query", "description": "Query to modify", "required": true, "default": "", "type": "query", "values": []},
-		{"name": "column", "description": "Name of the column to delete", "required": true, "default": "", "type": "string", "values": []}
+		{
+			"name": "query",
+			"description": "Query to modify",
+			"required": true,
+			"default": "",
+			"type": "query",
+			"values": []
+		},
+		{
+			"name": "column",
+			"description": "Name of the column to delete",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querydeletecolumn.html"},
-		"coldfusion": {"minimum_version": "2018", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querydeletecolumn.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querydeletecolumn"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/querydeletecolumn.html"
+		},
+		"coldfusion": {
+			"minimum_version": "2018",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querydeletecolumn.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querydeletecolumn"
+		}
 	},
 	"examples": [
 		{
-			"title":"Deletes a column from the query",
-			"description":"Builds a simple query and removes the 'id' column.",
-			"code":"news = queryNew(\"id,title\", \"integer,varchar\", [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nqueryDeleteColumn(news, 'id');\nwriteOutput(serializeJSON(news));",
-			"result":"{\"COLUMNS\":[\"TITLE\"],\"DATA\":[[\"Dewey defeats Truman\"],[\"Man walks on Moon\"]]}"
+			"title": "Deletes a column from the query",
+			"description": "Builds a simple query and removes the 'id' column.",
+			"code": "news = queryNew(\"id,title\", \"integer,varchar\", [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nqueryDeleteColumn(news, 'id');\nwriteOutput(serializeJSON(news));",
+			"result": "{\"COLUMNS\":[\"TITLE\"],\"DATA\":[[\"Dewey defeats Truman\"],[\"Man walks on Moon\"]]}"
 		}
 	],
 	"links": []

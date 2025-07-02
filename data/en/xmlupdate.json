@@ -1,47 +1,51 @@
 {
-  "name": "xmlUpdate",
-  "type": "function",
-  "syntax": "xmlUpdate(node, xpath, value)",
-  "returns": "void",
-  "related": [ "xmlSearch" ],
-  "description": "Updates a part of an XML document (elements, attributes, or nodes) with a new value.",
-  "params": [
-    {
-      "name": "node",
-      "description": "The XML node in which to update a value",
-      "required": true,
-      "default": "",
-      "type": "xml",
-      "values": []
-    },
-    {
-      "name": "xpath",
-      "description": "XPath expression to locate the XML fragment to update",
-      "required": true,
-      "default": "",
-      "type": "string",
-      "values": []
-    },
-    {
-      "name": "value",
-      "description": "The new value",
-      "required": true,
-      "default": "",
-      "type": "string",
-      "values": []
-    }
-  ],
-  "engines": {
-    "coldfusion": {"minimum_version":"2023", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlupdate.html"}
-  },
-  "links": [],
-  "examples": [
-    {
-      "title": "Update a specified node (Script syntax)",
-      "description": "Updates the text node of root in a simple XML document",
-      "code": "xmlData = xmlParse('<root><item id=\"1\">Item 1<\/item><item id=\"2\">Item 2<\/item><item id=\"3\">Item 3<\/item><\/root>');\nxmlUpdate(xmlData.root, \"xmlText\", \"hello world!\");\nwriteOutput(xmlData.toString());",
-      "runnable": true,
-      "result": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root><item id=\"1\">Item 1<\/item><item id=\"2\">Item 2<\/item><item id=\"3\">Item 3<\/item>hello world!<\/root>"
-    }
-  ]
+	"name": "xmlUpdate",
+	"type": "function",
+	"syntax": "xmlUpdate(node, xpath, value)",
+	"returns": "void",
+	"related": ["xmlSearch"],
+	"description": "Updates a part of an XML document (elements, attributes, or nodes) with a new value.",
+	"params": [
+		{
+			"name": "node",
+			"description": "The XML node in which to update a value",
+			"required": true,
+			"default": "",
+			"type": "xml",
+			"values": []
+		},
+		{
+			"name": "xpath",
+			"description": "XPath expression to locate the XML fragment to update",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "value",
+			"description": "The new value",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2023",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlupdate.html"
+		}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Update a specified node (Script syntax)",
+			"description": "Updates the text node of root in a simple XML document",
+			"code": "xmlData = xmlParse('<root><item id=\"1\">Item 1</item><item id=\"2\">Item 2</item><item id=\"3\">Item 3</item></root>');\nxmlUpdate(xmlData.root, \"xmlText\", \"hello world!\");\nwriteOutput(xmlData.toString());",
+			"runnable": true,
+			"result": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root><item id=\"1\">Item 1</item><item id=\"2\">Item 2</item><item id=\"3\">Item 3</item>hello world!</root>"
+		}
+	]
 }

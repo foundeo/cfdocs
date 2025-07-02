@@ -1,42 +1,87 @@
 {
-	"name":"toBase64",
-	"type":"function",
-	"syntax":"toBase64(string_or_object [, encoding])",
-	"returns":"string",
-	"related":[],
-	"description":" Calculates the Base64 representation of a string or binary\n object. The Base64 format uses printable characters, allowing\n binary data to be sent in forms and e-mail, and stored in a\n database or file.",
+	"name": "toBase64",
+	"type": "function",
+	"syntax": "toBase64(string_or_object [, encoding])",
+	"returns": "string",
+	"related": [],
+	"description": "Calculates the Base64 representation of a string or binary\n object. The Base64 format uses printable characters, allowing\n binary data to be sent in forms and e-mail, and stored in a\n database or file.",
 	"params": [
-		{"name":"string_or_object","description":"A string, the name of a string, or a binary object.","required":true,"default":"","type":"any","values":[]},
-		{"name":"encoding","description":"For a string, defines how characters are represented in a\n byte array.","required":false,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
+		{
+			"name": "string_or_object",
+			"description": "A string, the name of a string, or a binary object.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "encoding",
+			"description": "For a string, defines how characters are represented in a\n byte array.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": [
+				"utf-8",
+				"iso-8859-1",
+				"windows-1252",
+				"us-ascii",
+				"shift_jis",
+				"iso-2022-jp",
+				"euc-jp",
+				"euc-kr",
+				"big5",
+				"euc-cn",
+				"utf-16"
+			]
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/tobase64.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/tobase64.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/tobase64"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/tobase64"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/conversion/tobase64"}
+		"coldfusion": {
+			"minimum_version": "4.5",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/tobase64.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/tobase64.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/tobase64"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/tobase64"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/conversion/tobase64"
+		}
 	},
 	"examples": [
 		{
-			"title":"String Example",
-			"description":"Converts a String to a Base64-String.",
-			"code":"ToBase64(\"Test String\")",
-			"result":"VGVzdCBTdHJpbmc=",
-			"runnable":true
+			"title": "String Example",
+			"description": "Converts a String to a Base64-String.",
+			"code": "ToBase64(\"Test String\")",
+			"result": "VGVzdCBTdHJpbmc=",
+			"runnable": true
 		},
 		{
-			"title":"Binary Object Example",
-			"description":"Converts an Image Binary to a Base64-String.",
-			"code":"ToBase64(ToBinary(ImageRead(\"example.jpg\")))",
-			"runnable":false
+			"title": "Binary Object Example",
+			"description": "Converts an Image Binary to a Base64-String.",
+			"code": "ToBase64(ToBinary(ImageRead(\"example.jpg\")))",
+			"runnable": false
 		}
 	],
 	"links": [
 		{
-			"title":"URL Safe Base64 UDF",
-			"url":"https://www.petefreitag.com/item/917.cfm",
-			"description":"A UDF to encode / decode using URL Safe Base64. Uses native Java API (requires Java 8+)"
+			"title": "URL Safe Base64 UDF",
+			"url": "https://www.petefreitag.com/item/917.cfm",
+			"description": "A UDF to encode / decode using URL Safe Base64. Uses native Java API (requires Java 8+)"
 		}
 	]
-
 }

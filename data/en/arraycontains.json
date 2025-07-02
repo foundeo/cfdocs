@@ -1,21 +1,64 @@
 {
-	"name":"arrayContains",
-	"type":"function",
-	"syntax":"arrayContains(array, value)",
-	"member":"someArray.contains(value)",
-	"returns":"boolean",
-	"related":["arrayContains","arrayFind","arrayFindNoCase","arrayFindAll","arrayFindAllNoCase"],
-	"description":"Used to determine if a value is in the given array, case-sensitive. Adobe CF and OpenBD return boolean. Lucee / Railo returns the numeric index if the value is found, 0 if not.",
+	"name": "arrayContains",
+	"type": "function",
+	"syntax": "arrayContains(array, value)",
+	"member": "someArray.contains(value)",
+	"returns": "boolean",
+	"related": [
+		"arrayContains",
+		"arrayFind",
+		"arrayFindNoCase",
+		"arrayFindAll",
+		"arrayFindAllNoCase"
+	],
+	"description": "Used to determine if a value is in the given array, case-sensitive. Adobe CF and OpenBD return boolean. Lucee / Railo returns the numeric index if the value is found, 0 if not.",
 	"params": [
-		{"name":"array","description":"The array in which to search.","required":true,"default":"","type":"array","values":[]},
-		{"name":"value","description":"The value to search for in the array.","required":true,"default":"","type":"any","values":[]},
-		{"name":"substringMatch","description":"Lucee4.5+ If set to true then a substring match will also return an array position. This will only work with simple values. Passing true with complex objects will throw an exception.","required":false,"default":"false","type":"any","values":[]}
+		{
+			"name": "array",
+			"description": "The array in which to search.",
+			"required": true,
+			"default": "",
+			"type": "array",
+			"values": []
+		},
+		{
+			"name": "value",
+			"description": "The value to search for in the array.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "substringMatch",
+			"description": "Lucee4.5+ If set to true then a substring match will also return an array position. This will only work with simple values. Passing true with complex objects will throw an exception.",
+			"required": false,
+			"default": "false",
+			"type": "any",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraycontains.html"},
-		"lucee": {"minimum_version":"", "notes":"Returns the position of the array instead of boolean value.", "docs":"https://docs.lucee.org/reference/functions/arraycontains.html"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arraycontains"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arraycontains"}
+		"coldfusion": {
+			"minimum_version": "9",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraycontains.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "Returns the position of the array instead of boolean value.",
+			"docs": "https://docs.lucee.org/reference/functions/arraycontains.html"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/arraycontains"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arraycontains"
+		}
 	},
 	"links": [],
 	"examples": [
@@ -44,10 +87,10 @@
 			"result": "2"
 		},
 		{
-		   "title": "Substring Search",
-		   "description": "Lucee4.5+",
-		   "code": "words = [ 'hello' , 'world' ];\npositionOfSubstring = arrayContains( words, 'el', true );\nwriteDump(positionOfSubstring);",
-		   "result": "1"
+			"title": "Substring Search",
+			"description": "Lucee4.5+",
+			"code": "words = [ 'hello' , 'world' ];\npositionOfSubstring = arrayContains( words, 'el', true );\nwriteDump(positionOfSubstring);",
+			"result": "1"
 		}
 	]
 }

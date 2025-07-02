@@ -1,95 +1,390 @@
 {
-	"name":"cfschedule",
-	"type":"tag",
-	"syntax":"<cfschedule action=\"delete\" task=\"\">",
-	"related":[],
-	"description":"Provides a programmatic interface to the CFML scheduling engine. Can run a CFML page at scheduled intervals, with the option to write the page output to a static HTML page. This feature enables you to schedule pages that publish data, such as reports, without waiting while a database transaction is performed to populate the page.",
+	"name": "cfschedule",
+	"type": "tag",
+	"syntax": "<cfschedule action=\"delete\" task=\"\">",
+	"related": [],
+	"description": "Provides a programmatic interface to the CFML scheduling engine. Can run a CFML page at scheduled intervals, with the option to write the page output to a static HTML page. This feature enables you to schedule pages that publish data, such as reports, without waiting while a database transaction is performed to populate the page.",
 	"params": [
-		{"name":"action","description":"delete: deletes the specified task\n update: updates an existing task or creates a new task, if one with the name specified by the task attribute does not exist\n run: executes the specified task\n pause: Pauses the specified task.\n resume: Continues executing the specified task.\n list: Lists all the scheduled tasks.\n pauseall: CF10+ Pauses all scheduled tasks.\n resumeall: CF10+ Resume all scheduled tasks for a particular application.\n create: CF2018u2+ Create a fresh task. If a task already exists, an error is thrown.\n modify: CF2018u2+ Modifies an existing task while retaining its old values.","required":true,"default":"","type":"string","values":["delete","update","run","pause","resume","list","pauseall","resumeall","create","modify"]},
-		{"name":"task","description":"Name of the task. Not required if action attribute is set to list, otherwise it is required.","required":false,"default":"","type":"string","values":[]},
-		{"name":"operation","description":"Operation that the scheduler performs. Must be HTTPRequest.","required":false,"default":"HTTPRequest","type":"string","values":[]},
-		{"name":"file","description":"Name of the file in which to store the published output of the scheduled task.","required":false,"default":"","type":"string","values":[]},
-		{"name":"path","description":"Path to the directory in which to put the published file.\nNOTE: This is Required if `publish` is \"Yes\".","required":false,"default":"","type":"string","values":[]},
-		{"name":"startdate","description":"Date on which to first run the scheduled task.","required":false,"default":"","type":"string","values":[]},
-		{"name":"starttime","description":"Time at which to run the scheduled of task starts.","required":false,"default":"","type":"string","values":[]},
-		{"name":"URL","description":"URL of the page to execute.","required":false,"default":"","type":"string","values":[]},
-		{"name":"port","description":"Port to use on the server that is specified by the url parameter. If resolveURL = \"yes\", retrieved document URLs that specify a port number are automatically resolved, to preserve links in the retrieved document. A port value in the url attribute overrides this value.","required":false,"default":80,"type":"numeric","values":[]},
-		{"name":"publish","description":"Yes: save the result to a file\n No: does not","required":false,"default":false,"type":"boolean","values":[]},
-		{"name":"endDate","description":"Date when scheduled task ends.","required":false,"default":"","type":"string","values":[]},
-		{"name":"endTime","description":"Time when scheduled task ends (seconds).","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"interval","description":"Interval at which task is scheduled.\n * number of seconds (minimum is 60)\n * once\n * daily\n * weekly\n * monthly","required":false,"default":"","type":"string","values":["once","daily","weekly","monthly"]},
-		{"name":"requesttimeout","description":"Deprecated as of CF11+, Removed in CF2018 Used to extend the default timeout period.","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"username","description":"Username, if URL is protected.","required":false,"default":"","type":"string","values":[]},
-		{"name":"password","description":"Password, if URL is protected.","required":false,"default":"","type":"string","values":[]},
-		{"name":"proxyserver","description":"Host name or IP address of a proxy server.","required":false,"default":"","type":"string","values":[]},
-		{"name":"proxyport","description":"Port number to use on the proxy server.","required":false,"default":80,"type":"numeric","values":[]},
-		{"name":"proxyuser","description":"User name to provide to the proxy server.","required":false,"default":"","type":"string","values":[]},
-		{"name":"proxypassword","description":"Password to provide to the proxy server.","required":false,"default":"","type":"string","values":[]},
-		{"name":"resolveurl","description":"Yes: resolve links in the output page to absolute references\n No: does not","required":false,"default":false,"type":"boolean","values":[]},
-		{"name":"group","description":"CF11+ The group to which the scheduled task belongs.","required":false,"default":"default","type":"string","values":[]},
-		{"name":"mode","description":"CF10+ If the task is server-specific or application specific.","required":false,"default":"server","type":"string","values":["application","server"]},
-		{"name":"result (CF10+)/returnvariable (lucee)","description":"Name for the query in which cfschedule returns the result variables.\nNOTE: Required for `action`=\"list\"","required":false,"default":"","type":"query","values":[]},
-		{"name":"eventHandler","description":"CF10+ A CFC file which implements CFIDE.scheduler.ITaskEventHandler and is invoked for events while running the task.\n Note: CF 2018 Enterprise Required; not supported in Standard Edition","required":false,"default":"","type":"string","values":[]},
-		{"name":"onException","description":"CF10+ Specify the action to take if a task results in error.\n Note: CF 2018 Enterprise Required; not supported in Standard Edition","required":false,"default":"invokeHandler, if eventHandler is specified","type":"string","values":["refire","pause","invokeHandler"]},
-		{"name":"onComplete","description":"CF10+ The action or task to perform after completion of the current task. Can be used to chain dependent tasks by executing a task after this task completes.\n Note: CF 2018 Enterprise Required; not supported in Standard Edition","required":false,"default":"invokeHandler","type":"string","values":[]},
-		{"name":"onMisfire","description":"CF10+ Specify what to do if a task misfires. If unspecified, then no action is taken.\n Note: CF 2018 Enterprise Required; not supported in Standard Edition","required":false,"default":"invokeHandler if eventHandler is specified","type":"string","values":["fire_now","invokeHandler"]},
-		{"name":"cronTime","description":"CF10+ Schedule the task time in quartz cron expression format (6 or 7 space-seperated values). Format is: second, minute, hour, day of month, month, day of week, year. Second value is required, as are the rest, but year is optional.","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"repeat","description":"CF10+ Specify the number of times a given schedule has to repeat.","required":false,"default":"-1","type":"string","values":[]},
-		{"name":"retryCount","description":"CF10+ Specify the number of times to retry the task if the task fails. Must be between 0 and 3, inclusive.","required":false,"default":"3","type":"numeric","values":[0,1,2,3]},
-		{"name":"priority","description":"CF10+ Set the priority of this task.","required":false,"default":"5","type":"numeric","values":[]},
-		{"name":"exclude","description":"CF10+ Comma-separated list of dates or date range on which to not execute the scheduled task.","required":false,"default":"","type":"string","values":[]},
-		{"name":"cluster","description":"CF10+ If yes, the task can be executed in a cluster setup.\n Note: CF 2018 Enterprise Required; not supported in Standard Edition","required":false,"default":"no","type":"boolean","values":[]},
-		{"name":"overwrite","description":"CF10+ Specify whether to overwrite the output files on task execution (if true) or create new output files (if false).","required":false,"default":"true","type":"boolean","values":[]},
-		{"name":"unique","description":"lucee4.5+ If true, the scheduled task is only executed once at time. If a task is still running from previous round no new task is started.","required":false,"default":"true","type":"boolean","values":[]},
-		{"name":"autodelete","description":"lucee4.5+ If set to true, the scheduled task will be deleted when there is no possible future execution.","required":false,"default":"","type":"boolean","values":[]},
-		{"name":"readonly","description":"lucee4.5+ If true, the scheduled task can not be modified or deleted in the Lucee Administrator.","required":false,"default":"","type":"boolean","values":[]}
+		{
+			"name": "action",
+			"description": "delete: deletes the specified task\n update: updates an existing task or creates a new task, if one with the name specified by the task attribute does not exist\n run: executes the specified task\n pause: Pauses the specified task.\n resume: Continues executing the specified task.\n list: Lists all the scheduled tasks.\n pauseall: CF10+ Pauses all scheduled tasks.\n resumeall: CF10+ Resume all scheduled tasks for a particular application.\n create: CF2018u2+ Create a fresh task. If a task already exists, an error is thrown.\n modify: CF2018u2+ Modifies an existing task while retaining its old values.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": [
+				"delete",
+				"update",
+				"run",
+				"pause",
+				"resume",
+				"list",
+				"pauseall",
+				"resumeall",
+				"create",
+				"modify"
+			]
+		},
+		{
+			"name": "task",
+			"description": "Name of the task. Not required if action attribute is set to list, otherwise it is required.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "operation",
+			"description": "Operation that the scheduler performs. Must be HTTPRequest.",
+			"required": false,
+			"default": "HTTPRequest",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "file",
+			"description": "Name of the file in which to store the published output of the scheduled task.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "path",
+			"description": "Path to the directory in which to put the published file.\nNOTE: This is Required if `publish` is \"Yes\".",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "startdate",
+			"description": "Date on which to first run the scheduled task.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "starttime",
+			"description": "Time at which to run the scheduled of task starts.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "URL",
+			"description": "URL of the page to execute.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "port",
+			"description": "Port to use on the server that is specified by the url parameter. If resolveURL = \"yes\", retrieved document URLs that specify a port number are automatically resolved, to preserve links in the retrieved document. A port value in the url attribute overrides this value.",
+			"required": false,
+			"default": 80,
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "publish",
+			"description": "Yes: save the result to a file\n No: does not",
+			"required": false,
+			"default": false,
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "endDate",
+			"description": "Date when scheduled task ends.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "endTime",
+			"description": "Time when scheduled task ends (seconds).",
+			"required": false,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "interval",
+			"description": "Interval at which task is scheduled.\n * number of seconds (minimum is 60)\n * once\n * daily\n * weekly\n * monthly",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": ["once", "daily", "weekly", "monthly"]
+		},
+		{
+			"name": "requesttimeout",
+			"description": "Deprecated as of CF11+, Removed in CF2018 Used to extend the default timeout period.",
+			"required": false,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "username",
+			"description": "Username, if URL is protected.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "password",
+			"description": "Password, if URL is protected.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "proxyserver",
+			"description": "Host name or IP address of a proxy server.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "proxyport",
+			"description": "Port number to use on the proxy server.",
+			"required": false,
+			"default": 80,
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "proxyuser",
+			"description": "User name to provide to the proxy server.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "proxypassword",
+			"description": "Password to provide to the proxy server.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "resolveurl",
+			"description": "Yes: resolve links in the output page to absolute references\n No: does not",
+			"required": false,
+			"default": false,
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "group",
+			"description": "CF11+ The group to which the scheduled task belongs.",
+			"required": false,
+			"default": "default",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "mode",
+			"description": "CF10+ If the task is server-specific or application specific.",
+			"required": false,
+			"default": "server",
+			"type": "string",
+			"values": ["application", "server"]
+		},
+		{
+			"name": "result (CF10+)/returnvariable (lucee)",
+			"description": "Name for the query in which cfschedule returns the result variables.\nNOTE: Required for `action`=\"list\"",
+			"required": false,
+			"default": "",
+			"type": "query",
+			"values": []
+		},
+		{
+			"name": "eventHandler",
+			"description": "CF10+ A CFC file which implements CFIDE.scheduler.ITaskEventHandler and is invoked for events while running the task.\n Note: CF 2018 Enterprise Required; not supported in Standard Edition",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "onException",
+			"description": "CF10+ Specify the action to take if a task results in error.\n Note: CF 2018 Enterprise Required; not supported in Standard Edition",
+			"required": false,
+			"default": "invokeHandler, if eventHandler is specified",
+			"type": "string",
+			"values": ["refire", "pause", "invokeHandler"]
+		},
+		{
+			"name": "onComplete",
+			"description": "CF10+ The action or task to perform after completion of the current task. Can be used to chain dependent tasks by executing a task after this task completes.\n Note: CF 2018 Enterprise Required; not supported in Standard Edition",
+			"required": false,
+			"default": "invokeHandler",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "onMisfire",
+			"description": "CF10+ Specify what to do if a task misfires. If unspecified, then no action is taken.\n Note: CF 2018 Enterprise Required; not supported in Standard Edition",
+			"required": false,
+			"default": "invokeHandler if eventHandler is specified",
+			"type": "string",
+			"values": ["fire_now", "invokeHandler"]
+		},
+		{
+			"name": "cronTime",
+			"description": "CF10+ Schedule the task time in quartz cron expression format (6 or 7 space-seperated values). Format is: second, minute, hour, day of month, month, day of week, year. Second value is required, as are the rest, but year is optional.",
+			"required": false,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "repeat",
+			"description": "CF10+ Specify the number of times a given schedule has to repeat.",
+			"required": false,
+			"default": "-1",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "retryCount",
+			"description": "CF10+ Specify the number of times to retry the task if the task fails. Must be between 0 and 3, inclusive.",
+			"required": false,
+			"default": "3",
+			"type": "numeric",
+			"values": [0, 1, 2, 3]
+		},
+		{
+			"name": "priority",
+			"description": "CF10+ Set the priority of this task.",
+			"required": false,
+			"default": "5",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "exclude",
+			"description": "CF10+ Comma-separated list of dates or date range on which to not execute the scheduled task.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "cluster",
+			"description": "CF10+ If yes, the task can be executed in a cluster setup.\n Note: CF 2018 Enterprise Required; not supported in Standard Edition",
+			"required": false,
+			"default": "no",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "overwrite",
+			"description": "CF10+ Specify whether to overwrite the output files on task execution (if true) or create new output files (if false).",
+			"required": false,
+			"default": "true",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "unique",
+			"description": "lucee4.5+ If true, the scheduled task is only executed once at time. If a task is still running from previous round no new task is started.",
+			"required": false,
+			"default": "true",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "autodelete",
+			"description": "lucee4.5+ If set to true, the scheduled task will be deleted when there is no possible future execution.",
+			"required": false,
+			"default": "",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "readonly",
+			"description": "lucee4.5+ If true, the scheduled task can not be modified or deleted in the Lucee Administrator.",
+			"required": false,
+			"default": "",
+			"type": "boolean",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfschedule.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/schedule.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfschedule"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfschedule"}
+		"coldfusion": {
+			"minimum_version": "3",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfschedule.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/tags/schedule.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/tag/cfschedule"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/tag/cfschedule"
+		}
 	},
-	"links": [{
-		"title":"More about the cronTime param",
-		"description":"Learn more about the Quartz standard used in CF10+",
-		"url":"http://www.quartz-scheduler.org/documentation/quartz-2.2.2/tutorials/crontrigger.html"
-	}],
+	"links": [
+		{
+			"title": "More about the cronTime param",
+			"description": "Learn more about the Quartz standard used in CF10+",
+			"url": "http://www.quartz-scheduler.org/documentation/quartz-2.2.2/tutorials/crontrigger.html"
+		}
+	],
 	"examples": [
 		{
 			"title": "Create or update a task",
 			"description": "Tell ColdFusion to run 'importData.cfm' daily at 7AM",
 			"code": "<cfschedule\r\n action=\"update\"\r\n task=\"importMyCSVFileToDB\"\r\n operation=\"HTTPRequest\"\r\n startDate=\"5/12/2016\"\r\n startTime=\"7:00 AM\"\r\n url=\"http://www.mydomain.com/scheduled/importData.cfm\"\r\n interval=\"daily\" />",
 			"result": "",
-			"runnable":false
+			"runnable": false
 		},
 		{
 			"title": "Delete a scheduled task",
 			"description": "Delete the task 'importMyCSVFileToDB' from the list of ColdFusion scheduled jobs",
 			"code": "<cfschedule\r\n action=\"delete\"\r\n task=\"importMyCSVFileToDB\" />",
 			"result": "",
-			"runnable":false
+			"runnable": false
 		},
 		{
 			"title": "Exclude a date from the task execution schedule",
 			"description": "CF10+ Instruct ACF not to execute the task on the set date, date range, or list of dates",
 			"code": "<cfschedule\r\n action=\"update\"\r\n task=\"sendClientReportEmail\"\r\n exclude=\"12/24/2019 TO 1/2/2020\" />",
 			"result": "",
-			"runnable":false
+			"runnable": false
 		},
 		{
 			"title": "Use cron time format to schedule a task",
 			"description": "CF10+ Execute a task every 2 minutes from 3:00 AM to 10:00 AM and 9:00 PM to 11:58 PM daily",
 			"code": "<cfschedule\r\n action=\"update\"\r\n task=\"myTaskName\"\r\n cronTime=\"0 */2 3-10,21-23 * * ?\" />",
 			"result": "",
-			"runnable":false
+			"runnable": false
 		},
 		{
 			"title": "List all scheduled tasks",
 			"description": "List and dump all scheduled tasks running in ColdFusion instance",
 			"code": "<cfschedule\r\n action=\"list\"\r\n result=\"scheduledList\"\r\n />\r\n<cfdump var=\"#scheduledList#\" />",
 			"result": "",
-			"runnable":false
+			"runnable": false
 		}
 	]
 }

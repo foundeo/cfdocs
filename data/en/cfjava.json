@@ -1,26 +1,39 @@
 {
-	"name":"cfjava",
-	"type":"tag",
-	"syntax":"<cfjava handle=\"classInstance\">",
-	"related":[],
-	"description":"Provides support for writing Java code within ColdFusion.",
+	"name": "cfjava",
+	"type": "tag",
+	"syntax": "<cfjava handle=\"classInstance\">",
+	"related": [],
+	"description": "Provides support for writing Java code within ColdFusion.",
 	"params": [
-		{"name":"handle","description":"The variable that holds the value of class instance of the Java code.","required":true,"default":"","type":"variableName","values":[]}
+		{
+			"name": "handle",
+			"description": "The variable that holds the value of class instance of the Java code.",
+			"required": true,
+			"default": "",
+			"type": "variableName",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cfjava.html"}
+		"coldfusion": {
+			"minimum_version": "2021",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cfjava.html"
+		}
 	},
-	"links": [{
-			"title":"Java integration in ColdFusion",
-			"description":"",
-			"url":"https://helpx.adobe.com/coldfusion/using/java-integration-coldfusion.html"
-	}],
+	"links": [
+		{
+			"title": "Java integration in ColdFusion",
+			"description": "",
+			"url": "https://helpx.adobe.com/coldfusion/using/java-integration-coldfusion.html"
+		}
+	],
 	"examples": [
 		{
-			"title":"Create Name instance (Tag syntax)",
-			"description":"",
-			"code":"<cfjava handle=\"nameInstance\">\n    public class Name {\n        private String firstName;\n        private String lastName;\n\n        public Name(String firstName, String lastName) {\n            this.firstName = firstName;\n            this.lastName = lastName;\n        }\n\n        public String getFullName() {\n            return firstName + \" \" + lastName;\n        }\n    }\n<\/cfjava>\n<cfset nameInstance.init(\"John\", \"Doe\")>\n<cfset fullName = nameInstance.getFullName()>\n<cfoutput>#fullName#<\/cfoutput>",
-			"runnable":true,
+			"title": "Create Name instance (Tag syntax)",
+			"description": "",
+			"code": "<cfjava handle=\"nameInstance\">\n    public class Name {\n        private String firstName;\n        private String lastName;\n\n        public Name(String firstName, String lastName) {\n            this.firstName = firstName;\n            this.lastName = lastName;\n        }\n\n        public String getFullName() {\n            return firstName + \" \" + lastName;\n        }\n    }\n</cfjava>\n<cfset nameInstance.init(\"John\", \"Doe\")>\n<cfset fullName = nameInstance.getFullName()>\n<cfoutput>#fullName#</cfoutput>",
+			"runnable": true,
 			"result": "John Doe"
 		}
 	]

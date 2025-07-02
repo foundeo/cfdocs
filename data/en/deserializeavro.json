@@ -1,61 +1,65 @@
 {
-  "name": "deserializeAvro",
-  "type": "function",
-  "syntax": "deserializeAvro(data, readerSchema [, strictMapping, useCustomSerialization])",
-  "returns": "any",
-  "related": [ "serializeAvro" ],
-  "description": "Converts an Avro data representation into CFML data.",
-  "params": [
-    {
-      "name": "data",
-      "description": "Avro serialized data",
-      "required": true,
-      "default": "",
-      "type": "any",
-      "values": []
-    },
-    {
-      "name": "readerSchema",
-      "description": "The Avro schema as a string or the absolute path to the schema",
-      "required": true,
-      "default": "",
-      "type": "string",
-      "values": []
-    },
-    {
-      "name": "strictMapping",
-      "description": "Specifies whether to convert the Avro strictly. If true, converts the Avro binary to matching ColdFusion data types.",
-      "required": false,
-      "default": true,
-      "type": "boolean",
-      "values": []
-    },
-    {
-      "name": "useCustomSerialization",
-      "description": "Whether to use the customSerializer",
-      "required": false,
-      "default": true,
-      "type": "boolean",
-      "values": []
-    }
-  ],
-  "engines": {
-    "coldfusion": {"minimum_version":"2023", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/deserializeavro.html"}
-  },
-  "links": [
+	"name": "deserializeAvro",
+	"type": "function",
+	"syntax": "deserializeAvro(data, readerSchema [, strictMapping, useCustomSerialization])",
+	"returns": "any",
+	"related": ["serializeAvro"],
+	"description": "Converts an Avro data representation into CFML data.",
+	"params": [
+		{
+			"name": "data",
+			"description": "Avro serialized data",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "readerSchema",
+			"description": "The Avro schema as a string or the absolute path to the schema",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "strictMapping",
+			"description": "Specifies whether to convert the Avro strictly. If true, converts the Avro binary to matching ColdFusion data types.",
+			"required": false,
+			"default": true,
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "useCustomSerialization",
+			"description": "Whether to use the customSerializer",
+			"required": false,
+			"default": true,
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2023",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/deserializeavro.html"
+		}
+	},
+	"links": [
 		{
 			"title": "Avro and Protocol Buffer in ColdFusion",
 			"description": "Overview of Avro and Protobuf, including how to use them in ColdFusion",
 			"url": "https://helpx.adobe.com/coldfusion/using/avro-protobuf-coldfusion.html"
 		}
 	],
-  "examples": [
-    {
-      "title": "Deserialize an Avro serialized query (Script syntax)",
-      "description": "",
-      "code": "news = queryNew(\"id,title\",\n    \"integer,varchar\",\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nnewsSchema = '{  \n    \"namespace\": \"my.example\",\n    \"type\": \"record\",\n    \"name\": \"News\",\n    \"fields\": [ {\"name\":\"id\",\"type\":\"int\"}, {\"name\":\"title\",\"type\":\"string\"} ]\n}';\navro = serializeAvro(news, newsSchema);\nwriteDump(deserializeAvro(avro, newsSchema));",
-      "runnable": false,
-      "result": ""
-    }
-  ]
+	"examples": [
+		{
+			"title": "Deserialize an Avro serialized query (Script syntax)",
+			"description": "",
+			"code": "news = queryNew(\"id,title\",\n    \"integer,varchar\",\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nnewsSchema = '{  \n    \"namespace\": \"my.example\",\n    \"type\": \"record\",\n    \"name\": \"News\",\n    \"fields\": [ {\"name\":\"id\",\"type\":\"int\"}, {\"name\":\"title\",\"type\":\"string\"} ]\n}';\navro = serializeAvro(news, newsSchema);\nwriteDump(deserializeAvro(avro, newsSchema));",
+			"runnable": false,
+			"result": ""
+		}
+	]
 }

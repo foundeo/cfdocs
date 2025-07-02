@@ -1,34 +1,51 @@
 {
-	"name":"arrayRange",
-	"type":"function",
-	"syntax":"arrayRange(from, to)",
-	"member":"",
-	"returns":"numeric",
-	"related":["ArrayNew"],
-	"description":"Build an array out of a range of numbers or using our range syntax: {start}..{end} or using the from and to arguments",
+	"name": "arrayRange",
+	"type": "function",
+	"syntax": "arrayRange(from, to)",
+	"member": "",
+	"returns": "numeric",
+	"related": ["ArrayNew"],
+	"description": "Build an array out of a range of numbers or using our range syntax: {start}..{end} or using the from and to arguments",
 	"params": [
-		{"name":"from","description":"The initial index, defaults to 1 or you can use the {start}..{end} notation.","required":true,"default":"1","type":"numeric","values":[]},
-		{"name":"to","description":"The last index item, or defaults to the from value.","required":true,"default":"","type":"numeric","values":[]}
+		{
+			"name": "from",
+			"description": "The initial index, defaults to 1 or you can use the {start}..{end} notation.",
+			"required": true,
+			"default": "1",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "to",
+			"description": "The last index item, or defaults to the from value.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arrayrange"}
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arrayrange"
+		}
 	},
-	"links": [
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Create an array of sequential numbers using the string syntax.",
 			"description": "",
 			"code": "arr = arrayRange( \"2..5\" );\nwriteOutput('This array has ' & arrayLen(arr) & ' elements.');",
 			"result": "This array has 4 elements.",
-			"runnable":true
+			"runnable": true
 		},
 		{
 			"title": "Create an array of sequential numbers using the string syntax.",
 			"description": "",
 			"code": "arr = arrayRange( 5, 10 );\nwriteOutput('This array has ' & arrayLen(arr) & ' elements.');",
 			"result": "This array has 6 elements.",
-			"runnable":true
+			"runnable": true
 		}
 	]
 }

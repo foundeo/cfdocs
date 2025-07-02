@@ -7,14 +7,17 @@
 	"description": "returns all available image fonts",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/imagefonts.html"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/imagefonts.html"
+		}
 	},
 	"examples": [
 		{
-
 			"title": "imageFonts Example",
-			"description":"Returns the all available image fonts. It is supported only in Lucee.",
-			"code":"writeDump(imageFonts()) ;"
+			"description": "Returns the all available image fonts. It is supported only in Lucee.",
+			"code": "writeDump(imageFonts()) ;"
 		}
 	],
 	"links": []

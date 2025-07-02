@@ -1,26 +1,55 @@
 {
-	"name":"isXMLDoc",
-	"type":"function",
-	"syntax":"isXMLDoc(value)",
-	"returns":"boolean",
-	"related":["isXML"],
-	"description":"Determines whether a function parameter is an Extended Markup language (XML) document object.",
+	"name": "isXMLDoc",
+	"type": "function",
+	"syntax": "isXMLDoc(value)",
+	"returns": "boolean",
+	"related": ["isXML"],
+	"description": "Determines whether a function parameter is an Extended Markup language (XML) document object.",
 	"params": [
-		{"name":"value","description":"XML document","required":true,"default":"","type":"any","values":[]}
+		{
+			"name": "value",
+			"description": "XML document",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"6", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isxmldoc.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isxmldoc.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isxmldoc"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isxmldoc"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isxmldoc"}
+		"coldfusion": {
+			"minimum_version": "6",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isxmldoc.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isxmldoc.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/isxmldoc"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/isxmldoc"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isxmldoc"
+		}
 	},
 	"links": [],
-	"examples": [{
-		"title": "Checks if a given XML is valid",
-		"description": "",
-		"code": "<cfxml variable=\"example\">\n\t<coldfusionengines>\n\t\t<engine>\n\t\t\t<name>Adobe ColdFusion</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Lucee</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Railo</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Open BlueDragon</name>\n\t\t</engine>\n\t</coldfusionengines>\n</cfxml>\n<cfscript>\n\twriteOutput(isXMLDoc(example));\n</cfscript>",
-		"result": "YES",
-		"runnable": true
-	}]
+	"examples": [
+		{
+			"title": "Checks if a given XML is valid",
+			"description": "",
+			"code": "<cfxml variable=\"example\">\n\t<coldfusionengines>\n\t\t<engine>\n\t\t\t<name>Adobe ColdFusion</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Lucee</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Railo</name>\n\t\t</engine>\n\t\t<engine>\n\t\t\t<name>Open BlueDragon</name>\n\t\t</engine>\n\t</coldfusionengines>\n</cfxml>\n<cfscript>\n\twriteOutput(isXMLDoc(example));\n</cfscript>",
+			"result": "YES",
+			"runnable": true
+		}
+	]
 }

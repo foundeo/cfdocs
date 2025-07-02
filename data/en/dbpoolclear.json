@@ -1,37 +1,36 @@
 {
-   
-    "name": "dbpoolclear",
-    "engines": {
-        "lucee": {
-            "notes": "",
-            "minimum_version": "",
-            "docs": "https://docs.lucee.org/reference/functions/dbpoolclear.html"
-        }
-    },
-    "type": "function",
-    "syntax": "dbPoolClear([, string])",
-    "returns": "boolean",
-    "description": "clears all existing datasource connection",
-    "examples": [
-        {
-			"title": "dbPoolClear Example",
-			"description":"Clear all existing datasource connections",
-			"code":" dbPoolClear();"
-		},
-        {
-			"title": "dbPoolClear Example",
-			"description":"Clear a named datasource connection",
-			"code":" dbPoolClear(mydatasource);"
+	"name": "dbpoolclear",
+	"engines": {
+		"lucee": {
+			"notes": "",
+			"minimum_version": "",
+			"docs": "https://docs.lucee.org/reference/functions/dbpoolclear.html"
 		}
-    ],
-    "params": [
-        {
-            "default": "",
-            "required": false,
-            "values": [],
-            "name": "datasource",
-            "type": "string",
-            "description": "specific datasource to clear, if not set all datasources get removed."
-        }
-    ]
+	},
+	"type": "function",
+	"syntax": "dbPoolClear([, string])",
+	"returns": "boolean",
+	"description": "clears all existing datasource connection",
+	"examples": [
+		{
+			"title": "dbPoolClear Example",
+			"description": "Clear all existing datasource connections",
+			"code": "dbPoolClear();"
+		},
+		{
+			"title": "dbPoolClear Example",
+			"description": "Clear a named datasource connection",
+			"code": "dbPoolClear(mydatasource);"
+		}
+	],
+	"params": [
+		{
+			"default": "",
+			"required": false,
+			"values": [],
+			"name": "datasource",
+			"type": "string",
+			"description": "specific datasource to clear, if not set all datasources get removed."
+		}
+	]
 }

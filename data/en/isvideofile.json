@@ -3,13 +3,24 @@
 	"type": "function",
 	"syntax": "isVideoFile(path)",
 	"returns": "boolean",
-	"related": ["isPDFFile","isImageFile"],
+	"related": ["isPDFFile", "isImageFile"],
 	"description": "Checks if given string is a video file",
 	"params": [
-		{"name":"path","description":"Pathname to a video file.","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "path",
+			"description": "Pathname to a video file.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/isvideofile.html"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isvideofile.html"
+		}
 	},
 	"links": [],
 	"examples": []

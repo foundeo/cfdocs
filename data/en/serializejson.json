@@ -1,71 +1,119 @@
 {
-	"name":"serializeJSON",
-	"type":"function",
-	"syntax":"serializeJSON(data[, queryFormat[, useSecureJSONPrefix[, useCustomSerializer]]])",
-	"member":"someVar.toJSON([queryFormat[, useSecureJSONPrefix[, useCustomSerializer]]])",
-	"returns":"string",
-	"related":["deserializeJSON", "structSetMetadata", "arraySetMetadata"],
-	"description":"Converts a ColdFusion value into a JSON (JavaScript Object Notation) string.",
+	"name": "serializeJSON",
+	"type": "function",
+	"syntax": "serializeJSON(data[, queryFormat[, useSecureJSONPrefix[, useCustomSerializer]]])",
+	"member": "someVar.toJSON([queryFormat[, useSecureJSONPrefix[, useCustomSerializer]]])",
+	"returns": "string",
+	"related": ["deserializeJSON", "structSetMetadata", "arraySetMetadata"],
+	"description": "Converts a ColdFusion value into a JSON (JavaScript Object Notation) string.",
 	"params": [
-		{"name":"data","description":"A serializable ColdFusion data value","required":true,"default":"","type":"any","values":[]},
-		{"name":"queryFormat","description":"This specifies how to serialize ColdFusion queries. Prior to CF11+, this would only accept Boolean values. If it is a Boolean, the false value is equivalent to 'row' and true is 'column'.","required":false,"default":"row","type":"any","values":["row","column","struct",false,true]},
-		{"name":"useSecureJSONPrefix","description":"CF11+ When Prefix Serialized JSON is enabled in the ColdFusion Administrator, then by default this function inserts the secure JSON prefix at the beginning of the JSON.","required":false,"default":"false","type":"boolean","values":[]},
-		{"name":"useCustomSerializer","description":"CF11+ Use custom serializer if defined. See: https://helpx.adobe.com/coldfusion/developing-applications/changes-in-coldfusion/restful-web-services-in-coldfusion.html","required":false,"default":"true","type":"boolean","values":[]}
+		{
+			"name": "data",
+			"description": "A serializable ColdFusion data value",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "queryFormat",
+			"description": "This specifies how to serialize ColdFusion queries. Prior to CF11+, this would only accept Boolean values. If it is a Boolean, the false value is equivalent to 'row' and true is 'column'.",
+			"required": false,
+			"default": "row",
+			"type": "any",
+			"values": ["row", "column", "struct", false, true]
+		},
+		{
+			"name": "useSecureJSONPrefix",
+			"description": "CF11+ When Prefix Serialized JSON is enabled in the ColdFusion Administrator, then by default this function inserts the secure JSON prefix at the beginning of the JSON.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "useCustomSerializer",
+			"description": "CF11+ Use custom serializer if defined. See: https://helpx.adobe.com/coldfusion/developing-applications/changes-in-coldfusion/restful-web-services-in-coldfusion.html",
+			"required": false,
+			"default": "true",
+			"type": "boolean",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"CF11+ Added `useSecureJSONPrefix` and `useCustomSerializer` arguments. Changed `queryFormat` (formerly known as `serializeQueryByColumns`) from a boolean type to also allowing strings, adding the 'struct' functionality in the process. The default for `queryFormat` can be set using the newly added Application.cfc setting `this.serialization.serializeQueryAs`. Also added Application.cfc settings `this.serialization.preserveCaseForStructKey` and `this.serialization.preserveCaseForQueryColumn`. CF2016+ Added member syntax.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/serializejson.html"},
-		"lucee": {"minimum_version":"", "notes":"Member syntax added for Lucee5.3.8+", "docs":"https://docs.lucee.org/reference/functions/serializejson.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/serializejson"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/serializejson"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Transpiled to `JSONSerialize` in BoxLang.", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/conversion/jsonserialize"}
+		"coldfusion": {
+			"minimum_version": "8",
+			"notes": "CF11+ Added `useSecureJSONPrefix` and `useCustomSerializer` arguments. Changed `queryFormat` (formerly known as `serializeQueryByColumns`) from a boolean type to also allowing strings, adding the 'struct' functionality in the process. The default for `queryFormat` can be set using the newly added Application.cfc setting `this.serialization.serializeQueryAs`. Also added Application.cfc settings `this.serialization.preserveCaseForStructKey` and `this.serialization.preserveCaseForQueryColumn`. CF2016+ Added member syntax.",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/serializejson.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "Member syntax added for Lucee5.3.8+",
+			"docs": "https://docs.lucee.org/reference/functions/serializejson.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/serializejson"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/serializejson"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Transpiled to `JSONSerialize` in BoxLang.",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/conversion/jsonserialize"
+		}
 	},
 	"links": [
 		{
-			"title":"JSON Overview",
-			"description":"Overview of the JSON spec.",
-			"url":"http://www.json.org/"
+			"title": "JSON Overview",
+			"description": "Overview of the JSON spec.",
+			"url": "http://www.json.org/"
 		},
 		{
-			"title":"JSONUtil.cfc",
-			"description":"A CFC that provides JSON serialization and deserialization. It is written in CFML so it works on versions prior to CF8. It may be useful if you are experiencing automatic type conversion issues with the built-in serializeJSON function.",
-			"url":"https://github.com/CFCommunity/jsonutil"
+			"title": "JSONUtil.cfc",
+			"description": "A CFC that provides JSON serialization and deserialization. It is written in CFML so it works on versions prior to CF8. It may be useful if you are experiencing automatic type conversion issues with the built-in serializeJSON function.",
+			"url": "https://github.com/CFCommunity/jsonutil"
 		}
 	],
 	"examples": [
 		{
-			"title":"Serialize a Struct",
-			"description":"Serialize a CF Struct into a JSON representation",
-			"code":"person = {name=\"Pete Freitag\", company=\"Foundeo\"};\nwriteOutput( serializeJSON(person) );",
+			"title": "Serialize a Struct",
+			"description": "Serialize a CF Struct into a JSON representation",
+			"code": "person = {name=\"Pete Freitag\", company=\"Foundeo\"};\nwriteOutput( serializeJSON(person) );",
 			"result": "{\"COMPANY\":\"Foundeo\",\"NAME\":\"Pete Freitag\"}"
 		},
 		{
-			"title":"Serialize a Struct with Member Syntax",
-			"description":"Serialize a CF Struct into a JSON representation using toJSON",
-			"code":"person = {name=\"Pete Freitag\", company=\"Foundeo\"};\nwriteOutput( person.toJSON() );",
+			"title": "Serialize a Struct with Member Syntax",
+			"description": "Serialize a CF Struct into a JSON representation using toJSON",
+			"code": "person = {name=\"Pete Freitag\", company=\"Foundeo\"};\nwriteOutput( person.toJSON() );",
 			"result": "{\"COMPANY\":\"Foundeo\",\"NAME\":\"Pete Freitag\"}"
 		},
 		{
-			"title":"Lower Case Keys",
-			"description":"Same as above but they variable names are case-sensitive by quoting them.",
-			"code":"person = {\"name\"=\"Pete Freitag\", \"company\"=\"Foundeo\"};\nwriteOutput( serializeJSON(person) );",
+			"title": "Lower Case Keys",
+			"description": "Same as above but they variable names are case-sensitive by quoting them.",
+			"code": "person = {\"name\"=\"Pete Freitag\", \"company\"=\"Foundeo\"};\nwriteOutput( serializeJSON(person) );",
 			"result": "{\"company\":\"Foundeo\",\"name\":\"Pete Freitag\"}"
 		},
 		{
 			"title": "ACF Possible Issues",
-			"description":"Adobe ColdFusion may incorrectly serializes some strings if they can be automatically converted into other types, like numbers or booleans. One workaround is to use a CFC with cfproperty to specify types. Another workaround is to prepend chr(2) to the value and it will be forced to a string, however that is an unofficial / undocumented workaround.",
-			"code":"person = { \"phone\"=\"123456789\", \"firstname\"=\"no\",\"lastname\"=\"yes\" };\nwriteOutput( serializeJson(person) );",
+			"description": "Adobe ColdFusion may incorrectly serializes some strings if they can be automatically converted into other types, like numbers or booleans. One workaround is to use a CFC with cfproperty to specify types. Another workaround is to prepend chr(2) to the value and it will be forced to a string, however that is an unofficial / undocumented workaround.",
+			"code": "person = { \"phone\"=\"123456789\", \"firstname\"=\"no\",\"lastname\"=\"yes\" };\nwriteOutput( serializeJson(person) );",
 			"result": "{\"phone\":123456789,\"firstname\":false,\"lastname\":true}"
 		},
 		{
-			"title":"Using setMetadata to force types",
-			"description":"As of CF2016.0.2+ you can call `setMetadata()` as a member function on a struct to force a type",
-			"code":"myStruct = {\"zip\"=\"00123\"};\nmyStruct.setMetadata( { \"zip\": \"string\" } );\nwriteOutput(serializeJSON(myStruct));",
+			"title": "Using setMetadata to force types",
+			"description": "As of CF2016.0.2+ you can call `setMetadata()` as a member function on a struct to force a type",
+			"code": "myStruct = {\"zip\"=\"00123\"};\nmyStruct.setMetadata( { \"zip\": \"string\" } );\nwriteOutput(serializeJSON(myStruct));",
 			"result": "{\"zip\":\"00123\"}"
 		},
 		{
-			"title":"Serialize a Query as an array of structs",
-			"description":"Serialize a CF Query into a JSON representation of an array of structs",
-			"code":"news = queryNew(\"id,title\",\n    \"integer,varchar\",\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nwriteOutput(serializeJSON(news, \"struct\"));",
+			"title": "Serialize a Query as an array of structs",
+			"description": "Serialize a CF Query into a JSON representation of an array of structs",
+			"code": "news = queryNew(\"id,title\",\n    \"integer,varchar\",\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nwriteOutput(serializeJSON(news, \"struct\"));",
 			"result": "[{\"ID\":1,\"TITLE\":\"Dewey defeats Truman\"},{\"ID\":2,\"TITLE\":\"Man walks on Moon\"}]"
 		}
 	]

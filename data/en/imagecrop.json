@@ -1,27 +1,82 @@
 {
-	"name":"imageCrop",
-	"type":"function",
-	"syntax":"imageCrop(name, x, y, width, height)",
-	"member":"someImage.crop(x, y, width, height)",
-	"returns":"void",
-	"related":["imageResize"],
-	"description":"Crops a ColdFusion image to a specified rectangular area.",
+	"name": "imageCrop",
+	"type": "function",
+	"syntax": "imageCrop(name, x, y, width, height)",
+	"member": "someImage.crop(x, y, width, height)",
+	"returns": "void",
+	"related": ["imageResize"],
+	"description": "Crops a ColdFusion image to a specified rectangular area.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
-		{"name":"x","description":"The X origin of the crop area.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"y","description":"The Y origin of the crop area.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"width","description":"The width of the crop area.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"height","description":"The height of the crop area.","required":true,"default":"","type":"numeric","values":[]}
+		{
+			"name": "name",
+			"description": "The image on which this operation is performed.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "x",
+			"description": "The X origin of the crop area.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "y",
+			"description": "The Y origin of the crop area.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "width",
+			"description": "The width of the crop area.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "height",
+			"description": "The height of the crop area.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagecrop.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/imagecrop.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagecrop"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagecrop"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-image` module.", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"}
+		"coldfusion": {
+			"minimum_version": "8",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagecrop.html"
+		},
+		"lucee": {
+			"minimum_version": "4.5",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/imagecrop.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/imagecrop"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/imagecrop"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Requires the `bx-image` module.",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"
+		}
 	},
 	"links": [],
-    	"examples": [
+	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to crop an image.",
@@ -30,11 +85,11 @@
 			"runnable": false
 		},
 		{
-			"title":"Using crop member function",
-			"description":"CF11+ Lucee4.5+ Crop the image from starting point (x=25, y=25), with width=100 and height=100",
-			"code":"imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\nimgObj.crop(25,25,100,100);\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
-			"result":"",
-			"runnable":true
+			"title": "Using crop member function",
+			"description": "CF11+ Lucee4.5+ Crop the image from starting point (x=25, y=25), with width=100 and height=100",
+			"code": "imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\nimgObj.crop(25,25,100,100);\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result": "",
+			"runnable": true
 		}
 	]
 }

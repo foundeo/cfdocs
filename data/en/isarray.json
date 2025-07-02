@@ -1,20 +1,54 @@
 {
-	"name":"isArray",
-	"type":"function",
-	"syntax":"isArray(value [, number])",
-	"returns":"boolean",
-	"related":["isStruct","arrayIsEmpty"],
-	"description":" Determines whether a value is an array.\n True, if value is an array, a query column object, or XML.\n also number = Dimension; function tests whether the array has\n exactly this dimension",
+	"name": "isArray",
+	"type": "function",
+	"syntax": "isArray(value [, number])",
+	"returns": "boolean",
+	"related": ["isStruct", "arrayIsEmpty"],
+	"description": "Determines whether a value is an array.\n True, if value is an array, a query column object, or XML.\n also number = Dimension; function tests whether the array has\n exactly this dimension",
 	"params": [
-		{"name":"value","description":"The array in which to check.","required":true,"default":"","type":"any","values":[]},
-		{"name":"number","description":"Dimension of the array.","required":false,"default":"","type":"numeric","values":[]}
+		{
+			"name": "value",
+			"description": "The array in which to check.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "number",
+			"description": "Dimension of the array.",
+			"required": false,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isarray.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isarray.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isarray"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isarray"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isarray"}
+		"coldfusion": {
+			"minimum_version": "3",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isarray.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isarray.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/isarray"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/isarray"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isarray"
+		}
 	},
 	"links": [],
 	"examples": [

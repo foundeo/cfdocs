@@ -1,33 +1,71 @@
 {
-	"name":"structUpdate",
-	"type":"function",
-	"syntax":"structUpdate(structure, key, value)",
-	"returns":"boolean",
-	"related":[],
-	"description":" Updates a key with a value.",
+	"name": "structUpdate",
+	"type": "function",
+	"syntax": "structUpdate(structure, key, value)",
+	"returns": "boolean",
+	"related": [],
+	"description": "Updates a key with a value.",
 	"params": [
-		{"name":"structure","description":"Structure to update","required":true,"default":"","type":"struct","values":[]},
-		{"name":"key","description":"Key, the value of which to update","required":true,"default":"","type":"string","values":[]},
-		{"name":"value","description":"New value","required":true,"default":"","type":"any","values":[]}
-
+		{
+			"name": "structure",
+			"description": "Structure to update",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "key",
+			"description": "Key, the value of which to update",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "value",
+			"description": "New value",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structupdate.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/structupdate.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structupdate"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structupdate"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structupdate"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structupdate.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/structupdate.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/structupdate"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/structupdate"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structupdate"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title":"Updates a structure value at specific key",
-			"description":"Change value of structure item",
-			"code":"myStruct = {a: 1, b: 2, c: 3, d: 4};\r\nstructUpdate(myStruct,'c',15);\r\nwriteDump(serializeJSON(myStruct));",
-			"result":"{\"A\":1,\"B\":2,\"C\":15,\"D\":4}",
-			"runnable":true
+			"title": "Updates a structure value at specific key",
+			"description": "Change value of structure item",
+			"code": "myStruct = {a: 1, b: 2, c: 3, d: 4};\r\nstructUpdate(myStruct,'c',15);\r\nwriteDump(serializeJSON(myStruct));",
+			"result": "{\"A\":1,\"B\":2,\"C\":15,\"D\":4}",
+			"runnable": true
 		}
 	]
 }

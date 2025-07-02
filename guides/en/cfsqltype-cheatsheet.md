@@ -46,5 +46,5 @@ Table sourced from [the Adobe Documentation][docs]
 
 ## See also
 
-- [CF_SQL_ is optional in cfqueryparam cfsqltype](https://www.petefreitag.com/blog/cfsql-optional-cfqueryparam/)
-- [SQL Server JDBC data type mappings](https://docs.microsoft.com/en-us/sql/connect/jdbc/using-basic-data-types)
+* [CF_SQL_ is optional in cfqueryparam cfsqltype](https://www.petefreitag.com/blog/cfsql-optional-cfqueryparam/)
+* [SQL Server JDBC data type mappings](https://docs.microsoft.com/en-us/sql/connect/jdbc/using-basic-data-types)

@@ -29,23 +29,31 @@
 		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/systemcacheclear.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/systemcacheclear"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/systemcacheclear.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/systemcacheclear"
+		}
 	},
 	"examples": [
 		{
-			"title":"Clear all caches",
-			"description":"Clear all caches.",
-			"code":"systemCacheClear();",
-			"result":"",
-			"runnable":false
+			"title": "Clear all caches",
+			"description": "Clear all caches.",
+			"code": "systemCacheClear();",
+			"result": "",
+			"runnable": false
 		},
 		{
-			"title":"Clear the template cache",
-			"description":"Clear the template cache.",
-			"code":"systemCacheClear(\"template\");",
-			"result":"",
-			"runnable":false
+			"title": "Clear the template cache",
+			"description": "Clear the template cache.",
+			"code": "systemCacheClear(\"template\");",
+			"result": "",
+			"runnable": false
 		}
 	],
 	"links": []

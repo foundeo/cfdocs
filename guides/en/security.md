@@ -32,7 +32,7 @@ These lockdown guides will give you an excellent head start on protecting your s
 
 It is important to note that end of life versions of Adobe ColdFusion, and all Railo server versions, have inherent security flaws that are not and will not be addressed. These weaknesses can be, and very often are, primary attack vectors for exploitation of those insecure systems.
 
-If you are running Adobe ColdFusion versions prior to 2021 (e.g. CF2018, 2016, 11, 10, etc.), or any version of Railo, then you are currently **at high risk** of being attacked and should consider upgrading your version of Adobe to the latest version, or if you are using Railo to migrate to Lucee. 
+If you are running Adobe ColdFusion versions prior to 2021 (e.g. CF2018, 2016, 11, 10, etc.), or any version of Railo, then you are currently **at high risk** of being attacked and should consider upgrading your version of Adobe to the latest version, or if you are using Railo to migrate to Lucee.
 
 It is also important to note that Adobe, and Lucee, regularly release security patches for those application servers and you should regularly ensure that your server is on the latest security point release to avoid being the target of potential hackers. Likewise, much of the underlying infrastructure of these application servers, including Java, Tomcat, Apache, nginx, etc. also have security releases and it is important to keep these underlying services up to date with the latest security point release.
 
@@ -42,7 +42,7 @@ You can use tools such as [HackMyCF's ColdFusion server security scanner](https:
 
 Again, entire books exist that go in depth with securing your network. For most CFML DevOps, this usually means ensuring you have hardened your server (using much of the same steps already outlined in the lockdown guides) to include your web server, application server (JRun, Tomcat, Jetty, etc.) and your database. Ensuring these application servers are consistently patched and configured to be the least granting of access is essential.
 
-Layered security approaches work the best for network security, so having both a hardware firewall and intrusion detection system, and using the software based firewall that comes with your operating system is recommended. Limit access from the external network to your server only on the ports that need to be open. This is typically port 80 for http and port 443 for https. All other external ports should be blocked. If you need access to ssh, ftp or rdp ports, then you should use other methods such as IP allow listing, VPNs, etc. 
+Layered security approaches work the best for network security, so having both a hardware firewall and intrusion detection system, and using the software based firewall that comes with your operating system is recommended. Limit access from the external network to your server only on the ports that need to be open. This is typically port 80 for http and port 443 for https. All other external ports should be blocked. If you need access to ssh, ftp or rdp ports, then you should use other methods such as IP allow listing, VPNs, etc.
 
 Layering anti-virus, anti-malware and/or intrusion detection software should also be considered and implemented to ensure your systems are not infected or hijacked by rogue viruses and other malware.
 
@@ -50,7 +50,7 @@ Layering anti-virus, anti-malware and/or intrusion detection software should als
 
 Code security is an often overlooked and frequently misunderstood concept for many ColdFusion developers. It has either never come up for many, or they simply ignore possible security threats believing a breach will never happen to them. However, code security really is your first line of defense online – without it your web site or application could be hacked, data could be disclosed or outright destroyed. An attack from a random script kiddie trying to pwn as many systems as he could would be your best case scenario, an actual focused attacker trying to steal your data or use your application to hack further into your operating system, to get at your finance departments data, or your research departments data, etc. as a worst case scenario.
 
-You can use third party tools such as [Fixinator's ColdFusion code security scanner](https://fixinator.app/) to find vulnerabilities in your code or hire a [ColdFusion security consultant](https://foundeo.com/consulting/coldfusion/) to conduct a review of your code. 
+You can use third party tools such as [Fixinator's ColdFusion code security scanner](https://fixinator.app/) to find vulnerabilities in your code or hire a [ColdFusion security consultant](https://foundeo.com/consulting/coldfusion/) to conduct a review of your code.
 
 ### Web Application Firewalls
 
@@ -64,22 +64,22 @@ Here are some popular WAFs for use with CFML:
 
 ### OWASP
 
-The [Online Web Application Security Project](https://owasp.org/) is the go-to resource for all things related to web application security - from threat assessments to tools, tips and techniques on how to avoid security pitfalls, this is the place to be and should be on your reference list. [OWASP Top 10 Security Threats](https://owasp.org/www-project-top-ten/) is an excellent place to start exploring. OWASP also publishes cheat sheets on a wide variety of web application security topics. 
+The [Online Web Application Security Project](https://owasp.org/) is the go-to resource for all things related to web application security - from threat assessments to tools, tips and techniques on how to avoid security pitfalls, this is the place to be and should be on your reference list. [OWASP Top 10 Security Threats](https://owasp.org/www-project-top-ten/) is an excellent place to start exploring. OWASP also publishes cheat sheets on a wide variety of web application security topics.
 
 ### Encryption
 
 Encryption is the technology that allows us to take plain text messages and make them unreadable by both humans and other machines that do not have access to the encryption key used to [encrypt()](/encrypt) the data.
 
-[Click Here](/security-encryption) to learn how encrypting your data will help protect you from both parameter tampering and information disclosure.
+[Security Encryption](/security-encryption) to learn how encrypting your data will help protect you from both parameter tampering and information disclosure.
 
 ### Authentication
 
-Authentication is the process by which you validate that a particular user is allowed to login to your application. This should not be confused with *access control*, which determines what parts of your application a user has access to. Authentication is merely the process of ensuring a user can login.
+Authentication is the process by which you validate that a particular user is allowed to login to your application. This should not be confused with _access control*, which determines what parts of your application a user has access to. Authentication is merely the process of ensuring a user can login.
 
-[Click Here](/security-authentication) to learn how authentication can be used to provide logins for your users to your application.
+[Security Authentication](/security-authentication) to learn how authentication can be used to provide logins for your users to your application.
 
 ### Session Management
 
 Session management is the process by which you ensure that a logged in user maintains a valid session throughout the session lifecycle and is used to ensure that your user has not timed out or has not had their session hijacked by a potential hacker.
 
-[Click Here](/security-session-management) to learn how to build your own session management routines to maintain sessions for your logged in users.
+[Security Session Management](/security-session-management) to learn how to build your own session management routines to maintain sessions for your logged in users.

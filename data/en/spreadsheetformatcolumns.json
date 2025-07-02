@@ -1,31 +1,56 @@
 {
-	"name":"spreadsheetFormatColumns",
-	"type":"function",
-	"syntax":"spreadsheetFormatColumns(spreadsheetObj, format, columns)",
-	"returns":"void",
-	"related":["SpreadsheetFormatColumn","SpreadsheetFormatCell"],
-	"description":"Formats the contents of a multiple columns of an Excel spreadsheet object.",
+	"name": "spreadsheetFormatColumns",
+	"type": "function",
+	"syntax": "spreadsheetFormatColumns(spreadsheetObj, format, columns)",
+	"returns": "void",
+	"related": ["SpreadsheetFormatColumn", "SpreadsheetFormatCell"],
+	"description": "Formats the contents of a multiple columns of an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object for which formatting will be applied","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"format","description":"A structure containing the formatting information","required":true,"default":"","type":"string","values":[]},
-		{"name":"columns","description":"A string containing comma-separated column numbers or column ranges","required":true,"default":"","type":"string","values":[]}
-
+		{
+			"name": "spreadsheetObj",
+			"description": "The spreadsheet object for which formatting will be applied",
+			"required": true,
+			"default": "",
+			"type": "variableName",
+			"values": []
+		},
+		{
+			"name": "format",
+			"description": "A structure containing the formatting information",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "columns",
+			"description": "A string containing comma-separated column numbers or column ranges",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetformatcolumns.html"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetformatcolumns"}
+		"coldfusion": {
+			"minimum_version": "9",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetformatcolumns.html"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/spreadsheetformatcolumns"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title":"Tag Example",
-			"description":" ",
-			"code":"<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \n <!---<cfloop index=\"x\" from=\"1\" to=\"10\">---> \n <cfset queryAddRow(q)> \n <cfset querySetCell(q, \"Name\", \"John\")> \n <cfset querySetCell(q, \"Beers\", \"1\")> \n <cfset querySetCell(q, \"Vegetables\", \"1\")> \n <cfset querySetCell(q, \"Fruits\", \"1\")> \n <cfset querySetCell(q, \"Meats\", \"1\")> \n <cfset mySheet =   SpreadsheetNew( \"Test\"  ) /> \n <!--- Make a spreadsheet object ---> \n <cfset s = spreadsheetNew()> \n <!--- Add header row ---> \n <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \n <!--- Add query ---> \n  <cfscript>format1.font=\"Courier\"; \n     format1.fontsize=\"10\"; \n     format1.color=\"dark_blue;\"; \n     spreadsheetFormatColumns(s,format1,\"1-3\"); \n     </cfscript> \n <cfdump var=\"#s#\" /> <cfheader name=\"Content-Disposition\" value=\"inline; filename=testFile.xls\">  <cfcontent type=\"application/vnd.msexcel\" variable=\"#SpreadSheetReadBinary(s)#\">  ",
-			"result":"",
-			"runnable":false
+			"title": "Tag Example",
+			"description": "",
+			"code": "<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \n <!---<cfloop index=\"x\" from=\"1\" to=\"10\">---> \n <cfset queryAddRow(q)> \n <cfset querySetCell(q, \"Name\", \"John\")> \n <cfset querySetCell(q, \"Beers\", \"1\")> \n <cfset querySetCell(q, \"Vegetables\", \"1\")> \n <cfset querySetCell(q, \"Fruits\", \"1\")> \n <cfset querySetCell(q, \"Meats\", \"1\")> \n <cfset mySheet =   SpreadsheetNew( \"Test\"  ) /> \n <!--- Make a spreadsheet object ---> \n <cfset s = spreadsheetNew()> \n <!--- Add header row ---> \n <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \n <!--- Add query ---> \n  <cfscript>format1.font=\"Courier\"; \n     format1.fontsize=\"10\"; \n     format1.color=\"dark_blue;\"; \n     spreadsheetFormatColumns(s,format1,\"1-3\"); \n     </cfscript> \n <cfdump var=\"#s#\" /> <cfheader name=\"Content-Disposition\" value=\"inline; filename=testFile.xls\">  <cfcontent type=\"application/vnd.msexcel\" variable=\"#SpreadSheetReadBinary(s)#\">  ",
+			"result": "",
+			"runnable": false
 		}
 	]
-
 }

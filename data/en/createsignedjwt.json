@@ -1,45 +1,49 @@
 {
-  "name": "createSignedJWT",
-  "type": "function",
-  "syntax": "createSignedJWT(payload, signOptions, config)",
-  "returns": "string",
-  "related": [ "verifySignedJWT", "createEncryptedJWT" ],
-  "description": "Create a signed JWT (JSON Web Signature - JWS)",
-  "params": [
-    {
-      "name": "payload",
-      "description": "The payload as a string or struct.",
-      "required": true,
-      "default": "",
-      "type": "any",
-      "values": []
-    },
-    {
-      "name": "signOptions",
-      "description": "Create the signature using the key information from the given struct",
-      "required": true,
-      "default": "",
-      "type": "struct",
-      "values": []
-    },
-    {
-      "name": "config",
-      "description": "A struct with the following values:\n- algorithm : algorithm used for signing.\n- generateIssuedAt : boolean to indicate whether to generate \"iat\" field\n- generateJti : boolean to indicate whether to generate \"jti\" field",
-      "required": true,
-      "default": "",
-      "type": "struct",
-      "values": []
-    }
-  ],
-  "engines": {
-    "coldfusion": {"minimum_version":"2023", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/createsignedjwt.html"}
-  },
-  "links": [
+	"name": "createSignedJWT",
+	"type": "function",
+	"syntax": "createSignedJWT(payload, signOptions, config)",
+	"returns": "string",
+	"related": ["verifySignedJWT", "createEncryptedJWT"],
+	"description": "Create a signed JWT (JSON Web Signature - JWS)",
+	"params": [
+		{
+			"name": "payload",
+			"description": "The payload as a string or struct.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "signOptions",
+			"description": "Create the signature using the key information from the given struct",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "config",
+			"description": "A struct with the following values:\n- algorithm : algorithm used for signing.\n- generateIssuedAt : boolean to indicate whether to generate \"iat\" field\n- generateJti : boolean to indicate whether to generate \"jti\" field",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2023",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/createsignedjwt.html"
+		}
+	},
+	"links": [
 		{
 			"title": "JSON Web Tokens in ColdFusion",
 			"description": "Overview of JSON Web Tokens (JWT), including how to use them in ColdFusion",
 			"url": "https://helpx.adobe.com/coldfusion/using/coldfusion-json-web-tokens.html"
 		}
 	],
-  "examples": []
+	"examples": []
 }

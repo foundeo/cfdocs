@@ -1,35 +1,61 @@
 {
-	"name":"chr",
-	"type":"function",
-	"syntax":"chr(number)",
-	"returns":"string",
-	"related":["asc"],
-	"description":"Converts a numeric value to a UCS-2 character.",
+	"name": "chr",
+	"type": "function",
+	"syntax": "chr(number)",
+	"returns": "string",
+	"related": ["asc"],
+	"description": "Converts a numeric value to a UCS-2 character.",
 	"params": [
-		{"name":"number","description":"The UCS-2 code value (a number in the range 0 - 65535)","required":true,"default":"","type":"numeric","values":[]}
+		{
+			"name": "number",
+			"description": "The UCS-2 code value (a number in the range 0 - 65535)",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/Chr.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/chr.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/chr"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/chr"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/char"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/Chr.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/chr.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/chr"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/chr"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/char"
+		}
 	},
 	"links": [
 		{
-		    "title":"Unicode UCS-2 Code Chart",
-		    "description":"Cheatsheet with all the UCS-2 characters and their hexadecimal(!) representation",
-		    "url":"http://www.columbia.edu/kermit/ucs2.html"
+			"title": "Unicode UCS-2 Code Chart",
+			"description": "Cheatsheet with all the UCS-2 characters and their hexadecimal(!) representation",
+			"url": "http://www.columbia.edu/kermit/ucs2.html"
 		}
 	],
 	"examples": [
 		{
-			"title":"Character and value of Korean currency symbol ( unicode number 8361 )",
-			"description":"",
-			"code":"x = chr( 8361 ); \n writeOutput( 'character: #x#' ); \n x = asc( x ); \n writeOutput( '<br>Unicode value: #x#');",
-			"result":"",
-			"runnable":true
+			"title": "Character and value of Korean currency symbol ( unicode number 8361 )",
+			"description": "",
+			"code": "x = chr( 8361 ); \n writeOutput( 'character: #x#' ); \n x = asc( x ); \n writeOutput( '<br>Unicode value: #x#');",
+			"result": "",
+			"runnable": true
 		}
 	]
-
 }

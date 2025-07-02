@@ -1,39 +1,104 @@
 {
-	"name":"imageCopy",
-	"type":"function",
-	"syntax":"imageCopy(name, x, y, width, height [, dx] [, dy])",
-	"member":"someImage.copy(x, y, width, height [, dx] [, dy])",
-	"returns":"any",
-	"related":["ImageNew", "ImagePaste", "IsImageFile"],
-	"description":" Copies a rectangular area of an image.",
+	"name": "imageCopy",
+	"type": "function",
+	"syntax": "imageCopy(name, x, y, width, height [, dx] [, dy])",
+	"member": "someImage.copy(x, y, width, height [, dx] [, dy])",
+	"returns": "any",
+	"related": ["ImageNew", "ImagePaste", "IsImageFile"],
+	"description": "Copies a rectangular area of an image.",
 	"params": [
-		{"name":"name","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
-		{"name":"x","description":"The x coordinate of the source rectangle.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"y","description":"The y coordinate of the source rectangle.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"width","description":"The width of the source rectangle.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"height","description":"The height of the source rectangle.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"dx","description":"The x coordinate of the destination rectangle.","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"dy","description":"The y coordinate of the destination rectangle.","required":false,"default":"","type":"numeric","values":[]}
-
+		{
+			"name": "name",
+			"description": "The ColdFusion image on which this operation is performed.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "x",
+			"description": "The x coordinate of the source rectangle.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "y",
+			"description": "The y coordinate of the source rectangle.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "width",
+			"description": "The width of the source rectangle.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "height",
+			"description": "The height of the source rectangle.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "dx",
+			"description": "The x coordinate of the destination rectangle.",
+			"required": false,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "dy",
+			"description": "The y coordinate of the destination rectangle.",
+			"required": false,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagecopy.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/imagecopy.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagecopy"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagecopy"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-image` module.", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"}
+		"coldfusion": {
+			"minimum_version": "8",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagecopy.html"
+		},
+		"lucee": {
+			"minimum_version": "4.5",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/imagecopy.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/imagecopy"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/imagecopy"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Requires the `bx-image` module.",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title":"Using copy member function",
-			"description":"CF11+ Lucee4.5+ Copy the center of the image, rotate it 180 degrees about its center and paste it back into the original image",
-			"code":"imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\ncopiedImgObj = imgObj.copy(50,50,50,50);\r\ncopiedImgObj.rotate(25,25,180,\"bicubic\");\r\nimgObj.paste(copiedImgObj,50,50);\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
-			"result":"",
-			"runnable":true
+			"title": "Using copy member function",
+			"description": "CF11+ Lucee4.5+ Copy the center of the image, rotate it 180 degrees about its center and paste it back into the original image",
+			"code": "imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\ncopiedImgObj = imgObj.copy(50,50,50,50);\r\ncopiedImgObj.rotate(25,25,180,\"bicubic\");\r\nimgObj.paste(copiedImgObj,50,50);\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result": "",
+			"runnable": true
 		}
 	]
-
 }

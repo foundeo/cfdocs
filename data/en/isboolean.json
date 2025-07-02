@@ -1,63 +1,90 @@
 {
-	"name":"isBoolean",
-	"type":"function",
-	"syntax":"isBoolean(value)",
-	"returns":"boolean",
-	"related":["booleanFormat","yesNoFormat"],
-	"description":"Returns true when a value can be converted to Boolean",
+	"name": "isBoolean",
+	"type": "function",
+	"syntax": "isBoolean(value)",
+	"returns": "boolean",
+	"related": ["booleanFormat", "yesNoFormat"],
+	"description": "Returns true when a value can be converted to Boolean",
 	"params": [
-		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
+		{
+			"name": "value",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isboolean.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isboolean.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isboolean"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isboolean"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isboolean"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isboolean.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isboolean.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/isboolean"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/isboolean"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isboolean"
+		}
 	},
 	"links": [],
-	"examples":[
+	"examples": [
 		{
-			"title":"Yes",
-			"description":"`Yes` is considered a boolean that is `true`",
-			"code":"isBoolean(\"yes\")",
-			"result":"YES"
+			"title": "Yes",
+			"description": "`Yes` is considered a boolean that is `true`",
+			"code": "isBoolean(\"yes\")",
+			"result": "YES"
 		},
 		{
-			"title":"No",
-			"description":"`No` is considered a boolean that is `false`",
-			"code":"isBoolean(\"no\")",
-			"result":"YES"
+			"title": "No",
+			"description": "`No` is considered a boolean that is `false`",
+			"code": "isBoolean(\"no\")",
+			"result": "YES"
 		},
 		{
-			"title":"Maybe",
-			"description":"`Maybe` is not considered a boolean",
-			"code":"isBoolean(\"maybe\")",
-			"result":"NO"
+			"title": "Maybe",
+			"description": "`Maybe` is not considered a boolean",
+			"code": "isBoolean(\"maybe\")",
+			"result": "NO"
 		},
 		{
-			"title":"True",
-			"description":"`true` is a boolean",
-			"code":"isBoolean(true)",
-			"result":"YES"
+			"title": "True",
+			"description": "`true` is a boolean",
+			"code": "isBoolean(true)",
+			"result": "YES"
 		},
 		{
-			"title":"False",
-			"description":"`false` is a boolean",
-			"code":"isBoolean(false)",
-			"result":"YES"
+			"title": "False",
+			"description": "`false` is a boolean",
+			"code": "isBoolean(false)",
+			"result": "YES"
 		},
 		{
-			"title":"Zero",
-			"description":"`0` is considered a boolean that is `false`",
-			"code":"isBoolean(0)",
-			"result":"YES"
+			"title": "Zero",
+			"description": "`0` is considered a boolean that is `false`",
+			"code": "isBoolean(0)",
+			"result": "YES"
 		},
 		{
-			"title":"Non Zero Integer",
-			"description":"`23` is considered a boolean that is `true`",
-			"code":"isBoolean(23)",
-			"result":"YES"
+			"title": "Non Zero Integer",
+			"description": "`23` is considered a boolean that is `true`",
+			"code": "isBoolean(23)",
+			"result": "YES"
 		}
 	]
 }

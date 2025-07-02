@@ -1,18 +1,50 @@
 {
-	"name":"threadNew",
-	"type":"function",
-	"syntax":"threadNew()",
-	"returns":"void",
-	"related":["cfthread","threadTerminate"],
-	"description":"Creates a new thread of execution based on the passed closure/lambda.",
+	"name": "threadNew",
+	"type": "function",
+	"syntax": "threadNew()",
+	"returns": "void",
+	"related": ["cfthread", "threadTerminate"],
+	"description": "Creates a new thread of execution based on the passed closure/lambda.",
 	"params": [
-		{"name":"runnable","description":"The closure/lambda to execute in the new thread.","required":true,"default":"","type":"function","values":[]},
-		{"name":"attributes","description":"A struct of data to bind into the thread's scope.","required":false,"default":"{}","type":"struct","values":[]},
-		{"name":"name","description":"The name for the thread.","required":false,"default":"","type":"string","values":[]},
-		{"name":"priority","description":"The priority of the thread.","required":false,"default":"normal","type":"string","values":["high","normal","low"]}
+		{
+			"name": "runnable",
+			"description": "The closure/lambda to execute in the new thread.",
+			"required": true,
+			"default": "",
+			"type": "function",
+			"values": []
+		},
+		{
+			"name": "attributes",
+			"description": "A struct of data to bind into the thread's scope.",
+			"required": false,
+			"default": "{}",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "name",
+			"description": "The name for the thread.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "priority",
+			"description": "The priority of the thread.",
+			"required": false,
+			"default": "normal",
+			"type": "string",
+			"values": ["high", "normal", "low"]
+		}
 	],
 	"engines": {
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/async/threadnew"}
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/async/threadnew"
+		}
 	},
 	"links": []
 }

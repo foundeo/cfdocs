@@ -1,23 +1,39 @@
 {
-	"name":"getLocalhostIP",
-	"type":"function",
-	"syntax":"getLocalhostIP()",
-	"returns":"string",
-	"related":["isIPInRange","isIPV6"],
-	"description":"Returns the localhost IP address, which is 127.0.0.1 for IPv4 and ::1 for IPv6 addresses.",
+	"name": "getLocalhostIP",
+	"type": "function",
+	"syntax": "getLocalhostIP()",
+	"returns": "string",
+	"related": ["isIPInRange", "isIPV6"],
+	"description": "Returns the localhost IP address, which is 127.0.0.1 for IPv4 and ::1 for IPv6 addresses.",
 	"params": [],
 	"engines": {
-		"coldfusion": {"minimum_version":"7.0.1", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getlocalhostip.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/getlocalhostip.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getlocalhostip"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getlocalhostip"}
+		"coldfusion": {
+			"minimum_version": "7.0.1",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getlocalhostip.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/getlocalhostip.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/getlocalhostip"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/getlocalhostip"
+		}
 	},
 	"links": [],
 	"examples": [
 		{
 			"title": "getLocalhostIP Example",
-			"description":"Here we've example to get localhost ip address using getLocalhostIP()",
-			"code":"writeOutput(getLocalhostIP());"
+			"description": "Here we've example to get localhost ip address using getLocalhostIP()",
+			"code": "writeOutput(getLocalhostIP());"
 		}
 	]
 }

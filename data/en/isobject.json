@@ -1,35 +1,62 @@
 {
-	"name":"isObject",
-	"type":"function",
-	"syntax":"isObject(value)",
-	"returns":"boolean",
-	"related":["isStruct","isJSON","isSpreadsheetObject","isPDFObject"],
-	"description":"Determines whether a value is an object.\nTrue, if the value represents a CFML object. False if the value is any other type of data, such as an integer, string, date, or struct.",
+	"name": "isObject",
+	"type": "function",
+	"syntax": "isObject(value)",
+	"returns": "boolean",
+	"related": ["isStruct", "isJSON", "isSpreadsheetObject", "isPDFObject"],
+	"description": "Determines whether a value is an object.\nTrue, if the value represents a CFML object. False if the value is any other type of data, such as an integer, string, date, or struct.",
 	"params": [
-		{"name":"value","description":"","required":true,"default":"","type":"any","values":[]}
+		{
+			"name": "value",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"6", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isobject.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isobject.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isobject"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isobject"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isobject"}
+		"coldfusion": {
+			"minimum_version": "6",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isobject.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isobject.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/isobject"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/isobject"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isobject"
+		}
 	},
 	"links": [],
 	"examples": [
 		{
-			"title":"isObject Example",
-			"description":"Returns true if the parameter is a CFML object. The CFML object here is a Java object.",
-			"code":"random = createObject( \"java\", \"java.security.SecureRandom\" ).getInstance( \"SHA1PRNG\" );\nwriteOutput( isObject( random ) );",
-			"result":true,
-			"runnable":true
+			"title": "isObject Example",
+			"description": "Returns true if the parameter is a CFML object. The CFML object here is a Java object.",
+			"code": "random = createObject( \"java\", \"java.security.SecureRandom\" ).getInstance( \"SHA1PRNG\" );\nwriteOutput( isObject( random ) );",
+			"result": true,
+			"runnable": true
 		},
 		{
-			"title":"isObject Example for Other Data Types",
-			"description":"Returns false if the parameter is any data type other than a CFML object",
-			"code":"example = { 'name' = 'I am a struct' };\nwriteOutput( isObject( example ) );",
-			"result":false,
-			"runnable":true
+			"title": "isObject Example for Other Data Types",
+			"description": "Returns false if the parameter is any data type other than a CFML object",
+			"code": "example = { 'name' = 'I am a struct' };\nwriteOutput( isObject( example ) );",
+			"result": false,
+			"runnable": true
 		}
 	]
 }

@@ -4,7 +4,7 @@
 	"syntax": "lsDayOfWeek(date [, locale] [, timezone])",
 	"member": "date.lsDayOfWeek([locale] [, timezone])",
 	"returns": "numeric",
-	"related": ["day","dayOfWeek"],
+	"related": ["day", "dayOfWeek"],
 	"description": "Returns the day of the week using locale-specific date and time formatting conventions.",
 	"params": [
 		{
@@ -38,7 +38,11 @@
 			"notes": "",
 			"docs": "https://docs.lucee.org/reference/functions/lsdayofweek.html"
 		},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/temporal/lsdayofweek"}
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/temporal/lsdayofweek"
+		}
 	},
 	"examples": [],
 	"links": []

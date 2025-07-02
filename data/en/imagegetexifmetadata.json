@@ -1,29 +1,56 @@
 {
-	"name":"imageGetEXIFMetadata",
-	"type":"function",
-	"syntax":"imageGetEXIFMetadata(name)",
-	"member":"someImage.getEXIFMetadata()",
-	"returns":"struct",
-	"related":["imageGetEXIFTag"],
-	"description":"Retrieves the Exchangeable Image File Format (EXIF) headers in an image as a CFML structure.",
+	"name": "imageGetEXIFMetadata",
+	"type": "function",
+	"syntax": "imageGetEXIFMetadata(name)",
+	"member": "someImage.getEXIFMetadata()",
+	"returns": "struct",
+	"related": ["imageGetEXIFTag"],
+	"description": "Retrieves the Exchangeable Image File Format (EXIF) headers in an image as a CFML structure.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "name",
+			"description": "The image on which this operation is performed.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagegetexifmetadata.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/imagegetexifmetadata.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagegetexifmetadata"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagegetexifmetadata"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-image` module.", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"}
+		"coldfusion": {
+			"minimum_version": "8",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagegetexifmetadata.html"
+		},
+		"lucee": {
+			"minimum_version": "4.5",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/imagegetexifmetadata.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/imagegetexifmetadata"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/imagegetexifmetadata"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Requires the `bx-image` module.",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"
+		}
 	},
 	"links": [],
 	"examples": [
 		{
-			"title":"Using getEXIFMetadata member function",
-			"description":"CF11+ Lucee4.5+ Extract the EXIF meta data from exiv sample page (http://www.exiv2.org/sample.html)",
-			"code":"imgObj = imageRead(\"http://www.exiv2.org/include/img_1771.jpg\");\r\nx = imgObj.getEXIFMetadata();\r\nwriteDump(x);",
-			"result":"",
-			"runnable":true
+			"title": "Using getEXIFMetadata member function",
+			"description": "CF11+ Lucee4.5+ Extract the EXIF meta data from exiv sample page (http://www.exiv2.org/sample.html)",
+			"code": "imgObj = imageRead(\"http://www.exiv2.org/include/img_1771.jpg\");\r\nx = imgObj.getEXIFMetadata();\r\nwriteDump(x);",
+			"result": "",
+			"runnable": true
 		}
 	]
 }

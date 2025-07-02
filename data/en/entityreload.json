@@ -1,18 +1,41 @@
 {
-	"name":"entityReload",
-	"type":"function",
-	"syntax":"entityReload(entity)",
-	"returns":"void",
-	"related":["entitySave","entityToQuery","entityMerge","entityDelete"],
-	"description":"Reloads data for an entity that is already loaded.",
+	"name": "entityReload",
+	"type": "function",
+	"syntax": "entityReload(entity)",
+	"returns": "void",
+	"related": ["entitySave", "entityToQuery", "entityMerge", "entityDelete"],
+	"description": "Reloads data for an entity that is already loaded.",
 	"params": [
-		{"name":"entity","description":"Name of the entity to be reloaded","required":true,"default":"","type":"variableName","values":[]}
+		{
+			"name": "entity",
+			"description": "Name of the entity to be reloaded",
+			"required": true,
+			"default": "",
+			"type": "variableName",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entityreload.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/entityreload.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entityreload"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://bxorm.ortusbooks.com/usage/builtins#entityreload"}
+		"coldfusion": {
+			"minimum_version": "9",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entityreload.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/entityreload.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/entityreload"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://bxorm.ortusbooks.com/usage/builtins#entityreload"
+		}
 	},
 	"links": []
 }

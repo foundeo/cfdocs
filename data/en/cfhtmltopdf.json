@@ -1,48 +1,229 @@
 {
-	"name":"cfhtmltopdf",
-	"type":"tag",
-	"syntax":"<cfhtmltopdf>html</cfhtmltopdf>",
-	"script":"cfhtmltopdf() { writeOutput(html); };",
-	"description":"Creates PDFs from HTML using a WebKit based rendering engine.",
-	"engines":{"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfhtmltopdf.html","notes":"The rendering engine only runs on Windows or Linux. You can still run this tag on a Mac, but it must connect to a remote rendering engine running on Windows or Linux. Rendering engines are configured in the ColdFusion administrator."}},
-	"params":[
-		{"name":"encryption","description":"","values":["AES_128","RC4_40","RC4_128","RC4_128M","none"],"default":"none","type":"string","required":false},
-		{"name":"source","description":"A URL of the source HTML document to use instead of providing content directly.","values":[],"default":"","type":"string","required":false},
-		{"name":"destination","description":"Pathname of a file to contain the PDF output. If you omit the destination attribute, ColdFusion displays the output in the browser.","values":[],"default":"","type":"string","required":false},
-		{"name":"marginBottom","description":"Bottom margin in inches or cm based on unit attribute","values":[],"default":"","type":"numeric","required":false},
-		{"name":"marginTop","description":"Top margin in inches or cm based on unit attribute","values":[],"default":"","type":"numeric","required":false},
-		{"name":"marginLeft","description":"Left margin in inches or cm based on unit attribute","values":[],"default":"","type":"numeric","required":false},
-		{"name":"marginRight","description":"Right margin in inches or cm based on unit attribute","values":[],"default":"","type":"numeric","required":false},
-		{"name":"name","description":"Name of an existing variable into which the tag stores the PDF.","values":[],"default":"","type":"variableName","required":false},
-		{"name":"orientation","description":"","values":["portrait","landscape"],"default":"portrait","type":"string","required":false},
-		{"name":"overwrite","description":"Specifies whether ColdFusion overwrites an existing file. Used in conjunction with the destination attribute.","values":[],"default":"no","type":"string","required":false},
-		{"name":"ownerPassword","description":"Specifies the owner password. Cannot be same as userPassword.","values":[],"default":"","type":"string","required":false},
-		{"name":"userPassword","description":"Specifies a user password. Cannot be same as ownerPassword.","values":[],"default":"","type":"string","required":false},
-		{"name":"permissions","description":"Separate multiple permissions with commas.","values":["AllowPrinting","AllowModifyContents","AllowCopy","AllowModifyAnnotations","AllowFillIn","AllowScreenReaders","AllowAssembly","AllowDegradedPrinting","AllowSecure","All","None"],"default":"","type":"string","required":false},
-		{"name":"pageType","description":"Provide a type with standard dimensions or indicate custom to define your own","values":["legal","letter","A4","A5","B4","B5","B4-JIS","B5-JIS","custom"],"default":"letter","type":"string","required":false},
-		{"name":"pageWidth","description":"Only valid if pagetype=custom. based on unit attribute","values":[],"default":"","type":"numeric","required":false},
-		{"name":"pageHeight","description":"Only valid if pagetype=custom. based on unit attribute","values":[],"default":"","type":"numeric","required":false},
-		{"name":"saveAsName","description":"The filename that appears in the SaveAs dialog when a user saves a PDF file written to the browser.","values":[],"default":"","type":"string","required":false},
-		{"name":"unit","description":"Default unit for the pageHeight, pageWidth, and margin attributes:","values":["in","cm"],"default":"in","type":"string","required":false},
-		{"name":"language","description":"CF2016+ Document language","values":[],"default":"English","type":"string","required":false}
-	],
-	"links":[
+	"name": "cfhtmltopdf",
+	"type": "tag",
+	"syntax": "<cfhtmltopdf>html</cfhtmltopdf>",
+	"script": "cfhtmltopdf() { writeOutput(html); };",
+	"description": "Creates PDFs from HTML using a WebKit based rendering engine.",
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "11",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfhtmltopdf.html",
+			"notes": "The rendering engine only runs on Windows or Linux. You can still run this tag on a Mac, but it must connect to a remote rendering engine running on Windows or Linux. Rendering engines are configured in the ColdFusion administrator."
+		}
+	},
+	"params": [
 		{
-			"title":"PDF Service Manager Documentation",
-			"description":"Instructions for working with the PDF service manager in ColdFusion administrator.",
-			"url":"https://helpx.adobe.com/coldfusion/pdf-generation-in-coldfusion.html"
+			"name": "encryption",
+			"description": "",
+			"values": ["AES_128", "RC4_40", "RC4_128", "RC4_128M", "none"],
+			"default": "none",
+			"type": "string",
+			"required": false
 		},
 		{
-			"title":"ColdFusion 11 Support for cfhtmltopdf on Linux",
-			"description":"From the adobe blog, support for linux may require a few dependencies.",
-			"url":"http://blogs.coldfusion.com/post.cfm/adobe-coldfusion-11-support-for-cfhtmltopdf-pdfg-on-linux"
+			"name": "source",
+			"description": "A URL of the source HTML document to use instead of providing content directly.",
+			"values": [],
+			"default": "",
+			"type": "string",
+			"required": false
+		},
+		{
+			"name": "destination",
+			"description": "Pathname of a file to contain the PDF output. If you omit the destination attribute, ColdFusion displays the output in the browser.",
+			"values": [],
+			"default": "",
+			"type": "string",
+			"required": false
+		},
+		{
+			"name": "marginBottom",
+			"description": "Bottom margin in inches or cm based on unit attribute",
+			"values": [],
+			"default": "",
+			"type": "numeric",
+			"required": false
+		},
+		{
+			"name": "marginTop",
+			"description": "Top margin in inches or cm based on unit attribute",
+			"values": [],
+			"default": "",
+			"type": "numeric",
+			"required": false
+		},
+		{
+			"name": "marginLeft",
+			"description": "Left margin in inches or cm based on unit attribute",
+			"values": [],
+			"default": "",
+			"type": "numeric",
+			"required": false
+		},
+		{
+			"name": "marginRight",
+			"description": "Right margin in inches or cm based on unit attribute",
+			"values": [],
+			"default": "",
+			"type": "numeric",
+			"required": false
+		},
+		{
+			"name": "name",
+			"description": "Name of an existing variable into which the tag stores the PDF.",
+			"values": [],
+			"default": "",
+			"type": "variableName",
+			"required": false
+		},
+		{
+			"name": "orientation",
+			"description": "",
+			"values": ["portrait", "landscape"],
+			"default": "portrait",
+			"type": "string",
+			"required": false
+		},
+		{
+			"name": "overwrite",
+			"description": "Specifies whether ColdFusion overwrites an existing file. Used in conjunction with the destination attribute.",
+			"values": [],
+			"default": "no",
+			"type": "string",
+			"required": false
+		},
+		{
+			"name": "ownerPassword",
+			"description": "Specifies the owner password. Cannot be same as userPassword.",
+			"values": [],
+			"default": "",
+			"type": "string",
+			"required": false
+		},
+		{
+			"name": "userPassword",
+			"description": "Specifies a user password. Cannot be same as ownerPassword.",
+			"values": [],
+			"default": "",
+			"type": "string",
+			"required": false
+		},
+		{
+			"name": "permissions",
+			"description": "Separate multiple permissions with commas.",
+			"values": [
+				"AllowPrinting",
+				"AllowModifyContents",
+				"AllowCopy",
+				"AllowModifyAnnotations",
+				"AllowFillIn",
+				"AllowScreenReaders",
+				"AllowAssembly",
+				"AllowDegradedPrinting",
+				"AllowSecure",
+				"All",
+				"None"
+			],
+			"default": "",
+			"type": "string",
+			"required": false
+		},
+		{
+			"name": "pageType",
+			"description": "Provide a type with standard dimensions or indicate custom to define your own",
+			"values": [
+				"legal",
+				"letter",
+				"A4",
+				"A5",
+				"B4",
+				"B5",
+				"B4-JIS",
+				"B5-JIS",
+				"custom"
+			],
+			"default": "letter",
+			"type": "string",
+			"required": false
+		},
+		{
+			"name": "pageWidth",
+			"description": "Only valid if pagetype=custom. based on unit attribute",
+			"values": [],
+			"default": "",
+			"type": "numeric",
+			"required": false
+		},
+		{
+			"name": "pageHeight",
+			"description": "Only valid if pagetype=custom. based on unit attribute",
+			"values": [],
+			"default": "",
+			"type": "numeric",
+			"required": false
+		},
+		{
+			"name": "saveAsName",
+			"description": "The filename that appears in the SaveAs dialog when a user saves a PDF file written to the browser.",
+			"values": [],
+			"default": "",
+			"type": "string",
+			"required": false
+		},
+		{
+			"name": "unit",
+			"description": "Default unit for the pageHeight, pageWidth, and margin attributes:",
+			"values": ["in", "cm"],
+			"default": "in",
+			"type": "string",
+			"required": false
+		},
+		{
+			"name": "language",
+			"description": "CF2016+ Document language",
+			"values": [],
+			"default": "English",
+			"type": "string",
+			"required": false
 		}
 	],
-	"examples":[
-		{"result":"","title":"Basic Usage","description":"Put HTML inside the tags to render it as a PDF. When the destination attribute is omitted the pdf is sent back to the browser.","code":"<cfhtmltopdf>\n  <h1>Hello World</h1>\n<\/cfhtmltopdf>"},
-		{"result":"","title":"External Source","description":"Use the source attribute to specify an external url.","code":"<cfhtmltopdf\n destination=\"usage_example.pdf\" overwrite=\"yes\"\n source=\"http:\/\/www.google.com\/\"\n unit=\"in\" pageheight=\"8\" pagewidth=\"4\"\n pagetype=\"custom\">\n<\/cfhtmltopdf>"},
-		{"result":"","title":"Set Margins","description":"Uses the margintop, marginbottom, marginleft, marginright to set the page margins","code":"\n<cfhtmltopdf destination=\"usage_example2.pdf\"\n source=\"http:\/\/www.google.com\" overwrite=\"true\" \n orientation=\"portrait\" pagetype=\"A4\" margintop=\"1\" marginbottom=\"1\" \n marginleft=\"1\" marginright=\"1\">\n<\/cfhtmltopdf>"},
-		{"result":"","title":"Protect PDF","description":"Uses the ownerpassword, encryption, and permissions attributes to produce a password encrypted pdf.","code":"\n<cfhtmltopdf \n source=\"http:\/\/www.google.com\"\n ownerpassword=\"owner\" userpassword=\"user\"\n encryption=\"RC4_128\" permissions=\"AllowPrinting,AllowCopy\">\n<\/cfhtmltopdf>"}
+	"links": [
+		{
+			"title": "PDF Service Manager Documentation",
+			"description": "Instructions for working with the PDF service manager in ColdFusion administrator.",
+			"url": "https://helpx.adobe.com/coldfusion/pdf-generation-in-coldfusion.html"
+		},
+		{
+			"title": "ColdFusion 11 Support for cfhtmltopdf on Linux",
+			"description": "From the adobe blog, support for linux may require a few dependencies.",
+			"url": "http://blogs.coldfusion.com/post.cfm/adobe-coldfusion-11-support-for-cfhtmltopdf-pdfg-on-linux"
+		}
 	],
-	"related":["cfhtmltopdfitem","cfdocument"]
+	"examples": [
+		{
+			"result": "",
+			"title": "Basic Usage",
+			"description": "Put HTML inside the tags to render it as a PDF. When the destination attribute is omitted the pdf is sent back to the browser.",
+			"code": "<cfhtmltopdf>\n  <h1>Hello World</h1>\n</cfhtmltopdf>"
+		},
+		{
+			"result": "",
+			"title": "External Source",
+			"description": "Use the source attribute to specify an external url.",
+			"code": "<cfhtmltopdf\n destination=\"usage_example.pdf\" overwrite=\"yes\"\n source=\"http://www.google.com/\"\n unit=\"in\" pageheight=\"8\" pagewidth=\"4\"\n pagetype=\"custom\">\n</cfhtmltopdf>"
+		},
+		{
+			"result": "",
+			"title": "Set Margins",
+			"description": "Uses the margintop, marginbottom, marginleft, marginright to set the page margins",
+			"code": "\n<cfhtmltopdf destination=\"usage_example2.pdf\"\n source=\"http://www.google.com\" overwrite=\"true\" \n orientation=\"portrait\" pagetype=\"A4\" margintop=\"1\" marginbottom=\"1\" \n marginleft=\"1\" marginright=\"1\">\n</cfhtmltopdf>"
+		},
+		{
+			"result": "",
+			"title": "Protect PDF",
+			"description": "Uses the ownerpassword, encryption, and permissions attributes to produce a password encrypted pdf.",
+			"code": "\n<cfhtmltopdf \n source=\"http://www.google.com\"\n ownerpassword=\"owner\" userpassword=\"user\"\n encryption=\"RC4_128\" permissions=\"AllowPrinting,AllowCopy\">\n</cfhtmltopdf>"
+		}
+	],
+	"related": ["cfhtmltopdfitem", "cfdocument"]
 }

@@ -1,28 +1,41 @@
 {
-	"name":"onApplicationEnd",
-	"type":"function",
-	"syntax":"function onApplicationEnd(applicationScope) { }",
-	"returns":"boolean",
-	"related":["application-cfc", "onapplicationstart"],
-	"description":"Defined in Application.cfc, invoked when the application times out or when the server is shutting down.",
+	"name": "onApplicationEnd",
+	"type": "function",
+	"syntax": "function onApplicationEnd(applicationScope) { }",
+	"returns": "boolean",
+	"related": ["application-cfc", "onapplicationstart"],
+	"description": "Defined in Application.cfc, invoked when the application times out or when the server is shutting down.",
 	"params": [
-		{"name":"ApplicationScope","description":"The application scope of the application that is ending.","required":true,"default":"","type":"struct","values":[]}
+		{
+			"name": "ApplicationScope",
+			"description": "The application scope of the application that is ending.",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/application-cfc-reference/onapplicationend.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":""},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/applicationbx#life-cycle-events"}
+		"coldfusion": {
+			"minimum_version": "7",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/application-cfc-reference/onapplicationend.html"
+		},
+		"lucee": { "minimum_version": "", "notes": "", "docs": "" },
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/applicationbx#life-cycle-events"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-		"title": "Write to log when onApplicationEnd is triggered",
-		"description": "Write to the log that application has ended. In the example below, text 'myApp ended on {current date/time}' gets added to D:\\CF\\logs\\myApp.log file. Note: Application has already ended, but we can use ApplicationScope argument to access any Application scope variables.",
-		"code": "public void function onApplicationEnd(struct ApplicationScope){\n\n\t\twriteLog(text = \"#arguments.ApplicationScope.name# ended on: #now()#\");\n\t\treturn true;\n\t}",
-		"result": "",
-		"runnable": false
+			"title": "Write to log when onApplicationEnd is triggered",
+			"description": "Write to the log that application has ended. In the example below, text 'myApp ended on {current date/time}' gets added to D:\\CF\\logs\\myApp.log file. Note: Application has already ended, but we can use ApplicationScope argument to access any Application scope variables.",
+			"code": "public void function onApplicationEnd(struct ApplicationScope){\n\n\t\twriteLog(text = \"#arguments.ApplicationScope.name# ended on: #now()#\");\n\t\treturn true;\n\t}",
+			"result": "",
+			"runnable": false
 		}
 	]
 }

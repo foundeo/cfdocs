@@ -6,12 +6,34 @@
 	"related": ["expandPath"],
 	"description": "Opposite of expandpath.\n\nTries to match a given absolute path to mappings in the environment and will return a path that is contracted by the shortest matched mapping. If there are no matches, Lucee returns the absolute path it was given.",
 	"params": [
-		{"name": "path_absolute", "description": "The absolute path", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "placeholder", "description": "A boolean indicating whether Lucee placeholder names should be prefixed to the path.", "required": false, "default": "false", "type": "boolean", "values": []}
+		{
+			"name": "path_absolute",
+			"description": "The absolute path",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "placeholder",
+			"description": "A boolean indicating whether Lucee placeholder names should be prefixed to the path.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/contractpath.html"},
-		"boxlang": {"minimum_version": "1.0.0", "notes": "", "docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/io/contractpath"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/contractpath.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/io/contractpath"
+		}
 	},
 	"examples": [],
 	"links": []

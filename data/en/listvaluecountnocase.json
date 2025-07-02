@@ -1,37 +1,78 @@
 {
-	"name":"listValueCountNoCase",
-	"type":"function",
-	"syntax":"listValueCountNoCase(list, value [, delimiters])",
-	"returns":"numeric",
-	"related":["listLen","structCount"],
-	"description":"Counts instances of a specified value in a list.\nThe search is case-insensitive. For case-sensitive search use listValueCount.",
+	"name": "listValueCountNoCase",
+	"type": "function",
+	"syntax": "listValueCountNoCase(list, value [, delimiters])",
+	"returns": "numeric",
+	"related": ["listLen", "structCount"],
+	"description": "Counts instances of a specified value in a list.\nThe search is case-insensitive. For case-sensitive search use listValueCount.",
 	"params": [
-		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"value","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]}
+		{
+			"name": "list",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "value",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "delimiters",
+			"description": "",
+			"required": false,
+			"default": ",",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listvaluecountnocase.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/listvaluecountnocase.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listvaluecountnocase"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listvaluecountnocase"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listvaluecountnocase"}
+		"coldfusion": {
+			"minimum_version": "4",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listvaluecountnocase.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/listvaluecountnocase.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/listvaluecountnocase"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/listvaluecountnocase"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listvaluecountnocase"
+		}
 	},
 	"links": [],
 	"examples": [
-        {
-            "title": "Simple Example",
-            "description": "Counts instances of 'foo' in the list, ignoring case",
-            "code": "listValueCountNoCase(\"foo,bar,lorem,Foo,ipsum\", \"foo\")",
-            "result": 2,
-            "runnable":true
-        },
-        {
-            "title": "Example with Custom Delimiter",
-            "description": "Counts instances of 'foo' in the list with a custom delimiter, ignoring case",
-            "code": "listValueCountNoCase(\"bar|Foo|lorem,ipsum|me|foo,something|foo|FOO\", \"foo\", \"|\")",
-            "result": 3,
-            "runnable":true
-        }
-    ]
+		{
+			"title": "Simple Example",
+			"description": "Counts instances of 'foo' in the list, ignoring case",
+			"code": "listValueCountNoCase(\"foo,bar,lorem,Foo,ipsum\", \"foo\")",
+			"result": 2,
+			"runnable": true
+		},
+		{
+			"title": "Example with Custom Delimiter",
+			"description": "Counts instances of 'foo' in the list with a custom delimiter, ignoring case",
+			"code": "listValueCountNoCase(\"bar|Foo|lorem,ipsum|me|foo,something|foo|FOO\", \"foo\", \"|\")",
+			"result": 3,
+			"runnable": true
+		}
+	]
 }

@@ -7,14 +7,22 @@
 	"description": "clear pages in pools",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/pagepoolclear.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/pagepoolclear"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/pagepoolclear.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/pagepoolclear"
+		}
 	},
 	"examples": [
 		{
 			"title": "pagePoolClear Example",
-			"description":"Clear out all the CFML code (cfm, cfcs) in the cache of compiled code. It is supported in Lucee.",
-			"code":" writeDump(pagePoolClear());"
+			"description": "Clear out all the CFML code (cfm, cfcs) in the cache of compiled code. It is supported in Lucee.",
+			"code": "writeDump(pagePoolClear());"
 		}
 	],
 	"links": []

@@ -7,16 +7,20 @@
 	"description": "Returns a structure of all supported image formats that can be read (`decoder`) and written (`encoder`).",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/imageformats.html"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/imageformats.html"
+		}
 	},
 	"examples": [
-    {
-      "title": "Simple example",
-      "description": "Calls the function and dumps the structure of image formats it returns",
-      "code": "writeDump(imageFormats());",
-      "result": "",
-      "runnable": true
-    }
+		{
+			"title": "Simple example",
+			"description": "Calls the function and dumps the structure of image formats it returns",
+			"code": "writeDump(imageFormats());",
+			"result": "",
+			"runnable": true
+		}
 	],
 	"links": []
 }

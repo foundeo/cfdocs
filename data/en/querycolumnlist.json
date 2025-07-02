@@ -4,30 +4,57 @@
 	"syntax": "queryColumnList(query [, delimiter])",
 	"member": "query.columnList([delimiter])",
 	"returns": "string",
-	"related": ["queryColumnList","queryColumnCount","queryColumnExists","valueArray"],
+	"related": [
+		"queryColumnList",
+		"queryColumnCount",
+		"queryColumnExists",
+		"valueArray"
+	],
 	"description": "Returns the column names of a query as a list.",
 	"params": [
-		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
-		{"name": "delimiter", "description": "", "required": false, "default": ",", "type": "string", "values": []}
+		{
+			"name": "query",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "query",
+			"values": []
+		},
+		{
+			"name": "delimiter",
+			"description": "",
+			"required": false,
+			"default": ",",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querycolumnlist.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumnlist"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/querycolumnlist.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumnlist"
+		}
 	},
 	"examples": [
 		{
 			"title": "Create a query and output the column list",
 			"code": "myQuery = queryNew( 'ID,name,age' );\r\nwriteOutput( queryColumnList( myQuery ) );",
-			"description":"",
+			"description": "",
 			"result": "ID,name,age",
-			"runnable":true
+			"runnable": true
 		},
 		{
 			"title": "Using a member function",
 			"code": "myQuery = queryNew( 'ID,name,age' );\r\nwriteOutput( myQuery.columnList() );",
-			"description":"",
+			"description": "",
 			"result": "ID,name,age",
-			"runnable":true
+			"runnable": true
 		}
 	],
 	"links": []

@@ -1,33 +1,62 @@
 {
-	"name":"imageGrayScale",
-	"type":"function",
-	"syntax":"imageGrayScale(name)",
-	"member":"someImage.grayScale()",
-	"returns":"void",
-	"related":["ImageBlur","ImageNegative","ImageSetAntialiasing","ImageSharpen","IsImageFile"],
-	"description":" Converts a ColdFusion image to grayscale.",
+	"name": "imageGrayScale",
+	"type": "function",
+	"syntax": "imageGrayScale(name)",
+	"member": "someImage.grayScale()",
+	"returns": "void",
+	"related": [
+		"ImageBlur",
+		"ImageNegative",
+		"ImageSetAntialiasing",
+		"ImageSharpen",
+		"IsImageFile"
+	],
+	"description": "Converts a ColdFusion image to grayscale.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}
-
+		{
+			"name": "name",
+			"description": "The image on which this operation is performed.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagegrayscale.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/imagegrayscale.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagegrayscale"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagegrayscale"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-image` module.", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"}
+		"coldfusion": {
+			"minimum_version": "8",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagegrayscale.html"
+		},
+		"lucee": {
+			"minimum_version": "4.5",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/imagegrayscale.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/imagegrayscale"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/imagegrayscale"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Requires the `bx-image` module.",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title":"Using grayScale member function",
-			"description":"CF11+ Lucee4.5+ Convert image to grayScale",
-			"code":"imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\nimgObj.grayScale();\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
-			"result":"",
-			"runnable":true
+			"title": "Using grayScale member function",
+			"description": "CF11+ Lucee4.5+ Convert image to grayScale",
+			"code": "imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\nimgObj.grayScale();\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result": "",
+			"runnable": true
 		}
 	]
-
 }

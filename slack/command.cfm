@@ -64,7 +64,7 @@
                         "type": "section",
                         "text": {
                             "type": "plain_text",
-                            "text": " "
+                            "text": ""
                         },
                         "accessory": {
                             "type": "button",
@@ -88,10 +88,10 @@
         <cfcontent reset="true" type="application/json"><cfoutput>{"text": "Sorry, I am getting an error: #jsStringFormat(cfcatch.message)#"}</cfoutput>
     </cfcatch>
 </cftry>
-<cffunction name="buildBlock" returntype="struct">
-    <cfargument name="type" default="section">
-    <cfargument name="text" default="">
-    <cfargument name="text_type" default="mrkdwn">
+<cffunction name="buildBlock" returntype="struct" output="false">
+    <cfargument name="type" type="string" default="section">
+    <cfargument name="text" type="string" default="">
+    <cfargument name="text_type" type="string" default="mrkdwn">
     <cfset var block = {"type":arguments.type, "text":{"type":arguments.text_type, "text":arguments.text}}>
     <cfif arguments.type IS "divider">
         <cfreturn {"type": "divider"}>

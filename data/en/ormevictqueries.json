@@ -1,19 +1,49 @@
 {
-	"name":"ormEvictQueries",
-	"type":"function",
-	"syntax":"ormEvictQueries([cacheName, datasource])",
-	"returns":"void",
-	"related":["ormEvictEntity","ormEvictCollection"],
-	"description":"This will remove all the queries from the named query cache. If name is not specified, all queries from default cache will be removed.",
+	"name": "ormEvictQueries",
+	"type": "function",
+	"syntax": "ormEvictQueries([cacheName, datasource])",
+	"returns": "void",
+	"related": ["ormEvictEntity", "ormEvictCollection"],
+	"description": "This will remove all the queries from the named query cache. If name is not specified, all queries from default cache will be removed.",
 	"params": [
-		{"name":"cacheName","description":"Name of the cache region that you want to evict. If you do not specify the cache, the default query cache is evicted.","required":false,"default":"","type":"string","values":[]},
-		{"name":"datasource","description":"Name of the data source whose cache you want to evict.","required":false,"default":"","type":"string","values":[]}
+		{
+			"name": "cacheName",
+			"description": "Name of the cache region that you want to evict. If you do not specify the cache, the default query cache is evicted.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "datasource",
+			"description": "Name of the data source whose cache you want to evict.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormevictqueries.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/ormevictqueries.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/ormevictqueries"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://bxorm.ortusbooks.com/usage/builtins#ormevictqueries"}
+		"coldfusion": {
+			"minimum_version": "9",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormevictqueries.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/ormevictqueries.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/ormevictqueries"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://bxorm.ortusbooks.com/usage/builtins#ormevictqueries"
+		}
 	},
 	"links": [],
 	"examples": [

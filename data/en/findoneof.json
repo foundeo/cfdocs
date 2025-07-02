@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "findOneOf(set, string [, start])",
 	"returns": "numeric",
-	"related": ["listFind","find","findNoCase"],
+	"related": ["listFind", "find", "findNoCase"],
 	"description": "Finds the first occurrence of any one of a set of characters in a string, from a specified start position. The search is case-sensitive.\n\n Returns the position of the first member of set found in string; or 0, if no member of set is found in string.",
 	"params": [
 		{
@@ -37,7 +37,11 @@
 			"notes": "",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/findoneof.html"
 		},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/findoneof.html"},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/findoneof.html"
+		},
 		"railo": {
 			"minimum_version": "",
 			"notes": "",
@@ -48,7 +52,11 @@
 			"notes": "",
 			"docs": "http://openbd.org/manual/?/function/findoneof"
 		},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/findoneof"}
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/findoneof"
+		}
 	},
 	"links": [],
 	"examples": [

@@ -1,35 +1,69 @@
 {
-	"name":"imageReadBase64",
-	"type":"function",
-	"syntax":"imageReadBase64(string)",
-	"returns":"any",
-	"related":["ImageNew", "ImageRead", "ImageWrite", "ImageWriteBase64", "BinaryDecode", "BinaryEncode", "IsImageFile"],
-	"description":" Creates a ColdFusion image from a Base64 string.",
+	"name": "imageReadBase64",
+	"type": "function",
+	"syntax": "imageReadBase64(string)",
+	"returns": "any",
+	"related": [
+		"ImageNew",
+		"ImageRead",
+		"ImageWrite",
+		"ImageWriteBase64",
+		"BinaryDecode",
+		"BinaryEncode",
+		"IsImageFile"
+	],
+	"description": "Creates a ColdFusion image from a Base64 string.",
 	"params": [
-		{"name":"string","description":"a variable or Base64 string","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "string",
+			"description": "a variable or Base64 string",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagereadbase64.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/imagereadbase64.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagereadbase64"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagereadbase64"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-image` module.", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"}
+		"coldfusion": {
+			"minimum_version": "8",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagereadbase64.html"
+		},
+		"lucee": {
+			"minimum_version": "4.5",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/imagereadbase64.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/imagereadbase64"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/imagereadbase64"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Requires the `bx-image` module.",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"
+		}
 	},
 	"links": [
 		{
-		"title":"Reading And Writing Images",
-		"description":"This Tutorial illustrate Image function",
-		"url":"https://www.bennadel.com/blog/766-learning-coldfusion-8-cfimage-part-i-reading-and-writing-images.htm"
+			"title": "Reading And Writing Images",
+			"description": "This Tutorial illustrate Image function",
+			"url": "https://www.bennadel.com/blog/766-learning-coldfusion-8-cfimage-part-i-reading-and-writing-images.htm"
 		}
 	],
 	"examples": [
 		{
-			"title":"Using script syntax",
-			"description":"convert base64 representation of a small red dot to an image ",
-			"code":"imgObj = imageReadBase64('iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==');\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
-			"result":"",
-			"runnable":true
+			"title": "Using script syntax",
+			"description": "convert base64 representation of a small red dot to an image ",
+			"code": "imgObj = imageReadBase64('iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==');\r\ncfimage(action=\"writeToBrowser\", source=imgObj);",
+			"result": "",
+			"runnable": true
 		}
 	]
-
 }

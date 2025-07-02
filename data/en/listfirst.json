@@ -1,34 +1,68 @@
 {
-	"name":"listFirst",
-	"type":"function",
-	"syntax":"listFirst(list [, delimiters])",
-	"returns":"string",
-	"related":["listRest","listLast"],
-	"description":" Gets the first element of a list.",
+	"name": "listFirst",
+	"type": "function",
+	"syntax": "listFirst(list [, delimiters])",
+	"returns": "string",
+	"related": ["listRest", "listLast"],
+	"description": "Gets the first element of a list.",
 	"params": [
-		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]}
+		{
+			"name": "list",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "delimiters",
+			"description": "",
+			"required": false,
+			"default": ",",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listfirst.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/listfirst.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listfirst"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listfirst"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listfirst"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listfirst.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/listfirst.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/listfirst"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/listfirst"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listfirst"
+		}
 	},
 	"links": [],
 	"examples": [
 		{
-				"title":"Simple listFirst Example",
-				"description":"A very basic listFirst example",
-				"code" : "listFirst(\"one,two,three,four\");",
-				"result":"one"
+			"title": "Simple listFirst Example",
+			"description": "A very basic listFirst example",
+			"code": "listFirst(\"one,two,three,four\");",
+			"result": "one"
 		},
 		{
-				"title":"Traversing a List with listFirst and listRest",
-				"description":"Nesting list functions lets you move through the list in pieces.",
-				"code" : "listFirst(listRest(listRest(\"one,two,three,four\")));",
-				"result":"three"
+			"title": "Traversing a List with listFirst and listRest",
+			"description": "Nesting list functions lets you move through the list in pieces.",
+			"code": "listFirst(listRest(listRest(\"one,two,three,four\")));",
+			"result": "three"
 		}
 	]
 }

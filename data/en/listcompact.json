@@ -7,20 +7,51 @@
 	"related": ["listRemoveDuplicates"],
 	"description": "Remove empty elements from start and end of the list",
 	"params": [
-		{"name": "list", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "delimiters", "description": "", "required": false, "default": ",", "type": "string", "values": []},
-		{"name": "multiCharacterDelimiter", "description": "", "required": false, "default": "false", "type": "boolean", "values": []}
+		{
+			"name": "list",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "delimiters",
+			"description": "",
+			"required": false,
+			"default": ",",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "multiCharacterDelimiter",
+			"description": "",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/listcompact.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listcompact"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/listcompact.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listcompact"
+		}
 	},
 	"links": [],
-	"examples": [{
-		"title":"Trims first and last comma from list string",
-		"description":"",
-		"code":"listCompact(\",eggs,milk,bread,flour,\")",
-		"result":"eggs,milk,bread,flour",
-		"runnable":true
-	}]
+	"examples": [
+		{
+			"title": "Trims first and last comma from list string",
+			"description": "",
+			"code": "listCompact(\",eggs,milk,bread,flour,\")",
+			"result": "eggs,milk,bread,flour",
+			"runnable": true
+		}
+	]
 }

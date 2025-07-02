@@ -3,30 +3,71 @@
 	"type": "function",
 	"syntax": "extract(format, source, target)",
 	"returns": "boolean",
-	"related": ["compress","cfzip"],
+	"related": ["compress", "cfzip"],
 	"description": "Extract the data of a compressed file.",
 	"params": [
-		{"name": "format", "description": "The format of the compressed file.", "required": true, "default": "", "type": "string", "values": ["bzip", "bzip2", "tbz", "tbz2", "tar", "tar.bz", "tar.gz", "gzip", "tgz", "zip"]},
-		{"name": "source", "description": "Path (relative or absolute) to the source-file or a directory with zip-files.", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "target", "description": "Path (relative or absolute) to the directory, where you want to extract the data.", "required": true, "default": "", "type": "string", "values": []}
-	],
-	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/extract.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/zip/extract"}
-	},
-	"examples": [{
-			"title":"Extract a zip-file",
-			"description":"Extract a zip-file and save the data in the \"output-directory\".",
-			"code":"extract(\"zip\", \"test.zip\", \"output-directory\")",
-			"result":"",
-			"runnable":false
+		{
+			"name": "format",
+			"description": "The format of the compressed file.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": [
+				"bzip",
+				"bzip2",
+				"tbz",
+				"tbz2",
+				"tar",
+				"tar.bz",
+				"tar.gz",
+				"gzip",
+				"tgz",
+				"zip"
+			]
 		},
 		{
-			"title":"Extract a multiple zip-files via a directory",
-			"description":"Extract all zip-files, which are stored in the \"multiple-directory\" and save the data in the \"output-directory\".",
-			"code":"extract(\"zip\", \"multiple-directory\", \"output-directory\")",
-			"result":"",
-			"runnable":false
+			"name": "source",
+			"description": "Path (relative or absolute) to the source-file or a directory with zip-files.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "target",
+			"description": "Path (relative or absolute) to the directory, where you want to extract the data.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/extract.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/zip/extract"
+		}
+	},
+	"examples": [
+		{
+			"title": "Extract a zip-file",
+			"description": "Extract a zip-file and save the data in the \"output-directory\".",
+			"code": "extract(\"zip\", \"test.zip\", \"output-directory\")",
+			"result": "",
+			"runnable": false
+		},
+		{
+			"title": "Extract a multiple zip-files via a directory",
+			"description": "Extract all zip-files, which are stored in the \"multiple-directory\" and save the data in the \"output-directory\".",
+			"code": "extract(\"zip\", \"multiple-directory\", \"output-directory\")",
+			"result": "",
+			"runnable": false
 		}
 	],
 	"links": []

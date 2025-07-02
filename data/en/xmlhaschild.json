@@ -1,39 +1,43 @@
 {
-  "name": "xmlHasChild",
-  "type": "function",
-  "syntax": "xmlHasChild(xmlObject [, childName])",
-  "returns": "boolean",
-  "related": [ "xmlChildPos" ],
-  "description": "Checks if the XML document object has a child node",
-  "params": [
-    {
-      "name": "xmlObject",
-      "description": "The XML document object to be checked for child nodes",
-      "required": true,
-      "default": "",
-      "type": "xml",
-      "values": []
-    },
-    {
-      "name": "childName",
-      "description": "The name of the child node to check if it exists. If not provided, the root is checked.",
-      "required": false,
-      "default": "",
-      "type": "string",
-      "values": []
-    }
-  ],
-  "engines": {
-    "coldfusion": {"minimum_version":"2023", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlhaschild.html"}
-  },
-  "links": [],
-  "examples": [
-    {
-      "title": "Check for children (Script syntax)",
-      "description": "Checks the existence of children for two separate nodes in a simple XML document",
-      "code": "xmlData = xmlParse('<root><item id=\"1\">Item 1<\/item><item id=\"2\">Item 2<\/item><item id=\"3\">Item 3<\/item><\/root>');\nwriteOutput(xmlHasChild(xmlData, \"root\"));\nwriteOutput(\" \" & xmlHasChild(xmlData, \"item\"));",
-      "runnable": true,
-      "result": "YES NO"
-    }
-  ]
+	"name": "xmlHasChild",
+	"type": "function",
+	"syntax": "xmlHasChild(xmlObject [, childName])",
+	"returns": "boolean",
+	"related": ["xmlChildPos"],
+	"description": "Checks if the XML document object has a child node",
+	"params": [
+		{
+			"name": "xmlObject",
+			"description": "The XML document object to be checked for child nodes",
+			"required": true,
+			"default": "",
+			"type": "xml",
+			"values": []
+		},
+		{
+			"name": "childName",
+			"description": "The name of the child node to check if it exists. If not provided, the root is checked.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2023",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlhaschild.html"
+		}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Check for children (Script syntax)",
+			"description": "Checks the existence of children for two separate nodes in a simple XML document",
+			"code": "xmlData = xmlParse('<root><item id=\"1\">Item 1</item><item id=\"2\">Item 2</item><item id=\"3\">Item 3</item></root>');\nwriteOutput(xmlHasChild(xmlData, \"root\"));\nwriteOutput(\" \" & xmlHasChild(xmlData, \"item\"));",
+			"runnable": true,
+			"result": "YES NO"
+		}
+	]
 }

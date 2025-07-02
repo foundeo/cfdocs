@@ -1,25 +1,54 @@
 {
-	"name":"getCpuUsage",
-	"type":"function",
-	"syntax":"getCpuUsage([interval]);",
-	"returns":"numeric",
-	"related":["getSystemFreeMemory","getSystemTotalMemory","getMemoryUsage"],
-	"description":" Gets the CPU usage with default or custom snapshot interval.",
+	"name": "getCpuUsage",
+	"type": "function",
+	"syntax": "getCpuUsage([interval]);",
+	"returns": "numeric",
+	"related": [
+		"getSystemFreeMemory",
+		"getSystemTotalMemory",
+		"getMemoryUsage"
+	],
+	"description": "Gets the CPU usage with default or custom snapshot interval.",
 	"params": [
-		{"name":"interval","description":"Time in milliseconds. This is the time delay between two snapshots.","required":false,"default":"1000","type":"numeric","values":[]}
+		{
+			"name": "interval",
+			"description": "Time in milliseconds. This is the time delay between two snapshots.",
+			"required": false,
+			"default": "1000",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getcpuusage.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/getcpuusage.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/GetCpuUsage"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-oshi` module", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/hardware-and-system-info"}
+		"coldfusion": {
+			"minimum_version": "10",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getcpuusage.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/getcpuusage.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/GetCpuUsage"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Requires the `bx-oshi` module",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/hardware-and-system-info"
+		}
 	},
 	"links": [],
-	"examples": [{
-		"title": "Output CPU usage from current snapshot",
-		"description": "",
-		"code": "getCpuUsage()",
-		"result": "",
-		"runnable": true
-	}]
+	"examples": [
+		{
+			"title": "Output CPU usage from current snapshot",
+			"description": "",
+			"code": "getCpuUsage()",
+			"result": "",
+			"runnable": true
+		}
+	]
 }

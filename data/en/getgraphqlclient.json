@@ -1,37 +1,41 @@
 {
-  "name": "getGraphQLClient",
-  "type": "function",
-  "syntax": "getGraphQLClient(parameterStruct)",
-  "returns": "any",
-  "related": [ "generateGraphQLModels" ],
-  "description": "Use this method to create the GraphQL client that will communicate with the server that contains the schema. Pass the configuration parameters to get the client.",
-  "params": [
-    {
-      "name": "parameterStruct",
-      "description": "A structure defining the properties of the GraphQL client",
-      "required": true,
-      "default": "",
-      "type": "struct",
-      "values": []
-    }
-  ],
-  "engines": {
-    "coldfusion": {"minimum_version":"2023", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/using/graphql-coldfusion.html"}
-  },
-  "links": [
+	"name": "getGraphQLClient",
+	"type": "function",
+	"syntax": "getGraphQLClient(parameterStruct)",
+	"returns": "any",
+	"related": ["generateGraphQLModels"],
+	"description": "Use this method to create the GraphQL client that will communicate with the server that contains the schema. Pass the configuration parameters to get the client.",
+	"params": [
+		{
+			"name": "parameterStruct",
+			"description": "A structure defining the properties of the GraphQL client",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2023",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/using/graphql-coldfusion.html"
+		}
+	},
+	"links": [
 		{
 			"title": "GraphQL in ColdFusion",
 			"description": "Overview of GraphQL, including how to use it in ColdFusion",
 			"url": "https://helpx.adobe.com/coldfusion/using/graphql-coldfusion.html"
 		}
 	],
-  "examples": [
-    {
-      "title": "Create a GraphQL client (Script syntax)",
-      "description": "Creates a GraphQL client with specified properties",
-      "code": "gqlClient = getGraphQLClient({\n    service_name: \"server-name\",\n    type: \"graphqlclient\",\n    raw_http_client: true,\n    service_url: \"endpoint-url\",\n    root_folder: \"root_folder\",\n    headers: { values: \"auth-value\", keys: \"auth-key\" },\n    batching_configuration: { enabled: true, batch_interval_ms: 10, max_batch_size: 15 },\n    subscription_configuration: { websocket_url: \"wss:\/\/websocket-url\", subscription_heartbeat_timeout: 5, subscription_heartbeat_timeunit: \"nano\" }\n});",
-      "runnable": false,
-      "result": ""
-    }
-  ]
+	"examples": [
+		{
+			"title": "Create a GraphQL client (Script syntax)",
+			"description": "Creates a GraphQL client with specified properties",
+			"code": "gqlClient = getGraphQLClient({\n    service_name: \"server-name\",\n    type: \"graphqlclient\",\n    raw_http_client: true,\n    service_url: \"endpoint-url\",\n    root_folder: \"root_folder\",\n    headers: { values: \"auth-value\", keys: \"auth-key\" },\n    batching_configuration: { enabled: true, batch_interval_ms: 10, max_batch_size: 15 },\n    subscription_configuration: { websocket_url: \"wss://websocket-url\", subscription_heartbeat_timeout: 5, subscription_heartbeat_timeunit: \"nano\" }\n});",
+			"runnable": false,
+			"result": ""
+		}
+	]
 }

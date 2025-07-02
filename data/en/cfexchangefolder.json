@@ -1,35 +1,148 @@
 {
-	"name":"cfexchangefolder",
-	"type":"tag",
-	"syntax":"<cfexchangefolder action=\"\" folderID=\"\" connection=\"\" name=\"\">",
-	"related":["cfexchangecalendar","cfexchangeconnection","cfexchangecontact","cfexchangeconversation","cfexchangefilter","cfexchangemail","cfexchangetask"],
-	"description":"Lets you perform various actions on the mail folder, such as get folder information, find folders, or create, copy, modify, move, delete, and empty the contents of a folder.",
+	"name": "cfexchangefolder",
+	"type": "tag",
+	"syntax": "<cfexchangefolder action=\"\" folderID=\"\" connection=\"\" name=\"\">",
+	"related": [
+		"cfexchangecalendar",
+		"cfexchangeconnection",
+		"cfexchangecontact",
+		"cfexchangeconversation",
+		"cfexchangefilter",
+		"cfexchangemail",
+		"cfexchangetask"
+	],
+	"description": "Lets you perform various actions on the mail folder, such as get folder information, find folders, or create, copy, modify, move, delete, and empty the contents of a folder.",
 	"params": [
-		{"name":"action","description":"The action to take.","required":true,"default":"","type":"string","values":["getInfo","getExtendedInfo","findSubFolders","create","copy","delete","move","modify","empty"]},
-		{"name":"connection","description":"The name of the connection to the Exchange server, as specified in the `cfexchangeconnection` tag.","required":true,"default":"","type":"string","values":[]},
-		{"name":"uid","description":"(getInfo/getExtendedInfo) UID that is used to identify the folder in which the actions are performed.","required":false,"default":"","type":"string","values":[]},
-		{"name":"name","description":"(getInfo/getExtendedInfo/findSubFolders) The name of the ColdFusion query variable that contains the returned information about the folder.","required":false,"default":"","type":"variableName","values":[]},
-		{"name":"folderID","description":"(getInfo/getExtendedInfo/findSubFolders/delete/modify/empty) UID that is used to identify the folder in which the actions are performed.","required":false,"default":"","type":"string","values":[]},
-		{"name":"folderPath","description":"(getInfo/getExtendedInfo) Full path to the folder where the action has to be performed.","required":false,"default":"","type":"string","values":[]},
-		{"name":"pathDelimiter","description":"(getInfo/getExtendedInfo) Lets you specify the delimiter that is used to separate the folders.","required":false,"default":"/","type":"string","values":[]},
-		{"name":"result","description":"(create/copy/move) The name of a query variable that contains the result returned from the exchange server when one of the action is performed.","required":false,"default":"","type":"variableName","values":[]},
-		{"name":"destinationFolderID","description":"(copy/move) A case-sensitive Exchange UID value that uniquely identifies the destination folder.","required":false,"default":"","type":"string","values":[]},
-		{"name":"sourceFolderID","description":"(copy/move) The UID that is used to identify the folder from which you copy or move folders to the destination folder.","required":false,"default":"","type":"string","values":[]},
-		{"name":"deleteType","description":"(delete/move) - hardDelete: Removes a folder permanently from the Exchange server.\n- softDelete: Moves a folder to the dumpster in Exchange server, if dumpster is enabled.\n- moveToDeletedItems: Moves a folder to the deleted items folder.","required":false,"default":"moveToDeletedItems","type":"string","values":["hardDelete","softDelete","moveToDeletedItems"]},
-		{"name":"deleteSubFolders","description":"(empty) If true, deletes the subfolder.","required":false,"default":false,"type":"boolean","values":[]},
-		{"name":"folder","description":"(create/modify) A struct that contains the required information of the folder that has to be created or modified, such as display name and folder class.","required":false,"default":"","type":"string","values":[]}
+		{
+			"name": "action",
+			"description": "The action to take.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": [
+				"getInfo",
+				"getExtendedInfo",
+				"findSubFolders",
+				"create",
+				"copy",
+				"delete",
+				"move",
+				"modify",
+				"empty"
+			]
+		},
+		{
+			"name": "connection",
+			"description": "The name of the connection to the Exchange server, as specified in the `cfexchangeconnection` tag.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "uid",
+			"description": "(getInfo/getExtendedInfo) UID that is used to identify the folder in which the actions are performed.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "name",
+			"description": "(getInfo/getExtendedInfo/findSubFolders) The name of the ColdFusion query variable that contains the returned information about the folder.",
+			"required": false,
+			"default": "",
+			"type": "variableName",
+			"values": []
+		},
+		{
+			"name": "folderID",
+			"description": "(getInfo/getExtendedInfo/findSubFolders/delete/modify/empty) UID that is used to identify the folder in which the actions are performed.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "folderPath",
+			"description": "(getInfo/getExtendedInfo) Full path to the folder where the action has to be performed.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "pathDelimiter",
+			"description": "(getInfo/getExtendedInfo) Lets you specify the delimiter that is used to separate the folders.",
+			"required": false,
+			"default": "/",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "result",
+			"description": "(create/copy/move) The name of a query variable that contains the result returned from the exchange server when one of the action is performed.",
+			"required": false,
+			"default": "",
+			"type": "variableName",
+			"values": []
+		},
+		{
+			"name": "destinationFolderID",
+			"description": "(copy/move) A case-sensitive Exchange UID value that uniquely identifies the destination folder.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "sourceFolderID",
+			"description": "(copy/move) The UID that is used to identify the folder from which you copy or move folders to the destination folder.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "deleteType",
+			"description": "(delete/move) - hardDelete: Removes a folder permanently from the Exchange server.\n- softDelete: Moves a folder to the dumpster in Exchange server, if dumpster is enabled.\n- moveToDeletedItems: Moves a folder to the deleted items folder.",
+			"required": false,
+			"default": "moveToDeletedItems",
+			"type": "string",
+			"values": ["hardDelete", "softDelete", "moveToDeletedItems"]
+		},
+		{
+			"name": "deleteSubFolders",
+			"description": "(empty) If true, deletes the subfolder.",
+			"required": false,
+			"default": false,
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "folder",
+			"description": "(create/modify) A struct that contains the required information of the folder that has to be created or modified, such as display name and folder class.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexchangefolder.html"}
+		"coldfusion": {
+			"minimum_version": "10",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexchangefolder.html"
+		}
 	},
 	"links": [],
-  "examples": [
+	"examples": [
 		{
-			"title":"Get folder",
-			"description":"Gets the extended information for the Inbox folder.",
-			"code":"<cfexchangeconnection action=\"open\" username=\"conv\" password=\"Password\" server=\"IP_Address\" serverversion=\"2010\" connection=\"conn1\">\n<cfexchangefolder action=\"getextendedinfo\" connection=\"conn1\" name=\"result\" folderpath=\"Inbox\">\n<cfdump var=\"#result#\">",
-			"result":"",
-			"runnable":false
+			"title": "Get folder",
+			"description": "Gets the extended information for the Inbox folder.",
+			"code": "<cfexchangeconnection action=\"open\" username=\"conv\" password=\"Password\" server=\"IP_Address\" serverversion=\"2010\" connection=\"conn1\">\n<cfexchangefolder action=\"getextendedinfo\" connection=\"conn1\" name=\"result\" folderpath=\"Inbox\">\n<cfdump var=\"#result#\">",
+			"result": "",
+			"runnable": false
 		}
 	]
 }

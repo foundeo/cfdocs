@@ -1,35 +1,62 @@
 {
-	"name":"isImage",
-	"type":"function",
-	"syntax":"isImage(value)",
-	"returns":"boolean",
-	"related":["cfimage", "imageGetBlob", "imageInfo", "imageNew"],
-	"description":"Determines whether a variable returns a ColdFusion image.",
+	"name": "isImage",
+	"type": "function",
+	"syntax": "isImage(value)",
+	"returns": "boolean",
+	"related": ["cfimage", "imageGetBlob", "imageInfo", "imageNew"],
+	"description": "Determines whether a variable returns a ColdFusion image.",
 	"params": [
-		{"name":"value","description":"The value that is checked.","required":true,"default":"","type":"any","values":[]}
+		{
+			"name": "value",
+			"description": "The value that is checked.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isimage.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isimage.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isimage"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isimage"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-image` module.", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"}
+		"coldfusion": {
+			"minimum_version": "8",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isimage.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isimage.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/isimage"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/isimage"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Requires the `bx-image` module.",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"
+		}
 	},
 	"links": [],
 	"examples": [
 		{
-			"title":"Check local file image (Tag)",
-			"description":"If the local file is an image, write it to the browser",
-			"code":"<cfset myImage = imageNew(\"./sample.png\")>\n<cfif isImage(myImage)>\n\t<cfimage action=\"writeToBrowser\" source=\"#myImage#\">\n</cfif>",
-			"result":"",
-			"runnable":false
+			"title": "Check local file image (Tag)",
+			"description": "If the local file is an image, write it to the browser",
+			"code": "<cfset myImage = imageNew(\"./sample.png\")>\n<cfif isImage(myImage)>\n\t<cfimage action=\"writeToBrowser\" source=\"#myImage#\">\n</cfif>",
+			"result": "",
+			"runnable": false
 		},
 		{
-			"title":"Check online image (Script)",
-			"description":"Output whether the online file is an image",
-			"code":"isImage(imageRead(\"https://cfdocs.org/apple-touch-icon.png\");",
-			"result":true,
-			"runnable":true
+			"title": "Check online image (Script)",
+			"description": "Output whether the online file is an image",
+			"code": "isImage(imageRead(\"https://cfdocs.org/apple-touch-icon.png\");",
+			"result": true,
+			"runnable": true
 		}
 	]
 }

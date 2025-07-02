@@ -2,7 +2,7 @@
 
 This is an incomplete / work in progress guide to operators in CFML.
 
-### Equality
+## Equality
 
 `EQ` _Script_ ✓ _Tags_ ✓
 
@@ -16,7 +16,7 @@ This is an incomplete / work in progress guide to operators in CFML.
 
 The `EQ`, `IS`, and `==` operators are case insensitive, so `"PETE" IS "pete"` evaluates to `true`.
 
-### Inequality
+## Inequality
 
 `NEQ` _Script_ ✓ _Tags_ ✓
 
@@ -28,7 +28,7 @@ The `EQ`, `IS`, and `==` operators are case insensitive, so `"PETE" IS "pete"` e
         return "sanity";
     }
 
-### Negation
+## Negation
 
 `NOT` _Script_ ✓ _Tags_ ✓
 
@@ -38,7 +38,7 @@ The `EQ`, `IS`, and `==` operators are case insensitive, so `"PETE" IS "pete"` e
         throw("sorry localhost only");
     }
 
-### Comparison
+## Comparison
 
 `GREATER THAN` _Script_ ✓ _Tags_ ✓
 `GT` _Script_ ✓ _Tags_ ✓
@@ -66,7 +66,7 @@ Lucee supports the following shorthand for the `CONTAINS` and `DOES NOT CONTAIN`
 `CT` _Script_ ✓ _Tags_ ✓
 `NCT` _Script_ ✓ _Tags_ ✓
 
-### Concatenation
+## Concatenation
 
 `&` _Script_ ✓ _Tags_ ✓
 

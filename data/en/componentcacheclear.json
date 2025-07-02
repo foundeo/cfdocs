@@ -3,11 +3,20 @@
 	"type": "function",
 	"syntax": "componentCacheClear()",
 	"returns": "void",
-	"related": ["componentCacheList","getComponentMetadata","cfcomponent","cfcache"],
+	"related": [
+		"componentCacheList",
+		"getComponentMetadata",
+		"cfcomponent",
+		"cfcache"
+	],
 	"description": "This function flushes the component path cache",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/componentcacheclear.html"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/componentcacheclear.html"
+		}
 	},
 	"examples": [],
 	"links": []

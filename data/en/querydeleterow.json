@@ -7,26 +7,52 @@
 	"related": [],
 	"description": "Deletes a row within a query object.",
 	"params": [
-		{"name": "query", "description": "Query to modify", "required": true, "default": "", "type": "query", "values": []},
-		{"name": "row", "description": "Index of the row to delete, starts at 1.  If a row is not specified, the last row is removed.", "required": false, "default": "-9999", "type": "numeric", "values": []}
+		{
+			"name": "query",
+			"description": "Query to modify",
+			"required": true,
+			"default": "",
+			"type": "query",
+			"values": []
+		},
+		{
+			"name": "row",
+			"description": "Index of the row to delete, starts at 1.  If a row is not specified, the last row is removed.",
+			"required": false,
+			"default": "-9999",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querydeleterow.html"},
-		"coldfusion": {"minimum_version": "2018", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querydeleterow.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querydeleterow"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/querydeleterow.html"
+		},
+		"coldfusion": {
+			"minimum_version": "2018",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querydeleterow.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querydeleterow"
+		}
 	},
 	"examples": [
 		{
-			"title":"Implicit deletion of the last row",
-			"description":"Builds a simple query and removes the last row by not specifying a row index.",
-			"code":"news = queryNew(\"id,title\", \"integer,varchar\", [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nqueryDeleteRow(news);\nwriteOutput(news['title'][1]);",
-			"result":"Dewey defeats Truman"
+			"title": "Implicit deletion of the last row",
+			"description": "Builds a simple query and removes the last row by not specifying a row index.",
+			"code": "news = queryNew(\"id,title\", \"integer,varchar\", [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nqueryDeleteRow(news);\nwriteOutput(news['title'][1]);",
+			"result": "Dewey defeats Truman"
 		},
 		{
-			"title":"Deletes a specific row from the query",
-			"description":"Builds a simple query and removes one of the rows.",
-			"code":"news = queryNew(\"id,title\", \"integer,varchar\", [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nqueryDeleteRow(news, 1);\nwriteOutput(news['title'][1]);",
-			"result":"Man walks on Moon"
+			"title": "Deletes a specific row from the query",
+			"description": "Builds a simple query and removes one of the rows.",
+			"code": "news = queryNew(\"id,title\", \"integer,varchar\", [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nqueryDeleteRow(news, 1);\nwriteOutput(news['title'][1]);",
+			"result": "Man walks on Moon"
 		}
 	],
 	"links": []

@@ -3,7 +3,7 @@
 	"type": "function",
 	"syntax": "query()",
 	"returns": "query",
-	"related": ["queryNew","queryExecute"],
+	"related": ["queryNew", "queryExecute"],
 	"description": "Create and populate a query object. You can initialize with data by passing arrays of data as arguments, where the argument name is the desired column name and each item in the array is the value for a row.",
 	"params": [],
 	"engines": {
@@ -12,7 +12,11 @@
 			"notes": "",
 			"docs": "https://docs.lucee.org/reference/functions/query.html"
 		},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/types/query"}
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/types/query"
+		}
 	},
 	"examples": [
 		{

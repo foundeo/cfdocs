@@ -3,6 +3,7 @@
 ## Markdown Version of [CFDocs](https://cfmleditor.github.io/cfdocs/)
 
 CFDocs is a community maintained CFML reference tool available at [cfdocs.org](https://cfdocs.org). It features:
+
 * Hosting on Amazon CloudFront CDN for fast responses around the globe. Sponsored by [Foundeo Inc.](http://foundeo.com).
 * Easy to use urls like: [cfdocs.org/hash](https://cfdocs.org/hash) just hit /tag-name or /function-name.
 * Publicly maintained on [GitHub](https://github.com/foundeo/cfdocs)
@@ -16,7 +17,6 @@ All of the tag and function documentation are defined in JSON files under [*data
 This makes the documentation super easy to edit and allows developers to run a local version of the site "out of the box" since no database setup is required.
 
 ## Running CFDocs locally for dev or pleasure
-
 
 ### Running CFDocs Locally
 
@@ -39,7 +39,7 @@ If you are interested in helping you can just copy a tag or function and write u
 
 CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. attribute names / function arguments and one two sentence descriptions.
 
-#### The easy way to edit the docs
+### The easy way to edit the docs
 
 1. Browse the [data/en/](https://github.com/foundeo/cfdocs/tree/master/data/en) folder of this repository on GitHub and find the tag or function you want to edit.
 2. Click the edit button (pencil)
@@ -52,7 +52,7 @@ CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. att
 2. clone it locally
 3. make your changes
 4. test it locally using CommandBox (see above)
-4. once you are done you can send a pull request, and I'll merge it into the main repository.
+5. once you are done you can send a pull request, and I'll merge it into the main repository.
 
 ### Not sure what you can contribute?
 
@@ -65,6 +65,7 @@ We need help expanding existing tag and function documentation. Look through the
 
 ### JSON File Documentation
 
+    ```json
     {
         "name":"nameOfTagOrFunction",
         "type":"function|tag",
@@ -103,59 +104,59 @@ We need help expanding existing tag and function documentation. Look through the
             }
         ]
     }
-
-
-##### name
+    ```
+    
+#### name
 
 The name of the tag or function, use lowercase.
 
-##### type
+#### type
 
 Either `function` or `tag` or `listing` a *listing* is how categories are made, they simply contain a `name`, `description`, and a list of `related` items.
 
-##### syntax
+#### syntax
 
 The basic syntax of the tag or function
 
-##### script
+#### script
 
 For tags, shows how the tag would be invoked from cfscript.
 
-##### member
+#### member
 
 For functions, shows the available member function syntax.
 
-##### returns
+#### returns
 
 The returntype of a function. Valid options are: `any`, `array`, `binary`, `boolean`, `date`, `function`, `guid`, `numeric`, `query`, `string`, `uuid`, `variableName`, `void`, `xml`. Default value is `void`.
 
-##### related
+#### related
 
 An array of tag or function names that are related to this item.
 
-##### description
+#### description
 
 A short description of the item.
 
-##### discouraged
+#### discouraged
 
 If this key exists and has content a warning is displayed stating that the tag or function is discouraged by the CFML community.
 
-##### params
+#### params
 
 Array of structures containing information about the attributes of a tag, or arguments of a function.
 
-##### engines
+#### engines
 
 CFML engine implementation specific info goes here, for example if it was added in CF10 and Railo 4.1 you can add that in `minimum_version` if something was changed in CF11, you can add notes about what changed. The `docs` key should point to a url for vendor documentation.
 
-##### links
+#### links
 
 Use this to link to blog entries or other useful related content.
 
-##### examples
+#### examples
 
-Show example code. It is very helpful to readers to use the `result` to show the expected result of the code sample when applicable. This has to be JSON, so  you can to do `\n` for newline, double quotes must be escaped `\"`. The `runnable` is a boolean that determines if the _Run Code_ button shows up next to the example.
+Show example code. It is very helpful to readers to use the `result` to show the expected result of the code sample when applicable. This has to be JSON, so  you can to do `\n` for newline, double quotes must be escaped `\"`. The `runnable` is a boolean that determines if the *Run Code* button shows up next to the example.
 
 We have an [example JSON utility](https://cfdocs.org/utilities/json/) that can be used to create the JSON by filling out a form.
 
@@ -177,14 +178,14 @@ Install the CFML Plugin from KamasamaK: <https://marketplace.visualstudio.com/it
 
 Requires the vim-shell plugin:
 
-```
-function! CFDocsSearch()
-   let wordUnderCursor = expand("<cword>")
-   execute 'Open https://cfdocs.org/' . wordUnderCursor
-endfunction
+    ```shell
+    function! CFDocsSearch()
+    let wordUnderCursor = expand("<cword>")
+    execute 'Open https://cfdocs.org/' . wordUnderCursor
+    endfunction
 
-command! -nargs=0 CFdocs :call CFDocsSearch()
-```
+    command! -nargs=0 CFdocs :call CFDocsSearch()
+    ```
 
 #### CFEclipse
 

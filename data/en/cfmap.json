@@ -240,7 +240,11 @@
 		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version": "9", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmap.html"}
+		"coldfusion": {
+			"minimum_version": "9",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmap.html"
+		}
 	},
 	"links": []
 }

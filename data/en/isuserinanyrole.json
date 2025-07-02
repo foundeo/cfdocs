@@ -1,17 +1,36 @@
 {
-	"name":"isUserInAnyRole",
-	"type":"function",
-	"syntax":"isUserInAnyRole(value)",
-	"returns":"boolean",
-	"related":["getUserRoles","isUserInRole"],
-	"description":"Determines whether an authenticated user belongs to any role in a list of roles.",
+	"name": "isUserInAnyRole",
+	"type": "function",
+	"syntax": "isUserInAnyRole(value)",
+	"returns": "boolean",
+	"related": ["getUserRoles", "isUserInRole"],
+	"description": "Determines whether an authenticated user belongs to any role in a list of roles.",
 	"params": [
-		{"name":"value","description":"A comma-delimited list of one or more roles to be tested","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "value",
+			"description": "A comma-delimited list of one or more roles to be tested",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isuserinanyrole.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isuserinanyrole.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isuserinanyrole"}
+		"coldfusion": {
+			"minimum_version": "8",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isuserinanyrole.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isuserinanyrole.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/isuserinanyrole"
+		}
 	},
 	"links": []
 }

@@ -1,17 +1,37 @@
 {
-	"name":"cfstopwatch",
-	"type":"tag",
-	"syntax":"<cfstopwatch variable=\"time\" label=\"timer\"></cfstopwatch>",
-	"script":"cfstopwatch( variable=\"time\" label=\"timer\" ) {}",
-	"related":["getTickCount","cftimer"],
-	"description":"Measures the time taken, in milliseconds, for the code between the start tag and end tag to execute.",
+	"name": "cfstopwatch",
+	"type": "tag",
+	"syntax": "<cfstopwatch variable=\"time\" label=\"timer\"></cfstopwatch>",
+	"script": "cfstopwatch( variable=\"time\" label=\"timer\" ) {}",
+	"related": ["getTickCount", "cftimer"],
+	"description": "Measures the time taken, in milliseconds, for the code between the start tag and end tag to execute.",
 	"params": [
-		{"name":"variable","description":"The name of the variable that will contain the value of the time taken.","required":true,"type":"string","values":[]},
-		{"name":"label","description":"The label for the stopwatch, used in debugging output.","required":false,"default":"","type":"string"}
+		{
+			"name": "variable",
+			"description": "The name of the variable that will contain the value of the time taken.",
+			"required": true,
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "label",
+			"description": "The label for the stopwatch, used in debugging output.",
+			"required": false,
+			"default": "",
+			"type": "string"
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/stopwatch.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:stopwatch>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/debug/stopwatch"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/tags/stopwatch.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "`<bx:stopwatch>` in BoxLang",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/components/debug/stopwatch"
+		}
 	},
 	"links": [],
 	"examples": [

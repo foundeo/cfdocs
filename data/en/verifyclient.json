@@ -1,19 +1,27 @@
 {
-	"name":"verifyClient",
-	"type":"function",
-	"syntax":"verifyClient()",
-	"returns":"void",
-	"related":[],
-	"description":" Verifies whether request is from valid client or not",
-	"params": [
-	],
+	"name": "verifyClient",
+	"type": "function",
+	"syntax": "verifyClient()",
+	"returns": "void",
+	"related": [],
+	"description": "Verifies whether request is from valid client or not",
+	"params": [],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/verifyclient.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/verifyclient.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/verifyclient"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/verifyclient.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/verifyclient.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/verifyclient"
+		}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

@@ -1,15 +1,31 @@
 {
-	"name":"cflogout",
-	"type":"tag",
-	"syntax":"<cflogout>",
-	"related":["cflogin","cfloginuser"],
-	"description":"Logs the current user out. Removes knowledge of the user ID,\n password, and roles from the server. If you do not use this\n tag, the user is automatically logged out when the session\n ends.",
+	"name": "cflogout",
+	"type": "tag",
+	"syntax": "<cflogout>",
+	"related": ["cflogin", "cfloginuser"],
+	"description": "Logs the current user out. Removes knowledge of the user ID,\n password, and roles from the server. If you do not use this\n tag, the user is automatically logged out when the session\n ends.",
 	"params": [],
 	"engines": {
-		"coldfusion": {"minimum_version":"6", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cflogout.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/logout.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflogout"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflogout"}
+		"coldfusion": {
+			"minimum_version": "6",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cflogout.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/tags/logout.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/tag/cflogout"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/tag/cflogout"
+		}
 	},
 	"links": []
 }

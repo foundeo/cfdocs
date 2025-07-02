@@ -1,61 +1,106 @@
 {
-	"name":"arrayMap",
-	"type":"function",
-	"syntax":"arrayMap(array, function(item [,index, array]){} [, parallel] [, maxThreads])",
-	"member":"someArray.map(function(item [,index, array]){} [, parallel] [, maxThreads])",
-	"returns":"array",
-	"related":["arrayReduce"],
-	"description":"Iterates over every entry of the array and calls the closure function to work on the element of the array. The returned value will be set at the same index in a new array and the new array will be returned",
-	"params":[
-		{"name":"array", "description":"The input array", "default":"","type":"array","required":true, "values":[]},
-		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
+	"name": "arrayMap",
+	"type": "function",
+	"syntax": "arrayMap(array, function(item [,index, array]){} [, parallel] [, maxThreads])",
+	"member": "someArray.map(function(item [,index, array]){} [, parallel] [, maxThreads])",
+	"returns": "array",
+	"related": ["arrayReduce"],
+	"description": "Iterates over every entry of the array and calls the closure function to work on the element of the array. The returned value will be set at the same index in a new array and the new array will be returned",
+	"params": [
+		{
+			"name": "array",
+			"description": "The input array",
+			"default": "",
+			"type": "array",
+			"required": true,
+			"values": []
+		},
+		{
+			"name": "callback",
+			"description": "Closure or a function reference that will be called for each of the iteration.",
 			"callback_params": [
-			{
-				"values": [],
-				"default": "",
-				"description": "The value for the current iteration",
-				"name": "value",
-				"type": "any",
-				"required": false
-			},{
-				"values": [],
-				"default": "",
-				"description": "The current index for the iteration",
-				"name": "index",
-				"type": "numeric",
-				"required": false
-			},{
-				"values": [],
-				"default": "",
-				"description": "A reference of the original array",
-				"name": "array",
-				"type": "array",
-				"required": false
-			}],"type":"any","required":true,"values":[],"default":""},
-		{"name":"parallel","description":"Lucee4.5+ true if the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[true, false]},
-		{"name":"maxThreads","description":"Lucee4.5+ the maximum number of threads to use when parallel = true","required":false,"default":"20","type":"numeric","values":[]}
+				{
+					"values": [],
+					"default": "",
+					"description": "The value for the current iteration",
+					"name": "value",
+					"type": "any",
+					"required": false
+				},
+				{
+					"values": [],
+					"default": "",
+					"description": "The current index for the iteration",
+					"name": "index",
+					"type": "numeric",
+					"required": false
+				},
+				{
+					"values": [],
+					"default": "",
+					"description": "A reference of the original array",
+					"name": "array",
+					"type": "array",
+					"required": false
+				}
+			],
+			"type": "any",
+			"required": true,
+			"values": [],
+			"default": ""
+		},
+		{
+			"name": "parallel",
+			"description": "Lucee4.5+ true if the items can be executed in parallel",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "maxThreads",
+			"description": "Lucee4.5+ the maximum number of threads to use when parallel = true",
+			"required": false,
+			"default": "20",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion":{"minimum_version":"11","notes":"","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraymap.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arraymap.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arraymap"}
+		"coldfusion": {
+			"minimum_version": "11",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraymap.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/arraymap.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arraymap"
+		}
 	},
-	"links":[{
-		"title":"Map, Reduce and other Higher Order Functions",
-		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
-		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
-	},
-	{
-		"title": "ColdFusion 11: .map() and .reduce()",
-		"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
-		"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
-	},
-	{
-		"title": "arrayMap(): a reverse CFML history",
-		"description": "A history of custom implementations of map prior to CF11",
-		"url": "http://blog.adamcameron.me/2014/06/arraymap-reverse-cfml-history.html"
-	}],
-	"examples":[
+	"links": [
+		{
+			"title": "Map, Reduce and other Higher Order Functions",
+			"description": "A Primer for map, reduce, filter, and Higher Order Functions in general.",
+			"url": "http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+		},
+		{
+			"title": "ColdFusion 11: .map() and .reduce()",
+			"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
+			"url": "http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
+		},
+		{
+			"title": "arrayMap(): a reverse CFML history",
+			"description": "A history of custom implementations of map prior to CF11",
+			"url": "http://blog.adamcameron.me/2014/06/arraymap-reverse-cfml-history.html"
+		}
+	],
+	"examples": [
 		{
 			"title": "Script Syntax",
 			"description": "",
@@ -63,5 +108,4 @@
 			"result": "[4, 18, 51]"
 		}
 	]
-
 }

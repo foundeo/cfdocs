@@ -7,13 +7,42 @@
 	"related": [],
 	"description": "Converts structure key/value pairs where the key contains a period (.) into nested structures key / value pairs",
 	"params": [
-		{"name": "structure", "description": "", "required": true, "default": "", "type": "struct", "values": []},
-		{"name": "deepTranslation", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "leaveOriginalKey", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
+		{
+			"name": "structure",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "deepTranslation",
+			"description": "",
+			"required": false,
+			"default": "",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "leaveOriginalKey",
+			"description": "",
+			"required": false,
+			"default": "",
+			"type": "boolean",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/structkeytranslate.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structkeytranslate"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/structkeytranslate.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structkeytranslate"
+		}
 	},
 	"examples": [],
 	"links": []

@@ -1,50 +1,84 @@
 {
-	"name":"inputBaseN",
-	"type":"function",
-	"syntax":"inputBaseN(String, radix)",
-	"returns":"numeric",
-	"related":["int","parseNumber","toNumeric"],
-	"description":"Converts string, using the base specified by radix, to an integer.",
+	"name": "inputBaseN",
+	"type": "function",
+	"syntax": "inputBaseN(String, radix)",
+	"returns": "numeric",
+	"related": ["int", "parseNumber", "toNumeric"],
+	"description": "Converts string, using the base specified by radix, to an integer.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"radix","description":"","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "String",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "radix",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/inputbasen.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/inputbasen.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/inputbasen"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/inputbasen"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/math/inputbasen"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/inputbasen.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/inputbasen.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/inputbasen"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/inputbasen"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/math/inputbasen"
+		}
 	},
 	"links": [],
 	"examples": [
 		{
-			"title":"Binary string to decimal",
-			"description":"",
-			"code":"inputBaseN(\"1010\",2)",
-			"result":"10",
-			"runnable":true
+			"title": "Binary string to decimal",
+			"description": "",
+			"code": "inputBaseN(\"1010\",2)",
+			"result": "10",
+			"runnable": true
 		},
 		{
-			"title":"Hexadecimal string to decimal",
-			"description":"",
-			"code":"inputBaseN(\"3FF\",16)",
-			"result":"1023",
-			"runnable":true
+			"title": "Hexadecimal string to decimal",
+			"description": "",
+			"code": "inputBaseN(\"3FF\",16)",
+			"result": "1023",
+			"runnable": true
 		},
 		{
-			"title":"Decimal string to decimal",
-			"description":"",
-			"code":"inputBaseN(\"125\",10)",
-			"result":"125",
-			"runnable":true
+			"title": "Decimal string to decimal",
+			"description": "",
+			"code": "inputBaseN(\"125\",10)",
+			"result": "125",
+			"runnable": true
 		},
 		{
-			"title":"Binary number to decimal",
-			"description":"",
-			"code":"inputBaseN(1010,2)",
-			"result":"10",
-			"runnable":true
+			"title": "Binary number to decimal",
+			"description": "",
+			"code": "inputBaseN(1010,2)",
+			"result": "10",
+			"runnable": true
 		}
 	]
 }

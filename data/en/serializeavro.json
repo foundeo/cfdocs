@@ -1,61 +1,65 @@
 {
-  "name": "serializeAvro",
-  "type": "function",
-  "syntax": "serializeAvro(data, writerSchema [, queryFormat, useCustomSerialization])",
-  "returns": "any",
-  "related": [ "deserializeAvro" ],
-  "description": "Serializes data into an Avro binary format",
-  "params": [
-    {
-      "name": "data",
-      "description": "The data to serialize",
-      "required": true,
-      "default": "",
-      "type": "any",
-      "values": []
-    },
-    {
-      "name": "writerSchema",
-      "description": "The Avro schema as a string or the absolute path to the schema",
-      "required": true,
-      "default": "",
-      "type": "string",
-      "values": []
-    },
-    {
-      "name": "queryFormat",
-      "description": "Indicates in which format a query will be serialized",
-      "required": false,
-      "default": "",
-      "type": "string",
-      "values": ["row","column","struct"]
-    },
-    {
-      "name": "useCustomSerialization",
-      "description": "Whether to use the customSerializer",
-      "required": false,
-      "default": true,
-      "type": "boolean",
-      "values": []
-    }
-  ],
-  "engines": {
-    "coldfusion": {"minimum_version":"2023", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/serializeavro.html"}
-  },
-  "links": [
+	"name": "serializeAvro",
+	"type": "function",
+	"syntax": "serializeAvro(data, writerSchema [, queryFormat, useCustomSerialization])",
+	"returns": "any",
+	"related": ["deserializeAvro"],
+	"description": "Serializes data into an Avro binary format",
+	"params": [
+		{
+			"name": "data",
+			"description": "The data to serialize",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "writerSchema",
+			"description": "The Avro schema as a string or the absolute path to the schema",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "queryFormat",
+			"description": "Indicates in which format a query will be serialized",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": ["row", "column", "struct"]
+		},
+		{
+			"name": "useCustomSerialization",
+			"description": "Whether to use the customSerializer",
+			"required": false,
+			"default": true,
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2023",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/serializeavro.html"
+		}
+	},
+	"links": [
 		{
 			"title": "Avro and Protocol Buffer in ColdFusion",
 			"description": "Overview of Avro and Protobuf, including how to use them in ColdFusion",
 			"url": "https://helpx.adobe.com/coldfusion/using/avro-protobuf-coldfusion.html"
 		}
 	],
-  "examples": [
-    {
-      "title": "Serialize a query into Avro (Script syntax)",
-      "description": "Serializes a ColdFusion query into an array of Avro binary data",
-      "code": "news = queryNew(\"id,title\",\n    \"integer,varchar\",\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nnewsSchema = '{  \n    \"namespace\": \"my.example\",\n    \"type\": \"record\",\n    \"name\": \"News\",\n    \"fields\": [ {\"name\":\"id\",\"type\":\"int\"}, {\"name\":\"title\",\"type\":\"string\"} ]\n}';\nwriteDump(serializeAvro(data, newsSchema));",
-      "runnable": false,
-      "result": ""
-    }
-  ]
+	"examples": [
+		{
+			"title": "Serialize a query into Avro (Script syntax)",
+			"description": "Serializes a ColdFusion query into an array of Avro binary data",
+			"code": "news = queryNew(\"id,title\",\n    \"integer,varchar\",\n    [ {\"id\":1,\"title\":\"Dewey defeats Truman\"}, {\"id\":2,\"title\":\"Man walks on Moon\"} ]);\nnewsSchema = '{  \n    \"namespace\": \"my.example\",\n    \"type\": \"record\",\n    \"name\": \"News\",\n    \"fields\": [ {\"name\":\"id\",\"type\":\"int\"}, {\"name\":\"title\",\"type\":\"string\"} ]\n}';\nwriteDump(serializeAvro(data, newsSchema));",
+			"runnable": false,
+			"result": ""
+		}
+	]
 }

@@ -1,39 +1,43 @@
 {
-  "name": "xmlDeleteAt",
-  "type": "function",
-  "syntax": "xmlDeleteAt(xmlObject, position)",
-  "returns": "void",
-  "related": [ "xmlChildPos", "xmlClear" ],
-  "description": "Removes a node from an XML document by specifying the position",
-  "params": [
-    {
-      "name": "xmlObject",
-      "description": "The XML object",
-      "required": true,
-      "default": "",
-      "type": "xml",
-      "values": []
-    },
-    {
-      "name": "position",
-      "description": "The position of the child node to be deleted",
-      "required": true,
-      "default": "",
-      "type": "numeric",
-      "values": []
-    }
-  ],
-  "engines": {
-    "coldfusion": {"minimum_version":"2023", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmldeleteat.html"}
-  },
-  "links": [],
-  "examples": [
-    {
-      "title": "Delete a specified XML node (Script syntax)",
-      "description": "Deletes a single node in a simple XML document",
-      "code": "xmlData = xmlParse('<root><item id=\"1\">Item 1<\/item><item id=\"2\">Item 2<\/item><item id=\"3\">Item 3<\/item><\/root>');\nxmlDeleteAt(xmlData.root.item, 1);\nwriteOutput(xmlData.toString());",
-      "runnable": true,
-      "result": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root><item id=\"2\">Item 2<\/item><item\/><item id=\"3\">Item 3<\/item><\/root>"
-    }
-  ]
+	"name": "xmlDeleteAt",
+	"type": "function",
+	"syntax": "xmlDeleteAt(xmlObject, position)",
+	"returns": "void",
+	"related": ["xmlChildPos", "xmlClear"],
+	"description": "Removes a node from an XML document by specifying the position",
+	"params": [
+		{
+			"name": "xmlObject",
+			"description": "The XML object",
+			"required": true,
+			"default": "",
+			"type": "xml",
+			"values": []
+		},
+		{
+			"name": "position",
+			"description": "The position of the child node to be deleted",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2023",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmldeleteat.html"
+		}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Delete a specified XML node (Script syntax)",
+			"description": "Deletes a single node in a simple XML document",
+			"code": "xmlData = xmlParse('<root><item id=\"1\">Item 1</item><item id=\"2\">Item 2</item><item id=\"3\">Item 3</item></root>');\nxmlDeleteAt(xmlData.root.item, 1);\nwriteOutput(xmlData.toString());",
+			"runnable": true,
+			"result": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root><item id=\"2\">Item 2</item><item/><item id=\"3\">Item 3</item></root>"
+		}
+	]
 }

@@ -3,22 +3,46 @@
 	"type": "function",
 	"syntax": "getFunctionData(functionName)",
 	"returns": "struct",
-	"related": ["getMetadata","getTagData"],
+	"related": ["getMetadata", "getTagData"],
 	"description": "Return information to a function as struct",
 	"params": [
-		{"name": "functionName", "description": "The function you want information for", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "dialect", "description": "The dialect you want details for", "required": false, "default": "current template's dialect", "type": "string", "values": ["CFML","Lucee"]}
+		{
+			"name": "functionName",
+			"description": "The function you want information for",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "dialect",
+			"description": "The dialect you want details for",
+			"required": false,
+			"default": "current template's dialect",
+			"type": "string",
+			"values": ["CFML", "Lucee"]
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getfunctiondata.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/system/getfunctiondata"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/getfunctiondata.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/system/getfunctiondata"
+		}
 	},
-	"examples": [{
-		"title": "Output information about a function",
-		"description": "Returns a structure storing information about writeDump()",
-		"code": "getFunctionData('writeDump')",
-		"result": "",
-		"runnable":false
-        }],
+	"examples": [
+		{
+			"title": "Output information about a function",
+			"description": "Returns a structure storing information about writeDump()",
+			"code": "getFunctionData('writeDump')",
+			"result": "",
+			"runnable": false
+		}
+	],
 	"links": []
 }

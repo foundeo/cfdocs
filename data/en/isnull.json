@@ -1,30 +1,55 @@
 {
-	"name":"isNull",
-	"type":"function",
-	"syntax":"isNull(object)",
-	"returns":"boolean",
-	"related":["javacast"],
-	"description":"Returns true if the specified object is null.",
+	"name": "isNull",
+	"type": "function",
+	"syntax": "isNull(object)",
+	"returns": "boolean",
+	"related": ["javacast"],
+	"description": "Returns true if the specified object is null.",
 	"params": [
-		{"name":"object","description":"","required":true,"default":"","type":"variableName","values":[]}
+		{
+			"name": "object",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "variableName",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isnull.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isnull.html"},
-		"railo": {"minimum_version":"3", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isnull"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isnull"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isnull"}
+		"coldfusion": {
+			"minimum_version": "9",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isnull.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isnull.html"
+		},
+		"railo": {
+			"minimum_version": "3",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/isnull"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/isnull"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isnull"
+		}
 	},
-	"links": [
-
-	],
-	"examples":[
-	{
-		"title":"isNull Example",
-		"description":"Returns true if the given object is null or the given expressions evaluates to null; Returns false is otherwise. ",
-		"code":"isNull( javaCast(\"null\", \"\") )",
-		"result":true,
-		"runnable":true
-	}
+	"links": [],
+	"examples": [
+		{
+			"title": "isNull Example",
+			"description": "Returns true if the given object is null or the given expressions evaluates to null; Returns false is otherwise. ",
+			"code": "isNull( javaCast(\"null\", \"\") )",
+			"result": true,
+			"runnable": true
+		}
 	]
 }

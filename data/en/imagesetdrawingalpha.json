@@ -6,12 +6,34 @@
 	"related": [],
 	"description": "Applies drawing alpha to image i.e. makes image transparent/sets opacity. All subsequent graphic operations follow that value.",
 	"params": [
-		{"name": "name", "description": "", "required": true, "default": "", "type": "any", "values": []},
-		{"name": "alpha", "description": "", "required": true, "default": "", "type": "numeric", "values": []}
+		{
+			"name": "name",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "alpha",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/imagesetdrawingalpha.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-image` module.", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/imagesetdrawingalpha.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Requires the `bx-image` module.",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"
+		}
 	},
 	"examples": [],
 	"links": []

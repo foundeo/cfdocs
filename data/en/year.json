@@ -1,23 +1,49 @@
 {
-	"name":"year",
-	"type":"function",
-	"syntax":"year(date)",
-	"member":"date.year()",
-	"returns":"numeric",
-	"related":["hour","minute","second","month","quarter","week"],
-	"description":" From a date/time object, gets the year value.",
+	"name": "year",
+	"type": "function",
+	"syntax": "year(date)",
+	"member": "date.year()",
+	"returns": "numeric",
+	"related": ["hour", "minute", "second", "month", "quarter", "week"],
+	"description": "From a date/time object, gets the year value.",
 	"params": [
-		{"name":"date","description":"","required":true,"default":"","type":"date","values":[]}
+		{
+			"name": "date",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "date",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"Member function is available in CF11+.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/year.html"},
-		"lucee": {"minimum_version":"", "notes":"Member function is available in Lucee4.5+.", "docs":"https://docs.lucee.org/reference/functions/year.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/year"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/year"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/temporal/year"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "Member function is available in CF11+.",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/year.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "Member function is available in Lucee4.5+.",
+			"docs": "https://docs.lucee.org/reference/functions/year.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/year"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/year"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/temporal/year"
+		}
 	},
-	"links": [
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Year of a datetime object",

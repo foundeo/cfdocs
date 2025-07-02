@@ -1,24 +1,81 @@
 {
-	"name":"imageFlip",
-	"type":"function",
-	"syntax":"imageFlip(name, transpose)",
-	"member":"someImage.flip(transpose)",
-	"returns":"void",
-	"related":["ImageBlur", "ImageClearRec", "ImageNegative", "ImageNew", "ImageOverlay", "ImagePaste", "ImageResize", "ImageRotate", "ImageScaleToFit", "ImageSetAntialiasing", "ImageSharpen", "ImageShear", "ImageTranslate", "IsImageFile"],
-	"description":"Flips an image across an axis.",
+	"name": "imageFlip",
+	"type": "function",
+	"syntax": "imageFlip(name, transpose)",
+	"member": "someImage.flip(transpose)",
+	"returns": "void",
+	"related": [
+		"ImageBlur",
+		"ImageClearRec",
+		"ImageNegative",
+		"ImageNew",
+		"ImageOverlay",
+		"ImagePaste",
+		"ImageResize",
+		"ImageRotate",
+		"ImageScaleToFit",
+		"ImageSetAntialiasing",
+		"ImageSharpen",
+		"ImageShear",
+		"ImageTranslate",
+		"IsImageFile"
+	],
+	"description": "Flips an image across an axis.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
-		{"name":"transpose","description":"Transpose the image.\n\nvertical: Flip an image across an imaginary horizontal line that runs through the center of the image.\nhorizontal: Flip an image across an imaginary vertical line that runs through the center of the image.\ndiagonal: Flip an image across its main diagonal that runs from the upper-left to the lower-right corner.\nantidiagonal: Flip an image across its main diagonal that runs from the upper-right to the lower-left corner.\nOr rotate an image clockwise by 90, 180, or 270 degrees.","required":true,"default":"vertical","type":"string","values":["vertical","horizontal","diagonal","antidiagonal","90","180","270"]}
+		{
+			"name": "name",
+			"description": "The image on which this operation is performed.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "transpose",
+			"description": "Transpose the image.\n\nvertical: Flip an image across an imaginary horizontal line that runs through the center of the image.\nhorizontal: Flip an image across an imaginary vertical line that runs through the center of the image.\ndiagonal: Flip an image across its main diagonal that runs from the upper-left to the lower-right corner.\nantidiagonal: Flip an image across its main diagonal that runs from the upper-right to the lower-left corner.\nOr rotate an image clockwise by 90, 180, or 270 degrees.",
+			"required": true,
+			"default": "vertical",
+			"type": "string",
+			"values": [
+				"vertical",
+				"horizontal",
+				"diagonal",
+				"antidiagonal",
+				"90",
+				"180",
+				"270"
+			]
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imageflip.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/imageflip.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imageflip"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imageflip"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-image` module.", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"}
+		"coldfusion": {
+			"minimum_version": "8",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imageflip.html"
+		},
+		"lucee": {
+			"minimum_version": "4.5",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/imageflip.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/imageflip"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/imageflip"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Requires the `bx-image` module.",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"
+		}
 	},
 	"links": [],
-    	"examples": [
+	"examples": [
 		{
 			"title": "Tag Syntax",
 			"description": "This example shows how to rotate an image by 270 degrees.",
@@ -27,11 +84,11 @@
 			"runnable": false
 		},
 		{
-			"title":"Using flip member function",
-			"description":"CF11+ Lucee4.5+ Flip the image vertically",
-			"code":"imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\nimgObj.flip(\"vertical\");\r\ncfimage (action=\"writeToBrowser\", source=imgObj);",
-			"result":"",
-			"runnable":true
+			"title": "Using flip member function",
+			"description": "CF11+ Lucee4.5+ Flip the image vertically",
+			"code": "imgObj = imageRead(\"http://cfdocs.org/apple-touch-icon.png\");\r\nimgObj.flip(\"vertical\");\r\ncfimage (action=\"writeToBrowser\", source=imgObj);",
+			"result": "",
+			"runnable": true
 		}
 	]
 }

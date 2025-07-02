@@ -29,16 +29,16 @@ The inner function is available for execution after the outer function is return
 
 As seen in the example, even after the outer function is returned, the inner function can access the variables in the outer function. Closure retains the reference to the environment at the time it is created. For example, the value of a local variable in the outer function. It makes closure an easy to use and handy feature.
 
-To see more details on closure, see http://jibbering.com/faq/notes/closures/.
+To see more details on closure, see <http://jibbering.com/faq/notes/closures/>.
 
-### Closure in ColdFusion
+## Closure in ColdFusion
 
 A closure can be of the following categories:
 
 * Defined inline without giving a name. They can be used in the following ways:
 * They can be assigned to a variable, array item, struct, and variable scope. It can be returned directly from a function.
 
-#### ColdFusion Example
+### ColdFusion Example
 
     function operation(string operator) {
         return function(numeric x, numeric y) {
@@ -59,7 +59,7 @@ A closure can be of the following categories:
 
 In the above example, the outer function sets the operator. myval_addition and myval_subtraction are two closures. They process the data based on the condition sets by the outer function.
 
-#### Defined inline as a function and tag argument
+### Defined inline as a function and tag argument
 
     function operation(numeric x, numeric y, function logic)
     {
@@ -79,7 +79,7 @@ In the above example, the outer function sets the operator. myval_addition and m
 
 In the above example, the function operation has an argument logic, which is a closure. While calling operation, an inline closure is passed as an argument. This anonymous closure contains the logic to process the numbers - addition or subtraction. In this case, the logic is dynamic and passed as a closure to the function.
 
-#### You can assign a closure to a variable
+### You can assign a closure to a variable
 
     var c2 = function () {..}
 
@@ -99,19 +99,19 @@ Example
         return exampleReturned;
     }
 
-#### Calling closure with key-value pair
+### Calling closure with key-value pair
 
     var c2 = function(arg1, arg1) {..}
     c2(arg1=1, arg2=3);
 
-#### Closure can be assigned to a variable outside function
+### Closure can be assigned to a variable outside function
 
     hello = function (arg1) {
         writeOutput("Hello " & arg1);
     };
     hello("Mark");
 
-#### Calling closure with argument collection
+### Calling closure with argument collection
 
     var c2 = function(arg1, arg1) {..}
     argsColl = structNew();
@@ -119,23 +119,23 @@ Example
     argsColl.arg2 = 3;
     c2(argumentCollection = argsColl);
 
-### Closures and functions
+## Closures and functions
 
 A closure retains a copy of variables visible at the time of its creation. The global variables (like ColdFusion specific scopes) and the local variables (including declaring or outer function's local and arguments scope) are retained at the time of a closure creation. Functions are static.
 
 The following details the scope of closure based on the way they are defined:
 
-#### Scenario where closure is defined
+### Scenario where closure is defined
 
-##### In a CFC function
-
-Closure argument scope, enclosing function local scope and argument scope, this scope, variable scope, and super
-
-##### In a CFM function
+#### In a CFC function
 
 Closure argument scope, enclosing function local scope and argument scope, this scope, variable scope, and super
 
-##### As function argument
+#### In a CFM function
+
+Closure argument scope, enclosing function local scope and argument scope, this scope, variable scope, and super
+
+#### As function argument
 
 Closure argument scope, variable scope, and this scope and super scope (if defined in CFC component).
 
@@ -149,11 +149,11 @@ Scope Chain:
 
 Note: A closure cannot call any user-defined function, because the function's context is not retained, though the closure's context is retained. It gives erroneous results. For example, when a closure is cached, it can be properly called for later use, while a function cannot.
 
-### The isClosure Function
+## The isClosure Function
 
 CF10+ added the `isClosure` function which returns true if a variable is a closure, false otherwise.
 
-#### Modifications to the function isCustomFunction
+### Modifications to the function isCustomFunction
 
 Though closure is a function object, it is not considered as a custom function.
 The function now returns:
@@ -252,7 +252,7 @@ Create the CFM page that accesses the {{filterArray()}}function with a closure w
     writeDump(filteredArray);
     </cfscript>
 
-### Other Closure Examples
+## Other Closure Examples
 
 JavaScript example:
 
@@ -274,7 +274,7 @@ We have an outer function with a nested function which accepts a parameter `b`
 (2) Notice the outer function was called but the a still has its value and is used in the return function (innerFunction).
 (3) That is why the result Is 5!
 
-https://web.archive.org/web/20170508020042/taha-sh.com/blog/understanding-closures-in-javascript
+<https://web.archive.org/web/20170508020042/taha-sh.com/blog/understanding-closures-in-javascript>
 
 ## ColdFusion built in Functions that use Closures
 

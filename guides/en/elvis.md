@@ -10,7 +10,7 @@ It works like a Ternary Operator; it's a decision making operator that requires 
 
 The way it works is that the condition is evaluated. If it is true, then the true statement executed; if it is false, then the false statement executes.
 
-## Elvis Operator
+## Elvis Operator Details
 
 Before Elvis we had `isDefined()`, `structKeyExists()`, and `if` statements to do these kind of evaluations.
 

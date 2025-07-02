@@ -59,7 +59,17 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["top", "left", "bottom", "baseline", "texttop", "absbottom", "middle", "absmiddle", "right"]
+			"values": [
+				"top",
+				"left",
+				"bottom",
+				"baseline",
+				"texttop",
+				"absbottom",
+				"middle",
+				"absmiddle",
+				"right"
+			]
 		},
 		{
 			"name": "notsupported",
@@ -75,7 +85,7 @@
 			"minimum_version": "",
 			"notes": "",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-a-b/cfapplet.html",
-			"deprecated":"11"
+			"deprecated": "11"
 		},
 		"lucee": {
 			"minimum_version": "",

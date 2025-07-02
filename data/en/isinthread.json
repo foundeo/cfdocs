@@ -1,24 +1,28 @@
 {
-    "name": "isinthread",
-    "type": "function",
-    "syntax": "isinthread()",
-    "returns": "boolean",
-    "description": "Determines whether the executing code is inside a cfthread or not.",
-    "params": [],
-    "engines": {
-        "lucee": {
-            "notes": "",
-            "minimum_version": "5.0",
-            "docs": "https://docs.lucee.org/reference/functions/isinthread.html"
-        },
-        "boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/async/isinthread"}
-    },
-    "examples": [
-        {
-            "title": "isinthread Example",
-            "description": "Check if the code is running inside a cfthread.",
-            "code": "request.inthread = false;\nwriteOutput(isInThread());\nthread action=\"run\" name=\"inThread\" {\n request.inthread = isInThread();\n}\nsleep(1000);\nwriteOutput(request.inthread)",
-            "result": "falsetrue"
-        }
-    ]
+	"name": "isinthread",
+	"type": "function",
+	"syntax": "isinthread()",
+	"returns": "boolean",
+	"description": "Determines whether the executing code is inside a cfthread or not.",
+	"params": [],
+	"engines": {
+		"lucee": {
+			"notes": "",
+			"minimum_version": "5.0",
+			"docs": "https://docs.lucee.org/reference/functions/isinthread.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/async/isinthread"
+		}
+	},
+	"examples": [
+		{
+			"title": "isinthread Example",
+			"description": "Check if the code is running inside a cfthread.",
+			"code": "request.inthread = false;\nwriteOutput(isInThread());\nthread action=\"run\" name=\"inThread\" {\n request.inthread = isInThread();\n}\nsleep(1000);\nwriteOutput(request.inthread)",
+			"result": "falsetrue"
+		}
+	]
 }

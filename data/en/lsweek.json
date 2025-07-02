@@ -20,12 +20,7 @@
 			"required": false,
 			"default": "getLocale()",
 			"type": "string",
-			"values": [
-				"en",
-				"de-DE",
-				"de-CH",
-				"..."
-			]
+			"values": ["en", "de-DE", "de-CH", "..."]
 		},
 		{
 			"name": "timezone",
@@ -42,7 +37,11 @@
 			"notes": "",
 			"docs": "https://docs.lucee.org/reference/functions/lsweek.html"
 		},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/temporal/lsweek"}
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/temporal/lsweek"
+		}
 	},
 	"links": [
 		{

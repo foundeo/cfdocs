@@ -2,11 +2,11 @@
 
 The `VARIABLES` scope is the default scope in ColdFusion. i.e. if a variable is declared in .cfm and .cfc file without explicitly prefixing a scope, or without 'var' to a variable inside a function, ColdFusion assigns VARIABLES scope to that variable.
 
-### EXAMPLE
+## EXAMPLE
 
 `<cfset myVariable = "" />` is same as `<cfset variables.myVariable = "" />`
 
-### CF Script EXAMPLE
+## CF Script EXAMPLE
 
 ```cfml
 myVariable = "";
@@ -16,7 +16,7 @@ variables.myVariable = "";
 
 Similarly, variable declared in `VARIABLES` scope can be referenced without explicitly prefixing the `VARIABLES` scope.
 
-### EXAMPLE
+## EXAMPLE 2
 
 ```cfml
 <cfset myVariable = "" />
@@ -26,7 +26,7 @@ Similarly, variable declared in `VARIABLES` scope can be referenced without expl
 <cfoutput>#variables.myVariable#</cfoutput>
 ```
 
-### CF Script EXAMPLE
+## CF Script EXAMPLE 2
 
 ```cfml
 myVariable = "";
@@ -42,4 +42,4 @@ Variables declared in `VARIABLES` scope in a .cfc file are accessible to all fun
 
 Variables declared in `VARIABLES` scope in a .cfc file are **not** accessible from outside the component.
 
-Adobe `VARIABLES` scope Documentation: https://helpx.adobe.com/coldfusion/cfml-reference/reserved-words-and-variables/scope-specific-built-in-variables/variable-scope.html
+Adobe `VARIABLES` scope Documentation: <https://helpx.adobe.com/coldfusion/cfml-reference/reserved-words-and-variables/scope-specific-built-in-variables/variable-scope.html>

@@ -2,7 +2,7 @@
 	"name": "cfimage",
 	"type": "tag",
 	"syntax": "<cfimage>",
-	"related": ["imageRead", "imageWrite", "imageResize","imageScaleToFit"],
+	"related": ["imageRead", "imageWrite", "imageResize", "imageScaleToFit"],
 	"description": "Creates a ColdFusion image that can be manipulated by using image functions.\nYou can use the cfimage tag to perform common image manipulation operations as a shortcut to Image functions.\nYou can use the cfimage tag independently or in conjunction with image functions.",
 	"params": [
 		{
@@ -11,7 +11,17 @@
 			"required": false,
 			"default": "read",
 			"type": "string",
-			"values": [ "border", "captcha", "convert", "info", "read", "resize", "rotate", "write", "writeToBrowser" ]
+			"values": [
+				"border",
+				"captcha",
+				"convert",
+				"info",
+				"read",
+				"resize",
+				"rotate",
+				"write",
+				"writeToBrowser"
+			]
 		},
 		{
 			"name": "angle",
@@ -43,7 +53,7 @@
 			"required": false,
 			"default": "low",
 			"type": "string",
-			"values": [ "high", "medium", "low" ]
+			"values": ["high", "medium", "low"]
 		},
 		{
 			"name": "fontSize",
@@ -59,7 +69,7 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": [ "png", "jpg", "jpeg" ]
+			"values": ["png", "jpg", "jpeg"]
 		},
 		{
 			"name": "height",
@@ -75,7 +85,7 @@
 			"required": false,
 			"default": "false",
 			"type": "boolean",
-			"values": [ true, false ]
+			"values": [true, false]
 		},
 		{
 			"name": "name",
@@ -91,7 +101,7 @@
 			"required": false,
 			"default": "false",
 			"type": "boolean",
-			"values": [ true, false ]
+			"values": [true, false]
 		},
 		{
 			"name": "quality",
@@ -150,12 +160,30 @@
 			"values": []
 		},
 		{
-			"name":"interpolation",
-			"description":"CF10+ Used when action=resize determines the interpolation algorithm to use.",
-			"required":false,
-			"default":"highestQuality",
-			"type":"string",
-			"values": ["highestQuality","highQuality","mediumQuality","highestPerformance","highPerformance","mediumPerformance","nearest","bilinear","bicubic","bessel","blackman","hamming","hanning","hermite","lanczos","mitchell","quadratic"]
+			"name": "interpolation",
+			"description": "CF10+ Used when action=resize determines the interpolation algorithm to use.",
+			"required": false,
+			"default": "highestQuality",
+			"type": "string",
+			"values": [
+				"highestQuality",
+				"highQuality",
+				"mediumQuality",
+				"highestPerformance",
+				"highPerformance",
+				"mediumPerformance",
+				"nearest",
+				"bilinear",
+				"bicubic",
+				"bessel",
+				"blackman",
+				"hamming",
+				"hanning",
+				"hermite",
+				"lanczos",
+				"mitchell",
+				"quadratic"
+			]
 		}
 	],
 	"engines": {
@@ -182,37 +210,73 @@
 	},
 	"links": [
 		{
-			"title":"CFML Image Functions Listing",
-			"url":"http://cfdocs.org/image-functions",
-			"description":"List of image manipulation functions in CFML. Most of what you can do with the cfimage tag can also be done with image functions."
+			"title": "CFML Image Functions Listing",
+			"url": "http://cfdocs.org/image-functions",
+			"description": "List of image manipulation functions in CFML. Most of what you can do with the cfimage tag can also be done with image functions."
 		}
 	],
 	"examples": [
-		{ "title": "Border action", "description": "Add a red border of 5 pixels to an image, write the output to a variable.",
-			"code": "<cfimage action=\"border\" source=\"#sourceImage#\" size=5 color=\"red\" name=\"withborder\">", "runnable":false },
+		{
+			"title": "Border action",
+			"description": "Add a red border of 5 pixels to an image, write the output to a variable.",
+			"code": "<cfimage action=\"border\" source=\"#sourceImage#\" size=5 color=\"red\" name=\"withborder\">",
+			"runnable": false
+		},
 
-		{ "title": "Captcha action", "description": "Generate a CAPTCHA style image using medium difficulty.",
-			"code": "<cfimage action=\"captcha\" width=\"200\" height=\"50\" text=\"Captcha!\" difficulty=\"medium\" fontSize=\"18\" fonts=\"Comic Sans MS,Times New Roman\">","runnable":false },
+		{
+			"title": "Captcha action",
+			"description": "Generate a CAPTCHA style image using medium difficulty.",
+			"code": "<cfimage action=\"captcha\" width=\"200\" height=\"50\" text=\"Captcha!\" difficulty=\"medium\" fontSize=\"18\" fonts=\"Comic Sans MS,Times New Roman\">",
+			"runnable": false
+		},
 
-		{ "title": "Convert action", "description": "Convert an image to a different format (in this case PNG).",
-			"code": "<cfimage action=\"convert\" source=\"#sourceImage#\" destination=\"#expandPath( 'destination.png' )#\" overwrite=\"true\">","runnable":false },
+		{
+			"title": "Convert action",
+			"description": "Convert an image to a different format (in this case PNG).",
+			"code": "<cfimage action=\"convert\" source=\"#sourceImage#\" destination=\"#expandPath( 'destination.png' )#\" overwrite=\"true\">",
+			"runnable": false
+		},
 
-		{ "title": "Info action", "description": "Retrieve meta data from an image and stores that as a structure in a variable.",
-			"code": "<cfimage action=\"info\" source=\"http://lorempixel.com/60/50/\" structname=\"imageInfo\">\n<cfdump var=\"#imageInfo#\">","runnable":false },
+		{
+			"title": "Info action",
+			"description": "Retrieve meta data from an image and stores that as a structure in a variable.",
+			"code": "<cfimage action=\"info\" source=\"http://lorempixel.com/60/50/\" structname=\"imageInfo\">\n<cfdump var=\"#imageInfo#\">",
+			"runnable": false
+		},
 
-		{ "title": "Read action", "description": "Tag syntax for reading an image from a URL.",
-			"code": "<cfimage action=\"read\" name=\"sourceImage\" source=\"http://lorempixel.com/60/50/\">","runnable":false },
+		{
+			"title": "Read action",
+			"description": "Tag syntax for reading an image from a URL.",
+			"code": "<cfimage action=\"read\" name=\"sourceImage\" source=\"http://lorempixel.com/60/50/\">",
+			"runnable": false
+		},
 
-		{ "title": "Resize action", "description": "Example of resizing an image stored in a variable and storing the result in a variable.",
-			"code": "<cfimage action=\"resize\" source=\"#sourceImage#\" height=\"200\" width=\"200\" name=\"resized\">","runnable":false },
+		{
+			"title": "Resize action",
+			"description": "Example of resizing an image stored in a variable and storing the result in a variable.",
+			"code": "<cfimage action=\"resize\" source=\"#sourceImage#\" height=\"200\" width=\"200\" name=\"resized\">",
+			"runnable": false
+		},
 
-		{ "title": "Rotate action", "description": "Rotate an image 30 degrees clockwise.",
-			"code": "<cfimage action=\"rotate\" source=\"#sourceImage#\" destination=\"#expandPath( 'rotated.jpg' )#\" overwrite=\"true\" angle=\"30\" quality=\"1\">","runnable":false },
+		{
+			"title": "Rotate action",
+			"description": "Rotate an image 30 degrees clockwise.",
+			"code": "<cfimage action=\"rotate\" source=\"#sourceImage#\" destination=\"#expandPath( 'rotated.jpg' )#\" overwrite=\"true\" angle=\"30\" quality=\"1\">",
+			"runnable": false
+		},
 
-		{ "title": "Write action", "description": "Example of writing an image as an 80% compressed jpg image.",
-			"code": "<cfimage action=\"write\" source=\"#sourceImage#\" destination=\"#expandPath( 'newImage.jpg' )#\" overwrite=\"true\" quality=\".2\">","runnable":false },
+		{
+			"title": "Write action",
+			"description": "Example of writing an image as an 80% compressed jpg image.",
+			"code": "<cfimage action=\"write\" source=\"#sourceImage#\" destination=\"#expandPath( 'newImage.jpg' )#\" overwrite=\"true\" quality=\".2\">",
+			"runnable": false
+		},
 
-		{ "title": "WriteToBrowser action", "description": "Generates HTML to output the image in place.",
-			"code": "<cfimage action=\"writeToBrowser\" source=\"#sourceImage#\">","runnable":false }
+		{
+			"title": "WriteToBrowser action",
+			"description": "Generates HTML to output the image in place.",
+			"code": "<cfimage action=\"writeToBrowser\" source=\"#sourceImage#\">",
+			"runnable": false
+		}
 	]
 }

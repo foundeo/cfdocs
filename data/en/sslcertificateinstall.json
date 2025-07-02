@@ -6,11 +6,29 @@
 	"related": ["sslCertificateList"],
 	"description": "Installs certificates of a specific host into the JVM certificate store",
 	"params": [
-		{"name": "host", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "port", "description": "", "required": false, "default": "443", "type": "numeric", "values": []}
+		{
+			"name": "host",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "port",
+			"description": "",
+			"required": false,
+			"default": "443",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/sslcertificateinstall.html"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/sslcertificateinstall.html"
+		}
 	},
 	"links": [],
 	"examples": []

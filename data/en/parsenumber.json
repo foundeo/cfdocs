@@ -3,28 +3,53 @@
 	"type": "function",
 	"syntax": "parseNumber(number [, radix])",
 	"returns": "numeric",
-	"related": ["lsparseNumber","toNumeric","parseNumber"],
+	"related": ["lsparseNumber", "toNumeric", "parseNumber"],
 	"description": "Converts string to number in numeral system",
 	"params": [
-		{"name": "number", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "radix", "description": "", "required": false, "default": "", "type": "string", "values": ["bin","oct","dec","hex"]}
+		{
+			"name": "number",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "radix",
+			"description": "",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": ["bin", "oct", "dec", "hex"]
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/parsenumber.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/conversion/parsenumber"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/parsenumber.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/conversion/parsenumber"
+		}
 	},
 	"links": [],
-	"examples": [{
-		"title":"Convert decimal number to binary",
-		"description":"",
-		"code":"parseNumber(1010,\"bin\")",
-		"result":10,
-		"runnable":true
-	},{
-		"title":"Convert decimal number to hex",
-		"description":"",
-		"code":"parseNumber(1010,\"hex\")",
-		"result":4112,
-		"runnable":true
-	}]
+	"examples": [
+		{
+			"title": "Convert decimal number to binary",
+			"description": "",
+			"code": "parseNumber(1010,\"bin\")",
+			"result": 10,
+			"runnable": true
+		},
+		{
+			"title": "Convert decimal number to hex",
+			"description": "",
+			"code": "parseNumber(1010,\"hex\")",
+			"result": 4112,
+			"runnable": true
+		}
+	]
 }

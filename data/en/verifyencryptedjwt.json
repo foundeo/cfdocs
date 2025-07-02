@@ -1,45 +1,49 @@
 {
-  "name": "verifyEncryptedJWT",
-  "type": "function",
-  "syntax": "verifyEncryptedJWT(token, encryptOptions, config)",
-  "returns": "struct",
-  "related": [ "createEncryptedJWT" ],
-  "description": "Verify an encrypted JWT (JSON Web Encryption - JWE)",
-  "params": [
-    {
-      "name": "token",
-      "description": "An encrypted JWT",
-      "required": true,
-      "default": "",
-      "type": "string",
-      "values": []
-    },
-    {
-      "name": "encryptOptions",
-      "description": "The encryption uses the key information from the given struct",
-      "required": true,
-      "default": "",
-      "type": "struct",
-      "values": []
-    },
-    {
-      "name": "config",
-      "description": "A struct with the following values:\n- clockSkew : time in seconds to account for difference between the systems generating and processing the JWT\n- returntype : plaintext/struct",
-      "required": true,
-      "default": "",
-      "type": "struct",
-      "values": []
-    }
-  ],
-  "engines": {
-    "coldfusion": {"minimum_version":"2023", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/verifyencryptedjwt.html"}
-  },
-  "links": [
+	"name": "verifyEncryptedJWT",
+	"type": "function",
+	"syntax": "verifyEncryptedJWT(token, encryptOptions, config)",
+	"returns": "struct",
+	"related": ["createEncryptedJWT"],
+	"description": "Verify an encrypted JWT (JSON Web Encryption - JWE)",
+	"params": [
+		{
+			"name": "token",
+			"description": "An encrypted JWT",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "encryptOptions",
+			"description": "The encryption uses the key information from the given struct",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "config",
+			"description": "A struct with the following values:\n- clockSkew : time in seconds to account for difference between the systems generating and processing the JWT\n- returntype : plaintext/struct",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2023",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/verifyencryptedjwt.html"
+		}
+	},
+	"links": [
 		{
 			"title": "JSON Web Tokens in ColdFusion",
 			"description": "Overview of JSON Web Tokens (JWT), including how to use them in ColdFusion",
 			"url": "https://helpx.adobe.com/coldfusion/using/coldfusion-json-web-tokens.html"
 		}
 	],
-  "examples": []
+	"examples": []
 }

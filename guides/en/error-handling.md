@@ -16,13 +16,13 @@ void function onError(e) {
 
 ## Status codes
 
-Using an onError handler will stop the application setting a 500 status code that is normally sent with a system error. Sometimes you will still want to set these status codes, in which case you will need to use 
+Using an onError handler will stop the application setting a 500 status code that is normally sent with a system error. Sometimes you will still want to set these status codes, in which case you will need to use
 
 ```cfml
 cfheader(statuscode = 500);
 ```
 
-You can also set other status codes such as 404 not found or 400 bad request. 
+You can also set other status codes such as 404 not found or 400 bad request.
 
 ## Custom error pages
 
@@ -178,7 +178,4 @@ if (request.prc.isAjaxRequest) {
 else {
     // normal output
 }
-```    
-
-
-   
+```

@@ -1,16 +1,30 @@
 {
-	"name":"cfforward",
-	"type":"tag",
-	"syntax":"<cfforward template=\"page.cfm\">",
-	"script":"cfforward( \"page.cfm\" );",
-	"related":["cflocation"],
-	"description":"Leads the request to a different page. This tag acts like the tag cflocation except that the relocation is done directly on the server.",
+	"name": "cfforward",
+	"type": "tag",
+	"syntax": "<cfforward template=\"page.cfm\">",
+	"script": "cfforward( \"page.cfm\" );",
+	"related": ["cflocation"],
+	"description": "Leads the request to a different page. This tag acts like the tag cflocation except that the relocation is done directly on the server.",
 	"params": [
-		{"name":"template","description":"A logical path to a CFML page.","required":true,"type":"string","values":[]}
+		{
+			"name": "template",
+			"description": "A logical path to a CFML page.",
+			"required": true,
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/forward.html"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfforward"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/tags/forward.html"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/tag/cfforward"
+		}
 	},
 	"links": [],
 	"examples": [

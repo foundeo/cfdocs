@@ -6,11 +6,26 @@
 	"related": ["writeOutput"],
 	"description": "While writeOutput writes to the page-output stream, this function writes to the main response buffer",
 	"params": [
-		{"name": "string", "description": "String to be written to the output buffer", "required": true, "default": "", "type": "string", "values": []}
+		{
+			"name": "string",
+			"description": "String to be written to the output buffer",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/echo.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/echo"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/echo.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/echo"
+		}
 	},
 	"examples": [
 		{
@@ -18,14 +33,14 @@
 			"description": "Prints a simple string.",
 			"code": "echo(\"hello world\");",
 			"result": "hello world",
-			"runnable":true
+			"runnable": true
 		},
 		{
 			"title": "Complex Data Example",
 			"description": "Note that complex objects will not automatically be converted to String, as with System.out.println in Java.",
 			"code": "// Create data\r\ndata = {\r\n    \"title\"  : \"A Game of Thrones\",\r\n    \"author\" : \"George R. R. Martin\",\r\n    \"ISBN\"   : \"0-00-224584-1\"\r\n};\r\n\r\n// Print data\r\necho(data.toString());",
 			"result": "{ISBN={0-00-224584-1}, author={George R. R. Martin}, title={A Game of Thrones}}",
-			"runnable":true
+			"runnable": true
 		}
 	],
 	"links": []

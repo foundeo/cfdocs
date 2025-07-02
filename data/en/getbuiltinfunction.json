@@ -6,17 +6,28 @@
 	"related": [],
 	"description": "Returns an object, which contains the description, parameters and return-type of the given function. Throws an exception when the function do not exists.",
 	"params": [
-		{"name": "name", "description": "Name of the function.", "required": true, "default": "", "type": "string", "values": []}
+		{
+			"name": "name",
+			"description": "Name of the function.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getbuiltinfunction.html"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/getbuiltinfunction.html"
+		}
 	},
 	"examples": [
 		{
-            "title":"Show information about the StructKeyExists-function",
-            "description":"Dump the StructKeyExists-function to show information about this function.",
-            "code":"dump(getBuiltinFunction(\"StructKeyExists\"));",
-            "runnable":true
+			"title": "Show information about the StructKeyExists-function",
+			"description": "Dump the StructKeyExists-function to show information about this function.",
+			"code": "dump(getBuiltinFunction(\"StructKeyExists\"));",
+			"runnable": true
 		}
 	],
 	"links": []

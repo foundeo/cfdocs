@@ -1,68 +1,62 @@
 {
-  "name": "arrayDeleteNoCase",
-  "type": "function",
-  "syntax": "arrayDeleteNoCase(array, value)",
-  "member": "someArray.deleteNoCase(value)",
-  "returns": "boolean",
-  "related": [
-    "arrayDeleteAt",
-    "arrayDelete"
-  ],
-  "description": "Deletes the first element in an array that matches the value of `value`. The search is case insensitive. Returns `true` if the element was found and removed. The array will be resized, so that the deleted element doesn't leave a gap.",
-  "params": [
-    {
-      "name": "array",
-      "description": "",
-      "required": true,
-      "default": "",
-      "type": "array",
-      "values": []
-    },
-    {
-      "name": "value",
-      "description": "A value for which to search. Case insensitive.",
-      "required": true,
-      "default": "",
-      "type": "any",
-      "values": []
-    },
-    {
-      "name": "scope",
-      "description": "Lucee5.1+ Remove one (default) or all occurrences of the value.",
-      "required": false,
-      "default": "one",
-      "type": "string",
-      "values": [
-        "one",
-        "all"
-      ]
-    }
-  ],
-  "engines": {
-    "coldfusion": {
-      "minimum_version": "2016",
-      "notes": "",
-      "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraydeletenocase.html"
-    },
-    "lucee": {
-      "minimum_version": "5.1.0",
-      "notes": "",
-      "docs": "https://docs.lucee.org/reference/functions/arraydeletenocase.html"
-    },
-    "boxlang": {
-      "minimum_version": "1.0.0",
-      "notes": "",
-      "docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arraydeletenocase"
-    }
-  },
-  "links": [],
-  "examples": [
-    {
-      "title": "Delete an element from an array",
-      "description": "Deletes the first `apple` element from the array `arr`.",
-      "code": "arr = ['apple', 'orange', 'pear', 'Apple'];\narrayDeleteNoCase(arr, 'Apple');\n\nwriteDump(arr);",
-      "result": "['orange','pear','Apple']",
-      "runnable": true
-    }
-  ]
+	"name": "arrayDeleteNoCase",
+	"type": "function",
+	"syntax": "arrayDeleteNoCase(array, value)",
+	"member": "someArray.deleteNoCase(value)",
+	"returns": "boolean",
+	"related": ["arrayDeleteAt", "arrayDelete"],
+	"description": "Deletes the first element in an array that matches the value of `value`. The search is case insensitive. Returns `true` if the element was found and removed. The array will be resized, so that the deleted element doesn't leave a gap.",
+	"params": [
+		{
+			"name": "array",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "array",
+			"values": []
+		},
+		{
+			"name": "value",
+			"description": "A value for which to search. Case insensitive.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "scope",
+			"description": "Lucee5.1+ Remove one (default) or all occurrences of the value.",
+			"required": false,
+			"default": "one",
+			"type": "string",
+			"values": ["one", "all"]
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2016",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraydeletenocase.html"
+		},
+		"lucee": {
+			"minimum_version": "5.1.0",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/arraydeletenocase.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arraydeletenocase"
+		}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Delete an element from an array",
+			"description": "Deletes the first `apple` element from the array `arr`.",
+			"code": "arr = ['apple', 'orange', 'pear', 'Apple'];\narrayDeleteNoCase(arr, 'Apple');\n\nwriteDump(arr);",
+			"result": "['orange','pear','Apple']",
+			"runnable": true
+		}
+	]
 }

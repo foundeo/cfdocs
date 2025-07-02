@@ -5,13 +5,31 @@
 	"returns": "any",
 	"related": [],
 	"description": "Returns the size in bytes of a given object",
-	"discouraged":"This function is in an early state. Do not use in production!",
+	"discouraged": "This function is in an early state. Do not use in production!",
 	"params": [
-		{"name": "obj", "description": "", "required": true, "default": "", "type": "any", "values": []},
-		{"name": "complex", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
+		{
+			"name": "obj",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "complex",
+			"description": "",
+			"required": false,
+			"default": "",
+			"type": "boolean",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "","docs": "https://docs.lucee.org/reference/functions/sizeof.html"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/sizeof.html"
+		}
 	},
 	"examples": [],
 	"links": []

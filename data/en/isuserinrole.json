@@ -1,18 +1,41 @@
 {
-	"name":"isUserInRole",
-	"type":"function",
-	"syntax":"isUserInRole(value)",
-	"returns":"string",
-	"related":["getUserRoles","isUserInAnyRole"],
-	"description":"Determines whether an authenticated user belongs to the specified Role.",
+	"name": "isUserInRole",
+	"type": "function",
+	"syntax": "isUserInRole(value)",
+	"returns": "string",
+	"related": ["getUserRoles", "isUserInAnyRole"],
+	"description": "Determines whether an authenticated user belongs to the specified Role.",
 	"params": [
-		{"name":"value","description":"Name of a security role","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "value",
+			"description": "Name of a security role",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"6", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isuserinrole.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isuserinrole.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isuserinrole"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isuserinrole"}
+		"coldfusion": {
+			"minimum_version": "6",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isuserinrole.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isuserinrole.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/isuserinrole"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/isuserinrole"
+		}
 	},
 	"links": []
 }

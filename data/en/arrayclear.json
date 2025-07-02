@@ -1,24 +1,44 @@
 {
-	"name":"arrayClear",
-	"type":"function",
-	"syntax":"arrayClear(array)",
-	"member":"someArray.clear()",
-	"returns":"boolean",
-	"related":["ArrayDelete","ArrayDeleteAt"],
-	"description":" Removes all elements from an array.",
+	"name": "arrayClear",
+	"type": "function",
+	"syntax": "arrayClear(array)",
+	"member": "someArray.clear()",
+	"returns": "boolean",
+	"related": ["ArrayDelete", "ArrayDeleteAt"],
+	"description": "Removes all elements from an array.",
 	"params": [
-		{"name":"array","description":"An array name or variable name","required":true,"default":"","type":"array","values":[]}
-
+		{
+			"name": "array",
+			"description": "An array name or variable name",
+			"required": true,
+			"default": "",
+			"type": "array",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayclear.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arrayclear.html"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/arrayclear"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arrayclear"}
+		"coldfusion": {
+			"minimum_version": "3",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayclear.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/arrayclear.html"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/arrayclear"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arrayclear"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Clear the value of an array",
@@ -39,5 +59,4 @@
 			"result": "Yes"
 		}
 	]
-
 }

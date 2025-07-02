@@ -1,11 +1,11 @@
 {
-	"name":"structToSorted",
-	"type":"function",
-	"syntax":"structToSorted(structure, callback)\nstructToSorted(structure, sorttype, sortorder, localeSensitive)",
-	"member":"structure.toSorted(callback)",
+	"name": "structToSorted",
+	"type": "function",
+	"syntax": "structToSorted(structure, callback)\nstructToSorted(structure, sorttype, sortorder, localeSensitive)",
+	"member": "structure.toSorted(callback)",
 	"returns": "struct",
-	"related":["structSort"],
-	"description":"Converts a struct to an ordered one",
+	"related": ["structSort"],
+	"description": "Converts a struct to an ordered one",
 	"params": [
 		{
 			"name": "structure",
@@ -63,10 +63,7 @@
 			"required": false,
 			"default": "text",
 			"type": "string",
-			"values": [
-				"numeric",
-				"text"
-			]
+			"values": ["numeric", "text"]
 		},
 		{
 			"name": "sortorder",
@@ -74,10 +71,7 @@
 			"required": false,
 			"default": "asc",
 			"type": "string",
-			"values": [
-				"asc",
-				"desc"
-			]
+			"values": ["asc", "desc"]
 		},
 		{
 			"name": "localeSensitive",
@@ -94,9 +88,13 @@
 			"notes": "",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structtosorted.html"
 		},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structtosorted"}
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structtosorted"
+		}
 	},
-	"links":[],
+	"links": [],
 	"examples": [
 		{
 			"title": "structToSorted  with an inline function sorting by key value",
@@ -127,5 +125,4 @@
 			"runnable": true
 		}
 	]
-
 }

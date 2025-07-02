@@ -43,7 +43,12 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["portrait", "landscape", "reverse-portrait", "reverse-landscape"]
+			"values": [
+				"portrait",
+				"landscape",
+				"reverse-portrait",
+				"reverse-landscape"
+			]
 		},
 		{
 			"name": "pages",
@@ -67,7 +72,16 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["letter", "legal", "a4", "a5", "b4", "b5", "b4-jis", "b5-jis"]
+			"values": [
+				"letter",
+				"legal",
+				"a4",
+				"a5",
+				"b4",
+				"b5",
+				"b4-jis",
+				"b5-jis"
+			]
 		},
 		{
 			"name": "quality",
@@ -115,7 +129,13 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["duplex", "one-sided", "tumble", "two-sided-long-edge", "two-sided-short-edge"]
+			"values": [
+				"duplex",
+				"one-sided",
+				"tumble",
+				"two-sided-long-edge",
+				"two-sided-short-edge"
+			]
 		},
 		{
 			"name": "paper",
@@ -123,7 +143,16 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["na-letter", "na-legal", "iso-a4", "iso-a5", "iso-b4", "iso-b5", "jis-b4", "jis-b5"]
+			"values": [
+				"na-letter",
+				"na-legal",
+				"iso-a4",
+				"iso-a5",
+				"iso-b4",
+				"iso-b5",
+				"jis-b4",
+				"jis-b5"
+			]
 		},
 		{
 			"name": "fidelity",

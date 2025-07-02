@@ -1,92 +1,89 @@
 {
-  "name": "fileUploadAll",
-  "type": "function",
-  "syntax": "fileUploadAll(destination [,mimeType] [,onConflict] [,strict] [,continueOnError] [,errorVariable] [,allowedExtensions])",
-  "returns": "array",
-  "related": [
-    "fileUpload"
-  ],
-  "description": "Uploads all files sent to the page in an HTTP request to a directory on the server.",
-  "params": [
-    {
-      "name": "destination",
-      "description": "Path of directory in which to upload the file. If not an absolute path (starting with a drive letter and a colon, or a forward or backward slash), it is relative to the ColdFusion temporary directory returned by the function getTempDirectory. If the destination you specify does not exist, ColdFusion creates a file with the specified destination name.",
-      "required": true,
-      "default": "",
-      "type": "string",
-      "values": []
-    },
-    {
-      "name": "mimeType",
-      "description": "Limits the MIME types to accept. Comma-delimited list. For example, the following code permits JPEG and Microsoft Word file uploads:'image/jpg,application/msword' .The browser uses the filename extension to determine file type.",
-      "required": false,
-      "default": "",
-      "type": "string",
-      "values": []
-    },
-    {
-      "name": "onConflict",
-      "description": "Action to take if file has the same name of a file in the directory.",
-      "required": false,
-      "default": "error",
-      "type": "string",
-      "values": [
-        "error",
-        "skip",
-        "overwrite",
-        "makeUnique"
-      ]
-    },
-    {
-      "name": "strict",
-      "description": "Defines which method is used to determine the file type to check against the value of the `mimeType` parameter.\n`true`: The first few bytes of the uploaded file are used to determine the MIME type.\n`false`: The MIME type provided by the browser in the request payload is used.",
-      "required": false,
-      "default": "true",
-      "type": "boolean",
-      "values": []
-    },
-    {
-      "name": "continueOnError",
-      "description": "CF11+ Whether to continue uploading the remaining files when uploading one of the files fails.",
-      "required": false,
-      "default": "false",
-      "type": "boolean",
-      "values": []
-    },
-    {
-      "name": "errorVariable",
-      "description": "CF11+ The name of the variable in which the array of structs of file upload errors will be stored. \n\nThe upload failure information error structure contains the following fields:\n`REASON` - The reason for the failure\n`DETAIL` - File upload failure detail\nMESSAGE - A detailed message depicting the failure\nCLIENTFILE - Name of the file uploaded from the client's system\n`CLIENTFILEEXT` - Extension of the uploaded file on the client system (without a period)\n`CLIENTFILENAME` - Name of the uploaded file on the client system (without an extension)\n`INVALID_FILE_TYPE` - If the file mime type or extension is not in the specified accept attribute. If the reason is INVALID_FILE_TYPE, two additional keys will be available in the structure.\n --`ACCEPT`: list of mime types or file extensions given in the tag\n--`MIMETYPE`: mime type of the uploaded file\n`EMPTY_FILE` - If the uploaded file is an empty file\n`FILE_EXISTS` - If any file with the given name already exists in the destination and the overwritepolicy is error\n`DEST` - The destination where file is copied\n`FORM_FILE_NOT_FOUND` - If the uploaded file is not found on the server",
-      "required": false,
-      "default": "cffile.uploadAllErrors",
-      "type": "variableName",
-      "values": []
-    },
-    {
-      "name": "allowedExtensions",
-      "description": "CF2018+ A comma-separated list of file extensions, which will be allowed for upload. \n\nFor example, .png, .jpg, or, .jpeg. \n\nYou can use `*` (star) to allow all files, except where you specify the MIME type in the accept attribute. \n\nValues specified in the attribute allowedExtensions override the list of blocked extensions in the server or application settings.",
-      "required": false,
-      "default": "",
-      "type": "string",
-      "values": []
-    }
-  ],
-  "engines": {
-    "coldfusion": {
-      "minimum_version": "9.0.1",
-      "notes": "",
-      "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileuploadall.html"
-    },
-    "lucee": {
-      "minimum_version": "",
-      "notes": "",
-      "docs": "https://docs.lucee.org/reference/functions/fileuploadall.html"
-    },
-    "openbd": {
-      "minimum_version": "",
-      "notes": "",
-      "docs": "http://openbd.org/manual/?/function/fileuploadall"
-    },
-    "boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/web/fileuploadall"}
-  },
-  "links": []
+	"name": "fileUploadAll",
+	"type": "function",
+	"syntax": "fileUploadAll(destination [,mimeType] [,onConflict] [,strict] [,continueOnError] [,errorVariable] [,allowedExtensions])",
+	"returns": "array",
+	"related": ["fileUpload"],
+	"description": "Uploads all files sent to the page in an HTTP request to a directory on the server.",
+	"params": [
+		{
+			"name": "destination",
+			"description": "Path of directory in which to upload the file. If not an absolute path (starting with a drive letter and a colon, or a forward or backward slash), it is relative to the ColdFusion temporary directory returned by the function getTempDirectory. If the destination you specify does not exist, ColdFusion creates a file with the specified destination name.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "mimeType",
+			"description": "Limits the MIME types to accept. Comma-delimited list. For example, the following code permits JPEG and Microsoft Word file uploads:'image/jpg,application/msword' .The browser uses the filename extension to determine file type.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "onConflict",
+			"description": "Action to take if file has the same name of a file in the directory.",
+			"required": false,
+			"default": "error",
+			"type": "string",
+			"values": ["error", "skip", "overwrite", "makeUnique"]
+		},
+		{
+			"name": "strict",
+			"description": "Defines which method is used to determine the file type to check against the value of the `mimeType` parameter.\n`true`: The first few bytes of the uploaded file are used to determine the MIME type.\n`false`: The MIME type provided by the browser in the request payload is used.",
+			"required": false,
+			"default": "true",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "continueOnError",
+			"description": "CF11+ Whether to continue uploading the remaining files when uploading one of the files fails.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "errorVariable",
+			"description": "CF11+ The name of the variable in which the array of structs of file upload errors will be stored. \n\nThe upload failure information error structure contains the following fields:\n`REASON` - The reason for the failure\n`DETAIL` - File upload failure detail\nMESSAGE - A detailed message depicting the failure\nCLIENTFILE - Name of the file uploaded from the client's system\n`CLIENTFILEEXT` - Extension of the uploaded file on the client system (without a period)\n`CLIENTFILENAME` - Name of the uploaded file on the client system (without an extension)\n`INVALID_FILE_TYPE` - If the file mime type or extension is not in the specified accept attribute. If the reason is INVALID_FILE_TYPE, two additional keys will be available in the structure.\n --`ACCEPT`: list of mime types or file extensions given in the tag\n--`MIMETYPE`: mime type of the uploaded file\n`EMPTY_FILE` - If the uploaded file is an empty file\n`FILE_EXISTS` - If any file with the given name already exists in the destination and the overwritepolicy is error\n`DEST` - The destination where file is copied\n`FORM_FILE_NOT_FOUND` - If the uploaded file is not found on the server",
+			"required": false,
+			"default": "cffile.uploadAllErrors",
+			"type": "variableName",
+			"values": []
+		},
+		{
+			"name": "allowedExtensions",
+			"description": "CF2018+ A comma-separated list of file extensions, which will be allowed for upload. \n\nFor example, .png, .jpg, or, .jpeg. \n\nYou can use `*` (star) to allow all files, except where you specify the MIME type in the accept attribute. \n\nValues specified in the attribute allowedExtensions override the list of blocked extensions in the server or application settings.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "9.0.1",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/fileuploadall.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/fileuploadall.html"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/fileuploadall"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/web/fileuploadall"
+		}
+	},
+	"links": []
 }

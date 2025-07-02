@@ -1,32 +1,63 @@
 {
-	"name":"quotedValueList",
-	"type":"function",
-	"syntax":"quotedValueList(column [, delimiter])",
-	"returns":"string",
-	"related":["ValueList"],
-	"description":" Gets the values of each record returned from an executed query.\n CFML does not evaluate the arguments",
+	"name": "quotedValueList",
+	"type": "function",
+	"syntax": "quotedValueList(column [, delimiter])",
+	"returns": "string",
+	"related": ["ValueList"],
+	"description": "Gets the values of each record returned from an executed query.\n CFML does not evaluate the arguments",
 	"params": [
-		{"name":"column","description":"Name of an executed query and column. Separate query name\n and column name with a period.","required":true,"default":"","type":"query","values":[]},
-		{"name":"delimiter","description":"","required":false,"default":",","type":"string","values":[]}
+		{
+			"name": "column",
+			"description": "Name of an executed query and column. Separate query name\n and column name with a period.",
+			"required": true,
+			"default": "",
+			"type": "query",
+			"values": []
+		},
+		{
+			"name": "delimiter",
+			"description": "",
+			"required": false,
+			"default": ",",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/quotedvaluelist.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/quotedvaluelist.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/quotedvaluelist"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/quotedvaluelist"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Transpiled to `queryColumnData().map().toList( delimiter )` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumndata"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/quotedvaluelist.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/quotedvaluelist.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/quotedvaluelist"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/quotedvaluelist"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Transpiled to `queryColumnData().map().toList( delimiter )` in BoxLang",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumndata"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title":"Tag Example",
-			"description":" ",
-			"code":"<cfquery name = \"GetCourseList\" datasource = \"cfdocexamples\"> \r\n SELECT * \r\n FROM CourseList \r\n WHERE Dept_ID IN ('#GetDepartments.Dept_ID#') \r\n </cfquery> \r\n <cfoutput> \r\n #quotedValueList(GetCourseList.CorNumber,\";\")# \r\n </cfoutput> ",
-			"result":"",
-			"runnable":false
+			"title": "Tag Example",
+			"description": "",
+			"code": "<cfquery name = \"GetCourseList\" datasource = \"cfdocexamples\"> \r\n SELECT * \r\n FROM CourseList \r\n WHERE Dept_ID IN ('#GetDepartments.Dept_ID#') \r\n </cfquery> \r\n <cfoutput> \r\n #quotedValueList(GetCourseList.CorNumber,\";\")# \r\n </cfoutput> ",
+			"result": "",
+			"runnable": false
 		}
 	]
-
 }

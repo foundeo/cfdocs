@@ -1,41 +1,86 @@
 {
-	"name":"structInsert",
-	"type":"function",
-	"syntax":"structInsert(structure, key, value [, allowoverwrite])",
-	"returns":"boolean",
-	"related":[],
-	"description":" Inserts a key-value pair into a structure.",
+	"name": "structInsert",
+	"type": "function",
+	"syntax": "structInsert(structure, key, value [, allowoverwrite])",
+	"returns": "boolean",
+	"related": [],
+	"description": "Inserts a key-value pair into a structure.",
 	"params": [
-		{"name":"structure","description":"Structure to contain the new key-value pair.","required":true,"default":"","type":"struct","values":[]},
-		{"name":"key","description":"Key that contains the inserted value.","required":true,"default":"","type":"string","values":[]},
-		{"name":"value","description":"Value to add.","required":true,"default":"","type":"any","values":[]},
-		{"name":"allowoverwrite","description":"Whether to allow overwriting a key. Default: False.","required":false,"default":false,"type":"boolean","values":[true,false]}
+		{
+			"name": "structure",
+			"description": "Structure to contain the new key-value pair.",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "key",
+			"description": "Key that contains the inserted value.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "value",
+			"description": "Value to add.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "allowoverwrite",
+			"description": "Whether to allow overwriting a key. Default: False.",
+			"required": false,
+			"default": false,
+			"type": "boolean",
+			"values": [true, false]
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structinsert.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/structinsert.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structinsert"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structinsert"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structinsert"}
+		"coldfusion": {
+			"minimum_version": "4",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structinsert.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/structinsert.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/structinsert"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/structinsert"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structinsert"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Simple Example",
 			"description": "Inserts a new key/value into the structure",
 			"code": "map = {\r\n    \"hair\" : \"brown\",\r\n    \"eyes\" : \"green\"\r\n};\r\nstructInsert(map, \"lips\", \"red\");\r\nwriteOutput(structKeyList(map));",
 			"result": "eyes,lips,hair",
-			"runnable" : true
+			"runnable": true
 		},
 		{
 			"title": "Overwrite Example",
 			"description": "Throws exception when you try to add a duplicate key, when allowoverwrite parameter is false.",
 			"code": "map = {\r\n    \"hair\" : \"brown\",\r\n    \"eyes\" : \"green\"\r\n};\r\ntry {structInsert(map, \"hair\", \"red\", false);}\r\ncatch(any ex) {writeOutput(\"error!\");}",
 			"result": "error!",
-			"runnable" : true
+			"runnable": true
 		}
 	]
-
 }

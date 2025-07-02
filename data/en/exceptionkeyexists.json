@@ -1,19 +1,35 @@
 {
-	"name":"exceptionKeyExists",
-	"type":"function",
-	"syntax":"exceptionKeyExists(exception, key)",
-	"returns":"boolean",
-	"related":["structKeyExists"],
-	"description":"Determines whether a specific key is present in an exception.",
+	"name": "exceptionKeyExists",
+	"type": "function",
+	"syntax": "exceptionKeyExists(exception, key)",
+	"returns": "boolean",
+	"related": ["structKeyExists"],
+	"description": "Determines whether a specific key is present in an exception.",
 	"params": [
-		{"name":"exception","description":"Name of structure to test","required":true,"default":"","type":"struct","values":[]},
-		{"name":"key","description":"Key to test","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "exception",
+			"description": "Name of structure to test",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "key",
+			"description": "Key to test",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"2016", "notes":"This is not documented by Adobe yet", "docs":""}
+		"coldfusion": {
+			"minimum_version": "2016",
+			"notes": "This is not documented by Adobe yet",
+			"docs": ""
+		}
 	},
 	"links": [],
-	"examples": [
-		
-	]
+	"examples": []
 }

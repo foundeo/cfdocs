@@ -1,28 +1,32 @@
 {
-  "name": "generateGraphQLModels",
-  "type": "function",
-  "syntax": "generateGraphQLModels()",
-  "returns": "void",
-  "related": [ "getGraphQLClient" ],
-  "description": "This generates models for all queries, mutations, and subscriptions. Call this method every time if there is a change in the query or you've added a new query in the GraphQL file.",
-  "params": [],
-  "engines": {
-    "coldfusion": {"minimum_version":"2023", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/using/graphql-coldfusion.html"}
-  },
-  "links": [
+	"name": "generateGraphQLModels",
+	"type": "function",
+	"syntax": "generateGraphQLModels()",
+	"returns": "void",
+	"related": ["getGraphQLClient"],
+	"description": "This generates models for all queries, mutations, and subscriptions. Call this method every time if there is a change in the query or you've added a new query in the GraphQL file.",
+	"params": [],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2023",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/using/graphql-coldfusion.html"
+		}
+	},
+	"links": [
 		{
 			"title": "GraphQL in ColdFusion",
 			"description": "Overview of GraphQL, including how to use it in ColdFusion",
 			"url": "https://helpx.adobe.com/coldfusion/using/graphql-coldfusion.html"
 		}
 	],
-  "examples": [
-    {
-      "title": "Generate GraphQL models (Script syntax)",
-      "description": "Creates a GraphQL client with specified properties and calls generateGraphQLModels",
-      "code": "gqlClient = getGraphQLClient({\n    service_url: \"https:\/\/apollo-fullstack-tutorial.herokuapp.com\/graphql\",\n    root_folder: \"root\",\n    headers: { keys: \"key\", values: \"value\" }\n}); \ngenerateGraphQLModels();",
-      "runnable": false,
-      "result": ""
-    }
-  ]
+	"examples": [
+		{
+			"title": "Generate GraphQL models (Script syntax)",
+			"description": "Creates a GraphQL client with specified properties and calls generateGraphQLModels",
+			"code": "gqlClient = getGraphQLClient({\n    service_url: \"https://apollo-fullstack-tutorial.herokuapp.com/graphql\",\n    root_folder: \"root\",\n    headers: { keys: \"key\", values: \"value\" }\n}); \ngenerateGraphQLModels();",
+			"runnable": false,
+			"result": ""
+		}
+	]
 }

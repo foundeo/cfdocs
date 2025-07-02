@@ -1,32 +1,63 @@
 {
-	"name":"bitAnd",
-	"type":"function",
-	"syntax":"bitAnd(number1, number2)",
-	"returns":"numeric",
-	"related":["bitOr","bitXor"],
-	"description":"Performs a bitwise logical AND operation.",
+	"name": "bitAnd",
+	"type": "function",
+	"syntax": "bitAnd(number1, number2)",
+	"returns": "numeric",
+	"related": ["bitOr", "bitXor"],
+	"description": "Performs a bitwise logical AND operation.",
 	"params": [
-		{"name":"number1","description":"Integer","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"number2","description":"Integer","required":true,"default":"","type":"numeric","values":[]}
-
+		{
+			"name": "number1",
+			"description": "Integer",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "number2",
+			"description": "Integer",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/bitand.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/bitand.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/bitand"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/bitand"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/binary/bitand"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/bitand.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/bitand.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/bitand"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/bitand"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/binary/bitand"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title":"Calculate bitwise logical AND",
-			"description":"Uses the bitAnd function to perform the logical AND operation on each pair of the corresponding bits, by multiplying them",
-			"code":"bitAnd(5,3)",
-			"result":1,
-			"runnable":true
+			"title": "Calculate bitwise logical AND",
+			"description": "Uses the bitAnd function to perform the logical AND operation on each pair of the corresponding bits, by multiplying them",
+			"code": "bitAnd(5,3)",
+			"result": 1,
+			"runnable": true
 		}
 	]
 }

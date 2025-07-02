@@ -1,28 +1,55 @@
 {
-	"name":"fileReadLine",
-	"type":"function",
-	"syntax":"fileReadLine(file)",
-	"returns":"string",
-	"related":["fileOpen","fileClose","fileIsEOF","fileRead","fileWrite"],
-	"description":"Returns the next line from the file",
+	"name": "fileReadLine",
+	"type": "function",
+	"syntax": "fileReadLine(file)",
+	"returns": "string",
+	"related": ["fileOpen", "fileClose", "fileIsEOF", "fileRead", "fileWrite"],
+	"description": "Returns the next line from the file",
 	"params": [
-		{"name":"file","description":"file object previously opened with fileOpen()","required":true,"default":"","type":"any","values":[]}
+		{
+			"name": "file",
+			"description": "file object previously opened with fileOpen()",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filereadline.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/filereadline.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/filereadline"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/filereadline"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/io/filereadline"}
+		"coldfusion": {
+			"minimum_version": "8",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/filereadline.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/filereadline.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/filereadline"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/filereadline"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/io/filereadline"
+		}
 	},
 	"links": [],
-	"examples" : [
+	"examples": [
 		{
-			"title":"Opens a file, reads a line then closes it.",
-			"description":"",
-			"code":"// Open File\nvar fileObject = fileOpen(\"/path/to/file.txt\");\n\n// Perform Actions\ntry\n{\n\t// Read Line\n\twriteOutput(fileReadLine(fileObject));\n}\n\n// Error Handling\ncatch(any ex)\n{\n\t// Report Exception\n\twriteDump(ex);\n}\n\n// Always Close\nfinally\n{\n\t// Close File\n\tfileClose(fileObject);\n}",
-			"result":"",
-			"runnable":false
+			"title": "Opens a file, reads a line then closes it.",
+			"description": "",
+			"code": "// Open File\nvar fileObject = fileOpen(\"/path/to/file.txt\");\n\n// Perform Actions\ntry\n{\n\t// Read Line\n\twriteOutput(fileReadLine(fileObject));\n}\n\n// Error Handling\ncatch(any ex)\n{\n\t// Report Exception\n\twriteDump(ex);\n}\n\n// Always Close\nfinally\n{\n\t// Close File\n\tfileClose(fileObject);\n}",
+			"result": "",
+			"runnable": false
 		}
 	]
 }

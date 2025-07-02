@@ -80,7 +80,11 @@
 		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version": "9", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmapitem.html"}
+		"coldfusion": {
+			"minimum_version": "9",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmapitem.html"
+		}
 	},
 	"links": []
 }

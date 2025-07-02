@@ -4,21 +4,43 @@
 	"syntax": "queryColumnCount(query)",
 	"member": "query.columnCount()",
 	"returns": "numeric",
-	"related": ["queryColumnArray","queryColumnList","queryColumnExists","valueArray"],
+	"related": [
+		"queryColumnArray",
+		"queryColumnList",
+		"queryColumnExists",
+		"valueArray"
+	],
 	"description": "Returns the amount of all columns in the given query object",
 	"params": [
-		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []}
+		{
+			"name": "query",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "query",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querycolumncount.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumncount"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/querycolumncount.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumncount"
+		}
 	},
 	"links": [],
-	"examples": [{
-		"title": "Output number of query columns",
-		"description": "",
-		"code": "myQuery = queryNew(\"ID,name,age\");\nwriteOutput( queryColumnCount( myQuery ) );",
-		"result": 3,
-		"runnable": true
-	}]
+	"examples": [
+		{
+			"title": "Output number of query columns",
+			"description": "",
+			"code": "myQuery = queryNew(\"ID,name,age\");\nwriteOutput( queryColumnCount( myQuery ) );",
+			"result": 3,
+			"runnable": true
+		}
+	]
 }

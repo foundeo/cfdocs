@@ -1,25 +1,64 @@
 {
-	"name":"insert",
-	"type":"function",
-	"syntax":"insert(substring, String, position)",
-	"returns":"string",
-	"related":["RemoveChars", "Len"],
-	"description":" Inserts a substring in a string after a specified character\n position. If position = 0, prefixes the substring to the\n string.",
+	"name": "insert",
+	"type": "function",
+	"syntax": "insert(substring, String, position)",
+	"returns": "string",
+	"related": ["RemoveChars", "Len"],
+	"description": "Inserts a substring in a string after a specified character\n position. If position = 0, prefixes the substring to the\n string.",
 	"params": [
-		{"name":"substring","description":"A string to insert","required":true,"default":"","type":"string","values":[]},
-		{"name":"String","description":"A string, which to insert substring","required":true,"default":"","type":"string","values":[]},
-		{"name":"position","description":"Substring add after this position value in given string","required":true,"default":"","type":"numeric","values":[]}
+		{
+			"name": "substring",
+			"description": "A string to insert",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "String",
+			"description": "A string, which to insert substring",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "position",
+			"description": "Substring add after this position value in given string",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/insert.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/insert.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/insert"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/insert"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/insert"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/insert.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/insert.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/insert"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/insert"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/insert"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Simple insert function example",
@@ -34,5 +73,4 @@
 			"result": "New private mozilla firefox"
 		}
 	]
-
 }

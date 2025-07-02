@@ -7,33 +7,75 @@
 	"related": [],
 	"description": "This function calls a given closure/function with every element in a given struct and returns true, if all of the closure calls returns true",
 	"params": [
-		{"name": "struct", "description": "", "required": true, "default": "", "type": "struct", "values": []},
-		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "parallel", "description": "", "required": false, "default": "", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "numeric", "values": []}
+		{
+			"name": "struct",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "closure",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "function",
+			"values": []
+		},
+		{
+			"name": "parallel",
+			"description": "",
+			"required": false,
+			"default": "",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "maxThreads",
+			"description": "",
+			"required": false,
+			"default": "20",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"2018.0.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structevery.html"},
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/structevery.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structevery"}
+		"coldfusion": {
+			"minimum_version": "2018.0.5",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structevery.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/structevery.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structevery"
+		}
 	},
 	"examples": [
 		{
-			"title":"Simple structEvery example",
-			"description":"Here we have simple example about structevery function. It is supported only in Lucee.",
-			"code":"var struct = {\"Name\":\"Dhar\",\"Age\":\"20\",\"Country\":\"US\"};\r\nstructevery(struct,function(key,value){\r\n\twriteOutput(key & \":\" & value & \" \");\r\n\treturn true;\r\n});",
-			"result":"Country:US Name:Dhar Age:20"
+			"title": "Simple structEvery example",
+			"description": "Here we have simple example about structevery function. It is supported only in Lucee.",
+			"code": "var struct = {\"Name\":\"Dhar\",\"Age\":\"20\",\"Country\":\"US\"};\r\nstructevery(struct,function(key,value){\r\n\twriteOutput(key & \":\" & value & \" \");\r\n\treturn true;\r\n});",
+			"result": "Country:US Name:Dhar Age:20"
 		},
 		{
-			"title":"Simple structEvery member function example",
-			"description":"Here we have simple example about structevery member function. It is supported only in Lucee.",
-			"code":"var struct = {\"Name\":\"Dhar\",\"Age\":\"20\",\"Country\":\"US\"};\r\nstruct.every(function(key,value){\r\n\twriteOutput(key & \":\" & value & \" \");\r\n\treturn false;\r\n});",
-			"result":"Country:US"
+			"title": "Simple structEvery member function example",
+			"description": "Here we have simple example about structevery member function. It is supported only in Lucee.",
+			"code": "var struct = {\"Name\":\"Dhar\",\"Age\":\"20\",\"Country\":\"US\"};\r\nstruct.every(function(key,value){\r\n\twriteOutput(key & \":\" & value & \" \");\r\n\treturn false;\r\n});",
+			"result": "Country:US"
 		}
 	],
-	"links": [{
-		"title":"Map, Reduce and other Higher Order Functions",
-		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
-		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
-	}]
+	"links": [
+		{
+			"title": "Map, Reduce and other Higher Order Functions",
+			"description": "A Primer for map, reduce, filter, and Higher Order Functions in general.",
+			"url": "http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+		}
+	]
 }

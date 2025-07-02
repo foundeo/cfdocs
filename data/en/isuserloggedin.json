@@ -1,16 +1,39 @@
 {
-	"name":"isUserLoggedIn",
-	"type":"function",
-	"syntax":"isUserLoggedIn()",
-	"returns":"boolean",
-	"related":["cflogin","cfloginuser","getAuthUser","getUserRoles","isUserInAnyRole","isUserInRole"],
-	"description":"Determines whether a user is logged in.",
+	"name": "isUserLoggedIn",
+	"type": "function",
+	"syntax": "isUserLoggedIn()",
+	"returns": "boolean",
+	"related": [
+		"cflogin",
+		"cfloginuser",
+		"getAuthUser",
+		"getUserRoles",
+		"isUserInAnyRole",
+		"isUserInRole"
+	],
+	"description": "Determines whether a user is logged in.",
 	"params": [],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isuserloggedin.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isuserloggedin.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isuserloggedin"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isuserloggedin"}
+		"coldfusion": {
+			"minimum_version": "8",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isuserloggedin.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isuserloggedin.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/isuserloggedin"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/isuserloggedin"
+		}
 	},
 	"links": []
 }

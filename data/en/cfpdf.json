@@ -2,7 +2,7 @@
 	"name": "cfpdf",
 	"type": "tag",
 	"syntax": "<cfpdf>",
-	"related": ["cfpdfparam","cfpdfform"],
+	"related": ["cfpdfparam", "cfpdfform"],
 	"description": "Manipulates existing PDF documents. The following list describes some of the\n tasks you can perform with the cfpdf tag:\n Merge several PDF documents into one PDF document.\n Extract pages from multiple PDF documents and generate a new PDF document.\n Linearize multipage PDF documents for faster display.\n Encrypt or decrypt PDF files for security.",
 	"params": [
 		{
@@ -11,7 +11,36 @@
 			"required": true,
 			"default": "",
 			"type": "string",
-			"values": ["archive", "addAttachments", "addStamp", "addWatermark", "deletePages", "export", "getInfo", "import", "merge", "processddx", "protect", "read", "removeWatermark", "sanitize", "setInfo", "sign", "thumbnail", "write", "optimize", "extracttext", "extractimage", "addheader", "addfooter", "removeheaderfooter", "transform", "unsign", "validatesignature", "readsignaturefields"]
+			"values": [
+				"archive",
+				"addAttachments",
+				"addStamp",
+				"addWatermark",
+				"deletePages",
+				"export",
+				"getInfo",
+				"import",
+				"merge",
+				"processddx",
+				"protect",
+				"read",
+				"removeWatermark",
+				"sanitize",
+				"setInfo",
+				"sign",
+				"thumbnail",
+				"write",
+				"optimize",
+				"extracttext",
+				"extractimage",
+				"addheader",
+				"addfooter",
+				"removeheaderfooter",
+				"transform",
+				"unsign",
+				"validatesignature",
+				"readsignaturefields"
+			]
 		},
 		{
 			"name": "ascending",
@@ -163,7 +192,19 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["all", "allowassembly", "allowcopy", "AllowDegradedPrinting", "AllowFillIn", "AllowModifyAnnotations", "AllowModifyContents", "AllowPrinting", "AllowScreenReaders", "AllowSecure", "none"]
+			"values": [
+				"all",
+				"allowassembly",
+				"allowcopy",
+				"AllowDegradedPrinting",
+				"AllowFillIn",
+				"AllowModifyAnnotations",
+				"AllowModifyContents",
+				"AllowPrinting",
+				"AllowScreenReaders",
+				"AllowSecure",
+				"none"
+			]
 		},
 		{
 			"name": "position",
@@ -227,7 +268,7 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["high","low"]
+			"values": ["high", "low"]
 		},
 		{
 			"name": "stoponerror",
@@ -515,7 +556,12 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["_PAGELABEL", "_LASTPAGELABEL", "_PAGENUMBER", "_LASTPAGENUMBER"]
+			"values": [
+				"_PAGELABEL",
+				"_LASTPAGELABEL",
+				"_PAGENUMBER",
+				"_LASTPAGENUMBER"
+			]
 		},
 		{
 			"name": "useStructure",
@@ -565,7 +611,7 @@
 			"title": "Script Syntax - Create Thumbnail",
 			"description": "Creates a JPG thumbnail from a PDF file",
 			"code": "cfpdf(\r\n    action=\"thumbnail\",\r\n    source=expandPath( \"./myFile.pdf\" ),\r\n    destination=expandPath( \"./thumbnails/\"),\r\n    resolution=\"high\",\r\n    overwrite=\"yes\",\r\n    pages=\"1\",\r\n    scale=\"75\",\r\n    transparent=\"no\"\r\n);",
-			"runnable":false,
+			"runnable": false,
 			"result": "Creates a file called myFile_page_1.jpg in the /thumbnails/ directory"
 		},
 		{

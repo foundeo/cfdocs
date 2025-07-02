@@ -6,18 +6,35 @@
 	"related": ["entityNameArray"],
 	"description": "Returns a list of all loaded entities",
 	"params": [
-		{"name": "delimiter", "description": "", "required": false, "default": "", "type": "string", "values": []}
+		{
+			"name": "delimiter",
+			"description": "",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/entitynamelist.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://bxorm.ortusbooks.com/usage/builtins#entitynamelist"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/entitynamelist.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://bxorm.ortusbooks.com/usage/builtins#entitynamelist"
+		}
 	},
-	"examples": [{
-		"title":"Outputs a list of entities currently loaded",
-		"description":"",
-		"code":"entityNameList()",
-		"result":"",
-		"runnable":true
-	}],
+	"examples": [
+		{
+			"title": "Outputs a list of entities currently loaded",
+			"description": "",
+			"code": "entityNameList()",
+			"result": "",
+			"runnable": true
+		}
+	],
 	"links": []
 }

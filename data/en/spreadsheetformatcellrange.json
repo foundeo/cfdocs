@@ -1,24 +1,73 @@
 {
-	"name":"spreadsheetFormatCellRange",
-	"type":"function",
-	"syntax":"spreadsheetFormatCellRange (spreadsheetObj, format, startRow, startColumn, endRow, endColumn)",
-	"returns":"void",
-	"related":["SpreadsheetFormatCell", "SpreadsheetFormatColumns", "SpreadsheetFormatRow", "SpreadsheetFormatRows"],
-	"description":"Formats the cells within the given range.",
+	"name": "spreadsheetFormatCellRange",
+	"type": "function",
+	"syntax": "spreadsheetFormatCellRange (spreadsheetObj, format, startRow, startColumn, endRow, endColumn)",
+	"returns": "void",
+	"related": [
+		"SpreadsheetFormatCell",
+		"SpreadsheetFormatColumns",
+		"SpreadsheetFormatRow",
+		"SpreadsheetFormatRows"
+	],
+	"description": "Formats the cells within the given range.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The Excel spreadsheet object for which you want to format the cells.","required":true,"default":"","type":"any","values":[]},
-        {"name":"format","description":"A structure that contains format information.","required":true,"default":"","type":"struct","values":[]},
-        {"name":"startRow","description":"The number of the first row to format.","required":true,"default":"","type":"numeric","values":[]},
-        {"name":"startColumn","description":"The number of the first column to format.","required":true,"default":"","type":"numeric","values":[]},
-        {"name":"endRow","description":"The number of the last row to format.","required":true,"default":"","type":"numeric","values":[]},
-        {"name":"endColumn","description":"The number of the last column to format.","required":true,"default":"","type":"numeric","values":[]}
+		{
+			"name": "spreadsheetObj",
+			"description": "The Excel spreadsheet object for which you want to format the cells.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "format",
+			"description": "A structure that contains format information.",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "startRow",
+			"description": "The number of the first row to format.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "startColumn",
+			"description": "The number of the first column to format.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "endRow",
+			"description": "The number of the last row to format.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "endColumn",
+			"description": "The number of the last column to format.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"9.0.1", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetformatcellrange.html"}
+		"coldfusion": {
+			"minimum_version": "9.0.1",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetformatcellrange.html"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Tag Syntax",
@@ -27,5 +76,4 @@
 			"result": ""
 		}
 	]
-
 }

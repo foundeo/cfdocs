@@ -1,21 +1,36 @@
 {
-	"name":"releaseCOMObject",
-	"type":"function",
-	"syntax":"releaseCOMObject(objectName)",
-	"returns":"void",
-	"related":["CreateObject", "cfobject"],
-	"description":" Releases a COM Object and frees up resources that it used.",
+	"name": "releaseCOMObject",
+	"type": "function",
+	"syntax": "releaseCOMObject(objectName)",
+	"returns": "void",
+	"related": ["CreateObject", "cfobject"],
+	"description": "Releases a COM Object and frees up resources that it used.",
 	"params": [
-		{"name":"objectName","description":"","required":true,"default":"","type":"any","values":[]}
-
+		{
+			"name": "objectName",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/releasecomobject.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/releasecomobject.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/releasecomobject"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/releasecomobject.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/releasecomobject.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/releasecomobject"
+		}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

@@ -1,36 +1,70 @@
 {
-	"name":"isXML",
-	"type":"function",
-	"syntax":"isXML(value)",
-	"returns":"boolean",
-	"related":["isJSON"],
-	"description":"Determines whether a string is well-formed XML text.",
+	"name": "isXML",
+	"type": "function",
+	"syntax": "isXML(value)",
+	"returns": "boolean",
+	"related": ["isJSON"],
+	"description": "Determines whether a string is well-formed XML text.",
 	"params": [
-		{"name":"value","description":"A string containing the XML document text.","required":true,"default":"","type":"string","values":[]},
-		{"name":"parserOptions","description":"XML parsing options. No documentation available on usage.","required":false,"default":"","type":"struct","values":[]}
+		{
+			"name": "value",
+			"description": "A string containing the XML document text.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "parserOptions",
+			"description": "XML parsing options. No documentation available on usage.",
+			"required": false,
+			"default": "",
+			"type": "struct",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isxml.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isxml.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isxml"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isxml"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isxml"}
+		"coldfusion": {
+			"minimum_version": "7",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isxml.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isxml.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/isxml"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/isxml"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isxml"
+		}
 	},
 	"links": [],
 	"examples": [
 		{
-			"title":"isXML Example",
-			"description":"Returns true if the string is well-formed XML.",
-			"code":"example = '<coldfusionengines>\n <engine>\n  <name>Adobe ColdFusion</name>\n </engine>\n <engine>\n  <name>Lucee</name>\n </engine>\n <engine>\n  <name>Railo</name>\n </engine>\n <engine>\n  <name>Open BlueDragon</name>\n </engine>\n</coldfusionengines>';\nwriteOutput( isXml( example ) );",
-			"result":true,
-			"runnable":true
+			"title": "isXML Example",
+			"description": "Returns true if the string is well-formed XML.",
+			"code": "example = '<coldfusionengines>\n <engine>\n  <name>Adobe ColdFusion</name>\n </engine>\n <engine>\n  <name>Lucee</name>\n </engine>\n <engine>\n  <name>Railo</name>\n </engine>\n <engine>\n  <name>Open BlueDragon</name>\n </engine>\n</coldfusionengines>';\nwriteOutput( isXml( example ) );",
+			"result": true,
+			"runnable": true
 		},
 		{
-			"title":"isXML Example for Invalid XML",
-			"description":"Returns false if the string is not well-formed XML.",
-			"code":"example1 = '<coldfusionengines>\n <engine>\n  <name>Adobe ColdFusion</name>\n </engine>\n <engine>\n  <name>Lucee</name>';\nwriteOutput( isXml( example1 ) );",
-			"result":false,
-			"runnable":true
+			"title": "isXML Example for Invalid XML",
+			"description": "Returns false if the string is not well-formed XML.",
+			"code": "example1 = '<coldfusionengines>\n <engine>\n  <name>Adobe ColdFusion</name>\n </engine>\n <engine>\n  <name>Lucee</name>';\nwriteOutput( isXml( example1 ) );",
+			"result": false,
+			"runnable": true
 		}
 	]
 }

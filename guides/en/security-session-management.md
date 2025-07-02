@@ -6,7 +6,7 @@ This guide **does not** cover using much of the built-in session management func
 
 Once your user has [authenticated](/security-authentication) with your system securely, you will need to ensure that the session management lifecycle is secure and concise. We begin to do that by understanding some of the basic concepts of session management. Note that some of this information is repetitive if you've been following along with all our security guides, but is presented here again for a more complete picture of session management if you've **not** already read our other guides.
 
-### Session Cookies
+## Session Cookies
 
 CFML can provide the *cftoken* session cookie management features out of the box and, by default, these are usually turned on in older CFML engines, with CF10+ allowing for greater control over how those session cookies are managed. You can, and should, however utilize your own session cookie to manage sessions to achieve greater control over the session as well as eliminate a common attack vector against CFML - anyone who has used CFML understands that the *cftoken* cookie is used for session management, and thus understands this is the attack vector to exploit. If you instead utilize your own session cookie, it can help avoid script kiddie utilities designed to attack the specific *cftoken* cookie provided by CFML. We'll start by defining the name of our session cookie within the *application* scope of your *Application.cfc*, as follows:
 
@@ -21,7 +21,7 @@ Which might confuse the hacker into believing that this is a Google Analytics co
 
     __#hash( 'some_cookie_name', 'SHA-256', 'UTF-8', 25 )#
 
-### Session timeout
+## Session timeout
 
 If a user is idle for a period of time, then we want to invalidate that user's session and force them to login again to help ensure our session management remains secure. This is a best practice you should not avoid... else you open yourself up to another vector of attack where a MITM attacker could hijack a user's session and begin attacking your application as an authenticated user. For this reason, we will set a timeout value in the *application* scope of your *Application.cfc*, as follows:
 
@@ -30,13 +30,13 @@ If a user is idle for a period of time, then we want to invalidate that user's s
 
 Depending on the application, you will want to adjust the timeout value to a number of minutes equivalent to the longest process within your application. For example, if you have long forms in your application that could take the user 20 minutes to fill out completely before posting the form, then you will want to allow for that time between requests to avoid the user submitting the form and being immediately timed out for inactivity.
 
-### Session storage
+## Session storage
 
 In our examples here we will be using the cache functions of CFML to store a session object (bean) for each logged in user to our system. This is arbitrary and you could just as easily use a database, in-memory database, virtual file system (e.g. RAM://), or flat file storage with XML or JSON - or some combination thereof, for example.
 
 We have found, through trial and error, that using the cache functions is fast and allows us to use distributed caching in large enterprise applications without sticky sessions to maintain the session across clusters, and is our preferred way of storing session data.
 
-### Session management in onRequestStart()
+## Session management in onRequestStart()
 
 We'll put our session management code in the *onRequestStart()* method of our Application.cfc so that we can capture and manage the session for each request made of our application. If you're using an MVC framework, like fw/1 or ColdBox, for example, you can use the equivalent onRequestStart() method to inject a controller or interceptor to handle session management for you, otherwise you can build your session management directly into the onRequestStart() method. For our example here we will be using a *security.cfc* controller in fw/1 to manage the sessions, coupled with a *SecurityService.cfc* service.
 

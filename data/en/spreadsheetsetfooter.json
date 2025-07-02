@@ -1,23 +1,55 @@
 {
-	"name":"spreadsheetSetFooter",
-	"type":"function",
-	"syntax":"spreadsheetSetFooter(spreadsheetObj, leftFooter, centerFooter, rightFooter)",
-	"returns":"void",
-	"related":[],
-	"description":" Adds a footer to the specified worksheet.",
+	"name": "spreadsheetSetFooter",
+	"type": "function",
+	"syntax": "spreadsheetSetFooter(spreadsheetObj, leftFooter, centerFooter, rightFooter)",
+	"returns": "void",
+	"related": [],
+	"description": "Adds a footer to the specified worksheet.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The Excel spreadsheet object to which to add the footer.","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"leftFooter","description":"Adds the footer in the left side of the worksheet.","required":true,"default":"","type":"string","values":[]},
-		{"name":"centerFooter","description":"Adds the footer in the center of the worksheet.","required":true,"default":"","type":"string","values":[]},
-		{"name":"rightFooter","description":"Adds the footer in the right side of the worksheet.","required":true,"default":"","type":"string","values":[]}
-
+		{
+			"name": "spreadsheetObj",
+			"description": "The Excel spreadsheet object to which to add the footer.",
+			"required": true,
+			"default": "",
+			"type": "variableName",
+			"values": []
+		},
+		{
+			"name": "leftFooter",
+			"description": "Adds the footer in the left side of the worksheet.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "centerFooter",
+			"description": "Adds the footer in the center of the worksheet.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "rightFooter",
+			"description": "Adds the footer in the right side of the worksheet.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetsetfooter.html"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetsetfooter"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetsetfooter.html"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/spreadsheetsetfooter"
+		}
 	},
-	"links": [
-
-	]
-
+	"links": []
 }

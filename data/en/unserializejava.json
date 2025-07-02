@@ -6,10 +6,21 @@
 	"related": [],
 	"description": "literal definition of a serialized Java Object by function serialize",
 	"params": [
-		{"name": "string", "description": "", "required": true, "default": "", "type": "string", "values": []}
+		{
+			"name": "string",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/unserializejava.html"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/unserializejava.html"
+		}
 	},
 	"examples": [],
 	"links": []

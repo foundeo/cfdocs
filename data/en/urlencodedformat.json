@@ -1,25 +1,69 @@
 {
-	"name":"urlEncodedFormat",
-	"type":"function",
-	"syntax":"urlEncodedFormat(String [, charset])",
-	"returns":"string",
-	"related":["encodeForURL"],
-	"description":"Generates a URL-encoded string. For example, it replaces spaces\n with %20, and non-alphanumeric characters with equivalent\n hexadecimal escape sequences. Passes arbitrary strings within a\n URL.",
-	"discouraged":"The continued use of this function is discouraged. It is recommended that you use EncodeForURL for all new applications.",
+	"name": "urlEncodedFormat",
+	"type": "function",
+	"syntax": "urlEncodedFormat(String [, charset])",
+	"returns": "string",
+	"related": ["encodeForURL"],
+	"description": "Generates a URL-encoded string. For example, it replaces spaces\n with %20, and non-alphanumeric characters with equivalent\n hexadecimal escape sequences. Passes arbitrary strings within a\n URL.",
+	"discouraged": "The continued use of this function is discouraged. It is recommended that you use EncodeForURL for all new applications.",
 	"params": [
-		{"name":"String","description":"A string or a variable that contains one","required":true,"default":"","type":"string","values":[]},
-		{"name":"charset","description":"The character encoding in which the string is encoded.","required":false,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
+		{
+			"name": "String",
+			"description": "A string or a variable that contains one",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "charset",
+			"description": "The character encoding in which the string is encoded.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": [
+				"utf-8",
+				"iso-8859-1",
+				"windows-1252",
+				"us-ascii",
+				"shift_jis",
+				"iso-2022-jp",
+				"euc-jp",
+				"euc-kr",
+				"big5",
+				"euc-cn",
+				"utf-16"
+			]
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/urlencodedformat.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/urlencodedformat.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/urlencodedformat"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/urlencodedformat"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/urlencodedformat"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/urlencodedformat.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/urlencodedformat.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/urlencodedformat"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/urlencodedformat"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/urlencodedformat"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Simple urlEncodedFormat Example",
@@ -28,5 +72,4 @@
 			"result": "This%20is%20string%20with%20special%20character%2E"
 		}
 	]
-
 }

@@ -1,33 +1,63 @@
 {
-	"name":"rJustify",
-	"type":"function",
-	"syntax":"rJustify(String, length)",
-	"returns":"string",
-	"related":["lJustify","cJustify"],
-	"description":" Right justifies characters of a string.",
+	"name": "rJustify",
+	"type": "function",
+	"syntax": "rJustify(String, length)",
+	"returns": "string",
+	"related": ["lJustify", "cJustify"],
+	"description": "Right justifies characters of a string.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"length","description":"","required":true,"default":"","type":"numeric","values":[]}
-
+		{
+			"name": "String",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "length",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/rjustify.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/rjustify.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/rjustify"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/rjustify"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/rjustify"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/rjustify.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/rjustify.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/rjustify"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/rjustify"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/rjustify"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title":"Tag Example",
-			"description":" ",
-			"code":"<cfset length=10>\r\n<cfset result = RJustify(\"abc\",length)>\r\n<cfoutput>\r\n    <pre>~#result#~</pre>\r\n</cfoutput>",
-			"result":"",
-			"runnable":true
+			"title": "Tag Example",
+			"description": "",
+			"code": "<cfset length=10>\r\n<cfset result = RJustify(\"abc\",length)>\r\n<cfoutput>\r\n    <pre>~#result#~</pre>\r\n</cfoutput>",
+			"result": "",
+			"runnable": true
 		}
 	]
-
 }

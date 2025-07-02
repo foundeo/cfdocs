@@ -1,66 +1,107 @@
 {
 	"name": "queryReduce",
 	"type": "function",
-    "syntax": "queryReduce(query, function(result, row [, currentRow] [, query]){} [, initialVal])",
+	"syntax": "queryReduce(query, function(result, row [, currentRow] [, query]){} [, initialVal])",
 	"script": "query.reduce(function(result, [, currentRow] [, query]){} [, initialVal])",
 	"returns": "any",
 	"related": ["querymap", "queryfilter"],
 	"description": "Reduces query columns just like in array or collection",
 	"params": [
-		{"name": "query", "description": "query to process entries from", "required": true, "default": "", "type": "query", "values": []},
-		{"name":"callback","description":"Closure or a function reference that will be called for each of the iteration.",
+		{
+			"name": "query",
+			"description": "query to process entries from",
+			"required": true,
+			"default": "",
+			"type": "query",
+			"values": []
+		},
+		{
+			"name": "callback",
+			"description": "Closure or a function reference that will be called for each of the iteration.",
 			"callback_params": [
-			{
-				"values": [],
-				"default": "",
-				"description": "The result of the reduce operation after the previous iteration",
-				"name": "result",
-				"type": "any",
-				"required": false
-			},{
-				"values": [],
-				"default": "",
-				"description": "A struct with all of the columns for the current iteration",
-				"name": "row",
-				"type": "struct",
-				"required": false
-			},{
-				"values": [],
-				"default": "",
-				"description": "The value for the current iteration",
-				"name": "currentRow",
-				"type": "numeric",
-				"required": false
-			},{
-				"values": [],
-				"default": "",
-				"description": "A reference of the original query",
-				"name": "query",
-				"type": "query",
-				"required": false
-			}],"type":"any","required":true,"values":[],"default":""},
-		{"name": "initialValue", "description": "initial value passed as part of the first closure call", "required": false, "default": "", "type": "any", "values": []}
+				{
+					"values": [],
+					"default": "",
+					"description": "The result of the reduce operation after the previous iteration",
+					"name": "result",
+					"type": "any",
+					"required": false
+				},
+				{
+					"values": [],
+					"default": "",
+					"description": "A struct with all of the columns for the current iteration",
+					"name": "row",
+					"type": "struct",
+					"required": false
+				},
+				{
+					"values": [],
+					"default": "",
+					"description": "The value for the current iteration",
+					"name": "currentRow",
+					"type": "numeric",
+					"required": false
+				},
+				{
+					"values": [],
+					"default": "",
+					"description": "A reference of the original query",
+					"name": "query",
+					"type": "query",
+					"required": false
+				}
+			],
+			"type": "any",
+			"required": true,
+			"values": [],
+			"default": ""
+		},
+		{
+			"name": "initialValue",
+			"description": "initial value passed as part of the first closure call",
+			"required": false,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/queryreduce.html"},
-		"coldfusion": {"minimum_version": "2016", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryreduce.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/queryreduce"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/queryreduce.html"
+		},
+		"coldfusion": {
+			"minimum_version": "2016",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryreduce.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/queryreduce"
+		}
 	},
-	"examples": [{
-		"title":"Reduce column to total",
-		"description":"Sum one query column",
-		"code":"fruits = queryNew(\"fruit,amount\",\r\n    \t\"varchar,integer\", [{\r\n    \t\t\"fruit\": \"apples\",\r\n    \t\t\"amount\": 15\r\n    \t}, {\r\n    \t\t\"fruit\": \"pineapples\",\r\n    \t\t\"amount\": 3\r\n    \t}, {\r\n    \t\t\"fruit\": \"strawberries\",\r\n    \t\t\"amount\": 32\r\n    \t}]\r\n    );\r\n    total_fruits = queryReduce(fruits,function(a,b) {\r\n        return a + b.amount;\r\n    },0);\r\n    \r\n    writeOutput(total_fruits);",
-		"result":"50",
-		"runnable":true
-	}],
-	"links":[{
-		"title":"Map, Reduce and other Higher Order Functions",
-		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
-		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
-	},
-	{
-		"title": "ColdFusion 2016: query iteration functions",
-		"description": "A look at the higher-order functions that queries have",
-		"url":"http://blog.adamcameron.me/2016/02/coldfusion-2016-query-iteration.html"
-	}]
+	"examples": [
+		{
+			"title": "Reduce column to total",
+			"description": "Sum one query column",
+			"code": "fruits = queryNew(\"fruit,amount\",\r\n    \t\"varchar,integer\", [{\r\n    \t\t\"fruit\": \"apples\",\r\n    \t\t\"amount\": 15\r\n    \t}, {\r\n    \t\t\"fruit\": \"pineapples\",\r\n    \t\t\"amount\": 3\r\n    \t}, {\r\n    \t\t\"fruit\": \"strawberries\",\r\n    \t\t\"amount\": 32\r\n    \t}]\r\n    );\r\n    total_fruits = queryReduce(fruits,function(a,b) {\r\n        return a + b.amount;\r\n    },0);\r\n    \r\n    writeOutput(total_fruits);",
+			"result": "50",
+			"runnable": true
+		}
+	],
+	"links": [
+		{
+			"title": "Map, Reduce and other Higher Order Functions",
+			"description": "A Primer for map, reduce, filter, and Higher Order Functions in general.",
+			"url": "http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+		},
+		{
+			"title": "ColdFusion 2016: query iteration functions",
+			"description": "A look at the higher-order functions that queries have",
+			"url": "http://blog.adamcameron.me/2016/02/coldfusion-2016-query-iteration.html"
+		}
+	]
 }

@@ -1,27 +1,60 @@
 {
-	"name":"xmlNew",
-	"type":"function",
-	"syntax":"xmlNew([casesensitive])",
-	"returns":"xml",
-	"related":["xmlParse","serializeXML","deserializeXML","isXMLDoc","encodeForXML"],
-	"description":"Creates an XML document object.",
+	"name": "xmlNew",
+	"type": "function",
+	"syntax": "xmlNew([casesensitive])",
+	"returns": "xml",
+	"related": [
+		"xmlParse",
+		"serializeXML",
+		"deserializeXML",
+		"isXMLDoc",
+		"encodeForXML"
+	],
+	"description": "Creates an XML document object.",
 	"params": [
-		{"name":"casesensitive","description":"Maintains the case of document elements and attributes.\n Default: false","required":false,"default":false,"type":"boolean","values":[true,false]}
+		{
+			"name": "casesensitive",
+			"description": "Maintains the case of document elements and attributes.\n Default: false",
+			"required": false,
+			"default": false,
+			"type": "boolean",
+			"values": [true, false]
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlnew.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/xmlnew.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/xmlnew"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/xmlnew"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/xml/xmlnew"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlnew.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/xmlnew.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/xmlnew"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/xmlnew"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/xml/xmlnew"
+		}
 	},
 	"links": [],
 	"examples": [
 		{
-			"title":"The simple xmlnew example",
-			"description":"Here, We created myXml by using xmlNew function. Then created root node(sampleXml) for myXml and set the rootnode text",
-			"code":"<cfset myXml = xmlNew()>\r\n<cfset myXml.XmlRoot = xmlelemnew(myXml,\"sampleXml\")>\r\n<cfset myXml.sampleXml.XmlText =\"This is root node text\">\r\n<cfdump var=\"#myXml#\">",
-			"result":""
+			"title": "The simple xmlnew example",
+			"description": "Here, We created myXml by using xmlNew function. Then created root node(sampleXml) for myXml and set the rootnode text",
+			"code": "<cfset myXml = xmlNew()>\r\n<cfset myXml.XmlRoot = xmlelemnew(myXml,\"sampleXml\")>\r\n<cfset myXml.sampleXml.XmlText =\"This is root node text\">\r\n<cfdump var=\"#myXml#\">",
+			"result": ""
 		}
 	]
 }

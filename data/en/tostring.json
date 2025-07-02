@@ -1,21 +1,67 @@
 {
-	"name":"toString",
-	"type":"function",
-	"syntax":"toString(any_value [, encoding])",
-	"member":"any_value.toString()",
-	"returns":"string",
-	"related":["Val","NumberFormat"],
-	"description":" Converts a value to a string.\nLucee parses numbers with one decimal place.\ncomplex object types can only be used in combination with the member syntax.",
+	"name": "toString",
+	"type": "function",
+	"syntax": "toString(any_value [, encoding])",
+	"member": "any_value.toString()",
+	"returns": "string",
+	"related": ["Val", "NumberFormat"],
+	"description": "Converts a value to a string.\nLucee parses numbers with one decimal place.\ncomplex object types can only be used in combination with the member syntax.",
 	"params": [
-		{"name":"any_value","description":"Value to convert to a string","required":true,"default":"","type":"any","values":[]},
-		{"name":"encoding","description":"The character encoding (character set) of the string.\n\nThe default value is the encoding of the page on which the function is called.","required":false,"default":"","type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
+		{
+			"name": "any_value",
+			"description": "Value to convert to a string",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "encoding",
+			"description": "The character encoding (character set) of the string.\n\nThe default value is the encoding of the page on which the function is called.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": [
+				"utf-8",
+				"iso-8859-1",
+				"windows-1252",
+				"us-ascii",
+				"shift_jis",
+				"iso-2022-jp",
+				"euc-jp",
+				"euc-kr",
+				"big5",
+				"euc-cn",
+				"utf-16"
+			]
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/tostring.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/tostring.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/tostring"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/tostring"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/conversion/tostring"}
+		"coldfusion": {
+			"minimum_version": "4.5",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/tostring.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/tostring.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/tostring"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/tostring"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/conversion/tostring"
+		}
 	},
 	"links": [],
 	"examples": [
@@ -24,18 +70,20 @@
 			"description": "",
 			"code": "base64Value = toBase64( \"stringValue\" );\r\nbinaryValue = toBinary( base64Value );\r\nstringValue = toString( binaryValue );\r\nwriteOutput(stringValue);",
 			"result": "Expected Result: stringValue",
-			"runnable":true
-		},{
+			"runnable": true
+		},
+		{
 			"title": "Structure to String",
 			"description": "",
 			"code": "s = {\r\n    \"a\": \"1\",\r\n    \"b\":\"2\"\r\n};\r\nwriteOutput(toString(s));",
 			"result": "{a={1},b={2}}",
-			"runnable":true
-        	},{
+			"runnable": true
+		},
+		{
 			"title": "Member syntax",
 			"description": "CF number toString as a method\nCAUTION: While CF returns an integer (42), Lucee returns a double (42.0), that's because while CF stores the value as `java.lang.Integer` (CF2018+) resp. `java.lang.String` (CF2016+), Lucee calls this method on `java.lang.Double`.",
 			"code": "num = 42;\nwriteOutput(num.toString());",
 			"result": "42"
-        	}
+		}
 	]
 }

@@ -1,23 +1,51 @@
 {
-	"name":"binaryDecode",
-	"type":"function",
-	"syntax":"binaryDecode(string, encoding)",
-	"returns":"binary",
-	"related":["binaryEncode"],
-	"description":"Converts a string to a binary object. Used to convert\n binary data that has been encoded into string format\n back into binary data.",
+	"name": "binaryDecode",
+	"type": "function",
+	"syntax": "binaryDecode(string, encoding)",
+	"returns": "binary",
+	"related": ["binaryEncode"],
+	"description": "Converts a string to a binary object. Used to convert\n binary data that has been encoded into string format\n back into binary data.",
 	"params": [
-		{"name":"string","description":"A string containing encoded binary data.","required":true,"default":"","type":"string","values":[]},
-		{"name":"encoding","description":"A string specifying the algorithm used to encode the original\n binary data into a string; must be one of the following:\n - hex: characters 0-9 and A-F represent the hexadecimal value\n of each byte; for example, 3A.\n - UU: data is encoded using the UNIX UUencode algorithm.\n - base64: data is encoded using the Base64 algorithm.\n - base64URL: modification of the main Base64 standard, which uses the encoding result as filename or URL address.","required":true,"default":"","type":"string","values":["hex","uu","base64","base64URL"]}
+		{
+			"name": "string",
+			"description": "A string containing encoded binary data.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "encoding",
+			"description": "A string specifying the algorithm used to encode the original\n binary data into a string; must be one of the following:\n - hex: characters 0-9 and A-F represent the hexadecimal value\n of each byte; for example, 3A.\n - UU: data is encoded using the UNIX UUencode algorithm.\n - base64: data is encoded using the Base64 algorithm.\n - base64URL: modification of the main Base64 standard, which uses the encoding result as filename or URL address.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": ["hex", "uu", "base64", "base64URL"]
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/binarydecode.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/binarydecode.html"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/binarydecode"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/binary/binarydecode"}
+		"coldfusion": {
+			"minimum_version": "7",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/binarydecode.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/binarydecode.html"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/binarydecode"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/binary/binarydecode"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Decode a string using hex back into binary encoding of the string",
@@ -40,8 +68,8 @@
 		{
 			"title": "Create a byte array with 16 bytes",
 			"description": "Each byte in the array is set to 0",
-			"code":"arrayLen(binaryDecode('00000000000000000000000000000000','hex'))",
-			"result":"16"
+			"code": "arrayLen(binaryDecode('00000000000000000000000000000000','hex'))",
+			"result": "16"
 		}
 	]
 }

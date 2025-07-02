@@ -1,27 +1,69 @@
 {
-	"name":"arrayEvery",
-	"type":"function",
-	"syntax":"arrayEvery(array array, function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
-	"member":"someArray.every(function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
-	"returns":"boolean",
-	"related":["arraySome", "arrayEach"],
-	"description":"returns true if every closure returns true, otherwise false",
+	"name": "arrayEvery",
+	"type": "function",
+	"syntax": "arrayEvery(array array, function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
+	"member": "someArray.every(function(item, [index, [array]]) closure, [boolean parallel], [number maxThreads])",
+	"returns": "boolean",
+	"related": ["arraySome", "arrayEach"],
+	"description": "returns true if every closure returns true, otherwise false",
 	"params": [
-		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]},
-		{"name":"closure","description":"A function / closure with the signature: `boolean function (any item, [numeric index], [array array])`","required":true,"default":"","type":"function","values":[]},
-		{"name":"parallel","description":"Lucee4.5+ When `true` the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[]},
-		{"name":"maxThreads","description":"Lucee4.5+ The number of threads to use when `parallel=true`","required":false,"default":"20","type":"boolean","values":[]}
+		{
+			"name": "array",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "array",
+			"values": []
+		},
+		{
+			"name": "closure",
+			"description": "A function / closure with the signature: `boolean function (any item, [numeric index], [array array])`",
+			"required": true,
+			"default": "",
+			"type": "function",
+			"values": []
+		},
+		{
+			"name": "parallel",
+			"description": "Lucee4.5+ When `true` the items can be executed in parallel",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "maxThreads",
+			"description": "Lucee4.5+ The number of threads to use when `parallel=true`",
+			"required": false,
+			"default": "20",
+			"type": "boolean",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion":{"minimum_version":"2018.0.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayevery.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/arrayevery.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arrayevery"}
+		"coldfusion": {
+			"minimum_version": "2018.0.5",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arrayevery.html"
+		},
+		"lucee": {
+			"minimum_version": "4.5",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/arrayevery.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arrayevery"
+		}
 	},
-	"links": [{
-		"title":"Map, Reduce and other Higher Order Functions",
-		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
-		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
-	}],
+	"links": [
+		{
+			"title": "Map, Reduce and other Higher Order Functions",
+			"description": "A Primer for map, reduce, filter, and Higher Order Functions in general.",
+			"url": "http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+		}
+	],
 	"examples": [
 		{
 			"title": "Example for positive result",
@@ -31,11 +73,11 @@
 			"runnable": true
 		},
 		{
-			"title":"Example for negative result",
-			"description":"Checks whether all items in an array are greater than 2 and outputs false because some of them do not fulfill the requirement.",
-			"code":"array = [1, 2, 3, 4];\r\nwriteOutput(arrayEvery(array, function(value) { return value gt 2; }));",
-			"result":false,
-			"runnable":true
+			"title": "Example for negative result",
+			"description": "Checks whether all items in an array are greater than 2 and outputs false because some of them do not fulfill the requirement.",
+			"code": "array = [1, 2, 3, 4];\r\nwriteOutput(arrayEvery(array, function(value) { return value gt 2; }));",
+			"result": false,
+			"runnable": true
 		}
 	]
 }

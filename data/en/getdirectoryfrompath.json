@@ -1,28 +1,55 @@
 {
-	"name":"getDirectoryFromPath",
-	"type":"function",
-	"syntax":"getDirectoryFromPath(path)",
-	"returns":"string",
-	"related":["getFileFromPath"],
-	"description":"Extracts a directory from an absolute path. Returns the absolute path with a trailing slash and omits the filename.",
+	"name": "getDirectoryFromPath",
+	"type": "function",
+	"syntax": "getDirectoryFromPath(path)",
+	"returns": "string",
+	"related": ["getFileFromPath"],
+	"description": "Extracts a directory from an absolute path. Returns the absolute path with a trailing slash and omits the filename.",
 	"params": [
-		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "path",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getdirectoryfrompath.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/getdirectoryfrompath.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getdirectoryfrompath"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getdirectoryfrompath"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/io/getdirectoryfrompath"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getdirectoryfrompath.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/getdirectoryfrompath.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/getdirectoryfrompath"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/getdirectoryfrompath"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/io/getdirectoryfrompath"
+		}
 	},
 	"links": [],
-	"examples":[
+	"examples": [
 		{
-			"title":"Basic Example",
-			"description":"",
-			"code":"getDirectoryFromPath(\"C:\\temp\\file.txt\")",
-			"result":"C:\\temp\\",
-			"runnable":true
+			"title": "Basic Example",
+			"description": "",
+			"code": "getDirectoryFromPath(\"C:\\temp\\file.txt\")",
+			"result": "C:\\temp\\",
+			"runnable": true
 		}
 	]
 }

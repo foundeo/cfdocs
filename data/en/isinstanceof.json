@@ -1,29 +1,63 @@
 {
-	"name":"isInstanceOf",
-	"type":"function",
-	"syntax":"isInstanceOf(value, type)",
-	"returns":"boolean",
-	"related":["cfcomponent","cfinterface","cfobject"],
-	"description":"Determines whether an object is an instance of a ColdFusion interface or component, or of a Java class.",
+	"name": "isInstanceOf",
+	"type": "function",
+	"syntax": "isInstanceOf(value, type)",
+	"returns": "boolean",
+	"related": ["cfcomponent", "cfinterface", "cfobject"],
+	"description": "Determines whether an object is an instance of a ColdFusion interface or component, or of a Java class.",
 	"params": [
-		{"name":"value","description":"The CFC instance or Java object that you are testing","required":true,"default":"","type":"any","values":[]},
-		{"name":"type","description":"The name of the interface, component, or Java class of which the object might be an instance","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "value",
+			"description": "The CFC instance or Java object that you are testing",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "type",
+			"description": "The name of the interface, component, or Java class of which the object might be an instance",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isinstanceof.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/isinstanceof.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/isinstanceof"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/isinstanceof"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/isinstanceof"}
+		"coldfusion": {
+			"minimum_version": "8",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isinstanceof.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isinstanceof.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/isinstanceof"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/isinstanceof"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/isinstanceof"
+		}
 	},
 	"links": [],
 	"examples": [
 		{
-			"title":"Check if Date is instance of java.util.Date",
-			"description":"Dates in CFML are instances of the java class: `java.util.Date`",
-			"code":"isInstanceOf(now(), \"java.util.Date\");",
-			"result":true,
-			"runnable":true
+			"title": "Check if Date is instance of java.util.Date",
+			"description": "Dates in CFML are instances of the java class: `java.util.Date`",
+			"code": "isInstanceOf(now(), \"java.util.Date\");",
+			"result": true,
+			"runnable": true
 		}
 	]
 }

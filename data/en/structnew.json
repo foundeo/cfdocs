@@ -1,85 +1,140 @@
 {
-  "name": "structNew",
-  "type": "function",
-  "syntax": "structNew([type[[,sortType][,sortOrder][,localeSensitive]|[,callback]]])",
-  "returns": "struct",
-  "related": ["struct-functions"],
-  "description": "Creates a new, empty structure. The shorthand syntax for an empty unordered struct is `{}`. You can also use the syntax `{\"key\":\"value\"}` to initialize it with values. The shorthand syntax for an ordered struct is `[:]` or `[=]`. The shorthand for a case-sensitive struct is `${}`.The shorthand for a ordered and casesensitive struct is `$[=]`.\nNOTE: To preserve the case of the struct key, place quotes around it, otherwise it will be converted to uppercase.",
-  "params": [
-    {"name": "type","description": "CF2016+ Lucee4.5+ If set to `ordered` the order in which elements are added to the structure will be maintained. In Lucee `linked` can be used in place of `ordered`.\r\nCF2021+ If set to `casesensitive` the keys will remain case-sensitive. Additionally, `ordered-casesensitive` can be used to create an ordered case-sensitive struct.","required":false,"default":"","type":"string","values":["","ordered","casesensitive","ordered-casesensitive"]},
-    {"name":"sortType","description":"CF2016u3+ Sort types are text or numeric.","required":false,"default":"","type":"string","values":["text","numeric"]},
-    {"name":"sortOrder","description":"CF2016u3+ The order of the sort (ascending or descending).","required":false,"default":"asc","type":"string","values":["asc","desc"]},
-    {"name":"localeSensitive","description":"CF2016u3+ Specify if you wish to do a locale sensitive sorting.","required":false,"default":"false","type":"boolean","values":[]},
-    {"name":"callback","description":"CF2016u3+ A comparator function used to sort new data entered into the structure. Returns 1, 0 or -1.","required":false,"default":"","type":"function","values":[]}
-  ],
-  "engines": {
-		"coldfusion": {"minimum_version":"", "notes":"CF2016 added ordered structs. CF2016u3 added sorted structs. CF2018 added named parameters. CF2021 added 2 new types: ordered-casesensitive & casesensitive.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structnew.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/structnew.html"},
-		"railo": {"minimum_version":"","notes":"","docs":"http://railodocs.org/index.cfm/function/structnew"},
-    "openbd": { "minimum_version":"","notes":"","docs": "http://openbd.org/manual/?/function/structnew"},
-    "boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structnew"}
+	"name": "structNew",
+	"type": "function",
+	"syntax": "structNew([type[[,sortType][,sortOrder][,localeSensitive]|[,callback]]])",
+	"returns": "struct",
+	"related": ["struct-functions"],
+	"description": "Creates a new, empty structure. The shorthand syntax for an empty unordered struct is `{}`. You can also use the syntax `{\"key\":\"value\"}` to initialize it with values. The shorthand syntax for an ordered struct is `[:]` or `[=]`. The shorthand for a case-sensitive struct is `${}`.The shorthand for a ordered and casesensitive struct is `$[=]`.\nNOTE: To preserve the case of the struct key, place quotes around it, otherwise it will be converted to uppercase.",
+	"params": [
+		{
+			"name": "type",
+			"description": "CF2016+ Lucee4.5+ If set to `ordered` the order in which elements are added to the structure will be maintained. In Lucee `linked` can be used in place of `ordered`.\r\nCF2021+ If set to `casesensitive` the keys will remain case-sensitive. Additionally, `ordered-casesensitive` can be used to create an ordered case-sensitive struct.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": ["", "ordered", "casesensitive", "ordered-casesensitive"]
+		},
+		{
+			"name": "sortType",
+			"description": "CF2016u3+ Sort types are text or numeric.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": ["text", "numeric"]
+		},
+		{
+			"name": "sortOrder",
+			"description": "CF2016u3+ The order of the sort (ascending or descending).",
+			"required": false,
+			"default": "asc",
+			"type": "string",
+			"values": ["asc", "desc"]
+		},
+		{
+			"name": "localeSensitive",
+			"description": "CF2016u3+ Specify if you wish to do a locale sensitive sorting.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "callback",
+			"description": "CF2016u3+ A comparator function used to sort new data entered into the structure. Returns 1, 0 or -1.",
+			"required": false,
+			"default": "",
+			"type": "function",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "CF2016 added ordered structs. CF2016u3 added sorted structs. CF2018 added named parameters. CF2021 added 2 new types: ordered-casesensitive & casesensitive.",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structnew.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/structnew.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/structnew"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/structnew"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structnew"
+		}
 	},
-  "links": [
-	  {
-		  "title":"Structures",
-		  "description":"A description of CFML Structures from Ortus' Learn Modern ColdFusion <CFML> in 100 Minutes.",
-		  "url":"https://modern-cfml.ortusbooks.com/cfml-language/structures"
-	  }
-  ],
+	"links": [
+		{
+			"title": "Structures",
+			"description": "A description of CFML Structures from Ortus' Learn Modern ColdFusion <CFML> in 100 Minutes.",
+			"url": "https://modern-cfml.ortusbooks.com/cfml-language/structures"
+		}
+	],
 	"examples": [
-    {
-      "title": "New struct using literal notation",
-      "description": "Creates an unordered struct.",
-      "code": "unordered = { a=1, c=3, b=2 };\r\nwriteDump( unordered );",
-      "result": ""
-    },
-    {
-      "title": "New struct using function",
-      "description": "Creates an unordered struct.",
-      "code": "unordered = structNew();\r\nunordered.a = 1;\r\nunordered.b = 2;\r\nunordered.c = 3;\r\nwriteDump( unordered );",
-      "result": ""
-    },
-    {
-      "title": "New ordered struct using literal notation",
-      "description": "CF2016+ Creates an ordered struct. Note the square brackets.",
-      "code": "ordered = [ a=1, b=2, c=3 ];\r\nwriteDump( ordered );",
-      "result": ""
-    },
-    {
-      "title": "New ordered struct using function",
-      "description": "CF2016+ Lucee4.5+ Creates an ordered struct.",
-      "code": "ordered = structNew( \"ordered\" );\r\nordered.a = 1;\r\nordered.b = 2;\r\nordered.c = 3;\r\nwriteDump( ordered );",
-      "result": ""
-    },
-    {
-      "title": "New ordered struct using literal notation",
-      "description": "CF2016+ Lucee5+ Creates an ordered struct.",
-      "code": "ordered = [:];\r\nordered.a = 1;\r\nordered.b = 2;\r\nordered.c = 3;\r\nwriteDump( ordered );",
-      "result": ""
-    },
-    {
-      "title": "New case-sensitive struct using function",
-      "description": "CF2021+ Creates a case-sensitive struct.",
-      "code": "casesensitive = structNew( \"casesensitive\" );\r\ncasesensitive.a = 1;\r\ncasesensitive.B = 2;\r\ncasesensitive.c = 3;\r\nwriteDump( casesensitive );",
-      "result": ""
-    },
-    {
-      "title": "New case-sensitive struct using literal notation",
-      "description": "CF2021+ Creates a case-sensitive struct.",
-      "code": "casesensitive = ${a=1, B=2, c=3};\r\nwriteDump( casesensitive );",
-      "result": ""
-    },
-    {
-      "title": "New ordered and case-sensitive struct using function",
-      "description": "CF2021+ Creates a case-sensitive struct.",
-      "code": "someStruct = structNew( \"ordered-casesensitive\" );\r\nsomeStruct.c = 3;\r\nsomeStruct.B = 2;\r\nsomeStruct.a = 1;\r\nwriteDump( someStruct );",
-      "result": ""
-    },
-    {
-      "title": "New ordered and case-sensitive struct using literal notation",
-      "description": "CF2021+ Creates an ordered and case-sensitive struct.",
-      "code": "someStruct = $[c=3, B=2, a=1];\r\nwriteDump( someStruct );",
-      "result": ""
-    }
-  ]
+		{
+			"title": "New struct using literal notation",
+			"description": "Creates an unordered struct.",
+			"code": "unordered = { a=1, c=3, b=2 };\r\nwriteDump( unordered );",
+			"result": ""
+		},
+		{
+			"title": "New struct using function",
+			"description": "Creates an unordered struct.",
+			"code": "unordered = structNew();\r\nunordered.a = 1;\r\nunordered.b = 2;\r\nunordered.c = 3;\r\nwriteDump( unordered );",
+			"result": ""
+		},
+		{
+			"title": "New ordered struct using literal notation",
+			"description": "CF2016+ Creates an ordered struct. Note the square brackets.",
+			"code": "ordered = [ a=1, b=2, c=3 ];\r\nwriteDump( ordered );",
+			"result": ""
+		},
+		{
+			"title": "New ordered struct using function",
+			"description": "CF2016+ Lucee4.5+ Creates an ordered struct.",
+			"code": "ordered = structNew( \"ordered\" );\r\nordered.a = 1;\r\nordered.b = 2;\r\nordered.c = 3;\r\nwriteDump( ordered );",
+			"result": ""
+		},
+		{
+			"title": "New ordered struct using literal notation",
+			"description": "CF2016+ Lucee5+ Creates an ordered struct.",
+			"code": "ordered = [:];\r\nordered.a = 1;\r\nordered.b = 2;\r\nordered.c = 3;\r\nwriteDump( ordered );",
+			"result": ""
+		},
+		{
+			"title": "New case-sensitive struct using function",
+			"description": "CF2021+ Creates a case-sensitive struct.",
+			"code": "casesensitive = structNew( \"casesensitive\" );\r\ncasesensitive.a = 1;\r\ncasesensitive.B = 2;\r\ncasesensitive.c = 3;\r\nwriteDump( casesensitive );",
+			"result": ""
+		},
+		{
+			"title": "New case-sensitive struct using literal notation",
+			"description": "CF2021+ Creates a case-sensitive struct.",
+			"code": "casesensitive = ${a=1, B=2, c=3};\r\nwriteDump( casesensitive );",
+			"result": ""
+		},
+		{
+			"title": "New ordered and case-sensitive struct using function",
+			"description": "CF2021+ Creates a case-sensitive struct.",
+			"code": "someStruct = structNew( \"ordered-casesensitive\" );\r\nsomeStruct.c = 3;\r\nsomeStruct.B = 2;\r\nsomeStruct.a = 1;\r\nwriteDump( someStruct );",
+			"result": ""
+		},
+		{
+			"title": "New ordered and case-sensitive struct using literal notation",
+			"description": "CF2021+ Creates an ordered and case-sensitive struct.",
+			"code": "someStruct = $[c=3, B=2, a=1];\r\nwriteDump( someStruct );",
+			"result": ""
+		}
+	]
 }

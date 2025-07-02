@@ -1,14 +1,27 @@
 {
-	"name":"stringReduceRight",
-	"type":"function",
-	"syntax":"stringReduceRight(string, callback, initialValue)",
-	"member":"string.reduceRight(callback, initialValue)",
-	"returns":"any",
-	"related": ["StringReduce","StringMap","StringFilter","reverse"],
-	"description":"This function iterates over every element of the string and calls the closure to work on that element. This function will reduce the string to a single value, from the right to the left, and will return the value.\nNOTE: This function is not available in Lucee 5.x or lower. Potentially use `reverse()` instead.",
-	"params":[
-		{"name":"string", "description":"The input string.", "default":"","type":"string","required":true, "values":[]},
-		{"name":"callback","description":"Closure or a function reference that will be called for each iteration.","default":"","type":"any","required":true,"values":[],
+	"name": "stringReduceRight",
+	"type": "function",
+	"syntax": "stringReduceRight(string, callback, initialValue)",
+	"member": "string.reduceRight(callback, initialValue)",
+	"returns": "any",
+	"related": ["StringReduce", "StringMap", "StringFilter", "reverse"],
+	"description": "This function iterates over every element of the string and calls the closure to work on that element. This function will reduce the string to a single value, from the right to the left, and will return the value.\nNOTE: This function is not available in Lucee 5.x or lower. Potentially use `reverse()` instead.",
+	"params": [
+		{
+			"name": "string",
+			"description": "The input string.",
+			"default": "",
+			"type": "string",
+			"required": true,
+			"values": []
+		},
+		{
+			"name": "callback",
+			"description": "Closure or a function reference that will be called for each iteration.",
+			"default": "",
+			"type": "any",
+			"required": true,
+			"values": [],
 			"callback_params": [
 				{
 					"name": "result",
@@ -17,21 +30,24 @@
 					"values": [],
 					"default": "",
 					"required": true
-				},{
+				},
+				{
 					"name": "item",
 					"type": "any",
 					"description": "The value for the current iteration's item.",
 					"values": [],
 					"default": "",
 					"required": true
-				},{
+				},
+				{
 					"name": "index",
 					"type": "numeric",
 					"description": "The current index for the iteration",
 					"values": [],
 					"default": "",
 					"required": false
-				},{
+				},
+				{
 					"name": "array",
 					"type": "array",
 					"description": "A reference of the original array",
@@ -41,36 +57,51 @@
 				}
 			]
 		},
-		{"name":"initialValue", "description":"Initial value which will be used for the reduce operation.", "default":"","type":"any","required":true, "values":[]}
+		{
+			"name": "initialValue",
+			"description": "Initial value which will be used for the reduce operation.",
+			"default": "",
+			"type": "any",
+			"required": true,
+			"values": []
+		}
 	],
-	"engines":{
-		"coldfusion":{"minimum_version":"2021","notes":"","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/stringreduceright.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/stringreduceright"}
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2021",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/stringreduceright.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/stringreduceright"
+		}
 	},
-	"links":[
+	"links": [
 		{
-			"title":"One last one! CFML higher-order functions compared to tag-based code: reduceRight",
-			"description":"Blog entry by Adam Cameron covering the reduceRight function in CFML.",
-			"url":"https://coldfusion.adobe.com/2019/02/practical-uses-reduce-functions/"
+			"title": "One last one! CFML higher-order functions compared to tag-based code: reduceRight",
+			"description": "Blog entry by Adam Cameron covering the reduceRight function in CFML.",
+			"url": "https://coldfusion.adobe.com/2019/02/practical-uses-reduce-functions/"
 		},
 		{
-			"title":"Practical uses for reduce functions",
-			"description":"Blog entry by John Whish covering some practical uses for reduce functions in CFML.",
-			"url":"https://coldfusion.adobe.com/2019/02/practical-uses-reduce-functions/"
+			"title": "Practical uses for reduce functions",
+			"description": "Blog entry by John Whish covering some practical uses for reduce functions in CFML.",
+			"url": "https://coldfusion.adobe.com/2019/02/practical-uses-reduce-functions/"
 		},
 		{
-			"title":"Map, Reduce and other Higher Order Functions",
-			"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
-			"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+			"title": "Map, Reduce and other Higher Order Functions",
+			"description": "A Primer for map, reduce, filter, and Higher Order Functions in general.",
+			"url": "http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
 		},
 		{
 			"title": "ColdFusion 11: .map() and .reduce()",
 			"description": "A look at the new .map() and .reduce() methods that each of array, struct and lists all have",
-			"url":"http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
+			"url": "http://blog.adamcameron.me/2014/02/coldfusion-11-map-and-reduce.html"
 		}
 	],
-	"examples":[
-        {
+	"examples": [
+		{
 			"title": "Simple stringReduceRight Example",
 			"description": "Demonstrate how the function works from right to left.",
 			"code": "myString=\"abcd\";\nnewString=stringReduceRight(myString,function(prev,next,idx,arr){ return prev & next & idx },\"\")\nwritedump(newString);",
@@ -84,6 +115,5 @@
 			"result": "dcba",
 			"runnable": true
 		}
-
 	]
 }

@@ -1,30 +1,51 @@
 {
-	"name":"spreadsheetSetRowHeight",
-	"type":"function",
-	"syntax":"spreadsheetSetRowHeight(spreadsheetObj, rowNumber, height)",
-	"returns":"void",
-	"related":[],
-	"description":" Sets the height of a row in a worksheet.",
+	"name": "spreadsheetSetRowHeight",
+	"type": "function",
+	"syntax": "spreadsheetSetRowHeight(spreadsheetObj, rowNumber, height)",
+	"returns": "void",
+	"related": [],
+	"description": "Sets the height of a row in a worksheet.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The Excel spreadsheet object to which to set the column width.","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"rowNumber","description":"Specifies the row to set the height.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"height","description":"Specifies the height in points.","required":true,"default":"","type":"numeric","values":[]}
-
+		{
+			"name": "spreadsheetObj",
+			"description": "The Excel spreadsheet object to which to set the column width.",
+			"required": true,
+			"default": "",
+			"type": "variableName",
+			"values": []
+		},
+		{
+			"name": "rowNumber",
+			"description": "Specifies the row to set the height.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "height",
+			"description": "Specifies the height in points.",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetsetrowheight.html"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetsetrowheight.html"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Simple spreadsheetSetRowHeight Example",
 			"description": "Here,we've example to set the height for particular row in excel. It is supported only in adobe coldfusion.",
 			"code": "<cfset Detail=SpreadsheetNew(\"student\",false)>\r\n<cfset SpreadSheetAddRow(Detail,\"id,Name,Department\")>\r\n<cfset SpreadSheetAddRow(Detail,\"1,Dhar,CS\")>\r\n<cfset spreadsheetSetRowHeight(Detail,2,50)>\r\n<cfset SpreadsheetWrite(Detail,expandPath(\"./Detail.xls\"),true)>",
 			"result": "",
-			"runnable":false
+			"runnable": false
 		}
 	]
-
 }

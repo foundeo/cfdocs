@@ -1,23 +1,51 @@
 {
-	"name":"cJustify",
-	"type":"function",
-	"syntax":"cJustify(string, length)",
-	"returns":"string",
-	"related":["lJustify","rJustify"],
-	"description":"Centers a string in a given field length by adding spaces to either side.",
+	"name": "cJustify",
+	"type": "function",
+	"syntax": "cJustify(string, length)",
+	"returns": "string",
+	"related": ["lJustify", "rJustify"],
+	"description": "Centers a string in a given field length by adding spaces to either side.",
 	"params": [
-		{"name":"string","description":"The string that is to be centered","required":true,"default":"","type":"string","values":[]},
-		{"name":"length","description":"The length of the field in which the string should be centered","required":true,"default":"","type":"numeric","values":[]}
+		{
+			"name": "string",
+			"description": "The string that is to be centered",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "length",
+			"description": "The length of the field in which the string should be centered",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CJustify.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/cjustify.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cjustify"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/cjustify"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CJustify.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/cjustify.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/cjustify"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/cjustify"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Tag Syntax",
@@ -26,5 +54,4 @@
 			"result": ""
 		}
 	]
-
 }

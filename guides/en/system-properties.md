@@ -67,10 +67,10 @@ Introduced in March 2024 via ColdFusion 2021 Update 13 and ColdFusion 2023 Updat
 
 Added in June 2024 via ColdFusion 2021 Update 14 and CF2023 update 8. Defaults to `false`, when `true` it uses `CFMX_COMPAT` as the default algorithm for the `encrypt()` `decrypt()` and `hash()` (uses MD5) functions.
 
-# Standard Java System Properties
+## Standard Java System Properties
 
 The following system properties apply to the java runtime:
 
 * [Java Networking System Properties](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/doc-files/net-properties.html)
-* [Java Crypto Related System and Security Properties](https://www.java.com/en/configure_crypto.html) 
+* [Java Crypto Related System and Security Properties](https://www.java.com/en/configure_crypto.html)
 * [Java System Property Reference Guide](https://system-properties.com/)

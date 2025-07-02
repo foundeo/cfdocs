@@ -1,11 +1,11 @@
 {
-	"name":"structToQueryString",
-	"type":"function",
-	"syntax":"structToQueryString(structure, delimiter)",
-	"member":"structure.structToQueryString(delimiter)",
+	"name": "structToQueryString",
+	"type": "function",
+	"syntax": "structToQueryString(structure, delimiter)",
+	"member": "structure.structToQueryString(delimiter)",
 	"returns": "string",
-	"related":["structReduce"],
-	"description":"Converts a struct to a query string using the specified delimiter.",
+	"related": ["structReduce"],
+	"description": "Converts a struct to a query string using the specified delimiter.",
 	"params": [
 		{
 			"name": "structure",
@@ -25,9 +25,13 @@
 		}
 	],
 	"engines": {
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structtosorted"}
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structtosorted"
+		}
 	},
-	"links":[],
+	"links": [],
 	"examples": [
 		{
 			"title": "structToQueryString with the default delimiter",

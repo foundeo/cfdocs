@@ -83,7 +83,18 @@
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["AllowPrinting,  AllowCopy,  AllowScreenReaders", "AllowPrinting", "AllowModifyContents", "AllowCopy", "AllowModifyAnnotations", "AllowFillIn", "AllowScreenReaders", "AllowAssembly", "AllowDegradedPrinting", "AllowPrinting,  AllowModifyContents,  AllowCopy,  AllowModifyAnnotations,  AllowFillIn,  AllowScreenReaders,  AllowAssembly,  AllowDegradedPrinting"]
+			"values": [
+				"AllowPrinting,  AllowCopy,  AllowScreenReaders",
+				"AllowPrinting",
+				"AllowModifyContents",
+				"AllowCopy",
+				"AllowModifyAnnotations",
+				"AllowFillIn",
+				"AllowScreenReaders",
+				"AllowAssembly",
+				"AllowDegradedPrinting",
+				"AllowPrinting,  AllowModifyContents,  AllowCopy,  AllowModifyAnnotations,  AllowFillIn,  AllowScreenReaders,  AllowAssembly,  AllowDegradedPrinting"
+			]
 		},
 		{
 			"name": "datasource",

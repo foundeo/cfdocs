@@ -1,45 +1,49 @@
 {
-  "name": "verifySignedJWT",
-  "type": "function",
-  "syntax": "verifySignedJWT(token, signOptions, config)",
-  "returns": "struct",
-  "related": [ "createSignedJWT" ],
-  "description": "Verify a signed JWT (JSON Web Signature - JWS)",
-  "params": [
-    {
-      "name": "token",
-      "description": "A signed JWT",
-      "required": true,
-      "default": "",
-      "type": "string",
-      "values": []
-    },
-    {
-      "name": "signOptions",
-      "description": "The signature uses the key information from the given struct",
-      "required": true,
-      "default": "",
-      "type": "struct",
-      "values": []
-    },
-    {
-      "name": "config",
-      "description": "A struct with the following values:\n- clockSkew : time in seconds to account for difference between the systems generating and processing the JWT\n- returntype : plaintext/struct",
-      "required": true,
-      "default": "",
-      "type": "struct",
-      "values": []
-    }
-  ],
-  "engines": {
-    "coldfusion": {"minimum_version":"2023", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/verifysignedjwt.html"}
-  },
-  "links": [
+	"name": "verifySignedJWT",
+	"type": "function",
+	"syntax": "verifySignedJWT(token, signOptions, config)",
+	"returns": "struct",
+	"related": ["createSignedJWT"],
+	"description": "Verify a signed JWT (JSON Web Signature - JWS)",
+	"params": [
+		{
+			"name": "token",
+			"description": "A signed JWT",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "signOptions",
+			"description": "The signature uses the key information from the given struct",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "config",
+			"description": "A struct with the following values:\n- clockSkew : time in seconds to account for difference between the systems generating and processing the JWT\n- returntype : plaintext/struct",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2023",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/verifysignedjwt.html"
+		}
+	},
+	"links": [
 		{
 			"title": "JSON Web Tokens in ColdFusion",
 			"description": "Overview of JSON Web Tokens (JWT), including how to use them in ColdFusion",
 			"url": "https://helpx.adobe.com/coldfusion/using/coldfusion-json-web-tokens.html"
 		}
 	],
-  "examples": []
+	"examples": []
 }

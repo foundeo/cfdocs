@@ -1,26 +1,103 @@
 {
-	"name":"listSort",
-	"type":"function",
-	"syntax":"listSort(list, sortType [, sortOrder] [, delimiters] [, includeEmptyFields] [, localeSensitive])\nor\nlistSort(list, callback)",
-	"member":"list.listSort(sortType [, sortOrder])",
-	"returns":"string",
-	"related":["structSort","arraySort","querySort"],
-	"description":"Sorts list elements according to a sort type and sort order. Returns a sorted copy of the list.\n [sortType - description]\n numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n - aabzABZ, if sort_order = \"asc\"\n - ZBAzbaa, if sort_order = \"desc\"\n textnocase: sorts text alphabetically, without regard to case\n - aAaBbBzzZ, in an asc sort;\n - ZzzBbBaAa, in a desc sort;",
+	"name": "listSort",
+	"type": "function",
+	"syntax": "listSort(list, sortType [, sortOrder] [, delimiters] [, includeEmptyFields] [, localeSensitive])\nor\nlistSort(list, callback)",
+	"member": "list.listSort(sortType [, sortOrder])",
+	"returns": "string",
+	"related": ["structSort", "arraySort", "querySort"],
+	"description": "Sorts list elements according to a sort type and sort order. Returns a sorted copy of the list.\n [sortType - description]\n numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n - aabzABZ, if sort_order = \"asc\"\n - ZBAzbaa, if sort_order = \"desc\"\n textnocase: sorts text alphabetically, without regard to case\n - aAaBbBzzZ, in an asc sort;\n - ZzzBbBaAa, in a desc sort;",
 	"params": [
-		{"name":"list","description":"A list or variable name","required":true,"default":"","type":"string","values":[]},
-		{"name":"sortType","description":"numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n (also known as case-sensitive).\n - aabzABZ for ascending sort(sort_order = \"asc\")\n - ZBAzbaa for descending sort(sort_order = \"desc\")\n\n textnocase: sorts text alphabetically, without regard to\n case (also known as case-insensitive).\n - aAaBbBzzZ for ascending sort(sort_order = \"asc\")\n - ZzzBbBaAa for descending sort(sort_order = \"desc\")","required":true,"default":"","type":"string","values":["numeric","text","aabzABZ","ZBAzbaa","textnocase","aAaBbBzzZ","ZzzBbBaAa"]},
-		{"name":"sortOrder","description":"- asc: ascending sort order\n- desc: descending sort order","required":false,"default":"asc","type":"string","values":["asc","desc"]},
-		{"name":"delimiters","description":"Characters that separate the list elements. The default value is comma. If this parameter contains more than one character, ColdFusion uses the first character in the string as the delimiter in the output list.","required":false,"default":",","type":"string","values":[]},
-		{"name":"includeEmptyFields","description":"Set to true to include empty fields.","required":false,"default":"false","type":"boolean","values":[]},
-		{"name":"callback","description":"CF2016+ A function that uses two elements of a list. `function(element1, element2)`. Returns whether the first is less than (-1), equal to (0) or greater than (1) the second one (like the compare functions).","required":false,"default":"","type":"function","values":[]},
-		{"name":"localeSensitive","description":"CF10+ Specify if you wish to do a locale sensitive sorting.","required":false,"default":"false","type":"boolean","values":[]}
+		{
+			"name": "list",
+			"description": "A list or variable name",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "sortType",
+			"description": "numeric: sorts numbers\n text: sorts text alphabetically, taking case into account\n (also known as case-sensitive).\n - aabzABZ for ascending sort(sort_order = \"asc\")\n - ZBAzbaa for descending sort(sort_order = \"desc\")\n\n textnocase: sorts text alphabetically, without regard to\n case (also known as case-insensitive).\n - aAaBbBzzZ for ascending sort(sort_order = \"asc\")\n - ZzzBbBaAa for descending sort(sort_order = \"desc\")",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": [
+				"numeric",
+				"text",
+				"aabzABZ",
+				"ZBAzbaa",
+				"textnocase",
+				"aAaBbBzzZ",
+				"ZzzBbBaAa"
+			]
+		},
+		{
+			"name": "sortOrder",
+			"description": "- asc: ascending sort order\n- desc: descending sort order",
+			"required": false,
+			"default": "asc",
+			"type": "string",
+			"values": ["asc", "desc"]
+		},
+		{
+			"name": "delimiters",
+			"description": "Characters that separate the list elements. The default value is comma. If this parameter contains more than one character, ColdFusion uses the first character in the string as the delimiter in the output list.",
+			"required": false,
+			"default": ",",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "includeEmptyFields",
+			"description": "Set to true to include empty fields.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "callback",
+			"description": "CF2016+ A function that uses two elements of a list. `function(element1, element2)`. Returns whether the first is less than (-1), equal to (0) or greater than (1) the second one (like the compare functions).",
+			"required": false,
+			"default": "",
+			"type": "function",
+			"values": []
+		},
+		{
+			"name": "localeSensitive",
+			"description": "CF10+ Specify if you wish to do a locale sensitive sorting.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listsort.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/listsort.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listsort"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listsort"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listsort"}
+		"coldfusion": {
+			"minimum_version": "4",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listsort.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/listsort.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/listsort"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/listsort"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listsort"
+		}
 	},
 	"links": [],
 	"examples": [

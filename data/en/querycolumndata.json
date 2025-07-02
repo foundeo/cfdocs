@@ -7,26 +7,55 @@
 	"related": ["valueArray"],
 	"description": "Returns the data in a query column. See also valueArray for use in ACF.",
 	"params": [
-		{"name": "query", "description": "", "required": true, "default": "", "type": "query", "values": []},
-		{"name": "columnName", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "closure", "description": "", "required": false, "default": "", "type": "function", "values": []}
+		{
+			"name": "query",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "query",
+			"values": []
+		},
+		{
+			"name": "columnName",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "closure",
+			"description": "",
+			"required": false,
+			"default": "",
+			"type": "function",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querycolumndata.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumndata"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/querycolumndata.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumndata"
+		}
 	},
 	"examples": [
 		{
 			"title": "Create and populate a query and output the 'name' column data as an array",
 			"code": "myQuery = QueryNew( '' );\nnames = [ 'Indra','Elizabeth','Harry','Seth' ];\nqueryAddColumn( myQuery,'name','varchar',names );\nresult = queryColumnData( myQuery,'name' );\nDump( var='#result#' );",
-			"description":"",
-			"runnable":true
+			"description": "",
+			"runnable": true
 		},
 		{
 			"title": "Using a member function",
 			"code": "myQuery = QueryNew( '' );\nnames = [ 'Indra','Elizabeth','Harry','Seth' ];\nqueryAddColumn( myQuery,'name','varchar',names );\nresult = myQuery.columnData( 'name' );\nDump( var='#result#' );",
-			"description":"",
-			"runnable":true
+			"description": "",
+			"runnable": true
 		}
 	],
 	"links": []

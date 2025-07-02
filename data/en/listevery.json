@@ -4,20 +4,77 @@
 	"syntax": "listEvery(list, closure [, delimiter] [, includeEmptyFields] [, multiCharacterDelimiter] [, parallel] [, maxThreads])",
 	"member": "list.listEvery(closure [, delimiter] [, includeEmptyFields] [, multiCharacterDelimiter] [, parallel] [, maxThreads])",
 	"returns": "boolean",
-	"related": ["arrayEvery","structEvery","queryEvery"],
+	"related": ["arrayEvery", "structEvery", "queryEvery"],
 	"description": "This function calls a given callback function for every element in a given string list and returns true, if all of the calls returns true.",
 	"params": [
-		{"name": "list", "description": "List to iterate.", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "closure", "description": "Callback function that is called for every item of the list and returns a boolean value. The arguments passed to the callback are\r\n\r\nvalue: Current list item\r\nindex: Index of the list item within the list\r\nlist: List as defined in the 'list' parameter\r\ndelimiter: Delimiter as defined in the 'delimiter' parameter", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "delimiter", "description": "Delimiter used to separate the string list.", "required": false, "default": ",", "type": "string", "values": []},
-		{"name": "includeEmptyFields", "description": "Specifies whether to include empty fields or not.", "required": false, "default": "false", "type": "boolean", "values": []},
-		{"name": "multiCharacterDelimiter", "description": "Specifies whether the 'delimiter' parameter specifies a multi-character delimiter. If it is set to `true`, all characters are considered as one delimiter; otherwise each character is a delimiter on its own.", "required": false, "default": "true", "type": "boolean", "values": []},
-		{"name": "parallel", "description": "Specifies whether to execute closures in parallel.", "required": false, "default": "false", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "Maximum number of threads executed, ignored when argument 'parallel' is set to false.", "required": false, "default": "20", "type": "numeric", "values": []}
+		{
+			"name": "list",
+			"description": "List to iterate.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "closure",
+			"description": "Callback function that is called for every item of the list and returns a boolean value. The arguments passed to the callback are\r\n\r\nvalue: Current list item\r\nindex: Index of the list item within the list\r\nlist: List as defined in the 'list' parameter\r\ndelimiter: Delimiter as defined in the 'delimiter' parameter",
+			"required": true,
+			"default": "",
+			"type": "function",
+			"values": []
+		},
+		{
+			"name": "delimiter",
+			"description": "Delimiter used to separate the string list.",
+			"required": false,
+			"default": ",",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "includeEmptyFields",
+			"description": "Specifies whether to include empty fields or not.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "multiCharacterDelimiter",
+			"description": "Specifies whether the 'delimiter' parameter specifies a multi-character delimiter. If it is set to `true`, all characters are considered as one delimiter; otherwise each character is a delimiter on its own.",
+			"required": false,
+			"default": "true",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "parallel",
+			"description": "Specifies whether to execute closures in parallel.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "maxThreads",
+			"description": "Maximum number of threads executed, ignored when argument 'parallel' is set to false.",
+			"required": false,
+			"default": "20",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/listevery.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listevery"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/listevery.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listevery"
+		}
 	},
 	"examples": [
 		{
@@ -28,16 +85,18 @@
 			"runnable": true
 		},
 		{
-			"title":"Example for negative result",
-			"description":"Checks whether all items in a list are greater than 2 and outputs false because some of them do not fulfill the requirement.",
-			"code":"list = '1,2,3,4';\r\nwriteOutput(listEvery(list, function(value) { return value gt 2; }));",
-			"result":false,
-			"runnable":true
+			"title": "Example for negative result",
+			"description": "Checks whether all items in a list are greater than 2 and outputs false because some of them do not fulfill the requirement.",
+			"code": "list = '1,2,3,4';\r\nwriteOutput(listEvery(list, function(value) { return value gt 2; }));",
+			"result": false,
+			"runnable": true
 		}
 	],
-	"links": [{
-		"title":"Map, Reduce and other Higher Order Functions",
-		"description":"A Primer for map, reduce, filter, and Higher Order Functions in general.",
-		"url":"http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
-	}]
+	"links": [
+		{
+			"title": "Map, Reduce and other Higher Order Functions",
+			"description": "A Primer for map, reduce, filter, and Higher Order Functions in general.",
+			"url": "http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html"
+		}
+	]
 }

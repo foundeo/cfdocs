@@ -16,7 +16,7 @@ ColdFusion uses these settings to configure ORM. All settings are optional.
 
 Default: `true`
 
-Specifies whether ColdFusion should automatically generate mapping for the persistent CFCs. If `false` the mappings should be provided in the form of `.hbmxml` files (see the Hibernate documentation at https://hibernate.org/orm/).
+Specifies whether ColdFusion should automatically generate mapping for the persistent CFCs. If `false` the mappings should be provided in the form of `.hbmxml` files (see the Hibernate documentation at <https://hibernate.org/orm/>).
 
 ### `boolean autoManageSession`
 
@@ -116,7 +116,7 @@ Defines database standard and naming convention.
 
 ### `string ORMConfig`
 
-A Hibernate configuration file, see https://www.tutorialspoint.com/hibernate/hibernate_configuration.htm
+A Hibernate configuration file, see <https://www.tutorialspoint.com/hibernate/hibernate_configuration.htm>
 
 ### `boolean saveMapping`
 

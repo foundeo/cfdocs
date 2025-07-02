@@ -7,13 +7,17 @@
 	"description": "list all pages in pools",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/pagepoollist.html"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/pagepoollist.html"
+		}
 	},
 	"examples": [
 		{
 			"title": "pagePoolList Example",
-			"description":"Lists all the CFML code (cfm, cfcs) in the cache of compiled code. It is supported in Lucee.",
-			"code":" writeDump(pagePoolList());"
+			"description": "Lists all the CFML code (cfm, cfcs) in the cache of compiled code. It is supported in Lucee.",
+			"code": "writeDump(pagePoolList());"
 		}
 	],
 	"links": []

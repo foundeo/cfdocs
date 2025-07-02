@@ -4,24 +4,60 @@
 	"syntax": "listIndexExists(list, index [, delimiter] [, includeEmptyFields])",
 	"member": "list.listIndexExists(index [, delimiter] [, includeEmptyFields])",
 	"returns": "boolean",
-	"related": ["arrayIndexExists","structKeyExists"],
+	"related": ["arrayIndexExists", "structKeyExists"],
 	"description": "Determines whether that index exists in the given list or not",
 	"params": [
-		{"name": "list", "description": "", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "index", "description": "", "required": true, "default": "", "type": "numeric", "values": []},
-		{"name": "delimiter", "description": "", "required": false, "default": ",", "type": "string", "values": []},
-		{"name": "includeEmptyFields", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
+		{
+			"name": "list",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "index",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "delimiter",
+			"description": "",
+			"required": false,
+			"default": ",",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "includeEmptyFields",
+			"description": "",
+			"required": false,
+			"default": "",
+			"type": "boolean",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/listindexexists.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listindexexists"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/listindexexists.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listindexexists"
+		}
 	},
 	"examples": [
 		{
-			"title":"Simple listIndexExists",
-			"description":"Check whether the index is exists or not in list",
-			"code":"<cfset list=\"Apple,Orange,Banana,Graphs\">\r\n<cfif listIndexExists(list,2)>\r\n\t<cfset list=listsetAt(list,2,\"Goa\")>\r\n</cfif>\r\n<cfoutput>#list#</cfoutput>",
-			"result":"Apple,Goa,Banana,Graphs"
+			"title": "Simple listIndexExists",
+			"description": "Check whether the index is exists or not in list",
+			"code": "<cfset list=\"Apple,Orange,Banana,Graphs\">\r\n<cfif listIndexExists(list,2)>\r\n\t<cfset list=listsetAt(list,2,\"Goa\")>\r\n</cfif>\r\n<cfoutput>#list#</cfoutput>",
+			"result": "Apple,Goa,Banana,Graphs"
 		}
 	],
 	"links": []

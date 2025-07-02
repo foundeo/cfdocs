@@ -6,18 +6,35 @@
 	"related": ["setVariable"],
 	"description": "Retrieves value of a variable",
 	"params": [
-		{"name": "name", "description": "", "required": true, "default": "", "type": "string", "values": []}
+		{
+			"name": "name",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getvariable.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/system/getvariable"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/getvariable.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/system/getvariable"
+		}
 	},
 	"links": [],
-	"examples": [{
-		"title":"Retrieve value of a variable",
-		"description":"",
-		"code":"a=1;\nwriteOutput(getVariable('a'));",
-		"result":"1",
-		"runnable":true
-	}]
+	"examples": [
+		{
+			"title": "Retrieve value of a variable",
+			"description": "",
+			"code": "a=1;\nwriteOutput(getVariable('a'));",
+			"result": "1",
+			"runnable": true
+		}
+	]
 }

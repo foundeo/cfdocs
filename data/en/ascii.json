@@ -1,26 +1,35 @@
 {
-	"name":"ascii",
-	"type":"function",
-	"syntax":"ascii(string)",
-	"returns":"numeric",
-	"related":["char", "asc", "chr"],
-	"description":"Determines the ASCII value of a character.",
+	"name": "ascii",
+	"type": "function",
+	"syntax": "ascii(string)",
+	"returns": "numeric",
+	"related": ["char", "asc", "chr"],
+	"description": "Determines the ASCII value of a character.",
 	"params": [
-		{"name":"string","description":"","required":true,"default":"","type":"string","values":[]}
+		{
+			"name": "string",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"boxlang": {"minimum_version":"1.0.0", "notes":"`asc` is transpiled to `ascii` in CFML files", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/ascii"}
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "`asc` is transpiled to `ascii` in CFML files",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/ascii"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title":"character and value of Korean currency symbol ( unicode number 8361 )",
-			"description":"",
-			"code":"x = chr( 8361 ); \n writeoutput( 'character: #x#' ); \n x = asc( x ); \n writeoutput( '<br>Unicode value: #x#');",
-			"result":"",
-			"runnable":true
+			"title": "character and value of Korean currency symbol ( unicode number 8361 )",
+			"description": "",
+			"code": "x = chr( 8361 ); \n writeoutput( 'character: #x#' ); \n x = asc( x ); \n writeoutput( '<br>Unicode value: #x#');",
+			"result": "",
+			"runnable": true
 		}
 	]
 }

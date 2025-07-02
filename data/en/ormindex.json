@@ -1,18 +1,19 @@
 {
-	"name":"ormIndex",
-	"type":"function",
-	"syntax":"ormIndex(); ormIndex('entity_name'); ormIndex('entity_list'); ormIndex('entityObject');",
-	"returns":"void",
-	"related":[],
-	"description":" Performs offline indexing - using this function without specifying parameters, all persistent entities of a given application are indexed.",
-	"params": [
-	],
+	"name": "ormIndex",
+	"type": "function",
+	"syntax": "ormIndex(); ormIndex('entity_name'); ormIndex('entity_list'); ormIndex('entityObject');",
+	"returns": "void",
+	"related": [],
+	"description": "Performs offline indexing - using this function without specifying parameters, all persistent entities of a given application are indexed.",
+	"params": [],
 	"engines": {
-		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormindex.html"}
+		"coldfusion": {
+			"minimum_version": "10",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormindex.html"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Script Syntax",
@@ -21,5 +22,4 @@
 			"result": ""
 		}
 	]
-
 }

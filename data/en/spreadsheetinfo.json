@@ -1,29 +1,40 @@
 {
-	"name":"spreadsheetInfo",
-	"type":"function",
-	"syntax":"spreadsheetInfo(spreadsheetObj)",
-	"returns":"struct",
-	"related":[],
-	"description":" Returns spreadsheet property",
+	"name": "spreadsheetInfo",
+	"type": "function",
+	"syntax": "spreadsheetInfo(spreadsheetObj)",
+	"returns": "struct",
+	"related": [],
+	"description": "Returns spreadsheet property",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]}
-
+		{
+			"name": "spreadsheetObj",
+			"description": "No Help Available",
+			"required": true,
+			"default": "",
+			"type": "variableName",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetinfo.html"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetinfo"}
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetinfo.html"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/spreadsheetinfo"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
-			"title":"Simple spreadsheetInfo example",
-			"description":"Here we have simple example about spreadsheetinfo function. It displays the detail of read sreadsheet like sheet name,last edited,creation date etc..",
-			"code":"<cfspreadsheet action=\"read\" src=\"#expandPath(\"./reports.xls\")#\" name=\"SpreadsheetObj\" >\r\n<cfset spreadsheetInfo=spreadsheetInfo(SpreadsheetObj)>\r\n<cfdump var=\"#spreadsheetInfo#\" />",
-			"result":"",
-			"runnable":false
+			"title": "Simple spreadsheetInfo example",
+			"description": "Here we have simple example about spreadsheetinfo function. It displays the detail of read sreadsheet like sheet name,last edited,creation date etc..",
+			"code": "<cfspreadsheet action=\"read\" src=\"#expandPath(\"./reports.xls\")#\" name=\"SpreadsheetObj\" >\r\n<cfset spreadsheetInfo=spreadsheetInfo(SpreadsheetObj)>\r\n<cfdump var=\"#spreadsheetInfo#\" />",
+			"result": "",
+			"runnable": false
 		}
 	]
-
 }

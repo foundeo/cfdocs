@@ -1,21 +1,62 @@
 {
-	"name":"location",
-	"type":"function",
-	"syntax":"location(url [, addtoken] [, statuscode])",
-	"returns":"void",
-	"related":["cfscript","cflocation"],
-	"description":"Stops execution of the current page and redirects to the given URL.",
+	"name": "location",
+	"type": "function",
+	"syntax": "location(url [, addtoken] [, statuscode])",
+	"returns": "void",
+	"related": ["cfscript", "cflocation"],
+	"description": "Stops execution of the current page and redirects to the given URL.",
 	"params": [
-		{"name":"url","description":"URL of web page to open.","required":true,"default":"","type":"string","values":[]},
-		{"name":"addtoken","description":"clientManagement must be enabled (see cfapplication).","required":false,"default":true,"type":"boolean","values":[]},
-		{"name":"statuscode","description":"The HTTP status code","required":false,"default":302,"type":"numeric","values":[300,301,302,303,304,305,306,307]}
+		{
+			"name": "url",
+			"description": "URL of web page to open.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "addtoken",
+			"description": "clientManagement must be enabled (see cfapplication).",
+			"required": false,
+			"default": true,
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "statuscode",
+			"description": "The HTTP status code",
+			"required": false,
+			"default": 302,
+			"type": "numeric",
+			"values": [300, 301, 302, 303, 304, 305, 306, 307]
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"9", "notes":"Implemented as both a function and an alias to the cflocation tag in script, so named parameters can be used prior to CF2018+. CF11+ `addtoken` default value is `false` when Secure Profile is enabled", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/location.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/location.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/location"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/location"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/web/location"}
+		"coldfusion": {
+			"minimum_version": "9",
+			"notes": "Implemented as both a function and an alias to the cflocation tag in script, so named parameters can be used prior to CF2018+. CF11+ `addtoken` default value is `false` when Secure Profile is enabled",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/location.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/location.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/location"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/location"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/components/web/location"
+		}
 	},
 	"examples": [
 		{

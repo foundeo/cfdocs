@@ -4,9 +4,9 @@ Since ColdFusion 6, Java has been core to the CFML language. Your CFML code get 
 
 ## Using Java in CFML
 
-The Java Platform has several built-in classes that you can make use of in CFML (similar to how CFML has several built-in Functions and Tags that you can leverage). You can find detailed documentation of the Java Platform API [here](https://docs.oracle.com/javase/8/docs/api/index.html), there is quite a bit of useful API at your disposal.
+The Java Platform has several built-in classes that you can make use of in CFML (similar to how CFML has several built-in Functions and Tags that you can leverage). You can find detailed documentation of the Java Platform API [API](https://docs.oracle.com/javase/8/docs/api/index.html), there is quite a bit of useful API at your disposal.
 
-#### Using a Constructor
+### Using a Constructor
 
 Here's an example of using the [`java.io.File`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html) class to output the last modified date by calling the `lastModified()` method.
 
@@ -17,7 +17,7 @@ In the above example we created a new instance of the `java.io.File` class. The 
 
 In order to call a non static method, you first need to have an instance of the Java object. You will need to use a constructor or a static method to get an instance of a Java object so you can start calling methods.
 
-#### Invoking a static method
+### Invoking a static method
 
 A static method is a function that does not require an object instance to execute. In CFML you still have to use `createObject` to get a reference to the class to invoke the static method on.
 
@@ -33,7 +33,7 @@ Often when you have an API to interact with you can look through the Java API do
     runtime = createObject("java", "java.lang.Runtime").getRuntime();
     writeOutput( runtime.availableProcessors() );
 
-#### Converting Java Code Examples to CFML
+### Converting Java Code Examples to CFML
 
 Ok, let's suppose you have a Java library that you want to use in CFML. You have a code example showing how to use the library in Java that looks like this:
 
@@ -46,11 +46,11 @@ Often times code examples leave off the package names and only use class names, 
 
 Now to write the example in CFML. On the first line, we can assume that the `create()` method in the `CarFactory` class is a `static` method. The difference between a `static` method and a regular instance method is very important to understand. A `static` method can be called without an _instance_ of the class. All `static` methods are marked as such.
 
-#### All I have are Java Docs, how do I get started?
+### All I have are Java Docs, how do I get started?
 
 A good way to start is to look for `static` methods that you can invoke. If there are too many classes start by looking for a class with _Factory_ in the name, the _Abstract Class Factory Pattern_ is popular entry point to Java APIs.
 
-#### Type Casting
+### Type Casting
 
 Because CFML is a typeless language and Java is not, when you want to pass a Java primitive `int` into a method you can use the `javaCast` function.
 
@@ -63,7 +63,7 @@ To use a third party Java library, you will need to let the Java Runtime Environ
 
 Once the jar file is loaded and accessible to the CFML server / JVM you can use `createObject` just like above to work with the third party Java API.
 
-#### Using this.javaSettings to load jar files in CF10+
+### Using this.javaSettings to load jar files in CF10+
 
 If you are running CF10+ or Lucee4.5+ you can use your Application.cfc file to specify jar file locations. Here is an example:
 
@@ -76,7 +76,7 @@ If you are running CF10+ or Lucee4.5+ you can use your Application.cfc file to s
 
 The variable `this.javaSettings.loadPaths` is an array of jar files or java class file paths. You may need to restart ColdFusion or rename/restart your Application when you make changes to this setting.
 
-#### Adding Jar files to the classpath
+### Adding Jar files to the classpath
 
 If you want a Java library to be accessible to the entire server you can add it to the Java classpath. There are a few ways you can do this. On most ColdFusion servers the classpath is specified in the jvm.config file, you can also use the ColdFusion administrator to add jar file paths (it simply updates the jvm.config file for you) under the _Java and JVM Settings_ page.
 

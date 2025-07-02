@@ -3,21 +3,38 @@
 	"type": "function",
 	"syntax": "getMemoryUsage([type])",
 	"returns": "query",
-	"related": ["getSystemFreeMemory","getSystemTotalMemory","getCpuUsage"],
+	"related": ["getSystemFreeMemory", "getSystemTotalMemory", "getCpuUsage"],
 	"description": "Return detailed information to the memory usage of the container.",
 	"params": [
-		{"name": "type", "description": "Specify the type of memory information to return. If not specified, both types are returned.", "required": false, "default": "", "type": "string", "values": ["heap","non_heap"]}
+		{
+			"name": "type",
+			"description": "Specify the type of memory information to return. If not specified, both types are returned.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": ["heap", "non_heap"]
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getmemoryusage.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-oshi` module", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/hardware-and-system-info"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/getmemoryusage.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "Requires the `bx-oshi` module",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-framework/modularity/hardware-and-system-info"
+		}
 	},
 	"links": [],
-	"examples": [{
-		"title": "Dump memory usage query",
-		"description": "",
-		"code": "writeDump(getMemoryUsage());",
-		"result": "",
-		"runnable": true
-	}]
+	"examples": [
+		{
+			"title": "Dump memory usage query",
+			"description": "",
+			"code": "writeDump(getMemoryUsage());",
+			"result": "",
+			"runnable": true
+		}
+	]
 }

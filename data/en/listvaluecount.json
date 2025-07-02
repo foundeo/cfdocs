@@ -1,37 +1,78 @@
 {
-	"name":"listValueCount",
-	"type":"function",
-	"syntax":"listValueCount(list, value [, delimiters])",
-	"returns":"numeric",
-	"related":["listLen","structCount"],
-	"description":"Counts instances of a specified value in a list.\nThe search is case-sensitive. For case-insensitive search use listValueCountNoCase.",
+	"name": "listValueCount",
+	"type": "function",
+	"syntax": "listValueCount(list, value [, delimiters])",
+	"returns": "numeric",
+	"related": ["listLen", "structCount"],
+	"description": "Counts instances of a specified value in a list.\nThe search is case-sensitive. For case-insensitive search use listValueCountNoCase.",
 	"params": [
-		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"value","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]}
+		{
+			"name": "list",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "value",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "delimiters",
+			"description": "",
+			"required": false,
+			"default": ",",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listvaluecount.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/listvaluecount.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/listvaluecount"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/listvaluecount"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listvaluecount"}
+		"coldfusion": {
+			"minimum_version": "4",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listvaluecount.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/listvaluecount.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/listvaluecount"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/listvaluecount"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listvaluecount"
+		}
 	},
 	"links": [],
 	"examples": [
-        {
-            "title": "Simple Example",
-            "description": "Counts instances of 'foo' in the list",
-            "code": "listValueCount(\"foo,bar,lorem,foo,ipsum\", \"foo\")",
-            "result": 2,
-            "runnable":true
-        },
-        {
-            "title": "Example with Custom Delimiter",
-            "description": "Counts instances of 'foo' in the list with a custom delimiter",
-            "code": "listValueCount(\"bar|foo|lorem,ipsum|me|foo,something|foo|FOO\", \"foo\", \"|\")",
-            "result": 2,
-            "runnable":true
-        }
-    ]
+		{
+			"title": "Simple Example",
+			"description": "Counts instances of 'foo' in the list",
+			"code": "listValueCount(\"foo,bar,lorem,foo,ipsum\", \"foo\")",
+			"result": 2,
+			"runnable": true
+		},
+		{
+			"title": "Example with Custom Delimiter",
+			"description": "Counts instances of 'foo' in the list with a custom delimiter",
+			"code": "listValueCount(\"bar|foo|lorem,ipsum|me|foo,something|foo|FOO\", \"foo\", \"|\")",
+			"result": 2,
+			"runnable": true
+		}
+	]
 }

@@ -1,22 +1,52 @@
 {
-	"name":"removeCachedQuery",
-	"type":"function",
-	"syntax":"removeCachedQuery(SQL_, datasource, params, region___);",
-	"returns":"void",
-	"related":[],
-	"description":" Removes the query with the details you provide from query cache.",
+	"name": "removeCachedQuery",
+	"type": "function",
+	"syntax": "removeCachedQuery(SQL_, datasource, params, region___);",
+	"returns": "void",
+	"related": [],
+	"description": "Removes the query with the details you provide from query cache.",
 	"params": [
-		{"name":"SQL","description":"The Query SQL.","required":true,"default":"","type":"string","values":[]},
-        {"name":"datasource","description":"The datasource you ran the query on.","required":true,"default":"","type":"string","values":[]},
-        {"name":"params","description":" Array of parameter values passed to SQL.","required":false,"default":"","type":"array","values":[]},
-        {"name":"region","description":"Specifies the cache region where you can place the cache object.","required":false,"default":"","type":"string","values":[]}
+		{
+			"name": "SQL",
+			"description": "The Query SQL.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "datasource",
+			"description": "The datasource you ran the query on.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "params",
+			"description": "Array of parameter values passed to SQL.",
+			"required": false,
+			"default": "",
+			"type": "array",
+			"values": []
+		},
+		{
+			"name": "region",
+			"description": "Specifies the cache region where you can place the cache object.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/removecachedquery.html"}
+		"coldfusion": {
+			"minimum_version": "10",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/removecachedquery.html"
+		}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Tag Syntax",
@@ -25,5 +55,4 @@
 			"result": ""
 		}
 	]
-
 }

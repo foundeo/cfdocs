@@ -3,9 +3,7 @@
 	"type": "function",
 	"syntax": "directoryList(path [, recurse] [, listInfo] [, filter] [, sort] [, type])",
 	"returns": "any",
-	"related": [
-		"cfdirectory"
-	],
+	"related": ["cfdirectory"],
 	"description": "List the contents of a directory. Returns either an array, or a query. \rNOTE: Ensure that you have the required permissions to run this function.",
 	"params": [
 		{
@@ -22,10 +20,7 @@
 			"required": false,
 			"default": "false",
 			"type": "boolean",
-			"values": [
-				true,
-				false
-			]
+			"values": [true, false]
 		},
 		{
 			"name": "listInfo",
@@ -33,11 +28,7 @@
 			"required": false,
 			"default": "path",
 			"type": "string",
-			"values": [
-				"name",
-				"path",
-				"query"
-			]
+			"values": ["name", "path", "query"]
 		},
 		{
 			"name": "filter",
@@ -61,11 +52,7 @@
 			"required": false,
 			"default": "all",
 			"type": "string",
-			"values": [
-				"file",
-				"dir",
-				"all"
-			]
+			"values": ["file", "dir", "all"]
 		}
 	],
 	"engines": {
@@ -89,13 +76,17 @@
 			"notes": "",
 			"docs": "http://openbd.org/manual/?/function/directorylist"
 		},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/io/directorylist"}
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/io/directorylist"
+		}
 	},
 	"links": [
 		{
-		    "title":"Enhance closure filter on directory copy (Lucee Development / LDEV-1542)",
-		    "description":"Support ticket by Brad Wood describing the filter misbehavior in recursive mode",
-		    "url":"https://luceeserver.atlassian.net/browse/LDEV-1542"
+			"title": "Enhance closure filter on directory copy (Lucee Development / LDEV-1542)",
+			"description": "Support ticket by Brad Wood describing the filter misbehavior in recursive mode",
+			"url": "https://luceeserver.atlassian.net/browse/LDEV-1542"
 		}
 	],
 	"examples": [

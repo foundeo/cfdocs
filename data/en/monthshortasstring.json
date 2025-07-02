@@ -3,14 +3,29 @@
 	"type": "function",
 	"syntax": "monthShortAsString(monthnumber)",
 	"returns": "string",
-	"related": ["month","monthAsString"],
+	"related": ["month", "monthAsString"],
 	"description": "Returns the first three letters of the given month",
 	"params": [
-		{"name": "monthnumber", "description": "", "required": true, "default": "", "type": "numeric", "values": []}
+		{
+			"name": "monthnumber",
+			"description": "",
+			"required": true,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/monthshortasstring.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/temporal/monthshortasstring"}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/monthshortasstring.html"
+		},
+		"boxlang": {
+			"minimum_version": "1.0.0",
+			"notes": "",
+			"docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/temporal/monthshortasstring"
+		}
 	},
 	"examples": [
 		{

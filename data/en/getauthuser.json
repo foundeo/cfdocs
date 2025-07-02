@@ -1,16 +1,32 @@
 {
-	"name":"getAuthUser",
-	"type":"function",
-	"syntax":"getAuthUser()",
-	"returns":"string",
-	"related":[],
-	"description":"Gets the name of an authenticated user.",
+	"name": "getAuthUser",
+	"type": "function",
+	"syntax": "getAuthUser()",
+	"returns": "string",
+	"related": [],
+	"description": "Gets the name of an authenticated user.",
 	"params": [],
 	"engines": {
-		"coldfusion": {"minimum_version":"6", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getauthuser.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/getauthuser.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getauthuser"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getauthuser"}
+		"coldfusion": {
+			"minimum_version": "6",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getauthuser.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/getauthuser.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/getauthuser"
+		},
+		"openbd": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://openbd.org/manual/?/function/getauthuser"
+		}
 	},
 	"links": []
 }
