@@ -15,7 +15,8 @@
             "description":"",
             "code":"isNull(nullValue())",
             "result":true,
-            "runnable":true
+            "runnable":true,
+	    "testable":false
         },{
             "title":"ColdFusion polyfill",
             "description":"Using java data type null instead",
