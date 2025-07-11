@@ -31,7 +31,7 @@
 	},{
 		"title": "Null is a complex value",
 		"description": "For engines that support null, such as Lucee and Railo, `null` is considered a complex value.",
-		"code": "isSimpleValue(nullvalue())",
+		"code": "isSimpleValue( javaCast('null', '') )",
 		"result": false,
 		"runnable": true
 	},{
