@@ -1,0 +1,121 @@
+# cfpdf
+
+Manipulates existing PDF documents. The following list describes some of the
+ tasks you can perform with the cfpdf tag:
+ Merge several PDF documents into one PDF document.
+ Extract pages from multiple PDF documents and generate a new PDF document.
+ Linearize multipage PDF documents for faster display.
+ Encrypt or decrypt PDF files for security.
+
+### Syntax
+
+```html
+<cfpdf>
+```
+
+### Script Syntax ACF11+, Lucee, Railo 4.2+
+
+```javascript
+cfpdf();
+```
+
+## Attribute Reference
+
+| Name | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| action | string | Yes |  | The action to take. |
+| ascending | boolean | No | no | Order in which the PDF files are sorted:<br /> yes: files are sorted in ascending order<br /> no: files are sorted in descending order |
+| copyfrom | string | No |  | The filename of the PDF document from which to copy the watermark |
+| destination | string | No |  | The pathname of the modified PDF document.<br /> If the destination file exists, you must set the overwrite attribute to yes.<br /> If the destination file does not exist, ColdFusion creates it as long as<br /> the parent directory exists. (optional) |
+| directory | string | No |  | Specify the directory of the PDF documents to merge.<br /> You must specify either the directory or the source.<br /> If you specify the directory, you must also specify the order. |
+| encrypt | string | No |  | Specify the type of encryption used on the source PDF document |
+| flatten | boolean | No | no | Specify whether the output file is flattened:<br /> yes: the formatting is removed and the file is flattened<br /> no: the format of the source PDF is maintained in the output file. |
+| foreground | boolean | No | no | Specify whether the watermark is placed in the foreground of the PDF document:<br /> yes: the watermark appears in the foreground<br /> no: the watermark appears in the background |
+| image | string | No |  | Specify the image used as a watermark.<br /> You can specify a filename or a ColdFusion image variable. |
+| info | string | Yes |  | Specify the structure variable for relevant information, for example, #infoStruct#.<br /> ColdFusion ignores read only information, such as the creation date, application used to create<br /> the PDF document, and encryption parameters. |
+| isBase64 | boolean | No | no | Specify whether the image used a watermark is in Base64 format:<br /> yes: the image is in Base64 format<br /> no: the image is not in Base64 format |
+| keepbookmark | boolean | No | NO | Specify whether bookmarks from the source PDF<br /> documents are retained in the merged document:<br /> yes: the bookmarks are retained<br /> no: the bookmarks are removed |
+| name | string | No |  | Specify the PDF document variable name, for example, myPDFdoc.<br /> If the source is a PDF document variable, you cannot specify the<br /> name attribute again; you can write the modified PDF document<br /> to the destination. |
+| newOwnerPassword | string | No |  | Specify the password for the owner of the PDF document. |
+| newUserPassword | string | No |  | Specify the password for the user of the PDF document. |
+| opacity | string | No | 3 | Specify the opacity of the watermark.<br /> Valid values are integers in the range 0 (transparent)<br /> through 10 (opaque). |
+| order | string | Yes |  | Specify the order in which the PDF documents<br /> in the directory are merged:<br /> name: orders the documents alphabetically<br /> time: orders the documents by timestamp |
+| overwrite | string | No |  | Specify whether to overwrite the destination file:<br /> yes: overwrites the destination file<br /> no: does not overwrite the destination file |
+| password | string | No |  | Specify the owner or user password of the source PDF document, if it exists. |
+| permissions | string | No |  | Specify the type of permissions on the PDF document:<br /> AllowPrintHigh<br /> AllowPrintLow<br /> AllowModify<br /> AllowCopy<br /> AllowAdd<br /> AllowSecure<br /> AllowModifyAnnotations<br /> AllowExtract<br /> AllowFillIn<br /> all<br /> none<br /> Except for all or none, you can specify a<br /> comma separated list of permissions. (optional) |
+| position | string | No |  | Specify the position on the page where<br /> the watermark is placed. The position represents the<br /> top-left corner of the watermark.<br /> Specify the x and y coordinates; for example 50,30. |
+| rotation | numeric | No |  | Specify the degree of rotation of<br /> the watermark image on the page; for example, 30. |
+| showonprint | string | No |  | Specify whether the watermark is printed with<br /> the PDF document:<br /> yes: the watermark is printed with the PDF document<br /> no: the watermark is not printed with the PDF document |
+| source | string | Yes |  | Specify the source. The source can be:<br /> The pathname to a PDF document; for example, c:\work\myPDF.pdf<br /> A PDF document variable in memory that is generated by the<br /> cfdocument tag or the cfpdf tag; for example, #myPDFdoc#<br /> The binary content of PDF document variable. |
+| type | string | No |  | Specify the type to remove from the source PDF document:<br /> attachment<br /> bookmark<br /> watermark |
+| version | string | No |  | (write) Specify the version of the PDF document to write. |
+| transparent | boolean | No | NO | Specifies whether the image background is transparent or opaque: format=png only<br /> * yes: the background is transparent.<br /> * no: the background is opaque. |
+| resolution | string | No |  | Image quality used to generate thumbnail images:<br /> * high: use high resolution (uses more memory).<br /> * low: use low resolution. |
+| stoponerror | boolean | No | NO | Valid only if the directory attribute is specified. If the specified directory contains files other then ColdFusion-readable PDF files, ColdFusion either stops merge process or continues.<br /> * yes: stops the merge process if invalid PDF files exist in the specified directory.<br /> * no: continues the merge process even if invalid files exist in the specified directory. |
+| inputfiles | struct | No |  | Structure that maps the PDF source files to the input variables in the DDX file, or a string of elements and their pathname. |
+| scale | numeric | No |  | Size of the thumbnail relative to the source page. The value represents a percentage from 1 through 100. |
+| imageprefix | string | No |  | Prefix used for each image thumbnail file generated. The image filenames use the format: imagePrefix_page_n.format. |
+| outputfiles | struct | No |  | Structure that contains the output files in the DDX file or string as keys and the pathname to the result file as the value. |
+| pages | string | No |  | Page or pages in the source PDF document on which to perform the action. You can specify multiple pages and page ranges as follows: "1,6-9,56-89,100, 110-120". |
+| ddxfile | string | No |  | Owner or user password of the source PDF document, if the document is password-protected. |
+| saveoption | string | No | full | Save options for the PDF output:<br /> * full: normal save (default)<br /> * incremental: required to save modifications to a signed PDF document.<br /> * linear: for faster display. |
+| format | string | No | jpg | File type of thumbnail image output |
+| hires | boolean | No |  | Sets a high resolution for the thumbnail if set to yes. |
+| maxScale | numeric | No |  | Specifies the maximum scale of the thumbnail |
+| maxBreadth | numeric | No |  | CF9+ Specifies maximum width of the thumbnail |
+| maxLength | numeric | No |  | Specifies the maximum length of the thumbnail |
+| compressTIFFs | boolean | No |  | Compress thumbnail which are in TIFF format. |
+| overridepage | boolean | No |  | Specify whether to override page or not |
+| package | boolean | No |  | Create PDF packages |
+| hScale | numeric | No |  | Horizontal scale of the image to be modified. Valid values are hscale<1. |
+| vScale | numeric | No |  | Vertical scale of the image to be modified. Valid values are vscale>0. |
+| noBookMarks | boolean | No |  | CF9+ Remove bookmarks from PDF document |
+| noAttachments | boolean | No |  | CF9+ Removes all attachments from PDF documents. |
+| noComments | boolean | No |  | Remove comments from PDF document |
+| noJavaScripts | boolean | No |  | CF9+ Remove all document level JavaScript actions |
+| noLinks | boolean | No |  | Remove external cross-references |
+| noMetadata | boolean | No |  | CF9+ Remove document information and metadata |
+| noThumbnails | boolean | No |  | Remove embedded page thumbnails |
+| noFonts | boolean | No |  | CF9+ Remove font styling |
+| algo | string | No |  | CF9+ Specifies the algorithm for image downsampling. |
+| topMargin | numeric | No |  | Specifies the value of the top margin |
+| leftMargin | numeric | No |  | Specifies the value of the left margin |
+| rightMargin | numeric | No |  | Specifies the value of the right margin |
+| bottomMargin | numeric | No |  | Specifies the value of the bottom margin |
+| numberFormat | string | No |  | Specify the numbering format for PDF pages in the footer. |
+| align | string | No |  | Aligns the header and footer in PDF. |
+| honourspaces | boolean | No |  | Set this option to "true" if you need characters to be converted to spaces. |
+| addQuads | boolean | No |  | Add the position or quadrants of the thumbnail |
+| text | string | No |  | Specify Text Value |
+| useStructure | boolean | No |  | CF9+ Specify whether to use structure or not |
+| jpgdpi | numeric | No |  | CF9+ |
+| encodeAll | boolean | No |  | Encode streams that are not encoded to optimize page content |
+
+## Script Syntax - Create Thumbnail
+
+Creates a JPG thumbnail from a PDF file
+
+```html
+cfpdf(
+    action="thumbnail",
+    source=expandPath( "./myFile.pdf" ),
+    destination=expandPath( "./thumbnails/"),
+    resolution="high",
+    overwrite="yes",
+    pages="1",
+    scale="75",
+    transparent="no"
+);
+```
+
+### Expected Result: Creates a file called myFile_page_1.jpg in the /thumbnails/ directory
+
+## Add Watermark text
+
+Adds watermark text to the PDF, rotated by 45 degrees, sets flag to print the watermark
+
+```html
+<cfpdf action="addwatermark" position="57,0" text="TEST - DO NOT SEND!_" source="local.tempPdf" rotation="45" foreground="true" showonprint="true">
+```
+
+### Expected Result: PDF has watermark with text: TEST - DO NOT SEND!
