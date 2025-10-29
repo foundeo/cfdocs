@@ -7,10 +7,10 @@
 	"related":["listFind","arrayFindNoCase"],
 	"description":"Determines the index of the first list element in which a specified value occurs. Returns 0 if not found. Case-insensitive.",
 	"params": [
-		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"value","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]},
-		{"name":"includeEmptyValues","description":"","required":false,"default":"false","type":"string","values":["true","false"]}
+		{"name":"list","description":"List to search in.","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"String to search for.","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiters","description":"String of character(s) that separate list elements.","required":false,"default":",","type":"string","values":[]},
+		{"name":"includeEmptyFields","description":"If includeEmptyFields is set to true, empty list elements will be counted when index of the first found list element is returned.","required":false,"default":"false","type":"string","values":["true","false"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listfindnocase.html"},
