@@ -1,4 +1,5 @@
 <cfparam name="url.name" default="cfquery">
+<cfparam name="url.format" default="html">
 <cfset request.unsafe_name = url.name>
 <cfset url.name = ReReplace(url.name, "[^a-zA-Z0-9_-]", "", "ALL")>
 <cfif url.name IS "index">
@@ -11,7 +12,10 @@
 		<!--- convert md to HTML --->
 		<cfset flexmark = new lib.Processor() >
 		<cfset path = (url.name is "how-to-contribute" ? 'CONTRIBUTING' : './guides/en/#url.name#')>
-		<cfset data = flexmark.toHTML(FileRead(ExpandPath("#path#.md")))>
+		<cfset data = FileRead(ExpandPath("#path#.md"))>
+		<cfif url.format IS "html">
+			<cfset data = flexmark.toHTML(data)>
+		</cfif>
 		<cfset request.gitFilePath = "/tree/master/guides/en/"&(url.name is "how-to-contribute" ? 'CONTRIBUTING' : url.name)&".md">
 		<cfcatch>
 			<cfset data = "Error processing markdown: #encodeForHTML(cfcatch.message)# #encodeForHTML(cfcatch.detail)#">
@@ -63,7 +67,15 @@
 	<cfif data.keyExists("description")>
 		<cfset request.description = data.description>
 	</cfif>
-	<cfinclude template="views/doc.cfm">
+	<cfif url.format IS "md">
+		<cfinclude template="views/doc-md.cfm">
+		<cfheader name="Link" value="<https://cfdocs.org/#url.name#>; rel=""canonical""">
+	<cfelse>
+		<cfinclude template="views/doc.cfm">
+		<cfheader name="Link" value="<https://cfdocs.org/#url.name#.md>; rel=""alternate""; type=""text/markdown""">
+	</cfif>
+<cfelseif url.format IS "md">
+	<cfinclude template="views/doc-md.cfm">
 <cfelse>
 	<cfinclude template="views/markdown.cfm">
 </cfif>

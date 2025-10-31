@@ -50,7 +50,7 @@
 		<cfparam name="request.cacheControlMaxAge" default="604800" type="integer">
 		<cfheader name="Cache-Control" value="public, max-age=#Int(request.cacheControlMaxAge)#">
 		<cfif len(showError)><cfoutput>#showError#</cfoutput><cfflush></cfif>
-		<cfcontent reset="true" type="text/html"><cfinclude template="views/layout.cfm">
+		<cfinclude template="views/layout.cfm">
 	</cffunction>
 
 	<cffunction name="linkTo" output="false">
@@ -149,7 +149,7 @@
 			</div>
 		</cfsavecontent>
 
-		<cfcontent reset="true" type="text/html"><cfheader statuscode="500" statustext="Server Error"><cfinclude template="views/layout.cfm">
+		<cfcontent reset="true" type="text/html"><cfheader statuscode="500"><cfinclude template="views/layout.cfm">
 	</cffunction>
 
 </cfcomponent>
