@@ -46,6 +46,13 @@
 				"code": "param someVar; //declare the param\nparam someVar=5; //declare the param with a default value\nparam numeric someVar=3.1415; //declare the param with adefault value and set the type",
 				"result": "",
 				"runnable": true
+		},
+		{
+				"title": "cfparam using type=\"query\"",
+				"description": "How to use cfparam with a query object.",
+				"code": "<!--- Ensure the query object exists --->\n<cfparam name=\"variables.myQuery\" default=\"\">\n\n<!--- Check if the variable is a query object --->\n<cfif NOT isQuery(variables.myQuery)>\n    <!--- Create a new query object with the required structure --->\n    <cfset variables.myQuery = queryNew(\"id,name,age\", \"integer,varchar,varchar\")>\n\n    <!--- Add rows to the query --->\n    <cfset queryAddRow(variables.myQuery, 2)> <!-- Add 2 rows -->\n\n    <!--- Populate the rows with data --->\n    <cfset querySetCell(variables.myQuery, \"id\", 1, 1)>\n    <cfset querySetCell(variables.myQuery, \"name\", \"John Doe\", 1)>\n    <cfset querySetCell(variables.myQuery, \"age\", \"30\", 1)>\n\n    <cfset querySetCell(variables.myQuery, \"id\", 2, 2)>\n    <cfset querySetCell(variables.myQuery, \"name\", \"Jane Smith\", 2)>\n    <cfset querySetCell(variables.myQuery, \"age\", \"25\", 2)>\n</cfif>\n\n<!--- Output the query for debugging purposes --->\n<cfdump var=\"#variables.myQuery#\" label=\"Query Object\">",
+				"result": "",
+				"runnable": false
 		}
 	]
 }
