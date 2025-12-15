@@ -51,7 +51,7 @@
 		{
 			"title": "Loop Over an Array (Script Syntax)",
 			"description": "Array Loop",
-			"code": "myArray = [\"a\", \"b\", \"c\"];\n// For Loop By index for CF9.0.0 and lower \nfor (i = 1; i <= arrayLen(myArray); i++) {\n    writeOutput(myArray[i]);\n}\n// By For In CF9.0.1+ \nfor (currentIndex in myArray) {\n    writeOutput(currentIndex);\n}\n// By arrayEach() member function CF11+\nmyArray.each(function(element, index) {\n    writeOutput(element & \" : \" & index);\n});",
+			"code": "myArray = [\"a\", \"b\", \"c\"];\n// For Loop By index for CF9.0.0 and lower \nfor (i = 1; i <= arrayLen(myArray); i++) {\n    writeOutput(myArray[i]);\n}\n// By For In CF9.0.1+ \nfor (currentIndex in myArray) {\n    writeOutput(currentIndex);\n}\n// By arrayEach() member function CF11+\nmyArray.each(function(element, index) {\n    writeOutput(element & \" : \" & index);\n});\n// loop with index Lucee5+\nloop collection=cars index=\"i\" value=\"value\" {\n    writeOutput(i & \" : \" & value);\n}",
 			"result": ""
 		},
 		{
@@ -63,7 +63,7 @@
 	    	{
 			"title": "Loop over a Struct (Script Syntax)",
 			"description": "Struct Loop",
-			"code": "myStruct = {name: \"Tony\", state: \"Florida\"}; \r\n // By struct \r\n for (currentKey in myStruct) { \r\n writeOutput(\"<li>#currentKey# : #myStruct[currentKey]#</li>\"); \r\n } \r\n // By structEach() \r\n myStruct.each(function(key, value) { \r\n writeOutput(\"<li>#key# : #value#</li>\"); \r\n }); \r\n ",
+			"code": "myStruct = {name: \"Tony\", state: \"Florida\"}; \r\n // By struct \r\n for (currentKey in myStruct) { \r\n writeOutput(\"<li>#currentKey# : #myStruct[currentKey]#</li>\"); \r\n } \r\n // By structEach() \r\n myStruct.each(function(key, value) { \r\n writeOutput(\"<li>#key# : #value#</li>\"); \r\n }); \r\n // loop with index Lucee5+\nloop collection=myStruct index=\"key\" value=\"value\" {\n    writeOutput(key & \" : \" & value);\n}",
 			"result": ""
 		},
 		{
