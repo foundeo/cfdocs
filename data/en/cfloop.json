@@ -63,7 +63,7 @@
 	    	{
 			"title": "Loop over a Struct (Script Syntax)",
 			"description": "Struct Loop",
-			"code": "myStruct = {name: \"Tony\", state: \"Florida\"}; \r\n // By struct \r\n for (currentKey in myStruct) { \r\n writeOutput(\"<li>#currentKey# : #myStruct[currentKey]#</li>\"); \r\n } \r\n // By structEach() \r\n myStruct.each(function(key, value) { \r\n writeOutput(\"<li>#key# : #value#</li>\"); \r\n }); \r\n // loop with index Lucee5+\nloop collection=myStruct index=\"key\" value=\"value\" {\n    writeOutput(key & \" : \" & value);\n}",
+			"code": "myStruct = {name: \"Tony\", state: \"Florida\"}; \r\n // By struct \r\n for (currentKey in myStruct) { \r\n writeOutput(\"<li>#currentKey# : #myStruct[currentKey]#</li>\"); \r\n } \r\n // By structEach() \r\n myStruct.each(function(key, value) { \r\n writeOutput(\"<li>#key# : #value#</li>\"); \r\n }); \r\n // loop with index Lucee5+\nloop collection=myStruct key=\"key\" value=\"value\" {\n    writeOutput(key & \" : \" & value);\n}",
 			"result": ""
 		},
 		{
