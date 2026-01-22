@@ -2,6 +2,7 @@
 	"name":"structCount",
 	"type":"function",
 	"syntax":"structCount(structure)",
+	"member": "structure.count()",
 	"returns":"numeric",
 	"related":[],
 	"description":" Counts the keys in a structure.",
