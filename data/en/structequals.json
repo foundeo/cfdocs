@@ -2,6 +2,7 @@
 	"name":"structEquals",
 	"type":"function",
 	"syntax":"structEquals(struct1,  struct2)",
+	"member": "struct1.equals(struct2)",
 	"returns":"boolean",
 	"related":[],
 	"description":"Performs a deep comparison of two structures to see if they represent the same values",
@@ -19,8 +20,15 @@
 			"title":"Append options to config struct (without overwrite flag)",
 			"description":"",
 			"code":"config1 = {a:0, b:0};\nconfig2 = {a:0, b:1};\nwriteOutput( structEquals(config1, config2) );",
-			"result":"NO",
+			"result":"false",
 			"runnable": false
+		},
+		{
+			"title":"Member function comparison of two structs",
+			"description":"",
+			"code":"config1 = {a:0, b:0};\nconfig2 = {a:0, b:1};\nwriteOutput( config1.equals(config2) );",
+			"result":"false",
+			"runnable": true
 		}
 	]
 }
