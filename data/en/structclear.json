@@ -2,6 +2,7 @@
 	"name":"structClear",
 	"type":"function",
 	"syntax":"structClear(structure)",
+	"member": "structure.clear()",
 	"returns":"boolean",
 	"related":[],
 	"description":" Removes all data from a structure.",
