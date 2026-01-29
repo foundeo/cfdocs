@@ -38,7 +38,7 @@ component accessors=true singleton {
 			// Set the anchor id
 			anchorSetId              : true,
 			// Set the anchor id but also the name
-			achorSetName             : true,
+			anchorSetName            : true,
 			// Do we create the anchor for the full header or just before it. True is wrap, false is just create anchor tag
 			anchorWrapText           : true,
 			// The class(es) to apply to the anchor
@@ -140,7 +140,7 @@ component accessors=true singleton {
 				anchorLinkExtension.ANCHORLINKS_SET_NAME,
 				javacast(
 					"boolean",
-					arguments.options.achorSetName
+					arguments.options.anchorSetName
 				)
 			)
 			.set(
