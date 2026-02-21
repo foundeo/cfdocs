@@ -1,4 +1,4 @@
-# Application.cfc
+# Example Application.cfc
 
 ## Example: Full Application/Request Lifecycle Methods
 
