@@ -29,7 +29,8 @@
 		"coldfusion": {"minimum_version":"2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cfloop.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/loop.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfloop"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfloop"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfloop"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:loop>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/loop"}
 	},
 	"links": [
 

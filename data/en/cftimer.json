@@ -13,7 +13,8 @@
 		"coldfusion": {"minimum_version":"7", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-t/cftimer.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/timer.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cftimer"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cftimer"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cftimer"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:timer>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/debug/timer"}
 	},
 	"links": [],
 	"examples": [

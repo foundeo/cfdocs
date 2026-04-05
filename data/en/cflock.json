@@ -17,7 +17,8 @@
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cflock.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/lock.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflock"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflock"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflock"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:lock>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/lock"}
 	},
 	"links": [],
 	"examples": [

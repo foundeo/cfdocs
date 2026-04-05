@@ -5,9 +5,18 @@
         <to>/trycf.cfm?name=$1&amp;index=$2</to>
     </rule>
     <rule>
+        <from>^/llms.txt$</from>
+        <to last="true">/llms.cfm</to>
+    </rule>
+    <rule>
+        <from>^/([^./]+)\.md$</from>
+        <to last="true">/doc.cfm?name=$1&amp;format=md</to>
+    </rule>
+    <rule>
         <from>^/([^./]+)$</from>
         <to>/doc.cfm?name=$1</to>
     </rule>
+    
     <rule>
         <from>^/tag-summary$</from>
         <to type="redirect">/tags</to>

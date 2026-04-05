@@ -16,7 +16,8 @@
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-g-h/cfhttpparam.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/httpparam.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfhttpparam"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfhttpparam"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfhttpparam"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`, `<bx:httpparam>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/net/httpparam"}
 	},
 	"links": [],
 	"examples": [
@@ -27,7 +28,7 @@
 			"result":""
 		},
 		{
-			"title": "Alternate Script Syntax (CF9+)",
+			"title": "Alternate Script Syntax (CF9+). Removed in ColdFusion 2025.",
 			"description": "",
 			"code": "httpService = new http(method = \"POST\", charset = \"utf-8\", url = \"https://www.google.com/\");\r\nhttpService.addParam(name = \"q\", type = \"formfield\", value = \"cfml\");\r\nresult = httpService.send().getPrefix();\r\nwriteDump(result);",
 			"result": ""

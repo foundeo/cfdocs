@@ -9,12 +9,11 @@
 	"params": [
 		{"name":"query","description":"Query Object to test.","required":true,"default":"","type":"query","values":[]},
 		{"name":"key","description":"Key to test","required":true,"default":"","type":"string","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querykeyexists.html"},
-		"lucee":{"minimum_version":"5.1", "docs":"https://docs.lucee.org/reference/functions/querykeyexists.html","notes":""}
-
+		"lucee":{"minimum_version":"5.1", "docs":"https://docs.lucee.org/reference/functions/querykeyexists.html","notes":""},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querykeyexists"}
 	},
 	"links": [
 

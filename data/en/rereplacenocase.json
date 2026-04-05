@@ -11,12 +11,12 @@
 		{"name":"reg_expression","description":"Regular expression to replace.","required":true,"default":"","type":"string","values":[]},
 		{"name":"substring","description":"A string or a variable that contains one. Replaces\n reg_expression","required":true,"default":"","type":"string","values":[]},
 		{"name":"scope","description":"* one: Replace the first occurrence of the regular\n expression. Default.\n * all: Replace all occurrences of the regular expression.","required":false,"default":"","type":"string","values":["one","all"]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/rereplacenocase.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/rereplacenocase.html"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/rereplacenocase"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/rereplacenocase"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/rereplacenocase"}
 	},
 	"links": [
 

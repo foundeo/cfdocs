@@ -25,7 +25,8 @@
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfzip.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/zip.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfzip"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfzip"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfzip"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:zip>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/zip/zip"}
 	},
 	"links": [{
             "title":"Learning ColdFusion 8: CFZip Part IV - Extracting Zip File Archives",

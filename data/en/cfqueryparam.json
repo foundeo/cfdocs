@@ -19,7 +19,7 @@
       "name": "cfsqltype",
       "description": "SQL type that parameter (any type) is bound to. As of CF11+ or Lucee4.5+ you can omit the `cf_sql_` prefix. \nSee [CFSqlType Cheatsheet](https://cfdocs.org/cfsqltype-cheatsheet) for a mapping of CFSQL data types to DBMS data types.",
       "required": false,
-      "default": "",
+      "default": "CF_SQL_CHAR",
       "type": "string",
       "values": [
         "cf_sql_bigint",
@@ -139,6 +139,11 @@
       "minimum_version": "",
       "notes": "",
       "docs": "http://openbd.org/manual/?/tag/cfqueryparam"
+    },
+    "boxlang": {
+      "minimum_version": "1.0.0",
+      "notes": "`<bx:queryparam>` in BoxLang",
+      "docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/components/jdbc/queryparam"
     }
   },
   "links": [

@@ -30,7 +30,8 @@
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcache.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/cache.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfcache"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcache"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcache"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:cache>` in BoxLang files", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/cache/cache"}
 	},
 	"links": [
 

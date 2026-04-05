@@ -10,7 +10,8 @@
 		{"name":"label","description":"The label for the stopwatch, used in debugging output.","required":false,"default":"","type":"string"}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/stopwatch.html"}
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/stopwatch.html"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:stopwatch>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/debug/stopwatch"}
 	},
 	"links": [],
 	"examples": [

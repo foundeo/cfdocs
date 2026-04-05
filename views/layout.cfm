@@ -1,4 +1,5 @@
-<cfif StructKeyExists(request, "skiplayout") AND request.skiplayout><cfoutput>#request.content#</cfoutput><cfelse><!DOCTYPE html>
+<cfif StructKeyExists(request, "skiplayout") AND request.skiplayout><cfoutput>#request.content#</cfoutput><cfelse>
+<cfcontent reset="true" type="text/html"><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">

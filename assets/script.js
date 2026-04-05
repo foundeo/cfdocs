@@ -150,8 +150,9 @@ function fallbackCopyTextToClipboard(text) {
 
 //search submit
 function submitSearch(e) {
-	e.preventDefault();
-	var newLocation = $(this).find('#lookup-box').val().toLowerCase();
+	e.preventDefault();	
+	var submitId=$(this).closest('form').attr('id')
+	var newLocation = $('#'+submitId +' #lookup-box').val().toLowerCase();
 	document.location = '/' + encodeURIComponent((newLocation.length && newLocation[0] == '/') ? newLocation.slice(1) : newLocation);
 }
 //google analytics

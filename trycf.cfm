@@ -9,7 +9,7 @@
         <cfset data={title="404"}>
     </cfif>
     <cfif structKeyExists(data.engines, "lucee") AND NOT structKeyExists(data.engines, "coldfusion")>
-        <cfset url.engine = "lucee5">
+        <cfset url.engine = "lucee6">
     </cfif>
     <cfset request.skipLayout=true>
 </cfsilent>

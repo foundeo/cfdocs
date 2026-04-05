@@ -37,7 +37,8 @@
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "When called as a member function query.each() is chainable.", "docs": "https://docs.lucee.org/reference/functions/queryeach.html"},
-		"coldfusion": {"minimum_version": "2016", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryeach.html"}
+		"coldfusion": {"minimum_version": "2016", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryeach.html"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/queryeach"}
 	},
 	"examples": [{
 		"title":"Iterate over query rows instead of cfloop()",

@@ -12,7 +12,8 @@
 		{"name": "row_number", "description": "", "required": false, "default": "-9999", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querygetcell.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/querygetcell.html"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querygetcell"}
 	},
 	"links": [],
 	"examples": [
@@ -29,5 +30,5 @@
 			"result":"The Outsiders"
 		}
 	]
-	
+
 }

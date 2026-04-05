@@ -18,7 +18,8 @@
 		"coldfusion": {"minimum_version":"4", "notes":"ColdFusion 11 Update 3: Restored the previously ignored dbvarname attribute.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfprocparam.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/procparam.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfprocparam"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfprocparam"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfprocparam"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:procparam>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/jdbc/procparam"}
 	},
 	"links": [
 		{

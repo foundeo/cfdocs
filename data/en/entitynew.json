@@ -13,7 +13,8 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"This function has been enhanced in ColdFusion 9.0.1 to support multiple data sources in the same application.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/entitynew.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/entitynew.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entitynew"}
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/entitynew"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://bxorm.ortusbooks.com/usage/builtins#entitynew"}
 	},
 	"links": [],
 	"examples": [

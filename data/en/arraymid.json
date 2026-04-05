@@ -12,19 +12,20 @@
 		{"name": "count", "description": "The number of elements to extract. If not set, all elements up to the end of the array will be returned.", "required": false, "default": "", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/arraymid.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/arraymid.html"},
+		"boxlang": {"minimum_version": "1.0.0", "notes": "", "docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arraymid"}
 	},
 	"examples": [
 	  {
 		 "title": "Using only the start parameter",
-		 "description": "Lucee4.5+ Extract elements from an array staring with element 5 and ending with the last element of the array.",
+		 "description": "Lucee4.5+ Extract elements from an array starting with element 5 and ending with the last element of the array.",
 		 "code": "vehicles = ['Mustang','Nova','Celica','Camry','Tacoma','Tundra','Ram','F-250'];\ntrucks = arrayMid(vehicles, 5);\nwriteOutput(arrayToList(trucks));",
 		 "result": "Tacoma,Tundra,Ram,F-250",
 		 "runnable":true
 	  },
 	  {
 		 "title": "Using the count parameter to specify the number of elements to include",
-		 "description": "Lucee4.5+ Extract 4 elements from an array staring with element 3.",
+		 "description": "Lucee4.5+ Extract 4 elements from an array starting with element 3.",
 		 "code": "vehicles = ['Mustang','Nova','Celica','Camry','Tacoma','Tundra','Ram','F-250'];\ntoyotas = arrayMid(vehicles, 3, 4);\nwriteOutput(arrayToList(toyotas));",
 		 "result": "Celica,Camry,Tacoma,Tundra",
 		 "runnable":true

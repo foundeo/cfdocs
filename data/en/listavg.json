@@ -12,7 +12,8 @@
 		{"name": "multiCharacterDelimiter", "description": "", "required": false, "default": "false", "type": "boolean", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/listavg.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/listavg.html"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listavg"}
 	},
 	"examples": [{
             "title":"Calculate average from query columns",

@@ -21,7 +21,7 @@ This makes the documentation super easy to edit and allows developers to run a l
 The cfdocs.org site can run locally very easily thanks to CommandBox.
 
 1. Go download [CommandBox](https://www.ortussolutions.com/products/commandbox) if you do not have it already.
-2. Download this repository and extract it to a folder, or clone it from this repository. 
+2. Download this repository and extract it to a folder, or clone it from this repository.
 3. Make a copy of `.env.example` and name it `.env`. This contains required environment variables. [learn more](https://github.com/commandbox-modules/commandbox-dotenv)
 4. Run `box server start` from Command Prompt or Terminal in the root directory.
 
@@ -41,7 +41,7 @@ CFDocs.org is meant to be a quick reference so keep it short and sweet. E.g. att
 
 1. Browse the [data/en/](https://github.com/foundeo/cfdocs/tree/master/data/en) folder of this repository on GitHub and find the tag or function you want to edit.
 2. Click the edit button (pencil)
-3. Commit 
+3. Commit
 4. Send a pull request to merge your change with this repository.
 
 #### The better way to edit the docs

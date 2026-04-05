@@ -12,7 +12,8 @@
 		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cfexit.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/exit.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfexit"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfexit"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfexit"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:exit>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/exit"}
 	},
 	"links": [],
 	"examples": [
@@ -22,6 +23,6 @@
 			"code":"<cfoutput>\r\n<cfloop from=\"1\" to=\"5\" index = \"i\">\r\n<cfif i EQ 3>\r\n\t<cfexit>\r\n<cfelse>\r\n\t#i#\r\n</cfif>\r\n</cfloop>\r\n</cfoutput>",
 			"result":"1 2"
 		}
-		
+
 	]
 }

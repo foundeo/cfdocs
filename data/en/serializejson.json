@@ -16,7 +16,8 @@
 		"coldfusion": {"minimum_version":"8", "notes":"CF11+ Added `useSecureJSONPrefix` and `useCustomSerializer` arguments. Changed `queryFormat` (formerly known as `serializeQueryByColumns`) from a boolean type to also allowing strings, adding the 'struct' functionality in the process. The default for `queryFormat` can be set using the newly added Application.cfc setting `this.serialization.serializeQueryAs`. Also added Application.cfc settings `this.serialization.preserveCaseForStructKey` and `this.serialization.preserveCaseForQueryColumn`. CF2016+ Added member syntax.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/serializejson.html"},
 		"lucee": {"minimum_version":"", "notes":"Member syntax added for Lucee5.3.8+", "docs":"https://docs.lucee.org/reference/functions/serializejson.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/serializejson"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/serializejson"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/serializejson"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"Transpiled to `JSONSerialize` in BoxLang.", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/conversion/jsonserialize"}
 	},
 	"links": [
 		{

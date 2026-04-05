@@ -7,11 +7,11 @@
 	"description": "Clears all caches or the specified cache",
 	"params": [
 		{
-			"name": "cacheName", 
-			"description": "Name of the cache you want to clear. If not specified it will clear all caches.\r\n Some cachenames are aliases:\r\npage = template\r\ncfc, class = component\r\nct = customtag\r\nobject = query", 
-			"required": false, 
-			"default": "", 
-			"type": "string", 
+			"name": "cacheName",
+			"description": "Name of the cache you want to clear. If not specified it will clear all caches.\r\n Some cachenames are aliases:\r\npage = template\r\ncfc, class = component\r\nct = customtag\r\nobject = query",
+			"required": false,
+			"default": "",
+			"type": "string",
 			"values": [
 				"all",
 				"template",
@@ -29,7 +29,8 @@
 		}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/systemcacheclear.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/systemcacheclear.html"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/systemcacheclear"}
 	},
 	"examples": [
 		{

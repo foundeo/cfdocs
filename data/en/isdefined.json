@@ -33,7 +33,8 @@
 			"minimum_version": "",
 			"notes": "",
 			"docs": "http://openbd.org/manual/?/function/isdefined"
-		}
+		},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/decision/isdefined"}
 	},
 	"links": [
 		{
@@ -59,7 +60,7 @@
 			"description": "Beware of scope evaluation order when checking for an unscoped variable name.",
 			"code": "url.foo = \"url.foo\" ; form.foo = \"form.foo\"; writeoutput(\"Is 'foo' defined? \" & isDefined(\"foo\")); writeoutput(isDefined(\"foo\") ? \" (\" & foo & \")\" : \"\");",
 			"result": "Is 'foo' defined? YES (url.foo)"
-		}, 
+		},
 		{
 			"title": "Dot-notation Variable Names",
 			"description": "Potentially unexpected behavior when checking for a dot-notation variable containing a scope name.",

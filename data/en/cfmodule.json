@@ -14,7 +14,8 @@
 		"coldfusion": {"minimum_version":"3", "notes":"ColdFusion supports the cfmodule() script syntax", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmodule.html"},
 		"lucee": {"minimum_version":"", "notes":"Lucee Supports script syntax module template=\"file.cfm\"", "docs":"https://docs.lucee.org/reference/tags/module.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmodule"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmodule"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmodule"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:module>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/module"}
 	},
 	"links": [],
 	"examples": [
@@ -65,7 +66,7 @@
 			"description": "In this example, show how to invoke using cfscript.",
 			"code": "<cfscript>attrs = {theme = \"default\", pageTitle = \"Welcome!\"}>\ncfmodule(template=\"myTemplate.cfm\",attributeCollection=\"#attrCollection1#\")</cfscript>",
 			"result": "",
-			"runnable" : false			
+			"runnable" : false
 		}
 	]
 }

@@ -2,6 +2,7 @@
 	"name":"cfrethrow",
 	"type":"tag",
 	"syntax":"<cfrethrow>",
+	"script":"rethrow;",
 	"related":["cftry","cfcatch","cfthrow"],
 	"description":"Rethrows the currently active exception. Preserves the\n exception's `cfcatch.type` and `cfcatch.tagContext` variable\n values.",
 	"params": [],

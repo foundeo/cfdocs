@@ -1,0 +1,40 @@
+{
+	"name":"structToQueryString",
+	"type":"function",
+	"syntax":"structToQueryString(structure, delimiter)",
+	"member":"structure.structToQueryString(delimiter)",
+	"returns": "string",
+	"related":["structReduce"],
+	"description":"Converts a struct to a query string using the specified delimiter.",
+	"params": [
+		{
+			"name": "structure",
+			"description": "Structure or a variable that contains one.",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "delimiter",
+			"description": "Delimiter to use in between key/value pairs. Default is &amp;.",
+			"required": false,
+			"default": "&amp;",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structtosorted"}
+	},
+	"links":[],
+	"examples": [
+		{
+			"title": "structToQueryString with the default delimiter",
+			"description": "Converting a struct to a query string using the default delimiter (&amp;)",
+			"code": "someStruct = {\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\"\r\n};\r\nwriteDump( structToQueryString( someStruct ) );",
+			"result": "firstName=John&lastName=Doe",
+			"runnable": false
+		}
+	]
+}

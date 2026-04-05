@@ -13,7 +13,8 @@
 		{"name": "mode", "description": "", "required": false, "default": "777", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/compress.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/compress.html"},
+		"boxlang": {"minimum_version": "1.0.0", "notes": "", "docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/zip/compress"}
 	},
 	"examples": [{
 			"title":"Compress a file",
