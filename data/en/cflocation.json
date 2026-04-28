@@ -3,36 +3,32 @@
 	"type":"tag",
 	"syntax":"<cflocation url=\"page.cfm\" addtoken=\"false\" statusCode=\"301\">",
 	"script":"location(\"mypage.cfm\", \"false\", \"301\");",
-	"related":[],
+	"related":["cfforward","cfheader"],
 	"description":"Stops execution of the current page and redirects to the specified URI.",
 	"params": [
 		{"name":"url","description":"URI or URL to redirect to.","required":true,"default":"","type":"string","values":[]},
-		{"name":"addtoken","description":"Appends the CFID, CFTOKEN, JSESSIONID and possibly other session/client identifiers to the URL. Security best practices recommend setting this to false.","required":false,"default":"true","type":"boolean","values":[true,false]},
+		{"name":"addtoken","description":"Appends the CFID, CFTOKEN, JSESSIONID and possibly other session/client identifiers to the URL. Security best practices recommend setting this to false.","required":false,"default":"true","type":"boolean","values":[]},
 		{"name":"statuscode","description":"The 30X HTTP status code. CF8+","required":false,"default":"302","type":"numeric","values":[]}
-
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-j-l/cflocation.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/location.html"},
+		"lucee": {"minimum_version":"", "notes":"Lucee automatically URL encodes the url by default. See ticket LDEV-2164.", "docs":"https://docs.lucee.org/reference/tags/location.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cflocation"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cflocation"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "\r\nlocation(\"mypage.cfm\", \"false\", \"301\");",
+			"code": "location(\"mypage.cfm\", \"false\", \"301\");",
 			"result": ""
 		},
-	        {
-	            "title": "Tag Syntax",
-	            "description": "",
-	            "code": "<cflocation url=\"mypage.cfm\" addToken=\"false\" statusCode=\"301\">",
-	            "result": ""
-	        }
+		{
+			"title": "Tag Syntax",
+			"description": "",
+			"code": "<cflocation url=\"mypage.cfm\" addToken=\"false\" statusCode=\"301\">",
+			"result": ""
+		}
 	]
-
 }

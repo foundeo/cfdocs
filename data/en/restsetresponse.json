@@ -6,11 +6,11 @@
 	"related":[],
 	"description":" Sets the custom responses.",
 	"params": [
-		{"name":"response","description":"A struct that contains the response details.","required":true,"default":"","type":"","values":[]}
+		{"name":"response","description":"A struct that contains the response details.","required":true,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/restsetresponse.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/restsetresponse.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/restsetresponse.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/RestSetResponse"}
 	},
 	"links": [

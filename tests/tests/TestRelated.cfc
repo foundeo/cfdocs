@@ -1,16 +1,17 @@
 component extends="testbox.system.BaseSpec" {
 	function run(testResults, testBox) {
-		dataDir = ExpandPath("../data/en");
-		files = directoryList(dataDir, false, "array");
-		index = deserializeJSON(fileRead(dataDir & "/index.json"));
+		var dataDir = ExpandPath("../data/en");
+		var files = directoryList(dataDir, false, "array");
+		var index = deserializeJSON(fileRead(dataDir & "/index.json"));
 		// temporary: should be removed later
 		index.components = ["application-cfc"];
 
-		fileTypes = {tags=[], functions=[], listings=[], components=[]};
+		var fileTypes = {tags=[], functions=[], listings=[], components=[]};
+		var filePath = "";
 		for (filePath in files) {
-			json = fileRead(filePath);
-			isItJson = isJSON(json);
-			fileName = getFileFromPath(filePath);
+			var json = fileRead(filePath);
+			var isItJson = isJSON(json);
+			var fileName = getFileFromPath(filePath);
 			if (isItJson) {
 				json = deserializeJSON(json);
 				if (structKeyExists(json, "type") AND structKeyExists(json,"related")) {
@@ -44,7 +45,7 @@ component extends="testbox.system.BaseSpec" {
 			
 			it("shouldn't relate to itself", function() {
 				for(tag in fileTypes.tags) {
-					expect(arrayFind(tag.related,tag.name) is 0).toBeTrue("#tag.name# currently relates to itsef");
+					expect(arrayFindNoCase(tag.related,tag.name) is 0).toBeTrue("#tag.name# currently relates to itself");
 				}
 			});
 		});

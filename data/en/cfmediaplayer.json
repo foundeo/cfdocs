@@ -27,7 +27,7 @@
 			"required": false,
 			"default": "",
 			"type": "boolean",
-			"values": [false, true]
+			"values": []
 		},
 		{
 			"name": "hideBorder",
@@ -35,7 +35,7 @@
 			"required": false,
 			"default": "",
 			"type": "boolean",
-			"values": [false, true]
+			"values": []
 		},
 		{
 			"name": "controlbar",
@@ -43,7 +43,7 @@
 			"required": false,
 			"default": "",
 			"type": "boolean",
-			"values": [false, true]
+			"values": []
 		},
 		{
 			"name": "align",
@@ -55,7 +55,7 @@
 		},
 		{
 			"name": "onload",
-			"description": "Custom JavaScript function to run on loading th player component.",
+			"description": "Custom JavaScript function to run on loading the player component.",
 			"required": false,
 			"default": "",
 			"type": "string",
@@ -99,7 +99,7 @@
 			"required": false,
 			"default": "",
 			"type": "boolean",
-			"values": [false, true]
+			"values": []
 		},
 		{
 			"name": "oncomplete",
@@ -131,7 +131,7 @@
 			"required": false,
 			"default": "",
 			"type": "boolean",
-			"values": [false, true]
+			"values": []
 		},
 		{
 			"name": "style",
@@ -144,10 +144,11 @@
 	],
 	"engines": {
 		"coldfusion": {
-			"minimum_version": "",
+			"minimum_version": "9",
 			"notes": "",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmediaplayer.html",
-			"deprecated":"2016"
+			"deprecated":"2016",
+			"removed":"2025"
 		}
 	},
 	"links": []

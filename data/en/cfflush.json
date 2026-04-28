@@ -10,12 +10,27 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-f/cfflush.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/flush.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/flush.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfflush"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfflush"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfflush"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:flush>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/flush"}
 	},
-	"links": [
-
+	"links": [],
+	"examples": [
+		{
+			"title": "Simple Script Example",
+			"description": "Outputs 'foo' to the browser approximately 1 second before 'bar'",
+			"code": "writeOutput( \"<div>foo</div>\" ); \n cfflush(); \n sleep( 1000 ); \n writeOutput( \"<div>bar</div>\" );",
+			"result": "",
+			"testable": false
+		},
+		{
+			"title": "Simple Tag Example",
+			"description": "Outputs 'foo' to the browser approximately 1 second before 'bar'",
+			"code": "<div>foo</div> \n <cfflush /> <cfsleep time=\"1000\" /> \n <div>bar</div>",
+			"result": "",
+			"testable": false
+		}
 	]
 
 }

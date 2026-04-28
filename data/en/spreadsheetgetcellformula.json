@@ -1,31 +1,66 @@
 {
-	"name":"spreadsheetGetCellFormula",
-	"type":"function",
-	"syntax":"spreadsheetGetCellFormula(spreadsheetObj, row, column)",
-	"returns":"string",
-	"related":[],
-	"description":" Gets the formula for a for an Excel spreadsheet object cell, or all formulas for the object.",
-	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"row","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"column","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
-
-	],
-	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetgetcellformula.html"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetgetcellformula"}
-	},
-	"links": [
-
-	],
-	"examples": [
-		{
-			"title":"Script Example",
-			"description":" ",
-			"code":"<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \r\n  <cfset queryAddRow(q)> \r\n  <cfset querySetCell(q, \"Name\", \"John\")> \r\n  <cfset querySetCell(q, \"Beers\", \"1\")> \r\n  <cfset querySetCell(q, \"Vegetables\", \"1\")> \r\n  <cfset querySetCell(q, \"Fruits\", \"1\")> \r\n  <cfset querySetCell(q, \"Meats\", \"1\")> \r\n  <cfset mySheet =   SpreadsheetNew( \"Test\"  ) /> \r\n  <!--- Make a spreadsheet object ---> \r\n  <cfset s = spreadsheetNew()> \r\n  <!--- Add header row ---> \r\n  <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \r\n  <!--- Add query ---> \r\n   <cfscript> \r\n   theFormula=SpreadsheetGetCellFormula(s,1,1); \r\n </cfscript> \r\n <cfoutput> \r\n Row,Column: #theFormula# \r\n </cfoutput>  ",
-			"result":"",
-			"runnable":true
-		}
-	]
-
+    "name": "spreadsheetGetCellFormula",
+    "type": "function",
+    "syntax": "spreadsheetGetCellFormula(spreadsheetObj, row, column)",
+    "returns": "string",
+    "related": [
+        "SpreadsheetGetCellComment",
+        "SpreadsheetGetCellValue"
+    ],
+    "description": " Gets the formula for a for an Excel spreadsheet object cell, or all formulas for the object.",
+    "params": [
+        {
+            "name": "spreadsheetObj",
+            "description": "No Help Available",
+            "required": true,
+            "default": "",
+            "type": "variableName",
+            "values": []
+        },
+        {
+            "name": "row",
+            "description": "No Help Available",
+            "required": true,
+            "default": "",
+            "type": "numeric",
+            "values": []
+        },
+        {
+            "name": "column",
+            "description": "No Help Available",
+            "required": true,
+            "default": "",
+            "type": "numeric",
+            "values": []
+        }
+    ],
+    "engines": {
+        "coldfusion": {
+            "minimum_version": "",
+            "notes": "",
+            "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetgetcellformula.html"
+        },
+        "openbd": {
+            "minimum_version": "",
+            "notes": "",
+            "docs": "http://openbd.org/manual/?/function/spreadsheetgetcellformula"
+        }
+    },
+    "links": [],
+    "examples": [
+        {
+            "title": "Script Example",
+            "description": " ",
+            "code": "<cfset q = queryNew(\"Name,Beers,Vegetables,Fruits,Meats\", \"cf_sql_varchar,cf_sql_integer,cf_sql_integer,cf_sql_integer,cf_sql_integer\")> \r\n  <cfset queryAddRow(q)> \r\n  <cfset querySetCell(q, \"Name\", \"John\")> \r\n  <cfset querySetCell(q, \"Beers\", \"1\")> \r\n  <cfset querySetCell(q, \"Vegetables\", \"1\")> \r\n  <cfset querySetCell(q, \"Fruits\", \"1\")> \r\n  <cfset querySetCell(q, \"Meats\", \"1\")> \r\n  <cfset mySheet =   SpreadsheetNew( \"Test\"  ) /> \r\n  <!--- Make a spreadsheet object ---> \r\n  <cfset s = spreadsheetNew()> \r\n  <!--- Add header row ---> \r\n  <cfset spreadsheetAddRow(s, \"Name,Beers,Vegetables,Fruits,Meats\")> \r\n  <!--- Add query ---> \r\n   <cfscript> \r\n   theFormula=SpreadsheetGetCellFormula(s,1,1); \r\n </cfscript> \r\n <cfoutput> \r\n Row,Column: #theFormula# \r\n </cfoutput>  ",
+            "result": "",
+            "runnable": true
+        },
+        {
+            "title": "Example for getting cell formula",
+            "description": "Example of getting Excel spreadsheet cell value and formula",
+            "code": "<cfscript>\ncolumnsList = \"Name,Employed,Sales,Earnings,Some Value\";\nemployees = [\n    { \"Name\": \"Robert\",\"Employed\":\"Y\",\"Sales\":1,\"Earnings\":500 },\n    { \"Name\": \"Wilma\",\"Employed\":\"Y\",\"Sales\":15,\"Earnings\":5500 },\n    { \"Name\": \"Eric\",\"Employed\":\"Y\",\"Sales\":3,\"Earnings\":1200 },\n    { \"Name\": \"Fred\",\"Employed\":\"Y\",\"Sales\":1,\"Earnings\":500 },\n    { \"Name\": \"Dillan\",\"Employed\":\"Y\",\"Sales\":15,\"Earnings\":5500 },\n    { \"Name\": \"Dana\",\"Employed\":\"Y\",\"Sales\":3,\"Earnings\":1200 },\n    { \"Name\": \"Sandy\",\"Employed\":\"Y\",\"Sales\":1,\"Earnings\":500 },\n    { \"Name\": \"Ellen\",\"Employed\":\"Y\",\"Sales\":15,\"Earnings\":5500 },\n    { \"Name\": \"Richard\",\"Employed\":\"Y\",\"Sales\":3,\"Earnings\":1200 }\n];\n\n// create a spreadsheet\ns = SpreadsheetNew(\"Example\");\n// add the header row\nspreadsheetAddRow(s, columnsList);\n// Add some employee data\nemployees.each(function(record,row){\n    spreadsheetAddRow(s, \"\", row + 1);\n    // Add the row data by column name\n    ListToArray(columnsList).each(function(columnName,col){\n        if(structKeyExists(record,columnName)){\n            SpreadsheetSetCellValue(s, record[columnName], row + 1, col);\n        }\n    });\n});\n// Capture the number of rows plus the header row\nnumRows = ArrayLen(employees) + 1;\n\n// Create some random data in the 5th column\nfor (i=2; i<= numRows; i=i+1)\n    SpreadsheetSetCellValue(s,i,i,5);\n// add a totals row\nspreadsheetAddRow(s, \"\", numRows + 1);\n\n// Set the formula for the cell in the last row, column 3 to be the sum of\n// 'Sales'\nSpreadsheetSetCellFormula(s,\"SUM(#Chr(64+3)#2:#Chr(64+3)#10)\",numRows+1,3);\n// Set the formula for the cell in the last row, column 4 to be the sum of\n// 'Earnings'\nSpreadsheetSetCellFormula(s,\"SUM(#Chr(64+4)#2:#Chr(64+4)#10)\",numRows+1,4);\n// Set the formula for the cell in the last row, column 5 to be the sum of\n// 'Some Value'\nSpreadsheetSetCellFormula(s,\"SUM(#Chr(64+5)#2:#Chr(64+5)#10)\",numRows+1,5);\n\nfor (i=3; i<= 5; i=i+1){\n    //Get the formula from last row column i ex: ($E11)\n    formulaValue=SpreadsheetGetCellFormula(s,numRows+1,i);\n    //Get the value from last row column i ex: ($E11)\n    cellValue=SpreadsheetGetCellValue(s,numRows+1,i);\n    writeOutput(\"Total: \" & cellValue & \"<br>\");\n    writeOutput(\"formula: \" & formulaValue & \"<hr>\" );\n}\nwritedump(var=s,label=\"Example\");\n</cfscript>",
+            "result": "Total: 57 formula: SUM(C2:C10) Total: 21600 formula: SUM(D2:D10) Total: 54 formula: SUM(E2:E10)",
+            "runnable": true
+        }
+    ]
 }

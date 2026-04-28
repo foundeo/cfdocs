@@ -16,11 +16,11 @@
 		},
 		{
 			"name": "center",
-			"description": "A Boolean value specifying whether to center\n the window over the browser window.\n \u00e2\u20ac\u0161\u00c3\u201e\u00c2\u00a2 If true, ColdFusion ignores the x and y\n attribute values.\n \u00e2\u20ac\u0161\u00c3\u201e\u00c2\u00a2 If false, and you do not specify x and y\n attributes, ColdFusion centers the window.",
+			"description": "A Boolean value specifying whether to center\n the window over the browser window.\nIf true, ColdFusion ignores the x and y\n attribute values.\nIf false, and you do not specify x and y\n attributes, ColdFusion centers the window.",
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "closable",
@@ -28,7 +28,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "draggable",
@@ -36,7 +36,7 @@
 			"required": false,
 			"default": true,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "headerStyle",
@@ -60,7 +60,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "minHeight",
@@ -84,7 +84,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "name",
@@ -108,7 +108,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "source",
@@ -156,7 +156,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "destroyOnClose",
@@ -164,12 +164,12 @@
 			"required": false,
 			"default": "",
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		}
 	],
 	"engines": {
 		"coldfusion": {
-			"minimum_version": "",
+			"minimum_version": "8",
 			"notes": "",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfwindow.html"
 		}

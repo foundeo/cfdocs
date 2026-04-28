@@ -1,0 +1,31 @@
+{
+	"name":"cfpageencoding",
+	"type":"tag",
+	"syntax":"<cfpageencoding charset=\"utf-8\"></cfpageencoding>",
+	"script":"cfpageencoding( charset=\"utf-8\" ) {}",
+	"related":["cfcontent"],
+	"description":"The character encoding to use to read the content between the opening and closing tags.",
+	"params": [
+		{"name":"charset","description":"The name of the variable that will contain the value of the time taken.","required":true,"type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
+	],
+	"engines": {
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/pageencoding.html"}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Tag version",
+			"description": "",
+			"code": "<cfpageencoding charset=\"utf-8\">\nSome UTF-8 content\n</cfpageencoding>",
+			"result": "Encoding the buffered content between the tags",
+			"runnable": false
+		},
+		{
+			"title": "Script version",
+			"description": "",
+			"code": "cfpageencoding( charset=\"utf-8\" ){\nwriteoutput(\"Some UTF-8 content\");\n}",
+			"result": "Encoding the buffered content between the tags",
+			"runnable": false
+		}
+	]
+}

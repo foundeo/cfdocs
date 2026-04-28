@@ -32,9 +32,9 @@ Depending on the application, you will want to adjust the timeout value to a num
 
 ### Session storage
 
-In our examples here we will be using the cache functions of CFML to store a sesion object (bean) for each logged in user to our system. This is arbitrary and you could just as easily use a database, in-memory database, virtual file system (e.g. RAM://), or flat file storage with XML or JSON - or some combination thereof, for example.
+In our examples here we will be using the cache functions of CFML to store a session object (bean) for each logged in user to our system. This is arbitrary and you could just as easily use a database, in-memory database, virtual file system (e.g. RAM://), or flat file storage with XML or JSON - or some combination thereof, for example.
 
-We have found, through trial and error, that using the cache functions is fast and allows us to use distributed caching in large enterprise applications without sticky sessions to maintain the session across clusters, and is our preferred way of storing session data. 
+We have found, through trial and error, that using the cache functions is fast and allows us to use distributed caching in large enterprise applications without sticky sessions to maintain the session across clusters, and is our preferred way of storing session data.
 
 ### Session management in onRequestStart()
 
@@ -45,21 +45,21 @@ The first thing we'll need to do is to ensure that we're **not** triggering sess
     var actionArr = [ 'main.login', 'main.authenticate' ];
 
     // check if we're already logging in
-    if( !arrayFind( actionArr, rc.action )) {
+    if ( !arrayFind( actionArr, rc.action )) {
 
 In this example we're using fw/1's *rc.action* variable to determine if we're in the login or authentication views. If we are not in either of those views, then we proceed to check if our session cookie is present, as follows:
 
         // we're not, check if the session cookie is defined
-        if( !structKeyExists( cookie, application.cookieName ) ) {
+        if ( !structKeyExists( cookie, application.cookieName ) ) {
             // it isn't, redirect to the login page
-            variables.fw.redirect( action = 'main.login', queryString = "msg=501" );  
+            variables.fw.redirect( action = 'main.login', queryString = "msg=501" );
         }
 
 In the above code, we check if our *application.cookieName* variable is defined in the COOKIE scope by using the [structKeyExists()](/structkeyexists) function. If the cookie is **not** defined, then we redirect the user to the login page, passing some parameter we can use to provide a message to the user about why they have to authenticate (session expired, etc.). Again, we're using fw/1 in this example, but you could also simply check for the existence of the cookie and then use [cflocation](/cflocation) to redirect the user to the login page.
 
 When we [authenticated](/security-authentication) our user, we set an [encrypted](/encrypt) cookie value to store the users session id. Once we have checked for the existence of the cookie, we will then attempt to [decrypt()](/decrypt) the cookie's value using a [try](/cftry)/[catch](/cfcatch) block, as follows:
 
-        // try 
+        // try
         try {
             // decrypt the cookie
             rc.sessionId = application.securityService.getSessionIdFromCookie( cookie[ application.cookieName ] );
@@ -91,11 +91,11 @@ Our *checkUserSession()* function has the following code:
         // get the session object from the cache
         var sessionObj = cacheGet( uberHash( arguments.sessionId, 'MD5', 3000 ) );
         // ensure it is still in the cache
-        if( isNull( sessionObj ) ) {
+        if ( isNull( sessionObj ) ) {
             // it isn't, return an empty session object
             return createObject( 'component', 'model.beans.Session').init();
         // otherwise, ensure the session shouldn't have already expired (30 mins)
-        } else if( dateDiff('n', sessionObj.getLastActionAt(), now() ) GTE application.timeoutMinutes ) {
+        } else if ( dateDiff('n', sessionObj.getLastActionAt(), now() ) >= application.timeoutMinutes ) {
             // it should have expired, return an empty session object
             return createObject( 'component', 'model.beans.Session').init();
         // otherwise
@@ -107,15 +107,15 @@ Our *checkUserSession()* function has the following code:
 
 Here we are first checking if the session object exists in our cache. If it does **not** exist, then we return an empty bean which we will check after returning from this function. We then compare the last action of the user as stored in the session object with the timeout we specified in our application scope. If the users last action timespan is longer than the session timeout specified, then we again return an empty bean. Otherwise, the user has a valid session object and we return the populated bean we have stored in our cache. Again, this storage mechanism is arbitrary and could be any other storage mechanism - for speed and for distributed caching capabilities, however, we feel that using the cache functions is the most appropriate method of handling user sessions and recommend using it.
 
-Now that we have a sesson object (bean) to check, we have to see if the user id returned is valid (any non-zero value) or invalid (a zero value), as follows:
+Now that we have a session object (bean) to check, we have to see if the user id returned is valid (any non-zero value) or invalid (a zero value), as follows:
 
         // check if the sessionObj returned is valid
-        if( session.sessionObj.getUserId() EQ 0 ) {
+        if ( session.sessionObj.getUserId() == 0 ) {
             // it isn't, redirect to the login page
             variables.fw.redirect( action = 'main.login', queryString = "msg=502" );            
         }
 
-In the above code we check if the user id is zero, which is specified as the default value in our bean's init() method upon creation. If it *is* zero, then the user does not have a valid session and is redirected back to the login page. If the user is is a non-zero value, then we know we now have a valid session and can proceed to operate on that session object to a) rotate the users session and b) update the users session with the last action datetime, as follows:
+In the above code we check if the user id is zero, which is specified as the default value in our bean's init() method upon creation. If it *is* zero, then the user does not have a valid session and is redirected back to the login page. If the user is a non-zero value, then we know we now have a valid session and can proceed to operate on that session object to a) rotate the users session and b) update the users session with the last action datetime, as follows:
 
         // lock the session and rotate the session id (for every request)
         lock scope='session' timeout='10' {
@@ -152,7 +152,7 @@ We then update the session's last action and save the session back into the cach
 
 This code first clears any existing session object from the cache, then updates the session object's (bean's) last action datetime, saves the user's session object (bean) back to the cache and returns the updated session object.
 
-We split this into two parts because session rotation can be tricky in some applications. For example, using the browsers 'back' function can (and will) cause the cookie being sent from the browser to be the formerly assigned cookie value which is no longer valid. For this reason and for some applications we simply comment out, or leave out compeltely, the session rotation.
+We split this into two parts because session rotation can be tricky in some applications. For example, using the browsers 'back' function can (and will) cause the cookie being sent from the browser to be the formerly assigned cookie value which is no longer valid. For this reason and for some applications we simply comment out, or leave out completely, the session rotation.
 
 Finally, we re-set the users cookie value with the new (rotated) and encrypted session id, as follows:
 
@@ -171,10 +171,10 @@ In the above code we encrypt the cookie's value (the session id) using the key a
     var actionArr = [ 'main.login', 'main.authenticate' ];
 
     // check if we're already logging in
-    if( !arrayFind( actionArr, rc.action )) {
+    if ( !arrayFind( actionArr, rc.action )) {
 
         // we're not, check if the session cookie is defined
-        if( !structKeyExists( cookie, application.cookieName ) ) {
+        if ( !structKeyExists( cookie, application.cookieName ) ) {
             // it isn't, redirect to the login page
             variables.fw.redirect( action = 'main.login', queryString = "msg=501" );  
         }
@@ -195,9 +195,9 @@ In the above code we encrypt the cookie's value (the session id) using the key a
         }
 
         // check if the sessionObj returned is valid
-        if( session.sessionObj.getUserId() EQ 0 ) {
+        if ( session.sessionObj.getUserId() == 0 ) {
             // it isn't, redirect to the login page
-            variables.fw.redirect( action = 'main.login', queryString = "msg=502" );            
+            variables.fw.redirect( action = 'main.login', queryString = "msg=502" );
         }
 
         // lock the session and rotate the session id (for every request)
@@ -215,4 +215,4 @@ In the above code we encrypt the cookie's value (the session id) using the key a
 
     }
 
-All of these concepts can be found in convenient functions in my [SecurityService.cfc](http://bit.ly/1IkY5zK) service and [security.cfc](http://bit.ly/1XhnGPG) controller, which are part of a larger example of using these and other security techniques to create a [secure](http://bit.ly/1Msdwkt), or [two-factor](http://bit.ly/1Yx4hGt), [framework one (FW/1)](http://bit.ly/22lB2eu) application.
+All of these concepts can be found in convenient functions in my [SecurityService.cfc](https://bit.ly/1IkY5zK) service and [security.cfc](https://bit.ly/1XhnGPG) controller, which are part of a larger example of using these and other security techniques to create a [secure](https://bit.ly/1Msdwkt), or [two-factor](https://bit.ly/1Yx4hGt), [framework one (FW/1)](https://bit.ly/22lB2eu) application.

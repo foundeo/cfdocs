@@ -6,11 +6,11 @@
 	"related":[],
 	"description":"Adds freeze pane (non-scrollable columns/rows) to spreadsheet",
 	"params": [
-		{"name":"spreadsheetObj","description":"Spreadsheet variable","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"freezeColumn","description":"Amout of columns from left which should be freezed","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"freezeRow","description":"Amout of rows from top which should be freezed","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"hideColumn","description":"Amount of columns which should be hidden under/behind freezed columns (Scrolls left to first unhidden column).","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"hideRow","description":"Amount of rows which should be hidden under/behind freezed rows (Scrolls down to first unhidden row).","required":false,"default":"","type":"numeric","values":[]}
+		{"name":"spreadsheetObj","description":"Spreadsheet variable name","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"freezeColumn","description":"Amount of columns from left which should be freeze","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"freezeRow","description":"Amount of rows from top which should be freeze","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"hideColumn","description":"Amount of columns which should be hidden under/behind freeze columns (Scrolls left to first unhidden column).","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"hideRow","description":"Amount of rows which should be hidden under/behind freeze rows (Scrolls down to first unhidden row).","required":false,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetaddfreezepane.html"},

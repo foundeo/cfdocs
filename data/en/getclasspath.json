@@ -4,11 +4,17 @@
 	"syntax": "getClassPath()",
 	"returns": "array",
 	"related": ["createObject"],
-	"description": "Returns an array containing the Java classpath of the current enviroment.",
+	"description": "Returns an array containing the Java classPath of the current environment.",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getclasspath.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getclasspath.html"}
 	},
 	"links": [],
-	"examples": []
+	"examples": [
+		{
+			"title": "getClassPath Example",
+			"description":"It's containing the Java classPath of the current environment. It supported in Lucee.",
+			"code":" writeDump(getClassPath());"
+		}
+	]
 }

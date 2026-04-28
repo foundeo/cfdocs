@@ -3,7 +3,7 @@
 	"type":"tag",
 	"syntax":"<cfparam name=\"\">",
 	"script":"cfparam(name=\"\", default=\"\", pattern=\"\");",
-	"related":["cfset","isDefined"],
+	"related":["cfset","isDefined","isValid"],
 	"description":"Tests for a parameter's existence, tests its data type, and, if\n a default value is not assigned, optionally provides one.",
 	"params": [
 		{"name":"name","description":"Name of parameter to test (such as \"client.email\" or\n \"cookie.backgroundColor\"). If omitted, and if the\n parameter does not exist, an error is thrown.","required":true,"default":"","type":"string","values":[]},
@@ -11,13 +11,14 @@
 		{"name":"default","description":"Value to set parameter to if it does not exist. Any\n expression used for the default attribute is evaluated,\n even if the parameter exists.\n The result is not assigned if the parameter exists,\n but if the expression has side effects, they still occur.","required":false,"default":"","type":"any","values":[]},
 		{"name":"max","description":"The maximum valid value; used only for range validation.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"min","description":"The minimum valid value; used only for range validation.","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"pattern","description":"A regular experession that the parameter must match;\n used only for regex or regular_expression validation.","required":false,"default":"","type":"string","values":[]}
+		{"name":"pattern","description":"A regular expression that the parameter must match;\n used only for regex or regular_expression validation.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfparam.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/param.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/param.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfparam"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfparam"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfparam"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:param>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/param"}
 	},
 	"links": [],
 	"examples": [
@@ -38,6 +39,13 @@
 				"description": "Throws an error if the value is not one of a list of possible values",
 				"code":"<cfparam name=\"sortdir\" default=\"ASC\" type=\"regex\" pattern=\"ASC|DESC\"/>",
 				"result":""
+		},
+		{
+				"title": "param shorthand in cfscript",
+				"description": "Three ways to use the param shorthand inside of a cfscript tag",
+				"code": "param someVar; //declare the param\nparam someVar=5; //declare the param with a default value\nparam numeric someVar=3.1415; //declare the param with adefault value and set the type",
+				"result": "",
+				"runnable": true
 		}
 	]
 }

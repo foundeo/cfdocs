@@ -14,7 +14,6 @@ These are contrived values, mind you, but now that these parameter names are obf
 
 I can hear some of you already asking… 'Wait. Do you mean I have to come up with obscure parameter names and then try and remember where I used them?' The answer is no, you do not. Thankfully there is an easy way to obscure the parameter names you already use… we [hash()](/hash) them:
 
-
     <a href="Profile.cfm?v#hash( 'userId', 'SHA-384', 'UTF-8', 500 )#=#local.userId#
         &amp;v#hash( 'name', 'SHA-384', 'UTF-8', '1000' )#=#local.firstName#
         &amp;v#hash( 'departmentId', 'SHA-384', 'UTF-8', 750 )=#local.departmentId#">Edit Profile</a>
@@ -29,7 +28,6 @@ Note the inclusion of the letter 'v' in both the construction of the URL and in 
 
 You can just as easily apply this technique to form fields, though there is less value in using them for standard form fields given the HTML form typically includes labels which clearly indicate what each field's purpose is. It is still a handy technique to apply to hidden form fields, however, which helps further obfuscate common values. Using our Profile.cfm example:
 
-
     <input type="hidden" name="ff#hash( 'userId', 'SHA-512', 'UTF-8', 825 )#" value="911" />
 
 And conversely, getting this value in the action page, let's assume Profile.cfm posts back on itself, is just as simple as the URL variant:
@@ -40,4 +38,4 @@ Note that I've switched from 'v' as my starting variable name to 'ff' for 'formf
 
 'Wait.' You say… 'The value of the URL and form fields are still "911", so this is still not very secure'. Right you are, my friend. And thus, we need to introduce our next concept on the road to true security enlightenment… encryption.
 
-[Click Here](/security-encryption) to learn how encrypting your data will help protect you from parameter tampering or information disclosure. 
+[Click Here](/security-encryption) to learn how encrypting your data will help protect you from parameter tampering or information disclosure.

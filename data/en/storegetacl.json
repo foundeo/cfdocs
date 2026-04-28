@@ -6,12 +6,12 @@
 	"related":[],
 	"description":" Gets the ACL object or bucket.",
 	"params": [
-		{"name":"ulr","description":"Amazon S3 URLs (content or object)","required":true,"default":"","type":"","values":[]},
-        {"name":"ACLObject","description":"An array of struct where each struct represents a permission or grant as discussed in ACLObject.","required":true,"default":"","type":"","values":[]}
+		{"name":"ulr","description":"Amazon S3 URLs (content or object)","required":true,"default":"","type":"string","values":[]},
+        {"name":"ACLObject","description":"An array of struct where each struct represents a permission or grant as discussed in ACLObject.","required":true,"default":"","type":"array","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9.0.1", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/StoreGetACL.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/storegetacl.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/storegetacl.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/StoreGetACL"}
 	},
 	"links": [

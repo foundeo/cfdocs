@@ -4,14 +4,14 @@
 	"syntax":"ormSearchOffline(query_text, entityName, fields_to_be_selected)\normSearchOffline(query_text, entityName, fields_to_be_selected, fields)\normSearchOffline(query_text, entityName, fields_to_be_selected, fields, optionMap);",
 	"returns":"struct",
 	"related":[],
-	"description":" Performs search on the indexed properties but returns only the stored fields.For this function to work, specify indexStore=true on the properties on which you want to perform the search.",
+	"description":" Performs search on the indexed properties but returns only the stored fields. For this function to work, specify indexStore=true on the properties on which you want to perform the search.",
 	"params": [
-		{"name":"query_text","description":"The text to be searched for or a complete Lucene query.For details of Lucene query, see http://lucene.apache.org/core/old_versioned_docs/versions/.","required":true,"default":"","type":"","values":[]},
-        {"name":"entityName","description":"Name of the entity to be searched.","required":true,"default":"","type":"","values":[]},
-        {"name":"fields_to_be_selected","description":"Fields to be returned as keys in the resultant struct.","required":true,"default":"","type":"","values":[]},
-        {"name":"fields","description":"Fields in which search has to be performed.","required":true,"default":"","type":"","values":[]},
-        {"name":"optionMap","description":"","required":false,"default":"","type":"","values":[]},
-        {"name":"extra options","description":" can be passed while executing Lucene query. The options can be: sort, offset, maxResults","required":false,"default":"","type":"","values":[]}
+		{"name":"query_text","description":"The text to be searched for or a complete Lucene query. For details of Lucene query, see http://lucene.apache.org/core/old_versioned_docs/versions/.","required":true,"default":"","type":"string","values":[]},
+        {"name":"entityName","description":"Name of the entity to be searched.","required":true,"default":"","type":"string","values":[]},
+        {"name":"fields_to_be_selected","description":"Fields to be returned as keys in the resultant struct.","required":true,"default":"","type":"array","values":[]},
+        {"name":"fields","description":"Fields in which search has to be performed.","required":true,"default":"","type":"array","values":[]},
+        {"name":"optionMap","description":"","required":false,"default":"","type":"struct","values":[]},
+        {"name":"extra options","description":" can be passed while executing Lucene query. The options can be: sort, offset, maxResults","required":false,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormsearchoffline.html"}

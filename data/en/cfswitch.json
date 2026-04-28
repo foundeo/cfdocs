@@ -2,6 +2,7 @@
 	"name":"cfswitch",
 	"type":"tag",
 	"syntax":"<cfswitch expression=\"\">",
+	"script":"switch (expression) { }",
 	"related":["cfcase","cfdefaultcase"],
 	"description":"Evaluates a passed expression and passes control to the cfcase tag that matches the expression result. You can, optionally, code a cfdefaultcase tag, which receives control if there is no matching cfcase tag value. Note the difference in the tag and script syntax when providing multiple values for a case.",
 	"params": [
@@ -9,7 +10,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfswitch.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/switch.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/switch.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfswitch"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfswitch"}
 	},
@@ -26,6 +27,12 @@
 			"description": "",
 			"code": "<cfset fruit = \"\"> \r\n<cfswitch expression=\"#fruit#\"> \r\n    <cfcase value=\"Apple\">I like apples!</cfcase>\r\n    <cfcase value=\"Orange,Citrus\">I like oranges!</cfcase> \r\n    <cfcase value=\"Kiwi\">I like kiwi!</cfcase>\r\n    <cfdefaultcase>Fruit, what fruit?</cfdefaultcase> \r\n</cfswitch>",
 			"result": "Fruit, what fruit?"
+		},
+		{
+			"title": "Dynamic switch case",
+			"description": "CF2021+ switch cases are support dynamic value",
+			"code": "num = 10;\r\nswitch(0) {\r\n case num % 2:\r\n      writeOutput(\"Even number\");\r\n      break; \r\ndefault: \r\n     writeOutput(\"Odd number\"); \r\nbreak; \r\n }",
+			"result": "Even number"
 		}
 	]
 }

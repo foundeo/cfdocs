@@ -56,7 +56,7 @@
 		},
 		{
 			"name": "markerWindowContent",
-			"description": "Static inner html markup to be displayed in the infowindow opened when the marker is clicked. This is mutually exclusive with the markerbind attribute",
+			"description": "Static inner HTML markup to be displayed in the infowindow opened when the marker is clicked. This is mutually exclusive with the markerbind attribute",
 			"required": false,
 			"default": "",
 			"type": "string",
@@ -80,7 +80,7 @@
 		}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmapitem.html"}
+		"coldfusion": {"minimum_version": "9", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmapitem.html"}
 	},
 	"links": []
 }

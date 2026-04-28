@@ -6,8 +6,8 @@
 	"related":[],
 	"description":" Create a new translucent image with given percentage of translucence.",
 	"params": [
-		{"name":"img","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"","values":[]},
-        	{"name":"percentage","description":"The percent of translucence: 0 = opaque, 100=transparent. Decimal values are supported","required":true,"default":"","type":"","values":[]}
+		{"name":"img","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+        	{"name":"percentage","description":"The percent of translucence: 0 = opaque, 100=transparent. Decimal values are supported","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagemaketranslucent.html"}
@@ -18,7 +18,7 @@
 	"examples": [
 		{
 			"title": "Tag Syntax",
-			"description": "The following example illustrates three images with the second one translucent than first and the thrid one translucent than the second.",
+			"description": "The following example illustrates three images with the second one translucent than first and the third one translucent than the second.",
 			"code": "<cfset myImage=imageNew('',200,110)> \r\n <!--- Set the drawing color to green. ---> \r\n <cfset imageSetDrawingColor(myImage,'green')> \r\n <!--- Turn on antialiasing to improve image quality. ---> \r\n <cfset imageSetAntialiasing(myImage,'on')> \r\n <!--- Draw a filled green oval on the image. ---> \r\n <cfset imageDrawOval(myImage,5,5,190,100,'yes')> \r\n <!--- Display the image in a browser. ---> \r\n <cfoutput>PNG image<br></cfoutput> \r\n <cfset imageWrite(myImage,'#expandPath('.')#/png.png')> \r\n <cfset myImage = imageRead('#expandPath('.')#/png.png')> \r\n <cfimage source='#myImage#' action='writeToBrowser' > \r\n <cfset x =imageMakeTranslucent(myImage,50)> \r\n <cfimage source='#x#' action='writeToBrowser' > \r\n <cfset x =imageMakeTranslucent(myImage,75)> \r\n <cfimage source='#x#' action='writeToBrowser' > \r\n <cfset x =imageMakeTranslucent(myImage,100)> \r\n <cfimage source='#x#' action='writeToBrowser' > \r\n",
 			"result": ""
 		}

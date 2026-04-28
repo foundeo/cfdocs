@@ -16,6 +16,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Simple spreadsheetSetRowHeight Example",
+			"description": "Here,we've example to set the height for particular row in excel. It is supported only in adobe coldfusion.",
+			"code": "<cfset Detail=SpreadsheetNew(\"student\",false)>\r\n<cfset SpreadSheetAddRow(Detail,\"id,Name,Department\")>\r\n<cfset SpreadSheetAddRow(Detail,\"1,Dhar,CS\")>\r\n<cfset spreadsheetSetRowHeight(Detail,2,50)>\r\n<cfset SpreadsheetWrite(Detail,expandPath(\"./Detail.xls\"),true)>",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

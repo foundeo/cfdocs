@@ -6,8 +6,8 @@
 	"related":[],
 	"description":"Deletes a spreadsheet.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The Excel spreadsheet object from which you delete the sheet.","required":true,"default":"","type":"","values":[]},
-        {"name":"sheetname","description":"Name of the sheet that must be removed.","required":true,"default":"","type":"","values":[]}
+		{"name":"spreadsheetObj","description":"The Excel spreadsheet object from which you delete the sheet.","required":true,"default":"","type":"variableName","values":[]},
+        {"name":"sheetname","description":"Name of the sheet that must be removed.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9.0.1", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetremovesheet.html"}

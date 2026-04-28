@@ -8,8 +8,23 @@
 	"params": [],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/applicationstop.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/applicationstop.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/applicationstop"}
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/applicationstop.html"},
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/applicationstop"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/applicationstop"}
 	},
-	"links": []
+	"links": [
+		{
+			"title":"Resetting Applications With ApplicationStop()",
+			"description":"",
+			"url":"https://www.bennadel.com/blog/1667-learning-coldfusion-9-resetting-applications-with-applicationstop.htm"
+		}
+	],
+	"examples": [
+		{
+			"title": "Basic applicationStop usage.",
+			"description": "Halt the application.",
+			"code": "var applicationRequiresHalt = true;\nif(applicationRequiresHalt) applicationStop();\nwriteOutput(\"Still Running\");",
+			"result": "// We don't expect anything to happen after the application has been stopped."
+		}
+	]
 }

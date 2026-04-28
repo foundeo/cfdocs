@@ -188,7 +188,7 @@
       "description": "JavaScript regular expression pattern to validate input. ColdFusion uses this attribute only if you specify regex in the validate attribute. Omit leading and trailing slashes.",
       "required": false,
       "default": "",
-      "type": "regex",
+      "type": "string",
       "values": []
     },
     {
@@ -244,7 +244,7 @@
     },
     {
       "name": "disabled",
-      "description": "Disables user input, making the control read-only.",
+      "description": "Disables user input, making the control read-only.\nHTML: Passes the attribute directly to the HTML. To enable the input you need to omit this attribute. It does not respect the attribute-value.\nFlash: Disables the input when the attribute is set without attribute-value or when the attribute-value is an positive boolean value.",
       "required": false,
       "default": false,
       "type": "boolean",
@@ -311,7 +311,7 @@
     },
     {
       "name": "daynames",
-      "description": "A comma-delimited list that sets the names of the weekdays displayed in the calendar. Sunday is the first day and the rest of the weekday names follow in the normal order. You can use one-/two-letter, three-letter abreviation or the full name.",
+      "description": "A comma-delimited list that sets the names of the weekdays displayed in the calendar. Sunday is the first day and the rest of the weekday names follow in the normal order. You can use one-/two-letter, three-letter abbreviation or the full name.",
       "required": false,
       "default": "S,M,T,W,Th,F,S",
       "type": "string",
@@ -517,7 +517,7 @@
     "lucee": {
       "minimum_version": "",
       "notes": "Does not support `validateAt` attribute.",
-      "docs": "http://docs.lucee.org/reference/tags/input.html"
+      "docs": "https://docs.lucee.org/reference/tags/input.html"
     },
     "railo": {
       "minimum_version": "",

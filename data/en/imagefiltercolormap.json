@@ -4,14 +4,14 @@
 	"syntax": "imageFilterColorMap(type [, lineColor1] [, lineColor2])",
 	"returns": "any",
 	"related": ["imageFilter","imageFilterCurves","imageFilterKernel","imageFilterWarpGrid"],
-	"description": "",
+	"description": "Used to provide a colormap as argument of the imageFilter function",
 	"params": [
 		{"name": "type", "description": "", "required": true, "default": "", "type": "string", "values": []},
 		{"name": "lineColor1", "description": "", "required": false, "default": "", "type": "string", "values": []},
 		{"name": "lineColor2", "description": "", "required": false, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/imagefiltercolormap.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/imagefiltercolormap.html"}
 	},
 	"examples": [],
 	"links": []

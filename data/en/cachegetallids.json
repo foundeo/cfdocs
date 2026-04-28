@@ -1,15 +1,48 @@
 {
-	"name":"cacheGetAllIds",
-	"type":"function",
-	"syntax":"cacheGetAllIds()",
-	"returns":"array",
-	"related":["cacheGet","cacheGetAll"],
-	"description":" Gets the IDs of all objects stored in the cache.",
-	"params": [],
+	"name": "cacheGetAllIds",
+	"type": "function",
+	"syntax": "cacheGetAllIds()",
+	"returns": "array",
+	"related": ["cacheGet", "cacheGetAll"],
+	"description": "This function return an array containing all keys inside the cache.",
+	"params": [{
+		"name": "filter",
+		"description": "Lucee4.5+ Key filter for the elements, the filter follow the same rules as for cfdirectory-filter.",
+		"required": false,
+		"default": "",
+		"type": "string",
+		"values": []
+	}, {
+		"name": "cacheName",
+		"description": "CF10+ The cache region to use or the default object cache",
+		"required": false,
+		"default": "ObjectCache",
+		"type": "string",
+		"values": []
+	}, {
+		"name": "isAccurate",
+		"description": "CF11+ When set to false, function will return the result faster. However, the result may not be accurate. If you need only the IDs of valid (unexpired) objects from the cache, set accurate to true. If you set accurate to false, the IDs of all the objects in the cache will be returned.",
+		"required": false,
+		"default": "true",
+		"type": "boolean",
+		"values": []
+	}],
 	"engines": {
-		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheGetAllIds.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/cachegetallids.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/cachegetallids"}
+		"coldfusion": {
+			"minimum_version": "9",
+			"notes": "",
+			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CacheGetAllIds.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/cachegetallids.html"
+		},
+		"railo": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "http://railodocs.org/index.cfm/function/cachegetallids"
+		}
 	},
 	"links": [],
 	"examples": []

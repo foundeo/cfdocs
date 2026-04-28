@@ -17,15 +17,15 @@
 		{"name":"suggestions","description":"Specifies whether Verity\/SOLR returns spelling suggestions\n for possibly misspelled words.","required":false,"default":"never","type":"string","values":["always","never"]},
 		{"name":"contextPassages","description":"The number of passages\/sentences Verity returns in\n the context summary (that is, the context column of\n the results).\n Default: 3","required":false,"default":3,"type":"numeric","values":[]},
 		{"name":"contextBytes","description":"The maximum number of bytes Verity returns in the\n context summary.\n Default: 300","required":false,"default":300,"type":"numeric","values":[]},
-		{"name":"contextHighlightBegin","description":"The HTML to prepend to search terms in the context\n summary. Use this attribute in conjunction with\n contextHighlightEnd to highlight search terms in the\n context summary.\n Default: <b>","required":false,"default":"<b>","type":"string","values":[]},
-		{"name":"contextHighlightEnd","description":"The HTML to prepend to search terms in the context\n summary. Use this attribute in conjunction with\n contextHighlightEnd to highlight search terms in the\n context summary.\n Default: <\/b>","required":false,"default":"<\/b>","type":"string","values":[]},
+		{"name":"contextHighlightBegin","description":"The HTML to prepend to search terms in the context\n summary. Use this attribute in conjunction with\n contextHighlightEnd to highlight search terms in the\n context summary.","required":false,"default":"<b>","type":"string","values":[]},
+		{"name":"contextHighlightEnd","description":"The HTML to prepend to search terms in the context\n summary. Use this attribute in conjunction with\n contextHighlightEnd to highlight search terms in the\n context summary.","required":false,"default":"<\/b>","type":"string","values":[]},
 		{"name":"previousCriteria","description":"The name of a result set from an existing set of search\n results. Verity searches the result set for criteria\n without regard to the previous search score or rank.\n Use this attribute to implement searching within result\n sets.","required":false,"default":"","type":"string","values":[]},
 		{"name":"language","description":"Deprecated. This attribute is now ignored and the language of the collection is used to perform the search.","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"3", "notes":"The following types are not supported anymore in CF2016+: `simple`, `explicit`, `internet`, `internet_basic` and `natural`", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-r-s/cfsearch.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/search.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/search.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfsearch"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfsearch"}
 	},

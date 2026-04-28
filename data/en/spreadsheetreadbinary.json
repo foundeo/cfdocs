@@ -15,6 +15,22 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Tag Example",
+			"description": "",
+			"code": "<cfset testSpreadsheet = spreadhsheetnew(\"New Sheet\")>\n<cfset spreadsheetAddRow(testSpreadsheet ,\"column a,column b,column c\")>\n<cfheader name=\"Content-Disposition\" value=\"inline; filename=test.xls\">\n<cfcontent type=\"application/vnd-ms.excel\" variable=\"#spreadsheetReadBinary(testSpreadsheet)#\">",
+			"result": "",
+			"runnable": true
+		},
+		{
+			"title": "Script Example",
+			"description": "",
+			"code": "testSpreadsheet = spreadhsheetnew(\"New Sheet\");\nspreadsheetAddRow(testSpreadsheet ,\"column a,column b,column c\");\ncfheader(name=\"Content-Disposition\" value=\"inline; filename=test.xls\")'\ncfcontent(type=\"application/vnd-ms.excel\" variable=\"#spreadsheetReadBinary(testSpreadsheet)#\");",
+			"result": "",
+			"runnable": true
+		}
 	]
 
 }

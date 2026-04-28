@@ -4,14 +4,14 @@
     "syntax":"manifestRead(path)",
     "member":"",
     "script":"",
-    "returns":"structure",
+    "returns":"struct",
     "related":["manifestRead"],
     "description":"reads a manifest file and returns the content as struct",
     "params":[
         {"name":"path", "description":"Path to\n— a jar file containing a \"MANIFEST.MF\" file in the directory \"/META-INF/\"\n— a Manifest file\n\nor the content of a Manifest File", "required":true, "default":"", "type":"string", "values":[]}
     ],
     "engines":{
-        "lucee":{"minimum_version":"5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/manifestread.html"}
+        "lucee":{"minimum_version":"5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/manifestread.html"}
     },
     "links":[],
     "examples":[

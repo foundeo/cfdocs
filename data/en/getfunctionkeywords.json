@@ -7,8 +7,15 @@
 	"description": "Returns all keywords defined with all functions.",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getfunctionkeywords.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getfunctionkeywords.html"}
 	},
-	"examples": [],
+	"examples": [
+		{
+			"title": "Simple getFunctionKeywords Example",
+			"description": "It returns all function keywords in array format. It is supported only in Lucee.",
+			"code": "writeDump(getFunctionKeywords());",
+			"result": ""
+		}
+	],
 	"links": []
 }

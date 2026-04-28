@@ -9,14 +9,23 @@
 		{"name":"input","description":"A value to process","required":true,"default":"","type":"string","values":[]},
 		{"name":"output","description":"Name of variable for output. If action = \"WDDX2JS\" or\n \"CFML2JS\", and this attribute is omitted, result is output\n in HTML stream.","required":false,"default":"","type":"variableName","values":[]},
 		{"name":"toplevelvariable","description":"Name of top-level JavaScript object created by\n deserialization. The object is an instance of the\n WddxRecordset object.","required":false,"default":"","type":"string","values":[]},
-		{"name":"usetimezoneinfo","description":"Whether to output time-zone information when serializing\n CFML to WDDX.\n - Yes: the hour-minute offset, represented in ISO8601\n format, is output.\n - No: the local time is output.","required":false,"default":true,"type":"boolean","values":[true,false]},
-		{"name":"validate","description":"Applies if action = \"wddx2cfml\" or \"wddx2js\".\n - Yes: validates WDDX input with an XML parser using\n WDDX DTD. If parser processes input without error,\n packet is deserialized. Otherwise, an error is\n thrown.\n - No: no input validation","required":false,"default":false,"type":"boolean","values":[true,false]}
+		{"name":"usetimezoneinfo","description":"Whether to output time-zone information when serializing\n CFML to WDDX.\n - Yes: the hour-minute offset, represented in ISO8601\n format, is output.\n - No: the local time is output.","required":false,"default":true,"type":"boolean","values":[]},
+		{"name":"validate","description":"Applies if action = \"wddx2cfml\" or \"wddx2js\".\n - Yes: validates WDDX input with an XML parser using\n WDDX DTD. If parser processes input without error,\n packet is deserialized. Otherwise, an error is\n thrown.\n - No: no input validation","required":false,"default":false,"type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-u-z/cfwddx.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/wddx.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/wddx.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfwddx"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfwddx"}
 	},
-	"links": []
+	"links": [],
+	"examples": [
+		{
+			"title": "Convert cron job file to cfml",
+			"description": "Reads instance's scheduled tasks file and converts it into CFML collection",
+			"code": "<cfset local.FileContents = FileRead(\"D:/ColdFusion/#Instance#/lib/neo-cron.xml\") />\n\t\t\t\t\t\t<cfwddx action=\"wddx2cfml\" input=\"#local.FileContents#\" output=\"local.structFileContents\" />\n<cfdump var=\"local.structFileContents\"",
+			"result": "Dump of the Scheduled Tasks cron file stored in the local.structFileContents variable",
+			"runnable": false
+		}
+	]
 }

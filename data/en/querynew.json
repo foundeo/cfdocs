@@ -7,14 +7,15 @@
 	"description":"Creates a new query object. The query can be populated with data using functions queryAddRow, querySetCell, or by passing it in to the rowData argument.",
 	"params": [
 		{"name":"columnList","description":"A string or a variable that contains one. Delimited list\n of column names, or an empty string.","required":true,"default":"","type":"string","values":[]},
-		{"name":"columnTypeList","description":"CF7+ Comma-delimited list specifying column data types.","required":false,"default":"","type":"string","values":["Integer","BigInt","Double","Decimal","VarChar","Binary","Bit","Time","Data"]},
+		{"name":"columnTypeList","description":"CF7+ Comma-delimited list specifying column data types.","required":false,"default":"","type":"string","values":["Integer","BigInt","Double","Decimal","VarChar","Binary","Bit","Time","Date","Timestamp"]},
 		{"name":"rowData","description":"CF10+ Data to populate the query. Can be a struct (with keys matching column names), an array of structs, or an array of arrays (in same order as columnList)","required":false,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/querynew.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/querynew.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/querynew.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/querynew"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/querynew"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/querynew"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querynew"}
 	},
 	"links": [
 
@@ -45,8 +46,12 @@
 			"description":"CF10+ If you only need one row you can pass a single struct instead of an array into the rowData argument.",
 			"code":"news = queryNew(\"id,title\",\n    \"integer,varchar\",\n    {\"id\":1,\"title\":\"Dewey defeats Truman\"});\nwriteDump(news);",
 			"result":""
+		},
+		{
+			"title":"Creating and populating a query with an array of structs",
+			"description":"CF2018u5+ Directly assigns columns and values with an array of structs.",
+			"code":"news = queryNew([\n    {\"id\":1,\"title\":\"Dewey defeats Truman\"},\n    {\"id\":2,\"title\":\"Man walks on Moon\"}\n]);\nwriteDump(news);",
+			"result":""
 		}
-
 	]
-
 }

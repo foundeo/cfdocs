@@ -4,14 +4,14 @@
 	"syntax": "imageFilterKernel(width, height, data)",
 	"returns": "any",
 	"related": ["imageFilterColorMap","imageFilterCurves","imageFilter","imageFilterWarpGrid"],
-	"description": "",
+	"description": "Defines a matrix that describes how a specified pixel and its surrounding pixels affect the value computed for the pixel's position in the output image of a filtering operation.\n\nThe X origin and Y origin indicate the kernel matrix element that corresponds to the pixel position for which an output value is being computed.",
 	"params": [
 		{"name": "width", "description": "", "required": true, "default": "", "type": "numeric", "values": []},
 		{"name": "height", "description": "", "required": true, "default": "", "type": "numeric", "values": []},
 		{"name": "data", "description": "", "required": true, "default": "", "type": "any", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/imagefilterkernel.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/imagefilterkernel.html"}
 	},
 	"examples": [],
 	"links": []

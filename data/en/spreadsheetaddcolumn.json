@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"spreadsheetAddColumn(spreadsheetObj, data, startrow, startcolumn, insert [, insert])",
 	"returns":"void",
-	"related":[],
+	"related":["SpreadsheetDeleteColumn", "SpreadsheetDeleteColumns", "SpreadsheetFormatColumn", "SpreadsheetFormatColumns"],
 	"description":" Adds a column or column data to an Excel spreadsheet object.",
 	"params": [
 		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
@@ -11,16 +11,14 @@
 		{"name":"startrow","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"startcolumn","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"insert","description":"No Help Available","required":true,"default":"","type":"boolean","values":[]},
-		{"name":"insert","description":"No Help Available","required":false,"default":"","type":"boolean","values":[true,false]}
+		{"name":"insert","description":"No Help Available","required":false,"default":"","type":"boolean","values":[]}
 
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetaddcolumn.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetaddcolumn"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Tag Example",
@@ -30,5 +28,4 @@
 			"runnable":true
 		}
 	]
-
 }

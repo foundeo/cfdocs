@@ -2,17 +2,17 @@
 
 If you missed our [Obfuscation Guide](/security-obfuscation), we suggest you read it before reading this one, as this guide builds on the principles established in the [Obfuscation Guide](/security-obfuscation).
 
-Encrypting data is different than [obfuscating](/security-obfuscation) data in one key sense – obfuscation, or [hash()](/hash)ing in our case, is a one-way encryption technique. There is no practical way, other than building and using a [rainbow table](http://bit.ly/1TQzXG7), to decrypt the value produced by the hashing algorithm. This is perfect for parameter names because we know ahead of time what that parameter name is going to be. This isn't usually the case for the values assigned to those parameters, however, which is usually dynamic.
+Encrypting data is different than [obfuscating](/security-obfuscation) data in one key sense – obfuscation, or [hash()](/hash)ing in our case, is a one-way encryption technique. There is no practical way, other than building and using a [rainbow table](https://bit.ly/1TQzXG7), to decrypt the value produced by the hashing algorithm. This is perfect for parameter names because we know ahead of time what that parameter name is going to be. This isn't usually the case for the values assigned to those parameters, however, which is usually dynamic.
 
 Encryption, on the other hand, **is** reversible and allows you to safely encode the values of your URL and FORM (and COOKIE, RC, and other scope) values for passage on the URL or in hidden FORM fields.
 
 Before we dive much further into actual encryption, we need to visit another function that helps us to generate the encryption keys we'll use… [generateSecretKey()](/generatesecretkey):
 
-    \\ generate a 128 bit AES encryption key
-    writeOutput( generateSecretKey( 'AES' );
+    // generate a 128 bit AES encryption key
+    writeOutput( generateSecretKey( 'AES' ) );
     
-    \\ generate a 256 bit AES encryption key CF10+ Lucee4.5+
-    writeOutput( generateSecretKey( 'AES', 256 );
+    // generate a 256 bit AES encryption key CF10+ Lucee4.5+
+    writeOutput( generateSecretKey( 'AES', 256 ) );
 
 Note that by default [generateSecretKey()](/generatesecretkey) generates 128-bit encryption keys. You can pass the optional parameter for key size to this function, however, and generate 256 bit (and indeed, 512 bit, 1024 bit, etc.) keys. As of this writing, 256 bit keys are supported for the AES and BLOWFISH encryption algorithms. If you're using CF10+ or Lucee4.5+ then you can generate and use 256 bit keys instead of 128 bit keys.
 
@@ -80,21 +80,19 @@ To access these newly encrypted values we simply [decrypt()](/decrypt) them in a
     param name="URL['v' & hash( 'departmentId', 'SHA-384', 'UTF-8', 750 )]" default="0";
     
     // check for validity of parameter values
-    if( URL['v' & hash( 'userId', 'SHA-384', 'UTF-8', 500 )] eq 0 ) {
+    if ( URL['v' & hash( 'userId', 'SHA-384', 'UTF-8', 500 )] == 0 ) {
         // invalid or no user id submitted
     } else if ( !len( URL['v' & hash( 'name', 'SHA-384', 'UTF-8', 1000 )] ) ) {
         // invalid or no name submitted
-    } else if ( URL['v' & hash( 'departmentId', 'SHA-384', 'UTF-8', 750 )] eq 0 ) {
+    } else if ( URL['v' & hash( 'departmentId', 'SHA-384', 'UTF-8', 750 )] == 0 ) {
         // invalid or no departmentId submitted
     }
     
     // try to decrypt passed values
     try {
-    
         userId = decrypt( URL['v' & hash( 'userId', 'SHA-384', 'UTF-8', 500 )] , myKey, myAlgorithm, myEncoding );
         name = decrypt( URL['v' & hash( 'name', 'SHA-384', 'UTF-8', 1000 )], myKey, myAlgorithm, myEncoding );
         departmentId = decrypt( URL['v' & hash( 'departmentId', 'SHA-384', 'UTF-8', 750 )], myKey, myAlgorithm, myEncoding );
-    
     } catch( any e ) {
         // deal with decryption errors
     }
@@ -111,8 +109,8 @@ This layered approach works equally well for hidden form fields – you obfuscat
 
 If you're a keen observer you'll notice that, in addition to using a different [hash()](/hash) algorithm for form scoped parameter names vs. the URL scoped parameter names, I use a different key and algorithm when encrypting form parameter values vs. URL parameter values. This further obfuscates these values and makes them impossible to match up between a GET and POST request. It is recommended to use a different algorithm and key for each scope where you will be storing encrypted information, such as URL, form and cookie scopes.
 
-The last, and arguably the most important, use of encryption is to secure the data stored in your database, typically anything that is considered Personally Identifiable Information (PII, for short). While there are dozens of differing opinions online as to what constitutes personally identifiable information, the [NIST Guide to Protecting the Confidentiality of Personally Identifiable Information](http://1.usa.gov/1DgxrRy), covers what should be protected at a minimum. Names, addresses, email addresses, phone numbers, social security numbers, credit card numbers (which you ought not store at all if you can avoid it) and date of birth are some examples of what should be encrypted in your database.
+The last, and arguably the most important, use of encryption is to secure the data stored in your database, typically anything that is considered Personally Identifiable Information (PII, for short). While there are dozens of differing opinions online as to what constitutes personally identifiable information, the [NIST Guide to Protecting the Confidentiality of Personally Identifiable Information](https://1.usa.gov/1DgxrRy), covers what should be protected at a minimum. Names, addresses, email addresses, phone numbers, social security numbers, credit card numbers (which you ought not store at all if you can avoid it) and date of birth are some examples of what should be encrypted in your database.
 
-In addition, use of CBC/PKCS5Padding and multi-pass encryption is highly recommended when storing PII – though the NIST standards are less restrictive, more encryption is almost always better than less encryption and a couple extra encryption passes can have a big impact on security for the small cost of a couple of extra compute cycles. That being said, however, use your best judgement based on the expected server load and available hardware as to how many passes you should give PII before storing it in your database so you don't accidentally create an artificial bottleneck. As mentioned previously, 128 bit keys are suitable for encrypting data today with AES or BLOWFISH algorithms, but use of 256-bit keys are supported.
+In addition, use of CBC/PKCS5Padding and multi-pass encryption is highly recommended when storing PII – though the NIST standards are less restrictive, more encryption is almost always better than less encryption and a couple extra encryption passes can have a big impact on security for the small cost of a couple of extra compute cycles. That being said, however, use your best judgment based on the expected server load and available hardware as to how many passes you should give PII before storing it in your database so you don't accidentally create an artificial bottleneck. As mentioned previously, 128 bit keys are suitable for encrypting data today with AES or BLOWFISH algorithms, but use of 256-bit keys are supported.
 
-All of these concepts – different keys and algorithms depending on scope, repeatable but secure encryption, and multi-pass encryption for database storage – can all be found in convenient dataEnc( string, scope ) and dataDec( string, scope ) functions in my [SecurityService.cfc available on GitHub](http://bit.ly/1IkY5zK), which are part of a larger example of using the other security techniques outlined in this document to create a [secure](http://bit.ly/1Msdwkt), or [two-factor](http://bit.ly/1Yx4hGt), [framework one (FW/1)](http://bit.ly/22lB2eu) application.
+All of these concepts – different keys and algorithms depending on scope, repeatable but secure encryption, and multi-pass encryption for database storage – can all be found in convenient `dataEnc( string, scope )` and `dataDec( string, scope )` functions in my [SecurityService.cfc available on GitHub](https://bit.ly/1IkY5zK), which are part of a larger example of using the other security techniques outlined in this document to create a [secure](https://bit.ly/1Msdwkt), or [two-factor](https://bit.ly/1Yx4hGt), [framework one (FW/1)](https://bit.ly/22lB2eu) application.

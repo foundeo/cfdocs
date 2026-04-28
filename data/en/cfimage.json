@@ -167,7 +167,7 @@
 		"lucee": {
 			"minimum_version": "4.5",
 			"notes": "",
-			"docs": "http://docs.lucee.org/reference/tags/image.html"
+			"docs": "https://docs.lucee.org/reference/tags/image.html"
 		},
 		"railo": {
 			"minimum_version": "",
@@ -192,7 +192,7 @@
 			"code": "<cfimage action=\"border\" source=\"#sourceImage#\" size=5 color=\"red\" name=\"withborder\">", "runnable":false },
 
 		{ "title": "Captcha action", "description": "Generate a CAPTCHA style image using medium difficulty.",
-			"code": "<cfimage action=\"captcha\" text=\"Captcha!\" difficulty=\"medium\" fontSize=\"18\" fonts=\"Comic Sans MS,Times New Roman\">","runnable":false },
+			"code": "<cfimage action=\"captcha\" width=\"200\" height=\"50\" text=\"Captcha!\" difficulty=\"medium\" fontSize=\"18\" fonts=\"Comic Sans MS,Times New Roman\">","runnable":false },
 
 		{ "title": "Convert action", "description": "Convert an image to a different format (in this case PNG).",
 			"code": "<cfimage action=\"convert\" source=\"#sourceImage#\" destination=\"#expandPath( 'destination.png' )#\" overwrite=\"true\">","runnable":false },

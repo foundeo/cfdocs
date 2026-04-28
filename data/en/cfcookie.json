@@ -8,15 +8,17 @@
 		{"name":"name","description":"Name of cookie variable. CFML converts cookie names\n to all-uppercase. Cookie names set using this tag can\n include any printable ASCII characters except commas,\n semicolons or white space characters.","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"Value to assign to cookie variable. Must be a string or\n variable that can be stored as a string.","required":false,"default":"","type":"string","values":[]},
 		{"name":"expires","description":"Expiration of cookie variable.\n\n * The default: the cookie expires when the user closes the\n browser, that is, the cookie is \"session only\".\n * A date or date\/time object (for example, 10\/09\/97)\n * A number of days (for example, 10, or 100)\n * now: deletes cookie from client cookie.txt file\n (but does not delete the corresponding variable the\n Cookie scope of the active page).\n * never: The cookie expires in 30 years from the time it\n was created (effectively never in web years).","required":false,"default":"","type":"any","values":[]},
-		{"name":"secure","description":"If browser does not support Secure Sockets Layer (SSL)\n security, the cookie is not sent. To use the cookie, the\n page must be accessed using the https protocol.","required":false,"default":"","type":"boolean","values":[true,false]},
+		{"name":"secure","description":"If browser does not support Secure Sockets Layer (SSL)\n security, the cookie is not sent. To use the cookie, the\n page must be accessed using the https protocol.","required":false,"default":"","type":"boolean","values":[]},
 		{"name":"path","description":"URL, within a domain, to which the cookie applies;\n typically a directory. Only pages in this path can use the\n cookie. By default, all pages on the server that set the\n cookie can access the cookie.\n\n path = \"\/services\/login\"","required":false,"default":"","type":"string","values":[]},
 		{"name":"domain","description":"Domain in which cookie is valid and to which cookie content\n can be sent from the user's system. By default, the cookie\n is only available to the server that set it. Use this\n attribute to make the cookie available to other servers.\n\n Must start with a period. If the value is a subdomain, the\n valid domain is all domain names that end with this string.\n This attribute sets the available subdomains on the site\n upon which the cookie can be used.","required":false,"default":"","type":"string","values":[]},
-		{"name":"httpOnly","description":"CF9+ Specify whether cookie is http cookie or not","required":false,"default":"","type":"boolean","values":[true,false]},
-		{"name":"encodevalue","description":"CF10+ Specify if cookie value should be encoded","required":false,"default":"","type":"boolean","values":[true,false]}
+		{"name":"httpOnly","description":"CF9+ Specify whether cookie is http cookie or not","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"encodevalue","description":"CF10+ Specify if cookie value should be encoded","required":false,"default":"","type":"boolean","values":[]},
+		{"name":"preserveCase","description":"CF10+ Specify if cookie name should be case-sensitive","required":false,"default":"false","type":"boolean","values":[]},
+		{"name":"samesite","description":"CF2018+ Tells browsers when and how to fire cookies in first-\n or third-party situations. SameSite is used to\n identify whether or not to allow a cookie to be\n accessed.","required":false,"default":"","type":"string","values":["strict","lax","none"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcookie.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/cookie.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/cookie.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfcookie"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcookie"}
 	},
@@ -25,17 +27,17 @@
 		{
 			"title": "Script Syntax",
 			"description": "",
-			"code": "cfcookie(name=\"TimeVisited\", value=Now(), domain=\".local.com\", path=\"/coldfusion\" expires=30, httponly=\"yes\", encodedvalue=\"yes\" )\r\n"
+			"code": "cfcookie(name=\"TimeVisited\", value=Now(), domain=\".local.com\", path=\"/coldfusion\" expires=30, httponly=\"yes\", encodevalue=\"yes\" )\r\n"
 		},
 		{
 			"title": "Tag Syntax",
 			"description": "",
-			"code": "<cfcookie name=\"TimeVisited\" value=Now() domain=\".local.com\" path=\"/coldfusion\" expires=30 httponly=\"yes\" encodedvalue=\"yes\" />\r\n"
+			"code": "<cfcookie name=\"TimeVisited\" value=Now() domain=\".local.com\" path=\"/coldfusion\" expires=30 httponly=\"yes\" encodevalue=\"yes\" />\r\n"
 		},
 		{
 			"title": "Using Cookie Scope",
 			"description": "",
-			"code": "cookie.TimeVisited = { value=\"#Now()#\", domain=\".local.com\", path=\"/coldfusion\", expires=30, httponly=\"yes\", encodedvalue=\"yes\" }; \r\n "
+			"code": "cookie.TimeVisited = { value=\"#Now()#\", domain=\".local.com\", path=\"/coldfusion\", expires=30, httponly=\"yes\", encodevalue=\"yes\" }; \r\n "
 		},
 		{
 			"title": "Using CFHeader",

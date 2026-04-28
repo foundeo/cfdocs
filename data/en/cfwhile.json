@@ -10,8 +10,23 @@
 		{"name":"label","description":"Used to address loop from `break` or `continue` statement instead of innermost loop.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/while.html"}
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/while.html"}
 	},
 	"links": [],
-	"examples": []
+	"examples": [
+		{
+			"title": "Tag Syntax - without label",
+			"description": "Output the value of x while it is less than 5.",
+			"code": "<cfset x = 0/>\r\n<cfwhile condition=\"#x LT 5#\">\r\n  <cfoutput>#x#</cfoutput>\r\n  <cfset x = x + 1/>\r\n</cfwhile>",
+			"result": "0 1 2 3 4",
+			"runnable": true
+		},
+		{
+			"title": "Tag Syntax - with label in break",
+			"description": "An outer while loop can be broken from inside a nested loop if the correct label name is passed within the break tag.",
+			"code": "<cfset row = 0/>\r\n<cfwhile condition=\"#row LT 5#\" label=\"outerLoop\">\r\n    <cfset col = 0/>\r\n    <cfwhile condition=\"#col LT 5#\" label=\"innerLoop\">\r\n\r\n        <cfif col EQ 3>\r\n            <cfbreak/>\r\n        <cfelseif row EQ 1>\r\n            <cfbreak outerLoop/>\r\n        </cfif>\r\n\r\n        <cfoutput>[#row#, #col#]</cfoutput>\r\n\r\n        <cfset col = col + 1/>\r\n    </cfwhile>\r\n    <cfset row = row + 1/>\r\n</cfwhile>",
+			"result": "[0, 0] [0, 1] [0, 2]",
+			"runnable": true
+		}
+	]
 }

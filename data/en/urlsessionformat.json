@@ -7,11 +7,11 @@
 	"discouraged":"Putting session identifiers in the URL may lead to session hijacking.",
 	"description":"If the client does not accept cookies appends session identifiers `CFID`, `CFTOKEN` and / or `JSESSIONID` to the URL.",
 	"params": [
-		{"name":"requesturl","description":"URL of a CFML page","required":true,"default":"","type":"URL","values":["cgi.script_name"]}
+		{"name":"requesturl","description":"URL of a CFML page","required":true,"default":"","type":"string","values":["cgi.script_name"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/urlsessionformat.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/urlsessionformat.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/urlsessionformat.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/urlsessionformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/urlsessionformat"}
 	},

@@ -15,7 +15,7 @@
 		},
 		{
 			"name": "name",
-			"description": "The field name on the PDF form. (requiredl)",
+			"description": "The field name on the PDF form. (required)",
 			"required": true,
 			"default": "",
 			"type": "string",
@@ -31,7 +31,7 @@
 		}
 	],
 	"engines": {
-		"coldfusion": { "minimum_version": "", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpdfformparam.html" }
+		"coldfusion": { "minimum_version": "8", "notes": "", "docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpdfformparam.html" }
 	},
 	"links": [
 		{

@@ -17,6 +17,15 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title": "Simple spreadsheetSetColumnWidth Example",
+			"description": "Here,we've example to set the width for particular column in excel.",
+			"code": "<cfset Detail=SpreadsheetNew(\"student\",false)>\r\n<cfset SpreadSheetAddRow(Detail,\"id,Name,age\")>\r\n<cfset SpreadSheetAddRow(Detail,\"1,Dhar,10\")>\r\n<cfset spreadsheetSetColumnWidth(Detail,1,50)>\r\n<cfset SpreadsheetWrite(Detail,expandPath(\"./Detail.xls\"),true)>",
+			"result": "",
+			"runnable":false
+		}
 	]
 
 }

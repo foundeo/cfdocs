@@ -1,18 +1,20 @@
 {
 	"name":"monthAsString",
 	"type":"function",
-	"syntax":"monthAsString(month_number)",
+	"syntax":"monthAsString(month_number [, locale])",
 	"returns":"string",
 	"related":["month","monthShortAsString"],
 	"description":" ",
 	"params": [
-		{"name":"month_number","description":"","required":true,"default":"","type":"numeric","values":[]}
+		{"name":"month_number","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"locale","description":"","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/monthasstring.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/monthasstring.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/monthasstring.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/monthasstring"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/monthasstring"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/monthasstring"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/temporal/monthasstring"}
 	},
 	"links": [],
 	"examples": [
@@ -21,6 +23,12 @@
 			"description": "",
 			"code": "getVal = monthAsString(11); \r\n writeDump(getVal);",
 			"result": "result is: November"
+		},
+		{
+			"title": "Script Syntax",
+			"description": "With locale",
+			"code": "getVal = monthAsString(6,\"DE\"); \r\n writeDump(getVal);",
+			"result": "result is: Juni"
 		}
 	]
 }

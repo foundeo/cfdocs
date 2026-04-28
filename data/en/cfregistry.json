@@ -39,7 +39,7 @@
 		},
 		{
 			"name": "type",
-			"description": "* string: returns string values.\n * dWord: returns DWord values.\n * key: returns keys.\n * any: returns keys and values.",
+			"description": "",
 			"required": false,
 			"default": "String",
 			"type": "string",
@@ -99,7 +99,7 @@
 			"required": false,
 			"default": false,
 			"type": "boolean",
-			"values": [true, false]
+			"values": []
 		},
 		{
 			"name": "registryversion",
@@ -119,7 +119,7 @@
 		"lucee": {
 			"minimum_version": "",
 			"notes": "",
-			"docs": "http://docs.lucee.org/reference/tags/registry.html"
+			"docs": "https://docs.lucee.org/reference/tags/registry.html"
 		},
 		"railo": {
 			"minimum_version": "",

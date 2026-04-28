@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"queryConvertForGrid(query, page, pageSize)",
 	"returns":"struct",
-	"related":[],
+	"related":["cfgrid"],
 	"description":" Converts query data to a structure that contains a paged subset of the query.",
 	"params": [
 		{"name":"query","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
@@ -13,7 +13,7 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryconvertforgrid.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/queryconvertforgrid.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/queryconvertforgrid.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/queryconvertforgrid"}
 	},
 	"links": [

@@ -11,7 +11,7 @@
 	},
 	"links": [],
 	"examples": [{
-		"title":"Output current Locale's diplay name than set it to swiss locale",
+		"title":"Output current Locale's display name than set it to swiss locale",
 		"description":"",
 		"code":"writeOutput(getLocaleCountry());\r\nwriteOutput(' → ');\r\nsetLocale('de_ch');\r\nwriteOutput(getLocaleCountry());",
 		"result":"",

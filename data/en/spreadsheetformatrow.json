@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"spreadsheetFormatRow(spreadsheetObj, format, row)",
 	"returns":"void",
-	"related":[],
+	"related":["SpreadsheetFormatRows","SpreadsheetFormatCell"],
 	"description":"Formats the contents of a single row of an Excel spreadsheet object.",
 	"params": [
 		{"name":"spreadsheetObj","description":"The spreadsheet object for which formatting will be applied","required":true,"default":"","type":"any","values":[]},

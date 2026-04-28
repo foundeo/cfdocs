@@ -4,7 +4,7 @@
 	"syntax":"imageWrite(name [, destination] [, quality] [, overwrite])",
 	"member":"someImage.write([destination] [, quality] [, overwrite])",
 	"returns":"void",
-	"related":[],
+	"related":["cfimage", "GetWriteableImageFormats", "ImageNew", "ImageRead", "IsImageFile"],
 	"description":" Writes a ColdFusion image to the specified filename or destination.",
 	"params": [
 		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
@@ -15,9 +15,10 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagewrite.html"},
-		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"http://docs.lucee.org/reference/functions/imagewrite.html"},
+		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/imagewrite.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/imagewrite"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagewrite"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/imagewrite"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-image` module.", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/image-manipulation"}
 	},
 	"links": [
 

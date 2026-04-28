@@ -9,8 +9,9 @@
 		{"name": "arg1", "description": "A datetime object or a date-parsable String.", "required": true, "default": "", "type": "any", "values": [] }
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/getnumericdate.html"},
-		"railo": {"minimum_version": "3.1", "notes": "", "docs": ""}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getnumericdate.html"},
+		"railo": {"minimum_version": "3.1", "notes": "", "docs": ""},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/temporal/getnumericdate"}
 	},
 	"examples": [
 		{
@@ -18,18 +19,6 @@
 			"description": "This numeric date represents the number of days between December 30, 1899 and January 1, 2008.",
 			"code": "getNumericDate('2018-01-01')",
 			"result": "43101"
-		},
-		{
-			"title": "Convert a date string to a numeric date - Script Syntax",
-			"description": "This numeric date represents the number of days between December 30, 1899 and January 1, 2008.",
-			"code": "dump(getNumericDate('2008-01-01');",
-			"result": "43101"
-		},
-		{
-			"title": "Difference between two dates.",
-			"description": "This shows an example of how you could use getNumericDate() to determine the difference between two dates.",
-			"code": "<cfscript>\r\n date1='2017-01-01' \r\n date2='2018-01-01'\r\n writeoutput(date2-date1 & \" days\") \r\n</cfscript>",
-			"result": "365 days"
 		}
 	],
 	"links": [
@@ -45,7 +34,7 @@
 		},
 		{
 		    "title":"If you want to more of the \"Why\" of the various versions of \"Epoch time\"...",
-		    "description":"This is a MSDN link that discusses different types of Timestamps nd how they relate to an Epoch.",
+		    "description":"This is a MSDN link that discusses different types of Timestamps and how they relate to an Epoch.",
 		    "url":"https://blogs.msdn.microsoft.com/oldnewthing/20030905-02/?p=42653"
 		}
 	]

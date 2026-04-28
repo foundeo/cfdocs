@@ -5,7 +5,7 @@
 	"related":["cfchartseries","cfchartdata"],
 	"description":"Generates and displays a chart.",
 	"params": [
-		{"name":"format","description":"File format in which to save graph. `format=flash` has been deprecated in CF2016+","required":false,"default":false,"type":"string","values":["flash","jpg","png"]},
+		{"name":"format","description":"File format in which to save graph.\n`format=flash` has been deprecated in CF2016+\nFor Lucee the default value is `png` and the format `html` is not supported.","required":false,"default":"html","type":"string","values":["html","flash","jpg","png"]},
 		{"name":"chartheight","description":"Chart height; integer number of pixels","required":false,"default":240,"type":"numeric","values":[]},
 		{"name":"chartwidth","description":"Chart width; integer number of pixels","required":false,"default":320,"type":"numeric","values":[]},
 		{"name":"scalefrom","description":"Y-axis minimum value; integer","required":false,"default":"","type":"numeric","values":[]},
@@ -37,15 +37,16 @@
 		{"name":"showmarkers","description":"Applies to chartseries type attribute values line, curve\n and scatter.\n yes: display markers at data points","required":false,"default":true,"type":"boolean","values":[true,false]},
 		{"name":"markersize","description":"Size of data point marker. in pixels. Integer.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"pieslicestyle","description":"Applies to chartseries type attribute value pie.","required":false,"default":"sliced","type":"string","values":["solid","sliced"]},
-		{"name":"URL","description":"URL to open if the user clicks item in a data series; the\n onClick destination page.\n\n You can specify variables within the URL string;\n ColdFusion passes current values of the variables.\n * $VALUE$: the value of the selected row. If none, the value is an empty string.\n * $ITEMLABEL$: the label of the selected item. If none, the value is an empty string.\n * $SERIESLABEL$: the label of the selected series. If none, the value is an empty string.","required":false,"default":"","type":"URL","values":["$VALUE$","$ITEMLABEL$","$SERIESLABEL$"]},
-		{"name":"name","description":"Page variable name. String. Generates the the graph as\n binary data and assigns it to the specified variable.\n Suppresses chart display. You can use the name value in\n the cffile tag to write the chart to a file.","required":false,"default":"","type":"string","values":[]},
+		{"name":"URL","description":"URL to open if the user clicks item in a data series; the\n onClick destination page.\n\n You can specify variables within the URL string;\n ColdFusion passes current values of the variables.\n * $VALUE$: the value of the selected row. If none, the value is an empty string.\n * $ITEMLABEL$: the label of the selected item. If none, the value is an empty string.\n * $SERIESLABEL$: the label of the selected series. If none, the value is an empty string.","required":false,"default":"","type":"string","values":["$VALUE$","$ITEMLABEL$","$SERIESLABEL$"]},
+		{"name":"name","description":"Page variable name. String. Generates the graph as\n binary data and assigns it to the specified variable.\n Suppresses chart display. You can use the name value in\n the cffile tag to write the chart to a file.","required":false,"default":"","type":"string","values":[]},
 		{"name":"style","description":"CF7+ XML file or string to use to specify the style of the chart.","required":false,"default":"","type":"string","values":["beige","blue","default","red","silver","yellow"]},
-		{"name":"title","description":"CF7+ Title of the chart.","required":false,"default":"","type":"string","values":[]}
+		{"name":"title","description":"CF7+ Title of the chart.","required":false,"default":"","type":"string","values":[]},
+		{"name":"base64","description":"CF2018+ Can only be used for client side charts.","required":false,"default":"false","type":"boolean","values":["true","false"]}
 
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"6", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfchart.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/chart.html"},
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/chart.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfchart"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfchart"}
 	},

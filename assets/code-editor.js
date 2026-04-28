@@ -106,12 +106,15 @@ angular.module('code.editor', [])
 	'			<label class="control-label">Change CFML Engine</label>'+
 	'		        <div>'+
 	'		         <select id="engine" class="form-control">'+
+	'		             	<option value="lucee6">Lucee 6.LATEST</option>'+
 	'		             	<option value="lucee5">Lucee 5.LATEST</option>'+
 	'		             	<option value="lucee">Lucee 4.5.LATEST</option>'+
 	'		             	<option value="railo">Railo 4.2</option>'+
-	'				<option value="acf2018">Adobe ColdFusion 2018</option>'
-	'				<option value="acf2016">Adobe ColdFusion 2016</option>'+
-	'				<option value="acf11">Adobe ColdFusion 11</option>'+
+	'						<option value="acf2023">Adobe ColdFusion 2023</option>'+
+	'						<option value="acf2021">Adobe ColdFusion 2021</option>'+
+	'						<option value="acf2018">Adobe ColdFusion 2018</option>'+
+	'						<option value="acf2016">Adobe ColdFusion 2016</option>'+
+	'						<option value="acf11">Adobe ColdFusion 11</option>'+
 	'		             	<option value="acf">Adobe ColdFusion 10</option>'+
 	'		         </select>'+
 	'		        </div>'+
@@ -161,7 +164,7 @@ angular.module('code.editor', [])
 		// 	var elementText  = tElement.text();
 		// 	tAttrs.code = elementText || tAttrs.code;
 
-		// 	// Inject the rendered template html into the template element (tElement)
+		// 	// Inject the rendered template HTML into the template element (tElement)
 		// 	tElement.html(editorTemplate);
 
 		// 	// The return of a compile function is a link function (containing the compiled "scope") which Angular will fire
@@ -174,7 +177,7 @@ angular.module('code.editor', [])
 				scope.setupCodeGist = attrs.setupCodeGist;
 				scope.asserts = attrs.asserts;
 				scope.fullscreen = attrs.fullscreen;
-				scope.engines = {'acf2018':'Adobe ColdFusion 2018','acf2016':'Adobe ColdFusion 2016','acf11':'Adobe ColdFusion 11', 'acf':'Adobe ColdFusion 10', 'railo':'Railo 4.2', 'lucee':'Lucee 4.5', 'lucee5':'Lucee 5', 'lucee5.0.0.45':'Lucee 5.0.0.45'};
+				scope.engines = {'acf2023':'Adobe ColdFusion 2023','acf2021':'Adobe ColdFusion 2021','acf2018':'Adobe ColdFusion 2018','acf2016':'Adobe ColdFusion 2016','acf11':'Adobe ColdFusion 11', 'acf':'Adobe ColdFusion 10', 'railo':'Railo 4.2', 'lucee':'Lucee 4.5', 'lucee5':'Lucee 5', 'lucee6':'Lucee 6', 'lucee5.0.0.45':'Lucee 5.0.0.45'};
 				scope.engine = attrs.engine || 'lucee';
 				scope.basepath = attrs.basepath || '/gist/';
 
@@ -205,17 +208,20 @@ angular.module('code.editor', [])
 					asserts = attrs.asserts || "",
 					showOptions = typeof attrs.showOptions !== 'undefined' ? attrs.showOptions === "true" || attrs.showOptions === "1" : true,
 					showResults = typeof attrs.showResults !== 'undefined' ? attrs.showResults === "true" || attrs.showResults === "1" : true,
-                    urlPool = {
-                    	"railo" : [ "https://railo-sbx.trycf.com/getremote.cfm" ],
-		    	"lucee" : [ "https://lucee4-sbx.trycf.com/lucee4/getremote.cfm" ],
-		    	"lucee5" : [ "https://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
-		    	"lucee5.0.0.45" : [ "https://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
-                    	"acf" 	: [ "https://acf10-sbx.trycf.com/cfusion/getremote.cfm" ],
-			"acf11" : [ "https://acf11-sbx.trycf.com/cfusion/getremote.cfm" ],
-			"acf2016" : [ "https://acf12-sbx.trycf.com/getremote.cfm" ],
-			"acf2018" : [ "https://acf13-sbx.trycf.com/getremote.cfm" ]
-                    },
-                    url = attrs.url || urlPool[scope.engine][Math.floor(Math.random()*urlPool[scope.engine].length)];
+					urlPool = {
+						"railo" : [ "https://railo-sbx.trycf.com/getremote.cfm" ],
+						"lucee" : [ "https://lucee4-sbx.trycf.com/lucee4/getremote.cfm" ],
+						"lucee5" : [ "https://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
+						"lucee6" : [ "https://lucee6-sbx.trycf.com/getremote.cfm" ],
+						"lucee5.0.0.45" : [ "https://lucee5-sbx.trycf.com/lucee5/getremote.cfm" ],
+						"acf" : [ "https://acf10-sbx.trycf.com/cfusion/getremote.cfm" ],
+						"acf11" : [ "https://acf11-sbx.trycf.com/cfusion/getremote.cfm" ],
+						"acf2016" : [ "https://acf12-sbx.trycf.com/getremote.cfm" ],
+						"acf2018" : [ "https://acf13-sbx.trycf.com/getremote.cfm" ],
+						"acf2021" : [ "https://acf14-sbx.trycf.com/getremote.cfm" ],
+						"acf2023" : [ "https://acf2023-sbx.trycf.com/getremote.cfm" ]
+					},
+					url = attrs.url || urlPool[scope.engine][Math.floor(Math.random()*urlPool[scope.engine].length)];
 
 				displayEngine();
 				theme = theme.toLowerCase();
@@ -298,7 +304,7 @@ angular.module('code.editor', [])
 				aceEditor.on('change',function(e){
 					// When the scope changes, we need to update the form field and the
 					// ace editor manually because the bidirectional binding doesn't
-					// play well with unsafe html
+					// play well with unsafe HTML
 
 					scope.code = session.getValue();
 					$('#code',codeForm).val(scope.code);
@@ -510,7 +516,7 @@ angular.module('code.editor', [])
 									html = '<div class="alert alert-warning">'+
 											data.html +
 											'</div>';
-								// runtime error occured when running user's code
+								// runtime error occurred when running user's code
 								}else{
 								  	html = '<div class="alert alert-danger"><strong><i class="icon-bug"></i> Error:</strong><br/>'+
 											data.error +

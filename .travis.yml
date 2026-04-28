@@ -1,7 +1,7 @@
 language: java
 sudo: false
 jdk:
-- oraclejdk8
+- openjdk8
 env:
   global:
     - TEST_RUNNER_URI=/tests/run.cfm?reporter=text

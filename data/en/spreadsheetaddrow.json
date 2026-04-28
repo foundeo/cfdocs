@@ -6,20 +6,18 @@
 	"related":["spreadsheetAddRows"],
 	"description":"Adds a row to an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The speadsheet","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"data","description":"A comma seperated list of cell values.","required":true,"default":"","type":"string","values":[]},
+		{"name":"spreadsheetObj","description":"The spreadsheet","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"data","description":"A comma separated list of cell values.","required":true,"default":"","type":"string","values":[]},
 		{"name":"row","description":"Row number at which to insert, if omitted appended.","required":false,"default":"","type":"numeric","values":[]},
 		{"name":"column","description":"Column number at which to insert data.","required":false,"default":"1","type":"numeric","values":[]},
-		{"name":"insert","description":"When true appends data to spreadsheetObj, when false attempts to update rows.","required":false,"default":"true","type":"boolean","values":[true,false]},
+		{"name":"insert","description":"When true appends data to spreadsheetObj, when false attempts to update rows.","required":false,"default":"true","type":"boolean","values":[]},
 		{"name":"datatype","description":"CF11+ List of datatype expressions with values such as `STRING` `NUMERIC` or `DATE`. For example use `DATE:1;NUMERIC:2-2;STRING","required":false,"default":"","type":"array","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetaddrow.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetaddrow"}
 	},
-	"links": [
-
-	],
+	"links": [],
 	"examples": [
 		{
 			"title":"Add a row to SpreadSheet",
@@ -29,5 +27,4 @@
 			"runnable":true
 		}
 	]
-
 }

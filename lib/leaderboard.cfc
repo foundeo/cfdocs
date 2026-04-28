@@ -99,7 +99,7 @@ component {
 	}
 
 /* **********************************************************************************
- *    name: getContributors                                                         *
+ *    name: call                                                                    *
  *  author: Andrew Penhorwood                                                       *
  * created: 2016-09-09                                                              *
  * purpose:                                                                         *
@@ -113,10 +113,11 @@ component {
 			, throwonerror = "false"
 		);
 
-		service.addParam( type="header", name="Accept", value="application/vnd.github.v3+json" );
+		service.addParam( type="header", name="Accept", value="application/vnd.github.json" );
+		service.addParam( type="header", name="X-GitHub-Api-Version", value="2022-11-28" );
 
 		if( len(variables.config.token) ){
-			service.addParam( type="header", name="Authorization", value="Basic #variables.config.token#:" );
+			service.addParam( type="header", name="Authorization", value="Bearer #variables.config.token#:" );
 		}
 
 		var response = service.send().getPrefix();

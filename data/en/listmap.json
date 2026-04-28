@@ -14,7 +14,8 @@
 	],
 	"engines":{
 		"coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listmap.html","notes":""},
-		"lucee":{"minimum_version":"4.5", "docs":"http://docs.lucee.org/reference/functions/listmap.html","notes":""}
+		"lucee":{"minimum_version":"4.5", "docs":"https://docs.lucee.org/reference/functions/listmap.html","notes":""},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listmap"}
 	},
 	"links":[{
 		"title":"Map, Reduce and other Higher Order Functions",
@@ -29,6 +30,6 @@
 	 "examples":[{
 		"title": "Script Syntax",
 		"description": "",
-		"code": "Rainbow = \"Whero, Karaka, Kowhai, Kakariki, Kikorangi, Tawatawa, Mawhero\";\r\nexternalList = \"\";\r\nreverseRainbow = listMap( rainbow, function(v,i,l) {\r\n\tvar newValue = \"#i#:#v.reverse()#\";\r\n\texternalList = externalList.append(newValue);\r\n\treturn newValue;\r\n});\r\nwriteDump([{rainbow=rainbow},{reverseRainbow=reverseRainbow},{externalList=externalList}]);\r\n"
+		"code": "Rainbow = \"Whero, Karaka, Kowhai, Kakariki, Kikorangi, Tawatawa, Mawhero\";\r\nexternalList = \"\";\r\nreverseRainbow = listMap( rainbow, function(v,i,l) {\r\n\tvar newValue = \"#i#:#v.reverse()#\";\r\n\texternalList = externalList.listAppend(newValue);\r\n\treturn newValue;\r\n});\r\nwriteDump([{rainbow=rainbow},{reverseRainbow=reverseRainbow},{externalList=externalList}]);\r\n"
 	}]
 }

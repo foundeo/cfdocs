@@ -1,0 +1,35 @@
+{
+  "name": "structListNew",
+  "type": "function",
+  "syntax": "structListNew(maxsize)",
+  "returns": "struct",
+  "related": ["structNew"],
+  "description": "Creates a new structure, that has a maximum number of items. It will maintain the insertion order of the structure.",
+  "params": [
+    {
+      "name": "maxsize",
+      "description": "The maximum number of items that this struct will hold.",
+      "required": true,
+      "default": "",
+      "type": "numeric",
+      "values": []
+    }
+  ],
+  "engines": {
+    "openbd": {
+      "minimum_version": "",
+      "notes": "",
+      "docs": "http://openbd.org/manual/?/function/structListNew"
+    }
+  },
+  "links": [],
+  "examples": [
+    {
+      "title": "New struct using function",
+      "description": "Creates an ordered struct with a maximum of 3 items.",
+      "code": "sampleStruct = structListNew(3);\nsampleStruct.a = 1;\nsampleStruct.b = 2;\nsampleStruct.c = 3;\nwriteDump( sampleStruct );",
+      "result": "",
+      "runnable": false
+    }
+  ]
+}

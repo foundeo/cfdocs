@@ -2,6 +2,7 @@
 	"name":"dateCompare",
 	"type":"function",
 	"syntax":"dateCompare(date1, date2 [, datePart])",
+	"member":"date1.compare(date2 [, datePart])",
 	"returns":"numeric",
 	"related":["compare","compareNoCase","dateDiff"],
 	"description":"Performs a full date/time comparison of two dates.\n `-1` if date1 is less than date2\n `0` if date1 is equal to date2\n `1` if date1 is greater than date2\n [DatePart] `yyyy`: Year; `m`: Month; `d`: Day; `h`: Hour; `n`: Minute; `s`: Second",
@@ -12,9 +13,10 @@
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/DateCompare.html"},
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/functions/datecompare.html"},
+		"lucee": {"minimum_version":"", "notes":"In Lucee \"y\" can be used instead of \"yyyy\"", "docs":"https://docs.lucee.org/reference/functions/datecompare.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/datecompare"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/datecompare"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/datecompare"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/temporal/datecompare"}
 	},
 	"links": [],
 	"examples": [
@@ -29,6 +31,12 @@
 			"description": "Returns 1 because date1 is greater than date 2",
 			"code": "dateCompare('12/30/2015', '12/02/2015', 'd')",
 			"result": "1"
+		},
+		{
+			"title": "Member function example",
+			"description": "",
+			"code": "d1 = createDate(\"2024\",\"01\",\"01\");\nd2 = createDate(\"2024\",\"02\",\"14\");\nd1.compare(d2)",
+			"result": "-1"
 		}
 	]
 }

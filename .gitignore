@@ -8,6 +8,10 @@ tests/.exitcode
 WEB-INF/
 .editorconfig
 server-cfdocs.json
+server-*.json
 server.json
 *.sublime-workspace
 *.sublime-project
+/.vscode
+.env
+assets/img/opengraph/

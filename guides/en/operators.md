@@ -10,11 +10,11 @@ This is an incomplete / work in progress guide to operators in CFML.
 
 `==` _Script_ ✓ _Tags_ ✖ CF8+
 
-	if (animal == "cow") {
-		return "mooo!";
-	}
+    if (animal == "cow") {
+        return "mooo!";
+    }
 
-The `EQ` `IS` and `==` operators are case insensitive, so `"PETE" IS "pete"` evaluates `true`
+The `EQ`, `IS`, and `==` operators are case insensitive, so `"PETE" IS "pete"` evaluates to `true`.
 
 ### Inequality
 
@@ -24,9 +24,9 @@ The `EQ` `IS` and `==` operators are case insensitive, so `"PETE" IS "pete"` eva
 
 `!=` _Script_ ✓ _Tags_ ✖ CF8+
 
-	if (true != false) {
-		return "sanity";
-	}
+    if (true != false) {
+        return "sanity";
+    }
 
 ### Negation
 
@@ -34,36 +34,50 @@ The `EQ` `IS` and `==` operators are case insensitive, so `"PETE" IS "pete"` eva
 
 `!` _Script_ ✓ _Tags_ ✓ CF8+
 
-	if ( !isLocalHost(cgi.remote_addr) ) {
-		throw("sorry localhost only");
-	}
+    if ( !isLocalHost(cgi.remote_addr) ) {
+        throw("sorry localhost only");
+    }
 
-### Comparison 
+### Comparison
 
 `GREATER THAN` _Script_ ✓ _Tags_ ✓
 `GT` _Script_ ✓ _Tags_ ✓
+`>` _Script_ ✓ _Tags_ ✖
 
 `GREATER THAN OR EQUAL TO` _Script_ ✓ _Tags_ ✓
 `GTE` _Script_ ✓ _Tags_ ✓
+`GE` _Script_ ✓ _Tags_ ✓
+`>=` _Script_ ✓ _Tags_ ✖
 
 `LESS THAN` _Script_ ✓ _Tags_ ✓
 `LT` _Script_ ✓ _Tags_ ✓
+`<` _Script_ ✓ _Tags_ ✖
 
 `LESS THAN OR EQUAL TO` _Script_ ✓ _Tags_ ✓
 `LTE` _Script_ ✓ _Tags_ ✓
+`LE` _Script_ ✓ _Tags_ ✓
+`<=` _Script_ ✓ _Tags_ ✖
 
-### Concatination 
+`CONTAINS` _Script_ ✓ _Tags_ ✓
+`DOES NOT CONTAIN` _Script_ ✓ _Tags_ ✓
+
+Lucee supports the following shorthand for the `CONTAINS` and `DOES NOT CONTAIN` operators.
+
+`CT` _Script_ ✓ _Tags_ ✓
+`NCT` _Script_ ✓ _Tags_ ✓
+
+### Concatenation
 
 `&` _Script_ ✓ _Tags_ ✓
 
-	name = name & " Jr.";
+    name = name & " Jr.";
 
 `&=` _Script_ ✓ _Tags_ ✓ CF8+
 
-	name &= " Jr.";	
+    name &= " Jr.";
 
-Both code examples are equivilent.
+Both code examples are equivalent.
 
 ## Compatibility Notes
 
-The operators `==` `!=` `<` `<=` `>` `>=` do not work in tags such as cfif or cfset in Adobe ColdFusion (as of Version 2016). However the `==` `!=` `<` `<=` operators work from tags on Lucee, but `>` `>=` do not.
+The operators `==`, `!=`, `<`, `<=`, `>`, and `>=` do not work in tags such as cfif or cfset in Adobe ColdFusion (as of Version 2016). However the `==`, `!=`, `<`, and `<=` operators work from tags on Lucee, but `>` and `>=` do not.

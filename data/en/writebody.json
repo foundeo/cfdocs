@@ -1,17 +1,17 @@
 {
 	"name":"writeBody",
 	"type":"function",
-	"syntax":"writeBody();",
-	"returns":"void",
-	"related":[],
-	"description":" n/a",
+	"syntax":"writeBody(value);",
+	"returns":"boolean",
+	"related":["writeOutput"],
+	"description":" Writes an output to a page. WriteBody should be used within a tag with a body only.",
 	"params": [
-
+		{"name":"value","description":"A string or any variable that can evaluate to a string.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
+		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/writebody.html"}
 	},
 	"links": [
-
 	],
 	"examples": [
 

@@ -23,7 +23,7 @@
 		},
 		{
 			"name": "labelok",
-			"description": "The text to put on a alert button and prompt messge box OK button.",
+			"description": "The text to put on an alert button and prompt message box OK button.",
 			"required": false,
 			"default": "",
 			"type": "string",
@@ -63,7 +63,7 @@
 		},
 		{
 			"name": "labelyes",
-			"description": "The text to put on the button used for a positive responsein a confirm message box.",
+			"description": "The text to put on the button used for a positive response in a confirm message box.",
 			"required": false,
 			"default": "",
 			"type": "string",
@@ -144,7 +144,7 @@
 	],
 	"engines": {
 		"coldfusion": {
-			"minimum_version": "",
+			"minimum_version": "9",
 			"notes": "",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-m-o/cfmessagebox.html"
 		}

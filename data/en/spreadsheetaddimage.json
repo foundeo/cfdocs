@@ -21,7 +21,7 @@
 	"examples": [
 		{
 			"title":"Tag Example",
-			"description":"The following example creates a PNG format chart, puts it in a new spread sheet as rows 5-12 and column 5-10, and saves the sheet to disk. ",
+			"description":"The following example creates a PNG format chart, puts it in a new spreadsheet as rows 5-12 and column 5-10, and saves the sheet to disk. ",
 			"code":"<cfchart format=\"png\" name=\"image_var\"> \r\n     <cfchartseries type=\"line\"> \r\n         <cfchartdata item=\"Point1\" value=\"-50\"> \r\n         <cfchartdata item=\"Point2\" value=\"-25\"> \r\n         <cfchartdata item=\"Point3\" value=\"1\"> \r\n </cfchartseries> \r\n </cfchart> \r\n <cfset sObj = SpreadsheetNew()> \r\n <cfset SpreadsheetAddRow(sObj, \"\")> \r\n <cfset SpreadsheetAddImage(sObj,image_var,\"png\",\"1,1,7,6\")> \r\n <cfheader name=\"Content-Disposition\" value=\"inline; filename=testFile.xls\"> \r\n <cfcontent type=\"application/vnd.msexcel\" variable=\"#SpreadSheetReadBinary(sObj)#\"> ",
 			"result":"",
 			"runnable":true

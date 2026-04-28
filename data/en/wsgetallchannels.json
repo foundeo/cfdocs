@@ -2,11 +2,11 @@
 	"name":"wsGetAllChannels",
 	"type":"function",
 	"syntax":"wsGetAllChannels (); wsGetAllChannels('channelName');",
-	"returns":"void",
+	"returns":"array",
 	"related":[],
 	"description":"Provides all the channels defined in the Application.cfc as an array.",
 	"params": [
-		{"name":"channelName","description":"If specified, returns all sub-channels listed under the entered channel name. If left unspecified, the function returns all channels registered under the current application.","required":false,"default":"","type":"","values":[]}
+		{"name":"channelName","description":"If specified, returns all sub-channels listed under the entered channel name. If left unspecified, the function returns all channels registered under the current application.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/wsgetallchannels.html"}

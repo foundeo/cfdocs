@@ -6,10 +6,10 @@
 	"related":[],
 	"description":"Searches for given text in specific properties or entities.",
 	"params": [
-		{"name":"query_text","description":"The text to be searched for or a complete Lucene query.In the case of ORMSearch('query_text', 'entityName'), only Lucene query is supported.For details of Lucene query, see http://lucene.apache.org/core/old_versioned_docs/versions/3_0_0/queryparsersyntax.html","required":true,"default":"","type":"","values":[]},
-		{"name":"entityName","description":"Name of the entity to be searched.","required":true,"default":"","type":"","values":[]},
-		{"name":"fields","description":"Fields in which search has to be performed. This can be an array of strings.If you are performing a Lucene query, you need not specify this field. In other words, if you do not specify this value, a Lucene query is performed.Field name is case-sensitive.","required":true,"default":"","type":"","values":[]},
-		{"name":"optionMap","description":"Extra options that can be passed while executing Lucene query.The options are: Sort, Offset, maxResults","required":true,"default":"","type":"","values":[]}
+		{"name":"query_text","description":"The text to be searched for or a complete Lucene query.In the case of ORMSearch('query_text', 'entityName'), only Lucene query is supported. For details of Lucene query, see http://lucene.apache.org/core/old_versioned_docs/versions/3_0_0/queryparsersyntax.html","required":true,"default":"","type":"string","values":[]},
+		{"name":"entityName","description":"Name of the entity to be searched.","required":true,"default":"","type":"string","values":[]},
+		{"name":"fields","description":"Fields in which search has to be performed. This can be an array of strings. If you are performing a Lucene query, you need not specify this field. In other words, if you do not specify this value, a Lucene query is performed. Field name is case-sensitive.","required":true,"default":"","type":"array","values":[]},
+		{"name":"optionMap","description":"Extra options that can be passed while executing Lucene query. The options are: Sort, Offset, maxResults","required":true,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/ormsearch.html"}

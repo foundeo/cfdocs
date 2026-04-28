@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>JSON Utils For CFDocs</title>
-		<link href="//netdna.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/bootswatch/3.4.1/flatly/bootstrap.min.css" rel="stylesheet">
 		<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
 	</head>
 	<body>

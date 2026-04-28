@@ -19,9 +19,7 @@
     "instructions":"",
     "changelog":"",
     "type":"",
-    "keywords":[
-        
-    ],
+    "keywords":[],
     "private":false,
     "engines":[
         {
@@ -45,17 +43,13 @@
             "URL":""
         }
     ],
-    "contributors":[
-        
-    ],
-    "dependencies":{
-        
-    },
+    "contributors":[],
+    "dependencies":{},
     "devDependencies":{
-        "testbox":"^2.5.0+107"
+        "testbox":"^5.3.0+5"
     },
     "installPaths":{
-        "testbox":"tests/testbox"
+        "testbox":"tests/testbox/"
     },
     "ignore":[
         "**/.*",
@@ -68,9 +62,7 @@
                 "default":""
             }
         ],
-        "labels":[
-            
-        ],
+        "labels":[],
         "reporter":"",
         "reporterResults":"",
         "bundles":[
@@ -80,13 +72,9 @@
             "mapping":"",
             "recurse":true
         },
-        "watchers":[
-            
-        ],
+        "watchers":[],
         "notify":{
-            "emails":[
-                
-            ],
+            "emails":[],
             "growl":"",
             "URL":""
         }

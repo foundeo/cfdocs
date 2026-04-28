@@ -3,12 +3,27 @@
 	"type":"tag",
 	"syntax":"<cfretry>",
 	"script":"retry",
-	"related":["cfcatch","cftry"],
+	"related":["cfcatch","cftry","cfthrow"],
 	"description":"Used within a catch block to jump back to the beginning of the try statement.",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"http://docs.lucee.org/reference/tags/sleep.html"}
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/retry.html"}
 	},
 	"links": [],
-	"examples": []
+	"examples": [
+		{
+		    "runnable": true,
+		    "title": "Tag Syntax - basic example",
+		    "description": "Throw an error and retry within cfcatch until the iteration counter is equal to 3.",
+		    "code": "<cfoutput>\r\n<cfset iterations = 1/>\r\n<cfset limit = 3/>\r\n\r\n<cftry>\r\n\t<cfif iterations EQ limit>\r\n\t\tDone!\r\n\t<cfelse>\r\n\t\t<cfthrow type='Custom' message='Too soon. '/>\r\n\t</cfif>\r\n\r\n\t<cfcatch>\r\n\t\t#cfcatch.message#\r\n\r\n\t\t<cfset iterations += 1/>\r\n\t\t<cfif iterations LE limit>\r\n\t\t\t<cfretry/>\r\n\t\t</cfif>\r\n\t</cfcatch>\r\n</cftry>\r\n</cfoutput>",
+		    "result": "Too soon. Too soon. Done!"
+		},
+		{
+		    "runnable": true,
+		    "title": "Script Syntax - basic example",
+		    "description": "Throw an error and retry within catch until the iteration counter is equal to 3.",
+		    "code": "iterations = 1;\r\nlimit = 3;\r\n\r\ntry {\r\n\tif (iterations == limit) {\r\n\t\twriteOutput('Done!');\r\n\t} else {\r\n\t\tthrow(message='Too soon. ');\r\n\t}\r\n}\r\ncatch(any e) {\r\n\twriteOutput('#cfcatch.message#');\r\n\r\n\titerations += 1;\r\n\tif (iterations <= limit) {\r\n\t\tretry;\r\n\t}\r\n}",
+		    "result": "Too soon. Too soon. Done!"
+		}
+	]
 }

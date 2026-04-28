@@ -12,7 +12,7 @@
 		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/collectionfilter.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/collectionfilter.html"}
 	},
 	"examples": [{
 		"title":"Return only items of type mail",

@@ -1,17 +1,17 @@
 {
 	"name": "collectionReduce",
 	"type": "function",
-	"syntax": "collectionReduce(collection, closure [, initalValue])",
+	"syntax": "collectionReduce(collection, closure [, initialValue])",
 	"returns": "any",
 	"related": ["collectionEvery","collectionEach","collectionFilter","collectionMap","collectionSome"],
 	"description": "Sum amount of an item value for every item",
 	"params": [
 		{"name": "collection", "description": "", "required": true, "default": "", "type": "any", "values": []},
 		{"name": "closure", "description": "", "required": true, "default": "", "type": "function", "values": []},
-		{"name": "initalValue", "description": "", "required": false, "default": "", "type": "any", "values": []}
+		{"name": "initialValue", "description": "", "required": false, "default": "", "type": "any", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/collectionreduce.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/collectionreduce.html"}
 	},
 	"examples": [{
 		"title":"Sum amount of an item value for every item",
