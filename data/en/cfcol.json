@@ -12,7 +12,7 @@
 		{"name":"text","description":"Double-quotation mark-delimited text; determines what to\n display. Rules: same as for cfoutput sections. You can\n embed hyperlinks, image references, and input controls","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcol.html"},
+		"coldfusion": {"minimum_version":"", "notes":"", "deprecated":"2016", "removed":"2025", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-c/cfcol.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/col.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfcol"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfcol"}
