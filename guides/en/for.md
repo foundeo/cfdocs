@@ -24,6 +24,13 @@ The above would output `321`
 
 The above outputs `AB`
 
+Using `loop` you can loop over the key and values (Lucee5+)
+
+    loop collection=st key="key" value="value" {
+        writeOutput(key & " " & value);
+    }
+
+
 ### For In Loop (over an array) CF9.0.1+
 
     cars = ["Ford","Dodge"];
@@ -35,7 +42,13 @@ The above example would output `FordDodge`
 
 For in support for native Java arrays was added in CF10+
 
-### For In Loop (over a list) CF10+
+Using `loop` you can track the index and the value (Lucee5+)
+
+    loop collection=cars index="i" value="value" {
+        writeOutput("#i#: #value#");
+    }
+
+### For In Loop (over a list) CF10+ Lucee5+
 
     fruits = "apple,orange,banana";
     for (fruit in fruits) {
@@ -44,7 +57,7 @@ For in support for native Java arrays was added in CF10+
 
 The above example would output `appleorangebanana`
 
-### For In Loop (over a query) CF10+
+### For In Loop (over a query) CF10+ Lucee5+
 
     query = queryNew("name", "varchar", [
         ["apple"],
@@ -56,7 +69,7 @@ The above example would output `appleorangebanana`
         writeOutput("#query.currentRow# - #row.name#<br>");
     }
 
-### Query Loop (with grouping) CF10+
+### Query Loop (with grouping) CF10+ Lucee5+
 
     q = queryNew("pk,fk,data", "integer,integer,varchar", [
         [1, 10, "aa"],
