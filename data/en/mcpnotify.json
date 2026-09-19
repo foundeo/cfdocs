@@ -1,0 +1,41 @@
+{
+	"name":"mcpNotify",
+	"type":"function",
+	"syntax":"mcpNotify( server [, method [, params [, to]]] )",
+	"returns":"numeric",
+	"related":["mcp","mcpSessions","mcpConnect","mcpClient"],
+	"description":"Pushes an MCP notification to connected clients from anywhere: an ordinary page, a cfthread, or a scheduled job. This is the emit-from-anywhere ergonomic that wsPublish provides for WebSockets. The server argument is optional inside a handler (it defaults to the server the call is running on). When to is given, the notification is delivered only to that session; otherwise it is delivered to every session of the server that has a stream open. Returns the number of sessions reached. Always recorded into the mcp test log so the CFML test suite can assert on it with no client attached.",
+	"params": [
+		{"name":"server","description":"The MCP server to notify, e.g. \"/mcp/docs\". Inside a handler this defaults to the server of the current call.","required":false,"default":"","type":"string","values":[]},
+		{"name":"method","description":"The notification method name, e.g. \"notifications/resources/updated\". Required.","required":true,"default":"","type":"string","values":[]},
+		{"name":"params","description":"A struct of parameters to attach to the notification, converted to JSON for the wire.","required":false,"default":"","type":"any","values":[]},
+		{"name":"to","description":"An optional session id. When set, the notification is delivered only to that session instead of every open session of the server.","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+		{
+			"title":"RustCFML MCP documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/mcp.md",
+			"description":"Full documentation of the RustCFML Model Context Protocol support, including notifications from anywhere."
+		}
+	],
+	"examples": [
+		{
+			"title":"Broadcast a resource update to every session",
+			"description":"From any page or background job, publish a resource-changed notification to all open sessions of a server.",
+			"code":"mcpNotify( server = \"/mcp/docs\", method = \"notifications/resources/updated\"\n         , params = { uri = \"doc://pages/intro\" } );",
+			"result":"Returns the number of sessions the notification reached.",
+			"runnable":false
+		},
+		{
+			"title":"Notify a single session",
+			"description":"Use mcpSessions() to get live ids, then target one of them with the to argument.",
+			"code":"var sessions = mcpSessions( \"/mcp/docs\" );\nmcpNotify( server = \"/mcp/docs\", method = \"notifications/announcement\"\n         , params = { text = \"redeployed\" }, to = sessions[ 1 ] );",
+			"result":"Returns 1 when the target session had a stream open.",
+			"runnable":false
+		}
+	]
+
+}

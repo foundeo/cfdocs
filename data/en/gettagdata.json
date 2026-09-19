@@ -12,7 +12,8 @@
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/gettagdata.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/system/gettagdata"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/system/gettagdata"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"examples": [{
 		"title": "Output information about a tag",

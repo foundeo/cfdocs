@@ -1,0 +1,28 @@
+{
+	"name":"spreadsheetGetColumnWidth",
+	"type":"function",
+	"syntax":"spreadsheetGetColumnWidth(spreadsheetObj, column)",
+	"returns":"numeric",
+	"related":["spreadsheetSetColumnWidth","spreadsheetAutoSizeColumn","spreadsheetNew"],
+	"description":" Returns the width of a column in the active sheet of a spreadsheet workbook, in character widths (the same units setColumnWidth uses). Returns 0 when the column has no explicit width set. Columns are 1-based. The fluent member form is getColumnWidth(column).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"column","description":"1-based column index (1 = A).","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Read a column width",
+			"description":"Set a width, then read it back.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetColumnWidth(wb, 2, 30);\r\nwriteDump(spreadsheetGetColumnWidth(wb, 2));",
+			"result":"30",
+			"runnable":true
+		}
+	]
+
+}

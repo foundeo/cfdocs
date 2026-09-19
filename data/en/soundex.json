@@ -9,7 +9,8 @@
 		{"name": "str", "description": "", "required": true, "default": "", "type": "string", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/soundex.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/soundex.html"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [],
 	"examples": [{

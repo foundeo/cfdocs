@@ -1,0 +1,28 @@
+{
+	"name":"spreadsheetAutoSizeColumn",
+	"type":"function",
+	"syntax":"spreadsheetAutoSizeColumn(spreadsheetObj, column)",
+	"returns":"any",
+	"related":["spreadsheetSetColumnWidth","spreadsheetGetColumnWidth","spreadsheetNew"],
+	"description":" Sets a column of the active sheet to auto-fit its contents. Rows and columns are 1-based. Because a headless engine has no font-metrics renderer, the workbook is written with Excel's best-fit flag and the spreadsheet application computes the exact pixel width when the file is opened. The fluent member form is autoSizeColumn(column) and autoSize() does the same for every column.",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"column","description":"1-based column index to auto-size (1 = A).","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Auto-size the name column",
+			"description":"Best-fit column 1 after writing data.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetCellValue(wb, \"A long name indeed\", 1, 1);\r\nspreadsheetAutoSizeColumn(wb, 1);\r\nwb.write(expandPath(\"/out.xlsx\"), true);",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

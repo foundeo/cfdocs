@@ -1,0 +1,35 @@
+{
+	"name":"bcrypthash",
+	"type":"function",
+	"syntax":"bcrypthash(input [, cost])",
+	"returns":"string",
+	"related":["bcryptverify","generateBCryptHash","verifyBCryptHash"],
+	"description":" Generates a salted bcrypt hash of a string. Each call produces a different hash (a random salt is embedded), and the cost factor is encoded in the result. Returns the $2a$ variant so hashes are interchangeable with the org.mindrot.jbcrypt.BCrypt shim and reference engines. This is the Lucee crypto-extension name; the modern RustCFML name is bcryptHash() and the deprecated form is generateBCryptHash(). Available when the security cargo feature is enabled.",
+	"params": [
+		{"name":"input","description":"The string to hash.","required":true,"default":"","type":"string","values":[]},
+		{"name":"cost","description":"The bcrypt work factor, between 4 and 31 (default 10).","required":false,"default":"10","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Hash a password",
+			"description":"Hash with the default cost of 10.",
+			"code":"hash = bcrypthash(\"secret\");\r\nwriteDump(bcrypthash(\"secret\") == hash); // false - random salt each call",
+			"result":"false",
+			"runnable":true
+		},
+		{
+			"title":"Verify the hash",
+			"description":"Check a password against a stored bcrypt hash.",
+			"code":"hash = bcrypthash(\"secret\", 8);\r\nwriteDump(bcryptverify(\"secret\", hash));",
+			"result":"true",
+			"runnable":true
+		}
+	]
+
+}

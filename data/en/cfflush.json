@@ -13,7 +13,8 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/flush.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfflush"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfflush"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:flush>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/flush"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:flush>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/flush"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [],
 	"examples": [

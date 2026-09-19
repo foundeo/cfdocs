@@ -1,0 +1,21 @@
+{
+	"name":"getRequestProfile",
+	"type":"function",
+	"syntax":"getRequestProfile()",
+	"returns":"struct",
+	"related":["profileNow"],
+	"description":"Returns the folded sampling call tree for the current request as a struct: { sampleCount, root }. Each node has function, template, line, self, total, selfPercent, totalPercent, and a children array. The data comes from the FusionReactor-style threshold-gated sampling profiler, which snapshots the CFML call stack on an interval for requests that run longer than the configured threshold.",
+	"params": [
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title":"Dump the request's call tree",
+			"description":"Show the sampled profile of the current request.",
+			"code":"profile = getRequestProfile();\nwriteDump( profile );"
+		}
+	]
+}

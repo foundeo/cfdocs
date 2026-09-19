@@ -1,0 +1,31 @@
+{
+	"name":"csvFormatRow",
+	"type":"function",
+	"syntax":"csvFormatRow(values [, delimiter] [, quote] [, escape] [, quoteAll])",
+	"returns":"string",
+	"related":["spreadsheetToCsv","listToCsv"],
+	"description":" Formats an array (or a single scalar, treated as a one-column row) as a CSV row string. A field is quoted when quoteAll is true or the field contains the delimiter, the quote character, or a newline; the quote and escape characters are doubled inside quoted fields. A null element produces an empty, unquoted field. This matches the opencsv behaviour of the Java CSV shim, keeping round-trips byte-identical.",
+	"params": [
+		{"name":"values","description":"Array of values to format (or a single scalar for a one-column row).","required":true,"default":"","type":"array","values":[]},
+		{"name":"delimiter","description":"Single-character field delimiter (default comma).","required":false,"default":",","type":"string","values":[]},
+		{"name":"quote","description":"Single-character quote character (default double-quote).","required":false,"default":"\"","type":"string","values":[]},
+		{"name":"escape","description":"Single-character escape character (default the quote character).","required":false,"default":"\"","type":"string","values":[]},
+		{"name":"quoteAll","description":"Quote every field, not only those that need it (default true).","required":false,"default":"true","type":"boolean","values":[true,false]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Format a row",
+			"description":"Quote-all formatting of a simple array.",
+			"code":"writeDump(csvFormatRow([\"Alice\", 90, \"said \\\"hi\\\"\"]));",
+			"result":"\"Alice\",\"90\",\"said \\\"hi\\\"\"",
+			"runnable":true
+		}
+	]
+
+}

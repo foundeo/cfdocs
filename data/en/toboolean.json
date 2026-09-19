@@ -1,0 +1,27 @@
+{
+	"name":"toBoolean",
+	"type":"function",
+	"syntax":"toBoolean(value)",
+	"returns":"boolean",
+	"related":["isBoolean","toNumeric","toString"],
+	"description":" Converts a value to a boolean. A missing value or any value whose boolean coercion is false (false, 0, empty string, null) becomes false; everything else becomes true.",
+	"params": [
+		{"name":"value","description":"The value to convert.","required":false,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Coerce values",
+			"description":"Various values coerced to booleans.",
+			"code":"writeDump(toBoolean(1));\r\nwriteDump(toBoolean(\"\"));\r\nwriteDump(toBoolean(\"off\"));",
+			"result":"true\r\nfalse\r\ntrue",
+			"runnable":true
+		}
+	]
+
+}

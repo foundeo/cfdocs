@@ -10,7 +10,8 @@
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/getvariable.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/system/getvariable"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/system/getvariable"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [],
 	"examples": [{

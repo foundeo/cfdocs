@@ -1,0 +1,24 @@
+{
+	"name":"debugAdd",
+	"type":"function",
+	"syntax":"debugAdd(category, name, value [, key])",
+	"returns":"void",
+	"related":["getDebugData","isDebugMode"],
+	"description":"Appends rows to the Generic data section of the debug footer. The supported channel for app code and frameworks to inject their own debug panel. Two call forms: debugAdd( category, struct ) adds each key/value of the struct as a row, or debugAdd( category, name, value ) adds a single named row.",
+	"params": [
+		{"name":"category","description":"A category label; rows are grouped under it in the footer's Generic data section.","required":true,"default":"","type":"string","values":[]},
+		{"name":"name","description":"The row name, or (in the two-argument form) a struct of name/value pairs.","required":true,"default":"","type":"any","values":[]},
+		{"name":"value","description":"The row value (three-argument form only).","required":false,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title":"Inject a custom debug panel",
+			"description":"Add controller and cache information to the footer when debug is on.",
+			"code":"if ( isDebugMode() ) {\n    debugAdd( \"MyApp\", { controller: \"users.index\", cacheHit: false } );\n}"
+		}
+	]
+}

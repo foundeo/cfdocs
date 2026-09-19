@@ -1,0 +1,27 @@
+{
+	"name":"readLine",
+	"type":"function",
+	"syntax":"readLine([prompt])",
+	"returns":"string",
+	"related":["writeOutput","fileReadLine"],
+	"description":" Reads a single line from standard input and returns it as a string, with the trailing newline stripped. An optional prompt is written to standard error before reading. Intended for interactive/CLI use.",
+	"params": [
+		{"name":"prompt","description":"Optional prompt text written to stderr before reading.","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Read from stdin",
+			"description":"Prompt for a name and echo it back.",
+			"code":"name = readLine(\"Name: \");\r\nwriteOutput(\"Hello, #name#\");",
+			"result":"",
+			"runnable":false
+		}
+	]
+
+}

@@ -1,0 +1,25 @@
+{
+	"name":"sessionCommit",
+	"type":"function",
+	"syntax":"sessionCommit()",
+	"returns":"void",
+	"related":["sessionGetMetadata","sessionRotate","sessionInvalidate"],
+	"description":" Forces the current session's pending live-scope writes out to the persistent session store immediately, before a redirect or abort crosses a control-flow boundary. Normally RustCFML syncs the session at request end; this makes the sync explicit and is a no-op when there is no live session.",
+	"params": [],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Commit before a redirect",
+			"description":"Persist session changes before a cflocation.",
+			"code":"session.user = \"alex\";\r\nsessionCommit();\r\n// safe to redirect/abort now",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

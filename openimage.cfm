@@ -41,7 +41,7 @@
     hPos = 30;
     maxlength = 60;
 
-	img=imageNew("",512,256,"RGB","##fafafa");
+	img=imageNew("",600,256,"RGB","##fafafa");
 	img.setAntialiasing("on");
 
 	//Write Tag/Function Name
@@ -128,20 +128,28 @@
 		img.DrawText("Lucee",393,27,style3);
 	}
 
+	//RustCFML Engine Support
+	if(data.engines.keyExists('rustcfml')){
+		img.setDrawingColor("##dea584");
+		img.drawRect(420,15,62,16,true);
+		img.setDrawingColor("##ffffff")
+		img.DrawText("RustCFML",425,27,style3);
+	}
+
 	//ColdFusion Engine Support
 	if(data.engines.keyExists('coldfusion')){
 		cfversion =  data.engines.coldfusion.minimum_version;
 		img.setDrawingColor("##006699");
 		if (len(cfversion)) { cfversion &= "+" }
 		cfengineboxsize = ((len(cfversion))* 7) + 22;
-		img.drawRect(432,15,cfengineboxsize,16,true);
+		img.drawRect(492,15,cfengineboxsize,16,true);
 		img.setDrawingColor("##ffffff")
-		img.DrawText("CF" & cfversion,436,27,style3);
+		img.DrawText("CF" & cfversion,496,27,style3);
 	}
 
 	//Draw bottom green border
     img.setDrawingColor("##3dbc9c")
-	img.DrawRect(0,240,512,16,true);
+    img.DrawRect(0,240,600,16,true);
 	if(!DirectoryExists(ExpandPath(filepath))) DirectoryCreate(ExpandPath(filepath));
 	ImageWrite(img,ExpandPath(filepath & filename));
 	cfcontent( reset="true", variable="#toBinary(toBase64(img))#", type="image/jpg");

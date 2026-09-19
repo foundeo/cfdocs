@@ -118,7 +118,8 @@
 			"minimum_version": "",
 			"notes": "",
 			"docs": "http://openbd.org/manual/?/tag/cfspreadsheet"
-		}
+		},
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32. No .ods writing, limited chart types, no formula evaluation."}
 	},
 	"examples": [
 		{

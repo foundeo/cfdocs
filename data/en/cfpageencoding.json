@@ -9,7 +9,8 @@
 		{"name":"charset","description":"The name of the variable that will contain the value of the time taken.","required":true,"type":"string","values":["utf-8","iso-8859-1","windows-1252","us-ascii","shift_jis","iso-2022-jp","euc-jp","euc-kr","big5","euc-cn","utf-16"]}
 	],
 	"engines": {
-		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/pageencoding.html"}
+		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/pageencoding.html"},
+		"rustcfml": {"minimum_version": "", "notes": "Accepted but ignored - engine reads all files as UTF-8."}
 	},
 	"links": [],
 	"examples": [

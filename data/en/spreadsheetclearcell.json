@@ -1,0 +1,29 @@
+{
+	"name":"spreadsheetClearCell",
+	"type":"function",
+	"syntax":"spreadsheetClearCell(spreadsheetObj, row, column)",
+	"returns":"any",
+	"related":["spreadsheetClearCellRange","spreadsheetSetCellValue","spreadsheetNew"],
+	"description":" Clears the contents of a single cell in the active sheet of a spreadsheet workbook. Rows and columns are 1-based (row 1, column 1 = cell A1). The fluent member form is clearCell(row, column).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"row","description":"1-based row index of the cell to clear.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"column","description":"1-based column index of the cell to clear.","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Clear cell A1",
+			"description":"Remove the value previously written to row 1, column 1.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetCellValue(wb, \"temp\", 1, 1);\r\nspreadsheetClearCell(wb, 1, 1);\r\nwriteDump(spreadsheetGetCellValue(wb, 1, 1));",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

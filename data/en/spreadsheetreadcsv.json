@@ -1,0 +1,28 @@
+{
+	"name":"spreadsheetReadCsv",
+	"type":"function",
+	"syntax":"spreadsheetReadCsv(filePath [, delimiter])",
+	"returns":"any",
+	"related":["spreadsheetWriteToCsv","spreadsheetToCsv","spreadsheetNew"],
+	"description":" Creates a new spreadsheet workbook from a CSV file. The file is parsed into a single sheet (named Sheet1) with one row per line; quoted fields, escaped quotes and embedded delimiters/newlines are honoured. The fluent member form fromCsv(csvText, delimiter) instead replaces the active sheet's cells from an in-memory CSV string.",
+	"params": [
+		{"name":"filePath","description":"Path to the CSV file to read.","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiter","description":"Single-character field delimiter (default comma).","required":false,"default":",","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Load a CSV file into a workbook",
+			"description":"Read the CSV to a workbook, then convert it to a query.",
+			"code":"fileWrite(expandPath(\"/data.csv\"), \"name,score\\nAlice,90\\nBob,75\");\r\nwb = spreadsheetReadCsv(expandPath(\"/data.csv\"));\r\nwriteDump(spreadsheetToQuery(wb));",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

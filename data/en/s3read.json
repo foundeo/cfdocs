@@ -1,0 +1,29 @@
+{
+	"name":"s3Read",
+	"type":"function",
+	"syntax":"s3Read(bucket, object [, charset, accessKeyId, secretKey, host])",
+	"returns":"string",
+	"related":["s3readbinary","s3write","s3download"],
+	"description":"Reads an object from an S3 (or S3-compatible) bucket and returns its body as a UTF-8 string.",
+	"params": [
+		{"name":"bucket","description":"The name of the S3 bucket to read from.","required":true,"default":"","type":"string","values":[]},
+		{"name":"object","description":"The object key to read.","required":true,"default":"","type":"string","values":[]},
+		{"name":"charset","description":"Character encoding to use when decoding the body (informational; bodies are decoded as UTF-8).","required":false,"default":"","type":"string","values":[]},
+		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
+		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
+		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Read an object into a string",
+			"description": "Reads the body of an object from a bucket.",
+			"code": "content = s3Read(\"my-bucket\", \"logs/today.txt\");",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

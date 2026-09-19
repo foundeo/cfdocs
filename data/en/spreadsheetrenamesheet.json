@@ -1,0 +1,29 @@
+{
+	"name":"spreadsheetRenameSheet",
+	"type":"function",
+	"syntax":"spreadsheetRenameSheet(spreadsheetObj, sheetName, sheetNumber)",
+	"returns":"any",
+	"related":["spreadsheetCreateSheet","spreadsheetSetActiveSheet","spreadsheetNew"],
+	"description":" Renames a sheet in a spreadsheet workbook. The sheet is identified by its 1-based sheet number (the first sheet is 1). The fluent member form is renameSheet(sheetName, sheetNumber).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"sheetName","description":"The new name for the sheet.","required":true,"default":"","type":"string","values":[]},
+		{"name":"sheetNumber","description":"1-based index of the sheet to rename (default 1).","required":false,"default":"1","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Rename the first sheet",
+			"description":"Rename the default Sheet1 to People.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetRenameSheet(wb, \"People\", 1);\r\nwriteDump(wb.info().sheetnames);",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

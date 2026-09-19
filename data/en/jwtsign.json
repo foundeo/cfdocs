@@ -1,0 +1,37 @@
+{
+	"name":"jwtSign",
+	"type":"function",
+	"syntax":"jwtSign(payload, key [, algorithm] [, expiresIn])",
+	"returns":"string",
+	"related":["jwtVerify","jwtDecode"],
+	"description":" Signs a JWT with an HMAC secret and returns the encoded token string. payload is a struct of claims (or a raw JSON string); key is the HMAC secret. When expiresIn (seconds) is given, iat (now) and exp (now + expiresIn) claims are added to a struct payload if absent. Only HMAC algorithms are supported: HS256 (default), HS384 and HS512. This is the Lucee crypto-extension name; RustCFML does not provide the Adobe createSignedJWT name.",
+	"params": [
+		{"name":"payload","description":"Struct of claims to sign (or a raw JSON string).","required":true,"default":"","type":"struct","values":[]},
+		{"name":"key","description":"The HMAC secret key.","required":true,"default":"","type":"string","values":[]},
+		{"name":"algorithm","description":"HMAC algorithm: HS256 (default), HS384 or HS512.","required":false,"default":"HS256","type":"string","values":["HS256","HS384","HS512"]},
+		{"name":"expiresIn","description":"Optional lifetime in seconds; adds iat and exp claims when they are absent.","required":false,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Sign with an expiry",
+			"description":"Sign claims with a 1 hour lifetime using HS256.",
+			"code":"token = jwtSign({ sub: \"alex\", role: \"admin\" }, \"my-secret\", \"HS256\", 3600);\r\nwriteDump(jwtDecode(token).exp != 0);",
+			"result":"true",
+			"runnable":true
+		},
+		{
+			"title":"HS512",
+			"description":"Sign with the HS512 algorithm.",
+			"code":"token = jwtSign({ sub: \"alex\" }, \"my-secret\", \"HS512\");\r\nwriteDump(token);",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

@@ -13,7 +13,8 @@
 	"engines": {
 		"coldfusion": {"minimum_version":"11", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/serialize.html"},
 		"lucee": {"minimum_version":"4.5", "notes":"", "docs":"https://docs.lucee.org/reference/functions/serialize.html"},
-		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/Serialize"}
+		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/Serialize"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [],
 	"examples": [

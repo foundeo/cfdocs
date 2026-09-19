@@ -1,0 +1,28 @@
+{
+	"name":"s3ReadBinary",
+	"type":"function",
+	"syntax":"s3ReadBinary(bucket, object [, accessKeyId, secretKey, host])",
+	"returns":"binary",
+	"related":["s3read","s3write","s3download"],
+	"description":"Reads an object from an S3 (or S3-compatible) bucket and returns its body as a binary value.",
+	"params": [
+		{"name":"bucket","description":"The name of the S3 bucket to read from.","required":true,"default":"","type":"string","values":[]},
+		{"name":"object","description":"The object key to read.","required":true,"default":"","type":"string","values":[]},
+		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
+		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
+		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Read an object as binary",
+			"description": "Returns the raw bytes of the object.",
+			"code": "bytes = s3ReadBinary(\"my-bucket\", \"images/photo.jpg\");",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

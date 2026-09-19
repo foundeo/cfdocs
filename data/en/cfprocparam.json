@@ -19,7 +19,8 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/procparam.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfprocparam"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfprocparam"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:procparam>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/jdbc/procparam"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:procparam>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/jdbc/procparam"},
+		"rustcfml": {"minimum_version": "", "notes": "Only value/cfsqltype survive; direction/dbVarName/maxLength/scale dropped."}
 	},
 	"links": [
 		{

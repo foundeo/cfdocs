@@ -7,7 +7,8 @@
 	"description": "Creates a Unique Identifier for the current instance. If you want it to be Universal Unique use createUUID instead.",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/createuniqueid.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/createuniqueid.html"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"examples": [{
 		"title":"Creates a Unique Identifier. Each identifier will be unique",

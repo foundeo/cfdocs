@@ -20,7 +20,8 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/execute.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfexecute"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfexecute"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:execute>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/execute"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:execute>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/execute"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [],
 	"examples": [

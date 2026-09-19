@@ -1,0 +1,27 @@
+{
+	"name":"s3ClearBucket",
+	"type":"function",
+	"syntax":"s3ClearBucket(bucket [, accessKeyId, secretKey, host])",
+	"returns":"void",
+	"related":["s3delete","s3listbucket","s3createbucket"],
+	"description":"Deletes every object in an S3 (or S3-compatible) bucket, leaving the bucket itself in place.",
+	"params": [
+		{"name":"bucket","description":"The name of the S3 bucket to empty.","required":true,"default":"","type":"string","values":[]},
+		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
+		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
+		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Empty a bucket",
+			"description": "Removes all objects from the bucket.",
+			"code": "s3ClearBucket(\"my-bucket\");",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

@@ -1,0 +1,31 @@
+{
+	"name":"mcpResource",
+	"type":"function",
+	"syntax":"mcpResource( resource )",
+	"returns":"struct",
+	"related":["mcpText","mcpImage","mcpAudio","mcpResourceLink","mcp"],
+	"description":"Builds a resource MCP content block. The resource argument is the embedded resource content (typically a struct with a uri and the resource payload). The block passes through the automatic result coercion untouched, so use it when a tool wants exact control over what the client renders.",
+	"params": [
+		{"name":"resource","description":"The embedded resource, usually a struct describing the resource's uri and content.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+		{
+			"title":"RustCFML MCP documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/mcp.md",
+			"description":"Content helpers for exact control over MCP responses."
+		}
+	],
+	"examples": [
+		{
+			"title":"Return an embedded resource",
+			"description":"Embed a resource directly in a tool response.",
+			"code":"function page() tool=\"page\" {\n    var bytes = fileRead( expandPath( \"/pages/intro.txt\" ) );\n    return mcpResource( {\n        uri    = \"doc://pages/intro\",\n        mimeType = \"text/plain\",\n        text     = toString( bytes )\n    } );\n}",
+			"result":"",
+			"runnable":false
+		}
+	]
+
+}

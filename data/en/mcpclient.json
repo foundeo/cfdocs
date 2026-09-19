@@ -1,0 +1,31 @@
+{
+	"name":"mcpClient",
+	"type":"function",
+	"syntax":"mcpClient( name )",
+	"returns":"any",
+	"related":["mcpConnect","mcp","mcpNotify","mcpSessions"],
+	"description":"Connects to a named MCP server declared in .cfconfig.json under mcpServers, using the same shape an editor's client config uses so a block can be pasted across without translation. Returns a client handle identical to the one from mcpConnect(). Resolving a name requires serve mode with a loaded configuration; in a CLI run with no configuration loaded, use mcpConnect() with an explicit command or url instead.",
+	"params": [
+		{"name":"name","description":"The name of a server declared under mcpServers in .cfconfig.json.","required":true,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+		{
+			"title":"RustCFML MCP documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/mcp.md",
+			"description":"Full documentation of named MCP servers and the mcpServers config shape."
+		}
+	],
+	"examples": [
+		{
+			"title":"Use a named server from .cfconfig.json",
+			"description":"Declare servers once in .cfconfig.json and reference them by name.",
+			"code":"// .cfconfig.json\n// {\n//   \"mcpServers\": {\n//     \"files\":  { \"command\": \"npx\", \"args\": [\"-y\", \"@modelcontextprotocol/server-filesystem\", \"/tmp\"] },\n//     \"remote\": { \"url\": \"https://example.com/mcp\" }\n//   }\n// }\n\nclient = mcpClient( \"files\" );\ntools  = client.tools();\nclient.close();",
+			"result":"",
+			"runnable":false
+		}
+	]
+
+}

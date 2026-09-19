@@ -75,7 +75,7 @@ The #data.name# <cfif data.type IS "tag">tag<cfelseif data.type IS "function">fu
 
 | Engine | Minimum Version | Notes |
 | --- | --- | --- |
-<cfloop list="ColdFusion,Lucee,BoxLang" index="engine"><cfif data.engines.keyExists(engine) AND data.engines[engine].keyExists("docs") AND len(data.engines[engine].docs)>| #engine# | <cfif data.engines[engine].keyExists("minimum_version")>#EncodeForMarkdownCell(data.engines[engine].minimum_version)#</cfif> | <cfif data.engines[engine].keyExists("notes")>#EncodeForMarkdownCell(data.engines[engine].notes)#</cfif> |
+<cfloop list="ColdFusion,Lucee,BoxLang,RustCFML" index="engine"><cfif data.engines.keyExists(engine) AND data.engines[engine].keyExists("docs") AND len(data.engines[engine].docs)>| #engine# | <cfif data.engines[engine].keyExists("minimum_version")>#EncodeForMarkdownCell(data.engines[engine].minimum_version)#</cfif> | <cfif data.engines[engine].keyExists("notes")>#EncodeForMarkdownCell(data.engines[engine].notes)#</cfif> |
 </cfif></cfloop>
 </cfif>
 

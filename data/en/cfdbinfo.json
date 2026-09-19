@@ -19,7 +19,8 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/dbinfo.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfdbinfo"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfdbinfo"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:dbinfo>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/jdbc/dbinfo"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:dbinfo>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/jdbc/dbinfo"},
+		"rustcfml": {"minimum_version": "", "notes": "DATA_TYPE/SQL_DATA_TYPE always 0 except MySQL; statement syntax not parsed; inline datasource struct literal errors."}
 	},
 	"links": [],
 	"examples": [

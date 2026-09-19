@@ -20,7 +20,8 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/storedproc.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfstoredproc"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfstoredproc"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:storedproc>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/jdbc/storedproc"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:storedproc>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/jdbc/storedproc"},
+		"rustcfml": {"minimum_version": "", "notes": "Only procedure/datasource survive; returnCode/result/blockFactor/cachedWithin dropped. Only first result set bound."}
 	},
 	"links": [
 
