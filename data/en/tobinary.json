@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"toBinary(base64_or_object)",
 	"returns":"binary",
-	"related":[],
+	"related":["toBase64","toString"],
 	"description":" Calculates the binary representation of Base64-encoded data.",
 	"params": [
 		{"name":"base64_or_object","description":"A string or a variable that contains one:\n * In Base64 format to convert to binary\n * In binary format to test whether it is valid","required":true,"default":"","type":"any","values":[]}
@@ -17,6 +17,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Convert a Base64 string to binary",
+			"description":"Decodes a Base64-encoded string into binary data and converts it back to a readable string.",
+			"code":"bin = toBinary( \"SGVsbG8gV29ybGQ=\" );\r\nwriteOutput( toString( bin ) );",
+			"result":"Hello World",
+			"runnable":true
+		}
 	]
-
 }

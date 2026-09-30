@@ -19,6 +19,14 @@
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Find the position of the second item element",
+			"description":"The second item element is the third child of list, because a note element comes before it.",
+			"code":"doc = xmlParse( \"<list><item>A</item><note>X</note><item>B</item></list>\" );\r\nwriteOutput( xmlChildPos( doc.list, \"item\", 2 ) );",
+			"result":"3",
+			"runnable":true
+		}
 	]
-
 }
