@@ -7,7 +7,7 @@
 	"related":["queryColumnData"],
 	"description":"Returns a struct having all the columns as keys and their corresponding values.",
 	"params": [
-		{"name":"query","description":"query object do get data from.","required":true,"default":"","type":"query","values":[]},
+		{"name":"query","description":"query object to get data from.","required":true,"default":"","type":"query","values":[]},
         {"name":"rowNumber","description":"position of the row to be returned.","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
@@ -36,5 +36,4 @@
 			"runnable":true
 		}
 	]
-
 }
