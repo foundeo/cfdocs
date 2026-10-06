@@ -41,7 +41,7 @@
     hPos = 30;
     maxlength = 60;
 
-	img=imageNew("",600,256,"RGB","##fafafa");
+	img=imageNew("",512,256,"RGB","##fafafa");
 	img.setAntialiasing("on");
 
 	//Write Tag/Function Name
@@ -104,12 +104,13 @@
 	img.DrawText(decodeforhtml("Docs &bull; cfdocs.org#urlPath#"),hPos+24,vPos,style2);
 
 	style3={size="11"};
-	//Blue Dragon Engine Support
-	if(data.engines.keyExists('openbd')){
-		img.setDrawingColor("##2fa5d7");
-		img.drawRect(300,15,23,16,true);
+	
+	//RustCFML Engine Support
+	if(data.engines.keyExists('rustcfml')){
+		img.setDrawingColor("##dea584");
+		img.drawRect(260,15,62,16,true);
 		img.setDrawingColor("##ffffff")
-		img.DrawText("BD",305,27,style3);
+		img.DrawText("RustCFML",265,27,style3);
 	}
 
 	//BoxLang Engine Support
@@ -128,13 +129,7 @@
 		img.DrawText("Lucee",393,27,style3);
 	}
 
-	//RustCFML Engine Support
-	if(data.engines.keyExists('rustcfml')){
-		img.setDrawingColor("##dea584");
-		img.drawRect(420,15,62,16,true);
-		img.setDrawingColor("##ffffff")
-		img.DrawText("RustCFML",425,27,style3);
-	}
+	
 
 	//ColdFusion Engine Support
 	if(data.engines.keyExists('coldfusion')){
@@ -142,9 +137,9 @@
 		img.setDrawingColor("##006699");
 		if (len(cfversion)) { cfversion &= "+" }
 		cfengineboxsize = ((len(cfversion))* 7) + 22;
-		img.drawRect(492,15,cfengineboxsize,16,true);
+		img.drawRect(432,15,cfengineboxsize,16,true);
 		img.setDrawingColor("##ffffff")
-		img.DrawText("CF" & cfversion,496,27,style3);
+		img.DrawText("CF" & cfversion,436,27,style3);
 	}
 
 	//Draw bottom green border
