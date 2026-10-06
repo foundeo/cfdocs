@@ -1,0 +1,39 @@
+{
+	"name":"mcpConnect",
+	"type":"function",
+	"syntax":"mcpConnect( transport [, options] )",
+	"returns":"any",
+	"related":["mcpClient","mcp","mcpNotify","mcpSessions"],
+	"description":"Connects to a remote MCP server over stdio or HTTP and returns a client handle. The handshake runs at the connect call, so a bad command or URL fails where the developer is looking, rather than at the first tools() call somewhere else. The client declares no capabilities of its own, so it declines a server's sampling or elicitation request rather than leaving the server parked. A tool that reports failure throws an exception (type = \"MCPToolError\"); a tool with structured output returns that data directly.",
+	"params": [
+		{"name":"transport","description":"The transport to use to reach the remote server: \"stdio\" launches it as a subprocess, \"http\" talks to it over a URL.","required":true,"default":"","type":"string","values":["stdio","http"]},
+		{"name":"options","description":"A struct of transport options. For stdio: command and args. For http: url and headers. Named arguments other than transport are also merged in as options, so both mcpConnect( \"stdio\", command = \"...\" ) and mcpConnect( \"stdio\", { command = \"...\" } ) work.","required":false,"default":"","type":"struct","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+		{
+			"title":"RustCFML MCP documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/mcp.md",
+			"description":"Full documentation of calling other MCP servers from CFML."
+		}
+	],
+	"examples": [
+		{
+			"title":"Launch a server as a subprocess",
+			"description":"Connect to a filesystem server over stdio and call one of its tools.",
+			"code":"client = mcpConnect(\n      transport = \"stdio\"\n    , command   = \"npx -y @modelcontextprotocol/server-filesystem /tmp\"\n);\n\ntools = client.tools();\nrows  = client.call( \"read_file\", { path = \"/tmp/notes.txt\" } );\nclient.close();",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Talk to a server over HTTP",
+			"description":"Connect to a remote MCP server over HTTP with an authorization header, then list and call tools.",
+			"code":"client = mcpConnect(\n      transport = \"http\"\n    , url       = \"https://example.com/mcp\"\n    , headers   = { Authorization = \"Bearer #token#\" }\n);\n\ntools = client.tools();\nresult = client.call( \"search\", { query = \"invoices\" } );\nclient.close();",
+			"result":"",
+			"runnable":false
+		}
+	]
+
+}

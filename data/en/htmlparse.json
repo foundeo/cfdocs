@@ -10,7 +10,8 @@
 		{"name": "caseSensitive", "description": "", "required": false, "default": "", "type": "boolean", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/htmlparse.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/htmlparse.html"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"examples": [{
 		"title": "htmlParse Example",

@@ -1,0 +1,28 @@
+{
+	"name":"spreadsheetAddChart",
+	"type":"function",
+	"syntax":"spreadsheetAddChart(spreadsheetObj, { type, series, from, to, title })",
+	"returns":"any",
+	"related":["spreadsheet","spreadsheetNew","spreadsheetWrite"],
+	"description":" Adds a chart to the active sheet of a spreadsheet workbook. The chart struct accepts type (line, line3d, bar, bar3d, pie, pie3d, doughnut or area, default line), series (an array or delimited list of sheet-qualified ranges such as \"Sheet1!$A$2:$A$10\"), from and to (anchor A1 cells) and an optional title. The fluent member form is addChart({...}).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object to add the chart to.","required":true,"default":"","type":"any","values":[]},
+		{"name":"chart","description":"Struct describing the chart: type (line|line3d|bar|bar3d|pie|pie3d|doughnut|area), series (array or list of sheet-qualified ranges), from (top-left anchor cell, default \"C1\"), to (bottom-right anchor cell, default \"H15\") and title.","required":true,"default":"","type":"struct","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Bar chart over a query",
+			"description":"Write scores to a sheet, then add a bar chart anchored at E1.",
+			"code":"scores = queryNew(\"name,score\", \"varchar,integer\");\r\nqueryAddRow(scores, {name: \"Alice\", score: 90});\r\nqueryAddRow(scores, {name: \"Bob\", score: 75});\r\nSpreadsheet(\"xlsx\")\r\n\t.sheet(\"Data\")\r\n\t.fromQuery(scores, true)\r\n\t.addChart({\r\n\t\ttype: \"bar\",\r\n\t\tseries: [\"Data!$B$2:$B$3\"],\r\n\t\tfrom: \"E1\",\r\n\t\tto: \"L15\",\r\n\t\ttitle: \"Scores\"\r\n\t})\r\n\t.write(expandPath(\"/chart.xlsx\"), true);",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

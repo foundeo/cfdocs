@@ -18,7 +18,8 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/throw.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/throw"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/throw"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/throw"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/throw"},
+		"rustcfml": {"minimum_version": "", "notes": "Mixing named+positional args: compiles here, errors at call (Lucee: compile error). object= merges with explicit attrs (Lucee discards object)."}
 	},
 	"links": [
 

@@ -1,0 +1,21 @@
+{
+	"name":"profileNow",
+	"type":"function",
+	"syntax":"profileNow()",
+	"returns":"boolean",
+	"related":["getRequestProfile"],
+	"description":"Force-starts profiling of the current request immediately (FusionReactor's \"Profile now\"), instead of waiting for the request to cross the slow-request threshold. Takes one sample synchronously. Returns true when the sampling profiler is enabled, false when it is off server-wide.",
+	"params": [
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title":"Profile this request on demand",
+			"description":"Arm sampling for the current request and later inspect the result.",
+			"code":"on = profileNow();\n// ... do work ...\nif ( on ) {\n    writeDump( getRequestProfile() );\n}"
+		}
+	]
+}

@@ -28,7 +28,8 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/file.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cffile"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cffile"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:file>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/io/file"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:file>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/io/file"},
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32. Unsupported actions throw 'not implemented'. fileUpload accept allow-list discarded."}
 	},
 	"links": [
 		{

@@ -1,0 +1,36 @@
+{
+	"name":"imageReadSvg",
+	"type":"function",
+	"syntax":"imageReadSvg(source [, width [, height]])",
+	"returns":"any",
+	"related":["imageRead","imageResize","imageWrite"],
+	"description":" Reads an SVG and rasterises it into an ordinary CFML image object, so the whole image* family (resize, crop, draw on, imageWrite to png/jpg/gif) applies to it. source is either a path to an .svg file or the SVG markup itself (strings containing <svg are treated as markup). With no dimensions the SVG's own size is used; with one, the other is derived from the aspect ratio; with both, the SVG is scaled to fit inside that box, preserving aspect ratio and centring the result. Text is rendered with the operating system's font database.",
+	"params": [
+		{"name":"source","description":"Path to an .svg file, or the SVG markup itself.","required":true,"default":"","type":"string","values":[]},
+		{"name":"width","description":"Optional target width in pixels; the height is derived from the aspect ratio when only one dimension is given.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"height","description":"Optional target height in pixels; when both dimensions are given the SVG is scaled to fit inside the box.","required":false,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Rasterise an SVG file",
+			"description":"Read an SVG at native size and write it as a PNG.",
+			"code":"img = imageReadSvg(expandPath(\"/logo.svg\"));\r\nimageWrite(img, expandPath(\"/logo.png\"));",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Scale SVG markup",
+			"description":"Rasterise inline SVG markup into a 200x100 box.",
+			"code":"svg = \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" width=\\\"400\\\" height=\\\"200\\\"><rect width=\\\"400\\\" height=\\\"200\\\" fill=\\\"red\\\"/></svg>\";\r\nimg = imageReadSvg(svg, 200, 100);\r\nwriteDump(imageInfo(img));",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

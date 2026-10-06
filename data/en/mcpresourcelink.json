@@ -1,0 +1,34 @@
+{
+	"name":"mcpResourceLink",
+	"type":"function",
+	"syntax":"mcpResourceLink( uri [, name [, description [, mimeType]]] )",
+	"returns":"struct",
+	"related":["mcpText","mcpImage","mcpAudio","mcpResource","mcp"],
+	"description":"Builds a resource-link MCP content block. A resource link points at addressable content the model can read, without embedding the content itself. The uri identifies the resource; name, description, and mimeType are optional metadata. Omitted optional fields are left out rather than written as null. The block passes through the automatic result coercion untouched.",
+	"params": [
+		{"name":"uri","description":"The URI of the resource the link points to, e.g. \"doc://pages/intro\".","required":true,"default":"","type":"string","values":[]},
+		{"name":"name","description":"A human-readable name for the resource.","required":false,"default":"","type":"string","values":[]},
+		{"name":"description","description":"A human-readable description of the resource.","required":false,"default":"","type":"string","values":[]},
+		{"name":"mimeType","description":"The MIME type of the resource, e.g. \"text/markdown\".","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+		{
+			"title":"RustCFML MCP documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/mcp.md",
+			"description":"Content helpers for exact control over MCP responses."
+		}
+	],
+	"examples": [
+		{
+			"title":"Link to a resource from a tool response",
+			"description":"Return a text block plus a resource link in a single content list.",
+			"code":"function search( required string query ) tool=\"search_docs\" {\n    return [\n        mcpText( \"Here is the chart:\" ),\n        mcpResourceLink( \"doc://pages/intro\", \"intro\", \"The introduction\", \"text/markdown\" )\n    ];\n}",
+			"result":"",
+			"runnable":false
+		}
+	]
+
+}

@@ -15,7 +15,8 @@
 		"lucee": {"minimum_version":"", "notes":"Lucee Supports script syntax module template=\"file.cfm\"", "docs":"https://docs.lucee.org/reference/tags/module.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmodule"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmodule"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:module>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/module"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:module>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/module"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [],
 	"examples": [

@@ -104,12 +104,13 @@
 	img.DrawText(decodeforhtml("Docs &bull; cfdocs.org#urlPath#"),hPos+24,vPos,style2);
 
 	style3={size="11"};
-	//Blue Dragon Engine Support
-	if(data.engines.keyExists('openbd')){
-		img.setDrawingColor("##2fa5d7");
-		img.drawRect(300,15,23,16,true);
+	
+	//RustCFML Engine Support
+	if(data.engines.keyExists('rustcfml')){
+		img.setDrawingColor("##dea584");
+		img.drawRect(260,15,62,16,true);
 		img.setDrawingColor("##ffffff")
-		img.DrawText("BD",305,27,style3);
+		img.DrawText("RustCFML",265,27,style3);
 	}
 
 	//BoxLang Engine Support
@@ -128,6 +129,8 @@
 		img.DrawText("Lucee",393,27,style3);
 	}
 
+	
+
 	//ColdFusion Engine Support
 	if(data.engines.keyExists('coldfusion')){
 		cfversion =  data.engines.coldfusion.minimum_version;
@@ -141,7 +144,7 @@
 
 	//Draw bottom green border
     img.setDrawingColor("##3dbc9c")
-	img.DrawRect(0,240,512,16,true);
+    img.DrawRect(0,240,600,16,true);
 	if(!DirectoryExists(ExpandPath(filepath))) DirectoryCreate(ExpandPath(filepath));
 	ImageWrite(img,ExpandPath(filepath & filename));
 	cfcontent( reset="true", variable="#toBinary(toBase64(img))#", type="image/jpg");

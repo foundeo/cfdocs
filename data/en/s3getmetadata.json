@@ -1,0 +1,35 @@
+{
+	"name":"s3GetMetaData",
+	"type":"function",
+	"syntax":"s3GetMetaData(bucket, object [, accessKeyId, secretKey, host]) or s3GetMetaData(s3url [, accessKeyId, secretKey, host])",
+	"returns":"struct",
+	"related":["s3exists","s3read","s3generateuri"],
+	"description":"Returns the metadata for an S3 (or S3-compatible) object: content_type, content_length, etag, last_modified, storage_class and any x-amz-meta-* headers. Accepts either a bucket and object, or a single s3:// URL as the first argument.",
+	"params": [
+		{"name":"bucket","description":"The name of the S3 bucket, or a full s3:// URL.","required":true,"default":"","type":"string","values":[]},
+		{"name":"object","description":"The object key to inspect. Omitted when the first argument is an s3:// URL.","required":false,"default":"","type":"string","values":[]},
+		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
+		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
+		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Get object metadata by bucket and key",
+			"description": "Returns a struct with the object's metadata.",
+			"code": "meta = s3GetMetaData(\"my-bucket\", \"logs/today.txt\");",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title": "Get object metadata from a URL",
+			"description": "Passing an s3:// URL as the first argument addresses the object directly.",
+			"code": "meta = s3GetMetaData(\"s3://my-bucket/logs/today.txt\");",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

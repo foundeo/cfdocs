@@ -229,6 +229,13 @@ footer { text-align: center; margin-top: 10px; font-size:smaller; }
 .label-boxlang:focus {
   background-color: #08834C;
 }
+.label-rustcfml {
+  background-color: #dea584;
+}
+.label-rustcfml:hover,
+.label-rustcfml:focus {
+  background-color: #954530;
+}
 .syntax-highlight {
   color: #c7254e;
   font-weight:bold;

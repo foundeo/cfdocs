@@ -12,7 +12,8 @@
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/systemoutput.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/systemoutput"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/systemoutput"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"examples": [{
 		"title":"Write a string to the output stream \"Hello World\"",

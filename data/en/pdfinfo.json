@@ -1,0 +1,22 @@
+{
+	"name":"pdfInfo",
+	"type":"function",
+	"syntax":"pdfInfo(pdfObj)",
+	"returns":"struct",
+	"related":["pdfRead","pdfPageCount","pdfToImage"],
+	"description":"Returns metadata about a PDF document as a struct: { pages, source, pagesizes }. pages is the page count, source is the file path (empty when the document was read from a Binary), and pagesizes is an array of { width, height } structs in PostScript points (1/72 inch).",
+	"params": [
+		{"name":"pdfObj","description":"A PDF object from pdfRead() or pdf().","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title":"Get PDF metadata",
+			"description":"Read a PDF and dump its info struct.",
+			"code":"doc  = PdfRead( expandPath( \"/invoice.pdf\" ) );\ninfo = PdfInfo( doc );\nwriteDump( info );"
+		}
+	]
+}

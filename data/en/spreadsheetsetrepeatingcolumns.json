@@ -1,0 +1,28 @@
+{
+	"name":"spreadsheetSetRepeatingColumns",
+	"type":"function",
+	"syntax":"spreadsheetSetRepeatingColumns(spreadsheetObj, range)",
+	"returns":"any",
+	"related":["spreadsheetSetRepeatingRows","spreadsheetNew"],
+	"description":" Sets the print-title columns of the active sheet in a spreadsheet workbook, so the given column range repeats at the start of every printed page. The range is an A1 address such as \"A:B\" or \"$A:$C\". Implemented via the _xlnm.Print_Titles defined name. The fluent member form is setRepeatingColumns(columns).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"columns","description":"A1 address of the column range to repeat on every printed page, e.g. \"A:C\".","required":true,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Repeat header columns when printing",
+			"description":"Columns A through B repeat on every printed page.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetRepeatingColumns(wb, \"A:B\");",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

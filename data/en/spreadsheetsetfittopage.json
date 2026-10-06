@@ -1,0 +1,30 @@
+{
+	"name":"spreadsheetSetFitToPage",
+	"type":"function",
+	"syntax":"spreadsheetSetFitToPage(spreadsheetObj, state, pagesWide, pagesHigh)",
+	"returns":"any",
+	"related":["spreadsheetSetPrintOrientation","spreadsheetNew"],
+	"description":" Sets the fit-to-page print option on the active sheet of a spreadsheet workbook. When state is true the sheet is scaled to fit across pagesWide columns and pagesHigh rows (each minimum 1); when false the fit-to-page setting is cleared. The fluent member form is setFitToPage(state, pagesWide, pagesHigh).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"state","description":"True to enable fit-to-page, false to clear it (default true).","required":false,"default":"true","type":"boolean","values":[true,false]},
+		{"name":"pagesWide","description":"Number of pages wide to fit into (default 1, minimum 1 when enabled).","required":false,"default":"1","type":"numeric","values":[]},
+		{"name":"pagesHigh","description":"Number of pages high to fit into (default 1, minimum 1 when enabled).","required":false,"default":"1","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Fit to a single page",
+			"description":"Scale the active sheet to one page wide by one page high.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetFitToPage(wb, true, 1, 1);",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

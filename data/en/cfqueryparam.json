@@ -144,7 +144,8 @@
       "minimum_version": "1.0.0",
       "notes": "`<bx:queryparam>` in BoxLang",
       "docs": "https://boxlang.ortusbooks.com/boxlang-language/reference/components/jdbc/queryparam"
-    }
+    },
+		"rustcfml": {"minimum_version": "", "notes": "Only value/cfsqltype/list/null survive; maxLength/scale silently dropped."}
   },
   "links": [
     {

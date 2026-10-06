@@ -1,0 +1,29 @@
+{
+	"name":"spreadsheetGetCellFormat",
+	"type":"function",
+	"syntax":"spreadsheetGetCellFormat(spreadsheetObj, row, column)",
+	"returns":"struct",
+	"related":["spreadsheetFormatCell","spreadsheetGetCellValue","spreadsheetNew"],
+	"description":" Returns the formatting of a single cell in the active sheet of a spreadsheet workbook as a struct with the same keys the format methods accept: bold, italic, fontsize, font, color, bgcolor, alignment, verticalalignment, wraptext and dataformat (number format code). Colours are returned as #RRGGBB hex strings. Keys are only present when the style sets them. Rows and columns are 1-based. The fluent member form is getCellFormat(row, column).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"row","description":"1-based row index of the cell.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"column","description":"1-based column index of the cell.","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Read back a format",
+			"description":"Format a cell, then read the format struct back.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetFormatCell(wb, { bold: true, bgcolor: \"#ffcc00\", alignment: \"center\" }, 1, 1);\r\nwriteDump(spreadsheetGetCellFormat(wb, 1, 1));",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

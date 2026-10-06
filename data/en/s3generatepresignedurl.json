@@ -1,0 +1,37 @@
+{
+	"name":"s3GeneratePresignedURL",
+	"type":"function",
+	"syntax":"s3GeneratePresignedURL(bucket, object [, expireDate, httpMethod, accessKeyId, secretKey, host])",
+	"returns":"string",
+	"related":["s3generateuri","s3read","s3exists"],
+	"description":"Generates a presigned URL that grants temporary, signed access to an object in an S3 (or S3-compatible) bucket. The expireDate argument accepts a datetime (the URL is valid until that instant) or a plain number of minutes; it defaults to 15 minutes.",
+	"params": [
+		{"name":"bucket","description":"The name of the S3 bucket containing the object.","required":true,"default":"","type":"string","values":[]},
+		{"name":"object","description":"The object key the URL will grant access to.","required":true,"default":"","type":"string","values":[]},
+		{"name":"expireDate","description":"Expiry: a datetime (URL valid until that instant) or a number of minutes. Defaults to 15 minutes.","required":false,"default":"15","type":"any","values":[]},
+		{"name":"httpMethod","description":"HTTP method the presigned URL is valid for. Defaults to GET.","required":false,"default":"GET","type":"string","values":[]},
+		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
+		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
+		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Generate a presigned GET URL",
+			"description": "Creates a URL that expires in 60 minutes.",
+			"code": "url = s3GeneratePresignedURL(\"my-bucket\", \"reports/q3.pdf\", 60);",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title": "Generate a presigned PUT URL",
+			"description": "The fourth argument selects the HTTP method.",
+			"code": "url = s3GeneratePresignedURL(\"my-bucket\", \"uploads/new.txt\", 15, \"PUT\");",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

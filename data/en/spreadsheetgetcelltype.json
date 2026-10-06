@@ -1,0 +1,29 @@
+{
+	"name":"spreadsheetGetCellType",
+	"type":"function",
+	"syntax":"spreadsheetGetCellType(spreadsheetObj, row, column)",
+	"returns":"string",
+	"related":["spreadsheetGetCellValue","spreadsheetSetCellFormula","spreadsheetNew"],
+	"description":" Returns the data type of a cell in the active sheet of a spreadsheet workbook as a string (for example a number, string or formula cell type), or \"undefined\" for an empty cell. Rows and columns are 1-based. The fluent member form is getCellType(row, column).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"row","description":"1-based row index of the cell.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"column","description":"1-based column index of the cell.","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Cell types",
+			"description":"Inspect the types of a value cell and an empty cell.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetCellValue(wb, 42, 1, 1);\r\nwriteDump(spreadsheetGetCellType(wb, 1, 1));\r\nwriteDump(spreadsheetGetCellType(wb, 5, 5));",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

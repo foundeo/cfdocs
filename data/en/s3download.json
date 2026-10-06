@@ -1,0 +1,37 @@
+{
+	"name":"s3Download",
+	"type":"function",
+	"syntax":"s3Download(bucket, object [, target, charset, accessKeyId, secretKey, host])",
+	"returns":"any",
+	"related":["s3read","s3readbinary"],
+	"description":"Downloads an object from an S3 (or S3-compatible) bucket. When a target path is supplied, the bytes are written to that local file and true is returned; otherwise the body is returned as a UTF-8 string.",
+	"params": [
+		{"name":"bucket","description":"The name of the S3 bucket to download from.","required":true,"default":"","type":"string","values":[]},
+		{"name":"object","description":"The object key to download.","required":true,"default":"","type":"string","values":[]},
+		{"name":"target","description":"Optional local file path to write the object bytes to. When omitted, the body is returned as a string instead.","required":false,"default":"","type":"string","values":[]},
+		{"name":"charset","description":"Character encoding to use when decoding the body (informational; bodies are decoded as UTF-8).","required":false,"default":"","type":"string","values":[]},
+		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
+		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
+		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Download an object to a local file",
+			"description": "Writes the object body to disk and returns true on success.",
+			"code": "ok = s3Download(\"my-bucket\", \"logs/today.txt\", expandPath(\"./today.txt\"));",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title": "Download an object into a string",
+			"description": "Without a target path, the body is returned directly.",
+			"code": "content = s3Download(\"my-bucket\", \"logs/today.txt\");",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

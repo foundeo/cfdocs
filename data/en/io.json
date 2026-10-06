@@ -1,0 +1,38 @@
+{
+	"name":"io",
+	"type":"function",
+	"syntax":"io( [ channel ] )",
+	"returns":"any",
+	"related":["wsPublish","wsPresence","wsSubscribe","wsUnsubscribe","assertBroadcast"],
+	"description":"Returns a fluent emitter for a WebSocket channel — sugar over the same registry the wsPublish built-in uses. The channel argument is optional inside a channel handler, where io() with no argument refers to the current channel. The emitter supports emitting to the whole channel, to a specific room, excluding a connection, counting members, listing connection ids, and reading the presence roster. Only available in serve mode, where a live registry is present.",
+	"params": [
+		{"name":"channel","description":"The channel to emit on, e.g. \"/chat\". Inside a channel handler this defaults to the current channel.","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+		{
+			"title":"RustCFML WebSocket documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/websockets.md",
+			"description":"Full documentation of the RustCFML realtime engine, including the fluent io() emitter."
+		}
+	],
+	"examples": [
+		{
+			"title":"Emit to the whole channel and to a room",
+			"description":"The fluent emitter scopes fan-out with to(), excepts a connection with except(), and inspects the channel with count(), sockets(), and presence().",
+			"code":"io( \"/chat\" ).emit( \"ping\", now() );\nio( \"/chat\" ).to( \"lobby\" ).emit( \"announcement\", { text = \"hello\" } );\nio( \"/chat\" ).to( \"lobby\" ).except( cid ).emit( \"x\", data );\n\nvar members = io( \"/chat\" ).in( \"lobby\" ).count();\nvar ids     = io( \"/chat\" ).sockets();\nvar roster  = io( \"/chat\" ).presence();",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Use io() inside a channel handler",
+			"description":"Inside a handler, io() with no argument refers to the current channel.",
+			"code":"component socket=\"/chat\" encoding=\"json\" {\n    function onMessage( socket, message ) {\n        io().to( \"lobby\" ).emit( \"message\", { from = socket.id(), text = message.text } );\n    }\n}",
+			"result":"",
+			"runnable":false
+		}
+	]
+
+}

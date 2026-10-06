@@ -1,0 +1,32 @@
+{
+	"name":"spreadsheetSetCellRangeValue",
+	"type":"function",
+	"syntax":"spreadsheetSetCellRangeValue(spreadsheetObj, value, startRow, startColumn, endRow, endColumn)",
+	"returns":"any",
+	"related":["spreadsheetSetCellValue","spreadsheetClearCellRange","spreadsheetNew"],
+	"description":" Sets the same value on every cell in a rectangular range of the active sheet of a spreadsheet workbook. All coordinates are 1-based. The fluent member form is setCellRangeValue(value, startRow, startColumn, endRow, endColumn).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"value","description":"The value to write to each cell in the range.","required":true,"default":"","type":"any","values":[]},
+		{"name":"startRow","description":"1-based starting row of the range.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"startColumn","description":"1-based starting column of the range.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"endRow","description":"1-based ending row of the range.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"endColumn","description":"1-based ending column of the range.","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Fill a range",
+			"description":"Fill the 2x2 range from A1 to B2 with a border colour value.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetCellRangeValue(wb, \"pending\", 1, 1, 2, 2);\r\nwriteDump(spreadsheetGetCellValue(wb, 2, 2));",
+			"result":"pending",
+			"runnable":true
+		}
+	]
+
+}

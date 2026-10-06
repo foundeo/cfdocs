@@ -12,7 +12,8 @@
 	],
 	"engines": {
 		"lucee": {"minimum_version": "5.3.8", "notes": "", "docs": "https://docs.lucee.org/reference/functions/argon2checkhash.html"},
-		"boxlang": {"minimum_version": "1.0.0", "notes": "Requires the bx-password-encrypt module", "docs": "https://github.com/ortus-boxlang/bx-password-encrypt"}
+		"boxlang": {"minimum_version": "1.0.0", "notes": "Requires the bx-password-encrypt module", "docs": "https://github.com/ortus-boxlang/bx-password-encrypt"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"examples": [{
 		"title":"Show a passing and failing Argon2 hash check",

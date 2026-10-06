@@ -1,0 +1,36 @@
+{
+	"name":"s3Delete",
+	"type":"function",
+	"syntax":"s3Delete(bucket [, object, force, accessKeyId, secretKey, host])",
+	"returns":"void",
+	"related":["s3createbucket","s3clearbucket","s3exists"],
+	"description":"Deletes an S3 (or S3-compatible) bucket or a single object. Without an object argument the bucket itself is deleted; with an object argument the single key is deleted. Deleting a non-empty bucket requires force=true, which empties the bucket first.",
+	"params": [
+		{"name":"bucket","description":"The name of the S3 bucket to delete, or the bucket containing the object.","required":true,"default":"","type":"string","values":[]},
+		{"name":"object","description":"The object key to delete. When omitted, the bucket itself is deleted.","required":false,"default":"","type":"string","values":[]},
+		{"name":"force","description":"When deleting a bucket, true empties the bucket first. Defaults to false.","required":false,"default":"false","type":"boolean","values":[]},
+		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
+		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
+		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Delete a single object",
+			"description": "Removes one key from the bucket.",
+			"code": "s3Delete(\"my-bucket\", \"logs/today.txt\");",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title": "Delete a bucket and its contents",
+			"description": "force=true empties the bucket before deleting it.",
+			"code": "s3Delete(\"my-bucket\", \"\", true);",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

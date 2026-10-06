@@ -10,7 +10,8 @@
 		'lucee': 'Lucee',
 		'openbd': 'OpenBD',
 		'railo': 'Railo',
-		'boxlang': 'BoxLang'
+		'boxlang': 'BoxLang',
+		'rustcfml': 'RustCFML'
 	};
 
 	/* build discouraged filehead */
@@ -46,6 +47,15 @@
 			'## Lucee only'
 			& crlf & crlf
 			& '#### The following tags/functions are Lucee only'
+		);
+	}
+
+	/* build rustcfmly only filehead */
+	savecontent variable='rustcfmlyFileContent' {
+		writeOutput(
+			'## RustCFML only'
+			& crlf & crlf
+			& '#### The following tags/functions are RustCFML only'
 		);
 	}
 
@@ -93,6 +103,14 @@
 						luceeonlyFileContent &= ' - Minimum Version: ' & dataStruct['engines'][engine]['minimum_version'];
 					}
 				}
+				else if (engine == 'rustcfml') {
+					rustcfmlyFileContent &= crlf & crlf;
+					rustcfmlyFileContent &= '`' & dataStruct['name'] & '`';
+
+					if (dataStruct['engines'][engine]['minimum_version'] != '') {
+						rustcfmlyFileContent &= ' - Minimum Version: ' & dataStruct['engines'][engine]['minimum_version'];
+					}
+				}
 			}
 		}
 	}
@@ -109,4 +127,7 @@
 
 	fileWrite(guideDir & '\lucee-only.md', luceeonlyFileContent);
 	writeOutput("<p>Wrote lucee-only.md</p>");
+
+	fileWrite(guideDir & '\rustcfml-only.md', rustcfmlyFileContent);
+	writeOutput("<p>Wrote rustcfml-only.md</p>");
 </cfscript>

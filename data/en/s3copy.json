@@ -1,0 +1,31 @@
+{
+	"name":"s3Copy",
+	"type":"function",
+	"syntax":"s3Copy(srcBucket, srcObject, trgBucket [, trgObject, acl, accessKeyId, secretKey, host])",
+	"returns":"void",
+	"related":["s3move","s3write"],
+	"description":"Copies an object from one S3 (or S3-compatible) bucket to another (or to a different key in the same bucket).",
+	"params": [
+		{"name":"srcBucket","description":"The source bucket name.","required":true,"default":"","type":"string","values":[]},
+		{"name":"srcObject","description":"The source object key.","required":true,"default":"","type":"string","values":[]},
+		{"name":"trgBucket","description":"The destination bucket name.","required":true,"default":"","type":"string","values":[]},
+		{"name":"trgObject","description":"The destination object key. Defaults to the source object key.","required":false,"default":"","type":"string","values":[]},
+		{"name":"acl","description":"Object ACL to apply to the copy (accepted for compatibility; not enforced).","required":false,"default":"","type":"string","values":[]},
+		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
+		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
+		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Copy an object to another bucket",
+			"description": "Copies the object, keeping the same key in the target bucket.",
+			"code": "s3Copy(\"src-bucket\", \"reports/q3.pdf\", \"trg-bucket\");",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

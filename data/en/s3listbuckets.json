@@ -1,0 +1,26 @@
+{
+	"name":"s3ListBuckets",
+	"type":"function",
+	"syntax":"s3ListBuckets([accessKeyId, secretKey, host])",
+	"returns":"array",
+	"related":["s3listbucket","s3createbucket","s3delete"],
+	"description":"Lists all buckets accessible with the resolved credentials. Returns an array of structs with bucketName and creationDate.",
+	"params": [
+		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
+		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
+		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "List all buckets",
+			"description": "Returns an array of bucket structs.",
+			"code": "buckets = s3ListBuckets();",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

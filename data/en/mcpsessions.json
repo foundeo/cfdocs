@@ -1,0 +1,31 @@
+{
+	"name":"mcpSessions",
+	"type":"function",
+	"syntax":"mcpSessions( [ server ] )",
+	"returns":"array",
+	"related":["mcp","mcpNotify"],
+	"description":"Returns the live session ids for an MCP server as an array of strings, so a page can see which clients are connected and target one of them with mcpNotify( to= ). The server argument is optional inside a handler (it defaults to the server of the current call). When no server is running or no session matches, an empty array is returned.",
+	"params": [
+		{"name":"server","description":"The MCP server whose sessions to list, e.g. \"/mcp/docs\". Inside a handler this defaults to the server of the current call.","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+		{
+			"title":"RustCFML MCP documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/mcp.md",
+			"description":"Full documentation of the RustCFML Model Context Protocol support."
+		}
+	],
+	"examples": [
+		{
+			"title":"List the live sessions of a server",
+			"description":"Use mcpSessions() to see who is connected, then target a specific session with mcpNotify( to= ).",
+			"code":"var sessions = mcpSessions( \"/mcp/docs\" );\nwriteOutput( \"connected sessions: #arrayLen( sessions )#\\n\" );",
+			"result":"An array of session id strings; empty when nobody is connected.",
+			"runnable":false
+		}
+	]
+
+}

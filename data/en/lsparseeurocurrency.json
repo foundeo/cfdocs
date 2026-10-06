@@ -13,7 +13,8 @@
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/lsparseeurocurrency.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/lsparseeurocurrency.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/lsparseeurocurrency"},
-		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsparseeurocurrency"}
+		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/lsparseeurocurrency"},
+		"rustcfml": {"minimum_version": "", "notes": "RustCFML has lsEuroCurrencyFormat for formatting; parsing euro currency uses lsParseCurrency."}
 	},
 	"links": []
 }

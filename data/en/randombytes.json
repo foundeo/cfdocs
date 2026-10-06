@@ -1,0 +1,27 @@
+{
+	"name":"randomBytes",
+	"type":"function",
+	"syntax":"randomBytes(count)",
+	"returns":"binary",
+	"related":["generateSecretKey","createObject"],
+	"description":" Returns cryptographically secure random bytes as a Binary value, backed by the operating system CSPRNG. CFML has no primitive for raw entropy — generateSecretKey() only yields cipher-shaped key lengths as base64 text — so this covers PBKDF2 salts, nonces and opaque tokens. Count must be greater than 0 and at most 16777216 (16 MiB); a typo'd huge number fails loudly instead of exhausting memory. Available when the security cargo feature is enabled.",
+	"params": [
+		{"name":"count","description":"Number of random bytes to generate (1 to 16777216).","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Generate a nonce",
+			"description":"32 random bytes, base64-encoded for transport.",
+			"code":"nonce = toBase64(randomBytes(32));\r\nwriteDump(len(nonce));",
+			"result":"44",
+			"runnable":true
+		}
+	]
+
+}

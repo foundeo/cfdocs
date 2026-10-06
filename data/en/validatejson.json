@@ -1,0 +1,30 @@
+{
+	"name":"validateJson",
+	"type":"function",
+	"syntax":"validateJson(json, schema [, throwOnError] [, baseUri])",
+	"returns":"array",
+	"related":["isJson","serializeJson","deserializeJson"],
+	"description":" Validates a JSON string against a JSON Schema (also given as a string) and returns an array of violation structs, each with message (the human-readable problem) and pointerToViolation (a JSON pointer to the offending member, \"#\" for the document root). The array is empty when the JSON is valid. When throwOnError is true and there are violations, an error is thrown with the first violation's message instead. baseUri resolves relative schema references. Available when the jsonschema cargo feature is enabled.",
+	"params": [
+		{"name":"json","description":"The JSON string to validate.","required":true,"default":"","type":"string","values":[]},
+		{"name":"schema","description":"The JSON Schema string to validate against.","required":true,"default":"","type":"string","values":[]},
+		{"name":"throwOnError","description":"True to throw on the first violation instead of returning the array (default false).","required":false,"default":"false","type":"boolean","values":[true,false]},
+		{"name":"baseUri","description":"Optional base URI for resolving relative $refs in the schema.","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Validate against a schema",
+			"description":"A valid document returns an empty array; an invalid one lists the violations.",
+			"code":"schema = serializeJSON({ type: \"object\", properties: { name: { type: \"string\" } }, required: [\"name\"] });\r\nwriteDump(arrayLen(validateJson(serializeJSON({name: \"Alex\"}), schema)));\r\nerrors = validateJson(serializeJSON({age: 30}), schema);\r\nwriteDump(errors[1].message);",
+			"result":"0\r\nname is a required property",
+			"runnable":true
+		}
+	]
+
+}

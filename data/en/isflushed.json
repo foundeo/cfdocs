@@ -1,0 +1,25 @@
+{
+	"name":"isFlushed",
+	"type":"function",
+	"syntax":"isFlushed()",
+	"returns":"boolean",
+	"related":["cfflush"],
+	"description":" Returns true once the HTTP response has been committed by a cfflush, i.e. whether output has been flushed to the client. This is the same flag that decides whether cfheader, cfcontent or cflocation can still take effect. Outside a streaming web response (for example under the CLI) nothing is ever committed, so it reports false.",
+	"params": [],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Check the flush state",
+			"description":"True after a cfflush has committed the response.",
+			"code":"writeDump(isFlushed());\r\ncfflush();\r\nwriteDump(isFlushed());",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

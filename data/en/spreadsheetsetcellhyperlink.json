@@ -1,0 +1,31 @@
+{
+	"name":"spreadsheetSetCellHyperlink",
+	"type":"function",
+	"syntax":"spreadsheetSetCellHyperlink(spreadsheetObj, link, row, column [, tooltip])",
+	"returns":"any",
+	"related":["spreadsheetGetCellHyperlink","spreadsheetSetCellValue","spreadsheetNew"],
+	"description":" Adds a hyperlink to a cell in the active sheet of a spreadsheet workbook. Rows and columns are 1-based. When the cell is empty its visible text defaults to the link itself; pass a value with setCellValue first to control the display text. An optional tooltip is shown on hover in the spreadsheet application. The fluent member form is setCellHyperlink(link, row, column, tooltip).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"link","description":"The URL to link to.","required":true,"default":"","type":"string","values":[]},
+		{"name":"row","description":"1-based row index of the cell.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"column","description":"1-based column index of the cell.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"tooltip","description":"Optional tooltip text shown on hover.","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Add a hyperlink",
+			"description":"Link B2 to example.com with a tooltip.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetCellValue(wb, \"Home\", 2, 2);\r\nspreadsheetSetCellHyperlink(wb, \"https://example.com\", 2, 2, \"Open link\");",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

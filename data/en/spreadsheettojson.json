@@ -1,0 +1,28 @@
+{
+	"name":"spreadsheetToJson",
+	"type":"function",
+	"syntax":"spreadsheetToJson(spreadsheetObj [, pretty])",
+	"returns":"string",
+	"related":["spreadsheetFromJson","spreadsheetToQuery","spreadsheetNew"],
+	"description":" Converts the active sheet of a spreadsheet workbook to a JSON string: an array of row objects where row 1 supplies the keys (empty headers become column_N). When pretty is true the JSON is indented. The fluent member form is toJson(pretty).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"pretty","description":"True to pretty-print the JSON (default false).","required":false,"default":"false","type":"boolean","values":[true,false]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Sheet to JSON",
+			"description":"Export a sheet as a JSON array of row objects.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetAddRow(wb, \"name,score\", 1, 1, false);\r\nspreadsheetAddRow(wb, \"Alice,90\", 2, 1, false);\r\nwriteDump(spreadsheetToJson(wb, true));",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}
