@@ -1,0 +1,34 @@
+{
+	"name":"spreadsheet",
+	"type":"function",
+	"syntax":"spreadsheet([typeOrPath])",
+	"returns":"any",
+	"related":["spreadsheetNew","spreadsheetRead","spreadsheetFromJson","spreadsheetReadCsv"],
+	"description":" Creates a new spreadsheet workbook and is the entry point to the fluent builder API. Passing \"xlsx\" (the default) or \"xls\" selects the workbook format; mutating methods on the returned workbook return the same object, so calls can be chained. Terminal reads such as getCellValue(), info() or toQuery() return data.",
+	"params": [
+		{"name":"typeOrPath","description":"Optional workbook type: \"xlsx\" (default) or \"xls\". Legacy .xls workbooks can be read but not written.","required":false,"default":"xlsx","type":"string","values":["xlsx","xls"]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Fluent builder",
+			"description":"Build a workbook with a query, a formatted header row and a frozen pane, then write it to disk.",
+			"code":"people = queryNew(\"id,name\", \"integer,varchar\");\r\nqueryAddRow(people, {id: 1, name: \"Alice\"});\r\nSpreadsheet(\"xlsx\")\r\n\t.renameSheet(\"People\", 1)\r\n\t.addRows(people, 1, 1, true)\r\n\t.formatRow({ bold: true, bgcolor: \"#dfe6e9\" }, 1)\r\n\t.addFreezePane(0, 1)\r\n\t.write(expandPath(\"/people.xlsx\"), true);",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Plain workbook",
+			"description":"Create an empty workbook and use the Spreadsheet* function form on it.",
+			"code":"wb = Spreadsheet();\r\nspreadsheetSetCellValue(wb, \"Hello\", 1, 1);\r\nwriteDump(spreadsheetGetCellValue(wb, 1, 1));",
+			"result":"Hello",
+			"runnable":true
+		}
+	]
+
+}

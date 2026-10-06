@@ -14,7 +14,8 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/valuelist.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/valuelist"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/valuelist"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Transplies to `queryColumnData().toList( delimiter )` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumndata"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"Transplies to `queryColumnData().toList( delimiter )` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumndata"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [
 

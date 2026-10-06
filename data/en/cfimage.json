@@ -178,7 +178,8 @@
 			"minimum_version": "",
 			"notes": "",
 			"docs": "http://openbd.org/manual/?/tag/cfimage"
-		}
+		},
+		"rustcfml": {"minimum_version": "", "notes": "Rasterisation not pixel-identical to Java2D. Text uses bundled DejaVu Sans. imageGetBufferedImage throws."}
 	},
 	"links": [
 		{

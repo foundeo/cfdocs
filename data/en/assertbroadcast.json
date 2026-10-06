@@ -1,0 +1,40 @@
+{
+	"name":"assertBroadcast",
+	"type":"function",
+	"syntax":"assertBroadcast( channel [, event [, predicate]] )",
+	"returns":"boolean",
+	"related":["wsPublish","io","wsPresence"],
+	"description":"Test helper that inspects the ws test log. Returns true iff a recorded wsPublish matched the given channel (and the given event when one is provided). When the optional predicate is a closure, it is called with the recorded data payload and the assertion is true only if the closure returns true. This lets the CFML test suite assert on realtime broadcasts with no live WebSocket client attached.",
+	"params": [
+		{"name":"channel","description":"The channel to match against the recorded broadcasts.","required":true,"default":"","type":"string","values":[]},
+		{"name":"event","description":"An optional event name to match as well. When omitted, any event on the channel matches.","required":false,"default":"","type":"string","values":[]},
+		{"name":"predicate","description":"An optional closure. When given, it is called with the recorded data payload and must return true for the assertion to pass.","required":false,"default":"","type":"function","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes":"Test helper; inspects the ws test log written by wsPublish."}
+	},
+	"links": [
+		{
+			"title":"RustCFML WebSocket documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/websockets.md",
+			"description":"Testing without a live socket in the RustCFML realtime engine."
+		}
+	],
+	"examples": [
+		{
+			"title":"Assert a broadcast happened",
+			"description":"After wsPublish records a broadcast, assertBroadcast confirms it.",
+			"code":"wsPublish( channel=\"/chat\", event=\"message\", data={ text=\"hi\" } );\n\nassertBroadcast( \"/chat\", \"message\" );                                  // true\nassertBroadcast( \"/chat\", \"nope\" );                                     // false",
+			"result":"true / false",
+			"runnable":false
+		},
+		{
+			"title":"Assert with a data predicate",
+			"description":"Pass a closure to check the recorded data payload.",
+			"code":"assertBroadcast( \"/chat\", \"message\", function( d ){ return d.text == \"hi\"; } );   // true\nassertBroadcast( \"/chat\", \"message\", function( d ){ return d.text == \"bye\"; } );  // false",
+			"result":"true / false",
+			"runnable":false
+		}
+	]
+
+}

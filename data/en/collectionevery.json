@@ -12,7 +12,8 @@
 		{"name": "maxThreads", "description": "", "required": false, "default": "20", "type": "numeric", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/collectionevery.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/collectionevery.html"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"examples": [{
 		"title":"Check if every item is of type mail",

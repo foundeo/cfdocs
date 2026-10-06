@@ -1,0 +1,33 @@
+{
+	"name":"yamlSerialize",
+	"type":"function",
+	"syntax":"yamlSerialize(data [, filePath, charset])",
+	"returns":"string",
+	"related":["yamldeserialize","yamldeserializefile"],
+	"description":"Serializes a CFML value (struct, array, or scalar) to a YAML string and returns it. When a file path is supplied, the YAML is also written to that file. Struct keys beginning with two underscores are skipped, mirroring serializeJSON. The charset argument is accepted but ignored (output is UTF-8).",
+	"params": [
+		{"name":"data","description":"The CFML value to serialize to YAML.","required":true,"default":"","type":"any","values":[]},
+		{"name":"filePath","description":"Optional file path to also write the YAML string to.","required":false,"default":"","type":"string","values":[]},
+		{"name":"charset","description":"Character encoding (accepted for compatibility; output is always UTF-8).","required":false,"default":"utf8","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Serialize a struct to YAML",
+			"description": "Returns the YAML string.",
+			"code": "data = { name = \"Alex\", age = 30 };\nyaml = yamlSerialize(data);",
+			"result": "name: Alex\nage: 30",
+			"runnable":false
+		},
+		{
+			"title": "Serialize and write to a file",
+			"description": "The YAML string is returned and also written to the file.",
+			"code": "yaml = yamlSerialize(data, expandPath(\"./config.yaml\"));",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

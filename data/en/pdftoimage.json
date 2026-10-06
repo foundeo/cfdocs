@@ -1,0 +1,25 @@
+{
+	"name":"pdfToImage",
+	"type":"function",
+	"syntax":"pdfToImage(pdfObj [, page [, width [, dpi]]])",
+	"returns":"any",
+	"related":["pdfRead","pdfInfo","pdfPageCount","imageWrite"],
+	"description":"Rasterises a 1-based page of a PDF into an ordinary image object, so the whole image* family (resize, crop, watermark, write in any format) applies to the result. width wins if given; otherwise dpi is used (PDF's native resolution is 72dpi, so dpi/72 is the scale); otherwise 1:1. The output canvas is capped at 40 megapixels regardless of what the page declares — if exceeded, the scale is reduced to fit rather than the call failing.",
+	"params": [
+		{"name":"pdfObj","description":"A PDF object from pdfRead() or pdf().","required":true,"default":"","type":"any","values":[]},
+		{"name":"page","description":"1-based page number to render.","required":false,"default":"1","type":"numeric","values":[]},
+		{"name":"width","description":"Target width of the rendered image in pixels. Wins over dpi when given.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"dpi","description":"Target resolution in DPI. Used when width is not given (scale = dpi / 72).","required":false,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title":"Render page 1 to a 400px-wide PNG",
+			"description":"Rasterise the first page and write it to disk.",
+			"code":"doc = PdfRead( expandPath( \"/invoice.pdf\" ) );\nimg = PdfToImage( doc, 1, 400 );\nimageWrite( img, expandPath( \"/thumb.png\" ) );"
+		}
+	]
+}

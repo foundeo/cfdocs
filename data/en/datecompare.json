@@ -16,7 +16,8 @@
 		"lucee": {"minimum_version":"", "notes":"In Lucee \"y\" can be used instead of \"yyyy\"", "docs":"https://docs.lucee.org/reference/functions/datecompare.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/datecompare"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/datecompare"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/temporal/datecompare"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-framework/modularity/compat-cfml/reference/built-in-functions/temporal/datecompare"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [],
 	"examples": [

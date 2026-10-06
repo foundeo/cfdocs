@@ -26,7 +26,8 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/zip.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfzip"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfzip"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:zip>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/zip/zip"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:zip>` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/zip/zip"},
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32. cfzipparam only for action=zip."}
 	},
 	"links": [{
             "title":"Learning ColdFusion 8: CFZip Part IV - Extracting Zip File Archives",

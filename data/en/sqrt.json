@@ -1,0 +1,27 @@
+{
+	"name":"sqrt",
+	"type":"function",
+	"syntax":"sqrt(number)",
+	"returns":"numeric",
+	"related":["sqr","pow"],
+	"description":" Calculates the square root of a number. RustCFML alias for sqr().",
+	"params": [
+		{"name":"number","description":"Number whose square root to get.","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Square root of 144",
+			"description":"",
+			"code":"sqrt(144)",
+			"result":"12",
+			"runnable":true
+		}
+	]
+
+}

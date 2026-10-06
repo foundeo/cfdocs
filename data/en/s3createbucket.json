@@ -1,0 +1,29 @@
+{
+	"name":"s3CreateBucket",
+	"type":"function",
+	"syntax":"s3CreateBucket(bucket [, acl, location, accessKeyId, secretKey, host])",
+	"returns":"void",
+	"related":["s3delete","s3listbuckets","s3clearbucket"],
+	"description":"Creates a new S3 (or S3-compatible) bucket in the given location/region.",
+	"params": [
+		{"name":"bucket","description":"The name of the bucket to create.","required":true,"default":"","type":"string","values":[]},
+		{"name":"acl","description":"Optional bucket ACL to apply (accepted for compatibility).","required":false,"default":"","type":"string","values":[]},
+		{"name":"location","description":"Bucket location/region constraint. Defaults to us-east-1.","required":false,"default":"us-east-1","type":"string","values":[]},
+		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
+		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
+		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Create a bucket",
+			"description": "Creates a bucket in the default region.",
+			"code": "s3CreateBucket(\"my-new-bucket\");",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

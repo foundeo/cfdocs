@@ -1,0 +1,29 @@
+{
+	"name":"wsSubscribe",
+	"type":"function",
+	"syntax":"wsSubscribe()",
+	"returns":"void",
+	"related":["io","wsUnsubscribe","wsPresence","wsPublish"],
+	"description":"Accepted as a no-op for forward compatibility. In RustCFML, clients join rooms only through server-side socket.join(); there is no server-side subscribe to call. Feature-detecting code that calls wsSubscribe() will not error.",
+	"params": [],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes":"No-op; room joins are server-side via socket.join()."}
+	},
+	"links": [
+		{
+			"title":"RustCFML WebSocket documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/websockets.md",
+			"description":"Full documentation of the RustCFML realtime engine and rooms."
+		}
+	],
+	"examples": [
+		{
+			"title":"Feature-detecting code",
+			"description":"Calls to wsSubscribe() are accepted and do nothing; clients join rooms from server code instead.",
+			"code":"wsSubscribe();   // no-op",
+			"result":"Returns null (void).",
+			"runnable":false
+		}
+	]
+
+}

@@ -1,0 +1,29 @@
+{
+	"name":"spreadsheetSetRowHidden",
+	"type":"function",
+	"syntax":"spreadsheetSetRowHidden(spreadsheetObj, row, hidden)",
+	"returns":"any",
+	"related":["spreadsheetSetColumnHidden","spreadsheetSetRowHeight","spreadsheetNew"],
+	"description":" Shows or hides a row of the active sheet in a spreadsheet workbook. Rows are 1-based. The fluent member form is setRowHidden(row, hidden), with the shorthand members hideRow(row) and showRow(row) and the predicate isRowHidden(row).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"row","description":"1-based row index.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"hidden","description":"True to hide the row, false to show it (default true).","required":false,"default":"true","type":"boolean","values":[true,false]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Hide a row",
+			"description":"Hide row 3 and check its hidden state.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetRowHidden(wb, 3, true);\r\nwriteDump(wb.isRowHidden(3));",
+			"result":"true",
+			"runnable":true
+		}
+	]
+
+}

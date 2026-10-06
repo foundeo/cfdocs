@@ -1,0 +1,28 @@
+{
+	"name":"spreadsheetToCsv",
+	"type":"function",
+	"syntax":"spreadsheetToCsv(spreadsheetObj [, delimiter])",
+	"returns":"string",
+	"related":["spreadsheetWriteToCsv","spreadsheetReadCsv","spreadsheetNew"],
+	"description":" Converts the active sheet of a spreadsheet workbook to a CSV string. Fields containing the delimiter, a quote or a newline are quoted, with embedded quotes doubled. The fluent member form is toCsv(delimiter).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"delimiter","description":"Field delimiter (default comma).","required":false,"default":",","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Sheet to CSV string",
+			"description":"Write a header row and a data row, then export to CSV.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetAddRow(wb, \"name,score\", 1, 1, false);\r\nspreadsheetAddRow(wb, \"Alice,90\", 2, 1, false);\r\nwriteDump(spreadsheetToCsv(wb));",
+			"result":"name,score\r\nAlice,90",
+			"runnable":true
+		}
+	]
+
+}

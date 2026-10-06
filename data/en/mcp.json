@@ -1,0 +1,36 @@
+{
+	"name":"mcp",
+	"type":"function",
+	"syntax":"mcp()",
+	"returns":"any",
+	"related":["mcpNotify","mcpSessions","mcpConnect","mcpClient","mcpText","mcpImage","mcpAudio","mcpResource","mcpResourceLink"],
+	"description":"Returns the live handle for the MCP call in flight. Only available inside an MCP tool, resource, or prompt handler. The handle lets a long-running tool report progress, emit structured logs, inspect the client and session, ask the client for sampling or input, and send tool-change notifications. Each handle method returns a boolean saying whether the notification was actually delivered, so a tool can tell when nobody is listening.",
+	"params": [],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+		{
+			"title":"RustCFML MCP documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/mcp.md",
+			"description":"Full documentation of the RustCFML Model Context Protocol support, including the mcp() handle."
+		}
+	],
+	"examples": [
+		{
+			"title":"Report progress and log from a streaming tool",
+			"description":"Inside a tool that declares streaming=true, use mcp() to push progress notifications and structured log messages back to the client.",
+			"code":"function reindex( numeric batches = 10 ) tool=\"reindex\" streaming=true {\n    for ( var i = 1; i <= arguments.batches; i++ ) {\n        indexBatch( i );\n        mcp().progress( i, arguments.batches, \"batch #i# of #arguments.batches#\" );\n        mcp().log( \"info\", \"indexed batch #i#\" );\n    }\n    return \"reindexed #arguments.batches# batches\";\n}",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Inspect the client and session",
+			"description":"mcp().session(), mcp().server(), mcp().client(), and mcp().streaming() expose the conversation/server identifiers, the client's initialize details and capabilities, and whether this call has a stream.",
+			"code":"function whoami() tool=\"whoami\" {\n    var info = {\n        session   = mcp().session(),\n        server    = mcp().server(),\n        streaming = mcp().streaming(),\n        client    = mcp().client()\n    };\n    return info;\n}",
+			"result":"",
+			"runnable":false
+		}
+	]
+
+}

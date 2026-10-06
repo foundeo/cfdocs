@@ -13,10 +13,19 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/paragraphformat.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/paragraphformat"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/paragraphformat"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/paragraphformat"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/string/paragraphformat"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Convert line breaks into HTML paragraphs",
+			"description":"A single line break becomes a space, a double line break starts a new paragraph.",
+			"code":"text = \"This sentence\" & chr(10) & \"continues here.\" & chr(10) & chr(10) & \"This is a new paragraph.\";\r\nwriteOutput( paragraphFormat( text ) );",
+			"result":"This sentence continues here. <P>\r\nThis is a new paragraph. <P>",
+			"runnable":true
+		}
 	]
-
 }

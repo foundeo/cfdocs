@@ -14,7 +14,8 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/quotedvaluelist.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/quotedvaluelist"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/quotedvaluelist"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Transpiled to `queryColumnData().map().toList( delimiter )` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumndata"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"Transpiled to `queryColumnData().map().toList( delimiter )` in BoxLang", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/querycolumndata"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [
 

@@ -19,7 +19,8 @@
 		"lucee": {"minimum_version":"", "notes":"Uses `IVorSalt` parameter or aliases of `iv` and `salt`.", "docs":"https://docs.lucee.org/reference/functions/decrypt.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/decrypt"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/decrypt"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/encryption/decrypt"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/encryption/decrypt"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [
 

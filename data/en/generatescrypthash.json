@@ -11,7 +11,8 @@
 	],
 	"engines":{
 		"coldfusion":{"minimum_version":"2021","notes":"","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/generatescrypthash.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-password-encrypt` module", "docs":"https://forgebox.io/view/bx-password-encrypt"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-password-encrypt` module", "docs":"https://forgebox.io/view/bx-password-encrypt"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links":[
 		{"title":"OWASP Password Storage Cheat Sheet","description":"General advice from OWASP about how to work with passwords.","url":"https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"},

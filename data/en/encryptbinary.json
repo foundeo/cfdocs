@@ -2,7 +2,7 @@
 	"name":"encryptBinary",
 	"type":"function",
 	"syntax":"encryptBinary(binaryData, key [, algorithm [, encoding] [, iv | salt [, iterations]]])",
-	"returns":"string",
+	"returns":"binary",
 	"related":["decryptBinary", "generateSecretKey"],
 	"description":"Encrypts binary data using a specific algorithm and encoding method.",
 	"params": [
@@ -21,5 +21,13 @@
 		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/encryption/encrypt"}
 	},
 	"links": [],
-	"examples":[]
+	"examples":[
+		{
+			"title":"Encrypt and decrypt binary data with AES",
+			"description":"Encrypts binary data with a generated AES key and decrypts it again with the same key.",
+			"code":"key = generateSecretKey( \"AES\" );\r\ndata = charsetDecode( \"Hello World\", \"utf-8\" );\r\nencrypted = encryptBinary( data, key, \"AES\" );\r\ndecrypted = decryptBinary( encrypted, key, \"AES\" );\r\nwriteOutput( charsetEncode( decrypted, \"utf-8\" ) );",
+			"result":"Hello World",
+			"runnable":true
+		}
+	]
 }

@@ -1,0 +1,22 @@
+{
+	"name":"pdfPageCount",
+	"type":"function",
+	"syntax":"pdfPageCount(pdfObj)",
+	"returns":"numeric",
+	"related":["pdfRead","pdfInfo","pdfToImage"],
+	"description":"Returns the number of pages in a PDF document.",
+	"params": [
+		{"name":"pdfObj","description":"A PDF object from pdfRead() or pdf().","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title":"Get the page count",
+			"description":"Count the pages in a PDF.",
+			"code":"doc = PdfRead( expandPath( \"/invoice.pdf\" ) );\nwriteOutput( PdfPageCount( doc ) );"
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"name":"queryRegisterFunction",
+	"type":"function",
+	"syntax":"queryRegisterFunction(name, udf [, type])",
+	"returns":"void",
+	"related":["queryExecute","queryNew","query-of-queries"],
+	"description":" Registers a CFML user-defined function or closure so it can be called by name inside Query of Query (QoQ) SQL. type is scalar (the default) for a per-row function, or aggregate for a function that combines rows (usable with GROUP BY). The registered function stays available for the lifetime of the virtual machine.",
+	"params": [
+		{"name":"name","description":"The name to use for the function in QoQ SQL.","required":true,"default":"","type":"string","values":[]},
+		{"name":"udf","description":"The CFML function or closure to register.","required":true,"default":"","type":"function","values":[]},
+		{"name":"type","description":"Function kind: scalar (default) or aggregate.","required":false,"default":"scalar","type":"string","values":["scalar","aggregate"]}
+	],
+	"engines": {
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/query/queryregisterfunction"},
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Custom scalar function",
+			"description":"Register a function that doubles a column value and use it in QoQ.",
+			"code":"q = queryNew(\"name,score\", \"varchar,integer\");\r\nqueryAddRow(q, {name: \"Alice\", score: 90});\r\nqueryAddRow(q, {name: \"Bob\", score: 75});\r\nqueryRegisterFunction(\"doubleScore\", function(score) { return score * 2; });\r\nresult = q.query(\"SELECT name, doubleScore(score) AS doubled FROM q\");\r\nwriteDump(result);",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}
