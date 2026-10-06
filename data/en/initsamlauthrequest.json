@@ -1,0 +1,78 @@
+{
+    "name":"initsamlauthrequest",
+    "type":"function",
+    "syntax":"InitSAMLAuthRequest(options)",
+    "returns":"void",
+    "description":"Starts the SAML Single Sign-On (SSO) login process by redirecting the user to an external login provider such as Okta, Azure AD, or ADFS. Before using this function, both the Identity Provider (IdP) and Service Provider (SP) must already be configured in ColdFusion Administrator or Application.cfc.",
+    "params":[
+        {
+            "name":"options",
+            "description":"Structure containing the SAML authentication settings.",
+            "required":true,
+            "type":"struct"
+        },
+        {
+            "name":"options.idp.name",
+            "description":"Name of the configured Identity Provider (IdP). The IdP is the external system that handles user login, such as Okta or Azure Active Directory.",
+            "required":true,
+            "type":"string"
+        },
+        {
+            "name":"options.sp.name",
+            "description":"Name of the configured Service Provider (SP). The SP represents your ColdFusion application that uses the external login system for authentication.",
+            "required":true,
+            "type":"string"
+        },
+        {
+            "name":"options.relayState",
+            "description":"Optional value used to return users to a specific page after successful login.",
+            "required":false,
+            "type":"string"
+        },
+        {
+            "name":"options.template",
+            "description":"Optional template page shown before redirecting users to the Identity Provider. Used only with POST binding.",
+            "required":false,
+            "type":"string"
+        },
+        {
+            "name":"options.lifetime",
+            "description":"Time in seconds that the authentication request remains valid while waiting for a response from the Identity Provider.",
+            "required":false,
+            "type":"numeric"
+        }
+    ],
+    "engines":{
+        "coldfusion":{
+            "minimum_version":"2021",
+            "notes":"Requires the SAML package to be installed using ColdFusion Package Manager (CFPM). Configure the Identity Provider and Service Provider in ColdFusion Administrator under Security > SAML before using this function.",
+            "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/initsamlauthrequest.html"
+        }
+    },
+    "links":[
+        {
+            "title":"Adobe ColdFusion SAML Guide",
+            "description":"Step-by-step guide for configuring SAML authentication in ColdFusion.",
+            "url":"https://helpx.adobe.com/coldfusion/using/saml-coldfusion.html"
+        },
+        {
+            "title":"Adobe InitSAMLAuthRequest Function Reference",
+            "description":"Official Adobe documentation for the InitSAMLAuthRequest function and supported configuration options.",
+            "url":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/initsamlauthrequest.html"
+        },
+        {
+            "title":"SAML Authentication Demo with Okta and ColdFusion",
+            "description":"Video walkthrough by an Adobe developer demonstrating SAML Single Sign-On setup using Okta and Adobe ColdFusion.",
+            "url":"https://www.youtube.com/watch?v=IEVYCCKtAIM"
+        }
+    ],
+    "examples":[
+        {
+            "title":"Redirect Users to an External Login Provider",
+            "description":"This example starts a SAML login request using Okta as the Identity Provider (IdP). The ColdFusion application acts as the Service Provider (SP). Both configurations must already exist in ColdFusion Administrator under Security > SAML.",
+            "code":"<cfscript>\nconfig = {\n\n    // External login provider\n    idp = {\n        name = \"OktaIDP\"\n    },\n\n    // ColdFusion application\n    sp = {\n        name = \"EmployeePortal\"\n    },\n\n    // Optional page to return after login\n    relayState = \"dashboard\"\n};\n\n// Redirect user to the login provider\nInitSAMLAuthRequest(config);\n</cfscript>",
+            "result":"The user is redirected to the configured external login page for authentication.",
+            "runnable":false
+        }
+    ]
+}
