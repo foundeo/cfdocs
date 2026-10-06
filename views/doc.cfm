@@ -116,7 +116,7 @@
 			</cfif>
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "boxlang") AND StructKeyExists(data.engines.boxlang, "docs") AND Len(data.engines.boxlang.docs)>
 				<li class="pull-right">
-					<a href="#data.engines.boxlang.docs#" title="Official BoxLang Docs" class="label label-boxlang">BL<cfif StructKeyExists(data.engines.boxlang, "minimum_version") AND Len(data.engines.boxlang.minimum_version)> #encodeForHTML(data.engines.boxlang.minimum_version)#+</cfif></a>
+					<a href="#data.engines.boxlang.docs#" title="Official BoxLang Docs" class="label label-boxlang">BL<cfif StructKeyExists(data.engines.boxlang, "minimum_version") AND Len(data.engines.boxlang.minimum_version) AND data.engines.boxlang.minimum_version IS NOT "1.0.0"> #encodeForHTML(data.engines.boxlang.minimum_version)#+</cfif></a>
 				</li>
 			</cfif>
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "rustcfml")>
