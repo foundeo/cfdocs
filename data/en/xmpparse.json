@@ -1,0 +1,22 @@
+{
+	"name":"xmpParse",
+	"type":"function",
+	"syntax":"xmpParse(xmpXml)",
+	"returns":"struct",
+	"related":[],
+	"description":"Parses an XMP (RDF/XML) metadata packet and flattens it to a { path: value } struct, mirroring what Adobe XMPCore's XMPMetaFactory.parseFromString(...).iterator() yields. Paths use Adobe's canonical shape: simple properties are prefix:localName, array items (rdf:Bag/Seq/Alt) are prefix:localName[N] (1-based), and struct fields are prefix:localName/childPrefix:childName. All rdf:Description blocks (one per schema) are flattened into the same struct. Language-alternative qualifiers (xml:lang) are not emitted as separate pseudo-properties; the rdf:Alt item value is emitted directly.",
+	"params": [
+		{"name":"xmpXml","description":"An XMP metadata packet as an RDF/XML string.","required":true,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title":"Flatten an XMP packet",
+			"description":"Parse an XMP string and read a property by its canonical path.",
+			"code":"xmp = \"><rdf:RDF><rdf:Description rdf:about=\\\"\\\" xmlns:dc=\\\"http://purl.org/dc/elements/1.1/\\\"><dc:creator>Alex Skinner</dc:creator></rdf:Description></rdf:RDF>\";\ndata = XmpParse( xmp );\nwriteDump( data[\"dc:creator\"] );"
+		}
+	]
+}

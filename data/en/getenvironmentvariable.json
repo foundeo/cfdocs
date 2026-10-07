@@ -1,0 +1,27 @@
+{
+	"name":"getEnvironmentVariable",
+	"type":"function",
+	"syntax":"getEnvironmentVariable(name)",
+	"returns":"string",
+	"related":["server"],
+	"description":" Returns the value of an environment variable by name. Returns an empty string when the variable is not set. Available when the security cargo feature is enabled.",
+	"params": [
+		{"name":"name","description":"The name of the environment variable.","required":true,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Read HOME",
+			"description":"Get the HOME environment variable.",
+			"code":"writeDump(getEnvironmentVariable(\"HOME\"));",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

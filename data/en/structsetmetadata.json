@@ -11,7 +11,8 @@
 		{"name":"metaStruct","description":"The metadata struct you want to add.","required":true,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"2016.0.2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structsetmetadata.html"}
+		"coldfusion": {"minimum_version":"2016.0.2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structsetmetadata.html"},
+		"rustcfml": {"minimum_version": "", "notes": "Throws (Adobe-CF-only, not in Lucee either)."}
 	},
     	"links": [],
     	"examples": [

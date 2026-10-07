@@ -1,0 +1,31 @@
+{
+	"name":"s3Upload",
+	"type":"function",
+	"syntax":"s3Upload(bucket, object, source [, acl, location, accessKeyId, secretKey, host])",
+	"returns":"void",
+	"related":["s3write","s3read"],
+	"description":"Uploads a local file to an S3 (or S3-compatible) bucket. The MIME type is auto-detected from the object key extension.",
+	"params": [
+		{"name":"bucket","description":"The name of the S3 bucket to upload to.","required":true,"default":"","type":"string","values":[]},
+		{"name":"object","description":"The object key to write.","required":true,"default":"","type":"string","values":[]},
+		{"name":"source","description":"Path of the local file to upload.","required":true,"default":"","type":"string","values":[]},
+		{"name":"acl","description":"Object ACL to apply (accepted for compatibility; not enforced).","required":false,"default":"","type":"string","values":[]},
+		{"name":"location","description":"Bucket location/region (accepted for compatibility).","required":false,"default":"","type":"string","values":[]},
+		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
+		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
+		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Upload a local file",
+			"description": "Reads the local file and stores it in the bucket.",
+			"code": "s3Upload(\"my-bucket\", \"uploads/report.pdf\", expandPath(\"./report.pdf\"));",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

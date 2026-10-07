@@ -1,0 +1,34 @@
+{
+	"name":"spreadsheetFromJson",
+	"type":"function",
+	"syntax":"spreadsheetFromJson(json)",
+	"returns":"any",
+	"related":["spreadsheetToJson","spreadsheetNew","spreadsheetWrite"],
+	"description":" Creates a new spreadsheet workbook from a JSON array. An array of objects becomes a header row (the keys of the first object) followed by one data row per object; an array of arrays becomes a raw grid of cells. The fluent member form is fromJson(json), which replaces the contents of the active sheet.",
+	"params": [
+		{"name":"json","description":"A JSON string: an array of row objects or an array of arrays of cell values.","required":true,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Objects to workbook",
+			"description":"A JSON array of objects becomes a header row plus data rows.",
+			"code":"json = serializeJSON([ {name: \"Alice\", score: 90}, {name: \"Bob\", score: 75} ]);\r\nwb = spreadsheetFromJson(json);\r\nwriteDump(spreadsheetToQuery(wb));",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Arrays to workbook",
+			"description":"A JSON array of arrays becomes a raw grid.",
+			"code":"wb = spreadsheetFromJson(serializeJSON([ [\"a\", \"b\"], [\"1\", \"2\"] ]));\r\nwriteDump(spreadsheetGetCellValue(wb, 1, 1));",
+			"result":"a",
+			"runnable":true
+		}
+	]
+
+}

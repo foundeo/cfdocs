@@ -1,0 +1,28 @@
+{
+	"name":"htmlDocument",
+	"type":"function",
+	"syntax":"htmlDocument(html [, mode])",
+	"returns":"any",
+	"related":["htmlParse","sanitizeHTML"],
+	"description":" Parses an HTML string into an HTML document object that supports CSS selectors. Pass mode \"fragment\" to parse the markup as a fragment, \"document\" to force full-document parsing, or omit it to auto-detect (strings that look like a full document are parsed as documents, everything else as a fragment). The returned object exposes select(selector), selectWithin(element, selector), attr(element, name), setAttr(element, name, value), hasAttr, removeAttr, text, innerHTML, outerHTML, tagName, allElements and documentHTML()/toString() to serialise back to HTML.",
+	"params": [
+		{"name":"html","description":"The HTML markup to parse.","required":true,"default":"","type":"string","values":[]},
+		{"name":"mode","description":"Optional parse mode: fragment or document. Omit to auto-detect.","required":false,"default":"","type":"string","values":["fragment","document"]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Select elements",
+			"description":"Parse a fragment and pull out the class of every .item element.",
+			"code":"doc = htmlDocument(\"<ul><li class=\\\"item\\\">one</li><li class=\\\"item\\\">two</li></ul>\");\r\nitems = doc.select(\".item\");\r\nfor (i in items) {\r\n\twriteOutput(doc.attr(items[i], \"class\") & \" \");\r\n}",
+			"result":"item item",
+			"runnable":true
+		}
+	]
+
+}

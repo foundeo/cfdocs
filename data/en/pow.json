@@ -1,0 +1,35 @@
+{
+	"name":"pow",
+	"type":"function",
+	"syntax":"pow(base, exponent)",
+	"returns":"numeric",
+	"related":["exp","log"],
+	"description":" Raises a number to the power of another number and returns the result as a floating-point value. Alias for the power() function.",
+	"params": [
+		{"name":"base","description":"The base number.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"exponent","description":"The exponent.","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"2 to the 8th",
+			"description":"",
+			"code":"pow(2, 8)",
+			"result":"256",
+			"runnable":true
+		},
+		{
+			"title":"Fractional exponent",
+			"description":"",
+			"code":"pow(9, 0.5)",
+			"result":"3",
+			"runnable":true
+		}
+	]
+
+}

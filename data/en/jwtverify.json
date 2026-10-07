@@ -1,0 +1,36 @@
+{
+	"name":"jwtVerify",
+	"type":"function",
+	"syntax":"jwtVerify(token, key [, algorithm])",
+	"returns":"struct",
+	"related":["jwtSign","jwtDecode"],
+	"description":" Verifies a JWT's HMAC signature and returns its payload claims as a struct. Throws when the token is malformed, the signature does not match, the token's algorithm does not match the expected algorithm (when one is given, guarding against algorithm-substitution attacks), or the token is expired (exp) or not yet valid (nbf). Only HMAC algorithms are supported: HS256, HS384 and HS512. This is the Lucee crypto-extension name; RustCFML does not provide the Adobe verifySignedJWT name.",
+	"params": [
+		{"name":"token","description":"The JWT to verify (three dot-separated base64url parts).","required":true,"default":"","type":"string","values":[]},
+		{"name":"key","description":"The HMAC secret key the token was signed with.","required":true,"default":"","type":"string","values":[]},
+		{"name":"algorithm","description":"Optional expected algorithm (HS256, HS384 or HS512); when given, a token signed with a different algorithm is rejected.","required":false,"default":"","type":"string","values":["HS256","HS384","HS512"]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Round trip",
+			"description":"Sign a token and verify it back.",
+			"code":"token = jwtSign({ sub: \"alex\" }, \"my-secret\", \"HS256\", 3600);\r\nclaims = jwtVerify(token, \"my-secret\");\r\nwriteDump(claims.sub);",
+			"result":"alex",
+			"runnable":true
+		},
+		{
+			"title":"Wrong key fails",
+			"description":"A signature check with the wrong secret throws.",
+			"code":"token = jwtSign({ sub: \"alex\" }, \"my-secret\");\r\ntry {\r\n\tjwtVerify(token, \"other-secret\");\r\n} catch (any e) {\r\n\twriteDump(e.getMessage());\r\n}",
+			"result":"JwtVerify: signature verification failed.",
+			"runnable":true
+		}
+	]
+
+}

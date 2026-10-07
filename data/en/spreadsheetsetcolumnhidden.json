@@ -1,0 +1,29 @@
+{
+	"name":"spreadsheetSetColumnHidden",
+	"type":"function",
+	"syntax":"spreadsheetSetColumnHidden(spreadsheetObj, column, hidden)",
+	"returns":"any",
+	"related":["spreadsheetSetRowHidden","spreadsheetGetColumnWidth","spreadsheetNew"],
+	"description":" Shows or hides a column of the active sheet in a spreadsheet workbook. Columns are 1-based. The fluent member form is setColumnHidden(column, hidden), with the shorthand members hideColumn(column) and showColumn(column) and the predicate isColumnHidden(column).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"column","description":"1-based column index (1 = A).","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"hidden","description":"True to hide the column, false to show it (default true).","required":false,"default":"true","type":"boolean","values":[true,false]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Hide the helper column",
+			"description":"Hide column 3 and check its hidden state.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetColumnHidden(wb, 3, true);\r\nwriteDump(wb.isColumnHidden(3));",
+			"result":"true",
+			"runnable":true
+		}
+	]
+
+}

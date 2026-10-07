@@ -1,0 +1,31 @@
+{
+	"name":"qrCodeGenerate",
+	"type":"function",
+	"syntax":"qrCodeGenerate(text [, size [, format [, errorCorrection [, quietZone]]]])",
+	"returns":"binary",
+	"related":["imageWrite"],
+	"description":"Generates a QR code encoding the given text and returns it as a Binary of encoded image bytes. The module grid is drawn at the largest whole-pixel scale that fits the requested size and then nearest-neighbour resized to hit size on the nose (scaling a QR with a smoothing filter blurs the module edges and can make it unreadable). size is the target edge length in pixels (the result is square, clamped to 16-4096); format is any format the image BIFs write (png, gif, jpg, bmp, webp, ...); errorCorrection is L, M, Q or H; quietZone is the light margin in modules (the QR spec requires 4).",
+	"params": [
+		{"name":"text","description":"The text to encode. Required and must be non-empty.","required":true,"default":"","type":"string","values":[]},
+		{"name":"size","description":"Target edge length in pixels (the result is square). Clamped to 16-4096.","required":false,"default":"125","type":"numeric","values":[]},
+		{"name":"format","description":"Image format of the encoded output: png, gif, jpg, bmp, webp, tiff or ico.","required":false,"default":"png","type":"string","values":["png","gif","jpg","bmp","webp","tiff","ico"]},
+		{"name":"errorCorrection","description":"Error-correction level: L, M, Q or H — the proportion of the symbol that can be damaged and still decode.","required":false,"default":"M","type":"string","values":["L","M","Q","H"]},
+		{"name":"quietZone","description":"The mandatory light margin, in modules (the QR spec requires 4). Clamped to 0-32.","required":false,"default":"4","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title":"Generate a QR code PNG",
+			"description":"Encode a URL and write the 250px PNG to disk.",
+			"code":"qr = qrCodeGenerate( \"https://example.com/verify\", 250, \"png\" );\nimageWrite( qr, expandPath( \"/qr.png\" ) );"
+		},
+		{
+			"title":"GIF with high error correction",
+			"description":"A 125px GIF with H error correction, suitable for printing.",
+			"code":"qr = qrCodeGenerate( \"ME:12345678\", 125, \"gif\", \"H\" );"
+		}
+	]
+}

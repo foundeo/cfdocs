@@ -1,0 +1,35 @@
+{
+	"name":"spreadsheetAddConditionalFormatting",
+	"type":"function",
+	"syntax":"spreadsheetAddConditionalFormatting(spreadsheetObj, formatStruct)",
+	"returns":"any",
+	"related":["spreadsheet","spreadsheetNew","spreadsheetFormatCell"],
+	"description":" Adds a conditional formatting rule to the active sheet of a spreadsheet workbook. Pass a struct with range (A1 cell range), operator (equal, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual, notEqual or between, default equal), value (the comparison value) and format (the same format struct keys accepted by formatCell). Alternatively pass { type: \"colorScale\", range, colors: [ ... ] } with two or three colours to add a colour-scale rule. The fluent member form is addConditionalFormatting({...}).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object to add the conditional formatting to.","required":true,"default":"","type":"any","values":[]},
+		{"name":"format","description":"Struct describing the rule: range (A1 cell range), operator (equal|greaterThan|greaterThanOrEqual|lessThan|lessThanOrEqual|notEqual|between), value, format (cellIs rule), or type=\"colorScale\" with a colors array of 2 or 3 colour names/hex values.","required":true,"default":"","type":"struct","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Highlight cells greater than 100",
+			"description":"A cellIs rule that bolds and fills matching cells yellow.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetAddConditionalFormatting(wb, {\r\n\trange: \"B2:B100\",\r\n\toperator: \"greaterThan\",\r\n\tvalue: \"100\",\r\n\tformat: { bold: true, bgcolor: \"yellow\" }\r\n});",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Colour scale",
+			"description":"A three-colour scale from red to green across a range.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetAddConditionalFormatting(wb, {\r\n\trange: \"B2:B100\",\r\n\ttype: \"colorScale\",\r\n\tcolors: [\"red\", \"yellow\", \"green\"]\r\n});",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

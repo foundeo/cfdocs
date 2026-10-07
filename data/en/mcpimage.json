@@ -1,0 +1,32 @@
+{
+	"name":"mcpImage",
+	"type":"function",
+	"syntax":"mcpImage( data [, mimeType] )",
+	"returns":"struct",
+	"related":["mcpText","mcpAudio","mcpResource","mcpResourceLink","mcp"],
+	"description":"Builds an image MCP content block. data is a base64-encoded string of the image bytes and mimeType is the image's MIME type (e.g. \"image/png\"). The block passes through the automatic result coercion untouched, so use it when a tool wants exact control over what the client renders. An omitted mimeType is left out rather than written as null.",
+	"params": [
+		{"name":"data","description":"Base64-encoded image bytes.","required":true,"default":"","type":"string","values":[]},
+		{"name":"mimeType","description":"The MIME type of the image, e.g. \"image/png\".","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+		{
+			"title":"RustCFML MCP documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/mcp.md",
+			"description":"Content helpers for exact control over MCP responses."
+		}
+	],
+	"examples": [
+		{
+			"title":"Return an image content block",
+			"description":"Pair a text block with an image block in a single content list.",
+			"code":"function chart() tool=\"chart\" {\n    var bytes = renderChart();\n    return [\n        mcpText( \"Here is the chart:\" ),\n        mcpImage( toBase64( bytes ), \"image/png\" )\n    ];\n}",
+			"result":"",
+			"runnable":false
+		}
+	]
+
+}

@@ -1,0 +1,27 @@
+{
+	"name":"spreadsheetToQuery",
+	"type":"function",
+	"syntax":"spreadsheetToQuery(spreadsheetObj)",
+	"returns":"query",
+	"related":["spreadsheetToArray","spreadsheetToCsv","spreadsheetToJson","spreadsheetNew"],
+	"description":" Converts the active sheet of a spreadsheet workbook to a CFML query. Row 1 supplies the column names (empty headers become column_N); each subsequent row becomes a query row with all cell values as strings. The fluent member form is toQuery().",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Sheet to query",
+			"description":"Write a header row and data rows, then read back a query.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetAddRow(wb, \"name,score\", 1, 1, false);\r\nspreadsheetAddRow(wb, \"Alice,90\", 2, 1, false);\r\nq = spreadsheetToQuery(wb);\r\nwriteDump(q);",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

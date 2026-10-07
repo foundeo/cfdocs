@@ -10,7 +10,8 @@
 		{"name":"value","description":"The value to encode.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"http://cfdownload.adobe.com/pub/adobe/coldfusion/2018/publicBeta/NamedParametersColdFusion2018.pdf"}
+		"coldfusion": {"minimum_version":"2016", "notes":"", "docs":"http://cfdownload.adobe.com/pub/adobe/coldfusion/2018/publicBeta/NamedParametersColdFusion2018.pdf"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [
 	],

@@ -11,7 +11,8 @@
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/stringlen.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/type/stringlen"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/type/stringlen"},
+		"rustcfml": {"minimum_version": "", "notes": "RustCFML uses len() for string length."}
 	},
 	"links": [],
 	"examples": [

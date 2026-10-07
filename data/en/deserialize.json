@@ -2,7 +2,7 @@
 	"name":"deserialize",
 	"type":"function",
 	"syntax":"deserialize(string, type, useCustomSerializer);",
-	"returns":"string",
+	"returns":"any",
 	"related":["serialize"],
 	"description":"Deserializes a string.",
 	"params": [
@@ -14,5 +14,13 @@
 		"coldfusion": {"minimum_version":"11", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/deserialize.html"}
 	},
 	"links": [],
-	"examples": []
+	"examples": [
+		{
+			"title":"Deserialize a JSON string into a struct",
+			"description":"Converts a JSON string back into CFML data using ColdFusion's default JSON deserializer.",
+			"code":"person = deserialize( '{\"firstName\":\"John\",\"lastName\":\"Doe\"}', \"json\", false );\r\nwriteOutput( person.firstName & \" \" & person.lastName );",
+			"result":"John Doe",
+			"runnable":true
+		}
+	]
 }

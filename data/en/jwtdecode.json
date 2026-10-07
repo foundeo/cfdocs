@@ -1,0 +1,27 @@
+{
+	"name":"jwtDecode",
+	"type":"function",
+	"syntax":"jwtDecode(token)",
+	"returns":"struct",
+	"related":["jwtSign","jwtVerify"],
+	"description":" Decodes a JWT and returns its payload claims as a struct WITHOUT verifying the signature. For inspection only — never trust decoded claims without jwtVerify(). This is the Lucee crypto-extension name; RustCFML does not provide the Adobe createSignedJWT/verifySignedJWT names. Only HMAC algorithms (HS256/HS384/HS512) are supported by the jwt* family.",
+	"params": [
+		{"name":"token","description":"The JWT to decode (three dot-separated base64url parts).","required":true,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Inspect the claims",
+			"description":"Decode a signed token without verifying it.",
+			"code":"token = jwtSign({ sub: \"alex\", role: \"admin\" }, \"my-secret\");\r\nclaims = jwtDecode(token);\r\nwriteDump(claims.sub);",
+			"result":"alex",
+			"runnable":true
+		}
+	]
+
+}

@@ -1,0 +1,32 @@
+{
+	"name":"mcpAudio",
+	"type":"function",
+	"syntax":"mcpAudio( data [, mimeType] )",
+	"returns":"struct",
+	"related":["mcpText","mcpImage","mcpResource","mcpResourceLink","mcp"],
+	"description":"Builds an audio MCP content block. data is a base64-encoded string of the audio bytes and mimeType is the audio's MIME type (e.g. \"audio/mpeg\"). The block passes through the automatic result coercion untouched, so use it when a tool wants exact control over what the client renders. An omitted mimeType is left out rather than written as null.",
+	"params": [
+		{"name":"data","description":"Base64-encoded audio bytes.","required":true,"default":"","type":"string","values":[]},
+		{"name":"mimeType","description":"The MIME type of the audio, e.g. \"audio/mpeg\".","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+		{
+			"title":"RustCFML MCP documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/mcp.md",
+			"description":"Content helpers for exact control over MCP responses."
+		}
+	],
+	"examples": [
+		{
+			"title":"Return an audio content block",
+			"description":"A tool can return an explicit audio block alongside a text block.",
+			"code":"function greeting() tool=\"greeting\" {\n    var bytes = synthesizeGreeting();\n    return [\n        mcpText( \"Your greeting is ready:\" ),\n        mcpAudio( toBase64( bytes ), \"audio/mpeg\" )\n    ];\n}",
+			"result":"",
+			"runnable":false
+		}
+	]
+
+}

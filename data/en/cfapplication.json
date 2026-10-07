@@ -26,7 +26,8 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/application.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfapplication"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfapplication"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:application>` in BoxLang files.", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/application#component-signature"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"`<bx:application>` in BoxLang files.", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/components/system/application#component-signature"},
+		"rustcfml": {"minimum_version": "", "notes": "Many this.* settings silently ignored (applicationTimeout, scriptProtect, nullSupport, client scope, etc.). onCFCRequest not invoked."}
 	},
 	"links": []
 }

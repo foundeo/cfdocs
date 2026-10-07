@@ -1,0 +1,40 @@
+{
+	"name":"smtpConnectionTest",
+	"type":"function",
+	"syntax":"smtpConnectionTest(host [, port] [, username] [, password] [, useTls] [, useSsl] [, timeout])",
+	"returns":"struct",
+	"related":["cfmail"],
+	"description":" Opens a connection to an SMTP server to verify reachability and (optionally) credentials, the same way cfmail does. Uses the same TLS ladder as cfmail: implicit TLS (useSsl), else STARTTLS (useTls, the default), else plaintext; a requested-but-unavailable TLS is a failure, never a silent downgrade. Returns a struct with success (boolean), authFailed (true when the server rejected the credentials, SMTP 534/535/538) and message (a human-readable detail, empty on success).",
+	"params": [
+		{"name":"host","description":"The SMTP server host.","required":true,"default":"","type":"string","values":[]},
+		{"name":"port","description":"The SMTP port (default 25).","required":false,"default":"25","type":"numeric","values":[]},
+		{"name":"username","description":"Optional SMTP username; when present the password is used and auth is tested.","required":false,"default":"","type":"string","values":[]},
+		{"name":"password","description":"Optional SMTP password.","required":false,"default":"","type":"string","values":[]},
+		{"name":"useTls","description":"Use STARTTLS when available (default true).","required":false,"default":"true","type":"boolean","values":[true,false]},
+		{"name":"useSsl","description":"Use implicit TLS (default false); takes precedence over useTls.","required":false,"default":"false","type":"boolean","values":[true,false]},
+		{"name":"timeout","description":"Connection timeout in seconds (default 10).","required":false,"default":"10","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Test a relay",
+			"description":"Check that an SMTP relay is reachable on port 587.",
+			"code":"result = smtpConnectionTest(\"smtp.example.com\", 587);\r\nwriteDump(result.success);",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Test credentials",
+			"description":"A wrong password reports authFailed = true.",
+			"code":"result = smtpConnectionTest(\"smtp.example.com\", 587, \"user\", \"wrong\", true);\r\nwriteDump(result.authFailed);",
+			"result":"",
+			"runnable":false
+		}
+	]
+
+}

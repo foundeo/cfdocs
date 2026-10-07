@@ -11,7 +11,8 @@
 		{"name":"to","description":"The last index item, or defaults to the from value.","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arrayrange"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/array/arrayrange"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [
 	],

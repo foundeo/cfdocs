@@ -15,10 +15,19 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/xmlchildpos.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/xmlchildpos"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/xmlchildpos"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/xml/xmlchildpos"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/xml/xmlchildpos"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [
 
+	],
+	"examples": [
+		{
+			"title":"Find the position of the second item element",
+			"description":"The second item element is the third child of list, because a note element comes before it.",
+			"code":"doc = xmlParse( \"<list><item>A</item><note>X</note><item>B</item></list>\" );\r\nwriteOutput( xmlChildPos( doc.list, \"item\", 2 ) );",
+			"result":"3",
+			"runnable":true
+		}
 	]
-
 }

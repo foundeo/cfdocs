@@ -1,0 +1,22 @@
+{
+	"name":"pdf",
+	"type":"function",
+	"syntax":"pdf(pathOrBinary)",
+	"returns":"any",
+	"related":["pdfRead","pdfInfo","pdfPageCount","pdfToImage","isPdfObject"],
+	"description":"Opens a PDF file into a shared, reference-typed PDF object for reading. The object can be used directly with the Pdf* builtin functions or via method calls (e.g. Pdf( path ).toImage( 1, 400 )). A PDF in RustCFML is read-only: every method is terminal. This function is an alias of pdfRead().",
+	"params": [
+		{"name":"pathOrBinary","description":"Absolute path to a PDF file, or a Binary containing the PDF bytes.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title":"Open a PDF for reading",
+			"description":"Create a PDF object from a file path.",
+			"code":"doc = Pdf( expandPath( \"/invoice.pdf\" ) );"
+		}
+	]
+}

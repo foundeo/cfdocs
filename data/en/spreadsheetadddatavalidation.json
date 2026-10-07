@@ -1,0 +1,35 @@
+{
+	"name":"spreadsheetAddDataValidation",
+	"type":"function",
+	"syntax":"spreadsheetAddDataValidation(spreadsheetObj, validationStruct)",
+	"returns":"any",
+	"related":["spreadsheet","spreadsheetNew","spreadsheetWrite"],
+	"description":" Adds a data validation rule to the active sheet of a spreadsheet workbook. Pass a struct with range (A1 cell range), type (list, whole, decimal, textLength, date or custom, default list), operator (between, notBetween, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual, equal or notEqual) and the bound expressions formula1 and formula2. For a list type, formula1 is a quoted, comma-separated list such as \"Red,Green,Blue\" or a range reference. Blank cells are allowed. The fluent member form is addDataValidation({...}).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object to add the validation to.","required":true,"default":"","type":"any","values":[]},
+		{"name":"validation","description":"Struct describing the rule: range (A1 cell range), type (list|whole|decimal|textLength|date|custom), operator, formula1, formula2.","required":true,"default":"","type":"struct","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Dropdown list",
+			"description":"A dropdown of Red/Green/Blue on A2:A10.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetAddDataValidation(wb, {\r\n\trange: \"A2:A10\",\r\n\ttype: \"list\",\r\n\tformula1: \"\\\"Red,Green,Blue\\\"\"\r\n});",
+			"result":"",
+			"runnable":true
+		},
+		{
+			"title":"Whole numbers between 1 and 10",
+			"description":"A numeric between rule on B2:B20.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetAddDataValidation(wb, {\r\n\trange: \"B2:B20\",\r\n\ttype: \"whole\",\r\n\toperator: \"between\",\r\n\tformula1: \"1\",\r\n\tformula2: \"10\"\r\n});",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}
