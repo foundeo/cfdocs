@@ -1,0 +1,31 @@
+{
+	"name":"mcpText",
+	"type":"function",
+	"syntax":"mcpText( text )",
+	"returns":"struct",
+	"related":["mcpImage","mcpAudio","mcpResource","mcpResourceLink","mcp"],
+	"description":"Builds a text MCP content block. The block passes through the automatic result coercion untouched, so use it when a tool wants exact control over what the client renders. Returns a struct with type = \"text\" and the given text.",
+	"params": [
+		{"name":"text","description":"The text content to render.","required":true,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+		{
+			"title":"RustCFML MCP documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/mcp.md",
+			"description":"Content helpers for exact control over MCP responses."
+		}
+	],
+	"examples": [
+		{
+			"title":"Return a text content block",
+			"description":"A tool can return an explicit content block instead of relying on automatic coercion.",
+			"code":"function chart() tool=\"chart\" {\n    return mcpText( \"Here is the chart:\" );\n}",
+			"result":"{ type: \"text\", text: \"Here is the chart:\" }",
+			"runnable":false
+		}
+	]
+
+}

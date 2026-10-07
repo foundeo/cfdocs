@@ -11,7 +11,8 @@
 		{"name": "initialValue", "description": "", "required": false, "default": "", "type": "any", "values": []}
 	],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/collectionreduce.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/collectionreduce.html"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"examples": [{
 		"title":"Sum amount of an item value for every item",

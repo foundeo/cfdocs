@@ -1,0 +1,31 @@
+{
+	"name":"spreadsheetClearCellRange",
+	"type":"function",
+	"syntax":"spreadsheetClearCellRange(spreadsheetObj, startRow, startColumn, endRow, endColumn)",
+	"returns":"any",
+	"related":["spreadsheetClearCell","spreadsheetSetCellRangeValue","spreadsheetNew"],
+	"description":" Clears the contents of every cell in a rectangular range of the active sheet of a spreadsheet workbook. All coordinates are 1-based. The fluent member form is clearCellRange(startRow, startColumn, endRow, endColumn).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"startRow","description":"1-based starting row of the range.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"startColumn","description":"1-based starting column of the range.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"endRow","description":"1-based ending row of the range.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"endColumn","description":"1-based ending column of the range.","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Clear a block of cells",
+			"description":"Clear the 2x3 range from B2 to D3.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetCellRangeValue(wb, \"x\", 2, 2, 3, 4);\r\nspreadsheetClearCellRange(wb, 2, 2, 3, 4);",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

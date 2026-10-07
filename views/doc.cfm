@@ -75,7 +75,8 @@
 							"lucee": "Lucee",
 							"openbd": "OpenBD",
 							"railo": "Railo",
-							"boxlang": "BoxLang"
+							"boxlang": "BoxLang",
+							"rustcfml": "RustCFML"
 						};
 						engine = structKeyList(data.engines);
 					</cfscript>
@@ -115,7 +116,16 @@
 			</cfif>
 			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "boxlang") AND StructKeyExists(data.engines.boxlang, "docs") AND Len(data.engines.boxlang.docs)>
 				<li class="pull-right">
-					<a href="#data.engines.boxlang.docs#" title="Official BoxLang Docs" class="label label-boxlang">BL<cfif StructKeyExists(data.engines.boxlang, "minimum_version") AND Len(data.engines.boxlang.minimum_version)> #encodeForHTML(data.engines.boxlang.minimum_version)#+</cfif></a>
+					<a href="#data.engines.boxlang.docs#" title="Official BoxLang Docs" class="label label-boxlang">BL<cfif StructKeyExists(data.engines.boxlang, "minimum_version") AND Len(data.engines.boxlang.minimum_version) AND data.engines.boxlang.minimum_version IS NOT "1.0.0"> #encodeForHTML(data.engines.boxlang.minimum_version)#+</cfif></a>
+				</li>
+			</cfif>
+			<cfif StructKeyExists(data, "engines") AND StructKeyExists(data.engines, "rustcfml")>
+				<li class="pull-right">
+					<cfif StructKeyExists(data.engines.rustcfml, "docs") AND Len(data.engines.rustcfml.docs)>
+						<a href="#data.engines.rustcfml.docs#" title="RustCFML" class="label label-rustcfml">RustCFML</a>
+					<cfelse>
+						<span class="label label-rustcfml">RustCFML</span>
+					</cfif>
 				</li>
 			</cfif>
 			<cfif structKeyExists(data, "engines") AND NOT structIsEmpty(data.engines)>
@@ -230,7 +240,7 @@
 						<div class="row">
 							<div class="col-sm-2 text-right">
 								<h4>
-									<cfif i IS "coldfusion">ColdFusion<cfelseif i IS "railo">Railo<cfelseif i IS "openbd">OpenBD<cfelseif i IS "lucee">Lucee<cfelseif i IS "boxlang">BoxLang</cfif>:
+									<cfif i IS "coldfusion">ColdFusion<cfelseif i IS "railo">Railo<cfelseif i IS "openbd">OpenBD<cfelseif i IS "lucee">Lucee<cfelseif i IS "boxlang">BoxLang<cfelseif i IS "rustcfml">RustCFML</cfif>:
 								</h4>
 							</div>
 							<div class="col-sm-8">

@@ -1,0 +1,25 @@
+{
+	"name":"yamlDeserializeFile",
+	"type":"function",
+	"syntax":"yamlDeserializeFile(filePath [, charset])",
+	"returns":"any",
+	"related":["yamldeserialize","yamlserialize"],
+	"description":"Reads a YAML file from disk and parses it into native CFML values (structs, arrays, numbers, booleans, strings and null).",
+	"params": [
+		{"name":"filePath","description":"Path to the YAML file to read and parse.","required":true,"default":"","type":"string","values":[]},
+		{"name":"charset","description":"Character encoding used to read the file (accepted for compatibility; files are read as UTF-8).","required":false,"default":"utf8","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Load a YAML file into a struct",
+			"description": "Reads and parses the YAML file in one call.",
+			"code": "data = yamlDeserializeFile(expandPath(\"./config.yaml\"));",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

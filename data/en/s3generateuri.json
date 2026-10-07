@@ -1,0 +1,35 @@
+{
+	"name":"s3GenerateURI",
+	"type":"function",
+	"syntax":"s3GenerateURI(bucket [, object, style, secure, host])",
+	"returns":"string",
+	"related":["s3generatepresignedurl","s3exists"],
+	"description":"Builds a non-signed, canonical URI for an S3 (or S3-compatible) object. No network call is made. style may be virtualhost (default) or path; secure controls the https/http scheme; host overrides the endpoint (e.g. for Cloudflare R2 or MinIO).",
+	"params": [
+		{"name":"bucket","description":"The name of the S3 bucket.","required":true,"default":"","type":"string","values":[]},
+		{"name":"object","description":"The object key. When omitted, a bucket-level URI is returned.","required":false,"default":"","type":"string","values":[]},
+		{"name":"style","description":"Addressing style: virtualhost (bucket as subdomain, default) or path (bucket as first path segment).","required":false,"default":"virtualhost","type":"string","values":["virtualhost","path"]},
+		{"name":"secure","description":"Whether to use https (true, default) or http.","required":false,"default":"true","type":"boolean","values":[]},
+		{"name":"host","description":"Endpoint host to use instead of the default AWS endpoint (e.g. an R2 or MinIO host).","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Generate a canonical object URI",
+			"description": "Virtual-host style against the default endpoint.",
+			"code": "uri = s3GenerateURI(\"my-bucket\", \"reports/q3.pdf\");",
+			"result": "https://my-bucket.s3.amazonaws.com/reports/q3.pdf",
+			"runnable":false
+		},
+		{
+			"title": "Path-style URI for a custom endpoint",
+			"description": "Useful for providers that do not serve bucket subdomains.",
+			"code": "uri = s3GenerateURI(\"my-bucket\", \"reports/q3.pdf\", \"path\", true, \"minio.example.com\");",
+			"result": "https://minio.example.com/my-bucket/reports/q3.pdf",
+			"runnable":false
+		}
+	]
+}

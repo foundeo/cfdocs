@@ -1,0 +1,27 @@
+{
+	"name":"getComponentStaticScope",
+	"type":"function",
+	"syntax":"getComponentStaticScope(component)",
+	"returns":"struct",
+	"related":["getComponentMetadata","getMetadata"],
+	"description":" Returns the static scope of a component — the variables shared by all instances of that CFC (variables declared with static in the component body). Accepts an instance of the component, a component template (the result of createObject), or a component name. Returns an empty struct when no static scope is available.",
+	"params": [
+		{"name":"component","description":"A component instance, a component template, or a dot-separated component name.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Read the static scope",
+			"description":"Get the static variables of a component by name.",
+			"code":"cfc = createObject(\"component\", \"models.Person\");\r\nstatics = getComponentStaticScope(cfc);\r\nwriteDump(statics);",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

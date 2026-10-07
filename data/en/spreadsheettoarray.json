@@ -1,0 +1,27 @@
+{
+	"name":"spreadsheetToArray",
+	"type":"function",
+	"syntax":"spreadsheetToArray(spreadsheetObj)",
+	"returns":"array",
+	"related":["spreadsheetToQuery","spreadsheetToCsv","spreadsheetToJson","spreadsheetNew"],
+	"description":" Converts the active sheet of a spreadsheet workbook to an array of row-arrays: a raw grid of cell values (all as strings), one inner array per row. The fluent member form is toArray().",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Sheet as a grid array",
+			"description":"Write a small grid and read it back as an array of arrays.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetCellValue(wb, \"a\", 1, 1);\r\nspreadsheetSetCellValue(wb, \"b\", 1, 2);\r\nspreadsheetSetCellValue(wb, \"1\", 2, 1);\r\nwriteDump(spreadsheetToArray(wb));",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

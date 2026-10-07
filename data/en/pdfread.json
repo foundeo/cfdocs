@@ -1,0 +1,22 @@
+{
+	"name":"pdfRead",
+	"type":"function",
+	"syntax":"pdfRead(pathOrBinary)",
+	"returns":"any",
+	"related":["pdf","pdfInfo","pdfPageCount","pdfToImage","isPdfObject"],
+	"description":"Reads a PDF file (by path or as a Binary) into a shared, reference-typed PDF object. The parsed document is a native object: passing it around costs nothing and every handle sees the same document. Throws a runtime error if the file is not a PDF, is truncated, or uses an encryption the engine cannot open.",
+	"params": [
+		{"name":"pathOrBinary","description":"Absolute path to a PDF file, or a Binary containing the PDF bytes.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title":"Read a PDF file",
+			"description":"Open a PDF and inspect its metadata.",
+			"code":"doc  = PdfRead( expandPath( \"/invoice.pdf\" ) );\ninfo = PdfInfo( doc );\nwriteDump( info );"
+		}
+	]
+}

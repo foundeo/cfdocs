@@ -1,6 +1,6 @@
 {
 	"name":"Conversion Functions",
 	"type":"listing",
-	"related":["arrayToList","binaryDecode","binaryEncode","charsetDecode","charsetEncode","deserializeJSON","dotNetToCFType","entityToQuery","hash","hmac","HTMLParse","lCase","listToArray","parseNumber","serializeJSON","toBase64","toBinary","toScript","toString","URLDecode","URLEncode","URLEncodedFormat","val","XMLFormat","XMLParse","XMLTransform"],
+	"related":["arrayToList","binaryDecode","binaryEncode","charsetDecode","charsetEncode","csvFormatRow","deserializeJSON","dotNetToCFType","entityToQuery","hash","hmac","HTMLParse","lCase","listToArray","parseNumber","serializeJSON","toBase64","toBinary","toBoolean","toScript","toString","URLDecode","URLEncode","URLEncodedFormat","val","XMLFormat","XMLParse","XMLTransform","yamlDeserialize","yamlDeserializeFile","yamlSerialize"],
 	"description":"A listing of CFML Conversion Functions."
 }

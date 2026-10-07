@@ -1,0 +1,29 @@
+{
+	"name":"spreadsheetSetActiveCell",
+	"type":"function",
+	"syntax":"spreadsheetSetActiveCell(spreadsheetObj, row, column)",
+	"returns":"any",
+	"related":["spreadsheetSetActiveSheet","spreadsheetNew"],
+	"description":" Sets the active cell of the active sheet in a spreadsheet workbook. Rows and columns are 1-based (row 1, column 1 = cell A1). The fluent member form is setActiveCell(row, column).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"row","description":"1-based row index of the active cell.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"column","description":"1-based column index of the active cell.","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Move the active cell",
+			"description":"Make C4 the active cell of the active sheet.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetActiveCell(wb, 4, 3);",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

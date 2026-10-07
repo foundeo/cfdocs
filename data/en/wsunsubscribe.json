@@ -1,0 +1,29 @@
+{
+	"name":"wsUnsubscribe",
+	"type":"function",
+	"syntax":"wsUnsubscribe()",
+	"returns":"void",
+	"related":["io","wsSubscribe","wsPresence","wsPublish"],
+	"description":"Accepted as a no-op for forward compatibility. In RustCFML, connections leave rooms through server-side socket.leave(), and the engine removes a connection from every room automatically on disconnect; there is no server-side unsubscribe to call. Feature-detecting code that calls wsUnsubscribe() will not error.",
+	"params": [],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes":"No-op; room leaves are server-side via socket.leave() and are automatic on disconnect."}
+	},
+	"links": [
+		{
+			"title":"RustCFML WebSocket documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/websockets.md",
+			"description":"Full documentation of the RustCFML realtime engine and rooms."
+		}
+	],
+	"examples": [
+		{
+			"title":"Feature-detecting code",
+			"description":"Calls to wsUnsubscribe() are accepted and do nothing; leaves are server-side and automatic on disconnect.",
+			"code":"wsUnsubscribe();   // no-op",
+			"result":"Returns null (void).",
+			"runnable":false
+		}
+	]
+
+}

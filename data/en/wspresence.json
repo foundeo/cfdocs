@@ -1,0 +1,38 @@
+{
+	"name":"wsPresence",
+	"type":"function",
+	"syntax":"wsPresence( [ channel ] )",
+	"returns":"struct",
+	"related":["io","wsPublish","wsSubscribe","wsUnsubscribe"],
+	"description":"Returns the presence roster for a channel — a flat built-in accessor parallel to wsPublish. The roster is a struct keyed by presence key, each value holding a metas array of the tracked metadata for that key (for example, a user's multiple tabs or devices). The channel argument is optional inside a channel handler, where it defaults to the current channel. Returns an empty struct when there is no registry or channel.",
+	"params": [
+		{"name":"channel","description":"The channel whose presence roster to read, e.g. \"/chat\". Inside a channel handler this defaults to the current channel.","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+		{
+			"title":"RustCFML WebSocket documentation",
+			"url":"https://github.com/CFMLs/RustCFML/blob/main/docs/websockets.md",
+			"description":"Full documentation of RustCFML presence, including the roster shape."
+		}
+	],
+	"examples": [
+		{
+			"title":"Read the presence roster for a channel",
+			"description":"Get everyone currently tracking presence on a channel.",
+			"code":"var roster = wsPresence( \"/chat\" );\nwriteDump( roster );",
+			"result":"{ \"user-42\": { metas: [ { user: \"user-42\", status: \"online\" } ] }, \"user-99\": { metas: [ { user: \"user-99\", status: \"away\" } ] } }",
+			"runnable":false
+		},
+		{
+			"title":"Read the presence roster inside a handler",
+			"description":"Inside a channel handler, wsPresence() with no argument reads the current channel's roster.",
+			"code":"function whoami( socket, data ) on=\"whoami\" secured {\n    return io().presence();   // equivalent to wsPresence() here\n}",
+			"result":"",
+			"runnable":false
+		}
+	]
+
+}

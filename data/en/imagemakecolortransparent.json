@@ -10,7 +10,8 @@
         	{"name":"color","description":"The transparent color: Hexadecimal, String value, Default is black.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagemakecolortransparent.html"}
+		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagemakecolortransparent.html"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [
 

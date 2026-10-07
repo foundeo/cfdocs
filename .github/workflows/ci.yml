@@ -55,6 +55,7 @@ jobs:
         
   fixinator:
     needs: valid-json
+    if: github.event_name != 'pull_request' #PR does not have access to secrets
     runs-on: ubuntu-latest
     permissions:
       contents: read

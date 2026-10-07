@@ -1,0 +1,33 @@
+{
+	"name":"dump",
+	"type":"function",
+	"syntax":"dump(var [, output] [, label] [, top] [, expand] [, abort])",
+	"returns":"void",
+	"related":["writeDump","cfdump"],
+	"description":" Alias for writeDump(): outputs the elements, variables and values of most kinds of CFML objects. Useful for debugging. Supports the named arguments var, output (browser, console or a file path), label, top, expand and abort; output=\"console\" sends a plain-text dump to the server console and output to a file appends plain text.",
+	"params": [
+		{"name":"var","description":"Variable to display.","required":true,"default":"","type":"any","values":[]},
+		{"name":"output","description":"Where to send the dump: browser (default), console (server log) or a file path.","required":false,"default":"browser","type":"string","values":["browser","console","filename"]},
+		{"name":"label","description":"Header for the dump output.","required":false,"default":"","type":"string","values":[]},
+		{"name":"top","description":"Number of rows to display.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"expand","description":"Whether complex values are expanded (default true).","required":false,"default":"true","type":"boolean","values":[true,false]},
+		{"name":"abort","description":"True to abort immediately after displaying the dump.","required":false,"default":"false","type":"boolean","values":[true,false]}
+	],
+	"engines": {
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/system/dump"},
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Dump a variable",
+			"description":"Shortcut form of writeDump.",
+			"code":"x = { a: 1, b: [1, 2, 3] };\r\ndump(x);",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

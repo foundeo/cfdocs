@@ -14,7 +14,8 @@
 	],
 	"engines": {
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/listindexexists.html"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listindexexists"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listindexexists"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"examples": [
 		{

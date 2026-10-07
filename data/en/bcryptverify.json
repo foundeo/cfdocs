@@ -1,0 +1,29 @@
+{
+	"name":"bcryptverify",
+	"type":"function",
+	"syntax":"bcryptverify(input, hash [, throwOnError])",
+	"returns":"boolean",
+	"related":["bcrypthash","verifyBCryptHash"],
+	"description":" Verifies a string against a bcrypt hash. The cost factor is read from the hash itself. Returns false for a mismatch, and also false when the hash is malformed unless throwOnError is true, in which case an error is thrown instead. This is the Lucee crypto-extension name; the modern RustCFML name is bcryptVerify() and the deprecated form is verifyBCryptHash(). Available when the security cargo feature is enabled.",
+	"params": [
+		{"name":"input","description":"The plain string to check.","required":true,"default":"","type":"string","values":[]},
+		{"name":"hash","description":"The bcrypt hash to verify against.","required":true,"default":"","type":"string","values":[]},
+		{"name":"throwOnError","description":"True to throw on a malformed hash instead of returning false (default false).","required":false,"default":"false","type":"boolean","values":[true,false]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Verify a password",
+			"description":"Check that a password matches its stored hash.",
+			"code":"hash = bcrypthash(\"secret\");\r\nwriteDump(bcryptverify(\"secret\", hash));\r\nwriteDump(bcryptverify(\"wrong\", hash));",
+			"result":"true\r\nfalse",
+			"runnable":true
+		}
+	]
+
+}

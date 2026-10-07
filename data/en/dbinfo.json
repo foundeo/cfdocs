@@ -1,0 +1,35 @@
+{
+	"name":"dbinfo",
+	"type":"function",
+	"syntax":"dbinfo(name, attributes)",
+	"returns":"query",
+	"related":["cfdbinfo","queryExecute"],
+	"description":" Returns database metadata as a query — the function form of the cfdbinfo tag. Pass the same attributes the tag accepts (type, datasource, filter, columns, etc.), either as positional arguments or a single attributes struct; attributeCollection is expanded with explicit keys winning. Supported types include tables, columns, procedures, datasources and version. The result is delivered to the named variable just like the tag.",
+	"params": [
+		{"name":"name","description":"Name of the variable to receive the metadata query.","required":true,"default":"","type":"string","values":[]},
+		{"name":"attributes","description":"Struct of cfdbinfo attributes: type (tables|columns|procedures|datasources|version|foreignkeys), datasource, filter, columns, and other tag attributes.","required":true,"default":"","type":"struct","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"List tables",
+			"description":"Get the table metadata for the default datasource.",
+			"code":"dbinfo(name=\"tables\", type=\"tables\");\r\nwriteDump(tables);",
+			"result":"",
+			"runnable":false
+		},
+		{
+			"title":"Database version",
+			"description":"Read the database product version.",
+			"code":"dbinfo(name=\"version\", type=\"version\");\r\nwriteDump(version);",
+			"result":"",
+			"runnable":false
+		}
+	]
+
+}

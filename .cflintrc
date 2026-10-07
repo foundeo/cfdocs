@@ -1,0 +1,14 @@
+{
+	"rule": [],
+	"excludes": [
+		{"code": "UNQUOTED_STRUCT_KEY"},
+		{"code": "STRUCT_ARRAY_NOTATION"},
+		{"code": "VAR_TOO_SHORT"},
+		{"code": "VAR_TOO_LONG"},
+		{"code": "GLOBAL_VAR"},
+		{"code": "VAR_INVALID_NAME"}
+	],
+	"includes": [],
+	"inheritParent": false,
+	"parameters": {}
+}

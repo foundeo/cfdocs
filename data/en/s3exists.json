@@ -1,0 +1,35 @@
+{
+	"name":"s3Exists",
+	"type":"function",
+	"syntax":"s3Exists(bucket [, object, accessKeyId, secretKey, host])",
+	"returns":"boolean",
+	"related":["s3getmetadata","s3listbucket","s3read"],
+	"description":"Tests whether an S3 (or S3-compatible) bucket, or a specific object within a bucket, exists.",
+	"params": [
+		{"name":"bucket","description":"The name of the S3 bucket to test.","required":true,"default":"","type":"string","values":[]},
+		{"name":"object","description":"The object key to test. When omitted, the bucket itself is tested.","required":false,"default":"","type":"string","values":[]},
+		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
+		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
+		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Check whether an object exists",
+			"description": "Returns true if the key is present in the bucket.",
+			"code": "if ( s3Exists(\"my-bucket\", \"logs/today.txt\") ) { }",
+			"result": "",
+			"runnable":false
+		},
+		{
+			"title": "Check whether a bucket exists",
+			"description": "Without an object argument, tests the bucket itself.",
+			"code": "present = s3Exists(\"my-bucket\");",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

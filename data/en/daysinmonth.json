@@ -15,7 +15,8 @@
 		"lucee": {"minimum_version":"", "notes":"Lucee allows an optional `timezone` parameter. \nMember function is available in Lucee4.5+.", "docs":"https://docs.lucee.org/reference/functions/daysinmonth.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/daysinmonth"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/daysinmonth"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/temporal/daysinmonth"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/temporal/daysinmonth"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [
 

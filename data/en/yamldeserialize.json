@@ -1,0 +1,24 @@
+{
+	"name":"yamlDeserialize",
+	"type":"function",
+	"syntax":"yamlDeserialize(content)",
+	"returns":"any",
+	"related":["yamlserialize","yamldeserializefile"],
+	"description":"Parses a YAML string into native CFML values (structs, arrays, numbers, booleans, strings and null).",
+	"params": [
+		{"name":"content","description":"The YAML string to parse.","required":true,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Parse a YAML string into a struct",
+			"description": "Returns a struct mirroring the YAML mapping.",
+			"code": "yaml = \"name: Alex\\nage: 30\\nactive: true\";\ndata = yamlDeserialize(yaml);",
+			"result": "struct: {name=\"Alex\", age=30, active=true}",
+			"runnable":false
+		}
+	]
+}

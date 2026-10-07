@@ -1,0 +1,29 @@
+{
+	"name":"s3ListBucket",
+	"type":"function",
+	"syntax":"s3ListBucket(bucket [, prefix, maxKeys, accessKeyId, secretKey, host])",
+	"returns":"array",
+	"related":["s3listbuckets","s3read","s3delete"],
+	"description":"Lists the objects in an S3 (or S3-compatible) bucket, optionally filtered by a key prefix. Returns an array of structs with key, size, lastModified, eTag, storageClass and isDirectory. If a key prefix is configured for the application, returned keys have the prefix stripped.",
+	"params": [
+		{"name":"bucket","description":"The name of the S3 bucket to list.","required":true,"default":"","type":"string","values":[]},
+		{"name":"prefix","description":"Optional key prefix to filter objects by (e.g. \"logs/\").","required":false,"default":"","type":"string","values":[]},
+		{"name":"maxKeys","description":"Optional maximum number of keys to return.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
+		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
+		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "List objects under a prefix",
+			"description": "Returns objects whose keys begin with the prefix.",
+			"code": "listing = s3ListBucket(\"my-bucket\", \"logs/\");",
+			"result": "",
+			"runnable":false
+		}
+	]
+}

@@ -15,6 +15,7 @@
 	<cfif request.hasExamples><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-themes-for-google-code-prettify@2.0.4/dist/themes/tomorrow-night-bright.min.css" integrity="sha256-gLthyoOIaqxAddr/iijlwkUkgioUdF0FB39xaMdblzY=" crossorigin="anonymous" /></cfif>
 	<cfoutput><link href="#request.assetBaseURL#style.css" rel="stylesheet"></cfoutput>
 	<link rel="search" type="application/opensearchdescription+xml" title="Search CFML Documentation" href="/opensearch.xml" />
+	<cfoutput><script src="#request.assetBaseURL#theme-switcher.js"></script></cfoutput>
 	<cfoutput>
 		<meta name="description" content="#encodeForHTMLAttribute(request.description)#">
 		<meta property="og:title" content="#ReReplace(request.title, "[^a-zA-Z0-9 ._-]", "", "ALL")# CFML Documentation">
@@ -115,6 +116,23 @@
 					</div>
 				</form>
 				<a href="https://foundeo.com/" rel="noopener" class="visible-md visible-lg" id="foundeo"><img src="/assets/img/foundeo.png"></a>
+				<!-- Theme Toggle Button -->
+				<div class="theme-toggle" id="theme-toggle">
+					<svg id="svg-sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="12" cy="12" r="5"></circle>
+						<line x1="12" y1="1" x2="12" y2="3"></line>
+						<line x1="12" y1="21" x2="12" y2="23"></line>
+						<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+						<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+						<line x1="1" y1="12" x2="3" y2="12"></line>
+						<line x1="21" y1="12" x2="23" y2="12"></line>
+						<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+						<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+					</svg>
+					<svg id="svg-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+					</svg>
+				</div>
 			</div><!--/.navbar-collapse -->
 		</div>
 	</nav>

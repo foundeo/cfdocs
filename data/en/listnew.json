@@ -1,0 +1,35 @@
+{
+	"name":"listNew",
+	"type":"function",
+	"syntax":"listNew([value] [, delimiters])",
+	"returns":"string",
+	"related":["listAppend","listFirst","listLen"],
+	"description":" Creates a new list. With no arguments it returns an empty list; with a value it returns that value as a single-item list. The optional delimiters argument sets the list's delimiters. In RustCFML lists are plain delimited strings, so this is a convenience constructor over the string type.",
+	"params": [
+		{"name":"value","description":"Optional initial list content.","required":false,"default":"","type":"string","values":[]},
+		{"name":"delimiters","description":"Optional delimiter string for the list.","required":false,"default":",","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Empty list",
+			"description":"Create an empty list.",
+			"code":"l = listNew();\r\nwriteDump(listLen(l));",
+			"result":"0",
+			"runnable":true
+		},
+		{
+			"title":"Single-item list",
+			"description":"Wrap a value in a new list.",
+			"code":"l = listNew(\"one\");\r\nwriteDump(listFirst(l));",
+			"result":"one",
+			"runnable":true
+		}
+	]
+
+}

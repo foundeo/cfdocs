@@ -14,7 +14,8 @@
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/mailpart.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cfmailpart"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cfmailpart"},
-		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-mail` module.", "docs":"https://github.com/ortus-boxlang/bx-mail"}
+		"boxlang": {"minimum_version":"1.0.0", "notes":"Requires the `bx-mail` module.", "docs":"https://github.com/ortus-boxlang/bx-mail"},
+		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [],
 	"examples": [

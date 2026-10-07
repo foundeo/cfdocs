@@ -1,0 +1,28 @@
+{
+	"name":"spreadsheetSetPrintOrientation",
+	"type":"function",
+	"syntax":"spreadsheetSetPrintOrientation(spreadsheetObj, orientation)",
+	"returns":"any",
+	"related":["spreadsheetSetFitToPage","spreadsheetNew"],
+	"description":" Sets the print orientation of the active sheet in a spreadsheet workbook to landscape or portrait. Any other value resets the orientation to the default. The fluent member form is setPrintOrientation(orientation).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"orientation","description":"The print orientation: landscape or portrait.","required":true,"default":"","type":"string","values":["landscape","portrait"]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Landscape report",
+			"description":"Set the active sheet to print landscape.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetPrintOrientation(wb, \"landscape\");",
+			"result":"",
+			"runnable":true
+		}
+	]
+
+}

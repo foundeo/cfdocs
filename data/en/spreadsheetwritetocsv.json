@@ -1,0 +1,29 @@
+{
+	"name":"spreadsheetWriteToCsv",
+	"type":"function",
+	"syntax":"spreadsheetWriteToCsv(spreadsheetObj, filePath [, delimiter])",
+	"returns":"any",
+	"related":["spreadsheetToCsv","spreadsheetReadCsv","spreadsheetNew"],
+	"description":" Writes the active sheet of a spreadsheet workbook to a CSV file. Fields containing the delimiter, a quote or a newline are quoted, with embedded quotes doubled. The fluent member form is writeToCsv(filePath, delimiter) (alias writeCsv).",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"filePath","description":"Path of the CSV file to write.","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiter","description":"Field delimiter (default comma).","required":false,"default":",","type":"string","values":[]}
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title":"Export the active sheet to CSV",
+			"description":"Build a small workbook and write it to a CSV file.",
+			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetAddRow(wb, \"name,score\", 1, 1, false);\r\nspreadsheetAddRow(wb, \"Alice,90\", 2, 1, false);\r\nspreadsheetWriteToCsv(wb, expandPath(\"/out.csv\"));\r\nwriteDump(fileRead(expandPath(\"/out.csv\")));",
+			"result":"name,score\r\nAlice,90",
+			"runnable":true
+		}
+	]
+
+}

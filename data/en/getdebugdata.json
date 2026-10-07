@@ -1,0 +1,21 @@
+{
+	"name":"getDebugData",
+	"type":"function",
+	"syntax":"getDebugData()",
+	"returns":"struct",
+	"related":["isDebugMode","debugAdd"],
+	"description":"Returns a struct with all the data collected for the current request's debug footer: queries (with bound parameters), pages (templates, tags and CFCs, each carrying a methods array of { name, count, total }), exceptions, traces, genericData (from debugAdd), scopes, and total times. All times are in microseconds. The BIF is available whenever the debug footer's enabled and viewer-allowed gates pass; the data is collected in CLI runs too, so it works even where no footer is rendered.",
+	"params": [
+	],
+	"engines": {
+		"rustcfml": {"minimum_version": ""}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title":"Build a custom debug view",
+			"description":"Return the collected debug data as JSON for an AJAX endpoint.",
+			"code":"content-type=\"application/json\";\nif ( isDebugMode() ) {\n    write( serializeJson( getDebugData() ) );\n}"
+		}
+	]
+}
