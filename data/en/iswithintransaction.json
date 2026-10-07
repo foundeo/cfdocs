@@ -1,0 +1,27 @@
+{
+	"name":"isWithinTransaction",
+	"type":"function",
+	"syntax":"isWithinTransaction()",
+	"returns":"boolean",
+	"related":["cftransaction","transactioncommit","transactionrollback","transactionsetsavepoint"],
+	"description":"Determines whether the current code is running inside a cftransaction block. Returns true as soon as the block is entered, even before its first query runs.",
+	"params": [
+	],
+	"engines": {
+		"lucee": {"minimum_version":"5.3.9", "notes":"Introduced in 5.3.9.4.", "docs":"https://docs.lucee.org/reference/functions/iswithintransaction.html"},
+		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/jdbc/iswithintransaction"}
+	},
+	"links": [
+
+	],
+	"examples": [
+		{
+			"title": "Inside and outside a transaction",
+			"description": "Outside the transaction block the function returns false, inside it returns true.",
+			"code": "writeOutput(isWithinTransaction());\ntransaction {\n\twriteOutput(isWithinTransaction());\n}",
+			"result": "falsetrue",
+			"runnable": true
+		}
+	]
+
+}

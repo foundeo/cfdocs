@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"transactionRollback([savepoint])",
 	"returns":"void",
-	"related":["cftry", "cfcatch","cftransaction","transactioncommit","transactionsetsavepoint"],
+	"related":["cftry", "cfcatch","cftransaction","transactioncommit","transactionsetsavepoint","iswithintransaction"],
 	"description":"Rollback current transaction",
 	"params": [
 		{"name":"savepoint","description":"Name of the savepoint to roll back to","required":false,"default":"","type":"string","values":[]}
