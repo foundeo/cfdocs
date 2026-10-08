@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"transactionSetSavepoint(savepoint)",
 	"returns":"void",
-	"related":["cftry", "cfcatch","cftransaction","transactioncommit","transactionrollback"],
+	"related":["cftry", "cfcatch","cftransaction","transactioncommit","transactionrollback","iswithintransaction"],
 	"description":"Set savepoint for transaction",
 	"params": [
 		{"name":"savepoint","description":"Savepoint name to which can be rolled back","required":true,"default":"","type":"string","values":[]}

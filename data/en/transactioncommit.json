@@ -3,7 +3,7 @@
 	"type":"function",
 	"syntax":"transactionCommit()",
 	"returns":"void",
-	"related":["cftry", "cfcatch","cftransaction","transactionrollback","transactionsetsavepoint"],
+	"related":["cftry", "cfcatch","cftransaction","transactionrollback","transactionsetsavepoint","iswithintransaction"],
 	"description":"Commit a pending transaction",
 	"params": [
 	],
