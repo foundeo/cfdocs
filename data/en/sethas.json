@@ -1,0 +1,26 @@
+{
+	"name":"setHas",
+	"type":"function",
+	"syntax":"setHas(set, element)",
+	"member":"mySet.has(element)",
+	"returns":"boolean",
+	"related":["setcontains","setadd"],
+	"description":"Returns true if a set contains a value.",
+	"params": [
+		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]},
+		{"name":"element","description":"The value to look for.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/set_has.html"}
+	},
+	"links": [
+		{
+			"title":"Sets in ColdFusion",
+			"description":"Adobe overview of sets and set operations",
+			"url":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/sets-in-coldfusion.html"
+		}
+	],
+	"examples": [
+
+	]
+}

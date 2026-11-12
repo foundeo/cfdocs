@@ -1,0 +1,25 @@
+{
+	"name":"setIsEmpty",
+	"type":"function",
+	"syntax":"setIsEmpty(set)",
+	"member":"mySet.isEmpty()",
+	"returns":"boolean",
+	"related":["setclear"],
+	"description":"Returns true if a set has no elements.",
+	"params": [
+		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/set_is_empty.html"}
+	},
+	"links": [
+		{
+			"title":"Sets in ColdFusion",
+			"description":"Adobe overview of sets and set operations",
+			"url":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/sets-in-coldfusion.html"
+		}
+	],
+	"examples": [
+
+	]
+}

@@ -1,0 +1,26 @@
+{
+	"name":"setEvery",
+	"type":"function",
+	"syntax":"setEvery(set, callback)",
+	"member":"mySet.every(callback)",
+	"returns":"boolean",
+	"related":["setsome","setfilter"],
+	"description":"Returns true if the callback returns true for every element. Returns true for an empty set.",
+	"params": [
+		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]},
+		{"name":"callback","description":"Function that receives each element and returns a boolean.","required":true,"default":"","type":"function","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/setevery.html"}
+	},
+	"links": [
+		{
+			"title":"Sets in ColdFusion",
+			"description":"Adobe overview of sets and set operations",
+			"url":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/sets-in-coldfusion.html"
+		}
+	],
+	"examples": [
+
+	]
+}

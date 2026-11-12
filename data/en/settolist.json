@@ -1,0 +1,26 @@
+{
+	"name":"setToList",
+	"type":"function",
+	"syntax":"setToList(set, delimiter)",
+	"member":"mySet.toList(delimiter)",
+	"returns":"string",
+	"related":["settoarray","setkeys"],
+	"description":"Converts a set to a list.",
+	"params": [
+		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]},
+		{"name":"delimiter","description":"The list delimiter.","required":true,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/set_to_list.html"}
+	},
+	"links": [
+		{
+			"title":"Sets in ColdFusion",
+			"description":"Adobe overview of sets and set operations",
+			"url":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/sets-in-coldfusion.html"
+		}
+	],
+	"examples": [
+
+	]
+}

@@ -1,0 +1,24 @@
+{
+	"name":"setNew",
+	"type":"function",
+	"syntax":"setNew([variant])",
+	"returns":"any",
+	"related":["setadd","sethas","isset"],
+	"description":"Creates a new set. Sets hold unique values; adding a duplicate is ignored. By default the set is unordered and case-sensitive. Pass an array to create a set from its values with duplicates removed.",
+	"params": [
+		{"name":"variant","description":"ordered (keeps insertion order), nocase (case-insensitive) or ordered-nocase, or an array of initial values.","required":false,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/set_new.html"}
+	},
+	"links": [
+		{
+			"title":"Sets in ColdFusion",
+			"description":"Adobe overview of sets and set operations",
+			"url":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/sets-in-coldfusion.html"
+		}
+	],
+	"examples": [
+
+	]
+}

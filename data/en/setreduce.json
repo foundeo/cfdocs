@@ -1,0 +1,27 @@
+{
+	"name":"setReduce",
+	"type":"function",
+	"syntax":"setReduce(set, callback, initialValue)",
+	"member":"mySet.reduce(callback, initialValue)",
+	"returns":"any",
+	"related":["seteach","setmap"],
+	"description":"Reduces a set to a single value by calling a function with an accumulator and each element.",
+	"params": [
+		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]},
+		{"name":"callback","description":"Function that receives the accumulator and an element, and returns the new accumulator.","required":true,"default":"","type":"function","values":[]},
+		{"name":"initialValue","description":"The starting value of the accumulator.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/setreduce.html"}
+	},
+	"links": [
+		{
+			"title":"Sets in ColdFusion",
+			"description":"Adobe overview of sets and set operations",
+			"url":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/sets-in-coldfusion.html"
+		}
+	],
+	"examples": [
+
+	]
+}

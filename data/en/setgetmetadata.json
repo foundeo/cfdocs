@@ -1,0 +1,25 @@
+{
+	"name":"setGetMetaData",
+	"type":"function",
+	"syntax":"setGetMetaData(set)",
+	"member":"mySet.getMetaData()",
+	"returns":"struct",
+	"related":["setsetmetadata","setnew"],
+	"description":"Returns a struct describing a set, including its type and whether it is ordered or case-insensitive.",
+	"params": [
+		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"Listed by getFunctionList() in ColdFusion 2025+. No official documentation exists.", "docs":""}
+	},
+	"links": [
+		{
+			"title":"Sets in ColdFusion",
+			"description":"Adobe overview of sets and set operations",
+			"url":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/sets-in-coldfusion.html"
+		}
+	],
+	"examples": [
+
+	]
+}

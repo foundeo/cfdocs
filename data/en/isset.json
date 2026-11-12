@@ -1,0 +1,24 @@
+{
+	"name":"isSet",
+	"type":"function",
+	"syntax":"isSet(value)",
+	"returns":"boolean",
+	"related":["setnew"],
+	"description":"Returns true if a value is a set.",
+	"params": [
+		{"name":"value","description":"The value to test.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/isset.html"}
+	},
+	"links": [
+		{
+			"title":"Sets in ColdFusion",
+			"description":"Adobe overview of sets and set operations",
+			"url":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/sets-in-coldfusion.html"
+		}
+	],
+	"examples": [
+
+	]
+}

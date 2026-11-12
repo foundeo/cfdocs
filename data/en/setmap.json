@@ -1,0 +1,26 @@
+{
+	"name":"setMap",
+	"type":"function",
+	"syntax":"setMap(set, callback)",
+	"member":"mySet.map(callback)",
+	"returns":"any",
+	"related":["setfilter","setreduce"],
+	"description":"Returns a new set of the values returned by the callback for each element. Duplicate results are removed.",
+	"params": [
+		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]},
+		{"name":"callback","description":"Function that receives each element and returns the new value.","required":true,"default":"","type":"function","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/setmap.html"}
+	},
+	"links": [
+		{
+			"title":"Sets in ColdFusion",
+			"description":"Adobe overview of sets and set operations",
+			"url":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/sets-in-coldfusion.html"
+		}
+	],
+	"examples": [
+
+	]
+}

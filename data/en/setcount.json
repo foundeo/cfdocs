@@ -1,0 +1,25 @@
+{
+	"name":"setCount",
+	"type":"function",
+	"syntax":"setCount(set)",
+	"member":"mySet.count()",
+	"returns":"numeric",
+	"related":["setisempty"],
+	"description":"Returns the number of elements in a set.",
+	"params": [
+		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"Listed by getFunctionList() in ColdFusion 2025+. No official documentation exists.", "docs":""}
+	},
+	"links": [
+		{
+			"title":"Sets in ColdFusion",
+			"description":"Adobe overview of sets and set operations",
+			"url":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/sets-in-coldfusion.html"
+		}
+	],
+	"examples": [
+
+	]
+}
