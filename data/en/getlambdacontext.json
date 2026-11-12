@@ -1,0 +1,19 @@
+{
+	"name":"getLambdaContext",
+	"type":"function",
+	"syntax":"getLambdaContext()",
+	"returns":"any",
+	"related":["getcloudservice"],
+	"description":"An undocumented function related to running ColdFusion on AWS Lambda. It appears in the list returned by getFunctionList(), but Adobe has no official documentation for it.",
+	"params": [
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"Listed by getFunctionList() in ColdFusion 2021+. No official documentation exists.", "docs":""}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}

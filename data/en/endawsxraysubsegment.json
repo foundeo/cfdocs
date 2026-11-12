@@ -1,0 +1,19 @@
+{
+	"name":"endAWSXraySubsegment",
+	"type":"function",
+	"syntax":"endAWSXraySubsegment()",
+	"returns":"any",
+	"related":["beginawsxraysubsegment","addawsxraymetadata"],
+	"description":"An undocumented function related to AWS X-Ray tracing. It appears in the list returned by getFunctionList(), but Adobe has no official documentation for it.",
+	"params": [
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"Listed by getFunctionList() in ColdFusion 2021+. No official documentation exists.", "docs":""}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}
