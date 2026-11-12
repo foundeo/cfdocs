@@ -1,0 +1,23 @@
+{
+	"name":"isSAMLLogoutResponse",
+	"type":"function",
+	"syntax":"isSAMLLogoutResponse()",
+	"returns":"boolean",
+	"related":["initsamlauthrequest","processsamlresponse","initsamllogoutrequest","processsamllogoutrequest","sendsamllogoutresponse","issamllogoutrequest","getsamlauthrequest","getsamllogoutrequest","generatesamlspmetadata"],
+	"description":"Returns true if the current request is a SAML logout response.",
+	"params": [
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"Requires the saml package", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/issamllogoutresponse.html"}
+	},
+	"links": [
+		{
+			"title":"SAML in ColdFusion",
+			"description":"Adobe guide to configuring and using SAML single sign-on in ColdFusion",
+			"url":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/__references__/saml-coldfusion.html"
+		}
+	],
+	"examples": [
+
+	]
+}

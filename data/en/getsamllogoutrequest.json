@@ -1,0 +1,24 @@
+{
+	"name":"getSAMLLogoutRequest",
+	"type":"function",
+	"syntax":"getSAMLLogoutRequest(options)",
+	"returns":"string",
+	"related":["initsamlauthrequest","processsamlresponse","initsamllogoutrequest","processsamllogoutrequest","sendsamllogoutresponse","issamllogoutrequest","issamllogoutresponse","getsamlauthrequest","generatesamlspmetadata"],
+	"description":"Returns the XML of the logout request that would be sent to the Identity Provider, without sending it.",
+	"params": [
+		{"name":"options","description":"Struct with idp.name and sp.name keys naming the configured Identity Provider and Service Provider.","required":true,"default":"","type":"struct","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"Requires the saml package", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/getsamllogoutrequest.html"}
+	},
+	"links": [
+		{
+			"title":"SAML in ColdFusion",
+			"description":"Adobe guide to configuring and using SAML single sign-on in ColdFusion",
+			"url":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/__references__/saml-coldfusion.html"
+		}
+	],
+	"examples": [
+
+	]
+}
