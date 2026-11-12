@@ -5,7 +5,7 @@
 <cfset guides = []>
 <cfset all = []>
 <cfset categories = []>
-<cfset versions = {"4"=[], "4.5"=[],"5"=[],"6"=[],"7"=[],"8"=[],"9"=[],"10"=[],"11"=[],"2016"=[],"2018"=[],"2021"=[],"2023"=[]}>
+<cfset versions = {"4"=[], "4.5"=[],"5"=[],"6"=[],"7"=[],"8"=[],"9"=[],"10"=[],"11"=[],"2016"=[],"2018"=[],"2021"=[],"2023"=[],"2025"=[]}>
 <cfset lucee_versions = {"5"=[],"6"=[]}>
 <cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
 	<cfset json = fileRead(filePath,"utf-8")>

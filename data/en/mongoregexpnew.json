@@ -1,0 +1,17 @@
+{
+	"name":"mongoRegExpNew",
+	"type":"function",
+	"syntax":"mongoRegExpNew()",
+	"returns":"any",
+	"related":["getmongoservice","getmongobsonminkey","getmongobsonmaxkey","mongoobjectidnew","mongodbrefnew","mongobsonjsnew"],
+	"description":"Creates a BSON regular expression value. Use it in a query filter to match string fields against a pattern, or store it in a document.",
+	"params": [
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"Requires the mongodb package.", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/integrate-coldfusion-mongodb.html"}
+	},
+	"links": [
+	],
+	"examples": [
+	]
+}

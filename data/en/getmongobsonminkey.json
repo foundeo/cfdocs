@@ -1,0 +1,23 @@
+{
+	"name":"getMongoBsonMinKey",
+	"type":"function",
+	"syntax":"getMongoBsonMinKey()",
+	"returns":"any",
+	"related":["getmongoservice","getmongobsonmaxkey","mongoobjectidnew","mongoregexpnew","mongodbrefnew","mongobsonjsnew"],
+	"description":"Returns a BSON MinKey value. MinKey compares lower than every other BSON value, so a field set to it always sorts first.",
+	"params": [
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2021", "notes":"Requires the mongodb package", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/integrate-coldfusion-mongodb.html"}
+	},
+	"links": [
+		{
+			"title":"Integrate ColdFusion and MongoDB",
+			"description":"Adobe guide to using MongoDB datasources in ColdFusion",
+			"url":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/integrate-coldfusion-mongodb.html"
+		}
+	],
+	"examples": [
+		
+	]
+}
