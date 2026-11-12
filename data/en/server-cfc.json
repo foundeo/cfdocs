@@ -1,0 +1,26 @@
+{
+	"name":"Server.cfc",
+	"type":"component",
+	"syntax":"component { function onServerStart() { } }",
+	"returns":"void",
+	"related":["onserverstart","application-cfc"],
+	"description":"A component whose methods run when the server starts, before any application loads. Use it for server-wide setup that does not belong to a single application, such as setting server scope variables, configuring logging or scheduling tasks. It is separate from Application.cfc.\n\nIn ColdFusion, Server.cfc is disabled by default. Enable it in the ColdFusion Administrator under Server Settings > Settings, where you can also change its location (the default is Server.cfc in the web root) and set a timeout. The code cannot use the application or request scopes, or features that need the server to be fully started, such as a cfhttp request to the same server. Startup errors are logged in server.log, with details in exception.log.",
+	"params": [
+		{"name":"onServerStart","description":"Runs once when the server starts. In ColdFusion it takes no arguments.\n\nIn Lucee it receives a `reload` argument, which is false on the first start and true when the server configuration is updated in the Lucee Administrator or an extension is installed.","required":false,"default":"","type":"function","values":[]},
+		{"name":"onBuild","description":"Lucee6.1.1+ Runs when Lucee is started in build mode, by setting the environment variable `LUCEE_BUILD` or `LUCEE_ENABLE_WARMUP` to true.","required":false,"default":"","type":"function","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/develop-coldfusion-applications/onserverstart.html"},
+		"lucee": {"minimum_version":"", "notes":"Lucee also calls onBuild in Lucee 6.1.1+, and passes a reload argument to onServerStart.", "docs":"https://docs.lucee.org/recipes/startup-listeners-code.html"}
+	},
+	"links": [
+		{
+			"title":"Lucee Startup Listeners Video",
+			"description":"Micha shows how to create and enable Server.cfc",
+			"url":"https://youtu.be/b1MWLwkKdLE"
+		}
+	],
+	"examples": [
+
+	]
+}

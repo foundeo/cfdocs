@@ -3,7 +3,7 @@
 	"type":"component",
 	"syntax":"component { this.name=\"myApp\"; }",
 	"returns":"void",
-	"related":["cfapplication","onapplicationstart","onapplicationend","onsessionstart","onsessionend","onrequest","onrequeststart","onrequestend","onerror","onmissingtemplate","onserverstart"],
+	"related":["cfapplication","onapplicationstart","onapplicationend","onsessionstart","onsessionend","onrequest","onrequeststart","onrequestend","onerror","onmissingtemplate","onserverstart","server-cfc"],
 	"description":"Defines application level variables and event handlers (functions invoked at various application lifecycle events).",
 	"params": [
 		{"name":"this.name","description":"Name of application. Up to 64 characters","required":false,"default":"","type":"string","values":[]},

@@ -4,7 +4,7 @@ component extends="testbox.system.BaseSpec" {
 		var files = directoryList(dataDir, false, "array");
 		var index = deserializeJSON(fileRead(dataDir & "/index.json"));
 		// temporary: should be removed later
-		index.components = ["application-cfc"];
+		index.components = ["application-cfc","server-cfc"];
 
 		var fileTypes = {tags=[], functions=[], listings=[], components=[]};
 		var filePath = "";

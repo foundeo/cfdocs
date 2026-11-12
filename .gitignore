@@ -9,6 +9,7 @@ WEB-INF/
 .editorconfig
 server-cfdocs.json
 server-*.json
+!data/en/server-cfc.json
 server.json
 *.sublime-workspace
 *.sublime-project

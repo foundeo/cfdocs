@@ -6,7 +6,7 @@ component extends="testbox.system.BaseSpec" {
 		});
 		// temporary: should be removed later
 		var index = {};
-		index.components = ["application-cfc"];
+		index.components = ["application-cfc","server-cfc"];
 		describe("JSON Related Tests", function() {
 			it("there should be no guides and function/tag with the same name", function() {
 				for(guide in guides) {
