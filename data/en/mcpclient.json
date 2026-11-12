@@ -1,12 +1,12 @@
 {
 	"name":"mcpClient",
 	"type":"function",
-	"syntax":"mcpClient(config)",
+	"syntax":"mcpClient(configData)",
 	"returns":"any",
 	"related":["mcpserver","mcpserverexists","listmcpservers","removemcpserver","agent","mcpConnect","mcp","mcpNotify","mcpSessions"],
 	"description":"Creates an MCP (Model Context Protocol) client that connects to an MCP server over HTTP or STDIO. Returns a client, or an array of clients when a configFile describing several servers is passed.",
 	"params": [
-		{"name":"config","description":"Struct with a transport key (type http with a url, or type stdio with a command and args), or a configFile path to a JSON file describing several servers. Optional keys include clientInfo, capabilities, initializationTimeout, requestTimeout and consumer functions such as loggingConsumer.","required":true,"default":"","type":"struct","values":[]}
+		{"name":"configData","description":"Struct with a transport key (type http with a url, or type stdio with a command and args), or a configFile path to a JSON file describing several servers. Optional keys include clientInfo, capabilities, initializationTimeout, requestTimeout and consumer functions such as loggingConsumer.","required":true,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/coldfusion-ai-guide/mcpclient.html"},

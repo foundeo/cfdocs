@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetGetCellHyperlink",
 	"type":"function",
-	"syntax":"spreadsheetGetCellHyperlink(spreadsheetObj, row, column)",
+	"syntax":"spreadsheetGetCellHyperlink(spreadsheet, row, column)",
 	"returns":"struct",
 	"related":["spreadsheetSetCellHyperlink","spreadsheetGetCellValue","spreadsheetNew"],
 	"description":"Returns a struct describing the hyperlink on a cell, such as its address and type.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"row","description":"Row number (1-based).","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"column","description":"Column number (1-based).","required":true,"default":"","type":"numeric","values":[]}
 	],

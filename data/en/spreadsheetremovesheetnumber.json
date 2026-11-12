@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetRemoveSheetNumber",
 	"type":"function",
-	"syntax":"spreadsheetRemoveSheetNumber(spreadsheetObj, sheetNumber)",
+	"syntax":"spreadsheetRemoveSheetNumber(spreadsheet, sheetNumber)",
 	"returns":"void",
 	"related":["spreadsheetremovesheet","spreadsheetcreatesheet"],
 	"description":"Removes a sheet from a workbook by its position.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"sheetNumber","description":"Number of the sheet to remove (1-based).","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {

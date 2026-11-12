@@ -1,14 +1,14 @@
 {
 	"name":"setAdd",
 	"type":"function",
-	"syntax":"setAdd(set, element)",
-	"member":"mySet.add(element)",
+	"syntax":"setAdd(set, value)",
+	"member":"mySet.add(value)",
 	"returns":"boolean",
 	"related":["sethas","setunion","setaddall"],
 	"description":"Adds a value to a set. Returns true if the value was added, or false if it was already in the set.",
 	"params": [
 		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]},
-		{"name":"element","description":"The value to add.","required":true,"default":"","type":"any","values":[]}
+		{"name":"value","description":"The value to add.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/set_add.html"}

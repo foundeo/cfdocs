@@ -1,12 +1,13 @@
 {
 	"name":"mongoBsonJSNew",
 	"type":"function",
-	"syntax":"mongoBsonJSNew(code)",
+	"syntax":"mongoBsonJSNew(code [, scope])",
 	"returns":"any",
 	"related":["getmongoservice","getmongobsonminkey","getmongobsonmaxkey","mongoobjectidnew","mongoregexpnew","mongodbrefnew"],
 	"description":"Creates a BSON JavaScript value, which stores JavaScript code in a document field.",
 	"params": [
-		{"name":"code","description":"The JavaScript code to store.","required":true,"default":"","type":"string","values":[]}
+		{"name":"code","description":"The JavaScript code to store.","required":true,"default":"","type":"string","values":[]},
+		{"name":"scope","description":"Struct of variables available to the code.","required":false,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2021", "notes":"Requires the mongodb package", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/integrate-coldfusion-mongodb.html"}

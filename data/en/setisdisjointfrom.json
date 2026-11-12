@@ -1,14 +1,14 @@
 {
 	"name":"setIsDisjointFrom",
 	"type":"function",
-	"syntax":"setIsDisjointFrom(set, otherSet)",
+	"syntax":"setIsDisjointFrom(a, b)",
 	"member":"mySet.isDisjointFrom(otherSet)",
 	"returns":"boolean",
 	"related":["setintersection"],
 	"description":"Returns true if two sets have no elements in common.",
 	"params": [
-		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]},
-		{"name":"otherSet","description":"The other set.","required":true,"default":"","type":"any","values":[]}
+		{"name":"a","description":"The set.","required":true,"default":"","type":"any","values":[]},
+		{"name":"b","description":"The other set.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/set_is_disjoint_from.html"}

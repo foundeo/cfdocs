@@ -1,14 +1,14 @@
 {
 	"name":"setContains",
 	"type":"function",
-	"syntax":"setContains(set, element)",
-	"member":"mySet.contains(element)",
+	"syntax":"setContains(set, value)",
+	"member":"mySet.contains(value)",
 	"returns":"boolean",
 	"related":["sethas"],
 	"description":"Returns true if a set contains a value. Same as setHas.",
 	"params": [
 		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]},
-		{"name":"element","description":"The value to look for.","required":true,"default":"","type":"any","values":[]}
+		{"name":"value","description":"The value to look for.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/set_contains.html"}

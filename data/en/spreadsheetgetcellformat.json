@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetGetCellFormat",
 	"type":"function",
-	"syntax":"spreadsheetGetCellFormat(spreadsheetObj, row, column)",
+	"syntax":"spreadsheetGetCellFormat(spreadsheet, row, column)",
 	"returns":"struct",
 	"related":["spreadsheetFormatCell","spreadsheetGetCellValue","spreadsheetNew"],
 	"description":"Returns a struct of the formatting applied to a cell.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"row","description":"Row number (1-based).","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"column","description":"Column number (1-based).","required":true,"default":"","type":"numeric","values":[]}
 	],

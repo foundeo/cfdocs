@@ -1,12 +1,12 @@
 {
 	"name":"streamingSpreadsheetCleanup",
 	"type":"function",
-	"syntax":"streamingSpreadsheetCleanup(source)",
+	"syntax":"streamingSpreadsheetCleanup(spreadsheet)",
 	"returns":"boolean",
 	"related":["streamingspreadsheetnew","streamingspreadsheetread","streamingspreadsheetprocess"],
 	"description":"Deletes the temporary files a streaming spreadsheet wrote to disk. Call it after the spreadsheet has been written; the object can't be used afterwards.",
 	"params": [
-		{"name":"source","description":"File path of the streaming spreadsheet to clean up.","required":true,"default":"","type":"string","values":[]}
+		{"name":"spreadsheet","description":"File path of the streaming spreadsheet to clean up.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/streamingspreadsheetcleanup.html"}

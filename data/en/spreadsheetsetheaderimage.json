@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetSetHeaderImage",
 	"type":"function",
-	"syntax":"spreadsheetSetHeaderImage(spreadsheetObj, image, alignment [, imageType])",
+	"syntax":"spreadsheetSetHeaderImage(spreadsheet, image, alignment [, imageType])",
 	"returns":"void",
 	"related":["spreadsheetsetfooterimage","spreadsheetsetheader"],
 	"description":"Adds an image to the sheet header, visible in print preview. A sheet can have only one header image.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"image","description":"An image object, image bytes, or path to a jpg or png file.","required":true,"default":"","type":"any","values":[]},
 		{"name":"alignment","description":"Position in the header.","required":true,"default":"","type":"string","values":["left","center","right"]},
 		{"name":"imageType","description":"Image format, such as png or jpg. Used when passing image data.","required":false,"default":"","type":"string","values":[]}

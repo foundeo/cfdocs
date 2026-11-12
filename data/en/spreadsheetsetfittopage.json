@@ -1,13 +1,13 @@
 {
 	"name":"spreadsheetSetFitToPage",
 	"type":"function",
-	"syntax":"spreadsheetSetFitToPage(spreadsheetObj, fitToRange, pagesWidth, pagesHeight)",
+	"syntax":"spreadsheetSetFitToPage(spreadsheet, fitToPage, pagesWidth, pagesHeight)",
 	"returns":"void",
 	"related":["spreadsheetSetPrintOrientation","spreadsheetNew"],
 	"description":"Turns the fit-to-page print option on or off for the active sheet.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
-		{"name":"fitToRange","description":"true to enable fit to page, false to disable it.","required":true,"default":"","type":"boolean","values":[true,false]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"fitToPage","description":"true to enable fit to page, false to disable it.","required":true,"default":"","type":"boolean","values":[true,false]},
 		{"name":"pagesWidth","description":"Number of pages to fit the columns into. 0 for no horizontal fit.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"pagesHeight","description":"Number of pages to fit the rows into. 0 for no vertical fit.","required":true,"default":"","type":"numeric","values":[]}
 	],

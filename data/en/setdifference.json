@@ -1,14 +1,14 @@
 {
 	"name":"setDifference",
 	"type":"function",
-	"syntax":"setDifference(set, otherSet)",
+	"syntax":"setDifference(a, b)",
 	"member":"mySet.difference(otherSet)",
 	"returns":"any",
 	"related":["setsymmetricdifference","setunion"],
 	"description":"Returns a new set containing the elements of the first set that are not in the other set.",
 	"params": [
-		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]},
-		{"name":"otherSet","description":"The other set.","required":true,"default":"","type":"any","values":[]}
+		{"name":"a","description":"The set.","required":true,"default":"","type":"any","values":[]},
+		{"name":"b","description":"The other set.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/set_difference.html"}

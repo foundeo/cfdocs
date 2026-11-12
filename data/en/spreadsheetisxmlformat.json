@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetIsXMLFormat",
 	"type":"function",
-	"syntax":"spreadsheetIsXMLFormat(spreadsheetObj)",
+	"syntax":"spreadsheetIsXMLFormat(spreadsheet)",
 	"returns":"boolean",
 	"related":["spreadsheetisbinaryformat","spreadsheetisstreamingxmlformat"],
 	"description":"Returns true if the spreadsheet object is in xlsx (XML) format.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]}
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025", "notes":"No Adobe reference page was available when this entry was written.", "docs":""}

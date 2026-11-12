@@ -1,12 +1,12 @@
 {
 	"name":"agent",
 	"type":"function",
-	"syntax":"agent(config)",
+	"syntax":"agent(properties)",
 	"returns":"any",
 	"related":["chatmodel","embeddingmodel","vectorstore","documentservice","simplerag"],
 	"description":"Creates an AI agent from a chat model, adding conversation memory, system messages, guardrails and tool calling. Use its chat() method to send messages.",
 	"params": [
-		{"name":"config","description":"Struct with a required chatModel key (from chatModel()), and optional keys such as tools (CFCs or MCP clients the model can call) and chatMemory.","required":true,"default":"","type":"struct","values":[]}
+		{"name":"properties","description":"Struct with a required chatModel key (from chatModel()), and optional keys such as tools (CFCs or MCP clients the model can call) and chatMemory.","required":true,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/coldfusion-ai-guide/agent.html"}

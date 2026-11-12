@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetSetRepeatingRows",
 	"type":"function",
-	"syntax":"spreadsheetSetRepeatingRows(spreadsheetObj, rows)",
+	"syntax":"spreadsheetSetRepeatingRows(spreadsheet, rows)",
 	"returns":"void",
 	"related":["spreadsheetSetRepeatingColumns","spreadsheetNew"],
 	"description":"Sets rows that repeat on every printed page.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"rows","description":"Range of rows to repeat, such as 1:1.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {

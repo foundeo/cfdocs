@@ -1,12 +1,12 @@
 {
 	"name":"generateSAMLSPMetadata",
 	"type":"function",
-	"syntax":"generateSAMLSPMetadata(options)",
+	"syntax":"generateSAMLSPMetadata([struct])",
 	"returns":"string",
 	"related":["initsamlauthrequest","processsamlresponse","initsamllogoutrequest","processsamllogoutrequest","sendsamllogoutresponse","issamllogoutrequest","issamllogoutresponse","getsamlauthrequest","getsamllogoutrequest"],
 	"description":"Generates SAML Service Provider metadata.",
 	"params": [
-		{"name":"options","description":"Struct of Service Provider settings, such as entityid, acsurl and slourl.","required":true,"default":"","type":"struct","values":[]}
+		{"name":"struct","description":"Struct of Service Provider settings, such as entityid, acsurl and slourl.","required":false,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2021", "notes":"Requires the saml package", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/generatesamlspmetadata.html"}

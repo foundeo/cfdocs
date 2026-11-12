@@ -1,11 +1,13 @@
 {
 	"name":"mongoRegExpNew",
 	"type":"function",
-	"syntax":"mongoRegExpNew()",
+	"syntax":"mongoRegExpNew(pattern [, options])",
 	"returns":"any",
 	"related":["getmongoservice","getmongobsonminkey","getmongobsonmaxkey","mongoobjectidnew","mongodbrefnew","mongobsonjsnew"],
 	"description":"Creates a BSON regular expression value. Use it in a query filter to match string fields against a pattern, or store it in a document.",
 	"params": [
+		{"name":"pattern","description":"The regular expression pattern.","required":true,"default":"","type":"string","values":[]},
+		{"name":"options","description":"Regular expression option flags, such as `i` for a case-insensitive match.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2021", "notes":"Requires the mongodb package.", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/integrate-coldfusion-mongodb.html"}

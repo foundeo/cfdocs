@@ -1,13 +1,13 @@
 {
 	"name":"passkeyRegister",
 	"type":"function",
-	"syntax":"passkeyRegister(userStruct, configStruct)",
+	"syntax":"passkeyRegister(user, config)",
 	"returns":"void",
 	"related":["passkeyauthenticate","passkeygetresult","cflogin"],
 	"description":"Starts registering a passkey (WebAuthn/FIDO2) for a user. Call CFPasskey.startRegistration() in JavaScript to prompt the browser.",
 	"params": [
-		{"name":"userStruct","description":"Struct describing the user. name (such as an email address) is required. Optional keys: displayName, id, rpName, rpId, userVerification, authenticatorAttachment, requireResidentKey and attestation.","required":true,"default":"","type":"struct","values":[]},
-		{"name":"configStruct","description":"Struct with optional keys successHandler and errorHandler (JavaScript function names), redirectUrl (page that receives ?passkey_token=) and service (CFC used to store credentials; defaults to /CFIDE/passkey/DefaultPasskey.cfc, which is for development only).","required":true,"default":"","type":"struct","values":[]}
+		{"name":"user","description":"Struct describing the user. name (such as an email address) is required. Optional keys: displayName, id, rpName, rpId, userVerification, authenticatorAttachment, requireResidentKey and attestation.","required":true,"default":"","type":"struct","values":[]},
+		{"name":"config","description":"Struct with optional keys successHandler and errorHandler (JavaScript function names), redirectUrl (page that receives ?passkey_token=) and service (CFC used to store credentials; defaults to /CFIDE/passkey/DefaultPasskey.cfc, which is for development only).","required":true,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/passkeys-in-coldfusion.html"}

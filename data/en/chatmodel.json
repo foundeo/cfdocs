@@ -1,12 +1,13 @@
 {
 	"name":"chatModel",
 	"type":"function",
-	"syntax":"chatModel(config)",
+	"syntax":"chatModel(configName [, overrides])",
 	"returns":"any",
 	"related":["agent","embeddingmodel","vectorstore","documentservice","simplerag"],
 	"description":"Creates a stateless chat model connected to an LLM provider such as OpenAI, Anthropic, Mistral, Gemini, Azure OpenAI or Ollama. Use its chat() method to send a prompt.",
 	"params": [
-		{"name":"config","description":"Struct with provider and modelName (required), plus apiKey, baseUrl, temperature, maxTokens, timeout and other provider-specific options.","required":true,"default":"","type":"struct","values":[]}
+		{"name":"configName","description":"Name of a model configuration, or a struct with provider and modelName (required), plus apiKey, baseUrl, temperature, maxTokens, timeout and other provider-specific options.","required":true,"default":"","type":"struct","values":[]},
+		{"name":"overrides","description":"Struct of settings that override the named configuration.","required":false,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/coldfusion-ai-guide/llmmodel.html"}

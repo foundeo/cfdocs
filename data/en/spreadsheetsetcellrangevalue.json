@@ -1,17 +1,18 @@
 {
 	"name":"spreadsheetSetCellRangeValue",
 	"type":"function",
-	"syntax":"spreadsheetSetCellRangeValue(spreadsheetObj, value, startRow, startColumn, endRow, endColumn)",
+	"syntax":"spreadsheetSetCellRangeValue(spreadsheet, value, startRow, startColumn, endRow, endColumn [, dataType])",
 	"returns":"void",
 	"related":["spreadsheetSetCellValue","spreadsheetClearCellRange","spreadsheetNew"],
 	"description":"Sets every cell in a range to the same value.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"value","description":"Value to set.","required":true,"default":"","type":"any","values":[]},
 		{"name":"startRow","description":"First row of the range.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"startColumn","description":"First column of the range.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"endRow","description":"Last row of the range.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"endColumn","description":"Last column of the range.","required":true,"default":"","type":"numeric","values":[]}
+		{"name":"endColumn","description":"Last column of the range.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"dataType","description":"Data type to set the cells to, such as string, numeric or date.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetsetcellrangevalue.html"},

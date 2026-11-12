@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetGetCellType",
 	"type":"function",
-	"syntax":"spreadsheetGetCellType(spreadsheetObj, row, column)",
+	"syntax":"spreadsheetGetCellType(spreadsheet, row, column)",
 	"returns":"string",
 	"related":["spreadsheetGetCellValue","spreadsheetSetCellFormula","spreadsheetNew"],
 	"description":"Returns the data type of a cell: BLANK, BOOLEAN, ERROR, FORMULA, NUMERIC or STRING.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"row","description":"Row number (1-based).","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"column","description":"Column number (1-based).","required":true,"default":"","type":"numeric","values":[]}
 	],

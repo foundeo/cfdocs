@@ -1,14 +1,14 @@
 {
 	"name":"setIsSubsetOf",
 	"type":"function",
-	"syntax":"setIsSubsetOf(set, otherSet)",
+	"syntax":"setIsSubsetOf(a, b)",
 	"member":"mySet.isSubsetOf(otherSet)",
 	"returns":"boolean",
 	"related":["setissupersetof","setisdisjointfrom"],
 	"description":"Returns true if every element of the set is also in the other set.",
 	"params": [
-		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]},
-		{"name":"otherSet","description":"The other set.","required":true,"default":"","type":"any","values":[]}
+		{"name":"a","description":"The set.","required":true,"default":"","type":"any","values":[]},
+		{"name":"b","description":"The other set.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"Listed by getFunctionList() in ColdFusion 2025+. No official documentation exists.", "docs":""}

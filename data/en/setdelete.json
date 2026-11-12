@@ -1,14 +1,14 @@
 {
 	"name":"setDelete",
 	"type":"function",
-	"syntax":"setDelete(set, element)",
-	"member":"mySet.delete(element)",
+	"syntax":"setDelete(set, value)",
+	"member":"mySet.delete(value)",
 	"returns":"any",
 	"related":["setremove","setclear"],
 	"description":"Removes a value from a set and returns the same set. Does nothing if the value is not in the set.",
 	"params": [
 		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]},
-		{"name":"element","description":"The value to remove.","required":true,"default":"","type":"any","values":[]}
+		{"name":"value","description":"The value to remove.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/set_delete.html"}

@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetSetPrintOrientation",
 	"type":"function",
-	"syntax":"spreadsheetSetPrintOrientation(spreadsheetObj, orientation [, sheetName])",
+	"syntax":"spreadsheetSetPrintOrientation(spreadsheet, orientation [, sheetName])",
 	"returns":"void",
 	"related":["spreadsheetSetFitToPage","spreadsheetNew"],
 	"description":"Sets the print orientation of a sheet to landscape or portrait.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"orientation","description":"The print orientation.","required":true,"default":"","type":"string","values":["landscape","portrait"]},
 		{"name":"sheetName","description":"Sheet to apply to. Defaults to the active sheet.","required":false,"default":"","type":"string","values":[]}
 	],

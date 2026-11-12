@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetSetRepeatingColumns",
 	"type":"function",
-	"syntax":"spreadsheetSetRepeatingColumns(spreadsheetObj, columns)",
+	"syntax":"spreadsheetSetRepeatingColumns(spreadsheet, columns)",
 	"returns":"void",
 	"related":["spreadsheetSetRepeatingRows","spreadsheetNew"],
 	"description":"Sets columns that repeat on every printed page.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"columns","description":"Range of columns to repeat, such as A:B.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {

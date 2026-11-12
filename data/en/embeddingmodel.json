@@ -1,12 +1,12 @@
 {
 	"name":"embeddingModel",
 	"type":"function",
-	"syntax":"embeddingModel([config])",
+	"syntax":"embeddingModel([properties])",
 	"returns":"any",
 	"related":["agent","chatmodel","vectorstore","documentservice","simplerag"],
 	"description":"Creates an embedding model client that converts text to vectors, for use with vector stores.",
 	"params": [
-		{"name":"config","description":"Struct with provider settings such as provider, apiKey, modelName, baseUrl and dimension. Defaults to the built-in all_minilm model.","required":false,"default":"","type":"struct","values":[]}
+		{"name":"properties","description":"Struct with provider settings such as provider, apiKey, modelName, baseUrl and dimension. Defaults to the built-in all_minilm model.","required":false,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/coldfusion-ai-guide/embeddingmodel.html"}

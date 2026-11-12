@@ -1,14 +1,14 @@
 {
 	"name":"setRemoveIf",
 	"type":"function",
-	"syntax":"setRemoveIf(set, callback)",
-	"member":"mySet.removeIf(callback)",
+	"syntax":"setRemoveIf(set, predicate)",
+	"member":"mySet.removeIf(predicate)",
 	"returns":"boolean",
 	"related":["setfilter","setremove"],
 	"description":"Removes every element for which the callback returns true. Returns true if any element was removed.",
 	"params": [
 		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]},
-		{"name":"callback","description":"Function that receives each element and returns true to remove it.","required":true,"default":"","type":"function","values":[]}
+		{"name":"predicate","description":"Function that receives each element and returns true to remove it.","required":true,"default":"","type":"function","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"Listed by getFunctionList() in ColdFusion 2025+. No official documentation exists.", "docs":""}

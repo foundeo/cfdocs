@@ -1,12 +1,12 @@
 {
 	"name":"mcpServer",
 	"type":"function",
-	"syntax":"mcpServer(config)",
+	"syntax":"mcpServer(configData)",
 	"returns":"any",
 	"related":["mcpclient","mcpserverexists","listmcpservers","removemcpserver"],
 	"description":"Creates an MCP (Model Context Protocol) server that exposes CFC methods as tools, along with prompts and resources, to MCP clients.",
 	"params": [
-		{"name":"config","description":"Struct with serverInfo and capabilities (required), plus optional tools (array of CFCs), prompts, resources and cfcCaching.","required":true,"default":"","type":"struct","values":[]}
+		{"name":"configData","description":"Struct with serverInfo and capabilities (required), plus optional tools (array of CFCs), prompts, resources and cfcCaching.","required":true,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/coldfusion-ai-guide/mcpserver.html"}

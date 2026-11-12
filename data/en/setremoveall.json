@@ -1,14 +1,14 @@
 {
 	"name":"setRemoveAll",
 	"type":"function",
-	"syntax":"setRemoveAll(targetSet, sourceSet)",
-	"member":"mySet.removeAll(sourceSet)",
+	"syntax":"setRemoveAll(set, values)",
+	"member":"mySet.removeAll(values)",
 	"returns":"boolean",
 	"related":["setaddall","setretainall"],
 	"description":"Removes from the target set every element that is in the source set. Returns true if the target set changed.",
 	"params": [
-		{"name":"targetSet","description":"The set to remove elements from.","required":true,"default":"","type":"any","values":[]},
-		{"name":"sourceSet","description":"The set of elements to remove.","required":true,"default":"","type":"any","values":[]}
+		{"name":"set","description":"The set to remove elements from.","required":true,"default":"","type":"any","values":[]},
+		{"name":"values","description":"The set of elements to remove.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/set_remove_all.html"}

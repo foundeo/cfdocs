@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetGetColumnWidth",
 	"type":"function",
-	"syntax":"spreadsheetGetColumnWidth(spreadsheetObj, column [, returnWidthInPixels])",
+	"syntax":"spreadsheetGetColumnWidth(spreadsheet, column [, returnWidthInPixels])",
 	"returns":"numeric",
 	"related":["spreadsheetSetColumnWidth","spreadsheetAutoSizeColumn","spreadsheetNew"],
 	"description":"Returns the width of a column.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"column","description":"Column number (1-based).","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"returnWidthInPixels","description":"true to return the width in pixels, false for points.","required":false,"default":"","type":"boolean","values":[true,false]}
 	],

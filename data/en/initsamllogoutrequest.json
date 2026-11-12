@@ -1,12 +1,12 @@
 {
 	"name":"initSAMLLogoutRequest",
 	"type":"function",
-	"syntax":"initSAMLLogoutRequest(options)",
+	"syntax":"initSAMLLogoutRequest(struct)",
 	"returns":"void",
 	"related":["initsamlauthrequest","processsamlresponse","processsamllogoutrequest","sendsamllogoutresponse","issamllogoutrequest","issamllogoutresponse","getsamlauthrequest","getsamllogoutrequest","generatesamlspmetadata"],
 	"description":"Starts single logout by redirecting the user to the Identity Provider.",
 	"params": [
-		{"name":"options","description":"Struct of logout settings. Keys: idp.name, sp.name, relayState (token returned with the response), template (interstitial page, POST binding only), lifetime (seconds to wait for a response).","required":true,"default":"","type":"struct","values":[]}
+		{"name":"struct","description":"Struct of logout settings. Keys: idp.name, sp.name, relayState (token returned with the response), template (interstitial page, POST binding only), lifetime (seconds to wait for a response).","required":true,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2021", "notes":"Requires the saml package", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/initsamllogoutrequest.html"}

@@ -1,12 +1,12 @@
 {
 	"name":"mongoObjectIdNew",
 	"type":"function",
-	"syntax":"mongoObjectIdNew()",
+	"syntax":"mongoObjectIdNew(objectId)",
 	"returns":"any",
 	"related":["getmongoservice","getmongobsonminkey","getmongobsonmaxkey","mongoregexpnew","mongodbrefnew","mongobsonjsnew"],
 	"description":"Creates a MongoDB ObjectId",
 	"params": [
-		
+		{"name":"objectId","description":"A 24-character hexadecimal ObjectId string.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2021", "notes":"Requires the mongodb package", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/integrate-coldfusion-mongodb.html"}

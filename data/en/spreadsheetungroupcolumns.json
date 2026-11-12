@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetUngroupColumns",
 	"type":"function",
-	"syntax":"spreadsheetUngroupColumns(spreadsheetObj, startColumn, endColumn)",
+	"syntax":"spreadsheetUngroupColumns(spreadsheet, startColumn, endColumn)",
 	"returns":"void",
 	"related":["spreadsheetgroupcolumns","spreadsheetungrouprows"],
 	"description":"Removes a column grouping created with spreadsheetGroupColumns.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"startColumn","description":"First column of the group.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"endColumn","description":"Last column of the group.","required":true,"default":"","type":"numeric","values":[]}
 	],

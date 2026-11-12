@@ -1,15 +1,15 @@
 {
 	"name":"csvWrite",
 	"type":"function",
-	"syntax":"csvWrite(data, inputFormat, destinationFilePath [, writeConfiguration])",
+	"syntax":"csvWrite(data, inputFormat, outputFilePath [, csvFormatConfiguration])",
 	"returns":"void",
 	"related":["csvread","csvprocess","spreadsheetreadcsv","csvformatrow"],
 	"description":"Writes data such as a query, array of structs or array of arrays as CSV.",
 	"params": [
 		{"name":"data","description":"The data to write.","required":true,"default":"","type":"any","values":[]},
 		{"name":"inputFormat","description":"Format of the data being written.","required":true,"default":"","type":"string","values":["csvstring","arrayofcfarray","arrayofjavaarray","arrayofstruct","query","xlsx","csvrecorditerable"]},
-		{"name":"destinationFilePath","description":"Path of the file to write the CSV to.","required":true,"default":"","type":"string","values":[]},
-		{"name":"writeConfiguration","description":"Struct of output options. Keys include delimiter, quoteCharacter, quoteMode, escapeCharacter, encoding, recordSeparator, headerComments, nullString, trim, trailingDelimiter, autoflush, duplicateHeaderMode and readCSVConfig.","required":false,"default":"","type":"struct","values":[]}
+		{"name":"outputFilePath","description":"Path of the file to write the CSV to.","required":true,"default":"","type":"string","values":[]},
+		{"name":"csvFormatConfiguration","description":"Struct of output options. Keys include delimiter, quoteCharacter, quoteMode, escapeCharacter, encoding, recordSeparator, headerComments, nullString, trim, trailingDelimiter, autoflush, duplicateHeaderMode and readCSVConfig.","required":false,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/csvwrite.html"}

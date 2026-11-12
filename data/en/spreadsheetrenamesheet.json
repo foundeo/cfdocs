@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetRenameSheet",
 	"type":"function",
-	"syntax":"spreadsheetRenameSheet(spreadsheetObj, oldName, newName)",
+	"syntax":"spreadsheetRenameSheet(spreadsheet, oldName, newName)",
 	"returns":"void",
 	"related":["spreadsheetCreateSheet","spreadsheetSetActiveSheet","spreadsheetNew"],
 	"description":"Renames a sheet in a workbook.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"oldName","description":"Current name of the sheet.","required":true,"default":"","type":"string","values":[]},
 		{"name":"newName","description":"New name for the sheet.","required":true,"default":"","type":"string","values":[]}
 	],

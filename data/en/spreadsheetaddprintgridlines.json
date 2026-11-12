@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetAddPrintGridlines",
 	"type":"function",
-	"syntax":"spreadsheetAddPrintGridlines(spreadsheetObj [, sheetName])",
+	"syntax":"spreadsheetAddPrintGridlines(spreadsheet [, sheetName])",
 	"returns":"void",
 	"related":["spreadsheetremoveprintgridlines"],
 	"description":"Turns on printing of gridlines for a sheet.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"sheetName","description":"Sheet to apply to. Defaults to the active sheet.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {

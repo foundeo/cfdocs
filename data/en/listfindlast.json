@@ -1,7 +1,7 @@
 {
 	"name":"listFindLast",
 	"type":"function",
-	"syntax":"listFindLast(list, value [, delimiters] [, includeEmptyFields])",
+	"syntax":"listFindLast(list, value [, delimiter] [, includeEmptyFields])",
 	"member":"list.listFindLast(value [, delimiters, includeEmptyFields])",
 	"returns":"numeric",
 	"related":["listfind","listfindnocase","arrayfindlast"],
@@ -9,7 +9,7 @@
 	"params": [
 		{"name":"list","description":"The list to search.","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"The value to find.","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"Characters that separate list elements.","required":false,"default":",","type":"string","values":[]},
+		{"name":"delimiter","description":"Characters that separate list elements.","required":false,"default":",","type":"string","values":[]},
 		{"name":"includeEmptyFields","description":"true to count empty elements as list positions.","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {

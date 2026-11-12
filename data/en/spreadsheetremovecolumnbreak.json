@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetRemoveColumnBreak",
 	"type":"function",
-	"syntax":"spreadsheetRemoveColumnBreak(spreadsheetObj, column)",
+	"syntax":"spreadsheetRemoveColumnBreak(spreadsheet, column)",
 	"returns":"void",
 	"related":["spreadsheetsetcolumnbreak","spreadsheetremoverowbreak"],
 	"description":"Removes a print page break from a column.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"column","description":"Column number to remove the break from.","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {

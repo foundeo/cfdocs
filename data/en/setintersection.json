@@ -1,14 +1,14 @@
 {
 	"name":"setIntersection",
 	"type":"function",
-	"syntax":"setIntersection(set, otherSet)",
+	"syntax":"setIntersection(a, b)",
 	"member":"mySet.intersection(otherSet)",
 	"returns":"any",
 	"related":["setunion","setsymmetricdifference"],
 	"description":"Returns a new set containing the elements found in both sets.",
 	"params": [
-		{"name":"set","description":"The set.","required":true,"default":"","type":"any","values":[]},
-		{"name":"otherSet","description":"The other set.","required":true,"default":"","type":"any","values":[]}
+		{"name":"a","description":"The set.","required":true,"default":"","type":"any","values":[]},
+		{"name":"b","description":"The other set.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/set_intersection.html"}

@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetSetActiveCell",
 	"type":"function",
-	"syntax":"spreadsheetSetActiveCell(spreadsheetObj, row, column)",
+	"syntax":"spreadsheetSetActiveCell(spreadsheet, row, column)",
 	"returns":"void",
 	"related":["spreadsheetSetActiveSheet","spreadsheetNew"],
 	"description":"Makes a cell the active cell.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"row","description":"Row number (1-based).","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"column","description":"Column number (1-based).","required":true,"default":"","type":"numeric","values":[]}
 	],

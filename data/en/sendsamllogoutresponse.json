@@ -1,14 +1,14 @@
 {
 	"name":"sendSAMLLogoutResponse",
 	"type":"function",
-	"syntax":"sendSAMLLogoutResponse(sessionIndex, idp, sp)",
+	"syntax":"sendSAMLLogoutResponse(sessionIndex, idpName, spName)",
 	"returns":"void",
 	"related":["initsamlauthrequest","processsamlresponse","initsamllogoutrequest","processsamllogoutrequest","issamllogoutrequest","issamllogoutresponse","getsamlauthrequest","getsamllogoutrequest","generatesamlspmetadata"],
 	"description":"Sends a logout response back to the Identity Provider after handling its logout request.",
 	"params": [
 		{"name":"sessionIndex","description":"SESSIONINDEX of the session being closed, from processSAMLLogoutRequest.","required":true,"default":"","type":"string","values":[]},
-		{"name":"idp","description":"Name of the configured Identity Provider.","required":true,"default":"","type":"string","values":[]},
-		{"name":"sp","description":"Name of the configured Service Provider.","required":true,"default":"","type":"string","values":[]}
+		{"name":"idpName","description":"Name of the configured Identity Provider.","required":true,"default":"","type":"string","values":[]},
+		{"name":"spName","description":"Name of the configured Service Provider.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2021", "notes":"Requires the saml package", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/sendsamllogoutresponse.html"}

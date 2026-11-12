@@ -1,12 +1,12 @@
 {
 	"name":"getMongoService",
 	"type":"function",
-	"syntax":"getMongoService(datasource)",
+	"syntax":"getMongoService(config)",
 	"returns":"any",
 	"related":["getmongobsonminkey","getmongobsonmaxkey","mongoobjectidnew","mongoregexpnew","mongodbrefnew","mongobsonjsnew"],
 	"description":"Returns a MongoDB client object for the named MongoDB datasource. Call `db(name)` on the result to get a database object, and then work with its collections. Define the datasource in Application.cfc (in `this.datasources` with `type=\"mongodb\"`) or in the ColdFusion Administrator under NoSQL Data Sources.",
 	"params": [
-		{"name":"datasource","description":"Name of a MongoDB datasource defined in Application.cfc or the ColdFusion Administrator.","required":true,"default":"","type":"string","values":[]}
+		{"name":"config","description":"Name of a MongoDB datasource defined in Application.cfc or the ColdFusion Administrator.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2021", "notes":"Requires the mongodb package", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/integrate-coldfusion-mongodb.html"}

@@ -1,16 +1,16 @@
 {
 	"name":"csvProcess",
 	"type":"function",
-	"syntax":"csvProcess(filePath, rowProcessor, rowFilter [, processRowAsJavaArray] [, csvFormatConfiguration])",
+	"syntax":"csvProcess(filePath, rowProcessor [, csvFormatConfiguration] [, rowFilter] [, processRowAsJavaArray])",
 	"returns":"void",
 	"related":["csvread","csvwrite","spreadsheetreadcsv","csvformatrow"],
 	"description":"Reads a CSV file line by line, filtering and transforming each row with the functions you pass in.",
 	"params": [
 		{"name":"filePath","description":"Path of the CSV file to read.","required":true,"default":"","type":"string","values":[]},
 		{"name":"rowProcessor","description":"Function called for each row. It receives the row and row number.","required":true,"default":"","type":"function","values":[]},
-		{"name":"rowFilter","description":"Function that returns true for rows to process.","required":true,"default":"","type":"function","values":[]},
-		{"name":"processRowAsJavaArray","description":"true to pass each row as a Java array, for better performance.","required":false,"default":"","type":"boolean","values":[true,false]},
-		{"name":"csvFormatConfiguration","description":"Struct of parsing options: delimiter, encoding, escapeCharacter, ignoreEmptyLines, nullString, quoteCharacter and trailingDelimiter.","required":false,"default":"","type":"struct","values":[]}
+		{"name":"csvFormatConfiguration","description":"Struct of parsing options: delimiter, encoding, escapeCharacter, ignoreEmptyLines, nullString, quoteCharacter and trailingDelimiter.","required":false,"default":"","type":"struct","values":[]},
+		{"name":"rowFilter","description":"Function that returns true for rows to process.","required":false,"default":"","type":"function","values":[]},
+		{"name":"processRowAsJavaArray","description":"true to pass each row as a Java array, for better performance.","required":false,"default":"","type":"boolean","values":[true,false]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/csvprocess.html"}

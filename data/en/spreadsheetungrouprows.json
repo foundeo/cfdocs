@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetUngroupRows",
 	"type":"function",
-	"syntax":"spreadsheetUngroupRows(spreadsheetObj, startRow, endRow)",
+	"syntax":"spreadsheetUngroupRows(spreadsheet, startRow, endRow)",
 	"returns":"void",
 	"related":["spreadsheetgrouprows","spreadsheetungroupcolumns"],
 	"description":"Removes a row grouping created with spreadsheetGroupRows.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"startRow","description":"First row of the group.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"endRow","description":"Last row of the group.","required":true,"default":"","type":"numeric","values":[]}
 	],

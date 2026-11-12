@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetSetColumnBreak",
 	"type":"function",
-	"syntax":"spreadsheetSetColumnBreak(spreadsheetObj, column)",
+	"syntax":"spreadsheetSetColumnBreak(spreadsheet, column)",
 	"returns":"void",
 	"related":["spreadsheetremovecolumnbreak","spreadsheetsetrowbreak","spreadsheetaddpagebreaks"],
 	"description":"Inserts a print page break at a column.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"column","description":"Column number to break at.","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {

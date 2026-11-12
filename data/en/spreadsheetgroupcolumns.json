@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetGroupColumns",
 	"type":"function",
-	"syntax":"spreadsheetGroupColumns(spreadsheetObj, startColumn, endColumn)",
+	"syntax":"spreadsheetGroupColumns(spreadsheet, startColumn, endColumn)",
 	"returns":"void",
 	"related":["spreadsheetungroupcolumns","spreadsheetgrouprows"],
 	"description":"Groups a range of columns so they can be collapsed or expanded.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"startColumn","description":"First column of the group.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"endColumn","description":"Last column of the group.","required":true,"default":"","type":"numeric","values":[]}
 	],

@@ -1,14 +1,14 @@
 {
 	"name":"setAddAll",
 	"type":"function",
-	"syntax":"setAddAll(targetSet, sourceSet)",
-	"member":"mySet.addAll(sourceSet)",
+	"syntax":"setAddAll(set, values)",
+	"member":"mySet.addAll(values)",
 	"returns":"boolean",
 	"related":["setremoveall","setadd"],
 	"description":"Adds every element of one set to another. Returns true if the target set changed.",
 	"params": [
-		{"name":"targetSet","description":"The set to add to.","required":true,"default":"","type":"any","values":[]},
-		{"name":"sourceSet","description":"The set (or array) whose elements are added.","required":true,"default":"","type":"any","values":[]}
+		{"name":"set","description":"The set to add to.","required":true,"default":"","type":"any","values":[]},
+		{"name":"values","description":"The set (or array) whose elements are added.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/set_add_all.html"}

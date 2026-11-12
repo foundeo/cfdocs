@@ -1,13 +1,13 @@
 {
 	"name":"getCloudService",
 	"type":"function",
-	"syntax":"getCloudService(cloudCred, cloudConfig)",
+	"syntax":"getCloudService(vendorCredential, serviceConfig)",
 	"returns":"any",
 	"related":[],
 	"description":"Returns a service object for a cloud service such as Amazon S3, SQS, SNS, DynamoDB, AWS Lambda, Azure Blob or Azure Service Bus.",
 	"params": [
-		{"name":"cloudCred","description":"Credentials for the cloud vendor: either a struct, or the name of a credential alias defined in the ColdFusion Administrator or Application.cfc.","required":true,"default":"","type":"any","values":[]},
-		{"name":"cloudConfig","description":"Service configuration: either a struct (with a serviceName key such as S3, SQS, SNS, DYNAMODB, AZURE_BLOB or SERVICE_BUS), or the name of a config alias.","required":true,"default":"","type":"any","values":[]}
+		{"name":"vendorCredential","description":"Credentials for the cloud vendor: either a struct, or the name of a credential alias defined in the ColdFusion Administrator or Application.cfc.","required":true,"default":"","type":"any","values":[]},
+		{"name":"serviceConfig","description":"Service configuration: either a struct (with a serviceName key such as S3, SQS, SNS, DYNAMODB, AZURE_BLOB or SERVICE_BUS), or the name of a config alias.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2021", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/multi-cloud-services.html"}

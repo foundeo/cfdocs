@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetClearCellRange",
 	"type":"function",
-	"syntax":"spreadsheetClearCellRange(spreadsheetObj, startRow, startColumn, endRow, endColumn)",
+	"syntax":"spreadsheetClearCellRange(spreadsheet, startRow, startColumn, endRow, endColumn)",
 	"returns":"void",
 	"related":["spreadsheetClearCell","spreadsheetSetCellRangeValue","spreadsheetNew"],
 	"description":"Clears the values and styles of a range of cells.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"startRow","description":"First row of the range.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"startColumn","description":"First column of the range.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"endRow","description":"Last row of the range.","required":true,"default":"","type":"numeric","values":[]},

@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetIsColumnHidden",
 	"type":"function",
-	"syntax":"spreadsheetIsColumnHidden(spreadsheetObj, column)",
+	"syntax":"spreadsheetIsColumnHidden(spreadsheet, column)",
 	"returns":"boolean",
 	"related":["spreadsheetsetcolumnhidden","spreadsheetisrowhidden"],
 	"description":"Returns true if a column is hidden.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
 		{"name":"column","description":"Column number (1-based).","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {

@@ -1,13 +1,13 @@
 {
 	"name":"processSAMLResponse",
 	"type":"function",
-	"syntax":"processSAMLResponse(idp, sp)",
+	"syntax":"processSAMLResponse(idpName, spName)",
 	"returns":"struct",
 	"related":["initsamlauthrequest","initsamllogoutrequest","processsamllogoutrequest","sendsamllogoutresponse","issamllogoutrequest","issamllogoutresponse","getsamlauthrequest","getsamllogoutrequest","generatesamlspmetadata"],
 	"description":"Validates the SAML response from the Identity Provider and returns its details. A login response includes AUTHENTICATED, NAMEID, NAMEIDFORMAT, ATTRIBUTES and RELAYSTATE; a logout response includes SUCCESSFULLOGOUT.",
 	"params": [
-		{"name":"idp","description":"Name of the configured Identity Provider.","required":true,"default":"","type":"string","values":[]},
-		{"name":"sp","description":"Name of the configured Service Provider.","required":true,"default":"","type":"string","values":[]}
+		{"name":"idpName","description":"Name of the configured Identity Provider.","required":true,"default":"","type":"string","values":[]},
+		{"name":"spName","description":"Name of the configured Service Provider.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"2021", "notes":"Requires the saml package", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/__references__/saml-coldfusion.html"}
