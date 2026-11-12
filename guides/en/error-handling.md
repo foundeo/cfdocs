@@ -94,6 +94,29 @@ catch (any e) {
 }
 ```
 
+### cfcatch variables
+
+Inside a catch block the exception is available as `cfcatch`, or as the variable named in a script `catch` statement (`e` above). It has these keys:
+
+| Variable | Applies to | Description |
+| --- | --- | --- |
+| `type` | all | The exception type. |
+| `message` | all | The diagnostic message, or an empty string. |
+| `detail` | all | A more detailed message, from ColdFusion or from `throw`. ColdFusion's own messages may contain HTML. |
+| `tagContext` | all | An array of structs describing the template stack (template, line, etc.) when the error occurred. |
+| `nativeErrorCode` | `database` | The error code from the database driver. Defaults to -1. |
+| `sqlState` | `database` | The SQLState from the database driver. Defaults to 1. |
+| `sql` | `database` | The SQL statement sent to the datasource. |
+| `queryError` | `database` | The error message from the database driver. |
+| `where` | `database` | The query parameter name/value pairs, when `cfqueryparam` is used. |
+| `errNumber` | `expression` | The internal expression error number. |
+| `missingFileName` | `missingInclude` | The name of the file that could not be included. |
+| `lockName` | `lock` | The name of the lock, or `anonymous` for an unnamed lock. |
+| `lockOperation` | `lock` | The operation that failed: Timeout, Create Mutex or Unknown. |
+| `errorCode` | custom | The error code passed to `throw`. |
+| `extendedInfo` | `application`, custom | Extra information passed to `throw`, which the default error handler doesn't display. |
+
+
 ### Rethrowing an error
 
 Often after checking the details of an error you will want to pass it back to the error handling system. This is known as "rethrowing" an error. In cfscript, you use the `object` argument to do this:
