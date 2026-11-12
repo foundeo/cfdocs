@@ -1,0 +1,22 @@
+{
+	"name":"arrayGetAt",
+	"type":"function",
+	"syntax":"arrayGetAt(array, index)",
+	"member":"someArray.at(index)",
+	"returns":"any",
+	"related":["arrayfirst","arraylast","arrayfindlast"],
+	"description":"Returns the element at an index. Negative indexes count back from the end, so -1 is the last element. Throws an error if the index is out of range.",
+	"params": [
+		{"name":"array","description":"The array.","required":true,"default":"","type":"array","values":[]},
+		{"name":"index","description":"1-based index, or a negative index to count from the end.","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/arraygetat.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}

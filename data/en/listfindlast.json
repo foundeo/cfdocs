@@ -1,0 +1,24 @@
+{
+	"name":"listFindLast",
+	"type":"function",
+	"syntax":"listFindLast(list, value [, delimiters] [, includeEmptyFields])",
+	"member":"list.listFindLast(value [, delimiters, includeEmptyFields])",
+	"returns":"numeric",
+	"related":["listfind","listfindnocase","arrayfindlast"],
+	"description":"Returns the position of the last occurrence of a value in a list, or 0 if it is not found. The search is case-sensitive.",
+	"params": [
+		{"name":"list","description":"The list to search.","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"The value to find.","required":true,"default":"","type":"string","values":[]},
+		{"name":"delimiters","description":"Characters that separate list elements.","required":false,"default":",","type":"string","values":[]},
+		{"name":"includeEmptyFields","description":"true to count empty elements as list positions.","required":false,"default":"false","type":"boolean","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/listfindlast.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}

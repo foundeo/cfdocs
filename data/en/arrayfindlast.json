@@ -1,0 +1,22 @@
+{
+	"name":"arrayFindLast",
+	"type":"function",
+	"syntax":"arrayFindLast(array, value)",
+	"member":"someArray.findLast(value)",
+	"returns":"numeric",
+	"related":["arrayfind","arrayfindall"],
+	"description":"Returns the index of the last element that matches a value, or the last element for which a callback returns true. Returns 0 if nothing matches.",
+	"params": [
+		{"name":"array","description":"The array to search.","required":true,"default":"","type":"array","values":[]},
+		{"name":"value","description":"A value to match, or a function that receives each element and returns true for a match.","required":true,"default":"","type":"any","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/arrayfindlast.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}

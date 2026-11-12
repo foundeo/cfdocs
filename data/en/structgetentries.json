@@ -1,0 +1,21 @@
+{
+	"name":"structGetEntries",
+	"type":"function",
+	"syntax":"structGetEntries(struct)",
+	"member":"someStruct.entries()",
+	"returns":"array",
+	"related":["structkeyarray","structvaluearray","structeach"],
+	"description":"Returns an array with one entry for each key/value pair in a struct.",
+	"params": [
+		{"name":"struct","description":"The struct.","required":true,"default":"","type":"struct","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/struct-entries.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}
