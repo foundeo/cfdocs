@@ -1,0 +1,19 @@
+{
+	"name":"documentService",
+	"type":"function",
+	"syntax":"documentService()",
+	"returns":"any",
+	"related":["agent","chatmodel","embeddingmodel","vectorstore","simplerag"],
+	"description":"Returns a document processing service for loading, splitting, transforming and ingesting documents into a vector store.",
+	"params": [
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/coldfusion-ai-guide/documentservice.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}

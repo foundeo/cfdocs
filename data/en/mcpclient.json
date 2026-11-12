@@ -1,15 +1,16 @@
 {
 	"name":"mcpClient",
 	"type":"function",
-	"syntax":"mcpClient( name )",
+	"syntax":"mcpClient(config)",
 	"returns":"any",
-	"related":["mcpConnect","mcp","mcpNotify","mcpSessions"],
-	"description":"Connects to a named MCP server declared in .cfconfig.json under mcpServers, using the same shape an editor's client config uses so a block can be pasted across without translation. Returns a client handle identical to the one from mcpConnect(). Resolving a name requires serve mode with a loaded configuration; in a CLI run with no configuration loaded, use mcpConnect() with an explicit command or url instead.",
+	"related":["mcpserver","mcpserverexists","listmcpservers","removemcpserver","agent","mcpConnect","mcp","mcpNotify","mcpSessions"],
+	"description":"Creates an MCP (Model Context Protocol) client that connects to an MCP server over HTTP or STDIO. Returns a client, or an array of clients when a configFile describing several servers is passed.",
 	"params": [
-		{"name":"name","description":"The name of a server declared under mcpServers in .cfconfig.json.","required":true,"default":"","type":"string","values":[]}
+		{"name":"config","description":"Struct with a transport key (type http with a url, or type stdio with a command and args), or a configFile path to a JSON file describing several servers. Optional keys include clientInfo, capabilities, initializationTimeout, requestTimeout and consumer functions such as loggingConsumer.","required":true,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": ""}
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/coldfusion-ai-guide/mcpclient.html"},
+		"rustcfml": {"minimum_version": "", "notes": "Uses a different signature: mcpClient(name), where name is a server declared under mcpServers in .cfconfig.json. Returns the same client handle as mcpConnect(). Resolving a name requires serve mode with a loaded configuration; in a CLI run, use mcpConnect() with an explicit command or url."}
 	},
 	"links": [
 		{
@@ -20,7 +21,7 @@
 	],
 	"examples": [
 		{
-			"title":"Use a named server from .cfconfig.json",
+			"title":"RustCFML: Use a named server from .cfconfig.json",
 			"description":"Declare servers once in .cfconfig.json and reference them by name.",
 			"code":"// .cfconfig.json\n// {\n//   \"mcpServers\": {\n//     \"files\":  { \"command\": \"npx\", \"args\": [\"-y\", \"@modelcontextprotocol/server-filesystem\", \"/tmp\"] },\n//     \"remote\": { \"url\": \"https://example.com/mcp\" }\n//   }\n// }\n\nclient = mcpClient( \"files\" );\ntools  = client.tools();\nclient.close();",
 			"result":"",

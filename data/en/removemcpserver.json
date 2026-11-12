@@ -1,0 +1,19 @@
+{
+	"name":"removeMCPServer",
+	"type":"function",
+	"syntax":"removeMCPServer()",
+	"returns":"any",
+	"related":["mcpclient","mcpserver","mcpserverexists","listmcpservers"],
+	"description":"An undocumented MCP function. It appears in the list returned by getFunctionList(), but Adobe has no official documentation for it.",
+	"params": [
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025", "notes":"Listed by getFunctionList() in ColdFusion 2025+. No official documentation exists.", "docs":""}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}

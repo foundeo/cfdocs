@@ -1,0 +1,22 @@
+{
+	"name":"simpleRAG",
+	"type":"function",
+	"syntax":"simpleRAG(source, model [, options])",
+	"returns":"any",
+	"related":["agent","chatmodel","embeddingmodel","vectorstore","documentservice"],
+	"description":"Creates a retrieval-augmented generation (RAG) service that answers questions about your documents. Use its ask() method to query it.",
+	"params": [
+		{"name":"source","description":"A file path, directory, URL, or an array of these, to load documents from.","required":true,"default":"","type":"any","values":[]},
+		{"name":"model","description":"A chat model from chatModel(), or a struct of chat model settings.","required":true,"default":"","type":"any","values":[]},
+		{"name":"options","description":"Struct of settings such as chunkSize, chunkOverlap, splitterType, maxResults, minScore, vectorStore and batchSize.","required":false,"default":"","type":"struct","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/coldfusion-ai-guide/simplerag.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}
