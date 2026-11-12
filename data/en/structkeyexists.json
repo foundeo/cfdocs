@@ -31,6 +31,12 @@
 			"description": "CF11+ calling the keyExists member function on a struct.",
 			"code": "server.keyExists(\"os\")",
 			"result": "YES"
+		},
+		{
+			"title": "Key with a null value",
+			"description": "When a key's value is null, structKeyExists returns false for that key.",
+			"code": "s = {};\ns.whatever = javaCast(\"null\", 0);\nwriteOutput( structKeyExists(s, \"whatever\") );",
+			"result": "NO"
 		}
 	]
 }
