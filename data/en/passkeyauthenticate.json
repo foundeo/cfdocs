@@ -1,0 +1,21 @@
+{
+	"name":"passkeyAuthenticate",
+	"type":"function",
+	"syntax":"passkeyAuthenticate(userStruct, configStruct)",
+	"returns":"void",
+	"related":["passkeyregister","passkeygetresult","cflogin"],
+	"description":"Starts signing a user in with an existing passkey. Call CFPasskey.startAuthentication() in JavaScript to prompt the browser.",
+	"params": [
+		{"name":"userStruct","description":"Struct with optional keys username (omit to let the user choose from all passkeys for the site), rpId and userVerification.","required":true,"default":"","type":"struct","values":[]},
+		{"name":"configStruct","description":"Struct with optional keys successHandler and errorHandler (JavaScript function names), redirectUrl (page that receives ?passkey_token=) and service (CFC used to store credentials; defaults to /CFIDE/passkey/DefaultPasskey.cfc, which is for development only).","required":true,"default":"","type":"struct","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025.0.8", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/introduction-to-coldfusion/__references__/passkeys-in-coldfusion.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}
