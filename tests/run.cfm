@@ -26,7 +26,7 @@
 <cfset resultObject = r.getResult()>
 <cfset errors       = resultObject.getTotalFail() + resultObject.getTotalError()>
 <cfif errors GT 0>
-	<cfheader statuscode="500" statustext="Tests Failed">
+	<cfheader statuscode="500">
 </cfif>
 
 <cfif NOT plainText>

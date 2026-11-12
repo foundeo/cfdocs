@@ -53,7 +53,7 @@
 		type = "404",
 		related = possible
 	}>
-	<cfheader statuscode="404" statustext="Not Found">
+	<cfheader statuscode="404">
 </cfif>
 <cfif request.keyExists("canonical_url") AND request.unsafe_name IS NOT url.name>
 	<!--- there was a stripped char in url, redirect --->
