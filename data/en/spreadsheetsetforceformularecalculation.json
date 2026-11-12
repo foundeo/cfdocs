@@ -1,0 +1,21 @@
+{
+	"name":"spreadsheetSetForceFormulaRecalculation",
+	"type":"function",
+	"syntax":"spreadsheetSetForceFormulaRecalculation(spreadsheetObj, value)",
+	"returns":"void",
+	"related":["spreadsheetgetforceformularecalculation","spreadsheetsetcellformula"],
+	"description":"Sets whether the workbook recalculates its formulas when opened.",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"value","description":"true to recalculate formulas when the file is opened.","required":true,"default":"","type":"boolean","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025", "notes":"No Adobe reference page was available when this entry was written.", "docs":""}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}

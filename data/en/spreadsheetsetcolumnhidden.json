@@ -1,17 +1,18 @@
 {
 	"name":"spreadsheetSetColumnHidden",
 	"type":"function",
-	"syntax":"spreadsheetSetColumnHidden(spreadsheetObj, column, hidden)",
-	"returns":"any",
+	"syntax":"spreadsheetSetColumnHidden(spreadsheetObj, column [, hide])",
+	"returns":"void",
 	"related":["spreadsheetSetRowHidden","spreadsheetGetColumnWidth","spreadsheetNew"],
-	"description":" Shows or hides a column of the active sheet in a spreadsheet workbook. Columns are 1-based. The fluent member form is setColumnHidden(column, hidden), with the shorthand members hideColumn(column) and showColumn(column) and the predicate isColumnHidden(column).",
+	"description":"Hides or shows a column.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
-		{"name":"column","description":"1-based column index (1 = A).","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"hidden","description":"True to hide the column, false to show it (default true).","required":false,"default":"true","type":"boolean","values":[true,false]}
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"column","description":"Column number (1-based).","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"hide","description":"true to hide the column, false to show it.","required":false,"default":"","type":"boolean","values":[true,false]}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetsetcolumnhidden.html"},
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32. The third argument is named hidden (default true). Member forms: setColumnHidden(column, hidden), hideColumn(column), showColumn(column), isColumnHidden(column)."}
 	},
 	"links": [
 

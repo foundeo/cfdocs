@@ -1,0 +1,21 @@
+{
+	"name":"spreadsheetRemoveRowBreak",
+	"type":"function",
+	"syntax":"spreadsheetRemoveRowBreak(spreadsheetObj, row)",
+	"returns":"void",
+	"related":["spreadsheetsetrowbreak","spreadsheetremovecolumnbreak"],
+	"description":"Removes a print page break from a row.",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"row","description":"Row number to remove the break from.","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetremoverowbreak.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}

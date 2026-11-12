@@ -1,16 +1,17 @@
 {
 	"name":"spreadsheetSetRepeatingRows",
 	"type":"function",
-	"syntax":"spreadsheetSetRepeatingRows(spreadsheetObj, range)",
-	"returns":"any",
+	"syntax":"spreadsheetSetRepeatingRows(spreadsheetObj, rows)",
+	"returns":"void",
 	"related":["spreadsheetSetRepeatingColumns","spreadsheetNew"],
-	"description":" Sets the print-title rows of the active sheet in a spreadsheet workbook, so the given row range repeats at the top of every printed page. The range is an A1 address such as \"1:1\" or \"1:3\". Implemented via the _xlnm.Print_Titles defined name. The fluent member form is setRepeatingRows(rows).",
+	"description":"Sets rows that repeat on every printed page.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
-		{"name":"rows","description":"A1 address of the row range to repeat on every printed page, e.g. \"1:1\".","required":true,"default":"","type":"string","values":[]}
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"rows","description":"Range of rows to repeat, such as 1:1.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetsetrepeatingrows.html"},
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32. Implemented with the _xlnm.Print_Titles defined name. Member form: setRepeatingRows(rows)."}
 	},
 	"links": [
 

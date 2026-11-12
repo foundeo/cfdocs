@@ -1,16 +1,17 @@
 {
 	"name":"spreadsheetSetRepeatingColumns",
 	"type":"function",
-	"syntax":"spreadsheetSetRepeatingColumns(spreadsheetObj, range)",
-	"returns":"any",
+	"syntax":"spreadsheetSetRepeatingColumns(spreadsheetObj, columns)",
+	"returns":"void",
 	"related":["spreadsheetSetRepeatingRows","spreadsheetNew"],
-	"description":" Sets the print-title columns of the active sheet in a spreadsheet workbook, so the given column range repeats at the start of every printed page. The range is an A1 address such as \"A:B\" or \"$A:$C\". Implemented via the _xlnm.Print_Titles defined name. The fluent member form is setRepeatingColumns(columns).",
+	"description":"Sets columns that repeat on every printed page.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
-		{"name":"columns","description":"A1 address of the column range to repeat on every printed page, e.g. \"A:C\".","required":true,"default":"","type":"string","values":[]}
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"columns","description":"Range of columns to repeat, such as A:B.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetsetrepeatingcolumns.html"},
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32. Implemented with the _xlnm.Print_Titles defined name. Member form: setRepeatingColumns(columns)."}
 	},
 	"links": [
 

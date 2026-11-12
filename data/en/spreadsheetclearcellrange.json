@@ -2,18 +2,19 @@
 	"name":"spreadsheetClearCellRange",
 	"type":"function",
 	"syntax":"spreadsheetClearCellRange(spreadsheetObj, startRow, startColumn, endRow, endColumn)",
-	"returns":"any",
+	"returns":"void",
 	"related":["spreadsheetClearCell","spreadsheetSetCellRangeValue","spreadsheetNew"],
-	"description":" Clears the contents of every cell in a rectangular range of the active sheet of a spreadsheet workbook. All coordinates are 1-based. The fluent member form is clearCellRange(startRow, startColumn, endRow, endColumn).",
+	"description":"Clears the values and styles of a range of cells.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
-		{"name":"startRow","description":"1-based starting row of the range.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"startColumn","description":"1-based starting column of the range.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"endRow","description":"1-based ending row of the range.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"endColumn","description":"1-based ending column of the range.","required":true,"default":"","type":"numeric","values":[]}
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"startRow","description":"First row of the range.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"startColumn","description":"First column of the range.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"endRow","description":"Last row of the range.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"endColumn","description":"Last column of the range.","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetclearcellrange.html"},
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32. Member form: clearCellRange(startRow, startColumn, endRow, endColumn)."}
 	},
 	"links": [
 

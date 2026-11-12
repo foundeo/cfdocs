@@ -2,16 +2,17 @@
 	"name":"spreadsheetClearCell",
 	"type":"function",
 	"syntax":"spreadsheetClearCell(spreadsheetObj, row, column)",
-	"returns":"any",
+	"returns":"void",
 	"related":["spreadsheetClearCellRange","spreadsheetSetCellValue","spreadsheetNew"],
-	"description":" Clears the contents of a single cell in the active sheet of a spreadsheet workbook. Rows and columns are 1-based (row 1, column 1 = cell A1). The fluent member form is clearCell(row, column).",
+	"description":"Clears the value and style of a cell.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
-		{"name":"row","description":"1-based row index of the cell to clear.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"column","description":"1-based column index of the cell to clear.","required":true,"default":"","type":"numeric","values":[]}
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"row","description":"Row number (1-based).","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"column","description":"Column number (1-based).","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetclearcell.html"},
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32. Member form: clearCell(row, column)."}
 	},
 	"links": [
 

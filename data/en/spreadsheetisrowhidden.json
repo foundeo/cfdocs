@@ -1,0 +1,21 @@
+{
+	"name":"spreadsheetIsRowHidden",
+	"type":"function",
+	"syntax":"spreadsheetIsRowHidden(spreadsheetObj, row)",
+	"returns":"boolean",
+	"related":["spreadsheetsetrowhidden","spreadsheetiscolumnhidden"],
+	"description":"Returns true if a row is hidden.",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"row","description":"Row number (1-based).","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025", "notes":"No Adobe reference page was available when this entry was written.", "docs":""}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}

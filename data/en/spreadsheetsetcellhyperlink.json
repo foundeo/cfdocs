@@ -1,26 +1,24 @@
 {
 	"name":"spreadsheetSetCellHyperlink",
 	"type":"function",
-	"syntax":"spreadsheetSetCellHyperlink(spreadsheetObj, link, row, column [, tooltip])",
-	"returns":"any",
+	"syntax":"spreadsheetSetCellHyperlink(spreadsheetObj, hyperlinkInfo)",
+	"returns":"void",
 	"related":["spreadsheetGetCellHyperlink","spreadsheetSetCellValue","spreadsheetNew"],
-	"description":" Adds a hyperlink to a cell in the active sheet of a spreadsheet workbook. Rows and columns are 1-based. When the cell is empty its visible text defaults to the link itself; pass a value with setCellValue first to control the display text. An optional tooltip is shown on hover in the spreadsheet application. The fluent member form is setCellHyperlink(link, row, column, tooltip).",
+	"description":"Adds a hyperlink to a cell.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
-		{"name":"link","description":"The URL to link to.","required":true,"default":"","type":"string","values":[]},
-		{"name":"row","description":"1-based row index of the cell.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"column","description":"1-based column index of the cell.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"tooltip","description":"Optional tooltip text shown on hover.","required":false,"default":"","type":"string","values":[]}
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"hyperlinkInfo","description":"Struct with keys row, column, address and type (url, email or document).","required":true,"default":"","type":"struct","values":[]}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetsetcellhyperlink.html"},
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32. Uses a different signature: spreadsheetSetCellHyperlink(spreadsheetObj, link, row, column [, tooltip]). An empty cell shows the link as its text. Member form: setCellHyperlink(link, row, column, tooltip)."}
 	},
 	"links": [
 
 	],
 	"examples": [
 		{
-			"title":"Add a hyperlink",
+			"title":"RustCFML: Add a hyperlink",
 			"description":"Link B2 to example.com with a tooltip.",
 			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetSetCellValue(wb, \"Home\", 2, 2);\r\nspreadsheetSetCellHyperlink(wb, \"https://example.com\", 2, 2, \"Open link\");",
 			"result":"",

@@ -1,16 +1,18 @@
 {
 	"name":"spreadsheetSetPrintOrientation",
 	"type":"function",
-	"syntax":"spreadsheetSetPrintOrientation(spreadsheetObj, orientation)",
-	"returns":"any",
+	"syntax":"spreadsheetSetPrintOrientation(spreadsheetObj, orientation [, sheetName])",
+	"returns":"void",
 	"related":["spreadsheetSetFitToPage","spreadsheetNew"],
-	"description":" Sets the print orientation of the active sheet in a spreadsheet workbook to landscape or portrait. Any other value resets the orientation to the default. The fluent member form is setPrintOrientation(orientation).",
+	"description":"Sets the print orientation of a sheet to landscape or portrait.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
-		{"name":"orientation","description":"The print orientation: landscape or portrait.","required":true,"default":"","type":"string","values":["landscape","portrait"]}
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"orientation","description":"The print orientation.","required":true,"default":"","type":"string","values":["landscape","portrait"]},
+		{"name":"sheetName","description":"Sheet to apply to. Defaults to the active sheet.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetsetprintorientation.html"},
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32. Does not support sheetName; always applies to the active sheet. Any other orientation value resets to the default. Member form: setPrintOrientation(orientation)."}
 	},
 	"links": [
 

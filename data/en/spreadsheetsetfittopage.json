@@ -1,18 +1,19 @@
 {
 	"name":"spreadsheetSetFitToPage",
 	"type":"function",
-	"syntax":"spreadsheetSetFitToPage(spreadsheetObj, state, pagesWide, pagesHigh)",
-	"returns":"any",
+	"syntax":"spreadsheetSetFitToPage(spreadsheetObj, fitToRange, pagesWidth, pagesHeight)",
+	"returns":"void",
 	"related":["spreadsheetSetPrintOrientation","spreadsheetNew"],
-	"description":" Sets the fit-to-page print option on the active sheet of a spreadsheet workbook. When state is true the sheet is scaled to fit across pagesWide columns and pagesHigh rows (each minimum 1); when false the fit-to-page setting is cleared. The fluent member form is setFitToPage(state, pagesWide, pagesHigh).",
+	"description":"Turns the fit-to-page print option on or off for the active sheet.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
-		{"name":"state","description":"True to enable fit-to-page, false to clear it (default true).","required":false,"default":"true","type":"boolean","values":[true,false]},
-		{"name":"pagesWide","description":"Number of pages wide to fit into (default 1, minimum 1 when enabled).","required":false,"default":"1","type":"numeric","values":[]},
-		{"name":"pagesHigh","description":"Number of pages high to fit into (default 1, minimum 1 when enabled).","required":false,"default":"1","type":"numeric","values":[]}
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"fitToRange","description":"true to enable fit to page, false to disable it.","required":true,"default":"","type":"boolean","values":[true,false]},
+		{"name":"pagesWidth","description":"Number of pages to fit the columns into. 0 for no horizontal fit.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"pagesHeight","description":"Number of pages to fit the rows into. 0 for no vertical fit.","required":true,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetsetfittopage.html"},
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32. Arguments are named state, pagesWide and pagesHigh, are optional, and default to true, 1 and 1. Member form: setFitToPage(state, pagesWide, pagesHigh)."}
 	},
 	"links": [
 

@@ -1,0 +1,24 @@
+{
+	"name":"getCSPNonce",
+	"type":"function",
+	"syntax":"getCSPNonce([returnAsString])",
+	"returns":"string",
+	"related":["cfheader"],
+	"description":"Returns the nonce that ColdFusion adds to the Content-Security-Policy header for the current request. Put it on inline script tags so the browser allows them to run.",
+	"params": [
+		{"name":"returnAsString","description":"true to return the value in nonce=\"...\" attribute form, ready to place inside a script tag.","required":false,"default":"false","type":"boolean","values":[true,false]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/getcspnonce.html"}
+	},
+	"links": [
+		{
+			"title":"CSP Nonce Guide",
+			"description":"How Content Security Policy nonces work and how to use them with script and style tags.",
+			"url":"https://content-security-policy.com/nonce/"
+		}
+	],
+	"examples": [
+
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"name":"spreadsheetIsColumnHidden",
+	"type":"function",
+	"syntax":"spreadsheetIsColumnHidden(spreadsheetObj, column)",
+	"returns":"boolean",
+	"related":["spreadsheetsetcolumnhidden","spreadsheetisrowhidden"],
+	"description":"Returns true if a column is hidden.",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"column","description":"Column number (1-based).","required":true,"default":"","type":"numeric","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetiscolumnhidden.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}

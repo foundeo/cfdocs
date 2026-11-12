@@ -1,16 +1,18 @@
 {
 	"name":"spreadsheetGetColumnWidth",
 	"type":"function",
-	"syntax":"spreadsheetGetColumnWidth(spreadsheetObj, column)",
+	"syntax":"spreadsheetGetColumnWidth(spreadsheetObj, column [, returnWidthInPixels])",
 	"returns":"numeric",
 	"related":["spreadsheetSetColumnWidth","spreadsheetAutoSizeColumn","spreadsheetNew"],
-	"description":" Returns the width of a column in the active sheet of a spreadsheet workbook, in character widths (the same units setColumnWidth uses). Returns 0 when the column has no explicit width set. Columns are 1-based. The fluent member form is getColumnWidth(column).",
+	"description":"Returns the width of a column.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
-		{"name":"column","description":"1-based column index (1 = A).","required":true,"default":"","type":"numeric","values":[]}
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"column","description":"Column number (1-based).","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"returnWidthInPixels","description":"true to return the width in pixels, false for points.","required":false,"default":"","type":"boolean","values":[true,false]}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetgetcolumnwidth.html"},
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32. Does not support returnWidthInPixels; returns the width in character units (0 if no width is set). Member form: getColumnWidth(column)."}
 	},
 	"links": [
 

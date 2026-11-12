@@ -1,17 +1,18 @@
 {
 	"name":"spreadsheetSetRowHidden",
 	"type":"function",
-	"syntax":"spreadsheetSetRowHidden(spreadsheetObj, row, hidden)",
-	"returns":"any",
+	"syntax":"spreadsheetSetRowHidden(spreadsheetObj, row [, hide])",
+	"returns":"void",
 	"related":["spreadsheetSetColumnHidden","spreadsheetSetRowHeight","spreadsheetNew"],
-	"description":" Shows or hides a row of the active sheet in a spreadsheet workbook. Rows are 1-based. The fluent member form is setRowHidden(row, hidden), with the shorthand members hideRow(row) and showRow(row) and the predicate isRowHidden(row).",
+	"description":"Hides or shows a row without deleting its data.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
-		{"name":"row","description":"1-based row index.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"hidden","description":"True to hide the row, false to show it (default true).","required":false,"default":"true","type":"boolean","values":[true,false]}
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"row","description":"Row number (1-based).","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"hide","description":"true to hide the row, false to show it.","required":false,"default":"","type":"boolean","values":[true,false]}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetsetrowhidden.html"},
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32. The third argument is named hidden (default true). Member forms: setRowHidden(row, hidden), hideRow(row), showRow(row), isRowHidden(row)."}
 	},
 	"links": [
 

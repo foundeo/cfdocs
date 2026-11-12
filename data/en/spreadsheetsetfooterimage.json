@@ -1,0 +1,23 @@
+{
+	"name":"spreadsheetSetFooterImage",
+	"type":"function",
+	"syntax":"spreadsheetSetFooterImage(spreadsheetObj, image, alignment [, imageType])",
+	"returns":"void",
+	"related":["spreadsheetsetheaderimage","spreadsheetsetfooter"],
+	"description":"Adds an image to the sheet footer, visible in print preview. A sheet can have only one footer image.",
+	"params": [
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"image","description":"An image object, image bytes, or path to a jpg or png file.","required":true,"default":"","type":"any","values":[]},
+		{"name":"alignment","description":"Position in the footer.","required":true,"default":"","type":"string","values":["left","center","right"]},
+		{"name":"imageType","description":"Image format, such as png or jpg. Used when passing image data.","required":false,"default":"","type":"string","values":[]}
+	],
+	"engines": {
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetsetfooterimage.html"}
+	},
+	"links": [
+
+	],
+	"examples": [
+
+	]
+}

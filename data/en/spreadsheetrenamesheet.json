@@ -1,24 +1,25 @@
 {
 	"name":"spreadsheetRenameSheet",
 	"type":"function",
-	"syntax":"spreadsheetRenameSheet(spreadsheetObj, sheetName, sheetNumber)",
-	"returns":"any",
+	"syntax":"spreadsheetRenameSheet(spreadsheetObj, oldName, newName)",
+	"returns":"void",
 	"related":["spreadsheetCreateSheet","spreadsheetSetActiveSheet","spreadsheetNew"],
-	"description":" Renames a sheet in a spreadsheet workbook. The sheet is identified by its 1-based sheet number (the first sheet is 1). The fluent member form is renameSheet(sheetName, sheetNumber).",
+	"description":"Renames a sheet in a workbook.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet workbook object.","required":true,"default":"","type":"any","values":[]},
-		{"name":"sheetName","description":"The new name for the sheet.","required":true,"default":"","type":"string","values":[]},
-		{"name":"sheetNumber","description":"1-based index of the sheet to rename (default 1).","required":false,"default":"1","type":"numeric","values":[]}
+		{"name":"spreadsheetObj","description":"The spreadsheet object.","required":true,"default":"","type":"any","values":[]},
+		{"name":"oldName","description":"Current name of the sheet.","required":true,"default":"","type":"string","values":[]},
+		{"name":"newName","description":"New name for the sheet.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32."}
+		"coldfusion": {"minimum_version":"2025", "notes":"", "docs":"https://guides.adobe.com/coldfusion/en/docs/cfml-reference/spreadsheetrenamesheet.html"},
+		"rustcfml": {"minimum_version": "", "notes": "Not supported on wasm32. Uses a different signature: spreadsheetRenameSheet(spreadsheetObj, sheetName [, sheetNumber]), where sheetName is the new name and sheetNumber is the 1-based sheet to rename (default 1). Member form: renameSheet(sheetName, sheetNumber)."}
 	},
 	"links": [
 
 	],
 	"examples": [
 		{
-			"title":"Rename the first sheet",
+			"title":"RustCFML: Rename the first sheet",
 			"description":"Rename the default Sheet1 to People.",
 			"code":"wb = Spreadsheet(\"xlsx\");\r\nspreadsheetRenameSheet(wb, \"People\", 1);\r\nwriteDump(wb.info().sheetnames);",
 			"result":"",
