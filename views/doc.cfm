@@ -293,7 +293,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="gridSystemModalLabel">Add an Example for: #data.name#</h4>
+						<h4 class="modal-title" id="gridSystemModalLabel">Add an Example for: #encodeForHTML(data.name)#</h4>
 						<div>Use this form to create the Serialized JSON string needed to add an example into the docs.</div>
 					</div>
 					<div class="modal-body">
@@ -319,8 +319,9 @@
 								<ol style="margin-left: -21px;">
 									<li>Copy the generated code below	</li>
 									<li><a href="https://github.com/foundeo/cfdocs#request.gitFilePath#" target="_blank" rel="nofollow" class="label label-danger">Click Here to edit doc for: #data.name#</a></li>
-									<li> Update doc by adding the example in the examples section</li>
-									<li> Scroll to the bottom and click "Propose Change"</li>
+									<li>Update doc by adding the example in the examples section</li>
+									<li>Scroll to the bottom and click "Propose Change"</li>
+									<li>Create a pull request</li>
 								</ol>
 								<textarea rows="14" id="example-form-output" class="form-control"></textarea>
 							</div>
