@@ -11,7 +11,7 @@
 			"required": true,
 			"default": "",
 			"type": "string",
-			"values": ["archive", "addAttachments", "addStamp", "addWatermark", "deletePages", "export", "getInfo", "import", "merge", "processddx", "protect", "read", "removeWatermark", "sanitize", "setInfo", "sign", "thumbnail", "write", "optimize", "extracttext", "extractimage", "addheader", "addfooter", "removeheaderfooter", "transform", "unsign", "validatesignature", "readsignaturefields"]
+			"values": ["archive", "addAttachments", "addStamp", "addWatermark", "deletePages", "export", "getInfo", "import", "merge", "processddx", "protect", "read", "removeWatermark", "sanitize", "setInfo", "sign", "thumbnail", "write", "optimize", "extracttext", "extractimage", "addheader", "addfooter", "removeheaderfooter", "transform", "unsign", "validatesignature", "readsignaturefields", "redact", "getAttachments"]
 		},
 		{
 			"name": "ascending",
@@ -47,11 +47,11 @@
 		},
 		{
 			"name": "encrypt",
-			"description": "Specify the type of encryption used on the source PDF document",
+			"description": "Specify the type of encryption used on the source PDF document\n\nCF2016+ Added the AES_256R5 and AES_256R6 algorithms. On older JREs these need the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files.",
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["RC4_40", "RC4_128", "RC4_128M", "AES_128", "none"]
+			"values": ["RC4_40", "RC4_128", "RC4_128M", "AES_128", "AES_256R5", "AES_256R6", "none"]
 		},
 		{
 			"name": "flatten",
@@ -199,11 +199,11 @@
 		},
 		{
 			"name": "type",
-			"description": "Specify the type to remove from the source PDF document:\n attachment\n bookmark\n watermark",
+			"description": "(extracttext) The format of the extracted text: string or xml.\n\nCF2016+ (export, import) What to export or import: comment (as XFDF) or metadata (as XMP).",
 			"required": false,
 			"default": "",
 			"type": "string",
-			"values": ["string", "xml"]
+			"values": ["string", "xml", "comment", "metadata"]
 		},
 		{
 			"name": "version",
@@ -540,12 +540,188 @@
 			"default": "",
 			"type": "boolean",
 			"values": [true, false]
+		},
+		{
+			"name": "exportTo",
+			"description": "CF2016+ (export) Path of the file to export to: an XFDF file when type is comment, or an XMP file when type is metadata.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "importFrom",
+			"description": "CF2016+ (import) Path of the file to import: an XFDF file when type is comment, or an XMP file when type is metadata.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "standard",
+			"description": "CF2016+ (archive) The PDF/A conformance level to archive to, for example 2b or 3b.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "filename",
+			"description": "CF2016+ (addAttachments) File name for the attachment. Usually set on the cfpdfparam tag.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "encoding",
+			"description": "CF2016+ (addAttachments, getAttachments) Encoding of the attachment file name. Usually set on the cfpdfparam tag.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "description",
+			"description": "CF2016+ (addAttachments) Descriptive text for the attachment. Usually set on the cfpdfparam tag.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "mimetype",
+			"description": "CF2016+ (addAttachments) MIME type of the attachment, for example application/pdf or text/html. Usually set on the cfpdfparam tag.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "keystore",
+			"description": "CF11+ (sign) Location of the keystore file, for example C:\\OpenSSL\\bin\\keystore.jks. Required for the sign action.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "keystorePassword",
+			"description": "CF11+ (sign) Password of the keystore. Required for the sign action.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "keyAlias",
+			"description": "CF11+ (sign) Alias of the key that holds the certificate and private key in the keystore. Defaults to the first entry in the keystore.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "keyPassword",
+			"description": "CF11+ (sign) Password for the private key. Defaults to keystorePassword.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "author",
+			"description": "CF11+ (sign) true to create an author (certifying) signature, which lets recipients verify who signed the document and that it has not been altered.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "signatureFieldName",
+			"description": "CF11+ (sign, unsign) Fully qualified name of the existing signature field to sign or unsign.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "unsignAll",
+			"description": "CF11+ (unsign) true to remove all signatures from the document.",
+			"required": false,
+			"default": "",
+			"type": "boolean",
+			"values": [true, false]
+		},
+		{
+			"name": "height",
+			"description": "CF11+ (sign) Height of the signature field. Also accepted by addWatermark.",
+			"required": false,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "width",
+			"description": "CF11+ (sign) Width of the signature field. Also accepted by addWatermark.",
+			"required": false,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "charset",
+			"description": "(extracttext) not documented",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "extract",
+			"description": "(getAttachments) not documented",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "nameKeys",
+			"description": "(getAttachments) not documented",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "attachment",
+			"description": "(addWatermark) not documented",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "targetPage",
+			"description": "(addWatermark) not documented",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "title",
+			"description": "(addWatermark) not documented",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
 		}
 	],
 	"engines": {
 		"coldfusion": {
 			"minimum_version": "8",
-			"notes": "CF9+ Added new attributes: jpgdpi, maxBreadth, noAttachments, leftMargin, algo, noMetadata, noBookMarks, noJavaScripts, useStructure, noFonts.\n CF11 added validatesignature and readsignaturefields. CF2016 added sanitize, export, import, archive, addAttachments, addStamp, redact ",
+			"notes": "CF9+ Added new attributes: jpgdpi, maxBreadth, noAttachments, leftMargin, algo, noMetadata, noBookMarks, noJavaScripts, useStructure, noFonts.\n CF11 added validatesignature and readsignaturefields, and the signing attributes keystore, keystorepassword, keyalias, keypassword, author, signaturefieldname, unsignall, height and width. CF2016 added the actions sanitize, export and import (comments and metadata), archive, addAttachments, addStamp and redact, and the AES_256R5 and AES_256R6 encryption algorithms.",
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-p-q/cfpdf.html"
 		},
 		"lucee": {
