@@ -6,7 +6,7 @@
 <cfset all = []>
 <cfset categories = []>
 <cfset versions = {"4"=[], "4.5"=[],"5"=[],"6"=[],"7"=[],"8"=[],"9"=[],"10"=[],"11"=[],"2016"=[],"2018"=[],"2021"=[],"2023"=[],"2025"=[]}>
-<cfset lucee_versions = {"5"=[],"6"=[]}>
+<cfset lucee_versions = {"5"=[],"6"=[],"7"=[]}>
 <cfloop array="#directoryList(dataDir, false, "array")#" index="filePath">
 	<cfset json = fileRead(filePath,"utf-8")>
 	<cftry>
@@ -36,10 +36,11 @@
 				</cfif>
 			</cfif>
 
-			<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "lucee") AND structKeyExists(data.engines.lucee, "minimum_version") AND isNumeric(data.engines.lucee.minimum_version)>
-
-				<cfif structKeyExists(lucee_versions, val(data.engines.lucee.minimum_version))>
-					<cfset arrayAppend(lucee_versions[val(data.engines.lucee.minimum_version)], data.name)>
+			<cfif structKeyExists(data, "engines") AND structKeyExists(data.engines, "lucee") AND structKeyExists(data.engines.lucee, "minimum_version") AND reFind("^[0-9]+(\.[0-9]+)*$", data.engines.lucee.minimum_version)>
+				<!--- group by major version, so 7.0.0.107 is listed under Lucee 7 --->
+				<cfset lucee_major = listFirst(data.engines.lucee.minimum_version, ".")>
+				<cfif structKeyExists(lucee_versions, lucee_major)>
+					<cfset arrayAppend(lucee_versions[lucee_major], data.name)>
 				</cfif>
 
 			</cfif>

@@ -1,0 +1,56 @@
+{
+	"name": "createAISession",
+	"type": "function",
+	"syntax": "createAISession(name [, systemMessage] [, limit] [, temperature])",
+	"returns": "any",
+	"related": [
+		"inquiryAISession",
+		"serializeAISession",
+		"loadAISession",
+		"aiHas"
+	],
+	"description": "Creates a session for talking to a configured AI endpoint. The session keeps the conversation history between calls.",
+	"params": [
+		{
+			"name": "name",
+			"description": "The endpoint name from the Lucee Administrator, or a `default:category` reference.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "systemMessage",
+			"description": "Instructions that set the AI's role and rules for the whole session.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "limit",
+			"description": "The maximum number of question and answer pairs to keep in the history. Older ones are dropped.",
+			"required": false,
+			"default": "50",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "temperature",
+			"description": "How random the responses are, from 0.0 (focused) to 1.0 (creative).",
+			"required": false,
+			"default": "0.7",
+			"type": "numeric",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7",
+			"notes": "`aiCreateSession()` is an alias.",
+			"docs": "https://docs.lucee.org/reference/functions/createaisession.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

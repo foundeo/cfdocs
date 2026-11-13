@@ -25,6 +25,11 @@
 			"minimum_version": "2025",
 			"notes": "Listed by getFunctionList() in ColdFusion 2025+. No official documentation exists. Signature and behavior confirmed on CF2025.",
 			"docs": ""
+		},
+		"lucee": {
+			"minimum_version": "7",
+			"notes": "Lucee names the argument `name`. Passing `threadName=` is ignored, so Lucee interrupts the current thread instead. `threadInterrupt()` is an alias.",
+			"docs": "https://docs.lucee.org/reference/functions/interruptthread.html"
 		}
 	},
 	"links": [],

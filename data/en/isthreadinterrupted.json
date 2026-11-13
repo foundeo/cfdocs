@@ -1,0 +1,30 @@
+{
+	"name": "isThreadInterrupted",
+	"type": "function",
+	"syntax": "isThreadInterrupted(threadName)",
+	"returns": "boolean",
+	"related": [
+		"interruptThread",
+		"threadInterrupted"
+	],
+	"description": "Returns true when the named thread has been interrupted. It does not clear the interrupted status.",
+	"params": [
+		{
+			"name": "threadName",
+			"description": "The name of the thread. An error is thrown if no thread with that name is running.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.0.2.1",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isthreadinterrupted.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

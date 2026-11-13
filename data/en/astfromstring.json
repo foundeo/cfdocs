@@ -1,0 +1,37 @@
+{
+	"name": "astFromString",
+	"type": "function",
+	"syntax": "astFromString(cfmlCode [, mode])",
+	"returns": "struct",
+	"related": [
+		"astFromPath"
+	],
+	"description": "Parses a string of CFML code and returns its abstract syntax tree (AST) as a struct.",
+	"params": [
+		{
+			"name": "cfmlCode",
+			"description": "The CFML code to parse.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "mode",
+			"description": "Whether the code is `tag` or `script` based.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.0.0.296",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/astfromstring.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

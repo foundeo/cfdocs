@@ -1,0 +1,22 @@
+{
+	"name": "mavenExport",
+	"type": "function",
+	"syntax": "mavenExport()",
+	"returns": "string",
+	"related": [
+		"mavenImport",
+		"mavenExists",
+		"mavenInfo"
+	],
+	"description": "Returns a pom.xml string that lists every artifact in Lucee's local Maven cache as a dependency.",
+	"params": [],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.1.0.98",
+			"notes": "Use `mavenImport()` to load the exported pom.xml into another cache.",
+			"docs": "https://docs.lucee.org/reference/functions/mavenexport.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

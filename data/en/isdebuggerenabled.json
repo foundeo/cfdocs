@@ -1,0 +1,20 @@
+{
+	"name": "isDebuggerEnabled",
+	"type": "function",
+	"syntax": "isDebuggerEnabled()",
+	"returns": "boolean",
+	"related": [
+		"breakpoint"
+	],
+	"description": "Returns true when Lucee's debugger support is enabled, through the `LUCEE_DAP_SECRET` environment variable or the `lucee.dap.secret` system property.",
+	"params": [],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.1.0.45",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/isdebuggerenabled.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

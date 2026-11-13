@@ -1,0 +1,29 @@
+{
+	"name": "astFromPath",
+	"type": "function",
+	"syntax": "astFromPath(path)",
+	"returns": "struct",
+	"related": [
+		"astFromString"
+	],
+	"description": "Parses a CFML file and returns its abstract syntax tree (AST) as a struct.",
+	"params": [
+		{
+			"name": "path",
+			"description": "The path to the CFML file.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.0.0.296",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/astfrompath.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

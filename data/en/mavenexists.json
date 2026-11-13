@@ -1,0 +1,47 @@
+{
+	"name": "mavenExists",
+	"type": "function",
+	"syntax": "mavenExists(groupId [, artifactId] [, version])",
+	"returns": "boolean",
+	"related": [
+		"mavenInfo",
+		"mavenImport",
+		"mavenExport"
+	],
+	"description": "Returns true when a Maven artifact is in Lucee's local Maven cache. It doesn't contact any remote repository.",
+	"params": [
+		{
+			"name": "groupId",
+			"description": "The Maven group ID, or a `group:artifact` or `group:artifact:version` string when it is the only argument.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "artifactId",
+			"description": "The Maven artifact ID.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "version",
+			"description": "The version. When omitted, any cached version counts.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.1.0.98",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/mavenexists.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

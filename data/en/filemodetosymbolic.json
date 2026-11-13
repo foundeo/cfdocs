@@ -1,0 +1,30 @@
+{
+	"name": "fileModeToSymbolic",
+	"type": "function",
+	"syntax": "fileModeToSymbolic(mode)",
+	"returns": "string",
+	"related": [
+		"fileSetAccessMode",
+		"getFileInfo"
+	],
+	"description": "Converts a numeric file mode, such as `755`, to its symbolic form, such as `rwxr-xr-x`.",
+	"params": [
+		{
+			"name": "mode",
+			"description": "A three-digit file mode. The digits are the owner, group and other permissions.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.0.0.155",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/filemodetosymbolic.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

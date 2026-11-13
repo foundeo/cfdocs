@@ -1,0 +1,37 @@
+{
+	"name": "configMerge",
+	"type": "function",
+	"syntax": "configMerge(left, right)",
+	"returns": "struct",
+	"related": [
+		"configImport"
+	],
+	"description": "Merges two Lucee configuration structs, in the .CFConfig.json format, into a new struct. Neither input is changed.",
+	"params": [
+		{
+			"name": "left",
+			"description": "The base configuration.",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "right",
+			"description": "The configuration whose values override the base. Some collections, such as extensions, are appended instead of replaced.",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.0.4.5",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/configmerge.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

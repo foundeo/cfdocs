@@ -1,0 +1,38 @@
+{
+	"name": "cachedWithinFlush",
+	"type": "function",
+	"syntax": "cachedWithinFlush(cacheObject [, arguments])",
+	"returns": "boolean",
+	"related": [
+		"cachedWithinId",
+		"cacheRemove"
+	],
+	"description": "Removes one cached query, function or HTTP result from the cache. Returns true when an entry was removed.",
+	"params": [
+		{
+			"name": "cacheObject",
+			"description": "The query, function or HTTP result that was cached with `cachedWithin`.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "arguments",
+			"description": "For a cached function, the arguments used for the cached call, as an array or struct.",
+			"required": false,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.1.0.11",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/cachedwithinflush.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

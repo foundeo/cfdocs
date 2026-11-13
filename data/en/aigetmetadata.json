@@ -1,0 +1,38 @@
+{
+	"name": "aiGetMetadata",
+	"type": "function",
+	"syntax": "aiGetMetadata(name [, detailed])",
+	"returns": "struct",
+	"related": [
+		"aiHas",
+		"createAISession"
+	],
+	"description": "Returns information about a configured AI endpoint, such as its settings and, optionally, its models and files.",
+	"params": [
+		{
+			"name": "name",
+			"description": "The endpoint name from the Lucee Administrator, a `default:category` reference, or an AI session.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "detailed",
+			"description": "When true, also returns the available models and, for engines that support files, the uploaded files.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/aigetmetadata.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

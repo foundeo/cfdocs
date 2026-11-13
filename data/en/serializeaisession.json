@@ -1,0 +1,46 @@
+{
+	"name": "serializeAISession",
+	"type": "function",
+	"syntax": "serializeAISession(session [, maxlength] [, condense])",
+	"returns": "string",
+	"related": [
+		"loadAISession",
+		"createAISession"
+	],
+	"description": "Converts an AI session to a JSON string with its settings and conversation history, so it can be stored and restored later with `loadAISession()`.",
+	"params": [
+		{
+			"name": "session",
+			"description": "An AI session created with `createAISession()`.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "maxlength",
+			"description": "The maximum number of recent exchanges to keep. Older ones are left out.",
+			"required": false,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "condense",
+			"description": "When true, older parts of the conversation are summarized to save space.",
+			"required": false,
+			"default": "",
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.0.0.195",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/serializeaisession.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

@@ -1,0 +1,38 @@
+{
+	"name": "loadAISession",
+	"type": "function",
+	"syntax": "loadAISession(name, data)",
+	"returns": "any",
+	"related": [
+		"serializeAISession",
+		"createAISession"
+	],
+	"description": "Restores an AI session saved with `serializeAISession()`, including its settings and conversation history.",
+	"params": [
+		{
+			"name": "name",
+			"description": "The endpoint name from the Lucee Administrator, or a `default:category` reference.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "data",
+			"description": "The JSON string returned by `serializeAISession()`, or a struct with the same data.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.0.0.195",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/loadaisession.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

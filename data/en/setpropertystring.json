@@ -56,6 +56,11 @@
 			"minimum_version": "2025",
 			"notes": "Listed by getFunctionList() in ColdFusion 2025+. No official documentation exists. Signature and behavior confirmed on CF2025.",
 			"docs": ""
+		},
+		"lucee": {
+			"minimum_version": "7.0.0.108",
+			"notes": "Lucee only supports the `key` and `value` syntax, not the `properties` struct.",
+			"docs": "https://docs.lucee.org/reference/functions/setpropertystring.html"
 		}
 	},
 	"links": [],

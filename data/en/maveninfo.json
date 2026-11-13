@@ -1,0 +1,71 @@
+{
+	"name": "mavenInfo",
+	"type": "function",
+	"syntax": "mavenInfo(groupId, artifactId, version [, scopes] [, includeOptional] [, validateURL])",
+	"returns": "query",
+	"related": [
+		"mavenExists",
+		"mavenImport",
+		"mavenExport"
+	],
+	"description": "Returns a query describing a Maven artifact and its dependencies.",
+	"params": [
+		{
+			"name": "groupId",
+			"description": "The Maven group ID.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "artifactId",
+			"description": "The Maven artifact ID.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "version",
+			"description": "The artifact version.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "scopes",
+			"description": "The dependency scopes to include. Defaults to all scopes except `test`.",
+			"required": false,
+			"default": "",
+			"type": "array",
+			"values": []
+		},
+		{
+			"name": "includeOptional",
+			"description": "When true, includes optional dependencies.",
+			"required": false,
+			"default": "true",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "validateURL",
+			"description": "When true, checks every repository for the artifact instead of choosing the most likely one. This can be slow.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.0.0.136",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/maveninfo.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

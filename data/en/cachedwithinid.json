@@ -1,0 +1,38 @@
+{
+	"name": "cachedWithinId",
+	"type": "function",
+	"syntax": "cachedWithinId(cacheObject [, arguments])",
+	"returns": "string",
+	"related": [
+		"cachedWithinFlush",
+		"cacheRemove"
+	],
+	"description": "Returns the cache key for a cached query, function or HTTP result. The key can be passed to `cacheRemove()`.",
+	"params": [
+		{
+			"name": "cacheObject",
+			"description": "The query, function or HTTP result that was cached with `cachedWithin`.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "arguments",
+			"description": "For a cached function, the arguments used for the cached call, as an array or struct.",
+			"required": false,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.1.0.11",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/cachedwithinid.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

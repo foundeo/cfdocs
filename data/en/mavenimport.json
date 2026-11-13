@@ -1,0 +1,47 @@
+{
+	"name": "mavenImport",
+	"type": "function",
+	"syntax": "mavenImport(pomPath [, includeTransitive] [, includeOptional])",
+	"returns": "query",
+	"related": [
+		"mavenExport",
+		"mavenExists",
+		"mavenInfo"
+	],
+	"description": "Reads a pom.xml file and downloads each listed dependency into Lucee's local Maven cache. Returns a query of what was resolved.",
+	"params": [
+		{
+			"name": "pomPath",
+			"description": "The path to the pom.xml file.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "includeTransitive",
+			"description": "When true, also resolves the dependencies of each dependency.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "includeOptional",
+			"description": "When true, also resolves optional dependencies. Only used when `includeTransitive` is true.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.1.0.98",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/mavenimport.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

@@ -1,0 +1,30 @@
+{
+	"name": "aiHas",
+	"type": "function",
+	"syntax": "aiHas(name)",
+	"returns": "boolean",
+	"related": [
+		"aiGetMetadata",
+		"createAISession"
+	],
+	"description": "Returns true when an AI endpoint with the given name is configured.",
+	"params": [
+		{
+			"name": "name",
+			"description": "The endpoint name from the Lucee Administrator, or a `default:category` reference.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/aihas.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

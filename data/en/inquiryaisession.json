@@ -1,0 +1,46 @@
+{
+	"name": "inquiryAISession",
+	"type": "function",
+	"syntax": "inquiryAISession(session, question [, listener])",
+	"returns": "string",
+	"related": [
+		"createAISession",
+		"serializeAISession"
+	],
+	"description": "Sends a question to an AI session and returns the answer. Earlier questions and answers in the session are used as context.",
+	"params": [
+		{
+			"name": "session",
+			"description": "An AI session created with `createAISession()`.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "question",
+			"description": "The question to send. Pass an array to send multiple parts, such as text together with files or binary data.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "listener",
+			"description": "A function that receives the answer in chunks as they arrive, for streaming.",
+			"required": false,
+			"default": "",
+			"type": "function",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7",
+			"notes": "`aiInquirySession()` is an alias.",
+			"docs": "https://docs.lucee.org/reference/functions/inquiryaisession.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

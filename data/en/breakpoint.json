@@ -1,0 +1,37 @@
+{
+	"name": "breakpoint",
+	"type": "function",
+	"syntax": "breakpoint([label] [, condition])",
+	"returns": "boolean",
+	"related": [
+		"isDebuggerEnabled"
+	],
+	"description": "Pauses execution when a debugger is attached, like JavaScript's `debugger` statement. Returns true when execution was paused.",
+	"params": [
+		{
+			"name": "label",
+			"description": "A label for this breakpoint, shown in the debugger.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "condition",
+			"description": "Only pauses when true.",
+			"required": false,
+			"default": "true",
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7.1.0.45",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/breakpoint.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

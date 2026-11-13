@@ -1,0 +1,38 @@
+{
+	"name": "guardDecode",
+	"type": "function",
+	"syntax": "guardDecode(decodeFrom, string)",
+	"returns": "string",
+	"related": [
+		"esapiDecode",
+		"urlDecode"
+	],
+	"description": "Decodes a string that was encoded for a given context.",
+	"params": [
+		{
+			"name": "decodeFrom",
+			"description": "The encoding to reverse.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "string",
+			"description": "The encoded string.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/guarddecode.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

@@ -1,0 +1,20 @@
+{
+	"name": "sessionTouch",
+	"type": "function",
+	"syntax": "sessionTouch()",
+	"returns": "void",
+	"related": [
+		"sessionCommit"
+	],
+	"description": "Marks the session as changed so it is saved to session storage at the end of the request.",
+	"params": [],
+	"engines": {
+		"lucee": {
+			"minimum_version": "7",
+			"notes": "Unlike `sessionCommit()`, the save is deferred until the end of the request. With the default memory session storage, Lucee 7.1.2.191 throws a class cast error.",
+			"docs": ""
+		}
+	},
+	"links": [],
+	"examples": []
+}
