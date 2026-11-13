@@ -1,0 +1,44 @@
+{
+	"name": "generate3DesKey",
+	"type": "function",
+	"syntax": "generate3DesKey(string)",
+	"returns": "string",
+	"related": [
+		"generateSecretKey",
+		"encrypt",
+		"decrypt",
+		"toBase64"
+	],
+	"description": "Returns a Base64-encoded key for the Triple DES (`DESede`) algorithm, built from a seed string. The result is the same as `toBase64(string)`, so the seed must be 16 or 24 bytes long to give a valid key; other lengths fail in `encrypt()` with \"Wrong key size\". Use `generateSecretKey(\"DESede\")` for a random key.",
+	"params": [
+		{
+			"name": "string",
+			"description": "The seed string used to build the key. Lucee does not accept `string` as a named argument; it uses `input`.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "",
+			"notes": "Not listed by getFunctionList() before ColdFusion 2021, but it works on ColdFusion 10. Adobe's docs say it was added in ColdFusion 11.",
+			"docs": "https://guides.adobe.com/coldfusion/en/docs/cfml-reference/generate3deskey.html"
+		},
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/generate3deskey.html"
+		}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Generate a key from a 24 character seed",
+			"description": "",
+			"code": "generate3DesKey(\"abcdefghijklmnopqrstuvwx\")",
+			"result": "YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4"
+		}
+	]
+}

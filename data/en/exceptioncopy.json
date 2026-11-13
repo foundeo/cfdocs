@@ -1,0 +1,39 @@
+{
+	"name": "exceptionCopy",
+	"type": "function",
+	"syntax": "exceptionCopy(exception)",
+	"returns": "struct",
+	"related": [
+		"cftry",
+		"cfcatch",
+		"duplicate",
+		"throw"
+	],
+	"description": "Returns a copy of a caught exception as a struct, with keys such as `message`, `detail`, `type`, `stackTrace` and `tagContext`. The copy is a separate object from the exception.",
+	"params": [
+		{
+			"name": "exception",
+			"description": "A caught exception, such as the variable in a `catch` block.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2021",
+			"notes": "Listed by getFunctionList() in ColdFusion 2021+. No official documentation exists. Signature and behavior confirmed on CF2021 and CF2025.",
+			"docs": ""
+		}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Copy a caught exception",
+			"description": "",
+			"code": "try {\n\tthrow(message=\"boom\");\n} catch (any e) {\n\tcopy = exceptionCopy(e);\n}\nwriteOutput(copy.message);",
+			"result": "boom"
+		}
+	]
+}

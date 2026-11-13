@@ -1,0 +1,47 @@
+{
+	"name": "xmlDelete",
+	"type": "function",
+	"syntax": "xmlDelete(xmlNode, key)",
+	"returns": "xml",
+	"related": [
+		"xmlClear",
+		"xmlDeleteAt",
+		"xmlUpdate",
+		"xmlHasChild"
+	],
+	"description": "Deletes every child element with a given name from an XML node and returns the node.",
+	"params": [
+		{
+			"name": "xmlNode",
+			"description": "The XML document or element to delete from. Adobe's docs call this `xmlObject`, but CF2025 only accepts `xmlNode` as a named argument.",
+			"required": true,
+			"default": "",
+			"type": "xml",
+			"values": []
+		},
+		{
+			"name": "key",
+			"description": "Name of the child elements to delete. Adobe's docs call this `childName`, but CF2025 only accepts `key` as a named argument.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2021",
+			"notes": "",
+			"docs": "https://guides.adobe.com/coldfusion/en/docs/cfml-reference/xmldelete.html"
+		}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Delete child elements",
+			"description": "Both `a` elements are removed, leaving only `b`.",
+			"code": "xmlDelete(xmlParse(\"<root><a/><b/><a/></root>\").root, \"a\").xmlChildren[1].xmlName",
+			"result": "b"
+		}
+	]
+}
