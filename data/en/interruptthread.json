@@ -1,0 +1,39 @@
+{
+	"name": "interruptThread",
+	"type": "function",
+	"syntax": "interruptThread([threadName])",
+	"returns": "void",
+	"related": [
+		"threadInterrupted",
+		"threadTerminate",
+		"threadJoin",
+		"cfthread"
+	],
+	"description": "Interrupts a running thread created with `cfthread` or `threadNew`. A thread that is sleeping or waiting gets an exception; otherwise its interrupted flag is set, which it can check with `threadInterrupted()`. With no argument, interrupts the current thread, which must itself be a ColdFusion thread. Unlike `threadTerminate()`, the thread can handle the interrupt and stop cleanly.",
+	"params": [
+		{
+			"name": "threadName",
+			"description": "Name of the thread to interrupt. Omit to interrupt the current thread.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2025",
+			"notes": "Listed by getFunctionList() in ColdFusion 2025+. No official documentation exists. Signature and behavior confirmed on CF2025.",
+			"docs": ""
+		}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Interrupt a sleeping thread",
+			"description": "The thread's `sleep()` throws an exception, which it catches.",
+			"code": "thread name=\"worker\" {\n\ttry {\n\t\tsleep(5000);\n\t} catch (any e) {\n\t\tthread.message = e.message;\n\t}\n}\nsleep(200);\ninterruptThread(\"worker\");\nthreadJoin(\"worker\");\nwriteOutput(cfthread.worker.message);",
+			"result": "Thread interrupted by another thread."
+		}
+	]
+}

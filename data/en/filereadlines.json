@@ -1,0 +1,60 @@
+{
+	"name": "fileReadLines",
+	"type": "function",
+	"syntax": "fileReadLines(file [, startLine [, count]])",
+	"returns": "array",
+	"related": [
+		"fileReadLine",
+		"fileRead",
+		"fileOpen"
+	],
+	"description": "Reads several lines from a file into an array, without loading the whole file into memory. Reads from `startLine` to the end of the file when `count` is omitted.",
+	"params": [
+		{
+			"name": "file",
+			"description": "Path to the file, or a file object returned by `fileOpen()`. Also accepted as `filepath` when passed as a named argument.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "startLine",
+			"description": "The 0-based line number to start reading from, so `0` is the first line. Adobe's docs list this as required, but CF2025 accepts the call without it and reads from the first line.",
+			"required": false,
+			"default": "0",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "count",
+			"description": "Number of lines to read. A negative value reads backward, returning that many lines before `startLine`. Omit to read to the end of the file.",
+			"required": false,
+			"default": "",
+			"type": "numeric",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2025",
+			"notes": "",
+			"docs": "https://guides.adobe.com/coldfusion/en/docs/cfml-reference/filereadlines.html"
+		}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Read two lines",
+			"description": "`startLine` is 0-based, so `1` starts at the second line.",
+			"code": "f = getTempFile(getTempDirectory(), \"lines\");\nfileWrite(f, \"line1#chr(10)#line2#chr(10)#line3#chr(10)#line4\");\nwriteOutput(serializeJSON(fileReadLines(f, 1, 2)));",
+			"result": "[\"line2\",\"line3\"]"
+		},
+		{
+			"title": "Read backward",
+			"description": "A negative count returns the lines before `startLine`.",
+			"code": "f = getTempFile(getTempDirectory(), \"lines\");\nfileWrite(f, \"line1#chr(10)#line2#chr(10)#line3#chr(10)#line4\");\nwriteOutput(serializeJSON(fileReadLines(f, 3, -2)));",
+			"result": "[\"line2\",\"line3\"]"
+		}
+	]
+}

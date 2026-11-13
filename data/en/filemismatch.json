@@ -1,0 +1,46 @@
+{
+	"name": "fileMismatch",
+	"type": "function",
+	"syntax": "fileMismatch(filepath1, filepath2)",
+	"returns": "numeric",
+	"related": [
+		"fileRead",
+		"fileReadBinary",
+		"hash"
+	],
+	"description": "Compares two files byte by byte. Returns `-1` if they are identical, otherwise the 0-based byte position of the first difference.",
+	"params": [
+		{
+			"name": "filepath1",
+			"description": "Path to the first file.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "filepath2",
+			"description": "Path to the second file.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2025",
+			"notes": "",
+			"docs": "https://guides.adobe.com/coldfusion/en/docs/cfml-reference/filemismatch.html"
+		}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Find where two files differ",
+			"description": "The files match up to `line`, so the first difference is at byte 10.",
+			"code": "a = getTempFile(getTempDirectory(), \"a\");\nb = getTempFile(getTempDirectory(), \"b\");\nfileWrite(a, \"line1#chr(10)#line2\");\nfileWrite(b, \"line1#chr(10)#lineX\");\nwriteOutput(fileMismatch(a, b));",
+			"result": "10"
+		}
+	]
+}

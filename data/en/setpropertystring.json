@@ -1,0 +1,76 @@
+{
+	"name": "setPropertyString",
+	"type": "function",
+	"syntax": "setPropertyString(filepath, key, value [, encoding])\nsetPropertyString(filepath, properties)",
+	"returns": "void",
+	"related": [
+		"getPropertyString",
+		"getPropertyFile",
+		"setProfileString"
+	],
+	"description": "Sets one key, or several keys from a struct, in a Java properties file. Existing keys are updated, new keys are added, and other keys are kept. The file is rewritten with a `#File created by CF` comment and a timestamp at the top.",
+	"params": [
+		{
+			"name": "filepath",
+			"description": "Absolute path to the properties file.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "key",
+			"description": "The key to set. Not used when passing a `properties` struct.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "value",
+			"description": "The value to set for `key`.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "encoding",
+			"description": "Character encoding of the file.",
+			"required": false,
+			"default": "utf-8",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "properties",
+			"description": "A struct of keys and values to set. Pass it as the second argument instead of `key` and `value`.",
+			"required": false,
+			"default": "",
+			"type": "struct",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2025",
+			"notes": "Listed by getFunctionList() in ColdFusion 2025+. No official documentation exists. Signature and behavior confirmed on CF2025.",
+			"docs": ""
+		}
+	},
+	"links": [],
+	"examples": [
+		{
+			"title": "Set a value",
+			"description": "",
+			"code": "path = getTempDirectory() & \"app.properties\";\nfileWrite(path, \"a=1\");\nsetPropertyString(path, \"b\", \"hello\");\nwriteOutput(getPropertyString(path, \"b\"));",
+			"result": "hello"
+		},
+		{
+			"title": "Set several values",
+			"description": "",
+			"code": "path = getTempDirectory() & \"app.properties\";\nfileWrite(path, \"a=1\");\nsetPropertyString(path, {\"a\": \"9\", \"c\": \"3\"});\nwriteOutput(serializeJSON(getPropertyFile(path)));",
+			"result": "{\"a\":\"9\",\"c\":\"3\"}"
+		}
+	]
+}

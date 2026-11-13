@@ -1,21 +1,22 @@
 {
 	"name": "listEvery",
 	"type": "function",
-	"syntax": "listEvery(list, closure [, delimiter] [, includeEmptyFields] [, multiCharacterDelimiter] [, parallel] [, maxThreads])",
-	"member": "list.listEvery(closure [, delimiter] [, includeEmptyFields] [, multiCharacterDelimiter] [, parallel] [, maxThreads])",
+	"syntax": "listEvery(list, callback [, delimiter] [, includeEmptyFields] [, multiCharacterDelimiter] [, parallel] [, maxThreadCount])",
+	"member": "list.listEvery(callback [, delimiter] [, includeEmptyFields] [, multiCharacterDelimiter] [, parallel] [, maxThreadCount])",
 	"returns": "boolean",
 	"related": ["arrayEvery","structEvery","queryEvery"],
 	"description": "This function calls a given callback function for every element in a given string list and returns true, if all of the calls returns true.",
 	"params": [
 		{"name": "list", "description": "List to iterate.", "required": true, "default": "", "type": "string", "values": []},
-		{"name": "closure", "description": "Callback function that is called for every item of the list and returns a boolean value. The arguments passed to the callback are\r\n\r\nvalue: Current list item\r\nindex: Index of the list item within the list\r\nlist: List as defined in the 'list' parameter\r\ndelimiter: Delimiter as defined in the 'delimiter' parameter", "required": true, "default": "", "type": "function", "values": []},
+		{"name": "callback", "description": "Callback function that is called for every item of the list and returns a boolean value. The arguments passed to the callback are\r\n\r\nvalue: Current list item\r\nindex: Index of the list item within the list\r\nlist: List as defined in the 'list' parameter\r\ndelimiter: Delimiter as defined in the 'delimiter' parameter", "required": true, "default": "", "type": "function", "values": []},
 		{"name": "delimiter", "description": "Delimiter used to separate the string list.", "required": false, "default": ",", "type": "string", "values": []},
 		{"name": "includeEmptyFields", "description": "Specifies whether to include empty fields or not.", "required": false, "default": "false", "type": "boolean", "values": []},
-		{"name": "multiCharacterDelimiter", "description": "Specifies whether the 'delimiter' parameter specifies a multi-character delimiter. If it is set to `true`, all characters are considered as one delimiter; otherwise each character is a delimiter on its own.", "required": false, "default": "true", "type": "boolean", "values": []},
-		{"name": "parallel", "description": "Specifies whether to execute closures in parallel.", "required": false, "default": "false", "type": "boolean", "values": []},
-		{"name": "maxThreads", "description": "Maximum number of threads executed, ignored when argument 'parallel' is set to false.", "required": false, "default": "20", "type": "numeric", "values": []}
+		{"name": "multiCharacterDelimiter", "description": "Specifies whether the 'delimiter' parameter specifies a multi-character delimiter. If it is set to `true`, all characters are considered as one delimiter; otherwise each character is a delimiter on its own. Lucee only.", "required": false, "default": "true", "type": "boolean", "values": []},
+		{"name": "parallel", "description": "Specifies whether to execute closures in parallel. Lucee only.", "required": false, "default": "false", "type": "boolean", "values": []},
+		{"name": "maxThreadCount", "description": "Maximum number of threads executed, ignored when argument 'parallel' is set to false. Lucee only.", "required": false, "default": "20", "type": "numeric", "values": []}
 	],
 	"engines": {
+		"coldfusion": {"minimum_version": "2025", "notes": "No Adobe reference page was available when this entry was written. ColdFusion has no list member function for this; `someString.every()` is the string function, which tests each character.", "docs": ""},
 		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/listevery.html"},
 		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/list/listevery"},
 		"rustcfml": {"minimum_version": ""}

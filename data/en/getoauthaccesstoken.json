@@ -1,0 +1,31 @@
+{
+	"name": "getOauthAccessToken",
+	"type": "function",
+	"syntax": "getOauthAccessToken(input)",
+	"returns": "struct",
+	"related": [
+		"cfoauth",
+		"isValidOauthAccessToken",
+		"invalidateOauthAccessToken"
+	],
+	"description": "Gets an OAuth access token, like the `cfoauth` tag. Takes a struct of the settings that `cfoauth` accepts as attributes.",
+	"params": [
+		{
+			"name": "input",
+			"description": "A struct of OAuth settings. It needs either `type` or both `authendpoint` and `accesstokenendpoint`, as in `cfoauth`.",
+			"required": true,
+			"default": "",
+			"type": "struct",
+			"values": []
+		}
+	],
+	"engines": {
+		"coldfusion": {
+			"minimum_version": "2025",
+			"notes": "Listed by getFunctionList() in ColdFusion 2025+. No official documentation exists. The argument name and the struct requirement were confirmed on CF2025.",
+			"docs": ""
+		}
+	},
+	"links": [],
+	"examples": []
+}
