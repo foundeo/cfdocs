@@ -1,6 +1,6 @@
 {
     "name":"isSafeHTML",
-    "syntax":"isSafeHTML(inputString [, PolicyFile])",
+    "syntax":"isSafeHTML(value [, policyFile])",
     "returns":"boolean",
     "type":"function",
     "related":["getSafeHTML"],
@@ -13,8 +13,8 @@
         {"title":"AntiSamy OWASP","description":"","url":"https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project"}
     ],
     "params":[
-        {"values":[],"default":"","description":"String to be validated","name":"inputString","type":"string","required":true},
-        {"values":[],"default":"","description":"File path for custom AntiSamy policy file. Can be defined in the application scope or if not defined will use ColdFusion server default","name":"PolicyFile","type":"string","required":false}
+        {"values":[],"default":"","description":"String to be validated","name":"value","type":"string","required":true},
+        {"values":[],"default":"","description":"File path for custom AntiSamy policy file. Can be defined in the application scope or if not defined will use ColdFusion server default","name":"policyFile","type":"string","required":false}
     ],
     "examples":[
         {"result":"no","title":"Unsafe HTML Example","description":"Example with HTML that causes isSafeHTML to return false.","code":"<cfsavecontent variable=\"html\">\r\n    <div onmouseover=alert(1)>\r\n</cfsavecontent>\r\n<cfoutput>#isSafeHTML(html)#</cfoutput>"},

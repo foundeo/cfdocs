@@ -1,13 +1,13 @@
 {
 	"name":"urlSessionFormat",
 	"type":"function",
-	"syntax":"urlSessionFormat(requesturl)",
+	"syntax":"urlSessionFormat(url)",
 	"returns":"string",
 	"related":[],
 	"discouraged":"Putting session identifiers in the URL may lead to session hijacking.",
 	"description":"If the client does not accept cookies appends session identifiers `CFID`, `CFTOKEN` and / or `JSESSIONID` to the URL.",
 	"params": [
-		{"name":"requesturl","description":"URL of a CFML page","required":true,"default":"","type":"string","values":["cgi.script_name"]}
+		{"name":"url","description":"URL of a CFML page","required":true,"default":"","type":"string","values":["cgi.script_name"]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/urlsessionformat.html"},

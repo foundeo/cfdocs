@@ -1,13 +1,13 @@
 {
 	"name":"spreadsheetDeleteColumns",
 	"type":"function",
-	"syntax":"spreadsheetDeleteColumns(spreadsheetObj, range)",
+	"syntax":"spreadsheetDeleteColumns(spreadsheet, columns)",
 	"returns":"void",
 	"related":["SpreadsheetDeleteColumn"],
 	"description":" Deletes the data from multiple columns of an Excel spreadsheet object. This function does not remove the columns.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"range","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
+		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"columns","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

@@ -1,7 +1,7 @@
 {
 	"name":"listPrepend",
 	"type":"function",
-	"syntax":"listPrepend(someList, value [, delimiters, includeEmptyFields])",
+	"syntax":"listPrepend(someList, value [, delimiter, includeEmptyFields])",
     "member":"someList.listPrepend( value [, delimiters, includeEmptyFields])",
 	"returns":"string",
 	"related":["listAppend"],
@@ -9,7 +9,7 @@
 	"params": [
 		{"name":"list","description":"A string list.","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"An element or list of elements.","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"Characters that separate list elements.","required":false,"default":",","type":"string","values":[]},
+		{"name":"delimiter","description":"Characters that separate list elements.","required":false,"default":",","type":"string","values":[]},
 		{"name":"includeEmptyFields","description":"CF2018+ Set to true to insert blank values to the beginning of the list.","required":false,"default":"false","type":"boolean","values":["true","false"]}
 	],
 	"engines": {

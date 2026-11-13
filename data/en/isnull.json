@@ -1,12 +1,12 @@
 {
 	"name":"isNull",
 	"type":"function",
-	"syntax":"isNull(object)",
+	"syntax":"isNull(value)",
 	"returns":"boolean",
 	"related":["javacast"],
 	"description":"Returns true if the specified object is null.",
 	"params": [
-		{"name":"object","description":"","required":true,"default":"","type":"variableName","values":[]}
+		{"name":"value","description":"Lucee does not accept `value` as a named argument; it uses `object`.","required":true,"default":"","type":"variableName","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isnull.html"},

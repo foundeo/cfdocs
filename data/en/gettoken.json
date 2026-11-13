@@ -1,14 +1,14 @@
 {
 	"name":"getToken",
 	"type":"function",
-	"syntax":"getToken(string, index [, delimiters])",
+	"syntax":"getToken(string, index [, delimiter])",
 	"returns":"string",
 	"related":["Left", "Right", "Mid", "SpanExcluding", "SpanIncluding"],
 	"description":" Determines whether a token of the list in the delimiters\n parameter is present in a string.\n Returns the token found at position index of the string, as a\n string. If index is greater than the number of tokens in the\n string, returns an empty string.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"string","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"index","description":"","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]}
+		{"name":"delimiter","description":"","required":false,"default":",","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/gettoken.html"},

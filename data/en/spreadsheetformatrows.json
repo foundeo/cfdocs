@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetFormatRows",
 	"type":"function",
-	"syntax":"spreadsheetFormatRows(spreadsheetObj, format, rows)",
+	"syntax":"spreadsheetFormatRows(spreadsheet, format, rows)",
 	"returns":"void",
 	"related":["SpreadsheetFormatRow","SpreadsheetFormatCell"],
 	"description":"Formats the contents of a multiple rows of an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object for which formatting will be applied","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object for which formatting will be applied","required":true,"default":"","type":"any","values":[]},
 		{"name":"format","description":"A structure containing the formatting information","required":true,"default":"","type":"struct","values":[]},
 		{"name":"rows","description":"A string containing comma-separated row numbers or row ranges","required":true,"default":"","type":"string","values":[]}
 

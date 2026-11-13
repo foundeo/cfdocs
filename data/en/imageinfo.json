@@ -1,13 +1,13 @@
 {
 	"name":"imageInfo",
 	"type":"function",
-	"syntax":"imageInfo(name)",
+	"syntax":"imageInfo(image)",
 	"member":"someImage.info()",
 	"returns":"struct",
 	"related":[],
 	"description":" Returns a structure that contains information about the image, such as height, width, color model, size, and filename.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}
+		{"name":"image","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

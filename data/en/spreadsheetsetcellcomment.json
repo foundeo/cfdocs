@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetSetCellComment",
 	"type":"function",
-	"syntax":"spreadsheetSetCellComment(spreadsheetObj, comment, row, column)",
+	"syntax":"spreadsheetSetCellComment(spreadsheet, comment, row, column)",
 	"returns":"void",
 	"related":[],
 	"description":" Specifies the comment for an Excel spreadsheet object cell.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"comment","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
 		{"name":"row","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"column","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}

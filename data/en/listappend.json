@@ -1,7 +1,7 @@
 {
 	"name":"listAppend",
 	"type":"function",
-	"syntax":"listAppend(list, value [, delimiters, includeEmptyFields])",
+	"syntax":"listAppend(list, value [, delimiter, includeEmptyFields])",
 	"member": "str.listAppend(value [, delimiters, includeEmptyFields])",
 	"returns":"string",
 	"related":["listPrepend"],
@@ -9,7 +9,7 @@
 	"params": [
 		{"name":"list","description":"A list or variable with the list.","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"An element or a list of elements.","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"A string or variable with a character that separates list elements.","required":false,"default":",","type":"string","values":[]},
+		{"name":"delimiter","description":"A string or variable with a character that separates list elements.","required":false,"default":",","type":"string","values":[]},
 		{"name":"includeEmptyFields","description":"CF2018+ Set to true to append blank values to the list.","required":false,"default":"false","type":"boolean","values":["true","false"]}
 	],
 	"engines": {

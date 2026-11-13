@@ -1,13 +1,13 @@
 {
 	"name":"imageDrawBeveledRect",
 	"type":"function",
-	"syntax":"imageDrawBeveledRect(name, x, y, width, height, raised [, filled])",
+	"syntax":"imageDrawBeveledRect(image, x, y, width, height, raised [, filled])",
 	"member":"someImage.drawBeveledRect(x, y, width, height, raised [, filled])",
 	"returns":"void",
 	"related":["imageClearRect","imageDrawRect","imageDrawRoundRect"],
 	"description":"Draws a rectangle with beveled edges.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"image","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
 		{"name":"x","description":"The x coordinate of the rectangle.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"y","description":"The y coordinate of the rectangle.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"width","description":"The width of the rectangle.","required":true,"default":"","type":"numeric","values":[]},

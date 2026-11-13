@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetReadBinary",
 	"type":"function",
-	"syntax":"spreadsheetReadBinary(spreadsheetObj)",
+	"syntax":"spreadsheetReadBinary(spreadsheet)",
 	"returns":"void",
 	"related":[],
 	"description":" Reads spreadsheet file into a binary object",
 	"params": [
-		{"name":"spreadsheetObj","description":"Spreadsheet file","required":true,"default":"","type":"variableName","values":[]}
+		{"name":"spreadsheet","description":"Spreadsheet file","required":true,"default":"","type":"variableName","values":[]}
 
 	],
 	"engines": {

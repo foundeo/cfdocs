@@ -1,12 +1,12 @@
 {
 	"name":"isValidOauthAccesstoken",
 	"type":"function",
-	"syntax":"isValidOauthAccesstoken(token,type);",
+	"syntax":"isValidOauthAccesstoken(value,type);",
 	"returns":"boolean",
 	"related":[],
 	"description":"Checks if the OAuth access token is still valid.",
 	"params": [
-		{"name":"token","description":"The access token to check.","required":true,"default":"","type":"string","values":[]},
+		{"name":"value","description":"The access token to check.","required":true,"default":"","type":"string","values":[]},
 		{"name":"type","description":"The type of the OAuth server (facebook/google).","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {

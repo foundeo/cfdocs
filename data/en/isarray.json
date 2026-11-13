@@ -1,13 +1,13 @@
 {
 	"name":"isArray",
 	"type":"function",
-	"syntax":"isArray(value [, number])",
+	"syntax":"isArray(value [, dimensions])",
 	"returns":"boolean",
 	"related":["isStruct","arrayIsEmpty"],
 	"description":" Determines whether a value is an array.\n True, if value is an array, a query column object, or XML.\n also number = Dimension; function tests whether the array has\n exactly this dimension",
 	"params": [
 		{"name":"value","description":"The array in which to check.","required":true,"default":"","type":"any","values":[]},
-		{"name":"number","description":"Dimension of the array.","required":false,"default":"","type":"numeric","values":[]}
+		{"name":"dimensions","description":"Dimension of the array.\n\nLucee does not accept `dimensions` as a named argument; it uses `dimension`.","required":false,"default":"","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"3", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isarray.html"},

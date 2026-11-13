@@ -1,12 +1,12 @@
 {
 	"name":"isClosure",
 	"type":"function",
-	"syntax":"isClosure(object)",
+	"syntax":"isClosure(value)",
 	"returns":"boolean",
 	"description":"Checks if a given object is a closure.",
 	"related": ["isCustomFunction"],
 	"params": [
-		{"name":"object","description":"The object to check if it is a closure.","required":true,"default":"","type":"any","values":[]}
+		{"name":"value","description":"The object to check if it is a closure.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isclosure.html"},

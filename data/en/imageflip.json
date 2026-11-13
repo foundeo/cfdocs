@@ -1,13 +1,13 @@
 {
 	"name":"imageFlip",
 	"type":"function",
-	"syntax":"imageFlip(name, transpose)",
+	"syntax":"imageFlip(image, transpose)",
 	"member":"someImage.flip(transpose)",
 	"returns":"void",
 	"related":["ImageBlur", "ImageClearRec", "ImageNegative", "ImageNew", "ImageOverlay", "ImagePaste", "ImageResize", "ImageRotate", "ImageScaleToFit", "ImageSetAntialiasing", "ImageSharpen", "ImageShear", "ImageTranslate", "IsImageFile"],
 	"description":"Flips an image across an axis.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"image","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
 		{"name":"transpose","description":"Transpose the image.\n\nvertical: Flip an image across an imaginary horizontal line that runs through the center of the image.\nhorizontal: Flip an image across an imaginary vertical line that runs through the center of the image.\ndiagonal: Flip an image across its main diagonal that runs from the upper-left to the lower-right corner.\nantidiagonal: Flip an image across its main diagonal that runs from the upper-right to the lower-left corner.\nOr rotate an image clockwise by 90, 180, or 270 degrees.","required":true,"default":"vertical","type":"string","values":["vertical","horizontal","diagonal","antidiagonal","90","180","270"]}
 	],
 	"engines": {

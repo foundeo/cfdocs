@@ -1,12 +1,12 @@
 {
 	"name":"imageReadBase64",
 	"type":"function",
-	"syntax":"imageReadBase64(string)",
+	"syntax":"imageReadBase64(data)",
 	"returns":"any",
 	"related":["ImageNew", "ImageRead", "ImageWrite", "ImageWriteBase64", "BinaryDecode", "BinaryEncode", "IsImageFile"],
 	"description":" Creates a ColdFusion image from a Base64 string.",
 	"params": [
-		{"name":"string","description":"a variable or Base64 string","required":true,"default":"","type":"string","values":[]}
+		{"name":"data","description":"a variable or Base64 string","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagereadbase64.html"},

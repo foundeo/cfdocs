@@ -1,12 +1,12 @@
 {
 	"name":"structUpdate",
 	"type":"function",
-	"syntax":"structUpdate(structure, key, value)",
+	"syntax":"structUpdate(struct, key, value)",
 	"returns":"boolean",
 	"related":[],
 	"description":" Updates a key with a value.",
 	"params": [
-		{"name":"structure","description":"Structure to update","required":true,"default":"","type":"struct","values":[]},
+		{"name":"struct","description":"Structure to update","required":true,"default":"","type":"struct","values":[]},
 		{"name":"key","description":"Key, the value of which to update","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"New value","required":true,"default":"","type":"any","values":[]}
 

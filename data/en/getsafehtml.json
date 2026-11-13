@@ -1,5 +1,5 @@
 {
-  "syntax": "getSafeHTML(inputString [, PolicyFile, throwOnError])",
+  "syntax": "getSafeHTML(string [, policyFile, throwOnError])",
   "description": "Sanitizes HTML using antisamy policy rules. ",
   "engines": {
     "coldfusion": {
@@ -27,7 +27,7 @@
       "values": [],
       "default": "",
       "description": "String to be sanitized",
-      "name": "inputString",
+      "name": "string",
       "type": "string",
       "required": true
     },
@@ -35,7 +35,7 @@
       "values": [],
       "default": "",
       "description": "File path for custom antisamy policy file. Can be defined in the application scope or if not defined will use ColdFusion server default",
-      "name": "PolicyFile",
+      "name": "policyFile",
       "type": "string",
       "required": false
     },

@@ -1,13 +1,13 @@
 {
 	"name":"spreadsheetAddInfo",
 	"type":"function",
-	"syntax":"spreadsheetAddInfo(spreadsheetObj, info)",
+	"syntax":"spreadsheetAddInfo(spreadsheet, properties)",
 	"returns":"void",
 	"related":["SpreadsheetAddColumn", "SpreadsheetAddImage", "SpreadsheetAddRow", "SpreadsheetDeleteRow", "SpreadsheetDeleteRows", "SpreadsheetFormatRow", "SpreadsheetFormatRows", "SpreadsheetShiftRows"],
 	"description":" Adds information to an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"info","description":"No Help Available","required":true,"default":"","type":"struct","values":[]}
+		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"properties","description":"No Help Available","required":true,"default":"","type":"struct","values":[]}
 
 	],
 	"engines": {

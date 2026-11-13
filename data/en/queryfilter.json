@@ -1,7 +1,7 @@
 {
 	"name": "queryFilter",
 	"type": "function",
-	"syntax": "queryFilter(query, function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
+	"syntax": "queryFilter(query, function(row [, currentRow] [, query] ){} [, parallel] [, maxThreadCount])",
 	"member": "query.filter(function(row [, currentRow] [, query] ){} [, parallel] [, maxThreads])",
 	"returns": "query",
 	"related": ["querySome", "queryReduce", "queryMap", "queryEach"],
@@ -46,7 +46,7 @@
 			"values": []
 		},
 		{"name":"parallel","description":"Lucee4.5+ CF2021+ true if the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[true, false]},
-		{"name":"maxThreads","description":"Lucee4.5+ CF2021+ the maximum number of threads to use when parallel = true","required":false,"default":"20","type":"numeric","values":[]}
+		{"name":"maxThreadCount","description":"Lucee4.5+ CF2021+ the maximum number of threads to use when parallel = true","required":false,"default":"20","type":"numeric","values":[]}
 	],
 	"engines": {
 		"lucee": {

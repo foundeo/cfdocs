@@ -1,12 +1,12 @@
 {
 	"name":"lsParseNumber",
 	"type":"function",
-	"syntax":"lsParseNumber(String [, locale])",
+	"syntax":"lsParseNumber(number [, locale])",
 	"returns":"numeric",
 	"related":["parseNumber","toNumeric","inputBaseN"],
 	"description":"Converts a string that is a valid numeric representation in the current locale into a formatted number.",
 	"params": [
-		{"name":"String","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"number","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"locale","description":"Locale to use instead of the locale of the page when processing the function","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {

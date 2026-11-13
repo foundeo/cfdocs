@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetShiftRows",
 	"type":"function",
-	"syntax":"spreadsheetShiftRows(spreadsheetObj, start, end [, rows])",
+	"syntax":"spreadsheetShiftRows(spreadsheet, start, end [, rows])",
 	"returns":"void",
 	"related":[],
 	"description":" shifts one or more rows in Excel spreadsheet object up or down. . The contents of the shifted row, including empty cells, overwrites data in the column to which it is shifted.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"start","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"end","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"rows","description":"No Help Available","required":false,"default":"","type":"numeric","values":[]}

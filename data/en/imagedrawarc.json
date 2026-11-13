@@ -1,19 +1,19 @@
 {
 	"name":"imageDrawArc",
 	"type":"function",
-	"syntax":"imageDrawArc(name, x, y, width, height, startAngle, archAngle [, filled])",
+	"syntax":"imageDrawArc(image, x, y, width, height, startAngle, arcAngle [, filled])",
 	"member":"someImage.drawArc(x, y, width, height, startAngle, archAngle [, filled])",
 	"returns":"void",
 	"related":["ImageDrawCubicCurve", "ImageDrawOval", "ImageDrawQuadraticCurve", "ImageSetAntialiasing", "ImageSetDrawingColor", "ImageSetDrawingStroke", "IsImageFile"],
 	"description":" Draws a circular or elliptical arc.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"image","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
 		{"name":"x","description":"The x coordinate of the upper-left corner of the arc.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"y","description":"The y coordinate of the upper-left corner of the arc.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"width","description":"The width of the arc.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"height","description":"The height of the arc.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"startAngle","description":"The beginning angle in degrees.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"archAngle","description":"The angular extent of the arc, relative to the start angle.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"arcAngle","description":"The angular extent of the arc, relative to the start angle.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"filled","description":"Specify whether the arc is filled","required":false,"default":"false","type":"boolean","values":["true","false"]}
 	],
 	"engines": {

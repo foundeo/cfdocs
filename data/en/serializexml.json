@@ -1,12 +1,12 @@
 {
 	"name":"serializeXML",
 	"type":"function",
-	"syntax":"serializeXML( objToBeSerialized, useCustomSerializer )",
+	"syntax":"serializeXML( xml, useCustomSerializer )",
 	"returns":"string",
 	"related":["xmlParse","xmlNew","deserializeXML","isXMLDoc","encodeForXML"],
 	"description":"Serializes the given object to XML.",
 	"params": [
-		{"name":"objToBeSerialized","description":"An object to be serialized.","required":true,"default":"","type":"any","values":[]},
+		{"name":"xml","description":"An object to be serialized.","required":true,"default":"","type":"any","values":[]},
 		{"name":"useCustomSerializer","description":"Whether to use the custom serializer. The default value is true. The custom serializer will be always used for XML deserialization. If false, the XML/JSON deserialization will be done using the default ColdFusion behavior. If any other type is passed with useCustomSerializer as false, then TypeNotSupportedException will be thrown.","required":false,"default":true,"type":"boolean","values":[]}
 	],
 	"engines": {

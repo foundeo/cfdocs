@@ -1,13 +1,13 @@
 {
 	"name":"imageCrop",
 	"type":"function",
-	"syntax":"imageCrop(name, x, y, width, height)",
+	"syntax":"imageCrop(image, x, y, width, height)",
 	"member":"someImage.crop(x, y, width, height)",
 	"returns":"void",
 	"related":["imageResize"],
 	"description":"Crops a ColdFusion image to a specified rectangular area.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"image","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
 		{"name":"x","description":"The X origin of the crop area.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"y","description":"The Y origin of the crop area.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"width","description":"The width of the crop area.","required":true,"default":"","type":"numeric","values":[]},

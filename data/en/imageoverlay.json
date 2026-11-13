@@ -1,14 +1,14 @@
 {
 	"name":"imageOverlay",
 	"type":"function",
-	"syntax":"imageOverlay(source1, source2 [, rule, alpha])",
+	"syntax":"imageOverlay(image1, image2 [, rule, alpha])",
 	"member":"someImage.overlay(source2 [, rule, alpha])",
 	"returns":"void",
 	"related":[],
 	"description":" Reads two source ColdFusion images and overlays the second source image on the first source image.",
 	"params": [
-		{"name":"source1","description":"The image that is the bottom layer in the image.","required":true,"default":"","type":"string","values":[]},
-		{"name":"source2","description":"The image that is the top layer (overlaid on the source1 image) in the image.","required":true,"default":"","type":"string","values":[]},
+		{"name":"image1","description":"The image that is the bottom layer in the image.\n\nLucee does not accept `image1` as a named argument; it uses `source1`.","required":true,"default":"","type":"string","values":[]},
+		{"name":"image2","description":"The image that is the top layer (overlaid on the source1 image) in the image.\n\nLucee does not accept `image2` as a named argument; it uses `source2`.","required":true,"default":"","type":"string","values":[]},
 		{"name":"rule","description":"CF10+ Compositing Rule","required":false,"default":"","type":"string","values":["SRC","DST_IN","DST_OUT","DST_OVER","SRC_IN","SRC_OVER","SRC_OUT"]},
 		{"name":"alpha","description":"CF10+ The percentage value of transparency","required":false,"default":"","type":"string","values":[]}
 	],

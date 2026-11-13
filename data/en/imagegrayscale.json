@@ -1,13 +1,13 @@
 {
 	"name":"imageGrayScale",
 	"type":"function",
-	"syntax":"imageGrayScale(name)",
+	"syntax":"imageGrayScale(image)",
 	"member":"someImage.grayScale()",
 	"returns":"void",
 	"related":["ImageBlur","ImageNegative","ImageSetAntialiasing","ImageSharpen","IsImageFile"],
 	"description":" Converts a ColdFusion image to grayscale.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}
+		{"name":"image","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

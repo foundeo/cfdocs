@@ -1,7 +1,7 @@
 {
     "name":"structReduce",
     "type":"function",
-    "syntax":"structReduce(struct, function(result, key, value [,struct]){} [, initialVal])",
+    "syntax":"structReduce(struct, function(result, key, value [,struct]){} [, initialValue])",
     "member": "someStruct.reduce(function(result, key, value [,struct]){} [, initialVal])",
     "returns":"any",
     "related":["structEach","structSome","structMap","structFilter"],
@@ -39,7 +39,7 @@
 					"type": "struct",
 					"required": false
 				}],"type":"any","required":true,"values":[],"default":""},
-        {"name":"initialVal","description":"Initial value which will be used for the reduce operation.","type":"any","required":false,"values":[],"default":""}
+        {"name":"initialValue","description":"Initial value which will be used for the reduce operation.","type":"any","required":false,"values":[],"default":""}
     ],
     "engines":{
         "coldfusion":{"minimum_version":"11","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structreduce.html","notes":""},

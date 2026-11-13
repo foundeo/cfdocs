@@ -1,13 +1,13 @@
 {
 	"name":"structIsEmpty",
 	"type":"function",
-	"syntax":"structIsEmpty(structure)",
+	"syntax":"structIsEmpty(struct)",
 	"member":"someStruct.isEmpty()",
 	"returns":"boolean",
 	"related":[],
 	"description":" Determines whether a structure contains data.",
 	"params": [
-		{"name":"structure","description":"Structure to test","required":true,"default":"","type":"struct","values":[]}
+		{"name":"struct","description":"Structure to test","required":true,"default":"","type":"struct","values":[]}
 
 	],
 	"engines": {

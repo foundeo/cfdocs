@@ -13,15 +13,15 @@
 		"type": "string",
 		"values": []
 	}, {
-		"name": "cacheName",
+		"name": "region",
 		"description": "CF10+ The cache region to use or the default object cache",
 		"required": false,
 		"default": "ObjectCache",
 		"type": "string",
 		"values": []
 	}, {
-		"name": "isAccurate",
-		"description": "CF11+ When set to false, function will return the result faster. However, the result may not be accurate. If you need only the IDs of valid (unexpired) objects from the cache, set accurate to true. If you set accurate to false, the IDs of all the objects in the cache will be returned.",
+		"name": "excludeExpired",
+		"description": "CF11+ When set to false, function will return the result faster. However, the result may not be accurate. If you need only the IDs of valid (unexpired) objects from the cache, set accurate to true. If you set accurate to false, the IDs of all the objects in the cache will be returned.\n\nLucee does not support this argument.",
 		"required": false,
 		"default": "true",
 		"type": "boolean",

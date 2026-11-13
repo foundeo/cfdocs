@@ -1,14 +1,14 @@
 {
 	"name":"spreadsheetAddSplitPane",
 	"type":"function",
-	"syntax":"spreadsheetAddSplitPane(spreadsheetObj, x, y, splitColumn, splitRow [, position])",
+	"syntax":"spreadsheetAddSplitPane(spreadsheet, col, row, splitColumn, splitRow [, position])",
 	"returns":"void",
 	"related":[],
 	"description":" Adds split pane to spreadsheet.",
 	"params": [
-		{"name":"spreadsheetObj","description":"Spreadsheet variable","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"x","description":"X position for split","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"y","description":"Y position for split","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"spreadsheet","description":"Spreadsheet variable","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"col","description":"X position for split","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"row","description":"Y position for split","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"splitColumn","description":"Split Column","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"splitRow","description":"Split Row","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"position","description":"Specify which pane has the focus","required":false,"default":"","type":"string","values":["LOWER_LEFT","LOWER_RIGHT","UPPER_LEFT","UPPER_RIGHT"]}

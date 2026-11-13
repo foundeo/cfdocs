@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetGetCellValue",
 	"type":"function",
-	"syntax":"spreadsheetGetCellValue(spreadsheetObj, row, column)",
+	"syntax":"spreadsheetGetCellValue(spreadsheet, row, column)",
 	"returns":"string",
 	"related":["SpreadsheetGetCellComment","SpreadsheetGetCellFormula"],
 	"description":" Gets the Value for a for an Excel spreadsheet object cell.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"row","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
 		{"name":"column","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 

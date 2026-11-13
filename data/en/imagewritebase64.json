@@ -1,13 +1,13 @@
 {
 	"name":"imageWriteBase64",
 	"type":"function",
-	"syntax":"imageWriteBase64(name, destination, format [, inHTMLFormat] [, overwrite])",
+	"syntax":"imageWriteBase64(image, destination, format [, inHTMLFormat] [, overwrite])",
 	"member":"someImage.writeBase64(destination, format [, inHTMLFormat] [, overwrite])",
 	"returns":"void",
 	"related":["cfimage", "ImageReadBase64", "IsImageFile"],
 	"description":" Writes Base64 images to the specified filename and destination.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"image","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
 		{"name":"destination","description":"The path for the destination file.","required":true,"default":"","type":"string","values":[]},
 		{"name":"format","description":"the image format","required":true,"default":"","type":"string","values":[]},
 		{"name":"inHTMLFormat","description":"Specify whether Base64 output includes the headers used by the Base64 images in the HTML 'img' tag ('data:image/{format};base64,...')","required":false,"default":false,"type":"boolean","values":[false,true]},

@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetSetHeader",
 	"type":"function",
-	"syntax":"spreadsheetSetHeader(spreadsheetObj, leftHeader, centerHeader, rightHeader)",
+	"syntax":"spreadsheetSetHeader(spreadsheet, leftHeader, centerHeader, rightHeader)",
 	"returns":"void",
 	"related":[],
 	"description":" Adds a header to the specified worksheet.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The Excel spreadsheet object to which to add the header.","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"spreadsheet","description":"The Excel spreadsheet object to which to add the header.","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"leftHeader","description":"Adds the header in the left side of the worksheet.","required":true,"default":"","type":"string","values":[]},
 		{"name":"centerHeader","description":"Adds the header in the center of the worksheet.","required":true,"default":"","type":"string","values":[]},
 		{"name":"rightHeader","description":"Adds the header in the right side of the worksheet.","required":true,"default":"","type":"string","values":[]}

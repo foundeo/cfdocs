@@ -1,13 +1,13 @@
 {
 	"name":"spreadsheetAddimage",
 	"type":"function",
-	"syntax":"spreadsheetAddimage(spreadsheetObj, imagefilepath, anchor)",
+	"syntax":"spreadsheetAddimage(spreadsheet, imagePath, anchor)",
 	"returns":"void",
 	"related":[],
 	"description":" Adds an image to an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"imagefilepath","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"imagePath","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
 		{"name":"anchor","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],

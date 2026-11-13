@@ -1,14 +1,14 @@
 {
 	"name":"listToArray",
 	"type":"function",
-	"syntax":"listToArray(list [, delimiters] [, includeEmptyFields] [, multiCharacterDelimiter])",
+	"syntax":"listToArray(list [, delimiter] [, includeEmptyFields] [, multiCharacterDelimiter])",
 	"member":"str.listToArray([delimiters] [, includeEmptyFields] [, multiCharacterDelimiter])",
 	"returns":"array",
 	"related":["ArrayToList"],
 	"description":" Copies the elements of a list to an array.",
 	"params": [
 		{"name":"list","description":"A list or variable name","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]},
+		{"name":"delimiter","description":"","required":false,"default":",","type":"string","values":[]},
 		{"name":"includeEmptyFields","description":"A Boolean value specifying whether to create empty array entries if there are two delimiters in a row.","required":false,"default":"false","type":"boolean","values":[true,false]},
 		{"name":"multiCharacterDelimiter","description":"A Boolean value specifying whether the delimiters parameter specifies a multi-character delimiter.","required":false,"default":"false","type":"boolean","values":[true,false]}
 

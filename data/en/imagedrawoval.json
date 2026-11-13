@@ -1,13 +1,13 @@
 {
 	"name":"imageDrawOval",
 	"type":"function",
-	"syntax":"imageDrawOval(name, x, y, width, height [, filled])",
+	"syntax":"imageDrawOval(image, x, y, width, height [, filled])",
 	"member":"someImage.drawOval(x, y, width, height [, filled])",
 	"returns":"void",
 	"related":[],
 	"description":" Draws an oval.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"image","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
 		{"name":"x","description":"The x coordinate of the upper left corner of the oval to draw.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"y","description":"The y coordinate of the upper left corner of the oval to draw.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"width","description":"The width of the oval to draw.","required":true,"default":"","type":"numeric","values":[]},

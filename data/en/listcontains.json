@@ -1,14 +1,14 @@
 {
 	"name":"listContains",
 	"type":"function",
-	"syntax":"listContains(list, substring [, delimiters])",
+	"syntax":"listContains(list, substring [, delimiter])",
 	"returns":"numeric",
 	"related":["listContainsNoCase"],
 	"description":"Determines the index of the first list element that contains a\n specified substring.\n Returns the index of the first list element that contains\n substring. If not found, returns zero. The search for the substring is case-sensitive.",
 	"params": [
 		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"substring","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]}
+		{"name":"delimiter","description":"","required":false,"default":",","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listcontains.html"},

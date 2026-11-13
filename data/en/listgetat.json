@@ -1,7 +1,7 @@
 {
 	"name":"listGetAt",
 	"type":"function",
-	"syntax":"listGetAt(list, position [, delimiters [, includeEmptyValues]])",
+	"syntax":"listGetAt(list, position [, delimiter [, includeEmptyFields]])",
 	"returns":"string",
 	"related":["listDeleteAt","listInsertAt","listSetAt"],
 	"description":"Gets a list element at a specified position.",
@@ -9,7 +9,7 @@
 		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"position","description":"","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"delimiter","description":"","required":false,"default":",","type":"string","values":[]},
-		{"name":"includeEmptyValues","description":"","required":false,"default":"false","type":"boolean","values":[]}
+		{"name":"includeEmptyFields","description":"","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listgetat.html"},

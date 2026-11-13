@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetFormatColumn",
 	"type":"function",
-	"syntax":"spreadsheetFormatColumn(spreadsheetObj, format, column)",
+	"syntax":"spreadsheetFormatColumn(spreadsheet, format, column)",
 	"returns":"void",
 	"related":["SpreadsheetFormatColumns","SpreadsheetFormatCell"],
 	"description":"Formats the contents of a single column of an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object for which formatting will be applied","required":true,"default":"","type":"any","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object for which formatting will be applied","required":true,"default":"","type":"any","values":[]},
 		{"name":"format","description":"A structure containing the formatting information","required":true,"default":"","type":"struct","values":[]},
 		{"name":"column","description":"The column number for which to apply formatting","required":true,"default":"","type":"numeric","values":[]}
 

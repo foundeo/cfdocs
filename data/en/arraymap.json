@@ -1,7 +1,7 @@
 {
 	"name":"arrayMap",
 	"type":"function",
-	"syntax":"arrayMap(array, function(item [,index, array]){} [, parallel] [, maxThreads])",
+	"syntax":"arrayMap(array, function(item [,index, array]){} [, parallel] [, maxThreadCount])",
 	"member":"someArray.map(function(item [,index, array]){} [, parallel] [, maxThreads])",
 	"returns":"array",
 	"related":["arrayReduce"],
@@ -33,7 +33,7 @@
 				"required": false
 			}],"type":"any","required":true,"values":[],"default":""},
 		{"name":"parallel","description":"Lucee4.5+ true if the items can be executed in parallel","required":false,"default":"false","type":"boolean","values":[true, false]},
-		{"name":"maxThreads","description":"Lucee4.5+ the maximum number of threads to use when parallel = true","required":false,"default":"20","type":"numeric","values":[]}
+		{"name":"maxThreadCount","description":"Lucee4.5+ the maximum number of threads to use when parallel = true","required":false,"default":"20","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion":{"minimum_version":"11","notes":"","docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-a-b/arraymap.html"},

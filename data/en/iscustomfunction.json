@@ -1,12 +1,12 @@
 {
 	"name":"isCustomFunction",
 	"type":"function",
-	"syntax":"isCustomFunction(Object)",
+	"syntax":"isCustomFunction(value)",
 	"returns":"boolean",
 	"related":["isClosure"],
 	"description":"Determines if a variable is a user defined function",
 	"params": [
-		{"name":"Object","description":"The variable to test","required":true,"default":"","type":"any","values":[]}
+		{"name":"value","description":"The variable to test\n\nLucee does not accept `value` as a named argument; it uses `name`.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/iscustomfunction.html"},

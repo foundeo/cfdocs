@@ -1,14 +1,14 @@
 {
 	"name":"imageBlur",
 	"type":"function",
-	"syntax":"imageBlur(name [, blurradius])",
+	"syntax":"imageBlur(image [, blurRadius])",
 	"member":"someImage.blur(blurradius)",
 	"returns":"void",
 	"related":["ImageSharpen","IsImageFile"],
 	"description":" Smooths (blurs) the ColdFusion image.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
-		{"name":"blurradius","description":"The size of the blur radius. Value must be greater than or equal to 3 and less than or equal to 10.","required":false,"default":"3","type":"numeric","values":[]}
+		{"name":"image","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"blurRadius","description":"The size of the blur radius. Value must be greater than or equal to 3 and less than or equal to 10.","required":false,"default":"3","type":"numeric","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imageblur.html"},

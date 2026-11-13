@@ -1,17 +1,17 @@
 {
 	"name":"spreadsheetAddColumn",
 	"type":"function",
-	"syntax":"spreadsheetAddColumn(spreadsheetObj, data, startrow, startcolumn, insert [, insert])",
+	"syntax":"spreadsheetAddColumn(spreadsheet, data, startRow, startColumn, insert [, datatype])",
 	"returns":"void",
 	"related":["SpreadsheetDeleteColumn", "SpreadsheetDeleteColumns", "SpreadsheetFormatColumn", "SpreadsheetFormatColumns"],
 	"description":" Adds a column or column data to an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"data","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
-		{"name":"startrow","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"startcolumn","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"startRow","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"startColumn","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"insert","description":"No Help Available","required":true,"default":"","type":"boolean","values":[]},
-		{"name":"insert","description":"No Help Available","required":false,"default":"","type":"boolean","values":[]}
+		{"name":"datatype","description":"No Help Available","required":false,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

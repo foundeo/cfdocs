@@ -1,15 +1,15 @@
 {
 	"name":"imageDrawLines",
 	"type":"function",
-	"syntax":"imageDrawLines(name, xcords, ycords [, isPolygon] [, filled])",
+	"syntax":"imageDrawLines(image, xcoords, ycoords [, isPolygon] [, filled])",
 	"member":"someImage.drawLines(xcords, ycords [, isPolygon] [, filled])",
 	"returns":"void",
 	"related":["imageDrawLine"],
 	"description":"Draws a sequence of connected lines defined by arrays of x and y coordinates.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
-		{"name":"xcords","description":"A array of x coordinates.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"ycords","description":"A array of y coordinates.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"image","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"xcoords","description":"A array of x coordinates.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"ycoords","description":"A array of y coordinates.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"isPolygon","description":"Specify whether the lines form a polygon","required":false,"default":"false","type":"boolean","values":[]},
 		{"name":"filled","description":"Specify whether the polygon is filled","required":false,"default":"false","type":"boolean","values":[]}
 	],

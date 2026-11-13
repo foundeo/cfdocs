@@ -16,7 +16,7 @@
 			"values": []
 		},
 		{
-			"name": "function",
+			"name": "callback",
 			"description": "Inline closure function executed for each element in the list. Returns true if the list element should be included in the filtered list. Support for passing the original list to the closure function added in CF11 Update 5.",
 			"required": true,
 			"default": "",

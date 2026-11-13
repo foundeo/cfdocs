@@ -1,15 +1,15 @@
 {
 	"name":"spreadsheetShiftColumns",
 	"type":"function",
-	"syntax":"spreadsheetShiftColumns(spreadsheetObj, start [, end] [, start])",
+	"syntax":"spreadsheetShiftColumns(spreadsheet, start [, end] [, columns])",
 	"returns":"void",
 	"related":[],
 	"description":" shifts one or more columns in Excel spreadsheet object left or right.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"start","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"end","description":"No Help Available","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"start","description":"No Help Available","required":false,"default":"","type":"numeric","values":[]}
+		{"name":"columns","description":"No Help Available","required":false,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

@@ -1,13 +1,13 @@
 {
 	"name":"spreadsheetRead",
 	"type":"function",
-	"syntax":"spreadsheetRead(fileName, spreadsheetObj)",
+	"syntax":"spreadsheetRead(filePath [, sheetName])",
 	"returns":"void",
 	"related":[],
 	"description":"Create a new spreadsheet variable from specified file",
 	"params": [
-		{"name":"fileName","description":"Path to spreadsheet file","required":true,"default":"","type":"string","values":[]},
-		{"name":"spreadsheetObj","description":"Spreadsheet name or number","required":true,"default":"","type":"variableName","values":[]}
+		{"name":"filePath","description":"Path to spreadsheet file","required":true,"default":"","type":"string","values":[]},
+		{"name":"sheetName","description":"Spreadsheet name or number","required":false,"default":"","type":"variableName","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetread.html"},

@@ -1,7 +1,7 @@
 {
 	"name":"listFindNoCase",
 	"type":"function",
-	"syntax":"listFindNoCase(list, value [, delimiters, includeEmptyValues])",
+	"syntax":"listFindNoCase(list, value [, delimiter, includeEmptyFields])",
 	"member":"list.listFindNoCase(value [, delimiters, includeEmptyValues])",
 	"returns":"numeric",
 	"related":["listFind","arrayFindNoCase"],
@@ -9,7 +9,7 @@
 	"params": [
 		{"name":"list","description":"List to search in.","required":true,"default":"","type":"string","values":[]},
 		{"name":"value","description":"String to search for.","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"String of character(s) that separate list elements.","required":false,"default":",","type":"string","values":[]},
+		{"name":"delimiter","description":"String of character(s) that separate list elements.","required":false,"default":",","type":"string","values":[]},
 		{"name":"includeEmptyFields","description":"If includeEmptyFields is set to true, empty list elements will be counted when index of the first found list element is returned.","required":false,"default":"false","type":"string","values":["true","false"]}
 	],
 	"engines": {

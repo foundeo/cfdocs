@@ -1,12 +1,12 @@
 {
 	"name":"getTempFile",
 	"type":"function",
-	"syntax":"getTempFile(dir, prefix)",
+	"syntax":"getTempFile(path, prefix)",
 	"returns":"string",
 	"related":["getTempDirectory","fileWrite"],
 	"description":" Creates a temporary file in a directory whose name starts with\n (at most) the first three characters of prefix.",
 	"params": [
-		{"name":"dir","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"path","description":"Lucee does not accept `path` as a named argument; it uses `dir`.","required":true,"default":"","type":"string","values":[]},
 		{"name":"prefix","description":"","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {

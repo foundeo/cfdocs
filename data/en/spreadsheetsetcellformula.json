@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetSetCellFormula",
 	"type":"function",
-	"syntax":"spreadsheetSetCellFormula(spreadsheetObj, formula, row, column)",
+	"syntax":"spreadsheetSetCellFormula(spreadsheet, formula, row, column)",
 	"returns":"void",
 	"related":[],
 	"description":" Specifies the formula for an Excel spreadsheet object cell.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"formula","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
 		{"name":"row","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"column","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}

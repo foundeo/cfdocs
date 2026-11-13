@@ -1,15 +1,14 @@
 {
 	"name":"spreadsheetGetCellComment",
 	"type":"function",
-	"syntax":"spreadsheetGetCellComment(author [, column] [, comment] [, row])",
+	"syntax":"spreadsheetGetCellComment(spreadsheet [, row, column])",
 	"returns":"array",
 	"related":["SpreadsheetGetCellFormula", "SpreadsheetGetCellValue"],
 	"description":" Gets the comment for an Excel spreadsheet object cell as a structure with formatting information, or all comments for the object.",
 	"params": [
-		{"name":"author","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
-		{"name":"column","description":"No Help Available","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"comment","description":"No Help Available","required":false,"default":"","type":"string","values":[]},
-		{"name":"row","description":"No Help Available","required":false,"default":"","type":"string","values":[]}
+		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"any","values":[]},
+		{"name":"row","description":"No Help Available","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"column","description":"No Help Available","required":false,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

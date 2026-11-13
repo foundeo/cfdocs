@@ -1,12 +1,12 @@
 {
 	"name":"toBinary",
 	"type":"function",
-	"syntax":"toBinary(base64_or_object)",
+	"syntax":"toBinary(data)",
 	"returns":"binary",
 	"related":["toBase64","toString"],
 	"description":" Calculates the binary representation of Base64-encoded data.",
 	"params": [
-		{"name":"base64_or_object","description":"A string or a variable that contains one:\n * In Base64 format to convert to binary\n * In binary format to test whether it is valid","required":true,"default":"","type":"any","values":[]}
+		{"name":"data","description":"A string or a variable that contains one:\n * In Base64 format to convert to binary\n * In binary format to test whether it is valid","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4.5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/tobinary.html"},

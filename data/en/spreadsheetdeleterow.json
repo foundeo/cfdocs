@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetDeleteRow",
 	"type":"function",
-	"syntax":"spreadsheetDeleteRow(spreadsheetObj, row)",
+	"syntax":"spreadsheetDeleteRow(spreadsheet, row)",
 	"returns":"void",
 	"related":["SpreadsheetDeleteRows"],
 	"description":" Deletes all data from a row of an Excel spreadsheet object. It does not delete the row.",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"row","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
 
 	],

@@ -1,13 +1,13 @@
 {
 	"name":"imageDrawPoint",
 	"type":"function",
-	"syntax":"imageDrawPoint(name, x, y)",
+	"syntax":"imageDrawPoint(image, x, y)",
 	"member":"someImage.drawPoint(x, y)",
 	"returns":"void",
 	"related":["ImageDrawLine", "ImageDrawLines", "ImageSetAntialiasing", "ImageSetDrawingColor", "ImageSetDrawingStroke"],
 	"description":" Draws a point at the specified (x,y) coordinate.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"image","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
 		{"name":"x","description":"The x coordinate of the point.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"y","description":"The y coordinate of the point.","required":true,"default":"","type":"numeric","values":[]}
 	],

@@ -1,13 +1,13 @@
 {
 	"name":"imageDrawRect",
 	"type":"function",
-	"syntax":"imageDrawRect(name, x, y, width, height [, filled])",
+	"syntax":"imageDrawRect(image, x, y, width, height [, filled])",
 	"member":"someImage.drawRect(x, y, width, height [, filled])",
 	"returns":"void",
 	"related":["imageDrawBeveledRect","imageClearRect","imageDrawRoundRect"],
 	"description":"Draws a rectangle.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"image","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
 		{"name":"x","description":"The x coordinate of the rectangle.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"y","description":"The y coordinate of the rectangle.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"width","description":"The width of the rectangle.","required":true,"default":"","type":"numeric","values":[]},

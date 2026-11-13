@@ -1,13 +1,13 @@
 {
 	"name":"imageGetBlob",
 	"type":"function",
-	"syntax":"imageGetBlob(source)",
+	"syntax":"imageGetBlob(image)",
 	"member":"someImage.getBlob()",
 	"returns":"binary",
 	"related":["cfimage", "ImageGetBufferedImage", "ImageGetEXIFTag", "ImageGetHeight", "ImageGetIPTCTag", "ImageGetWidth", "ImageInfo", "IsImage"],
 	"description":"Retrieves the bytes of the underlying image. The bytes are in the same image format as the source image.",
 	"params": [
-		{"name":"source","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}
+		{"name":"image","description":"The ColdFusion image on which this operation is performed.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-h-im/imagegetblob.html"},

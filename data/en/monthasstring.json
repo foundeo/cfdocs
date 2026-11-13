@@ -1,12 +1,12 @@
 {
 	"name":"monthAsString",
 	"type":"function",
-	"syntax":"monthAsString(month_number [, locale])",
+	"syntax":"monthAsString(month [, locale])",
 	"returns":"string",
 	"related":["month","monthShortAsString"],
 	"description":" ",
 	"params": [
-		{"name":"month_number","description":"","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"month","description":"","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"locale","description":"","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {

@@ -1,13 +1,13 @@
 {
 	"name":"spreadsheetSetActiveSheetNumber",
 	"type":"function",
-	"syntax":"spreadsheetSetActiveSheetNumber(spreadsheetObj [, number])",
+	"syntax":"spreadsheetSetActiveSheetNumber(spreadsheet, sheetNumber)",
 	"returns":"void",
 	"related":[],
 	"description":" Sets number of active sheet in given spreadsheet",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"number","description":"No Help Available","required":false,"default":"","type":"numeric","values":[]}
+		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"sheetNumber","description":"No Help Available","required":true,"default":"","type":"numeric","values":[]}
 
 	],
 	"engines": {

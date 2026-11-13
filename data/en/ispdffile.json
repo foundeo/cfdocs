@@ -1,12 +1,12 @@
 {
 	"name":"isPDFFile",
 	"type":"function",
-	"syntax":"isPDFFile(path)",
+	"syntax":"isPDFFile(value)",
 	"returns":"boolean",
 	"related":["isPDFObject","isSpreadsheetFile","isSpreadsheetObject"],
 	"description":" Verifies whether a PDF file is valid.",
 	"params": [
-		{"name":"path","description":"Pathname to a PDF file.","required":true,"default":"","type":"string","values":[]}
+		{"name":"value","description":"Pathname to a PDF file.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"8", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/ispdffile.html"}

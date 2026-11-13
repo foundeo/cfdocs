@@ -1,14 +1,14 @@
 {
 	"name":"listEach",
 	"type":"function",
-	"syntax":"listEach(String str, UDFMethod function [, String delim, boolean includeEmptyFields]);",
+	"syntax":"listEach(String list, UDFMethod callback [, String delimiter, boolean includeEmptyFields]);",
 	"returns":"void",
 	"related":["arrayEach","structEach","queryEach"],
 	"description":"Iterates over every element of a List object and can call a UDF function, passed as the second argument.",
 	"params": [
-		{"name":"str","description":"An input list object.","required":true,"default":"","type":"string","values":[]},
-        	{"name":"function","description":"UDF or closure object.","required":true,"default":"","type":"function","values":[]},
-		{"name":"delim","description":"A list delimiter to be used. The default value is comma (,).","required":true,"default":"","type":"string","values":[]},
+		{"name":"list","description":"An input list object.","required":true,"default":"","type":"string","values":[]},
+        	{"name":"callback","description":"UDF or closure object.","required":true,"default":"","type":"function","values":[]},
+		{"name":"delimiter","description":"A list delimiter to be used. The default value is comma (,).","required":true,"default":"","type":"string","values":[]},
         	{"name":"includeEmptyFields","description":"Boolean. Whether to allow empty fields. Default is false.","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {

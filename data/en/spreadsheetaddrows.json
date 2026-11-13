@@ -1,18 +1,18 @@
 {
 	"name":"spreadsheetAddRows",
 	"type":"function",
-	"syntax":"spreadsheetAddRows(spreadsheetObj, data,[ row, column , insert, datatype, includeColumnNames])",
+	"syntax":"spreadsheetAddRows(spreadsheet, data,[ startRow, startColumn , insert, datatypes, insertColumnHeader])",
 	"returns":"void",
 	"related":["spreadsheetAddRow"],
 	"description":"Adds multiple rows from a query or array to an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object variable","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object variable","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"data","description":"A query or array","required":true,"default":"","type":"any","values":[]},
-		{"name":"row","description":"The row number in the spreadsheet at which to insert the data. If omitted rows are appended.","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"column","description":"The column number to start, all columns to the left will be empty.","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"insert","description":"When true appends the row `data` to the `spreadsheetObj`. When `false` attempts to update the spreadsheet object rows.","required":false,"default":"true","type":"boolean","values":[true,false]},
-		{"name":"datatype","description":"CF11+ An array of datatype expressions with values `STRING` `NUMERIC` or `DATE`. For example use `DATE:1;NUMERIC:2-2;STRING","required":false,"default":"","type":"array","values":[]},
-		{"name":"includeColumnNames","description":"CF2016+ When `true` writes column names as headers in the spreadsheet.","required":false,"default":"false","type":"boolean","values":[]}
+		{"name":"startRow","description":"The row number in the spreadsheet at which to insert the data. If omitted rows are appended.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"startColumn","description":"The column number to start, all columns to the left will be empty.","required":false,"default":"","type":"numeric","values":[]},
+		{"name":"insert","description":"When true appends the row `data` to the `spreadsheet`. When `false` attempts to update the spreadsheet object rows.","required":false,"default":"true","type":"boolean","values":[true,false]},
+		{"name":"datatypes","description":"CF11+ An array of datatype expressions with values `STRING` `NUMERIC` or `DATE`. For example use `DATE:1;NUMERIC:2-2;STRING","required":false,"default":"","type":"array","values":[]},
+		{"name":"insertColumnHeader","description":"CF2016+ When `true` writes column names as headers in the spreadsheet.","required":false,"default":"false","type":"boolean","values":[]}
 
 	],
 	"engines": {

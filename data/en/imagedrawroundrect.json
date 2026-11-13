@@ -1,19 +1,19 @@
 {
 	"name":"imageDrawRoundRect",
 	"type":"function",
-	"syntax":"imageDrawRoundRect(name, x, y, width, height, arcwidth, archeight [, filled])",
+	"syntax":"imageDrawRoundRect(image, x, y, width, height, arcWidth, arcHeight [, filled])",
 	"member":"someImage.drawRoundRect(x, y, width, height, arcwidth, archeight [, filled])",
 	"returns":"void",
 	"related":["imageDrawBeveledRect","imageDrawRect","imageClearRect"],
 	"description":" Draws a rectangle with rounded corners.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"image","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
 		{"name":"x","description":"The x coordinate of the rectangle.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"y","description":"The y coordinate of the rectangle.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"width","description":"The width of the rectangle.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"height","description":"The height of the rectangle.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"arcwidth","description":"The horizontal diameter of the arc at the four corners.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"archeight","description":"The vertical diameter of the arc at the four corners.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"arcWidth","description":"The horizontal diameter of the arc at the four corners.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"arcHeight","description":"The vertical diameter of the arc at the four corners.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"filled","description":"Specify whether the rectangle is filled","required":false,"default":"false","type":"boolean","values":[]}
 	],
 	"engines": {

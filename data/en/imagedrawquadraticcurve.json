@@ -1,17 +1,17 @@
 {
 	"name":"imageDrawQuadraticCurve",
 	"type":"function",
-	"syntax":"imageDrawQuadraticCurve(name, ctrlx1, ctrly1, x1, y1, x2, y2)",
+	"syntax":"imageDrawQuadraticCurve(image, x1, y1, ctrlx, ctrly, x2, y2)",
 	"member":"someImage.drawQuadraticCurve(ctrlx1, ctrly1, x1, y1, x2, y2)",
 	"returns":"void",
 	"related":[],
 	"description":" Draws a curved line. The curve is controlled by a single point.",
 	"params": [
-		{"name":"name","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
+		{"name":"image","description":"The image on which this operation is performed.","required":true,"default":"","type":"string","values":[]},
 		{"name":"x1","description":"The x coordinate of the start point of the quadratic curve segment.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"y1","description":"The y coordinate of the start point of the quadratic curve segment.","required":true,"default":"","type":"numeric","values":[]},
-		{"name":"ctrlx1","description":"The x coordinate of the first control point of the quadratic curve segment.","required":true,"default":"","type":"string","values":[]},
-		{"name":"ctrly1","description":"The y coordinate of the first control point of the quadratic curve segment.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"ctrlx","description":"The x coordinate of the first control point of the quadratic curve segment.","required":true,"default":"","type":"string","values":[]},
+		{"name":"ctrly","description":"The y coordinate of the first control point of the quadratic curve segment.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"x2","description":"The x coordinate of the end point of the quadratic curve segment.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"y2","description":"The y coordinate of the end point of the quadratic curve segment.","required":true,"default":"","type":"numeric","values":[]}
 	],

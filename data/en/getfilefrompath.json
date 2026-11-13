@@ -1,12 +1,12 @@
 {
 	"name":"getFileFromPath",
 	"type":"function",
-	"syntax":"getFileFromPath(path)",
+	"syntax":"getFileFromPath(filePath)",
 	"returns":"string",
 	"related":["getDirectoryFromPath"],
 	"description":" Extracts a filename from an absolute path.",
 	"params": [
-		{"name":"path","description":"","required":true,"default":"","type":"string","values":[]}
+		{"name":"filePath","description":"Lucee does not accept `filePath` as a named argument; it uses `path`.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getfilefrompath.html"},

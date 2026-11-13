@@ -1,14 +1,14 @@
 {
 	"name":"listContainsNoCase",
 	"type":"function",
-	"syntax":"listContainsNoCase(list, substring [, delimiters])",
+	"syntax":"listContainsNoCase(list, substring [, delimiter])",
 	"returns":"numeric",
 	"related":["listContains"],
 	"description":" Determines the index of the first list element that contains a\n specified substring.",
 	"params": [
 		{"name":"list","description":"","required":true,"default":"","type":"string","values":[]},
 		{"name":"substring","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"delimiters","description":"","required":false,"default":",","type":"string","values":[]}
+		{"name":"delimiter","description":"","required":false,"default":",","type":"string","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-l/listcontainsnocase.html"},

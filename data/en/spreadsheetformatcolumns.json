@@ -1,12 +1,12 @@
 {
 	"name":"spreadsheetFormatColumns",
 	"type":"function",
-	"syntax":"spreadsheetFormatColumns(spreadsheetObj, format, columns)",
+	"syntax":"spreadsheetFormatColumns(spreadsheet, format, columns)",
 	"returns":"void",
 	"related":["SpreadsheetFormatColumn","SpreadsheetFormatCell"],
 	"description":"Formats the contents of a multiple columns of an Excel spreadsheet object.",
 	"params": [
-		{"name":"spreadsheetObj","description":"The spreadsheet object for which formatting will be applied","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"spreadsheet","description":"The spreadsheet object for which formatting will be applied","required":true,"default":"","type":"variableName","values":[]},
 		{"name":"format","description":"A structure containing the formatting information","required":true,"default":"","type":"string","values":[]},
 		{"name":"columns","description":"A string containing comma-separated column numbers or column ranges","required":true,"default":"","type":"string","values":[]}
 

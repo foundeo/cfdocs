@@ -1,13 +1,13 @@
 {
 	"name":"spreadsheetwrite",
 	"type":"function",
-	"syntax":"spreadsheetwrite(spreadsheetObj, fileName [, password] [, overwrite])",
+	"syntax":"spreadsheetwrite(spreadsheet, filePath [, password] [, overwrite])",
 	"returns":"void",
 	"related":[],
 	"description":" Writes Spreadsheet object into file",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"fileName","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
+		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"filePath","description":"No Help Available","required":true,"default":"","type":"string","values":[]},
 		{"name":"password","description":"No Help Available","required":false,"default":"","type":"string","values":[]},
 		{"name":"overwrite","description":"No Help Available","required":false,"default":"","type":"boolean","values":[]}
 

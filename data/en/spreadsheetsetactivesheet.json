@@ -1,13 +1,13 @@
 {
 	"name":"spreadsheetSetActiveSheet",
 	"type":"function",
-	"syntax":"spreadsheetSetActiveSheet(spreadsheetObj [, name])",
+	"syntax":"spreadsheetSetActiveSheet(spreadsheet, sheetName)",
 	"returns":"void",
 	"related":[],
 	"description":" Sets active sheet in given spreadsheet",
 	"params": [
-		{"name":"spreadsheetObj","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
-		{"name":"name","description":"No Help Available","required":false,"default":"","type":"string","values":[]}
+		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]},
+		{"name":"sheetName","description":"No Help Available","required":true,"default":"","type":"string","values":[]}
 
 	],
 	"engines": {

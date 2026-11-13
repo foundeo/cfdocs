@@ -1,17 +1,17 @@
 {
 	"name":"queryAddColumn",
 	"type":"function",
-	"syntax":"queryAddColumn(query, column_name [, datatype], array_name)",
+	"syntax":"queryAddColumn(query, columnName [, columnType], array)",
 	"member":"someQuery.addColumn(column_name [, datatype], array_name)",
 	"returns":"numeric",
 	"related":["QueryNew", "QueryAddRow", "QuerySetCell"],
 	"description":" Adds a column to a query and populates its rows with the\n contents of a one-dimensional array. Pads query columns,\n if necessary, to ensure that all columns have the same number\n of rows.",
 	"params": [
 		{"name":"query","description":"","required":true,"default":"","type":"query","values":[]},
-		{"name":"column_name","description":"","required":true,"default":"","type":"string","values":[]},
-		{"name":"datatype","description":"Column data type.","required":false,"default":"","type":"string","values":["Integer","Bigint","Double","Decimal","Varchar","Binary","Bit","Time",
+		{"name":"columnName","description":"","required":true,"default":"","type":"string","values":[]},
+		{"name":"columnType","description":"Column data type.\n\nLucee does not accept `columnType` as a named argument; it uses `datatype`.","required":false,"default":"","type":"string","values":["Integer","Bigint","Double","Decimal","Varchar","Binary","Bit","Time",
 "Date","Timestamp"]},
-		{"name":"array_name","description":"","required":true,"default":"","type":"array","values":[]}
+		{"name":"array","description":"","required":true,"default":"","type":"array","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/queryaddcolumn.html"},
