@@ -1,0 +1,27 @@
+{
+	"name": "valueRef",
+	"type": "function",
+	"syntax": "valueRef(ref)",
+	"returns": "any",
+	"related": [],
+	"description": "Wraps a function so that it acts like a simple value. The function is called each time the value is used.",
+	"params": [
+		{
+			"name": "ref",
+			"description": "The function that returns the value.",
+			"required": true,
+			"default": "",
+			"type": "function",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.1.0.15",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/valueref.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

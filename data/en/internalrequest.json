@@ -1,0 +1,101 @@
+{
+	"name": "internalRequest",
+	"type": "function",
+	"syntax": "internalRequest(template [, method] [, urls] [, forms] [, cookies] [, headers] [, body] [, charset] [, addToken] [, throwonerror])",
+	"returns": "struct",
+	"related": [
+		"cfhttp"
+	],
+	"description": "Runs a request for a template inside the current Lucee server, without going over HTTP, and returns a struct with the response.",
+	"params": [
+		{
+			"name": "template",
+			"description": "The template path to request, such as `/test/index.cfm`.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "method",
+			"description": "The HTTP method, such as `GET` or `POST`.",
+			"required": false,
+			"default": "get",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "urls",
+			"description": "URL variables, as a struct or a `name=value&name2=value2` string.",
+			"required": false,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "forms",
+			"description": "Form variables, as a struct or a `name=value&name2=value2` string.",
+			"required": false,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "cookies",
+			"description": "Cookies to send.",
+			"required": false,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "headers",
+			"description": "Request headers to send.",
+			"required": false,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "body",
+			"description": "The request body.",
+			"required": false,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "charset",
+			"description": "The charset of the request. Defaults to the web charset.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "addToken",
+			"description": "When true, adds the session token as a cookie.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "throwonerror",
+			"description": "When true, an exception in the requested template is rethrown. When false, it is only reported in the result.",
+			"required": false,
+			"default": "true",
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.0.0.161",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/internalrequest.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

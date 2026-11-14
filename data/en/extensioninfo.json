@@ -1,0 +1,30 @@
+{
+	"name": "extensionInfo",
+	"type": "function",
+	"syntax": "extensionInfo(id)",
+	"returns": "struct",
+	"related": [
+		"extensionList",
+		"extensionExists"
+	],
+	"description": "Returns a struct of details about an installed extension, such as its name, version, functions and tags.",
+	"params": [
+		{
+			"name": "id",
+			"description": "The extension ID.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.0.0.210",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/extensioninfo.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

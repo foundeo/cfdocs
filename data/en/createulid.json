@@ -1,0 +1,46 @@
+{
+	"name": "createULID",
+	"type": "function",
+	"syntax": "createULID([type] [, input1] [, input2])",
+	"returns": "string",
+	"related": [
+		"createUUID",
+		"createGUID"
+	],
+	"description": "Generates a ULID, a 26-character unique identifier that sorts by creation time.",
+	"params": [
+		{
+			"name": "type",
+			"description": "`monotonic` makes each ULID greater than the last, even within the same millisecond. `hash` makes a repeatable ULID from `input1` and `input2`. When omitted, a standard random ULID is generated.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "input1",
+			"description": "A number used to build the ULID. Only used when `type` is `hash`.",
+			"required": false,
+			"default": "",
+			"type": "number",
+			"values": []
+		},
+		{
+			"name": "input2",
+			"description": "A string used to build the ULID. Only used when `type` is `hash`.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.0.1.65",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/createulid.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

@@ -1,0 +1,29 @@
+{
+	"name": "gatewayState",
+	"type": "function",
+	"syntax": "gatewayState(gatewayID)",
+	"returns": "string",
+	"related": [
+		"gatewayAction"
+	],
+	"description": "Returns the current state of an event gateway instance.",
+	"params": [
+		{
+			"name": "gatewayID",
+			"description": "The ID of the gateway instance. An error is thrown if no instance has that ID.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.2.0.75",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/gatewaystate.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

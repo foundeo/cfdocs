@@ -1,0 +1,29 @@
+{
+	"name": "getSystemPropOrEnvVar",
+	"type": "function",
+	"syntax": "getSystemPropOrEnvVar([property])",
+	"returns": "any",
+	"related": [
+		"getEnvironmentVariable"
+	],
+	"description": "Returns the system properties and environment variables Lucee supports, or the configured value of one of them.",
+	"params": [
+		{
+			"name": "property",
+			"description": "The name of a property. When given, its configured value is returned.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.2.1.23",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/getsystemproporenvvar.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

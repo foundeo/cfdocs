@@ -1,0 +1,21 @@
+{
+	"name": "sessionExists",
+	"type": "function",
+	"syntax": "sessionExists()",
+	"returns": "boolean",
+	"related": [
+		"sessionCommit",
+		"sessionInvalidate"
+	],
+	"description": "Returns true when a session has already been created for the current request.",
+	"params": [],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.2.1.16",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/sessionexists.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

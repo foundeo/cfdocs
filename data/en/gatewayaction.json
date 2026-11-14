@@ -1,0 +1,53 @@
+{
+	"name": "gatewayAction",
+	"type": "function",
+	"syntax": "gatewayAction(gatewayID, action [, waitForIt] [, timeout])",
+	"returns": "string",
+	"related": [
+		"gatewayState"
+	],
+	"description": "Starts, stops or restarts an event gateway instance.",
+	"params": [
+		{
+			"name": "gatewayID",
+			"description": "The ID of the gateway instance.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "action",
+			"description": "The action: `start`, `stop` or `restart`.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "waitForIt",
+			"description": "When true, waits for the action to finish.",
+			"required": false,
+			"default": "true",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "timeout",
+			"description": "How long to wait when `waitForIt` is true. Defaults to one second.",
+			"required": false,
+			"default": "",
+			"type": "timespan",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.2.0.75",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/gatewayaction.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

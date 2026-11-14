@@ -7,7 +7,8 @@
 	"description":" Forces the current session's pending live-scope writes out to the persistent session store immediately, before a redirect or abort crosses a control-flow boundary. Normally RustCFML syncs the session at request end; this makes the sync explicit and is a no-op when there is no live session.",
 	"params": [],
 	"engines": {
-		"rustcfml": {"minimum_version": ""}
+		"rustcfml": {"minimum_version": ""},
+		"lucee": {"minimum_version": "6.2.1.15", "notes": "", "docs": "https://docs.lucee.org/reference/functions/sessioncommit.html"}
 	},
 	"links": [
 

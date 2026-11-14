@@ -29,7 +29,7 @@
 	"engines": {
 		"lucee": {
 			"minimum_version": "7",
-			"notes": "",
+			"notes": "Lucee 6.2 has this as `luceeAIGetMetadata()`, which Lucee 7 still supports.",
 			"docs": "https://docs.lucee.org/reference/functions/aigetmetadata.html"
 		}
 	},

@@ -1,6 +1,6 @@
 {
 	"name":"Filesystem Functions",
 	"type":"listing",
-	"related":["directorycopy","directorycreate","directorydelete","directoryexists","directorylist","directoryrename","expandPath","fileClose","fileCopy","fileDelete","fileExists","fileGetMimeType","fileIsEOF","fileMismatch","fileModeToSymbolic","fileMove","fileOpen","fileRead","fileReadBinary","fileReadLine","fileReadLines","fileSeek","fileSetAccessMode","fileSetAttribute","fileSetLastModified","fileSkipBytes","fileUpload","fileUploadAll","fileWrite","fileWriteLine","getCurrentTemplatePath","getDirectoryFromPath","getFileFromPath","getFileInfo","getProfileSections","getProfileString","getPropertyFile","getPropertyString","getTempDirectory","getTempFile","isVideoFile","isZipFile","setPropertyString"],
+	"related":["directorycopy","directorycreate","directorydelete","directoryexists","directoryInfo","directorylist","directoryrename","expandPath","fileClose","fileCopy","fileDelete","fileExists","fileGetMimeType","fileIsEOF","fileMismatch","fileModeToSymbolic","fileMove","fileOpen","fileRead","fileReadBinary","fileReadLine","fileReadLines","fileSeek","fileSetAccessMode","fileSetAttribute","fileSetLastModified","fileSkipBytes","fileUpload","fileUploadAll","fileWrite","fileWriteLine","getCurrentTemplatePath","getDirectoryFromPath","getFileFromPath","getFileInfo","getProfileSections","getProfileString","getPropertyFile","getPropertyString","getTempDirectory","getTempFile","isVideoFile","isZipFile","setPropertyString"],
 	"description":"A listing of CFML Filesystem Functions."
 }

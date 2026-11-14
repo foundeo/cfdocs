@@ -1,0 +1,35 @@
+{
+	"name": "mavenLoad",
+	"type": "function",
+	"syntax": "mavenLoad(input [, includeOptional])",
+	"returns": "array",
+	"related": [],
+	"description": "Downloads JAR files from Maven, including their dependencies, and loads them into Lucee. Returns an array of the loaded files.",
+	"params": [
+		{
+			"name": "input",
+			"description": "A struct, or an array of structs, with the Maven `groupId`, `artifactId` and `version`.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "includeOptional",
+			"description": "When true, optional dependencies are loaded too.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.2.0.151",
+			"notes": "The `includeOptional` argument is Lucee 7+.",
+			"docs": "https://docs.lucee.org/reference/functions/mavenload.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

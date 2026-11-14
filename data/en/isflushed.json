@@ -7,7 +7,8 @@
 	"description":" Returns true once the HTTP response has been committed by a cfflush, i.e. whether output has been flushed to the client. This is the same flag that decides whether cfheader, cfcontent or cflocation can still take effect. Outside a streaming web response (for example under the CLI) nothing is ever committed, so it reports false.",
 	"params": [],
 	"engines": {
-		"rustcfml": {"minimum_version": ""}
+		"rustcfml": {"minimum_version": ""},
+		"lucee": {"minimum_version": "6.1.0.70", "notes": "", "docs": "https://docs.lucee.org/reference/functions/isflushed.html"}
 	},
 	"links": [
 

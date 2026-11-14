@@ -95,7 +95,8 @@
 			"docs": "https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structtosorted.html"
 		},
 		"boxlang": {"minimum_version":"1.0.0", "notes":"", "docs":"https://boxlang.ortusbooks.com/boxlang-language/reference/built-in-functions/struct/structtosorted"},
-		"rustcfml": {"minimum_version": ""}
+		"rustcfml": {"minimum_version": ""},
+		"lucee": {"minimum_version": "6.2.1.6", "notes": "Lucee names the first argument `base`, so passing `struct=` as a named argument fails. Positional calls work.", "docs": "https://docs.lucee.org/reference/functions/structtosorted.html"}
 	},
 	"links":[],
 	"examples": [

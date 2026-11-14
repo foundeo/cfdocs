@@ -1,0 +1,30 @@
+{
+	"name": "directoryInfo",
+	"type": "function",
+	"syntax": "directoryInfo(source)",
+	"returns": "struct",
+	"related": [
+		"getFileInfo",
+		"directoryExists"
+	],
+	"description": "Returns a struct of information about a directory, such as its size, mode and last modified date.",
+	"params": [
+		{
+			"name": "source",
+			"description": "The path of the directory.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.0.0.151",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/directoryinfo.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

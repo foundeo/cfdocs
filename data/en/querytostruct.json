@@ -1,0 +1,54 @@
+{
+	"name": "queryToStruct",
+	"type": "function",
+	"syntax": "queryToStruct(query, columnKey [, structType] [, valueRowNumber])",
+	"returns": "struct",
+	"related": [
+		"queryGetRow",
+		"valueArray"
+	],
+	"description": "Converts a query to a struct, keyed by the values of one column.",
+	"params": [
+		{
+			"name": "query",
+			"description": "The query to convert.",
+			"required": true,
+			"default": "",
+			"type": "query",
+			"values": []
+		},
+		{
+			"name": "columnKey",
+			"description": "The column whose values become the struct keys.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "structType",
+			"description": "The type of struct to create.",
+			"required": false,
+			"default": "ordered",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "valueRowNumber",
+			"description": "When true, each value is the row number instead of a struct of the row's data.",
+			"required": false,
+			"default": "",
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.0.0.302",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/querytostruct.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

@@ -1,0 +1,46 @@
+{
+	"name": "queryRenameColumn",
+	"type": "function",
+	"syntax": "queryRenameColumn(query, column, newColumnName)",
+	"returns": "void",
+	"related": [
+		"queryAddColumn",
+		"queryDeleteColumn"
+	],
+	"description": "Renames a column in a query.",
+	"params": [
+		{
+			"name": "query",
+			"description": "The query.",
+			"required": true,
+			"default": "",
+			"type": "query",
+			"values": []
+		},
+		{
+			"name": "column",
+			"description": "The column to rename.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "newColumnName",
+			"description": "The new name.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.0.0.57",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/queryrenamecolumn.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

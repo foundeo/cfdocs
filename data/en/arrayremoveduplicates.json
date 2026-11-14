@@ -1,0 +1,38 @@
+{
+	"name": "arrayRemoveDuplicates",
+	"type": "function",
+	"syntax": "arrayRemoveDuplicates(array [, ignoreCase])",
+	"returns": "array",
+	"related": [
+		"listRemoveDuplicates",
+		"arrayFilter"
+	],
+	"description": "Returns a new array with duplicate values removed, keeping the first occurrence of each.",
+	"params": [
+		{
+			"name": "array",
+			"description": "The array to remove duplicates from.",
+			"required": true,
+			"default": "",
+			"type": "array",
+			"values": []
+		},
+		{
+			"name": "ignoreCase",
+			"description": "When true, values that differ only in case count as duplicates.",
+			"required": false,
+			"default": "",
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.0.0.119",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/arrayremoveduplicates.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

@@ -1,0 +1,61 @@
+{
+	"name": "configTranslate",
+	"type": "function",
+	"syntax": "configTranslate(source [, target] [, type] [, mode] [, charset])",
+	"returns": "struct",
+	"related": [
+		"configImport"
+	],
+	"description": "Converts an old Lucee XML configuration (lucee-server.xml or lucee-web.xml.cfm) to the .CFConfig.json format.",
+	"params": [
+		{
+			"name": "source",
+			"description": "The path to the XML file, the XML itself, or `server` or `web` to use the old XML file in that context's directory.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "target",
+			"description": "The path to write the CFConfig.json file to, or `server` or `web` to write it to that context's directory. When omitted, the result is only returned.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "type",
+			"description": "The config context: `server` or `web`.",
+			"required": false,
+			"default": "server",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "mode",
+			"description": "Whether the result is for `single` or `multi` mode. Only used when `type` is `server`.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "charset",
+			"description": "The charset used to read the XML file.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.0.0.460",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/configtranslate.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

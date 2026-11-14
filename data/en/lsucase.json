@@ -1,0 +1,38 @@
+{
+	"name": "lsUCase",
+	"type": "function",
+	"syntax": "lsUCase(string [, locale])",
+	"returns": "string",
+	"related": [
+		"uCase",
+		"lsLCase"
+	],
+	"description": "Converts a string to uppercase using the casing rules of a locale.",
+	"params": [
+		{
+			"name": "string",
+			"description": "The string to convert.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "locale",
+			"description": "The locale to use. Defaults to the current locale.",
+			"required": false,
+			"default": "",
+			"type": "locale",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.1.0.37",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/lsucase.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

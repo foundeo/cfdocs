@@ -1,0 +1,43 @@
+{
+	"name": "logAllThreads",
+	"type": "function",
+	"syntax": "logAllThreads(path [, interval] [, duration])",
+	"returns": "void",
+	"related": [],
+	"description": "Writes stack traces of all running threads to a JSON Lines file at a set interval for a set time, to help find performance problems. Runs in the background and returns right away.",
+	"params": [
+		{
+			"name": "path",
+			"description": "The file to write to, ideally ending in `.jsonl`. The file is created or appended to.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "interval",
+			"description": "The time between captures, in milliseconds.",
+			"required": false,
+			"default": "0",
+			"type": "number",
+			"values": []
+		},
+		{
+			"name": "duration",
+			"description": "How long to capture for, in milliseconds.",
+			"required": false,
+			"default": "10000",
+			"type": "number",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "6.2.0.219",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/logallthreads.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}
