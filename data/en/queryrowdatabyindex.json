@@ -1,0 +1,47 @@
+{
+	"name": "queryRowDataByIndex",
+	"type": "function",
+	"syntax": "queryRowDataByIndex(query, index [, defaultValue])",
+	"returns": "struct",
+	"related": [
+		"queryGetCellByIndex",
+		"queryRowByIndex",
+		"queryGetRow"
+	],
+	"description": "Returns the row with the given value in a query's index column, as a struct. Set the index column with the `indexName` query option.",
+	"params": [
+		{
+			"name": "query",
+			"description": "The query.",
+			"required": true,
+			"default": "",
+			"type": "query",
+			"values": []
+		},
+		{
+			"name": "index",
+			"description": "The index value of the row.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "defaultValue",
+			"description": "Returned when no row matches. When omitted, an error is thrown.",
+			"required": false,
+			"default": "",
+			"type": "struct",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "5.3.4.34",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/queryrowdatabyindex.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

@@ -11,6 +11,7 @@
 		{"name":"value","description":"The row value (three-argument form only).","required":false,"default":"","type":"any","values":[]}
 	],
 	"engines": {
+		"lucee": {"minimum_version":"", "notes":"Lucee only supports the two-argument form, `debugAdd(category, struct)`, and names the struct argument `data`.", "docs":"https://docs.lucee.org/reference/functions/debugadd.html"},
 		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [],

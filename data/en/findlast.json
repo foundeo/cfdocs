@@ -1,0 +1,46 @@
+{
+	"name": "findLast",
+	"type": "function",
+	"syntax": "findLast(substring, string [, start])",
+	"returns": "numeric",
+	"related": [
+		"findLastNoCase",
+		"find"
+	],
+	"description": "Returns the position of the last occurrence of a substring in a string, or 0 if it isn't found. The search is case-sensitive.",
+	"params": [
+		{
+			"name": "substring",
+			"description": "The string to search for.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "string",
+			"description": "The string to search in.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "start",
+			"description": "The position to search backward from.",
+			"required": false,
+			"default": "1",
+			"type": "numeric",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/findlast.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

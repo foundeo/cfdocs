@@ -1,0 +1,21 @@
+{
+	"name": "inspectTemplates",
+	"type": "function",
+	"syntax": "inspectTemplates()",
+	"returns": "boolean",
+	"related": [
+		"pagePoolClear",
+		"templateCacheClear"
+	],
+	"description": "Makes Lucee check every cached template for changes on its next use. Useful when the inspect templates setting is `never`.",
+	"params": [],
+	"engines": {
+		"lucee": {
+			"minimum_version": "5.3.6.2",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/inspecttemplates.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

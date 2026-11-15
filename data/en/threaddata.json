@@ -1,0 +1,21 @@
+{
+	"name": "threadData",
+	"type": "function",
+	"syntax": "threadData()",
+	"returns": "struct",
+	"related": [
+		"cfthread",
+		"threadJoin"
+	],
+	"description": "Returns the `cfthread` scope, a struct of the threads in the current request.",
+	"params": [],
+	"engines": {
+		"lucee": {
+			"minimum_version": "5.3.6.19",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/threaddata.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

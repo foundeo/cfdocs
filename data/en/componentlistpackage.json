@@ -1,0 +1,30 @@
+{
+	"name": "componentListPackage",
+	"type": "function",
+	"syntax": "componentListPackage(package)",
+	"returns": "array",
+	"related": [
+		"getComponentMetadata",
+		"createObject"
+	],
+	"description": "Returns an array of the component names in a package. Throws an error if the package doesn't exist.",
+	"params": [
+		{
+			"name": "package",
+			"description": "The dotted package name, such as `org.lucee.cfml`. `packageName` and `name` are aliases.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/componentlistpackage.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

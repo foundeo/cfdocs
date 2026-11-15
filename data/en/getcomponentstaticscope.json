@@ -9,6 +9,7 @@
 		{"name":"component","description":"A component instance, a component template, or a dot-separated component name.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
+		"lucee": {"minimum_version":"", "notes":"`name`, `componentName` and `cfc` are aliases for the `component` argument.", "docs":"https://docs.lucee.org/reference/functions/getcomponentstaticscope.html"},
 		"rustcfml": {"minimum_version": ""}
 	},
 	"links": [

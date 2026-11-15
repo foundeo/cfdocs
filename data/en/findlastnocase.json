@@ -1,0 +1,46 @@
+{
+	"name": "findLastNoCase",
+	"type": "function",
+	"syntax": "findLastNoCase(substring, string [, start])",
+	"returns": "numeric",
+	"related": [
+		"findLast",
+		"findNoCase"
+	],
+	"description": "Returns the position of the last occurrence of a substring in a string, or 0 if it isn't found. The search is case-insensitive.",
+	"params": [
+		{
+			"name": "substring",
+			"description": "The string to search for.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "string",
+			"description": "The string to search in.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "start",
+			"description": "The position to search backward from.",
+			"required": false,
+			"default": "1",
+			"type": "numeric",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/findlastnocase.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

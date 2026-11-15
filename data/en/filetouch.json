@@ -1,0 +1,38 @@
+{
+	"name": "fileTouch",
+	"type": "function",
+	"syntax": "fileTouch(file [, createPath])",
+	"returns": "void",
+	"related": [
+		"fileWrite",
+		"fileSetLastModified"
+	],
+	"description": "Updates a file's last modified date, creating the file if it doesn't exist.",
+	"params": [
+		{
+			"name": "file",
+			"description": "The path of the file, or a file object.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "createPath",
+			"description": "When true, missing parent directories are created. Lucee's docs give the default as true, but a missing parent directory throws an error unless this is true.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/filetouch.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

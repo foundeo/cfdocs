@@ -1,0 +1,20 @@
+{
+	"name": "applicationPathCacheClear",
+	"type": "function",
+	"syntax": "applicationPathCacheClear()",
+	"returns": "void",
+	"related": [
+		"applicationStop"
+	],
+	"description": "Clears Lucee's cache of Application.cfc and Application.cfm locations.",
+	"params": [],
+	"engines": {
+		"lucee": {
+			"minimum_version": "5.3.8.149",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/applicationpathcacheclear.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

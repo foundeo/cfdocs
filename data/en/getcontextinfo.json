@@ -1,0 +1,20 @@
+{
+	"name": "getContextInfo",
+	"type": "function",
+	"syntax": "getContextInfo()",
+	"returns": "struct",
+	"related": [
+		"getPageContext"
+	],
+	"description": "Returns a struct of information about the current request context, such as whether the response has been flushed.",
+	"params": [],
+	"engines": {
+		"lucee": {
+			"minimum_version": "5.3.1.7",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/getcontextinfo.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

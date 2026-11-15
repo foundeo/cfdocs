@@ -1,0 +1,21 @@
+{
+	"name": "getSystemMetrics",
+	"type": "function",
+	"syntax": "getSystemMetrics()",
+	"returns": "struct",
+	"related": [
+		"getCPUUsage",
+		"getFreeMemory"
+	],
+	"description": "Returns a struct of server metrics, such as active requests and threads, session count, datasource and HTTP connections, and CPU load.",
+	"params": [],
+	"engines": {
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/getsystemmetrics.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

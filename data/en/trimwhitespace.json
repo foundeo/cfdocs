@@ -1,0 +1,30 @@
+{
+	"name": "trimWhitespace",
+	"type": "function",
+	"syntax": "trimWhitespace(input)",
+	"returns": "string",
+	"related": [
+		"trim",
+		"reReplace"
+	],
+	"description": "Collapses each run of whitespace in a string to a single whitespace character.",
+	"params": [
+		{
+			"name": "input",
+			"description": "The string to clean up.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/trimwhitespace.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

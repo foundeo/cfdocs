@@ -1,0 +1,20 @@
+{
+	"name": "getHTTPRequestHeaders",
+	"type": "function",
+	"syntax": "getHTTPRequestHeaders()",
+	"returns": "struct",
+	"related": [
+		"getHTTPRequestData"
+	],
+	"description": "Returns a struct of the current request's HTTP headers.",
+	"params": [],
+	"engines": {
+		"lucee": {
+			"minimum_version": "5.3.8.163",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/gethttprequestheaders.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

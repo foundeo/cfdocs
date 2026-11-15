@@ -1,0 +1,30 @@
+{
+	"name": "generateRSAKeys",
+	"type": "function",
+	"syntax": "generateRSAKeys([key_size])",
+	"returns": "struct",
+	"related": [
+		"encrypt",
+		"decrypt"
+	],
+	"description": "Generates an RSA key pair for `encrypt()` and `decrypt()`. Returns a struct with `private` and `public` keys.",
+	"params": [
+		{
+			"name": "key_size",
+			"description": "The key size in bits. Lucee 6.2.0.55+.",
+			"required": false,
+			"default": "1024",
+			"type": "numeric",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/generatersakeys.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

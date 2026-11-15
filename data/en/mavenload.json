@@ -16,7 +16,7 @@
 		},
 		{
 			"name": "includeOptional",
-			"description": "When true, optional dependencies are loaded too.",
+			"description": "When true, optional dependencies are loaded too. Lucee 7+.",
 			"required": false,
 			"default": "false",
 			"type": "boolean",
@@ -26,7 +26,7 @@
 	"engines": {
 		"lucee": {
 			"minimum_version": "6.2.0.151",
-			"notes": "The `includeOptional` argument is Lucee 7+.",
+			"notes": "",
 			"docs": "https://docs.lucee.org/reference/functions/mavenload.html"
 		}
 	},

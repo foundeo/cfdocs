@@ -1,0 +1,47 @@
+{
+	"name": "encodeForSQL",
+	"type": "function",
+	"syntax": "encodeForSQL(string, dialect [, canonicalize])",
+	"returns": "string",
+	"related": [
+		"encodeForHTML",
+		"cfqueryparam"
+	],
+	"description": "Encodes a string for use in a SQL statement.",
+	"discouraged": "Escaping is easy to get wrong and can still leave a query open to SQL injection. Use cfqueryparam or queryExecute() parameters instead.",
+	"params": [
+		{
+			"name": "string",
+			"description": "The string to encode.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "dialect",
+			"description": "The SQL dialect: `db2`, `mysql_ansi`, `mysql` or `oracle`.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "canonicalize",
+			"description": "When true, the string is canonicalized before it is encoded.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "5",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/encodeforsql.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

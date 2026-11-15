@@ -1,0 +1,29 @@
+{
+	"name": "queryClose",
+	"type": "function",
+	"syntax": "queryClose(query)",
+	"returns": "boolean",
+	"related": [
+		"cfquery"
+	],
+	"description": "Closes the result set of a lazy query (`lazy=true`) so it stops holding memory.",
+	"params": [
+		{
+			"name": "query",
+			"description": "The query to close.",
+			"required": true,
+			"default": "",
+			"type": "query",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "5.3.4.38",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/queryclose.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

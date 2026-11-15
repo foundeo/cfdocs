@@ -7,7 +7,7 @@
 		"aiHas",
 		"createAISession"
 	],
-	"description": "Returns information about a configured AI endpoint, such as its settings and, optionally, its models and files.",
+	"description": "Returns information about a configured AI endpoint, such as its settings and, optionally, its models and files. Lucee 6.2 names it `luceeAIGetMetadata()`, which Lucee 7 still accepts.",
 	"params": [
 		{
 			"name": "name",
@@ -29,7 +29,7 @@
 	"engines": {
 		"lucee": {
 			"minimum_version": "7",
-			"notes": "Lucee 6.2 has this as `luceeAIGetMetadata()`, which Lucee 7 still supports.",
+			"notes": "",
 			"docs": "https://docs.lucee.org/reference/functions/aigetmetadata.html"
 		}
 	},

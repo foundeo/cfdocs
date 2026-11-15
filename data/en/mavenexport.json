@@ -8,12 +8,12 @@
 		"mavenExists",
 		"mavenInfo"
 	],
-	"description": "Returns a pom.xml string that lists every artifact in Lucee's local Maven cache as a dependency.",
+	"description": "Returns a pom.xml string that lists every artifact in Lucee's local Maven cache as a dependency. Use `mavenImport()` to load the exported pom.xml into another cache.",
 	"params": [],
 	"engines": {
 		"lucee": {
 			"minimum_version": "7.1.0.98",
-			"notes": "Use `mavenImport()` to load the exported pom.xml into another cache.",
+			"notes": "",
 			"docs": "https://docs.lucee.org/reference/functions/mavenexport.html"
 		}
 	},

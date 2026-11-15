@@ -6,7 +6,7 @@
 	"related": [
 		"transaction"
 	],
-	"description": "Returns the isolation level of the current transaction.",
+	"description": "Returns the isolation level of the current transaction. Returns an empty string outside a transaction.",
 	"params": [
 		{
 			"name": "datasource",
@@ -20,7 +20,7 @@
 	"engines": {
 		"lucee": {
 			"minimum_version": "7.1.0.70",
-			"notes": "Returns an empty string outside a transaction.",
+			"notes": "",
 			"docs": "https://docs.lucee.org/reference/functions/gettransactionisolation.html"
 		}
 	},

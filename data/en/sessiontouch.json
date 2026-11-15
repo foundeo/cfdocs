@@ -6,12 +6,12 @@
 	"related": [
 		"sessionCommit"
 	],
-	"description": "Marks the session as changed so it is saved to session storage at the end of the request.",
+	"description": "Marks the session as changed so it is saved to session storage at the end of the request. `sessionCommit()` saves it right away instead. With the default memory session storage, Lucee 7.1.2.191 throws a class cast error.",
 	"params": [],
 	"engines": {
 		"lucee": {
 			"minimum_version": "7",
-			"notes": "Unlike `sessionCommit()`, the save is deferred until the end of the request. With the default memory session storage, Lucee 7.1.2.191 throws a class cast error.",
+			"notes": "",
 			"docs": ""
 		}
 	},

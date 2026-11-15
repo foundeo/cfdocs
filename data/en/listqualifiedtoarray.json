@@ -1,0 +1,61 @@
+{
+	"name": "listQualifiedToArray",
+	"type": "function",
+	"syntax": "listQualifiedToArray(list [, delimiter, qualifier, qualifierRequired, includeEmptyFields])",
+	"returns": "array",
+	"related": [
+		"listToArray"
+	],
+	"description": "Converts a list to an array, treating delimiters inside qualifiers (double quotes by default) as part of the element.",
+	"params": [
+		{
+			"name": "list",
+			"description": "The list.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "delimiter",
+			"description": "The delimiter. `delimiters` is an alias.",
+			"required": false,
+			"default": ",",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "qualifier",
+			"description": "The character around elements that may contain delimiters. `qualifiers` is an alias.",
+			"required": false,
+			"default": "\"",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "qualifierRequired",
+			"description": "When true, every element must be wrapped in the qualifier.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "includeEmptyFields",
+			"description": "When true, empty elements are included.",
+			"required": false,
+			"default": "false",
+			"type": "boolean",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/listqualifiedtoarray.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

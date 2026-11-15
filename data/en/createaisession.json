@@ -9,7 +9,7 @@
 		"loadAISession",
 		"aiHas"
 	],
-	"description": "Creates a session for talking to a configured AI endpoint. The session keeps the conversation history between calls.",
+	"description": "Creates a session for talking to a configured AI endpoint. The session keeps the conversation history between calls. `aiCreateSession()` is an alias. Lucee 6.2 names it `luceeCreateAISession()`, which Lucee 7 still accepts.",
 	"params": [
 		{
 			"name": "name",
@@ -47,7 +47,7 @@
 	"engines": {
 		"lucee": {
 			"minimum_version": "7",
-			"notes": "`aiCreateSession()` is an alias. Lucee 6.2 has this as `luceeCreateAISession()`, which Lucee 7 still supports.",
+			"notes": "",
 			"docs": "https://docs.lucee.org/reference/functions/createaisession.html"
 		}
 	},

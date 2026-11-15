@@ -1,0 +1,30 @@
+{
+	"name": "fileInfo",
+	"type": "function",
+	"syntax": "fileInfo(file)",
+	"returns": "struct",
+	"related": [
+		"getFileInfo",
+		"directoryInfo"
+	],
+	"description": "Returns a struct of details about a file, such as its size, mode, checksum and last modified date.",
+	"params": [
+		{
+			"name": "file",
+			"description": "The path of the file. `resource` is an alias.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "5",
+			"notes": "",
+			"docs": "https://docs.lucee.org/reference/functions/fileinfo.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}
