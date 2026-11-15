@@ -9,7 +9,7 @@
 	"description":"Check if the K2Server is available to perform a search",
 	"params": [],
 	"engines": {
-		"coldfusion": {"minimum_version":"6", "deprecated":"6.1", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isk2serveronline.html"},
+		"coldfusion": {"minimum_version":"6", "deprecated":"6.1", "removed":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isk2serveronline.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":""},
 		"railo": {"minimum_version":"", "notes":"", "docs":""}
 	},

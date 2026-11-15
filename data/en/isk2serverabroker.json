@@ -9,7 +9,7 @@
 	"description":"Check if K2Broker is in configured with ColdFusion",
 	"params": [],
 	"engines": {
-		"coldfusion": {"minimum_version":"6", "deprecated":"6.1", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isk2serverabroker.html"},
+		"coldfusion": {"minimum_version":"6", "deprecated":"6.1", "removed":"10", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-in-k/isk2serverabroker.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":""},
 		"railo": {"minimum_version":"", "notes":"", "docs":""}
 	},
