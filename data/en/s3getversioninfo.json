@@ -1,0 +1,70 @@
+{
+	"name": "s3GetVersionInfo",
+	"type": "function",
+	"syntax": "s3GetVersionInfo(bucketName [, objectName, accessKeyId, secretAccessKey, host, timeout])",
+	"returns": "query",
+	"related": [
+		"s3GetMetaData",
+		"s3ListBucket"
+	],
+	"description": "Returns version information for an S3 bucket or object, as a query.",
+	"params": [
+		{
+			"name": "bucketName",
+			"description": "The bucket name.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "objectName",
+			"description": "The object key. When omitted, information for the bucket is returned.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "accessKeyId",
+			"description": "The S3 access key ID. Defaults to the `lucee.s3.accesskeyid` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "secretAccessKey",
+			"description": "The S3 secret access key. Defaults to the `lucee.s3.secretaccesskey` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "host",
+			"description": "The hostname of an S3-compatible provider, without `https://`. Defaults to Amazon AWS.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "timeout",
+			"description": "The timeout in milliseconds.",
+			"required": false,
+			"default": "10000",
+			"type": "numeric",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "",
+			"notes": "Requires the S3 extension.",
+			"docs": "https://docs.lucee.org/reference/functions/s3getversioninfo.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

@@ -1,37 +1,105 @@
 {
-	"name":"s3Download",
-	"type":"function",
-	"syntax":"s3Download(bucket, object [, target, charset, accessKeyId, secretKey, host])",
-	"returns":"any",
-	"related":["s3read","s3readbinary"],
-	"description":"Downloads an object from an S3 (or S3-compatible) bucket. When a target path is supplied, the bytes are written to that local file and true is returned; otherwise the body is returned as a UTF-8 string.",
+	"name": "s3Download",
+	"type": "function",
+	"syntax": "s3Download(bucketName, objectName [, target, charset, accessKeyId, secretAccessKey, host, timeout])",
+	"returns": "any",
+	"related": [
+		"s3read",
+		"s3readbinary"
+	],
+	"description": "Downloads an object from an S3 bucket. It can save the object to a file, pass it to a function in parts, or return its content.",
 	"params": [
-		{"name":"bucket","description":"The name of the S3 bucket to download from.","required":true,"default":"","type":"string","values":[]},
-		{"name":"object","description":"The object key to download.","required":true,"default":"","type":"string","values":[]},
-		{"name":"target","description":"Optional local file path to write the object bytes to. When omitted, the body is returned as a string instead.","required":false,"default":"","type":"string","values":[]},
-		{"name":"charset","description":"Character encoding to use when decoding the body (informational; bodies are decoded as UTF-8).","required":false,"default":"","type":"string","values":[]},
-		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
-		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
-		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+		{
+			"name": "bucketName",
+			"description": "The bucket name.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "objectName",
+			"description": "The object key.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "target",
+			"description": "Where the data goes: a file object from `fileOpen(path, \"write\")`, or a function that receives the data in parts. The function's argument name sets how the data is split: `line`, `string{size}` or `binary{size}`. Return false from it to stop. When omitted, the content is returned.",
+			"required": false,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "charset",
+			"description": "The charset of the content.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "accessKeyId",
+			"description": "The S3 access key ID. Defaults to the `lucee.s3.accesskeyid` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "secretAccessKey",
+			"description": "The S3 secret access key. Defaults to the `lucee.s3.secretaccesskey` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "host",
+			"description": "The hostname of an S3-compatible provider, without `https://`. Defaults to Amazon AWS.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "timeout",
+			"description": "The timeout in milliseconds.",
+			"required": false,
+			"default": "10000",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": ""}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "Requires the S3 extension.",
+			"docs": "https://docs.lucee.org/reference/functions/s3download.html"
+		},
+		"rustcfml": {
+			"minimum_version": "",
+			"notes": "Names the first two arguments `bucket` and `object`, and the secret key argument `secretKey`. `target` is a file path, and the function returns true when it saves to a file. Doesn't list `timeout`."
+		}
 	},
 	"links": [],
 	"examples": [
 		{
 			"title": "Download an object to a local file",
-			"description": "Writes the object body to disk and returns true on success.",
-			"code": "ok = s3Download(\"my-bucket\", \"logs/today.txt\", expandPath(\"./today.txt\"));",
+			"description": "Writes the object to the file.",
+			"code": "s3Download(\"my-bucket\", \"logs/today.txt\", fileOpen(expandPath(\"./today.txt\"), \"write\"));",
 			"result": "",
-			"runnable":false
+			"runnable": false
 		},
 		{
 			"title": "Download an object into a string",
-			"description": "Without a target path, the body is returned directly.",
+			"description": "Without a target, the content is returned.",
 			"code": "content = s3Download(\"my-bucket\", \"logs/today.txt\");",
 			"result": "",
-			"runnable":false
+			"runnable": false
 		}
 	]
 }

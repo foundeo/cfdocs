@@ -1,37 +1,178 @@
 {
-	"name":"s3GeneratePresignedURL",
-	"type":"function",
-	"syntax":"s3GeneratePresignedURL(bucket, object [, expireDate, httpMethod, accessKeyId, secretKey, host])",
-	"returns":"string",
-	"related":["s3generateuri","s3read","s3exists"],
-	"description":"Generates a presigned URL that grants temporary, signed access to an object in an S3 (or S3-compatible) bucket. The expireDate argument accepts a datetime (the URL is valid until that instant) or a plain number of minutes; it defaults to 15 minutes.",
+	"name": "s3GeneratePresignedURL",
+	"type": "function",
+	"syntax": "s3GeneratePresignedURL(bucketNameOrPath [, objectName, expireDate, httpMethod, sseAlgorithm, sseCustomerKey, checksum, type, disposition, encoding, version, zeroByte, responseHeaders, accessKeyId, secretAccessKey, host, timeout])",
+	"returns": "string",
+	"related": [
+		"s3generateuri",
+		"s3read",
+		"s3exists"
+	],
+	"description": "Generates a presigned URL that gives temporary access to an S3 object.",
 	"params": [
-		{"name":"bucket","description":"The name of the S3 bucket containing the object.","required":true,"default":"","type":"string","values":[]},
-		{"name":"object","description":"The object key the URL will grant access to.","required":true,"default":"","type":"string","values":[]},
-		{"name":"expireDate","description":"Expiry: a datetime (URL valid until that instant) or a number of minutes. Defaults to 15 minutes.","required":false,"default":"15","type":"any","values":[]},
-		{"name":"httpMethod","description":"HTTP method the presigned URL is valid for. Defaults to GET.","required":false,"default":"GET","type":"string","values":[]},
-		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
-		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
-		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+		{
+			"name": "bucketNameOrPath",
+			"description": "The bucket name, or an `s3://` path to a bucket or object, such as `s3://mybucket/file.txt`.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "objectName",
+			"description": "The object key, when `bucketNameOrPath` is a bucket name.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "expireDate",
+			"description": "When the URL expires.",
+			"required": false,
+			"default": "",
+			"type": "date",
+			"values": []
+		},
+		{
+			"name": "httpMethod",
+			"description": "The HTTP method the URL is for, such as `GET` or `PUT`.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "sseAlgorithm",
+			"description": "The server-side encryption algorithm: `AES256` or `KMS`.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "sseCustomerKey",
+			"description": "The customer-provided server-side encryption key.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "checksum",
+			"description": "The base64-encoded MD5 checksum of the content.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "type",
+			"description": "The MIME type of the content.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "disposition",
+			"description": "The Content-Disposition value, such as `attachment; filename=\"report.pdf\"`.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "encoding",
+			"description": "The Content-Encoding value, such as `gzip`.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "version",
+			"description": "The object version ID, when versioning is enabled.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "zeroByte",
+			"description": "When true, the object has zero-byte content.",
+			"required": false,
+			"default": "",
+			"type": "boolean",
+			"values": []
+		},
+		{
+			"name": "responseHeaders",
+			"description": "A struct of custom metadata headers. The `x-amz-meta-` prefix is added when missing.",
+			"required": false,
+			"default": "",
+			"type": "struct",
+			"values": []
+		},
+		{
+			"name": "accessKeyId",
+			"description": "The S3 access key ID. Defaults to the `lucee.s3.accesskeyid` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "secretAccessKey",
+			"description": "The S3 secret access key. Defaults to the `lucee.s3.secretaccesskey` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "host",
+			"description": "The hostname of an S3-compatible provider, without `https://`. Defaults to Amazon AWS.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "timeout",
+			"description": "The timeout in milliseconds.",
+			"required": false,
+			"default": "10000",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": ""}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "Requires the S3 extension.",
+			"docs": "https://docs.lucee.org/reference/functions/s3generatepresignedurl.html"
+		},
+		"rustcfml": {
+			"minimum_version": "",
+			"notes": "Names the first two arguments `bucket` and `object`, and the secret key argument `secretKey`. `expireDate` also accepts a number of minutes and defaults to 15 minutes. Only `expireDate` and `httpMethod` are supported of the URL arguments, so `accessKeyId` is the fifth argument."
+		}
 	},
 	"links": [],
 	"examples": [
 		{
 			"title": "Generate a presigned GET URL",
 			"description": "Creates a URL that expires in 60 minutes.",
-			"code": "url = s3GeneratePresignedURL(\"my-bucket\", \"reports/q3.pdf\", 60);",
+			"code": "url = s3GeneratePresignedURL(\"my-bucket\", \"reports/q3.pdf\", dateAdd(\"n\", 60, now()));",
 			"result": "",
-			"runnable":false
+			"runnable": false
 		},
 		{
 			"title": "Generate a presigned PUT URL",
 			"description": "The fourth argument selects the HTTP method.",
-			"code": "url = s3GeneratePresignedURL(\"my-bucket\", \"uploads/new.txt\", 15, \"PUT\");",
+			"code": "url = s3GeneratePresignedURL(\"my-bucket\", \"uploads/new.txt\", dateAdd(\"n\", 15, now()), \"PUT\");",
 			"result": "",
-			"runnable":false
+			"runnable": false
 		}
 	]
 }

@@ -1,22 +1,105 @@
 {
-	"name":"s3Move",
-	"type":"function",
-	"syntax":"s3Move(srcBucket, srcObject, trgBucket [, trgObject, acl, accessKeyId, secretKey, host])",
-	"returns":"void",
-	"related":["s3copy","s3delete"],
-	"description":"Moves an object between S3 (or S3-compatible) buckets (or keys) by copying the object and then deleting the source.",
+	"name": "s3Move",
+	"type": "function",
+	"syntax": "s3Move(srcBucketName, srcObjectName, trgBucketName [, trgObjectName, acl, location, accessKeyId, secretAccessKey, host, timeout])",
+	"returns": "void",
+	"related": [
+		"s3copy",
+		"s3delete"
+	],
+	"description": "Moves an object to another bucket or key, by copying it and then deleting the source.",
 	"params": [
-		{"name":"srcBucket","description":"The source bucket name.","required":true,"default":"","type":"string","values":[]},
-		{"name":"srcObject","description":"The source object key.","required":true,"default":"","type":"string","values":[]},
-		{"name":"trgBucket","description":"The destination bucket name.","required":true,"default":"","type":"string","values":[]},
-		{"name":"trgObject","description":"The destination object key. Defaults to the source object key.","required":false,"default":"","type":"string","values":[]},
-		{"name":"acl","description":"Object ACL to apply to the move (accepted for compatibility; not enforced).","required":false,"default":"","type":"string","values":[]},
-		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
-		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
-		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+		{
+			"name": "srcBucketName",
+			"description": "The source bucket.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "srcObjectName",
+			"description": "The source object key.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "trgBucketName",
+			"description": "The target bucket.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "trgObjectName",
+			"description": "The target object key. Defaults to the source object key.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "acl",
+			"description": "An array of structs, one for each ACL grant.",
+			"required": false,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "location",
+			"description": "The S3 region.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "accessKeyId",
+			"description": "The S3 access key ID. Defaults to the `lucee.s3.accesskeyid` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "secretAccessKey",
+			"description": "The S3 secret access key. Defaults to the `lucee.s3.secretaccesskey` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "host",
+			"description": "The hostname of an S3-compatible provider, without `https://`. Defaults to Amazon AWS.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "timeout",
+			"description": "The timeout in milliseconds.",
+			"required": false,
+			"default": "10000",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": ""}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "Requires the S3 extension.",
+			"docs": "https://docs.lucee.org/reference/functions/s3move.html"
+		},
+		"rustcfml": {
+			"minimum_version": "",
+			"notes": "Names the bucket and object arguments `srcBucket`, `srcObject`, `trgBucket` and `trgObject`, and the secret key argument `secretKey`. Doesn't list `location` or `timeout`, so `accessKeyId` is the sixth argument."
+		}
 	},
 	"links": [],
 	"examples": [
@@ -25,7 +108,7 @@
 			"description": "Copies the object to the target and deletes the source.",
 			"code": "s3Move(\"src-bucket\", \"reports/q3.pdf\", \"archive-bucket\");",
 			"result": "",
-			"runnable":false
+			"runnable": false
 		}
 	]
 }

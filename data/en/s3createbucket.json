@@ -1,20 +1,82 @@
 {
-	"name":"s3CreateBucket",
-	"type":"function",
-	"syntax":"s3CreateBucket(bucket [, acl, location, accessKeyId, secretKey, host])",
-	"returns":"void",
-	"related":["s3delete","s3listbuckets","s3clearbucket"],
-	"description":"Creates a new S3 (or S3-compatible) bucket in the given location/region.",
+	"name": "s3CreateBucket",
+	"type": "function",
+	"syntax": "s3CreateBucket(bucketName [, acl, location, accessKeyId, secretAccessKey, host, timeout])",
+	"returns": "void",
+	"related": [
+		"s3delete",
+		"s3listbuckets",
+		"s3clearbucket"
+	],
+	"description": "Creates an S3 bucket.",
 	"params": [
-		{"name":"bucket","description":"The name of the bucket to create.","required":true,"default":"","type":"string","values":[]},
-		{"name":"acl","description":"Optional bucket ACL to apply (accepted for compatibility).","required":false,"default":"","type":"string","values":[]},
-		{"name":"location","description":"Bucket location/region constraint. Defaults to us-east-1.","required":false,"default":"us-east-1","type":"string","values":[]},
-		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
-		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
-		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+		{
+			"name": "bucketName",
+			"description": "The bucket name.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "acl",
+			"description": "An array of structs, one for each ACL grant.",
+			"required": false,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "location",
+			"description": "The S3 region.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "accessKeyId",
+			"description": "The S3 access key ID. Defaults to the `lucee.s3.accesskeyid` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "secretAccessKey",
+			"description": "The S3 secret access key. Defaults to the `lucee.s3.secretaccesskey` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "host",
+			"description": "The hostname of an S3-compatible provider, without `https://`. Defaults to Amazon AWS.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "timeout",
+			"description": "The timeout in milliseconds.",
+			"required": false,
+			"default": "10000",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": ""}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "Requires the S3 extension.",
+			"docs": "https://docs.lucee.org/reference/functions/s3createbucket.html"
+		},
+		"rustcfml": {
+			"minimum_version": "",
+			"notes": "Names the first argument `bucket` and the secret key argument `secretKey`. `location` defaults to `us-east-1`. Doesn't list `timeout`."
+		}
 	},
 	"links": [],
 	"examples": [
@@ -23,7 +85,7 @@
 			"description": "Creates a bucket in the default region.",
 			"code": "s3CreateBucket(\"my-new-bucket\");",
 			"result": "",
-			"runnable":false
+			"runnable": false
 		}
 	]
 }

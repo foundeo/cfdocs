@@ -1,29 +1,91 @@
 {
-	"name":"s3ListBucket",
-	"type":"function",
-	"syntax":"s3ListBucket(bucket [, prefix, maxKeys, accessKeyId, secretKey, host])",
-	"returns":"array",
-	"related":["s3listbuckets","s3read","s3delete"],
-	"description":"Lists the objects in an S3 (or S3-compatible) bucket, optionally filtered by a key prefix. Returns an array of structs with key, size, lastModified, eTag, storageClass and isDirectory. If a key prefix is configured for the application, returned keys have the prefix stripped.",
+	"name": "s3ListBucket",
+	"type": "function",
+	"syntax": "s3ListBucket(bucketName [, listener, blockfactor, accessKeyId, secretAccessKey, host, timeout])",
+	"returns": "query",
+	"related": [
+		"s3listbuckets",
+		"s3read",
+		"s3delete"
+	],
+	"description": "Lists the objects in an S3 bucket, as a query.",
 	"params": [
-		{"name":"bucket","description":"The name of the S3 bucket to list.","required":true,"default":"","type":"string","values":[]},
-		{"name":"prefix","description":"Optional key prefix to filter objects by (e.g. \"logs/\").","required":false,"default":"","type":"string","values":[]},
-		{"name":"maxKeys","description":"Optional maximum number of keys to return.","required":false,"default":"","type":"numeric","values":[]},
-		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
-		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
-		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+		{
+			"name": "bucketName",
+			"description": "The bucket name.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "listener",
+			"description": "A function or component that receives the listed objects.",
+			"required": false,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "blockfactor",
+			"description": "The number of objects to fetch per request.",
+			"required": false,
+			"default": "1000",
+			"type": "numeric",
+			"values": []
+		},
+		{
+			"name": "accessKeyId",
+			"description": "The S3 access key ID. Defaults to the `lucee.s3.accesskeyid` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "secretAccessKey",
+			"description": "The S3 secret access key. Defaults to the `lucee.s3.secretaccesskey` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "host",
+			"description": "The hostname of an S3-compatible provider, without `https://`. Defaults to Amazon AWS.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "timeout",
+			"description": "The timeout in milliseconds.",
+			"required": false,
+			"default": "10000",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": ""}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "Requires the S3 extension.",
+			"docs": "https://docs.lucee.org/reference/functions/s3listbucket.html"
+		},
+		"rustcfml": {
+			"minimum_version": "",
+			"notes": "Names the first argument `bucket` and the secret key argument `secretKey`. Takes `prefix` and `maxKeys` as the second and third arguments instead of `listener` and `blockfactor`, and returns an array of structs with `key`, `size`, `lastModified`, `eTag`, `storageClass` and `isDirectory`. Doesn't list `timeout`."
+		}
 	},
 	"links": [],
 	"examples": [
 		{
-			"title": "List objects under a prefix",
-			"description": "Returns objects whose keys begin with the prefix.",
-			"code": "listing = s3ListBucket(\"my-bucket\", \"logs/\");",
+			"title": "List the objects in a bucket",
+			"description": "Returns a query of the bucket's objects.",
+			"code": "listing = s3ListBucket(\"my-bucket\");",
 			"result": "",
-			"runnable":false
+			"runnable": false
 		}
 	]
 }

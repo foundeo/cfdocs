@@ -1,0 +1,78 @@
+{
+	"name": "s3SetACL",
+	"type": "function",
+	"syntax": "s3SetACL(bucketNameOrPath [, objectName], aclObject [, accessKeyId, secretAccessKey, host, timeout])",
+	"returns": "void",
+	"related": [
+		"s3AddACL",
+		"s3GetACL"
+	],
+	"description": "Replaces the ACL grants of an S3 bucket or object.",
+	"params": [
+		{
+			"name": "bucketNameOrPath",
+			"description": "The bucket name, or an `s3://` path to a bucket or object, such as `s3://mybucket/file.txt`.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "objectName",
+			"description": "The object key, when `bucketNameOrPath` is a bucket name.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "aclObject",
+			"description": "An array of structs, one for each ACL grant.",
+			"required": true,
+			"default": "",
+			"type": "any",
+			"values": []
+		},
+		{
+			"name": "accessKeyId",
+			"description": "The S3 access key ID. Defaults to the `lucee.s3.accesskeyid` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "secretAccessKey",
+			"description": "The S3 secret access key. Defaults to the `lucee.s3.secretaccesskey` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "host",
+			"description": "The hostname of an S3-compatible provider, without `https://`. Defaults to Amazon AWS.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "timeout",
+			"description": "The timeout in milliseconds.",
+			"required": false,
+			"default": "10000",
+			"type": "numeric",
+			"values": []
+		}
+	],
+	"engines": {
+		"lucee": {
+			"minimum_version": "",
+			"notes": "Requires the S3 extension.",
+			"docs": "https://docs.lucee.org/reference/functions/s3setacl.html"
+		}
+	},
+	"links": [],
+	"examples": []
+}

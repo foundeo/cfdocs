@@ -1,18 +1,74 @@
 {
-	"name":"s3ClearBucket",
-	"type":"function",
-	"syntax":"s3ClearBucket(bucket [, accessKeyId, secretKey, host])",
-	"returns":"void",
-	"related":["s3delete","s3listbucket","s3createbucket"],
-	"description":"Deletes every object in an S3 (or S3-compatible) bucket, leaving the bucket itself in place.",
+	"name": "s3ClearBucket",
+	"type": "function",
+	"syntax": "s3ClearBucket(bucketName [, maxage, accessKeyId, secretAccessKey, host, timeout])",
+	"returns": "void",
+	"related": [
+		"s3delete",
+		"s3listbucket",
+		"s3createbucket"
+	],
+	"description": "Deletes every object in an S3 bucket, leaving the bucket in place. With `maxage`, only objects older than that are deleted.",
 	"params": [
-		{"name":"bucket","description":"The name of the S3 bucket to empty.","required":true,"default":"","type":"string","values":[]},
-		{"name":"accessKeyId","description":"Inline AWS access key id. Overrides credentials from Application.cfc and environment variables.","required":false,"default":"","type":"string","values":[]},
-		{"name":"secretKey","description":"Inline AWS secret access key.","required":false,"default":"","type":"string","values":[]},
-		{"name":"host","description":"Inline endpoint URL for S3-compatible providers (e.g. Cloudflare R2, MinIO).","required":false,"default":"","type":"string","values":[]}
+		{
+			"name": "bucketName",
+			"description": "The bucket name.",
+			"required": true,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "maxage",
+			"description": "Only delete objects older than this timespan.",
+			"required": false,
+			"default": "",
+			"type": "timespan",
+			"values": []
+		},
+		{
+			"name": "accessKeyId",
+			"description": "The S3 access key ID. Defaults to the `lucee.s3.accesskeyid` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "secretAccessKey",
+			"description": "The S3 secret access key. Defaults to the `lucee.s3.secretaccesskey` system property or environment variable.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "host",
+			"description": "The hostname of an S3-compatible provider, without `https://`. Defaults to Amazon AWS.",
+			"required": false,
+			"default": "",
+			"type": "string",
+			"values": []
+		},
+		{
+			"name": "timeout",
+			"description": "The timeout in milliseconds.",
+			"required": false,
+			"default": "10000",
+			"type": "numeric",
+			"values": []
+		}
 	],
 	"engines": {
-		"rustcfml": {"minimum_version": ""}
+		"lucee": {
+			"minimum_version": "",
+			"notes": "Requires the S3 extension.",
+			"docs": "https://docs.lucee.org/reference/functions/s3clearbucket.html"
+		},
+		"rustcfml": {
+			"minimum_version": "",
+			"notes": "Names the first argument `bucket` and the secret key argument `secretKey`. Doesn't list `maxage` or `timeout`."
+		}
 	},
 	"links": [],
 	"examples": [
@@ -21,7 +77,7 @@
 			"description": "Removes all objects from the bucket.",
 			"code": "s3ClearBucket(\"my-bucket\");",
 			"result": "",
-			"runnable":false
+			"runnable": false
 		}
 	]
 }
