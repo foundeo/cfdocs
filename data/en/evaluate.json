@@ -10,7 +10,7 @@
 		{"name":"expression","description":"Expression to evaluate. String expressions can be complex. If a string expression contains a single- or double-quotation mark, the mark must be escaped. This function is useful for forming one variable from multiple variables.","required":true,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/evaluate.html"},
+		"coldfusion": {"minimum_version":"2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/evaluate.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/evaluate.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/evaluate"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/evaluate"},

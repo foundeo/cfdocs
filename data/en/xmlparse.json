@@ -11,7 +11,7 @@
 		{"name":"validator","description":"Any of the following:\n - The name of a Document Type Definition (DTD) or\n XML Schema file.\n - The URL of a DTD or Schema file; valid protocol\n identifiers include http, https, ftp, and file.\n - A string representation of a DTD or Schema.\n - An empty string; in this case, the XML file must\n contain an embedded DTD or Schema identifier, which\n is used to validate the document.","required":false,"default":"","type":"string","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlparse.html"},
+		"coldfusion": {"minimum_version":"6", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-t-z/xmlparse.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/xmlparse.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/xmlparse"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/xmlparse"},

@@ -17,7 +17,7 @@
 		{"name":"overwriteFlag","description":"Whether values in struct2 should overwrite corresponding values in\n struct1 or not.","required":false,"default":true,"type":"boolean","values":[true,false]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"CF6+ can be used on XML objects as well as structures.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structappend.html"},
+		"coldfusion": {"minimum_version":"5", "notes":"CF6+ can be used on XML objects as well as structures.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structappend.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/structappend.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structappend"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structappend"},

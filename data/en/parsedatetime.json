@@ -10,7 +10,7 @@
 		{"name":"format","description":"- standard: function does no conversion.\n - pop: specifies that the date\/time string is in POP format, which includes the local time of the sender and a time-zone offset from UTC. ColdFusion applies the offset and returns\n a value with the UTC time.\n- Apart from these two values, this parameter allows you to directly specify the format in which to parse the given string.","required":false,"default":"standard","type":"string","values":["standard","pop"]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/parsedatetime.html"},
+		"coldfusion": {"minimum_version":"2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-m-r/parsedatetime.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/parsedatetime.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/parsedatetime"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/parsedatetime"},

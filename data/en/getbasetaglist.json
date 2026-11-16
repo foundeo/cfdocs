@@ -9,7 +9,7 @@
 		{"name":"caller", "description":"Adobe only. Not aliased in Lucee", "required":false, "default":"", "type":"any", "values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"ACF behavavior is different from Lucee.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getbasetaglist.html"},
+		"coldfusion": {"minimum_version":"4", "notes":"ACF behavavior is different from Lucee.", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getbasetaglist.html"},
 		"lucee": {"minimum_version":"", "notes":"params:'delimiter' with default: ','.", "docs":"https://docs.lucee.org/reference/functions/getbasetaglist.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/getbasetaglist"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/getbasetaglist"},

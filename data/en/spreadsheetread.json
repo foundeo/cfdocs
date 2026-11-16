@@ -10,7 +10,7 @@
 		{"name":"sheetName","description":"Spreadsheet name or number","required":false,"default":"","type":"variableName","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetread.html"},
+		"coldfusion": {"minimum_version":"9", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/spreadsheetread.html"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/spreadsheetread"},
 		"rustcfml": {"minimum_version": ""}
 	},

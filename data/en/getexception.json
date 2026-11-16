@@ -9,7 +9,7 @@
 		{"name":"object","description":"","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getexception.html"}
+		"coldfusion": {"minimum_version":"5", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-e-g/getexception.html"}
 	},
 	"examples" : [
 		{

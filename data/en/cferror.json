@@ -11,7 +11,7 @@
 		{"name":"exception","description":"Type of exception that the tag handles:\n\n application: application exceptions\n database: database exceptions\n template: CFML page exceptions\n security: security exceptions\n object: object exceptions\n missingInclude: missing include file exceptions\n expression: expression exceptions\n lock: lock exceptions\n custom_type: developer-defined exceptions, defined in the\n cfthrow tag\n any: all exception types","required":false,"default":"any","type":"string","values":["any","application","database","template","security","object","missinginclude","expression","lock","custom_type"]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cferror.html"},
+		"coldfusion": {"minimum_version":"2", "notes":"", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-d-e/cferror.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/tags/error.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/tag/cferror"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/tag/cferror"}

@@ -22,8 +22,8 @@
 	],
 	"engines": {
 		"coldfusion": {
-			"minimum_version": "",
-			"notes": "Not listed by getFunctionList() before ColdFusion 2021, but it works on ColdFusion 10. Adobe's docs say it was added in ColdFusion 11.",
+			"minimum_version": "7",
+			"notes": "Undocumented until CF11 and missing from getFunctionList() until CF2021, but present since CF7.",
 			"docs": "https://guides.adobe.com/coldfusion/en/docs/cfml-reference/generate3deskey.html"
 		},
 		"lucee": {

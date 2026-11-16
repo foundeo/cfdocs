@@ -15,7 +15,7 @@
 		{"name":"callback","description":"CF2016+ A closure for sorting which takes two keys of the struct and returns whether the first value is greater than, equal to, or less than the second value. Inside compare function can be used (compare, compareNoCase, dateCompare or custom). `function(key1, key2)`","required":false,"default":"","type":"function","values":[]}
 	],
 	"engines": {
-		"coldfusion": {"minimum_version":"", "notes":"CF10+ Added support for locale-specific characters", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structsort.html"},
+		"coldfusion": {"minimum_version":"5", "notes":"CF10+ Added support for locale-specific characters", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-s/structsort.html"},
 		"lucee": {"minimum_version":"", "notes":"", "docs":"https://docs.lucee.org/reference/functions/structsort.html"},
 		"railo": {"minimum_version":"", "notes":"", "docs":"http://railodocs.org/index.cfm/function/structsort"},
 		"openbd": {"minimum_version":"", "notes":"", "docs":"http://openbd.org/manual/?/function/structsort"},
