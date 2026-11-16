@@ -84,7 +84,6 @@ Historical information about ColdFusion Versions and releases.
 ## Adobe ColdFusion 10 - May 2012 (_Zeus_)
 
 * Ditched JRun, Moved to Tomcat
-* [ColdFusion 10 Updates & Hotfixes](https://helpx.adobe.com/coldfusion/kb/coldfusion-10-updates.html)
 * [ColdFusion 10 New Tags and Functions](/cf10)
 * EOL: Core Support Ended 5/16/2017, Extended Support Ended	5/16/2019
 
@@ -93,7 +92,6 @@ Historical information about ColdFusion Versions and releases.
 
 * Member functions e.g. `structName.keyExists("k")` instead of `structKeyExists(structName, "k")`
 * Full script support for all tags e.g. `cftagName(attribute=value)`
-* [ColdFusion 11 Updates & Hotfixes](https://helpx.adobe.com/coldfusion/kb/coldfusion-11-updates.html)
 * [ColdFusion 11 New Tags and Functions](/cf11)
 * EOL: Core Support Ended 4/30/2019, Extended Support Ended	4/30/2021
 
@@ -102,7 +100,6 @@ Historical information about ColdFusion Versions and releases.
 
 * Security Analyzer
 * API Manager
-* [ColdFusion 2016 Updates & Hotfixes](https://helpx.adobe.com/coldfusion/kb/coldfusion-2016-updates.html)
 * [ColdFusion 2016 New Tags and Functions](/cf2016)
 * EOL: Core Support Ended 2/17/2021, Extended Support Ended	2/17/2022
 
@@ -129,6 +126,7 @@ Historical information about ColdFusion Versions and releases.
 * [ColdFusion 2021 Updates & Hotfixes](https://helpx.adobe.com/coldfusion/kb/coldfusion-2021-updates.html)
 * [ColdFusion 2021 What's New](https://community.adobe.com/t5/coldfusion/introducing-adobe-coldfusion-2021-release/m-p/11585468)
 * [ColdFusion 2021 New Tags and Functions](/cf2021)
+* EOL: Core Support Ended 11/10/2025, Extended Support Ends	11/10/2026
 
 ## Adobe ColdFusion 2023 - May 2023 (_Fortuna_)
 
@@ -143,6 +141,7 @@ Historical information about ColdFusion Versions and releases.
 * [ColdFusion 2023 Updates & Hotfixes](https://helpx.adobe.com/coldfusion/kb/coldfusion-2023-updates.html)
 * [ColdFusion 2023 What's New](https://community.adobe.com/t5/coldfusion-discussions/live-introducing-the-2023-release-of-adobe-coldfusion/td-p/13797706)
 * [ColdFusion 2023 New Tags and Functions](/cf2023)
+* EOL: Core Support Ends 05/16/2028, Extended Support Ends	05/16/2029
 
 
 ## Adobe ColdFusion 2025 - February 2025 (_Project CFNext_) 
@@ -185,5 +184,6 @@ Historical information about ColdFusion Versions and releases.
 * cfoauth changes
 * cfexchangeconnection changes
 * Microsoft Graph: User Store in ColdFusion
+* EOL: Core Support Ends 02/26/2030
 
 Lots of additional historical and version information can be found on the [ColdFusion Wikipedia Page](https://en.wikipedia.org/wiki/Adobe_ColdFusion)
