@@ -2,7 +2,7 @@
   "name": "cfhtmltopdfitem",
   "type": "tag",
   "syntax": "<cfhtmltopdfitem>",
-  "description": "Header Footer PageBreak subdefinition for cfhtmltopdf.\r\n\r\nYou can access the following scope variables in <cfhtmltopdfitem> content:\r\n\r\n_PAGENUMBER \u2013 Add current page number.\r\n_LASTPAGENUMBER \u2013 Add last page number.",
+  "description": "Header Footer PageBreak subdefinition for cfhtmltopdf. CF2023+ With PDF engine 2.0, headers and footers can contain HTML.\r\n\r\nYou can access the following scope variables in <cfhtmltopdfitem> content:\r\n\r\n_PAGENUMBER \u2013 Add current page number.\r\n_LASTPAGENUMBER \u2013 Add last page number.",
   "engines": {
     "coldfusion": {
       "minimum_version": "11",

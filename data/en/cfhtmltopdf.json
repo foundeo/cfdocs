@@ -24,7 +24,8 @@
 		{"name":"pageHeight","description":"Only valid if pagetype=custom. based on unit attribute","values":[],"default":"","type":"numeric","required":false},
 		{"name":"saveAsName","description":"The filename that appears in the SaveAs dialog when a user saves a PDF file written to the browser.","values":[],"default":"","type":"string","required":false},
 		{"name":"unit","description":"Default unit for the pageHeight, pageWidth, and margin attributes:","values":["in","cm"],"default":"in","type":"string","required":false},
-		{"name":"language","description":"CF2016+ Document language","values":[],"default":"English","type":"string","required":false}
+		{"name":"language","description":"CF2016+ Document language","values":[],"default":"English","type":"string","required":false},
+		{"name":"conformance","description":"CF2023+ The PDF/A conformance level of the output file. Requires PDF engine 2.0.","values":["PDFA1a","PDFA1b","PDFA2a","PDFA2b","PDFA2u","PDFA3a","PDFA3b","PDFA3u"],"default":"","type":"string","required":false}
 	],
 	"links":[
 		{
