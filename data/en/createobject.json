@@ -4,7 +4,7 @@
 	"syntax":"createObject(type, className)",
 	"returns":"any",
 	"related":["cfobject","cfinvoke"],
-	"description":"The createObject function takes different arguments depending on the value of the type argument:\n\n createObject('component', cfcName)\n createObject('java', class)\n createObject('java', class, bundleName, bundleVersion) (Lucee only)\n createObject('webservice', urltowsdl, [, portname])\n createObject('.NET', class, assembly [, server, port, protocol, secure])\n createObject('com', class, context, serverName)",
+	"description":"The createObject function takes different arguments depending on the value of the type argument:\n\n createObject('component', cfcName)\n createObject('java', class)\n createObject('java', class, loadPaths) (CF2025+)\n createObject('java', class, bundleName, bundleVersion) (Lucee only)\n createObject('webservice', urltowsdl, [, portname])\n createObject('.NET', class, assembly [, server, port, protocol, secure])\n createObject('com', class, context, serverName)",
 	"params": [
 		{"name":"type","description":"The type of object","required":true,"default":"","type":"string","values":["component","corba","com","java","webservice",".NET","dotnet"]},
 		{"name":"className","description":"","required":true,"default":"","type":"string","values":[]},
@@ -15,7 +15,8 @@
 		{"name":"urltowsdl","description":"WSDL file URL; location of web service","required":true,"default":"","type":"string","values":[]},
 		{"name":"portname","description":"The port name for the web service. This value is case-sensitive\n and corresponds to the port element's name attribute under the\n service element.\n Specify this parameter if the web service contains multiple ports.\n If no port name is specified, ColdFusion uses the first port found\n in the WSDL.","required":false,"default":"","type":"string","values":[]},
 		{"name":"bundleName","description":"Bundle where the object has to be located","required":false,"default":"","type":"string","values":[]},
-		{"name":"bundleVersion","description":"Specific version to","required":false,"":"false","type":"string","values":[]}
+		{"name":"bundleVersion","description":"Specific version to","required":false,"":"false","type":"string","values":[]},
+		{"name":"loadPaths","description":"CF2025+ For Java objects: a path, or an array of paths, to JAR or class files to load the class from. Pass it as the third argument.","required":false,"default":"","type":"any","values":[]}
 	],
 	"engines": {
 		"coldfusion": {"minimum_version":"4.5", "notes":"CORBA support DEPRECATED in CF11+", "docs":"https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-functions/functions-c-d/CreateObject.html"},

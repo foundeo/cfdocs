@@ -1,7 +1,7 @@
 {
   "name": "fileUpload",
   "type": "function",
-  "syntax": "fileUpload(destination [, fileField] [, mimeType] [, onConflict] [, strict])",
+  "syntax": "fileUpload(destination [, fileField] [, mimeType] [, onConflict] [, strict] [, allowedExtensions] [, continueOnError] [, errorVariable])",
   "returns": "struct",
   "related": [
     "fileUploadAll"
@@ -51,6 +51,30 @@
       "required": false,
       "default": "true",
       "type": "boolean",
+      "values": []
+    },
+    {
+      "name": "allowedExtensions",
+      "description": "A comma-separated list of file extensions to allow, such as `.png,.jpg`. Use `*` to allow all. Overrides the blocked extensions in the server or application settings. Added in CF2018 Update 3, CF2016 Update 10 and CF11 Update 18.",
+      "required": false,
+      "default": "",
+      "type": "string",
+      "values": []
+    },
+    {
+      "name": "continueOnError",
+      "description": "CF2025+ If `true`, keep uploading the remaining files when one fails, for example because it already exists or has a blocked type or MIME type.",
+      "required": false,
+      "default": "false",
+      "type": "boolean",
+      "values": []
+    },
+    {
+      "name": "errorVariable",
+      "description": "CF2025+ The name of a variable to receive an array of structs describing each failed upload, with keys such as `clientFile`, `reason` and `message`. Use with `continueOnError`.",
+      "required": false,
+      "default": "",
+      "type": "string",
       "values": []
     }
   ],

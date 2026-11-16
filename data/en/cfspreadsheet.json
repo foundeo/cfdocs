@@ -73,7 +73,7 @@
 		},
 		{
 			"name": "password",
-			"description": "Set a password for modifying the sheet.",
+			"description": "Set a password for modifying the sheet. CF2025+ Also required to read a password-protected file; reading one without it throws an error.",
 			"required": false,
 			"type": "string"
 		},

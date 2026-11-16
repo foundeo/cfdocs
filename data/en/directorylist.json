@@ -41,7 +41,7 @@
 		},
 		{
 			"name": "filter",
-			"description": "File extension filter applied to the listed files, for example, `*.jpg`. \rMultiple filters can be applied by using a pipe delimiter. For example: `*.doc|*.xls`. \rYou can also pass a function. The arguments of the passed function must have: `path` :the file path, `type`: The values (file or dir), `extension`: The file extension, if any, otherwise and empty string. \rThis argument can also accept the instances of Java `FileFilter` Objects. \rIn Lucee4.5+ it can be a closure as well.",
+			"description": "File extension filter applied to the listed files, for example, `*.jpg`. \rMultiple filters can be applied by using a pipe delimiter. For example: `*.doc|*.xls`. \rYou can also pass a function. The arguments of the passed function must have: `path` :the file path, `type`: The values (file or dir), `extension`: The file extension, if any, otherwise and empty string. \rThis argument can also accept the instances of Java `FileFilter` Objects. \rIn Lucee4.5+ it can be a closure as well. \rCF2025+ A function that takes a single argument receives a struct with the keys `attributes`, `extension`, `lastmodifieddate`, `link`, `name`, `parent`, `path`, `size` and `type`.",
 			"required": false,
 			"default": "",
 			"type": "string",

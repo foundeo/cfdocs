@@ -4,7 +4,7 @@
 	"syntax":"spreadsheetInfo(spreadsheet)",
 	"returns":"struct",
 	"related":[],
-	"description":" Returns spreadsheet property",
+	"description":"Returns a struct of properties of a spreadsheet, such as the author, sheet names and creation date. CF2025+ also returns a `visibility` struct showing whether each sheet is visible, hidden or very hidden.",
 	"params": [
 		{"name":"spreadsheet","description":"No Help Available","required":true,"default":"","type":"variableName","values":[]}
 

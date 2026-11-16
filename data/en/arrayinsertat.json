@@ -8,7 +8,7 @@
 	"description":"Inserts a value at the specified position in the array. If the element is inserted before the end of the array, ColdFusion shifts the positions of all elements with a higher index to make room.",
 	"params": [
 		{"name":"array","description":"The array which will have the new element inserted.","required":true,"default":"","type":"array","values":[]},
-		{"name":"position","description":"The numerical index in the array where the new element will be inserted.\n Must be less than or equal to the length of the array.\n Remember ColdFusion arrays start at 1 not 0.","required":true,"default":"","type":"numeric","values":[]},
+		{"name":"position","description":"The numerical index in the array where the new element will be inserted.\n Must be less than or equal to the length of the array. CF2025+ also accepts the length plus one, which appends the value, so it works on an empty array.\n Remember ColdFusion arrays start at 1 not 0.","required":true,"default":"","type":"numeric","values":[]},
 		{"name":"value","description":"The new element to insert.","required":true,"default":"","type":"any","values":[]}
 	],
 	"engines": {

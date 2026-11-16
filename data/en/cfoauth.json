@@ -6,9 +6,9 @@
   "related": ["cflogin","cfntauthenticate"],
   "params": [
     {
-      "values": ["Facebook", "Google"],
+      "values": ["Facebook", "Google", "Microsoft"],
       "default": "",
-      "description": "Currently supported values are Facebook and Google. Implicitly supports the authentication workflow of Facebook and Google.",
+      "description": "The provider: Facebook, Google or Microsoft (CF2025+). Implicitly supports the authentication workflow of these providers.",
       "name": "Type",
       "type": "string",
       "required": true
@@ -83,6 +83,26 @@
       "description": "Extra options which will be passed as URL query string to authendpoint.",
       "name": "urlparams",
       "type": "string",
+      "required": false
+    },
+    {
+      "values": [
+        "authorization_code",
+        "refresh_token",
+        "client_credentials"
+      ],
+      "default": "authorization_code",
+      "description": "CF2025+ The OAuth workflow: `authorization_code` signs in a user, `refresh_token` renews a token without signing in again, and `client_credentials` gets application-level access with no user.",
+      "name": "grantType",
+      "type": "string",
+      "required": false
+    },
+    {
+      "values": [],
+      "default": "",
+      "description": "CF2025+ A struct of provider-specific settings: `tenant` (the Microsoft tenant ID) or `apiVersion` (the Facebook API version).",
+      "name": "providerConfig",
+      "type": "struct",
       "required": false
     }
   ],

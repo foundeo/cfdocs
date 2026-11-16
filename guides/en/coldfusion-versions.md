@@ -184,6 +184,7 @@ Historical information about ColdFusion Versions and releases.
 * cfoauth changes
 * cfexchangeconnection changes
 * Microsoft Graph: User Store in ColdFusion
+* [ColdFusion 2025 New Tags and Functions](/cf2025)
 * EOL: Core Support Ends 02/26/2030
 
 Lots of additional historical and version information can be found on the [ColdFusion Wikipedia Page](https://en.wikipedia.org/wiki/Adobe_ColdFusion)
