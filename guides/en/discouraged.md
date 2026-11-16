@@ -18,6 +18,10 @@ The use of this function is discouraged. It is an internal function, call decryp
 
 The use of this function is discouraged. It is an internal function, call encrypt(string,key,"cfmx_compat","hex") instead.
 
+`encodeForSQL`
+
+Escaping is easy to get wrong and can still leave a query open to SQL injection. Use cfqueryparam or queryExecute() parameters instead.
+
 `evaluate`
 
 In almost all cases evaluate is unnecessary (use bracket notation instead). Use of evaluate can lead to performance and security issues.

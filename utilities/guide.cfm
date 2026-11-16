@@ -116,18 +116,18 @@
 	}
 
 	/* write all files */
-	fileWrite(guideDir & '\discouraged.md', discouragedFileContent);
+	fileWrite(guideDir & '/discouraged.md', discouragedFileContent);
 	writeOutput("<p>Wrote discouraged.md</p>");
 
-	fileWrite(guideDir & '\deprecated.md', deprecatedFileContent);
+	fileWrite(guideDir & '/deprecated.md', deprecatedFileContent);
 	writeOutput("<p>Wrote deprecated.md</p>");
 
-	fileWrite(guideDir & '\acf-only.md', acfonlyFileContent);
+	fileWrite(guideDir & '/acf-only.md', acfonlyFileContent);
 	writeOutput("<p>Wrote acf-only.md</p>");
 
-	fileWrite(guideDir & '\lucee-only.md', luceeonlyFileContent);
+	fileWrite(guideDir & '/lucee-only.md', luceeonlyFileContent);
 	writeOutput("<p>Wrote lucee-only.md</p>");
 
-	fileWrite(guideDir & '\rustcfml-only.md', rustcfmlyFileContent);
+	fileWrite(guideDir & '/rustcfml-only.md', rustcfmlyFileContent);
 	writeOutput("<p>Wrote rustcfml-only.md</p>");
 </cfscript>

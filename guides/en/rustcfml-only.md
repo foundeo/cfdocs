@@ -12,10 +12,6 @@
 
 `dbinfo`
 
-`debugAdd`
-
-`getComponentStaticScope`
-
 `getDebugData`
 
 `getEnvironmentVariable`
@@ -28,8 +24,6 @@
 
 `io`
 
-`isFlushed`
-
 `jwtDecode`
 
 `jwtSign`
@@ -41,8 +35,6 @@
 `mcp`
 
 `mcpAudio`
-
-`mcpClient`
 
 `mcpConnect`
 
@@ -78,40 +70,6 @@
 
 `readLine`
 
-`s3ClearBucket`
-
-`s3Copy`
-
-`s3CreateBucket`
-
-`s3Delete`
-
-`s3Download`
-
-`s3Exists`
-
-`s3GeneratePresignedURL`
-
-`s3GenerateURI`
-
-`s3GetMetaData`
-
-`s3ListBucket`
-
-`s3ListBuckets`
-
-`s3Move`
-
-`s3Read`
-
-`s3ReadBinary`
-
-`s3Upload`
-
-`s3Write`
-
-`sessionCommit`
-
 `smtpConnectionTest`
 
 `spreadsheet`
@@ -124,41 +82,9 @@
 
 `spreadsheetAutoSizeColumn`
 
-`spreadsheetClearCell`
-
-`spreadsheetClearCellRange`
-
 `spreadsheetFromJson`
 
-`spreadsheetGetCellFormat`
-
-`spreadsheetGetCellHyperlink`
-
-`spreadsheetGetCellType`
-
-`spreadsheetGetColumnWidth`
-
 `spreadsheetReadCsv`
-
-`spreadsheetRenameSheet`
-
-`spreadsheetSetActiveCell`
-
-`spreadsheetSetCellHyperlink`
-
-`spreadsheetSetCellRangeValue`
-
-`spreadsheetSetColumnHidden`
-
-`spreadsheetSetFitToPage`
-
-`spreadsheetSetPrintOrientation`
-
-`spreadsheetSetRepeatingColumns`
-
-`spreadsheetSetRepeatingRows`
-
-`spreadsheetSetRowHidden`
 
 `spreadsheetToArray`
 

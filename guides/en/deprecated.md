@@ -16,7 +16,13 @@
 
 `cfcalendar` - Deprecated as of Adobe ColdFusion 2016
 
+`cfcol` - Deprecated as of Adobe ColdFusion 2016
+
 `cffileupload` - Deprecated as of Adobe ColdFusion 2016
+
+`cfformgroup` - Deprecated as of Adobe ColdFusion 2016
+
+`cfformitem` - Deprecated as of Adobe ColdFusion 2016
 
 `cfmediaplayer` - Deprecated as of Adobe ColdFusion 2016
 

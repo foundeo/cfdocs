@@ -2,67 +2,37 @@
 
 ## The following tags/functions are Lucee only
 
-`applicationStartTime`
+`aiGetMetadata` - Minimum Version: 7
 
-`argon2CheckHash` - Minimum Version: 5.3.8
+`aiHas` - Minimum Version: 7
 
-`array`
+`applicationPathCacheClear` - Minimum Version: 5.3.8.149
 
-`arrayIndexExists`
+`arrayRemoveDuplicates` - Minimum Version: 6.0.0.119
 
-`arrayMedian`
+`astFromPath` - Minimum Version: 7.0.0.296
 
-`arrayMerge`
-
-`arrayMid`
-
-`arrayReverse`
-
-`arrayToStruct`
+`astFromString` - Minimum Version: 7.0.0.296
 
 `beat`
 
+`breakpoint` - Minimum Version: 7.1.0.45
+
 `bundleInfo` - Minimum Version: 5
 
-`cacheClear`
+`cachedWithinFlush` - Minimum Version: 7.1.0.11
 
-`cacheCount`
-
-`cacheDelete`
-
-`cacheGetAll`
+`cachedWithinId` - Minimum Version: 7.1.0.11
 
 `cacheGetDefaultCacheName`
 
-`cacheKeyExists`
-
 `cfadmin`
 
-`cfpageencoding`
-
 `cfretry`
-
-`cfsleep`
-
-`cfstopwatch`
 
 `cfusion_Decrypt`
 
 `cfusion_Encrypt`
-
-`cfwhile`
-
-`collectionEach`
-
-`collectionEvery`
-
-`collectionFilter`
-
-`collectionMap`
-
-`collectionReduce`
-
-`collectionSome`
 
 `componentCacheClear`
 
@@ -70,29 +40,29 @@
 
 `componentInfo`
 
-`compress`
+`componentListPackage`
 
-`contractPath`
+`configImport` - Minimum Version: 5.3.8
 
-`createGUID`
+`configMerge` - Minimum Version: 7.0.4.5
 
-`createUniqueID`
+`configTranslate` - Minimum Version: 6.0.0.460
+
+`createAISession` - Minimum Version: 7
+
+`createULID` - Minimum Version: 6.0.1.65
 
 `ctCacheClear`
 
 `ctCacheList`
 
-`dayOfWeekShortAsString`
+`dbpoolclear`
 
-`each`
-
-`echo`
+`directoryInfo` - Minimum Version: 6.0.0.151
 
 `empty`
 
-`entityNameArray`
-
-`entityNameList`
+`encodeForSQL` - Minimum Version: 5
 
 `esapiDecode`
 
@@ -100,47 +70,55 @@
 
 `extensionExists` - Minimum Version: 5.3
 
+`extensionInfo` - Minimum Version: 6.0.0.210
+
 `extensionList` - Minimum Version: 5.3
 
-`extract`
+`fileInfo` - Minimum Version: 5
 
-`generateArgon2Hash` - Minimum Version: 5.3.8
+`fileModeToSymbolic` - Minimum Version: 7.0.0.155
 
-`getApplicationSettings`
+`fileTouch`
+
+`findLast`
+
+`findLastNoCase`
+
+`gatewayAction` - Minimum Version: 6.2.0.75
+
+`gatewayState` - Minimum Version: 6.2.0.75
+
+`generateRSAKeys`
 
 `getBuiltinFunction`
 
 `getClassPath`
 
-`getCurrentContext`
+`getContextInfo` - Minimum Version: 5.3.1.7
 
-`getFunctionData`
+`getCurrentContext`
 
 `getFunctionKeywords`
 
-`getLocaleCountry`
+`getHTTPRequestHeaders` - Minimum Version: 5.3.8.163
 
-`getLocaleInfo` - Minimum Version: 5
+`getLocaleCountry`
 
 `getLocaleLanguage`
 
 `getLuceeID`
 
-`getMemoryUsage`
+`getSystemMetrics`
 
-`getTagData`
+`getSystemPropOrEnvVar` - Minimum Version: 6.2.1.23
 
 `getTagList`
 
-`getVariable`
+`getTransactionIsolation` - Minimum Version: 7.1.0.70
 
-`hash40`
+`guardDecode` - Minimum Version: 7
 
-`htmlParse`
-
-`imageCaptcha` - Minimum Version: 5
-
-`imageDrawImage` - Minimum Version: 4.5
+`imageCoderInfo`
 
 `imageFilter`
 
@@ -156,104 +134,106 @@
 
 `imageFormats`
 
-`imageSetDrawingAlpha`
+`imageWriteToBrowser`
 
-`isEmpty`
+`inquiryAISession` - Minimum Version: 7
+
+`inspectTemplates` - Minimum Version: 5.3.6.2
+
+`internalRequest` - Minimum Version: 6.0.0.161
+
+`isDebuggerEnabled` - Minimum Version: 7.1.0.45
 
 `isIPInRange`
 
 `isNotMap`
 
+`isThreadInterrupted` - Minimum Version: 7.0.2.1
+
 `isVideoFile`
 
-`isZipFile`
+`listQualifiedToArray`
 
-`listAvg`
+`loadAISession` - Minimum Version: 7.0.0.195
 
-`listCompact`
+`logAllThreads` - Minimum Version: 6.2.0.219
 
-`listEvery`
+`lsLCase` - Minimum Version: 6.1.0.37
 
-`listIndexExists`
-
-`listItemTrim`
-
-`listSome`
-
-`listTrim`
-
-`lsDayOfWeek`
-
-`lsWeek`
+`lsUCase` - Minimum Version: 6.1.0.37
 
 `manifestRead` - Minimum Version: 5
 
-`metaphone`
+`markdownToHtml` - Minimum Version: 6.0.0.150
 
-`millisecond`
+`mavenExists` - Minimum Version: 7.1.0.98
 
-`monthShortAsString`
+`mavenExport` - Minimum Version: 7.1.0.98
 
-`newLine`
+`mavenImport` - Minimum Version: 7.1.0.98
 
-`nowServer`
+`mavenInfo` - Minimum Version: 7.0.0.136
 
-`nullValue`
-
-`pagePoolClear`
+`mavenLoad` - Minimum Version: 6.2.0.151
 
 `pagePoolList`
 
-`parseNumber`
+`queryClose` - Minimum Version: 5.3.4.38
 
-`query`
+`queryGetCellByIndex` - Minimum Version: 5.3.4.34
 
-`queryColumnArray`
+`querylazy` - Minimum Version: 5.3.6
 
-`queryColumnCount`
+`queryRenameColumn` - Minimum Version: 6.0.0.57
 
-`queryColumnData`
+`queryRowByIndex` - Minimum Version: 5.3.4.34
 
-`queryColumnExists`
+`queryRowDataByIndex` - Minimum Version: 5.3.4.34
 
-`queryColumnList`
-
-`queryCurrentRow`
-
-`queryGetCell`
-
-`queryRowData`
+`queryToStruct` - Minimum Version: 6.0.0.302
 
 `render` - Minimum Version: 5
 
-`sanitizeHtml`
+`s3AddACL`
 
-`sessionstartTime`
+`s3GetACL`
+
+`s3GetVersionInfo`
+
+`s3SetACL`
+
+`s3SetMetaData`
+
+`sanitize` - Minimum Version: 7
+
+`secretProviderGet` - Minimum Version: 7.0.0.197
+
+`secretProviderList` - Minimum Version: 7.0.2.94
+
+`secretProviderListNames` - Minimum Version: 7.0.2.94
+
+`secretProviderRemove` - Minimum Version: 7.0.2.94
+
+`secretProviderSet` - Minimum Version: 7.0.2.94
+
+`serializeAISession` - Minimum Version: 7.0.0.195
+
+`sessionExists` - Minimum Version: 6.2.1.16
+
+`sessionTouch` - Minimum Version: 7
 
 `sizeOf`
-
-`soundEx`
 
 `sslCertificateInstall`
 
 `sslCertificateList`
 
-`stringLen`
+`threadData` - Minimum Version: 5.3.6.19
 
-`structKeyTranslate`
-
-`systemCacheClear`
-
-`systemOutput`
-
-`toNumeric`
-
-`trueFalseFormat`
-
-`ucFirst`
+`trimWhitespace`
 
 `unserializeJava`
 
-`urlEncode`
+`valueRef` - Minimum Version: 6.1.0.15
 
 `webserviceNew` - Minimum Version: 5
