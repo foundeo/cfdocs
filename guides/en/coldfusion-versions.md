@@ -11,12 +11,15 @@ Historical information about ColdFusion Versions and releases.
 
 * Email DBMAIL
 * CFX Tags C/C++
+* Tags Supported: `dbabort`, `dbcgi`, `dbcol`, `dbcontent`, `dbcookie`, `dbelse`, `dbif`, `dbinclude`, `dbinsert`, `dblocation`, `dbmail`, `dboutput`, `dbquery`, `dbset`, `dbsql`, `dbtable`, `dbtransaction`, `dbupdate`
+* Functions Supported: `DateFormat`, `DecimalFormat`, `DecrementValue`, `DollarFormat`, `HTMLCodeFormat`, `HTMLEditFormat`, `IncrementValue`, `LongStringFormat`, `NumberFormat`, `ParagraphFormat`, `ParameterExists`, `PreserveSingleQuotes`, `QuotedValueList`, `StripCR`, `TimeFormat`, `URLEncodedFormat`, `ValueList`, `YesNoFormat`
 
 ## Allaire Cold Fusion 2 - November 1996
 
 * CFML (tags were switched from `dbif` to `cfif`)
 * Significantly expanded language capabilities
-* Advanced function library
+* 9 new tags: `cfapplication`, `cfbreak`, `cfelseif`, `cferror`, `cffile`, `cfheader`, `cfloop`, `cfparam`, `cfreport`
+* Advanced function library (123 new functions)
 * File Upload and Management
 * Application Framework (Application.cfm)
 * Client Management
