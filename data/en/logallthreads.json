@@ -19,7 +19,7 @@
 			"description": "The time between captures, in milliseconds.",
 			"required": false,
 			"default": "0",
-			"type": "number",
+			"type": "numeric",
 			"values": []
 		},
 		{
@@ -27,7 +27,7 @@
 			"description": "How long to capture for, in milliseconds.",
 			"required": false,
 			"default": "10000",
-			"type": "number",
+			"type": "numeric",
 			"values": []
 		}
 	],

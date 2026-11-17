@@ -23,7 +23,7 @@
 			"description": "Only delete objects older than this timespan.",
 			"required": false,
 			"default": "",
-			"type": "timespan",
+			"type": "numeric",
 			"values": []
 		},
 		{

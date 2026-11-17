@@ -22,7 +22,7 @@
 			"description": "The locale to use. Defaults to the current locale.",
 			"required": false,
 			"default": "",
-			"type": "locale",
+			"type": "string",
 			"values": []
 		}
 	],

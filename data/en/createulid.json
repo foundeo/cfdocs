@@ -22,7 +22,7 @@
 			"description": "A number used to build the ULID. Only used when `type` is `hash`.",
 			"required": false,
 			"default": "",
-			"type": "number",
+			"type": "numeric",
 			"values": []
 		},
 		{
