@@ -7,7 +7,7 @@ This shows all of the built-in Application.cfc methods.
 
 ```cfml
 component {
-    this.name = "YourAppName" & hash(getCurrentTemplatePath());
+    this.name = "YourAppName" & hash(getCurrentTemplatePath(), "MD5");
     this.applicationTimeout = createTimeSpan(1,0,0,0);
     this.sessionTimeout = createTimeSpan(1,0,0,0);
     this.sessionManagement = true;
